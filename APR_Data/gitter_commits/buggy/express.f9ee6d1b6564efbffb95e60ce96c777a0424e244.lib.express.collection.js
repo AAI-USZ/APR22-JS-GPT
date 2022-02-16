@@ -1,0 +1,59 @@
+
+// Express - Collection - Copyright TJ Holowaychuk <tj@vision-media.ca> (MIT Licensed)
+
+Collection = Class({
+  
+  /**
+   * Initialize collection with an array-like object.
+   *
+   * @param  {object} arr
+   * @api private
+   */
+  
+  init: function(arr) {
+    var clone = toArray(arr)
+    this.length = clone.length
+    clone.unshift(0, clone.length)
+    Array.prototype.splice.apply(this, clone)
+  },
+  
+  /**
+   * Return the value of _index_ or null.
+   *
+   * @param  {int} index
+   * @return {mixed}
+   * @api public
+   */
+  
+  at: function(index) {
+    return this[index]
+  },
+  
+  /**
+   * Iterate collection using callback _fn_,
+   * passing both the index and value.
+   *
+   * @param  {function} fn
+   * @return {Collection}
+   * @api public
+   */
+  
+  each: function(fn) {
+    for (var i = 0, len = this.length; i < len; ++i)
+      fn(i, this[i])
+    return this
+  }
+})
+
+/**
+ * Create a new collection from an array-like object.
+ *
+ * @param  {object} arr
+ * @return {Collection}
+ * @api public
+ */
+
+exports.$ = function(arr) {
+  if (arr instanceof Collection) return arr
+  return new Collection(arr)
+}
