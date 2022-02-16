@@ -9,3 +9,5 @@ Example run:
 --experiment_dir will be created in APR_Data
 
 For additional parameters check argument_parser.py
+
+Note: The '/' symbol after each path given as parameter is necessary.

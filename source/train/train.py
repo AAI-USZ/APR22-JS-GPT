@@ -28,7 +28,10 @@ def train(gpu, batch_size, max_epochs, early_stop_patience, lr_rate, warmup_step
     warmup_steps = warmup_steps
     epsilon = epsilon
     sample_every = 100
-    output_dir = './model_save/'
+    output_dir = './train/model_save/'
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2', bos_token='<|startoftext|>', eos_token='<|endoftext|>', pad_token='<|pad|>') #gpt2-medium
     dataset = GPTDataset(TXT_PATH, tokenizer, max_length=768)
