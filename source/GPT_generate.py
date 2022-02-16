@@ -20,6 +20,7 @@ model = model.to(device)'''
 
 
 def generate(model, tokenizer, input):
+    device = torch.device("cuda")
     model.eval()
     prompt = "<|startoftext|>" + input
 
