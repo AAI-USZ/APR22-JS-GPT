@@ -1,8 +1,0 @@
-var ejs = require('ejs'),
-  extend = require('../../extend'),
-  _ = require('lodash');
-
-extend.renderer.register('ejs', 'html', function(file, content, locals){
-  if (file) locals = _.extend(locals, {filename: file});
-  return ejs.render(content, locals);
-}, true);

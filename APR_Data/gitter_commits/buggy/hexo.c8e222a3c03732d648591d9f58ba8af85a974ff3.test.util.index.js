@@ -1,1 +1,0 @@
-exports.stream = require('./stream');

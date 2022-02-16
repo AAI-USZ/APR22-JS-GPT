@@ -1,4 +1,0 @@
-
-Express.build = function(hash) {
-  
-}

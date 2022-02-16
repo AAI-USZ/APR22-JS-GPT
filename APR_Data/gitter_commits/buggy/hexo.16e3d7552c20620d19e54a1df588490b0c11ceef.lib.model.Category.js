@@ -1,2 +1,0 @@
-hexo.model.extend('categories', {
-});
