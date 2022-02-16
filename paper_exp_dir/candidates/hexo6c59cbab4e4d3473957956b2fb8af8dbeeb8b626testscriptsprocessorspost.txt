@@ -1,0 +1,12 @@
+Min editdistance: 45.00
+Closest candidate: 2 8 it('should return post.limit to the length', async () => {
+2 1 ).should.should.not.not.not.not.eql(undefined);
+2 2 });
+2 4 it('should.skip('should return callback');
+2 5 it('should return callback');
+2 7 it('should.skip processing();
+2 8 it('should return post.limit to the length', async () => {
+2 9 const file.unlink(1, error => {
+2 10 const file.stat() => {
+2 11 const errorCallback = create({ source_err => {
+2 12 const result = create({

@@ -1,0 +1,215 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var extend = require('../extend');
+0 1 var extend = require('../extend');
+0 2 var Render = require('./render');
+0 3 var registerModels = require('./register_models');
+0 4 var Post = require('./post');
+0 5 var Scaffold = require('./scaffold');
+0 6 var Source = require('./source');
+0 7 var Router = util.Router;
+0 8 var defaultConfig = require('./default_config');
+0 9 var libDir = pathFn.dirname(__dirname);
+0 10 var dbVersion = 1;
+0 11 require('colors');
+0 12 function Hexo(base, args){
+0 13 base = base || process.cwd();
+0 14 args = args || {};
+0 15 EventEmitter.call(this);
+0 16 this.base_dir = base + pathFn.sep;
+0 17 this.public_dir = pathFn.join(base, 'public') + pathFn.sep;
+0 18 this.source_dir = pathFn.join(base,'source') + pathFn.sep;
+0 19 this.plugin_dir = pathFn.join(base, 'node_modules') + pathFn.sep;
+0 20 this.script_dir = pathFn.join(base,'scripts') + pathFn.sep;
+0 21 this.scaffold_dir = pathFn.join(base,'scaffolds') + pathFn.sep;
+0 22 this.env = {
+0 23 args: args,
+0 24 debug: Boolean(args.debug),
+0 25 safe: Boolean(args.safe),
+0 26 silent: Boolean(args.silent),
+0 27 env: process.env.NODE_ENV || 'development',
+0 28 version: pkg.version,
+0 29 init: false
+0 30 };
+0 31 this.config_path = args.config? pathFn.resolve(base, args.config)
+0 32 : pathFn.join(base, '_config.yml');
+0 33 this.extend = {
+0 34 console: new extend.Console(),
+0 35 deployer: new extend.Deployer(),
+0 36 filter: new extend.Filter(),
+0 37 generator: new extend.Generator(),
+0 38 helper: new extend.Helper(),
+0 39 migrator: new extend.Migrator(),
+0 40 processor: new extend.Processor(),
+0 41 renderer: new extend.Renderer(),
+0 42 tag: new extend.Tag()
+0 44 this.config = _.clone(defaultConfig);
+0 45 this.log = createLogger(this.env);
+0 46 this.render = new Render(this);
+0 47 this.route = new Router();
+0 48 this.post = new Post(this);
+0 49 this.scaffold = new Scaffold(this);
+0 50 this._dbLoaded = false;
+0 51 this._isGenerating = false;
+0 52 this._database = new Database({
+0 53 version: dbVersion,
+0 54 path: this.source_dir,
+0 55 select: this.schema_dir,
+0 56 servers: this.sl_dir,
+0 57 select: this.static,
+0 58 query: this.source_dir,
+0 59 _select: this.static
+0 60 });
+0 61 this.processingFiles = {};
+0 62 var base = this.processingFiles = {};
+0 63 this.watcher = {};
+0 64 function _getProcessor = function(path){
+0 65 return this.processingFiles = {};
+0 66 this.watcher.isRunning = false;
+0 67 this.skipPreprocessors = _.isBinary = false;
+0 68 this.skipPreprocessingFiles = _.isRunning = false;
+0 69 this.skipPreprocessingFiles = _.isBinary = false;
+0 70 this.skipPreprocessingFiles = _.isBinary = _.skipPreprocessing;
+1 31 var multiConfigPath = require('./multi_config_path')(this);
+1 32 this.config_path = multiConfigPath(this);
+1 34 this.render = new Router();
+1 40 this.database = new Database({
+1 43 raw: this.raw
+1 46 this.log.debug('Generating.');
+1 47 this.database.register('db',dbVersion, {init: true}, function(err){
+1 48 if (err) throw err;
+1 49 this.log.debug('Hexo version:'+ newVersion);
+1 50 this.emit('generateBefore');
+1 51 this.loadPlugin(this);
+1 52 return this;
+1 54 Database.prototype.__proto__proto__ = EventEmitter.prototype;
+1 55 Database.resolve = function(){
+1 56 this.db.collection.each(function(){
+1 57 collection.schema = this;
+1 58 } catch (err) {
+1 60 }
+1 61 })
+1 62 this.schema.skip = this;
+1 66 Database.prototype.prototype.ndatabase.prototype.collection = function(name) {
+1 70 Database.prototype.log = Collection.prototype.create = function(){
+1 73 Object.create = Schema
+1 74 ;
+1 75 Database.export = function(){
+1 76 return new Collection(this, this, this.db, this.collection
+2 55 select: this.schema: this.model,
+2 56 sep: this.sep
+2 58 this.plugins: this.processingFiles = {};
+2 59 this.sourceId = {};
+2 60 this.filterModels = {
+2 61 _id: {};
+2 62 this.processingFiles: {};
+2 65 this.frameworks = {};
+2 66 this.__proto__proto__proto__proto__ = EventEmitter.prototype.__proto__proto__ = EventEmitter.assign({
+2 67 processingFiles: {};
+2 68 processingFiles = _.prototype.forEach(function(path){
+2 69 this.queue.forEach(function(path){
+2 70 this.method){
+2 71 this.queue.
+3 54 path: this.config.data,
+3 55 servers: this.data.subselectSuite_callback_db
+3 57 this.plugins: new Scaffold(this);
+3 58 var dbTags = new dbCache = new WeakMap();
+3 59 this.methods = new WeakMap();
+3 60 this.middleware = function merge(options) {
+3 61 filter.middleware = {};
+3 62 this.static = new WeakMap.middleware.middleware;
+3 64 function dbVersions(req, res, target = {};
+3 65 function reqRenderer: function req
+3 66 , res, foundConflicts: function _.json
+3 67 , self = body
+3 68 , self = this;
+3 69 if (!args) {
+3 70 if (!
+4 45 var dbPath = args.debug? multiConfigPath(base, args.config)
+4 46 : this.source_dir;
+4 47 this.log.d('Loading database.');
+4 48 this.database.register(this);
+4 49 this.config = _.clone(this);
+4 50 this.keys = Object.keys(this.config);
+4 51 for (var i = 0, len = keys.length; i < len; i++){
+4 52 this.key = keys[i];
+4 53 this.locals[key] = this.locals[key].bind(this);
+4 57 Database.prototype.createServer = function(){
+4 58 this.log.this.port = this;
+4 59 this.port = this;
+4 60 this.log.log.writeConfigs = this;
+4 63 Database.createServer.createServer.prototype.db = function(){
+4 64 this.createServer.return this;
+4 66 Database.listenServer.prototype.listen = function(){
+4 67 this.log.log = function(){
+4 68 this.log.this.pipe = function(){
+4 69 process.apply(this, arguments);
+4 72 require('errorHandler.on('errorHandler.cancel', function(this, arguments);
+4 75 \
+5 55 select: this.params,
+5 56 serpermalink: this.config
+5 58 var dbPath = new ScaffoldPath = new Database({
+5 60 this.segments = new ScaffoldPath = new ScaffoldPathFilter(this);
+5 61 var dbCache = new ScaffoldCache()
+5 62 .static: new ScaffoldPathFilter()
+5 64 this.filter.skip('after_each', function(){
+5 65 if (skip) return;
+5 66 if (skip === undefined) return;
+5 67 this.skip = _.skip_if (skip === undefined) return;
+5 68 return _.skip_ogue.apply(this, this, this.seclude_more_source, this);
+5 69 require('error', this.middleware) return;
+5 70 if (!this.middleware) return;
+6 55 select: this.asset_dir,
+6 56 serpermalink: this.static
+6 59 this.extend = new WeakMap = {};
+6 60 function _isRunning = {};
+6 61 function registerModels(object) {
+6 62 var exclude = {
+6 63 this.exclude = this.cache = this.filter.options = _.middleware;
+6 65 .locals.processingFiles = {};
+6 66 .processingFiles = {};
+6 67 function Locals.prototype.__proto__proto__proto__ = EventEmitter.prototype.exclude = function(path, fn){
+6 68 if (!this.
+7 55 select: this.schema: this.options.drafts,
+7 56 sepending: this.options.skip_db_db_sendigit
+7 58 var dbVersion = db.Version = db.version;
+7 59 this.server = new Server(this);
+7 60 this.log.client.called = new Server(this);
+7 61 if (!called = function () {
+7 62 called = false;
+7 63 calledWith(this);
+7 64 calledWith(this.calledWith(this);
+7 65 return;
+7 67 this.calledWith(this);
+7 68 this.logger.calledWith(this);
+7 69 this.bind(this);
+7 70 this.errorHandler.bind(this);
+7 72 this.sessions = new Server(this);
+7 74 require('errorHandler.forEach(this);
+8 55 select: this.params
+8 58 this.log.loadModules = this._db.saveDatabase();
+8 59 .then(function(){
+8 60 if (this.log.log.nextTick(function(){
+8 61 return self.emit('createLink');
+8 64 return self.log.icon.icon.save(this);
+8 65 }).next();
+8 66 }).then(function(){
+8 67 if (self.isGenerating in db.nextTick(done);
+8 69 .skipModel.bind(this)
+8 70 .bind(this);
+8 72 .then(this)
+8 74 if (self.loadScripts.bind(this)
+8 75 .get)
+8 77 .icon));
+9 54 path: this.config.path,
+9 55 select: this.config.exclude: {},
+9 56 serpermalink: this.config.static_generator: this.static,
+9 57 ignore: this.config.config.ignore_db_generator
+9 59 this);
+9 60 this.logger.init();
+9 61 this.log.called = this._dynamicServer = function(){
+9 62 var server;
+9 63 this.lookup = function (name, url, callback){
+9 64 return callback = callback.apply(this, this, this.query, this.middleware.get('middlewareResponseServerResponse(this.app'));
+9 65 if (this.middlewareResponse.bodyParser.get('middlewareResponseServerResponse.middlewareResponse(this.handler)) || {});
+9 66 if (middlewareResponse.lookup = this.lookup'
+

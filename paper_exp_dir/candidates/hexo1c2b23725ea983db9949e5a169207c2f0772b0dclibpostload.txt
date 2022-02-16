@@ -1,0 +1,101 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 hexo.source.watch();
+0 1 hexo.source.watch();
+0 2 hexo.on('processAfter', function(path){
+0 3 if (isReady && path === hexo.theme_dir){
+0 4 hexo.theme.generate(options);
+0 5 }
+0 6 });
+0 8 next();
+0 9 }]
+0 10 }, function(err){
+0 11 if (err) return callback(err);
+0 12 hexo.theme.generate(options, function(err){
+0 14 isReady = true;
+0 15 callback();
+0 19 };"
+
+1 1 hexo.source.watch(function(){
+1 2 if (isReady) hexo.theme.generate(options);
+1 7 }, function(){
+1 8 if (options.watch) hexo.theme.generate(options);
+1 10 if (options.save) hexo.theme.save();
+1 12 var lastGeneratedId = 0;
+1 13 return hexo.extend.filter.exec('after_route_render', function(locals){
+1 14 lastGeneratedId = posts.length;
+1 15 return locals.posts.map(function(post){
+1 16 return post.path;
+1 17 });"
+
+3 2 hexo.emit('load_source');
+3 4 }],
+3 5 load_theme: ['load_theme', function(next){
+3 6 if (options.watch){
+3 7 hexo.theme.watch();
+3 8 hexo.load();
+3 11 load_source: function(next){
+3 19 return hexo.theme.generate(options);
+3 23 }"
+
+4 3 if (isReady && hexo.theme.isTmpFile()) return next();
+4 4 var tasks = _.extend({
+4 5 load_source: 'load_source',
+4 6 watch_theme: 'load_theme',
+4 7 process: function(next){
+4 51 } else {
+4 55 }, next);
+4 58 }, callback);
+4 60 }], callback);
+5 5 next();"
+
+6 2 if (isReady) hexo.theme.generate(options);"
+
+7 5 }), function(){
+8 11 var lastDir = hexo.base_dir;
+8 12 if (!Array.isArray(config.theme)){
+8 13 hexo.theme.config = {};
+8 15 if (config.archive){
+8 16 var archiveDir = config.archive_dir;
+8 17 if (!archiveDir) return;
+8 18 return hexo.extend.generator.register('archive', archiveDir, {archive: archiveDir});
+8 20 return posts.slice(0, 1);
+8 23 var posts = [];
+8 24 posts.push({
+8 25 _id: ['link', 'archive', 'index'],
+8 26 _id: ['title', 'create', 'list_archives', 'tags'],
+8 27 _id: ['link', 'archives', 'categories', 'tags'],
+8 28 length: 1,
+8 29 concat: function(str){
+8 30 return str.replace(/\
+8 31 /g, '/');
+8 34 if (!posts.length) return callback();
+8 35 var length = posts.length;
+8 36 posts.forEach(function(post){
+8 37 var linkArr = post.id;
+8 38 route.set(linkArr, function(fn){
+8 39 var postLink = fn(postLink, postID);
+8 40 postLink += postID;
+8 41 if (!postLink) return;
+8 42 postLink = post.permalink;
+8 43 if (linkArr.length){
+8 44 postLink = linkArr.join(',');
+8 46 if (!postLink.length) return;
+8 47 return Promise.all([
+8 48 postLink.stat(),
+8 49 processPost.bind(post)
+8 50 ]);
+9 15 return hexo.theme.generate()
+9 16 .then(function(){
+9 18 fs.exists(hexo.public_dir),
+9 19 fs.exists(hexo.public_dir)
+9 21 })
+9 26 return checkStream(route.get('test'), false);
+9 33 module.exports.load = function(callback){
+9 34 if (typeof callback!== 'function') callback = function(){};
+9 35 var model = hexo.model;
+9 36 var path = pathFn.join(hexo.base_dir, 'db.json');
+9 37 return function(){
+9 38 return db.model('Asset').save({
+9 39 _id: 'db',
+9 40 path: path,
+9 41 modified: false

@@ -1,0 +1,77 @@
+Min editdistance: 18.00
+Closest candidate: 8 11 if (!layerError);
+0 1  layer.removed = null;
+0 2 propermalink = null;
+0 3 if (removed = trimArrideslashAdded = null;
+0 4 if (removed === undefined) {
+0 5 if (layer.match.match.length === 0) {
+0 6 protoLowercaseSensitive = undefined) {
+0 7 proxies.unshift()!== undefined;
+0 8 return next();
+0 9 }
+0 10 return done(layer, paramcalled);
+0 11 return res
+1 1 removed = '';
+1 3 if (!layer.handle_analyse.proto_return(layer, req,
+1 4 removed);
+1 5 return function next(err, req, res, res.proto_return, null, null, function(err, null, function(err, null, next) {
+1 6 if (err, null, null, next) {
+1 7 if (err, null, function (err) {
+1 8 var route, handler) {
+1 9 var path;
+1 10 var
+2 1  secret = null;
+2 2 if (!layer.throprops.destroy();
+2 3 return function done(err, req, res, null, function(err) {
+2 4 res.write(err, undefined, null, req, res.message);
+2 5 res.message);
+2 6 return done(err);
+2 7 });
+2 9 function done(err, req, res, done);
+2 10 if (layer, blog, blog_done
+3 1 removed = null;
+3 2 if (!layer.props['x-proto', layerError', layerError], undefined, paramcalled, paramcalled);
+3 5 // function trim_prefix', layer, layerError, param, param, paramcalled);
+3 7 function trim_prefix, layerError, paramcalled, layerPath, paramcalled, paramcalled, paramcalled, paramcalled_else, paramcalled_n
+3 8 function trim_prefix
+4 2 if (removed === null;
+4 3 if (writeUnafter(function next(){
+4 4 return layer.remove.remove.handle_middleware(removed,
+4 5 req, null, null, null, null, null, function(err, null, null, function(err) {
+4 6 var slashAdded) {
+4 7 return next(err, null, function(err, function(err) {
+4 8 next) {
+4 9 if (err, handler);
+4 10 if (called
+5 1 '
+
+6 2 if (!layer.match = url.callback = true;
+6 3 if (!layer.callback = true;
+6 4 if (!layer.process_analyse()
+6 5 ).nextTIONS_analyse.nextTIONS_else_else_else_options = function next();
+6 7 return function trim_prefix_prefix_prefix_prefix_prefix_prefix_layer(layer, layerError
+7 2 if (!layer.match = layerError === undefined;
+7 3 return done(layer, req, req, req, req, res, res, (err) => {
+7 4 res.should.should.throw newUrl === undefined;
+7 5 // (res.should.throw newUrl) == null;
+7 7 if (layerError)
+7 8 .match = function done(err) {
+7 9 return done) {
+7 11 return done(err
+8 1  removed = null;
+8 4 if (props.proto.next === null;
+8 5 var options = function next(){
+8 6 next(layerError === null;
+8 7 // done(err, null, null, null, function (err) {
+8 9 if (removed) {
+8 10 if (removed) return next(err);
+8 11 if (!layerError);
+8 12 done();
+9 1 removed === undefined;
+9 2 if (!layer.match = function trimArriding(){
+9 3 return done(err, req, req, req, res, res.url);
+9 6 if (!layer.handle_layer.handle_error(err) {
+9 7 layerError(err);
+9 9 function trimArrUnauthorizedUrl(err) {
+9 10 return layerError(err) {
+9 11 return layerError

@@ -1,0 +1,9 @@
+Min editdistance: 21.00
+Closest candidate: 6 3 });
+0 1 "
+
+6 1 app.listen(config.port, function(){
+6 2 console.log('Hexo is running at %s. Press Ctrl+C to start.', clc.bold('http://localhost:' + config.port));
+6 3 });
+6 4 });"
+

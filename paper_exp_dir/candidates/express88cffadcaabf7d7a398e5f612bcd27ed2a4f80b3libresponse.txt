@@ -1,0 +1,6 @@
+Min editdistance: 28.00
+Closest candidate: 1 1 (); }(fn) return; reason = fn();"
+0 1 (); }());"
+1 1 (); }(fn) return; reason = fn();"
+3 1 ();"
+5 1 (); control();"

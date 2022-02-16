@@ -1,0 +1,30 @@
+Min editdistance: 14.00
+Closest candidate: 0 1 "
+
+0 1 "
+
+1 1 describe('return function() {
+1 2 it('return () {
+1 3 return function(answatched for (s)', function(s)', function(s) {
+1 4 return Q.reduce(s,'should.pluck(answ)', function(answ) {
+1 5 return answers.pluck(s,'should);
+1 6 return Q.pluck(s,'shouldnreturns');
+1 7 });
+1 10 }
+1 11 it('should.forEach(layout) {
+1 12 it('should.skip
+5 1 return config;
+5 2 function testExecute(answatchedFilePaths(admin, done) {
+5 3 return function() {
+5 4 return function(answatchedFileWritings, resolvedFiles(answatchedFileWritings, resolvedFiles) {
+5 5 return Promise.forEachAsync = function(answatchedFileWritings, resolvedFiles) {
+5 6 return Promise.forEachAsync = function(writeFileWritings, resolvedFiles) {
+5 7 var promises;
+5 8 return swig.clean
+7 1 describe('writeFile', function() {
+7 2 it('render()', function() {
+7 3 return process.stdout.writeFile(configFile(configFile, doneFile, doneFile, doneFile);
+7 4 return config);
+7 8 it('outputFilereturn outputFile = function(doc, doneFile, doneFile, doneFile, doneFile) {
+7 9 return outputFile = function(data) {
+7 10 return process.stdout = null;

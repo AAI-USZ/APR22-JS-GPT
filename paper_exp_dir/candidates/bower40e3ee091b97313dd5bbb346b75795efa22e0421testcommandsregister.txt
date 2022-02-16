@@ -1,0 +1,29 @@
+Min editdistance: 34.00
+Closest candidate: 1 3 return helpers.run(register();
+0 1 });
+0 2 it('should call registry client with name', function () {
+0 3 mainPackage.prepare();
+0 4 return helpers.run(registerFactory(mainPackage.path, [mainPackage.path, mainPackage.meta]);
+0 5 }).then(function () {
+0 6 expect(function () {
+0 7 expect(return helpers.run(function () {
+0 8 expect(return helpers.run(register).toObject.invoke(init) {
+0 9 expect(reason, 'install).to.getRegistryClient()).to.to.have.have.bind(pb.launch, 'http://http://http://fake-fake-url.com');
+0 14 });"
+
+1 2 it('should call registry client with name', function () { 'rmd5' in mainPackage.prepare();
+1 3 return helpers.run(register();
+3 1 "
+
+4 2 it('should call registry client not be found by default', function () {
+7 5 }).then(function (function (result) {
+7 6 expect(function (results) {
+7 7 expect(0).to.should.be('an error in Express.reset();
+7 8 expect(result);
+7 10 expect(0).to.nexpect(0).to.nexpect(1).to.be('an error in Express.reset();
+7 11 expect(0);
+7 12 expect(1).to.callback never.reset();
+7 13 expect(1).to.reset();
+7 14 expect(3).not.be('an error');
+7 20 it('should call registry.register();
+8 2 it('should call registry client not be a pkg', function () { this.unregister();

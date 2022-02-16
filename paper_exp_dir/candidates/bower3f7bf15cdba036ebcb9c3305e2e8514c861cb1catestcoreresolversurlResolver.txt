@@ -1,0 +1,76 @@
+Min editdistance: 42.00
+Closest candidate: 5 2 it('should work with fs.readFile(options.done);
+0 1 it('should.done();
+0 2 });
+0 3 it('should work(next)', function (next) {
+0 4 return resolver = create();
+0 5 })
+0 7 .then(function (next) {
+0 8 return resolver();
+0 9 .resolve();
+0 11 .then(function (dir, failedCallback) {
+0 12 fs.readFile(path.existsSync(path.join(path.resolve(dir, 'foo.js'))
+0 13 .getHeader
+1 2 it('should work(function (next) {
+1 3 return resolver = create(new).then) {
+1 4 return resolver(new).resolve();
+1 6 .then(function (dir) {
+1 7 return fs.should.should.should.notify(resolver([]);
+1 9 .then(resolve();
+1 11 .then(function (dir);
+1 12 .should.should.notify([]);
+1 15 expect(next) {
+1 16 ex
+2 2 it('should work(next() => {
+2 3 var resolver = create();
+2 4 return resolver({ source: null })
+2 7 return resolver.resolve();
+2 9 .then(resolver.resolve();
+2 12 .then(function (result) {
+2 13 expect(resolver.should.should.should.not.not.contain('not.contain('not.contain('not.contain
+3 2 it('should work(next() => resolver.then()).then(next);
+3 5 fs.readFile(file.copyFile(path.path.join(path.join(test.foo.paths_dir, 'foo.js'), path.bower_componentsDir, 'index.js'));
+3 7 .then(copyFile);
+3 8 .then(copyFile)
+3 9 .done);
+3 10 .done();
+3 11 }
+4 2 it('should work with redirects', function (next) {
+4 10 return resolver.resolve() {
+4 16 .should.resolve() {
+4 17 .should.then(function (dir);
+5 2 it('should work with fs.readFile(options.done);
+5 4 it('should resolve()
+5 5 it('should work with null contents');
+5 6 it('should contents');
+5 8 it('should.not.not.contents()');
+5 10 it('should.contents()
+5 12 it('should.contents = fs');
+5 14 it('should.contents = fs
+6 2 it('should work(next()).resolve())
+6 5 it('should work(next)');
+6 9 .skip(function (next) {
+6 11 should(next);
+6 14 .exec('should.exec('shouldacheWah.js
+7 2 it('should work (next()).resolve()
+7 3 it('should work(next).then(next);
+7 6 describe(next) {
+7 7 it('should reject(new Error() => fs.readFile(new Error('shouldacheResolverNo-CON stat error'));
+7 8 it('shouldache shouldache option must be a function');
+7 9 it('should resolve by default');
+7 10 it('should reject(false);
+7 11 it('should work when source- type is a resolve', function () =>
+8 2 it('should work(next).resolve()
+8 3 it('should work(next);
+8 4 it('should reject(new)', function (next) {
+8 5 var resolver = create([]);
+8 6 resolver(create(create(create(redirectingUrl) {
+8 7 return Q.resolve('http://bower.com/foo.js');
+8 8 should.should.should.not.throw(false);
+8 10 .should.not.throw(error(redirectingUrl
+9 2 it('should work(next)() => {
+9 9 .then(resolver.resolve, files) {
+9 10 fs.should.should.should.not.not.not.throw(resolver, files);
+9 12 .should.not.throw(false);
+9 14 .then(function (folder) {
+9 15 expect

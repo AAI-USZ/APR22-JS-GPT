@@ -1,0 +1,273 @@
+Min editdistance: 10.00
+Closest candidate: 0 1 const pathFn = require(\'path\');
+0 1 const pathFn = require(\'path\');
+0 2 const _ = require(\'lodash\');
+0 3 const yaml = require(\'js-yaml\');
+0 4 const { slugize, escapeRegExp } = require(\'hexo-util\');
+0 5 const fs = require(\'hexo-fs\');
+0 6 const yfm = require(\'hexo-front-matter\');
+0 7 const rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]+?)<\\/escape>/g;
+0 8 const rSwigVar = /\\{\\{[\\s\\S]+?\\}\\}/g;
+0 9 const rSwigComment = /\\{#[\\s\\S]+?#\\}/g;
+0 10 const rSwigBlock = /\\{%[\\s\\S]+?%\\}/g;
+0 11 const rSwigFullBlock = /\\{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+0 12 const rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+0 13 const rSwigTagInsideInlineCode = /{%([\\s\\S]+?)<\\/{2}/g;
+0 15 const _escape = util.escape;
+0 16 const _str = str.replace(rSwigFullBlock, escape)
+0 17 .replace(rSwigBlock, escape)
+0 18 .replace(rSwigComment, \'\')
+0 19 .replace(rSwigVar, escape);
+0 20 const _escapeContent = str.replace(rSwigVar, escape);
+0 21 const _str = str.replace(rSwigVar, escape);
+0 22 const _escapeContent = str.replace(rSwigComment, \'\');
+0 23 const _escape = _escapeContent, _str);
+0 25 const escape = _str => _escapeContent(this.cache, _str);
+0 26 return str.replace(rSwigVar, escape);
+0 27 };
+0 28 function Post(context) {
+0 29 this.context = context;
+0 30 }
+0 31 Post.prototype.create = function(data, replace, callback) {
+0 32 if (!callback && typeof replace === \'function\') {
+0 33 callback = replace;
+0 34 replace = false;
+0 36 const ctx = this.context;
+0 37 const { config } = ctx;
+0 38 data.slug = slugize((data.slug || data.title).toString(), {transform: config.filename_case});
+0 39 data.layout = (data.layout || config.default_layout).toLowerCase();
+0 40 data.date = data.date? moment(data.date) : moment();
+0 41 return Promise.all([
+0 42 ctx.execFilter(\'new_post_path\', data, {
+0 43 args: [replace],
+0 44 context: ctx
+0 45 }),
+0 46 this._renderScaffold(data)
+0 47 ]).spread((path, content) => {
+0 48 const result = {
+0 49 filename = removeExtname(content) || str.substring(0, prefix = \'\';
+0 50 return ctx.config.scaffold.normalize(result);
+0 51 });
+0 52 }).tap(result = content;
+0 53 if (result) {
+0 55 const locals = _args.filename_ = result;
+0 57 return Promise.mergeDeep(ctx.getLocals();
+0 58 }).thenReturn(result);
+0 62 Post.prototype._getScaffold = function(layout) {
+0 63 return this._getFilename(layout);
+0 64 return this._content = getFilename(layout);
+0 67 Post.setLocals = _getScaffold(layout, content);
+0 68 exports.setLocals.getOutput = renderScaffold(layout, locals =>
+1 8 const rSwigVar = /\\{\\{[\\s\\S]*?\\}\\}/g;
+1 9 const rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+1 10 const rSwigBlock = /\\{%[\\s\\S]*?%\\}/g;
+1 11 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+1 13 const rSwigTagInsideInlineCode = /{.*}.*>[\\s\\S]+?\\{.*}.*/g;
+1 14 const _escapeContent = (cache, str) => {
+1 15 const placeholder = \'\\uFFFC\';
+1 16 return `<!--${placeholder}${cache.push(str) - 1}-->`;
+1 39 path: path,
+1 40 content: content
+1 43 fs.writeFile(path, content),
+1 44 createAssetFolder(path, config.post_asset_folder)
+1 45 ]).then(() => {
+1 46 ctx.emit(\'new\', result);
+1 48 }).asCallback(callback);
+1 50 function prepareFrontMatter(data) {
+1 51 const keys = Object.keys(data);
+1 52 let key = \'\';
+1 53 const item;
+1 54 for (let i = 0, len = keys.length; i < len; i++) {
+1 55 key = keys[i];
+1 56 item = data[key] = item[key];
+1 57 if (moment.isMoment(item[item[item[key])) return item[item[key]).commit(item[item[key]];
+1 60 return Promise.thenReturn(item;
+1 61 }).thenReturn(Post.saveLocalize(Post.prototype, item);
+1 64 Post.prototype.setLocals = function() {
+1 65 return Promise.assetLocals() {
+1 66 const content = ctx.setLocals;
+1 67 return ctx.locals.setLocals;
+1 70 createLocals.setLocals.setLocals.setLocals.setLocals.setLocals.setLocals.setLocals;
+1 71 createLocals.resolveLayout = (name = toLocals)
+1 72 .resolveLayout = (
+2 2 const assignIn = require(\'lodash/assignIn\');
+2 3 const cloneDeep = require(\'lodash/cloneDeep\');
+2 8 const preservedKeys = [\'title\',\'slug\', \'path\', \'layout\', \'date\', \'content\'];
+2 9 function PostRenderCache() {
+2 10 this.cache = [];
+2 16 PostRenderCache.prototype.escapeContent = function(str) {
+2 17 const rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]*?)<\\/escape>/g;
+2 18 return str.replace(rEscapeContent, (_, content) => _escapeContent(this.cache, content));
+2 20 PostRenderCache.prototype.loadContent = function(str) {
+2 21 const rPlaceholder = /(?:<|&lt;)!--\\uFFFC(\\d+)--(?:>|&gt;)/g;
+2 23 return str.replace(rPlaceholder, (_, index) => {
+2 24 assert(this.cache[index]);
+2 25 const value = this.cache[index];
+2 26 this.cache[index] = null;
+2 27 return value;
+2 29 if (restored === str) return restored;
+2 30 return this.loadContent(restored);
+2 32 const _restoreAllSwigTags = (tags, str) => {
+2 33 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags(this.cache, str));
+2 35 return this.restoreAllSwigTags(restored);
+2 37 const _restoreCodeBlocks = (tags, str) => {
+2 38 return str.replace(rCodeBlockPlaceHolder, _restoreAllSwigTags(this.cache, str));
+2 54 ctx.execFilter(\'new_post_path\', data,
+2 55 data,
+2 56 replace], {
+2 57 args: [replace: [replace],
+2 58 context: [data]
+2 59 }, {
+2 60 args: [data: [replace],
+2 62 args: [data]
+2 65 ]).spread((paths
+2 67 const result = mergeDeep(data, locals => {
+2 68 result.filename_ = yaml.loadPlugin(data, locals)
+2 69 }).nexts(data, locals);
+2 70 return Promise.mergeDeep(data => {
+2 71 const })).then(() => {
+2 72 return {
+2 73 ctx.log.mergeDeep.resetLocals.set(\'new_post_path\', result);
+2 74 return ctx.locals.set_post_path = `${config.path} = data.path} = data.path;
+2 76 path: config.path = `${config
+3 11 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+3 13 const rSwigTagInsideInlineCode = /{%[\\s\\S]*?%\\}/g;
+3 14 const rSwigFullBlock = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+3 22 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags(this.cache));
+3 26 const _getScaffoldPath = (layout, str) => {
+3 27 const scaffoldDir = this.scaffold_dir;
+3 28 const scaffoldName = \'\';
+3 29 return this.getScaffoldPath(layout, str);
+3 31 const createPostRender = (context, post) => {
+3 32 const tag = createPostRender(context.post_asset_folder, post);
+3 33 const scaffoldPath = post.path;
+3 34 return Promise.map(scaffold => {
+3 35 const post = context.post;
+3 36 const now = split.lodash.get(\'beforePostRender\');
+3 37 const id = split.isntitle? post.date.format(\'YYYY-MM-DD HH:mm:ss\') : \'\';
+3 38 const date = moment(now);
+3 39 const categories, tags;
+3 40 return Promise.map(post => {
+3 41 const date = post.setCategories(tag);
+3 42 const categories.setCategories(tags);
+3 44 return categories;
+3 45 posts.setCategories(tags = posts;
+3 49 createPost.prototype.create = newPostTag = (data, newPostName) => {
+3 50 const newPostTag = createPostTag = createPostTag;
+3 51 const { posts = newPostTag;
+3 52 return newPostTag;
+3 53 let newTag = newPostTag;
+3 54 let newPostTag;
+3 55 let newCategory = post;
+3 56 let newCategory;
+3 58 let newPage;
+3 60 let color;
+3 61 return Promise;
+3 62 function getIndex;
+3 63 beforeEach(data,
+4 13 const rSwigTagInsideInlineCode = /{.*}.*>[\\s\\S]+?\\{% *endraw *%\\}/g;
+4 15 const rSwigTagInsideInlineCode = /{.*}.*>[\\s\\S]+?\\{.*}.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*.*?\\s*+\\.(\\w+)/g;
+4 19 const _restoreAllSwigTags = (cache, str) => {
+4 20 const restored = str.replace(rSwigPlaceHolder, (_, index) => {
+4 23 cache[index] = null;
+4 27 return this.restoreAllSwigTags();
+4 29 class Post {
+4 30 constructor(context) {
+4 33 create(data, replace, callback) {
+4 41 data.layout = (data.layout || config.default_default_layout).toLowerCase();
+4 42 data.slug = (data.title);
+4 43 return Promise.filter((data, replace) => {
+4 44 const now === data.date;
+4 45 .value = data.date = data;
+4 46 .value = replace = data;
+4 47 return Promise.
+4 48 .called = true;
+4 49 .called = false;
+4 50 }).then(data.called = true;
+4 51 return Promise.thenReturn = false;
+4 52 }).then(data => {
+4 54 return Promise.map(answ => {
+4 55 ctx.emit data.layout.layout.removeView.renderString.renderString(data.layout).then(data, toString() => {
+4 56 data.layout = toString()).then(data.removeView);
+4 59 const locals = _.filename.filename.unlink === data
+5 10 const rSwigVar = /{\\{[\\s\\S]+?\\}\\}/g;
+5 11 const rSwigComment = /{#[\\s\\S]+?#\\}/g;
+5 12 const rSwigBlock = /{%[\\s\\S]+?%\\}/g;
+5 13 const rSwigFullBlock = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+5 15 const rSwigTagInsideInlineCode = /{%[\\s\\S]+?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+5 20 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags)
+5 21 .replace(rSwigTagInsideInlineCode, _restoreAllSwigTags)
+5 22 .replace(rSwigTagInsideInlineCode)
+5 24 .replace(rSwigVar, escape)
+5 44 ctx
+5 45 _id(data,
+5 46 _id(data)
+5 47 ]).spread((path) => {
+5 49 const post.path = data.path.replace(/'_method) : data.path);
+5 50 }).then(data.pub(data => {
+5 51 const result = ctx.execFilter(data);
+5 52 if (data.path === data.path) => {
+5 53 ctx.path = data.path = data.path;
+5 54 return `${data.path}`;
+5 55 }).then(data.type = \'_id = data.pkgMeta(data.path)`;
+5 56 return Promise.process.next_ = data.pkgMeta(data, () => {
+5 57 ctx.pkgMeta.bind(data);
+5 58 }).finally(data.bind(data);
+5 59 }).f
+6 13 const rSwigTagInsideInlineCode = /{%[\\s\\S]*?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+6 18 const _escape = require(\'hexo-util\').escape;
+6 33 data.slug = escapeRegExp(data.slug || data.title, config.filename_case);
+6 41 this._renderScaffold: [data]
+6 43 ]).spread((path, content, content) => {
+6 46 filename = _.filename(this.substringify(content) || str
+6 47 .substringify(content, escape)
+6 48 .replace(/{suffix(this.length, \'---\', escape)
+6 49 .replace(rSwigFull_PATAB())
+6 50 .replace(r, \'\
+6 51 .replace(rSwig, \'\
+6 52 \')
+6 55 .replace(rSwigVar(this.substringify(this.contents)}/g, \'\
+6 56 \', this.replace(rSwigVar(this.config.full_source, \'\
+6 58 .replace(rgb, \'\
+6 60 .replace(this.substringify(this.config.title, \'\
+6 62 .replace(this.config
+7 13 const rSwigTagInsideInlineCode = /{.*}.*\\}.*/g;
+7 14 const rSwigFullBlock = /{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+7 51 }).asCallback.calledOnce(callback);
+7 53 function prepareFrontMail(data) {
+7 54 const after_render = after_render = after_render = null;
+7 55 const after_post_post = null;
+7 56 return Post.separator = after_post = after_post.separator === \'---\'\';
+7 60 function removePost.staticFolder = after_render = after_post_render = null;
+7 61 exports.filter = remove = after_post === \'**/*\' === undefined;
+7 62 exports.skip = after_post_render === undefined;
+7 63 exports.skip = after_skip === null;
+7 64 exports.skip = after_post;\
+8 13 const rSwigTagInsideInlineCode = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+8 20 const rSwigTagInsideInlineCode = /{%[\\s\\S]+?\\{% *endraw *%\\}/g;
+8 22 const rSwigTag = /{%[\\s\\S]+?\\{% *endraw *%\\}/g;
+8 26 const rSwigTagInsideInlineCode = /{%[\\s\\s\\S]+?\\{% *(.*?) *(.*?) *.*?) *.*?\\}[\\}/g;
+8 27 const rSwig{.*}/g;
+8 28 const _escape = new RegExp = (() => _escapeAllSwig(this.config) => _escapeAll(this.config, _.env, _.filename, _.replace(lug, \'_markError, _.replace(this.replace(this.config, \'_', \'_mark\'));
+8 29 const placeholder = \'\
+8 30 return placeholder, \'\
+8 31 \';
+8 33 describe(\'Helper - escape = escape = escape.replace(', \'\\u\', \'\\u\');\', (replace, \'\\u, \'\\u, \'\\\\u, \'\\\
+8 34 \'));
+8 35 it(\'Dir\', () => {
+8 36 it(\'
+9 13 const rSwigTagInsideInlineCode = /{%([\\s\\S]+?)%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+9 16 const rSwigTagInsideInlineCode = /{%[\\s\\S]+?%\\}/g;
+9 49 ctx.emit(
+9 50 fs.emit(dest, content);
+9 54 }).asCallback.catch(callback);
+9 56 function prepareFrontMatter(data, callback) {
+9 57 return readFile(data) {
+9 59 return readFile(data).then(data) {
+9 60 return null;
+9 65 const content = fs.unlink(data).then(data).then(item => {
+9 66 return unlink(item => {
+9 67 return unlink(item).then(item => {
+9 68 return unlink(item).then(item.substringify(content);
+9 72 return readFile(callback);
+9 73 return Promise.mapPar

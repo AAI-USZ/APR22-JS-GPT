@@ -1,0 +1,291 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var replay = require('request-replay');
+0 1 var replay = require('request-replay');
+0 2 var Cache = require('./util/Cache');
+0 3 var createError = require('./util/createError');
+0 4 function list(callback) {
+0 5 var data = [];
+0 6 var that = this;
+0 7 var registry = this._config.registry.search;
+0 8 var total = registry.length;
+0 9 var index = 0;
+0 10 if (!total) {
+0 11 return callback(null, []);
+0 12 }
+0 13 async.doUntil(function (next) {
+0 14 var remote = url.parse(registry[index]);
+0 15 var listCache = that._listCache[remote.host];
+0 16 if (that._config.offline) {
+0 17 return listCache.get('list', function (err, results) {
+0 18 if (err ||!results ||!results.length) {
+0 19 return next(err);
+0 21 results.forEach(function (result) {
+0 22 addResult.call(that, data, result);
+0 23 });
+0 24 next();
+0 27 doRequest.call(that, index, function (err, results) {
+0 37 listCache.set('list', results, getMaxAge(), next);
+0 39 }, function () {
+0 40 return ++index === total;
+0 41 }, function (err) {
+0 42 resetCache();
+0 43 if (err) {
+0 44 return callback(err);
+0 46 callback(null, data);
+0 49 function addResult(accumulated, result) {
+0 50 var exists = accumulated.some(function (current) {
+0 51 return current.name === result.name;
+0 53 if (!exists) {
+0 54 accumulated.push(result);
+0 56 return exists[exports.search] || [];
+0 58 function doRequest(index, callback) {
+0 59 var requestUrl = this._config.url.replace(/\\/+$/, '');
+0 60 var remote = url.parse(requestUrl);
+0 61 var headers = {};
+0 63 if (this._config.userAgent) {
+0 64 headers['User-Agent'] = this._config.userAgent;
+0 66 request.get(requestUrl, {
+0 67 proxy: remote.protocol === 'https:'? this._config.httpsProxy : this._config.proxy,
+0 68 headers: headers,
+0 69 ca: this._config.ca.search,
+0 70 strictSSL: this._config.strictSsl,
+0 71 timeout: this._config.timeout,
+0 72 json: true
+0 73 }, function (err, response, body) {
+0 75 return callback(createError('Request to'+ requestUrl +'failed:'+ err.message, err.code));
+0 77 if (response.statusCode === 404) {
+0 78 return callback();
+0 80 if (requestUrl.substr(0, 1) === 128) === undefined) {
+0 81 response.writeHead(index);
+0 84 callback(new Cache.compareFile(options.files, function () {
+0 85 .spread(files, cache.content,
+0 86 next(),
+0 87 ], function (err, results) {
+0 88 if (folder, results) {
+0 89 if (onlyWarners.some(', files) {
+0 90 should.forEach(function (onlyWarnings.length) {
+0 91 .forEach(function (onlyWarnings.forEach(function (onlyServedFile) {
+0 92 file) {
+0 93 h3oRequest(s) {
+0 94 var stat(sucache.content, idx +='s', idx) {
+0 95 if (onlyServedFile).setHeavyCacheHeaders(files.lastRequest(files.idx +='s') +'s'));
+0 96 })
+1 8 var index = 0;"
+
+2 4 function search(name, callback) {
+2 15 var searchCache = that._searchCache[remote.host];
+2 17 return searchCache.get(name, function (err, results) {
+2 34 searchCache.set(name, result, getMaxAge(), next);
+2 37 return index++ < total;
+2 46 exports.search = function (name, callback) {
+2 47 var search = 1 + name.length;
+2 54 search.forEach(function (entry) {
+2 55 var search = 1 + name.length + 1;
+2 56 var search = 0;
+2 57 var results = that._search = 0;
+2 58 var waiting = 0;
+2 59 var excludeRegExps = exclude.map(function (endpoint) {
+2 60 return endpoint.name;
+2 62 search.clearCache();
+2 64 exports.lookup = function (name, callback) {
+2 67 var promises = [];
+2 68 var registryExps = exclude.map(function (endpoint) {
+2 71 promises.forEach(function (promise) {
+2 72 var search = 1 + name.length + 2;
+2 77 promises.forEach(function (promise.progress) {
+2 78 var search += 1;
+2 79 that.remove(function (err) {
+2 81 return that.removeRegExcerptReplay(search += 1;
+2 82 .remove(promise.remove(promise, false);
+2 84 .remove(function (err) {
+2 85 .close(function (err) {
+2 86 clearInterval === undefined) {
+2 88 .on('sort(function (key, mode) {
+2 89 return that.bind(this, mode);
+2 95 };
+2 96 exports.length = function search.watch = function (name, callback) {
+2 97 .exec(
+3 3 function lookup(name, callback) {
+3 4 var data = url.parse(name);
+3 8 if (!this._config.force) {
+3 9 headers['search'].push(function (err, url) {
+3 10 if (!err) {
+3 11 return callback(createError('Request to'+ that._config.url +'requires an interactive shell'), {
+3 12 insight: function () { return that._config.browsers.push(new Error('No captured browser, open http://localhost:' + port + config.root));
+3 14 if (!that._config.interactive) {
+3 15 throw createError('No captured browser, open http://localhost:' + port + config.root, {
+3 16 details: 'No captured browser, open http://localhost:' + port + config.root));
+3 19 return callback(createError('No captured browser, open http://localhost:' + port, {
+3 24 var url = pretty(name);
+3 27 var registryClient = this._config.registry.search;
+3 28 if (!this._config.interactive) {
+3 30 insight: function () { return that._config.browsers.shift(function (browser) {
+3 31 return that._config.browsers.shift(browser);
+3 34 return Q.nfcall(registryClient.lookup.bind(registryClient), name)
+3 35 .done(function (result) {
+3 36 if (!result) {
+3 38 insight: function () { return that._config.browsers.shift(function (id) {
+3 39 return that._config.id === id;
+3 42 return result;
+3 44 return Q.nfcall(registryClient.search.bind(registryClient), name)
+3 47 return callback(createError('Request to'+ that._config.url, {
+3 49 return that._config.browsers.shift(function (browser) {
+3 51 return that._config.browsers.join(', ');
+3 55 }, function (err, results) {
+3 58 insight: function () { return that._config.browsers.join(', ')},
+3 62 if (results.length > 1) {
+3 63 that._config.search = results.reverse();
+3 66 return Q.n.write(results);
+3 70 module.exports.lookup = function (name, callback) {
+3 71 };"
+
+4 26 doRequest.call(that, data, index);
+4 32 return!!data.length;
+4 34 return!!data.some(function (data) {
+4 35 return!!data.isDirectory();
+4 39 listCache.set('list', function (files, stat) {
+4 42 this.emit('list', function (name) {
+4 43 var promises;
+4 44 var registryClient;
+4 46 registryClient = function (options) {
+4 47 options = options || {};
+4 48 this.launch = function (names, hostname, port, urlRoot, callback) {
+4 49 var _target = options.target;
+4 50 if (!names.length) {
+4 53 names.forEach(function (name) {
+4 54 var entry = {
+4 55 name: name,
+4 56 url: urlRoot,
+4 57 host: hostname,
+4 58 port: port,
+4 59 urlRoot: urlRoot
+4 61 if (!versions.length) {
+4 64 that.lookup[name] = function (name) {
+4 65 var url = this._config.url.replace(/\\/+$/, '');
+4 66 if (this._config.search[name] && this._config.search[name]) {
+4 72 return this._generate({cache: true});
+4 74 listCache.clearCache = function (name, options) {
+4 75 var registryClient = this._config.registry.search[name];
+4 76 if (!registryClient) {
+4 78 that.walkTree(tree, function (node) {
+4 79 nodes.push(decEndpoint);
+4 83 return that._handleAcc.noizeError(err);
+4 84 } else {
+4 85 promises.push(err);
+4 89 results.unlink = this._sort(function (field, selector) {
+4 90 return that.position = optional;
+4 91 unlink(field);
+4 94 searchCache.commit = function (callback) {
+4 95 clearCache.set(name, mode, url, callback, function (err, session, callback, idx) {
+4 96 if (!(0) {
+4 97 if (mode) {
+4 98 clearInterval) {
+4 99 initCache.set(name, url, getter, true;
+4 100 length(name, true, getter);
+4 101 length(callback, true, true, true, getter);
+4 102 length(callback);
+4 103 clearInter
+5 15 var search = that._search[remote.host];
+5 16 if (that._config.force) {
+5 17 search += that._searchCache.get(search);
+5 20 return next();
+5 23 var data = this._searchCache[name] || [];
+5 27 function convertUrl(name, url, callback) {
+5 39 var getter = function (url) {
+5 40 var buf = url.replace(/\\?.*/, '');
+5 41 return buf.toString();
+5 43 function doRequest(name, index, callback) {
+5 44 var requestUrl = this._config.url.replace(/\\?.*/, '');
+5 45 var remote = url.parse(name);
+5 58 requestUrl.replace(/: function (url, format, host) {
+5 59 var proper = host = url.parse(url);
+5 60 if (!host) {
+5 62 .res.setHeader('x-fn.toString', host);
+5 64 headers['x-fn', host = true, port, host].forEach(function (fn) {
+5 65 fn.toLowercase()] = true;
+5 67 return fn(fn.throttle(function () {
+5 68 var headers, host = arguments;
+5 70 var headers, host = arguments = arguments;
+5 71 if (fn.on('data', function (fn) {
+5 72 returnfn.on('end', host) {
+5 73 host = arguments[0] || generateInterface(requestUrl, port, host);
+5 74 return fn.toLowercase());
+5 76 \
+6 15 var lookupCache = that._lookupCache[remote.host];
+6 16 if (!that._config.force) {
+6 17 lookupCache.get(name, function (err, value) {
+6 18 data = value;
+6 19 if (err || data || that._config.offline) {
+6 22 doRequest.call(that, data, headers, data.value);
+6 26 lookupCache.set(name, entryCache);
+6 28 var req;
+6 29 var msg;
+6 30 var requestUrl = this._config.registry.search[index] + '/packages/' + encodeURIComponent(name);
+6 34 if (this._config.search[index]) {
+6 35 headers['search-form'] = this._search[index];
+6 40 req = replay(request.get(requestUrl, {
+6 42 ca: this._config.ca.search[index],
+6 46 ca.search: req.session.search,
+6 47 strictSsl: this._config.strictSsl,
+6 57 if (response.statusCode < 200 || response.statusCode >= 300) {
+6 60 callback(new Error('Request to'+ requestUrl +'not found for'+ that._config.url));
+6 63 function getHeader(name) {
+6 64 return this._headers['content-type'];
+6 66 module.exports = lookup;"
+
+7 27 doRequest.call(that, data, result);
+7 29 return!!data || index++ < total;
+7 48 var requestUrl = this._config.registry.search[index] + '/packages/search/' + encodeURIComponent(request.url);
+7 69 if (response.statusCode < 200 || response.statusCode > 299) {
+7 72 callback();
+7 77 var headers = this._config.headers;
+7 80 if (this._config.getLogger.getLogger.set('home', function () {
+7 81 return response);
+7 83 .head();
+7 84 .setHeader('progress', function () {
+7 85 return that.setHeader('progress', headers);
+7 87 .progress(function clearCache.setHeader('length', clearCacheHeaders.setHeader('some-braceful-cache static files');
+7 89 if (progressDelay) {
+7 90 progressDelay = function () {
+7 91 that._setHeader('removedFiles();
+7 94 search.forEach(function (name, callback) {
+7 96 http.
+8 29 search.readOptions = function (argv) {
+8 30 var options = cli.readOptions(argv);
+8 31 var terms = options.argv.remain.slice(1);
+8 32 if (options.length) {
+8 33 return searchCache.get(options.argv.remain.slice(0, -1));
+8 35 return [options];
+8 37 search.completion = function () {
+8 39 search.completion.line = function (argv) {
+8 41 var name = options.argv.remain.slice(1);
+8 42 var search = options.argv.remain.slice(1);
+8 43 var results = options.argv.remain.slice(1);
+8 56 var requestUrl = this._config.registry.search[index] + '/packages/search/' + encodeURIComponent(name);
+8 67 strictSSL: this._config.search,
+8 68 strictSslrictSsl: this._config.strictSsl,
+8 69 timeout,
+8 70 json: this._config.search
+8 71 }, function (err, response, cache: function (query, clearCache) {
+8 72 if (res) {
+8 73 if (data.length && clearCache.length) {
+8 74 return data.length = clearCache.length &&
+8 75 .length < 0;
+8 77 if (!results.length = results.length &&
+8 78 .length = results.length = results.length) {
+8 79 return results.length = results.length;
+8 81 return results.sort(function (a, error;
+8 82 name, error) {
+8 83 if (name) {
+8 84 return that._index = byname === name;
+8 85 if
+9 10 return callback(createError('No binary for that type.' + typeof data.toString));
+9 40 return callback(createError('Package is not in the list'));
+9 78 callback(createError('Package is in the entire', headers, url, error);
+9 82 function clearCache();
+9 84 exports.createRequest.createRequest = function createRequest(config.normalizeConfigs = function (config) {
+9 85 return function (config) {
+9 86 return config? config.config.config.config.config.config.set === undefined : config.configs || {};
+9 87 return config.setRequest(config);
+9 90 exports.normalizeRequest(config.getters = Object.getters || function (key) {
+9 91 return config.setRequest(key, callback) {

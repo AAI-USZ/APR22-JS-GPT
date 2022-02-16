@@ -1,0 +1,43 @@
+Min editdistance: 12.00
+Closest candidate: 3 6 partials: options
+0 1  return res.locals })"
+
+1 1  return res.contentType(9876)
+1 2 })"
+
+2 1  return this.partial('content', options)
+2 2 .exec('exit status 0')
+2 3 .expect(200)
+2 4 .expect(200, done)
+2 5 })
+2 7 }
+2 10 })'
+
+3 1  return set('views') + '/' } })
+3 2 }, __extname({
+3 3 partial: function(view, options) { return set(\'views\') + '/partials' })
+3 5 views: view,
+3 6 partials: options
+4 1  return this.renderSync({ path: view, options: options })
+4 2 }, {
+4 3 options: options,
+4 4 type: \'hidden"
+5 1  return res.contentType(extname(view)).render(options || { done: options.done })
+6 1  return res.locals } })
+6 3 options: {
+6 4 type: 'views',
+6 5 locals: {
+6 6 body: view,
+6 7 filename: path
+7 1  return res.headers['content-type'] || { set('content-type') }
+7 5 locals: { 'body-type': view },
+7 6 content: {
+7 7 \'Content-Type': page.content
+8 3 partial: function(event, options) { return set(\'views\', undefined, options)
+8 4 }), __extname({
+8 6 locals: { {
+8 7 body: \'<h1>Forum Thread</h1><p>\
+8 8 <p>Visit view for <span>#{ options.partial }}</p>`,"
+
+9 1  return set('home') + '/' })
+9 2 }, function(){ return set('views') + '/' })

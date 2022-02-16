@@ -1,0 +1,186 @@
+Min editdistance: 1.00
+Closest candidate: 1 4 swig = require('swig'),
+0 1 fs = require('graceful-fs'),
+0 2 pathFn = require('path'),
+0 3 moment = require('moment'),
+0 4 util = require('../../util'),
+0 5 yfm = util.yfm,
+0 6 escape = util.escape.path;
+0 7 module.exports = function(data, callback){
+0 8 var Page = hexo.model('Page'),
+0 9 path = data.path,
+0 10 doc = Page.findOne({source: path}),
+0 11 getOutput = hexo.render.getOutput;
+0 12 if (data.type ==='skip' && doc){
+0 13 return callback();
+0 14 }
+0 15 if (data.type === 'delete'){
+0 16 if (doc){
+0 17 hexo.route.remove(doc.path);
+0 18 doc.remove();
+0 19 } else {
+0 20 _output({path: path});
+0 23 async.auto({
+0 24 stat: function(next){
+0 25 data.stat(next);
+0 26 },
+0 27 read: function(next){
+0 28 data.read({cache: true}, next);
+0 30 }, function(err, results){
+0 31 if (err) return callback(err);
+0 32 var stat = results.stat,
+0 33 link = '',
+0 34 meta;
+0 35 meta = yfm(results.read);
+0 36 meta.content = meta._content;
+0 37 delete meta._content;
+0 38 meta.source = path;
+0 39 meta.raw = results.read;
+0 40 if (meta.date){
+0 41 if (!(meta.date instanceof Date)){
+0 42 meta.date = moment(meta.date, 'YYYY-MM-DD HH:mm:ss').toDate();
+0 45 meta.date = stat.ctime;
+0 47 if (meta.updated){
+0 48 if (!(meta.updated instanceof Date)){
+0 49 meta.updated = moment(meta.updated, 'YYYY-MM-DD HH:mm:ss').toDate();
+0 52 meta.updated = stat.mtime;
+0 54 if (meta.permalink){
+0 55 var link = meta.permalink;
+0 56 delete meta.permalink;
+0 58 var link = path;
+0 60 var pageLink = getPagePath(data.source);
+0 61 if (!pageLink.length) return callback();
+0 62 pageLink += meta.permalink;
+0 63 delete pageLink;
+0 64 if (prevNext && current > 1){
+0 65 var target = pathFn.join(source.substring(0, 1), path);
+0 66 meta.adapters.push(target);
+0 69 var src = pathFn.join(source.substring(baseDir.length), path);
+0 70 meta.categories.push(data.categories);
+0 74 var target = pathFn.join(source.substring(baseDir.length + 1), path);
+0 75 meta.tags.push(data.tags);
+0 77 if (meta.categories){
+0 78 var categories = [];
+0 79 meta.categories.forEach(function(cat){
+0 80 Category.push(cat.name);
+0 81 });
+0 82 for (var i=0, len="; i<len; i++){
+0 83 var item = categories.categories.length;
+0 86 if (1){
+0 87 var i++categories.push(siteLink + i;
+0 90 pageLink += metaPost.categories.categories.push(siteLink);
+0 93 return locals = pageLink(locals);
+0 94 };"
+
+1 2 path = require('path'),
+1 4 swig = require('swig'),
+1 5 util = require('../util'),
+1 6 file = util.file2,
+1 8 escape = util.escape;
+1 9 var config = hexo.config,
+1 10 scaffoldDir = hexo.scaffold_dir;
+1 11 var scaffolds = {
+1 12 post: [
+1 13 'title: {{ title }}',
+1 14 'date: {{ date }}',
+1 15 'tags:',
+1 16 '---'
+1 17 ].join('\
+1 18 ') + '\
+1 19 ',
+1 20 page: [
+1 27 normal: [
+1 28 'layout: {{ layout }}',
+1 35 '
+1 36 };
+1 38 var scaffoldDir = hexo.scaffold_dir;
+1 39 var scaffoldPath = path.join(scaffoldDir, data.layout);
+1 40 var escapeContent = function(content){
+1 41 return content.replace(/<[^\
+1 42 \\t ]*>/g, '');
+1 45 var scaffoldPath = scaffoldDir + path.join(scaffoldDir, '.md');
+1 47 var scaffoldPath = scaffoldDir + path.join(post.md, '.md');
+1 49 var scaffoldFile = fs.readFileSync(scaffoldFile).toString;
+1 50 var scaffoldPath = fs.readFileSync(scaffoldFile);
+1 51 var spawn = function(data, callback){
+1 52 spawn(data, callback);
+1 55 baseDir = hexo.base_dir;
+1 56 var scaffoldPath = baseDir + path.join(baseDir, '../..');
+1 57 \
+2 5 HexoError = require('../error');
+2 6 var extend = hexo.extend,
+2 7 processors = extend.processor.list(),
+2 8 sourceDir = hexo.source_dir;
+2 9 var model = hexo.model,
+2 10 Cache = model('Cache');
+2 11 var processingFiles = {};
+2 12 var _getProcessor = function(path){
+2 13 var tasks = [];
+2 14 processors.forEach(function(item){
+2 15 var match = path.match(item.pattern);
+2 16 if (!match) return;
+2 17 var params = {};
+2 18 for (var i=0, len=match.length; i<len; i++){
+2 19 var name = item.params[i - 1];
+2 20 params[i] = match[i];
+2 21 if (~files.indexOf(name)!== -1) return;
+2 24 tasks.push({
+2 25 fn: item.fn,
+2 26 params: params
+2 29 return tasks;
+2 31 module.exports = function(files, callback){
+2 32 if (!Array.isArray(files)) files = [files];
+2 33 hexo.emit('processBefore');
+2 34 async.each(files, function(item, next){
+2 35 if (_getProcessor(item)){
+2 36 var tasks = getProcessor(item);
+2 37 processingFiles[path.extname(item)] = true;
+2 38 route.destroy(item);
+2 39 next();
+2 41 var next();
+2 43 }, function(){
+2 44 if (processingFiles[path.extname(item)]) return next();
+2 45 processingFiles[path.extname(item)].forEach(function(file){
+2 46 file.on('data', function(data){
+2 47 processors.push({
+2 48 fn: item,
+2 54 }, callback);
+3 3 _ = require('lodash'),
+3 5 util = require('./util'),
+3 7 yfm = util.yfm;
+3 9 renderer = extend.renderer.list(),
+3 10 rendererSync = extend.renderer.list(true),"
+
+4 9 rendererSync = extend.renderer.list(true),
+4 10 helper = extend.helper.list(),
+4 11 swigInit = false,"
+
+5 2 extend = require('../../../extend'),
+5 3 route = require('../../../route'),
+5 4 paginator = require('./paginator');
+5 5 extend.generator.register(function(locals, render, callback){
+5 6 var config = hexo.config.tag;
+5 7 if (!config) return callback();
+5 8 async.forEach(locals.tags.toArray(), function(item, next){
+5 9 var path = item.path;
+5 10 item.tag = item.name;
+5 11 if (config == 2){
+5 12 paginator(path, item, 'tag', render);
+5 14 route.set(path, function(func){
+5 15 var result = render('tag', path, item);
+5 16 if (!result) result = render('archive', path, item);
+5 17 if (!result) result = render('index', path, item);
+5 18 func(result);
+5 22 });"
+
+9 6 module.exports = function(locals, render, callback){
+9 8 log = hexo.log;
+9 9 if (config.exclude_generator && config.exclude_generator.indexOf(config.exclude_generator) > -1) return callback();
+9 10 log.i('Generating posts.');
+9 11 async.forEach(locals.posts.toArray(), function(item, next){
+9 12 var layout = item.layout? item.layout : 'post',
+9 13 permalink = config.permalink;
+9 14 render(layout, item, function(err, result){
+9 15 if (err) throw err;
+9 16 if (result.readable){
+9 17 file.write(permalink, result, next);

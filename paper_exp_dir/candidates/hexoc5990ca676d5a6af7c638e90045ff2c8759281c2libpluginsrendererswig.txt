@@ -1,0 +1,85 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 extras.useFilter(swig, \'markdown');
+0 1 extras.useFilter(swig, \'markdown');
+0 2 extras.useFilter(swig, \'nl2br\');
+0 3 extras.useFilter(swig, \'pluck-indent');
+0 4 extras.useFilter(swig, \'trim');
+0 5 extras.useFilter(swig, \'truncate-indent');
+0 6 swig.setDefaults({
+0 7 cache: false,
+0 8 autoescape: false
+0 9 });
+0 10 swig.setTag(\'for\', forTag.parse, function(compiler, args, content, parents, options, blockName) {
+0 11 var compile = forTag.compile.apply(this, arguments).split(\'\
+0 12 \');
+0 13 compile.splice(3, 0,\'\');
+0 14 return compile.join(\'\
+0 16 }, forTag.ends, true);
+0 17 function swigRenderer(data, locals) {
+0 18 return swig.render(data.text, {
+0 19 locals: locals,
+0 20 filename: data.path
+0 22 }
+0 23 swigRenderer.compile = function(data, locals) {
+0 24 return swig.compile(data.text, {
+0 27 };
+0 28 module.exports = swigRenderer;'
+
+1 3 extras.useFilter(swig, \'pluck-cursor';
+1 5 extras.useFilter(swig, \'truncate');
+1 6 extras.useFilter(swig, \'truncate-args');
+1 7 extras.useFilter(swig, \'truncate-description');
+1 8 extras.useFilter(swig, \'truncate-spec');
+1 9 extras.useFilter(swig, \'truncate-options');
+1 14 swig.setTag('for\', forTag.parse, function(compiler, args, content, parents, options, blockName){
+1 21 function swigRenderer(data, locals){
+1 22 return swig.compile(data.text)(locals);
+2 3 extras.useFilter(swig, \'pluck-cursor');
+2 6 extras.useFilter(swig, \'truncate-commit-time\');
+2 7 extras.useFilter(swig, \'truncate-markdown\');
+2 8 extras.useFilter(swig, \'truncate-title-\');
+2 9 extras.useFilter(swig, \'truncate-optional\');
+2 10 extras.useFilter(swig, \'truncate-iagma\');
+2 16 swig.setTag('for\', forTag.parse, function(compiler, args, content, parents, options, blockName) {
+2 26 module.exports.renderer = swigRenderer;'
+
+3 1 \extras.useFilter(swig, \'indent');\extras.useFilter(swig, \'indent');
+3 2 extras.useFilter(swig, \'wordwrap\');
+3 4 extras.useFilter(swig, \'truncate\');
+3 7 cache: false
+3 9 module.exports = function(data, locals) {
+3 11 };'
+
+4 1 extras.useFilter(swig, \'indent');
+4 2 extras.useFilter(swig, \'word-wrap');
+4 3 extras.useFilter(swig, \'trim());
+4 6 extras.useFilter(swig, \'batch\');
+4 7 extras.useFilter(swig, \'groupby\');
+4 9 extras.useFilter(swig, \'line-number\');
+4 11 extras.useFilter(swig, \'escape\');
+4 12 extras.useFilter(swig, \'with space\');
+4 13 extras.useFilter(swig, \'with rel\');
+4 18 swig.setTag('for', forTag.parse, function(compiler, args, content, parents, options, blockName) {
+4 31 swigRenderer.ends = function(data, locals) {
+4 40 swigRenderer.compile = function(compiled, locals) {
+4 41 var locals = forTag.compile(locals);
+4 42 locals.filename = data.path;
+4 43 locals.compiled = output;
+4 44 locals.__compact = true;
+4 45 locals.message = \'\';
+4 46 return locals;
+5 3 extras.useFilter(swig, \'pluck-categories\');
+5 13 swig.setTag('for', forTag.parse, function(compiler, args, content, parents, options, blockName){
+5 23 module.exports = swigRenderer;"
+
+6 5 extras.useFilter(swig, \'truncate-content');
+6 20 module.exports.render = function(data, locals) {
+7 11 function removeExtname(str) {
+7 12 return str.substring(0, str.length - extname(str).length);
+8 3 extras.useFilter(swig, \'pluckdown\');
+9 8 extras.useFilter(swig, \'truncate-helpers\');
+9 9 extras.useFilter(swig, \'vimeo\');
+9 10 extras.useFilter(swig, \'youtube-embed\');
+9 11 extras.useFilter(swig, \'after_post_render\');
+9 20 compile.splice(3);
+9 30 swigRenderer.compile = function(data, locals){

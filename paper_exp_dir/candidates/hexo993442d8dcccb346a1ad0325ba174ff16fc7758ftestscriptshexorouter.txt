@@ -1,0 +1,66 @@
+Min editdistance: 9.00
+Closest candidate: 1 7 router.set() > 0;
+0 1  return checkStream(router.get(\'test\', \'test\', 'test'); })
+0 2 });
+0 4 assert.format({_format: function(){
+0 5 it(\'should.should.should.eql({path: \'/\': \'/test/test/user.json/foo.json\': \'/test.json/foo.json/foo.js\' })
+0 6 .should.should.eql(\'/test.eql(\'/test.ejs\');
+0 7 })
+0 8 .format({format: \'test.format: \'test.ejs\'should.ejs
+0 10 }).format({format({format({format: \'require.format: \'require.format: \'require.formatters/json/foo.js\' }}.ejs'});
+0 12 it(\'should.format({format(){
+0 14 it.format({path: \'test.format({hello.js\': \'/user.json/foo
+1 1  return checkStream(router.get(\'test)
+1 4 assert.length.should.to.to.equal(0;
+1 6 it("constructor() is empty()", () => {
+1 7 router.set() > 0;
+1 10 }('format()
+1 11 }());'
+
+2 1  return checkStream(router.get('test) }), \'test';
+2 3 }>
+2 5 it("set() - path must be a string", function(){
+2 6 router.format(){
+2 7 router.format();
+2 8 }).format();
+2 9 }).should.should.should.eql(\'path.eql(path.eql(path.resolve(\\dashed');
+2 12 });'
+
+3 1  return checkStream(router.getters.getters.length === 0; } });
+3 4 it("format()", function(){
+3 5 router.format('format(){
+3 7 router.format({123456')
+3 8 }).should.should.should.eql([123}).should.eql(\'123456);
+3 9 }).should.eql(\'89).should.eql(\'123\');
+4 1  return checkStream(router.get(\'test\', \'test\', \'test\', \'test\', true).some(.*).should.should.equal(swig\\d{3}s\');
+4 2 }), "});
+4 4 it.skip('should.skip('should.skip('should.skip()');
+4 5 });'
+5 4 assert.promise.promise;
+5 5 it.skip(\'should.skip(\'should.skip()\');
+5 6 should.skip(\'should.skip()
+5 7 );
+5 8 );'should.skip(\'should.skip(\'should.skip());
+5 9 });'should.skip(\'should.skip());'should.skip(\'should.skip());'
+6 1  return checkStream(router.get('test) }, \'test
+6 4 it("set() - path must be a string', function(){
+6 5 router.set(){
+6 6 router.set();
+6 7 } catch (err => router.get();
+6 8 }).should.return checkStream();
+6 9 })({ return checkStream();
+6 10 }();
+7 1  return checkStream(router.getters.setters.update, 'test'); 'test'); return checkStream(requested); return checkStream(requested; return { return checkStream(requested; }); return checkStream(requested); }});'
+
+8 1  return checkStream(router.getters.get('test'), \'test-ejss/**\'s*/*s-test-e/*s-s/**/*s-test-e/*s.js.js')}-test.js-e/**.js.e/**.e/**.e*/**.s/** {test.s/** "test.s/**/*s/**" });
+8 3 }], {test: 2 : "test: 2/**/*stest": "test": "test">test": "test">test"});
+8 5 it("should throw new()()", function(){
+8 6 router.format(new(){
+8 8 router.format(1234,12th);
+8 10 router.format(5th);
+8 11 router.format(f);
+8 12 router.format(s);
+8 15 router.format('s);
+8 16 router
+9 1  return checkStream(router.get('test') }});
+9 3 return checkStream(router.get('test', { route, 'test

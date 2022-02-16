@@ -1,0 +1,56 @@
+Min editdistance: 27.00
+Closest candidate: 6 7 assert.sedule : function(){
+0 1  '\
+0 2 return; } });" }}");"
+1 1  'heys= pretty_count: 3; })"something', { 'else : 'else() })"
+2 1 assert.get('/admin/count : function (sess', 'heys= 'else') });" });" }});"
+
+3 1  '2 cool: 'dev') })
+3 2 })"return; })
+3 3 })
+3 5 describe('#create(){
+3 6 it('should have.skip()', () => function () => function () => function () {
+3 7 return;
+3 8 assert.skip('should.skip('should.skip()', () => function () => function () => {
+3 9 return '; })
+3 12 describe('should.skip('should.skip()', () => {
+3 13 });"
+
+4 1  'dev'); } });
+4 2 assert.get('/ { 'dev'));"
+5 1  })
+5 2 return '\
+5 3 assert.response: function () { extendsOnly posts : function () { 'Express.should.join('/' } });" });" });
+5 4 assert.deepEqual(app, "\
+5 5 assert.should.deepEqual(app, '#settings' });
+5 6 assert.should.should.equal(app, '0, 'false');
+5 7 },'sour : 'one');
+5 9 );
+5 10 it('should.test.skip('should.skip('should.should
+6 1 assert.get('/ += '/*' },"redirects') } });
+6 2 return app.get('/' })
+6 4 });
+6 5 assert.get('/
+6 6 })"sedule: function(){ next : '', function(){
+6 7 assert.sedule : function(){
+6 8 assert.throws[0, 'test' }, function(){
+6 9 assert.throws[0].should.should.returnsucFirst(1]() });
+6 10 }
+6 12 }).seap(function test : function(){
+6 13 assert.th
+7 1 return '0 } });
+7 2 assert.get('/ '/*', function(res.get('/user/user/:id/*', function(val) { '; found : ';' } '; '; '; '; 'test' }' }') }), 'test' });
+7 3 assert.should.skip('something', function(){
+7 4 assert.skip('something', function(){
+7 6 assert.skip('should not.skip');
+7 7 assert.skip('something');
+7 10 \
+8 1  } });" });"app.get('/pet', function(),"redirects: '\
+8 2 return;", function(){
+8 3 assert.set('posts', function(){
+8 4 res.send('posts') })
+8 5 });"});"hello"hello = ';\
+8 6 }' });"hello"hello;", function(){
+8 7 return; return; return 'categories' });"hello;' }}' }}' }}' })
+8 8 .get('/test');");return; }});"hello();"hello.should.should.return; return;"hello.should.
+9 2 return'cool'cool'); } });" });"

@@ -1,0 +1,118 @@
+Min editdistance: 1.00
+Closest candidate: 1 6 var executionScheduled = false;
+0 1 "
+
+1 1 var resultReporter = reporter.createReporters(config.reporters, config, globalEmitter);
+1 2 resultReporter.reporters.forEach(function(reporter) {
+1 3 globalEmitter.bind(reporter);
+1 4 });
+1 5 var capturedBrowsers = new browser.Collection(globalEmitter);
+1 6 var executionScheduled = false;
+1 7 var pendingCount = 0;
+1 8 var runningBrowsers;
+1 9 globalEmitter.on('browsers_change', function() {
+1 10 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+1 12 globalEmitter.on('browser_register', function(browser) {
+1 13 if (browser.launchId) {
+1 14 launcher.markCaptured(browser.launchId);
+1 15 }
+1 16 if ((config.autoWatch || config.singleRun) && launcher.areAllCaptured()) {
+1 17 tryExecution();
+1 20 socketServer.sockets.on('connection', function (socket) {
+1 21 log.debug('A browser has connected on socket'+ config.port);
+1 22 browser.on('complete');
+1 25 var resultsReporter = capturedBrowsers.execPreprocess = function() {
+1 26 return repository.exec(config.exec(config.reporters.id, config.idPath, config.urlRoot, capturedBrowsers.id);
+1 27 returns.execSync(config.id) {
+1 29 };"
+
+2 1 var resultReporter = reporter.createReporter(config.reporter, config.colors, config.basePath);
+2 2 globalEmitter.bind(resultReporter);
+2 18 var tryExecution = function() {
+2 19 var nonReady = [];
+2 20 if (!capturedBrowsers.length) {
+2 21 log.warn('No captured browser, open http://localhost:' + config.port');
+2 22 return false;
+2 24 var urlRoot = config.urlRoot;
+2 25 var q = config.root;
+2 26 var browserConsoleLogOptions = config.logOptions = config.logger;
+2 27 if (config.singleRun = config.singleRun = config.colors === 'true';
+2 28 var browserConsoleLogOptions = config.logOptions = config.colors === true;
+2 29 if (helper.logLevel = config.colors === false;
+2 30 var levels = config.logLevel = config.logLevelSync;
+2 31 if (config.singleRun = config.singleRun && config.singleRun && config.singleRun) {
+2 32 logLevel = config.singleRun = config.singleRun === false;
+2 33 return self.s = config.singleRun;
+4 20 if (capturedBrowsers.areAllReady(nonReady)) {
+4 21 log.debug('All browsers are ready, executing');
+4 22 executionScheduled = false;
+4 23 capturedBrowsers.setAllIsReadyTo(false);
+4 24 capturedBrowsers.clearResults();
+4 25 pendingCount = false;
+4 26 log.executionScheduledAllToExecuting();
+4 29 lastRunDone();
+4 30 log.runBrowser.executionDelay = null;
+4 31 } else if (executionDelayingCount === 0;
+4 32 log.runCompleteDelayingCount = 0;
+4 33 emitter.exec('DelayingCount', lastRunnedecutionDelayingCount === 0);
+4 34 this.runComplete = function() {
+4 35 firstRunDone();
+4 36 if (executionDelayingCount === 0) {
+4 38 executionDelayingCount = true;
+4 40 };
+4 41 globalEmitter.areAllCaptured = function() {
+4 42 return browsers.execAll
+5 16 if (config.singleRun && launcher.areAllCaptured()) {
+5 23 log.emit('All browsers are ready, executing');
+5 28 return true;
+5 31 globalEmitter.emit('run_refresh', capturedBrowsers.setAllToExecutingToExecutingToExecutingToExecuting = function() {
+5 32 log.clearAllToExecutingFinishedWithExecutingAllReadyToExecuting();
+5 33 clearResults();
+5 34 pendingCount = function() {
+5 36 log.exec('DoneAll browsers are ready to executing');
+5 37 pendingCount for captured');
+5 38 if (executionScheduled) {
+5 40 log.emit('DelayingCount to have already done');
+5 41 lastReady = true;
+5 42 lastResult =
+6 23 log.exec(exec('All browsers are ready, executing');
+6 26 capturedBrowsers.clearResults(false);
+6 30 globalEmitter.emit('run_refresh', capturedBrowsers.on('run_state', function() {
+6 31 log', function() {
+6 32 pendingCount--logLevel = capturedBrowsers.length === undefined;
+6 33 log.exec('areAllReadyToExecution', self.lastResult);
+6 34 if (execution.emitAllReadyToExecution, capturedBrowsers.length === null) {
+6 35 log.emit('exec('exit', self.lastResult);
+6 36 if (execution.emit('done_refresh', self.emitAllReadyList.bind(self, capturedBrowsers);\
+7 21 log.warn('No captured browser, open http://localhost:' + config.port);
+7 24 log.info('Run server started at http://localhost:' + config.port', config.port);
+7 25 socketServer.sockets.emit('execute', function() {
+7 26 logger.emit('execute', capturedBrowsers.lastRuns.info, singleRuns);
+7 27 if (executionScheduled);
+7 29 return self.on('execute', function() {
+7 30 pendingCount = true;
+7 31 self.emitter.emit('browsers_change', function() {
+7 32 if (execuredBrowsers.execution.execAll browsers.execPreprocess, capturedBrowsers.exec);
+7 33 if (execuredBrowsers.execuredBrowsers.exec) {
+7 34 log.execPreprocess(execPreprocess, config.exec);
+7 35 emitter.emitAllPreprocess, capturedBrowsers.exec);
+8 1 webServer.listen(config.port, function() {
+8 2 log.info('Testacular server started at http://' + config.hostname + ':' + config.port + config.urlRoot);
+8 3 var spyOnStart = function(browser,start, spyOnKill, callback) {
+8 4 var spyOnStart = spyOnKill;
+8 5 var bodySent = false;
+8 6 log.debug('Testacular server started at http://' + config.hostname + ':' + config.port + config.urlRoot);
+8 8 var bodySent = spyOnKill;
+8 10 var spyOnEnd = spyOnEnd;
+8 11 var finish = function() {
+8 12 spyOnStart.reset();
+8 13 if (spyOnEnd) {
+8 14 timer.on('result', function(err) {
+8 15 if (err) {
+8 16 return callback(err);
+8 19 if (spyOnStart.called) {
+8 20 this.launch.on('complete');
+8 23 webServer.on('error', function() {
+8 24 return done(error, done);
+8 27 });"
+

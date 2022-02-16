@@ -1,0 +1,148 @@
+Min editdistance: 8.00
+Closest candidate: 1 46 client1);
+0 1 "
+1 1 client1.publish("a nice channel", "I am sending a second message.");\client2.publish("a nice channel", "I am sending a second message.");\client3.publish("a nice channel", "I am sending my last message.");\client1.end();
+1 2 client2.end();
+1 3 client1.end();
+1 5 client1.done();
+1 9 client1.error("client1 is not connected"));
+1 12 client1.error("client2.end();
+1 20 client1.registerError("client1 is not connected"));
+1 21 client1.exists('client1', function (exists) {
+1 22 if (exists) {
+1 23 client1.isNotconnected();
+1 24 client2.setOnInsert({
+1 25 value: client1.getSharma(),
+1 26 context: self.connect()
+1 27 }, function (err, disconnectedSocket) {
+1 28 return client1.getSharma(config.client);
+1 29 });
+1 30 client1.getSharma(config.client2);
+1 31 client1.getSharma(config.client3);
+1 32 client1.getSharma(config.client4);
+1 33 client1.getSharma(config.client5);
+1 34 client1.getClient(config.client6);
+1 35 client1.getClient(config.client7);
+1 36 client1.getClient(config.client8);
+1 37 client1.getClient(config.client9);
+1 38 client1.getClient(config.client5);
+1 43 client1.getClient(config.use(config.client1);
+1 44 client1.use(client1);
+1 45 client1.match.selectClient(config.use(config.client1);
+1 46 client1);
+1 47 client1.selectClient(config.use(config.use(config.client1);
+1 49 client1.use(config.use(config.use(config.client1);
+1 51 client.use(config.use(config.use(config.protocol);
+1 52 client.use(config.router);
+1 53 client.router);
+1 54 client.method.colors;
+1 55 client.compress());
+1 56 client.remist = config.host = config.colors = config.colors;
+1 57 client.root = config.redirects = config.root.ranges === undefined;
+1 58 client.slate();
+1 59 client.maxClient();
+1 60 client.root = config.stack = undefined;
+2 1 client1.upd("client2").return(true);
+2 3 client1.list_number = true;
+2 4 client1.list_first_level = "debug";
+2 5 client1.use(redis.createClient());
+2 6 client1.get_context(),client1.list_info({
+2 7 id:client1.subscribe("1"),"
+
+3 1 client1.publish("a nice channel", "I am sending a second message.");client1.end();
+3 30 client1.error("client1 is not connected")
+3 31 .should.equal(false);
+3 32 client1.use(connect.static());
+3 33 client2.get('/', function (req, res) {
+3 34 res.send(req.params.client1);
+3 36 client1.get('/client2', function (req, res) {
+3 37 res.send(req.params.client2);
+3 39 client1.get('/client3', function (req, res) {
+3 40 res.send(req.params.client3);
+3 42 client1.get('/client2/:client_test', function (req, res) {
+3 45 client1.get('/client3/:client_test', function (req, res) {
+3 51 client1.get('/client2/:client2/:client3/:client_test', function (req, res) {
+3 52 res: null;
+3 54 client1.remove('/client1.end();
+3 62 });"
+
+4 2 client1.on("client2", function (channel, message, data) {
+4 3 console.log("client2 received from " + channel + ", " + message);
+4 4 client2.publish("a nice channel", "I am sending a second message.");
+4 5 client2.publish("another one", "I am sending a second message.");
+4 6 client2.publish("a nice channel", "I am sending my last message.");
+4 11 client3.end();
+4 19 client4.end();
+4 20 client6.end();
+4 21 client7.end();
+4 23 client8.end();
+4 27 client9.end();
+4 29 client5.end();
+4 35 client14.end();
+4 61 describe("debug_count": function () {
+4 62 it("should return client1 when run count is not in the client", function", function () {"
+
+6 1 "
+
+7 1 "}
+7 2 client1.on("debug_mode", function (channel, count) {
+7 3 console.log("client1 received message on 2 files!");
+7 4 client1.expect(message.stringation + "\
+7 5 " + count + " bytes subscriptions (x i + 1).toFixed(1) + "\
+7 6 " + pluralize(2).toFixed(3);
+7 66 describe(" and call it is not function by defaulting the client", function (when client is not returned", function () {
+7 67 it(" and must be given", function () {
+7 68 it("should return client")
+7 69 it("reduce it is", function (no string")
+7 70 it("reduce it (s the client")
+7 71 ", function (express") }, "reduce it (s the client")
+7 72 it("s")", function (", function (s) {}") {
+7 73 it("reduce it (s) {}")
+7 74 returns () {}")
+7 75 }).map(function (s) {}", function (s) {}") {
+7 76 return stringify() {}",reduce("reduce this")
+7 77 }).reduce("a stringify()", function (s) {}", function (s) {}")
+7 78 return stringify() {}", function (s) {}")
+7 79 }).set(string) {}"reduce(s) {}")
+7 80 }).reduce("puts" + string")
+8 2 client1.return(true);
+8 3 }
+8 4 client1.error("client1 not connected");
+8 6 client1.return(false);
+8 7 client1.options.client = client1.defaults;client1.logger.debug('client1 received error:client1', "client1 received'+ count + " rulesMeta ", redis.createClient(), "foo"));
+8 8 client1.client.debug('client2 received error:client2', "client2 received error:client2'+ count + " rulesMeta 2", redis.createClient(), "foo"));
+8 9 client1.client.debug('client1 received with only a name',client1.client.name);
+8 10 client1.client.debug('client2 received:client1',client1.client.client.name);
+8 11 client1.client.error("client1 received:client1',client1.client.client.name);
+8 12 client1.client.client.client.debug('client1 received:client2',client1.client.name);
+8 13 client1.client.debug('client1 received:client3',client1.client.name);
+8 14 client1.client.error("client1 received:client3',client1.client.name);
+8 15 client1.client.debug('client1 received:client1',client1.client.name);
+8 16 client1.client.debug('client1 received:client2',client1.client.name);
+8 22 client1.client.debug('client1 received:client1',client1.client.client.name);
+8 23 client1.debug('client1.client1 should not be connected :client1.debug('client1');
+9 2 client1.list()
+9 3 .set("length", 2);
+9 4 client1.publish("a nice channel", "I am sending a message.");
+9 7 .set("field", "debug")
+9 8 .set("value", "one");
+9 9 client1.valueOf()
+9 10 .length > 0;
+9 11 client1.publish("a nice channel", "I am sending a second message.");
+9 13 client1.quit();
+9 15 client1.set("object", "foo")
+9 16 .
+9 17 .client1.client2.set(client1.client1, "foo');
+9 23 client1.return;
+9 24 client1.promise
+9 25 .done();
+9 59 client1.getShasum();
+9 60 client1.setShasum();
+9 64 };
+9 65 describe("multis closesslint").sendArray() {
+9 66 it(function pluralize(1, 2, 3)
+9 67 .return {
+9 68 .length = 2
+9 71 .length = 3
+9 74 })"
+

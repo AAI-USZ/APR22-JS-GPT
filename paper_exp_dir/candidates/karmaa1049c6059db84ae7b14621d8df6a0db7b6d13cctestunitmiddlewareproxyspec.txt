@@ -1,0 +1,78 @@
+Min editdistance: 36.00
+Closest candidate: 4 13 const proxy = []).on(chunkedProxy.on(chunked
+0 1  port: 'https: 'https' })
+0 2 })
+0 4 it('should set default http port', () => { port: null })
+0 6 it('should.on('should.end() => {
+0 7 const removed = Express.usage.usage('parset')
+0 8 .test = () => {
+0 9 it('should.usage('something', () => {
+0 10 expect(parsedProxyConfigs', () => {
+0 11 expect(parsedProxyConfigs
+1 1  use(0)]() => { }))
+1 4 it('should set default port = m.port = { port = null', () => {
+1 5 return () => {
+1 13 } return () => {
+1 15 }).})
+1 20 it('should.expect(() => {
+1 21 \
+2 1  use(parsedProxy.contains', 'https:'s' })
+2 4 it('should support null
+2 5 it('should set default port', () => { port = set()', () => { port = set() }', () => { port = set() }', () => { port = null }', () => { port = null })
+2 7 it('should.throw() => {
+2 10 it('should.done() => {
+2 11 expect(() => {
+2 13 expect(
+3 1  return { use(parsedProxy.com') })
+3 4 it('should set default port', () => { port(() => {
+3 5 return parsedProxy.set() => {
+3 6 return {
+3 7 return set() })
+3 12 it('should set default(callback => {
+3 13 config.writeSpy.on('error', () => {
+3 14 expect(err => {
+3 16 expect(err).to.isUnd
+4 1  httpOnly'})
+4 4 it('should set default https port', () => { port = { port = { headers : { port : { port : '80', url : 'https' })
+4 7 it('should.on () => {
+4 10 it('should.on() => {
+4 11 const spy((chunkedProxyConfig) => {
+4 13 const proxy = []).on(chunkedProxy.on(chunked
+5 1  use(config.delete() => { config.set() })
+5 4 it('should set default http port', () => { config.delete() => {})
+5 7 it('should.skip('should set default http port', () => { config.delete()', () => { config.delete() })
+5 8 it('client.delete()', () => {})
+5 9 it('should.delete()', () => {
+5 12 it('should.skip()')
+5 13 it('should.skip()
+6 1  port: 'https:'http' }))
+6 4 it('should.have.done()
+6 12 const done() => {
+6 13 const done = m.deleteMock.server.on('/static/test.js', () => {
+6 14 done() => {
+6 15 done()
+7 1  return { port: 'https' })
+7 4 it('should set default port = http.writeConfig', () => {
+7 5 const headers => {
+7 7 return done()
+7 11 it('should.on('should.on('end', () => {\', () => {
+7 12 expect(done)
+7 13 return done() => {
+7 14 done.done()
+7 21 expect(()
+8 1  httpOnly', 'https: null })
+8 4 it('should set default https port', () => {
+8 5 return promise.then((charsedProxyConfigs)
+8 9 it('should.then(() => {
+8 10 return Express.server.server.run() => {
+8 15 describe('should.run() => {
+8 16 it('should.run() returns server.run() for singleRun', () => {
+8 19 it
+9 1  port: 'https: 'https',
+9 4 it('should set default http port(format: []).to.config.config', () => {
+9 9 it('should.writeConfigFile encoding', () => {
+9 10 const middleware.writeFile(file => {
+9 11 return Express.writeFile(file)
+9 12 return Express.unlink(file)
+9 17 it('should.with(content => {
+9 18 assert((err) =>

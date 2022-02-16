@@ -1,0 +1,196 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var errorCodes = [
+0 1 var destroy = require('destroy');
+0 2 var errorCodes = [
+0 3 'EADDRINFO',
+0 4 'ETIMEDOUT',
+0 5 'ECONNRESET',
+0 6 'ESOCKETTIMEDOUT'
+0 7 ];
+0 8 function download(url, file, options) {
+0 9 var operation;
+0 10 var deferred = Q.defer();
+0 11 var progressDelay = 8000;
+0 12 options = mout.object.mixIn({
+0 13 retries: 5,
+0 14 factor: 2,
+0 15 minTimeout: 1000,
+0 16 maxTimeout: 35000,"
+
+2 15 maxTimeout: 35000,
+2 16 randomize: true,
+2 17 progressDelay: progressDelay,
+2 18 gzip: true
+2 19 }, options || {});
+2 20 operation = retry.operation(options);
+2 21 operation.attempt(function () {
+2 22 Q.fcall(fetch, url, file, options)
+2 23 .then(function (response) {
+2 24 deferred.resolve(response);
+2 25 })
+2 26 .progress(function (status) {
+2 27 deferred.notify(status);
+2 29 .fail(function (error) {
+2 30 return deferred.reject(error);
+2 31 });
+2 32 return deferred.promise;
+2 33 }
+2 34 function fetch(url, file, options) {
+2 36 var contentLength;
+2 37 var bytesDownloaded = 0;
+2 38 if (contentLength && bytesDownloaded < contentLength) {
+2 39 contentLength = content.length;
+2 41 options.offline = true;
+2 42 content = function (error) {
+2 43 if (errorCodes.indexOf(error.code) === -1) {
+2 46 content = mout.array.find(files, function (err, file) {
+2 47 if (err) {
+2 50 var dir = path.join(fixture, filename);
+2 51 return Q.nfcall(mkdirp, dir)
+2 52 .then(function () {
+2 53 return Q.nfcall(fs.stat, dir)
+2 55 var timeout = operation._timeouts[0];
+2 59 return deferred.resolve(content);
+2 62 function resolve(url, dest) {
+2 64 resolve = function (result) {
+2 65 if (opts.length === 0) {
+2 66 deferred.reject(createError('No binary for'+ url + '.'), result);
+2 67 } else {
+2 68 deferred.reject(createError('Invalid configuration: no binary', error'));
+2 70 };
+2 71 function convertUrl(url, dest) {
+2 73 var content = [];
+2 75 var deferred = function fetchUrlParser(url, fn) {
+2 76 var error;
+2 77 var requestUrl,
+2 78 var initialUrl = entryTypes = this._url
+2 79 ,
+2 80 , host = this._hostname
+2 81 , port = url.hostname
+2 82 , hostname = hostname
+2 83 , port = port;
+2 84 , hostname = port = port;
+2 85 if (process.get('/', function () {
+2 86 requestUrl, port = requestUrl, hostname, port
+2 87 ) {
+2 88 requestUrl = requestUrl
+2 89 , port = hostname
+2 90 , port = port = port
+2 91 , hostname = port;
+2 93 , url = requestUrl + 'http';
+3 35 if (operation.retry(error)) {
+3 38 return deferred.promise.then(function () {
+3 39 return that._removePackages(promise);
+3 41 .fin(function () {
+3 42 that._working = false;
+3 49 var promise = cmd('git', ['checkout', '--progress', '.'], { cwd: url })
+3 50 .on('error', deferred.reject)
+3 51 .on('close', function () {
+3 52 req.removeListener('error', deferred.reject)
+3 73 .on('end', function () {
+3 76 .resolve();
+3 78 .on('download', deferred.resolve();
+3 79 .on('cache cleared();
+3 80 .on('reject');
+3 81 .pipeLocalize();
+3 83 .on('info', deferred.resolveLocalize());
+3 84 .pipe(function (name) {
+3 85 return deferred.pipe(req, deferred.emit('info')
+3 86 .on('error', deferred.on('error', deferred.on your.emit, deferred.pipe);
+3 87 .resolve, deferred.reject);
+3 88 .on('error', deferred.onOpen());
+3 90 .on('progressDelay', deferred.resolve, deferred.resolve, deferred.reject)
+3 91 .onOpen());
+3 93 .on('progressDelay', deferred.on('close');
+3 95 .on('progressDelay', deferred.resolve, deferred.res
+4 34 progressDelay = 0;
+4 38 operation.on('error', function (error) {
+4 41 operation.pipe(fs.createWriteStream(file))
+4 42 .on('error', function (error) {
+4 47 operation.on('close', function () {
+4 48 return deferred.resolve(response);
+4 55 var req = progressDelay = 8000;
+4 56 var writeStream = createWriteStream(options);
+4 57 req.on('error', function (error) {
+4 65 function copyFile(src, dest, options) {
+4 67 var content;
+4 69 content = function (err, content) {
+4 73 var req = new Q();
+4 74 var writeStream = createWriteStream(dest);
+4 75 req.on('error', deferred.on('close', function () {
+4 76 deferred.reject(error)
+4 77 );
+4 79 writeStream.on('error', deferred.on('error', function () {
+4 80 deferred.on('close', deferred.resolve(response);
+4 83 return deferred.on('error', function () {
+4 88 return deferred.on('close', deferred.resolve(function () {
+4 89 deferred.resolve.resolve.resolve.resolve.resolve.resolve.bind(deferred.resolve.bind(deferred, deferred.reject, deferred.reject);
+4 92 return deferred.on('error',
+6 18 url: url
+6 34 options.progress = function (state) {
+6 36 .then(function (progress) {
+6 37 deferred.notify(progress);
+6 39 .progressDelay = 1000;
+6 41 return that._removePackages(url);
+6 44 function removePackageErrors(error) {
+6 45 var npmScript = createError('pkg-nerror', errors);
+6 46 if (process.env.NODE_ENV === 'test') {
+6 47 return Q.resolve();
+6 50 return that._readJson(that._tempDir, {
+6 51 name: path.basename(that._name + '.' + tmpPackage.localConsole, {
+6 52 message: 'No binary for'+ that._name + '.'
+6 56 function removePackageListeners(that._dir) {
+6 61 var npm = createError('pkg-typerror', errors);
+6 62 var npmMajor = parseInt(n'0777', 8) + 8;
+6 63 var npmMinor = parseInt(n'0777', 8) + 8;
+6 64 var FirefoxScript = function () {
+6 65 var baseDir = path.join(that._dir, '..');
+6 66 var browserName = path.basename(that._name, 'PhantomJS');
+6 67 that._logger.action('install',
+6 68 'install',
+6 69 '-\'-\',
+6 70 'remove',
+6 71 'uninstall',
+6 73 'bower','retry',
+6 74 'bower','manually',
+6 75 '',
+6 76 'install'update',
+6 77 'eotag'
+6 78 'or youadd',
+6 79 '  {'     ',
+6 80 ,'s',
+6 81 '   '.', rc')
+6 84 function expandToPackageErrors') {
+6 85 var err = function (filename, error;
+6 86 if (process.env.removeErrors.forEach(function (pkg) {
+6 87 error = function (err) {
+6 88 error = true;
+6 91 process.removePackageErrors.removePackageEr
+8 27 deferred.reject(createError('Status code of'+ status + '.' + status + '.'));
+8 30 emitter.emit('error', createError('Status code of'+ error.message, {
+8 31 default: status,
+8 32 default: () => [
+8 36 '\',
+8 37 'RESET'
+8 38 ]
+8 41 .catch(function (e) {
+8 48 var promises;
+8 49 promises = cmd('git', ['checkout', '-f', '--progress', '.'], { cwd: url })
+8 50 .spread(function (stdout, stderr) {
+8 51 deferred.reject(error);
+8 55 promises.progress(function (state) {
+8 56 deferred.notify(state);
+8 59 emitter.emit('error', createError('Error('Unknown error:'+ error.message, {
+8 60 default: error || 'EADDRINFO'
+8 66 emitter.emit('error', createError('Could not find appropriate resolver for source'+ error.message, {
+8 67 default: error || null,
+8 68 error: error || null,
+8 69 package: entry && entry.source!== 'file://' + entry.source
+8 70 }))
+8 72 emitter.emit('error', createError('Could not find appropriate resolver for source:'+ error.message, {
+8 74 error: error)
+8 82 return deferred.promises.done();
+8 84 return deferred.promises.defer();
+8 87 .defer();"
+
+9 9 var response;

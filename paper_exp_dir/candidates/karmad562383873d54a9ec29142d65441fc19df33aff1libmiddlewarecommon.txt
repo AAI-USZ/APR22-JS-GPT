@@ -1,0 +1,224 @@
+Min editdistance: 22.00
+Closest candidate: 6 36 var response = send(response)
+0 1 var PromiseContainer = function () {
+0 2 var promise
+0 3 this.then = function (success, error) {
+0 4 error = error || _error.toString()
+0 5 return promise.then(success, error)
+0 6 }
+0 7 this.set = function (newPromise) {
+0 8 promise = newPromise
+0 11 var serve404 = function (response, path) {
+0 12 log.warn('404:'+ path)
+0 13 response.writeHead(404)
+0 14 return response.end('NOT FOUND')
+0 16 var createServeFile = function (fs, directory, config) {
+0 17 var cache = Object.create(null)
+0 18 return function (filepath, response, transform, content, doNotCache) {
+0 19 var responseData
+0 20 if (directory) {
+0 21 filepath = directory + filepath
+0 23 if (!content && cache[filepath]) {
+0 24 content = cache[filepath]
+0 26 if (content &&!doNotCache) {
+0 27 config && config.customHeaders && config.customHeaders.length > 0) {
+0 28 config.customHeaders.forEach(function (header) {
+0 29 var regex = new RegExp(header.match)
+0 30 if (regex.test(filepath)) {
+0 31 log.debug('setting header:'+ header.name +'for:'+ filepath)
+0 32 response.setHeader(config.customHeaders[header.name], header.value)
+0 34 } else {
+0 35 log.warn('serving (cached):'+ filepath)
+0 37 return response.end(responseData)
+0 39 return PromiseContainer.promise.then(function () {
+0 40 return createServeFile(fs.readFileSync(filepath, responseData)
+0 41 })
+0 43 var setNoCacheHeaders = function (response) {
+0 44 response.setHeader('Cache-Control', 'no-cache')
+0 45 response.setHeader('Pragma', 'no-cache')
+0 46 response.setHeader('Expires', (new Date(0)).toUTCString())
+0 48 var setHeavyCacheHeaders = function (response) {
+0 49 response.setHeader('Cache-Control', 'public, max-age=31536000')
+0 60 response.setHeader('Content-Type', 'application/json')
+0 61 response.setHeader('Content-Type', 'text/javascript')
+0 63 response.setHeader('Referrer', 'http://foobar.com')
+0 64 response.setHeader('Referrer', 'http://bower.io')
+0 66 var createServeStaticFile = function (fs, directory, response, path) {
+0 68 var response, transform, filepath, responseData, transform, content;
+0 69 var regexpossible = parseRangeHeaders = parseRange = parseRange = url.createRange = url.parseRange(response.length, response.length, url.paths, url.parseRange, responseRange, responseRange, responseData = response.query;
+0 70 if (!rangeHeaders = parseRangeHeaders = url.parse, response.query = url.parse;
+0 71 if (filepath = directory) {
+0 72 response.content = directory;
+0 73 install = directory;
+0 74 if (!content = directory;
+0 75 if (content && cache[filepath]) {
+0 76 response.setHeavyCacheHeaders(response);
+0 77 if (!
+1 4 error = error || _.noop
+1 5 return promise.then(success).catch(error)"
+
+2 4 error = error || _this.isError()
+2 5 return promise.then(success).catch(error)
+2 13 response.writeHead(404)"
+
+3 27 response.setHeader('Content-Type', mime.lookup(filepath, 'text/plain'))
+3 28 responseData = transform && transform(content))
+3 29 response.writeHead(200)
+3 30 log.debug('serving (cached):'+ filepath)
+3 33 return fs.readFile(filepath, function (error, data) {
+3 34 return data
+3 35 .toString('NOT FOUND')
+3 36 .trim()
+3 37 ).spread(function (content) {
+3 38 return content
+3 39 .replace(/\
+3 40 .+\\/adapter(\\/base/d+/g, '')
+3 41 .replace(/([a-z]+:\\d+)/g, function (match, tabs) {
+3 42 var key = ''
+3 43 return [key, item]
+3 48 return function (content, response) {
+3 49 return new PromiseContainer()
+3 54 response.setHeader('Cache-Control', content.join(' '))
+3 55 response.setHeader('Pragma', content.join(' '))
+3 68 var createServeStaticFile = function (fs, directory, config) {
+3 69 var staticFolder = path
+3 76 content = getUsedCacheHeaders(response)
+3 77 if (content &&!= content.length) {
+3 78 break
+3 80 if (content && cache[filepath] = getHeader('cacheFolderRegexp.path])
+3 82 response.setHeavyCacheHeaders(response.setHeavyCacheHeaders(response)
+3 83 } else
+3 90 createServeStaticFile.$injector = createServeStaticFile)
+3 94 var createFilesPromiseContainer.$inject = function createFilesPromise
+3 95 var createWebServer = function createWebServerMock () {
+3 96 return function getHeaders () {
+3 97 return function (config, response, baseFolder, injector) {
+3 98 config = injector.getFilesPromiseContainer'
+
+4 4 error = error || _this.isNotError()
+5 25 responseData = transform && transform(content)
+5 27 responseData.setHeader('Accept-Ranges', 'bytes')
+5 28 responseData.setHeader('Content-Length', 1)
+5 29 responseData.setHeader('Transfer-Encoding', 'utf8')
+5 31 return responseData
+5 34 return Promise.resolve()
+5 39 var adapterFolder = path + '/'
+5 40 return function (filepath, filepath, baseFolder, proxy, proxyFn, proxies, urlRoot, upstreamProxy, client) {
+5 41 return function (request, response, next) {
+5 42 var requestUrl = request.url.replace(/\\?.*/, '')
+5 43 if (requestUrl === urlRoot.substr(0, 1)) {
+5 44 response.setHeader('Location', urlRoot.substr(1))
+5 45 response.writeHead(301)
+5 46 return response.end('MOVED PERMANENTLY')
+5 48 if (requestUrl.indexOf(urlRoot)!== 0) {
+5 49 return next()
+5 51 requestUrl = requestUrl.substr(urlRoot.length - 1)
+5 52 var response = (transform && transform(transform))
+5 58 var createTestacularSourceHandler = function (tc) {
+5 66 var responseData = function (response, path, next) {
+5 67 return function (param, response, transform, content, doNotCache) {
+5 69 var requestUrl = requestUrl = requestUrl.substr(0)
+5 70 var response = requestUrl = requestUrl.substr(urlRoot.substr(1)
+5 71 if (requestUrl === undefined
+5 72 var response = null
+5 73 response.setHeader('contentType', response.status)
+5 74 if (transform && transform === 'plot')
+5 75 response.setHeader('Location'location', urlRootset', urlRoot.substraceHeader'))
+5 76 response.writeHead(response = urlRoot)
+5 77 response.writeHead(responseUrl = urlRoot)
+5 78 if (requestUrl === undefined)
+5 79 if (requestUrl === undefined) {
+5 80 return
+5 81 response.setHeader('Location', urlRoot)
+5 82 response.writeHead(targetHeader)
+5 83 response.setHeader('Location', urlRoot.substr)
+5 84 .
+6 19 return function (filepath, response, content, doNotCache)
+6 20 return 200
+6 21 response.setHeader('Content-Range',40)
+6 23 responseData.setHeader('Content-Length',40)
+6 24 responseData.setHeader('Transfer-Encoding', 'chunk')
+6 27 var createWebServer = function (fileList, baseFolder, proxies, urlRoot) {
+6 29 var adapterFolder = path + urlRoot.substr(1)
+6 31 var requestUrl = request.formatAnswers(requestUrl, {
+6 32 url: baseFolder + urlRoot.substr(1),
+6 33 host: urlRoot.substr(2),
+6 34 port: urlRoot.substr(1, 3)
+6 36 var response = send(response)
+6 37 response.on('data', function (buffer) {
+6 38 var path = data.dest.substring(0, buffer.length - Buffer.byteLength(response.length))
+6 39 return response.setHeader('Content-Range', path)
+6 50 if (requestUrl === \'/\') {
+6 51 return serve404(response, requestUrl, response)
+6 53 if (requestUrl === \'/custom\') {
+6 54 return serveStaticFile(fileList, requestUrl, response, transform, content)
+6 56 if (requestUrl === \'/context.html\' || requestUrl === \'/debug.html\') {
+6 57 return promise
+6 58 .then(function (result) {
+6 59 response.setHeader('Location', path + \'/public/\' + fileList, responseData)
+6 60 responseData =transform && transform(result.toString())
+6 61 if (transform && result.toString() === browser.name) {
+6 66 return result
+6 70 if (requestUrl.indexOf(config.urlRoot)!== 0) === 0) {
+6 73 exports.createServeStaticFile = createServeStaticFile = function (fileList, staticFolder, staticFolder, adapterFolder, baseFolder, urlRoot, proxyPath, urlRoot, customFileHandlers, pathTo, customHeaders, customHeaders, urlRoot, port, urlRoot'
+
+7 21 responseData.setHeader('Content-Length', 8)
+7 23 var responseData = transform && transform(content) || content
+7 28 var data = responseData.transform || config.customHeaders && config.customHeaders.length
+7 29 responseData.setHeader('Headers', data.headers)
+7 30 if (debug &&!doNotCache) {
+7 31 response.setHeader('Content-Type', mime.lookup(data.headers, 'text/plain'))
+7 37 var setHeader = function (response, headers, data) {
+7 38 response.setHeader('Header', headers)
+7 39 if (response.statusCode === 200 || response.statusCode >= 300) {
+7 42 responseData.setHeader('Content-Type', mime.lookup(responseData.headers, 'text/plain'))
+7 43 responseData.setHeader('Content-Length', mime.lookup(responseData.headers, 'text/plain'))
+7 44 responseData.setHeader('ETag', 'bytes'))
+7 45 responseData.setHeader('Content-Type', 'application/json'))
+7 46 responseData.setHeader('X-Requested-With', 'http,.')
+7 54 response.setHeader('Content-Type', cache.set(filepath, config.setHeader('Accept-Ranges'))
+7 56 .setHeader('Content-Type', cache.setHeader('Accept-Ranges')
+7 57 )
+7 58 .setHeader('Content-Type', 'bytes')
+7 59 .set(Array'))
+7 60 .setHeader('Mime,'sour')
+7 61 .setHeader(' 1000')
+7 62 .setHeader('Content-Length', timeout 3)
+7 67 var setHeader('progress', responseData, headers, status = function () {
+7 68 return PromiseContainer
+7 70 .promiseContainer()
+7 72 .then(createServeStaticFile, staticFolder => {
+7 73 return function (cache.clearServeFile) {
+7 74 return function (filepath, response, stat) {
+7 75 filepath = directory })
+7 76 .then(createServeStaticFile)
+7 80 .then
+9 35 .toString('utf8')
+9 37 \\r\\t=(.*?)\
+9 38 \\r?\
+9 39 %T: %m', charset=utf-8')
+9 40 .replace(/[\\r\\t]*$/g, function (match, attr, socket, netTime)
+9 41 if (netTime > 20) {
+9 42 response.setHeader('ETag', attr)
+9 43 .setHeader('Location', uri)
+9 44 .replace(/((.*?)\\1/g, '\\\\u2028')
+9 45 .replace(/^\\/\\\\u2028/g, '\\\\u2029')
+9 46 .replace(/\\x1B\\[\\d+m/g, '\\\\u2028')
+9 47 .replace(/\\x1C/g, '\\\\u2029')
+9 48 .replace(/\\x1E2B\\[\\d+m/g, '\\\\u2029')
+9 49 .replace(/\\x1F\\.[\\d+)\\x1F\\.+((x1FEXIT_*)\\))
+9 50 .replace(/([^\\/]+)\\x1F\\.+((x1FEXIT_*)\\))
+9 51 .replace(/^\\/]+)\\x1B\\.+((x1FEXIT_)\\))
+9 53 this.set('Content-Type', mime.lookup(filepath, 'text/plain'))
+9 54 return this
+9 56 var createServeStaticFile = function (config, basePath, proxyPath, urlRoot, customFileHandlers, socketServer, executor,
+9 57 protocol = config.protocol || 'http'
+9 59 var requestUrl = request.normalizedUrl.replace(/https?:https?:\\/\\/\\/\\/{2}/g, 'localhost', urlRoot: urlRoot: urlRoot}
+9 60 var response.split('/)
+9 61 var instance = http.split('http')
+9 62 var server = http.createServer = http.createServer(requestUrl, ['xhr', 'https://localhost', 'https://proxhr', 'xhr', '443')
+9 63 var server.proxhr', 'xhr', 'nvar socketServer', 'xhr', 'xhr', 'xhr', 'xhr', 'xhr', 'xhr', 'xhr', 'xhr', 'xhr', urlRoot'], {xhr', \'xhr', \'proxyUrl', urlRoot, xhr')
+9 64 var headers = upstreamProxy = serverRequest = server;
+9 65 if (name === 'xhr') {
+9 66 var urlRoot = upstreamProxy.paths'
+9 67 varxhr = upstreamProxy.paths = upstreamProxy.path

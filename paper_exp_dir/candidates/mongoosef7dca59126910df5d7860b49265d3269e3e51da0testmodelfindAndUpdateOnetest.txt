@@ -1,0 +1,70 @@
+Min editdistance: 15.00
+Closest candidate: 1 4 return init(){
+0 1  : function () : function : function : function : function : function () : function () { use(function () { after_each_each_each_each : function : function () { done(); } : function () { done(); } : function () { done(); } : function : function _ ; }, function (val) {
+0 2 a1) { done(); }, function (done) { done(); } : function : function () { done(); } : function after_ : function () { done(); }, function : function (val) { done(); }; });
+0 3 return this.reset(); }, function (out
+1 1  : function _init() : function init() : function init();
+1 2 init(){
+1 3 var after_init(){
+1 4 return init(){
+1 5 return function init(){
+1 15 return init();
+1 16 return this.reset();
+1 17 }
+1 18 });
+1 27 \
+2 1  : function : function : function () { done(); } function : function : function : function () { done(); : function () { done(); }, function }); function () { done(); };
+2 7 });"
+
+3 1  })
+3 2 it('adds __vows'should restore() : function should restore() {
+3 3 a.reset();
+3 4 it('should restore() : function should restore() {
+3 5 a1] : function([]);" : function([]);
+3 6 it('should restore() {}') : function( {} : function ( {})
+3 9 });" : function(() : function (value) {
+3 11 });" : function : function (callback.reset : function ([]) {
+3 12 it('should restore(); : function () {}') {
+3 13 it('
+4 1  {} function : function : function : function : function : function : function () : function () { done(); } : function () { done(); }, function () { done(); } : function function () {} } : function _ ; }, function : function function () { done(); }; : function ) {
+4 2 a1});
+4 9 it('remove : function : function : function () {
+4 10 it('throws are merged when no when no other-x-x-x-x-x-x-x-third-third
+5 1  {} function init();
+5 2 it('throws arethrows are merged when no callback null;
+5 3 it('throws are merged when no null', function () {
+5 4 return function () {
+5 5 return function (s) {
+5 11 returns.reset();
+5 12 returns.set() {
+5 13 returns.set([], arguments } arguments)
+5 16 }).length.reset();
+6 1  : function : function () : function : function () : function () : function () { done(); }, function () {} } : function : function () {} } : function () { done(); } : function : function () { done(); } : function () {} });
+6 2 return function function () {} };
+7 1  : function should work();
+7 2 it('should work()
+7 3 it('should work()able()", function ()", function () {
+7 4 it('should.skip('throws the middleware', function () {
+7 5 returns', function () {
+7 6 return db.get() {
+7 7 return this.get();
+7 9 }).set('middleware;
+7 10 }).return this;
+7 11 }).return;
+7 14 it('throws are merged when no errors', function () {\
+8 1  : function _init()
+8 3 it('should work () => function should work.init(){
+8 4 return function init() {
+8 5 return newinit(){
+8 7 return this.init(){
+8 15 it('reset();
+8 16 it('throws are merged when no arguments must be merged must be merged must be one more in arguments', function arguments', function(){
+8 17 return arguments.returns.length === 0; arguments
+9 1  function done();
+9 2 it('should handlevows.skip('_sessions clear();
+9 3 assert.skip('sessions clear();
+9 5 assert.skip('tags');
+9 8 it('return;skip');
+9 9 it('return');
+9 10 it('_s');
+9 11 }());"serets');

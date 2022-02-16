@@ -1,0 +1,24 @@
+Min editdistance: 12.00
+Closest candidate: 2 13 }, this)
+0 1 {"
+
+2 1  { count: process.stdout } })
+2 2 set('root', __dirname)
+2 3 get('/', function(){
+2 4 this.redirect('/upload')
+2 5 })
+2 6 get('/upload', function(){
+2 7 this.render('upload.haml.html')
+2 9 post('/upload', function(){
+2 10 this.param('images').each(function(image){
+2 11 puts(image.filename +'->'+ image.tempfile)
+2 12 this.flash('info', 'Uploaded'+ image.filename)
+2 13 }, this)
+2 16 get('/public/*', function(file){
+2 17 this.sendfile(__dirname + '/public/' + file)
+2 19 get('/*.css', function(file){
+2 20 this.render(file + '.sass.css', { layout: false })
+2 22 run()"
+
+3 1  {'
+

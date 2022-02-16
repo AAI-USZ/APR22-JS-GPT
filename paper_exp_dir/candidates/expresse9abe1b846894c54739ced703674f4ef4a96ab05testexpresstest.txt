@@ -1,0 +1,74 @@
+Min editdistance: 18.00
+Closest candidate: 8 5 app.get('/', function(){
+0 1  }).unify(app.use(app.createServer);
+0 2 assert.test.client.init();
+0 3 assert.client.test.test.test.test.should.should.should.be.have.have.init();
+0 4 assert.have.init();
+0 5 assert.have.test.have.have.init();
+0 6 assert.done();
+0 7 })
+0 8 }).test.done();
+0 9 it('server.test.should.should.done();
+0 10 }).test.test.test.should.
+1 1  }).bodyParser; });
+1 2 assert.port.reset();
+1 3 assert.should.test.should.should.have.have.have.some(app);
+1 4 assert.have.have.method.static('test');
+1 5 }).should.should.have.skip('test');
+1 6 assert.skip('test').should.skip('something').should.skip('barset');
+1 7 }).should.have.skip('regular');
+1 8 }).all.skip('express.should.should.should.skip('lean');\
+2 1  }).loop(); }).server.configure({ use(app, null).__protoDataEmitter.bind(app);return {};"
+3 1  }); }).join(app.createServer(); }).export.use(app, users);
+3 2 assert.skip('express.writeFile(app);
+3 3 assert.writeFile(app);
+3 5 assert.writeFile(blog);
+3 6 assert.writeFile);
+3 7 assert.end();
+3 8 assert.skip('engine.writeFile(blog);
+3 10 assert.writeFile(admin);
+4 1  }).join(http.createServer(); });
+4 2 assert.createServer.createServer.prototype.logger.register();
+4 3 assert.test.should.should.return;
+4 4 assert.return;
+4 5 }).should.throw(app);
+4 6 it('should.listen() and start()', function(){
+4 8 });
+4 9 assert.called.should.done();
+4 12 },
+4 13 });"
+
+5 1  }).loop(); } });"
+6 1  } });"
+7 1  }).loop(); } });
+7 2 assert.writeServer.server.unregister()
+7 3 assert.test();
+7 4 assert.test.should.should.equal(app, blog);
+7 5 assert.equal(blog);
+7 6 assert.should.equal(map);
+7 7 assert.equal(\'hello.middleware', blog);
+7 9 assert.middleware).should.mounted();
+7 10 assert.should.mounted();
+7 11 assert.equal('regular').should.equal('regular').should.should
+8 1  }).configure(); } });
+8 2 assert.createServer.createServer();
+8 3 assert.listen('http.use(app);
+8 4 assert.get('/', function(){
+8 5 app.get('/', function(){
+8 6 app.get('/admin/admin/', function(){
+8 7 assert.get('test');
+8 8 assert.get('test', function(){
+8 9 return 'test', function(){
+8 10 return;
+8 11 return 'test', done);
+8 14 .then(function
+9 1  }).run({ });
+9 2 app.use(app, { };
+9 3 app.use(app.use('/login', function(), { throw).get('login', function(){
+9 4 return 'logout, i, res){ res, res.end(); });
+9 5 return });
+9 6 app.get('login.completion, res.compose(); });
+9 7 app.compose();
+9 10 return { done();
+9 11 }).should.end();
+9 13 \

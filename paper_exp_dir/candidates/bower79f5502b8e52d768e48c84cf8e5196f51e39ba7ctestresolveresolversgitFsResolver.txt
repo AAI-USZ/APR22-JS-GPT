@@ -1,0 +1,22 @@
+Min editdistance: 1.00
+Closest candidate: 4 2 describe('.constructor', function () {
+0 1 )"
+
+2 1 "
+
+4 1 bind(null, new GitFsResolver());
+4 2 describe('.constructor', function () {
+4 3 it('should guess the name from the path', function () {
+4 4 var resolver = new GitFsResolver('foo');
+4 5 expect(resolver.getName()).to.equal('github-test-package');
+4 6 });
+4 7 it('should remove?part from the path', function () {
+4 9 expect(resolver.getName()).to.equal('foo');
+4 11 it('should keep the name', function () {
+4 15 });"
+
+6 1 )
+6 2 .done();"
+
+7 1 ,"
+

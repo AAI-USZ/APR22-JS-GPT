@@ -1,0 +1,141 @@
+Min editdistance: 23.00
+Closest candidate: 0 1 var uuid = require('uuid');
+0 1 var uuid = require('uuid');
+0 2 describe('bin', function () {
+0 3 var rp;
+0 4 before(function (done) {
+0 5 Redis.start(function (err, _rp) {
+0 6 rp = _rp;
+0 7 return done(err);
+0 8 });
+0 9 })
+0 10 function removeMochaListener () {"
+
+1 1 var RedisProcess = require('./lib/redis-process');
+1 3 describe('The\'set\' function', function () {
+1 4 function removeMochaListener () {
+1 5 var mochaListener = process.listeners(\'uncaughtException\').pop();
+1 6 process.removeListener(\'uncaughtException\', mochaListener);
+1 7 return mochaListener;
+1 8 }
+1 9 function allTests(parser, ip) {
+1 10 var args = config.configureClient(parser, ip);
+1 11 describe("using " + parser + " and " + ip, function () {
+1 12 var key = "sequence";
+1 13 describe("when not connected", function () {
+1 14 var client;
+1 16 client = redis.createClient.apply(redis.createClient, args);
+1 17 client.once("connect", function () {
+1 18 client.set(true);
+1 20 client.once("error", done);
+1 22 it("reports an error", function (done) {
+1 23 client.set(undefined, "Redis connection gone from end event. ");
+1 25 client.set(undefined, "Redis connection error to end event. ");
+1 28 describe("when connected", function () {
+1 31 var cb = redis.createClient.apply(redis.createClient, args);
+1 32 client.once("error", function onError(err) {
+1 36 client.set(undefined, "Redis connection to end event. ");
+1 38 after(function () {
+1 41 it("returns the new instanceof Redis connection, when it is removed", function (done) {
+1 51 client.removeListener(undefined, "Redis connection to end event. ");
+1 54 client.removeListener(undefined, "Redis connection to other object must be the first valid parameters in the client. "select", "*");
+1 55 client.select.should.equal(2);
+1 56 done();
+1 63 client.removeListener.removeListener(undefined, "Redis.createClient);
+1 64 client.removeListener(undefined, "Redis.setTimeout);
+1 65 client.removeListener();
+1 67 client.removeListener.set(undefined, "timeout);
+1 68 client.end();
+1 72 client.set(client.end();
+1 74 describe(" and call it is not connected in Redis", function () {
+1 76 client.set(undefined, "Redis.set(client);
+1 78 client.set(undefined, "Redis.bind(client);
+1 85 it("in one();
+1 86 it("return", function onFinished(done);
+1 87 it("remove", function (done) {
+1 88 it("done) {
+1 89 it("removed is not connected (in Redis closes the server should have no more than the end event
+2 2 describe('The \'incr\' method', function () {
+2 10 describe("using " + parser + " and " + ip, function () {'
+
+3 1 var RedisProcess = require('../lib/redis-process');
+3 3 describe('A reply is not redis', function () {
+3 4 var reply;
+3 5 var l;
+3 6 before(function () {
+3 7 var stat;
+3 9 RedisProcess.start(function (err, _rp) {
+3 14 beforeEach(function (done) {
+3 15 RedisProcess.stderr.set(function (err) {
+3 16 if (err) return done(err);
+3 18 after(function (done) {
+3 19 RedisProcess. start(function (err) {
+3 23 it('returned a promise', function (done) {
+3 25 process.stdout.on('data', function (data) {
+3 26 if (data.readable) {
+3 27 data.on('end', function () {
+3 28 assert(!err);
+3 30 promise.progress(function (re) {
+3 31 done(err);
+3 34 it('return a promise with a clear array', function (done) {
+3 35 var reply = new RedisProcess.stdout;
+3 38 process.stdout.write(data);
+3 44 it('promises a promise for all requests starting with a specific key', function (done) {
+3 47 client.on('data', function (data) {
+3 48 client.on('error', function (err) {
+3 51 client.once('prompt', function (prompt) {
+3 52 return done();
+3 57 client.namespace('/').stdout.setEncoding('utf8');
+3 58 client.serialize(doc);
+3 59 client.publish();
+3 61 it('promises for the custom parser', function (done) {
+3 62 var parser = redis.createClient.apply(redis.createClient, args);
+3 63 var p = redis.createClient.apply(redis.createClient, args);
+3 64 p.stdout.setEncoding('utf8');
+3 65 client. parser.setEncoding('utf8');
+3 68 it('promises for the custom parser (with the same package meta version)', function (done) {
+3 70 try {
+3 72 } catch (err) {
+3 75 assert.deepEqual(client.stringify({
+3 76 _p: p,
+3 77 _r: 'foo',
+3 78 _s: 'bar'
+3 79 }, function (s) {
+3 84 });"
+
+4 5 describe('using " + parser + " and " + ip, function () {
+4 6 var key = 'x';
+4 7 describe('when not connected', function () {
+4 11 client.once('connect', function () {
+4 12 client.set(key, args);
+4 14 client.reconnect();
+4 16 it('returns an empty array if no sub app is found', function (done) {
+4 17 client.get('/', function (req, res) {
+4 18 assert.equal(req.xhr, 0);
+4 19 res.send(req.yaml());
+4 21 client.set('/:something', function (req, res) {
+4 24 client.listen(0);
+4 31 client.listen(1);
+4 33 describe('when connected', function () {
+4 40 client.once('error', function onError(err) {
+4 41 client.removeListener(err);
+4 42 client.set(key, done);
+4 44 client.on('end', function () {
+4 69 describe('when there is data in Redis', function () {
+4 78 afterEach(function () {
+4 80 it('end();
+4 82 it('promise.skip('return promise.done');
+4 83 it('return promise.done');
+6 2 describe('A' + mongoose.Types.forEach(function (type) {
+6 3 var db;
+6 4 var redis = newuuid.Types.ObjectId;
+6 5 db = redis.createClient();
+6 6 process.nextTick(function () {
+6 7 process.kill();
+6 9 function done (err) {
+6 10 if (err) {"
+
+7 2 describe('The \'getset\' method', function () {
+8 2 describe('The\'mset\' method', function () {
+9 7 }'
+

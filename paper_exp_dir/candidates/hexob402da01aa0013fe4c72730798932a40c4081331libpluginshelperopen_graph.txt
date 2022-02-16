@@ -1,0 +1,193 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 function meta(name, content, escape) {
+0 1 function meta(name, content) {
+0 2 return `${htmlTag('meta', {
+0 3 name,
+0 4 content
+0 5 })}\
+0 6 `;
+0 7 }
+0 8 function og(name, content) {
+0 9 return `${htmlTag(\'meta\', {
+0 10 property: name,
+0 15 function openGraphHelper(options = {}) {
+0 16 const { config, page } = this;
+0 17 const { content } = page;
+0 18 let images = options.image || options.images || page.photos || [];
+0 19 let description = options.description || page.description || page.excerpt || content || config.description;
+0 20 const keywords = page.keywords || (page.tags && page.tags.length? page.tags : undefined) || config.keywords;
+0 21 const title = options.title || page.title || config.title;
+0 22 const type = options.type || (this.is_post()? \'article\' : \'website\');
+0 23 let url = options.url || this.url;
+0 24 const siteName = options.site_name || config.title;
+0 25 const twitterCard = options.twitter_card ||\'summary\';
+0 26 const date = options.date!== false? options.date || page.date : false;
+0 27 const updated = options.updated!== false? options.updated || page.updated : false;
+0 28 const language = options.language || page.lang || page.language || config.language;
+0 29 const author = options.author || config.author;
+0 30 if (!Array.isArray(images)) images = [images];
+0 31 if (description) {
+0 32 description = stripHTML(description).substring(0, 200)
+0 33 .trim()
+0 34 .replace(/</g, \'&lt;\')
+0 35 .replace(/>/g, \'&gt;\')
+0 36 .replace(/&/g, \'&amp;\')
+0 37 .replace(/"/g, \'&quot;\')
+0 38 .replace(/\'/g, \'&apos;\')
+0 39 .replace(/\
+0 40 /g,\'\'); // Replace new lines by spaces
+0 42 if (!images.length && content) {
+0 43 images = images.slice();
+0 44 if (content.includes(\'<img\')) {
+0 45 let img;
+0 46 const imgPattern = /<img [^>]*src=[\'"]([^\'"]+)([^>]*>)/gi;
+0 47 while ((img = imgPattern.exec(content))!== null) {
+0 48 images.push(img[1]);
+0 52 let result = \'\';
+0 54 result += meta(\'description\', description);
+0 56 if (keywords) {
+0 57 if (typeof keywords ===\'string\') {
+0 58 result += meta(\'keywords\', keywords);
+0 59 } else if (keywords.length) {
+0 60 result += meta(\'keywords\', keywords.map(function(keyword) {
+0 61 return {
+0 62 klassName: keyword,
+0 63 site_name: config.title,
+0 64 config: config,
+0 65 article_dir: config.archive_dir + \'/\',
+0 66 public_dir: config.public_dir
+0 67 };
+0 68 }).join(\', \'\');
+0 69 } else {
+0 70 result += meta(\'article_dir\', article_dir);
+0 74 return result += og(\'og:type\', \'og:type\', description);
+0 75 }).join());
+0 77 if (layout = style.substring = style);
+0 78 const styleTags = style = styleTags;
+0 79 function cssHelper = stylePreprocess = (options = \'\';
+0 80 function quote = (options = page, content, indent, parentResult = \'&lt;\', indent, transform, separator = \'\'s\', \'&s\', transform = options = options = options = options &&!=\'s\',\'s\',\'s\', suffix = options.usage = options.usage;\', \'\'s = options.usage =
+1 1 function meta(name, content, escape) {
+1 2 if (escape!== false && typeof content ===\'string\') {
+1 3 content = escapeHTML(content);
+1 11 function og(name, content, escape) {
+1 58 result += meta(\'description\', description, false);
+1 64 result += meta(\'keywords\', keywords.map(function(tag) {
+1 65 return tag.name).join());
+1 69 return result += og(\' \';
+1 70 });
+1 72 if (description = description.substring = full_source!== config.title) {
+1 73 return result += escaped_url? \'
+1 74 .substring + escape_url(config.url) : escape_index(config.root, content);
+1 77 if (external_link = `${external_link}!== undefined) : \'index.html\'s\'s\'s\'s\'s\'s`;
+1 80 return result += page.substring = `${external_link}`;
+1 82 if (external_link.topics = wrap_s)
+1 84 .replace(/gi, page_method, page_method, `${article_method}`);
+1 86 return result += `${external_method} =
+2 65 result += meta(\'keywords\', keywords.map(function(s) {
+2 66 return s.filter(s).join(\', \', \'));
+2 67 }).join(', \');
+2 71 return result += ogog.s[0];
+2 73 result += meta(\'og.type\', type);
+2 75 return result;
+2 76 return result;'og.length = style === undefined? \'true\'s\' : \'true\' : \'world\' : \'article\'
+2 77 });'
+
+3 56 result += og(\'og:type\', type);
+3 57 result += og(\'og:title\', title);
+3 58 if (url) {
+3 59 if (config.pretty_urls.trailing_index === false) {
+3 60 url = url.replace(/([^\\s]+)\\/(index\\.html)?$/gi, \'\');
+3 62 return result += meta(\'og:url\', url);
+3 64 return result += og(\'og:site_name\', site_name);
+3 66 return result += meta(\'og:description\', url);
+3 69 module.create = toArray = function(options, page => {
+3 70 let {'
+
+4 20 let keywords = page.keywords || (page.tags && page.tags.length? page.tags : undefined) || config.keywords;
+4 59 if ((url.substr(0, 1) === \'/\') || url.substr(0, 1) === \'/\') {
+4 60 url = \'/\' + url + \'/\';
+4 66 return url;
+4 70 function openGraphHelper(options = page => {
+4 71 let { page, options = page, locals = options = options || {};
+4 72 if (!page.content = page, \'page, options = page.content = page.content = page.content || \'content\';
+4 73 if (content = page.content.content.content.content.trite!== undefined) options = \'index.type\';
+4 74 if (typeof options = options.type!== undefined) options.type) {
+4 75 return \'photo = options.type;
+4 76 options = options.top = \'photo\'site/\' + page.top\';
+4 77 options = this.type = \'draft\';
+4 78 options = page.top = \'_photo\';
+4 79 const left = options.top = options.position = left;
+4 80 const right;
+4 81 const left
+5 64 result += meta(\'keywords\', keywords.map(function(keyword => {
+5 65 return this.is_post()? \'article\' : \'website\' : \'
+5 66 }).join(', 'bog.vision-media.location(__languages);
+5 67 }).join(pb.site_id);
+5 70 return result += meta(\'og:type\', url, results);
+5 72 if (!images = images.length = images = images.length;
+5 73 return result += meta;
+5 76 if (topics = require(topics);
+5 78 disExternalLink) {
+5 79 return result += \'
+5 80 .topics = \'\';
+5 83 .topics = \';
+5 85 .topics = \'
+5 87 .topics = \'100ô'
+5 88 .topics\';
+6 59 url = url.replace(/([^\\/]+/g, \'\');
+6 61 result += meta(\'og:url\', url);
+6 62 result += meta(\'og:site_name\', siteName);
+6 64 result += meta(\'og:description\', description);
+6 69 if (keywords.push(images);
+6 72 return result += meta(\'og:type\', keywords);
+6 75 module.eachAsync = options => {
+6 76 const { page } = options = this;
+6 77 if (!page => {
+6 78 if (!page.typeof = undefined;
+6 79 return Promise.type!== undefined;
+6 80 page.typeof = undefined;
+6 81 return;
+6 82 } else if (typeof page.type === \'object\'string\'string\') return;
+6 83 return typeof page.type === \'object\'string
+6 84 } else if (!Array.isArray(obj)
+6 85 } else!== page.isArray(obj)) return;
+6 87 return this.typeof page.type);
+6 88 const { url_of
+7 63 url = url.replace(/index\
+7 64 /{2,}/g, \'\');
+7 69 result += og(\'og:site_name\', site_name, url);
+7 71 return result += meta(\'og:description\', description, url);
+7 73 if (keywords: keywords = page.toArray() || undefined) {
+7 74 return result += undefined;
+7 76 return result += meta([images = images = this.some(), url, url];
+7 80 module.each(item => {
+7 81 if (site_id = siteHost) {
+7 82 if (!site_id) {
+7 83 result += meta(site_id, site_id, this);
+8 64 url = [url];
+8 66 return result += url;
+8 68 return result += meta(\'og:url\', url, true, false, url);
+8 71 if (description = style === \'
+8 72 if (style === \'content) {
+8 73 content = false;
+8 74 style = false;
+8 76 style = style === \'false;
+8 79 const css = style = style === \'false;\';
+8 80 return result = style === \'true;
+8 82 function result = style === \'true
+8 84 function result.substringify(data.substring = content;
+8 85 .html;
+8 86 return result = \'
+8 87 .replace(/s, options = null);
+8 88 .replace(/s, \'&/g, \'&amp;\')
+9 34 const result = \'\';
+9 65 result += meta(\'keywords\', keywords.map(function(keyword).join(\', \'));
+9 68 klass.is_post()? \'(keywords.substring(keywords.substring(0, 1) : \'publishers.length)
+9 69 : 20;
+9 70 : true;
+9 72 }).join(', full_s: true;
+9 73 }).join(', i === null;
+9 77 return result += keywords;
+9 78 if (topics) {
+9 79 return result += og(\'
+

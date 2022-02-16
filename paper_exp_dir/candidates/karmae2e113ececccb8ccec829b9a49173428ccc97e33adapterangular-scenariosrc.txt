@@ -1,0 +1,20 @@
+Min editdistance: 6.00
+Closest candidate: 5 9 model.on('RunnerEnd', function() {
+0 1 "
+
+1 1 "
+5 1 model.on('SpecEnd', function(spec) {
+5 2 tc.info({total: totalTests});
+5 3 });
+5 5 tc.complete({
+5 6 coverage: window.__coverage__
+5 9 model.on('RunnerEnd', function() {
+5 19 model.on('TestEnd', function(test) {
+5 20 tc.result({ total: totalTests });
+5 32 model.on('testEnd', function(test) {
+5 52 model.registerResultListeners('testEnd', function(model) {
+5 53 model.emit('testEnd', model);
+5 56 model.on('test.on('test', function(function(name, callback) {
+5 57 model.emit('test', callback);
+5 60 });"
+

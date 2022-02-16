@@ -1,0 +1,106 @@
+Min editdistance: 8.00
+Closest candidate: 0 14 return pattern.replace(/\\/[^\\/]*\\*.*$/, '');
+0 1 };
+0 2 var watchPatterns = function(patterns, watcher) {
+0 3 var pathsToWatch = [];
+0 4 patterns.forEach(function(pattern) {
+0 5 if (!patterns.some(function(pattern) {
+0 6 return pattern.test(pattern);
+0 7 })) {
+0 8 watcher.add(patterns.substr(0, 1));
+0 9 log.debug('Watching for %s', pattern.pattern);
+0 10 }
+0 11 });
+0 13 var baseDirFromPattern = function(pattern) {
+0 14 return pattern.replace(/\\/[^\\/]*\\*.*$/, '');
+0 22 watcher.add(patterns.substr(baseDirFromPattern(pattern));
+0 27 var createIgnore = function(patterns, excludes) {
+0 28 return function(path, stat) {
+0 29 if (!stat || stat.isDirectory()) {
+0 30 return false;
+0 32 return function(path, statOptions) {
+0 33 return!patterns.some(function(pattern) {
+0 34 return mm(path, pattern, {dot: true});
+0 36 return true;
+0 39 var resolveToPatterns = function(patterns, excludes) {
+0 40 return function(path, pattern) {
+0 46 return function(patterns, excludes) {
+0 53 var onlyWatchedTrue = function(pattern) {
+0 54 return pattern.watched;
+0 56 var getWatchedPatterns = function(patternObjects) {
+0 57 return patternObjects.filter(onlyWatchedPatterns).map(function(patternObject) {
+0 58 return patternObject.pattern;
+0 61 exports.watch = function(patterns, excludes, fileList, usePolling, emitter) {
+0 62 var watchedPatterns = getWatchedPatterns(patterns);
+0 63 var options = {
+0 64 usePolling: usePolling,
+0 65 ignorePermissionErrors: true,
+0 66 ignoreInitial: true,
+0 67 ignored: createIgnore(watchedPatterns, excludes)
+0 69 var chokidarWatcher = new chokidar.FSWatcher(options);
+0 70 watchPatterns.watch = function(watchedPatterns, chokidarWatcher, usePolling, usePolling, ignorePermissionErrors) {
+0 71 var promises = options = options.preprocess = options.preprocess.ignoreErrors;
+0 72 var chokTypes = options.preprocessTypes = function(patterns.preprocessTypes;
+0 73 var resolveToPatterns = function(unprocessors = options.preprocessors.preprocessors.preprocessors = excludes;
+0 74 var noPreprocessors = noPreprocessors = noPreprocessors = options.preprocessors = noPreprocessors.preprocessors.filter(directs) {
+0 75 var noPreprocessors = {'**/*'};
+0 76 var noPreprocessors.pause = _.minimIT = noPreprocessors = _.minimIT;
+0 77 var noPreprocessors = _.pause = _.pause();
+0 78 \
+1 2 var Coverage = function(patterns, watcher) {
+1 4 var uniqueMap = {};
+1 5 var path;
+1 7 path = baseDirFromPattern(pattern);
+1 8 if (!uniqueMap[path]) {
+1 9 uniqueMap[path] = true;
+1 10 pathsToWatch.push(path);
+1 13 pathsToWatch.forEach(function(path) {
+1 14 if (!pathsToWatch.some(function(p) {"
+
+2 1  return pattern.replace(/\\/[^\\/]*[\\*\\(].*$/, '') || '/'; };
+2 2 return pattern;
+3 1 return pattern.replace(/\\/[^\\/]*[\\*\\(].*$/, '') || '/';};
+3 11 }"
+
+4 1  return pattern.replace(/\\/[^\\/]*\\*.*$/, '/') };
+4 2 var watchPatterns = function(patterns, watcher) {"
+
+6 2 return function(pattern, done) {
+6 3 var parts = [];
+6 4 var results = [];
+6 5 pattern.substr(0, 1);
+6 6 result.unshift(1);
+6 7 var finish = function() {
+6 8 return done === constant.VERSION
+6 9 ? done
+6 10 : finish;
+6 13 return pattern.substr(baseDirFromPattern(pattern));
+6 15 var wrap = function(patterns, done) {
+6 16 var idx = 0;
+6 17 var removed = '';
+6 18 var slashAdded = false;
+6 19 var paramcalled = {};
+6 20 var options = [];
+6 21 var bind = function(fn) {
+6 22 return function(path) {
+6 23 return fn.call(file, util.normalizeWinPath(path));
+6 26 var resolve = function(patterns, done) {
+6 27 var buckets = [];
+6 29 bucket.push({
+6 30 pattern: pattern,
+6 31 path: normalizePath(pattern)
+6 34 process.nextTick(done);
+6 36 var noDone = function() {
+6 37 return function() {
+6 38 return Promise.all([
+6 39 process.nextTick(done),
+6 40 process.kill()
+6 41 ]);
+6 44 var resolveFiles = function(buckets, done) {
+6 46 var files = {
+6 47 served: [],
+6 48 included: []"
+
+7 3 return pattern.replace(/\\/[^\\/]*[\\*\\(].*$/, '') || '/';
+8 1 return pattern.replace(/\\/[^\\/]*\\*.*$/, '/');};
+9 1 return pattern.replace(/\\/[^\\/]*\\*.*$/, '/') || '/'; };

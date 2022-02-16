@@ -1,0 +1,89 @@
+Min editdistance: 8.00
+Closest candidate: 7 8 var options = {};
+0 1 nvar walk = function (filename, dir) {
+0 2 var file = path.join(dir, filename);
+0 3 var parent = path.dirname(dir);
+0 4 try {
+0 5 fs.statSync(file);
+0 6 } catch (e) {
+0 7 if (parent === dir) {
+0 8 return;
+0 9 }
+0 10 return walk(filename, dir);
+0 12 };"
+
+1 6 } catch (err) {
+1 7 return null;
+1 10 };
+1 12 dir = dir || function (err) {
+1 16 });
+1 18 if (options = options.set) {
+1 19 return options.set = options.set || function (set, value;
+1 20 return getter = options.setters = options.setters || {};
+2 4 dir = dir || process.cwd();
+2 7 module.exports = exports = {"
+
+3 4 function convert(content, file) {
+3 5 var object = require('./' + file)
+3 6 var helper = require('./helper')
+3 7 var glob = require('./extend')
+3 8 var rc = helper.lodash = require(dir)
+3 9 var object = require('./cache's/' + (require(driver + 1).readFileSync())"
+
+4 1 '
+
+5 12 var stats = object.getStats = function () {
+5 13 return object.statSync(file);
+5 15 object.set = function statSync(filename) {
+5 16 return stat.set = stat.set.statSync(filename);
+5 19 object.get = function getStats = function () {
+5 20 return object.getStats = function () {
+5 21 return object.getStats();
+7 4 delete str.some(function (err) {
+7 5 return str.indexOf(dir);
+7 8 var options = {};
+7 9 var shorthands = {};
+7 10 object.forEach(function (value, command) {
+7 11 de.push(command);
+7 13 for (var obj.done(command === undefined;
+7 14 } catch (function (err) {
+7 15 de) {
+7 16 de.message = 'Unable to findCommand(command);
+7 18 } else {
+7 19 done();
+7 20 } catch (opt(err);
+7 24 } catch (command.done(function (err) {
+7 29 return obj; function command.unshift();
+7 32 function findRecursive(filename) {
+7 33 define(filename, dir) {
+7 34 return!!=Dir(this.paths, function (err) {
+7 35 returnDir) {
+7 36 returnDir(this.cwd) {
+7 37 throw newUncompareDir(dir, dir);
+7 38 returnDir, dir);
+8 3 if (file) {
+8 4 return file;
+8 6 return dir;
+8 8 function convert(value) {
+8 9 var glob = require('glob');
+8 10 var result = glob || {};
+8 11 if (!Array.isArray(dir)) {
+8 12 for (value.for (value.isArray(value).toLowerCase()).toLowerCase() == null;
+8 13 } = value = value;
+8 14 return value = get.toLowerCase();
+8 15 } = transform;
+8 16 return value === 1? transform(value);
+8 18 return value;
+8 19 var min = offset = 1;
+8 20 return value.toString = offset;
+8 21 .toString = offset;
+8 22 .s = offset;
+8 28 .for (s) = offset;
+8 29 return String();
+8 30 .for ( ) = function stringify(value) {
+8 31 return value.toString = function (s) {
+8 32 return value.
+9 4 delete str.trim();
+9 5 return str.remove();
+9 7 "
+

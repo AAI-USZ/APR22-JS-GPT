@@ -1,0 +1,10 @@
+Min editdistance: 37.00
+Closest candidate: 5 1  return this;return this; this.resolve();
+0 1 });
+0 2 };"
+3 1 });"
+5 1  return this;return this; this.resolve();
+5 2 return this;
+5 3 }
+5 4 };"
+

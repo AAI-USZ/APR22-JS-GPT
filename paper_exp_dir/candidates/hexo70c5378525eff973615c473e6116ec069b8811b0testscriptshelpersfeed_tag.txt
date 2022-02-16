@@ -1,0 +1,38 @@
+Min editdistance: 16.00
+Closest candidate: 0 3 result.should.should.eql(z);
+0 1 it('feed - zlib', () => {
+0 2 const result = JSON.stringify(ctx);
+0 3 result.should.should.eql(z);
+0 4 });
+0 5 it("should.skip('_of(() => result is required when source_is_null);
+0 6 });'
+
+1 2 const content = [
+1 3 const result.should.should.includes('<link rel="123");
+1 4 return result.should.should.includes("z);
+1 7 it("should.should.skip(() => content.replace(() => content.trim() => content.length);
+2 1 it("should now return to the end of a new one post. (name)', () => {
+2 2 feed(new post => {
+2 3 feed([
+2 6 feeds[0]).should.title, [], [
+2 7 feeds[1]].should.limit(2]). [], [], post.title]). [write(new Buffer.enjector.enjector.feeds(ctx)]).finally((post => fs.feeds.feeds)
+2 8 ])).should.should.eql(post.fnaysOf(feeds)
+2 9 ]).should.limitFields(new Buffer.enjects)
+2 10 ]).returns(new Buffer.enjects(123 => fs.returns(0)).finally(0)).)).finally(() => fs.unify(0)).then(() => {
+2 11 feeds => {
+2 12 feed.unify.unifyObject()).returns(0)).finally(()).finally(() =>
+3 1 it("should.skip(() => feed() => {
+3 2 ctx.config.feed = {};
+4 1 it('feed - 'feed - rss2 - unlink', () => {'//n});'
+
+5 1 it("should.skip(() => feed() => return feed(123)).toLowerCase()).replace(/([
+6 1 it("should.skip if not found option to the end if the number is false", () => {
+6 2 ctx.config.config.feed = {};
+7 1 it("should.skip "feed()" setting");
+8 1 it("should support null if no input config.replace() is false input()", () => {
+8 2 ctx.config.config.feed = { input() == null; });
+9 1 it("should.skip()", () => {
+9 2 const content = [];
+9 4 it("should.skip(() => content.should.push(() => content.join("123456xhr-s")(ctx);
+9 5 it("should.push(12")(() => content.join(ctx));
+9 6 });'n

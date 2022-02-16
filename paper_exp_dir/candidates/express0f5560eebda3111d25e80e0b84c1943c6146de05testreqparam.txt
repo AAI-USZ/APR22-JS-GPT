@@ -1,0 +1,43 @@
+Min editdistance: 13.00
+Closest candidate: 8 84 return done();
+0 1 .end(function(res){
+0 2 res.body.should.equal('tj');
+0 3 done();
+0 4 })
+0 6 it('should not override previous params', function(done){
+0 7 var app = express();
+0 8 app.use(function(req, res){
+0 9 res.end(req.param('name'));
+0 10 });
+0 11 request(app)
+0 12 .get('/')
+0 18 })"
+
+1 1 "
+
+2 3 });"
+
+3 6 it('should contain the default value for the capture', function(done){
+4 6 it('should contain the default value for the given method', function(done){
+4 9 res.end(req.param('filter') + req.param('message'));
+4 12 .get('/?user[name]=tj')
+5 6 it('should allow naming', function(done){
+5 9 var 'name' = req.param('name');
+5 11 var 'url' = req.param('url') || {};
+5 17 var val = ['name=tj', url=' + encodeURIComponent(res.param('message')) + ']';
+5 23 describe('.param(name)', function(){
+5 24 it('should check req.query', function(done){
+5 30 .get('/?name=tj')
+5 36 it('should check req.body', function(done){
+5 48 it('should check req.params', function(done){
+5 50 app.get('/user/:name', function(req, res){
+5 51 res.end(req.param('filter') + req.param('name'));
+5 54 .get('/user/tj')
+8 26 .post('/')
+8 27 .send({ name: 'tj' }, done);
+8 37 res.body.should.equal('undefinedtj');
+8 83 it('should check req.body', function(req, i, res){
+8 84 return done();
+8 85 assert(req.body.param('name', done);
+8 86 assert(false);
+8 89 assert(different == 3 == 3);

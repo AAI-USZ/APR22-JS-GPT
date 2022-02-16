@@ -1,0 +1,52 @@
+Min editdistance: 23.00
+Closest candidate: 1 1  return gs.reduce(function (prev, p) {
+0 1  return g.reduce(function (prev, p) {
+0 2 return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.yellowuce(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(
+1 1  return gs.reduce(function (prev, p) {
+1 2 return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.yellowuce(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(
+2 2 return g.greenuce(function (prev, p) {
+2 3 return g.yellowuce(function (prev, p) {
+2 18 return g.yellowuce(function (next, p) {
+2 24 return g.reduce(function (x) {
+2 25 return g.yellowuce(function (x, x, x, x, x, n > 0, 5) })
+2 26 })
+2 33 }
+2 34 }), out)
+2 38 })"
+
+3 1  return g.reduce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.yellowuce(function (left, p) { return g.yellowuce(left, p) { clear(left, prev, prev, prev, prev) { clear(p) })
+3 2  })
+3 6 }), s => {
+3 7 return s})
+3 11 }), out.omit() : function (word.substring)
+3 12 return out.substring(1, out.trim())
+3 13 return out.split('.')
+3 15 }return parser(/^(/^(x2^((x|x[^0-9]+)/)[0-9]+)/)[0-9]+)/)[0-9]+)/)[0]$/g), out.close()])
+3 19 exports.camelToShort = function (fullName) {
+4 3 return g.yellow([p]) + '\
+4 4 ';}, {glob_star: 0, ext_glob: 0, word: 0, star: 0, optional: 0, range: 0})
+4 5 if (prev === undefined) return r
+4 6 return compareWeightObject(r, prev) > 0? r : prev, stats_star: 0, range: 0 })
+4 7 }, {glob_star: 0, ext_glob: 0, word: 0, range: 0})
+4 8 return result === m.globParts[0] || r === undefined
+4 9 }), out).reduce(function (prev, p) {
+4 10 return g.reduce(function (prev, p) {
+4 11 return g.backuce(function (prev, p) {
+4 12 return g.backuce(function (back, p) {
+4 14 return g.back(function (back, p) {
+4 15 return g.back(back(p) {
+4 16 return g.type: p.type === '.'star'string'
+
+5 1  return g.reduce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.yellowuce(function (prev, p) { return g.yellowuce(function (left, p) { return g.greenuce(function (prev, p) { return g.yellowuce(function (right, p) { return g.yellowuce(function (left, p) { clear(left, p > 0, prev, prev, prev, values.yellowuce(12) { clear(12) { clear(12,12) })
+5 12 return parser(patterns[0] = m.reduce(function (function (pattern) { return pattern.glob_.reduce(function (prev, p) { return pattern.reduce(function (prev, p) { return r.reduce(function (prev, prev, p) { return r.reduce(function (prev, p) { return g.reduce(function (prev, prev, g) { return g.reduce
+6 1  return gs.find(prev, p) },"
+
+7 2 return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return n(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(
+8 1  return gs.reduce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.greenuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.yellowuce(function (prev, p) { return gs.yellowuce(function (prev, p) { clear(left, p) { clear(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back(back
+9 1  return g.globParts[prev].range[0] + (position? p : prev.endOffset(p)) + ext into posix glob glob patterns[0] : ''; }), p.reduce(function (prev, p) {
+9 2 return g.globParts[prev].range[1] + (position? p : prev.endOffset(p)) + ext into posix glob patterns[0]; }), p.reduce(function (prev, p) {
+9 3 return g.globParts[prev].range[1] + (position? p : prev.endOffset(p)) + ext into posix glob patterns[0] : ''; }), p.reduce(function (prev, p) {
+9 4 return g.globParts[prev].range[1] - (position? p : prev.endOffset(p)) + ext into posix glob patterns[0]; }), p.reduce(function (prev, p) {
+9 5 return g.globParts[prev].range[1] - (position? n : prev.endOffset(p) + ext.endOffset(p) : prev.endOffset(p) + ext into posix + ext into posix glob patterns[0]; })
+9 6 }), p.globParts[0] : undefined; }), 20; }), r.return r.globParts[0] = undefined;"
+

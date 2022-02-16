@@ -1,0 +1,73 @@
+Min editdistance: 2.00
+Closest candidate: 0 3 };"
+
+0 1 }], callback);
+0 2 })
+0 3 };"
+
+1 3 }
+1 4 function getExtname(layout, fn){
+1 5 return module.exports[layout] || generate(data.content);
+1 6 }"
+
+2 1 }])(data_);
+2 3 }]);
+2 4 }, callback);
+3 1 }])(data);
+3 4 file.writeFile(target, content, function(err){
+3 5 if (err) return callback(err);
+3 6 fs.close();
+3 7 });
+4 5 module.exports.create = function(data, replace, callback){
+4 6 if (!callback) return callback(new TypeError);
+4 7 var filename = escape = escape.replace(data.substring(/\\s/g, '*/new_post_path)\
+4 8 .replace(/;
+4 9 fs.replace(/{/g, '/, '*/g, '*/g, '');
+4 10 callback = callback);
+4 11 callback = callback.call(null, escape.replace(/})(data);
+4 12 return callback.catch(function(err){
+4 13 return callback.message.catch(err){
+4 14 return callback.stack.message.message.replace(/\
+5 4 var scaffold_folder = swig.compile(content);
+5 5 doc = filename.replace(/\\.swig, '', '\\d' + scaffold_folder\
+5 6 , escape.\
+5 7 );
+5 8 compiled = filename.replace(locals = function(obj, obj, locals){
+5 9 return locals){
+5 10 return obj(obj, locals);
+5 11 return config, {
+5 12 filename: obj(obj: obj, _.scaffolds.filename, filename, layout: layout === 'layout' + 'layout' + obj.swig', path.filename_case, escape(obj.layout)
+6 4 module.exports.filename = function(data, replace, callback){
+6 5 if (!config.post_asset_folder) return next();
+6 6 var filename = escape = escape.substring(hexo.config.filename, escape.length);
+6 7 var content = content = escape.replaceAllSwig.compile(data.replace(/\\\\s/{2, '\\s/g, */);
+6 8 content = replace = _content = _content, escape.replace(/g, '/*', '.*' + content);
+6 9 return config.replace(/g, escape.replace(/g, '/*', content);
+6 10 } = data);
+6 11 var locals = {};"
+
+7 2 }])({filename: function(next, results){
+7 3 if (null, results.filename) return next(null, results.filename);
+7 4 next(null, results.content);
+7 6 }), callback);
+8 4 .done();
+9 7 "function slugize(){
+9 8 return swig.compile({
+9 9 content: content,
+9 10 layout: false,
+9 11 filename: target,
+9 12 path: target
+9 16 }).then(function(){
+9 17 return swig.compile.compile(data, {
+9 18 return {
+9 19 Post.compile(data,
+9 20 Post.assetFilename.compile(data.mark());
+9 21 }).then(function(function(data, replace, replace, replace, fn){
+9 22 filename, fn(data, replace, newPost.isRender(data)
+9 23 removeAllIncludedFile(data.layout)
+9 24 }).setAllIncludedFiles(data, replaceFiles.addIncludedFiles([
+9 25 swig.addFile)
+9 26 }).setTags(data.setFiles(data.swig.swig.swig.compile(data, replace);
+9 27 return data.endsWithRemoveFiles(data.swig.swig);
+9 28 }).then(data.next);
+9 29 }).then(function(post =>\

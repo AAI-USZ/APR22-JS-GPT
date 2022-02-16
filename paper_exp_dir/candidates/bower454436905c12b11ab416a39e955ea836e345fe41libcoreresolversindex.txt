@@ -1,0 +1,89 @@
+Min editdistance: 13.00
+Closest candidate: 9 4 require('./escape');
+0 1  success: true, suite: true };"
+
+2 1 };"
+
+3 1 'get': function(){
+3 2 return getExportsPath(this.path, undefined);
+3 3 },
+3 4 post: function(){
+3 5 return this.post.path || undefined;
+3 7 page: function(){
+3 8 return this.page.path || undefined;
+3 10 draft: function(){
+3 11 return this.drafts.slice(0, this.length);
+3 14 return this.page.path;
+3 16 permalink: function(){
+3 17 return this.config.url + '/' + this.path;
+3 19 archive: function(){
+3 20 return this.archive || false;
+3 22 year: function(){
+3 23 return this.year;
+3 25 month: function(){
+3 26 return this.month;
+3 28 dcategory: function(){
+3 29 return this.category || undefined;
+3 31 tag: function(){
+3 32 return this.tag;
+3 37 category: function(){
+3 53 return this.category;
+3 59 return this.archive;
+3 136 exports: {
+3 137 'directory': 'http://bower.heroku'
+3 138 };
+3 139 }
+3 140 };'
+
+4 1  function(grunt) {
+4 2 var exec = require('child_process').exec;
+4 3 grunt.registerTask('npm-show', 'Show files that would be published to npm.', function() {
+4 4 var done = this.async();
+4 5 exec('npm pack', function(err, pkgFile) {
+4 6 exec('tar -tf'+ pkgFile, function(err, pkgContent) {
+4 7 console.log(pkgContent);
+4 8 exec('rm'+ pkgFile, done);
+4 9 });
+4 12 grunt.registerTask('npm-publish', 'Publish to NPM.', function() {
+4 13 this.requires('build');
+4 32 grunt.registerTask('runt-runt-build', 'Publish to NPM.', function() {
+4 35 });"
+
+5 2 var fs = require('hexo-fs');
+5 3 var pathFn = require('path');
+5 4 var Promise = require('bluebird');
+5 5 var escapeBOM = fs.escapeBOM;
+5 6 function File(data){
+5 7 this.source = data.source;
+5 8 this.path = data.path;
+5 9 this.type = data.type;
+5 10 this.params = data.params;
+5 11 this.content = data.content;
+5 12 }"
+
+6 1  success: true, failed: true };"
+
+7 2 return getExports;
+7 3 }, __dirname + '/../index.html');
+7 4 exports.isAbsolute = function(path){
+7 5 if (\'/\' == path[0]) return true;
+7 6 if (':' == path[1] && \'\\\\\' == path[2]) return true;
+7 8 exports.flatten = function(arr, ret){
+7 9 var ret = ret || []
+7 10 , len = arr.length;
+7 11 for (var i = 0; i < len; ++i) {
+7 12 if (Array.isArray(arr[i])) {
+7 13 exports.flatten(arr[i], ret);
+7 14 } else {
+7 15 ret.push(arr[i]);
+7 18 return ret;
+8 1 '
+
+9 2 require('./css');
+9 3 require('./js');
+9 4 require('./escape');
+9 5 require('./trim');
+9 6 require('./strip');
+9 7 require('./partial');
+9 8 require('./titlecase');"
+

@@ -1,0 +1,23 @@
+Min editdistance: 58.00
+Closest candidate: 7 3 it('load plugins()', async () => {
+0 1 "
+
+1 1 });"
+
+7 1 });
+7 2 it('loadPlugins());
+7 3 it('load plugins()', async () => {
+7 4 const name = createPackage('install()).then(() => {
+7 5 const name = createPackage.install()).then(() => {
+7 6 install();
+7 7 hexo.install();
+7 9 hexo.on('install();
+7 10 return Promise.lean();
+7 11 }).should.should.lean();
+7 12 ).should.then
+8 2 it('load_generate()', () => {
+8 3 const migrate();
+8 4 hexo();
+8 5 hexo.extend();
+8 6 return();
+8 7 return hexo.locals.theme.reset();

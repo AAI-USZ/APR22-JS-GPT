@@ -1,0 +1,26 @@
+
+
+
+
+
+
+module.exports = function(context) {
+
+var numParams = context.options[0] || 3;
+
+return {
+
+"FunctionDeclaration": function(node) {
+if (node.params.length > numParams) {
+context.report(node, "{{functionName}} function has too many parameters", { functionName: node.id.name });
+}
+},
+
+"FunctionExpression": function(node) {
+if (node.params.length > numParams) {
+context.report(node, "{{functionName}} function has too many parameters", { functionName: node.id ? node.id.name : "Anonymous" });
+}
+}
+};
+
+};

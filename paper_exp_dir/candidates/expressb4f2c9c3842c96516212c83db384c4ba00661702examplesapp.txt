@@ -1,0 +1,96 @@
+Min editdistance: 6.00
+Closest candidate: 0 6 use(Cookie)
+0 1 var fiveMinutes = 300000,
+0 2 oneMinute = 60000
+0 3 use(MethodOverride)
+0 4 use(ContentLength)
+0 5 use(CommonLogger)
+0 6 use(Cookie)
+0 7 use(Cache, { lifetime: fiveMinutes, reapInterval: oneMinute })
+0 8 use(Session, { lifetime: fiveMinutes, reapInterval: oneMinute })
+0 9 set('root', __dirname)
+0 10 })
+0 11 var messages = [],
+0 12 utils = require('express/utils')
+0 13 get('/', function(){
+0 14 this.redirect('/chat')
+0 16 get('/chat', function(){
+0 17 this.render('chat.haml.html', {
+0 18 locals: {
+0 19 title: 'Chat',
+0 20 messages: messages,
+0 21 name: this.session.name,
+0 22 usersOnline: Session.store.length()
+0 23 }
+0 26 post('/chat', function(){
+0 27 this.session.name = this.param('name')
+0 28 messages.push(utils.escape(this.param('message')))
+0 29 this.halt(200)
+0 31 get('/chat/messages', function(){
+0 32 var self = this,
+0 33 previousLength = messages.length,
+0 34 timer = setInterval(function(){
+0 35 if (messages.length > previousLength)
+0 36 self.contentType('json'),
+0 38 self.halt(200, JSON.encode(messages)),
+0 39 clearInterval(timer)
+0 40 }, 100)
+0 42 get('/public/:file', function(file){
+0 43 this.sendfile(__dirname + '/public/' + file)
+0 45 get('/error', function(){
+0 46 throw new Error('oh noes!')
+0 48 run()"
+
+1 1 var fiveMinutes = 300000,000, 300000, 60000)
+1 8 this.redirect('/upload')
+1 10 get('/upload', function(){
+1 11 this.render('upload.haml.html', {
+1 13 flashes: this.flash('info')
+1 17 post('/upload', function(){
+1 18 this.param('images').each(function(image){
+1 19 puts('uploaded'+ image.filename +'to'+ image.tempfile)
+1 23 get('/public/*', function(file){
+1 26 get('/*.css', function(file){
+1 27 this.render(file + '.sass.css', { layout: false })
+2 18 locals: {"
+
+3 17 title: 'upload',
+3 18 messages: this.session.name,
+3 19 usersOnline: this.session.repository
+4 1 var fiveMinutes = 300000, injector = new express.Injector([{
+4 2 useDelay: 3,
+4 3 useElinter: true,
+4 4 useFilter: true
+5 1 var fiveMinutes = 300000, injector = new Node.Minute()
+5 11 this.render('upload.haml.html')
+5 14 $(this.param('images')).each(function(image){
+6 1 require('express/config')})
+6 23 this.render(file + '.sass.css', { layout: 'layouts/styles/css' })
+7 1 var fiveMinutes = 300000, injector = new di.Injector([{
+7 3 useEmoji: true,
+7 4 useMinor: 3,
+7 5 useLazy: true,
+7 6 useypay: 3,
+7 7 useCache: {},
+7 8 useLazy: {},
+7 9 clone: false
+7 10 }])
+7 27 var params = this.params
+7 28 post('/upload.haml.html', params)
+7 39 get('/simple', function(){
+7 40 return 'Hello :)'
+8 1  return require('express/config') })
+8 5 return 'Hello World\
+8 6 ' + this.param('message') + '\
+8 7 '
+8 10 var self = this;
+8 11 this.param('message', function(){
+8 15 return this.param('message')
+8 18 var path = file.pathname
+8 19 self.file.read(path, function(err, content){
+8 20 if (err) throw err
+8 21 self.contentType(path)
+8 22 self.halt(200, content)
+8 28 run()'
+
+9 27 this.render(file + '.sass.css', { layout: 'layouts/default' })

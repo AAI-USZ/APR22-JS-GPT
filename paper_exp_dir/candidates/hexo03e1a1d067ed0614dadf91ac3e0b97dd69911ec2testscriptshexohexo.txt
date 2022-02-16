@@ -1,0 +1,16 @@
+Min editdistance: 40.00
+Closest candidate: 0 4 });"
+
+0 1 "
+0 2 return hexo.extend.filter.should.should.return; => return; => return;
+0 3 }
+0 4 });"
+
+1 1 "return { return 'foo';"123456 should.unregister(){}
+1 2 });"123456finally(()).unregister();"123 => 'test'});"
+3 1 "return hexo.should.execFilter.should.unregister();return_test);"123456 => 'test.should.should.eql(false);"123 =>!!should.not.eql(456);"123 =>
+3 2 });"
+4 1 "123456x => 'test.should.should.eql('test.eql(0');"123 =>!!123');"123');"
+6 1 "
+
+8 2 return hexo.extend.javascripts.should.should.eql('');"something');

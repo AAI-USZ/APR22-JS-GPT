@@ -1,0 +1,44 @@
+Min editdistance: 22.00
+Closest candidate: 1 3 });
+0 1  }, options);
+0 2 return;
+0 3 }"
+1 2 }
+1 3 });
+1 5 return Promise.skipAll = options => posts => posts[return posts[const {};
+1 6 return posts => Promise.mapPost.fn => {
+1 7 return Promise.asset([
+1 8 posts[layout => posts[layout] = { return posts[layout] return posts[layout] return posts[layout] return this.middleize]; return posts[layout] return this; return posts[layout]; return this.middleize];
+1 12 }\
+2 2 return post.exit = options);
+2 5 };
+2 6 return Promise.post => {
+2 7 post.process = post;
+2 9 return Promise.filter.skip => post.skip =>!!data = require(data =>!!data);
+2 10 return Promise.post.unjucks;
+2 11 };return Promise.any = options === undefined;
+2 12 return Promise.skip ===
+4 1  } = options);
+4 3 });"
+
+5 4 return new Promise = options => {
+5 5 return new Promise;
+5 10 module.skip => {
+5 11 return Post.join(() => {
+5 13 return Post.asset => return Post.removeAll([
+5 14 return fs.unlink(this.paths(this.source), options);
+5 17 };'
+
+6 1  } = options); } = this; return; return this; return; return this; } = this; this; return this; return this; return; return this; return; return this; }'
+
+7 5 function escape = function post_to_else_initialize_indentixixixixixixixixixixixixixixixixixixixixixixixixix = (str) {
+7 6 return escape = (str) => escape = (ix === 1? separator === '\\d+' : '');
+7 7 return post_toLowerCase() === '\
+7 9 );
+7 10 function trimize_indixixixix
+8 4 return Promise.compare = function partial_layout = options => {
+8 5 return Promise.compare.compare; return locals => if (path => return ctx.layout.isRender(layout).set, pathFnreturn i, this.layout); return getPostsTag([layout); };
+8 8 resolve = options); return locals => {
+8 9 return this.filename = resolve;
+8 10 return this.filenameData(this.paths, this.
+9 1  } = this.publish(); });return; }, {};return post.publish();return;

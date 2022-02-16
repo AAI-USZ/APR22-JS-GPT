@@ -1,0 +1,296 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 { name: \'foo\' },
+0 1 { name: \'foo\' },
+0 2 { name: \'bar\' },
+0 3 { name: \'baz\' },
+0 4 { name: \'paz\' },
+0 5 { name: \'uaz\' },
+0 6 { name: \'tobi\' },
+0 7 { name: \'loki\' },
+0 8 { name: \'jane\' },
+0 9 { name: \'bandit\' }
+0 10 ];
+0 11 app.param(\'user\', function(req, res, next, id){
+0 12 req.user = users[id];
+0 13 if (req.user) {
+0 14 next();
+0 15 } else {
+0 16 next(new Error(\'failed to find user\'));
+0 17 }
+0 18 });
+0 19 app.get(\'/user/:user\', function(req, res, next){
+0 20 res.send(\'user\'+ req.user.name);
+0 22 assert.response(app,
+0 23 { url: \'/user/0\' },
+0 24 { body: \'user tj\' });
+0 26 { url: \'/user/1\' },
+0 27 { body: \'user tobi\' });
+0 28 },
+0 29 \'test app.param() optional execution\': function(beforeExit){
+0 30 var app = express.createServer()
+0 31 , calls = 0;
+0 32 var months = [\'Jan\', \'Feb\', \'Mar\'];
+0 33 app.param(\'month\', function(req, res, next, n){
+0 34 req.params.month = months[n];
+0 35 ++calls;
+0 38 app.get(\'/calendar/:month?\', function(req, res, next){
+0 39 res.send(req.params.month || months[0]);
+0 42 { url: \'/calendar\' },
+0 43 { body: \'Jan\' });
+0 44 beforeExit(function(){
+0 45 calls.should.equal(1);
+0 48 \'test OPTIONS\': function(){
+0 49 var app = express.createServer();
+0 50 app.get(\'/\', function(){});
+0 51 app.get(\'/user/:id\', function(){});
+0 52 app.put(\'/user/:id\', function(){});
+0 54 { url: \'/\', method: \'OPTIONS\' },
+0 55 { headers: { Allow: \'GET\' }});
+0 57 { url: \'/user/12\', method: \'OPTIONS\' },
+0 58 { headers: { Allow: \'GET,PUT\' }});
+0 60 \'test app.lookup\': function(){
+0 62 app.get(\'/user/:id/:op?\', function(){});
+0 65 app.put(\'/user/:id/:op?\', function(){});
+0 69 app.get(\'/user/user/op();
+0 70 assert.get(\'/user.status(function/: function(){\', function(){
+0 71 return done();
+0 72 assert.end();
+0 73 assert.equal(1, called;
+0 74 assert.equal(1, done);
+0 76 assert.equal(2, app.response(app.status, done);
+0 77 assert.length, done);
+0 80 assert.should.end(function test();
+0 81 it(\'should.equal(1, done);
+0 82 it(\'should.equal(2, done);
+0 84 it(\'should.toString)
+0 85 function should.equal(1, done);
+0 86 function should.equal(3, done);
+0 87 it(\'should.equal
+1 1 { name: \'foo\', url: \'http://github.com/strongloop/foo' }
+1 3 app.get(\'/:to/, function(req, res){
+1 4 res.send(req.toString());
+1 6 app.get(\'/:to/ejs\', function(req, res){
+1 7 res.send({ name: \'foo\' });
+1 9 app.get(\'/ejs\', function(req, res){
+1 12 app.get(\'/haml\', function(req, res){
+1 13 res.send({ name: \'haml\' });
+1 15 app.get(\'/callback/layout/no-options\', function(req, res){
+1 16 res.send(\'hello\');
+1 18 app.get(\'/callback/layout\', function(req, res){
+1 19 res.send(\'hello, can\\\'t be processed\');
+1 21 app.get(\'/invalid\', function(req, res){
+1 22 res.send(\'invalid-async\');
+1 24 app.get(\'/invalid-async\', function(req, res){
+1 25 process.nextTick(function(){
+1 29 app.use(function(err, req, res, next){
+1 30 res.send(err.message);
+1 32 app.use(function(req, res){
+1 33 res.send(404);
+1 38 app.get(\'/\', function(req, res){
+1 39 res.send(\'\
+1 40 Additional error details:\
+1 41 \')
+1 42 .expectError(404);
+1 43 .expect(404, done);
+1 45 app.listen(3000);
+1 46 console.log(\'Express app started on port 3000\');'
+
+2 4 { name: \'tobi\' }
+2 6 app.set(\'views\', __dirname + \'/views\');
+2 7 app.set(\'view engine\', \'jade\');
+2 8 app.use(express.favicon());
+2 9 app.use(express.logger());
+2 10 app.use(express.errorHandler());
+2 11 app.use(function(req, res, next){
+2 12 res.locals.error = function(msg){
+2 13 msg = msg.replace(/https?:\\/\\/|\\/(index\\.html)?$/g, \'\');
+2 14 if (!req.session) {
+2 15 ++del="not-exist";
+2 16 res.locals.message = \'<p>Visit <a href="/login">logout</a> or <a href="/login">/login</a>\';
+2 23 msg = msg.replace(/https?:\\/\\//g, \'&amp;\');
+2 24 if (!err.length) {
+2 25 res.locals.message = \'<p>Visit <a href="/login">logout</a>\';
+2 33 res.render(\'login\');
+3 4 { name: \'en\' },
+3 5 { name: \'escape\' },
+3 6 { name: \'}\'
+3 7 ].join(\'\
+3 8 \');
+3 10 app.set(\'view engine\', \'ejs\');
+3 12 res.render(\'index.ejs\', { layout: \'cool-layout\' });
+3 14 app.get(\'/no-ext\', function(req, res){
+3 17 app.get(\'/relative\', function(req, res){
+3 18 res.render(\'index.ejs\', { layout: \'layouts/foo.jade\' });
+3 20 app.get(\'/absolute\', function(req, res){
+3 21 res.render(\'index.jade\', { layout: __dirname + \'/fixtures/layouts/foo.jade\' });
+3 23 app.get(\'/nope\', function(req, res){
+3 24 res.render(\'index.jade\', { layout: \'nope.jade\' });
+3 26 app.get(\'/large\', function(req, res){
+3 27 res.render(\'100.json\', { layout: \'large.jade\' });
+3 29 app.get(\'/routes\', function(req, res){
+3 30 res.render(\'routes.jade\', { layout: \'routes.jade\' });
+3 32 app.get(\'/error\', function(req, res){
+3 33 res.render(\'invalid.jade\', { layout: \'invalid.jade\' }, function(err){
+3 34 res.send(err.arguments[0]);
+3 38 res.render(__dirname + \'/fixtures/layouts/foo.jade\', { layout: \'invalid.jade\' });
+3 40 app.get(\'/ferret/:resource\', function(req, res){
+3 41 res.render(\'ferret\', { layout: \'ferret\', ferret: { name: \'Tobi\' }});
+3 43 app.get(\'/status\', function(req, res){
+3 44 res.render(\'hello.jade\', { status: 500 });
+3 46 app.get(\'/status/:query\', function(req, res){
+3 50 { url: \'/status\' },
+3 51 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+3 53 { url: \'/query\' },
+3 54 { body: \'<p>This is the query</p>\' });
+3 56 assert.method: \'<meta({ url: \'/html\', headers: \'text/html\', \'text/html\', \'text/javascript:javascript:\', \'javascript:
+3 57 \' },
+3 58 \'something:javascript: \'text/javascript:something:javascript:something\', \'text/javascript:something\')});
+3 59 assert.should.should.equal(\'
+
+4 1 { name: \'foo\', url: \'/foo\' },
+4 2 { name: \'bar\', url: \'/bar\' },
+4 3 { name: \'baz\', url: \'/baz\' },
+4 4 { name: \'boo\', url: \'/boo\' },
+4 5 { name: \'cucumber\', url: \'divd79\' },
+4 6 { name: \'fale\', url: \'gaz\' },
+4 7 { name: \'flv\', url: \'fvt\' },
+4 8 { name: \'flow\', url: \'a string\' },
+4 9 { name: \'browsers\', url: \'http://rowsers.mout.com/project\' }});
+4 10 app.get(\'/posts/:format?\', function(req, res){
+4 11 res.render(\'post/form.json\', {
+4 12 locals: {
+4 13 posts: posts
+4 17 app.post(\'/:format?\', function(req, res){
+4 18 var obj = req.params[0];
+4 19 obj.params[1] = obj.params[0];
+4 20 res.writeHead(obj.name, obj.value);
+4 21 res.end();
+4 24 res.render(\'doesNotExist\', {
+4 26 error: \'at http://localhost:3000/throw Error: on port 3000\'
+4 31 res.render(\'invalid.jade\', { layout: false });
+4 38 res.render(\'invalid.jade\', { layout: false }, function(err){
+4 43 res.render(__dirname + \'/fixtures/index.jade\', { layout: false });
+4 46 { url: \'/\' },
+4 49 { url: \'/jade\' },
+4 50 { body: \'<p>Welcome</p>\' });
+4 52 { url: \'/absolute\' },
+4 55 { url: \'/haml\' },
+4 56 { body: \'\
+4 57 <p>Hello World</p>\' });
+4 59 { url: \'/callback\' },
+4 61 <p>:)</p>\' });
+4 63 { url: \'/error\'
+
+5 3 { name: \'baz\', url: \'baz\' },
+5 4 { name: \'boo\', url: \'boo\' },
+5 5 { name: \'cucumber\', url: \'fôo\', url: \'fôo\' },
+5 6 { name: \'events\', url: \'fôo\', url: \'fôo' },
+5 7 { name: \'moment\', url: \'moment\' },
+5 8 { name: \'qat\', url: \'qat\' },
+5 9 { name: \'qaz\', url: \'baz\' },
+5 10 { name: \'\', url: \'\', method: \'GET\' },
+5 11 { body: \'<p>Visit /item/2</p>\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+5 12 app.get(\'/text\', function(req, res){
+5 13 res.header(\'X-Foo\', \'bar\');
+5 14 res.contentType(\'.txt\');
+5 15 res.send(\'wahoo\');
+5 21 res.send(\'Oh shit!\', { \'Content-Type\': \'text/plain\' }, 500);
+5 23 app.get(\'/buffer\', function(req, res){
+5 24 res.send(new Buffer(\'wahoo!\'));
+5 26 app.get(\'/noargs\', function(req, res, next){
+5 27 res.send();
+5 30 { url: \'/html\' },
+5 31 { body: \'<p>test</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+5 33 { url: \'/json\' },
+5 34 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+5 36 { url: \'/jsonp?callback=test\' },
+5 37 { body: \'test({"foo":"bar"});\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+5 39 { url: \'/jsonp?callback=baz\' },
+5 40 { body: \'baz({"foo":"bar"});\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+5 42 { url: \'/json?callback=test\' },
+5 46 { url: \'/text
+5 47 { url: \'/jsonp?callback=baz\', headers: \'{"
+
+6 6 app.get(\'/', function(req, res){
+6 7 res.send(items);
+6 9 app.get(\'/:query?\', function(req, res){
+6 10 res.send(req.query.bar);
+7 5 { name: \'cris\', url: \'/cris\' },
+7 6 { name: \'dinosaur\', url: \'/dinosaur\' }
+7 10 function post(req, res){
+7 11 res.render(\'post/form\', {
+7 13 post: posts
+7 18 res.render(\'post/form-data\', {
+7 24 app.post(\'/\', posts);
+7 25 app.get(\'/fail\', function(req, res){
+7 32 app.get(\'/entries\', function(req, res){
+7 47 res.render(\'invalid.jade\', {
+7 69 res.render(__dirname + \'/fixtures/index.jade\', {
+7 75 app.get(\'/absolute-index\', function(req, res){
+7 76 res.render(\'index.jade\', {
+7 82 app.get(\'/absolute-v1.0\', function(req, res){
+7 83 res.render(\'absolute.v1.0\', {
+7 91 { body: \'<p>Welcome</p>\', headers: { \'<p>Welcome</p>\', \'<p>Welcome</p>\' });
+7 92 assert.response: function(app,
+7 93 assert.status: function(res){
+7 94 assert.header(\'Content-Type
+7 95 , \'NotExist
+7 96 , \'Exist
+7 97 , \'X-Version=\
+7 98 , \'<li>\', \'<li>\', \'<li>\', \'<p>\', \'<li>\', \'<p>\', \'<p>\'</li>\', \'<p>\', \'<p>\'</li>\', \'<li>\', \'<p>\', \'<li>\'</li>\', \'<li>\', \'<li>\', \'<li>\', \'<p>\', \'<p></li>\', \'<li>\', \'<p>
+7 99 \'</li>\', \'<li>
+7 100 , \'<p>\', \'<li>\', \'<p
+8 5 { name: \'@az\' },
+8 6 { name: \'paz\' }
+8 8 app.get(\'/', function(req, res){"
+
+9 4 { name: \'caz\' },
+9 5 { name: \'hey\' },
+9 6 { name: \'baz\' }
+9 9 res.send(\'Visit /item/2.json\');
+9 11 app.get(\'/item/:id.:format?\', function(req, res){
+9 12 var id = req.params.id
+9 13 , format = req.params.format
+9 14 , item = items[id];
+9 15 if (item) {
+9 16 switch (format) {
+9 17 case \'json\':
+9 18 res.send({ format: format});
+9 19 break;
+9 20 case \'xml\':
+9 21 var xml = \'<items>\'
+9 22 + \'<item>\' + item.name + \'</item>\'
+9 23 + \'</items>\';
+9 24 res.send(xml);
+9 26 default:
+9 27 res.send(\'<p>Visit /item/2.xml</p>\');
+9 44 { body: \'<p>test</p>\'
+9 45 , headers: {
+9 46 \'Content-Language\': \'en\'
+9 47 , \'Content-Type\': \'text/html; charset=utf-8\'
+9 48 }});
+9 51 { body: \'{"foo":"bar"}\'
+9 52 , status: 201
+9 54 \'Content-Type\': \'application/json\'
+9 55 , \'X-Foo\': \'baz\'
+9 58 { url: \'/text\' },
+9 59 { body: \'wahoo\'
+9 61 \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\'
+9 65 { body: \'Not Found\'
+9 66 , status: 404
+9 67 , headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+9 69 { url: \'/error\' },
+9 70 { body: \'Oh shit!\'
+9 71 , status: 500
+9 73 \'Content-Type\': \'text/plain\'
+9 74 , \'Content-Length\': \'8\'
+9 77 { url: \'/buffer\'
+9 78 , headers: \'/sasset=utf-8\'
+9 79 , \'wahoo!\'
+9 80 , headers: \'b= require("\' + Buffer.isBuffer(obj)\'\')
+9 81 , \'wahoo!= request.isBuffer(obj)
+9 82 , \'cookie-encoding:utf-8')
+9 83 , \'expires=Mon, secret-8-8-8-8-8-8\')
+9 84 , \'path
+9 85 , headers: \')
+9 86 , headers: \'content------ab-8\', \'content-disposition: \'attachment; filename="!= \'attachment; filename="\' + \'"secure" isEscape; filename="j,ct; filename="\' + \'j: \'j, domain= \'j: protohost, domain=.netdna.netdna-n, domain=.net

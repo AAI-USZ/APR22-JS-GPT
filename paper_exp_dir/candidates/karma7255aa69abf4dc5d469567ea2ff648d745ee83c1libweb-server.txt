@@ -1,0 +1,90 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var connect = require('connect');
+0 1 var connect = require('connect');
+0 2 var common = require('./middleware/common');
+0 3 var runnerMiddleware = require('./middleware/runner');
+0 4 var stripHostMiddleware = require('./middleware/strip_host');
+0 5 var karmaMiddleware = require('./middleware/karma');
+0 6 var sourceFilesMiddleware = require('./middleware/source_files');
+0 7 var proxyMiddleware = require('./middleware/proxy');
+0 8 var log = require('./logger').create('web-server');
+0 9 var createCustomHandler = function(customFileHandlers,   basePath) {
+0 10 return function(request, response, next) {
+0 11 for (var i = 0; i < customFileHandlers.length; i++) {
+0 12 if (customFileHandlers[i].urlRegex.test(request.url)) {
+0 13 return customFileHandlers[i].handler(request, response, 'fake/static', 'fake/adapter',
+0 14 basePath, 'fake/root');
+0 15 }
+0 17 return next();
+0 18 };
+0 20 createCustomHandler.$inject = ['customFileHandlers', 'config.basePath'];"
+
+1 5 var sourceFilesMiddleware = require('./middleware/source-files');
+1 19 createCustomHandler.$inject = ['customFileHandlers', 'config.basePath'] = ['config.urlRoot'] || 'root';
+1 20 var createWebServer = function(injector, emitter, fileList) {
+1 21 var config = injector.get('config');
+1 22 common.initializeMimeTypes(config);
+1 23 var serveStaticFile = common.createServeStaticFile(fs, path.normalize(static), config);
+1 24 var serveFile = common.createServeFile(fs);
+1 25 var filesPromise = new common.PromiseContainer();
+1 26 emitter.on('file_list_modified', function(files) {
+1 27 filesPromise.set(files);
+1 28 });
+1 29 injector.createChild([{
+1 30 serveFile: ['value', serveFile],
+1 31 serveStaticFile: ['value', serveStaticFile],
+1 32 filesPromise: ['value', filesPromise]
+1 33 }]);
+1 34 var proxyMiddlewareInstance = injector.invoke(proxyMiddleware.create);
+1 35 var handler = connect()
+1 36 .use(injector.invoke(runnerMiddleware.create))
+1 37 .use(injector.invoke(karmaMiddleware.create))
+1 38 .use(injector.invoke(sourceFilesMiddleware.create))
+1 39 .use(proxyMiddlewareInstance)
+1 40 .use(injector.invoke(createCustomHandler))
+1 41 .use(function(request, response) {"
+
+3 2 var mime = require('mime');
+4 2 var Promise = require('bluebird');
+5 18 var createWebServer = function(injector, emitter) {
+5 19 var serveStaticFile = common.createServeFile(fs, path.normalize(__dirname + '/../static'));
+5 25 injector = injector.createChild([{
+5 37 .use(function(request, response) {
+5 38 common.serve404(response, request.url);
+5 40 var serverClass = http
+5 41 .get('/', function(req, res) {
+5 42 serverClass.setHeader('Location', serverClass);
+5 43 res.writeHead(200, {
+5 44 'Location': basePath,
+5 45 'COMPATIBLE CONTEXT': 'components'
+5 47 res.end('DONE');
+5 49 return serverClass;
+5 51 exports.create = createWebServer;"
+
+9 22 var config = injector.config();
+9 23 var serveStaticFile = common.createServeFile(fs, path.normalize(__dirname + '/../static'), config);
+9 37 .use(injector.invoke(stripHostMiddleware.create))
+9 45 var serverClass = injector.model('server', serverClass);
+9 46 var serverArg = serverClass.join(' ');
+9 47 if (config.protocol) {
+9 48 serverClass = injector.get('config.protocol');
+9 50 var proto = serverClass.split(' ');
+9 51 var server = serverClass.pop();
+9 52 var serverArg = serverArg.split(' ')[0];
+9 53 if (config.proxies && config.proxies.hasOwnProperty(config.urlRoot)) {
+9 54 log.warn('upgrade');
+9 55 config.urlRoot = config.root;
+9 57 var protoxies = serverClass.split('/');
+9 58 var server = serverClass.splice;
+9 59 var protox = serverClass;
+9 60 var serverArg = null;
+9 61 if (config.proxies.length === 1) {
+9 62 log.for (valx = 0;
+9 63 for (var i = 1; i = 0; i = 0; i < args.length; i; i; i; i < args.length; i; i; i++) {
+9 64 var key = ip = ip = ipFnvar val = '';
+9 65 log.untry {
+9 66 serverClass = injector.handle = injector.handle = injector.handle.get('server', ip);
+9 67 log.handle = injector.handle(serverClass);
+9 68 proxhriddleware[key].apply(serverClass, this, args);
+9 70 log.done(serverClass, arguments);
+9 71 return serverClass, url = injector.handle

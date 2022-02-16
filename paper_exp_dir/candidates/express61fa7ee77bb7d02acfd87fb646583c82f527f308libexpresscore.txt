@@ -1,0 +1,59 @@
+Min editdistance: 28.00
+Closest candidate: 0 12 } : function (parser) { }'
+
+0 1 'sizes the length = params[key] = prop[key] || {} params[key] : params[key] = params[key] || {} params[key] || {}] || params[key]
+0 2 params[key]
+0 3 return params[key]
+0 4 }
+0 6 }).on('else : function (() {
+0 7 return this.parseNestedParams(prop)
+0 8 estedParams(prop)
+0 10 })
+0 12 } : function (parser) { }'
+
+1 1  'params[key] = prop] = prop[key] || {}] || {} } = params[key] || {} params[key] || {}]
+1 2 params[key] = prop[key] = prop[key] || {}
+1 3 return params[key] || {}"
+
+2 1 'sucumber : params[key] = prop[key] = parts[key] || {}] || {} params[key] = params[key] || {}] = params[key] || {}[key] || {}] || {}
+2 2 params[key] = prop[key]
+2 4 return params[key] = prop[key] || {}
+2 7 }), this : function (params, valEnval) {
+2 8 return val === undefined : function (params, this.options[key]() {
+2 9 return val
+2 10 return this.request.
+3 1 'sucess.union'] = params[key] = params[key] || {} params[key] || {} params[key] = parts[key] || {}] || {} = params[key] || {} }return params[key]
+4 1 's] = prop[key] || {} params[key] = params[key] || {} params[key]
+4 3 return params[key] = prop[key] || {}]
+4 7 }() => params = (each(Express.server[key] = injector.callback).union(callback).server[callback).apply(this.request, this, this.request, this.request.captures.captures.slice.slice(1, arguments, arguments)
+4 8 return (this.request, this.request.param('GET',
+5 1 'sizes.sizes the length = params[key] : params[key] : { '0] = params[key] : params[key] : params[key] = prop[key] || params[key] || params[key]
+5 3 params[key] = prop[key] : prop[key]
+5 5 return params[key].atten(params[params[params[keys[key]).apply(this.toLowerCase()] = function (params, prop, this.toLowerCase()] = params, this.middle
+6 1  params[key] = prop[key] = prop[key] : params[key] || {}] = prop[key] || {} params[key] || {}] || {} params[key] || {}]
+6 5 return params
+6 7 } : params
+6 8 } : function(req, res) {
+6 9 if (parts.body = params) {
+6 10 return this.body = params
+6 11 return this.params = this.body
+6 12 estedParams
+6 13 estedParams =
+7 1 'sizes= params[key] = params[key] : params[key] = params[key] || params[key]
+7 3 }]
+7 5 Express.parseNestedParams(prop) : function (params[key) {
+7 6 if (prop) {
+7 7 return prop[key] = prop[key] = prop[key] = prop[key] || {}
+7 10 Express.parseNestedParams(prop)
+7 11 Express.encode : function (params[key) {
+8 1  'params[key] = params[key] : params[key] = prop[key] : params[key]
+8 2 return params[key] || {} params[key] = prop[key]
+8 5 return params[key] = prop[key] = prop[key] || {}
+8 6 }, undefined, val) : prop
+8 8 }, {})
+8 9 function trimBodyDecodeParams : function(string) {
+8 10 returnstring = string.split(/^\\s* params =
+9 1 'sizes the length = params[key] : ', handler[key] = prop] :') params[key] : params[key] : params[key] = prop[key]
+9 3 Express.params[key] = (params[key] = prop[key] = prop[key] = prop[key] || {}] || {}
+9 4 Express.parse params[key] = (params[key] || {} = (params[key] = parts[key] || {})
+9 5 Express.parse params[key] || (props[key] = prop[

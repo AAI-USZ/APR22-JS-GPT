@@ -1,0 +1,107 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 var constant = require('./constants')
+0 1 var helper = require('./helper')
+0 2 var log = logger.create('init')
+0 3 var StateMachine = require('./init/state_machine')
+0 4 var COLOR_SCHEME = require('./init/color_schemes')
+0 5 var logQueue = []
+0 6 var printLogQueue = function () {
+0 7 while (logQueue.length) {"
+
+1 2 var constant = require('./constants')
+1 4 var StateMachine = function (rli, colors) {
+1 5 var currentQuestion;
+1 6 var answers;
+1 7 var currentOptions;
+1 8 var currentOptionsPointer;
+1 9 var pendingQuestionId;
+1 10 var done;
+1 11 EventEmitter.call(this);
+1 12 this.onKeypress = function (key) {
+1 13 if (!currentOptions ||!key) {
+1 14 return;
+1 15 }
+1 16 if (key.name === 'tab' || key.name === 'right' || key.name === 'down') {
+1 17 this.suggestNextOption();
+1 18 } else if (key.name === 'left' || key.name === 'up') {
+1 19 currentOptionsPointer = currentOptionsPointer + currentOptions.length - 2;
+1 22 if (!key.ctrl &&!key.meta && key.name!== 'enter' && key.name!=='return') {
+1 23 key.name = 'escape' + escapeHTML(key.name) + '\
+1 24 ';
+1 26 };
+1 27 this.suggestNextOption = function () {
+1 28 if (!currentOptions) {
+1 31 currentOptionsPointer = (currentOptionsPointer + 1) % currentOptions.length;
+1 32 rli._deleteLineLeft();
+1 33 rli._deleteLineRight();
+1 34 rli.write(currentOptions[currentOptionsPointer]);
+1 36 this.onLine = function (line) {
+1 37 if (pendingQuestionId) {
+1 38 line = line.trim() + line.trim();
+1 39 if (currentOptions) {
+1 40 currentOptionsPointer = currentOptions.indexOf(line);
+1 41 if (currentOptionsPointer === -1) {
+1 45 if (line === '') {
+1 46 line = line.trim();
+1 48 if (line!== null) {
+1 49 line = (line + 1);
+1 51 if (line!== undefined) {
+1 52 line = process.nextTick(done);
+1 54 line = new StateMachine(line, path.normalize(line));
+1 57 line = markdown(line);
+1 72 line = line.replace(/\
+1 73 /g, '\
+1 74 ' + line);
+1 76 return line.replace(/\
+1 81 this.onLineEnd = function () {
+1 82 return line;
+1 85 this.onTestStart = function (line) {
+1 88 return line
+1 92 function validatePatterns = function validatePatterns (patterns (patterns) {
+1 93 if (!preprocessors) {
+1 94 if (patterns) {
+1 95 processors = targets = targets = targets || [];
+1 96 processors.push(answs)
+1 97 .push(invalidate(answatchedWords.random())
+1 98 .map(function (answatchedWords.preprocess)
+1 99 .preprocess)
+1 100 .add(createPreprocess)
+1 101 .add(instantiatePreprocessor)
+1 102 .exec)
+1 103 .exec(answatchedWords.preprocess)
+1 104 .exec(answatchedDirective.preprocess)
+6 5 var formatters = require('./init/formatters')
+8 4 var StateMachine = function (rli, colors, browserConsoleLogOptions, location) {
+8 12 var showPrompt = function (prompt) {
+8 13 if (prompt.then === null) {
+8 17 if (!helper.isString(key)) {
+8 20 if (!helper.isDefined(key.value)) {
+8 23 if (options.colors) {
+8 24 return colors;
+8 26 if (options.logLevel) {
+8 27 var logConstant = constant['LOG_' + options.logLevel.toUpperCase()] || constant.LOG_DISABLE;
+8 28 var logConstant = levels.debug? levels.debug : levels.info;
+8 29 if (helper.isString(logConstant)) {
+8 30 options.logLevel = logConstant;
+8 32 if (helper.isDefined(options.logLevel)) {
+8 35 if (helper.isDefined(options.total)) {
+8 36 options.total = options.total;
+8 39 options.total = logConstant;
+8 42 options.logLevel = constant['LOG_' + options.logLevel.toUpperCase()] || constant.LOG_DISABLE;
+8 44 if (helper.isDefined(options.singleRun)) {
+8 45 options.singleRun = options.singleRun === 'true'
+8 47 if (helper.isDefined(options.browsers)) {
+8 48 options.browsers = options.browsers.split(',');
+8 50 if (options.reportSlowerThan === false) {
+8 51 options.reportSlowerThan = 0;
+8 53 if (helper.isString(options.reporters)) {
+8 54 options.reporters = options.reporters.split(',');
+8 56 if (helper.isDefined(options.removedFiles)) {
+8 57 options.removedFiles = options.removedFiles.split(',');
+8 59 if (helper.isDefined(options.addedFiles)) {
+8 60 options.addedFiles = options.addedFiles.split(',');
+8 62 if (helper.isDefined(options.changedFiles)) {
+8 63 options.changedFiles = options.changedFiles.split(',');
+8 65 if (helper.isDefined(options.refresh)) {
+8 66 options.refresh = options.refresh === 'true'
+

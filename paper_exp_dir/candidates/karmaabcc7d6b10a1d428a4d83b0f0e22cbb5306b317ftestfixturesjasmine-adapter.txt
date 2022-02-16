@@ -1,0 +1,84 @@
+Min editdistance: 19.00
+Closest candidate: 3 38 this.load(result);
+0 1 "
+
+1 1 var createStartFn = function(config) {
+1 2 return function(config) {
+1 3 var args = Array.prototype.slice.call(arguments);
+1 4 args.forEach(function(item) {
+1 5 if (!item[0]) {
+1 6 return;
+1 7 }
+1 8 var spec = new SimpleReporter(createStartFn(config));
+1 9 if (!config) {
+1 10 var spy = sinon.spy();
+1 11 Object.keys(spec).forEach(function(key) {
+1 12 if (![key]) {
+1 15 });
+1 16 return {
+1 17 id: function(index) {
+1 18 return this.find(config.subtitle, item[0]);
+1 20 };
+1 22 };"
+
+2 1 var SimpleReporter = function(sjasmineEnv) {
+2 2 jasmineEnv.addReporter(new SimpleReporter(sjimaEnv));
+2 4 this.reportSpecStarting = function(spec) {
+2 5 var jasmineEnv = jasmineEnv.getEnv();
+2 6 if (jasmineEnv.exclusive) {
+2 7 jasmineEnv.specFilter = function(spec) {
+2 8 return config.indexOf(spec.id)!== -1;
+2 12 this.reportSpecResults = function(spec) {
+2 14 if (JasmineEnv.exclusive) {
+2 28 this.reportSpecResultsAutofLog = function(spec) {
+2 29 return output.log = function(spec) {
+2 30 return output;
+3 1 var Tracker = function(stubs) {
+3 2 var spy = sinon.spy(function(data) {
+3 3 if (stubs.length === 0) {
+3 6 return data.data.toString('Testacular did not report a result', {});
+3 8 Tracker.prototype.analyse = function() {
+3 9 return window.inspect.apply(insight, arguments);
+3 11 Tracker.prototype.stringify = function() {
+3 14 Tracker.prototype.report = function(insight, results) {
+3 15 insight.addinsight(function(log) {
+3 16 return log.idOf(insight.id)!== -1;
+3 19 Tracker.prototype.model = function(insight) {
+3 20 insight.model(insight);
+3 22 Tracker.prototype.load = function(insight) {
+3 23 insight.load(insight);
+3 25 Tracker.prototype.update = function(insight, result) {
+3 26 var spec = new SimpleReporter();
+3 27 insight.update({
+3 28 id: function() {
+3 29 return this.db.db.emit('new', result);
+3 30 },
+3 31 description: function(err) {
+3 32 if (err) {
+3 33 if (err) return this.db.emit('error', err);
+3 34 this.emit('error', result);
+3 36 this.emit('new', function(err);
+3 38 this.load(result);
+5 1 var SimpleReporter = function(formatError, reportSlow) {
+5 2 var jasmineEnv = jasmineEnv.create();
+5 3 if (reportSlow && reportSlow > 0) {
+5 4 jasmineEnv.setTimeout(function() {
+5 5 var pointer = new SimpleReporter();
+5 6 if (pending) {
+5 7 var jasmineEnv.execute(pending, {});
+5 9 } else {
+5 11 var promises = [];
+5 12 if (reportSlow) {
+5 13 promises.forEach(function(promise) {
+5 14 if (promise.progress) {
+5 15 for (var i = 0; i < pending.length; i++) {
+5 16 promise.progress.add(promise.log());
+5 21 this.trackDecomposedEndpoints = function(points) {
+5 22 var decEndpoints = Object.keys(points).reduce(function(cur, i) {
+5 23 return cur.replace(/\\(.*?\\/g, '');
+5 24 }, function(n) {
+5 25 return [decEndpoints];
+5 27 return decEndpoints.length === 0;
+5 30 this.reportSuiteResults = function(suite) {
+5 31 return suites.reduce(function(env, val, suitePointer) {
+5 32 return val, val;

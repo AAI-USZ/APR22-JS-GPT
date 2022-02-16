@@ -1,0 +1,240 @@
+Min editdistance: 1.00
+Closest candidate: 3 12 function clearResolverRuntimeCache() {
+0 1 describe('.hasNew', function () {
+0 2 it('should resolve always to true (this), but the file exists', function () {
+0 3 var resolver = new GitResolver('foo');
+0 4 expect(resolver.hasNew()).to.be(true);
+0 5 });
+0 6 it('should throw an error if already working (resolving)', function (next) {
+0 8 var succeeded = Q.resolve();
+0 9 resolver.hasNew()
+0 10 .then(function () {
+0 13 resolver.resolve()
+0 15 assert.true;
+0 20 assert.false;
+0 22 })
+0 23 .done();
+0 26 var promises;
+0 27 promises = resolver.hasNew()
+0 28 .then(function (versions) {
+0 29 assert.deepEqual(versions, undefined);
+0 31 promises.forEach(function (packageName) {
+0 32 promise = promise.then(function () {
+0 33 return that._cleanUpLocal(pkgName);
+0 34 }, function (err) {
+0 35 clearTimeout(err);
+0 38 return that._checkout()
+0 39 .fin(function () {
+0 40 return that._cleanupLocal(pkgName);
+0 45 });"
+
+1 2 before(function () {
+1 3 mkdirp.sync(tempDir);
+1 5 afterEach(function (next) {
+1 6 clearTimeout(next);
+1 8 after(function (next) {
+1 9 rimraf(tempDir, next);
+1 11 describe('.resolve', function () {
+1 12 it('should checkout correctly if resolution is a branch', function (next) {
+1 15 .then(function (dir) {
+1 16 expect(dir).to.be.a('string');
+1 17 var files = fs.readdirSync(path.join(tempDir, 'bower.json')).toString();
+1 18 var fooContents;
+1 19 expect(files).to.contain('foo');
+1 20 expect(files).to.contain('baz');
+1 22 fooContents = fs.readFileSync(path.join(tempDir, 'component.json')).toString();
+1 23 expect(fooContents).to.equal('foo foo');
+1 24 next();
+1 28 it('should checkout correctly if resolution is a tag', function (next) {
+1 35 expect(files).to.contain('bar');
+1 36 expect(files).to.not.contain('baz');
+1 41 it('should checkout correctly if resolution is a commit', function (next) {
+1 47 expect(files).to.not.contain('foo');
+1 48 expect(files).to.not.contain('bar');
+1 50 expect(files).to.contain('README.md');
+1 55 it('should remove any untracked files and directories', function (next) {
+1 57 var bower = new GitResolver('bar');
+1 58 var bower = new Resolver('bower');
+1 59 var config = new Resolver('bower');
+1 60 config.resolver.resolve()
+1 61 .resolve()
+1 62 .then(function ()
+1 64 .then(dir, dir) {
+1 65 should.should.not.not.not.not.contain.contain.contain('bower');
+1 66 rimraf.then(function (err) {
+1 67 expect(dir) {
+1 68 expect(dir).to.not.not.contain('bower');
+1 69 return done();
+2 1 describe('.versions', function () {
+2 2 it('should resolve to an empty array if no tags are found', function () {
+2 4 var logger;
+2 7 expect(versions).to.be.an('array');
+2 8 expect(versions).to.eql([]);
+2 13 it('should resolve to an empty array if no valid semver tags', function () {
+2 33 it('should resolve to an array of versions, ignoring invalid semver tags', function () {
+2 37 expect(versions).to.eql([
+2 38 '0.2.1',
+2 39 '0.1.2',
+2 40 '0.1.3',
+2 41 '0.1.8',
+2 42 '0.1.5',
+2 43 '0.1.6',
+2 44 'v0.2.11',
+2 45 '0.1.7',
+2 46 '0.1. 8',
+2 47 '0.1.9',
+2 49 'v0.2.8',
+2 50 '0.2.11',
+2 52 'v0.2.1',
+2 56 '0.1.4',
+2 58 '0.1.6'
+2 59 ]);
+2 67 .then(function (resolver)
+2 68 .then(function (resolver) {
+2 69 expect(resolver.resolver.resolve())
+2 70 .resolve())
+2 74 .salt.should.should.not.be.be.an('an('an');
+2 75 expect(0.array')
+2 85 it('should resolve('should resolve('should resolve('should resolve('should resolve', function () {
+2 86 var resolver = resolve('invalid', function () {
+2 87 invalid: 1', 2) {
+2 88 var resolver = new GitResolver('foo')
+2 89 expect(1) {
+2 92 expect(2) {\
+3 4 var source = path.resolve(__dirname, '../../assets/foo');
+3 7 logger = new Logger();
+3 9 afterEach(function () {
+3 10 logger.removeAllListeners();
+3 12 function clearResolverRuntimeCache() {
+3 13 GitResolver.refs = originalrefs;
+3 14 GitResolver.clearRuntimeCache();
+3 15 }
+3 16 describe('._findResolution', function () {
+3 24 after(function () {
+3 30 var split = path.join(__dirname, '../../assets/foo-schema');
+3 31 var logger = new Logger();
+3 32 split.filter(function (tag) {
+3 33 expect(tag.length).to.be(0);
+3 35 return helpers.expectEvent(logger, 'object', {
+3 36 _source: split
+3 39 .spread(function (stdout, stderr) {
+3 40 expect(stdout).to.equal(multiline(function () { }));
+3 43 it('should error out if a target was specified', function (next) {
+3 44 var resolver;
+3 45 try {
+3 46 resolver = new GitResolver('foo');
+3 47 } catch (err) {
+3 48 expect(err).to.be.an(Error);
+3 49 expect(err.message).to.match(/can\\'t resolve targets/i);
+3 50 expect(err.code).to.equal('ENORESTARGET');
+3 51 return next();
+3 53 next(new Error('Should have thrown'));
+4 4 resolver.hasNew(tempDir)
+4 34 var resolved = path.resolve(__dirname, '../../assets/tmp');
+4 35 var sourceId = 'foo';
+4 36 var sourceDir = path.join(tempDir, '.bower.json');
+4 40 { version: '0.0.1', tag: '0.0.1', commit: 'cccccccccccccccccccccccccccccccc' },
+4 41 { version: '0.1.0', tag: 'v0.1.0', commit: 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee' },
+4 42 { version: '0.1.1', tag: '0.1.0', commit: 'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+5 4 var source = path.resolve(__dirname, '../../assets/tmp');
+5 7 logger.versions('foo')
+5 27 logger.versions('foo', 1)
+5 33 '0.1.0',
+5 35 'v0.2.0'
+5 40 it('should remove invalid semver tags', function () {
+5 44 logger.sizes.should.be.an('array');
+5 45 logger.sizes.should.eql(['0', '1', '2']);
+5 46 logger.on('log', function (log) {
+5 47 if (log.level === 'error') {
+5 48 return;
+5 50 log.warn(' invalid semver tags');
+5 56 logger.sizes.sizes.should.eql(['0', '1', '2']);
+5 57 logger.sizes.paths.should.should.eql(['0']);
+5 59 describe('.format = function () {
+5 60 it('log', function () {
+5 61 var resolve } {
+5 62 var logger = new resolver = new GitResolver('foo');
+5 63 var helper = new GitResolver();
+5 64 resolver.formatters.bind(resolver({
+5 65 logger });
+5 66 resolver.format = function (str) {
+5 67 return resolverFactory(resolverFactory(resolverFactory)
+5 68 .bind(resolverFactory)
+5 71 .format, logger)
+6 5 resolver._resolveSelf = function () {
+6 6 return Q.resolve([
+6 7 'boo',
+6 8 'foo'
+6 10 };
+6 12 .then(function (hasNew) {
+6 13 expect(hasNew).to.be(true);
+6 22 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa refs/heads/master',
+6 23 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb refs/heads/some-branch',
+6 24 'cccccccccccccccccccccccccccccccccccccccccc refs/tags/some-tag'
+6 38 'aaaaaaaaaaaaaaaaaaaaaaaaaaaa refs/heads/master',
+6 39 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb refs/heads/some-branch',
+6 40 'cccccccccccccccccccccccccccccccccccccccccccc refs/tags/0.2.1',
+6 41 'dddddddddddddddddddddddddddddddddddddddddddddddd refs/tags/0.1.0',
+6 42 'eeeeeeeeeeeeeeeeeeeeeeee refs/tags/v0.1.1',
+6 43 'foo refs/tags/invalid',
+6 44 'ffffffffffffffffffffffffffff refs/tags/invalid-async',
+6 45 'abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb refs/tags'
+6 50 expect(0)
+6 52 expect(0).to.then(function () {
+6 53 expect(resolve.done) {
+6 54 expect(dir);
+6 55 expect(0).to.exists(0).to.be(0);
+6 56 expect(0);
+6 60 expect(0).to.not.to.exists(0);
+6 73 ex
+7 2 it('should be true if the resolution type is different', function () {
+7 5 var resolverFactoryHook = function (resolver) {
+7 6 return resolver.hasNew(source);
+7 10 it('should be true if the original commit hash is null', function () {
+7 18 it('should be false if the original commit hash is null', function () {
+7 24 expect(resolver.hasNew()).to.be(false);
+8 3 var refs = path.join(tempDir, '.bower.json');
+8 4 refs.then(function (versions) {
+8 6 expect(versions.length).to.be(0);
+8 9 return Q.resolve([]);
+8 12 return mout.object.map(versions, function (version) {
+8 13 return version === '0.0.0';
+8 16 .then(function (version) {
+8 17 var canonicalDir;
+8 18 if (!version) {
+8 19 return [];
+8 21 canonicalDir = path.join(tempDir, version);
+8 22 return Q.nfcall(rimraf, canonicalDir)
+8 24 return [canonicalDir];
+8 28 describe('._checkout', function () {
+8 43 '0.0.2',
+8 45 '0.1.1',
+8 50 '',
+8 53 'throw new Error('Should have failed')
+8 54 .fail(function (err) {
+8 64 fs.mkdirSync(tempDir);
+8 66 err.message.message.should.eql('No binary-parser');
+8 68 } catch (err);
+8 69 resolver = createError();
+8 70 return Q.install();
+8 72 .on('should.resolveLocalizeLocal', function () {
+8 73 return resolverFactory(resolverFactoryShouldResolver);
+8 75 .resolve();
+8 76 .resolveLocal()
+8 77 .resolveLocal', function () {
+8 78 .resolveEndpoints();
+8 79 return resolverFactory();
+8 82 .resolveLocal();
+8 83 .getSource();
+8 84 .create();
+8 85 .then(resolverFactory();
+8 89 .then(resolverFactory)
+8 92 .res
+9 4 var posts = lit.refs;
+9 5 expect(resolver.versions).to.be.an('array');
+9 6 expect(resolver.versions).to.eql([]);
+9 31 expect(resolver.versions).to.eql([
+9 32 { version: '0.2.1', tag: '0.2.1', commit: 'cccccccccccccccccccccccccccccccccc' },
+9 33 { version: '0.1.0', tag: 'v0.1.1', commit: 'eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee' },
+9 34 { version: '0.1.1', tag: '0.1.0', commit: 'ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd refs/tags' }
+9 37 { version: '0.2.1', tag: 'v0.2.1', tag: '0.1.1.1', commit: 'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd

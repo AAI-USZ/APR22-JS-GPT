@@ -1,0 +1,23 @@
+Min editdistance: 27.00
+Closest candidate: 3 4 Express.server = set('test')
+0 1  }
+1 1  } () })
+1 2 })
+1 3 }]
+2 1  })"
+3 1  }() })
+3 4 Express.server = set('test')
+3 5 Express.server.response.on('response.returnsockets.returnsockets.returnsockets.returnsockets.returns({sockets.returnsockets.returnsockets.returns{'sockets.returnsockets }'s's's's's's's' })
+3 6 Express.static: function () })
+3 7 Express.static: function(){
+3 8 }
+3 11 },
+3 12 })"
+
+4 1  })
+4 4 Express.post('express/post('http')
+4 5 Express.listenquest : function()"
+5 1  } })
+5 3 })"
+6 3 }()}'
+

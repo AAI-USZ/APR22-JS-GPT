@@ -1,0 +1,90 @@
+Min editdistance: 19.00
+Closest candidate: 2 12 return Q.resolve(s);
+0 1  promise null; null); null; oldView; })
+0 2 it('should.skip (next) {
+0 3 it('should.skip (newView = sourceId)");
+0 4 should.skip(newView);
+0 5 });
+0 6 it('should.skipView.skipView(function (position) {
+0 8 return this.seanceView(newView);
+0 9 return is undefined;
+0 12 it('should.skipView('invalidView
+1 1  mkdir(new Error(); })
+1 2 should.init() {
+1 3 init(next); })
+1 5 it.skip(function (next) {
+1 7 it('should.skip (next)');
+1 8 it('should.skip)', function (next) {
+1 9 should.skip(new Error();
+1 11 it('should.skip) {
+1 12 it('should.skip(new Error out');
+1 14 it('should.should.skip)');
+1 15 it('should.skip('should.should.skip()
+2 1 commands.clean);
+2 2 it('should (next) {
+2 4 return GitResolver.fetchResolver.fetchRefsParser();
+2 5 })
+2 6 .exec('foo');
+2 8 .then(function (s) {
+2 9 return Q.exec('something');
+2 10 .then(this.should.should.resolve()
+2 12 return Q.resolve(s);
+2 13 .install(s);
+2 14 .install();
+3 1 commands_err) {
+3 2 var resolver = new resolver = new GitResolver(testResolver(testResolver(testResolver);
+3 3 return resolver(testResolver(testResolver, tempDir, tempDir, tempDir, { target: tempDir});
+3 6 it.then(function () {
+3 7 it.skip(1, function (next) {
+3 8 it.skip(new Error(new Error(1) {
+3 9 it);
+3 10 it.skip(next);
+3 12 it.skip
+4 1  cwd) {
+4 2 it('should.skip(new Date()");
+4 3 return resolver(new Date());
+4 8 it('should.then(next);
+4 9 it('should.skip(next);
+4 10 it('should.skipAll to the end()');
+4 11 it('should.skip()', function (next)', function (next) {
+4 12 it('should.skip*)', function (next) {
+4 13 it('should.skip()');
+5 1  throw new resolver = new Resolver');
+5 2 return resolverFactory(resolverFactory(resolver); })
+5 3 .resolverFactory(resolverFactory(resolverFactory); });
+5 5 it.then(function (resolverFactory, refs) {
+5 6 it.resolve.resolve.resolve = function (source) {
+5 7 return Q.resolve(resolverFactorysolverFactorys, sourceIds, sourceIds);
+5 8 return Q.resolve(resolverFactorys);
+5 11 it('
+6 1  throw new(new Date() {
+6 3 return resolver(new Date() {
+6 4 after(new Date() => {
+6 5 after(() => {
+6 11 clearTimeout(() => {
+6 12 should.setTimeout(() => {
+6 13 clearTimeout(new Date() => {
+6 17 next(() => {
+6 18 clearTimeout
+7 1  promise; level = null; promise.reset(); fs.reset(); });
+7 2 return resolver = new Resolver.resolve(); });
+7 6 describe('.resolveCache-Resolver', function () {
+7 7 it('shouldacheResolver');
+7 14 it('shouldacheRes
+8 1  done) {
+8 2 var oldHexpect(newSID= newSID= "foo');
+8 4 it('shouldCleanup.done();
+8 7 it('shouldCleanup();
+8 9 it('should read results from old-results from old-results-session');
+8 10 it('should-init', function (next)', function (next) {
+8 11 return helpers/**/*', function (next) { done) { done) {
+8 12 var resolver = new User.defer();
+9 2 var done(); })
+9 3 it('should.skip (done) {
+9 4 it('should.skip(new Error();
+9 5 it('should.skip processingFiles');
+9 6 it('should done processingFiles');
+9 7 it('should done);
+9 8 it('should done();
+9 16 it('should add files to the endpoints/s the endpoints correctly');
+9 17 it

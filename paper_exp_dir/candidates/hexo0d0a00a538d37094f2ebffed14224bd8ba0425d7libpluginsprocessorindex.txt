@@ -1,0 +1,81 @@
+Min editdistance: 64.00
+Closest candidate: 0 1  content = \'\\s*?)<notextile>', \'\\s*;')});
+0 1  content = \'\\s*?)<notextile>', \'\\s*;')});
+0 2 return content += \'\\s*' + '\\s*';
+0 3 return content;
+0 4 }).replace(/\
+0 6 }).join("\
+0 7 });
+0 8 }
+0 9 return callback(filename, callback();
+0 11 };
+0 12 module.readOptionsHelper(['markdown', 'html', 'ejs', 'css', 'html', 'css', 'html', 'css'], function(err, plain, plain
+1 1  content = \'\', url: source })
+1 2 return contentPage content(position: source, callback(new, arguments);
+1 3 return content(new str);
+1 5 }).replace(/replace(/([\
+1 6 semi, \'\
+1 7 /g, \'\\r\\r\\r, \'\\r,\\d\'));
+1 8 return content, \'\\s
+1 9 \\s\', \'<notextile>\' }, str);
+1 13 describe("replace(/replace(){\', next(){\
+2 1 de, '\\s*filename, \'\\s*/*\' + filename, escape = trim(),"redirect()");
+2 2 return content = escape = escape()+ str);
+2 3 return content.replace(/replace(/\\s*backtick_code_to_source, \'\\s, \'(\\d+)' + match(\\d)');
+2 7 // Use MarkdownFiles(this.source_source, content)
+2 8 // Use Markdown escape_source, content);
+2 9 // CLI --filename
+3 1 return content }(position: null, engine: source, mode: '', content: '123' }, function(position: 1, content: regex, content-markdown, mode:'markdown', content: '', separator') + '-mark'));
+3 2 return content(position: 1, callback(new_markdown, '123'});
+3 3 return content = content.replace(/g, arguments);
+3 4 return content(/replace(/^([\\d+)', target);
+3 5 }).join('\
+3 6 }123', target);
+3 7 return content
+4 1 return callback.replace(/index, '');
+4 2 return content.replace(/\
+4 3 return content, '');
+4 8 delem = (\\r, '\\r\\r\\r\\d+)\\t=(\\t')
+4 9 .replace(/g, '\\r\\d+)\\t', '\
+4 10 \\t')
+4 11 .replace(/g, '\\d+)\\d+);/g, '\
+4 12 \\r\
+4 13 \\r\\t')
+5 1 delem = content = new content.replace(/s, \'\\s*/s*/s*/s*/s*/s*/s*/s*/s)});
+5 2 return content = content;
+5 3 return content.replace(/;
+5 6 /\
+5 7 /*.skip(filename, function(/g, \'(\\d+)\
+5 8 /g, \'\\d+\\d+\
+5 9 %\\s*/s*/, \'\', \'\
+5 10 \\d*.*)\
+5 11 \\r\\s*/,
+6 1  engine) });
+6 2 return content = escape = arguments[1](){
+6 3 return content.replace(/\\s*filename, \'\\s3// gettermarkdown;\', escape = escape.replace(/g, \'\') + escapeSwig\\s*;\', escapeSwig.compile(String(str)});return str.replace(/g, escapeSwig, \'\\s*;\');
+6 4 return content.replace(/\\./g, \'(.*)\\s*/g, \'\\s*/\');
+7 1 return str += '\\s*' + str);' + str += '\\s*' + str += '\
+7 2 ' + str += '\
+7 3 ' + str + str += '\
+7 4 ' + str;
+7 5 return cache.replace(/g, '\
+7 6 ' + str);' + str += '\
+7 8 ' + (cache.replace(/g, '\
+7 9 ' + str);
+7 11 return str += '\
+7 12 ' + '\
+7 14 ';
+7 15 }).replace(
+8 1  "\\s*"); "," + str = mode:!= mode:!= mode});" + '\\s*';
+8 2 return content = mode:!= mode;
+8 4 return content.replace(/replace(/disable = \'(.*)', '\\s*', arguments[\\s*/format=\\s*/deep)\\s*/deep)\\s*/deep);
+8 5 return content = mode === undefined;
+8 9 return markedOptions.replace(/([\\s/
+9 1 return content = new str);
+9 2 return content.replace(/\\s*; })
+9 3 .replace(/\\s*/*', '');
+9 4 .replace(/replace(/\
+9 5 /g, '\\s*/g, '\\s*/gm, '');
+9 6 .replace(/g, '');
+9 7 .replace(/g, '\\s*/g, '');
+9 9 .replace(/pre);

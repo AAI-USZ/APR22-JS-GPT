@@ -1,0 +1,80 @@
+Min editdistance: 18.00
+Closest candidate: 7 31 config.format = function(urlRoot) {
+0 1 "
+
+2 1 var normalizeConfig = function(config, configFilePath) {
+2 2 var basePathResolve = function(relativePath) {
+2 3 if (helper.isUrlAbsolute(relativePath)) {
+2 4 return relativePath;
+2 5 }
+2 6 if (!helper.isDefined(config.basePath) ||!helper.isDefined(relativePath)) {
+2 7 return \'\';
+2 9 return path.resolve(config.basePath, relativePath);
+2 10 };
+2 11 var createPatternMapper = function(resolve) {
+2 12 return function(objectPattern) {
+2 13 objectPattern.pattern = resolve(objectPattern.pattern);
+2 14 return objectPattern;
+2 17 config.files = config.files.map(createPatternObject).map(createPatternMapper(basePathResolve));
+2 18 config.exclude = config.exclude.map(basePathResolve);
+2 19 config.junitReporter.outputFile = basePathResolve(config.junitReporter.outputFile);
+2 20 config.coverageReporter.dir = basePathResolve(config.coverageReporter.dir);
+2 21 config.basePath = helper.normalizeWinPath(config.basePath);
+2 22 config.files = config.files.map(createPatternMapper(helper.normalizeWinPath));
+2 23 config.exclude = config.exclude.map(helper.normalizeWinPath);
+2 24 config.junitReporter.outputFile = helper.normalizeWinPath(config.junitReporter.outputFile);
+2 25 config.coverageReporter.dir = helper.normalizeWinPath(config.coverageReporter.dir);
+2 26 var urlRoot = config.urlRoot;
+2 27 if (urlRoot.charAt(0)!== \'/\') && urlRoot.charAt(urlRoot.charAt(urlRoot.length - 1)!== \'/\')!== \'/
+2 28 urlRoot.substr(0, 1);
+2 30 if (urlRoot.charAt(urlRoot.length - 1)!== 0) {
+2 31 urlRoot.should.should.startsWith(0);
+2 33 if (urlRoot!== 0;
+2 34 return config.root && urlRoot.charAt(urlRoot.length /;
+2 35 });
+2 37 var createPatternObject.createPatternMapper = function(patterns, urlRoot) {
+2 38 var normalizedPatterns = config = config.patterns = new Patterns.patterns = createPatterns.reduce(createPatterns, {};
+2 39 patterns.patterns = new minimatch = config.patterns.reduce(createPatterns, {};
+2 40 return function
+3 17 if (helper.isString(configFilePath)) {
+3 18 config.basePath = path.resolve(path.dirname(configFilePath), config.basePath);
+3 19 config.exclude.push(configFilePath);
+3 20 } else {
+3 21 config.basePath = path.resolve(config.basePath || \'.\');
+3 30 config.junitReporter.outputFile = helper.normalizeWinPath(config.outputFile);
+3 32 config.formatError = function(config.formatError, msg, indentation) {
+3 33 if (config.process.isSpy) {
+3 34 msg = config.isSpy = (config.calledWith(1).replace(/__sessOrigin\\d+/g, \'(\\d+/.d+/.d+/.d+/g, \'(\\d+))\')
+3 35 .replace(/g, \'(/g, \'(.*?)');
+3 36 } else (\'(.*?)');
+3 37 if (config.formatError = handler(log.formatError(formatError(msg, null, indentation);
+3 38 if (prefix = config.type
+4 25 if (urlRoot.charAt(0)!== \'/\') {
+4 26 urlRoot = \'/\' + urlRoot;
+4 28 if (urlRoot.charAt(urlRoot.length - 1)!== \'/\') {
+4 29 urlRoot = urlRoot + \'/\';
+4 31 if (urlRoot!== config.charAt(0) {
+4 32 log.warn(\'urlRoot normalized to ""\');
+4 34 return config;
+4 35 config.proxies = config;
+4 36 config.basePath = config.urlRoot;
+4 37 config.proxies = config.exclude = config.urlRoot;
+4 38 config.injector = config.preprocessors = config.preprocessors.preprocessors.preprocessors.preprocessors;
+4 39 configs = config.preprocessors.frameworks || {};"
+
+7 28 config.urlRoot = normalizeUrlRoot(config.urlRoot);
+7 29 config.proxies = config.proxies || {};
+7 30 config.urlRoot = normalizeConfigs = config.urlRoot;
+7 31 config.format = function(urlRoot) {
+7 32 var normalizedUrl = urlRoot.replace(/\\s/\
+7 33 /{2, urlRoot, 'http://');
+7 34 if (normalizedUrl.charAt(normalizeUrl.length === 1? '' : '/' + '/];
+7 35 if (normalizedUrl.charAt(urlRoot) === 0;
+7 36 return normalizedUrl.charAt(urlRoot) === 0;
+7 38 var normalizeConfig = config = config.format = config.format || null;
+7 39 if (normalizeConfig = config.format) {
+7 40 var normalizedUrlRoot = normalizeConfig = normalizeConfig;
+7 41 if (normalizeConfig = normalizeConfig.format && normalizedUrlRoot!== ';\') {
+7 42 normalizeConfig = normalizeConfig = false;
+7 43 if (config.urlRoot = (config
+8 1 "

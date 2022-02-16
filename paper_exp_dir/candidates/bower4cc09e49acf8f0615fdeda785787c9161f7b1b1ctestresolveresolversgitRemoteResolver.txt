@@ -1,0 +1,81 @@
+Min editdistance: 1.00
+Closest candidate: 0 6 var resolver;
+0 1  {
+0 2 var resolver = new GitRemoteResolver('file://' + testPackage);
+0 3 expect(resolver.getName()).to.equal('github-test-package');
+0 4 });
+0 5 it('should ensure.git in the source (except if protocol is file://)', function () {
+0 6 var resolver;
+0 7 resolver = new GitRemoteResolver('git://github.com/twitter/bower.git');
+0 8 expect(resolver.getSource()).to.equal('git://github.com/twitter/bower.git');
+0 9 resolver = new GitRemoteResolver('git://github.com/twitter/bower.git/');
+0 12 });"
+
+1 3 assert.equal(resolver.getName(), testPackage);
+1 5 it('should remove?part from the path', function () {
+1 6 var resolver = new GitRemoteResolver('git://github.com/twitter/bower.git');
+1 9 it('should not guess the name from the path', function () {
+1 11 assert.equal(resolver.getName(), 'bower');
+1 13 it('should error out if a target was specified', function (next) {
+1 15 resolver = new GitRemoteResolver('git://github.com/twitter/bower');
+1 16 expect(resolver.getName()).to.equal('bower');
+1 20 it('should set default registry config', function () {
+1 23 expect(resolver.config).to.deep.equal([
+1 24 'https://github.com/twitter/bower.git',
+1 25 'https://github.com/twitter/bower.git'
+1 26 ]);
+2 8 it('should not guess the name from the path if the name was'', function () {
+2 9 var resolver = new GitRemoteResolver('git://github.com/twitter/bower');
+2 13 var resolver = new GitRemoteResolver('git://github.com');
+2 14 expect(resolver.getName()).to.equal('github.com');
+3 3 expect(resolver.getName()).to.equal('github-test-package');"
+
+4 8 it('should not guess the name from the path if the name was'+ 'git://github.com/twitter/bower');
+4 9 it('should remove?part from the path if the name is'+ 'git://github.com/twitter/bower');
+4 12 it('should remove?part from the path if no endpoint is'+ 'git://github.com/twitter/bower');
+4 14 describe('.resolve', function () {
+4 15 it('should checkout correctly if resolution is a branch', function (next) {
+4 16 var resolver = new GitRemoteResolver('file://' + testPackage, { target:'some-branch' });
+4 17 resolver.resolve()
+4 18 .then(function (dir) {
+4 19 expect(dir).to.be.a('string');
+4 20 var files = fs.readdirSync(dir);
+4 21 var fooContents;
+4 22 expect(files).to.contain('foo');
+4 23 expect(files).to.contain('baz');
+4 25 fooContents = fs.readFileSync(path.join(dir, 'foo')).toString();
+4 26 expect(fooContents).to.equal('foo foo');
+4 27 next();
+4 28 })
+4 29 .done();
+4 31 it('should checkout correctly if resolution is a tag', function (next) {
+4 32 var resolver = new GitRemoteResolver('file://' + testPackage, { target: '~0.0.1' });
+4 38 expect(files).to.contain('bar');
+4 39 expect(files).to.not.contain('baz');
+4 44 it('should checkout correctly if resolution is a commit', function (next) {
+4 45 var resolver = new GitRemoteResolver('file://' + testPackage, { target: '7339c38f5874129504b83650fb6b83650fbb6b83650fbb2daggg2d8503945b83650fbbbreb6ef2d8503945b6287b6d850394573e9' });
+4 48 expect(dir) {
+4 49 expect(dir).to.should.not.not.not.contain(something.id)
+4 50 expect(dir).to.id).to.equal('7340');
+4 51 expect(dir);
+4 53 expect(file).to.should.not.not.to.containEqual(multiline(multiline(resolve.calculate(multiline.calculate(resolve(resolve(resolve(resolve(
+6 2 it('should remove the name from the path', function () {
+6 4 resolver = new GitRemoteResolver({ source: 'file://' }, { name: 'github-test-package', source: 'git://github.com/twitter/bower.git' });
+6 6 resolver = new GitRemoteResolver({ source: 'file://' }, { name: 'bower.git', source: 'git://github.com/twitter/bower.git' });
+6 7 expect(resolver.getName()).to.equal('bower.git');
+6 11 resolver = new GitRemoteResolver({ source: 'file://' }, { name: 'bower.git', name: 'bower.git' });
+6 14 it('should not guess the name from the path if the name was specified', function () {
+7 16 expect(resolver.getTarget()).to.equal('*');
+7 24 it('should fail to guess the name from the path', function () {
+7 30 try {
+7 32 } catch (err) {
+7 33 expect(err).to.be.an(Error);
+7 34 expect(err.message).to.match(/can\\'t resolve targets/i);
+7 35 expect(err.code).to.equal('ENORESTARGET');
+7 36 return next();
+7 37 }
+7 38 next(new Error('Should have thrown'));
+8 4 it('should remove?part from the source (except)?', function () {
+8 12 it('should clear?part from the source (except)?', function () {
+8 16 it('should clear versions cache', function () {
+8 18 expect(resolver.get('0.0.1')).to.equal('0.0.1');

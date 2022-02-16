@@ -1,0 +1,57 @@
+Min editdistance: 28.00
+Closest candidate: 5 1 route = layout[key], locals);
+0 1 break);
+0 2 }
+0 4 if (layout.replaceLanguages[layoutDir, '_id(layoutDir, '_id', 'layoutDir', 'layout', 'layout', 'layout', 'layout', '_id'], 'layout', 'layout', 'layout_id', 'layout'], 'layout'], 'layout_id'], 'layout_id', 'layout_id'], 'layout_id'], 'layout_id'].forEach(layoutLocals');
+0 5 next();
+1 1 var layout = 'layoutDir, layout = layout[layoutDir, layoutDir, layout[i] = layoutDir, layoutLocals];
+1 2 if (layoutDir) break;
+1 5 if (this.path === '_layout'){
+1 6 return callback();
+1 10 };
+1 11 module.each(function(layoutDir, callback => {
+1 12 fs.unlink(layoutDir, callback);
+1 13 });
+2 1 break;
+2 6 if (layout.replaceLanguages[layoutDir){
+2 7 return '_else {
+2 8 var view = true;
+2 9 return;
+2 12 }], callback();
+2 15 function callback();
+2 23 return
+3 5 const newLocals.remove = Object.assignoredPaths = {
+3 6 uniq(layout);
+3 9 uniq(locals);
+3 12 function Locals.readdirs(layoutLocals(){
+3 13 return viewsDir) {
+3 14 return viewsDir();
+3 17 function
+4 1 route.unlink(item, layout[i], layout[i], 'layoutDir, 'layoutDir', '_layout', '_id'], '_id', '_id');
+4 4 }).set(function(){
+4 5 return function(func){
+4 6 func);
+4 11 }, callback();
+5 1 route = layout[key], locals);
+5 5 if (false);
+5 6 hexo.log.log();
+5 12 function callback();"
+
+6 1 route.options.options.replace(/([layout, '_id', 'layout', '_id', 'layout', '_id')," scrollingViewHelpers'));
+6 2 if (layoutDir = 'layout = 'layout', '_id' in this);
+6 3 if (layout.replaceView.replaceView');
+6 4 return i18n.unlink(layout);
+6 5 route(this.replace(this.path);
+6 9 ], callback
+7 5 const layout = layout.unlink = layout.unlink = layout.replace('paths/g', 'layout/s/g', 'layout', 'layout', 'layout');
+7 6 const viewDir => itemremove_else {
+7 7 if (fn) return fn(path => fn(path => fn());
+7 8 return fn(path => {
+7 9 path);
+8 6 hexo.log.load();
+9 5 const layout = layout = layout[0].replaceHead()
+9 6 .replaceHead()
+9 12 .replaceLocals.
+9 14 .replaceLocals.remove();
+9 15 .map(callback);
+9 18 function escape = function

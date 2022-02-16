@@ -1,0 +1,348 @@
+Min editdistance: 60.00
+Closest candidate: 8 59 parts.expires.should.eql \'Fri, 31-Dec-2010 23:59:59 GMT\'
+0 1 headers: {
+0 2 \'x-requested-with\':  null,
+0 4 'x-requested-with\': null,
+0 5 'x-xmlhttprequest\': null
+0 6 },
+0 7 init : function(request, response) {
+0 8 this.merge(request)
+0 9 response.headers = {}
+0 10 this.response = response
+0 11 this.uri.path = exports.normalizePath(this.uri.path)
+0 12 this.uri.params = parseNestedParams(this.uri.params)
+0 13 this.plugins = Express.plugins.map(function(plugin){
+0 14 return new plugin.klass(plugin.options)
+0 15 })
+0 17 header : function(key, val) {
+0 18 return val === undefined?
+0 19 this.headers[key.toLowerCase()] :
+0 20 this.response.headers[key.toLowerCase()] = val
+0 22 param : function(key) {
+0 23 return this.params[key] ||
+0 24 this.uri.post[key] ||
+0 25 this.uri.params[key]
+0 27 accepts : function() {
+0 28 var accept = this.header(\'accept\')
+0 29 return accept
+0 30 ? arguments.any(function(path){
+0 31 var type = mime.type(path)
+0 32 return accept.indexOf(type)!== -1 ||
+0 33 accept.indexOf(type.split(\'/\')[0]+\'/*\')!== -1
+0 35 : true
+0 37 status : function(code) {
+0 38 this.response.status = code
+0 39 return this
+0 41 halt : function(code, body, encoding, callback) {
+0 42 if (body!== null)
+0 43 body = body || statusBodies[code]
+0 44 return this.respond(body, encoding, callback)
+0 46 respond : function(body, encoding, callback) {
+0 47 var self = this
+0 48 this.response.body = body
+0 49 this.trigger(\'response\', function(e) {
+0 50 if (e)
+0 51 if (callback!== undefined) callback(e)
+0 52 else throw e
+0 53 self.response.writeHeader(self.response.status, self.response.headers)
+0 54 self.response.write(self.response.body, encoding)
+0 55 self.response.close()
+0 58 pass : function(path) {
+0 59 this.passed = path || true
+0 62 contentType : function(path) {
+0 63 this.header(\'content-type\', path)
+0 64 this.contentType(path)
+0 65 if (path.indexOf(\'..\')!= -1)
+0 66 Error.raise(\'InvalidPathError\', "`" + path + "\' is not a valid path")
+0 69 this.status(code = code || 404)
+0 77 this.trigger(\'response.body\', function(body, encoding, encoding, callback)
+0 78 if (callback)
+0 79 if (callback!== undefined) callback()
+0 81 if (body!== undefined) callback()
+0 82 this.end()
+0 83 }
+0 86 function options : function options : function request(method) {
+0 87 this.method = method.toLowerCase() {
+0 88 return this.request = request.uri.path.path.split(\'=\')
+0 89 return this.header(\'get
+0 90 return Function.extname
+0 93 }'
+
+1 2 \'x-requested-with\':  \'text/x-requested-with\',
+1 3 \'x-requested-with\':  \'application/x-requested-with\',
+1 9 \'x-requested-with\':   \'text/x-requested-with\',
+1 13 \'x-requested-with\':  \'audio/x-requested-with\',
+1 15 \'x-requested-with\':   \'audio/x-requested-with\',
+1 18 describe('GET /', function() {
+1 19 it(\'should redirect to /users\', function(done){
+1 20 request(app)
+1 21 .get(\'/\')
+1 22 .expect(\'Location\', \'/users\')
+1 23 .expect(302, done)
+1 26 describe(\'GET /pet/0\', function(){
+1 27 it(\'should get pet\', function(done){
+1 29 .get(\'/pet/0\')
+1 30 .expect(200, /Tobi/, done)
+1 37 it(\'should not get pet\', function(done){
+1 40 .expect(200, /^pet\\/0\')
+1 41 .expect(200, done)
+1 43 it(\'should get pet not\', function(done){
+1 50 describe(\'GET /pet/0/edit\', function(){
+1 51 it(\'should get the pet edit page\', function(done){
+1 53 .get(\'/pet/0/edit\')
+1 54 .expect(/<h1>TJ</h1>/)
+1 58 describe(\'PUT /pet/2\', function(){
+1 59 it(\'should update the pet\', function(done){
+1 61 .put(\'/pet/3\')
+1 62 .set(\'Content-Type\', \'application/x-www-form-urlenc-1\')
+1 63 )
+1 64 .expect(200, getEACCES
+1 65 .writeToUndefinedArray(function(){ return \'MovedFiles(doc)
+1 66 .send(doc)
+1 67 .expect(doc)
+1 74 it(\'shouldputs the pet.getPill when no spaces = after_put\', function(){
+1 75 it(\'should not\', function(){\', function(){
+1 76 it(\'should return done)
+1 77 request(newFolder)
+1 78 .set(\'/\')
+1 79 .expect(/^\\'should respond with.txt\')
+1 86 describe(\'with (undefined)
+1 87 ', function(){
+1 88 it(\'should set when no
+2 1 init: function(request, response) {
+2 5 this.uri.params = Express.parseNestedParams(request.uri.params)
+2 10 header: function(key, val) {
+2 11 return val === undefined
+2 12 ? this.headers[key.toLowerCase()]
+2 13 : this.response.headers[key.toLowerCase()] = val
+2 15 param: function(key) {
+2 16 return this.params[key] || this.uri.post[key] || new Session(key)
+2 18 accepts: function() {
+2 28 get isXHR() {
+2 29 return (this.header(\'x-requested-with\') || \'\').lowercase === \'xmlhttprequest\'
+2 31 status: function(code) {
+2 35 halt: function(code, body, encoding, callback) {
+2 39 if (encoding!== \'utf8\' ||
+2 40 encoding!== \'utf-8\')
+2 41 this.charset = this.charset || \'utf-8\'
+2 48 pass: function () {
+2 49 this.passed = true
+2 52 contentType: function(path) {
+2 57 format: function(obj) {
+2 58 var req = this.app.format || this.app.settings.format)
+2 59 if (obj.length)
+2 60 this.header(\'content-type\', obj.length)
+2 67 header: function(name, value) {
+2 68 return value?
+2 69 this.headers[name.toLowerCase()] = value :
+2 70 this.response.headers[name.toLowerCase()]
+2 72 requestHeader: function(name, defaultValue) {
+2 73 return this.headers[name.toLowerCase()] || defaultValue
+2 75 param: function(key, defaultValue) {
+2 76 return this.params[key] || defaultValue
+2 79 parseParams: function(key) {
+2 80 var params = {}
+2 81 if (key) {
+2 82 if (key in params)
+2 83 return params = {}
+2 84 for (key in this.split(\'= this.params.split(\'=\')
+2 85 return this.params.last)
+2 86 for (key in params.split(\'=\')
+2 87 params.length)
+2 88 if (key[key.length= this.lastSplit(\'=\'))
+2 89 params.splice(key))
+2 90 params.splice(key, 1)
+2 92 return params., 1)
+2 97 ServerResponse: function(req, res) {
+2 98 var self = this,
+2 99 return this,
+2 100 return this.server = this
+2 101 serverLength = this,
+3 23 return accept?
+3 24 $(arguments).any(function(path){
+3 28 }) :
+3 29 true
+3 39 if (encoding === \'utf8\' ||
+3 40 encoding === \'utf-8\')
+3 43 this.trigger(\'response\', function(err) {
+3 44 if (err)
+3 45 return this.response.body = this.respond(body, encoding, callback)
+3 48 respond: function(body, encoding, callback) {
+3 53 return this.response.body = this.response.body
+3 54 this.response.close()
+3 55 if (callback!== undefined) callback(fn)
+3 56 else throw new Error(\'Express.fail\')
+3 66 attachment: function attachment(filename) {
+3 67 if (filename) {
+3 68 this.header(\'attachment\', filename)
+3 69 return
+3 73 send: function (body) {
+3 74 this.header(\'content-type\', headers)
+3 77 header: function headers, val) {
+3 79 this.headers[field] :
+3 80 this.headers[field] = this.headers[field] :
+3 82 param: function param(fn) {
+3 83 return this.params[field] = this.params[field] || this.params]
+3 85 return this.params[field]
+3 92 })'
+
+4 5 this.uri.params = {}
+4 38 if (body = body || statusBodies[code])
+4 51 });
+4 59 return this.headers[path] ||
+4 60 this.headers[path]
+4 64 this.header(\'Content-Disposition\', filename)
+4 66 ?
+4 67 this.headers[filename] =
+4 68 this.headers[filename]
+4 69 :
+4 70 this.response.headers[filename] = this.response.headers[filename]
+4 72 settings: function settings(view, options) {
+4 73 this.set(\'view options\', undefined, 2)
+4 74 this.set(\'home\', \'/\')
+4 75 this.set(\'env\', process.env.NODE_ENV || \'development\')
+4 76 this.exclude = options.exclude.map(function(exclude) {
+4 77 return \'test\'
+4 78 }).join(\'\')
+4 80 this.get(\'/\')
+4 81 .exclude.skip(\'
+
+5 44 this.charset = this.charset || \'utf-8\';
+5 45 this.response.body = body;
+5 46 this.response.trigger(\'response\', this.request, {
+5 47 headers: headers,
+5 48 ca: this.uri.params[code]
+5 49 }, callback)
+5 50 return this.response.body.name = this.param(\'name\') || this.param(\'name\'));
+5 53 var user = this
+5 55 return this.passed?
+5 56 this.passed :
+5 57 this.accepted = false
+5 61 return this.header(\'content-type\', path.split(\'/\')[0] + \':\'+ path
+5 64 var req = this.req
+5 65 return (this.params.format || obj.params.formatters.Terminal || obj.params.formatters.Terminal)
+5 67 xhr() {
+5 68 return this.hr()
+5 70 xhr() : function() {
+5 73 xhr : function() {
+5 74 return this.state = arguments.n}
+5 76 },'
+
+6 6 this.uri.params = Express.parseNestedParams(this.uri.params)
+6 39 if (encoding instanceof Function)
+6 40 callback = encoding,
+6 41 encoding = null
+6 76 return this.headers[path]
+6 78 normalizePath: function(path) {
+6 79 if (path.length === 0) return path
+6 80 return path.replace(/[0]
+6 83 pathToRegexp: function(filePath) {
+6 84 path = normalizePath(path)
+6 85 return this.normalizePath(path)
+6 86 this.normalizePath(path)
+6 87 this.replace(/../..)
+6 88 return this.)
+7 6 this.uri.path = Express.normalizePath(this.uri.path)
+7 75 self.response.write(self.body, encoding)
+7 81 varpassed = false
+7 85 fail: function (e) {
+7 86 this.type = function (route) {
+7 88 return this.callback.length < 120
+7 90 this.thistle()
+7 91 return done(this.headers.headers.length)
+7 96 , len = 128
+7 97 , tests = 0
+7 98 , tests.length
+7 99 , tests.some(function (statics = 0, done) {
+7 100 this.dis.none(passed = false, this.last)
+7 101 , tests = 0 = 0, error)
+7 102 , error)
+7 103 , tests.length = 0 = 0
+7 105 , error = 0
+7 106 , tests.error
+8 1 foo: \'bar\'
+8 3 var res = {
+8 5 \'x-requested-with\': \'XMLHttpRequest\'
+8 7 settings: {
+8 8 \'x-pagination-count\': 1,
+8 9 \'x-requested-with\': \'xmlhttprequest\'
+8 11 url: \'/__karma__/\',
+8 12 root: \'/__karma__/\',
+8 13 proxy: {
+8 14 web: function (req, res) {
+8 15 try {
+8 16 res.statusCode = 200
+8 17 res.headers = { \'X-Requested-With\': \'XMLHttpRequest\' }
+8 18 .request.uri.path = \'/__karma__/\' + req.url
+8 19 return res.responseText
+8 20 } catch (e) {
+8 21 next()
+8 25 var MockResponse = Class({
+8 29 utilities: {
+8 30 mockRequest: function(req, res) {
+8 31 var buf = new Buffer(new Buffer(str))
+8 32 return buf.toString()
+8 34 mockResponse: function(req, res) {
+8 35 var buf = new Buffer(str)
+8 39 describe \'Express\'
+8 40 describe \'.version\'
+8 41 it\'should be properly formatted\'
+8 42 Express.version.should.match /\\d+\\.\\d+\\.\\d+/"/
+8 43 end
+8 45 describe \'.parseNestedParams()\'
+8 46 it\'should parse nested params hash provided by node\'
+8 47 params = { \'foo\' : \'bar\', \'user[name]\' : \'tj\', \'user[info][email]\' : \'tj@vision-media.ca\', \'user[info][city]\' : \'Victoria\' }
+8 48 nested = Express.parseNestedParams(params)
+8 49 nested.foo.should.eql \'bar\'
+8 50 nested.user.name.should.eql \'tj\'
+8 51 nested.user.info.email.should.eql \'tj@vision-media.ca\'
+8 52 nested.user.info.city.should.eql \'Victoria\'
+8 55 describe \'.parseCookie()\'
+8 56 it\'should parse cookie pairs\'
+8 57 cookie = \'expires=Fri, 31-Dec-2010 23:59:59 GMT; path=/; q=foo%3dbar; domain=example.net\'
+8 58 parts = Express.parseCookie(cookie)
+8 59 parts.expires.should.eql \'Fri, 31-Dec-2010 23:59:59 GMT\'
+8 60 parts.path.should.eql \'/\'
+8 61 parts.q.should.eql \'foo=bar\'
+8 62 parts.domain.should.eql \'example.net\'
+8 65 describe \'.argsArray()\'
+8 66 it\'should return an array of arguments\'
+8 67 Express.argsArray(-{ return arguments }(\'foo\', \'bar\')).should.eql [\'foo\', \'bar\']
+8 69 it\'should allow an offset\'
+8 70 Express.argsArray(-{ return arguments }(\'foo\', \'bar\'), 1).should.eql [[\'baz\'], [\'baz\']
+8 75 describe \'.escape()\'should escape()\'\', function()\'should escape()\'\', function(){\'should escape()'should escape()'\', \'baz\'
+8 76 Express.escape()'
+8 82 describe \'with space = require("\'\', \'baz"\', \'e,baz"\')
+8 87 describe \'escape(){\'
+
+9 1 res  : {
+9 2 \'http://some.com/whatever\'
+9 4 \'3.0.0\'
+9 7 describe(\'when given a mock request\', function () {
+9 8 it(\'should merge the promise once all files\', function () {
+9 9 var response = new MockRequest({
+9 10 path : \'hello.haml\'
+9 11 }, {}, emitter)
+9 12 response.once(\'end\', function () {
+9 13 expect(nextSpy).not.to.have.been.called
+9 14 expect(response).to.beServedAs(200, \'CONTEXT\
+9 15 <script type="text/javascript" src="http://some.com/whatever" crossorigin="anonymous"></script>\')
+9 16 expect(response._headers[\'Content-Type\']).to.equal(\'application/octet-stream\')
+9 19 it(\'should merge when given an abitrary path\', function () {
+9 26 <script type="text/javascript" src="http://some.com/abc" crossorigin="anonymous"></script>\')
+9 41 it(\'should ignore if the path is not defined\', function () {
+9 43 path : \'foo.js\'
+9 49 expect(response._headers[\'Content-Type\']).to.equal(\'text/javascript\')
+9 52 it(\'should default to the "root" setting\', function () {
+9 54 path : \'foo.js\',
+9 55 root : \'/some/thing\'
+9 59 expect(nextSpy).not.to.to.have.have.been.called
+9 60 expect(nextSpy).to.to.have.have.to.have.have.to.have.have.been.called
+9 61 expect(new.called)
+9 65 it(\'should allow(something = function (val) {
+9 69 it(\'should.toString)
+9 71 .toString = function (val === \'this.toString)
+9 73 .toString = function (val = function (val) {
+9 74 return val === \'this.toString)
+9 76 .toString = function (val) {
+9 77 return val === \'{}

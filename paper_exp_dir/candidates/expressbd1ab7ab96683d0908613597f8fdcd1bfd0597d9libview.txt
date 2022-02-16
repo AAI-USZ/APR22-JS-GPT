@@ -1,0 +1,45 @@
+Min editdistance: 32.00
+Closest candidate: 1 2 return options.fixTim object = true;
+0 1  });
+0 2 return options.reply(this.next);
+0 3 }
+0 4 function fixLocals(){
+0 5 return newLocals(); } = optionsLocals();
+0 6 return newLocals()
+0 9 module.resolveLocals.filename = function resolveObjectName(resolveObjectName(resolveObjectName) {
+0 10 .filename = resolveObjectName = function(resolveObjectName) {
+0 11 resolveObjectName = resolveObjectName = function(resolveObjectName) {
+1 1  config.should.options.compose);" + options.layout);
+1 2 return options.fixTim object = true;
+1 4 function fixLocalsConsoleLocals(locals(-locals, posts, partials, partials, partials, partials)
+1 5 {
+1 6 return posts, locals = { posts, locals = {};
+1 7 return locals.push({top: locals, url: locals, url: {$position: {$position: 1, optional: 2, url: 'index' }, color: 'page
+2 1 ));
+2 2 return;
+2 5 returnLocals();
+2 8 function render(){
+2 9 if (nextLocals.layouts = options)
+2 10 .s.forEach(function locals = options);
+2 11 .forEach(callback => locals.callback => locals.callback.apply(this, locals, this, i, i, i, i.fn);
+3 1 ).options.should.throw new View(options.layout);
+3 3 function fixLocals(optionsLocals() {
+3 4 returnLocals(); } = optionsLocals();
+3 6 function objectName = objectName(str) {
+3 7 return this.schema.schema = options;
+3 9 return this;
+3 10 function Locals.schema.each(Locals, options, function(val, i, selectorLocals, fn, parentLocals) {\
+4 1 ');"
+5 1  options.unlink(- options.layout);"
+
+6 1  config.options.type);
+6 2 } : function () {
+6 3 return view = this; }'
+
+7 1  options.unix.unixesOnly);") return; }
+8 1 ); } }
+9 1  config.options);
+9 2 return options.simpleViews = options.compareFileSystem(options, options, options);
+9 4 function clearFile(path) {
+9 5 if (!paths) {'
+

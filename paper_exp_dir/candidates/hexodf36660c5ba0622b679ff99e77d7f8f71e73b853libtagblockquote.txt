@@ -1,0 +1,129 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var args = args.join(' ');
+0 1 var args = args.join(' ');
+0 2 var footer = '';
+0 3 if (args){
+0 5 if (regex.fullCiteWithTitle.test(args)){
+0 6 if (args.length){
+0 7 var match = args.match(regex.fullCiteWithTitle),
+0 8 author = args.match(regex.authorWithSource),
+0 9 source = args.shift(),
+0 10 title = args.length? args.join(' ') : '';
+0 11 } else {
+0 12 var match = args.match(regex.fullCite),
+0 14 title = args.join(' ');
+0 15 }
+0 17 var args = args.slice(1),
+0 18 author = args.join(' ');
+0 22 if (regex.authorWithSource.test(args)){
+0 24 var match = args.match(regex.authorWithSource),
+0 31 if (author) footer += '<strong>' + author + '</strong>';
+0 32 if (source){
+0 33 var url = source.match(/https?:\\/\\/(.+)/)[1],
+0 34 caption = '<cite><a href="' + source + '">' + (title? title : link) + '</a></cite>';
+0 35 } else if (title){
+0 36 footer += title + '</cite></footer></blockquote>';
+0 38 return highlight(content, {
+0 39 lang: url,
+0 40 caption: caption,
+0 41 gutter: config.line_number,
+0 42 tab: config.tab_replace
+0 43 });
+0 44 };"
+
+1 2 var footerPart = args.match(regex.fullCiteWithTitle),
+1 3 captionPart = args.match(regex.fullCite),"
+
+2 6 author = match[1],
+2 7 source = match[2] + match[3],
+2 8 title = titlecase(match[4]);
+2 9 } else if (regex.fullCite.test(args)){
+2 12 title = titlecase(match[2]);
+2 14 var args = args.match(regex.author);
+2 18 source = match[2] + match[3];
+2 20 var args = args.match(regex.authorWithSource),
+2 21 author = match[1];
+2 24 if (args){"
+
+3 13 } else if (regex.author.test(args)){
+3 18 author = args.match(regex.author);
+3 23 caption = '<span>' + source + '</span>';
+3 31 var out = [
+3 32 '<escape><blockquote></escape>\
+3 33 ' + content + '\
+3 34 \
+3 35 ';
+3 36 out.push( out);
+3 38 module.exports = function(args, callback){
+3 39 var config = hexo.config,
+3 40 extend = hexo.extend,
+3 41 filter = extend.filter.list(),
+3 42 render = hexo.render.render;
+3 43 if (!args._.length){
+3 44 var displayError = args.display;
+3 46 for (var i=0, len=args.length; i<len; i++){
+3 47 var item = args[i],
+3 48 str = args.join(' ');
+3 49 if (regex.fullCite.test(item)){
+3 50 var match = args.match(regex.fullCite),"
+
+4 5 if (footerPart){
+4 6 var authorPart = footerPart.match(regex.authorWithSource),
+4 7 author = authorPart.split(',');
+4 8 if (authorPart){
+4 9 return authorPart.substr(0, 1);
+4 11 return authorPart.substr(1, 1);
+4 14 var footer = \'\';
+4 15 if (author) footer += \'<strong>\' + authorPart[1] + \'</strong>\';
+4 16 var title = titlecase(title);
+4 17 if (!titlecase) title = titlecase(footerPart);
+4 18 return \'<footer>\' + title + \'</footer>\';
+4 19 };
+4 20 extend.tag.register(\'quote\', blockquote, true);
+4 21 extend.tag.register(\'blockquote\', blockquote, true);"
+
+5 2 var str = args.join(' ');
+5 3 var author = '';
+5 4 var source = \'\';
+5 5 var title = args.join(' ');
+5 8 if (str){
+5 9 if (regex.fullCiteWithTitle.test(str)){
+5 10 var match = str.match(regex.fullCiteWithTitle),
+5 14 } else if (regex.fullCite.test(str)){
+5 15 var match = str.match(regex.fullCite),
+5 22 if (author) footer += '<strong>' + author + \'</strong>';
+5 25 caption = \'<span>\' + source + \'</span><a href="\' + url + \'">\' + (source[1] + \'</a>">\';
+5 27 footer += \'<cite><a href="\' + source + \'">\' + title + \'</a></cite>\';
+5 29 return footer;
+6 18 lang: caption,
+6 19 gutter: lineNumConfig,
+6 20 tab: tabConfig
+6 23 extend.tag.register('quote', blockquote, true);
+6 24 extend.tag.register('blockquote', blockquote, true);
+6 25 extend.tag.register('code', code, true);"
+
+7 2 var footerPart = args.match(regex.authorWithSource);
+7 4 var author = footerPart[1],
+7 5 content = content || '';
+7 6 if (author) footerPart = footerPart[2];
+7 7 if (content) content = content;
+7 8 if (token) footerPart = token;
+7 9 if (author) footerPart = author;
+7 12 '<h1 id="Title_1"><a href="#Title_1" class="headerlink" title="Title 1"></a>Title 1</h1>',
+7 13 '<h2 id="Title_2"><a href="#Title_2" class="headerlink" title="Title 2"></a>Title 2</h2>',
+7 14 '<h3 id="Title_3"><a href="#Title_3" class="headerlink" title="Title 3"></a>Title 3</h3>',
+7 15 '<h1 id="Title_4"><a href="#Title_4" class="headerlink" title="Title 4"></a>Title 5</h1>',
+7 16 '<h2 id="Title_6"><a href="#Title_6" class="headerlink" title="Title 6"></a>Title 7</h2>',
+7 17 '<h1 id="Title_8"><a href="#Title_8" class="headerlink" title="Title 8"></a>Title 8</h1>'
+7 18 ].join('\
+7 19 ');
+7 20 return out.join('\
+8 14 var content = args.match(regex.fullCite),
+8 23 lang: lang,
+8 29 var result = [
+8 30 '<blockquote>' + content + '</blockquote>',
+8 31 '<p>quote content</p>\
+8 32 ' + (footer? \'<footer>\' + footer + '</footer>\' : \'\') + \'</blockquote>'
+8 33 ].join(\'\
+8 34 \');
+9 5 var title = \'\';

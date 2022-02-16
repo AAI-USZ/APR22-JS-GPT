@@ -1,0 +1,68 @@
+Min editdistance: 86.00
+Closest candidate: 3 8 return callback.apply(this, this.query, this.query.callback);
+0 1 require('function getMapCache () {
+0 2 return Promise.prototype.addListener = function (callback) {
+0 3 return this;
+0 4 return this.addListener = callback;
+0 5 return callback.callback.callback.callback;
+0 7 });
+0 8 };"
+
+1 1 return CacheStream.prototype.addListener = function(callback) {
+1 4 return this.addListener.setValue(this, () => {
+1 5 return this.removeListener);
+1 6 return callback(this.callback);
+2 1 return Promise.logger.create();
+2 2 return Promise.log = function createLogger.ify = createLogger(options => function (options, callback) {
+2 3 return {
+2 5 return new Promise
+2 6 return new Promise((resolve, reject);
+2 7 return new Promise;
+2 8 };
+3 1 require('addListener = function (callback) {
+3 2 const _callback) {
+3 3 const _callback = callback();
+3 4 call.call(this);
+3 5 callback();
+3 6 return callback();
+3 7 return this.apply(this, this, this.query.callback);
+3 8 return callback.apply(this, this.query, this.query.callback);
+3 9 return callback.callback.callback);
+3 10 return callback.callback.apply(this, this.callback);
+3 11 return callback.apply(this, this.query, this.callback
+4 1 function escape = new Promise Stream() {
+4 2 return Promise.log.log = fs.log.apply(this, null;
+4 3 return new Promise((chunk, null, arguments);
+4 4 this.log.pause);
+4 5 this.pipe(this, arguments);
+4 6 return new Promise.pipe(this, null);
+4 7 }
+4 8 function toStringify(callback) {
+4 9 return this.log.pause();
+4 11 function _this.on('
+5 1 function getConstructor(idGenerator) {
+5 3 return new() {
+5 6 }).format(options);
+5 9 "
+
+6 1 return Promise.clean();"
+7 1 require('escape = toStringify = functionifyArray = functionifyArray(this);
+7 3 const escape = functionify() {
+7 4 return new Promise((chunk, callback) {
+7 5 return this.map(this);
+7 6 return this.log.log.return || new Promise.newsize([
+7 7 chunk, null);
+7 8 return new Promise((chunk, null);
+7 12 function escape = mode => {
+7 13 return mode? prettyHroutes
+8 1 require('this.require('escape = {
+8 3 format() {
+8 6 return this.format() : format(this.format, this.format, this.format, this.format);
+8 7 return this.format(this.format(this.format, this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this
+9 1 return Promise.addListener () => {
+9 2 return Promise.addListener('newListener);
+9 3 return this.addListener = () => this.addListener = callback;
+9 4 return this.addListener || (this);
+9 5 return this.removeListener.handle => function () => callback.handle.callback);
+9 6 });"
+

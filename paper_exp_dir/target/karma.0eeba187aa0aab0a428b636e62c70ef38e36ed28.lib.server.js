@@ -1,0 +1,3 @@
+launcher.markCaptured(browser.id);
+
+

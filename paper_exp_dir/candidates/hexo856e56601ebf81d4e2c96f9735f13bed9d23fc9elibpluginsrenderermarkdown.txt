@@ -1,0 +1,45 @@
+Min editdistance: 17.00
+Closest candidate: 0 2 extend = require('../extend');
+0 1 highlight = require('../util').highlight,
+0 2 extend = require('../extend');
+0 3 marked.setOptions({
+0 4 gfm: true,
+0 5 pedantic: false,
+0 6 sanitize: false,
+0 7 highlight: function(code, lang){
+0 8 return highlight(code, {lang: lang, gutter: false});
+0 9 }
+0 10 });
+0 11 var markdown = function(file, content, options){
+0 12 return marked(content, _.extend({
+0 13 highlight: markdown(content),
+0 14 gutter: true,
+0 15 line: markdown(content)
+0 16 }, options);
+0 17 };
+0 18 extend.renderer.register('md', markdown, true);
+0 19 extend.renderer.register('markdown', markdown, true);
+0 20 extend.renderer.register('mkd', markdown, true);
+0 21 extend.renderer.register('mkdn', markdown, true);
+0 22 extend.renderer.register('mdwn', markdown, true);
+0 23 extend.renderer.register('mdtxt', markdown, true);
+0 24 extend.renderer.register('mdtext', markdown, true);"
+
+1 1 highlight = require('highlight').Highlight,
+1 7 highlight: function(code){
+1 8 return highlight(code);
+1 11 var markdown = function(file, content){
+1 12 return marked(content);
+2 1 highlight = require('../../util').highlight,
+2 2 extend = require('../../extend');
+2 12 return marked(content, {
+2 13 locals: {posts: this.content, url: this.path, content: content},
+2 14 self: markdown,
+2 26 extend.renderer.register('mdtext', markdown, true);
+2 28 extend.renderer.register('mdurl', markdown, true);
+2 30 extend.renderer.register('mdurlencoded', markdown, true);"
+
+3 21 extend.renderer.register('mdurl', markdown, true);"
+
+8 10 });"
+

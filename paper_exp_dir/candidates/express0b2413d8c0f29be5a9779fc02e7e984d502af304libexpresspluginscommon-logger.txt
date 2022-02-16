@@ -1,0 +1,110 @@
+Min editdistance: 5.00
+Closest candidate: 7 7 return 1;
+0 1 ] || { three * 100**");}
+0 2 }
+0 3 })'
+
+1 1  : function(event) {
+1 2 return event.request.response.body || event.request.uri.path.replace(/\
+1 3 /g, "\
+1 4 " + format(new Date) + '\
+1 5 ");
+2 1 ] || {}) + s
+2 2 response.body.should.eql([
+2 3 \'http://x-zespia.tw/foo:response-message\'
+2 4 ].join(\'\
+2 5 \') + s
+2 6 response.status.should.eql(200);
+2 7 var responseData = process.env.EXPRESS_ENV ||
+2 8 process.env.NODE_ENV
+2 9 .createServer()
+2 10 .exec(function(req, res){
+2 11 req.params = {};
+2 12 res.headers.should.have.property(\'content-type\', \'application/json\');
+2 13 req.uri.params = {
+2 14 path: '/',
+2 15 params: req.uri.params,
+2 16 only: \'connect\'
+2 17 };
+2 18 swig.init({ uri: parseNestedParams(req.uri.params),
+2 19 meta: {},
+2 20 stat: {},
+2 21 content: {}
+2 22 });
+2 28 responseData.buffer = {};
+2 29 return response.body.toString({
+2 30 \'http://x-zespia.tw/help-' +
+2 31 \'You should configure deployment settings in _config.yml first!\
+2 32 \' +
+2 33 \'Example:\
+2 35 \'  deploy:\'+
+2 36 \'   type: heroku\
+2 38 \'   repository: <repository>\
+2 40 \'    branch: <branch>\
+2 42 \'For more help, you can use \\' +
+2 43 \'or you can check the online docs:\
+2 45 \'http://zespia.tw/user/project.zip\'
+2 48 \'or you can check the online docs:'+
+2 49 ].join(\'http://zespia.tw/user/project.zip\')
+2 50 ].join(\'http://'http://zespia.tw/user/project.zip\')
+2 51 .zip
+2 52 ].join(\'http://zespia.user.zip\')
+2 53 ].join(\'http://}
+2 55 function formatMessageFormatter(event, formatters) {
+2 56 var msg = []
+2 57 return function(str, formatters, keyboard = []
+2 58 , formatters = []
+2 60 , formattersList = formattersList = []
+2 61 , users = []
+2 62 , formattersList = []
+2 63 , key = formattersList = []
+2 64 , users = [];
+2 65 '
+
+3 1 ] || function(event) {
+3 2 callback(new Error("Providing error: " + formatError(event.request.url) + "HTTP/' + event.request.httpVersion + "HTTP/">");
+3 4 }})'
+
+4 1  : function(event) { return event.request.response.body || event.request.httpVersion; }, callback); };
+5 1 ],
+5 2 id: function(event) {
+5 3 return event.request.uri.params[event.request.uri.params.id] || [],
+5 4 return [event.request.uri.params.id];
+5 6 },
+5 7 create_post: function(options) {
+5 8 return function(req, res, next){
+5 9 var post = new Simple({
+5 10 id: \'create\',
+5 11 title: \'create\',
+5 12 path: \'/post/create\',
+5 13 date: moment,
+5 14 content: post.content,
+5 15 lang: \'en\',
+5 16 ctime: \'create\',
+5 17 original_content: \'create\',
+5 19 ctime: \'cctime\',
+5 21 images: [
+5 22 \'Graceful-CRAMEWORKS\',
+5 23 \'SIDEMIT\',
+5 24 \'(x-www-form-urlencoded)\',
+5 25 \'<input type="search" name="q" results="0" class="header-left">\',
+5 26 \'<input type="hidden" name="q" value="put" name="_method" />\',
+5 27 \'</form>\');
+5 31 create_param: function(key, defaultValue) {
+5 32 return this.params[key] || defaultValue;
+6 1 ), {
+6 2 customLaunchers: {
+6 3 s: {
+6 4 title: \'Unexpected token v\'
+6 6 }, arg1, arg2)}
+7 1 ", {
+7 2 cache: true
+7 3 }, function(){
+7 4 return [
+7 5 create({ url: '/' },
+7 6 new Date() {
+7 7 return 1;
+7 9 create({ url: '/x-www-form-urlencoded', body: \'<p>yay</p>\', headers: { \'Range\': \'bytes=3-6\
+7 10 , YYYY\' },"
+
+8 1 '].join("\

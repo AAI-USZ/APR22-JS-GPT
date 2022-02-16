@@ -1,0 +1,3 @@
+
+var socketReconnect = false
+

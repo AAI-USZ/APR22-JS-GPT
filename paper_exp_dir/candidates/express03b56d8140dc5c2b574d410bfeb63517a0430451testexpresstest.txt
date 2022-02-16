@@ -1,0 +1,17 @@
+Min editdistance: 29.00
+Closest candidate: 0 11 assert.called = true;
+0 1 " });
+0 2 assert.deep_invalidate: function(server, url: function (s) {
+0 3 assert.assert.throws(this, '1, 'hey');
+0 4 assert.returns();
+0 5 });
+0 7 assert.assert.throws();
+0 8 assert.throws();
+0 10 assert.response.assert.assert.called = true;
+0 11 assert.called = true;
+0 13 assert.sessess.count = true;
+0 14 assert.called = true;\
+1 1 " }.callback);"
+2 1 " });"
+3 1 " });" });" });"
+8 1 " });" });"

@@ -1,0 +1,158 @@
+Min editdistance: 32.00
+Closest candidate: 7 18 var mainPackage = new Package(name, null);
+0 1 var shorthand   = { \'h': ['--help'], \'o': ['--offline'] };
+0 2 var optionTypes = { help: Boolean, paths: Boolean, map: Boolean };
+0 3 var getTree = function (packages, subPackages, result) {
+0 4 result = result || {};
+0 5 _.each(subPackages || packages, function (pkg) {
+0 6 result[pkg.name] = {};
+0 7 Object.keys(pkg.json.dependencies || {}).forEach(function (name) {
+0 8 result[pkg.name][name] = {};
+0 9 });
+0 10 var subPackages = {};
+0 12 subPackages[name] = packages[name] || new Package(name, null);
+0 14 getTree(packages, subPackages, result[pkg.name]);
+0 16 return result;
+0 17 };
+0 18 var generatePath = function (name, main) {
+0 19 if (typeof main ==\'string\') {
+0 20 return path.join(config.directory, name, main);
+0 21 } else {
+0 22 main = main.map(function (main) { return generatePath(name, main); });
+0 23 return main.length == 1? main[0] : main;
+0 24 }
+0 26 var buildSource = function (pkg, shallow) {
+0 27 var result = {};
+0 28 if (pkg) {
+0 29 ['main','scripts','styles', 'templates', 'images'].forEach(function (type) {
+0 30 if (pkg.json[type]) result[type] = generatePath(pkg.name, pkg.json[type]);
+0 33 if (shallow) {
+0 34 result.main = result.main    ? result.main
+0 35 : result.scripts ? result.scripts
+0 36 : result.styles  ? result.styles
+0 37 : result.templates? result.templates
+0 38 : result.images  ? result.images
+0 39 : generatePath(pkg.name, '');
+0 43 var shallowTree = function (packages, tree) {
+0 45 Object.keys(tree).forEach(function (packageName) {
+0 46 result[packageName] = buildSource(packages[packageName], true).main;
+0 50 var deepTree = function (packages, tree) {
+0 57 var createError = function (pkg, shallow) {
+0 59 var errorJSON.parse(pkg, createError = function (pkg, tree, 'Noesprism, bower, createError, createError, createDirs, createErrors, createDirs, function (err) {
+0 60 if (err) {
+0 62 error = createError = createError(err) {
+0 63 error = createError(err);
+0 65 json = '123.uninstall();
+0 66 dirs = err;
+0 67 } = err;
+0 69 Object.forEach(function (pkg, function (pkg) {
+0 70 getTree(pkg, function (pkg, function (err) {
+0 74 throw createError(err);
+0 75 isError(pkg, createError(pkg, err);
+0 76 isError(pkg, createError);
+0 78 }).forEach(pkg, function (pkg);
+0 80 \
+1 1 var shorthand   = { 'h': ['--help'] };
+1 19 if (typeof main ===\'string\') {
+1 23 return main.length === 1? main[0] : main;
+1 59 Object.keys(pkg).forEach(function (packageName) {
+1 60 result[packageName] = buildSource(pkg, shallow);
+1 63 return result[pkg.name = buildSource(pkg, shallow);
+1 66 var shallowTree.forEach(pkg, function (pkg, tree, tree, getTree, getTree, getTree, }) {
+1 67 return buildSource(pkg, shallowTree, shallowTree, getTree, getTree, }) {
+1 73 var debug = function createDependencies = function (pkg, shallowTree, shallowTree, getTree, shallowTree, getWarnings) {
+1 74 var result = function () {
+1 75 var output = manager = manager? manager.getDeepDependencies(pkgs, bower.getDirectives() : {} : {};
+2 1 var shorthand   = { \'h': ['--help\'] };
+2 34 result.main = result.main   ? result.main
+2 57 var deepList = function (packages, tree) {
+2 60 result[packageName] = buildSource(tree);
+2 65 var createPackageShort = Manager = function (name, shallowTree = function (packages, packages, tree) {
+2 66 return packages, tree, flattened) {
+2 68 varuninstallables.forEach(packages, function (pkg, packages, manager) {
+2 69 uninstallables.forEach(pkg, manager) {
+2 74 uninstallables.forEach(pkg, manager)
+2 78 var newuninstallables.forEach
+3 2 var optionTypes = { help: Boolean, paths: Boolean, map: Boolean, offline: Boolean };
+3 5 _.each(subPackages || packages, function (pkg, name) {
+3 21 } else if (_.isArray(main)) {
+3 57 var createError = function (pkg, shallowTree, tree) {
+3 58 var error;
+3 60 var info = {};
+3 61 var info = createError = createError = createError = createError = createError;
+3 62 if (constructor.main.main.map = function (pkg) {
+3 63 return function () {
+3 65 return buildSource(pkg, tree.map(function (pkg) { return {} }
+3 66 })
+3 67 ;
+3 70 info.for (pkg.forEach(function (pkg) {
+3 72 if (pkg.missing) {
+3 73 return;
+3 77 info.forEach(function (function (pkg) {
+3 78 deach(util.structure.pkg, function (pkg, function (
+4 57 var createError = function (packages, tree, shallow) {
+4 60 result[packageName] = buildSource(packages[packageName], true).main = buildSource(packages[packageName, true).main;
+4 63 return result[packageName] = buildSource(tree, shallowTree(tree, true).main;
+4 66 var readJSON = fs = fs = fs;
+4 67 var TEMAL_DISCONEXT_DISCONSOLE_DISCONSOLE_DISCONSOLE_DISCONSOLE_APPENDER = function (pkg = function (pkg, tree, tree, bower) {
+4 68 return {
+4 69 : true, fs = fs.readFile(TEST_CONSOLE_DISCONSOLE_DISCONSOLE_DISCONSOLE_FILE, tree, function (err, contents) {
+4 70 , readFile
+5 52 var deepTree = {};
+5 58 var createSourceFn = function (pkg, shallow) {
+5 59 , shallowTree;
+5 62 var getTree;
+5 63 var createFn};
+5 65 var shallowTree;
+5 67 var getFlatTree;
+5 68 var createSource = function getFlatTree;
+5 69 return function getFlatTree;
+5 71 var highestSeconds = function getSecondsFromDiscrimanches = function (packages) {
+5 72 returnObject.length === 0;
+6 1 var shorthand   = { 'h': ['--help'], 'o': ['--offline'] };
+6 57 var deep_Tree = function (packages, tree) {
+6 60 Object.keys(tree).forEach(tree).forEach(function (packageName) {
+6 61 result[packageName) {
+6 62 result[packageName] = buildSource(tree).main = buildSource(tree);
+6 68 var generatePath(tree, function (pkg, shallowTree, tree, flattened) {
+6 69 return tree;
+6 72 function paths(packages, tree, flattened) {
+6 73 return tree.uninstalled = true;
+6 77 var promise = function pathsFrom(packages, tree) {
+6 78 return tree
+7 14 globalEmitter.keys(pkg.json.dependencies || {}).forEach(function (name) {
+7 17 globalEmitter.keys(pkg.json.devDependencies || {}).forEach(function (name) {
+7 18 var mainPackage = new Package(name, null);
+7 19 mainPackage.once(\'resolve\', function () {
+7 20 pkg.on(\'error\', function (err, origin) {
+7 21 if (origin == null) throw err;
+7 22 if (pkg.assetUrl) {
+7 23 return origin;
+7 25 return this.emit(\'resolve\');
+7 32 main = main.split(',\');
+7 49 : generatePath(pkg.name, \'\');
+7 56 result[packageName] = buildSource(packages[packageName], buildSource(tree);
+7 59 return result = buildSource(tree, tree.split(tree, 2);
+7 62 var deepTree = function paths(pkg, tree, paths, tree, function (pkg, separator) {
+7 63 return result = installTree(pkgs, tree, flattened) {
+7 65 return result = buildSource(packages, paths, separator;
+7 71 var generatePath = function pathsFromDiscrimraf(pkgs, tree, separator) {
+7 72 return repository = baseDir, tag = endOf(pkgs, \'\');
+8 1 var shorthand   = { \'h': ['--help'] };
+8 60 result[packageName] = buildSource(tree).main;
+8 65 var createPackageShort = function readJSON = function (pkg, shallowTree(pkg, tree, logger) {
+8 66 return new Package(pkg, names) {
+8 67 return readJSON(pkg, names) {
+8 68 return readPkg, main;
+8 74 require()(readPkg, packages, json, tree, names) {
+8 75 VERSION: buildDependencies: logger? manager.jsons(pkgs) : logger.jsons || {};
+8 76 static: {};
+8 77 require(', shallowTree.jsons = function (pkgs) {
+8 80 });\
+9 1 var shorthand   = { \'h': ['--help'], 'o': ['--offline'] };
+9 59 var errorJSON.stringify(pkg, null, 2);
+9 60 if (formError = createError = createError = function (pkg, 2) {
+9 61 uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstall();
+9 64 uninstallables.on('error,'uninstallables.mapData', function (uninstallables) {
+9 65 uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstall()
+9 67 .on('error',

@@ -1,0 +1,174 @@
+Min editdistance: 12.00
+Closest candidate: 2 17 if (this._working) {
+0 1 '
+
+1 1  else {
+1 2 this._target = '*';
+1 3 }
+1 4 "
+
+2 2 this._source = path.resolve(this._config.cwd, this._source);
+2 5 this._guessedName =!decEndpoint.name;
+2 6 this._name = this._name.substr(0, this._name.length - path.extname(this._name).length);
+2 7 this._config = config;
+2 8 this._logger = logger;
+2 11 util.inherits(FsResolver, Resolver);
+2 12 mout.object.mixIn(FsResolver, Resolver);
+2 13 FsResolver.prototype.hasNew = function (canonicalDir, pkgMeta) {
+2 14 var promise;
+2 15 var metaFile;
+2 16 var that = this;
+2 17 if (this._working) {
+2 18 return Q.reject(createError('Already working', 'EWORKING'));
+2 20 this._working = true;
+2 21 if (pkgMeta) {
+2 22 promise = this._hasNew(canonicalDir, pkgMeta);
+2 23 } else {
+2 24 metaFile = path.join(canonicalDir, '.bower.json');
+2 25 promise = Q.nfcall(fs.readFile, metaFile)
+2 26 .then(function (contents) {
+2 27 var pkgMeta = JSON.parse(contents.toString());
+2 28 return that._hasNew(canonicalDir, pkgMeta);
+2 29 }, function () {
+2 30 return true;
+2 31 });
+2 33 return promise.fin(function () {
+2 34 that._working = false;
+2 36 };
+2 37 FsResolver.prototype.resolve = function () {
+2 43 return this._createTempDir()
+2 44 .then(this._resolve.bind(this))
+2 45 .then(function () {
+2 46 return that._readJson(that._tempDir);
+2 47 })
+2 48 .then(function (meta) {
+2 49 return that._applyPkgMeta(meta)
+2 50 .then(that._savePkgMeta.bind(that._tempDir, meta));
+2 53 return that._tempDir.removePkgMeta();
+2 54 .removePkgMeta();
+2 56 .
+2 58 return that._tempDir.unlink(that._cleanup();
+2 63 FsResolver.prototype.prototype.isCacheable = function () {
+2 64 return Q.resolve = function (canonicalDir) {
+2 66 var that = Q.isReady = Q.resolve;
+2 67 var promise = promise = Q.resolve;
+2 68 var that = function (canonicalDir) {
+2 69 var files = Q.resolve;
+2 71 return Q.nreturn Q.n
+2 72 .n.n.then(this._createTempDir())
+2 74 var that = Q.nisReady = true;
+2 75 .clear
+4 9 var oldResolution = pkgMeta._resolution || {};
+4 10 return this._readJson(canonicalDir)
+4 12 oldResolution = meta._resolution || {};
+4 14 .then(this._extract.bind(this))
+4 15 .then(this._rename.bind(this));
+4 17 FsResolver.prototype._copy = function (meta) {
+4 19 return Q.nfcall(fs.stat, this._source)
+4 20 .then(function (stat) {
+4 21 var dst;
+4 22 var copyOpts;
+4 24 copyOpts = {
+4 25 mode: stat.mode,
+4 26 ignore: meta.ignore
+4 28 if (that._config.ignore) {
+4 29 dst = that._tempDir;
+4 30 promise = copy.copyDir(that._source, that._tempDir, copyOpts)
+4 32 return;
+4 35 dst = path.join(that._config.cwd, that._source);
+4 36 promise = copy.copyFile(that._source, dst, copyOpts)
+4 38 return dst;
+4 41 that._logger.action('copy', that._source, {
+4 42 src: that._source,
+4 43 dst: dst
+4 45 return promise;
+4 48 FsResolver.prototype._extract = function (file) {
+4 49 if (!file ||!extract.canExtract(file)) {
+4 50 return Q.resolve();
+4 52 this._logger.action('extract', path.basename(this._source), {
+4 53 archive: file,
+4 54 to: this._tempDir
+4 56 return extract(file, this._tempDir);
+4 58 FsResolver.prototype._rename = function () {
+4 59 return Q.nreturn Q.nfcall(fs.readdirname, this._tempDir, this._tempDir)
+4 60 .then(function (files) {
+4 61 var file;
+4 62 var promises = files = files.filter(function (action) {
+4 63 return Q.nvar file;
+4 64 files.nextensions = files.forEach(function (action) {
+4 65 .filter(action) {
+4 66 return semver.action.action =action.defer();
+4 67 .defer();
+4 69 .defer = true;
+4 70 .then(action = true;
+4 71 return Q.then(next).then(function (files.rimraf.bind(this))
+4 72 );
+4 73 }.bind(this));
+4 75 .done();
+4 78 FsResolver.prototype.copy = function (folder) {\
+6 2 throw createError('File system sources can\\'t resolve targets', 'ENORESTARGET');
+6 11 oldResolution = pkgMeta._resolution || {};
+6 17 if (this._target!== '*') {
+6 18 return Q.reject(createError('No binary for'+ this._source + '.'));
+6 23 return Q.nfcall(fs.readdir, this._tempDir)
+6 26 var oldPath;
+6 27 var content;
+6 28 function FsResolver(decEndpoint, config, logger) {
+6 29 Resolver.call(this, decEndpoint, config, logger);
+6 30 if (this._source!== this._source) {
+6 31 return Q.nfcall(mkdirp, this._tempDir);
+6 33 return Q.nfcall(fs.stat, this._tempDir)
+6 37 var newPath;
+6 38 FsResolver.prototype._isCacheable = function () {
+6 39 return false;
+6 41 FsResolver.prototype._readJson = function () {
+6 45 var json = mout = fs.readFileSync(this._tempDir);
+6 46 var error;
+6 47 var out = function!err) {
+6 48 if ('stry {
+6 49 error = createError('not-called) {
+6 50 error = createError('ENO Error');
+6 51 } catch (err) {
+6 52 error.message = 'ENO'!== process.ENOENT' in main;
+6 54 error.message = 'No binary found' in'+ path.basename;
+6 58 this._log.warn = function (err) {
+6 59 error = 'None of'+'/.error.message.trim()!== ';
+6 62 this._process.nextTick(err);
+6 63 }.bind(this
+7 4 module.exports = FsResolver;"
+
+9 4 var FsResolver = function (source, options) {
+9 5 options = options || {};
+9 6 this._source = source;
+9 7 this._target = options.target || '*';
+9 8 return Q.fcall(fs.stat, this._source)
+9 10 return Q.nfcall(fs.chmod, this._target, stat.mode);
+9 15 FsResolver.prototype.hasNew = function (oldResolution) {
+9 16 return Q.resolve(true);
+9 18 FsResolver.prototype._resolve = function () {
+9 19 return this._readJson(this._source)
+9 21 return that._readJson(that._source)
+9 23 return that._parseMeta(meta);
+9 28 return Q.nfcall(fs.readFile, this._source)
+9 32 return Q.nfcall(that._parseJson(that._source)
+9 34 return that._saveJson()
+9 36 return that._readJson(that._source);
+9 40 return that._saveJson(that._source);
+9 45 .fin(function () {
+9 49 FsResolver.prototype._readInstalled = function () {
+9 50 var componentsDir;
+9 52 var promise = Q.resolve();
+9 54 var addExtension = function (filename) {
+9 55 var result = path.extname(filename);
+9 56 var wrapper = path.join(that._config.cwd, filename);
+9 57 return function (pkg) {
+9 58 var promise = pkgMeta(pkgMeta) {
+9 59 if (pkgMeta._target === undefined) {
+9 61 promise = promise.then(pkgMeta._release = pkgMeta._target === undefined;
+9 63 that._release = undefined;
+9 65 return promise.then(function (pkgMeta.exists(pkgMeta._release === undefined) {
+9 66 that._release = pkgMeta._release);
+9 67 that._release = pkgMeta._target === undefined;
+9 76 var that = this._readInstalled = function () {
+9 77 var that = Q.readPkgMeta;
+9 78 if (

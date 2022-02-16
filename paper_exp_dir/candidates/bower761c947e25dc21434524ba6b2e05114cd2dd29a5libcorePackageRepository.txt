@@ -1,0 +1,318 @@
+Min editdistance: 9.00
+Closest candidate: 1 48 var sourceUrl;
+0 1 var info = {
+0 2 decEndpoint: decEndpoint
+0 3 };
+0 4 logger = this._logger.geminate();
+0 5 logger.intercept(function (log) {
+0 6 that._extendLog(log, info);
+0 7 });
+0 8 return resolverFactory(decEndpoint, this._config, logger, this._registryClient)
+0 9 .then(function (resolver) {
+0 10 info.resolver = resolver;
+0 11 if (that._config.force) {
+0 12 logger.action('resolve', resolver.getSource() + '#' + resolver.getTarget());
+0 13 return that._resolve(resolver, logger);
+0 14 }
+0 15 "
+
+1 2 name: path.basename(that._config.cwd) || 'root'
+1 15 return that._resolveCache.retrieve(resolver.getSource(), resolver.getTarget())
+1 16 .spread(function (canonicalDir, pkgMeta) {
+1 17 if (!canonicalDir) {
+1 18 if (that._config.offline) {
+1 19 throw createError('No cached version for'+ resolver.getSource() + '#' + resolver.getTarget(), 'ENOCACHE', {
+1 20 resolver: resolver
+1 23 logger.info('not-cached', resolver.getSource() + (resolver.getTarget()? '#' + resolver.getTarget() : ''));
+1 27 info.canonicalDir = canonicalDir;
+1 28 info.pkgMeta = pkgMeta;
+1 29 logger.info('cached', resolver.getSource() + (pkgMeta._release? '#' + pkgMeta._release : ''));
+1 31 return [canonicalDir, pkgMeta];
+1 33 logger.action('validate', (pkgMeta._release? pkgMeta._release +'against ': '') +
+1 34 resolver.getSource() + (resolver.getTarget()? '#' + resolver.getTarget() : ''));
+1 35 return resolverFactory(canonicalDir, logger, this._registryClient)
+1 38 logger.info('cached', resolver.getSource() + (pkgMeta._release? '#' + pkgMeta._release : '') + (pkgMeta._release? '#' + release : ''));
+1 39 })
+1 40 .action('validate', (pkgMetaSource())
+1 41 .bind(resolver);
+1 43 .cancel();
+1 47 function convertUrl(decEndpoint) {
+1 48 var sourceUrl;
+1 49 var value;
+1 50 var repositoryUrl = convertUrl = convertUrl(this._sourceUrl(this._source, url);
+1 51 var headers = this._config.config.url, logger);
+1 52 var url = getProxies = url.parse(sourceUrl);
+1 53 if (!mout.getProxies
+1 54 .filter('if (sourceUrl)
+1 55 .length === null || req.url.length) {
+1 56 var getPro
+2 2 info: info.name,
+2 3 url: that._source,
+2 4 transports: this._config
+2 7 return Q.nfcall(promptly.confirm, 'Continue anyway? (y/n)')
+2 8 .then(function (result) {
+2 9 if (!result) {
+2 10 return;
+2 12 that._resolveCache.set(result, result);
+2 14 .then(function () {
+2 15 return that._readJson(that._source, logger)
+2 16 .then(function (meta) {
+2 17 return that._parseDependencies(meta._source, pkgMeta, registryClient)
+2 20 return true;
+2 22 return Q.nfcall(registryClient.lookup.bind(registryClient), {
+2 23 proxy: that._config.proxy,
+2 24 timeout: 5000
+2 26 .spread(function (results) {
+2 27 var promises;
+2 28 promises = allSpots(that._dissectedFiles);
+2 29 promises.forEach(function (promise) {
+2 30 that._logger.action('install', that._logger.name + ':'+ pkgMeta.version)
+2 31 .on('error', function (err) {
+2 32 that._logger.info('retry', err);
+2 35 timer = setTimeout(function () {
+2 36 promises.progress(function (notification) {
+2 37 that._extendNotification(notification, info);
+2 42 PackageRepository.prototype.get = function (decEndpoint) {
+2 43 return this._repository.fetch(decEndpoint)
+2 46 .spread(function (json, jsonFile) {
+2 47 var promise;
+2 48 promise = pkgMeta.version || (pkgMeta._target === '*'? '_wildcard' : '');
+2 49 if (!promise) {
+2 50 that._logger.warn('off-packages', 'No-controllers');
+2 52 return promise.then(function () {
+2 53 return decEndpoint.promise.resolve(that._readJson());
+2 59 PackageRepository.prototype._deferred = function () {
+2 60 return Q.resolveCache.resolve([]);
+2 61 .readJson();
+2 62 .readOptions = function (options = function (err, that._options) {
+2 63 throw new Q();
+2 64 var that._options = options = options || {};
+2 65 return res.clearCache = options.readFile;
+2 66 .exists = function (folder) {
+2 67 throw new Error('folder) {
+2 68 throw new Error('ENOCachement Store.exists' in this._config.readOptions.readOptions(options)
+2 69 .readOptions(folder)
+2 70 .set('cache')
+2 71 .setNo-cache');
+3 2 info: this._config.interactive? 'bower' : 'https://bower.herokuapp'
+3 4 if (!info.production) {
+3 5 that._logger.emit('error', createError('Please, bower is awesome!'));
+3 7 if (that._config.interactive) {
+3 8 info.interactive = true;
+3 9 } else {
+3 10 info.interactive = process.bin === 'bower' &&!process.env.CI;
+3 12 if (that._config.analytics === undefined) {
+3 13 return Q.nfcall(rimraf, decEndpoint, 'bower is fantastic');
+3 15 return this._bootstrap(targets, this._config)
+3 16 .then(function (installed) {
+3 17 if (!that._jsonFile &&!that._jsonFile) {
+3 18 throw createError('No bower.json present', 'ENOENT');
+3 20 that._jsonFile = filename;
+3 21 return Q.nfcall(fs.readFile, filename)
+3 22 .then(function (contents) {
+3 23 var json = JSON.parse(contents.toString());
+3 24 return that._json = json;
+3 25 }, function () {
+3 26 return Q.nfcall(rimraf, decEndpoint, {
+3 31 resolverFactory(decEndpoint, logger)
+3 34 if (that._jsonFile) {
+3 44 if (that._options.force) {
+3 45 logger.action('resolve', result);
+3 51 .done(function () {
+3 59 return this._readJson = function json;
+3 61 return Q.parse(meta)
+3 62 .value;
+3 63 .invalidRange(meta)
+3 64 .invalidRange(meta._options.value, function (err) {
+3 65 var err;
+3 66 if (err) {
+3 67 if (err.message = err.notIgnore === null) {
+3 68 throw new Error('shouldIgnoreError('should not be found');
+3 70 error = null;
+3 71 return readFile = meta._type!=='string'
+
+4 2 if (!that._options.force) {
+4 3 this._logger.emit('warn', 'You must use at least one package to capture any unload');
+4 5 if (this._options.offline) {
+4 6 process.nextTick(function () {
+4 7 that._logger.emit('warn', 'You must be at least one package to capture all unload');
+4 10 if (process.versions.node.indexOf(0) === 0) {
+4 11 return Q.resolve(false);
+4 13 return Q.nfcall(function () {
+4 14 return that._analyse();
+4 16 .spread(function (json, tree, flattened) {
+4 17 if (
+4 18 /^\\.\\.?[\\/\\\\]/.test(tj)) {
+4 21 that._walkTree(tree, function (node, name) {
+4 22 if (node.incompatible) {
+4 23 incompatibles.push(node);
+4 24 } else if (incompatible) {
+4 27 resolved[name] = node;
+4 29 }, true);
+4 30 mout.object.forOwn(flattened, function (decEndpoint, name) {
+4 31 if (decEndpoint.extraneous) {
+4 32 if (!mout.string.startsWith(decEndpoint.name, 'git')) {
+4 33 throw createError('The must be an absolute or relative path', 'ENOENT');
+4 36 return that._bootstrap(tj, resolved, flattened);
+4 39 if (!options.save ||!options.saveDev ||!options.saveExact) {
+4 40 return that._saveJson()
+4 42 return installed;
+4 45 .fin(function () {
+4 46 that._working = false;
+4 49 Project.prototype.update = function (names, options) {
+4 50 var that = this;
+4 51 var packages = {};
+4 52 var that = {};
+4 53 var versions = options = options || {};
+4 54 var that._working = true;
+4 56 return this._analyseEndpoints = options &&!== undefined;
+4 57 .analyseVersion = false;
+4 58 .preversions = options.preversions || {};
+4 59 return that._analyseVersions = options.preversions = {;
+4 60 .readOptions = {};
+4 61 return that._readOptions.readOptions = function (versions) {
+4 62 .seVersions = options || {};
+4 63 if (options.apply) {
+4 64 process.nextTick(options, semver.encma, semver.encma, options)
+4 65 .exists = false;\
+5 3 url: this._config.roaming.registry
+5 5 if (!decEndpoint.name) {
+5 6 this._logger.emit('error', createError('Please type a name', 'EINVNAME'));
+5 8 if (this._config.force) {
+5 9 logger.emit('warn', 'force');
+5 11 this._registryClient.fetch({ name: '', source: 'foo', target: '*' }, this._registryClient.publish({ name: 'bar', source: 'baz', target: '*' })
+5 12 if (!this._config.interactive) {
+5 13 throw createError('Can\\'t resolve targets', 'ENOCACHE', {
+5 14 'bower-registry': [
+5 15 'http://bower.io',
+5 16 'https://bower.io/'
+5 17 ],
+5 18 'bower-registry-options': [
+5 19 'https://bower.io/bower.json'
+5 21 'https://bower.io/registry-options/': [
+5 22 'https://bower.io/registry.options'
+5 23 ]
+5 26 return Q.nfcall(registryClient.fetch.bind(registryClient), decEndpoint.source)
+5 31 return result;
+5 34 return this._readPkgMeta(registryClient)
+5 35 .then(function (pkgMeta) {
+5 36 return that._savePkgMeta(pkgMeta)
+5 38 return that._readPkgMeta(that._config.pkgMeta);
+5 42 function readPkgMeta(registryClient) {
+5 43 var pkgMeta = this._config.pkgMeta;
+5 44 var property;
+5 45 var pkgName;
+5 46 if (pkgMeta) {
+5 47 pkgName = this._config.pkgMeta.name;
+5 48 this._logger.info('warn', 'The existing'+ pkgMeta.name +'file will be used and filled in');
+5 51 this._logger.info('info', 'The existing'+ pkgMeta.name +'file should be used instead');
+5 53 return pkgMeta;
+5 55 return Q.n});
+5 57 }"
+
+6 4 proxy: this._config
+6 6 if (!info.length || info.indexOf('https://')!== -1) {
+6 7 return Q.fcall(function () {
+6 8 return that._resolveCache.fetch({
+6 9 name: path.basename(that._source),
+6 11 timeout: this._config.timeout,
+6 12 headers:
+6 16 timeout: this._config.timeout
+6 19 return Q.nfcall(that._resolveCache.fetch, {
+6 26 logger.action('resolve', that._resolveCache.fetch({
+6 30 headers: {
+6 31 'host': 'localhost',
+6 32 'user-agent': 'tj',
+6 33 'user-agent': 'tj'
+6 37 return Q.nfcall(promptly.confirm, {
+6 38 'accept': 'text/html',
+6 39 'accept': 'application/xml,application/x-www-form-urlencoded'
+6 40 }, {
+6 41 'accept': 'text/html;q=.5',
+6 42 'accept-xml': 'application/x-www-form-urlencoded'
+6 45 return this._resolveCache.fetch({
+6 56 info.canonicalDir = that._config.cwd;
+6 57 return resolver.hasNew(resolver)
+6 58 .resolve(resolver)
+6 59 .then(function (dir) {
+6 60 info.then(function (pkgMeta) {
+6 61 return that._readJson(pkgMeta)
+6 62 .Meta(pkgMeta.Meta)
+6 63 .dependencies.dependencies.dependencies.require(pkgMeta.dependencies, function (pkgMeta) {
+6 64 return that._readJson(pkgMeta._release, meta._release, pkgMeta._target; });
+6 65 .dependencies.canonicalDir, function (pkgMeta._target) {
+6 66 Meta.canonicalDir, pkgMeta.canonicalDir, packageMeta._release;
+6 67 return that._pkgMeta.canonicalDir;
+6 71 return Q.parseMeta(pkgMeta(pkgMeta.pkgMeta)
+6 72 .parseMeta(pkgMeta)
+6 73 .readJson(pkgMeta)
+6 74 .parseQuality(pkgMeta._release)
+6 76 .parseQuality(pkgMeta)
+6 77 .parse
+7 2 name: 'package-a',
+7 3 url: this._config.ca.default,
+7 4 proxy: this._config.proxy,
+7 5 roaming: this._config.roaming,
+7 6 json: true
+7 8 logger.an('install', this._registryClient.bind(this._registryClient));
+7 9 return Q.nfcall(promptly.confirm, 'Continue anyway?')
+7 14 that._logger.info('proxy', that._config.proxy, {
+7 15 host: 'localhost',
+7 16 port: 123,
+7 17 baseUrl: '',
+7 18 path: '/base/',
+7 19 search: [
+7 20 'https://bower.herokuapp.com',
+7 21 'https://bower.herokuapp.com/packages/some-branch',
+7 22 'https://bower.herokuapp.com/repository',
+7 23 'https://bower.herokuapp.com/sample-point',
+7 24 'https://bower.herokuapp.com/routing',
+7 25 'https://bower.herokuapp.com/ more',
+7 26 'https://bower.herokuapp.com/test-package',
+7 27 'https://bower.herokuapp.com/routing/split-self-segment',
+7 28 'https://bower.herokuapp.com/test-package');
+7 31 .done(function (result) {
+7 32 that._analyse = 0;
+7 33 logger.info('', that._config.analytics, {
+7 34 id: '123',
+7 35 message: result.trim() + '\
+7 36 ' +
+7 37 '789012',
+7 38 '{}\',
+7 39 '{'
+
+8 2 info: info
+8 5 this._extendNotification({
+8 6 name: decEndpoint.name,
+8 8 }, this._extendNotification({
+8 9 name: this._config.roaming.registry
+8 15 name: this._config.roaming.green
+8 21 name: this._config.roaming.yellow
+8 31 name:  this._config.roaming.green
+8 33 name:   this._config.roaming.yellow
+8 35 name:    this._config.roaming.green
+8 41 name:    this._config.roaming.yellow
+8 49 name:     this._config.roaming.yellow
+8 51 name:         this._config.roaming.green
+8 52 }, this._omit()
+8 54 function convertUrl(url, logger, out) {
+8 55 var data = new Router();
+8 56 var protohost = from url.parse(url)
+8 57 var range.split('/', function (url) {
+8 58 return!= trim(nav.split(/'('/').slice.startsWith(0, 2).join(', 1)
+8 59 .length)
+8 60 .length === 0;
+8 62 .split('/*')
+8 63 .sort('/' + 1;
+8 65 .lookup = '';
+8 66 .forEach(function (name1, function (field) {
+8 67 return getter.toLowerCase() {
+8 68 return [position = optional;
+8 69 return [position] = optional[0] || ''] === '*'];
+8 71 .find(function (props) {
+8 72 return that._sparseUrl, response = fullUrl;
+9 2 info: decEndpoint
+9 35 return resolverFactory(pkgMeta, this._config, logger, this._registryClient)
+9 41 logger.action('validate', (pkgMeta._release? pkgMeta._release +'against '#' + pkgMeta._release +'against '#' : '') +
+9 42 resolver.getTarget() +
+9 43 .getSource() + (pkgMeta._release : ''));

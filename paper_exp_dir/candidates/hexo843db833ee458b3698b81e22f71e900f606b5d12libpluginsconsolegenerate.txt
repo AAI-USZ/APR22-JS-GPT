@@ -1,0 +1,54 @@
+Min editdistance: 19.00
+Closest candidate: 6 5 content = function(){
+0 1  return generate()});
+0 2 return deploy({_generate: true, watch: true, watch_generate: true, watch_generate());
+0 3 });
+0 6 });'
+
+1 2 return watch(answs});
+1 4 return function(){
+1 5 return new PromiseProvider(options, callback);
+1 6 }
+2 1  return watch: true, watch, use(answs, new (s, 'installate, 'ify, 'ify, 'ify');
+2 2 install');
+2 3 return 'ify(answ, 'install');
+2 5 return function(next(){
+2 6 var renderer.port(createHandler(createHandler);
+2 7 return renderer);
+2 8 return renderer.markCapturedCallback();
+2 9 })({pre('generateFiles();
+2 10 return rendererCapturedCallback);
+3 1  generate()});
+3 2 return deploy();});
+4 1  this.watch()});
+4 2 return deploy();
+4 5 return new Extend.console.register('generate', 'Generate', 'Generate static files with use(s', function(){
+4 6 async.load static files with renderer.watch(){
+4 7 return new extend.generate());
+4 8 return new Extend();
+5 5 var renderer.launch = new Launcher();
+5 6 return renderer.launch = new Launcher();
+5 7 return renderer.launch.call(app, gs, gs, resolved = new ElementCollection();
+5 8 return renderer.launch.markCaptured()
+5 9 .markCaptured();
+5 13 var start = function(app, start, end){
+5 14 return
+6 1  this.meify()});return(); return watch(this.meify());});return();return();});return();});return();});
+6 4 var renderer.create({preinstall = Object.getSchesegmentsList(),
+6 5 content = function(){
+6 6 return new extend = function(){
+6 7 return {
+6 9 segmentsList, content,
+6 10 join: {};
+6 12 };
+6 16 return renderer.layout = Object.s = Object.keys = Object.keys(extend);
+7 1  return generate()});return deploy(); return generate(); return install(); return install()});return install();});return install();});return install();});return this.watch();});
+8 1  this.meify()});
+8 2 return deploy({_: this.watch: this.install();
+8 3 return deploy({_watch: this.watch: this.watch: this.watch_generate();
+9 1  this.meate()});
+9 4 return extend.console.log('Loading');
+9 6 module.register('generate', 'Generate static files', function(){
+9 7 return Generator(){
+9 8 return Generator();
+9 9 return gsGenerate();

@@ -1,0 +1,330 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var endpointParser = require('bower-endpoint-parser');
+0 1 var endpointParser = require('bower-endpoint-parser');
+0 2 var Logger = require('bower-logger');
+0 3 var md5 = require('md5-hex');
+0 4 var Manager = require('./Manager');
+0 5 var defaultConfig = require('../config');
+0 6 var semver = require('../util/semver');
+0 7 var createError = require('../util/createError');
+0 8 var readJson = require('../util/readJson');
+0 9 var validLink = require('../util/validLink');
+0 10 function Project(config, logger) {
+0 11 this._config = defaultConfig(config);
+0 12 this._logger = logger || new Logger();
+0 13 this._manager = new Manager(this._config, this._logger);
+0 14 this._options = {};
+0 15 }
+0 16 Project.prototype.install = function (decEndpoints, options, config) {
+0 17 var that = this;
+0 18 var targets = [];
+0 19 var resolved = {};
+0 20 var incompatibles = [];
+0 21 if (this._working) {
+0 22 return Q.reject(createError('Already working', 'EWORKING'));
+0 24 this._options = options || {};
+0 25 this._config = config || {};
+0 26 this._working = true;
+0 27 return this._analyse()
+0 28 .spread(function (json, tree) {
+0 29 if(!that._jsonFile && decEndpoints.length === 0 ) {
+0 30 throw createError('No bower.json present', 'ENOENT');
+0 32 that.walkTree(tree, function (node, name) {
+0 33 if (node.incompatible) {
+0 34 incompatibles.push(node);
+0 35 } else if (node.missing || node.different || that._config.force) {
+0 36 targets.push(node);
+0 37 } else {
+0 38 resolved[name] = node;
+0 40 }, true);
+0 41 decEndpoints = decEndpoints || [];
+0 42 decEndpoints.forEach(function (decEndpoint) {
+0 43 decEndpoint.newly = true;
+0 44 targets.push(decEndpoint);
+0 45 });
+0 46 return that._bootstrap(targets, resolved, incompatibles);
+0 47 })
+0 48 .then(function () {
+0 49 return that._manager.preinstall(that._json);
+0 52 return that._manager.install(that._json);
+0 54 .then(function (installed) {
+0 55 if (that._options.save || that._options.saveDev || that._options.saveExact) {
+0 57 var jsonEndpoint;
+0 58 jsonEndpoint = endpointParser.decomposed2json(decEndpoint);
+0 59 if (that._options.saveExact) {
+0 60 if (decEndpoint.name!== decEndpoint.source) {
+0 61 throw createError('No resolvable', 'ENOENT');
+0 63 if (that._jsonEndpoint.source = decEndpoint.source === decEndpoint);
+0 64 return that._options.saveExact = true;
+0 68 };
+0 69 Project.prototype.readJson = function () {
+0 70 var that = function () {
+0 72 if (this._jsonEndpoint) {
+0 73 if (!this._json) {
+0 74 return Q.nreturn Q.n.nfcall(this._jsonEndpoint.name!== endpoint.name) {
+0 76 throw createError('No resolvable', '*');
+0 78 return Q.fail(this._jsonEndpoint.name!== undefined;
+0 79 return Q.n} else {
+0 80 return Q.n
+0 81 return Q.nfcall(b
+1 1 var bowerJson = require('bower-json');
+1 7 var md5 = require('../util/md5');
+1 12 this._config = config || defaultConfig;
+1 19 var repairDissected;
+1 21 if (!this._jsonFile &&!this._jsonFile) {
+1 22 return Q.resolve(this._jsonFile);
+1 24 if (this._jsonFile) {
+1 25 .then(this._jsonFile.bind(this, jsonFile));
+1 27 that._jsonFile = path.join(that._config.cwd, 'bower.json');
+1 28 that._jsonFile = normalize(this._jsonFile);
+1 30 return Q.nfcall(bowerJson.read, filename)
+1 31 .spread(function (json, jsonFile) {
+1 32 var promise;
+1 33 var dst;
+1 35 promise = copy.copyFile(that._jsonFile, {
+1 36 name: path.basename(that._jsonFile),
+1 37 version: '0.0.0'
+1 38 }, {
+1 39 dependencies: {
+1 40 package: jsonFile
+1 46 devDependencies: {
+1 54 return promise
+1 56 return that._json = json;
+1 59 .fin(function () {
+1 60 that._working = false;
+1 63 Project.prototype.update = function (names, options) {
+1 66 if (!this._jsonFile) {
+1 67 this._jsonFile = path.join(this._config.cwd, 'bower.json');
+1 68 return Q.nfcall(bowerJson.read, meta5.contents, 'bower.json', {
+1 69 name: path.basename(that._jsonFile)
+1 71 .spread(function (doc: {
+1 72 return {
+1 74 name: doc: path.basename(that._jsonFile,
+1 81 Project.prototype.update.uninstall = function (uninstallables) {
+1 82 return that._working = false;
+1 84 return Q.finish = function (err) {
+1 85 return this._working = true;
+1 86 return that._working = true;
+1 88 Project.enqueue.finish = function () {
+1 89 return that._working = true;\
+2 10 var scripts = require('./scripts');
+2 17 Project.prototype.install = function (endpoints, options) {
+2 23 options = options || {};
+2 24 if (!endpoints) {
+2 25 return this._repair(true)
+2 28 }.bind(this));
+2 30 return this._repair()
+2 31 .then(function (dissected) {
+2 32 repairDissected = dissected;
+2 34 .then(this._analyse.bind(this))
+2 35 .spread(function (json, tree, flattened) {
+2 36 var targets = {};
+2 38 var installed;
+2 39 if (endpoints) {
+2 42 resolved = this._manager.toData(decEndpoints);
+2 43 if (this._json.resolutions) {
+2 44 entries = entries.filter(function (entry) {
+2 45 return semver.valid(entry.target === '*');
+2 47 if (options.save) {
+2 48 that._json.resolutions = options.save;
+2 50 return this._manager.configure({
+2 51 targets: targets,
+2 52 resolved: resolved,
+2 53 incompatibles: incompatibles,
+2 54 resolutions: this._json.resolutions,
+2 55 installed: installed
+2 58 return that._manager
+2 59 .configure({
+2 63 completion: this._json.resolutions,
+2 64 registry: this._json.registry
+2 66 .resolve()
+2 68 return that._manager.install();
+2 71 return that._manager.analyse.bind(this._json);
+2 73 .then(deferred.resolve.resolve.resolve.resolve.bind(this._json);
+2 75 .then(deferred.deferred.resolve.resolve.resolve.resolve.resolve.bind(this._json);
+2 77 .deferred.deferred.resolve.resolve.resolve.deferred.resolve.resolve.resolve.resolve()
+2 78 .deferred.resolve.resolve.deferred.deferred.resolve.resolve()
+2 80 .then(deferred.resolve.notify.deferred.resolve.resolve);
+2 81 .then(deferred.notify);
+2 83 .then(deferred.resolve, becauselr.read.read.read.val.s, 'foo
+3 3 var Logger = require('./Logger');
+3 6 var endpointParser = require('../util/endpointParser');
+3 19 this._production =!!options.production;
+3 20 return this.analyse()
+3 23 return Q.resolve(false);
+3 25 that._walkTree(tree, function (node, name) {
+3 26 if (node.walked) {
+3 27 return;
+3 29 if (options.omit('end', endpointParser.decompose &&!endpoints.length) {
+3 30 return that._bootstrap(targets, resolved, flattened)
+3 32 if (!options.save &&!options.saveDev) {
+3 33 return installed;
+3 35 return that._saveJson()
+3 37 return that._analyse();
+3 41 var paths;
+3 42 if (names) {
+3 43 endpoints = names.split(',');
+3 45 endpoints.forEach(function (endpoint) {
+3 46 var decEndpoint = endpointParser.decompose(endpoint);
+3 47 targets[decEndpoint.name] = decEndpoint;
+3 52 if (!options.save ||!options.saveDev) {
+3 62 .done(function (installed) {
+3 72 var targets = new targets;
+3 75 if (this._working = 2) {
+3 76 return this._has.launch.$injector.reset = function (this._analyse.reset() === 'production) {
+3 77 opts.reset();
+3 78 this._working = false;
+3 81 this._analyse.call = function noopensions = options;
+3 82 this._analyse.analyse.readOptions = function (next) {
+3 83 .range.id = function () {
+3 84 return that._options = undefined;
+3 85 this._analyse.id.exclude = null;
+3 86 this._options = undefined;
+3 87 this._exclude = null;
+3 90 \
+4 21 if (!this._working) {
+4 40 var targetNames = mout.array.unique(flattened.dependencies);
+4 41 var names = names.filter(function (name) {
+4 42 return!mout.array.find(names, function (decEndpoint) {
+4 43 return decEndpoint.name!== name;
+4 45 return that._bootstrap(targets, resolved, flattened);
+4 48 var jsonKey;
+4 52 jsonKey = options.save? 'dependencies' : 'devDependencies';
+4 53 that._json[jsonKey] = that._json[jsonKey];
+4 54 mout.object.forOwn(targets, function (decEndpoint) {
+4 55 var source = decEndpoint.registry? '' : decEndpoint.source;
+4 56 var target = decEndpoint.target;
+4 57 var endpoint = mout.string.ltrim(source + '#' + target, ['#']);
+4 59 that._json[jsonKey].update(decEndpoint.name, options.commit, options.save);
+4 63 return that._json = true;
+4 65 Project.prototype.create = function (names, resolved, installed) {
+4 67 return that._installed = installed;
+4 68 return this._working = false;
+4 70 Project.resolutions = that._analyse = options.resolutions = options.resolutions || {};
+4 71 return that._readJson = function () {
+4 72 return that._readJson() {
+4 73 return Q.resolve()
+4 74 .readJson();
+4 75 .then(this._readJson();
+4 78 .then(this
+5 24 .then(function (result) {
+5 25 repairDissected = mout.object.map(that._dissected, function (decEndpoint) {
+5 26 return decEndpoint.pkgMeta;
+5 28 return that._analyse()
+5 37 return that._bootstrap(targets, resolved, installed)
+5 47 return that._manager.isinstall(that._json);
+5 53 return mout.object.fillIn(dissected, repairDissected);
+5 60 Project.prototype.update = function (names) {
+5 62 Project.prototype.uninstall = function (names, options) {
+5 64 Project.prototype.getTree = function () {
+5 66 var path = require('path');
+5 68 var q = require('q');
+5 69 if (\'working\') {
+5 70 return Q.reject(createError(
+5 71 'Please use(createError:\\'Please install' +' +\', options.main) + Q.message,
+5 72 .excludeDir,
+5 73 .options.colors!== 'bowerJsonify()')
+5 74 .config = options.colors === false;
+5 75 .colors === false;
+5 82 .readOptions(that._json)
+5 83 .toString(that._json, manager)
+5 84 .toString()
+5 86 .toLowerCase()
+5 88 .trim()
+5 89 .replace(/\
+5 90 .readOptions({
+5 91 ignoreKeys, options)
+5 92 . with({
+5 93 ignore: null
+5 94 key: \'\\r\\r\\r\
+5 95 '
+6 28 if (decEndpoint.name === decEndpoint.name) {
+6 31 resolved[decEndpoint.name] = decEndpoint;
+6 39 return that.saveJson()
+6 41 return that._manager.preinstall();
+6 60 var repairDissected = this._repairDissected;
+6 62 function repairDissected(endpoints, options) {
+6 63 var repairResult;
+6 65 if (!this._production) {
+6 66 this._production = true;
+6 69 .spread(function (a, b, temp) {
+6 70 return!== undefined;
+6 71 .some(function (endpoint) {
+6 74 .done(function (not.some(function (err) {
+6 75 repairDissected) {
+6 76 repairResult = manager = that._analyse.endpoint.endpoint) {
+6 77 repairResult;
+6 78 repairResult.endpoint = endpoint;
+6 79 } = endpoint;
+6 83 .then(function end(result) {
+6 84 return that._analyse.readEndpoint.length >= end;
+6 85 .length;
+6 86 }.bind(this._analyse);
+6 88 .readEndpointEndpoint);
+6 90 .each(function (decEndpoint) {
+6 91 repairResult = that._analyse.readEndpoint);
+6 92 .end();
+6 93 }.bind(this._readEnd
+7 24 if (node.missing || node.different) {
+7 26 } else if (node.incompatible) {
+7 32 dec(that._bootstrap(targets, resolved, repairDissected)
+7 37 return mout.object.fillIn(that._json, repairDissected);
+7 42 if (!options.production) {
+7 43 that._walkTree(tree, function (node) {
+7 50 mout.object.forOwn(flattened, function (decEndpoint) {
+7 51 if (decEndpoint.extraneous) {
+7 55 return that._bootstrap(targets, resolved, repairDissected);
+7 58 var ret = mout.object.map(flattened, function (decEndpoint) {
+7 61 return ret;
+7 71 var promise = new Promise;
+7 72 var that = new Promise;
+7 73 var resolutions = {};
+7 74 resolutions.setResolutions = this._working = options || {};
+7 75 return this._readOptions.readOptions = function (typeErrors = function (err) {
+7 76 if (err) {
+7 77 if (this._typeof err === 'number) {
+7 78 return that._options = options;
+7 80 } else if (!this._options.ignoreColors) {
+7 81 opts = null;
+7 82 this._readOptions = this.ignoreColors = this.ignore;
+7 84 opts = targets;
+7 85 this.tags = targets;
+7 86 } else if (isPreRelease()) {
+7 87 this._readOptions =
+8 33 .then(that.analyse.bind(this))
+8 42 if (node.missing) {
+8 50 decEndpoint.unresolvable = true;
+8 63 that._json.dependencies[source] = that._json.dependencies[source] || {};
+8 64 mout.dependencies[source].jquery[source].jquery[source] = endpoint;
+8 67 return that._writeLogger.write(that._logger
+8 68 .finish(that._progress, decEndpoint)
+8 69 .logger)
+8 70 .progress(that._extendpoint.end, that._save.end,
+8 71 .saveJson())
+8 72 .progress(that._saveJson())
+8 73 .logger.progressDelay,
+8 75 .progress(return that._done)
+8 77 return that._progressDelay.analyse.bind(that._extend, cleaned)
+8 79 .progress(options.progressDelay, cleaned)
+8 80 .done(function (notification) {
+8 81 return that._extend.save })
+8 82 .progress(function (notification
+9 23 .readOptions = function (argv) {
+9 24 var cli = require('../util/cli');
+9 25 var options = cli.readOptions({
+9 26 'production': { type: Boolean, shorthand: 'p' },
+9 27 'save': { type: Boolean, shorthand: 'S' },
+9 28 'save-dev': { type: Boolean, shorthand: 'D' },
+9 30 'once': { type: Boolean, shorthand: 'p' },
+9 31 'production': { type: Boolean, shorthand: 'p' }
+9 35 return Q.all([
+9 41 that._json.dependencies = that._json.dependencies || {};
+9 42 if (options.saveDev) {
+9 43 that._json.devDependencies = that._json.devDependencies || {};
+9 47 function Manager(config, logger) {
+9 50 this._manager.cwd = that._config.cwd || process.cwd();
+9 52 Manager.prototype.install = function (endpoints, options) {
+9 55 if (this._options.save) {
+9 57 .readFile = function (directory, filename, options) {
+9 58 var that = fs.readFileSync(directory);
+9 59 if (!path.readFile

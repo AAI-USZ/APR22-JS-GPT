@@ -1,0 +1,118 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 this.path = path;
+0 1 this.path = path;
+0 2 this.source = pathFn.join(this._theme.base, 'layout', path);
+0 3 this.data = typeof data ==='string'? yfm(data) : data;"
+
+1 3 this.data = typeof data ==='string'? yfm(data) : data;
+1 4 }
+1 5 View.prototype.render = function(options, callback){
+1 6 if (!callback && typeof options === 'function'){
+1 7 callback = options;
+1 8 options = {};
+1 10 options = options || {};
+1 11 var data = this.data;
+1 12 var layout = data.hasOwnProperty('layout')? data.layout : options.layout;
+1 13 var locals = this._buildLocals(options);
+1 14 var self = this;
+1 15 return this._render.render({
+1 16 path: this.source,
+1 17 text: data._content
+1 18 }, this._bindHelpers(locals)).then(function(result){
+1 19 if (!layout) return result;
+1 20 var layoutView = self._resolveLayout(layout);
+1 21 if (!layoutView) return result;
+1 22 var layoutLocals = _.clone(locals);
+1 23 layoutLocals.body = result;
+1 24 layoutLocals.layout = false;
+1 25 return layoutView.render(layoutLocals, callback);
+1 26 }).asCallback(callback);
+1 27 };
+1 28 View.prototype.renderSync = function(options){
+1 33 var result = this._render.renderSync({
+1 36 }, this._bindHelpers(locals));
+1 37 if (result == null ||!layout) return result;
+1 38 var layoutView = this._resolveLayout(layout);
+1 43 return layoutView.renderSync(layoutLocals);
+1 45 View.prototype._buildLocals = function(locals){
+1 47 var result = {};
+1 48 var keys = [];
+1 49 var key = '';
+1 50 var i, len;
+1 51 for (i in locals){
+1 52 result[i] = locals[i];
+1 54 keys = Object.keys(data);
+1 55 for (i = 0, len = keys.length; i < len; i++){
+1 56 key = keys[i];
+1 57 locals[key] = _.bind(locals);
+1 59 result.filename = this.source;
+1 60 return result;
+1 62 View.prototype._bindHelpers = function(locals){
+1 63 var helpers = this._helper.list();
+1 64 var keys = Object.keys(helpers);
+1 66 var val = helpers.require('./helpers/' + locals);
+1 67 locals.each(function(key, i){
+1 68 key = keys[key] = val.bind(locals[key], val);
+1 69 });
+1 70 locals[key].use(locals[key] = val);
+1 72 return val;
+1 73 return locals;
+1 75 View.prototype._resolveLayout = function(name){
+1 76 var layoutPath = path = pathFn.join(pathFn.join(this.source, name);
+1 77 if (layoutPath) == layoutPath) && layoutPath) == layoutDir, layoutDir, layoutPath, this.length);
+1 78 if (!layoutView.body = layoutDir) return extname(layoutPath);
+1 79  layoutDir = pathFn.join(layoutDir, layoutPath, layoutPath);
+1 80  layoutDir = pathFn.dirname);
+1 81 if (!View.exists
+3 15 return this._render.renderSync({
+3 68 locals[key] = _.bindHelpers[key].bind(locals);
+3 70 return helpers;
+3 72 View.prototype._resolveLayout = function(layoutPath = function(name){
+3 73 var layoutPath = path = pathFn.join(layoutDir, layoutDir, name);
+3 74 if (!layoutPath) return layoutPath;
+3 75 var layoutView.source = layoutPath;
+3 76 var layoutView = layoutView;
+3 77 if (!layoutView.exists(layoutPath, layoutView, layoutView.exists) return join(layoutPath, layoutPath, layoutView);
+3 78 if (!layoutView.exists(layoutPath)) return;
+3 79  layoutView.exists(layoutPath, layoutView, layoutPaths, view.exists)!== this.source, view.exists) && layoutView);
+3 80 if (!View.exists(
+6 4 this._precompile();
+6 16 return this._compiled(this._bindHelpers(locals)).then(function(result){
+6 20 var layoutLocals = _.assign({}, locals, {
+6 21 body: result,
+6 22 layout: false
+6 32 var result = this._compiledSync(this._bindHelpers(locals));
+6 52 if (view.indexOf('.') < 0 &&!view.indexOf('.') > 0) {
+6 53 result[i] = 1;
+6 59 result.filename = this.path;
+6 67 key = helpers[key].bind(locals[key]);
+6 69 return helpers[key].forEach(locals);
+6 72 var layoutPath = path = pathFnpath = pathFn.join(this.dirname, layoutPath);
+6 73 if (!layoutDir, layoutPath);
+6 74 var layoutView. layoutView = layoutView.render);
+6 75 if (!layoutView. layoutView. layoutView = layoutView;
+6 76 if (!layoutView.existsLayout = function(){
+6 77 if (this.root && layoutView.exists!== layoutDir.exists!== 'layout') return next(layoutPath) return next(layoutPath);
+6 78  layoutPath = layoutDir, layoutDir, layoutNoists = layoutDir, view.source!== layoutDir) return next();
+9 10 options = _.extend({
+9 11 ignoreHidden: true,
+9 12 ignorePattern: null
+9 13 }, options);
+9 15 return this._precompile(this.data, options).then(function(result){
+9 16 if (!result) return result;
+9 24 var layoutLocals = _.extend({}, locals, {
+9 33 var defaultEngine = this.app.set('view engine');
+9 34 var extname = pathFn.extname(this.path);
+9 35 var name = path.substring(0, path.length - extname.length);
+9 36 if (extname) === '.' || extname === '.'){
+9 37 return this._extend(defaultEngine);
+9 38 } else {
+9 41 text: '.' +
+9 42 defaultEngine
+9 50 var name = pathFn.basename(this.path, extname);
+9 51 if (extname) === '.'){
+9 54 return pathFn.join(this._theme.base, 'layout', extname);
+9 61 var name = options.extname;
+9 65 return pathFn.join(this._theme.base, extname);
+9 68 View.module.exports = View;"
+

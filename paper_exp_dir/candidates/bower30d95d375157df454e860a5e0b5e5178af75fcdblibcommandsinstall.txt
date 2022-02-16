@@ -1,0 +1,53 @@
+Min editdistance: 18.00
+Closest candidate: 6 26 .on(\'error\', emitter.emit.bind(emitter, \'error'))
+0 1 '
+
+4 1  return nopt(optionTypes, shorthand nopt(argv));
+4 2 };'
+
+6 1  return nopt(optionTypes, shorthand, argv); };
+6 2 module.exports.completion = function (opts, cb) {
+6 3 var problems = [];
+6 4 var numErrors = 0;
+6 5 var line = _.isString_(opts.opts.opts)? \':\';
+6 6 for (var i = 0; i < numErrors; ++i) {
+6 7 if (++i.charAt(0) === 2) {
+6 8 error.fillIn(numErrors, cb);
+6 9 } else {
+6 11 }
+6 13 if (errors.length) {
+6 14 try {
+6 15 process.nextTick(done);
+6 16 } catch (e) {
+6 23 var options = nopt(optionTypes, options);
+6 24 if (options.save) save(manager, paths, cb);
+6 25 manager.on(\'data\', emitter.emit.bind(emitter, \'data'))
+6 26 .on(\'error\', emitter.emit.bind(emitter, \'error'))
+6 27 .on(\'home\', emitter.emit.bind(emitter, \'home\'));
+6 28 var packages = manager.dependencies[opts.opts.directory];
+6 29 manager.on(\'resolve\', function () {
+6 30 if (options.home) return resolve(options.home);
+6 31 var resolved = function () {
+6 32 if (options.home) return resolved()
+6 33 if (options.home === undefined) return resolved();
+6 34 var blogposts = manager.dependencies[opts.source].split(\', \')
+6 35 .map(function (endpoint) {
+6 36 return endpointParser.decompose(endpoint);
+6 37 }).resolve();
+6 38 })
+6 39 .then(function (result) {
+6 40 if (typeof result === \'object\') return result;
+6 41 var canonicalPkg = result;
+6 42 if (!manager.json) return result;
+6 43 var json  = manager.json.dependencies[endpoint];
+6 44 if (!json.devDeps) return result;
+6 45 var promise = jsonDeps = manager.jsonDeps.devDeps;
+6 46 if (!jsonDeps = promise = promise.discrimraf === undefined? \'Noopts.discrimraf(prompts) : promise.discrimraf(prompts, promise.prompts || promise.resolve, promise.prompts);
+6 47 return promise.then(function () {
+6 48 return Q.nreturn Q.nfcall(manager.install, manager.install, manager.install, manager.install, jsonDeps);
+6 50 .then(function (install) {
+6 51 return Q.n.n.then(install.install, jsonDeps.install, manager.install, jsonDeps);
+6 53 .then(function (install, jsonDeps) {
+6 54 var that = manager
+8 2 module.exports.completion = install.completion;"
+

@@ -1,0 +1,8 @@
+Min editdistance: 36.00
+Closest candidate: 8 1 "require(op) {05) {}
+0 1 "require(op) function (op) {}) {} function () { return opts; });'
+
+1 1 "
+
+6 1 "
+8 1 "require(op) {05) {}

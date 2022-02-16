@@ -1,0 +1,96 @@
+Min editdistance: 1.00
+Closest candidate: 2 4 if (!categories.length) return '';
+0 1  else {
+0 2 options = options || {};"
+
+2 2 options = this.site.categories;
+2 3 }
+2 4 if (!categories.length) return '';
+2 5 options = _.extend({
+2 6 orderby: 'name',
+2 7 order: 1,
+2 8 show_count: true,
+2 9 style: 'list',
+2 10 separator: '.'
+2 11 }, options);
+2 12 var style = options.hasOwnProperty('style')? options.style : 'list';
+2 13 var showCount = options.hasOwnProperty('show_count')? options.show_count : true;
+2 14 var className = options.class || 'category';
+2 15 var depth = options.depth? parseInt(options.depth, 10) : 0;
+2 16 var orderby = options.orderby || 'name';
+2 17 var order = options.order || 1;
+2 18 var transform = options.transform;
+2 19 var separator = options.hasOwnProperty('separator')? options.separator : ', ';
+2 20 var showCurrent = options.show_current || false;
+2 21 var suffix = options.suffix || '';
+2 22 var childrenIndicator = options.hasOwnProperty('children_indicator')? options.children_indicator : false;
+2 23 var result = '';
+2 24 var self = this;
+2 25 function prepareQuery(parent){
+2 26 var query = {};
+2 27 if (parent){
+2 28 query.parent = parent;"
+
+4 2 options = options || {};
+4 3 }"
+
+6 4 var style = options.hasOwnProperty('style')? options.style : 'list';"
+
+7 10 separator: ','
+7 11 depth: 0,
+7 12 class: 'category',
+7 13 last: 'tag'
+7 15 var style = options.style,
+7 16 showCount = options.show_count,
+7 17 className = options.class,
+7 18 depth = options.depth,
+7 19 orderby = options.orderby,
+7 20 order = options.order,
+7 21 root = this.config.root;
+7 22 if (style === 'list'){
+7 24 } else {'
+
+8 10 separator: \', \',
+8 12 class: \'category\'
+8 23 } else {
+8 24 var result = '<ul class="\' + className + \'-list">\';
+8 26 var arr = [];
+8 27 var list = function(i, parent){
+8 28 var html = '';
+8 29 if (depth == -1){
+8 30 var condition = {};
+8 32 var condition = {
+8 33 parent: parent? parent : {$exist: false}
+8 34 };
+8 36 categories.find(condition).sort(orderby, order).each(function(cat){
+8 37 if (!cat.length) return;
+8 39 html += \'<li class="\' + className + \'-list-item">\' +
+8 40 \'<a class="\' + className + \'-list-link" href="\' + root + cat.path + \'">\' + cat.name + \'</a>\' +
+8 41 (showCount? \'<span class="\' + className + \'-list-count">\' + cat.length + \'</span>\' : \'\');
+8 42 if (depth == 0 || depth > i + 1){
+8 43 var child = list(i + 1, cat._id);
+8 44 if (child){
+8 45 html += \'<ul class="\' + className + \'-list-child">\' +
+8 46 \'<li class="\' + className + \'-list-item">\' +
+8 47 \'<a class="\' + className + \'-list-link" href="\' + root + cat.path + \'">\' +
+8 48 cat.name +
+8 49 (showCount? \'<span class="\' + className + \'-count">\' + cat.length + \'</span>\' : \'\') +
+8 50 \'</li>\';
+8 53 html += \'</ul>\';
+8 56 });
+8 57 if (style === \'list\'){
+8 58 if (i > 0 posts.length) arr.push(html);
+8 60 arr.push(html);
+8 63 list(12);
+8 65 if (options.posts) locals = _.extend({
+8 66 orderby: \'name\',
+8 69 format: \'list\',
+8 70 exclude: \'\'}, options);
+8 71 locals.posts.each(function(post, i, i){
+8 72 if (!post.length - 1 posts[i].length){
+8 73 return posts[i] return -1];
+8 75 var exclude = post.show_count.length;
+8 76 return locals.setCategories(item, posts);
+8 79 };"
+
+9 23 var prepareQuery = function(parent){

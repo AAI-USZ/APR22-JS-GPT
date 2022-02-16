@@ -1,0 +1,213 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 var createFailedSpecLog = function(spec) {
+0 1 var testsCompleted = 0;
+0 2 var waiting = 0;
+0 3 var createFailedSpecLog = function(spec) {
+0 4 var failedStep = findFailedStep(spec.steps);
+0 5 var specError = spec.line? spec.line + ':'+ spec.error.toString() : spec.error.toString();
+0 6 return failedStep? [failedStep.name, specError] : [specError];
+0 7 };
+0 8 var findFailedStep = function(steps) {
+0 9 var stepCount = steps.length;
+0 10 var error = spec.line? spec.line + ':'+ spec.error.toString() : spec.error.toString();
+0 13 var updateResultListeners = function(model, tc) {
+0 14 var totalTests = angular.scenario.Describe.specId;
+0 16 return function(error, result) {
+0 17 if (error) {
+0 18 tc.info({total: totalTests});
+0 19 }
+0 20 tc.complete({
+0 21 coverage: window.__coverage__
+0 22 });
+0 25 model.on('RunnerBegin', function() {
+0 26 totalTests = angular.scenario.Describe.specId;
+0 29 model.on('SpecEnd', function(spec) {
+0 30 var result = {
+0 31 id: spec.id,
+0 32 description: spec.name,
+0 33 suite: [spec.fullDefinitionName],
+0 34 success: spec.status ==='success',
+0 35 skipped: false,
+0 36 time: spec.duration,
+0 37 log: []
+0 39 if (spec.error) {
+0 40 tc.error(error);
+0 42 if (spec.complete) {
+0 47 model.on('RunnerEnd', function() {
+0 53 model.on('Result', function(result) {
+0 54 var cov = result.coverage;
+0 57 description: result.description,
+0 60 time: result.timeout,
+0 63 if (result.skipped) {
+0 64 result.skipped = true;
+0 70 model.on('SpecEnd', function() {
+0 73 coverage: window.__coverage__coverage__
+0 77 model.on('Skipped = function() {
+0 78 var socketServer.s = function() {
+0 79 var socketServer.sockets.sockets.sockets.emit('info('info', socketServer.sockets);
+0 81 model.on('Server.sockets.on('Server.sockets', function() {
+0 82 sockets.emit('info', function(socket, i, i, i, i.emit.on')
+0 86 model.on('xhr.on('csockets.em', function() {
+0 87 puts.emit('xhrone', function() {
+0 88 log.on('connect', function() {
+0 89 puts.emit('x-inches', function() {
+0 90 log.emit('name', i.on');
+0 95 model.on('Server.sockets.on
+1 17 tc.emit('error', createNgScenarioStartFn(tc, 'failure'));
+1 18 } else {
+1 19 tc.emit('warning', createNgScenarioStartFn(tc, 'failure'));
+1 22 model.emit('serverEnd', passingSpec.bind(null,' '));
+1 32 var skippedTests = totalTests - testsCompleted;
+1 67 model.on('Xpm', function() {
+1 68 model.output('testStartFn = createTestStartFn.output('test');
+1 71 model.on('RunnerEnd = function(spec, passingSpecLog = function() {
+1 72 return function() {
+1 73 return this.log = new SimpleReporter.startReporter.apply(this, arguments);
+1 74 return this.logger.apply(this, arguments);
+1 75 this.logger.createTestStartRegexp.bind(this, arguments);
+1 77 };"
+
+2 8 var error = spec.name + ':'+ spec.error.toString();
+2 9 if (stepCount > 0) {
+2 10 return;
+2 12 var getFailedStep = function(steps) {
+2 13 var step = steps[0];
+2 14 if (step.status === 'failure') {
+2 15 return step;
+2 17 returnfailedStep? [failedStep.name, step.message] : [specError];
+2 26 if (failure) {
+2 27 return failedStep? [failedStep.name, failingStep] : [specError];
+2 29 return failedStep? [failedStep.name, failing step.message] : [specError];
+2 33 if (failedStep) {
+2 36 var resolved = function() {
+2 37 if (!resolved) {
+2 38 return Q.resolve();
+2 40 resolved.forEach(function(spec) {
+2 41 tc.info({ total: total });
+2 43 return this;
+2 45 this.onRunStart = function(browsers, resolved) {
+2 46 var specDone = Q.browsers.browsers.lastResult;
+2 47 var pending = 0;
+2 48 var runningBrowsers;
+2 49 var client;
+2 50 var pendingCount = 0;
+2 52 this.onBrowserComplete = function(browser) {
+2 53 if (this.isReady()) {
+2 59 if (this.isReady) {
+2 62 this.lastResult = {
+2 63 id: 'isReady',
+2 64 name: this.isReady
+2 66 this.setHeader('X-Pending', 'To', 'GET /=')
+2 68 this.removeHeader('afterRemove', function()
+2 69 this.render()
+2 70 .done(this.bind(this)
+2 71 .bind(this)
+2 72 .done(this);
+2 73 this.then(this.done.done, this.bind(this)
+2 74 .then(function() {
+2 75 return this.execFilter.execFilter('after_each, this.bind(this, this.bind(this,'some', function() {
+2 76 return this.toObject')
+2 77 return this.execFilter('self.getDirective', this.bind(this,'some')
+2 78 .bind(this,'some')
+2 80 .bind(this,'nonKill')
+2 81 .bind(this));
+2 82 .bind(this,'clearRuntime')
+2 84 .then(
+3 3 return [
+3 4 failedStep.name,
+3 5 spec.line? spec.line + ':'+ spec.error.toString() : spec.error.toString(),
+3 6 spec.point? spec.source : null
+3 7 ];
+3 9 return failedStep? [
+3 13 ] : [
+3 14 'b',
+3 15 'c','
+3 16 'd','
+3 17 'e','f','g','l','m','s','sil',
+3 18 'movie','smv', 'bmp', 'cgm', 'g3', 'h261', 'h263', 'h264', 'jpgv', 'jpm',
+3 19 'mj2','mp4','mpeg', 'ogv', 'qt', 'uvh', 'uvm', 'uvp', \'uvs', 'dvb', \'fvt','mxu', 'pyv', 'uvu',
+3 20 'viv', 'webm', 'f4v', 'fli', 'flv','m4v','mkv','mng', 'asf', 'vob', 'wm', 'wmv', \'wmx', \'wvx',
+3 21 'movie','smv', 'bmp', \'cgm', \'g3', 'gif', 'ief', 'jpg', 'jpeg', 'ktx','png', \'btif',
+3 22 'sgi', 'tiff', \'psd', 'uvi','sub', 'djvu', 'dwg', 'dxf', \'fbs', 'fpx', 'fst','mmr',
+3 23 'rlc','mdi', 'wdp', 'npx', 'wbmp', 'xif', 'webp', '3ds', 'ras', 'cmx', 'fh', 'ico', 'pcx', 'pic',
+3 24 'pnm', 'pbm', 'pgm', 'ppm', 'rgb', 'tga', 'xbm', 'xpm', 'xwd', 'xz', \'zip', 'rar', 'tar',
+3 25 'tgz', 'tbz2',
+3 26 'tgz', 'txz', 'bz2', 'eot', 'ttf', 'woff', 'dat', 'nexe', 'pexe', 'epub','mp3', 'ogg',
+3 27 'ogg',
+3 28 'swf'
+3 29 ].forEach(function(extension) {
+3 30 isRunning = true;
+3 32 var registerResultListeners = function(model, tc) {
+3 33 var totalTests = 0;
+3 34 var Widget = function() {
+3 35 var tabs =
+3 36 .filter(function(i) {
+3 37 return i.state === 'Run' && /^(run) };
+3 38 varResultListeners.forEach(tabs).forEach(function(tab) {
+3 39 result = obj[tab] = function(item) {
+3 40 result[item[0] = item[0] = _id]];
+3 44 return result;
+3 47 return i
+3 49 .getTests(env, args) {
+4 6 spec.line? spec.line + ':'+ spec.error : spec.error
+4 11 var error = spec.line? spec.line + ':'+ spec.error : spec.error
+4 15 "boo!","
+
+5 10 var error = null;
+5 11 if (slashAdded) {
+5 18 pathToUrl(steps),
+5 19 formatError(error, '\\t')
+5 37 result.log = createNgScenarioStartFn(tc, result);
+5 39 testsCompleted++;
+5 40 tc.result(result);
+5 44 for (var i = 0; i < skippedTests; i++) {
+5 45 tc.result({
+5 46 id: 'Skipped' + (i + 1),
+5 47 description: (pkg.name? pkg.name + ':' + pkg.version + ') +
+5 48 segments: [
+5 49 {
+5 51 name: (pkg.name? pkg.name + ':' + pkg.version + ') +
+5 55 name: (pkg.name? pkg.name + ':'+ pkg.version + ')' : '',"
+
+6 3 function createTestacular(tc, scenarioSetupAndRun) {
+6 6 var createTestacular = function(tc, scenarioSetupAndRun) {
+6 7 var testResultListeners = {};
+6 8 var totalListeners = 0;
+6 9 var createTestacular = function(tc,enarioSetupAndRun) {
+6 11 var sub = function(event, callback) {
+6 12 if (event === 'done') {
+6 15 if (sub) {
+6 18 if (model.name === 'test') {
+6 19 tc.result({total: totalTests});
+6 39 result.log = createTestacular(tc, result);
+6 46 if (totalTests) {
+7 9 var model;
+7 10 model = function(str) {
+7 11 if (str) return str.replace(/\
+7 12 |\\r/g, '\
+7 13 ');
+7 47 var finish = new Date(),
+7 48 specsCount = testsCompleted = 0;
+7 49 if (skipped) {
+7 50 result.log.push(util.format('No running.' + spec.id));
+7 57 var skipped = total testsCompleted - testsCompleted;
+7 66 working = false;
+7 67 if (totalWests) {
+7 68 tc.result({total: totalWests});
+7 70 tc.complete();
+7 73 });"
+
+8 12 || null;
+8 14 return [];
+8 16 for (var i = 0; i < stepCount; i++) {
+8 17 var step = steps[i];
+8 22 return null;
+8 39 result.log = createFailedSpecLog(spec);
+8 49 description: 'Skipped' + (i + 1),
+8 50 suite: [],
+8 51 skipped: true,
+8 52 time: 0,
+8 59 model.on('SpecEnd', function(tc, jasmineEnv) {
+8 60 var skippedTests = jasmineEnv.nextSpecId_;
+9 9 var idx = '';
+9 11 if (i++) {

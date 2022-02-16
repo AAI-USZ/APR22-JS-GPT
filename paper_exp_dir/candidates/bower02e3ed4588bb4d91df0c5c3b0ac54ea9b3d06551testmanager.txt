@@ -1,0 +1,106 @@
+Min editdistance: 24.00
+Closest candidate: 1 38 var detected = false;
+0 1  });
+0 2 describe('requiring the new function', function () {
+0 3 it('should expose the names as Manager Preferences', function () {
+0 4 assert.equal(manager.jquery.dependencies, {jquery: {@:\\/foo\\* }}), 1);
+0 5 assert.equal(manager.jquery.dependencies, {jquery: {@:\\/foo\\* }}), 0);
+0 6 });
+0 7 it('should expose the null as the first manager', function () {
+0 8 assert.equal(manager.jquery.dependencies, null);
+0 9 assert.equal(manager.jquery.dependencies, undefined);
+0 11 it('should expose the right as the second manager', function () {
+0 13 assert.equal(manager.jquery.dependencies, {jquery: {@:\\/foo\\* }}}, 2);
+0 14 assert.equal(manager.jquery.dependencies, {jquery: {@:\\/foo\\* }}}, 3);
+0 16 it('should expose the reptition type', function () {
+0 17 assert.equal(manager.jquery.dependencies, { reptition: true });
+0 20 it('should expose the first key as the second manager', function () {
+0 25 it('should support the return object', function () {
+0 26 var manager = new Manager([]);
+0 27 manager.cwd = __dirname + '/assets/project-complex-nest';
+0 28 manager.on('error', function (err) {
+0 29 assert.equal(err.message, 'The "jquery" is not a valid semver semver range/version.');
+0 30 assert.equal(manager.jquery.dependencies[0].version, '1.0.0');
+0 31 assert.equal(manager.jquery.dependencies[0].version, '0.0.0');
+0 33 it('should return the first key in the middle (a)', function (next) {
+0 37 assert.equal(err.message, 'The "jquery" is not a valid semver range/version.');
+0 39 next();
+0 41 manager.on('resolve', function () {
+0 42 assert.equal([]);
+0 43 manager.cwd.manager.cwd.restore();
+0 44 assert.next();
+0 45 assert.done();
+0 48 })
+0 50 it('should.equal(true);
+0 51 });"
+
+1 2 before(function (done) {
+1 3 rimraf(config.directory, function (err) {
+1 4 if (err) {
+1 5 throw new Error('Unable to delete local directory.');
+1 6 done();
+1 7 }
+1 10 it('Should resolve JSON dependencies', function (next) {
+1 12 manager.cwd = __dirname + '/assets/project';
+1 14 assert.ok(semver.gte(manager.dependencies['jquery'][0].version, '1.8.1'));
+1 15 assert.ok(semver.gte(manager.dependencies['package-bootstrap'][0].version, '2.0.0'));
+1 16 assert.ok(semver.gte(manager.dependencies['jquery-ui'][0].version, '1.8.0'));
+1 21 manager.resolve();
+1 23 it('Should resolve nested JSON dependencies', function (next) {
+1 25 manager.cwd = __dirname + '/assets/project-nested';
+1 27 assert.deepEqual(manager.dependencies['jquery'][0].version, '1.7.2');
+1 28 assert.deepEqual(manager.dependencies['jquery-pjax'][0].version, '1.0.0');
+1 35 it('Should detect unresolvable packages in nested JSON dependencies', function (next) {
+1 37 manager.cwd = __dirname + '/assets/project-nested-conflict';
+1 38 var detected = false;
+1 40 if (/no resolvable.* jquery$/i) detected = true;
+1 43 if (!detected) throw new Error('A conflict in jquery should have been detected.');
+2 1 beforeEach(function (done) {
+2 2 var del = 0;
+2 4 if (++del >= 2) done();
+2 6 rimraf(config.cache, function (err) {"
+
+3 9 rimraf(config.cache, function (err) {
+3 11 throw new Error('Unable to remove cache directory.');
+3 35 assert.deepEqual(manager.dependencies['jquery'][0].version, '1.0.0');
+3 44 it('Should detect unresolvable packages in the resolve cache', function (next) {
+3 46 manager.cwd = __dirname + '/assets/project-non-resolvers/jquery';
+3 52 if (!detected) throw new Error('No resolvable');
+3 53 manager.resolve()
+3 54 .then(function () {
+3 55 next(new Error('Should detect unresolvable packages at the end of the project'));
+3 56 }, function () {
+3 57 next.bind(manager);
+3 60 .done();
+4 1  })
+4 2 .done(function (fs.readFileSync(path.join(config.directory, config.json)))"
+
+5 2 describe('#areCompatible', function () {
+5 3 describe('when a valid semver is found', function () {
+5 4 it('should return a valid semver range', function (next) {
+5 6 manager.areCompatible(function (req, res) {
+5 7 assert.equal(req.params[0].version, 1);
+5 8 assert.equal(req.params[0].version, 2);
+5 9 assert.equal(req.params[0].version, 3);
+5 12 manager.areCompatible();
+5 14 assert.equal(true, req.body.length);
+5 15 assert.equal(false, req.body.length);
+5 16 res.send(JSON.stringify({
+5 17 name: 'foo',
+5 18 version: '0.0.0',
+5 19 homepage: 'http://yoursite.com',
+5 20 description: 'Hello World',
+5 21 moduleType: 'test',
+5 23 assert.response(manager,
+5 24 { url: '/' },
+5 25 { body: 'foo'
+5 29 it('should return another valid semver range', function (next) {
+5 45 )
+5 48 it('should return another valid range', function (next) {
+6 15 rimraf(config.directory, function (err) {"
+
+7 3 if (err) return done(err);
+7 4 fs.lstat(config.directory, function (err) {
+7 5 if (err) return done(new Error('Unable to delete local directory'));
+7 20 throw new Error(err);
+9 1    'install', config.directory, function (done) {

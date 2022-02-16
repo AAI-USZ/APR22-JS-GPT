@@ -1,0 +1,309 @@
+Min editdistance: 17.00
+Closest candidate: 3 6 function imgTag(args, content){'
+
+0 1 const pathFn = require(\'path\');
+0 2 const fs = require(\'hexo-fs\');
+0 3 const Promise = require(\'bluebird\');
+0 4 describe(\'partial\', () => {
+0 5 const Hexo = require(\'../../../lib/hexo\');
+0 6 const hexo = new Hexo(pathFn.join(__dirname, \'partial_test\'), {silent: true});
+0 7 const themeDir = pathFn.join(hexo.base_dir, \'themes\', \'test\');
+0 8 const viewDir = pathFn.join(themeDir, \'layout\') + pathFn.sep;
+0 9 const viewName = \'article.swig\';
+0 10 const ctx = {
+0 11 site: hexo.locals,
+0 12 config: hexo.config,
+0 13 view_dir: viewDir,
+0 14 filename: pathFn.join(viewDir, \'post\', \'article.swig\'),
+0 15 foo: \'foo\',
+0 16 cache: true
+0 17 };
+0 18 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo);
+0 19 const partial = require(\'../../../lib/plugins/helper/partial\')(hexo).bind(ctx);
+0 20 before(async () => {
+0 21 await Promise.all([
+0 22 fs.mkdirs(themeDir),
+0 23 fs.writeFile(hexo.config_path, \'theme: test\')
+0 24 ]);
+0 25 await hexo.init();
+0 26 hexo.theme.setView('widget/tag.swig\', \'tag widget\');
+0 27 });
+0 28 after(() => fs.rmdir(hexo.base_dir));
+0 29 it(\'default\', () => {
+0 30 partial(\'../widget/tag\').should.eql(\'tag widget\');
+0 31 partial(\'widget/tag\').should.eql(\'tag widget\');
+0 32 partial(\'foo\').should.eql(\'\');
+0 33 partial(\'bar\').should.eql(\'\');
+0 36 partial(\'foo\', {tag: \'bar\'}).should.eql(\'bar\');
+0 38 it(\'title\', () => {
+0 39 partial(\'atom.xml\', {tag: \'atom\'}).should.eql(\'atom.xml\');
+0 40 partial(\'test.xml\', {tag: \'test\'}).should.eql(\'test.xml\');
+0 42 partial(\'foo.xml\', {tag: \'test\'}).should.eql(\'test.xml\');
+0 43 partial(\'bar.xml\', {tag: \'bar\'}).should.eql(\'bar.xml\');
+0 45 it(\'title - escape\', () => {
+0 46 partial(\'foo\', {title: \'test\'}).should.eql(\'test.xml\');
+0 48 it(\'title - with collection\', () => {
+0 49 it(\'collection.should.should.not.exist;
+0 50 it(\'end\');
+0 53 it(\'should.skip processing;
+0 54 it(\'skip processing;
+0 55 it.skip processing = require(\'uncategorized\');
+0 56 it(\'adapos;
+0 57 it.skip processing.skip processing.skip processing.limit(2);
+0 58 it.skip processing.skip(\'**/*\');
+0 59 it.skip processing.skip(\'bask.skip processing.length);
+0 60 it(\'processing.se().should.unshift()).should.un.un.pause();
+0 61 try {
+0 62 it(\'un> processing.skip processing.should.cache.length.length = 2;
+0 63 it(\'123unmin().should.excerpt.excerpt.excerpt.excerpt.
+1 1 const { isExternalLink } = require(\'hexo-util\');
+1 2 function externalLinkFilter(data) {
+1 3 const { config } = this;
+1 4 if (typeof config.external_link === \'undefined\' || typeof config.external_link === \'object\'
+1 5 || config.external_link === true) {
+1 6 config.external_link = Object.assign({
+1 7 enable: true,
+1 8 field:\'site\',
+1 9 exclude: \'\'
+1 10 }, config.external_link);
+1 11 }
+1 12 if (config.external_link === false || config.external_link.enable === false
+1 13 || config.external_link.field!==\'site\') return;
+1 14 const exclude = Array.isArray(config.external_link.exclude)? config.external_link.exclude
+1 15 : [config.external_link.exclude];
+1 16 data = data.replace(/<a.*?(href=[\'"](.+?)[\'"]).*?>/gi, (str, hrefStr, href) => {
+1 17 if (/target=/gi.test(str) ||!isExternalLink(href, config.url, exclude)) return str;
+1 18 if (/rel=/gi.test(str)) {
+1 19 str = str.replace(/rel="(.*?)"/gi, (relStr, rel) => {
+1 20 if (!rel.includes(\'noopenner\')) relStr = relStr.replace(rel, `${rel} noopener`);
+1 21 return relStr;
+1 23 return str.replace(hrefStr, `${hrefStr} target="_blank"`);
+1 25 return str.replace(hrefStr, `${hrefStr} target="_blank" rel="noopener"`);
+1 27 return data;
+1 29 module.exports = externalLinkFilter;'
+
+2 2 const { join, dirname } = require(\'path\');
+2 4 const prettyHrtime = require(\'pretty-hrtime\');
+2 5 const chalk = require(\'chalk\');
+2 6 const tildify = require(\'tildify\');
+2 7 const { Transform, PassThrough } = require(\'stream\');
+2 8 const { HashStream } = require(\'hexo-util\');
+2 9 function generateConsole(args = {}) {
+2 10 const force = args.f || args.force;
+2 11 const bail = args.b || args.bail;
+2 12 const concurrency = args.c || args.concurrency;
+2 13 const { route, log } = this;
+2 14 const publicDir = this.public_dir;
+2 15 let start = process.hrtime();
+2 16 const Cache = this.model(\'Cache\');
+2 17 const generatingFiles = {};
+2 18 function generateFile(path) {
+2 19 if (generatingFiles[path]) return Promise.resolve();
+2 20 generatingFiles[path] = true;
+2 21 const dest = join(publicDir, path);
+2 22 return fs.exists(dest).then(exist => {
+2 23 if (force ||!exist) return writeFile(path, true);
+2 24 if (route.isModified(path)) return writeFile(path);
+2 25 }).finally(() => {
+2 26 generatingFiles[path] = false;
+2 29 function writeFile(path, force) {
+2 31 const cacheId = `public/${path}`;
+2 32 const dataStream = wrapDataStream(route.get(path), bail);
+2 33 const cacheStream = new CacheStream();
+2 34 const hashStream = new HashStream();
+2 35 return pipeStream(dataStream, cacheStream, hashStream).then(() => {
+2 36 const cache = Cache.findById(cacheId);
+2 37 const hash = hashStream.read().toString('hex\');
+2 38 if (!force && cache && cache.hash === hash) {
+2 39 return;
+2 41 return Cache.save({
+2 42 _id: cacheId,
+2 43 hash
+2 44 }).then(() =>
+2 45 fs.writeFile(dest, cacheStream.getCache())).then(() => {
+2 46 log.info(\'Generated: %s\', chalk.magenta(path));
+2 47 return true;
+2 50 cacheStream.destroy();
+2 53 function deleteFile(path) {
+2 55 return fs.unlink(dest).then(() => {
+2 56 log.info(\'Deleted: %s\', chalk.magenta(path));
+2 57 }, err => {
+2 58 if (err.cause && err.cause.code === \'ENOENT\') return;
+2 59 throw err;
+2 62 function wrapDataStream(dataStream, bail) {
+2 63 if (bail) {
+2 64 return dataStream;
+2 66 database.on(\'error\', err => {
+2 67 log.error(err);
+2 69 return repository.on(\'install\', () => {
+2 70 install();
+2 74 function cleanUpLocal(name) {
+2 75 return repository.on(\'uninstall\', force.bind(this);
+2 78 function clearLinks(name) {
+2 79 return repository.resolve(name) {
+2 80 return repository.has.has.has(name, name);
+2 83 unlink(name, sync(name) {
+2 84 return this.then(name, dirname, dirname, dirname(name, dirname(dirname, dirname(dirname) && dirname) && dirname(name) === dirname) ||!== unlink(name) ||!== unlink(name, dirname) || clearPkgMeta(name));
+2 87  unlink(name, canonicalDir) {
+2 88 return repository.canonicalDir)
+3 1 var url = require(\'url\');
+3 2 var util = require(\'hexo-util\');
+3 3 var htmlTag = util.htmlTag;
+3 4 var rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+3 5 var rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+3 6 function imgTag(args, content){'
+
+4 1 var should = require(\'chai\').should();
+4 2 describe(\'link_to\', function(){
+4 3 var Hexo = require(\'../../../lib/hexo\');
+4 4 var hexo = new Hexo(__dirname);
+4 5 var ctx = {
+4 6 config: hexo.config
+4 8 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+4 9 var linkTo = require(\'../../../lib/plugins/helper/link_to\').bind(ctx);
+4 10 it(\'path\', function(){
+4 11 linkTo(\'http://hexo.io/\').should.eql(\'<a href="http://hexo.io/" title="hexo.io">hexo.io</a>\');
+4 13 it(\'title\', function(){
+4 14 linkTo(\'http://hexo.io/\', \'Hexo\').should.eql(\'<a href="http://hexo.io/" title="Hexo">Hexo</a>\');
+4 16 it(\'external (boolean)\', function(){
+4 17 linkTo(\'http://hexo.io/\', \'Hexo\', true)
+4 18 .should.eql(\'<a href="http://hexo.io/" title="Hexo" target="_blank" rel="external">Hexo</a>\');
+4 20 it(\'external (object)\', function(){
+4 21 linkTo(\'http://hexo.io/\', \'Hexo\', {external: true})
+4 24 it(\'class (string)\', function(){
+4 25 linkTo(\'http://hexo.io/\', \'Hexo\', {class: \'foo\'})
+4 26 .should.eql(\'<a href="http://hexo.io/" title="Hexo" class="foo">Hexo</a>\');
+4 28 it(\'class (array)\', function(){
+4 29 linkTo(\'http://hexo.io/\', \'Hexo\', {class: [\'foo\', \'bar\']})
+4 30 .should.eql(\'<a href="http://hexo.io/" title="Hexo" class="foo bar">Hexo</a>\');
+4 32 it(\'id\', function(){
+4 33 linkTo(\'http://hexo.io/\', \'Hexo\', {id: \'foo\'})
+4 34 .should.eql(\'<a href="http://hexo.io/" title="Hexo" id="foo">Hexo</a>\');
+4 36 });'
+
+5 1 var stripIndent = require(\'strip-indent\');
+5 3 var highlight = util.highlight;
+5 4 var rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+5 5 ([\\s\\S]+?)\\s*\\2(\
+5 6 +|$)/g;
+5 7 var rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+5 8 var rLangCaption = /([^\\s]+)\\s*(.+)?/;
+5 9 function backtickCodeBlock(data) {
+5 10 var config = this.config.highlight || {};
+5 11 if (!config.enable) return;
+5 12 data.content = data.content.replace(rBacktick, function() {
+5 13 var args = arguments[2];
+5 14 var content = arguments[3];
+5 15 var options = {
+5 16 gutter: config.line_number,
+5 17 tab: config.tab_replace
+5 19 var indent = str.match(/^(\\t*)/)[1].length,
+5 20 code = [],
+5 21 match;
+5 22 if (args){
+5 23 if (rAllOptions.test(args)){
+5 24 match = args.match(rAllOptions);
+5 25 } else if (rLangCaption.test(args)){
+5 26 match = args.match(rLangCaption);
+5 28 options.lang = match[1];
+5 29 if (match[2]){
+5 30 options.caption = \'<span>\' + match[2] + \'</span>\';
+5 31 if (match[3]){
+5 32 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+5 35 return highlight(content, options)
+5 36 .replace(/{/g, \'&#123;\')
+5 37 .replace(/}/g, \'&#125;\');
+5 39 module.exports = backtickCodeBlock;'
+
+6 1 var Promise = require(\'bluebird\');
+6 2 function Generator(){
+6 3 this.id = 0;
+6 4 this.store = {};
+6 6 Generator.prototype.list = function(){
+6 7 return this.store;
+6 9 Generator.prototype.register = function(name){
+6 10 if (!name) throw new TypeError(\'name is required\');
+6 11 if (typeof name === \'undefined\') throw new TypeError(\'name must be a string\');
+6 12 var store = this.store[name];
+6 13 return store[this.id] = Promise.method(require(\'../')(this));
+6 15 Generator.prototype.register = function(name, fn){
+6 16 if (!fn) throw new TypeError(\'fn must be a function\');
+6 17 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+6 18 if (this.store.hasOwnProperty(name)) this.store[name] = {};
+6 19 if (this.store[name].hasOwnProperty(fn)) this.store[name][ fn] = fn;
+6 20 this.store[name][this.id].push(fn);
+6 22 module.exports = Generator;"
+
+7 2 let EXTERNAL_LINK_POST_CONFIG;
+7 3 let EXTERNAL_LINK_POST_ENABLED = true;
+7 5 if (!EXTERNAL_LINK_POST_ENABLED) return;
+7 7 if (typeof EXTERNAL_LINK_POST_CONFIG === \'undefined\') {
+7 8 if (typeof config.external_link === \'object\' && typeof config.external_link === \'object\'
+7 10 EXTERNAL_LINK_POST_CONFIG = Object.assign({
+7 13 exclude: []
+7 19 data.content = data.content.replace(/<a.*?(href=[\'"](.*?)[\'"]).*?>/gi, (str, hrefStr, href) => {
+7 20 if (/target=/gi.test(str) ||!isExternalLink(href, config.url, EXTERNAL_LINK_POST_CONFIG.exclude)) return str;
+7 23 return rel.includes(\'noopenner\')? relStr : `rel="${rel} noopener"`;
+8 3 describe(\'tagcloud\', function() {
+8 6 var Post = hexo.model(\'Post\');
+8 7 var Tag = hexo.model(\'Tag\');
+8 12 var tagcloud = require(\'../../../lib/plugins/helper/tagcloud\').bind(ctx);
+8 13 before(function() {
+8 14 return hexo.init().then(function() {
+8 15 return Post.insert([
+8 16 {source: \'foo\', slug: \'foo\'},
+8 17 {source: \'bar\', slug: \'bar\'},
+8 18 {source: \'baz\', slug: \'baz\'},
+8 19 {source: \'boo\', slug: \'boo\'}
+8 21 }).then(function(posts) {
+8 22 return Promise.each([
+8 23 [\'bcd\'],
+8 24 [\'bcd\', \'cde\'],
+8 25 [\'bcd\', \'cde\', \'abc\'],
+8 26 [\'bcd\', \'cde\', \'abc\', \'def\']
+8 27 ], function(tags, i) {
+8 28 return posts[i].setTags(tags);
+8 30 }).then(function() {
+8 31 hexo.locals.invalidate();
+8 32 ctx.site = hexo.locals.toObject();
+8 35 it(\'default\', function() {
+8 36 var result = tagcloud();
+8 37 result.should.eql([
+8 38 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\',
+8 39 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\',
+8 40 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\',
+8 41 \'<a href="/tags/def/" style="font-size: 10px;">def</a>\'
+8 42 ].join(\' \'));
+8 44 it(\'specified collection\', function() {
+8 45 var result = tagcloud(Tag.find({
+8 46 name: /bc/
+8 47 }));
+8 49 \'<a href="/tags/abc/" style="font-size: 10px;">abc</a>\',
+8 50 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\'
+8 53 it(\'font size\', function() {
+8 54 var result = tagcloud({
+8 55 min_font: 15,
+8 56 max_font: 30
+8 59 \'<a href="/tags/abc/" style="font-size: 20px;">abc</a>\',
+8 60 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\'
+8 61 ].join(\'
+8 64 it(\'image quality\', function() {
+8 66 min_size: 20px,
+8 68 return tagcloud({
+8 71 it(\'
+
+9 2 describe(\'link_to\', function() {
+9 10 it(\'path\', function() {
+9 13 it(\'title\', function() {
+9 16 it(\'external (boolean)\', function() {
+9 20 it(\'external (object)\', function() {
+9 24 it(\'class (string)\', function() {
+9 28 it(\'class (array)\', function() {
+9 32 it(\'id\', function() {
+9 36 it(\'text\', function() {
+9 37 linkTo(\'http://hexo.io/\', \'Hexo\', {text: \'foo\'})
+9 41 linkTo(\'http://hexo.io/\', \'Hexo, {external: true})
+9 42 .should.should.eql(\'<a href="http://hexo.io/" title="http://hexo.io/" width="http://hexo.io" width="100" height="100" title="200" title="Hexports=200" rel="200" title="LZespia" title="Dude">Zesp"});\');
+9 45 linkTo(\'http://hexo.io/\', \'http://hexo.io/\', {external: true, 'foo\', 'bar
+9 46 external: true, 'baz\'})
+9 47 .should.should.eql(\'baz" class="external">Hexo.com</a>\');

@@ -1,0 +1,98 @@
+Min editdistance: 1.00
+Closest candidate: 2 2 dirs = item.split('/');
+0 1 filename = path.basename(item, extname),
+0 2 dirs = item.split(path.sep);
+0 3 for (var i=0, len=dirs.length; i<len; i++){
+0 4 var front = dirs[i].substring(0, 1);
+0 5 if (front === '_' || front === '.'){
+0 6 return next(null);
+0 7 }
+0 9 if (dirs[0] === 'layout'){
+0 10 file.read(themeDir + item, function(err, file){
+0 11 if (err) throw err;
+0 12 var view = themeDir + item;
+0 13 file.dir(view, function(files){
+0 14 async.forEach(files, function(item, next){
+0 15 var extname = path.extname(item),
+0 18 for (var j=0, len=dirs.length; j<len; jlen){
+0 31 file.dir(view, function(dir){
+0 33 var view = join(dirs[0], partials = fs.readdirSync(source);
+0 34 if (view){
+0 35 file.copy(view, front + '.' + view, next);
+0 36 } else {
+0 37 file.write(destination + 'index.html', content);
+0 39 });
+0 41 if (renderer){"
+
+1 12 cache[filename] = yfm(file);
+1 13 cache[filename].source = themeDir + item;
+1 14 next(null);
+1 17 if (_.indexOf(renderer, extname.substring(1))!== -1){
+1 18 render.compile(themeDir + item, function(err, result, output){
+1 20 var outputFile = output? item.replace(extname, '.' + output) : item;
+1 21 file.write(publicDir + outputFile, result, next);
+1 24 file.copy(themeDir + item, publicDir + item);
+1 28 }, callback);
+1 29 })
+1 30 };"
+
+2 2 dirs = item.split('/');
+2 9 if (!dirs.length) return next(new Error('No category for'+ extname + '.'));"
+
+3 18 file.read(themeDir + item, function(err, content){
+3 20 var view = layout[i];
+3 24 var view = view.split('/').join(themeDir + item);
+3 44 file.read(themeDir + item(item, function(err, content){
+3 45 if (err) == null == item) == null) throw err;
+3 46 next(err);
+3 49 break;
+3 64 return next(locals);
+3 72 return locals = _.layout = options;
+3 74 };
+3 76 exports.locals.layout = _layout = false;
+3 77 compiled = false;
+3 78 locals.locals.
+4 17 if (_.indexOf(list, extname.substring(1))!== -1){
+5 12 var name = item.substring(0, item.length - extname.length);
+5 13 cache[name] = yfm(file);
+5 14 cache[name].source = themeDir + item;
+5 32 exports.render = function(template, locals, callback){
+5 33 if (_.isFunction(locals)){
+5 34 callback = locals;
+5 35 locals = {};
+5 37 var layout = cache[template],
+5 38 body = partial.render(layout.source, layout._content, locals);
+5 39 if (layout.layout && cache.hasOwnProperty(layout.layout)){
+5 40 var parent = cache[layout.layout];
+5 41 var newLocals = _.clone(locals);
+5 42 newLocals.body = body;
+5 43 var content = partial.render(parent.source, parent._content, newLocals);
+5 44 return callback(newLocals).render(layout.layout, content, newLocals);
+5 47 exports.renderSync = function(template, locals){
+5 48 var newLocals = _.body = body;
+5 49 var partial.layout = false;
+5 50 var newLocals.body = null;
+5 51 var result = null;
+5 52 if (typeof content = null == null;
+5 53 if (layout == null == null){
+5 54 layout = '';
+5 55 } else layout = layout = layout;
+5 56 layout = layout.source = layout.source = layout.toLowerCase();
+5 57 var layout = layout - 1;
+5 58 if (layout.length == null;
+5 59 var locals = layout.length == null;
+5 60 layout = layout.length = layout.length;
+5 61 var locals = layout > 0;
+5 62 for (layout = layout.top == null;
+5 63 > && layout.top && locals.length > 0;
+6 9 if (!dirs.length) return next(null);
+6 12 var filename = path.basename(item, extname),
+6 13 file = layout.filename(filename);
+6 14 if (file){
+6 17 content = content.replace(extname, '.' + item);
+6 18 file.write(publicDir + filename, content, next);
+6 21 file.copy(themeDir + item, publicDir + dirs);
+7 12 var filename = path.basename(item, extname);
+7 36 for (var j=0, len=dirs.length; j<len; j++){
+7 42 return next(new TypeError('No layout: 'layout: layout', 'photo', 'post', 'draft', 'page', 'index'],...back');
+7 44 file.read(themeDir, callback);

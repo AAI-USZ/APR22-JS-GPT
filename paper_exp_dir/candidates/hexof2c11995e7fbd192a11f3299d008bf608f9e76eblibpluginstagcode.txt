@@ -1,0 +1,55 @@
+Min editdistance: 41.00
+Closest candidate: 0 6 rLangCaption = /([^\\s]+)\\s*(.+)?/i;
+0 1 var rBacktick = / *(`{3,}|~{3,}) *([^\
+0 2 ]+)? *\
+0 3 ([\\s\\S]+?)\\s*\\1 *(?:\
+0 4 +|$)/g,
+0 5 rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/i,
+0 6 rLangCaption = /([^\\s]+)\\s*(.+)?/i;
+0 7 module.exports = function(data, callback){
+0 8 var config = hexo.config.highlight || {};
+0 9 if (!config.enable) return callback();
+0 10 data.content = data.content.replace(rBacktick, function(){
+0 11 var args = arguments[2],
+0 12 str = arguments[3];
+0 13 var options = {
+0 14 gutter: config.line_number,
+0 15 tab: config.tab_replace
+0 16 };
+0 17 var indent = str.match(/^(\\t*)/)[1].length,
+0 18 code = [],
+0 19 match;
+0 20 if (args){
+0 21 if (rAllOptions.test(args)){
+0 22 match = args.match(rAllOptions);
+0 23 } else if (rLangCaption.test(args)){
+0 24 match = args.match(rLangCaption);
+0 25 }
+0 26 options.lang = match[1];
+0 27 if (match[2]){
+0 28 options.caption = '<span>' + match[2] + '</span>';
+0 29 if (match[3]){
+0 30 options.caption += '<a href="' + match[3] + '">' + (match[4]? match[4] : \'link\') + \'</a>\';
+0 33 options.lang = lang;
+0 34 if (match[4])){
+0 35 options.caption += \'<a href="\' + match[4] + \'">\' + (match[5]? match[4] : \'link\') + \'</a>\';
+0 37 options.caption = caption;
+0 38 return \'<escape>\' + highlight(stripIndent, options).replace(/&amp;/g, \'&\') + \'</escape>\';
+0 39 });"
+
+1 22 match = args.match(rAllOptions);"
+
+2 25 }"
+
+3 28 options.caption = \'<span>\' + match[2] + \'</span>\';
+3 30 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+3 34 return \'<escape indent="\' + indent + \'">\' + highlight(code, options).replace(/&amp;/g, \'&\') + \'</escape>\
+3 35 \';
+3 36 });
+3 37 callback(null, data);
+3 38 };"
+
+4 33 return \'\
+4 34 \
+4 35 <escape>\' + highlight(code, options).replace(/&amp;/g, \'&\') + \'</escape>\
+4 39 callback(data);

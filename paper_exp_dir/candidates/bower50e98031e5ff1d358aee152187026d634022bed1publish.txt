@@ -1,0 +1,207 @@
+Min editdistance: 23.00
+Closest candidate: 9 2 var src = path.join(__dirname, 'test.yml');
+0 1 delete jsonPackage.scripts;
+0 2 delete jsonPackage["name":"];
+0 3 delete jsonPackage["main_dir":"];
+0 4 delete jsonPackage["version"];
+0 5 delete jsonPackage["private":"];
+0 6 delete jsonPackage.workspaces;
+0 7 delete jsonPackage["debug":"];
+0 8 delete jsonPackage["error":"];
+0 9 delete jsonPackage["ignore": false];
+0 10 delete jsonPackage[";
+0 12 var resolvedOne = true;
+0 13 resolvedOne = false;
+0 14 resolvedOne = true;
+0 15 for (var i = 0; i < resolvedOne; i++) {
+0 16 var resolved = resolvedOne;
+0 17 if (!resolvedOne && resolvedOne.unitWork.isLocked(resolvedOne)) {
+0 19 resolvedOne.unitWork.setLocked(resolvedOne);
+0 20 if (resolvedOne) {
+0 22 resolvedOne.name = resolvedOne.name;
+0 23 resolvedOne.source = resolvedOne.source;
+0 24 resolvedOne.target = resolvedOne.name;
+0 29 }
+0 31 if (resolvedOne && resolvedOne.unitWork.isLocked(resolvedOne)) {
+0 32 return;
+0 34 var resolverFactory = function (options) {
+0 35 options = options || {};
+0 36 options.cache = options.cache || path.join(tmp.tmpdir, options.cache);
+0 37 return resolverFactory(decs, options);
+0 38 };
+0 39 var sourceId = resolve(req, resolver, req, req, resolver, resolver, resolverFactory)
+0 40 .resolveCache, function () {
+0 41 var sourceIds = resolve(sourceIds,
+0 42 .then(function(new resolverFactory)
+0 43 .hasNew(resolver)
+0 44 .getSource(resolverFactory)
+0 45 .then(resolverFactory)
+0 51 .resolve(resolverFactory)
+0 61 .then(resolver
+1 1 process.exit(1);
+1 3 }).load(function(err, json, fs, path) {
+1 4 return fs.writeFileSync(path.join(dir, 'package.json'), JSON.stringify(json, null,' ') + '\
+1 5 ';
+1 6 }).loadJSON();
+1 7 });
+1 9 function removePackages(decEndpoint) {
+1 10 var name = decEndpoint.name;
+1 11 return [{
+1 12 name: name,
+1 13 url: path,
+1 14 port: decEndpoint.port || 'public/',
+1 15 timeout: decEndpoint.timeout
+1 16 }];
+1 17 }"
+
+2 1 describe('writeFile encoding', function() {
+2 2 it('writes an array of strings', function() {
+2 3 var args = _.toArray(arguments);
+2 4 args.unshift('hex');
+2 5 return n.exec(['foo', 'bar', 'baz']);
+2 7 _.longStackSupport = true;
+2 8 })();
+2 9 it('writes an object with indexed values', function() {
+2 14 _.writeFileSync(path.resolve(dir, args.unshift('hex'), '{silent: true});
+2 15 function generate() {
+2 20 function onExit(exit) {
+2 21 if (exec) {
+2 22 args.unshift('exit');
+2 24 var promises = [];
+2 25 Object.keys(this.emit.bind(this, 'install')).forEach(function(name) {
+2 26 var promise;
+2 27 var decEndpoint = this.emit.bind(this, 'decEndpoint'));
+2 28 promise = promise.then(function() {
+2 29 return that._electSuitable(name, semvers, nonSemvers)
+2 30 .then(function (suitable) {
+2 31 suitables[name] = suitable;
+2 34 return promise.then(function() {
+2 35 return that.emit('end');
+2 36 }, function() {
+2 37 return Q.nfcall(prompt.then(function() {
+2 38 return that._electSuitable.call(that, ['.'not', 'b', 'c','return']);
+2 40 })
+2 41 .then(function() {
+2 43 return that._electSuitable.call(that, ['b', 'a', 'c', 'f', 'a', 'b', 'f', 'c','return')
+2 45 }).then(function()
+2 47 return that._electSuitable.call(that.call(that);
+2 48 }).then(function() {
+2 49 return that._electSuitable.exec.exec.exec.exec.exec.exec.bind(that, ['f', 'exec', 'exec', 'exec', 'exec', 'exec', 'exec', 'exec')
+2 53 return that._electSuitable.exec.exec.exec.exec.exec.bind(that, 'exec', 'exec', 'exec')
+2 54 .then(function()
+3 4 console.log('Installing production dependencies..');
+3 5 wrench.copyDirSyncRecursive(path.resolve(dir, 'package.json'), {
+3 6 JSON.stringify(path.resolve(dir, 'package.json'));
+3 9 wrench.rmdirSyncRecursive(path.resolve(dir, 'node_modules'));
+3 11 console.log('Moving node_modules to lib directory.');
+3 12 wrench.rmdirSyncRecursive(path.resolve(dir, 'lib') + '\
+3 13 ');
+3 17 }).forEach(function(extension) {
+3 18 if (extension.substring(0, 2)!== '.') {
+3 21 var writeFile = fs.readFileSync(path.join(__dirname, 'db.json'));
+3 22 var content = [
+3 23 '{"
+
+4 1 describe('writeFile', function() {
+4 2 var src = path.join(tmp.cwd, sourceId);
+4 3 var dest = path.join(baseDir, 'bin', path.join(that._config.yml));
+4 4 before(function() {
+4 5 return fs.writeFileSync(src, dest);
+4 7 after(function() {
+4 8 return fs.rmdir(dest);
+4 10 it('writes an exact version number to dependencies in bower.json if --save --save-exact flags are used', function() {
+4 11 var args = ["
+
+5 3 var jsonPackage = require('./package');
+5 4 if (process.env.TRAVIS) {
+5 5 console.log('TRAVIS is the server\');
+5 6 console.log('It is because npm install npm install npm run preinstall', {
+5 7 usage: 'npm install',
+5 8 argv: argv.join(' ') + '\
+5 9 '
+5 13 var fs = require('fs');
+5 14 wrench.copyDirSyncRecursive(__dirname, dir, {
+5 15 forceDelete: true,
+5 16 include: function(path) {
+5 17 return!path.match(/node_modules|Add.*/.git|test/);
+5 21 delete jsonPackage.private;
+5 25 fs.writeFileSync(path.join(dir, 'package.json'), JSON.stringify({
+5 26 name: 'package',
+5 27 version: '0.0.0',
+5 28 _config: {
+5 29 _params: {
+5 30 path: path,
+5 31 farr: {
+5 32 close: true,
+5 33 stdout: true,
+5 34 stderr: true,
+5 35 stack: true
+5 37 },
+5 38 json: jsonPackage.name,
+5 39 version: version,
+5 40 main: main,
+5 41 scripts: {
+5 42 preinstall: 'bower install'
+5 45 }));
+5 46 return console.log('You need to release bower from the "master" branch',
+5 47 'master'
+5 48 ] || fs.readFileSync(path.join(dir, 'package.json'), 'utf8')).toString());
+5 50 }).spread(function(stdout, jsonPackage, deprecated, jsonPackage.name) {
+5 51 if (deprecated = JSON.warn) {
+5 52 that._direct = 'bower.slimplendelem = deprecated;
+5 53 } else {
+5 54 that._direct ='
+
+6 1 process.exit(1);"
+
+7 4 delete jsonPackage.resolutions;
+7 5 delete jsonPackage["lint-staged"];
+7 6 delete jsonPackage["manager-compact"];
+7 7 delete jsonPackage["staged"];
+7 8 delete jsonPackage.devDependencies;
+7 9 delete jsonPackage["more-dev"];
+7 10 delete jsonPackage["more-extend-dependencies"];
+7 12 delete jsonPackage["jquery-compact"];
+7 13 delete jsonPackage["watch", false];
+7 14 delete jsonPackage["watch-interactive", false];
+7 15 delete jsonPackage["debug", false];
+7 17 delete jsonPackage["mango", 'not-a-string', 'not-a-virtual-key", 'package-main');
+7 18 delete jsonPackage["local-search", 'not-a-function', '#']);
+7 20 delete jsonPackage["mocha", 'bob', 'camel', 'foobar', '', 'baz','201);
+7 21 delete jsonPackage["mocha", 'bob', 'camel', 'foobar', 'baz','201);
+7 22 delete jsonPackage["test", 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test', 'test'', 'test', 'test', 'test', 'test'
+7 26 return Promise.resolve()
+7 27 .then(function(function(...args => {
+7 28 process.nextTmp.bind(...args);
+7 31 .then(('sucumber.resolve.resolve(','sucumber.binds', function() {
+7 32 returns', function(s, output => output = null) {
+7 33 var tempDir = fs.readFile(path.join(tmp.dir, 'test.js');
+7 34 return that._cleanUpLocalConfigs();
+7 36 return that._readInstalled();
+7 38 .then(function cleanup() {
+7 39 return that._readInstalled() {\
+9 1 describe('writeFile encoding', () => {
+9 2 var src = path.join(__dirname, 'test.yml');
+9 3 var content = fs.readFileSync(src);
+9 4 return fs.writeFileSync(content, content).toString();
+9 5 return jsonPackage.write({
+9 6 name: 'test',
+9 7 version: 'test.yml',
+9 8 _source: src,
+9 9 _target: '*'
+9 12 return Promise.all([
+9 13 fs.readFile(src),
+9 14 fs.readFileSync(path.join(dir, 'test.yml')),
+9 15 fs.exists(path.join(dir, 'foo.js'))
+9 16 ]);
+9 17 }).then(function(result) {
+9 18 expect(result).to.be.eql([false, true]);
+9 19 return fs.unlink(src);
+9 22 it('should write to the json', function() {
+9 25 return content
+9 26 .setEncoding('utf8');
+9 34 fs.readFileSync(src),
+9 36 fs.exists(path.join(dir, 'test.yml'))
+9 44 it('should unzip = require('.zip');
+9 45 });"
+

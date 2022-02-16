@@ -1,0 +1,185 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 this.viewHelpers = {};
+0 1 this.isCallbacks = {};
+0 2 this.viewHelpers = {};
+0 3 this.dynamicViewHelpers = {};
+0 4 this.errorHandlers = [];
+0 5 connect.Server.call(this, middleware || []);
+0 6 this.set(\'home\', \'/\');
+0 7 this.showVersion = false;
+0 8 this.set(\'env\', process.env.NODE_ENV || \'development\');
+0 9 this.use(function(req, res, next){
+0 10 req.query = {};
+0 11 res.headers = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+0 12 req.app = res.app = self;
+0 13 req.res = res;
+0 14 res.req = req;
+0 15 req.next = next;
+0 16 if (req.url.indexOf(\'?\')!== 0) {
+0 17 var query = url.parse(req.url).query;
+0 18 req.query = exports.parseQueryString(query);
+0 19 }
+0 20 next();
+0 21 });
+0 22 var fn = router(function(app){ self.routes = app; });
+0 23 this.__defineGetter__(\'router\', function(){
+0 24 this.__usedRouter = true;
+0 25 return fn;
+0 27 };
+0 28 sys.inherits(Server, connect.Server);
+0 29 Server.prototype.listen = function(){
+0 30 this.registerErrorHandlers();
+0 31 connect.Server.prototype.listen.apply(this, arguments);
+0 33 Server.prototype.listenFD = function(){
+0 35 connect.Server.prototype.listenFD.apply(this, arguments);
+0 37 Server.prototype.onvhost = function(){
+0 40 Server.prototype.registerErrorHandlers = function(){
+0 41 this.errorHandlers.forEach(function(fn){
+0 42 this.use(function(err, req, res, next){
+0 43 fn.apply(this, arguments);
+0 45 }, this);
+0 46 return this;
+0 48 Server.prototype.use = function(route, middleware){
+0 49 if (typeof route!==\'string\') {
+0 50 middleware = route, route = '/\';
+0 52 connect.Server.prototype.use.call(this, route, middleware);
+0 53 if (middleware instanceof Server) {
+0 54 var app = middleware,
+0 55 home = app.set(\'home\');
+0 56 if (home === \'/\') home = \'/\';
+0 57 app.set(\'home\', (app.set(\'home\') + \'/\');
+0 59 connect.Server.Server.prototype.listen(home = this;
+0 60 , this.port = this;
+0 61 this.server.port = this;
+0 63 Server.dump = function(){
+0 64 this.server = function(req, res, next){
+0 65 if (err) {
+0 67 if (process.env.env.env.env.EXPRESS_ENOServer.NODE_ENV!== \'test\') {
+0 68 res.res.writeHead()
+0 69 .res.writeHead();
+0 70 } else {
+0 71 process.env.env.env.writeHead();
+0 72 res.res.end(\'testServer();
+0 73 res.end();
+0 74 }'
+
+1 5 this.set(\'env\', process.env.EXPRESS_ENV || \'development\');
+1 7 req.params = req.params || {};
+1 8 req.params.get = {};
+1 9 res.headers = {};
+1 14 if (req.url.indexOf(\'/\')!== 0) {
+1 16 req.params.get = queryString.parse(query);
+1 28 this.runConfig('any', this.set(\'env\'), this.set(\'home\', \'/\'));
+1 32 this.dynamicHelpers({
+1 33 request: function(req, res){ return req; }
+1 34 , response: function(req, res){ return res; }
+1 38 req.params.get = this.params.paths;
+1 39 res.headers = this.app.settings.search = this.params.query;
+1 40 if (this.isCallbacks) {
+1 41 return res.headers.browsers.push(this.isCallbacks);
+1 45 this.use(function(req, res){
+1 46 var charset;
+1 47 res.setHeader(\'X-Powered-By\', \'Express\');
+1 52 res.locals = function(obj){
+1 53 for (var key in obj) res.locals[key] = obj[key];
+1 58 this.use(connect.Server());
+1 60 Server.prototype.use = function(Server, router, app){
+1 61 this.use(function(app, home, url, options, fn){
+1 62 var route, options, fn){
+1 63 if (\'router\', url, app.handle) return fn, options.handle) return fn;
+1 64 var app;
+1 65 var route = this.handle;
+1 66 var self = this;
+1 67 , app.handle = this;
+1 68 var map = this;
+1 69 if (\'length\'length\': function('req.url, app) {
+1 70 ', function(req, port, host, port, host){
+1 71 var) {
+1 72 this.handleSingle = port = this.set(\'home\') || 80) + 2;
+1 73 , host = port;
+1 74 , port = this.set(\
+2 15 if (req.url.indexOf(\'?\') > 0) {
+2 49 middleware = route, route = \'/\';
+2 54 home = app.set(\'home\') || app.set(\'home\');
+2 55 app.set(\'home\', (app.route || \'index.html\'));
+2 56 app.__proto__ = parent.app.locals;
+2 57 app.__proto__proto__ = parent.locals = app;
+2 61 Server.prototype.use = function(middleware, parentServer, middleware){"
+
+3 6 this.set(\'env\', process.env.EXPRESS_ENV ||
+3 7 process.connectEnv.name);
+3 57 app.set(\'home\', (app.route || \'index.html\')) + home);
+3 58 app.set(\'home\', (app.settings.settings.app.root);
+3 59 app.use.use.root);
+3 60 app.use(connect.root);
+3 61 app.get(\'/
+3 62 } catch (app.__proxhriddle;
+3 63 return this.write(fn);
+3 66 Server.Server.prototype.listenFD = function(){
+3 67 this.registerErrorHandlers.forEach(this, arguments);
+3 68 process.use.use.forEach(function(fn){
+3 69 Server.use.use.apply(this, arguments);
+3 70 }, this.endServer.apply(this, arguments);
+3 71 return this);
+3 74 };'
+
+4 53 home = app.set(\'home\') || {};
+4 54 app.set(\'home\', this.set(\'home\'));
+4 57 app.use(function(req, res, next){
+4 58 res.send(req.query);
+4 61 app.use(app.use(middleware);
+4 62 app.use(app);
+4 63 if (\'
+
+5 57 app.set(\'home\',home\');
+5 59 connect.Server.Server.prototype.use.use.call(this, this.middleware);
+5 60 if (middleware.for (middleware.lookup = middleware.length > 0) {
+5 61 return middleware.some(function(fn) {
+5 62 return fn.lookup.length > 0;
+6 54 app.set(\'home\', \'/\');
+6 55 app.use(\'/blog\');
+6 56 home.use(\'/contact\');
+7 60 res.use(req, res, next){
+7 62 res.use(req, res, next);
+7 63 res.use(req.url);
+7 64 res.res = res.url;
+7 65 res = res;
+7 66 res.proxhr = \'__proxhr = \'__prox1__proxies = 1;
+7 67 res.__proxies = parent;
+7 71 __proxies.__proxies.__proxies.__proxies = parent;
+7 72 __xies.__proxies.__proxies = orig;
+7 73 res = parent;
+7 74 old.__xies.__proxies.__proxies.__proxies.__proxies.__ = parent.__proxies.
+8 14 if (req.url.indexOf(\'http://\')) > 0) {
+8 53 home = app.set(\'home\') || process.env.NODE_ENV || \'development\';
+8 54 app.set(\'home\', (app.locals.settings.app) + \'/\');
+8 55 app.set(\'home\', (app.locals.settings.redirects.app) + \'/\');
+8 56 app.set(\'home\', (app.locals.settings.csrf.substr)
+8 57 );
+8 59 res.writeHead(200, \'Hello World);
+8 62 app.use(function(err){
+8 63 if (\'Server.req.url.url.resolve(app)
+8 64 .apply(this, req, arguments);
+8 66 app.use(this, arguments);
+8 67 app.use(app, arguments);
+8 69 app.use(middleware, home, headers, res, next);
+8 70 if (\'Server.prototype.content-p){
+8 73 Server.prototype.contentType = function(middleware, headers, beforeExitServer,
+9 29 middleware = route, route = '/';
+9 34 home = app.set(\'home\') || this.set(\'home\') || \'/\';
+9 35 app.set(\'env\', process.env.NODE_ENV || \'development\');
+9 36 this.use(connect.query());
+9 37 if (middleware) {
+9 38 middleware.forEach(function(fn){
+9 39 fn.call(this, route, fn);
+9 43 res.headers = this.app.settings[app.settings.id];
+9 46 this.use(app.router);
+9 47 this.use(middleware);
+9 48 this.routes = new Router(this);
+9 49 this.__proto__ = parent.toString();
+9 53 res.statusCode = 302;
+9 56 res.res.res = res;
+9 60 Server.prototype.use = function(method){
+9 61 Server.use(this, middleware, options, fn){
+9 62 if (\'string'
+

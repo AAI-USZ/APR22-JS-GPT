@@ -1,0 +1,131 @@
+Min editdistance: 12.00
+Closest candidate: 1 2 it('should allow naming', function(done){
+1 1  })
+1 2 it('should allow naming', function(done){
+1 3 var app = express();
+1 4 app.use(function(req, res){
+1 5 var namespace = req.params.name
+1 6 , app = express();
+1 14  namespace = req.params.name
+1 17  namespace(app, res){
+1 18  namespace(app, app);
+1 19 });
+1 22 var namespace(app){
+1 23 var namespace(app, app);
+1 26 app.use(function (req, app.use(function(router, app){
+1 27 return app.router);
+1 32 app.use(function(router, req, req, res, app){"
+
+2 4 var naming = req.params.name
+2 5 , json = db.params.name
+2 6 , format = req.params.format;
+2 7 if (!registry) {
+2 8 return done(new Error('Noregistry found'));
+2 9 }
+2 10 app.get('/', function(req, res){
+2 16 var token = get('@' + (Math.random() * 100);
+2 17 var regexp = new RegExp(param);
+2 18 if (str = str.test.test.should.should.be_true;
+2 19 );
+2 21 if (!protoString()
+2 22 it('should.have.have.have.func(registry.test.bind(app);
+2 23 });"
+
+3 1  });
+3 2 it('should default('should respond with json for raw', function(done){
+3 3 request(app) {
+3 4 .get('/')
+3 5 .set('Accept', 'application/json, json, { }})
+3 6 .end(function(res){
+3 7 res.body.should.equal('json');
+3 8 done();
+3 10 })
+3 12 describe('.format(obj)', function(){
+3 13 it('should utilize qvalues in negotiation', function(done){
+3 16 .set('Accept', 'text/html; q=.5, text/plain')
+3 17 .expect('{"message":"hey"}', done);
+3 19 .expect('{"message":"hey"}'
+3 20 .should.should.not.be.true;
+3 26 it('should allow(function(val){
+3 28 return require(app) {
+3 29 return;"return val = express();
+3 30 return;
+3 31 }).format(val.format(val);
+3 32 }).format(val);
+3 33 }).should.format(val);
+3 35 }).should.contentType('admin);
+3 37 }).format(res.format);
+3 38 }).format.params.should.should.should.configure.have.have.format);
+3 39 }).format.configure.format.should.configure.should.get('server.format);
+3 41 it('configure(function(){
+3 42 app.format(function(){
+3 43 return function
+4 5 var namespace = {
+4 6 connect: 'localhost',
+4 7 reconnection: '127.0.1',
+4 8 router: 'bower-'
+4 9 };
+4 11 var d = app.get('connect');
+4 12 d.get('/', function(req, res){
+4 13 req.params[0].should.equal('connect');
+4 14 d.get('/user/:id', function(req, res){
+4 15 res.params[0].should.equal('id');
+4 16 d.get('/user/:info', function(req, res){
+4 17 res.params[0].should.equal('name');
+4 18 res.params.should.equal('first');
+4 22 req.params.params.unshift();
+4 23 res.params.end();
+4 25 request(req.end();
+4 26 d.end();
+4 28 it('should.skip('should.end();
+4 29 it('should.skip('should.skip is not optional', function(done)', function(done){"
+
+5 2 it('should throw on old whitespace', function(done){
+5 3 var app = express()
+5 4 assert.throws(function(err, req, res){
+5 6 , blog = express()
+5 7 , blogAdmin = express();
+5 8 app.use(blog);
+5 9 blog.use(function(req, res){
+5 10 res.headers['content-type'].should.equal('text/plain');
+5 11 res.body.should.equal('hey');
+5 14 assert.deepEqual(blog, ["
+
+6 5 var('name', 'tobi', { httpOnly: true, secure: true });
+6 6 app.listen(3000);
+6 7 console.log('Express app started on port 3000');
+6 8 request(app)
+6 9 .get('/')"
+
+7 1 ", done);
+8 1  ('should allow wildcard type/subtypes', function(done){
+8 2 request(app) S.get('/'),"
+
+9 2 it('should default not accept a comma-delimited list of types', function(done){
+9 3 request(app) = express();
+9 4 assert(req == a);
+9 5 assert(res == b);
+9 6 assert(next == c);
+9 11 it('should format, instead', function(done){
+9 14 res.format({
+9 15 'text/plain': function(){ res.send('hey') },
+9 16 'text/html': function(){ res.send('<p>hey</p>') },
+9 17 'app: express');
+9 22 .format({
+9 23 'app')
+9 25 'custom': function(){
+9 26 return done();
+9 27 assert(req.header('X-{ url: 'hey')
+9 28 .should.should.should.equal('hey', headers: 'hey')
+9 29 .should.should.equal('q= 'hey')
+9 30 .should.should.equal('hey')
+9 31 .should.equal('hey')
+9 32 .should.should.equal('bah'
+9 33 done.should.should.should.equal(res')
+9 34 .response.should.should.response.should.status.should.equal(200)
+9 35 done);
+9 36 done()
+9 42 describe('when format is notjenkins', function(){
+9 43 it('should allow('should be available', function(){
+9 44 it('should be available', function(){
+9 45 request(

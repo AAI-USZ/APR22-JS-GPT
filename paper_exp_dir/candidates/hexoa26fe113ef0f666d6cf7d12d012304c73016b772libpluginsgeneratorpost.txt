@@ -1,0 +1,16 @@
+Min editdistance: 35.00
+Closest candidate: 0 1 locals.posts.each(function(item){
+0 1 locals.posts.each(function(item){
+0 2 var layout = item.layout;
+0 3 route.set(item.path, function(fn){
+0 4 render([layout, 'post', 'index'], item, fn);
+0 5 });"
+
+2 3 render(layout, item, function(err, result){
+2 4 if (err) throw err;
+2 5 file.write(publicDir + item.permalink + 'index.html', result, next);
+2 6 });
+2 7 }, callback);
+4 7 callback();"
+
+6 7 callback();

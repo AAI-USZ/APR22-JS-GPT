@@ -1,0 +1,218 @@
+Min editdistance: 16.00
+Closest candidate: 2 51 function openGraphHelper(options = {}) {
+0 1 function iframeTag(args) {
+0 2 const url = args[0];
+0 3 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+0 4 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+0 5 return `<iframe src="${url}" width="${width}" height="${height}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+0 6 }
+0 7 module.exports = iframeTag;'
+
+1 1 const { htmlTag } = require(\'hexo-util\');
+1 2 function vimeoTag(id) {
+1 3 const src = \'https://player.vimeo.com/video/\' + id;
+1 4 const iframeTag = htmlTag(\'iframe\', {
+1 5 src,"
+
+2 1 const { parse, resolve } = require(\'url\');
+2 2 const { isMoment, isDate } = require(\'moment\');
+2 3 const { encodeURL, htmlTag, stripHTML, escapeHTML, Cache } = require(\'hexo-util\');
+2 4 const localeMap = {
+2 5 \'en\': \'en_US\',
+2 6 \'de\': \'de_DE\',
+2 7 \'es\': \'es_ES\',
+2 8 \'fr\': \'fr_FR\',
+2 9 \'hu\': \'hu_HU\',
+2 10 \'id\': \'id_ID\',
+2 11 \'it\': \'it_IT\',
+2 12 \'ja\': \'ja_JP\',
+2 13 \'ko\': \'ko_KR\',
+2 14 \'nl\': \'nl_NL\',
+2 15 \'ru\': \'ru_RU\',
+2 16 \'th\': \'th_TH\',
+2 17 \'tr\': \'tr_TR\',
+2 18 \'vi\': \'vi_VN\'
+2 19 };
+2 20 const localeCache = new Cache();
+2 21 const localeToTerritory = str => localeCache.apply(str, () => {
+2 22 if (str.length === 2 && localeMap[str]) return localeMap[str];
+2 23 if (str.length === 5) {
+2 24 let territory = [];
+2 25 if (str.includes(\'-\')) {
+2 26 territory = str.split(\'-\');
+2 27 } else {
+2 28 territory = str.split(\'_\');
+2 30 if (territory.length === 2) return territory[0].toLowerCase() + \'_\' + territory[1].toUpperCase();
+2 32 });
+2 33 const meta = (name, content, escape) => {
+2 34 if (escape!== false && typeof content ===\'string\') {
+2 35 content = escapeHTML(content);
+2 37 if (content) return `<meta name="${name}" content="${content}">\
+2 38 `;
+2 39 return `<meta name="${name}">\
+2 42 function og(name, content, escape) {
+2 46 if (content) return `<meta property="${name}" content="${content}">\
+2 48 return `<meta property="${name}">\
+2 51 function openGraphHelper(options = {}) {
+2 52 const { config, page } = this;
+2 53 const { content } = page;
+2 54 let images = options.image || options.images || page.photos || [];
+2 55 let description = options.description || page.description || page.excerpt || content || config.description;
+2 56 let keywords = page.tags;
+2 57 const title = options.title || page.title || config.title;
+2 58 const type = options.type || (this.is_post()? \'article\' : \'website\');
+2 59 const url = prettyUrls(options.url || this.url, config.pretty_urls);
+2 60 const siteName = options.site_name || config.title;
+2 61 const twitterCard = options.twitter_card ||\'summary\';
+2 62 const date = options.date!== false? options.date || page.date : false;
+2 63 const updated = options.updated!== false? options.updated || page.updated : false;
+2 64 let language = options.lang || page.lang || page.language || page.language || config.language || config.language;
+2 65 const { type:language:lang;
+2 66 const author: author: author,
+2 68 if (!Array.isArray.isArray(images)) images = (images)) images = [images = [images];
+2 69 if (!images.length = images = images = images.some) &&!== 1 : 1;
+2 70 for (image = meta.flatten(isArray(images).forEach(image));
+2 71 if (!images = flatten(images, i => {
+2 72 const { return flatten(images));
+2 73 image = arguments.apply(images, [images, [images]));
+2 74 })) return arr.forEach(... else {
+2 75 const src = arr.forEach(image, [images, src => {
+3 1 const url = require(\'url\');
+3 2 module.exports = ctx => {
+3 3 const PostAsset = ctx.model(\'PostAsset\');
+3 4 return function assetLinkTag(args) {
+3 5 const slug = args.shift();
+3 6 if (!slug) return;
+3 7 const asset = PostAsset.findOne({post: this._id, slug});
+3 8 if (!asset) return;
+3 9 let escape = args[0];
+3 10 if (escape === \'true\' || escape === \'false\') {
+3 11 args.shift();
+3 13 escape = \'false\';
+3 15 let title = args.length? args.join(\' \') : asset.slug;
+3 16 const attrTitle = escapeHTML(title);
+3 17 if (escape === \'true\') title = attrTitle;
+3 18 const link = encodeURL(res.url(ctx.config.root + asset.path));
+3 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+3 21 };'
+
+4 1 module.exports = function(ctx) {
+4 2 var PostAsset = ctx.model(\'PostAsset\');
+4 4 var slug = args.shift();
+4 6 var asset = PostAsset.findOne({post: this._id, slug: slug});
+4 8 var title = args.length? args.join(\' \') : asset.slug;
+4 9 return \'<a href="\' + ctx.config.root + asset.path + \'" title="\' + title + \'">\' + title + \'</a>\';
+5 2 const createLink = (options, ctx) => {
+5 3 const { base, format } = options;
+5 4 return i => ctx.url_for(i === 1? base : base + format.replace(\'%d\', i));
+5 6 const createPageTag = (options, ctx) => {
+5 7 const link = createLink(options, ctx);
+5 8 return i => {
+5 9 let result = \'<a class="page-number" href="\' + link(i) + \'">\' + result + \'</a>\';
+5 10 result += currentPageTag;
+5 11 return \'<a class="page-number" href="\' + link(i) + \'">\' + result + \'</a>\';
+5 14 function paginatorHelper(options = {}) {
+5 15 options = Object.assign({
+5 16 base: this.page.base || \'\',
+5 17 current: this.page.current || 0,
+5 18 format: `${this.config.pagination_dir}/%d/`,
+5 19 total: this.page.total || 1,
+5 20 end_size: 1,
+5 21 mid_size: 2,
+5 22 space: \'&hellip;\',
+5 23 next_text: \'Next\',
+5 24 prev_next: true
+5 25 }, options);
+5 26 const {
+5 27 current,
+5 28 total,
+5 29 space,
+5 30 end_size: endSize,
+5 31 mid_size: midSize,
+5 32 prev_text: prevText,
+5 33 next_text: nextText,
+5 34 prev_next: prevNext
+5 35 } = options;
+5 36 if (!current) return \'\';
+5 37 const link = createLink(options, this);
+5 38 const pageLink = createPageTag(options, this);
+5 39 let result = \'<a class="page-number" href="\' + link(current) + \'">\' + result + \'</a>\';
+5 41 const leftEnd = current <= endSize? current - 1 : endSize;
+5 42 const rightEnd = total - current <= endSize? current + 1 : total - endSize + 1;
+5 43 const leftMid = current - midSize <= endSize? leftEnd + 1 : current - midSize;
+5 44 const rightMid = current + midSize + endSize > total? rightEnd - 1 : current + midSize;
+5 45 const spaceHtml = `<span class="space">${space}</span>`;
+5 46 for (let i = 1; i <= leftEnd; i++) {
+5 47 result += pageLink(i);
+5 49 if (space && current - endSize - midSize > 1) {
+5 50 result += spaceHtml;
+5 52 if (leftMid > leftEnd) {
+5 53 for (let i = leftMid; i < current; i++) {
+5 58 if (rightMid < rightEnd) {
+5 59 for (let i = current; i <= rightMid; i++) {
+5 63 if (space && total - endSize - midSize > 1) {
+5 66 const leftMidColor = spaceHtml = `<span class="space">${total - endSize}</span>`;
+5 70 createPage.replace(/head, before_else = page_number>
+5 71 .replace(/else, after_number
+5 72 .replace(/else, after_number)
+5 74 .split(/else, separator => after_number separator === \'\', \'\')
+5 75 .split(seag = separator === \'else\', \'&lt;\'));
+5 77 it(\'current = before_number =, first_number\'s option must be separator\'))
+5 78 .replace(/} = space, after_number\'s option)
+5 79 .replace(/{ string_format, separator = space_format, string_format, `
+6 8 return \'<a href="\' + ctx.config.root + asset.path + \'" title="\' + title + \'">\' + ctx.config.root + asset.path + \'</a>\';
+7 1 function iframeTag(args, content) {
+7 2 var url = args[0];
+7 3 var width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+7 4 var height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+7 5 return \'<iframe src="\' + url + \'" width="\' + width + \'" height="\' + height + \'" frameborder="0" allowfullscreen></iframe>\';
+8 1 const stripIndent = require(\'strip-indent\');
+8 2 const { highlight } = require(\'hexo-util\');
+8 3 const rBacktick = /^((?:\\s*>){0,3}\\s*)(`{3,}|~{3,}) *(.*) *\
+8 4 ([\\s\\S]+?)\\s*\\2(\
+8 5 +|$)/g;
+8 6 const rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+8 7 const rLangCaption = /([^\\s]+)\\s*(.+)?/;
+8 8 function backtickCodeBlock(data) {
+8 9 const config = this.config.highlight || {};
+8 10 if (!config.enable) return;
+8 11 data.content = data.content.replace(rBacktick, ($0, start, $2, _args, content, end) => {
+8 12 const args = _args.split(\'=\').shift();
+8 13 const options = {
+8 14 hljs: config.hljs,
+8 15 autoDetect: config.auto_detect,
+8 16 gutter: config.line_number,
+8 17 tab: config.tab_replace
+8 19 if (options.gutter) {
+8 20 config.first_line_number = config.first_line_number || \'always1\';
+8 21 if (config.first_line_number === \'inline\') {
+8 22 _args = _args.replace(\'=+\', \'=\');
+8 23 options.gutter = _args.includes(\'=\');
+8 24 options.firstLine = options.gutter? _args.split(\'=\')[1] || 1 : 0;
+8 27 if (args) {
+8 28 const match = rAllOptions.exec(args) || rLangCaption.exec(args);
+8 29 if (match) {
+8 30 options.lang = match[1];
+8 31 if (match[2]) {
+8 32 options.caption = `<span>${match[2]}</span>`;
+8 33 if (match[3]) {
+8 34 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+8 38 const endOfStart = start.split(\'\
+8 39 \').pop();
+8 40 if (endOfStart && endOfStart.includes(\'>\')) {
+8 41 const depth = endOfStart.split(\'>\').length - 1;
+8 42 const regexp = new RegExp(`^([^\\\\S\\\\r\\\
+8 43 ]*>){0,${depth}}([^\\\\S\\\\r\\\
+8 44 ]|$)`,\'mg\');
+8 45 const paddingOnEnd =\'\';
+8 46 content = (content + paddingOnEnd).replace(regexp, \'\').replace(/\
+8 47 $/, \'\');
+8 49 content = highlight(stripIndent(content), options)'
+
+9 5 +|$)/gm;
+9 49 content = highlight(stripIndent(content), options)
+9 50 .replace(/{/g, \'&#123;\')
+9 51 .replace(/}/g, \'&#125;\');
+9 52 return `${start}<escape>${content}</escape>${endOfStart}`;
+9 55 module.exports = backtickCodeBlock;'
+

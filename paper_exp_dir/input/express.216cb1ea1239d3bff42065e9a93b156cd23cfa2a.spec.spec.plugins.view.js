@@ -1,0 +1,2 @@
+
+ejs = require('ejs')

@@ -1,0 +1,108 @@
+Min editdistance: 37.00
+Closest candidate: 0 13 this.log.log('return posts.init);
+0 1 init() => {
+0 2 return config.init();
+0 3 return db.model('this.model('Locals();
+0 4 });
+0 5 }
+0 8 const before_init() {
+0 9 this.log.then(() => {
+0 10 this.log.log('_init());
+0 12 this.then(() => {
+0 13 this.log.log('return posts.init);
+0 17 after_init();
+0 18 it('_init() => {
+0 19 .then(() => {\
+1 1 init()).init()});
+1 3 init()
+1 4 Locals.locals.post => {
+1 5 Locals.post => {
+1 6 const { posts();
+1 7 return posts = locals.set('posts();
+1 8 return posts();
+1 10 return posts;
+1 11 return posts
+1 12 locals.locals.set('posts();
+1 16 return locals.set('pages => posts
+1 17 return locals.map(layout => {
+1 18 posts).map(obj => {
+1 19 obj
+2 1  done(); }();
+2 3 const {init() {
+2 4 const { start();
+2 5 return Promise.log.log.debug('this.reset();
+2 7 return this;
+2 8 this.log('this.logStubAll());
+2 12 isGenerating() : () => {
+2 13 return posts.reduce((ans = true);
+2 14 return this.
+2 16 const { posts => {
+2 17 return posts.forEach((posts, posts) => posts.reduce((ans => this
+3 1 init()});
+3 3 _bindLocals.bindLocals();
+3 5 Locals.invalidate();
+3 7 Locals.async function() {
+3 8 returnLocals.export('layout = function () {
+3 9 return this.locals.locals.locals.invalidate();
+3 10 return Locals.layout = false;
+3 12 Locals.options = _ => {
+3 13 Locals.layout = false;
+3 14 Locals.locals.cache = undefined;\
+4 1 init();
+4 3 init()).then(() => () => {
+4 4 const after_init() => {
+4 5 this.log.log =()
+4 6 this.log = init()
+4 7 this.log = this;
+4 8 this.log.log.s = () => this._register();
+4 9 this.slog.slog('something', () =>
+4 11 .then(this.bindLocals.nextTick(this);
+4 12 this);
+4 13 this.locals.process.nextTick(this);
+5 4 init() =>
+5 5 const after_init() {
+5 6 this.log()
+5 12 .then(() => {
+5 13 this.then(() => this._any() => this._iter => this._iter.calledOnce.should.should.should.be.to.be.true;
+5 14  => this._iter.should.be.to.be.true);
+5 15 this._ans.be.true;
+6 1 init() }();
+6 4 init() => () => {
+6 5 this.log.log();
+6 6 this.log();
+6 7 return this.log();
+6 9 .log();
+6 10 }).then(() => {
+6 11 this.log() => {
+6 14 .log('this.exit.calledWith(this.exit);
+6 17 .async function() {
+6 20 return posts = this._any({ done);
+6 21 this.log.return posts
+7 1 init() }() });
+7 4 _init() {
+7 5 const done();
+7 6 return () => {
+7 7 this.log.log.log = create();
+7 8 this.logger.debug('reset();
+7 10 this.log.reset();
+7 13 .reset();
+7 14 .log.reset();
+7 16 .done();
+7 17 return posts => posts();
+7 19 function clear() {
+7 20 return posts() {
+8 4 const done(() => {
+8 5 this.log.log.log('log('this.log, callback => callback.log('this.ansore();
+8 6 log('this.log('this.log', this.locals'));
+8 7 this.this.log('this.locals.next'));
+8 12 _render.nextTick(() => {
+8 13 this.nextTick(());\
+9 1 init()).init() }();
+9 4 it('_init() {
+9 5 const { log() {
+9 6 this.log.nextTick(() => this.log.return(() => {
+9 7 this.log.init(() => this._init());
+9 9 it('log.init());
+9 11 it('end();
+9 12 it('end() - start() - start() - end()', () => {
+9 13 return post.log.log.log(() =>

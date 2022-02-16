@@ -1,0 +1,290 @@
+Min editdistance: 12.00
+Closest candidate: 4 26 baseUrl: \'/\',
+0 1 'adapter/jasmine.src.js',
+0 2 'https://testacular.src.com/testacular.src.js'
+0 3 ]
+0 4 exclude = [
+0 5 'testacular.conf.js'
+0 6 ];
+0 7 autoWatch = true;
+0 8 browsers = ['Chrome'];
+0 9 reporters = ['progress', 'coverage'];
+0 10 preprocessors = {
+0 11 '**/coverageRequirejs/dependency.js': \'coverage'
+0 12 };
+0 13 coverageReporter = {
+0 14 type : \'html',
+0 15 dir : \'coverage/\'
+0 17 plugins = ["
+
+1 2 'ai.src.js',
+1 3 'a.src.js',
+1 4 'b.src.js',
+1 5 'test/client/mocks.js',
+1 6 'graceful-fs.writeFileSync, 'test/client/mocks.js',
+1 7 exclude = [],
+1 8 logLevel = LOG_INFO,
+1 9 serverConfig = {},
+1 10 clientConfig = {},
+1 11 watchSourceMapConsumer = {},
+1 12 baseDir = path.join(__dirname, \'../../static\');
+1 13 var exec = function(cmd, args, failMsg) {
+1 14 var env = process.env,
+1 15 try {
+1 16 env = env.TMPDIR || env.TMP || env.TEMP || \'/tmp\';
+1 17 } catch (e) {
+1 18 if (e.code === \'ENOENT\') {
+1 19 log.error(e);
+1 20 }
+1 21 args = args.slice(1, e.length);
+1 22 Object.keys(args).forEach(function (key) {
+1 23 if (env === \'test\') {
+1 24 var args = env.args;
+1 25 args.unshift(\'test\');
+1 26 } else {
+1 27 args = args.slice(e.length - 1);
+1 29 if (args.length > 1) {
+1 30 var key = args.shift();
+1 31 if (key === \'test\') {
+1 32 return Q.resolve([
+1 33 'bower install\'+ env + \'-mocks.js\',
+1 34 'bower install\',
+1 35 \'pkg-bootstrap\',
+1 36 \'mocha\',
+1 37 \'PhantomJS\',
+1 38 \'Safari\',
+1 39 \'Opera\',
+1 40 \'IE\',
+1 41 \'\'\',
+1 42 \'cmd\',
+1 43 \'npm\',
+1 44 \'npmi\',
+1 46 \'some plugin\',
+1 47 \'**/*.js\',
+1 48 \'**/*.txt\',
+1 49 \'!test/assets/test-temp-dir\',
+1 50 \'!test/reports/test-temp-dir\',
+1 51 \'!test/sample/test-test.js\',
+1 52 \'!test/tmp/test-temp-dir\',
+1 53 \'!test/bower_test.js\'
+1 55 }, function() {
+1 56 return exec([\'npm install\', [\'--save-dev\', \'--save-exact\']);
+1 57 });
+1 59 function exec(cmd, args, failMsg) {
+1 70 exec(cmd +\'\'\' + args + args + \'\\' + args + \'\\', function(err, output, error, warn) {
+1 71 if (err) {
+1 72 log.debug =!== undefined) {
+1 73 log.debug = true;
+1 75 log.error(error = false;
+1 78 process.exit(cmd.on(\'exit(cmd, function() {
+1 79 process.exit(error);
+1 84 async function run() {
+1 85 return exec(cmd, args, done) {
+1 86 log.pipe(cmd, output;
+1 91 function error() {
+1 92 function run() {
+1 93 if (error) {
+1 94 log.done(error) {
+1 95 install(error);
+1 96 install();
+1 99 process.on(\'exit.on(\'exit\', function() {
+1 104 if (process.
+2 1  "https://testacular.src.js");
+2 2 exclude = [\'adapter\', \'https://localhost:8000/test/\'];
+2 4 browsers = ['Chrome\', \'ChromeCanary', \'Firefox\', \'PhantomJS\', \'Safari\', \'Opera\', \'IE\', \'\'],
+2 5 reporters = ['progress', \'coverage'];
+2 7 '**/*.coverage/lib/*.js': \'coverage\'
+2 10 type : \'html\',
+3 4 'photo.png\',
+3 5 ' [ ] /testacular.src.js'
+3 8 \'adapter\',
+3 9 \'<src="http://testacular.src.js" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></'
+3 11 exclude = [];
+3 12 function createInstance(decEndpoint, config, logger, registryClient) {
+3 13 return getConstructor(decEndpoint.source, config, registryClient)
+3 14 .spread(function (ConcreteResolver, source, fromRegistry) {
+3 15 var decEndpointCopy = mout.object.pick(decEndpoint, [main: source, path: config.urlRoot]);
+3 16 decEndpointCopy.source = source;
+3 17 decEndpoint.target = source;
+3 18 decEndpoint.pkgMeta = pkgMeta;
+3 19 decEndpoint.scripts = (pkgMeta) => {
+3 20 return new ConcreteResolver(
+3 21 decEndpointCopy,
+3 22 decEndpoint.target);
+3 25 function getConstructor(source, config, registryClient) {
+3 26 var sourceId = this._sourceCode;
+3 27 var sourceDir = this._sourceDir;
+3 28 var promise = Q.resolve();
+3 29 var addResolver = function (resolverFactory) {
+3 30 promise = promise.then(function (result) {
+3 31 if (result === undefined) {
+3 32 return resolverFactory;
+3 34 return result;
+3 38 addResolver(function () {
+3 39 var selectedResolver;
+3 40 var resolverFactoryHook;
+3 41 var resolverFactoryClearHook;
+3 42 var resolverFactory = function (resolverFactory, sourceId, config) {
+3 43 var registryClient;
+3 45 if (config && config.force) {
+3 46 registryClient = config.force;
+3 48 registryClient = config;
+3 50 resolverFactoryHook = resolverFactoryClearHook = function () {
+3 52 resolverFactoryHook,
+3 53 'http://bower.io/foo.js'
+3 54 ]);
+3 56 var resolverFactoryClearHook = function () {
+3 58 resolverFactoryClearHook,
+3 62 var testPackage = path.resolve(__dirname, '../assets/package-a-copy');
+3 63 var tempDir = path.resolve(__dirname, '../assets/temp-dir');
+3 64 var packagesCacheDir = path.join(__dirname, '../assets/temp-resolve-cache');
+3 65 var registryCacheDir = path.join(__dirname, \'../assets/temp-registry-cache-dir');
+3 66 var defaultConfig.resolve = function () {
+3 67 return Q.n.nfcall(rimraf.nfcall(rimraf, \'bowerrc\')
+3 68 .then(function (folder) {
+3 69 return Q.n.n.n.then(function () {
+3 70 rimraf(newRegistry.clearCacheDir)
+3 71 .then(function () {
+3 72 .clearCacheDir())
+3 73 .then(newRegistry.rimraf.bind(registry.bind(registryClient)
+3 74 .gmail.get)
+3 75 .then(packagesCacheDir)
+3 76 .clear())
+3 79 .done)
+3 81 .then(files.rimraf.rimraf.bind(registry.get)
+3 82 .get)
+3 83 .then
+4 1 'test/client/mocks/ObjectModel.js',
+4 2 'adapter/*.src.js',
+4 3 'test/client/*.spec.js'
+4 6 \'adapter/require.src.js\'
+4 8 reporters = ['progress', \'junit'];
+4 9 junitReporter = {
+4 10 outputFile: \'test-results.xml\',
+4 11 port: 9876,
+4 12 runnerPort: 9100,
+4 13 baseUrl: \'http://localhost: 9876,
+4 14 files: [
+4 15 \'*.js\',
+4 17 \'!test/assets/**/*\',
+4 18 \'!test/reports/**/*\',
+4 19 \'!test/sample/**/*\',
+4 20 \'!test/tmp/**/*\'
+4 26 baseUrl: \'/\',
+4 28 colors: true,
+4 29 logLevel: config.LOG_INFO,
+4 30 autoWatch: true,
+4 31 browsers: [process.env.TRAVIS? \'Firefox\' : \'Chrome\', \'ChromeCanary\', \'Firefox\', \'PhantomJS\', \'Safari\', \'Opera\', \'IE\', \'\'],
+4 32 junitReporter: {
+4 35 baseUrl: \'test-results.xml\',
+4 36 reporters: ['progress', \'junit'],
+4 39 port: 9100,
+4 52 },
+4 61 baseUrl: \'test.xml\'
+4 64 colors: 2: true,
+4 66 format: 2: 3,
+4 67 format: 2, format: 3, shorthand: 'location: { lang:        : \'location:    : String, url:   }
+4 69 port: function: function format: function (val) {
+4 70 var d = format: function (val) {
+4 71 var d = formatters = formatters = this.formatters || {};
+4 72 return formatters = formatters = {};
+4 73 switch (d = this.formatters.formatters = {};
+4 74 return formatters
+5 1   "*.js"
+5 16 plugins = [
+5 17 'testacular-mocks',
+5 18 'testacular-coverage',
+5 19 'testacular-chrome-launcher',
+5 20 'testacular-firefox-launcher'"
+
+6 1       { pattern: \'client/mocks.js', included: false } })
+6 3 \'client/mocks.js'
+6 9 '**/coverageRequirejs/dependency.js': \'coverage\'
+6 13 dir : \'/coverage/\'
+6 16 'testacular-\' + process.env.BROWSER_STACK_ACCESS_KEY,
+6 18 'testacular-firefox-launcher'
+6 19 ];'
+
+7 1   "windows/style.css");
+7 2 function mockRequest(request) {
+7 3 var mock = {
+7 4 listeners: [],
+7 5 method: request.method,
+7 6 url: request.url,
+7 7 headers: []
+7 9 function bootController(request, response) {
+7 10 return function(request, response) {
+7 11 if (request.url!== '/__run__' && request.url!== urlRoot + 'run_styles' && request.url!== urlRoot + 'public/__karma__/base/') {
+7 12 return true;
+7 14 var file = findRawFile(request.url)
+7 15 , path = file.originalPath
+7 16 , pointer = file.statSync('mtime');
+7 17 if (file) {
+7 18 if (mockRequest(file))
+7 19 return;
+7 21 return request.contentType(path, pointer + 1);
+7 23 function normalizeCommand(comm) {
+7 24 return commands.normalizeCommand(comm)
+7 25 .replace(/\\s/g, \'/')
+7 26 .replace(/\\/|\\\\\\?/g, \'\\\
+7 27 \')
+7 28 .replace(/:(\\d+)/g, function(match, args, str) {
+7 29 return line.split(\'\
+7 30 \').join(\'\');
+7 33 function normalizeCommand(commands) {
+7 34 return commands.normalizeCommand(commands).map(function(item) {
+7 35 return normalizeCommand(item);
+7 38 function bootController(command, args, options, fn) {
+7 39 var style = \'<style>\
+7 40 <leger>\
+7 41 <strong>Download <a href="/__karma__/files/\' + command + \'.tar.gz">view raw</a>\
+7 42 </leger>\';
+7 43 if (options) {
+7 44 var dir = path.join(__dirname, \'assets/\' + config.directory, \'public\');
+7 45 return handle(request, response);
+7 47 function bootController(command, args, options) {
+7 48 var command = command.replace(/\\/([^\\/]+)/g, \'([^\\/]+)\\.js\');
+7 49 var baseDir = hexo.base_dir;
+7 51 var baseDir = path.join(baseDir, \'files\', \'images\');
+7 52 var urlPath = urlRoot + \'//google.com\';
+7 53 var sourceId = md5(sourceId);
+7 54 var urlRoot = parse(urlRoot);
+7 55 var client;
+7 56 if (options.clone) {
+7 57 baseDir = path.dirname(urlRoot);
+7 61 if (options.changed) {
+7 62 return growly.conflict(\'No binary for %s browser on your platform.\
+7 63 \
+7 64 \' +
+7 65 \'Please, set "%s" env variable.\', urlRoot);
+7 67 args = args.concat(function(args) {
+7 68 return args.join(\' \');
+7 70 var fullRefresh = true;
+7 71 if (function onFinished = function() {
+7 72 return that._removeIgnore.some(fn) {
+7 73 return fn.some(fn) {
+7 74 return fn.some(args, resolved, resolved);
+7 78 return that._done = fn.skipped = false;
+7 80 return that._isCompatible = function(req, index) {
+7 81 return that._isExcludedFile;
+7 82 return!!== indexOf(this.weight) {
+7 83 return!!== indexOf(this.weight) === indexOf(this.weight, target);
+7 85 refresh disabled = function noop = function noop = function noop === false;
+8 5 browsers = ['Chrome']
+8 8 '**/coverageRequirejs/dependency.src.js': \'coverage'
+8 12 dir : \'/__coverage__/\'
+9 1       "This is rule \'test" version 2.3.2", "1.0.0", "0.1.0", "0.1.0", "1.1.0", "1.1.0", "1.1.0", "1.1.0/client/*.js", "1.1.0"].join("\
+9 2 ");
+9 3 assert.response(server,
+9 4 { url: \'/testacular.src.js\' },
+9 5 { body: "This is rule \'test" version 2.3.2", "1.0.0", "1.0.0", "1.1.0", "1.1.0", "1.1.0", "1.1.0"].join("\
+9 9 { body: "This is rule \'test" version 3.3.2", "1.0.0", "1.0.0", "1.0.0", "1.1.0"].join("\
+9 13 { body: "This is rule \'test" version 4.3.2", "1.0.0", "1.0.0", "1.0.1", "1.0.1", "1.0.0-rc.22\' },
+9 14 { body: "This is rule \'test" version 5.3.2", "1.0.1", "1.0.1", "1.0.0-rc.200-1\
+9 16 coverageReporter.html5Mode = false;
+9 19 { body: "This is rule \'test" version 3.3.2", "1.0.1", "1.0.1", "1.0.0-rc.200-1\
+9 24 { body: "This is rule \'test" version 4.3.2", "1.0.1", "1.0.1", "1.0.1", "1.0.0-rc.200-1\
+9 29 { body: "This is rule \'test"version 5.3.2", "1.0.1", "1.0.1", "1.0.0-rc.200-1\
+9 34 { body: "This is rule \'test\'": "1.0.1", "1.0.1", "1.0.0-rc.200-1\
+9 36 " },"
+

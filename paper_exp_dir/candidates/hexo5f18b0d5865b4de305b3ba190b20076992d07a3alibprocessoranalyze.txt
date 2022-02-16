@@ -1,0 +1,282 @@
+Min editdistance: 21.00
+Closest candidate: 4 1 route = require('../route'),
+0 1 async = require('async'),
+0 2 fs = require('graceful-fs'),
+0 3 colors = require('colors'),
+0 4 _ = require('underscore'),
+0 5 util = require('../util'),
+0 6 file = util.file,
+0 7 spawn = util.spawn,
+0 8 config = hexo.config.deploy;
+0 9 extend.deployer.register('heroku', function(args){
+0 10 if (!config.repository){
+0 11 console.log('\
+0 12 You should configure deployment settings in %s first!\
+0 13 ', '_config.yml'.bold);
+0 14 return console.log([
+0 15 'Example:',"
+
+1 1 _ = require('underscore');
+1 2 extend.helper.register('tagcloud', function(tags, options){
+1 3 if (!options){
+1 4 options = tags;
+1 5 tags = this.site.tags;
+1 6 }
+1 7 var options = _.extend({
+1 8 min_font: 8,
+1 9 max_font: 20,
+1 10 unit: 'px',
+1 11 amount: 40,"
+
+2 2 words = [],
+2 3 total = 0,
+2 4 config = hexo.config;
+2 5 extend.filter.register('home', function(req, res){
+2 6 var paginationDir = config.pagination_dir;
+2 7 var posts = _.extend({
+2 8 base: root + '',
+2 9 total: total,
+2 10 current: num,
+2 11 total: posts.length,
+2 12 prev_text: 'Prev',
+2 13 next_text: 'Next',
+2 14 space: '&hellip;',
+2 15 prev_next: function(next){
+2 16 var prev = posts[year];
+2 17 if (prev == null){
+2 18 next();
+2 19 } else {
+2 20 posts.archive = true;
+2 23 }, function(){
+2 24 console.log('Prev');
+2 25 });
+2 26 extend.generate.register(function(locals, render, callback){
+2 27 if (!_.isArray(locals)) posts = locals;
+2 28 console.log('Generating posts.');
+2 29 async.forEach(posts, function(item, next){
+2 30 var layout = item.layout;
+2 32 var result = render(layout, item);
+2 33 if (!result) result = render('archive', item);
+2 34 if (!result) result = render('index', item);
+2 35 var newest = posts.first().date;
+2 36 for (var i=oldest.year(); i<=oldest.year(); i++){
+2 37 var yearly = posts.find({date: {$year: i}});
+2 38 if (!yearly.length) continue;
+2 39 if (yearly.length){
+2 40 var query = {$year: i};
+2 41 if (value){
+2 42 _.each(posts.toArray(), function(item, i){
+2 43 var year = item.date.year(),
+2 44 month = item.date.format('MM');
+2 46 var month = item.date.format('DD');
+2 48 var name = item.name;
+2 49 if (i == 0){
+2 50 name = item.substring(0, i + 1);
+2 52 name = item.substring(i + 1);
+2 55 if (!space){
+2 56 var space_html = '<span class="space">' + space + '</span>';
+2 57 if (current!== 0){
+2 58 name += space_html;
+2 65 var newest = posts.find({date: {$year: i}, i);
+2 67 if (monthly.length){
+2 68 var monthly = posts.find({date: {$year: i, $month: i}});
+2 69 if (!monthly.length) continue;
+2 70 var yearly_url = root + item.format('MM');
+2 72 var monthly_url = root + item.format('DD');
+2 73 if (monthly_url === '/' || item.format) continue;
+2 75 for (var format = format = format.format){
+2 76 var i = i + 1;
+2 77 var url = format;
+2 78 url_format = format.path = format.replace(/format, i, i + '/';
+2 82 if (!lang = format || url_format) return i + '/'s', i + '/'s', i + '/';
+2 84 if (!lang || url_format) return i;
+2 85 url_format = _format = url_format;
+2 86 };
+2 87 extend.tag = function(){
+2 88 return i;
+2 89 return i
+2 90 };"
+
+3 3 path = require('path'),
+3 4 sep = new RegExp('\\\\' + path.sep, 'g'),
+3 5 spawn = require('../spawn'),
+3 8 commitMessage = require('./util').commitMessage;
+3 9 extend.deployer.register(function(args, callback){
+3 10 if (!args.repo &&!args.repository){
+3 15 'Example:',
+3 16 '  deploy:',
+3 17 '    type: heroku',
+3 18 '    repository: <repository>',
+3 19 '    branch: <branch>',
+3 20 '',
+3 21 'More info: http://zespia.tw/hexo/docs/deploy.html'
+3 22 ].join('\
+3 23 ') + '\
+3 24 ');
+3 26 var baseDir = hexo.base_dir,
+3 27 setup = args.setup;
+3 28 var command = function(comm, args, callback){
+3 29 spawn({
+3 30 command: comm,
+3 31 args: args,
+3 32 exit: function(code){
+3 33 if (code === 0) callback();
+3 37 async.series([
+3 38 function(next){
+3 39 async.every([\'Procfile'], function(item, next){
+3 40 fs.exists(baseDir + item, function(exist){
+3 41 next(null, exist);
+3 43 }, function(result){
+3 44 if (result &&!setup) return next();
+3 45 console.log('Setting up.');
+3 46 async.parallel([
+3 48 file.write(baseDir + 'Procfile\', args, next);
+3 49 },
+3 51 file.read(baseDir + 'package.json', function(err, content){
+3 52 if (err) throw new Error('Failed to read file:'+ baseDir + 'package.json');
+3 53 var pkg = JSON.parse(content);
+3 54 if (_.isObject(pkg.dependencies)){
+3 55 pkg.dependencies = _.extend(pkg.dependencies, {connect: '*'});
+3 57 pkg.dependencies = {connect: '*'};
+3 59 file.write(baseDir + 'package.json', JSON.stringify(pkg, null,' '), next);
+3 63 var content = [
+3 64 'var connect = require("connect"),\',
+3 65 '  app = connect.createServer(),\',
+3 66 'sest app = connect.createServer(),\',
+3 67 '  port = process.env.PORT;\',
+3 69 'app.use(connect.static(__dirname + "/public"));
+3 70 app.use(connect.compress());
+3 71 app.listen(port, function(){
+3 72 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.port + config.root).bold);
+3 73 hexo.emit('reconnect');
+3 77 extend.end();
+3 78 });"
+
+4 1 route = require('../route'),
+4 5 fs = require('fs'),
+4 7 publicDir = hexo.public_dir;
+4 8 extend.console.register('generate', 'Generate static files', function(args){
+4 9 var ignoreTheme = (args.indexOf('-t')!== -1 || args.indexOf('--theme')!== -1),"
+
+5 4 extend.helper.register('word', 'Number');
+5 5 extend.helper.register('css', 'css', function(){
+5 6 var result = [];
+5 7 _.each(words, function(item){
+5 8 result.push(item);
+5 10 return result;
+6 2 extend.helper.register('tagcloud', function(){
+6 3 return function(tags, options){
+6 4 var config = hexo.config;
+6 5 var defaults = {
+6 7 max_font: 22,
+7 3 rEOL = require('os').EOL,
+7 4 rFOL = require('os').FOL,
+7 5 rHexoError = require('../error');
+7 6 extend.helper.register('paginator', function(options){
+7 8 base: '/',
+7 9 format: '%d/%d/',
+7 10 total: 1,
+7 11 current: 0,
+7 15 prev_next: true,
+7 16 end_size: 1,
+7 17 mid_size: 2,
+7 18 show_all: false
+7 20 var options = _.extend(defaults, options),
+7 21 end = new Extend();
+7 22 [
+7 23 'base', 'letters', '', 'top', 'left', 'width', 'height', 'title', 'Next', 'djvu', 'dwg', 'dxf', 'fbs', 'fpx', 'fst','mmr',
+7 24 'paginator', ':a',
+7 25 options = _.extend(defaults, options),
+7 26 hljs = options.highlight || {},
+7 27 total = options.total,
+7 28 end_size = options.end_size,
+7 29 mid_size = options.mid_size,
+7 30 space = options.space,
+7 31 base = options.base,
+7 32 format = options.format,
+7 33 front = '',"
+
+8 5 extend.helper.register('words', function(tags, i){
+8 7 words: [
+8 8 'a',
+8 9 'an',
+8 10 'and',
+8 11 'as',
+8 12 'at',
+8 13 'but',
+8 14 'en',
+8 20 'by',
+8 23 'Zo',
+8 26 'anch',
+8 27 'zoom'
+8 29 var schemaPosts = function(posts){
+8 30 var num = _.length;
+8 31 posts.forEach(function(post){
+8 32 var id = post._id;
+8 33 if (num){
+8 34 var _id = parseInt(num, 10);
+8 35 if (num >= _id){
+8 36 return;
+8 38 var newObj = posts.slice(0, num);
+8 39 newObj.id = num;
+8 40 return newObj;
+8 42 var id;
+8 43 return posts.length;
+9 1 renderer = Object.keys(extend.renderer.list()),
+9 2 tag = extend.tag.list(),
+9 3 render = require('../render'),
+9 5 Collection = require('../model').Collection,
+9 8 yfm = util.yfm,
+9 9 titlecase = util.titlecase,
+9 10 highlight = util.highlight,
+9 11 pathFn = require('path'),
+9 12 sep = pathFn.sep,
+9 14 swig = require('swig'),
+9 16 moment = require('moment'),
+9 18 config = hexo.config,
+9 19 sourceDir = hexo.source_dir,
+9 20 publicDir = hexo.public_dir,
+9 21 catDir = config.category_dir,
+9 22 tagDir = config.tag_dir + '/',
+9 23 siteUrl = config.url + '/',
+9 24 configLink = config.permalink,
+9 25 highlightConfig = config.highlight,
+9 26 highlightEnable = highlightConfig? highlightConfig.enable : true,
+9 27 backtickConfig = highlightConfig? highlightConfig.backtick_code_block : true,
+9 28 lineNumConfig = highlightConfig? highlightConfig.line_number : true;
+9 29 swig.init({tags: tag});
+9 30 if (config.new_post_name){
+9 31 var configNewPostLink = config.new_post_name;
+9 32 var filenameRE = pathFn.basename(configNewPostLink, pathFn.extname(configNewPostLink))
+9 33 .replace(':year', '\\\\d{4}')
+9 34 .replace(/:(month|day)/g, '\\\\d{2}')
+9 35 .replace(':title', '(.*)');
+9 36 filenameRE = new RegExp(filenameRE);
+9 38 var load = function(source, callback){
+9 39 var sourcePath = sourceDir + source;
+9 42 file.read(sourcePath, next);
+9 45 fs.stat(sourcePath, next);
+9 47 ], function(err, results){
+9 48 var meta = yfm(results[0]),
+9 49 stats = results[1],
+9 50 extname = pathFn.extname(sourcePath).substring(1);
+9 51 meta.date = _.isDate(meta.date)? moment(meta.date) : moment(meta.date, 'YYYY-MM-DD HH:mm:ss');
+9 52 meta.stats = stats;
+9 53 meta.source = sourcePath;
+9 54 if (meta.updated) meta.updated = _.isDate(meta.updated)? moment(meta.date) : moment(meta.date, 'YYYY-MM-DD HH:mm:ss');
+9 55 else meta.updated = moment(stats.mtime);
+9 56 var compiled = swig.compile(meta._content)(data);
+9 57 compiled.replace(/`{3,} *([^\
+9 58 ]*)?\
+9 59 ([\\s\\S]+?)\
+9 60 `{3}/, function(match, args, str){
+9 61 if (!args) return '<notextile><pre><code>' + content + '</code></pre></notextile>';
+9 62 var matched = args = compiled.replace(/([], function(/([], function(match, content){
+9 63 indent = content, indent, indent){
+9 64 return indent = indent + 1, options = options.replace(/lang){
+9 65 lang){
+9 66 return '\\s = (match = (match =match[0] || '\\s] = '\\dlang/match[1]';
+9 67 return '('r') + match[2]';
+9 69 var lang = matched = line_ = line_number = line_number = highlight(content = highlight(content, lang) + '('r') + '\
+9 70 return (match = '_number>' + matched' + target)';
+9 71 return [indent = highlight(content = options.caption = content + '>' + match[3] || content + '</code></pre></' + '</' + match

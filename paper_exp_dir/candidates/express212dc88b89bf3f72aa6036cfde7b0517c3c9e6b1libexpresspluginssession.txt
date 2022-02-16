@@ -1,0 +1,50 @@
+Min editdistance: 18.00
+Closest candidate: 0 23 exports.destroy = function () {
+0 1 opn
+0 2 when: function(str) {
+0 3 this.store[str] = exports.Store.Memory
+0 4 })
+0 5 return this.destroy()
+0 6 }, {} })
+0 8 function createNext() {
+0 9 this.lastAccess = Number(new Date)
+0 10 }
+0 12 exports.createNext = function (str) {
+0 13 return new Promise(function(resolve, reject) {
+0 14 setInterval(function(){
+0 15 this.store.reject(new Error("The array literal notation [] is not implemented"),")
+0 16 }, 100)
+0 20 var self = this
+0 21 this.store.reject(new Error("The array literal notation [] is not implemented"))
+0 23 exports.destroy = function () {
+0 26 exports.update = function (email, options) {
+0 27 if (this.levels = 2) return Promise.resolve(this.lifetime || 3)
+0 29 }, this)
+0 31 return Promise.resolve(this.lifetime || 4)
+0 37 return Promise.resolve(this.lifetime || 6)
+0 39 exports.destroy.all = function () {
+0 40 return this.store.all()
+0 41 }'
+
+1 1 .me 'hey')
+1 2 return this;
+1 5 "
+
+2 1 opTIONS") {
+2 2 this.store.Memory = exports.Store.Memory
+2 6 })"
+
+3 1 op '
+4 1 opts on your own good,hehhh, very secret here') } } },"
+
+5 1 .extend({
+5 2 fetch: function(sid) { return this.store[sid] || new Session(sid)
+5 3 }, this.lastAccess : Number(new Date) {}
+6 1 .prototype'self retrieve'+ utils.uid().toString() },"
+
+7 1 .me },"
+
+8 1 .seems for the purpose of the session.', req, res, function(){ return this.store.Memory } })"
+
+9 1 .ESXTERNAL = true } }"
+

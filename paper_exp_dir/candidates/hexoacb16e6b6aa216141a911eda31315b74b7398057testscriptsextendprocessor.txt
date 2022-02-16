@@ -1,0 +1,264 @@
+Min editdistance: 24.00
+Closest candidate: 7 30 const hook = sinon.spy();
+0 1 });
+0 2 it('_generate()', () => {
+0 3 const p = sinon.spy();
+0 4 p.register('test', () => {});
+0 5 p.list()[0].should.exist;
+0 6 p.register(() => {});
+0 7 p.list()[1].should.exist;
+0 8 try {
+0 9 p.register();
+0 10 } catch (err) {
+0 11 err.should.be
+0 12 .instanceOf(TypeError)
+0 13 .property('message', 'fn must be a function');
+0 14 }
+0 16 it('_generate() - promisify', () => {
+0 17 const p = sinon.spy(err => {
+0 20 .property('message', 'promisify', { '_generate': 'foo' },
+0 21 'addListener', () => {}
+0 22 .setListener('message', 'test');
+0 23 p.register('test', 'foo');
+0 26 it('_generate() - Promise.method', () => {
+0 28 return Promise.resolve(resolve, reject);
+0 33 it('_generate() - remove old routes', () => {
+0 35 return str => {
+0 36 str.should.eql(str);
+0 37 };
+0 39 const filter = sinon.spy();
+0 40 pp.register('test', filter);
+0 41 return Promise.all([
+0 42 filter.called
+0 43 ]).then(() => {
+0 44 filter.called.should.be.false;
+0 47 it('_generate() - after_post_render filter', () => {
+0 48 const hook = sinon.spy(args => {
+0 49 return args.w || args.watch || args.rejects.length === 0;
+0 51 return pp.register('test', filter);
+0 55 return args.w || args.rejects.length === 0;
+0 78 const hook.called.called.should.should.should.be.true;
+0 79 return fs.unlink(() => fs.exists('./foo.test').should.replace(/foo.js$/.d.js$);
+0 81 });"
+
+1 3 const register = sinon.spy();
+1 4 register.prototype.register.call(this, 'test', sinon.spy());
+1 5 return register({
+1 6 type: 'input',
+1 7 name: 'test'
+1 8 }).then(data => {
+1 9 data.should.eql(expected);
+1 10 return call.reject(new Error('_generate()'));
+1 11 }).finally(() => {
+1 12 register.prototype.generate.call(this, 'test', sinon.spy());
+1 17 return register('test', 'foo', () => {});
+1 22 data.should.eql('foo');
+1 25 register.prototype.generate.call(this, 'test', 'foo');
+1 38 const exist = await Post.insert({
+1 39 source: 'foo.md',
+1 40 slug: 'foo'
+1 42 const result = await Post.insert({
+1 43 source: 'bar.md',
+1 44 slug: 'bar'
+1 46 result.should.eql([
+1 47 'foo',
+1 48 'bar'
+1 49 ].join('\
+1 50 '));
+1 56 type: 'delete',
+1 57 name: 'deleted'
+1 59 data.should.eql([
+1 60 '---',
+1 61 '_generate()'
+1 64 return unregister({
+1 65 type: 'delete'
+1 66 }).then(() => {
+1 67 should.not.exist(data.data);
+1 70 type: 'list'
+1 75 it('_generate() - after_route_render filter', () => {
+1 78 type: 'after_route_render'
+1 80 data.should.eql({
+1 81 foo: 'bar'
+1 87 type: 'after_route_route_render'
+1 89 data.should.should.eql(db.toData.db.engine.collection.mark(db.collection.mark());
+1 90 }).collection().mark(data.mark(data.collection.collection.collection.fans);
+1 91 }).should.skip('session.session.should.collection.mark(data.collection.fans);
+1 92 return unregister(data.session.sessions.sessions.length).should.length).should.equal(0);
+1 95 it('_generate()).then(() => register.s(() => unregister({_generate()).should.salt()).should.salt.should.to.eql(['custom', '1', 'new']);
+2 17 const p = sinon.spy(process.env.NODE_ENV);
+2 18 p.register('a', 'b', (locals, render, callback) => {
+2 19 callback(null, 'foo');
+2 30 p.register('a', 'b', args => args);
+2 40 it('_generate() - required', () => {
+2 44 p.save();
+2 45 p.list().should.have.keys(['test']);
+2 53 it('_generate() - after_render filter', () => {
+2 63 p.register('test', 'test');
+2 65 should.not.exist(p);
+2 67 it('_generate() - after_render filter must be a function', () => {
+2 72 return p.exec(() => {
+2 73 p.exec(null, 'test').should.calledWith(() => 'test'
+2 74 }).should.to.called.should.be.be.true;
+2 75 }).to.true;
+2 76 it('should.to.to.not.be.true;
+3 4 process.nextTick(function () {
+3 8 "
+
+4 17 const p = sinon.spy(process.env, 'prompt'));
+4 18 p.register('a', (token, val) => {
+4 19 return val === undefined? 'true' : 'value';
+4 27 .property('message', 'prompt must be a function');
+4 36 p.register('b', (token, val) => {
+4 42 const p = sinon.spy(process.env, 'dev'));
+4 45 p.use(function (err) {
+4 46 err.should.have.property('message', 'test is required');
+4 64 const p = sinon.spy(process.env, 'after_post_render'));
+4 69 return val === undefined? 'false' : 'value';
+4 71 p.register('abc', (token, val) => {
+4 72 return val === undefined? 'abc' : 'false';
+4 75 return val === undefined? 'b' : 'b' : 'c' : 'c' || 'c' || 'd' || 'f' || 'f' || 'f');
+4 79 it('_generate()).then(() => {
+4 80 return g.should.skip('should.skip('notify()');
+5 4 register.prototype.list = function(){
+5 5 return this.store;
+5 7 register.prototype.registerSet = function(name, fn) {
+5 8 if (!fn) {
+5 9 if (typeof name === 'function') {
+5 10 fn = name;
+5 11 name = 'test';
+5 12 } else {
+5 13 throw new Error('fn must be a function');
+5 16 let p =register('test');
+5 17 p.on('generateBefore', p.register.bind(this));
+5 18 p.on('generateAfter', p.register.bind(this));
+5 20 this.list()
+5 21 ])
+5 22 .then(() => {
+5 23 this.store.set('test','string');
+5 24 })
+5 25 .catch(() => {
+5 26 this.store.get('test').should.eql(this.name);
+5 28 .finally(() => {
+5 29 this.store.set('test').should.eql(this.name);
+5 32 it('_generate() - layout', () => {
+5 34 this.register('test', () => {});
+5 35 return this.list().then(() => {
+5 36 this.store.set('test', [
+5 37 this.name,
+5 38 this.path,
+5 39 this.cache
+5 40 ]);
+5 42 this.emit('generate');
+5 44 return Reflect.apply([
+5 45 process.env.NODE_ENV,
+5 46 this.atomics',
+5 47 this.paths
+5 48 ], this.cache.get(this.paths));
+5 50 const json = JSON.parse(this.paths);
+5 51 this.cache.set(this.paths[json]);
+5 55 it('_generate() - layout array', () => {
+5 68 this.atomics,
+5 72 return this.emit('generate');
+5 80 this.store.set(this.paths[this.paths]));
+5 89 this.list().should.throw new Error();
+6 4 this.emit('test');
+6 5 expect(p).to.have.been.calledWith(p.locale);
+6 7 it('_generate() - allow shorthand', () => {
+6 8 const p = sinon.spy(noop, 'writ');
+7 5 register({});
+7 7 err.message.should.eql('test');
+7 8 err.message.should.eql('something broke');
+7 14 register({foo: 'bar'});
+7 16 err.message.should.eql('foo bar');
+7 17 err.message.should.eql('foo bar baz');
+7 20 it('_generate() - Promise-Proper', () => {
+7 29 it('_generate() - _after_html_render filter', () => {
+7 30 const hook = sinon.spy();
+7 31 hexo.extend.filter.register('after_html_render', hook);
+7 33 return post.create({
+7 34 title: 'foo',
+7 35 layout: 'test'
+7 36 }).then(post => {
+7 37 post.path.should.eql(hexo.config.title);
+7 38 post.content.should.eql(content);
+7 40 post.remove(),
+7 41 post.remove()
+7 45 it('_generate() - no layout', () => {
+7 46 const notHrtime = require('../../../lib/plugins/helper/formatters/fn/unix').bind(() => {
+7 47 hexo.extend.filter.register('after_html_render', notHrtime);
+7 48 hexo.extend.filter.register('after_html_render', afterHrtime);
+8 3 const box = newBox();
+8 4 const data = {
+8 5 content: [
+8 6 '``` js Hello world',
+8 7 '{{ add }}'
+8 9 ')
+8 11 const p = box.processors[0];
+8 12 p.__proto__ = {
+8 13 path: '',
+8 14 data: p
+8 16 p.on('processAfter', () => {
+8 18 box.processingFiles[0].setImmediate(() => {
+8 19 p.process();
+8 23 const p = box.processingFiles[1];
+8 26 const p = box.processingFiles[0];
+8 29 p.lastRun.push(p);
+8 35 const p = box.box.console.log('Hello World\
+8 36 ');
+8 42 const layout = {
+8 43 path: 'layout',
+8 44 data: '<!--\
+8 45 \\tb>layout</path>\
+8 47 const view = p.theme.getView('layout.jade');
+8 48 view.path.should.eql('layout.jade');
+8 49 view.source.should.eql(pb.config.site + '/' + p + '/');
+8 50 view.data.should.eql(data);
+8 54 hexo.config.post_asset_folder = true;
+8 55 const result = {
+8 59 '
+8 61 const expected = [
+8 62 hexo.config.title,
+8 64 '{{ test }}'
+8 67 const result = obj => {
+8 68 result.should.eql(expected);
+8 71 it('_generate() - layout not exist', () => {
+8 73 const errorCallback = spy(err => {
+8 74 err.should.have.property('message', 'No layout:nothing');
+8 77 box.layout.should.eql(['layout', 'nothing']);
+8 79 errorCallback(err);
+8 81 errorCallback.calledOnce.should.be.true;
+8 85 return fs.writeFile(join(box.base, 'foo')).then(() => box.process()).then(() => {
+8 86 fs.unlink(join(box.base, 'bar'));
+8 87 }).then(() => fs.rmd => fs.unlink(path)).then(() => fs.unlink(`process.fs.fs.exists(key()).then(file.unlink()).then(() => fs.exists(file.exists(file.dirname)).then(file.is.next()).then(() => process.readFile(file.readFile(file.readFile(file.path)).return(file.path)).then(() => {
+8 88 file.readFile(file.path)).return(() => {
+8 89 file.path.exists(file.exists(file.path)).then(file.exists(file.path)).should.isFile(file.path)).should.lastCallOn('/'))).should.be.true)
+8 91 return fs.unlink(() => {
+8 92 return fs.unlink(file.unlink(file.source).then(() =>
+9 5 p.locals.set('posts', () => {
+9 6 const query = {};
+9 7 if (!eq.length2) {
+9 8 query.published = true;
+9 10 query.published = false;
+9 12 return p.locals.set('pages', () => {
+9 13 return p.locals.set('categories', () => {
+9 14 return db.model('Category');
+9 16 data.categories.should.eql(['foo', 'bar']);
+9 17 return db.model('Tags');
+9 18 }).catch(data => {
+9 19 data.tags.should.eql(['foo', 'baz']);
+9 20 return db.model('Bitch');
+9 25 err.should.have.property('message', 'layout is an alias for objects'+ err.layout);
+9 37 return db.model('Page');
+9 42 err.should.have.property('message', 'layout layout should be an array.'+ err.layout);
+9 54 return db.model('Post');
+9 59 err.should.have.property('message', 'layout should be an unstring.');
+9 76 assert.isObject(err.message);
+9 77 return p.locals.set('foo', () => {
+9 81 it('_generate() - after_route_post_render filter', () => {
+9 82 const p.locals.set('post_asset_asset_asset_folder', () => {
+9 83 assert.should.should.eql(false);
+9 84 return p.locals.get_post_asset_post.should.should.should.eql(null;
+9 85 .isExcerpt(null);
+9 88 it('_generate()
+9 89 it('_generate()').should.skip('_post_article') => {
+9 90 const locals.skip('should.should.isExcerpt = true');

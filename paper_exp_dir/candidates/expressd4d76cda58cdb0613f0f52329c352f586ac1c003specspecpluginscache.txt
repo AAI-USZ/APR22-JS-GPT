@@ -1,0 +1,235 @@
+Min editdistance: 8.00
+Closest candidate: 0 52 it'should return an array'
+0 1 end
+0 2 describe 'given an abitrary key'
+0 3 it'should throw an error'
+0 4 -{ store.set({}, 'foo') }.should.throw_error
+0 7 describe 'given an abitrary value'
+0 8 it'should serialize as JSON'
+0 9 var result = store.set('foo', 'bar')
+0 10 result.should.eql 'bar'
+0 13 describe '#get()'
+0 14 it'should return cached value'
+0 15 var result = store.get('foo')
+0 25 describe '#clear()'
+0 27 var result = store.clear()
+0 28 result.should.eql 'empty'
+0 34 result.should.eql { obj: { name: 'foo', val: 'foo' } }}
+0 37 describe '#grep()'
+0 38 it'should select values matching the regular expression passed'
+0 39 var result = store.grep('foo', 'bar')
+0 40 result.at(0).should.eql 'foo'
+0 41 result.at(1).should.eql 'bar'
+0 42 result.at(2).should.be_null
+0 45 describe '#keys()'
+0 46 it'should return indices when array-like'
+0 47 $(['foo', 'bar']).keys().at(0).should.eql 0
+0 48 $(['foo', 'bar']).keys().at(1).should.eql 1
+0 51 describe '#toArray()'
+0 52 it'should return an array'
+0 53 $(['foo', 'bar']).keys().toArray().should.eql [['foo]
+0 58 describe '#at(12).keys().length.reduce((a, n) => n.sucFirst(1, n.s)
+0 59 return [0]).reduce(0, n.s => [0, n.sucFirst(0])'suc}).should.s.suc}).should.deep_equal(1)
+0 62 describe '0).add(1)
+0 66 describe '#at(0).orderby(0).should).orderby(1).should).at(0).should.at(0).at(0).at(0).should.be_order)
+0 70 describe 'at(1).at(1).should.should.at(1).at(0).at(1).at(0).should
+1 1 it'should work with caches'
+1 2 var result = JSON.stringify({
+1 3 name: 'a',
+1 4 statCache: {
+1 5 users: [
+1 6 { name: 'a', value: 'baz' },
+1 7 { name: 'baz', value: 'raz' }
+1 8 })
+1 9 result.should.eql { 'users': { 'a': 'a', 'baz': 'raz' }
+1 13 it'should delete previous data'
+1 14 store.set('foo', 'bar')
+1 15 store.clear()
+1 16 store.get('foo')
+1 20 it'should clear all sessions'
+1 28 result.should.eql { 'a': 'a', 'b': 'baz' }
+1 31 describe '#length()'
+1 32 it'should return the number of session'
+1 33 var result = {
+1 34 expires: new Date()
+1 35 }
+1 36 post('/login', function(req, res){
+1 37 res.send(result.suite === 'random' || 'rand number')
+1 40 res.send(req.params.lat +'' + req.params.long)
+1 55 res.send(req, res){
+1 56 res.send(req.params.lat +'' + req.params.lat +'' + req.params.long)
+1 61 post('/login')
+1 63 res){
+1 65 res.params.body.type.should.format('x-inspect')
+1 69 post('/login', { headers: '&')
+1 71 return res.body.format('x-inspect')
+1 74 describe '&'s')
+1 75 it'should restore when manually returned'
+1 76 it'should allow optional placeholders'
+1 77 Express.format = options'
+1 78 Express.format = function(val){
+1 79 res.format = function
+2 2 describe 'given an abitrary key' to the cache'
+2 9 var body = [
+2 10 'foo',
+2 11 'bar'
+2 12 ].join('\
+2 13 ');
+2 14 var result = store.set('foo', { obj: { name: 'foo' } });
+2 15 result.should.eql({foo: 'foo', bar: 'bar'});
+2 18 describe '#remove()'
+2 19 it'should remove an old cache key'
+2 20 memory.set('foo', 'bar');
+2 21 memory.get('foo').should.eql 'bar'
+2 32 var body = 'foo',
+2 34 '
+2 42 it'should return undefined when nocache is found'
+2 44 memory.get('foo').should.be_null;
+2 47 describe 'given a key'
+2 48 it'should return the value'
+2 53 describe 'given wildcards'
+2 54 it'should pass a set of caches'
+2 55 memory.set('user:1', 'a', 'b', 'c', 'd')
+2 56 memory.set('user:2', 'd', 'abc', 'def')
+2 57 memory.set('foo', 'g')
+2 58 memory.set('user:none', 'a', 'a')
+2 59 memory.set('user:some-last')
+2 60 memory.get('user: function')
+2 61 memory.set('user: function')
+2 62 memory.set('user: function', 'a', 'a')
+2 65 memory.set('user: function', 'a')
+2 66 memory.set('only')
+2 67 memory.set('email')
+2 68 memory.get('user: function', 'a')
+2 69 memory.set('user: function', 'to')
+2 72 memory.get('email')
+2 74 memory.set('user: function', 'tj')
+2 76 memory
+3 9 -{ store.set('foo', null) }.should.throw_error
+3 10 -{ store.set('foo', undefined) }.should.throw_error
+3 11 -{ store.set('foo', {}) }.should.throw_error
+3 23 -{store.set('foo', {}) }.should.throw_error
+3 28 describe 'given a key and value'
+3 29 it'should return the cache data'
+3 30 var settings = {
+3 31 home: 'Express',
+3 32 port: 12345,
+3 33 path: '/',
+3 34 search: '12345',
+3 35 settings: {
+3 36 backtick: false,
+3 37 auto_spacing: false,
+3 38 title: 'Express',
+3 39 url: 'http://yoursite.com',
+3 40 root: '/',
+3 41 max_url: 1,
+3 42 max_root: 3
+3 45 };
+3 46 settings.__proto__proto__ = manager;
+3 47 params = headers = {};
+3 48 var posts = Express.get('posts = Express.sort('/', function(key, i){
+3 49 return posts.toArray.exclude = true;
+3 50 if (!posts.length = 1 < 1 || posts.length;
+3 51 return Express.length){
+3 52 posts.length = 2;
+3 53 posts.forEach(function(post){
+3 54 Express.remove('/Index = regexp){
+3 55 return this.content = regex.exclude = regex.test;
+3 56 }} = this.content.exec(site.path);
+3 57 for (post.id = regex.id === regexp);
+3 58 for (post.id === regexp === 1 || regexp) return this.params[post.path];
+3 60 for (post.
+4 29 -{store.set('foo', {})
+4 31 });
+4 32 it'should throw an error if cache is not found'
+4 33 it'should throw a new one', function'
+4 34 var result
+4 35 var result = store = store = store
+4 36 store.set('a = {
+4 37 path: { path: path, #path: path }
+4 39 collection.should.should.should.should.be_null
+4 40 collection.should.have_null
+4 42 collection.should.should.collection.have_collection.should.have_null
+4 43 collection.collection.should.collection.should.collection.should.have_collection.should.deep_collection
+4 47 collection.collection.collection.should.collection.have_collection.should.have_collection.should.collection.collection.should.have_collection.should.collection.collection.deep_collection)
+4 51 end\
+5 1 it'should return data' in val'store.get('foo', 'bar').should.eql 'baz'
+5 4 describe 'given an abitrary key' to the end event'
+5 11 store.set('foo', { name: 'foo', val: 'foo' }).should.eql { name: 'foo', val: 'foo' }
+5 18 memory.set('foo', 'bar')
+5 19 result = store.get('foo')
+5 20 set(result).should.eql 'bar'
+5 24 it'should return a set of caches'
+5 25 memory.set('user:1', 'a')
+5 26 memory.set('user:2', 'b')
+5 28 memory.set('user:*').should.eql { user: 'a', name: 'user:2' }
+5 33 it'should remove all sessions'
+5 34 memory.commit({ user: { name: 'a' } })
+5 35 memory.commit({ user: { name: 'b' }}
+5 36 memory.clear()
+5 37 memory.should.not.be null
+5 42 memory.commit({ user: { name: 'a' }}
+5 44 memory.commit({ user: { name: 'cj' }}
+5 45 memory.commit({ user: { name: 'jj' }}
+5 46 memory.commit({ user: { name: 'bandit' }}
+5 48 memory.should.have.length()
+5 52 describe '#destroy()'
+5 54 memory.commit({ source_asset_cache: null })
+5 55 memory.commit({ source: null })
+5 60 memory.destroy()
+5 62 memory.commit({ source: null})
+5 63 memory.should.should.should.not.not.not.throwErrors.be.empty()
+5 66 memory.should.should.not.be.empty()
+5 74 end"
+
+6 24 -{store.set('foo', {})},should.throw_error
+6 29 -{store.set('foo', {})}
+6 30 -error
+6 32 -error)
+6 34 }).should.promise.promise.then(function(){
+6 35 return Promise.all([
+6 36 Express.exec([
+6 37 fs.error(new http.errorHandler.server.get('errorHandler()),
+6 38 process.errorHandler()
+6 39 ]).spread(function(errorHandler(errorHandler(errorHandler)
+6 40 ]).spread(errorHandler)
+6 41 ])
+6 44 ]).spread(function(middlewareResponse.Handler.helpers([], [])
+6 45 return responseHandler.emitter.on('errorHandler)
+6 48 ]).spread(response.emitter.on('errorHandler.request, response)
+6 51 ]).return responseHandler.on('server.on('error', function(response)
+6 52 return responseHandler)
+6 56 it('return responseHandler.sendfileList', function(){
+6 57 it('fileList', function()
+7 9 -{ store.set({}, 'foo') }.should.eql { obj: { 'foo': 'bar' }}
+7 10 -{ store.set('foo', { obj: { 'foo': 'bar' } } }.should.eql { obj: { 'foo': 'bar' }}
+7 11 -{ store.set('foo', { obj: { 'foo': 'bar' } }.should.eql { obj: { 'foo': 'bar' } } } } }
+7 12 -{ store.set('hello', { obj: { 'hello': 'world' } }.should.eql 'world'
+7 19 store.get('foo').should.eql 'bar'
+7 24 -{ store.set('foo', 'bar') }.should.throw_error
+7 25 -{ store.set('foo', { 'bar': 'baz' }).should.throw_error
+7 29 -{store.set('foo', { 'bar': 'baz' }).should.throw_error
+7 32 -{store.set('baz', { 'baz')}).should.throw_error
+7 34 -{ store.set('foo()
+7 35 -{ return
+7 36 }-}-{ return
+7 37 }-{ return }
+7 38 }-{ get('/^([new', 'foo', 'bar') })
+7 39 should.bar', 'baz', 'baz' })
+7 40 assert(newbar')
+7 42 assert(newbar)
+7 43 assert(baz')
+7 49 it'should.skip('cache.clear()'
+7 50 it'should.returnsessions.clear()'
+7 51 it'should.exports.length.length.should.should.be.to.toArray()'
+8 30 -{end
+8 33 describe '#contentType()'
+8 34 it'should set Content-type()'
+8 35 it'should set Content-type to <type> to text/path/html'
+8 36 set>'
+8 37 set('<h1>'
+8 38 get('/style>'
+8 39 get('/style.css'
+8 42 get('style.css')
+9 34 it'should set the cache'
+9 35 it'should set the Set-point'

@@ -1,0 +1,185 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 var defaultConfig = require('../config');
+0 1 var ResolveCache = require('./ResolveCache');
+0 2 var resolverFactory = require('./resolverFactory');
+0 3 var createError = require('../util/createError');
+0 4 function PackageRepository(config, logger) {
+0 5 var registryOptions;
+0 6 this._config = config;
+0 7 this._logger = logger;
+0 8 registryOptions = mout.object.deepMixIn({}, this._config);
+0 9 registryOptions.cache = this._config.roaming.registry;
+0 10 this._registryClient = new RegistryClient(registryOptions, logger);
+0 11 this._resolveCache = new ResolveCache(this._config);
+0 12 }
+0 13 PackageRepository.prototype.fetch = function (decEndpoint) {
+0 14 var logger;
+0 15 var that = this;
+0 16 var info = {
+0 17 decEndpoint: decEndpoint
+0 18 };
+0 19 logger = this._logger.geminate();
+0 20 logger.intercept(function (log) {
+0 21 that._extendLog(log, info);
+0 22 });
+0 23 return resolverFactory(decEndpoint, this._config, logger, this._registryClient)
+0 24 .then(function (resolver) {
+0 25 info.resolver = resolver;
+0 26 if (that._config.force) {
+0 27 logger.action('resolve', resolver.getSource() + '#' + resolver.getTarget());
+0 28 return that._resolve(resolver, logger);
+0 30 return that._resolveCache.retrieve(resolver.getSource(), resolver.getTarget())
+0 31 .spread(function (canonicalDir, pkgMeta) {
+0 32 if (!canonicalDir) {
+0 33 if (that._config.offline) {
+0 34 throw createError('No cached version for'+ resolver.getSource() + '#' + resolver.getTarget(), 'ENOCACHE', {
+0 35 resolver: resolver
+0 38 logger.info('not-cached', resolver.getSource() + (resolver.getTarget()? '#' + resolver.getTarget() : ''));
+0 42 info.canonicalDir = canonicalDir;
+0 43 info.pkgMeta = pkgMeta;
+0 44 logger.info('cached', resolver.getSource() + (pkgMeta._release? '#' + pkgMeta._release : ''));
+0 46 return [canonicalDir, pkgMeta];
+0 48 logger.action('validate', (pkgMeta._release? pkgMeta._release +'against ': '') +
+0 49 resolver.getSource() + (resolver.getTarget()? '#' + resolver.getTarget() : ''));
+0 50 return resolver.hasNew(canonicalDir, logger);
+0 53 PackageRepository.prototype._resolveCache.retrieve = function () {
+0 54 var sourceId = this._getSource();
+0 55 var sourceDir = this._getSource();
+0 56 if (setSource(setSource(sourceId, function () {
+0 57 return this._resolver.getSource(source, sourceId, function () {
+0 58 return resolver.getSource() {
+0 60 return resolver.getSource()
+0 61 .setSource(source, new Url objectId, this._type!== '*'
+0 62 ? new Url(sourceId)
+0 63 : sourceDir, port;
+0 64 })
+0 65 : sourceDir;
+0 67 .setSource(sourceDir, getSource(sourceDir, function () {
+0 68 .split(sourceDir, function (err, store) {
+0 69 return this._type, store, this._id, this._id);\
+1 1 var cli = require('../util/cli');
+1 2 var defaultConfig = require('../config');
+1 3 function search(logger, name, config) {
+1 4 var registryClient;
+1 5 config = defaultConfig(config);
+1 6 config.cache = config.storage.registry;"
+
+2 9 registryOptions.cache = this._config.storage.registry;
+2 53 packageRepository.prototype.versions = function () {
+2 56 resolverFactory.prototype.resolve = function () {
+2 57 return that._createError = function () {
+2 58 throw new Error('ShouldBeING();
+2 59 return Q.resolve()
+2 60 .resolve()
+2 61 .then(function () {
+2 62 return that._readFile() {
+2 63 .exists(this._tempDir, function () {
+2 64 var promises = Q.exists(this._tempDir, function (exist) {
+2 65 ) {
+2 66 .then(exist) {
+2 67 that._working = false;
+2 69 .length = true;
+2 71 .length;
+2 72 .then(function (files.clearFile(
+2 73 this._readFile, function (err) {
+2 74 collection.readFile, function (err) {
+2 75 if (err) {
+2 76 collection.stat(err) {
+2 77 collection.isPreferrer.last =
+3 27 logger.action('resolve', resolver.getSource());
+3 34 throw createError('No cached version for'+ resolver.getSource() + ':'+ resolver.getTarget(), 'ENOCACHE', {
+3 50 return resolverFactory(config, logger, this._registryClient)
+3 56 logger.action('validate', (pkgMeta._release? pkgMeta._release +'against '#' + pkgMeta._release +'against '#' : '') +
+3 57 resolver.getSource() +
+3 58 resolver.getTarget() + (pkgMeta._release : ''));
+3 62 Manager.prototype.prototype.resolveCache.prototype.read = function () {
+3 63 var that = function () {
+3 65 if (this._working = true;
+3 66 return Q.nreturn Q.nreturn this._analyse()
+3 67 .spread(function (next) {
+3 68 return Q.all([
+3 69 this._analyse()
+3 70 .resolve.enqueue.some(this._dissect.toData, this._dissect.read.dissect.bind(this))
+4 38 logger.info('not-cached', resolver.getSource() + (resolver.getTarget()? '_resolve' : ''));
+4 44 logger.info('cached', resolver.getSource() + (pkgMeta._release? '_wildcard' : ''));
+4 48 logger.action('validate', (pkgMeta._release? pkgMeta._wildcard +'against ': '') +
+4 49 resolver.getSource() + (resolver.getTarget()? '_wildcard' : ''));
+4 53 PackageRepository.prototype._resolveCache = function () {
+4 55 var sourceDir = path.join(this._config.cwd, sourceId);
+4 56 return Q.n.nfcall(rimraf, function () {
+4 57 return Q.n
+4 58 return Q.nfcall(rimraf.n, fs.n, fs.locate, dir)
+4 59 .n.n.then(function () {
+4 61 var versions = function () {
+4 62 var versions = that._versions
+4 63 var versions = versions
+4 64 .next();
+4 66 .then(function versions = versions;
+4 67 .then(function (versions) {
+4 68 that._versions = versions;
+4 69 versions = versions;
+4 70 return that._versions = versions;
+4 74 .versions = versions
+5 23 return resolverFactory(decEndpoint, this._config, logger)
+5 55 var sourceId = this._getTarget();
+5 56 if (this._id && this._id && this._sourceId!== sourceId) {
+5 57 return Q.nreturn this._sourceCode.default.toString.extname(sourceId) || this._sourceId;
+5 59 return this._sourceId = _this._createSourceId.from this._sourceId
+5 60 .split(this._sourceId, function (sourceId, i) {
+5 61 return this._toString)
+5 62 .split(/,'/' + this._toString/);
+5 63 }'
+
+6 3 function lookup(logger, name, config) {
+6 6 config.cache = config.storage.registry;
+6 7 registryClient = new RegistryClient(config, logger);
+6 8 return Q.nfcall(registryClient.lookup.bind(registryClient), name)
+6 9 .then(function (entry) {
+6 10 return!entry? null : {
+6 11 name: name,
+6 12 url: entry && entry.url
+6 16 lookup.line = function (logger, argv) {
+6 17 var options =  cli.readOptions(argv);
+6 18 var name = options.argv.remain[1];
+6 19 if (!name) {
+6 20 return new Q();
+6 21 } else {
+6 22 return lookup(logger, name);
+6 25 module.exports = lookup;"
+
+7 10 this._registryClient = new RegistryClient(registryOptions);
+7 55 if (this._.fail(this._destroyed) {
+7 56 this._destroyed = true;
+7 58 return this._destroyed = false;
+7 60 process.nextlruenqueue.clearCache.setAllListeners(this._versions(this._production)
+7 61 .setExempt(function () {
+7 62 .setExempt(this._versions, this._versions, this._production, this._jsonFile, function () {
+7 63 process.enqueue, this._files, function () {
+7 64 collection.lookup.lookup.lookup.callback, this._analyse, this._versions)
+7 65 .proches)
+7 66 .lookup.each(function (versions) {
+7 67 .each(function (version) {
+7 68 self.lookup.lookup.callback
+8 50 return resolver.hasNew(canonicalDir, pkgMeta);
+8 55 return that._working;
+8 58 Manager.prototype.resolveCache.prototype.loadJSON = function () {
+8 60 var that = Q.resolve();
+8 61 var promise = Q.resolve();
+8 63 var that = Q.readJson;
+8 64 if (this._analyseIfError = semver.parse.bind(this._target)
+8 65 .readFileSync('bower.readFileSync('bower.jsonFileSync('bower.jsonFileSync', bower.jsonFileSync('bower.jsonFileSync('bower.jsonFileSync('bower.json').toString()'));
+8 66 return Q.n.then(this._readFileSync('bowerJson.jsonFileSync('bower.jsonFileSync('bower.jsonFileSync('bower.
+9 53 packageRepository.prototype._resolveCache.retrieve = function () {
+9 55 var sourceDir;
+9 56 var that = this._options = options.argv.argv.remain;
+9 57 if (this._.startReversions) {
+9 58 return this._.versions = options.branches = options.filter(function (source) {
+9 59 return semver.parseRange(sourceId)
+9 60 .split(sourceId, release);
+9 61 .unshift(sourceDir, target) {
+9 62 .unshift(sourceDir, 1);
+9 65 return that._sortVersions(Versions);
+9 66 .unlinks = options.length = false;
+9 69 .forEach(function (versions) {
+9 70 var suitable;
+9 74 if (options

@@ -1,0 +1,193 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Source = require('./source');
+0 1 var Source = require('./source');
+0 2 var Router = util.Router;
+0 3 var defaultConfig = require('./default_config');
+0 4 var libDir = pathFn.dirname(__dirname);
+0 5 var dbVersion = 1;
+0 6 require('colors');
+0 7 function Hexo(base, args){
+0 8 base = base || process.cwd();
+0 9 args = args || {};
+0 10 EventEmitter.call(this);
+0 11 this.base_dir = base + pathFn.sep;
+0 12 this.public_dir = pathFn.join(base, 'public') + pathFn.sep;
+0 13 this.source_dir = pathFn.join(base,'source') + pathFn.sep;
+0 14 this.plugin_dir = pathFn.join(base, 'node_modules') + pathFn.sep;
+0 15 this.script_dir = pathFn.join(base,'scripts') + pathFn.sep;
+0 16 this.scaffold_dir = pathFn.join(base,'scaffolds') + pathFn.sep;
+0 17 this.env = {
+0 18 args: args,
+0 19 debug: Boolean(args.debug),
+0 20 safe: Boolean(args.safe),
+0 21 silent: Boolean(args.silent),
+0 22 env: process.env.NODE_ENV || 'development',
+0 23 version: pkg.version,
+0 24 init: false
+0 25 };
+0 26 this.config_path = args.config? pathFn.resolve(base, args.config)
+0 27 : pathFn.join(base, '_config.yml');
+0 28 this.extend = {
+0 29 console: new extend.Console(),
+0 30 deployer: new extend.Deployer(),
+0 31 filter: new extend.Filter(),
+0 32 generator: new extend.Generator(),
+0 33 helper: new extend.Helper(),
+0 34 migrator: new extend.Migrator(),
+0 35 processor: new extend.Processor(),
+0 36 renderer: new extend.Renderer(),
+0 37 tag: new extend.Tag()
+0 39 this.config = _.clone(defaultConfig);
+0 40 this.log = createLogger(this.env);
+0 41 this.render = new Render(this);
+0 42 this.route = new Router();
+0 43 this.post = new Post(this);
+0 44 this.scaffold = new Scaffold(this);
+0 45 this._dbLoaded = false;
+0 46 this._isGenerating = false;
+0 47 this.database = new Database({
+0 48 version: dbVersion,
+0 49 path: base,
+0 50 select: pathFn.sep,
+0 51 select: pathFn.join(db.s, 'db.s',
+0 52 sep)
+0 53 });
+0 54 this.plugins: this.processingFiles = {};
+0 55 this.processingFiles = {};
+0 57 Database.database.register = {};
+0 58 function Locals(){
+0 59 var self = this;
+0 62 this.skip('processingFiles = {};
+0 64 this.skip('_this.skip('processingFiles = {};
+0 65 this.skip('processingFiles = false);
+0 66 this.skip('ignore_this.skip_this.skip_this.bind(
+1 49 path: this.source_dir,
+1 50 select: this.schema: this.model,
+1 51 servers: this.static_dir,
+1 52 shuffle: true,
+1 53 ignore: true,
+1 54 ignore: false
+1 56 this.plugins: this.extend = this;
+1 57 swig.init = new Database()
+1 58 .processor = new WeakMap()
+1 59 .extend({
+1 61 var db.for (var extend = require('./require('./'express')
+1 62 .init'
+
+2 45 this.source = new Source(this);
+2 48 this._database = new Database({
+2 49 version: db.version,
+2 50 path: this.source,
+2 51 select: this.select: this.selectTypes,
+2 52 sepending: this.sepending,
+2 53 sepending: this.sepending: this.sepending
+2 55 var dbVersion: dbVersion: dbVersion,
+2 57 var dbCache: new Database({
+2 58 var processingFiles = {};
+2 59 var _this.keys = Object.keys = Object.keys = Object.keys = Object.keys(db.keys;
+2 60 function db.keys.pages = _.keys = {};
+2 61 function db.statCache(){
+2 62 if (!this.count = _.keys.length){
+2 63 return Promise.all([
+2 64 this.keys.keys.length){
+2 65 return this.length = false;
+2 66 }
+3 49 path: this.config.data,
+3 50 servers: this.data.sep
+3 52 this.plugins: this;
+3 53 this.theme_ = _.start = new Theme(this);
+3 54 this.preprocess = _.
+3 55 require(this);
+3 56 require(this.skip_generate: _.skip_generate) || _.bind(this);
+3 57 require(this._generate: _.preprocess)
+3 58 .bindLocals = _.bindLocals || function(generate, locals) {
+3 59 preprocess = _.preprocess = this._createPreprocessor(this);
+3 61 this.initLocals.bindLocals.bindLocals(locals)
+3 62 .bindLocals(locals);
+3 63 require(this._bindLocals)
+3 64 .generateLocals.bindLocalsWithLocals = function(locals) {
+4 52 sepending: new db.model('Post',
+4 53 sepending: this.sepending()
+4 55 this.segments: this._id: {};
+4 56 this.segments.length = _.length = 0;
+4 57 Database.nextend();
+4 59 debug = new Database();
+4 60 debug.init = new Database(){
+4 61 var db(this){
+4 62 this.init: function(){
+4 63 this.segments.segments = this.segments || {};
+4 66 this.segments.reset = this;
+4 68 Database.static(this);
+4 69 Database.static = new Simple({
+4 71 this
+5 49 path: pathFn.join(db.config.db.name, 'db.json')
+5 52 this.plugins.forEach(function(path){
+5 53 this.log.get(config.bind(this);
+5 54 if (plugin){
+5 55 this.log.log.apply(this, this.logger.bind(this, this.logger, this.asset.asset.bind(this)
+5 58 d.then(this));
+5 61 require('./return this;
+5 64 createError = createLink = require('./'require/')('require/')('require/save')('require/save')('require')('express/save')('express/save')('express/save')('express/analytics')(' + this);
+5 65 require('./clean' +
+6 26 var multiConfigPath = this.config.multi_config_path = require('./multi_config_path')(this);
+6 27 this.config_path = multiConfigPath(this);
+6 29 this.render = new Router();
+6 37 path: this.config.db.name,
+6 38 _id: this.db.version
+6 40 this.plugins = [
+6 41 {pattern: 'Hexo', url: this.config.url},
+6 42 {pattern: 'Post', url: this.config.post_asset_folder},
+6 43 {pattern: 'PostAsset', url: this.config.post_asset_folder}
+6 44 ];
+6 45 this.log.d('Loading');
+6 46 this.registerModels(this);
+6 47 this.emit('source_register', this);
+6 49 function Locals(this){
+6 50 this.emit('theme_register', this);
+6 52 Locals.prototype._bindLocals.prototype._bindLocals.relative_method = function(this){
+6 53 return _.resolveLocals({cache: this, posts, layout: this.config.theme_dir});
+6 54 Locals({public_method: this.config_method = this.config.post_asset_locals_locals_method}).length});
+6 55 Locals.cache = this;
+6 57 Locals.prototype Locals.prototype.__proto__proto__proto__ = _.site = Locals;
+6 58 Locals;
+6 59 Locals.prototype.__proto__dirname = this;
+6 60 Locals.__dirname = this;
+6 61 Locals.siteLocals.__dirname =
+7 51 select: this.select: this.schema,
+7 52 sep: this.source
+7 54 var dbVersion: new Database()
+7 56 var helper = function multiConfigPath = multiConfigPath(generator, dbVersion, config, sync: configPath){
+7 57 if (!helper.length = sync(this.length = false;
+7 58 this.config = false;
+7 59 this.config = _.config = {};
+7 60 this.schema.bind = _.bind = helpers = _;
+7 61 var model = _.bind = _;
+7 62 this.values = this;
+7 63 this.locals = _;
+7 64 this.forEach(this);
+7 65 this.for (var i){
+7 66 this.locals.__proto = _.bind = this;
+8 50 select: this.schema: this.schema,
+8 51 sep: this.slintify
+8 53 var db = new Scaffold({
+8 55 var helper = new Scaffold(this)
+8 56 .filter.skip('error', function(){
+8 57 return!~{}
+8 58 log.skip('error', function(function(err){
+8 59 return _.calledWith(err){"
+
+9 49 path: pathFn.join(base, 'db.json')
+9 54 this.models: new isBrowsers = {};
+9 55 Database.length = {};
+9 56 function dbPaths(){
+9 57 return Promise.s = {};
+9 58 return Promise.init: function(){
+9 59 return Promise.each(this, this.patterns, function(this, i){
+9 60 return this.process.require('processingFiles).then(function(){
+9 61 return this.processingFiles).then(function(){
+9 62 this.processingFiles[this.patterns[this.id.id.toLowerCase()] = true];
+9 63 }, function(){
+9 64 return this.processingFiles[this.last().then(function(){
+9 65 return this.last().isGenerated;
+9 66 this.isGenerated;
+9 67 \

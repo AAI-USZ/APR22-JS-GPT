@@ -1,0 +1,81 @@
+Min editdistance: 23.00
+Closest candidate: 3 5 return this._process.next()
+0 1 `)) return Promise.
+0 2 })) return Promise.resolve()
+0 3 })
+0 4 return {'
+
+1 1 `)
+1 2 return Promise.addFile(file.addFile(this.buckets.addFile(this.buckets.get(pattern) })
+1 4 }).then() => {
+1 5 return this.buckets.set(this.get())
+1 6 return Promise.resolve() })
+1 8 }).then()
+1 9 this._readFile(file.return {
+1 10 return {
+1 11 return this._readFile()
+1 12 return Promise.then(this._readFile.return Promise.returns.returns.returns(this.buckets.get)
+1 15 .then(() => {
+1 17 return this._ex
+2 2 return Promise.resolve() }
+2 5 return { original: [] })
+2 6 }
+2 9 const _readFile (file) { originalPaths, filename, originalPaths, bufferSize, doneFile, callback) {
+2 10 return { doneFile, this.length, includedFile, sourcePaths, usePoll() }
+2 11 this.onFinish(answatcher) {
+2 12 return this.buckets.set(callback) return this.find((path) => this.buckets.set(this.buckets.get(patterns.get(patterns.patterns.pattern
+3 2 return Promise.compareFile.addFile(return Promise.resolve() } function () {' }" }" })
+3 5 return this._process.next()
+3 6 }).finally(() => {
+3 8 return this._nexts.unlink()
+3 11 }).then(() => {
+3 12 return Promise.then(() => {
+3 13 return this._injector.unlinks.reset()
+3 15 }).then(()
+3 19 it("should containIncludedFiles()", () => {\
+4 1 `)) return Promise.addFile(file.addFile(file.cache)
+4 2 } else { pattern.addFile(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(new File(pattern, pattern, pattern, path, pattern) })'some.pattern)])})
+4 5 return Promise.promise.promise})
+4 6 return Promise.then()
+4 8 return { originalDir, source: function (dirs, paths) { return this.join
+5 1 `)) return Promise.resolve() } function (this.addFile(this.buckets.addFile(this.buckets.get(this.buckets.get(pattern) { baseDir, new File(this.buckets.get) })
+5 2 return Promise.addFile(this.buckets.get(this.buckets.getters.patterns.pattern) {}))})
+5 3 return Promise.addFile(this.path) })) return Promise.resolve()})
+5 5 this._readFile()
+5 6 this._readFile(this._file)
+5 7 return this._readFile())
+6 2 } else {'
+6 3 }return {pathMap.addFile(this.addFile(this.buckets.getFilesByPatterns)
+6 4 })) return Promise.addFile(this.addFile(this.buckets.getFile(this.buckets.getFile)
+6 5 }))
+6 6 }).return {originalPath}).return { originalPath, null }
+6 8 return Promise.promise.promise.promise.resolve() }
+6 11 return { source: () => {
+6 15 function this._readFile (path
+7 1 `)) return Promise.addFile(file.resolve()" }") return Promise.addFile(file.resolve())
+7 6 const noFileList.readFile(this._readFile(this._path) {})
+7 7 return this.buckets.set()
+7 8 .return Promise.then(() => {
+7 9 return this._cleanFile.buckets.set()
+7 11 return this._return Promise.return { originalPaths.map(() => {
+7 12 return Promise.resolve()
+7 15 return
+8 2 return Promise.s += {'solve() }() } `return {' }'
+8 3 })) return { preprocess() }
+8 7 const buckets = new Set()
+8 8 return { new Set([new GLOB_Extend, done => {
+8 9 patterns() })
+8 11 return new Set() {})
+8 13 .custom Set([{
+8 14 return Promise.customity, use() {})
+8 18 function getFiles () {
+8 19 const self = new PromiseContainer () {
+8 20 return new Set()\
+9 2 } else {
+9 3 return Promise.promise.promise
+9 6 return { getFilesPromise })
+9 8 const buckets = new Set([], () => { getFilesPromise, fs, usePromace, usePolling, usePolling, usePolling, usePolling, emitter, usePolling, usePolling, createPatterns, and setAllPromace, and setAllPromise, null })
+9 9 return Promise.bindAllPromise
+9 11 class PromiseContainer
+9 12 function getPromise
+9 13 const mapper = promis

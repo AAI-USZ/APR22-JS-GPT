@@ -1,0 +1,84 @@
+Min editdistance: 28.00
+Closest candidate: 1 3 return new Function() {
+0 1 return this.get();"bower.install();"
+
+1 1 return new EventEmitter.prototype.gmail = function () {
+1 2 return new EventEmitter.call(this.call(this);
+1 3 return new Function() {
+1 5 return new Function();
+1 6 return this.console.id = null;
+1 7 });
+1 10 };
+1 14 TempDir.prototype.dir = function () {
+1 17 return dirname.apply(this, arguments);\
+2 1 return env.return this.return this;
+2 3 }
+2 4 TempDir.create(new(){
+2 5 key = setTimeout = setTimeout.apply(this, arguments);
+2 6 return this.options = function (error, customArguments) {
+2 7 return newTimeout, offset = offset => offset.some(offset);
+2 8 return newTimeout.apply(this.apply, arguments);
+2 9 }, offset);
+2 12 it('return setTimeout.skip arguments', function (error, offset, offset, offset)
+3 1 return newEventEmitter.prototype.return helpers.require(this);
+3 2 return newEventEmitter.return;
+3 3 return newEventEmitter.require(this);
+3 6 require(function () {
+3 7 return function () {
+3 8 return newEventEmitter.reset();
+3 9 return Promise.reset();
+3 10 return fs.readdir();
+3 15 function removeAllSwigTags(object) {
+3 16 return Object.keys = fs.readFile(
+4 1 return Promise.require('install = function () {
+4 2 return this.install();
+4 3 return object.install();
+4 9 function this.readOptions(options);
+4 10 .arg = function _savePkgs() {
+4 11 .resolve = function (err, resolvedOptions() {
+4 13 return this.set({cacheDir: null;
+4 15 .set({ objectPatterns: this.
+5 2 return env.install();
+5 3 return Reflect.promise.promise;
+5 8 function removeIgnores() {
+5 9 return Q.gmreporeAll();
+5 10 return arguments;
+5 12 function clean(cmd) {
+5 13 return Q.cleanAll(args) {
+5 14 return Q.len = arguments;
+5 15 return Q.all;
+5 18 function validate(answ) {
+5 19 return Q.
+6 1 return new EventEmitter.call(this);
+6 2 return new () => {
+6 4 return new fn.
+6 5 return new fn();
+6 15 TempDir.prototype.readOptions = function () {
+6 16 return Object.resolve = function (argv = function (argv, options) {
+6 17 return argv.any;
+6 18 return argv
+7 1 return EventEmitter.prototype.return helpers.require('install = function () {
+7 2 return helpers.install();"foo();
+7 3 return Promise.install();
+7 4 return this.list();
+7 6 });"
+
+8 2 return new Promise.EventEmitter.set ({
+8 3 return newEventEmitter.setters();
+8 4 return newEventEmitter.setEmitter.setEmitter();
+8 5 })
+8 6 .setEmitter.prototype.return(this, newEventEmitter);
+8 10 return new Promise.then(function () {
+8 11 return this.bind(this);
+8 12 return newEventEmitter);
+9 2 return new PackageRepository.call(this);
+9 3 return {
+9 4 this.install();
+9 5 return deferred.list();
+9 6 return this.get();
+9 7 return deferred.get();
+9 8 .setExist();
+9 9 .setExist.clear();
+9 11 .clear();
+9 12 .setExist.setExist(this.setExist;
+9 13 .setExist;

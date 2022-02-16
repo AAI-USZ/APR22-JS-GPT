@@ -1,0 +1,26 @@
+Min editdistance: 59.00
+Closest candidate: 7 13 res.status(404).end('404 Not Found');
+0 1 "
+3 1 "
+
+4 1 ')('express:\
+4 2   app started on port 3000');"
+6 1 ')('express:static', function(req, res){
+6 2 res.status(500).send('users'+ names.slice(from, to).join(', '));
+6 3 });"
+
+7 1 ')('express:user', function(){
+7 2 it('should start the server and watch for all the users', function(done){
+7 3 var app = express()
+7 4 , calls = 0;
+7 5 app.use(function(req, res){
+7 6 res.status(500).end('WahAHa');
+7 7 });
+7 8 app.listen(3000);
+7 9 console.log('Express started on port 3000');
+7 10 })
+7 11 }, function(){
+7 13 res.status(404).end('404 Not Found');
+7 15 app.listen(3001);
+7 16 console.log('Express started on port 3000');"
+

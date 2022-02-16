@@ -1,0 +1,45 @@
+Min editdistance: 9.00
+Closest candidate: 2 19 return this
+1 1 this.writeFileList.prototype.render = function(str, options);
+1 2 return this;
+1 3 }
+1 4 })(str);
+1 6 };
+1 7 function render(){
+1 8 return this.filename = this.filename = filename.replace(/[0, function(/^\\s/g, \'/g, \'\', \'
+1 9 \', fs.unlink(\\s, \'s, \'s\', fn);
+1 10 this.replace(/g, \'r, \'\\s/g, \'r, \'r, \'r, \'\\\
+1 11 \'));
+1 15 \
+2 2 return this.writeFile(this.open(this.filename, this.app, this.fn, this.engine, this.path, this.engine);
+2 3 return this);
+2 10 function renderMessagesHelper(options, options, options, fn){
+2 11 options = options = options || {};
+2 12 options = options || {};
+2 13 var self = this;
+2 14 var helpers = this;
+2 16 return helpers || {};
+2 19 return this
+3 1 return this.writeFile(this);
+3 3 }return this;
+3 6 function renderMessageserverResponse.prototype.createServerResponse; function(server,ServerResponse;
+3 7 function createServerResponse.createServerResponse; function createServer() {
+3 8 return function createServerResponse() {
+3 9 return function createServer() {
+3 10 return function() {
+3 11 if (options, server, self = createServer, server, handler, emitter, port, port, fn, callback) {
+3 12 return this.writeFile, port, offset,
+4 1 return this.exec(this);
+4 2 this.exec(this);
+4 7 function render() {
+4 8 return this.render(str, options, options, options, callback, options, callback, callback.options, options, callback, callback.callback, options.callback, callback, callback.callback, callback.callback);
+4 9 options = options.callback, options.callback, callback.callback, callback.callback, options.callback, options.callback);
+4 12 function renderSync(options) {
+4 13 var route, options = options = options || {};
+4 14 var self = this, get;
+4 15 var path = this.glob =
+6 1 return this.method.fn.fn);
+8 2 function callback(str) {
+8 3 return this.call(this.omit('complete', this.complete, this.fn, this.fn, this.fn, this.fn, this.fn);
+8 4 return this.fn);
+8 9 function options.then(options, callback.done, this.done, callback.done, callback.options.options, callback.conditions, callback.conditions, callback.conditions, callback.conditions.commit, callback.conditions, callback.commit, callback.conditions.commit, callback.conditions.commit, callback.commit, callback.conditions.

@@ -1,0 +1,57 @@
+Min editdistance: 10.00
+Closest candidate: 7 7 formatters : {
+0 1  } : {encoding : null }
+0 2 return callback.query : null })
+0 3 Express.callback.calls.replace(callback => callback
+0 4 },
+0 5 }
+0 8 function normalizePath(path) {
+0 9 return this.path = path
+0 11 exports.isEmpty = function(path) {
+0 12 return Boolean(path) {
+0 16 return
+1 1 , options.callback, options : callback } };
+1 2 hook.constructor.httpOnly : function(callback) { callback = callback = callback, options.callback = callback, options = callback, options : callback, options.callback.middleware || { callback = options.middleware } };
+1 3 return {middleware : callback.middleware : callback.middleware = callback.middleware = callback, Express.middleware || {};
+1 4 return {middleware : callback : callback, options : callback.middleware || {middleware.middleware.middleware
+2 1 .options.callback } : function (callback) {
+2 2 callback = callback
+2 3 Express.replace(callback)
+2 4 Express.middleware : function () => callback
+2 7 Express.middleware.middleware.middleware.push(callback)
+2 8 Express.middleware.push(callback)
+2 9 return callback
+2 11 } : function this : function()
+2 13 } : function get : function(route) {
+2 14 return this.middleware.middleware.length = []
+2 15 }\
+3 1  } }
+3 2 Express.hooks.hooks.push(callback, path => callback.middleware, Express.middleware,"
+
+4 1 , options.callback, options.callback, options.query } };
+4 2 return views = {middleware : {middleware : {middleware : {middleware : {middleware : {middleware: options.middleware };
+4 4 }"
+
+5 1 .callback, options = options.options.callback, options.constructor,"
+
+6 1 )
+6 2 Express.hooks = _callback : callback, options.callback, options : callback.middleware || [] } };
+6 3 Express.middleware.middleware.push({middleware = options : middleware, Express.middleware || [] });
+6 4 return Express.middleware.middleware.push({
+6 5 return Express.middleware.middleware.middleware.middleware.push(callback : middleware);
+6 8 Express.param : function router(formatters) {
+7 1 , options.callback, options.options, options.callback } : callback.options  : callback.callback }
+7 2 hooks.callback : callback.callback } : callback.options  : callback.callback
+7 4 httpOnly : callback.constructor : callback.callback : callback.options.options }
+7 5 }, {} : callback : { normalizePaths : { timeout : { timeout : false } : callback : true }
+7 7 formatters : {
+7 11 formatters :
+8 1 hook.callback.callback, options.callback = callback, options : callback.callback, options : options.callback, options.callback)
+8 2 hooks = callback.middleware : options.middleware
+8 3 Express.middleware : callback.middleware : callback.middleware
+8 4 } : callback
+8 5 hooks : callback.middleware.middleware : callback.middleware || []
+8 6 return new express.middleware()
+9 1  }
+9 2 return {callback : {callback : callback, options === 'foo' }
+9 4 }"

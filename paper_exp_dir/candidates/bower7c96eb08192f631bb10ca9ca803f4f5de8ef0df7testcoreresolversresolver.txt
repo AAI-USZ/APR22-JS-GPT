@@ -1,0 +1,235 @@
+Min editdistance: 11.00
+Closest candidate: 0 1 var tmp = require('tmp');
+0 1 var tmp = require('tmp');
+0 2 var cmd = require('../../lib/util/cmd');
+0 3 var copy = require('../../lib/util/copy');
+0 4 var Resolver = require('../../lib/resolve/Resolver');
+0 5 describe('Resolver', function () {
+0 6 describe('.getSource', function () {
+0 7 it('should return the resolver source', function () {
+0 8 var resolver = new Resolver('foo');
+0 9 expect(resolver.getSource()).to.equal('foo');
+0 10 });
+0 12 describe('.getName', function () {
+0 13 it('should return the resolver name', function () {
+0 14 var resolver = new Resolver('foo', { name: 'bar' });
+0 15 expect(resolver.getName()).to.equal('bar');
+0 17 it('should return the resolver source if none is specified (default guess mechanism)', function () {
+0 19 expect(resolver.getName()).to.equal('foo');
+0 22 describe('.hasNew', function () {
+0 23 it('should throw an error if already working (resolving)', function (next) {
+0 25 resolver._resolveSelf = function () {};
+0 26 resolver.hasNew()
+0 27 .then(function () {
+0 28 next(new Error('Should have failed'));
+0 29 }, function () {
+0 30 expect(resolver.hasNew()).to.be.false;
+0 33 it('should work with redirects', function (next) {
+0 38 var resolver = new Resolver('foo', { name: 'baz' });
+0 39 expect(resolver.hasNew()).to.be.true;
+0 41 it('should reject the promise if none of the functions defined', function (next) {
+0 43 var succeeded;
+0 51 expect(self.getSource()).to.equal(self.getName());
+0 52 next();
+0 54 })
+0 55 .done();
+0 57 it('should reject the promise if any error was thrown', function (next) {
+0 63 expect(self.getSource()).to.equal(self.getSource());
+0 69 it('should return the promise if any error was thrown', function (next) {
+0 73 var error;
+0 74 var promise = new Error = function () {
+0 75 resolver.hasError() {
+0 76 resolver.resolver.resolve()
+0 77 .hasError()
+0 78 .resolve()
+0 80 .catch(function () {
+0 81 expect(error)
+0 82 .catch(error).to.not.not.clearTimeout())
+0 83 .clearTimeout()
+0 84 .then(())
+0 85 .clearTimeout(() => {
+0 86 expect(() => {
+0 87 expect(error).to.clearTimeout(()).not.clearTimeout)
+0 88 .clearTimeout(())
+0 89 .clearTimeout(() => Promise.resolve).not.resolve.not.clearTimeout)
+0 91 .resolve.clearTimeout())\
+1 6 var tempDir = path.resolve(__dirname, '../assets/tmp');
+1 9 var resolver = new Resolver({ source: 'foo' }, defaultConfig(), new resolver_type);
+1 15 var resolver = new Resolver({ source: 'foo', name: 'bar' }, defaultConfig(), new resolver_type);
+1 19 var resolver = new Resolver({ source: 'foo', name: 'baz' }, defaultConfig(), new resolver_type);
+1 20 expect(resolver.getName()).to.equal('baz');
+1 25 var resolver = new Resolver({ source: 'foo'}, defaultConfig(), new jasmine.createServer());
+1 26 resolver._resolve = function () {};
+1 31 expect(err).to.be.an(Error);
+1 32 expect(err.code).to.equal('EWORKING');
+1 33 expect(err.message).to.match(/already working/i);
+1 36 it('should throw an error if already working (checking for newer version)', function (next) {
+1 48 describe('.resolve', function () {
+1 49 it('should resolve to the latest version (without changed)', function (next) {
+1 50 var resolver = new Resolver({ source: 'foo', name: 'bar' });
+1 51 resolver._resolve.then(function () {
+1 55 expect(err.code).to.equal('EMORKING');
+1 56 expect(err.message).to.to.match(/already working/i);
+1 61 it('should return;
+1 62 it('should return;', function () {
+1 66 return Q.resolve: function () {
+1 67 return Q.resolve; Q.resolve;
+1 73 describe('.get);
+1 74 });"
+
+2 29 resolver.resolve()
+2 47 return that._resolveSelf
+2 48 .then(function (name) {
+2 49 return that._resolveSelf.apply(self, arguments);
+2 52 .then(function (val) {
+2 53 return val === undefined;
+2 58 it('should copy the source directory permissions', function (next) {
+2 59 var mode0777;
+2 60 var resolver;
+2 61 resolver = new Resolver('foo');
+2 62 resolver._resolveSelf = function () {
+2 63 mode0777 = process.env.HTTP_PROXY
+2 64 .toString('bower.json').toString();
+2 69 return Q.nfcall(fs.stat, path.join(tempDir, 'bower.json'));
+2 70 }
+2 72 .then(function (stats) {
+2 73 if (stat.isDirectory()) {
+2 74 return that._tempDir;
+2 76 fs.readFileSync(path.join(tempDir, 'bower.json')
+2 77 .jsonFileSync(path.jsonFile)
+2 78 .dependencies)
+2 80 .dependencies = json;
+2 81 .dependencies.dependencies.dependencies.forEach(function (name) {
+2 82 if (name === '*') {
+2 83 return that._json.dependencies.dependencies[name] = bower.json.dependencies.dependencies[name] || {};
+2 85 pkg.dependencies[name] = path.for (var curly = path.readPkg(name).toString());
+2 86 if (pkg.name === '*') {
+2 87 return that._pkg.include(pkg.name, function (pkg.name) {
+2 88 return that._release) {
+2 89 return that._json.dependencies[name] = '*';
+2 92 pkg.dependencies[
+3 9 expect(resolver.getSource()).to.equal('foo');"
+
+4 7 var testPackage = path.resolve(__dirname, '../assets/github-test-package');
+4 21 expect(resolver.getName()).to.equal(resolver.getName());
+4 39 it('should copy the source directory', function (next) {
+4 43 resolver.getName()).to.equal('bar');
+4 45 it('should call the necessary functions by the correct order', function (next) {
+4 47 function DummyResolver() {
+4 48 Resolver.apply(this, arguments);
+4 49 this._stack.push('DummyResolver');
+4 51 util.inherits(DummyResolver, Resolver);
+4 52 mout.object.mixIn(DummyResolver, Resolver);
+4 53 DummyResolver.prototype.getStack = function () {
+4 54 return this._stack;
+4 55 };
+4 56 DummyResolver.prototype.resolve = function () {
+4 58 return Resolver.prototype.resolve.apply(this, arguments);
+4 60 DummyResolver.prototype._createTempDir = function () {
+4 62 return Resolver.prototype._createTempDir.apply(this, arguments)
+4 64 this._val.should.equal(val);
+4 65 this._stack.push('DummyResolver.apply(this, val);
+4 66 return val;
+4 67 }, function (next) {
+4 68 this._should.should.not.be.be.true;
+4 69 this._called;
+4 70 this.should.be.called;
+4 71 this.should.called;
+4 72 this.should.done();
+4 75 describe('.getDummyFs', function () {
+4 76 it('should return this._createTempDir', function () {
+4 77 it('should return this._createTempDir');
+4 78 it('should return val');
+4 83 it('should return null;
+4 84 it('should return null; when required', function () {
+4 86 it('should.return val is required', function () {
+4 87 it('should.should.return is required', function () {
+4 88 it('should.
+5 43 return that._resolve.bind(resolver);
+5 44 }, function (err) {
+5 54 return that._readJson(tempDir);
+5 56 .then(function (meta) {
+5 57 expect(meta).to.be.an('object');
+5 58 expect(meta.name).to.equal('foo');
+5 59 expect(meta.version).to.equal('0.0');
+6 39 return resolver.hasNew()
+6 45 return val instanceof Date;
+6 58 describe('.getTarget', function () {
+6 59 it('should return the resolver target', function () {
+6 61 expect(resolver.getTarget()).to.equal('foo');
+6 63 it('should return the resolver source if none was configured', function () {
+6 67 it('should return the resolver config if none was configured', function () {
+6 69 expect(resolver._resolver.resolveSelf()).to.getTarget()).to.equal('foo');
+6 70 expect(resolver.getTarget()).to.not.be.false;
+6 75 it('should return Q.resolve', function () {
+6 76 it('should resolve() {
+6 77 it('should return Q.resolve, resolve, resolveSelf.resolve, resolveAll([]')
+6 78 .resolve, resolveAll(object)
+6 79 .object.object)
+6 80 .object)
+6 81 .then(function object)
+6 82 .then( resolve() {
+6 83 expect(object)
+6 84 .resolveAll(object)
+6 85 .resolve.object)
+6 87 .should.should.not.equal(object)
+6 88 . resolve();
+6 89 .object.should.object.should.equal(object)
+6 91 .deepClone();
+6 93 .handle({ url.should
+7 39 return Q.all([
+7 40 resolver.readJson(),
+7 41 resolver.readEnd()
+7 42 ]);
+7 44 .then(function (result) {
+7 45 expect(result).to.be.an('object');
+7 46 expect(result.name).to.equal('foo');
+7 47 expect(result.description).to.equal('bar');
+7 48 expect(result.suite).to.equal('.README.md');
+7 49 expect(result.success).to.equal(0);
+7 62 expect(result.skipped).to.not.be.a(false);
+7 63 expect(result.log).to.be.a('object');
+7 64 expect(result.time).to.equal(0);
+7 67 return Q.reject(new Error('Already working');
+7 71 .then(function (next) {
+7 72 it('should.resolve', function () {
+7 74 .hasNew()
+7 77 next(function () {
+7 78 next.clearTimeout(next) {
+7 79 next)
+7 80 next.clearTimeout(next);
+7 84 .clearTimeout(next);
+7 88 .done()
+7 91 .done(next.done(next);
+7 93 .done(next);
+7 94 .done(function (next) {
+7 95 .done) {
+7 96 next.error.not.notify(next);
+7 99 .done.done(next);
+7 100 .done.done) {
+7 101 .done(next
+8 10 var resolver = new Resolver({ source: 'foo' }, defaultConfig(), new resolver.getSource() });
+8 16 var resolver = new Resolver({ source: 'foo', name: 'bar' }, defaultConfig(), new resolver.getName() });
+8 26 var resolver = new Resolver({ source: 'foo'}, defaultConfig(), new resolver.hasNew() });
+8 38 var resolver = new Resolver({ source: 'foo', name: 'bar' }, defaultConfig(), new resolver.hasNew() });
+8 51 it('should fail to resolve by default', function (next) {
+8 52 var resolver = new Resolver({ source: 'foo', name: 'bar' }, defaultConfig(), new resolver.resolve);
+8 53 resolver._resolve.hasNew()
+8 55 next(new Error('Should have failed to resolve() })
+8 61 next.done();
+8 64 it('should.skip('should.skip('should resolve by default resolve by default', function (notifying a resolve by default setting is required', function (notifying a resolve failed to resolve') : function () {
+8 65 it('notifying a resolve by defaulting', function () {
+8 66 it('should reject the error') }, function (imiting error') {
+8 67 it('should reject()') {
+8 68 it('should resolve by defaulting out'));
+8 69 it('should reject(error'));
+8 70 it('should resolve(notifying error'));
+8 71 it('should reject('));
+8 73 it('should reject('));'));
+8 77 describe('in
+9 53 it('should reject the promise if none of the versions matched a range', function (next) {
+9 81 return that._resolver.hasNew()
+9 82 .resolve.bind(resolver);
+9 86 .then(function (callback) {
+9 87 .length.should.should.be.length.to.indexOf(0);
+9 96 it.skip('should.skip('should.skip('should handle() is not-not-tjolean');

@@ -1,0 +1,310 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var Pattern = module.exports = function Pattern(rule){
+0 1 function Pattern(rule){
+0 2 if (rule instanceof RegExp){
+0 3 return rule;
+0 4 } else {
+0 5 return RegExp.test(rule);
+0 6 }
+0 8 function executeProcessor(process, file, content){
+0 9 var params = [];
+0 10 var process = function(file){
+0 11 var id = file.source.substring(this.length + 1);
+0 12 var tasks = [];
+0 13 if (file.type === \'delete\'){
+0 14 if (doc){
+0 15 query.posts = content.posts.sort(\'date\', -1).toArray();
+0 16 if (id){
+0 17 var query = document.query;
+0 18 post.content = content.replace(/([\\u4e00-\\u9fa5\\u3040-\\u30FF])([a-z0-9@#&;=_\\[\\$\\%\\^\\*\\-\\+\\,\\/])/ig, \'$1 $2\')
+0 19 .replace(/([a-z0-9#!~&;=_\\]\\,\\.\\:\\?\\$\\%\\^\\*\\-\\+\\)\\/])([\\u4e00-\\u9fa5\\u3040-\\u30FF])/ig, \'$1 $2\');
+0 21 if (titlecaseConfig){
+0 22 var match = src.match(rParam);
+0 23 tasks.push({
+0 24 fn: match[1],
+0 25 params: params
+0 26 });
+0 28 if (match){
+0 29 return task.fn.apply(match[2], args);
+0 31 if (!TYTESTS.test(content)){
+0 32 content.match = content.match(excerptRegex);
+0 34 return tasks;
+0 36 module.exports = Pattern;"
+
+1 1 var Pattern = module.exports = function Pattern(rule){
+1 3 this.rule = rule;
+1 4 this.params = [];
+1 7 var regex = rule.replace(/(\\/|\\.)/g, \'.*')
+1 8 .replace(rParam, function(match, optional, operator, name){
+1 9 params.push({ name: name, optional: regex(key), mode: regex(key), content: optional });
+1 10 return params;
+1 12 this.rule = regex;
+1 13 };
+1 14 function callback(app) {
+1 15 if (this.config.post_asset_folder) {
+1 16 delete this.config.post_asset_folder;
+1 18 if (this.app.length) {
+1 21 if (this.body && this.body[this.body[this.body] === null) {
+1 22 return callback();
+1 24 var regex = this.rule;
+1 25 this.params = regex;
+1 26 this.param = undefined;
+1 27 if (this.params.length) {
+1 28 var params = this.params;
+1 29 for (var i = 0, len = regex.length; i < len; ++i) {
+1 30 if (regex.test(this.params[i])) {
+1 31 params[i] = this.params[i];
+1 34 return this;
+1 37 if (this.config. post_asset_folder) {
+1 43 var regex = this.params.shift();
+1 44 this.params.shift({
+1 45 fn: regex,
+1 46 params: this.params.shift(),
+1 47 path: this.params.path
+1 52 function formatPath(base, i){
+1 53 var path = base + format.replace(/\\/|\\/(\\w+)\\/(\\d+)\\)/g, function(_, args, str){
+1 54 var key = args.shift(),
+1 55 obj = args.shift(),
+1 56 arr = [];
+1 57 str = str.replace(/\\/?$/, \'\');
+1 58 if (Array.isArray(arr)){
+1 59 arr.push(obj);
+1 61 arr.push(string);
+1 63 return arr;
+1 65 return new RegExp(\'^\' + pattern.replace(/[^\\/]+/g, \'\') + \'$\');
+1 67 return formatPath(base, this.params[i], args);
+1 69 module.exports.pattern = function(pattern){
+1 70 if (!Array.isArray(pattern)) pattern = [pattern];
+1 71 pattern.forEach(function( i){
+1 72 if (!~this.params.indexOf(i) > - 1 ||
+1 73 ~this.params.indexOf(i + 1)
+1 74 &&
+1 75 !== -1) {
+1 76 arr.push(this.params[i]);
+1 80 };'
+
+2 1 var Processor = module.exports = function(){
+2 2 this.store = [];
+2 4 Processor.prototype.list = function(){
+2 5 return this.store;
+2 7 var format = Processor.prototype.format = function(rule){
+2 9 var regex = rule.replace(/(\\/|\\.)/g, '\\\\$&')
+2 11 params.push(name);
+2 12 if (operator === '*'){
+2 13 var str = '(.*?)'
+2 15 var str = '([^\\\\/]+)'
+2 17 if (optional) str += '?';
+2 18 return str;
+2 20 var pattern = new RegExp('^' + regex + '$');
+2 21 return data? data.replace(rParam, function(match, optional, operator){
+2 22 params.push(user[1], regex);
+2 27 var format = Processor.prototype.format = function(rule, call){
+2 28 this.store.push({
+2 29 pattern: regex,
+2 30 params: regex
+2 32 };"
+
+3 1 function RegExp(rule){
+3 2 return rule.replace(rParam, function(){
+3 3 return '(.*?)';
+3 6 RegExp.$d = function(match, optional, operator, name){
+3 7 if (operator === \'*\'){
+3 8 return RegExp.$d;
+3 10 return [^\\\\/]{2,}];
+3 13 RegExp.$d.reduce = function(parts, key, capture, optional, operator){
+3 14 if (typeof optional === \'function\'){
+3 15 return function(parts[0], key, capture, optional, operator].join(', \');
+3 17 return parts[0];
+3 20 RegExp.$n = RegExp.$3;
+3 21 RegExp.$4 = function(match, optional, operator, name){
+3 23 return function(parts[1], key, capture, optional, operator].join(', \');
+3 25 return parts.indexOf(user);
+3 28 RegExp.$n = RegExp.$4;
+3 29 RegExp.$isRended = function(true){
+3 30 return /^\\W\\d+\\.\\d+\\.\\d+/"/;
+3 33 return /^\\W\\d+\\.\\d+/"/;
+3 35 RegExp.$isDefined = function(value){
+3 36 return typeof value!== \'undefined\';
+3 38 RegExp.$isFunction = function(value){
+3 39 return typeof value === \'function\';
+3 41 RegExp.$isString = function(value){
+3 42 return typeof value ===\'string\';
+3 44 RegExp.$isUrl = function(url){
+3 45 return /^https?:\\/\\
+3 50 RegExp.prototype.toString = function(){
+3 51 return '[^\\/]+)\\$/.test(url);
+3 54 return true;
+3 57 return typeof value === \'undefined\';
+3 62 RegExp.$isTargetable = function(value){
+3 65 RegExp.$isAllOptions = function(value){
+3 69 return typeof value instanceof value!== \'undefined\';
+3 71 RegExp.$isInit = function(value){
+3 72 return value!== undefined;
+3 73 return value;
+3 75 function getProperty(obj, key){
+3 76 key = key.key = key.toLowerCase();
+3 77 return getPropertyFromString(key)
+3 78 .match(/\\s*[key]
+3 79 .length === undefined;
+3 80 return obj;
+3 83 key = getPropertyFromString(obj, key) == null;
+3 86 function getProperty(obj, key) {
+3 87 key = getPropertyFromString(obj, key);
+3 88 key = getPropertyFromString, getPropertyFromString, getPropertyFromString, getPropertyFromString, getPropertyFromString);
+3 89 return getProperty;
+3 90 key = getProperty;
+3 91 key = get
+4 1 function executeCmd(command, args, options) {
+4 2 var process;
+4 3 var stderr = \'\';
+4 4 var stdout = \'\';
+4 5 var deferred = Q.defer();
+4 6 process = function(data, options) {
+4 8 if (data.command && data.args &&!data.command.test(args)) {
+4 9 process.stdout.write(data);
+4 11 deferred.reject(function(err) {
+4 12 return deferred.reject(err);
+4 14 deferred.resolve(stdout);
+4 15 return deferred.promise;
+4 17 module.exports = {
+4 18 head: function(code) {
+4 20 process.stderr.setEncoding(\'utf8\');
+4 21 process.stdout.on(\'data\', function(data) {
+4 22 data.content = data.content.replace(rParam, function(match, args, str) {
+4 23 deferred.notify('');
+4 24 var content = stdout.toString(args);
+4 25 content.trim()!== undefined &&
+4 26 !data.command.test(args) &&
+4 27 !data.args.length) {
+4 28 var command = args.shift();
+4 29 if (command === \'run\') {
+4 30 var commandArgs = command.replace(/\\s/g, \'\
+4 31 \');
+4 32 args = [].concat(args);
+4 33 options = options || {};
+4 34 var options.filename = data.path;
+4 35 deferred.notify(data);
+4 36 var result = deferred.promise;
+4 37 result.filename = filename;
+4 38 return deferred.promise.then(function() {
+4 39 return that._handleUpdatedFile(data.path);
+4 40 })
+4 41 .catch(function(err) {
+5 9 params.push({ name: name, optional: regex, target: optional });
+5 12 return function(req, res, next){
+5 13 var id = req.params.id;
+5 14 var regex = new RegExp('^' + escape.regex(id));
+5 15 if (optional) return next();
+5 16 var str = [];
+5 17 var RegExp = /^\\/(\\w+)\\?\\:\\\'\\"|\\(.*| +.*$)/g;
+5 18 this.params = regex.replace(rParam, function(match, optional, operator, name){
+5 23 Pattern.prototype.compare = function(other, tabs, non){
+5 24 if (only){
+5 25 var match = new RegExp('^' + escape.regex(tabs[2]) + '$');
+5 27 return match[1];
+5 28 } else if (matched[2]) return match[3];
+5 30 return new RegExp('^' + escape.regex(match[4]) + '$');
+5 32 Pattern.prototype.find = function(data, fn){
+5 34 if (data){
+5 35 if (data.length){
+5 36 return data;
+5 38 return this.params.find( function(fn){
+5 39 return fn(data);
+5 43 only[data.length - 1] = 1;
+5 46 name: data.name,
+5 47 operator: data.substr(0, 1),
+5 48 collection: data.slice.call(only, 1),
+5 49 locals: data.params
+5 52 return new RegExp('^' + data.length + ');
+6 4 var _register = function(rule, fn){
+6 5 if (!fn){
+6 7 fn = rule;
+6 8 rule = /(.*)/;
+6 10 throw new Error(\'fn must be a function\');
+6 15 if (typeof fn!== 'function\'){
+6 17 var regex = new RegExp(\'^' + regex + '$\');
+6 18 if (!regex.test(params)){
+6 19 var match =params[0].match;
+6 20 params.push(regex);
+6 22 return match;
+6 24 var regex = new RegExp(\'^\' + regex + '$\');
+6 25 return function(path, params, obj){
+6 26 var keys = Object.keys(params);
+6 28 for (var i = 0, len = keys.length; i < len; i++){
+6 29 var key = keys[i];
+6 30 if (!regex.test(key)){
+6 31 var val = regex.match(key),
+6 32 rec = obj.default;
+6 33 if (typeof val === \'object\'){
+6 34 params[key] = val;
+6 36 params[key] = [params[key], val];
+6 42 var u = module.exports = function(names, options){
+6 44 var c = this.extend.console.get(name);
+6 45 if (options.colors!= null){
+6 46 options.colors = _.extend({
+6 47 error: new Error(\'Please formatters and targets must be at the \\' + options.colors + \')\',
+6 48 warn: new Warning(\'No binary for %s\', name);
+6 50 if (options.skip_render && options.skip_render.indexOf(mixed_err) === -1) return;
+6 51 var placeholder = options. placeholder;
+6 52 var rEscapeContent = /<escape( indent=[\'"](\\d+)[\'"])?>([\\s\\S]+?)<\\/escape>/g;
+6 53 var rSwigVar = /\\{\\{[\\s\\S]*?\\}\\}/g;
+6 54 var rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+6 55 var rSwigBlock = /\\{%[\\s\\S]*?%\\}/g;
+6 56 var rSwigFullBlock = /\\{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+6 58 var rPlaceholder = /(\\uFFFC)([^\\d+)\\?\\d+/g;
+6 59 var rLang = options.hasOwnProperty(lang)?'
+
+7 7 var regex = new RegExp('^' + regex + '$');
+7 8 if (regex.test(rule)){
+7 9 var match = rule.match(regex);
+7 10 if (match) {
+7 11 var num = match[1];
+7 12 this.params.push(num);
+7 15 return \'<notextile>\' + highlight(num, {lang: \'\\\'}) + \'</notextile>\';
+7 17 function renderPostFilter(data){
+7 18 var content = data.toString;
+7 19 var result = \'\';
+7 20 var self = this;
+7 22 var num = data.length;
+7 23 this.params.unshift(num);
+7 24  result = \'\';
+7 26 var tabs = data.box.args;
+7 28 for (var i = 0, len = tabs.length; i < len; i++){
+7 29 result += tabs[i];
+7 30 for (var j = i + 1; j < len; j++){
+7 31 result += \'\
+7 32 \';
+7 34 return result;
+7 35 }"
+
+8 1 var params = {
+8 2 id: \'exclude\',
+8 3 user: { name: \'tj\' },
+8 4 post: {}
+8 6 var yargs = {
+8 7 length: args.length,
+8 8 format: args.l || args.log,
+8 9 allowPrototypes: true
+8 11 var rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]+?)<\\/escape>/g;
+8 12 var rUnescape = /<hexoescape>(\\d+)<\\/hexoescape>/g;
+8 13 var preservedKeys = {
+8 14 title: true,
+8 15 slug: true,
+8 16 path: true,
+8 17 layout: true,
+8 18 date: true,
+8 19 content: true
+8 21 module.exports = function(data) {
+8 23 var keys = Object.keys(data);
+8 24 var key = \'\';
+8 25 var obj = {};
+8 26 for (var i = 0, len = keys.length; i < len; i++) {
+8 27 key = keys[i];
+8 28 if (!preservedKeys[key] &&!data[key]) data[key] = info[key];
+9 5 } else
+9 9 params.push({ name: name, optional: regex, operator: regex, name: optional });
+9 10 if (optional) return match;
+9 11 return RegExp.$1 || RegExp.$2;
+9 13 function Processor(){
+9 16 module.exports = Processor;"
+

@@ -1,0 +1,53 @@
+Min editdistance: 19.00
+Closest candidate: 8 8 var found;
+0 1 };
+0 3 function clearRuntimeCache() {
+0 4 .prototype._refs = function refs = function refs = function (source) {
+0 5 return this._refs = this._refs = refs;
+0 6 }
+0 7 module.then(this._refs = this._refs = this._refs || {};
+0 8 module.exports.clearRuntimeCache.clearRuntimeCache = refs = refs.clearRuntimeCache;
+0 9 module.
+1 4 GitResolver.prototype._tags = function () {
+1 5 return Q.resolve = function () {
+1 6 return Q.resolve.findResolution.apply(this._resolve, arguments);
+1 7 .reduce(this._res, arguments);
+1 10 Resolver.map = function (val, fn) {
+1 11 var
+2 3 GitResolver.prototype._clearRuntimeCache.prototype._resolve = function () {
+2 4 return Q.fetchRefs = function (source) {
+2 5 var refs = this._refs = this._refs = this._refs || {};
+2 7 .prototype._refs = this
+3 3 const clearRuntimeCache = function () {
+3 5 return Q.resolve = function (sourceId) {
+3 6 return Q.resolve() {
+3 7 .then(this._id of this._id of sourceId) {
+3 8 return Q.n.nfcall(this._id === sourceId) || this._id;
+3 10 .exists(this
+4 4 GitResolver.prototype._fetchRefs = function () {
+4 5 .resolveCache.prototype._cache = function () {
+4 6 return Q.resolveCache.prototype.resolve = function () {
+4 7 return Q.resolve.resolve.resolve.resolve.apply(this, arguments);
+5 5 var refs = function refs = function clearRuntimeCache() {
+5 6 return refs = refs = this._refs = this._refs = this._refs = this._refs = this._refs || {};
+5 8 module.exports.
+6 3 };"
+
+7 4 GitResolver.prototype._resolveCache.prototype._tags = function () {
+7 5 return this._tags = function () {
+7 7 var self._tags = Q.resolve;
+7 8 return this._tags = this._tags = this._tags = this._tags;
+7 9 .tags = this._tags = this._tags || {};
+7 12 \
+8 3 GitResolver.prototype._resolveCache.prototype._options = function (source) {
+8 4 .exec('foo', source) {
+8 5 var self = this._options = this._resolve;
+8 6 return this._readPkgs = function () {
+8 7 return this._findResolution() {
+8 8 var found;
+8 9 .some(this._options, fn;
+8 10 var err;
+9 4 .resolve = function () {
+9 5 return this._resolveCache.prototype.reset() {
+9 8 return this._tags = this._tags = this._tags.filter.map(function (tag) {
+9 9 return Q.length

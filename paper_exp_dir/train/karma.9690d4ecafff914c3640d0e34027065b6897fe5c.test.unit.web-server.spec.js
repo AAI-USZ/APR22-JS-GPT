@@ -1,0 +1,50 @@
+require('core-js')
+import {EventEmitter} from 'events'
+import request from 'supertest-as-promised'
+import di from 'di'
+import mocks from 'mocks'
+import fs from 'fs'
+
+describe('web-server', () => {
+var server
+var emitter
+var File = require('../../lib/file')
+
+var _mocks = {}
+var _globals = {__dirname: '/karma/lib'}
+
+_mocks.fs = mocks.fs.create({
+karma: {
+static: {
+'client.html': mocks.fs.file(0, 'CLIENT HTML')
+}
+},
+base: {
+path: {
+'one.js': mocks.fs.file(0, 'js-source'),
+'new.js': mocks.fs.file(0, 'new-js-source')
+}
+}
+})
+
+
+
+var m = mocks.loadFile(__dirname + '/../../lib/web-server.js', _mocks, _globals)
+
+var customFileHandlers = server = emitter = null
+
+var servedFiles = (files) => {
+emitter.emit('file_list_modified', {included: [], served: files})
+}
+
+describe('request', () => {
+beforeEach(() => {
+customFileHandlers = []
+emitter = new EventEmitter()
+
+var injector = new di.Injector([{
+config: ['value', {basePath: '/base/path', urlRoot: '/'}],
+customFileHandlers: ['value', customFileHandlers],
+emitter: ['value', emitter],
+fileList: ['value', {files: {served: [], included: []}}],
+capturedBrowsers: ['value', null],

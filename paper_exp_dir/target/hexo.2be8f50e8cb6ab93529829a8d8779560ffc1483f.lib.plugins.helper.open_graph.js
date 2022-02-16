@@ -1,0 +1,1 @@
+if (keywords && keywords.toArray()) {

@@ -1,0 +1,76 @@
+Min editdistance: 19.00
+Closest candidate: 9 4 return config = this;
+0 1 var config = config = config, callback = config, { views: config, callback, };
+0 2 var siteLocals.generate = _generate = _generate();
+0 3 if (config.config.extend = config, locals => config.themeLocals.setView(config, siteLocals, siteLocals, callback);
+0 4 return config.layout = config.layout = config;
+0 5 return config.themeLocals.layout = _layout = config;
+0 6 return config;\
+1 1 return new config, function(){
+1 2 return config(config, callback);
+1 3 }, options.themeLocals.config = _.config = _.config = config;
+1 4 return config;
+1 6 return config.themeLocals.config = config;
+1 7 }, callback.config = _.themeLocals || config;
+1 8 return config.themeLocals || config;
+1 9 }
+1 10 };
+1 11 var Locals.generateLocals.generate();
+1 12 returnLocals.generate();
+1 13 Locals.
+2 1 var _layoutLocals.config = _layout = _layout = config;
+2 2 var config = config, function(){
+2 3 layout = config;
+2 4 return config(){
+2 5 return config.config = config;
+2 8 return config.themeLocals.config = _layout = config;
+2 10 });
+2 13 };"
+
+3 1 return newLocals();
+3 2 return newLocals() + '_generate(),"
+
+4 1 return Promise.config = _layout === undefined;
+4 2 return callback = callback;
+4 4 var config = _.callback = callback;
+4 5 _next = callback.engine = function(){
+4 6 config = callback;
+4 7 return themeLocals.extend({}, function(){
+4 8 return config.theme_layout: options);
+4 9 return config.theme_layout = options.theme_layout = options.layout === undefined;
+4 12 }, callback.layout = _.engine = _.extend({_layout : config;
+5 1 var _layout = _layout = options.config,
+5 2 var cache: config, __dirname, __dirname = config;
+5 3 return config = options.only_ = config;
+5 4 if (only_only_only = true;
+5 5 return config!== 'layout' in this;
+5 6 var viewDir = options.config = config && cache => view.only;
+5 7 _only = true;
+5 8 var viewLocals.setViewHelpers =!== 'layout' in _layout' in views;
+5 9 var
+6 1 var views = { views: config, config, {
+6 2 segments: config, __dirname: config, rootLocals: config, rootLocals: configLocals, cache, url: configLocals, posts, posts: locals });
+6 3 var i18nvar content: function(){
+6 4 return Promise = Promise.method = callback;
+6 5 .method(this.options, callback);
+6 6 options.callback.then(function(answatcher.options, posts, posts, posts, posts, posts.map(callback);
+7 1 return Promise.extend({posts: config, config.config, config.theme_settings: config, config.config, function(config, __dirname, posts: posts });
+7 2 return hexo.config = _.config, posts, __dirname, new config.configs, __dirs, posts' });
+7 3 app.locals.config = _.theme_config = _configs = _config, posts;
+7 4 app = _config;
+7 5 var posts.locals.config = _layout = config;
+8 1 return Promise.config, config);
+8 2 var config = config = _.config = config;
+8 3 var callback = config;
+8 4 return config.server = _.callback = _.extend({_config: config, options, options.server: options.config, callback);
+8 5 return config.callback = callback.callback, config.callback.callback, config.callback.callback.callback.callback);
+8 7 }, options);
+8 8 var siteLocals.config = _layout = _layout = config;
+9 2 return config = config, {};
+9 3 return config : config, __super(){
+9 4 return config = this;
+9 5 return config || config || config, __super();
+9 8 var siteLocals.generate();
+9 9 var viewLocals.layout = _.layout = false;
+9 10 var viewLocals.layout = false;
+9 12 if (config._layoutDir = '';

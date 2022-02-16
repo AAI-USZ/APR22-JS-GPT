@@ -1,0 +1,52 @@
+Min editdistance: 14.00
+Closest candidate: 3 16 return done) {
+0 1  })
+0 2 .expect('return done);"
+
+1 2 .end
+1 3 })
+1 4 .end();
+1 5 describe('", function(){
+1 6 it('should use(': function(){
+1 7 it('should allow(app)', function(){
+1 8 return app.use(express, express(){
+1 9 return);
+1 10 return call(app)return done);
+1 11 });
+1 15 it('should.error(function(err, done){"error: function (err) {
+1 16 request(err) {
+1 17 app.get('should.get('/something', function
+3 5 it('should use(function(done){"redirectory":"return"\', function(){
+3 6 return done();
+3 11 it('should use(done)', function(done) {
+3 14 it('should.done);
+3 15 it('should.skip(function(function(function(done) {
+3 16 return done) {
+3 17 return done(done) {
+3 18 should(done) {\
+4 4 describe('", function () {
+4 5 it('should use(': function () {
+4 6 it('should use(app)', function () {
+4 7 it('should work(simple)', function () {
+4 8 return function (s) {
+4 9 return app.use(s)', function (s) { returns) { returns) { returns) { returns} }', function (s) { returns) { returns) { returns; },'s' }', function (s) { returns) { return s }', done
+5 2 .end();"
+6 4 .expect(': function(){
+6 5 it('should use(': function () => {
+6 11 it('should.skip('should.skip('should use the status of the middleware', function(fn)', function(done) {
+6 12 return function(done) {
+6 14 var app.use(function(err) {
+6 15 var app.use(function(err) { done(err) { done(err) { done
+8 2 .expect('something', done);
+8 4 .json.configure('something', function(){
+8 5 return done);
+8 13 it('should.skip('should use(function(function(err)', function(err){"string") return done(err);
+8 15 });'
+
+9 3 .expect(function () {
+9 4 it('should use(app.get('/returnsucs/s/returns', function () => res.json', function () => {
+9 6 }).should.returns('sucs', function () => {
+9 7 return res.json(something', done);
+9 10 .expect('s')
+9 11 .expect('x-return', '123456', done);' invalidate', done);
+9 14 .expect(

@@ -1,0 +1,198 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 app.get('/text', function(req, res){
+0 1 app.get('/text', function(req, res){
+0 2 res.header(\'X-Foo\', \'bar');
+0 3 res.contentType(\'.html\');
+0 4 res.send(\'wahoo\');
+0 5 });
+0 6 app.get('/status', function(req, res){
+0 7 res.send(404);
+0 9 app.get(\'/error\', function(req, res){
+0 10 res.send(\'Oh shit!\', { \'Content-Type\': \'text/plain\' }, 500);
+0 12 app.get(\'/buffer\', function(req, res){
+0 13 res.send(new Buffer(\'wahoo!\'));
+0 15 assert.response(app,
+0 16 { url: \'/html\' },
+0 17 { body: \'<p>test</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+0 19 { url: \'/json\' },
+0 20 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+0 22 { url: \'/text\' },
+0 23 { body: \'wahoo\', headers: { \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+0 25 { url: \'/status\' },
+0 26 { body: \'Not Found\', status: 404, headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+0 28 { url: \'/error\' },
+0 29 { body: \'Oh shit!\', status: 500, headers: { \'Content-Type\': \'text/plain\' }});
+0 31 { url: \'/buffer\' },
+0 32 { body: \'wahoo!\', headers: { \'Content-Type\': \'application/octet-stream\' }});
+0 34 { url: \'/noargs\' },
+0 35 { status: 204 }, function(res){
+0 36 assert.equal(undefined, res.headers[\'content-type\']);
+0 37 assert.equal(undefined, res.headers[\'content-length\']);
+0 41 },
+0 42 \'test #contentType()\': function(assert){
+0 43 var app = express.createServer();
+0 44 app.get(\'/html\', function(req, res){
+0 45 res.contentType(\'index.html\');
+0 46 res.writeHead(200, res.headers);
+0 47 res.end(\'<p>yay</p>\');
+0 50 { url: \'/html\', headers: \'<p>\', headers: { contentType: \'text/html, headers: \'text/html,text/p>\' },
+0 51 : \'text/p>\' },
+0 52 : \'text/p>\'},
+0 53 : \'text/x-p>
+0 54 :</p>
+0 56 : \'</p>\'},
+0 57 : \'</p>
+0 58 : \'</ul>
+0 60 \'test #attachment()\': function(req, res){
+0 62 return express.createServer();
+0 63 assert.createServer();
+0 65 assert.contentType(app, \'text.html\', contentType(res.html, \'text/html; charset=utf-8\');
+0 66 res.writeHeaders, \'utf-
+1 3 res.contentType(\'.txt\');
+1 18 { body: \'<p>yay</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+1 41 \'test #attachment()\': function(assert){
+1 43 app.get(\'/style.css\', function(req, res){
+1 44 res.attachment();
+1 45 res.send(\'some stylezzz\');
+1 47 app.get(\'/*\', function(req, res){
+1 48 res.attachment(req.params[0]);
+1 49 res.send(\'whatever\');
+1 52 res){
+1 53 res.attachment(req.params[1]);
+1 54 res.params[0].send(\'whatever
+1 58 assert.get(\'/*\', function(function(req, res){
+1 59 assert.params[0]
+1 60 assert.params.test.test.skip(\'should.skip\')
+1 61 });'should.skip(\'should.skip
+1 62 }
+1 63 });'
+
+2 2 res.header(\'X-Foo\', \'bar\');
+2 6 app.get('/status, function(req, res){
+2 9 app.get(\'/error', function(req, res){
+2 12 app.get(\'/buffer', function(req, res){
+2 15 app.get(\'/noargs, function(req, res, next){
+2 16 res.send();
+2 18 app.get(\'/relativeToBaseUrl', function(req, res){
+2 19 res.send(req.params.baseUrl);
+2 50 app.get(\'/html\', function(req, function(req, res){
+2 52 res.contentType(res.contentType(\'index.html\');
+2 53 res.writeHead();
+2 54 res.writeHead(200, \'<p>index.html\');
+2 55 res.end();
+2 58 res.send(\'
+
+3 6 app.get('/status\', function(req, res){
+3 34 \'#contentType\': function(assert){
+3 46 { headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'bar\' }});
+3 49 \'#attachment;</p>\': function(filename) {
+3 50 return require(\'image.html\');
+4 15 app.get(\'/noargs\', function(req, res, next){
+4 50 app.get(\'/json\', function(req, res){
+4 51 res.contentType(\'json\');
+4 52 res.headers.app = res.app = res;
+4 53 res = res;
+4 54 res.contentType(\'something\');
+4 55 res.json = null;
+4 56 res.app = null;
+4 59 assert.get(\'/text\', function(req, res){
+4 61 res.contentType(\'index.json\');
+4 63 res.should.should.equal(\'index.json\');
+4 64 res.should.equal(\'something\');
+4 65 .type(\'index.json
+4 66 .should.should.equal(\'index.json\');
+4 67 .should.equal(\'something\');
+4 68 .should.equal(\'else\');
+4 69 res.type(\'something.type(\'index
+5 25 { url: \'/jsonp?callback=test\' },
+5 26 { body: \'test({"foo":"bar"});\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+5 48 app.get(\'/html\', function(options, fn){
+5 49 res.contentType(2);
+5 50 res.writeHead(200, \'<p>content-type=;
+5 51 res.should.should.indexOf(\'index.html\');
+5 52 res.should.should.equal(\'<0);
+5 53 res.writeHead(200);
+5 54 res.headers.headers.should.should.equal(\'<li>=0);
+5 55 res.headers.headers.should.equal(\'5');
+5 57 res.headers.should.should.equal(\'1);
+5 58 res.headers.should.equal(\'2\');
+5 60 res.send(\'jade\');
+5 62 app.get(\'/json\', function(options, fn);
+5 63 res.req, function
+6 43 \'test #contentType()': function(assert){
+6 51 { url: \'/html\', headers: \'<p>;\', headers: { contentType: \'text/html,text/plain,text/plain\' }}
+6 54 \'#attachment()
+6 55 },"
+
+7 18 app.get(\'/undefined', function(req, res, next){
+7 19 res.send(undefined);
+7 21 app.get(\'/bool\', function(req, res, next){
+7 22 res.send(true);
+7 25 { url: \'/bool\' },
+7 26 { body: \'true\'
+7 27 , headers: { \'Content-Type\': \'application/json\' }});
+7 29 { url: \'/bool\', headers: { \'Content-Type\': \'application/json\' }});
+7 31 { url: \'/bool/test\' },
+7 33 , headers: {
+7 34 \'Content-Type\': \'application/json\'
+7 35 , \'X-Foo\': \'bar\'
+7 36 }});
+7 49 , \'X-Foo\': \'baz\'
+7 53 { body: \'false\'
+7 71 , \'baz\'
+7 76 assert.get(\'/app,
+7 77 { url: \'/bool/test
+7 78 , headers: \'true, headers: { url: \'/form-url=http://foo=bar=baz=baz=baz=0; path=/baz/bar; domain=baz/' }});
+7 79 assert.response: \'foo=baz=baz=baz=baz/baz/baz/baz'});
+7 81 assert.response: \'/response: \'/response:
+7 83 assert.get(\'/
+7 84 assert.test.sendfile = function(path, options, fn){
+7 85 var app = express.format = function(path){
+7 86 res.options = options)
+8 20 { body: \'<p>test</p>', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+8 52 res.headers.app = res.params = {};
+8 53 res.contentType(\'something-type\');
+8 54 res.type(\'json
+8 56 res.params.params.type(\'something
+8 58 assert.assert.assert.type(\'something\');
+8 59 .type(\'something\');
+8 60 done();
+8 61 assert.skip(\'something\');
+8 62 it(\'skip\');
+8 64 it(\'skip processingFiles\');
+8 66 it(\'removes/ relative to lib files\');
+8 67 it(\'express.html - yes\', function(/*)
+8 68 app.get(\'/html\', function(/*)
+8 70 \
+9 18 app.get(\'/undefined\', function(req, res, next){
+9 29 { url: \'/bool.json\' },
+9 30 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\' }});
+9 32 { url: \'/bool.html\' },
+9 33 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/html; charset=utf-8\' }});
+9 35 { url: \'/hello.haml\' },
+9 36 { body: \'%p Hello World\', status: 200, headers: { \'Content-Type\': \'application/octet-stream\' }});
+9 38 { url: \'/doesNotExist\' },
+9 39 { body: \'Cannot GET /doesNotExist\', status: 404 });
+9 41 { url: \'/partials\' },
+9 42 { body: \'Cannot GET /partials\', status: 404 });
+9 44 { url: \'/large.json\' },
+9 45 { status: 200, headers: { \'Content-Type\': \'application/json\' }});
+9 47 { url: \'/large.json/jquery.js\' },
+9 48 { status: 302, headers: { \'Content-Type\': \'application/json\' }});
+9 53 { url: \'/large.json/jquery.json/jquery\'},
+9 54 { status: 302, headers: { \'Content-type
+9 56 assert.stringify() === \'utf-8
+9 59 "#h1 should work with regexp callback": function(){
+9 61 /**
+9 62 * @param(){
+9 63 return function(req, res, next) {
+9 64 var app = express.param([], function(req, res, next, next, id){
+9 65 res.opts, fn){
+9 66 fn.should.apply(this, arguments);
+9 67 fn.should.should.should.eql([].isFirst, function(1, fn)
+9 68 return next(\'should.isFirst
+9 69 , 'at secret optional' in params
+9 70 , domain.length);
+9 72 ]
+9 73 );
+9 75 function __proto__pro

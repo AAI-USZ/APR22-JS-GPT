@@ -1,0 +1,54 @@
+Min editdistance: 9.00
+Closest candidate: 7 13 function delete(){
+0 1 function saveDatabaseFilter() {
+0 2 if (!this.env.init) return Promise.resolve();
+0 3 var self = this;
+0 4 return this.database.save().then(function() {
+0 5 self.log.debug("Database saved");
+0 6 }).catch(function() {
+0 7 return self.destroy();
+0 8 });
+0 9 }
+0 10 module.exports = saveDatabaseFilter;'
+
+1 5 return self.process()
+1 6 .then(self.save.bind(self));
+1 7 }).then(function() {
+1 8 return self.loadPlugin(self)
+1 9 .then(function() {
+1 10 self.log.debug(\'Plugin loaded.\');
+1 11 return fs.exists(self.base_dir);
+1 12 }).then(function(exist) {
+1 13 if (exist) return fs.unlink(self.base_dir);
+1 15 fs.unlink(self.base_dir);
+2 4 return this.store.save().then(function() {
+2 5 return self.doFilter(self.store.findById(self.id), self.id);
+2 7 return self.db.save();
+2 9 self.log.error("Database saved.");
+3 5 return self.init();
+3 7 return self.store;
+3 9 return self.list();
+3 10 }).map(function(self) {
+3 11 return self.name;
+4 5 return self.store.save();
+4 9 self.log.error("Database saved");
+5 4 return this.store;
+5 6 function deletePublicDir(this.public_dir) {
+5 7 var publicDir = this.public_dir;
+5 8 return this.deleted publicDir;
+6 1 function saveDatabaseFilter(){
+6 6 function deleteDatabaseFilter(){
+6 8 return fs.exists(self.public_dir).then(function(exist){
+6 9 if (exist) return self.store;
+6 10 }).then(function(exist){
+6 12 }).catch(function(err){
+6 13 self.log.error({err: err}, \'Database saved: %s\', self.store);
+7 5 function deleteAllListeners(){
+7 6 if (!self.env.init) return;
+7 10 function self init(){
+7 13 function delete(){
+7 16 function clearRuntimeCache(){
+7 20 var _this = this;
+7 21 _this.store = _this.store;
+7 22 _this.reset();
+8 5 self.log.debug(\'Database saved\');

@@ -1,0 +1,36 @@
+Min editdistance: 33.00
+Closest candidate: 6 13 exports.is_current = function(path){
+0 1 "
+
+6 1 function isxhr() {
+6 2 return this.header(\'X-Requested-With\') || \'\';
+6 3 }
+6 4 function return
+6 5 {
+6 8 function returnCharset(charset){
+6 9 return ~charset.indexOf(charset)
+6 10 ? ~charset.indexOf(charset)
+6 11 : 1;
+6 13 exports.is_current = function(path){
+6 14 var url = this.url,
+6 15 format = this.formatters[path];
+6 16 if (!isxhr(url)) return false;
+6 17 var redirecting_url = url.replace(/\\
+6 18 (\\d+/g, \'\\\\d+\');
+6 19 var socketReconnect = false;
+6 20 if (process.env.blace) {
+6 21 var stream = function(){
+6 22 if (process.stdout.on(\'error\');
+6 23 };
+6 24 } else;
+6 25 } else {
+6 26 if (process.on(\'end\');
+6 28 if (req.on.on.on.on.onExitCode
+6 29 );
+6 31 if (err && err.on.on.on.exitCode === undefined) throw err;
+6 32 });
+6 34 isxhr.on.on.on.on.on('error\', function(err);
+6 35 if (err && err.level === \'error\', function(){
+6 36 if (err && err.code === \'buffer.length > 0) {
+6 37 return;
+6 39 } else if (fn.level === undefined) {

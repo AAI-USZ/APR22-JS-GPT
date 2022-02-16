@@ -1,0 +1,169 @@
+Min editdistance: 9.00
+Closest candidate: 1 1 || (dep.url && dep.url === curr)
+0 1 ? dep.name : curr;
+0 2 }.bind(this));
+0 4 pkgs = _.compact(pkgs).map(function (name) {
+0 5 return this.dependencies[name][0];
+0 7 pkgs.forEach(addDependency.bind(this));
+0 8 fs.writeFileSync(path.join(this.cwd, config.json), JSON.stringify(this.json, null, 2));
+0 9 }).loadJSON.bind(manager));
+0 10 }
+0 11 function addDependency(pkg) {
+0 12 var path;
+0 13 var tag;
+0 14 if (pkg.lookedUp) {
+0 15 tag = pkg.originalTag || \'~\' + pkg.version;
+0 16 } else {
+0 17 path = (pkg.gitUrl || pkg.assetUrl || pkg.originalPath || '');
+0 20 if (!semver.valid(tag) &&!semver.validRange(tag)) tag = null;
+0 21 return fs.writeFileSync(path.join(this.cwd, config.json), JSON.stringify(tag));
+0 23 module.exports = save.bind(this);
+0 24 module.exports.discard = save.bind(this,'resolve', addDependency);'
+
+1 1 || (dep.url && dep.url === curr)
+1 2 || (dep.originalPath && dep.originalPath === curr);
+1 13 if (!this.json.dependencies) this.json.dependencies = {};
+1 23 return json.dependencies[pkg.name] = path? path + (tag? '#' + tag : '') : tag || \'latest\';
+1 26 module.exports.discard = function (dependencies) {
+1 27 var json = {};
+1 28 var that = this;
+1 29 if (this.opts.save &&!this.json.devDependencies) {
+1 30 dependencies = this.json.dependencies || {};
+1 31 dependencies.forEach(function (name) {
+1 32 var jsonEndpoint = endpointParser.decompose(name);
+1 33 if (!this.dependencies[name]) {
+1 34 return this.json.dependencies[name];
+1 36 dependencies[name] = jsonEndpoint || {};
+1 37 dependencies[name].forEach(function (pkg) {
+1 38 if (!pkg.root) {
+1 39 this.json.root = true;
+1 41 }, this);
+1 42 this.dependencies[name] = this.json.dependencies || {};
+1 43 dependencies[name].forEach(function (name) {
+1 47 pkg.root = false;
+1 50 });
+1 51 this.dependencies[name].forEach(function (pkg) {
+1 52 if (pkg) {
+1 53 dependencies[name].forEach(pkg) {
+1 54 pkg.once("resolveEndpoint.pkgEndpoint.pkgMeta.bind(this, pkg.name + "*");
+1 55 this.pkg.remove(this.name + this.dependencies[pkg.name]);
+1 60 this.readJSONEndpoint.prototype.resolve = function () {
+1 61 return this.readJSON();
+1 62 };
+1 63 if (this.stringify = function () {
+1 64 return json;
+1 66 }).if (this.stringify) {
+1 67 }).stringify([
+2 21 return json.version === pkg.version || \'*\';
+2 24 module.exports.discard = save.bind(this);'
+
+3 21 return fs.readFileSync(path).then(function (str) {
+3 22 var versions = pkg.version.split(\'.\');
+3 23 if (!versions.length && target === \'*\') {
+3 24 return this.emit(\'load\', versions[tag]);
+3 26 version = versions[0];
+3 27 if (!semver.satisfies(version, target)) {
+3 28 target = semver.maxSatisfying(versions, target, true);
+3 30 target = target.split(\'.\');
+3 31 if (!version) {
+3 32 return this.emit(\'load\', target);
+3 34 return this.loadJSON();
+3 37 function removeDependencies(pkg) {
+3 38 delete this.json.dependencies;
+3 40 module.exports = save.bind(this,'resolve\');
+3 41 module.exports.discard = save.bind(this,'resolveLocal', function (err) {
+3 42 if (err) return this.emit(\'error\', err);
+3 43 this.json.dependencies = this.json.dependencies || {};
+3 44 this.json.devDependencies = this.json.devDependencies || {};
+3 45 this.json.dependencies = json.dependencies || {};
+3 47 this.json.resolutions = this.json.resolutions || {};
+3 48 this.config = _.resolutions = _.resolutions || {};
+3 49 return this.config.resolutions.resolutions.resolutions = _.resolutions || config.resolutions || config.resolutions || {};
+3 50 };'
+
+4 8 addDependency(this).once('loadJSON', function () {
+4 9 var template = new Package(\'foo\');
+4 10 var contents = JSON.stringify(this.json, null, 2);
+4 11 contents.forEach(function (contents) {
+4 12 var json = JSON.parse(contents.toString());
+4 13 var sub = contents.filter(function (str) {
+4 14 return!!Object.keys(this.dependencies).length;
+4 16 return!!data.length;
+4 22 function addDependency(this) {
+4 25 var repository = this.post.tag;
+4 27 tag = this.name + \'/\' + pkg.url.replace(/\\
+4 28 replace(/^\\/+/, \'\');
+4 29 this.tag = tags;
+4 31 var key = pkg.name + \'/\';
+4 34 if (!semver.valid(this.tag)) this.commit = this.tag;
+4 35 if (this.tag) {
+4 36 tag = tags.every(function (tag) {
+4 37 return this.tag.every(function (tag) {
+4 38 return semver.satisfies(this.tag, tag);
+4 41 tag = tags.length + 2;
+4 42 this.commit = tag;
+4 43 this.tag = this.name + \'\';
+4 44 this.tag = tag;
+4 45 return this;
+4 47 function removeDependency(this) {
+4 48 delete this.tag;
+4 50 module.exports = save.bind(this,'resolveLocal', addDependency);
+4 51 module.exports.discard = save.bind(this,'resolveEndpoints\');'
+
+5 21 return fs.writeFileSync(path.join(this.cwd, config.json), tag, null, 2) + fs.readFileSync(path.join(this.cwd, config.json), tag);
+5 23 function removeDependency(pkg) {
+5 24 delete this.dependencies[pkg];
+5 26 module.exports = save.bind(this,'resolve', addDependency);
+5 27 module.exports.discard = save.bind(this,'resolveLocal', removeDependency);'
+
+6 22 return json.dependencies[pkg.name] = path? path + (tag? '#\' + tag : '') : tag || \'latest\';
+6 24 module.exports = save.bind(this,'resolveLocal', save.bind(this,'resolveEndpoints\'));'
+
+7 13 if (!this.json) return this.json = {}
+7 15 for (var i = 0, len = this.dependencies.length; i < len; ++i) {
+7 16 var packagePath = path.join(this.cwd, this.json.name)
+7 17 , pkg = manager.pkgFile.findOne({ name: pkg }, this);
+7 18 pkg.dependencies[packagePath] = pkg;
+7 20 return this.json = json;
+7 23 delete this.json = _.uniq(pkg);
+7 25 module.exports = save.bind(this,'resolve', addDependency);'
+
+8 21 return fs.writeFileSync(path.join(this.cwd, config.json), JSON.stringify(this.json, null, 2));
+9 2 || (dep.originalPath === curr)
+9 3 || (dep.originalPath === curr);
+9 10 this.json =!!this.json;
+9 11 this.dependencies = _.extend({}, this.json);
+9 12 this.jsonpkg = this.json = _.pkgs.bind(this);
+9 13 this.manager = new Manager(this);
+9 14 this.unitWork = new UnitWork;
+9 15 this.opts = manager.opts;
+9 16 if (!this.opts.save && this.jsonpkgs.saveDev) {
+9 17 var jsonp = new Package(\'jquery\', { cwd: this.cwd });
+9 18 this.jsonpkg = jsonp.split(\'#\');
+9 19 this.name = jsonp.name;
+9 20 this.message = this.json.message;
+9 21 this.unitWork.update({ cwd: this.cwd }, this);
+9 22 this.unitWork.extend({ cwd: this.cwd });
+9 24 if (this.opts.save) {
+9 25 this.emit(\'save\');
+9 27 this.unitWork.on(\'error\', this.emit.bind(this, \'error\'))
+9 28 .on(\'resolve\', this.emit.bind(this, \'end\'));
+9 29 this.waitUnlock = this.waitUnlock.bind(this);
+9 30 this.setMaxListeners(30);
+9 32 Package.prototype.resolve = function () {
+9 33 if (this.unitWork.isLocked(this.name)) return this.unitWork.on(\'unlock\', this.waitUnlock);
+9 34 var data = this.unitWork.retrieve(this.name);
+9 35 if (data) {
+9 36 this.unitWork.unlock(this.name, this);
+9 37 this.waitUnlock.bind(this);
+9 40 Package.prototype.resolveLocal = function () {
+9 41 glob(this.name + \'.*\', { cwd: this.cwd }, this);
+9 42 var promise = Q.resolveEndpoints();
+9 43 var endpoints = {};
+9 44 var validPromise = function validPromise
+9 46 if (this.local = resolveEndpoints.forExprune = function (command) {
+9 47 if (this.name == null) return this.originalPkg === \'_;
+9 48 return Q.resolve(this.preinstall.pkg.assume) {
+9 49 .release = this.assume = this.localPath == this.localPath;
+9 51 .preinstall = path.preinstall = path.resolve(this.cwd, this.localPath, this.localPath, function () {
+9 52 if (validVersions) return Q.n.n.n.if (validVersions) return this.versions.versions.versions.preinstall.apply(this.preinstall.preinstall.bind(this.pre

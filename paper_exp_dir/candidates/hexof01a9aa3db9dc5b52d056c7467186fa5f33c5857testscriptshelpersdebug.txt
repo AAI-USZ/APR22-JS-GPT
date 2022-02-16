@@ -1,0 +1,94 @@
+Min editdistance: 21.00
+Closest candidate: 3 20 debug.log.intercept(function(log) {
+0 1 describe("inspect simple object", function() {
+0 2 it("inspect circular object", function() {
+0 3 inspect(object(5)).to.eql({});
+0 4 });
+0 5 it("inspect circular object with indexed values in object", function() {
+0 6 inspect(object(5), 100).to.eql({8: false});
+0 8 it("inspect circular object with indexed values and length in object", function() {
+0 14 });'
+
+1 2 it("inspect simple object with simple name", function() {
+1 3 var obj = { foo: \'bar\' };
+1 4 debug.inspectObject(obj).should.eql(inspect(obj));
+1 6 it("inspect circular object with no name", function() {
+1 7 var obj = { baz: { thud: \'narf\', dur: { foo: \'bar\' } } } } };
+1 9 done();
+1 11 it("inspect deep object with no name", function() {
+1 12 var obj = { baz: { thud: \'narf\', dur: { foo: \'bar\' } } } };
+1 16 it("inspect.string object with no name", function() {
+1 21 it("inspect.array object with no name", function() {
+1 27 var obj = { baz: { thud: \'narf\', dur: { foo: \'bar\' } } };
+2 3 inspect(object.circular = "foo.js");
+2 6 inspect(object.circular = "foo.js&foo.js";
+2 8 it("inspect circular object with name must be a string", function() {
+2 11 it("inspect circular object not found", function() {
+2 12 inspect(object.circular = "foo.js?bar=baz.js&baz.js";
+2 21 inspect(object.circular, "foo.js?bar=baz.js&baz.js";
+3 2 it("inspect simple object with simple locals", function() {
+3 4 debug.inspectObject( obj).should.eql(inspect(obj));
+3 6 it("inspect circular object with no locals", function() {
+3 7 var obj = { baz: { thud: \'nar\' } } };
+3 11 it("inspect deep object with clear object", function() {
+3 12 var obj = { baz: { thud: \'nar\' } };
+3 18 it("log should print to console by default", function() {
+3 19 var spy = sinon.spy();
+3 20 debug.log.intercept(function(log) {
+3 21 expect(log.data).to.be.empty();
+3 23 inspect.collection.call(inspecturedObject());
+4 2 it("inspect circular object with noinspect property", function() {
+4 3 inspect(object.inspect(newObj("foo")).to.eql({});
+4 5 it("inspect circular object withinspect object and noinspect property", function() {
+4 8 it("inspect circular object withinspect and clear object", function() {
+4 11 it("inspect circular object withinspect object - noinspect property", function() {
+5 2 it("inspect simple object", function() {
+5 3 inspect(object).should.eql({});
+5 8 it("inspect deep object", function() {
+5 11 it("inspect deep object with noes specified", function() {
+5 12 inspect(object, {});
+6 1 describe("inspect simple object", () => {
+6 2 it("inspect circular object", () => {
+6 3 inspect(object).to.eql({});
+6 5 it("inspect circular object with no hostname", () => {
+6 6 inspect(object).to.eql({ Host: \'foo.com\', port: 123 }, false);
+6 8 it("inspect circular object with trusted X-Forwarded-Host', () => {
+6 9 inspect(object).to.eql({ trusted X-Forwarded-Host, port: 123 }, true);
+6 14 it("inspect in an old environment", () => {
+6 15 inspect(object).to.eql([
+6 16 ["Object", undefined, false, true],
+6 17 ["Ex Object", Object.assign({}, defaultConfig.env),
+6 18 ["Program", Object.assign({}, defaultConfig.env)
+6 19 ]);
+6 21 it("inspect in an old environment with trusted X-Forwarded-Host", () => {
+6 28 it("inspect in an old environment with trusted X-Forwarded-Host, enabled by default", () => {
+6 35 it("inspect() - no path and object", () => {
+6 37 "'"foo.js",
+6 38 "bar.js"
+6 41 it("inspect() - keyboard cat", () => {
+6 43 ["foo.js",
+6 44 ["bar.js",
+6 45 ["inspect.config-client",
+6 46 ["inspect.client"]
+7 5 it("inspect circular object with no config", () => {
+7 7 { config: config }
+7 10 it("inspect circular object with trusted config", () => {
+7 11 inspect(object).to.eql({ config: config });
+7 13 it("inspect circular object with trusted config and port", () => {
+8 2 var obj;
+8 6 it("inspect circular object with indexed values and length", () => {
+8 7 inspect(object, true).to.eql(false);
+8 9 it("inspect deep object', () => {
+8 10 inspect(object, false).to.eql(false);
+8 12 it("inspect#toString()", () => {
+8 13 inspect(object, true).to.eql(string());
+8 15 it("inspect Object Array()", () => {
+8 16 inspect(object, true).to.eql(["one","two"]);
+8 18 it("inspect Object()", () => {
+8 21 it("inspect circular object wrapped in braces", () => {
+8 24 it("inspect Event()", () => {
+8 25 inspect(object, true).to.eql(true);
+9 3 inspect(object).should.eql({
+9 4 foo: \'bar\'
+9 22 it("inspect.string object", function() {
+9 23 inspect(object).to.eql({

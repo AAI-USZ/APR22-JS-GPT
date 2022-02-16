@@ -1,0 +1,174 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 original_content: String,
+0 1 original_content: String,
+0 2 source: String,
+0 3 path: String,
+0 4 ctime: Date,
+0 5 mtime: Date
+0 6 });
+0 7 var Page = new Schema({
+0 8 title: String,
+0 9 date: Date,
+0 10 updated: Date,
+0 11 comments: Boolean,
+0 12 layout: {type: String, default: 'page'},
+0 13 content: String,
+0 14 excerpt: Number,
+0 20 var Category = new Schema({
+0 21 name: String,
+0 22 slug: String,
+0 23 posts: [Number]
+0 25 var Tag = new Schema({
+0 30 var Asset = new Schema({
+0 32 mtime: Number
+0 34 var Cache = new Schema({
+0 39 var dateGetter = function(){
+0 40 return moment(this.date);
+0 41 };
+0 42 var updatedGetter = function(){
+0 43 return moment(this.updated);
+0 45 var ctimeGetter = function(){
+0 46 return moment(this.ctime);
+0 48 var mtimeGetter = function(){
+0 49 return moment(this.mtime);
+0 51 var catGetter = function(){
+0 52 return dbCats._init(this.categories);
+0 54 var tagGetter = function(){
+0 55 return dbTags._init(this.tags);
+0 57 var permalinkGetter = function(){
+0 58 return siteUrl + this.path;
+0 60 var postsGetter = function(){
+0 61 return dbPosts._init(this.posts);
+0 63 var excerptGetter = function(){
+0 64 return this.content.substring(0, this.excerpt);
+0 66 var postCountGetter = function(){
+0 67 return this.posts.length;
+0 69 var full_url_for = newPostIndexGetter;
+0 71 exports.statics.statics.statics = newPostGetter = statics;
+0 72 exports.statics.statics = statics = statics;"
+
+1 5 original_link: String,
+1 6 ctime_format: Date,
+1 7 original_next: Date,
+1 8 old_content: Number,
+1 9 highlight: Number,
+1 13 next_text: String,
+1 14 },"
+
+2 2 source_dir:'source',
+2 69 var fullPathGetter = function(){
+2 70 return fullPath;"
+
+3 2 url: String,
+3 5 root: String,
+3 9 original_content: String
+3 68 return this.content;
+3 70 var full_urlGetter = function(){
+3 71 return full_url_for.char === ': '';
+3 72 };"
+
+4 22 parent: Number,
+4 27 parent: Number
+4 51 return dbCats;
+4 54 return dbTags;
+4 60 return dbPosts;
+5 2 source_dir: String,
+5 3 new_post_name: String,
+5 4 default_layout: String,
+5 5 filename: String,
+5 6 external_link: false,
+5 7 filename_case: 0,
+5 8 render_drafts: false,
+5 9 post_asset_folder: false,
+5 10 relative_link: false,
+5 11 highlight: function(code, lang){
+5 12 return highlight(code, {lang: lang, gutter: false});
+5 13 }
+5 55 var getter = function(){
+5 56 return this.date.toISOString();
+5 61 var defaultGetter = function(){
+5 62 return this.default_tempDir;
+5 64 var _getter = function(){
+5 65 return this.cache.getter;
+5 67 this.getter_item = function(){
+5 68 return this.getter.item;
+5 71 var _setter = function(){
+5 72 return this;
+5 73 return config;
+5 76 var clearCache.set({
+5 78 return Cache.list({
+6 47 return moment(this.categories);
+6 50 return moment(this.tags);
+6 56 return hexo.model('Post')._init(this.posts);
+6 65 return pathFn.join(this.path, this.index);
+6 67 schema.virtual('date').get(this.date, this.date_format);
+6 68 schema.virtual('path').get(this.format);
+6 69 schema.virtual('ctime_format);
+6 70 schema.virtual('s').get(this.format);
+6 72 schema.virtual('xhrtime').get(this.format);
+6 73 schema.get(this.format);
+6 75 schema.virtuals').get(this.date_format);
+6 76 schema.get(this.params);
+6 77 schema.get(this.get);
+6 78 schema.get(this.params.get);
+6 79 schema.get);
+6 83 schema.get());
+6 85 sche
+7 57 return sourceDir + this.slug + this.name;
+7 59 schema.virtual('date', dateGetter);
+7 60 schema.virtual('path', pathGetter);
+7 61 schema.virtual('permalink', permalinkGetter);
+7 62 schema.virtual('posts', postsGetter);
+7 63 schema.virtual('categories', this);
+7 64 schema.virtual('tags', tags);
+7 65 schema.virtual('ctime', dateGetter);
+7 66 schema.virtual('ctimeGetter');
+7 67 schema.virtual('excerpt', ctimeGetter);
+7 68 schema.virtual('excerpt', dateGetter);
+7 70 schema.virtual('s', dateGetter);
+7 72 schema.virtual('excerpt', this.lengthGetter);"
+
+8 6 }, config.permalink);
+8 7 var posts = [{
+8 10 posts: posts,
+8 11 tags: posts
+8 12 }];
+8 13 var meta = yfm(Post.findOne({source: tagDir, slug: '', posts: posts), {
+8 14 filename: post.path,
+8 15 content: post.content
+8 17 meta.date = date;
+8 18 meta.updated = updated;
+8 19 meta.comments = comments;
+8 20 meta.layout = 'post';
+8 21 var content = [
+8 22 '---',
+8 23 'layout: post',
+8 24 '---'
+8 25 ].join('\
+8 26 ');
+8 27 return post.create({
+8 28 title: 'Hello World',
+8 29 layout: 'draft'
+8 30 }).then(function(post){
+8 31 var data = Post.findOne({source: tagDir});
+8 32 if (data){
+8 33 data.date = moment(data.date);
+8 34 } else {
+8 35 data.date = stats.ctime;
+8 37 data.updated = common.toDate(data.updated);
+8 46 data.updated = stats.mtime;
+8 58 return data._id.toString();
+8 61 var schema = function(post, posts, parent){
+8 62 return db(this.model('Post').findOne({source: post._id);
+8 65 schema.collection.collection.findById(data._id.should.should.toArray().should.eql(data._id);
+8 67 schema.should.should.toArray().should.eql(data._id);
+8 68 schema.should.nschema.should.nschema.should.nschema.collection.should.nschema.nschema.should.return;
+8 69 schema.collection.collection.discard;
+9 66 return sourceDir + this.source;
+9 69 schema.virtual('path', dateGetter);
+9 71 schema.virtual('categories', dateGetter);
+9 73 schema.virtual('tags', dateGetter);
+9 76 schemaGetter', dateGetter);
+9 77 schemaGetter);
+9 78 schemaGetter = schemaGetter);"
+

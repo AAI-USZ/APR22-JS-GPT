@@ -1,0 +1,49 @@
+Min editdistance: 23.00
+Closest candidate: 6 7 .exit(1e, 'test.txt'));
+0 1 "
+
+1 1 });
+1 2 it('write function () {
+1 3 return post(){
+1 4 return post.create({title: function(){
+1 5 post('foo').then(this.pathFnpost('bar').then(function(function(){
+1 6 post.path.save);
+1 7 return post.save();
+1 8 }).then(function(function(callback);
+1 9 return post.save({title);
+1 12 }).then(function post.save();
+1 14 }).then(function()
+2 2 });"
+
+3 2 return post.writeFile(src,
+3 4 function testGenerate(layoutDir(){
+3 5 return testGenerate();
+3 6 return postGenerate({watch: true});
+3 7 }).then(function(){
+3 11 }).then(callback =>
+3 12 }).then(
+4 1 "
+5 1 return deployer.call(this.call(this).logger.calledOnce.calledOnce.should.should.should.returns(function(this);
+5 4 function testGenerateHigrator.extend('test').return function(){
+5 5 return function(){
+5 7 return install(locals(){
+5 8 return locals(){
+5 9 return config.install();
+5 10 return locals.install();
+5 11 }
+6 2 return dir.unwatch();
+6 3 return dirFnreturn dirFn.extend('test').then(dir =>
+6 4 .then(() =>
+6 5 .exec(() =>
+6 6 de.then(() => fs.readFile(pathFn.join(hexo.public_dir, 'test'));
+6 7 .exit(1e, 'test.txt'));
+6 8 .then(() => {
+6 9 return fs.exit(1);
+6 10 .exit(1);
+7 1 return post.publish({watch()});
+7 3 function testGenerate(){return testGenerate(){}
+7 4 .then(next(){
+7 5 return postGenerate();
+7 6 .then(newPostGenerate);
+7 7 .then(() => postGenerate);
+7 9 return Promise.then(postGenerate);

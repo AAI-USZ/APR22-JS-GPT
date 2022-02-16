@@ -1,0 +1,207 @@
+Min editdistance: 14.00
+Closest candidate: 0 1 const { encodeURL, escapeHTML } = require(\'hexo-util\');
+0 1 const { encodeURL, escapeHTML } = require(\'hexo-util\');
+0 2 module.exports = ctx => {
+0 3 const Post = ctx.model(\'Post\');
+0 4 return function postLinkTag(args) {
+0 5 const slug = args.shift();
+0 6 if (!slug) return;
+0 7 const post = Post.findOne({slug});
+0 8 if (!post) return;
+0 9 let title = args.length? args.join(\' \') : post.title;
+0 10 const attrTitle = escapeHTML(title);
+0 11 if (escape === \'true\' || escape === \'false\') title += escapeHTML(title);
+0 12 const link = encodeURL(res.url(ctx.config.root, post.path));
+0 13 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+0 14 };
+0 15 };'
+
+2 1 const url = require(\'url\');
+2 3 const PostAsset = ctx.model(\'PostAsset\');
+2 4 return function assetLinkTag(args) {
+2 7 const asset = PostAsset.findOne({post: this._id, slug});
+2 8 if (!asset) return;
+2 9 let escape = args[0];
+2 10 if (escape === \'true\' || escape === \'false\') {
+2 11 args.shift();
+2 12 } else {
+2 13 escape = \'false\';
+2 14 }
+2 15 let title = args.length? args.join(\' \') : asset.slug;
+2 17 if (escape === \'true\') title = attrTitle;
+2 18 const link = encodeURL(res.url(ctx.config.root + asset.path));
+4 1 const Promise = require(\'bluebird\');
+4 2 const { mkdirs, rmdir, unlink, writeFile } = require(\'hexo-fs\');
+4 3 const { join } = require(\'path\');
+4 4 describe(\'data\', () => {
+4 5 const Hexo = require(\'../../../lib/hexo\');
+4 6 const baseDir = join(__dirname, \'data_test\');
+4 7 const hexo = new Hexo(baseDir);
+4 8 const processor = require(\'../../../lib/plugins/processor/data\')(hexo);
+4 9 const process = Promise.method(processor.process).bind(hexo);
+4 10 const source = hexo.source;
+4 11 const File = source.File;
+4 12 const Data = hexo.model(\'Data\');
+4 13 const Data.._writeFile(data);
+4 14 function newFile(options) {
+4 15 const path = options.path;
+4 16 options.params = {
+4 17 path: path,
+4 18 data: data
+4 20 return new File(options);
+4 22 before(() => mkdirs(baseDir).then(() => hexo.init()));
+4 23 after(() => rmdir(baseDir));
+4 24 it(\'pattern\', () => {
+4 25 const { path } = data;
+4 26 path.should.eql(join(baseDir, \'_data/\') + \'/\');
+4 27 path.should.eql(join(baseDir, \'_data/test\') + \'/.foo\');
+4 28 });
+4 29 it(\'type: create - yaml\', () => {
+4 30 const body = \'foo: bar\';
+4 31 const file = newFile({
+4 32 path: \'test.yml\',
+4 33 type: \'create\',
+4 34 content: body
+4 36 return process(file).then(() => {
+4 37 const data = Data.findById(\'data\');
+4 38 data.data.should.eql({foo: \'bar\'});
+4 39 return data.remove();
+4 41 it(\'type: create - json\', () => {
+4 42 const body = \'{"foo": 1}\';
+4 50 data.data.should.eql({foo: 1});
+4 53 it(\'type: create - others\', () => {
+4 57 content: \'text/plain\',
+4 58 path: \'test.yml\'
+4 70 path: \'text/html\'
+4 73 const data = Data.insert({
+4 74 _type: \'data\'should.toData\'});
+4 75 data.data.data.should.should.eql({foo.should.should.eql(\'something\');
+4 76 return data.should.should.to.not.eql(\'123\');
+4 80 it(\'type: create();
+4 82 const file.should.should.not.should.throw(() => require(\'new\');
+4 84 it(\'type: create - others.should.should.should.throw(() => require("express"));
+4 85 it(\'type: create.should.should.have.have.have.all(callback
+6 2 const { Readable } = require(\'stream\');
+6 4 const crypto = require(\'crypto\');
+6 5 const { createReadStream, readdir, stat, unlink, writeFile } = require(\'hexo-fs\');
+6 6 const { magenta } = require(\'chalk\');
+6 7 const { load } = require(\'js-yaml\');
+6 8 const { slugize, escapeRegExp } = require(\'hexo-util\');
+6 9 const { copyDir, exists, listDir, mkdirs, readFile, rmdir, unlink, writeFile } = require(\'hexo-fs\');
+6 10 const { parse: yfmParse, split: 1, split: 2, stringify: yaml,utf8 } = require(\'hexo-front-matter\');
+6 11 const preservedKeys = [\'title\', \'slug\', \'path\', \'layout\', \'date\', \'content\'];
+6 12 const rPlaceholder = /(?:<|&lt;)!--\\uFFFC(\\d+)--(?:>|&gt;)/g;
+6 13 const rSwigVar = /\\{\\{[\\s\\S]+?\\}\\}/g;
+6 14 const rSwigComment = /\\{#[\\s\\S]+?#\\}/g;
+6 15 const rSwigBlock = /\\{%[\\s\\S]+?%\\}/g;
+6 16 const rSwigFullBlock = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+6 17 const rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+6 18 const rSwigTagInsideInlineCode = /<!--\\uFFFC(\\d+)--(?:>|&gt;)/g;
+6 19 const rSwigFullBlock = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+6 20 const _escapeContent = (cache, str) => {
+6 21 const placeholder = \'\\uFFFC\';
+6 22 return `<!--${placeholder}${cache.push(str) - 1}-->`;
+6 24 class PostRenderCache {
+6 25 constructor() {
+6 26 this.cache = [];
+6 28 loadContent(str) {
+6 29 if (str) {
+6 30 return Promise.resolve([
+6 31 '<a href="${placeholder}">${cache.push(str) - 1}</a>`
+6 32 ]);
+6 34 const _restoreAllSwigTags(str) {
+6 35 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags)
+6 36 .replace(_restoreAllSwigTags, _restoreAllSwigTags)
+6 37 .replace(rSwigComment, _restoreComment)
+6 38 .replace(rSwigVar, escape)
+6 39 .replace(rSwigComment, \'\')
+6 40 .replace(rSwigVar, escape);
+6 43 const _getScaffoldPath = (layout) => {
+6 44 return this.cache.get(layout);
+6 46 exports.filename = join(this.filename || \'\';
+6 47 exports.image.image.image.filename = join(this.image.filename || join(this.filename, \'image.sasset\', this.image.sasset.image.salt)
+6 49 exports.link = join = join(this.filename, \'\', this.filename, this.asset.image.salt);
+6 50 exports.link = join(this.link? join(this.filename, \'\')'
+
+8 6 const { spy, stub, match, assert: sinonAssert } = require(\'sinon\');
+8 7 describe(\'Router\', () => {
+8 8 const Router = require(\'./router\');
+8 9 const router = new Router();
+8 10 function checkStream(stream, expected) {
+8 11 return testUtil.stream.read(stream).then(data => {
+8 12 data.should.eql(expected);
+8 15 function checksum(stream) {
+8 16 return new Promise((resolve, reject) => {
+8 17 const hash = crypto.createHash(\'sha1\');
+8 18 stream.on(\'readable\', () => {
+8 19 let chunk;
+8 20 while ((chunk = stream.read())!== null) {
+8 21 hash.update(chunk);
+8 23 }).on(\'end\', () => {
+8 24 resolve(hash.digest(\'hex\'));
+8 25 }).on(\'error\', reject);
+8 28 it(\'format\', () => {
+8 29 router.format = Router.format;
+8 30 router.format.should.eql(JSON.stringify({
+8 31 format: \'foo\',
+8 32 format: \'bar\',
+8 33 params: {},
+8 34 serializers: {
+8 35 checkum: checksum,
+8 37 locals: {
+8 38 close: false
+8 40 }));
+8 41 return router.format(format);
+8 44 router.format.should.eql(json);
+8 46 it(\'format - array\', () => {
+8 47 router.format.should.eql([
+8 48 \'foo\',
+8 49 \'bar\',
+8 50 \'baz\',
+8 51 \'\',
+8 52 \'{% * 7}',
+8 53 \'{{foo}bar %}\',
+8 54 \'{{foo}baz\',
+8 56 \'{% endfoo %}'
+8 57 ].join(\'\
+8 58 \');
+8 59 return router.format(['foo', \'bar', \'baz']);
+8 61 it(\'format - page\', () => {
+8 65 \'<h1 id="more"></h1>\',
+8 67 \'<p>This is a nice day</p>\',
+8 68 \'</li>\',
+8 69 \'<li>loki</li>\',
+8 70 \'<li>Jane</li>\',
+8 71 \'<li>Bandit</li>\',
+8 72 \'</ul>\',
+8 74 \'<li>456789<39 class="">\',
+8 75 \'<a href="http://zespia.tw">\',
+8 76 \'456789</a>\',
+8 77 \'456789</li>\',
+8 78 \'456789\'
+8 79 ].join(\'\');
+8 80 router.format.format.should.should.eql(JSON.stringify({
+8 81 \'{"
+
+9 1 const fs = require(\'hexo-fs\');
+9 2 const pathFn = require(\'path\');
+9 4 describe(\'Load plugins\', () => {
+9 6 const hexo = new Hexo(pathFn.join(__dirname, \'plugin_test\'), {silent: true});
+9 7 const loadPlugins = require(\'../../../lib/hexo/load_plugins\');
+9 8 const script = [
+9 9 \'hexo._script_test = {',
+9 10 \'  filename: __filename,',
+9 11 \'  dirname: __dirname,',
+9 12 \'  module: module,',
+9 13 \'  require: require\',
+9 14 \'}\'
+9 17 function validate(path) {
+9 18 const result = hexo._script_test;
+9 19 result.filename.should.eql(path);
+9 20 result.dirname.should.eql(pathFn.dirname(path));
+9 21 result.module.id.should.eql(path);
+9 22 result.module.filename.should.eql(path);
+9 23 delete hexo._script_test;
+9 25 function createPackageFile(...args) {
+9 26 const pkg = {"
+

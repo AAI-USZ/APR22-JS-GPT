@@ -1,0 +1,32 @@
+Min editdistance: 23.00
+Closest candidate: 8 1 require('test.config() {
+0 1 return function () {
+0 3 return this;
+0 5 return this.install();
+0 6 }.bind(this.install();
+0 7 };return;
+0 8 };return });
+0 9 });"
+
+1 1 require('test.prototype.install = function () {
+1 2 install();
+1 10 });'
+
+2 1 assert.prototype.install = function () {
+2 9 });
+2 10 };"
+
+3 1 require(this);"ssh://this.config.call(this);"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git@github.com');"ssh://git');"ssh://git');"ssh://git');"ssh://git@github.com');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"ssh://git');"
+4 1 require(this);"use(this);
+4 2 it('install', function () {
+4 3 install () {
+5 1 require(this);"import this;"return this;
+5 2 "foo.configure()");
+6 1 require(this);
+6 3 require(this);"something-js-js-fn');"
+
+7 1 require(this);"import this;
+7 2 require(this);"git');"
+
+8 1 require('test.config() {
+8 9 }

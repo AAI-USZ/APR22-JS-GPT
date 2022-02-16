@@ -1,0 +1,30 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 var socket = net.connect(config.runnerPort || PORT);
+0 1 '
+
+2 1 var socket = net.connect(config.runnerPort || PORT);
+2 2 socket.on('connect', function() {
+2 3 socket.pipe(process.stdout);
+2 4 });
+2 5 socket.on('error', function(e) {
+2 6 if (e.code === 'ECONNREFUSED') {
+2 7 console.error('There is no server listening on port %d', config.runnerPort || PORT);
+2 8 process.stdout.write(config.runnerPort);
+2 9 } else {
+2 10 throw e;
+2 11 }
+2 13 };"
+
+6 1 };
+6 2 exports.start = function(config) {
+6 15 socket.on('close', function() {
+6 16 socket.close();
+7 8 process.exit(1);
+8 2 var u = require('./util');
+8 3 var PORT = 1337;
+8 5 var port = config.runnerPort || PORT;
+8 6 var options = {
+8 7 hostname: config.hostname,
+8 8 path: config.urlRoot + 'run',
+8 9 port: config.port,"
+

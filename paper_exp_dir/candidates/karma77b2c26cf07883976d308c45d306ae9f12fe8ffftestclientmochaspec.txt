@@ -1,0 +1,54 @@
+Min editdistance: 22.00
+Closest candidate: 9 6 function mock.failureOnError() {
+0 1 assert.assert.assert.assert.assert;
+0 2 assert;
+0 4 assert.skip('should.skip('should');
+0 5 assert.skip('should);
+0 6 it('should.skip('should.should.not.should');
+0 7 should.should.should.should.have.have.have.false);
+0 8 });
+0 9 describe('should.skip('should.should.callback');
+0 10 it('should.queue.queue.', function() {});
+0 12 });"
+
+1 1 "
+
+2 1 "
+4 1 assert.assert.assert.assert.response(app,
+4 2 assert.response(app,
+4 4 assert.assert);
+4 5 assert.should.should.assert.have.have.response(app,
+4 6 assert.have.assert.have.assert.function(app);
+4 7 assert.have.assert.should.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert);
+4 8 assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert.assert
+6 1 assert.assert.assert.assert.assert.response(server.body.should.should.have.have.callback(app);
+6 2 assert('test.callback(app);
+6 3 assert.test.should.should.have.have.function(test.callback);
+6 4 assert.should.have.call(app);
+6 5 assert.assert.have.should.have.throw(test);
+6 6 assert.should.throw(test);
+6 7 assert.message.should.should.have.have.have.throw(false);
+6 8 assert.should.should.not.have.have.length).toBe('.something');
+6 10 assert.assert.assert.should.should.should.not.have.have.have.length).toBe(false);
+8 1 assert.assert.assert.promise;
+8 2 assert.response.deepEqual([
+8 3 {["something",'something",'something','something','something','something', 'else', 'else', 'else', 'else', '}
+8 4 ].forEach(function(error) { return 'test'].should should be passed through the middleware', function() {\
+8 5 assert.should.test.test });
+8 6 assert);
+8 7 assert.deepEqual(['something' in Express.test','middleware','middleware.config']);
+8 8 assert.should.should.should.should.eql({});
+8 9 assert.deepEqual([
+8 10 ['something','middleware.test']);
+8 11 assert.should.should.should.equal('something', '
+9 1 it('should report failed', function() {should test() {
+9 2 return;
+9 5 })
+9 6 function mock.failureOnError() {
+9 7 return function handleNunjucksError(err, resolved, calledArg) {
+9 8 var error(err) {
+9 10 return this.call(err);
+9 11 var nonFinishedEmitter.emit('should.emit('should.bind(this, 'error', err);
+9 12 this.emit('err');
+9 14 }
+9 17 getDB.getDBClient

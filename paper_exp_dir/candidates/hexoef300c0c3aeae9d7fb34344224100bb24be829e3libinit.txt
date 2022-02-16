@@ -1,0 +1,155 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var configfile = args.config || '_config.yml';
+0 1 var configfile = args.config || '_config.yml';
+0 2 hexo.bootstrap(cwd, args);
+0 3 hexo.configfile = path.join(hexo.base_dir, configfile);
+0 4 async.eachSeries([
+0 5 'logger',
+0 6 'extend',
+0 7 'config',
+0 8 'update',
+0 9 'database',
+0 10 'plugins',
+0 11 'scripts'
+0 12 ], function(name, next){
+0 13 require('./loaders/' + name)(next);
+0 14 }, function(err){
+0 15 if (err) throw err;
+0 16 hexo.emit('ready');
+0 17 var command = args._.shift();
+0 18 if (command){
+0 19 var c = hexo.extend.console.get(command);
+0 20 if (!c || (!hexo.env.init &&!c.options.init)){
+0 21 command = 'help';
+0 22 }"
+
+1 3 hexo.configfile = args.config || '_config.yml';
+1 4 var baseDir = hexo.base_dir;"
+
+2 3 hexo.configfile = configfile || path.join(hexo.base_dir, configfile);
+2 16 hexo.emit('ready');"
+
+3 1 var Logger = hexo.Logger({
+3 2 levels: 3,
+3 3 log: new Logger(),
+3 4 levels: 4,
+3 5 renderable: true
+3 6 });
+3 7 var callback = args.c || args.render || new Logger({
+3 8 path: hexo.config.category_dir + 'public/',
+3 9 hide: args.depth? args.join(' ') : ''
+3 11 if (hexo.debug) callback = callback.apply(logger, args);
+3 12 hexo.log.d('Loading');
+3 13 var list = hexo.extend.console.list(),
+3 14 keys = Object.keys(list);
+3 15 if (keys.indexOf(command) === -1){
+3 16 var maxLen = 0,
+3 17 result = '\
+3 18 Usage: hexo <command>\
+3 19 \
+3 20 Commands:\
+3 21 ';
+3 22 var helps = [
+3 23 ['version', 'Display version'],
+3 24 ['help', 'Display help']
+3 25 ];
+3 26 _.each(list, function(val, key){
+3 27 helps.push([key, val.description]);
+3 29 helps = helps.sort(function(a, b){
+3 30 var orderA = a[0],
+3 31 orderB = b[0];
+3 32 if (orderA.length >= orderB.length && maxLen < orderA.length) maxLen = orderA.length;
+3 33 else if (maxLen < orderB.length) maxLen = orderB.length;
+3 34 if (orderA < orderB) return -1;
+3 35 else return 0;
+3 37 helps.forEach(function(item){
+3 38 result +=''+ item[0].bold;
+3 39 for (var i=0; i<maxLen + 3 - item[0].length; i++){
+3 40 result +='';
+3 41 }
+3 42 result += item[1] + '\
+3 45 result += '\
+3 46 More info: http://zespia.tw/hexo/docs/cli.html\
+3 48 console.log(result);
+3 49 return callback();
+3 50 };"
+
+5 2 command: 'test',"
+
+6 3 hexo.log.apply(hexo, [
+6 4 '\
+6 5 ' + configfile,"
+
+8 1 var Logger = hexo.Logger();
+8 2 var Asset = hexo.model('Asset');
+8 3 var cquery = require('./conditions/' + args.length + '_id');
+8 4 if (!ctx.config.future){
+8 5 var queryOpt = {};
+8 6 query.date = {$lte: new Date(), + $lte: new Date(), + $gt: new Date(),
+8 7 '---' + hexo.config.date;
+8 9 if (!data.length) return callback();
+8 10 hexo.config.future = true;
+8 11 hexo.locals.invalidate();
+8 12 hexo.locals.get('posts').each(function(post){
+8 13 var query = new Logger();
+8 14 if (!post.length) return callback();
+8 15 post.content = post.content.replace(/\
+8 16 $/, '/');
+8 18 var posts = Post.find({source: data.path});
+8 19 if (!posts.length) return callback();
+8 29 hexo.config.future = false;
+8 33 return obj();
+8 36 if (data.path){
+8 37 var path = data.path;
+8 38 posts.forEach(function(post){
+8 40 if (!post.length) return;
+8 41 post.path = data.path;
+8 44 hexo.emit('generateBefore');
+8 45 var baseDir = hexo.base_dir;
+8 46 function Locals(){
+8 47 this.page = {};
+8 48 this.path = baseDir + path;
+8 49 this.permalink = config.root + this.page + config.root + '/';
+8 50 this.site = site;
+8 51 this.config = config;
+8 52 this.theme = theme;
+8 53 this._ = _;
+8 54 this.post = this;
+8 55 this._permalink = config.root + this.post + '/';
+8 57 Locals.prototype.__proto__ = EventEmitter.prototype;
+8 58 Locals.prototype.call(this, this.page, this.path);
+8 59 return locals;
+8 61 Locals.prototype.site = site;
+8 62 Locals.call(this, this.config, this.path);
+8 63 Locals.skip = this._paginator = this.asset_render();
+8 64 Locals;
+8 65 Locals.skip = this.asset_render();
+8 66 Locals.getLocals.getLocals.getLocals.getLocals;
+8 67 Locals.getLocals;
+8 68 Locals.setLocals =!Locals;
+8 69 Locals.clearLocals;
+8 71 Locals clearLocals.getLocals;
+8 72 Locals.skipLocals.setLocals = _;
+8 73 Locals. resetLocals.setLocals;
+8 74 Locals.setLocals;
+8 75 Locals = _;
+8 77 Locals.setLocals = posts;
+8 79 Locals.clearLocals = _;
+8 80 Locals. resetLocals = _;
+9 2 config: hexo.config
+9 4 var configPath = path.join(hexo.base_dir, 'debug.log');
+9 5 return callback(module.exports, 'update', {init: true}, function(){
+9 6 return hexo.init();
+9 7 }).then(function(){
+9 8 return new Logger(hexo.config, {}, function(err){
+9 9 if (err) return log.e(err);
+9 10 return Promise.all([
+9 11 log.remove(),
+9 12 log.remove()
+9 13 ]);
+9 15 return hexo.extend.filter.exec('after_post_render', require('./backtick_code_block'));
+9 19 module.exports = function(cwd, args, callback){
+9 20 var hexo = new Hexo(process.cwd(), args);
+9 21 return function(){
+9 22 var args = Array.isArray(args)? args : ["
+

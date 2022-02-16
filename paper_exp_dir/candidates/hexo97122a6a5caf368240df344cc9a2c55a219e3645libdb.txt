@@ -1,0 +1,349 @@
+Min editdistance: 1.00
+Closest candidate: 0 5 async = require('async'),
+0 1 pathFn = require('path'),
+0 2 swig = require('swig'),
+0 3 moment = require('moment'),
+0 4 _ = require('lodash'),
+0 5 async = require('async'),
+0 6 extend = require('../../extend'),
+0 7 renderer = Object.keys(extend.renderer.list()),
+0 8 tagExt = extend.tag.list(),
+0 9 render = require('../../render'),
+0 10 route = require('../../route'),
+0 11 model = require('../../model'),
+0 12 dbPosts = model.posts,
+0 13 dbPages = model.pages,
+0 14 dbCats = model.categories,
+0 15 dbTags = model.tags,
+0 16 dbAssets = model.assets,
+0 17 util = require('../../util'),
+0 18 yfm = util.yfm,
+0 19 titlecase = util.titlecase,
+0 20 highlight = util.highlight,
+0 21 config = hexo.config,
+0 22 catDir = (config.category_dir || 'categories') + '/',
+0 23 tagDir = (config.tag_dir || 'tags') + '/',
+0 24 siteUrl = config.url + '/',
+0 25 configLink = config.permalink,
+0 26 highlightConfig = config.highlight,
+0 27 highlightEnable = highlightConfig? highlightConfig.enable : true,
+0 28 backtickConfig = highlightConfig? highlightConfig.backtick_code_block : true,
+0 29 lineNumConfig = highlightConfig? highlightConfig.line_number : true,
+0 30 tabConfig = highlightConfig? highlightConfig.tab_replace : '',
+0 31 autoSpacingConfig = config.auto_spacing,
+0 32 titlecaseConfig = config.titlecase,
+0 33 newPostConfig = config.new_post_name,
+0 34 defaultCategory = config.default_category || 'uncategorized',
+0 35 categoryMap = config.category_map || {},
+0 36 tagMap = config.tag_map || {},
+0 37 excerptRegex = /<!--\\s*more\\s*-->/;
+0 38 swig.init({tags: tagExt});
+0 39 if (newPostConfig){
+0 40 var filenameRE = pathFn.basename(newPostConfig, pathFn.extname(newPostConfig))
+0 41 .replace(/:year/g, '(\\\\d{4})')
+0 42 .replace(/:(month|day)/g, '(\\\\d{2})')
+0 43 .replace(/:title/g, '(.*)');"
+
+1 2 _ = require('underscore'),
+1 3 sep = require('path').sep;
+1 4 if (!fs.exists ||!fs.existsSync){
+1 5 fs.exists = path.exists;
+1 6 fs.existsSync = path.existsSync;
+1 7 }
+1 8 var mkdir = exports.mkdir = function(destination, callback){
+1 9 var parent = path.dirname(destination);
+1 10 fs.exists(parent, function(exist){
+1 11 if (exist){
+1 12 fs.mkdir(destination, callback);
+1 13 } else {
+1 14 mkdir(parent, function(){
+1 16 });
+1 19 };
+1 20 var write = exports.write = function(destination, content, callback){
+1 24 fs.writeFile(destination, content, callback);
+1 32 var copy = exports.copy = function(source, destination, callback){
+1 34 async.series([
+1 35 function(next){
+1 37 if (exist) next();
+1 38 else mkdir(parent, next);
+1 41 ], function(){
+1 42 var rs = fs.createReadStream(source),
+1 43 ws = fs.createWriteStream(destination);
+1 44 rs.pipe(ws)
+1 45 .on('error', function(err){
+1 46 if (err) throw err;
+1 48 ws.on('close', callback)
+1 54 var dir = exports.dir = function(source, callback, parent){
+1 55 fs.exists(source, function(exist){
+1 57 fs.readdir(source, function(err, files){
+1 59 var result = [];
+1 60 async.each(files, function(item, next){
+1 61 fs.stat(source + sep + item, function(err, stats){
+1 63 if (stats.isDirectory()){
+1 64 dir(source + sep + item, function(children){
+1 65 result = result.concat(children);
+1 66 next();
+1 67 }, (parent? parent + sep : '') + item);
+1 69 result.push((parent? parent + sep : '') + item);
+1 73 }, function(){
+1 74 callback(result);
+1 78 return [];
+1 82 var read = exports.read = function(source, callback){
+1 85 fs.readFile(source, 'utf8', callback);
+1 87 callback(null);
+1 91 var toISOString = function(date){
+1 92 if (!date || new Date()){
+1 93 return date = new Date(date);
+1 95 return dateFormat(dateFormat);
+1 97 return fs.toISOString = dateFormat);
+1 99 return fs = function queryString = queryString = queryString.replace(/;
+1 102 exports.dateFormat = toDate = toDate = toDateHelper;
+1 103 exports.dateHelper = function(date, timeFormat){
+1 104 exports.time = queryString;
+1 105 exports.time = toDateHelper;
+1 106 exports.time = _.time = _.time;
+1 107 exports.date = _.format = _.format;
+1 108 exports.time = _.toDate;
+1 109 return function(){
+1 110 return config;
+1 111 };"
+
+2 1 path = require('path'),
+2 4 EOL = require('os').EOL,
+2 5 EOLre = new RegExp(EOL, 'g');
+2 63 fs.stat(source + '/' + item, function(err, stats){
+2 66 dir(source + '/' + item, function(children){
+2 69 }, (parent? parent + '/' : '') + item);
+2 71 result.push((parent? parent + '/' : '') + item);
+2 87 fs.readFile(source, function(source, callback);
+2 89 callback(null, callback);
+2 94 var read = exports = function(source, callback){
+2 95 fs.readFile(source, function(source, callback){
+2 98 return readFile = fs.readFile = fs.readFile = fs.readFileSync(source, function(source, callback);
+2 102 module.readFileSync = function(source, function(source, callback){
+2 104 async.readFileSync = function(source, data, function(source, callback){
+2 105 async.readFileSync(source, function(source, function(err, options, content){
+2 106 if (err){"
+
+3 7 fs.exists = pathFn.exists;
+3 8 fs.existsSync = pathFn.existsSync;
+3 10 var sep = exports.sep = pathFn.sep;
+3 11 var delimiter = exports.delimiter = pathFn.delimiter;
+3 12 var mkdirs = exports.mkdirs = function(path, callback){
+3 13 var parent = pathFn.dirname(path);
+3 16 fs.mkdir(path, callback);
+3 18 mkdirs(parent, function(){
+3 24 var checkParent = function(path, callback){
+3 27 if (exist) return callback();
+3 28 mkdirs(parent, callback);
+3 31 var writeFile = exports.writeFile = function(path, data, options, callback){
+3 32 if (!callback){
+3 33 if (typeof options === 'function'){
+3 34 callback = options;
+3 35 options = {};
+3 37 callback = function(){};
+3 40 options = _.extend({
+3 41 checkParent: true
+3 42 }, options);
+3 45 if (!options.checkParent) return next();
+3 46 checkParent(path, next);
+3 49 var rs = fs.createReadStream(path),
+3 50 ws = fs.createWriteStream(path, data, options);
+3 61 var copyFile = exports.copyFile = function(src, dest, options, callback){
+3 71 ignoreHidden: true,
+3 72 ignorePattern: null
+3 76 fs.exists(dest, function(exist){
+3 77 if (exist) return next();
+3 78 mkdirs(dest, next);
+3 82 var rs = fs.createReadStream(dest),
+3 83 ws = fs.createWriteStream(dest);
+3 89 .on('error', function(callback)
+3 90 .on('close');
+3 95 var copy = exports = function(src, dest, dest, options, callback){
+3 96 fs.copyDir(dest,
+3 97 fs.readFile,
+3 98 , exists = fs.readFile,
+3 99 , function(dest, function(dest, options, callback){
+3 100 async.forEach(src, next){
+3 101 fs.stat(dest, function(dest, stat(dest, stat){
+3 102 if (stat(dest, stat(dest, stat(dest) return stat(dest) || stat(dest) ||!== undefined) || stat(dest));
+3 103 if (options.stat(dest && stat.isDirectory())) return next();
+3 104 fs.each(function(function(dest, function(file, next){
+3 105 if (!(dest, next){\
+4 94 var read = exports = fs.read = function(source, callback){
+4 95 fs.readFile(source, callback, callback, callback);
+4 97 var toArray.each(function(callback, function(callback, function(callback, function(callback, content){
+4 98 return callback, content){
+4 99 return callback(callback){
+4 101 return callback(null, callback);
+4 106 var ele = function readFile(callback, target = function(new, target){
+4 107 return function(err, content, index){
+4 108 return callback){
+4 109 return callback(null, target){
+4 110 return callback(new, target){
+4 111 isDirectory(){
+4 112 if (target === '_dir) || target === '_read: __dirs', __dirs.join('/
+5 3 module.exports = function(callback){
+5 4 var pluginDir = hexo.plugin_dir;
+5 7 fs.exists(pluginDir, function(exist){
+5 11 callback();
+5 14 },
+5 18 file.dir(pluginDir, function(files){
+5 19 async.forEach(files, function(item, next){
+5 20 require(pluginDir + item);
+5 22 }, next);
+5 25 ], callback);
+6 4 join = pathFn.join,
+6 33 var defaults = {
+6 36 if (_.isFunction(options)){
+6 53 if (err) callback(err);
+6 75 if (!options.ignoreHidden &&!options.ignorePattern &&!options.ignorePattern.test(src)) return next();
+6 76 checkParent(dest, next);
+6 79 var rs = fs.createReadStream(src),
+6 87 var copyDir = exports.copyDir = function(src, dest, options, callback){
+6 88 var defaults = options = options;
+6 89 fs.readdir = fs.statSync(dest);
+6 90 async.parallel.parallel([
+6 91 ], function(src, next){
+6 92 , next();
+6 95 }, function(next){
+6 98 var restore = function(next){
+6 100 var writeFile(src, cache = join, sep, callback);
+6 101 File.exists(dest, callback);
+6 104 if (!bowerDir = new View(src, function(){
+6 106 if (options) return next();
+6 107 .stat(dest.exists(dest, callback);
+6 109 \
+7 10 var join = function(parent, child){
+7 11 return parent? pathFn.join(parent, child) : child;
+7 29 mkdirs(parent, function(err){
+7 30 if (err && err.code === 'EEXIST') return callback();
+7 31 callback(err);
+7 65 var appendFile = exports.appendFile = function(path, data, options, callback){
+7 80 if (!options.ignoreHidden &&!options.ignorePattern &&!options.ignorePattern.test(path)) return next();
+7 81 var checkParent = exports.checkParent = function(path, next){
+7 85 mkdirs(parent.addFile(path, function(new File(parent, path){"
+
+8 3 sep = path.sep,
+8 4 yaml = require('yamljs'),
+8 5 EventEmitter = require('events').EventEmitter,
+8 7 i18n = require('./i18n'),
+8 8 util = require('./util'),
+8 9 file = util.file;
+8 10 module.exports = function(root, options, callback){
+8 11 async.parallel([
+8 13 file.read(__dirname + '/../package.json', next);
+8 16 fs.exists(root + '/_config.yml', function(exist){
+8 18 file.read(root + '/_config.yml', next);
+8 20 next(null, '');
+8 24 ], function(err, result){
+8 25 if (err) throw new Error('Initialize Error');
+8 26 var version = JSON.parse(result[0]).version,
+8 27 config = yaml.parse(result[1]),
+8 28 env = process.env,
+8 29 themeDir = config? root + sep + 'themes' + sep + config.theme + sep : null;
+8 30 var hexo = global.hexo = new EventEmitter();
+8 31 hexo.__defineGetter__('base_dir', function(){return root + sep});
+8 32 hexo.__defineGetter__('public_dir', function(){return root + sep + 'public' + sep});
+8 33 hexo.__defineGetter__('source_dir', function(){return root + sep +'source' + sep});
+8 34 if (themeDir) hexo.__defineGetter__('theme_dir', function(){return themeDir});
+8 35 hexo.__defineGetter__('plugin_dir', function(){return root + sep + 'node_modules' + sep});
+8 36 hexo.__defineGetter__('script_dir', function(){return root + sep +'scripts' + sep});
+8 37 hexo.__defineGetter__('version', function(){return version});
+8 38 hexo.__defineGetter__('env', function(){return env});
+8 39 hexo.__defineGetter__('safe', function(){return options.safe});
+8 40 hexo.__defineGetter__('debug', function(){return options.debug});
+8 41 hexo.__defineGetter__('config', function(){return config});
+8 42 hexo.__defineGetter__('extend', function(){return require('./extend')});
+8 43 hexo.__defineGetter__('util', function(){return require('./util')});
+8 44 hexo.__defineGetter__('render', function(){return require('./render')});
+8 45 hexo.__defineGetter__('i18n', function(){return i18n.i18n});
+8 46 hexo.__defineGetter__('route', function(){return require('./route')});
+8 47 hexo.__defineGetter__('process', function(){return require('./process')});
+8 48 if (require('./renderer')){
+8 49 require('./tag')(hexo.extend.renderer.list());
+8 51 var extend = require('./extend'),
+8 52 renderer = extend.renderer.store.list(),
+8 53 filter,
+8 54 helper = extend.helper.list(),
+8 55 processor = extend.processor,
+8 56 renderer.static,
+8 57 highlight = require(extend,
+8 58 processor,
+8 60 rendererSync = extend.static,
+8 62 processor: require: function(require,
+8 63 tag: require,
+8 64 swig,
+8 66 server: require(swig,
+8 67 async: require,
+8 68 config: function(swig,
+8 69 file,
+8 70 render: function(swig,
+8 72 server: function(swig,
+8 73 ignore,
+8 74 ignore: function(swig,
+8 75 ignore, arg){
+8 76 if (ignore,
+8 77 config.ignore = config.ignore!= null) return;
+8 78 if (config.ignore!= null) return;
+8 79 if (config.ignore = config.ignore == null){
+8 80 if (config.ignore == null){
+8 81 config.highlight === 'not
+9 3 vsprintf = require('sprintf-js').vsprintf;
+9 4 var i18n = module.exports = function(){
+9 5 this.store = {};
+9 7 this.storeSync = {};
+9 9 i18n.prototype.get = function(name){
+9 10 name = name.toLowerCase();
+9 11 return this.store[this.store[name]];
+9 13 i18n.prototype.list = function(){
+9 14 var store = this[this.store],
+9 15 keys = Object.keys(store),
+9 16 list = [];
+9 17 keys.sort(function(a, b){
+9 18 return a - b;
+9 20 keys.forEach(function(key){
+9 21 list.push(key + ':');
+9 23 list.sort(function(a, b){
+9 26 list.unshift(key) + ':');
+9 31 i18n.prototype.set = function(name, data, callback){
+9 32 var _id = data._id;
+9 33 if (data.length){
+9 34 _id = getData(data.shift()),
+9 35 name = data.toLowerCase();
+9 37 _id = getData(data.shift(), function(){
+9 38 return _id.call(this, data.id);
+9 42 return data.toUpperCase();
+9 46 var _id = getData(_id);
+9 47 if (_id){
+9 48 _id.should.eql(data._id);
+9 50 _id.should.eql(data);
+9 54 async.each(this.store[data.id], function(key, callback){
+9 55 if (typeof data!== 'undefined') callback = function(){};
+9 56 var _id = this._id;
+9 57 if (data){
+9 60 _id.should.eql(this.store[data.id]);
+9 65 i18n.prototype.remove = function(name){
+9 67 if (this._id){
+9 68 _id.should.eql(this._id);
+9 70 _id.should.eql(this.store[this.id]);
+9 73 i18n.prototype.register = function(name, callback){
+9 75 if (typeof name === 'undefined'){
+9 76 _id = getId(this._id);
+9 78 _id.should.eql(this);
+9 81 i18n.prototype.prototype.get = function(name, callback){
+9 82 var getPointerval){
+9 83 return this.length = interval > 0? - 1 : interval;
+9 84 this.length : interval;
+9 85 this.middleware = [];
+9 86 this.store = getPointerval = getPill(callback);
+9 89 i18n
+9 90 i18n.prototype.setInterval(filename, interval, function(len, function(fn){
+9 91 this.element, function(err, content){
+9 92 this.filename, interval){
+9 93 this.filename = getPill, interval || getPointer(filename, fn){
+9 94 process.type = fn);
+9 95 process.on('exit', function(){
+9 96 var interval = fn(fn){
+9 97 fn.setTimeout, interval || function(){
+9 98 fn.priority

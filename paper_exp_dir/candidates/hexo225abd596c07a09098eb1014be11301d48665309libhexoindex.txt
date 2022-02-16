@@ -1,0 +1,11 @@
+Min editdistance: 22.00
+Closest candidate: 0 1 return this.dirname
+0 1 return this.dirname
+3 1 return
+6 1 return () =>
+7 1 module.exports.filename = this;'helpers = this;"
+9 1 return function (options) { Source(options) { Source } this.log = this.__protoString() };
+9 2 return this.process = this; };
+9 3 }
+9 4 };"
+

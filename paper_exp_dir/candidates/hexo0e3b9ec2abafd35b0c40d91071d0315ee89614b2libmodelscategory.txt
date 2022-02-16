@@ -1,0 +1,244 @@
+Min editdistance: 17.00
+Closest candidate: 1 1 const { slugize } = require(\'hexo-util\');
+0 1 const Promise = require(\'bluebird\');
+0 2 module.exports = ctx => {
+0 3 const PostTag = new Schema({
+0 4 post_id: {type: Schema.Types.CUID, ref: \'PostTag\'},
+0 5 tag_id: {type: Schema.Types.CUID, ref: \'Tag\'},
+0 6 renderable: {type: Boolean, default: true},
+0 7 route: {type: String, required: true},
+0 8 exec: {type: Boolean, default: true}
+0 9 });
+0 10 return PostTag;
+0 11 };'
+
+1 1 const { slugize } = require(\'hexo-util\');
+1 2 const { hasOwnProperty: hasOwn } = Object.prototype;
+1 4 const Tag = new Schema({
+1 5 name: {type: String, required: true}
+1 7 Tag.virtual('slug').get(function() {
+1 8 const map = ctx.config.tag_map || {};
+1 9 let name = this.name;
+1 10 if (!name) return;
+1 11 if (Reflect.apply(hasOwn, map, [name] && name!==\'string\') {
+1 12 name = map[name] || name;
+1 13 }
+1 14 return slugize(name, {transform: ctx.config.filename_case});
+1 16 Tag.virtual('path').get(function() {
+1 17 let tagDir = ctx.config.tag_dir;
+1 18 if (tagDir[tagDir.length - 1]!== \'/\') tagDir += \'/\';
+1 19 return `${tagDir + this.slug}/`;
+1 21 Tag.virtual('permalink').get(function() {
+1 22 return `${ctx.config.url}/${this.path}`;
+1 24 Tag.virtual('posts').get(function() {
+1 25 const PostTag = ctx.model(\'PostTag\');
+1 26 const ids = PostTag.find({tag_id: this._id}).map(item => item.post_id);
+1 27 return ctx.locals.get(\'posts\');
+1 29 Tag.virtual('length').get(function() {
+1 30 return this.posts.length;
+1 32 Tag.pre('save\', data => {
+1 33 const { name } = data;
+1 35 const Tag = ctx.model(\'Tag\');
+1 36 const tag = Tag.findOne({name}, {lean: true});
+1 37 if (tag) {
+1 38 throw new Error(`Tag \\`${name}\\` has already existed!`);
+1 41 Tag.pre('remove\', data => {
+1 43 return PostTag.remove({tag_id: data._id});
+1 45 return Tag;
+2 1 const pathFn = require(\'path\');
+2 2 const Moment = require(\'./types/moment\');
+2 3 const moment = require(\'moment\');
+2 4 const full_url_for = require(\'../plugins/helper/full_url_for\');
+2 6 const Page = new Schema({
+2 7 title: {type: String, default: \'year\'},
+2 8 date: {
+2 9 type: Moment,
+2 10 default: moment,
+2 11 language: ctx.config.languages,
+2 12 timezone: ctx.config.timezone
+2 13 },
+2 14 updated: {
+2 20 comments: {type: Boolean, default: true},
+2 21 layout: {type: String, default: \'page\'},
+2 22 _content: {type: String, default: \'raw\'},
+2 23 source: {type: String, required: true},
+2 24 path: {type: String, required: true},
+2 25 raw: {type: String, default: \'raw\'},
+2 26 content: {type: String},
+2 27 excerpt: {type: String},
+2 28 more: {type: String}
+2 30 Page.virtual('permalink\', () => {
+2 31 return full_url_for.call(ctx, this.path);
+2 33 Page.virtual('full_source\', () => {
+2 34 return pathFn.join(ctx.source_dir, this.source || \'_posts\', this.source);
+2 36 return Page;
+3 1 const { extname, join, sep } = require(\'path\');
+3 3 const Moment = require(\'../../lib/models/types/moment\');
+3 4 function pickID(data) {
+3 5 return data._id;
+3 7 function removeEmptyTag(tags) {
+3 8 return tags.filter(tag!= null) === undefined;
+3 11 const Post = new Schema({
+3 12 id: String,
+3 13 title: {type: String, default: \'\'},
+3 27 layout: {type: String, default: \'post\'},
+3 28 _content: {type: String, default: \'\'},
+3 30 slug: {type: String, required: true},
+3 31 photos: [String],
+3 32 link: {type: String, default: \'photo\'},
+3 34 published: {type: Boolean, default: true},
+3 39 Post.virtual('path\').get(function() {
+3 40 const path = ctx.execFilterSync(\'post_permalink\', this, {context: ctx});
+3 41 return typeof path ===\'string\'? path : '';
+3 43 Post.virtual('permalink\', this, {context: ctx});
+3 44 Post.virtual('full_source\').get(function() {
+3 45 return join(ctx.source_dir, this.source || \'_posts\', this.source);
+3 47 return Post.virtual('asset_dir\').get(function() {
+3 48 const src = this.full_source;
+3 49 return src!== src || src.substring(0, src.length - extname(src).length) + sep;
+3 51 Post.virtual('tags\').get(function() {
+3 54 const ids = PostTag.find({post_id: this._id}).map(item => item.tag_id);
+3 55 return Tag.find({_id: {$in: ids}});
+3 57 Post.method('setTags', function(tags) {
+3 60 const id = this._id;
+3 61 const existed = PostTag.find({post_id: {$in: ids}});
+3 62 const content = ctx.config.permalink;
+3 63 return Promise.map([
+3 64 PostTag.insert({source: this._id, slug: tags[id]},
+3 65 Tag.tag_id: this._id}),
+3 66 PostTag.insert({source: this._id, path: config.path, tag_id]
+3 67 }),
+3 68 ]).filter(tag => {
+3 69 if (!content == undefined) return;
+3 70 return config.removeTags(data[key);
+3 71 }).thenReturn(data[key] = data[key];
+4 4 describe(\'types/shim, cb, silent, fn, parentParams, parent) {
+4 5 const rulesMeta = new Schema({
+4 6 id: Number,
+4 7 title: {type: String, default: \'foo\'},
+4 8 updated: {type: Moment, default: moment},
+4 11 content: {type: String, default: \'delete\'},
+4 12 excerpt: {type: String, default: \'more\'},
+4 20 module.exports = cb;
+4 22 return data? \'\
+4 23 \' : \'\';
+4 26 return tags.filter(tag => tag!= null && tag!== undefined;
+4 28 module.exports.instanceOf = cb => {
+4 29 return!Object.keys(tags).length;
+5 1 const moment = require(\'moment-timezone\');
+5 2 const micromatch = require(\'micromatch\');
+5 3 const DURATION_MINUTE = 1000 * 60;
+5 4 function isTmpFile(path) {
+5 5 const last = path[path.length - 1];
+5 6 return last === \'/\' || last === \'/index.html\';
+5 8 function isHiddenFile(path) {
+5 9 return /(^|\\/)[_.]/.test(path);
+5 11 function isExcludedFile(path) {
+5 14 function isIncludedFile(path) {
+5 17 function isFileWith(path, pattern) {
+5 18 return pattern.match(pattern);
+5 20 function isExcludedFileSync(path) {
+5 21 return /(^\\/)[_.]/.test(path);
+5 23 function makeUrl(path) {
+5 24 return new UrlPattern(path);
+5 26 function createUrlHelper(config, baseDir, urlRoot) {
+5 27 const { config } = this;
+5 28 const { url } = config;
+5 29 const getExternalLink = function(url) {
+5 31 if (config.external_link === false || config.external_link.enable === false) {
+5 32 return false;
+5 34 const exclude = config.external_link.exclude;
+5 35 const data = url.parse(url);
+5 36 if (!data || data.protocol) return;
+5 37 if (exclude && exclude.length) {
+5 38 for (const i = 0, len = exclude.length; i < len; i++) {
+5 39 if (exclude[i] === config.url) {
+5 43 return true;
+5 47 function getExternalLink(config, urlRoot) {
+5 48 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+5 51 return null;
+5 53 function createLink(config, urlRoot, external_link) {
+5 54 return function(path, prefix, urlRoot, keys, sensitive, config) {
+5 55 if (object.isOwn(config.external_link.exclude)) {
+5 56 return;
+5 58 if (external_link.exclude) {
+5 59 if (Array.isArray(config.external_link.exclude)) {
+5 60 config.external_link.exclude = [config.external_link.exclude];
+5 61 if (config.external_link.trailing_index === false &&
+5 62 config.external_link.trailing_html === false
+5 63 ) {
+5 64 config.external_link.trailing_html = \'\';
+5 66 return config;
+5 69 config.external_link.exclude = config.external_link.exclude.map(isTmpFile);
+5 73 module.exports = {
+5 74 meta: makeUrl,
+5 75 url: createUrl,
+5 76 config: config,
+5 77 query: config,
+5 78 urlRoot: config.urlRoot
+6 3 const Asset = new Schema({
+6 4 _id: {type: String, required: true},
+6 6 modified: {type: Boolean, default: true},
+6 9 model: {type: String, required: true},
+6 10 renderer: {type: String, required: true},
+6 11 helper: {type: String, required: true},
+6 12 deployer: {type: Boolean, required: true},
+6 13 processor: {type: String, default: true},
+6 14 renderer: {type: String, default: true},
+6 15 tag: {type: String, default: true},
+6 16 console: {type: String, default: true},
+6 17 migrator: {type: String, required: true},
+6 18 filter: {type: String, default: true},
+6 19 renderable: {type: String, default: true},
+6 22 processor: {type: String, required: true},
+6 27 processor: [String],
+6 31 date: {\type: Date, default: moment},
+6 32 YYYY-MM-DD
+6 34 permalink: {type: String, default: \'/\'},
+6 35 tag_dir: {type: String, default: \'/\'},
+6 36 archive_dir: {type: String, default: \'/\'},
+6 37 category_dir: {type: String, default: \'/\'},
+6 38 code_dir: {type: String, default: \'/\'},
+6 39 date_format: {
+6 40 type: String, default: \'/\'},
+6 41 per_page: 10,
+6 42 pagination_dir: {\type: String, default: \'/\'},
+6 43 total_url: {type: String, default: \'/\'},
+6 44 page: 10,
+6 45 category: {type: String, default: \'foo\'},
+6 50 pagination_dir: {type: String, default: \'/\'},
+6 53 limit_html: {type: String, default: \'html\'},
+6 54 total_url: 20,
+6 55 space_html: {type: String, default: \'/\'},
+6 60 monthly: 10,
+6 61 monthly: 10,'
+
+7 9 return tags.filter(tag => tag!= null && tag!== undefined) || tag!== undefined;
+7 33 link: {type: String, default: \'photos\'},
+7 44 Post.virtual('permalink\').get(function() {
+7 45 return ctx.config.url + \'/\' + this.path;
+7 48 return pathFn.join(ctx.source_dir, this.source || \'/\');
+7 52 return src!==\'string\'? src : src;
+7 58 return Tag.find({_id: {$in: ids}}).sort(\'name\');
+7 60 Post.method('setTagsToRemove\', function() {
+7 65 PostTag.insert({source: this._id}),
+7 66 Tag.insert({name: this._id})
+7 67 ]).map(item => item.tag_id === item.name);
+7 70 PostTag.method(\'setCategories\', function() {
+7 71 const categories = this._id = this._id;
+7 72 return posts.filter((cat = cat.categories).toArray().filter(cat => cat.findCategories).filter(cat => cat.categories.length);
+7 73 return posts.length;
+7 75 return Promise.sort((category).toArray().should.some(categories).toArray().should.some(categories).toArray().should.some(categories).toArray().should.some(categories).toArray().should.eql(categories);
+7 77 });'
+
+8 7 renderable: {type: Boolean, default: true}
+8 9 Asset.virtual('source').get(function() {
+8 10 return pathFn.join(ctx.base_dir, this._id);
+8 12 return Asset;
+9 4 const full_url_for = require(\'../../lib/plugins/helper/full_url_for\');
+9 7 title: {type: String, default: \'page\'},
+9 22 _content: {type: String, default: \'index\'},
+9 31 const { config } = ctx;
+9 32 let url = full_url_for.call(ctx, this.path);
+9 33 if (config.canonical_url) url = url.replace(/index\\.html$/, \'/index.html\');
+9 34 return url;

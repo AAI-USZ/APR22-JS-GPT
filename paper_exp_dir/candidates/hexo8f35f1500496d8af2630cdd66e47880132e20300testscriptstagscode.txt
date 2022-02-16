@@ -1,0 +1,61 @@
+Min editdistance: 25.00
+Closest candidate: 5 7 .should.should.response(server)
+0 1 " });"
+
+1 1 assert.writeHead());
+1 2 assert.write(result);
+1 3 assert.deepEqual(result, 2);
+1 4 });
+1 5 it('deepEqual(false);
+1 6 it('deepEqual(function() {
+1 10 it('deepEqual(express.staticFolder', function() { return);
+1 12 it('onlyWAT_each(function(Boo
+2 1 " });
+2 2 assert.assert.deepEqual(result, 2);
+2 4 it('deepEqual(function(deepEqual(options => {
+2 5 return require(
+2 6 {
+2 7 request => {
+2 8 request.isRender(source).should.toString('something/deepEqual(express);
+2 9 })
+2 10 .should.should.toString('something(invalid).should.toString());
+2 12 },
+2 14 it('deepEqual(options => {
+2 15 const result =
+3 1 return result.server.call(Express.bind(Express.prototype);
+3 2 }'install();
+3 3 }),
+3 4 });"
+
+4 2 return result.end();
+4 4 it(\'server.listen(123 => {
+4 5 return result.logger.should.should.calledWith(1);
+5 1 assert.write(200);
+5 2 assert.response.response(server.on('result', () => {
+5 3 assert.called });
+5 4 assert.response(server)
+5 5 .called);
+5 7 .should.should.response(server)
+5 8 .return;
+5 12 .get(\'/hello
+5 13 .return();
+5 14 .end(123);
+5 15 .expect(2);
+5 16 ).should.return
+6 1 assert.write('server.set(\'logger\', function(){\', function(){
+6 2 // CLI');
+7 1 return result.write(result);
+8 3 it('deep_link', function() {
+8 4 return { } {
+8 5 return code(\'//deep_url: http://localhost: http://localhost: \'/\' },
+8 6 }
+8 10 mark: function() {
+8 11 return code(a, url, port, url, url_, content) {
+8 12 return done) {
+8 13 return done: function(a, url_, url_, url_, url_else
+9 4 it(\'deep_equipment', function() {
+9 5 return ignore() {
+9 6 return callHandler(newHighlight.apply(this, arguments);
+9 10 it(\'invalidate()
+9 11 it(\'invalidate()\', arguments => {
+9 12 is_different_s(this, arguments);

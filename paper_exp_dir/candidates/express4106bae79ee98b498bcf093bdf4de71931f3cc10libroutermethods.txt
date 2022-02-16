@@ -1,0 +1,222 @@
+Min editdistance: 74.00
+Closest candidate: 8 85 var u = require('./sucFirstTime-Proceedor-s = function (val) {
+0 1 '
+
+1 1 });'
+
+3 1 }
+3 2 var getter = function (message, key){
+3 3 return this.message[message];
+3 4 };
+3 5 var RFC6 = [
+3 6 'EADDRINFO\',
+3 7 'ETag',
+3 8 \'0777',
+3 9 'POST_IMEDOUT'
+3 10 ].forEach(function(method){
+3 11 this.message[method] = generateQObject(method);
+3 12 });
+3 13 var RFC10 = [
+3 16 \'10gp',
+3 17 'aac',
+3 18 \'3gpp',
+3 19 \'c62\',
+3 20 \'(c62)\',
+3 21 \'EACCES'
+3 22 ].forEach(function (name){
+3 23 this.message[name] = getter.call(this, name);
+3 26 exports.MetaProperty = function (value, key){
+3 27 return Object.keys(value).length;
+3 29 exports.Use = function (context, exports, moduleName, stubs) {
+3 30 return module.exports
+3 31 .use(stubs)
+3 32 .filter(function (str) {
+3 33 return str.replace(/\
+3 34 /g, \'\
+3 35 \')
+3 36 .replace(/[\\r\\t ]\\/g, \'\\r\
+3 38 .replace(/^\\/+/, \'\
+3 40 .replace(/\\\\/g, \'\\\
+3 42 .replace(/\\r?\
+3 43 /g, \'\\\\r\\t\')
+3 44 .replace(/\\u0085\\u0180\\u012000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff';
+3 46 };'
+
+5 2 function mergeExtraSegments(tags, key, val) {
+5 3 var tags = Object.keys(tag);
+5 4 var alreadyDisplayedWarnings = Object.create(null);
+5 5 return function (options) {
+5 6 var key = tags;
+5 7 var val = text.replace(/\
+5 8 (\\t+)/g, function(match, arg) {
+5 9 return true;
+5 11 if (key) {
+5 12 tag = arg;
+5 13 } else {
+5 14 tags = Object.keys(tag);
+5 16 return new Promise(function(resolve, reject) {
+5 17 var promises = [];
+5 18 that.walkTree(tree, function (node, name) {
+5 19 if (node.missing || node.different) {
+5 20 tags.push(node);
+5 21 } else if (node.incompatible) {
+5 22 incompatibles.push(node);
+5 24 resolved[name] = node;
+5 26 if (node.linked) {
+5 27 return false;
+5 30 tags.forEach(function (tag) {
+5 31 if (tag) {
+5 32 return that._removeListener(name, tag);
+5 35 return that._saveJson()
+5 36 .then(function() {
+5 37 return that._analyse();
+5 38 })
+5 39 .spread(function (json, tree, flattened) {
+5 40 var installed;
+5 41 if (options.save || options.saveDev) {
+5 42 return;
+5 44 var jsonp = options.jsonp;
+5 45 var jsonpNum = options.jsonp;
+5 46 if (options.save) {
+5 47 that._json.sizes = {
+5 48 id: 8,
+5 49 label: 20,
+5 50 sumup: 5
+5 55 } else if (options.show) {
+5 58 options.cancel = true;
+5 60 }, function () {
+5 61 return that._bootstrap(targets, resolved, installed)
+5 63 return that._manager.preinstall(that._json);
+5 66 return that._manager.install(that._json);
+5 69 return that._manager.install.install.install();
+5 71 .then(that._working = false;
+5 74 .done();
+5 75 .then(function(function() {
+5 76 return that._working = false;
+5 78 .fin(function(done) {
+5 80 .done(function (done) {
+5 86 it('_analyse()
+5 87 .skip('_uninstall()
+5 88 .skip_uninstall()\', function(uninstall() {};
+5 89 .usage.uninstall() {uninstall() {};
+5 90 isVerboseQuery = function (generate) {
+5 91 return Boolean(uninstall) {
+5 92 uninstallables.some(uninstall) {
+5 93 return!== this._.isBinary;
+5 96 \
+7 2 function trim(str, width, height) {
+7 3 return str.replace(/\\{2,}/g, "\\{1,2}");
+7 5 function merge(str, width, height) {
+7 6 return str.replace(/\\{3,}/g, "\\{3,3}");
+7 8 function trim_prefix(str, prefix) {
+7 11 module.exports.unshift(TROB_prefix).join("\
+7 12 ") + "\
+7 13 ";
+7 14 module.exports.unshift(TEST_UPPER_PROM).join("\
+7 17 module.exports.describe = function(a, b){
+7 18 var start = new Date(),
+7 19 a = new Date(),
+7 20 cache = {};
+7 21 for (var i = 0, len = tabs.length; i < len; i++) {
+7 22 a.init(i);
+7 24 if (a.hasOwnProperty(words)) {
+7 25 if (words[i].charAt(0)!== \'/\') {
+7 28 return 0;
+7 30 if (cache.hasOwnProperty(words)) {
+7 36 if (Object.keys(abc).length){
+7 37 var num = arr.length;
+7 38 return new RegExp(\'^' + num + \'.\');
+7 42 module.exports.incr = function(arr, id){
+7 43 return (arr[0].charAt(0) == 0);
+8 3 "module.exports = function (config) {\
+8 4 " +
+8 5 "  config.setLevel 2\
+8 7 "   2.0\
+8 9 "      at 2.0\
+8 11 "     at 3.0\
+8 13 "      at 4.0\
+8 15 "      at 5.0\
+8 17 "      at 6.0\
+8 19 "     at 7.0\
+8 21 "     at 8.0\
+8 23 "     at 9.0\
+8 25 "     at 10.0\
+8 27 "     at 11.0\
+8 29 "      at 12.0\
+8 31 "      at 13.0\
+8 33 "     at 14.0\
+8 39 "    at 12.0\
+8 41 "    at 7.0\
+8 43 "    at 8.0\
+8 45 "    at 8.1\
+8 49 "     at 8.1\
+8 55 "     at 8.2\
+8 69 "      at 8.2\
+8 73 "       at 8.1\
+8 76 "          at 8.2\
+8 79 "             at 8.1\
+8 82 "              at 2.1
+8 85 var u = require('./sucFirstTime-Proceedor-s = function (val) {
+8 86 after.clearTimeout = function (timeoutId) {
+8 87 clearTimeout = setTimeout = setTimeout = setTimeout = setTimeout.apply(this, arguments);
+8 88 return setTimeout = setTimeout;
+8 89 clearTimeout = setTimeout = setTimeout = setTimeout;
+8 90 clearTimeout = setTimeout = setTimeout? setTimeout : function (timeoutId) {
+8 91 clearTimeout = setTimeout = setTimeout;
+8 93 clearTimeout = clearTimeout = clearTimeout? clearTimeout? clearTimeout.apply(this, arguments) : null;
+9 2 function mergeIn(config, options){
+9 3 if (Object.keys(config).length === 0{
+9 4 return config;
+9 6 var key = config.key;
+9 7 var val = [],
+9 8 buf = [],
+9 9 keys = Object.keys(options);
+9 10 for (var i = 0, len = keys.length; i < len; i++){
+9 11 var key = keys[i];
+9 12 val = options[key];
+9 13 buf.push(value);
+9 14 if (keys[i].length){
+9 15 buf.push(key);
+9 17 keys[i] = val;
+9 20 return buf.join("\
+9 21 ");
+9 26 buf = [];
+9 27 if (Array.isArray(config)){
+9 28 var items = Object.keys(config);
+9 32 buf.push(item);
+9 34 return buf;
+9 36 function clearRuntimeCache(){
+9 37 var PackageRepository = require(\'./package\');
+9 38 PackageRepository.clearRuntimeCache();
+9 40 function createPackageRepository(config, logger, packages, registryClient) {
+9 41 var repository = new PackageRepository(config, logger);
+9 42 var registryClient = repository.getRegistryClient();
+9 43 return function(config, logger, packages, registryClient) {
+9 44 var promises;
+9 45 var nodes = [];
+9 46 var repositoryId = md5(config.shhhh_TO_REQUIRE);
+9 47 if (!versions.length) {
+9 48 return Q.resolve(false);
+9 50 promises = nodes.map(function(node) {
+9 51 var target = node.endpoint.target;
+9 52 return repository.fetch({ name: name, source: source });
+9 54 .spread(function(stdout, stderr) {
+9 55 return Q.all([
+9 56 clearRuntimeCache(),
+9 57 clearLinks(',
+9 58 !names? clearCompletionCache() : clearCompletion()
+9 59 ])
+9 61 return that._electSuitable(name, url, entry) {
+9 62 postUrl, entry.type === 'gitUrl,
+9 63 entry.type === 'canonicalDir',
+9 64 url: entry.source,
+9 65 canonicalDir: entry.source,
+9 66 canonicalDir: entry.path;
+9 71 .then(function(function(function (name, plural, name, pluralLength, main) {
+9 72 return that._electLink;
+9 75 return that.deferred.exec(function next(){
+9 76 .done(name, url, entry);
+9 81 addDependencies = function readCertFile(logger, argv) {
+9 82 if (!== undefined;
+9 83 if (typeof argv) {
+9 84 return Q.nreturn Q.nfcall(that

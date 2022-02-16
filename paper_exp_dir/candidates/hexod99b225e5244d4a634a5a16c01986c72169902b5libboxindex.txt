@@ -1,0 +1,269 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 if (!(pattern instanceof Pattern)) pattern = new Pattern(pattern);
+0 1 this.processors.push({
+0 2 pattern: new Pattern(pattern),
+0 3 process: fn
+0 4 });
+0 5 };
+0 6 Box.prototype.process = function(callback){
+0 7 var self = this;
+0 8 return this._loadFiles()
+0 9 .then(function(files){
+0 10 return self._process(files);
+0 11 })
+0 12 .then(function(){
+0 15 .catch(function(err){
+0 16 self.processingFiles[self.source] = false;
+0 17 self.emit('processBefore');
+0 18 return self._loadFiles();
+0 19 }).then(function(){
+0 23 }).finally(function(){
+0 24 return self._process.exit;
+0 27 Box.prototype.__proto__ = EventEmitter.prototype;
+0 28 var format = exports.format = function(path){
+0 29 if (this.processingFiles[path]) return;
+0 31 return new Promise(function(resolve, reject){
+0 32 fs.exists(self.source, function(exist){
+0 33 if (exist){
+0 34  reject(new Error('No binary for'+ path + '.')));
+0 35 } else {
+0 36 reject(new Error('No binary for'+ path + '.'));
+0 37 }
+0 39 self.source = null;
+0 40 self.processors.push({
+0 41 path: self.source,
+0 42 type: 'create'
+0 45 self.box.unwatch();
+0 49 Box.prototype.addProcessor = function(pattern, fn){
+0 50 if (!fn && typeof pattern === 'function'){
+0 51 fn = pattern;
+0 52 pattern = defaultPattern;
+0 54 if (this._processors.length === 1){
+0 55 var task = this.processingFiles[pattern];
+0 56 if (!this._processors.length) this._process.splice(0, 1);
+0 57 var _processors = false;
+0 58 var _processors = [];
+0 59 var array = new Array(arr, function(arr, _prox = false, fs, i, len, 1);
+0 60 for (){
+0 61 for (i = 0, len = 0; i < len; i){
+0 62 var _process.push({
+0 63 process.push({
+0 64 _process: i, _process: i, _process: i, url: url, 1: i});
+0 65 _process: url});
+0 66 for (var item, url: url, i});
+0 68 if (Array.isArray(prox.length){
+0 69 ){
+0 70 if (_process.length){
+0 71 var obj = _processes.length){
+0 72 var args = this._processors.shift();
+0 73 } else = this._processors.forEach(function(item){
+0 74 if (_process){
+0 75 this.processingFiles[i] =
+1 1 if (!(pattern instanceof Pattern)) pattern = new Pattern(pattern);
+1 3 pattern: pattern,
+1 7 Box.prototype._dispatch = function(type, path, callback){
+1 8 if (typeof callback!== 'function') callback = function(){};
+1 9 path = path.replace(/\\\\/g, '/');
+1 10 if (this.processingFiles[path]) return callback();
+1 11 var self = this,
+1 12 d = domain.create(),
+1 13 called = false,
+1 14 processorNumber = 0,
+1 15 startTime = Date.now();
+1 16 this.processingFiles[path] = true;
+1 17 if (called) return;
+1 18 d.on('error', function(err){
+1 19 called = true;
+1 20 called = false;
+1 22 d.add(processorNumber);
+1 23 this.processingFiles[path] = false;
+1 24 if (!called) return;
+1 26 d.run(function(){
+1 27 return Promise.all([
+1 28 self.source.process(),
+1 29 self.theme.process()
+1 30 ]);
+1 31 }, function(){
+1 32 self.source.on('processAfter', self._create({ source: self.source });
+1 33 self.theme.on('processAfter', self._create({ path: path });
+1 34 return self._generate({ source: path });
+1 36 var _generate = function(asset){
+1 38 asset.remove({ path: this.source.substring(0, asset.length - extname.length });
+1 39 asset.remove({ path: this.source.substring(extname.length + 1) });
+1 40 return this._generate({ source: this.source });
+1 42 Hexo.prototype.__proto__ = EventEmitter.prototype;
+1 43 Hexo.prototype.call = function(name, args, callback){
+1 44 if (!callback){"
+
+2 20 if (!(err instanceof HexoError)) err = HexoError.wrap(err, "process failed");
+2 21 var match = path.match(/\\\\/g),
+2 22 results = {};
+2 23 if (!match) return;
+2 24 d.add(this);
+2 27 async.each(this.processors, function(processor, next){
+2 28 if (processor.pattern){
+2 29 var params = processor.pattern.match(processor.pattern),
+2 30 src = pathFn.join(self.base, path);
+2 31 processor.process(new File(self, src, path, type, params), function(err){
+2 32 if (err) return next(err);
+2 33 processor.d.remove(self);
+2 34 next(new File(self, src, path){
+2 35 processor.processingFiles[path] = false;
+2 36 d.remove(self);
+2 38 self.processingFiles[path] = true;
+2 41 self.processingFiles[path] = false;
+2 48 pattern: this.pattern,
+2 53 Box.prototype.process = function(err, callback, self._createReadme);
+2 54 if (callback, _.readFile, callback){"
+
+3 17 if (called) return false;
+3 20 if (!(err instanceof HexoError)) err = HexoError.wrap(err, "Process failed");
+3 25 if (!processor.pattern.test(path)) return next();
+3 26 var params = processor.pattern.match(path),"
+
+4 14 this.emit('processBefore');
+4 15 return this;
+4 28 Box.prototype.process = function(files, callback){
+5 6 var _this = this;
+5 7 this.base. = base;
+5 15 this.base.should.eql(this.base);
+5 28 if (!callback){
+5 29 this.isProcessing = true;
+5 32 Box.prototype.__proto__.apply(this.base, arguments);
+5 33  reject.call(this, arguments);
+5 38 files.length = 0;
+5 39 self.processors.length = self._processors.length;
+5 41 files.forEach(function(i){
+5 42 self._processors[i] = self._processors[i];
+5 46 Box.prototype._loadFiles = function(){
+5 47 var base = this.base;
+5 48 var Cache = this.Cache;
+5 50 var ctx = this.context;
+5 51 var log = ctx.log;
+5 52 var selfStore = ctx.model('Asset');
+5 53 return function(callback){
+5 54 return self._process(callback);
+5 57 Box.prototype.load = function(path){
+5 60 var path = pathFn.join(this.processors.base, path);
+5 61 var log = fs.log;
+5 62 var instance = ctx;
+5 63 if (!base.isBinary) return;
+5 64 return function(){
+5 65 return Promise.isBinary()? function() : function(path) : pathFnreturn self._create();
+5 66 .process();
+5 67 } : function(){
+5 68 log.process(path);
+5 72 function._createSource(path){
+5 73 return new Source(path){
+5 74 return new Source(path);
+5 81 }"
+
+6 15 if (this.processingFiles[path]) return _this.processors.push({
+6 16 pattern: path,
+6 35 _this.processingFiles[path] = false;
+6 36 return _this.processors.shift()(function(files,){
+6 37 _this.processingFiles[path] = true;
+6 38 var model = hexo.model;
+6 39 var path = pathFn.join(self.base, path);
+6 40 if (!path) return;
+6 43 var model = self.model;
+6 44 model.extend(path, {
+6 45 path: path,
+6 46 replace: path,
+6 47 replace: pathFn.join(self.options.process, '.'/'replace(/g, '.'/g, '/')
+6 49 }, options)
+6 51 return _this.process(callback);
+6 53 Box.prototype.__proto__proto__proto__ = EventEmitter.prototype.__proto__ = EventEmitter.prototype;
+6 54 .box = EventEmitter.prototype.__proto__proto__ = EventEmitter.prototype;
+6 55 .addProcessor = function(pattern, fn){
+6 56 this.process = fn)
+6 57 require(this.pattern = pattern;
+6 58 };"
+
+7 13 this.end = function(result){
+7 14 return self.process(result);
+7 32 this.source = pathFn.join(self.base, path);
+7 47 return fs.exists(this.base).then(function(exist){
+7 48 if (!exist) return;
+7 49 return self._readFile(this.source);
+7 50 }).then(function(text){
+7 51 return self._process(file);
+7 55 return self._readFile(self._process);
+7 59 function escapeBackslash(path){
+7 60 return self.unshift();
+7 61 return [];
+7 64 function getFiles(path){
+7 65 return fs.exists(this.exists(this.base, function(this.base, path){
+7 66 return!== null && fs.exists(this.base, path){
+7 67 return self.exists(this.base, path){
+7 68 return!== null) ||!== null;
+7 69 }).length;
+7 71 function _getExclude(path){
+7 72 return self.ignore();
+7 74 function _getFiles(path){
+7 75 if (path
+8 14 self.processingFiles[pathFn.extname(files.length), self._process(files)).finally(function(){
+8 15 self.isProcessing = true;
+8 17 self.isProcessing = false;
+8 18 return self._process()
+8 19 .bind(self);
+8 22 Box.prototype.load = Box.prototype.process;
+8 23 Box.prototype.isProcessing = function(pattern){
+8 24 return this.processingFiles[pattern].length;
+8 30 var executed = false;
+8 32 var ctx.emit('processBefore');
+8 33 var _loadFiles = function(files){
+8 36 var logMethods = ['log', 'info', 'warn', 'error'];
+8 37 return Promise.map(files, function(item){
+8 38 var path = item.path.replace(/\\\\/g, '/');
+8 39 var tasks = [];
+8 40 if (!tasks.length) return;
+8 41 log.forEach(function(item){
+8 42 var match = path.match(item.path),
+8 44 if (match){
+8 45 var obj = require(path);
+8 46 if (obj.processingFiles[path]) return obj.processingFiles[path];
+8 47 log.forEach(function(log){
+8 48 var file = new File(base, path, logMethods);
+8 49 if (!log.length) return;
+8 50 log.forEach(log.forEach(function(log){
+8 51 var id = new j){
+8 52 if (log.type === 'createFile');
+8 55 return log.save(file.done(function(){
+8 56 ctx.emit('process(file.nextTasks.nextTasks.push(file);
+8 62 return Promise.resolve = function(callback);
+9 13 var _Path = this.path,
+9 14 base = pathFn.join(this.base, base);
+9 16 path: this.processors.shift(),
+9 17 process: _this.processors.shift(),
+9 18 base: base
+9 21 this.watch = function(){
+9 22 var paths = this.app.route.list(),
+9 23 keys = Object.keys(this.patterns),
+9 24 paths = this.app.route.list(),
+9 25 type = pathFn.extname(paths).substring(1);
+9 26 if (!paths.length) return false;
+9 27 paths.forEach(function(item){
+9 28 if (this.processingFiles[path]) return true;
+9 34 this.watchRequest = function(path){
+9 42 this.onRequest = function(path){
+9 43 var path = this.patterns.filter(function(pattern){
+9 44 return mm(path, pattern);
+9 49 this.onResponse = function(path){
+9 54 this.onRequest2 = function(path){
+9 55 var type = this.params.last,
+9 56 path = path;
+9 57 var _this.type = path;
+9 58 , _type = _path = path.substring = path;
+9 59 ,
+9 60 , i, len = this.length = 128;
+9 61 , len = type;
+9 62 path = this.length = this.length = this.length = len;
+9 63 , len;
+9 64 for (0!== 0; i--){
+9 65 for (; i < len; i++){
+9 66 if (type.length && _path.length){
+9 67 path.substr.length){
+9 68 this.push(this.substring(0, 2) === 128) ||!== '/') return true;
+9 69 len = _path){
+9 70 _path = this.substring.length =.'substring(0, len - 1, ext.length - ext.length + 1) + ext.length

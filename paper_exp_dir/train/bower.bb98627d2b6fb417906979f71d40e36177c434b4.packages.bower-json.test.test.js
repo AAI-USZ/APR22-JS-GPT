@@ -1,0 +1,39 @@
+var path = require('path');
+var expect = require('expect.js');
+var bowerJson = require('../lib/bower-json');
+
+describe('.find', function () {
+it('should find the bower.json file', function (done) {
+bowerJson.find(__dirname + '/pkg-bower-json', function (err, file) {
+if (err) return done(err);
+
+expect(file).to.equal(path.resolve(__dirname + '/pkg-bower-json/bower.json'));
+done();
+});
+});
+
+it('should fallback to the component.json file', function (done) {
+bowerJson.find(__dirname + '/pkg-component-json', function (err, file) {
+if (err) return done(err);
+
+expect(file).to.equal(path.resolve(__dirname + '/pkg-component-json/component.json'));
+done();
+});
+});
+
+it('should error if no component.json / bower.json is found', function (done) {
+bowerJson.find(__dirname, function (err) {
+expect(err).to.be.an(Error);
+expect(err.code).to.equal('ENOENT');
+expect(err.message).to.contain('no json file');
+done();
+});
+});
+});
+
+describe('.read', function () {
+it('should give error if file does not exists', function (done) {
+bowerJson.read(__dirname + '/willneverexist', function (err) {
+expect(err).to.be.an(Error);
+expect(err.code).to.equal('ENOENT');
+done();

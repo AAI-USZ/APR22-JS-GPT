@@ -1,0 +1,213 @@
+Min editdistance: 2.00
+Closest candidate: 5 1 it'should allow request to be passed'
+0 1 it'should allow multiple arguments'
+0 2 var request = mockRequest({
+0 3 method : 'POST',
+0 4 uri : {
+0 5 path : '/',
+0 6 params : {},
+0 8 path : '/user/:user/:user/:op?',
+0 11 path : '/user/:user/:op?',
+0 38 path : '/user/:op?',
+0 53 path : '/user/user/op?': {},
+0 54 opacity : 2 : function() {
+0 55 }
+0 59 })
+0 60 Express.server = mockExpress.server.callback.salt()
+0 61 Express.server.hooks = []
+0 62 Express.server.server.method.callback.http = mockExpress.server.callback = mockCallback
+0 63 Express.callback.callback.server.callback = mockCallback
+0 64 Express.callback.server.callback.method.hooks = mockCallback
+0 65 function mockRequest(methods = Express.server, options) {
+0 66 return Express.server.request = mockCallback
+0 67 server.request = mockCallback
+0 68 Express.server.callback.callback.start()
+0 69 , middleware = mockCallback
+0 70 , locals = mockCallback.server.server
+0 71 , self = mockCallback
+0 72 , viewHelpers = mockCallback = mockCallback
+0 73 , methods = mockCallback.
+1 1 describe 'options'
+1 2 it'should allow multiple capture groups in the middleware'
+1 3 it'should return a route'
+1 4 mockRequest({
+1 5 '/user/:id'
+1 8 '/user/12'
+1 11 '/user/ab'
+1 13 exports.hooks.should.have.length(1)
+1 14 end
+1 16 describe 'when several capture groups in the middleware'
+1 19 '/user/:id/:op?',
+1 21 '/user/:id/edit'
+1 29 describe '#format()'
+1 30 it'should format passing drafts'
+1 31 get('/user/:id/:op?', function(){
+1 32 return 'user'+ this.format(req.params[0]) + '(' + this.params[1])'
+1 34 get('/user/12/edit').body.should.eql 'user 12'
+1 37 it'should format()'
+1 39 return 'user'+ this.format(req.params[0]) + ':'+ this.params[1])
+1 47 get('/user/12/*.s/12.s/edit', function()'
+1 48 memory.s=5'
+1 49 memory.s= memory.s= memory.s= memory.s= null
+1 50 memory.s= null
+1 52 memory.s += null
+1 53 memory.write(new Date()
+1 54 memory.write(new Date())
+1 55 memory.write(this.logger)
+1 56 memory.stat('some(new Date())
+1 57 memory.write(this.format)
+1 58 memory.format('some(this.format(this.format)
+1 59 memory.format(this.format(this.format)
+1 60 memory.format(this.format)
+1 65 memory.format(this
+2 3 it'should override when no route defined'
+2 4 post('users', function(){ 'No routes defined')
+2 5 post('users', function(){ 'Refres.render() })
+2 6 post('users/', { layout : 'post' })
+2 7 post('users/').body.should.eql 'Refres.render()'
+2 10 describe 'route'
+2 11 it'should throw several similar routes'
+2 12 var user = { method : 'get' }
+2 13 Express.server.method.should.throw(/requires callback function/)
+2 14 try { Express.server.method.should.throw(/requires callback function/)
+2 18 describe 'injector'
+2 19 it'should throw an error'
+2 20 var injector = {'
+
+3 4 end"
+
+4 2 function mockRequest(mockRequest, callback) {
+4 3 var mock = mocks.http.createServer()
+4 4 , app = express.createServer()
+4 5 , api = express.createServer();
+4 6 var mockResponse = mockRequest({
+4 7 body: null,
+4 8 status: 200,
+4 9 headers: {},
+4 11 uri: {
+4 12 path: '/',
+4 13 params: {},
+4 14 content: ''
+4 17 var get = mockRequest({
+4 20 path: '/users/delete',
+4 22 content: 'delete'
+4 25 function mockResponse(response) {
+4 29 var users = [
+4 30 { name: 'tj' }
+4 31 , { name: 'ciaran' }
+4 32 , { name: 'aaron' }
+4 33 , { name: 'guillermo' }
+4 34 , { name:'simon' }
+4 35 , { name: 'tobi' }
+4 36 ];
+4 37 function mockRequest(request, response) {
+4 38 var mock = mockRequest({
+4 47 path: '/users/: ''
+4 51 });
+4 52 return Express.server.callback.boot(mock(mockRequest(request)
+4 53 bootRequest(request)
+4 54 bootResponse)
+4 55 .then(response)
+4 56 .then(function(response)
+4 58 .end(function(response)
+4 62 function bootHandler.Handler.callbackHandler.isXMLHttpRequest()
+4 63 returnHandler()
+4 64 return function(handler) {
+4 65 return handler.isXMLHttpRequest()
+4 66 .return handler.returnHandler()
+4 67 .return handler.handler()
+4 68 .constructor.handler()
+4 69 .get('/Handler()
+4 70 .get('/Handler', function(request, response)
+4 71 .get('/ handler)
+4 72 .get('/Handler',
+5 1 it'should allow request to be passed'
+5 2 get('/user', function(){ request.test })
+5 3 get('/user').body.should.eql 'test'
+5 6 describe 'when existing users' in the middleware'
+5 7 it'should be sent'
+5 12 describe 'when unknown targets'
+5 15 -{ get('/user') }.should.throw_error
+5 25 it'should set the session'
+5 26 get('/login', function(){
+5 27 this.session.name = 'tj'
+5 29 get('/login').headers['set-cookie'].should.match(/^\\w+/i)
+5 32 describe '#clear()'
+5 37 get('/login').headers['clear-cookie'].should.be_empty
+5 40 describe '#destroy()'
+5 43 this.session.session.name = 'tj'
+5 45 get('/login').headers['destroy()'].should.should.be_null
+5 53 describe '#length = toArray.from=1'
+5 56 describe 'when given     null
+5 57 end'should.settings = function(){ return this.at('1', done }'  }'
+5 60 end = function    = function(){ return this.at('1', done }' }'
+
+6 3 it'should have options when present'
+6 4 var user = mockRequest({
+6 6 headers : { 'user-name': user.name || 'tj' }}
+6 8 post('user', { user: user }).headers.user.should.eql 'tj'
+6 10 assert(server instanceof mockRequest, {
+6 11 method : 'GET'
+6 13 assert(server instanceof mockResponse, {
+6 16 assert(server instanceof mockWebServer, {
+6 19 it'should have options when available'
+6 26 describe 'when no route defined'
+6 27 it'should throw a InvalidResponseBody'
+6 28 get('/user', function(){})
+6 29 get('/user', { user: user }).body.should.eql 'Not Found'
+6 32 describe 'param()'
+6 33 it'should return a route placeholder value'
+6 34 get('/user/:id', function(){ return 'user' })
+6 35 get('/user/12').body.should.eql 'user 12'
+6 37 it'should return several route placeholder values'
+6 38 get('/user/:id/:operation', function(){ return 'operation' })
+6 39 get('/user/12').body.should.body.should.eql 'operation'
+6 45 describe 'key : function toArray.from=something'
+7 7 describe 'when existing is available'
+7 8 it'should return the replaced route'
+7 10 get('/user', { request: 'test' })
+7 12 get('/user').status.should.eql 200
+7 15 describe 'when unknown routes'
+7 18 -{ get('/user') }.should.throw_error(/Invalid routes\\/\\d+/)
+7 19 try { get('/user') }
+7 20 catch (e) {
+7 21 e.should.be_an_instance_of ExpressError
+7 22 e.should.be_an_instance_of InvalidArray
+7 27 it'should return the format'
+7 28 get('/format', function(){
+7 29 return 'var format = md5(2,3) + '; q=0.5'
+7 31 get('/format/').body.should.eql '12345'
+7 32 get('/format/').body.should.eql '789'
+7 34 it'should work with several routes'
+7 35 get('/format/:     1..3', function(){
+7 36 return 'var format = md5(12,3,3) + format
+7 38 get('/format/format/format/').body.should.should.eql '1..3'
+8 2 get('/user', function(){ return 'test' })
+8 7 describe 'when no messages have been pushed'
+8 8 it'should return a null value'
+8 14 describe 'with several similar routes'
+8 15 it'should match them properly'
+8 16 get('/foo', function(){
+8 17 return 'bar'
+8 19 get('/foos', function(){
+8 20 return 'baz'
+8 22 get('/foo').body.should.eql 'bar'
+8 23 get('/foos').body.should.eql 'baz'
+8 26 describe 'with several identical routes'
+8 27 it'should match the first route'
+8 38 describe 'with no response body'
+8 40 get('/user', function(){
+8 41 Express.server.respond()
+8 43 -{ get('/user') }.should.throw_error(/InvalidResponseBody: get "\\/user" did not respond with a body string/)
+9 8 it'should allow multiple capture groups'
+9 9 get('/user/:id', function(){ return 'test' })
+9 10 get('/user/:id/:op', function(){ return 'test' })
+9 11 get('/user/:id/edit', function(){ return 'edit' })
+9 12 get('/user/:id/edit/edit', function(){ return 'newedit' })
+9 13 get('/user/:id/edit/edit', function(){ return 'edit' })
+9 14 get('/user/:id/edit/edit', function(){ return 'update' })
+9 16 get('/user/:id/login', function(){ return 'login' })
+9 17 get('/user/:id/edit/login', function(){ return 'update' })
+9 21 get('/user/:id/register', function(){ return'register' })
+9 24 get('/user/:id/register', { status: 404 })
+9 25 get('/user/user/12').status.should.eql 404

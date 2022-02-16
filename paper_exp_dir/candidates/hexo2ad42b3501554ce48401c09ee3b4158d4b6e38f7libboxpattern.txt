@@ -1,0 +1,186 @@
+Min editdistance: 22.00
+Closest candidate: 0 4 var params = [];
+0 1 this.rule = rule;
+0 2 this.params = [];
+0 3 } else {
+0 4 var params = [];
+0 5 var regex = escape.regex(rule)
+0 6 .replace(/\\\\\\*/g, '-')
+0 7 .replace(r, function(match, optional, operator, name){
+0 8 params.push({
+0 9 name: name,
+0 10 operator: name
+0 11 });
+0 12 return params;
+0 16 }
+0 18 };
+0 19 exports.read = function(source){
+0 20 if (this.config === Object.prototype.init) return;
+0 21 var params = this.params;
+0 22 var body = this.body || {};
+0 23 var query = this.query || {};
+0 24 if (!this.config.length) return;
+0 25 return new RegExp('^' + escape.regex(source), '\\\\' + this.config.length);
+0 27 exports.post = function(source, data, callback){
+0 28 if (!callback) callback = function(){};
+0 29 var self = this;
+0 30 var queryTags = this.query.tags;
+0 31 if (data.length){
+0 32 data.tags.sort(function(a, b){
+0 33 return a - b;
+0 40 if (!self.config.length) return callback();
+0 41 var regex = escape.regex(source),
+0 42 result = {};
+0 43 if (regex.test(result)){
+0 44 result = result.replace(regex, function(match, optional, operator){
+0 45 return '(.*?)';
+0 48 result = regexFilter(result, {});
+0 50 return result;
+0 52 exports.search = function(source){
+0 53 return this.findOne({source: source});
+0 55 exports.update = function(source, data, callback){
+0 57 if (this.config.posts.length) this.source = source;
+0 61 if (this.config.posts.length) return callback();
+0 65 var regex = {"
+
+1 2 this.message = escape.message;
+1 4 var num = Number(rule),
+1 5 ins = 0;
+1 6 return n.filter(num);
+1 8 var args = this.args,
+1 9 ruleId = args.shift(),
+1 10 fn = args.pop(),
+1 11 headers = args.length? args.join(' ') : '';
+1 12 if (!has_tag) return fn;
+1 13 if (num){
+1 14 var args = Array.isArray(num)? num : [num];
+1 15 args.unshift(num);
+1 17 var content = this.rule.replace(/\\/?$/, '');
+1 18 content.replace(/([\\s\\S]*)/g, function(match, tabs){
+1 19 var result = '\
+1 20 ';
+1 21 for (var i = 0, len = tabs.length; i < len; i++){
+1 22 result += '\
+1 28 var args = Array.isArray(args)? args : [args];
+1 29 args.unshift(args);
+1 33 var escape = function(str){
+1 34 return str.replace(/{2,}/g, '\\u');
+1 36 module.exports = escape;"
+
+2 2 this.message = '\
+2 3 ' + this.rule.replace(/\
+2 4 function(ex){
+2 5 return this.rule.replace(r, function(match, optional, operator, name){
+2 6 if ( optional) return options[name];
+2 7 if ( operator === '*'){
+2 8 this.filter.add(filter);
+2 10 this.filter.set(rule);
+2 12 return this;
+2 17 exports.read = function (source){
+2 18 return this.source || this.source;
+2 20 exports.readOptions = function (argv){
+2 21 var cli = this.getReadOptions(argv);
+2 22 var options = cli.readOptions({
+2 23 'force-latest': { type: Boolean, shorthand: 'F' },
+2 24 'production': { type: Boolean, shorthand: 'p' },
+2 25 'save': { type: Boolean, shorthand: 'S' },
+2 26 'save-dev': { type: Boolean, shorthand: 'D' }
+2 27 }, argv);
+2 28 var packages = this.site.dependencies.get(source);
+2 29 delete options.argv;
+2 30 return [packages, options];
+2 32 exports.readDir = function (source, options, callback){
+2 34 var uri = this.getSource(source);
+2 35 if (typeof options === 'function'){
+2 36 callback = options;
+2 37 options = {};
+2 39 callback = function(){};
+2 43 async.each(packages, function (pkg, next){
+2 44 pkg.dependencies = _.extend({}, this.defaults);
+2 45 pkg.dependencies[pkg.name] = next();
+2 46 }, function () {
+2 47 if (options.save) save(pkg, next);
+2 49 }, callback);
+2 51 exports.unshift(function (source){
+2 52 var oldData = this.getSource(source);
+2 53 if (oldData.indexOf('/')!== -1) return next();
+2 54 var data = this.getData(source);
+2 55 if (data.indexOf('/users/')!== -1) return next();
+2 57 if (data.indexOf('/ignore')!== -1) return next();
+2 58 var freeSpots = options.maxSolutions? this.set('_max_s') : -1,
+2 59 endpoint = this.getSource(source);
+2 60 return this.setCookie(dest).then(function(){
+2 61 return getJSTag('%s', source);
+2 62 }, function (err){
+2 63 if (err) throw err;
+2 64 if (options.max_max_s) return this.set('max_s', options.max_s);
+2 65 return this.setCookie(dest);
+2 67 };"
+
+3 2 this.content = content;
+3 4 this.context = [];
+3 6 this.__super__.call(this, content);
+3 8 exports.escape = function(str){
+3 9 return str.replace(/{2,}/g, '&amp;');
+4 4 this.method = undefined;"
+
+5 2 this.message = 'This is a function.' + regexp.replace(/^\\*/g, '-') + '\
+5 5 this.rule =ram;
+6 2 this.message = this.rule.replace(/\\*/g, '(.+)');
+6 4 this.rule = normalize(rule);
+6 6 this.filter.exec(this.message);
+6 9 return str.toString()
+6 10 .replace(/
+6 11 .replace(/|\\/|<|>|:|"|\\?|\\*/g, '-')
+6 12 .replace(/(|\\.)/g, '-')
+6 13 .replace(/(\\*/g, '-')
+6 14 .replace(/\\*)(\\?.*)\\1/g, '-')
+6 15 .replace(/\\//g, '-')
+6 16 .replace(/:/g, '-')
+6 17 .replace(/;/g, '-')
+6 18 .replace(/:|\\/g, '-')
+6 19 .replace(/:\\?.*)(this.message);
+6 21 exports.parse = function(str){
+6 22 return str.replace(/https?:\\/\\/(.+)/g, function(match, tabs){
+6 23 var id = '';
+6 24 var item = '';
+6 26 item = tabs[i];
+6 27 if (!item ||!isDefined(item)){
+6 28 return false;
+6 30 if (item[0] === true){
+6 31 return true;
+6 32 } else if (item[0] === false){
+6 38 return item;
+7 4 return this.post.Filter(this.content, this.filter.exec(rule));
+7 8 return str.replace(/{2,}/g, '&amp;');"
+
+8 6 .replace(/\\\\\\*/g, '*')
+8 7 .replace(rParam, function(match, optional, operator, name){
+8 8 params.push({ name: name, optional: name, params: regex });
+8 9 })
+8 10 .replace(rLang, '\\\\' + regex);
+8 15 this.rule = this;
+8 18 exports.isAbsolute = function(path){
+8 19 if ('/' === path[0]) return true;
+8 20 if (':' === path[1] && '\\\\' === path[2]) return true;
+8 22 exports.flatten = function(arr, ret){
+8 23 var ret = ret || []
+8 24 , len = arr.length;
+8 25 for (var i = 0; i < len; ++i) {
+8 26 if (Array.isArray(arr[i])) {
+8 27 exports.flatten(arr[i], ret);
+8 29 ret.push(arr[i]);
+8 32 return ret;
+9 2 this.context = context;
+9 4 return this.Filter(this.rule, this.query || {});
+9 6 this.rule = _.extend({}, this.filter);
+9 8 this.context. = this;
+9 10 require('util').inherits(escape, this.filter);
+9 11 function post(obj){
+9 12 var content = this.content;
+9 13 var result = obj? this.filter.exec(obj) : null;
+9 14 if (!result) return result;
+9 15 if (!content) return content;
+9 16 return this.post.render(obj.full_source, content, result);
+9 20 module.exports = post;"
+

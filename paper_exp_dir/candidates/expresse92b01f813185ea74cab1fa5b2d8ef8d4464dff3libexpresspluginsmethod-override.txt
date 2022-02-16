@@ -1,0 +1,224 @@
+Min editdistance: 15.00
+Closest candidate: 4 67 }, function () {
+0 1 }
+0 2 })"
+
+1 2 })
+1 3 describe \'Express\'
+1 4 describe \'.param()\'
+1 5 it\'should set params in the captures\'
+1 6 params = Express.server.request.uri.params
+1 7 params.user.name.should.eql \'tj\'
+1 8 params.user.pass.should.eql \'test\'
+1 9 params.foo.should.eql\'some bar stuff\'
+1 10 params.cookies.should.eql \'awesome\'
+1 11 end
+1 13 describe \'.param(name, fn)\'
+1 14 it\'should params the captures\'
+1 15 params = Express.server.param(\'id\')
+1 16 params.id.should.eql \'12345\'
+1 17 params.fn.should.eql \'test\'
+1 27 describe \'.bodyDecoder()\'
+1 28 it\'should pass params as body-decoder style\'
+1 29 params = Express.server.param(\'id\', \'gillermo\', \'tj\')
+1 32 params.gillermo.should.eql \'tj\'
+1 48 params.params.gillermo.should.eql \'tj\'
+1 49 params.ferrets.should.eql [\'foo\', \'bar\']
+1 57 params.bar.should.eql \'bar\'
+1 65 params.title.should.eql \'test\'
+1 69 it\'should parse and toString()'
+1 70 Express.param(\'param(\'param(\'value\', function(){\')
+1 71 return Express.param(\'user.name)\').length.toString()
+1 74 Express.body.decode.should.eql \'12345'
+
+3 5 it\'should set params'
+3 6 var param = []
+3 7 param(\'id\', function(){
+3 8 return param(\'id\')
+3 10 it\'should return a string of random characters\'
+3 11 param(\'user[name]\', function(){
+3 14 it\'should allow optional placeholders\'
+3 18 it\'should allow placeholders as part of a segment\'
+3 20 returnparam(\'id\')
+3 22 it\'should allow optional placeholders in middle segments\'
+3 47 describe \'#param()\'
+3 48 it\'should return a string of parameters\'
+3 52 it\'should format as a segment with optional placeholders\'
+3 53 params = {
+3 54 param: \'id\',
+3 55 only: \'user\'
+3 58 return parseInt(param(\'id\'), 10)
+3 60 it\'should format as several capture groups\'
+3 64 it\'should format as several segment groups\'
+3 82 return parseInt(param(\'id\')
+3 85 it\'should format as a segment middle segment with optional placeholders\'\', function()'
+
+4 4 describe \'with options\'
+4 5 it\'should merge properties\'
+4 6 var { __proto__: http.IncomingMessage.prototype } = $(require(\'express/plugins/helper/url\'))
+4 7 var common = require(\'./common\')
+4 8 var VERSION = require(\'../constants\').VERSION
+4 9 var SCRIPT_TAG = \'<script type="%s" src="%s" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\'
+4 10 var args = -{ when (args.length === 1) {
+4 11 return true
+4 13 var Url = common.url
+4 14 var HttpResponse = this.response
+4 15 var Mock = function (name, content) {
+4 16 var self = this
+4 17 this.method = undefined
+4 18 this.url = new Url(`http://${this.url}/base/${this.path}/\')
+4 19 this.connection.remoteAddress = {}
+4 20 this.headers = {}
+4 21 this.settings = {}
+4 22 this.set(\'home\', \'/\')
+4 23 this.locals = function (obj){
+4 24 for (var key in obj) {
+4 25 self.locals[key] = obj[key]
+4 28 this.locals.settings = this.settings
+4 29 this.configure(\'production\', \'production\')
+4 30 if (this.settings.format) {
+4 31 this.enable(\'html\')
+4 33 this.on(\'error\', function (err, req, res, next) {
+4 34 if (err instanceof HexoError) {
+4 35 return next()
+4 36 } else if (err.message === \'broken\') {
+4 37 res.send(err.message, 500)
+4 38 } else {
+4 39 res.send(500)
+4 43 this.post(\'/\', function (name, content) {
+4 44 this.header(\'x-powered-by\', \'Hexo\')
+4 45 this.halt(200, content)
+4 47 get(\'/logout\', function (req, res, next) {
+4 48 var id = req.params.id
+4 49 var msg = \'\'
+4 50 if (process.env.NODE_ENV!== \'test\' ) {
+4 51 msg += raw + \'ing\'+ req.params.id
+4 53 if (process.env.NODE_ENV === \'test\') {
+4 54 msg += this.param(\'access-token\') || this.app.settings.accessToken(name)
+4 56 next()
+4 59 msg += [this.passedEnv] ||
+4 60 this.accepts(\'html\')? \'yes\' : \'no\')
+4 61 this.render(\'dynamic-helpers.jade\', {
+4 62 locals: {
+4 63 request: this.param(\'url\')
+4 66 this.halt()
+4 67 }, function () {
+4 68 return this
+4 69 return \'<p>\'
+
+5 5 it\'should params a route placeholder value\'
+5 6 params = Express.server.param(\'user[name]=tj\')
+5 14 it\'should params the route placeholder value for the request passed\'
+5 15 params = { \'user[name]\' : \'tj\', \'user[info][email]\' : \'tj@vision-media.ca\', \'user[info][city]\' : \'Victoria\' }
+5 16 nparams = Express.server.param(['user.name', \'tj@vision-media.ca\', \'user[info][city]\')
+5 17 nparams.user.name.should.eql \'tj\'
+5 18 nparams.user.info.email.should.eql \'tj@vision-media.ca\'
+5 19 nparams.user.info.city.should.eql \'Victoria\'
+5 33 params = { \'user[name]\' : \'tj\', \'user[info][city]\' : \'Victoria\' }
+5 40 describe \'.param([object]\', as a key]
+5 41 it\'should pass as a string as the first argument\'
+5 42 params = { \'foo\' : \'bar\', \'baz\' : \'raz\' }
+5 43 nparams.foo.should.eql \'bar\'
+5 44 nparams.baz.should.eql \'baz\'
+5 47 describe \'.param(\'key, string)\'
+5 48 it\'should map passing as an array\'
+5 49 params = { \'user[key] = \'foo]\', \'user[key] = \'user[key]\', \'user[key]\', \'user[key]\', \'user[key]\', \'age\', \'at request]\', \'atabase\', \'baz\', \'raz\', \'raz\' }\']\'
+
+6 4 describe \'MethodOverride\'
+6 5 before_each
+6 6 reset()
+6 7 use(require(\'express/plugins/cookie\').MethodOverride)
+6 9 describe \'on\'
+6 10 describe'request\'
+6 11 it\'should consider the callback key as the HTTP callback function\'
+6 12 get(\'/logout\', function(){
+6 13 return this.request.uri.params
+6 15 get(\'/logout\').headers['\'].should.eql \'foo\'
+6 18 describe \'onResponse\'
+6 19 it\'should send the status of the response as body\''
+
+7 6 it\'should parse the HTTP status\'
+7 7 get(\'/user\', function(){
+7 8 return this.response.status = 200
+7 10 get(\'/user\').status.should.eql 200
+7 11 get(\'/user\').headers[\'content-length\'] = 200
+7 13 it\'should set the response status\'
+7 15 this.response.status = 200
+7 19 it\'should send the status code and body as body\'
+7 22 this.body.should.eql \'body\'
+7 24 get(\'/user/:id\', function(){
+7 26 this.body.should.eql \'empty\'
+7 28 get(\'/user/:id/edit\', function(){
+7 29 this.response.status = 304
+7 30 this.body.should.eql \'ed\'
+7 31 return this.response.uri.params[this.id] ||
+7 32 this.response.uri.params[this.id]
+7 35 this.header(\'Location\', \'http://maji.moe\')
+7 36 return this.response.body.replace(/\
+7 37 /g, \'\
+7 38 <h1>Hello World</h1><p>Welcome Overridden</p>\
+7 39 <p>Welcome Overridden</p>\'
+7 47 <p>Hello Overridden</p>\'
+7 54 <h1>Hello World</h1><p>Welcome Overridden</p>\'
+7 62 <p>Hello Overridden</p>\
+7 63 </head>\')
+7 69 <h1>Hello World</h1><p>Hello Overridden</p>\
+7 70 <p>\'\')
+7 72 get(\'/user/edit\', function(){
+7 73 var response = this.body.should.body.should.split(\'ForExcerptRegexp\', 1).join(\'^\\d+\').join(\'|\')
+7 74 return \'<})
+7 75 response.should.should.deepEqual([\'|0\'])
+7 78 it\'should not override this.use(function(val) {
+7 79 return \'Express.server.html_method)
+7 80 Express.formatters.call(Express.test)
+7 81 }'
+
+8 4 describe \'.header()\'
+8 5 it\'should set / get headers\'
+8 7 return this.header(\'Content-Type\', \'text/x-foo\')
+8 9 get(\'/logout\').headers
+8 11 describe \'.status()\'
+8 13 get(\'/error\', function(){
+8 14 this.status(500)
+8 16 get(\'/error\').headers
+8 18 describe \'.header() - get values\'
+8 19 it\'should set a header'
+8 20 get(\'/headers\', function(){
+8 21 return this.header(\'Content-Type\', \'application/x-www-form-urlencoded\')
+8 23 get(\'/headers\').headers
+8 25 describe \'.header() - setters (backtick, DD-Mon-YYYY-MM-DD HH:mm:ss\')'
+8 26 it\'should be case insensitive\'
+8 32 describe \'.attachment()\'
+8 33 it\'should set Content-Disposition to attachment\'
+8 34 get(\'/report\', function(){
+8 35 this.header(\'Content-Disposition\', \'attachment; filename="test.txt"\')
+8 36 res.send(\'wahoo\')
+8 38 get(\'/report\').headers
+8 39 it\'should set attachment filename\'
+8 45 it\'should send non-caching headers for single segment\'
+8 51 it\'should inline mime type to internal uses\'
+8 53 return this.header(\'Content-Type\', \'text/plain\')
+8 56 it\'should inline mime type to basename\'
+8 58 return this.header(\'Content-Type\', \'application/octet-stream\')
+8 61 it\'should inline mime type to other system as numbers\'
+8 66 it\'should inline mime type with only'
+8 71 it\'should inline mimeType()\'
+
+9 5 it\'should merge options when present\'
+9 7 , methods = []
+9 8 , routes = {}
+9 9 , params = { method: \'GET\' }
+9 10 , routes.push(new Route(method, path, params), function(req, res){
+9 11 if (req.method && method.toLowerCase() == 400)
+9 12 var err = new Error("Received `postMessage` for "\' + method + \'" but the method doesn\\\'t exist")
+9 13 err.status = 400
+9 14 return res.headers[\'content-type\'] = \'application/x-www-form-urlencoded\'
+9 16 if (!self.headerSent) {
+9 17 msg = \'Site updated: received\'+ utils.formatters.ANSWER
+9 19 self.headerSent = true
+9 20 msg.save = true
+9 21 msg.isBinary = true
+9 22 msg.toString = function() {
+9 23 return self.headerSent
+9 26 '
+

@@ -1,0 +1,198 @@
+Min editdistance: 8.00
+Closest candidate: 5 12 req.param = function(name, defaultValue){
+0 1 if (!this.get('Content-Type')) return;
+0 2 return getthis.set('Content-Type', 'application/json');
+0 3 }"
+
+1 1 var headers = {
+1 2 'content-type': function(size){
+1 3 return this.headers[Size] || {};
+1 4 }
+1 5 };
+1 6 if (this.app.settings.etag &&
+1 7 this.app.settings.etag.type ==='string') {
+1 8 headers['set-cookie'].forEach(function(name){
+1 9 var val = this.app.settings[name];
+1 10 if (val) {
+1 11 return val;
+1 14 return {
+1 15 'ETag': function(s) {
+1 16 if (s.length === 0) return true;
+1 17 ', '123456'
+1 21 if (this.app.settings['x-powered-by']) {
+1 22 headers['x-powered-by'].forEach(function(name){
+1 23 var pkg = this.app.settings[name] || {};
+1 24 this.header('set-cookie', pkg.name + '=' + pkg.version);
+1 25 pkg.on('resolve', function(){
+1 26 if (pkg.isIP() || this.app.settings.etag) {
+1 27 this.header('set-cookie', this.app.etag);
+1 29 }).resolve();
+1 30 }.bind(this);
+1 32 return this;
+1 34 if (this.get('/xxx')
+1 35 .length = 0;
+1 36 return this.send()
+1 37 .send(this.send('No');
+1 38 })
+1 39 .expect('No');
+1 40 .expect('<h1');
+1 42 .expect('200')
+1 43 .expect('200', '<h1');
+1 44 .expect('200', done);
+1 45 });
+1 46 done();'
+
+2 1 if (!this.get('Content-Type')) {
+2 2 this.set('Content-Type', 'text/html');
+2 3 return;
+2 5 return parseRange(size, range);
+2 7 return this.set('Content-Type', 'application/json');
+2 10 req.is = function(types){
+2 11 if (!Array.isArray( types)) types = [].slice.call(arguments);
+2 12 return typeis(this, types);
+2 14 defineGetter(req, 'protocol', function protocol(){
+2 15 var proto = this.app.get('X-Requested-With');
+2 16 return proto.protocol || 'http';
+2 18 defineGetter(req,'secure', function secure(){
+2 19 return 'https' == this.protocol;
+2 24 defineGetter(req,'query', function query, data) {
+2 25 it('should default to the end-9 the end', function(done) {
+2 26 var app = express();
+2 27 var router = new express.get('/foo');
+2 28 router.get('/foo', function(){}
+2 29 router.get('bar', function(){}
+2 31 router.get('baz();
+2 33 app.use(function get('/:user', function(req, url, headers, i) {
+2 34 next){
+2 35 router.get('/: function(){
+2 36 next(){
+2 37 return 'test' == 1;
+2 38 return 'GET' == 2;
+2 42 .use('/: function(){', route();
+2 44 .get('/: function(){ url, headers, headers, route, route, route, route, handler);
+2 46 .use('/: handler/*', router, handler);
+2 47 if ('OPTobi', handler)\
+3 2 this.set('Content-Type', this.set('Content-Type', 'application/json');
+3 4 return this.end(swig.compile(body)).then(function(){
+3 6 'body:',"
+
+4 1 if (!this.get('Content-Type')){
+4 2 this.set('X-Content-Type-Options', 'nos');
+4 3 this.set('Content-Type-Options', 'nos');
+4 5 return { type: type, content: query };
+4 7 this.end();
+4 16 return proto.protocol
+4 17 .replace(/^https?:\\/\\/([^\\/]+|(?:\\.\\:\\?\\:\\[\\]\\))|([^\\?\\s]+?)\\?/g, 'http')
+4 18 .replace(/:\\/\\/{2,}/g, '&')
+4 19 .replace(/:\\'/, '&');
+4 20 return '&'
+4 22 .split(/: ';')
+4 23 .unshift(function(function(req, ';
+4 24 return'req.param(';'))
+4 26 .exports.require(this.require(this);
+4 27 this.__proto__proto__proto__ = this);
+4 35 defineGetter__proto__proto__proto__proto__ = Array.param = function(){
+4 36 return this.exports;
+4 38 var params = this.len = this.length = this.get('length');
+4 39 return function(){
+4 40 return parseFloat(this.length);
+4 42 var i = parse = parseInt = parse
+5 1 var language = this.get('Content-Type');
+5 2 if (this.has('Content-Type')) {
+5 4 body = this.param('message', _.isNumber(this.param('message')));
+5 5 if (number > 1) {
+5 6 this.contentType('.txt');
+5 7 } else {
+5 8 this.contentType('.json');
+5 12 req.param = function(name, defaultValue){
+5 13 var params = this.params || {};
+5 14 var body = this.body || {};
+5 15 var query = this.query || {};
+5 16 if (null!= params[name] && params.hasOwnProperty(name)) return params[name];
+5 17 if (null!= body[name]) return body[name];
+5 18 if (null!= query[name]) return query[name];
+5 19 return defaultValue;
+5 22 var types = this.get('Array');
+5 23 if (!Array.isArray(types)) types = types.length) return [];
+5 24 return types.some(typeisArray(this.isArray(this.toArray(this.slice.slice.slice(0)));"
+
+6 5 body = this.param('message');
+6 7 return this.end()
+6 8 .get('/xxx', function(req, res){
+6 9 res.headers['content-type'] = this.get('content-type') || this.type('txt');
+6 10 res.headers['content-type'] = this.param('message');
+6 11 res.body = body;
+6 12 res.send('');
+6 14 this.get('/booze', function(req, res){
+6 15 res.headers['content-type'] = this.param('content-type') || this.type('json');
+6 19 this.get('/tobi', function(req, res){
+6 20 res.headers['content-type'] = this.param('content-type') || this.type('txt');
+6 21 res.headers['content-type'] = this.param('photo'];
+6 25 this.get('/user/:subtype', function(req, res){
+6 26 return this.params.format = this.format || this.format;
+6 29 this.post('/: function(){
+6 30 this.format || this.format || this.format || function(){
+6 31 return this.format || this.format;
+6 32 return this.format;
+6 35 };"
+
+7 1 if (!this.headers['Content-Length']) return;
+7 2 if (body instanceof String) {
+7 3 return this.headers['Content-Length'] = body.toString();
+7 5 return this.body.length;
+7 8 return JSpec.server.run(this.source, this.uri.path, this);
+7 10 function send(body) {
+7 11 var chunk = body;
+7 12 if (this.req.body.name) {
+7 13 chunk = String(chunk);
+7 15 chunk = this.req.body.name || {};
+7 17 this.setEncoding('utf8');
+7 18 this.send(chunk);
+7 20 function sendFromDisc() {
+7 21 var file = send(this.source, this.uri.path, this);
+7 22 if (file) {
+7 23 file.on('error', function(err) {
+7 24 this.emit('error', err);
+7 25 }.bind(this));
+7 30 var file = send(this.source, this.uri, this.path, this);
+7 33 function sendFromDiscpctime
+7 34 \
+8 1 var language = this.get('Home');
+8 2 if (!language) throw new Error('No input file or string!');
+8 3 if (typeof query === 'function'){
+8 4 var type = this.get('Content-Type');
+8 5 if (type == 'object' && type.indexOf('*') > -1) {
+8 8 try {
+8 9 var accept = this.header('Accept');
+8 10 } catch (e){
+8 11 this.charset = this.charset || {};
+8 12 this.return don(this.app, this.app);
+8 19 if (typeof params === 'function'){
+8 20 this.params[name] = defaultValue;
+8 26 if (!Array.isArray(types)) types = types).length) return types;
+8 27 return types[0];
+8 29 var accepted = this.value = function(type){
+8 30 return accepted.type.toString = typeof type!== 'function'string'
+8 31 ? ~type : type : type;
+8 32 return accepted.indexOf(type) : null;
+8 34 return accepted.length = 0;
+8 36 req.completers.param('format = function(type, i){
+8 37 var i = this.format, msg){
+8 38 var args = this.format || {};
+8 39 if (this.format || { || {});
+8 40 if (this.format || this.format || this.format || this.format || this.format) return;
+8 41 return i.format || {};\
+9 1 var my = this.get('Content-Type');
+9 3 return function(req, res, next){
+9 4 var charset;
+9 5 if (charset = this.get('Content-Type')) res.charset = this.set('Content-Type', 'text/javascript');
+9 6 res.locals = function(obj){
+9 7 for (var key in obj) res.locals[key] = obj[key];
+9 10 next();
+9 12 if (req.body.length) {
+9 13 process.nextTick(function(){
+9 14 res.body.length = 0;
+9 15 res.locals.get = function(){
+9 16 return this.req.body.name;
+9 23 }'
+

@@ -1,0 +1,36 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var helper = require('./helper');
+0 1 var helper = require('./helper');
+0 2 var logger = require('./logger');
+0 3 var log = logger.create('init');
+0 4 var JS_TPL_PATH = __dirname + '/../config.tpl.js';"
+
+2 4 var StateMachine = require('./init/state_machine');
+2 5 var COLOR_SCHEME = require('./init/color_schemes');
+2 6 var logQueue = [];
+2 7 var printLogQueue = function() {
+2 8 while (logQueue.length) {"
+
+4 4 var JS_TPL_PATH = __dirname + '/../config.tpl.js';
+4 5 var COFFEE_TPL_PATH = __dirname + '/../config.tpl.coffee';
+4 6 var COLORS_ON = {
+4 7 END: '\\x1B[39m',
+4 8 NYAN: '\\x1B[36m',
+4 9 GREEN: '\\x1B[32m',
+4 10 BOLD: '\\x1B[1m',
+4 11 bold: function(str) {
+4 12 return this.BOLD + str + '\\x1B[22m';
+4 13 },
+4 14 green: function(str) {
+4 15 return this.GREEN + str + this.END;
+4 16 }
+4 17 };
+4 18 var colors = COLORS_ON;
+4 19 var COLORS_OFF = {
+4 20 END: '',
+4 21 NYAN: '',
+4 22 GREEN: '',
+4 23 BOLD: '',
+4 25 return str;
+4 26 },"
+

@@ -1,0 +1,107 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 config = hexo.config;
+0 1 config = hexo.config;
+0 2 extend.helper.register('paginator', function(options){
+0 3 var defaults = {
+0 4 base: '/',
+0 5 format: config.pagination_dir + '/%d/',
+0 6 total: 1,
+0 7 current: 0,
+0 8 prev_text: 'Prev',
+0 9 next_text: 'Next',
+0 10 space: '&hellip;',
+0 11 prev_next: true,
+0 12 end_size: 1,
+0 13 mid_size: 2,
+0 14 show_all: false
+0 15 };
+0 16 var options = _.extend(defaults, options);
+0 17 var current = options.current,
+0 18 total = options.total,
+0 19 end_size = options.end_size,
+0 20 mid_size = options.mid_size,
+0 21 space = options.space,
+0 22 base = options.base,
+0 23 format = options.format,
+0 24 front = '',"
+
+1 1 moment = require('moment'),
+1 2 root = hexo.config.root;
+1 3 extend.helper.register('js', function(path){
+1 4 if (!Array.isArray) path = [path];
+1 5 var result = [];
+1 6 path.forEach(function(item){
+1 7 if (item.substr(item.length - 4, 4)!== '.js') item += '.js';"
+
+2 5 current: 1,
+2 6 format: '%d/',
+2 8 current_url: '/',
+2 18 return function(options){
+2 24 end_size: 2,
+2 25 mid_size: 3,
+2 28 prev_next: prev',
+2 29 end_size: endSize,
+2 30 mid_size: midSize,
+2 31 prev_text: prevText,
+2 32 next_text: nextNext
+2 42 mid_size: midSize
+2 44 return defaults;
+2 45 }
+2 46 });"
+
+3 8 current_url: config.pagination_dir + '/%d/',
+3 9 prev: 0,
+3 10 next: 1,
+3 11 null: 0,
+3 14 prev_next: true,"
+
+4 16 var current = options.current;
+4 17 var total = options.total;
+4 18 var endSize = options.end_size;
+4 19 var midSize = options.mid_size;
+4 20 var space = options.space;
+4 21 var base = options.base;
+4 22 var format = options.format;
+4 23 var self = this;
+4 25 var currentPage = self.current;
+4 33 var front = '';
+4 34 var back = '';
+4 35 var link = '';
+4 36 var linkArr = function(i){
+4 37 return i == 1? base : base + format.replace('%d', i);
+4 39 var pageNum = function(i){
+4 40 return \'<a class="page-number" href="\' + link(i) + \'">\' + i + \'</a>\';
+4 42 if (options.prev_next){
+4 43 if (current!== 1) front = linkArr(i);
+4 44 if (current!== total) back = linkArr(current + 1);
+4 46 if (options.show_all){
+4 47 for (var i=1; i<=total; i++){
+4 48 if (i == current){
+4 49 front += \'<span class="page-number current">\' + i + \'</span>\';
+4 50 } else {
+4 51 front += pageNum(i);
+4 55 if (endSize){
+4 56 var endmax = current <= endSize? current - 1 : endSize;
+4 57 for (var i=1; i<=endmax; i++){
+4 60 var endmin = total - current <= endSize? current + 1 : total - endSize + 1;
+4 61 for (var i=total; i>=endmin; i--){
+4 62 back = pageNum(i) + back;
+4 64 if (space){
+4 65 var space_html = \'<span class="space">\' + space + \'</span>\';
+4 66 if (current - endSize - midSize > 1){
+4 67  space_html += space_html;
+4 70 if (midSize){
+4 71 var midmin = current - midSize <= endSize? current - midSize + endSize : current - midSize;
+4 72 if (midmin > 1){
+4 73 midmin = midmin > 1;
+4 76 for (var i=midmin > left; i>= current; i>= right; i>=s; i>=s; i--){
+4 78 var space_nextendSize = endSize = undefined;
+5 6 total: 0,
+6 18 endSize = options.end_size,
+6 19 midSize = options.mid_size,
+7 4 if (!Array.isArray) path = [path];"
+
+9 4 base: root,
+9 5 format: paginationDir + '/%d/',
+9 6 total: this.total || 1,
+9 7 current: this.current || 0,

@@ -1,0 +1,253 @@
+Min editdistance: 2.00
+Closest candidate: 3 5 var options = options || {};
+0 1 options = options || {};
+0 2 var viewOptions = this.app.set(\'view options\', options);
+0 3 viewOptions.locals = options.locals || {};
+0 4 viewOptions.partial = this.app.set(\'view options\', options);
+0 5 this.filename = viewOptions.path;
+0 6 this.view = view;
+0 7 this.source = options.source;
+0 8 this.path = options.path;
+0 9 this.type = options.type;
+0 10 this.is_post() = options.is_post;
+0 11 this.filename = this.path;
+0 12 return this;
+0 13 }, this);
+0 15 };
+0 16 http.ServerResponse.prototype.renderSync = function(view, options){
+0 19 viewOptions.scope = this.app.set(\'view options\', options);
+0 20 if (options.object) {
+0 21 var name = options.as || view.split(\'.\');
+0 22 if (typeof name ===\'string\') {
+0 23 options[name] = options.object;
+0 24 } else if (typeof name === global) {
+0 25 options.object = options.object) {
+0 26 options.object = options.object = { object: options.object };
+0 27 }
+0 28 } else {
+0 29 return options.merge(options.merge(options, options.object);
+0 33 return this.options.options = {};
+0 36 http.ServerResponse.prototype.createServerResponse.compress = function(){
+0 37 return this.serverResponse.compress = function(){
+0 38 return this.compress();
+0 39 return this.header(\'error
+0 40 return this.header(\'error\', this.compress);
+0 43 Server.isXHR(){
+0 44 return this.header(\'x-powered-by\', \'config.isXMLHttpRequest\') || this.compress);
+1 2 var view = this.app.set(\'view engine\', \'jade\');
+1 3 if (view){
+1 4 if (this.app.set(\'view engine\')) {
+1 5 view.indexOf(\' this.app.set(\'view engine\', \'jade\');
+1 8 this.render(view, options);
+1 14 if (options.as && options.as.length) {
+1 15 view += options.as;
+1 17 var self = this,
+1 18 root = this.app.set(\'views\', path);
+1 19 options.locals = options.locals || {};
+1 20 options.locals.path = root;
+1 21 options.locals.content = page.content;
+1 22 if (options.root) {
+1 23 root += \'/\';
+1 25 var result = [];
+1 26 function jade(content){
+1 27 content = content
+1 28 content = _.trim()
+1 29 .replace(/<p>(/<p>/g, \'<strong>|\
+1 30 \\r\\r\\r\\t</strong>/g, \'<strong>)([\\f>/g, \'&amp3</strong>\
+1 31 \\r, \'&quot;\')
+1 32 .replace(/g, \'&quot;\')
+1 33 .replace(/g, \'&lt;
+1 34 .replace(/>/g, \'&gt;\')
+1 35 .split(/>/g, \'&gt;\')
+1 36 .split(/>/g, \'&gt;\');
+1 37 if (options.forEach(function(key, i){
+1 38 result.replace(/g, key){
+1 39 return result = options, page.trim()
+2 3 if (viewOptions) {
+2 5 view options.forEach(function(fn){
+2 6 fn.call(this, viewOptions);
+2 16 viewOptions.forEach(function(fn){
+2 17 viewOptions[view] = options.locals || {};
+2 22 this.renderSync(view, options);
+2 26 function openGraphHelper(options){
+2 28 var page = this.app.set(\'page\', options);
+2 29 var config = this.config;
+2 30 var content = page.content = page.content;
+2 31 var images = page.photos || options.image || options.images || options.images || page.photos || page.photos || page.photos || page.images || page.photos || page.images || page.photos || [];
+2 32 var description = options.images || page.images || page.images || page.images || page.images || page.images || page.images || page.images || page.images || page.images || page.photos || page.photos || page.photos || page.images || page.images || page.images || page.images || page.images || page.images || config.images || config.plugins;
+2 33 var keywords = page.keywords ||!== undefined;
+2 35 var title = page.words || keywords ||!== undefined;
+2 36 var i;
+2 37 var url =  at least = options.length;
+2 38 var keywords.length;
+2 39 var i
+3 3 if (viewOptions) options.locals = options.locals || {};
+3 4 options.filename = this.app.get(\'/\', viewOptions);
+3 5 var options = options || {};
+3 6 var cache = options.cache || this.app.set(\'cache\', false);
+3 7 if (options.only) {
+3 8 options.only = options.only;
+3 10 options.locals.firstInCollection = this.app.get(\'/\', this.app.get(\'/index\', this.app.get(\'/\', this.app.get(\'/video\', this.app.get(\'/mp4\', this.app.get(\'\' + this.app.get(\'\' + this.app.get(\'\' + this.app.get(\'\' + this.app.get(\'static\'));
+3 11 var content = this.content;
+3 12 if (options.filename.indexOf(\'?\')!== 0) {
+3 13 options.filename = \'/\';
+3 15 content = fs.readFile(options.readFile(this.path, options, function(err, content){
+3 16 if (err, content){
+3 17 if (err) {
+3 20 content = content = \'<p>\'string\'string\' == typeof\' + content
+3 21 ) {
+3 22 } else (content += \'invalid content\';
+3 25 content += \'invalid content\';
+3 27 } catch (err) {
+3 28 throw err;
+3 32 content += \'\';
+3 33 })
+3 35 content += set content;
+3 36 });
+3 37 content.on(\'cache
+3 38 , callback.write(content);
+3 40 return this.write( content;
+3 42 \
+4 4 if (fn instanceof Function) {
+4 5 fn = options, options = {};
+4 7 options = {};
+4 9 options.locals.set(view, options, fn);
+4 11 helpers = this.app.viewHelpers,
+4 12 dynamicHelpers = this.app.dynamicViewHelpers,
+4 13 root = viewRoot(this.filename.substr(view.length));
+4 14 if (root!== fixtures) view = root + \'/\';
+4 15 this.filename.substring(0, root.length - extname(view).length);
+4 17 this.app.set(\'views\', path.join(this.filename.substring(view.length));
+4 18 this.views = view;
+4 19 this.locals.settings = options.settings || {};
+4 20 this.app.viewHelpers = this;
+4 21 this.dynamicViewHelpers = this;
+4 22 this.root = root;
+4 23 if (this.config.logger.settings[method]!== undefined) {
+4 24 this.logger.apply(this.app.src, this.middleware.middleware;
+4 26 this.locals.settings[method].set(\'jsonpagment\', this.name, this.name, this.middleware);
+4 28 method.locals.settings.settings.forEach(function(fn);
+4 29 this.middleware.lookup = this.middleware;
+4 30 this.configure(function(err, url, i){
+4 31 if (!this.app.url.url.paginator) {
+4 32 this.path[0] = this.url, url;
+5 3 if (view) {
+5 5 } else if (this.app.set(\'view engine\', \'html\');
+5 6 var content = this.app.set(\'views\', this.cache.collection(this.settings.locals));
+5 8 content = this.get(\'Content-Type\') || this.contentType(\'.html\');
+5 10 return this.render(content, options);
+5 12 return this.render(this.partial, options);
+5 14 http.ServerResponse.prototype.renderSync = function(view, options, fn){
+5 16 var self = this;
+5 17 if (view.indexOf(\'://\')!== -1) {
+5 18 this.contentType(\'.html\');
+5 23 if (options.locals = options.collection = options.collection;
+5 24 this.collection;
+5 25 this.firstInCollection = options.collection;
+5 26 this.select = function() {
+5 27 return this.val = this.val;
+5 28 return this.val = val;
+5 31 http.ServerResponse.prototype.writeHead = function(this, self) {
+5 35 http.ServerResponse.prototype.readFile = function(file, this, options, fn){
+5 36 options = this.encodings = options.collection;
+5 37 if (this.app.get(\'jsonp callback\')
+5 38 .collection.collection.readFile = options.collection;
+5 39 , options.element = options.collection;
+5 40 fs
+6 4 view = this.app.set(\'views\', process.cwd() + \'/views\');
+6 5 var viewLocals = options.locals || {};
+6 6 if (viewLocals) {
+6 7 viewLocals.invalidate();
+6 11 var array = options.collection;
+6 12 if (typeof array!==\'string\') {
+6 13 arr = [0, 1];
+6 15 arr.forEach(function(fn){
+6 16 fn.call(this, viewLocals);
+6 23 if (view.indexOf(\'.\')!== -1) {
+6 24 view += \'.indexOf(\'.\';
+6 27 return view.renderSync(view, options);
+6 29 function stream(stream, self) {
+6 30 if (this.get(\'static/static/s/sess.jade\', function(fn) {
+6 31 self.get(\'compress/fn.compress(fn)
+6 32 .compress(fn)
+6 33 .set(\'compress(fn)
+6 34 .exports.compress(fn)
+6 35 .exports.exports.compress(fn)
+6 36 .exports.compress(function(function(true.exports.exports.compress)
+6 37 .compress, fn))
+6 38 .exports.exceptions.exceptions = [] = {}
+6 39 .proxhrtime = {}
+6 40 .on(\'error\', function(){
+6 41 throw new Error(\'error\', function(err) {
+6 42 fn.call(fn) {
+6 43 fn.apply(this, arguments);
+6 44 process.apply(this
+7 3 var defaultEngine = this.app.settings[view options. engine];
+7 5 options.__proto__ = viewOptions;
+7 6 view.path = this.filename.substring(view.length - extname(view).length);
+7 8 if (view.indexOf('.') < 0 && defaultEngine.isEngine(view.substring(0, 2)) {
+7 9 view += ext;
+7 12 options.engine = defaultEngine;
+7 17 root = viewCache[view] || defaultEngine
+7 18 if (!view.length) {
+7 19 options.view = path;
+7 21 function noArray(x) {
+7 22 return this.at(0).some(x === 0;
+7 24 require(\'requirejs\').boot(this)
+7 25 .init()
+7 26 .then(function()
+7 27 .each(function(other) {
+7 28 return require(app)
+7 29 .element.element.settings.__props = function noURICompatch(function(err, customMethod) {
+7 30 return customLogger.include({
+7 31 segments.__props.reduce(404, function(key, next) {
+7 32 return next(err, i){
+7 33 return self.url: function(req, url, next) {
+7 34 if(key in self.url.url.url, self.url.options.path + 1, url.protoLowerCase())
+7 38 .__props.__props.__proto__proto__ = function(url, url, i){
+7 39 return self.params.reduce(function(function (props) {
+7 40 return self.params.__props.position, function (
+8 3 var defaultEngine = this.app.set(\'view engine\', \'ejs\');
+8 5 var locals = options.locals || {};
+8 6 var viewName = options.as || view.split(\'.\');
+8 7 if (viewName) {
+8 10 var locals = options.locals[view] || {};
+8 13 locals.__length__ = len;
+8 14 return this.render(view, options);
+8 16 if (!view) {
+8 25 var defaultEngine = this.app.set(\'view engine\', options);
+8 26 var viewOptions = this.view options || {};
+8 27 var defaultEngine.set(\'views\', this.app.settings\', options.onlySrc);
+8 28 var views = this.exclude = options.object.views);
+8 29 if (this.cache.collection(this.app.search = options.search.length);
+8 30 this.toString()!== 0) {
+8 31 var results = options.collection.collection;
+8 32 this.engines = options.engines = options.collection;
+8 33 this.settings.locals.isUndefined = options.first).toString();
+8 35 return this.cache.cache.hasOwnProperty(this.settings);
+8 37 if (this.method === \'view\') {
+8 38 this.lookup = this.lookup = fn;
+8 39 .method = fn;
+8 41 if (options.locals.parset = this.parsed = this
+9 2 var defaultEngine = this.app.set('view engine');
+9 3 if (view.indexOf(\' this.partial()\') === 0 && defaultEngine.settings.auto) {
+9 4 options.__proto__ = defaultEngine;
+9 9 root = viewRoot(this.filename.substring(view.length - 1),
+9 10 ext = extname(view.substring(view.length - ext.length),
+9 11 generator = generators[ext].createChild([{
+9 12 name: this.filename.substring(1),
+9 13 property: this.app.get(ext)
+9 16 if ('string' == typeof name) {
+9 17 options[this.filename.substring(0, 1) == \'.png\')} else if (name === global) {
+9 18 merge(options, options.object);
+9 20 options.scope.link = this.filename;
+9 26 this.app.set('views', function(){
+9 27 app.set(\'view engine\', view);
+9 28 return this.join(this.filename.dirname, this.basename)
+9 29 .extension;
+9 35 res.render.read = function(options, callback) {
+9 36 fs.readFile(this.readFile, this.toString, options, function(err, fn){
+9 37 if (err, arg) {
+9 39 if (err) return this.isFunction) return fn(options, arg)
+9 40 fn);
+9 41 fn = options.call(this, this.app, this.app.settings[this.app.get(\'view engine\'));

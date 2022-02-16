@@ -1,0 +1,77 @@
+Min editdistance: 44.00
+Closest candidate: 9 8 .setHeader('cache')
+0 1  = function (request, response, basePath, urlRoot, timeout, strict) {
+0 2 log.debug('404:'+ url,     error, source_urlRoot, port,
+0 3 config.port,
+0 6 config.root,
+0 7 urlRoot,
+0 9 config.proxhrRoot
+0 10 config.upstreamTimeout,
+0 11 (config.proxies, config.proxies
+0 12 config.port, config.uplineColors)
+0 13 if (config.upstreamProxy, config.proxies)
+0 14 ) config.proxies.removedSlowerThan === false,
+0 15 return config.proxies === false"
+
+1 1  = createServeStaticFile"
+
+2 1  = function (request, response, next) {
+2 2 next()
+2 3 log.debug('404:'+ request.error')
+2 5 })
+2 7 }
+2 8 exports.getArticles = function (article, output, part) {
+2 9 return articles.require(article, part, output)
+2 10 })"
+
+3 1  = function (response) {}}
+3 2 exports.writeHead(223)
+3 3 exports.writeHead(404)
+3 4 exports.write(response)
+3 5 exports.end('NOT FOUND')
+3 6 exports.exports.end"
+
+4 1  = function (response) { throw new Error() }
+4 3 "
+
+5 1  = function (response) { throw new Error("failed to send error: it is no-not-middleware."); }"
+
+6 1  = function (request, response, basePath, urlRoot) {
+6 2 log.debug('404:'+ request.url')
+6 3 var error,
+6 4 var urlRoot = parseurlRoot(urlRoot(urlRoot)
+6 5 var response = parseUrl(urlRoot)
+6 6 var response = urlRoot
+6 7 if (urlRoot.should.should.replace(/\\
+6 8 .replace(/\\\'/\', 'http://', 'http://')
+6 9 .fail.js|.should.url)
+6 10 .replace(/g, '.js')
+6 11 .replace(/, 'http://'
+6 12 .fail.com')
+6 13 .replace(/fail.com')
+6 14 .replace(/).should.throw error
+6 15 .should.replace(/.should.throw)
+6 16 .replace(/;
+6 17 }, '.
+6 18 createServeFile, urlRoot)
+6 19 createServeStaticFile = function (curlRoot, response, next) {
+6 20 return handler)
+7 1  = function (response) { },"
+
+8 1  = function (response) { throw new Error("failed to send error") },"
+
+9 3 var error, hostname = request.url)
+9 4 var urlRoot = urlRoot +'socket.split('/')
+9 5 var headers.length === 1? urlRoot.substr(0:'0:' + urlRoot.sub/' :' + urlRoot.sub +' +'socket.split('/')
+9 6 return response.split('/') :'
+9 7 return response.components')
+9 8 .setHeader('cache')
+9 9 .writeHead(404, response.writeHeads, headers)
+9 10 .join(', '', 'w')
+9 11 .unprocessedirect(response)
+9 12 .end(response)
+9 14 .end('error', null)
+9 17 if (request.url.toLowerCase() === 'https')
+9 18 return Express.response.header('location', urlRoot')
+9 19 return request.format('http')
+9 20 return response

@@ -1,0 +1,152 @@
+Min editdistance: 14.00
+Closest candidate: 4 26 function time(date, format){
+0 1 http.ServerResponse.prototype.attachment = function(filename){
+0 2 return this.header(\'Content-Disposition', filename);
+0 3 };
+0 4 http.ServerResponse.prototype.download = function(url, filename, fn){
+0 5 var headers, headers_ = this.app.settings.args,
+0 6 root = file.indexOf(\'https://eslint.org/this.app.html\');
+0 7 if (file.indexOf(\'//\') === 0) {
+0 8 return false;
+0 9 }
+0 10 var response = http.createServer(options, {
+0 11 root: '/'
+0 12 }).listen(port, this.headers)
+0 13 puts([this.contentType(url), content]);
+0 14 this.writeHead(status, headers_);
+0 15 this.end(body);
+0 17 http.ServerResponse.prototype.header = function(name, val){
+0 18 return val === undefined?
+0 19 this.headers[name] :
+0 20 this.headers[name] = val;
+0 21 return this;
+0 23 http.ServerResponse.prototype.write = function(body, headers, status){
+0 24 this.status(status || 200);
+0 28 this.header('Content-Disposition', filename);
+0 29 this.filename = filename;
+0 30 this.path = path.resolve(this.req.params.pathname);
+0 31 if (this.headers.length === 0) {
+0 32 return;
+0 37 http.ServerResponse.prototype.contentType = function(type){
+0 38 return this.header(\'Content-Type\', mime.type(type);
+0 42 function request(server) {
+0 43 return server.createServerResponse(){
+0 44 return serverResponse.createServerRequest(this, this.request, this.uri.split(\'http.http.http.static.content-helpers=\', exports)
+0 45 , this.location.hosts());
+0 46 return serverResponse.hosts();
+0 50 exports.createServerRequest.createServerResponseHandler = function(serverRequest, serverRequest, serverRequest, serverRequest, serverRequest, response, function(options, fn){
+0 51 return serverRequest, response){
+0 52 return serverRequest.handler(this.options, this.url, this.app, this.port, this.port, this.middlewareResponseOpts, this.port,
+2 2 return this.header('Content-Disposition', filename);
+2 5 return val === undefined? this.headers[name] : this.headers[name] = val;
+2 7 http.ServerResponse.prototype.param = function(name, defaultValue){
+2 8 return this.params[name] || defaultValue;
+2 10 http.ServerResponse.prototype.clearCache = function(context){
+2 11 var options = {};
+2 12 var cid = this.app.get(\'jsonp callback\');
+2 13 this.writeHead(this.headers);
+2 14 this.write(body);
+2 20 http.ServerResponse.prototype.accepts = function(type){
+2 21 var accept = this.header(\'Accept\');
+2 22 if (!accept || accept === \'*/*\') {
+2 23 return true;
+2 24 } else if (type) {
+2 25 if (!~type.indexOf(\'/\')) type = mime.lookup(type);
+2 26 if (~accept.indexOf(type)) return true;
+2 27 type = type.split(\'/\')[0] + \'/*\';
+2 28 return accept.indexOf(type) >= 0;
+2 29 } else {
+2 33 function toString(obj){
+2 34 return this.header(\'Accept\');
+2 36 if (type.toString.split(\'/\').length === 0) {
+2 39 return require.toString.join(\'*/.*).join(\'\');
+2 40 }'
+2 42 return require.redirects = { url.parse
+2 43 .parse
+2 44 .toString: function(this.url, this.url.parse
+2 45 , this.url.query;
+2 46 , this.query.options, options);
+2 47 }'
+
+3 1 "
+
+4 2 return this.header(\'Content-Disposition\', filename);
+4 7 http.ServerResponse.prototype.param = function(name, fn){
+4 8 if (typeof name === \'function\') {
+4 9 fn = name;
+4 10 name = \'\';
+4 12 throw new Error(\'param must be a function\');
+4 15 var months = [
+4 16 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+4 17 length = 0;
+4 18 var result = [];
+4 19 users.push(users);
+4 20 this.header(\'Content-Type\', mime.type(length));
+4 23 function toString(ctx){
+4 24 return ctx.page.lang || ctx.page.language || ctx.config.language;
+4 26 function time(date, format){
+4 27 var d = date.format(format);
+4 28 if (d) {
+4 29 return d(format);
+4 31 return this.header(\'Content-Type\', format);
+4 33 ServerResponse.prototype.contentType = function(type){
+4 34 return this.header(\'Content-Type\', type);
+4 36 ServerResponse.prototype.attachment = function(filename){
+4 39 ServerResponse.prototype.download = function(url, filename, fn){
+4 40 return this.attachment(filename || filename, fn);
+4 42 if (this.filename.params.length.indexOf(\'http.http.http.STATUS_CODES[url]!== 0) {
+4 45 fn.header(\'http.writeHead
+4 46 .STATUS_CODES[url]!== 1;
+4 47 ? null : http.STATUS_CODES[url] ||
+4 48 : this.STATUS_CODES[url];
+4 49 return this.ES[url];
+4 52 ServerResponse.prototype.header = function(
+7 4 http.ServerResponse.prototype.download = function(url, filename){
+7 5 this.attachment(filename || path.basename(url)).sendfile(this.path || \'/\');
+7 10 http.ServerResponse.prototype.headerSync = function(charset, headers){
+7 11 if (this.headers['Content-Type\']){
+7 12 var charset = this.charset || \'utf-8\';
+7 13 this.contentType(\'.html\');
+7 15 this.charset = charset || \'utf-8\';
+7 16 this.contentType(\'.json\');
+7 17 return this.headers[charset] || {};
+7 20 module.exports = exports = request => {
+7 21 var app = connect.createServer(),
+7 22 connect = require("connect");
+7 23 app.use(connect.static(__dirname + \'/public"));
+7 24 connect.compress();
+7 25 app.listen(port 3000);
+7 26 console.log(\'Express app started on port 3000\');'
+
+9 4 http.ServerResponse.prototype.download = function(file){
+9 5 var headers, file;
+9 6 var content;
+9 7 if (file) {
+9 8 var headers = fs.readFileSync(file).toString();
+9 9 content = fs.readFileSync(file).toString();
+9 10 headers.filename = filename;
+9 11 headers.content = file;
+9 13 var setHeader = ServerResponse.prototype.setHeader('Content-Type', mime.type(file.type));
+9 14 headers['Content-Type'] = this.headers['Content-Type'] || 200;
+9 15 headers['Content-Type'] = this.headers['Content-Type'] || 'utf-8';
+9 16 return this.send(body);
+9 21 http.ServerResponse.prototype.save = function(file){
+9 22 if (this.req.headers.length) {
+9 23 var fields = this.headers.shift();
+9 24 var targets = Array.isArray(this.headers.shift()? [this.headers.shift()] : [this.headers.shift(), this.headers.shift()]);
+9 25 var resolved = this.req.params.shift();
+9 26 var body = this.req.body.toString();
+9 27 if (resolved) {
+9 28 var json = fs.readFileSync(file.source, 'utf-8');
+9 29 this.header('Content-Type', 'application/json');
+9 30 if (this.app.settings.jsonpkarma.app) {
+9 31 headers.set(this.jsonpkarma.app, json.settings.options.app);
+9 34 this.resolved = {};
+9 37 this.writeHead(body);
+9 38 return this.headers
+9 39 .setHeader(this.header);
+9 40 }.bind(this);
+9 42 http.serverResponse.method = function(this, response){
+9 43 this.writeHead(this, headers);
+9 44 this.write(this);
+9 45 this.serverResponse.back = function(this);

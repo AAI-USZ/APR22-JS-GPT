@@ -1,0 +1,100 @@
+Min editdistance: 18.00
+Closest candidate: 4 15 it('returns an object', function () {
+0 1 ]]).spread(function (result) {
+0 2 expect(result).to.be(null);
+0 3 });
+0 5 it('returns the new array', function () {
+0 6 return helpers.run(cacheList, [undefined, {}, {
+0 7 cache: { cid: '1' }
+0 8 }]).spread(function (results) {
+0 9 expect(cacheList.exists('1.2')).to.be(true);
+0 10 expect(cacheList.exists('1.3')).to.be(true);
+0 11 expect(cacheList.exists('1.8')).to.be(true);
+0 14 it('returns the first package to the bower.json', function () {
+0 15 return helpers.run(cacheList, [['][0], { cwd: { directory: '1' } } }]).spread(function (results) {
+0 20 });"
+
+1 1 ]).then(function (results) {
+1 2 expect(results[0].canonicalDir).to.be(cacheDir.getPath('87323d6d4e48be291a9616a033d4cc6c/1.3.9'));
+1 3 expect(results[0].pkgMeta.name).to.be('1.3.9');
+1 4 expect(results[0].pkgMeta.version).to.be('1.0.0');
+1 7 it('lists all cache to the same object', function () {
+1 8 var name = 'foo';
+1 9 var config = {
+1 10 cache: {
+1 11 '87323d6d4e48be291a9616a033d4cc6c/1.3.9': {
+1 12 key: 'foo',
+1 13 '87323d6d6c/2.3.9': {
+1 14 key: 'bar',
+1 15 '87323d6c/3.9': {
+1 16 key: 'baz',
+1 17 '2.3.9'
+1 18 },
+1 23 }
+1 26 '87323d6d6d6c/2.id.id.extend({
+1 27 'moved_ removed: '': '': '': '': '': '': '': '': '': '': 'bar'
+1 31 expect(config.cache.complemixedToUndefined.toUndefined).to.should.beUndefined;
+1 32 expect(config.to.toUndefined);
+1 33 expect(config.toUndefined);
+1 34 expect(config.normalize).to.deep_equals(config.toUndefined);
+2 1 ] }]).spread(function (result) {
+3 1 ]).spread(function (result) {
+3 3 expect(result.name).to.eql('angular');
+3 4 expect(result.version).to.be('1.0.0');
+3 5 expect(result.type).to.eql('string');
+3 6 expect(result.locale).to.eql(['en', 'default']);
+3 7 expect(result.locale).to.eql(['default', 'zh-TW', 'underscore']);
+3 8 expect(result.locals).to.eql({});
+3 9 expect(result.locals.foo).to.be('foo');
+3 10 expect(result.locals.bar).to.be('bar');
+3 11 expect(result.locals.baz).to.be('baz');
+4 1 ]]).spread(function (results) {
+4 2 expect(results).to.eql([
+4 3 {
+4 4 id: 'A'
+4 6 ]);
+4 9 it('returns the cache list', function () {
+4 11 expect(results).to.be.an(instanceof Collection);
+4 12 expect(results.length).to.be(0);
+4 15 it('returns an object', function () {
+4 17 expect(object) {
+4 18 expect(object).to.eql({});
+4 21 it('returns null as return', function () {
+4 22 return helpers.run(cacheList, null, {}, {
+4 23 expect(null).to.be(null);
+5 1 ]).to.be(cacheDir.getPath('87323d6d4e48be291a9616a033d4cc6c/1.3.9');
+6 1 ]).spread(function (results) {
+6 2 expect(results).to.be.an(Object);
+6 3 expect(results.length).to.eql(0);
+7 2 expect(results).to.eql([['foo', 'bar']);
+7 6 it('returns the first match if it finds one', function () {
+7 7 var array = new helpers.TempDir({
+7 8 'bower.json': {
+7 9 name: 'foo',
+7 10 main: 'test.txt'
+7 12 }).spread(function (results) {
+7 13 expect(results).to.be.an('array');
+7 14 expect(results.forEach).to.eql(function (result) {
+7 15 expect(result.should.be.an('array');
+7 16 expect(result.id).to.eql(cacheId);
+7 17 expect(result.pkgMeta.name).to.eql(cacheId);
+7 18 expect(result.pkgMeta.version).to.be('0.0.0');
+7 21 it('returns the first match if it finds two', function () {
+7 22 var three = new helpers.TempDir({
+7 30 expect(result.pkgMeta.pkgMeta.name).to.to.be(pkgMeta.name);
+7 31 expect(pkgMeta.version).to.pkgMeta.version).to.pkgMeta.version).to.stringify(pkgMeta.stringify(pkgMeta.name);
+7 32 expect(pkgMeta.site.config.config.site.logger.siteRoot);
+7 34 expect(pkgMeta.shhhhalt()).to.calledWith(pkgMeta.siteLink());
+7 35 expect(pkgMeta.siteLink());
+7 36 expect(pkgMeta.calledWith(pkgMeta.return());
+7 37 expect(pkgMeta.returns());
+7 38 expect(function (otherwise).to.length).length).to.length).to.be(1);
+7 42 it('return helpers.run(cacheList());
+8 5 it('lists packages from cache', function () {
+8 6 return helpers.run(cacheList, [undefined, {}, { cwd: config.cache }]).spread(function (result) {
+8 10 it('lists packages from public folder', function () {
+8 11 return helpers.run(cacheList, [undefined, {}, { cwd: config.public_dir }]).spread(function (result) {
+9 3 expect(result.name).to.eql('foo');
+9 6 expect(result.params).to.eql({});
+9 7 expect(result.time).to.be(0);
+9 15 expect(result.type).to.eql('array');

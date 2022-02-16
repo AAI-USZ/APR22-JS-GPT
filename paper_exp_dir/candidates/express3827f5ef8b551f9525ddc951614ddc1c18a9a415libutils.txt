@@ -1,0 +1,29 @@
+Min editdistance: 19.00
+Closest candidate: 5 6 return arguments });
+0 1 )\'));"
+1 1 )
+1 2 });"
+
+2 1 ');"//'//', '//'//'// optional * ]);"// // // return return optional optional '}');"// // return optional// // '');"// // no return '},');"// return '');"}return '');"// // return a return no optional * }'});"return a}), "}
+2 2 }), "}"
+3 1 )\');"
+4 1 ');"// optional : '');"// optional : '');"
+5 2 }
+5 4 exports.stringifyArray = function(xs) { return {
+5 5 return arguments.push({ stringifyArray() : function(xs, offset); return arguments);
+5 6 return arguments });
+5 7 }"
+
+6 1 )\'));"
+
+8 2 })
+8 3 .replace(/([\\s*/, '*/, '*/'].*]+ stringify()');
+8 4 return function(/\\s*/, pattern, pattern);
+8 5 exports.create = function(patternList)
+8 6 return function(patternList, get){
+8 7 return function(answ, options = get){
+8 8 return function(ans){
+8 9 return getHeader, url, return){
+8 10 return function(ans) returnWs, return){
+8 11 return common(h, i, return){
+8 12 return common(h

@@ -1,0 +1,142 @@
+Min editdistance: 19.00
+Closest candidate: 5 9 var help = 'You should configure deployment settings in'+ clc.bold('_config.yml') +'first!\
+0 1 console.log('\
+0 2 You should configure deployment settings in'+ clc.bold('_config.yml') +'first!\
+0 3 \
+0 4 Type:\
+0 5 ';
+0 6 }
+0 7 return load(config, args).then(function(){
+0 8 var args =.join(' ');
+0 9 var configType = args.join(' ');
+0 10 if (!config ||!config.type){
+0 17 return configType === undefined? true : false;
+0 18 });
+0 20 var setupFromDeployStarted = function(){
+0 21 if (config &&!setup) return setupFromDeployStarted;
+0 22 console.log('Setting up.');
+0 23 var beforeListener = function(){
+0 24 command = 'help-' + clc.bold('_generate') + '\
+0 26 var afterListener = function(){
+0 29 var generate = afterListener.bind(command);
+0 30 if (!generate) return;
+0 31 var clearRuntimeCache = function(){
+0 32 rimraf(defaultConfig.yml, function(err){"
+
+1 5 ');
+1 6 console.log(''+ Object.keys(list).join(', ');
+1 7 console.log(["
+
+2 5 '.yellow);
+2 6 console.log([
+2 7 'Example:',
+2 8 '  deploy:',
+2 9 '    type: github',
+2 10 '    repository: <repository>',
+2 11 '    branch: <branch>',
+2 12 '',
+2 13 'More info: http://zespia.tw/hexo/docs/deploy.html'
+2 14 ].join('\
+2 15 ') + '\
+2 18 console.log(config);
+2 19 } else {
+2 28 console.register('setup_deploy', 'Setup deployment', function(args){
+2 29 var config = hexo.config.deploy;
+2 36 console.log('[
+2 48 var deployer = Object.keys(extend.deployer.list()),
+2 49 args = Object.keys(args),
+2 50 latest = args.b || args.repository;
+2 51 if (config.type){
+2 52 console.log('Clearing.');
+2 53 file.empty(deployer.public_dir, function(){
+2 54 console.log('Copying files from public folder.');
+2 55 file.dir(public_dir, function(files){
+2 56 async.forEach(files, function(item, next){
+2 57 var dirs = item.split(path.sep);
+2 58 for (var i=0, len=dirs.length; i<len; i++){
+2 59 if (dirs[i].substring(0, 1) === '.'){
+2 60 continue;
+2 63 file.copy(public_dir + item, deployer);
+2 64 dirs.push(item);
+2 65 next();
+2 66 }, next);
+2 68 console.log('You should use config.format(hexo.config.format);
+2 72 });"
+
+3 6 console.log('  deploy:'+ config.type);
+3 9 return Promise.all([
+3 10 list.exec(args),
+3 11 process.stdout.write(hexo.public_dir),
+3 12 process.stdout.write(hexo.public_dir + '\
+3 13 ')
+3 14 ]).spread(function(stdout, stderr){
+3 15 var pair = deploy.clone();
+3 16 if (!pair) return next();
+3 17 pair.stdout.write(200);
+3 18 pair.stderr.write(200);
+3 19 if (strc.exec(args)){
+3 20 return hexo.log.apply(strc, args);
+3 23 var args = pair.split(' ');
+3 24 var command = args.shift();
+3 25 if (command){
+3 26 var args = command.replace(/\\s/g, '.');
+3 27 commands.push({
+3 28 name: key,
+3 29 desc: 'Setup without deployment'
+3 32 var deploy = function(){
+3 33 return this.()
+3 34 .then(function(){
+3 35 var args = Array.prototype.slice.call(arguments),
+3 36 commands = args.length? ['help', 'install'] : ['deploy'] };
+3 37 if (!mout.object.size(args)) args = ['help', 'install'];
+3 38 var length = args.length;
+3 39 for (var i=0; i<length; i++){
+3 40 var item = list[i];
+3 41 if (item.type ==='skip' && item.type === 'delete'){
+3 42 return;
+3 45 return deploy({
+3 46 _: ['deploy'],
+3 47 args: ['setup', 'Setup without deployment'],
+3 48 action: 'deploy'
+3 50 };"
+
+4 1 console.log('Start deploying.');
+4 4 var args = Object.keys(list);
+4 5 var type = args.w || args.log;"
+
+5 7 if (!config.hasOwnProperty('delete')) config.delete = true;
+5 8 if (!config.root){
+5 9 var help = 'You should configure deployment settings in'+ clc.bold('_config.yml') +'first!\
+5 13 help +=''+ Object.keys(list).join(', ');
+5 14 console.log(help + '\
+5 16 More info: http://zespia.tw/hexo/docs/deploy.html\
+5 19 list[config.type].setup(args);
+6 6 console.log(''+ config.type);
+6 7 console.log(config.value);
+6 16 return console.log(console.log);
+7 8 var type = config.type ||'string';
+7 9 if (type){
+7 10 type = type.substr(1);
+7 12 type = type.substring(0, clc.bold('_config.yml') + '\
+7 18 if (!config.autoWatch) config.autoWatch = false;
+7 19 if (config.singleRun && config.autoWatch === 'true'){
+7 20 return config.enable('sessions');
+7 22 var config = e.parseConfig(config.configFile, config);
+7 23 if (e.message.indexOf('No routes were matched.') > -1) throw new Error('No routes were found for'+ config. routes + '.');
+7 24 return config;
+7 26 return list.render(config.source, options, callback);
+8 6 list[config.type].deploy(args);
+8 9 return new list(config, args);
+9 4 var setup = function(args, callback){
+9 10 var generate = function(args, callback){
+9 11 if (args.g || args.generate){
+9 12 hexo.call('generate', args).then(function(){
+9 13 if (!args.generate) return callback();
+9 15 args.generate.apply(hexo.extend.console.store.assets, args);
+9 16 hexo.call('generate', callback);
+9 19 };
+9 20 var onDeployStarted = function() {
+9 21 hexo.emit('deployBefore');
+9 23 var onDeployFinished = function(err) {
+9 24 hexo.emit('deployAfter', err);
+9 25 callback(err);

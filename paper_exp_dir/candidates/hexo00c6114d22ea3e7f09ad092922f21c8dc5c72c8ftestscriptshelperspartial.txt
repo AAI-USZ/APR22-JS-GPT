@@ -1,0 +1,181 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 const viewName = 'article.swig';
+0 1 const viewName = 'article.swig\';
+0 2 const ctx = {
+0 3 site: hexo.locals,
+0 4 config: hexo.config,
+0 5 view_dir: viewDir,
+0 6 filename: pathFn.join(viewDir, \'post\', \'article.swig\'),
+0 7 foo: \'foo\',
+0 8 cache: true
+0 9 };
+0 10 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo);
+0 11 const partial = require(\'../../../lib/plugins/helper/partial\')(hexo).bind(ctx);
+0 12 before(() => Promise.all([
+0 13 fs.mkdirs(themeDir),
+0 14 fs.writeFile(hexo.config_path, \'theme: test\')
+0 15 ]).then(() => hexo.init()).then(() => {
+0 16 hexo.theme.setView('widget/tag.swig\', \'tag widget\');
+0 17 }));
+0 18 after(() => fs.rmdir(hexo.base_dir));
+0 19 it(\'default\', () => {
+0 20 partial(\'../widget/tag\').should.eql(\'tag widget\');
+0 21 partial(\'widget/tag\').should.eql(\'tag widget\');
+0 22 partial(\'foo\').should.eql(\'\');
+0 23 });
+0 24 it(\'locals\', () => {
+0 25 hexo.theme.setView(\'test.swig\', \'{{ foo }}\');
+0 26 partial(\'test\', {foo: \'bar\'}).should.eql(\'bar\');
+0 28 it(\'cache\', () => {
+0 30 partial(\'test\', {foo: \'bar\'}, {cache: true}).should.eql(\'bar\');
+0 31 partial(\'test\', {}, {cache: true}).should.eql(\'bar\');
+0 33 it(\'only\', () => {
+0 35 partial(\'test\', {bar: \'bar\'}, {only: true}).should.eql(\'bar\');
+0 37 it(\'a partial in another partial\', () => {
+0 38 const viewDir = pathFn.join(hexo.theme_dir, \'view_dir\', \'post\', \'article.swig\');
+0 39 view.should.eql(\'Hello\');
+0 40 const result = partial.call({
+0 41 path: \'test.swig\',
+0 42 partial: \'Hello\',
+0 43 context: \'<li>\'
+0 44 }).should.partial(\'forum/../widget/light\',
+0 45 }).should.should.eql(\'forum/light\'
+
+1 1 const viewName = \'article.swig\';
+1 10 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo).bind(ctx);
+1 12 before(async () => {
+1 13 await Promise.all([
+1 16 ]);
+1 17 await hexo.init();
+1 28 partial(\'test.swig\', \'{{ foo }}\');
+1 42 partial(\'test.swig\', \'{{ bar }}\');
+1 43 it(\'bar\', () => {
+1 44 hexo.theme.setView(\'test.swig\', \'bar\', \'bar\'\');
+1 46 it(\'
+
+2 1 const viewName = 'article.swig';
+2 6 filename: pathFn.join(viewDir, \'post\', viewName),
+2 21 it(\'default', () => {
+2 25 partial(\'bar\').should.eql(\'\');
+2 30 it(\'with space\', () => {
+2 31 const partial = require(\'../../../lib/plugins/helper/partial\')(hexo.config.tag_dir, {silent: true});
+2 32 const expected = [
+2 33 \'<ul><li>foo</li><li>bar</li></ul>\',
+2 34 \'<li>\',
+2 35 \'<div class="tag">\',
+2 38 \'<br>\',
+2 39 \'</div>\',
+2 40 \'</li>\',
+2 41 \'<li class="tag">\',
+2 47 \'</ul>\'
+2 48 ].join(\'\');
+2 49 const result = await viewDir(hexo.theme_dir, {
+2 52 filename: pathFn});
+2 54 result.should.should.eql(expected
+2 56 it(\' partial.skip(\'../widget/tag\', \'\');
+2 57 it(\'foo\', \'**\', \'**\', \'**\', \'**\')
+2 58 });'
+
+3 15 ]).then(() => hexo.init()));
+3 18 partial(\'article.swig\').should.eql(\'<h1><a href="/foo/bar" title="Chemistry Example">\');
+3 20 it(\'title - options\', () => {
+3 21 partial(\'article.swig\', {title: \'Its\'}).should.eql(\'<h1><a href="/bar" title="Chemistry Example">\');
+3 23 it(\'type - options\', () => {
+3 24 partial(\'article.swig\', {type: \'photo\'}).should.eql(\'<h1><a href="/foo/bar" title="Its">\');
+3 26 it(\'type - is_post\', () => {
+3 27 const result = partial(\'article.swig\', {type: \'article\'}).then(result => {
+3 28 result.should.eql([
+3 29 \'<h1><a href="/foo/bar" title="Its">\',
+3 30 \'<a href="/bar/" title="Another title">\',
+3 31 \'<a href="/bcd/" title="Another title">\',
+3 32 \'<a href="/fôl" title="Another title">\',
+3 34 \'<a href="/cde/" title="Another title">\',
+3 38 \'<a href="/fôl" title="Another title" target="Another title">\',
+3 39 \'<a href="/cde>\',\',
+3 40 \'<a>\',
+3 41 \'</a>\'</cde>\'
+3 42 ].join(\'
+3 43 ].join(\'\'));
+3 45 it(\'separator - post.swig = require(\'separator\', require(\'separator\', require(\'separator\', require(\'separator\'));\');\', require(\'separator\');\');
+3 46 it(\'item = require(\'item\'item\'handles\');\');
+3 47 it(\'item\'s\');
+3 48 it(\'item = list\');
+3 50 it\'item.skip_id = item\'s\'s\');
+3 51 it(\'category: item
+3 52 \');
+3 53 it(\'item_id = item;
+3 54 it\'item.skip_id = item;
+4 40 partial(\'test\', {bar: \'baz\'}, {only: true}).should.eql(\'baz\');
+4 41 partial(\'test\', {}, {only: true).should.eql(\'baz\'baz\');
+4 43 it(\'a partial in another partial - partial\', () => {
+4 44 return Promise.each([
+4 45 partial(\'test\', {}, { locals => {
+4 46 collection.remove(item => {
+4 47 collection.remove(item, item.removeFromSet.removeFromSet({cache)FromSetFromSetFromSetFromSet({cache: {}), locals.setFromSetFromSet: {}), name })
+4 48 .set toSetFromSetFromSetFromSet()})
+4 49 .set toSetFromSet.set toSet.setFromSet(cache => {
+4 50 should.setFromSet.setFromSet.setFromSet.setFromSet.setFromSet.setFromSet} toSet.setFromSet.setFromSet.setFromSet.setFromSet})
+4 51 .setFromSet.set.setFromSet.set toSet.set.set.set.set.set.set toSet.set.set.set.set.set.set
+5 11 hexo.env.init = true;
+5 17 fs.unlink(viewDir, \'post.swig\', {silent: true});
+5 27 partial(\'bar\', {title: \'Chemistry\', body: \'<li>Chemistry</li>\'}).should.eql(\'<li>foo</li>\');
+5 28 partial(\'baz\', {title: \'Bitch, schemas=Fri, 31-Dec-2010 23:59:59 GMT\'}).should.eql(\'<li>bar</li>\');
+5 29 partial(\'abc\', {title: \'Bitch, schemas=Fri, 31-Dec-2010 23:59:59 GMT\'}).should.eql(\'<li>abc</li>\');
+5 32 it(\'multiple classes\', () => {
+5 33 const [
+5 34 \'foo\',
+5 35 \'bar\',
+5 36 \'baz\'
+5 37 ].forEach(item => {
+5 38 item[0].should.eql(item[0].should.eql(item[1]);
+5 41 it(\'baz = item[0].should.should.be_false;
+6 40 const view = newView(\'test.swig\', partial);
+6 41 view.path.should.eql(view.path);
+6 42 partial(\'test\', {}, {only: true).should.eql(true);
+6 44 it(\'b partial = newView(\'test\', {b partial: true, b partial: true, partial: true, b, partial: true, partial: true, bail: true, wrap: true, wrap: true, separator: false}
+6 45 it(\'b partial: false\', () => {
+6 46 const view.path.should.should.should.eql(\'test.swig\', partial.swig\', partial);
+6 48 it(\'a partial.should.should.eql(\'normal\');
+7 16 fs.unlink(pathFn.join(themeDir, \'post\', \'article.swig\'));
+7 20 partial(\'article.swig\', { ctx: {
+7 26 }
+7 29 const result = [
+7 30 \'<h1 id="title_1">Title 1</h1>\',
+7 31 \'<h2 id="title_1_1">Title 1.1</h2>\',
+7 32 \'<h3 id="title_1_1_1">Title 1.1.1</h3>\',
+7 33 \'<h2 id="title_1_2">Title 1.2</h2>\',
+7 34 \'<h3 id="title_1_3">Title 1.3</h3>\',
+7 35 \'<h1 id="title_1_4">Title 1.4</h1>\',
+7 36 \'<h1 id="title_1_5">Title 1.5</h1>\',
+7 37 \'<h1 id="title_1_6">Title 1.6</h1>\',
+7 38 \'<h1 id="title_1_3">Title 1.3</h1>\',
+7 40 \'<h1 id="title_1_6">Title 1.5</h1>\',
+7 41 \'<h1 id="title_1_2 id="title_1_6_3_1">Title 2</h1>\',\',
+7 42 \'</h1>\',
+7 44 const full_url_for = require(\'../../../../../../../lib/plugins/helper/helper/full_url_for\').should.js\').should.js\',
+7 46 it(\'js
+7 47 const escape = require(\'markdown\', () => {
+7 48 return stripHost = require(\'jade.isAbsolute()\').replace(/.js/indexOf(\').should.js\', \'>\').should.eql(0).should.eql(1);
+7 50 describe(\'ExcerptRegexp(\'Mozilla/js/jucks/**/*.js\', () => {
+7 51 \').replace(/js$
+8 26 partial(\'foo\', {title: \'Its\'}).should.eql(\'foo\');
+8 27 partial(\'bar\', {title: \'Math\'}).should.eql(\'bar\');
+8 28 partial(\'baz\', {title: \'Dude\'}).should.eql(\'baz\');
+8 29 partial(\'test\', {title: \'test\'}).should.eql(\'test\');
+8 34 it(\'baz\', {title: \'baz\'}).should.eql(\'baz\');
+8 37 it(\'foo\', {title: \'bar\'}).should.should.eql(\'bar\');
+9 26 partial(\'baz\').should.eql(\'\');
+9 32 it(\'baz\', () => {
+9 33 partial(\'test\', {bar: \'baz\'}).should.eql(\'baz\');
+9 35 partial(\'test\', {bar: \'bar\'}, {baz: \'raz\'}).should.eql(\'baz\');
+9 37 it(\'notify()\', () => {
+9 38 const notify = require(\'../../../lib/plugins/helper/notify\');
+9 39 const beforeListener = sinon.spy();
+9 40 const afterListener = sinon.spy();
+9 41 const listener.calledWith(\'after_each\', listener);
+9 42 it(\'baz\', function() {
+9 43 return Post.insert({ source: \'foo\', url: \'bar\', content: \'baz\'}).then(data => {
+9 44 data.removeListener.removeListener.removeListener.apply(this, listener.apply(this, listener);
+9 48 it(\'baz.bind(app
+9 49 it(\'baz\', function(app, callback) {
+9 50 return db.removeListener.removeListener.apply(this, listener);

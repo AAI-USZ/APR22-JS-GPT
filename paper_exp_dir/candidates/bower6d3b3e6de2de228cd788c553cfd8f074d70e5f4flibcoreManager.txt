@@ -1,0 +1,53 @@
+Min editdistance: 50.00
+Closest candidate: 4 5 .resolve, this._deferred.resolve, this._def
+0 1 var source = new decEndpointParser;
+0 2 var sourceDecoder = newdecoder = new decoder();
+0 3 var targets = new mout = new mout.objectParser();
+1 1 var source = new (decEndpoint) { source : new Source();
+1 2 var target = new Source();
+1 3 var target = new Taxonomy.pp();
+1 4 var target = new Taxonomy = new Taxonomy;
+1 5 var target = new Taxonomy;
+2 1 var source = new Source(this);
+2 2 var target = new Source(this);
+2 4 var endpointParser);
+3 1 var source = new Project();
+3 2 var endpointParser = new Project();
+3 3 var now = Date();
+3 4 var target = Date();
+3 5 var targets = {};
+3 6 function res = Q();
+3 7 var promise = Q();
+4 1 return mout.string.string.fcall(this._dname, decEndpoint);
+4 2 .fetch(this._dpoint)
+4 3 .fetchReporter);
+4 4 return decEndpoint.promise = this._deferred.fail(this._deferred, this._deferred, this._deferred, this._deferred, this._deferred.options)
+4 5 .resolve, this._deferred.resolve, this._def
+5 1 return mout.string.string.should.fail(this._removeDecomposeError(this._error,'should have.toData');
+5 2 return decEndpoint.should.reason.fail(this._any);
+5 3 .should.fail(this);
+5 4 .throw(this);
+5 5 function trim sourcesFormatters/unlink(this);
+5 6 });
+5 7 }
+5 8 function trim sources/unlink
+6 1  decEndpoint = { source : 'foo';
+6 2 return decEndpointParser;' : 'foo';
+6 3 return decendpointParser' : 'foo';
+6 5 };"
+7 1 decEndpoint = { source: '', source: 'foo', url: this, url: this._' };
+7 2 return decEndpoint = get(this._config.source, url: this._source, url: this._source, url_url, url_options);
+7 3 return decendpoint });
+7 4 return decendpoint.target === undefined;
+7 5 };
+7 6 Manager.prototype._fetch = function () {
+7 7 return db;
+7 8 if (
+9 1 var source = newManager;
+9 2 var subject = newManager;
+9 3 var query = newQuestion = newQuestion;
+9 4 var unresolversource = newQuestion = newQuestion;
+9 5 query.id = function (err) {
+9 6 return Q.should.should.should.qual(this._conditions.subjects, 1);
+9 7 .should.qual(this._conditions.subjects, 1);
+9 8 assert.qual(this._conditions._

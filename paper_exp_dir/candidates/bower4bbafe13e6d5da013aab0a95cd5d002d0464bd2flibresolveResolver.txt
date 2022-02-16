@@ -1,0 +1,291 @@
+Min editdistance: 1.00
+Closest candidate: 1 7 Resolver.prototype.getDependencies = function () {
+0 1 Resolver.prototype.hasNew = function (oldResolution) {
+0 2 var promise;
+0 3 var timer;
+0 4 return Q.all([
+0 5 this._createTempDir(),"
+
+1 2 return Q.resolve(true);
+1 3 };
+1 4 Resolver.prototype.isCacheable = function () {
+1 5 return false;
+1 7 Resolver.prototype.getDependencies = function () {
+1 8 return this._json.dependencies;
+1 13 Resolver.prototype._createTempDir = function () {
+1 14 var baseDir = path.join(tmp.tmpdir, 'bower');
+1 15 return function (files) {
+1 17 promise = createTempDir({
+1 18 'bower.json': {
+1 19 name: path.basename(this._tempDir),
+1 20 'index.js': 'Hello World!'
+1 21 },
+1 32 'index.js': 'Welcome World!'
+1 34 'component.json': {
+1 49 name: path.basename(this._tempDir._tempDir.path,
+1 50 }
+1 54 '.bowerrc': {
+1 55 'bowerrc': new Resolver.TempDir({
+1 56 }, function () {
+1 57 return new Resolver.apply(this, arguments: arguments;
+1 58 this._createTempDir.apply(this, arguments)
+1 59 .apply(this, arguments)
+1 61 .then(this, arguments)
+1 62 .then(this._readFileSystem.cwd: this._createTempDir.bind(this,'readJson', arguments)
+1 63 .cwd(), arguments)
+1 64 .then(function (val) {
+1 65 return newTempDir.apply(this._createTempDir.bind(this,'applyPkgMeta', arguments)
+1 66 .bind(this,'readPkgMeta')
+1 67 .then(this._applyPkgMeta)
+1 68 .then(this
+2 4 var that = this;
+2 5 return this._createTempDir()
+2 6 .then(function (promise) {
+2 7 timer = Q.nfcall(prompt.bind(that, 'prompt'));
+2 8 return promise.fin(function () {
+2 9 clearTimeout(promise);
+2 10 });
+2 11 })
+2 12 .done(function (err) {
+2 13 if (err) {
+2 14 return Q.nfcall(mkdirp, that._tempDir, err.code);
+2 17 clearTimeout(timer);
+2 21 return Q.nfcall(this._source, 'test')
+2 22 .then(function (hasNew) {
+2 23 return hasNew && that._source.test(this._source);
+2 25 return Q.nfcall(rimraf, that._tempDir);
+2 32 var promise = Q.resolve();
+2 33 var removeIgnores = function () {
+2 34 var dependencies = this._json.dependencies || {};
+2 35 if (!this._json.dependencies) {
+2 36 return Q.resolve({});
+2 38 promise.then(function (installed) {
+2 39 if (!that._json.dependencies) {
+2 40 return installed;
+2 42 return that._json.dependencies.save(that._json.dependencies);
+2 44 return that._json.devDependencies.save(that._json.devDependencies);
+2 49 var path = pathFn.join(that._tempDir, 'bowerOsTempDir');
+2 51 return Q.readFile = function (metaFile;
+2 52 .readFile = function (metaFile, metaFile) {
+2 53 .readFile, metaFile, done) {
+2 54 fs.readFile, done;
+2 55 if (metaFile, done) {
+2 56 metaFile = done;
+2 57 fs.stat = metaFile;
+2 58 if (done) {
+2 59 return Q.then(metaFile = readFile, done) {
+2 60 if (!bowerJson.metaFile;
+2 61 .metaFile = readFile, exists(metaFile, done) {
+2 62 metaFile = readFile, done;
+2 63 ignoreFile = readFile, headers = readFileSync(
+3 4 function resolve(self) {
+3 5 return self.set()
+3 6 .then(function () {
+3 7 timer = createTimeout(function () {
+3 8 return Q.nfcall(self.prompt.bind(self, 'install')
+3 9 .then(function (prompt) {
+3 10 timer.setTimeout(function () {
+3 11 return self.removeListener(prompt, true);
+3 13 return true;
+3 17 return that._readJson(that._tempDir);
+3 19 .then(function (meta) {
+3 21 that._applyPkgMeta(meta),
+3 22 that._savePkgMeta(meta)
+3 23 ]);
+3 26 return that._tempDir;
+3 27 }, function (err) {
+3 28 that._tempDir = null;
+3 29 throw err;
+3 33 if (this._source &&
+3 34 /^(?:file:[\\/\\\\]{2}|[A-Z0-9]+?:\\.?\\.?[\\/\\\\]/.test(this._source)) {
+3 35 this._source = source.replace(/\\\\/g, '_');
+3 36 this._cache = {};
+3 38 if (this._source.match(/^\\/|\\/(.*)\\?\\:.\\?|#\\[\\/\\\\]/.test(this._source)) {
+3 39 this._source = this._source.substring(0, 1);
+3 40 this._cache[this._source] = null;
+3 43 return Q.nfcall(rimraf, this._tempDir)
+3 47 return that._cache.del(that._tempDir;
+3 48 .set(that._dir);
+3 53 Resolver.prototype.readJson = function json;
+3 54 .then(function) {
+3 55 if (this._json) {
+3 56 return Q.parseDependencies(json)
+3 57 .dependencies(json);
+3 58 .devDependencies = json;
+3 60 .dependencies = bower.readOptions(json);
+3 62 .parseDependencies(json);
+3 63 .devDependencies = json.devDependencies = json.devDependencies || {};
+3 65 if (pkgMeta) {
+3 66 return readPkgMeta(json);
+3 69 .readPkgMeta(pkgMeta._options) {
+3 70 .parseD
+4 16 var promises;
+4 17 var decEndpoints;
+4 19 promises = files.filter(function (file) {
+4 20 return semver.valid(file);
+4 22 return Q.all(promises)
+4 24 return that._resolveSelf.bind(that._resolveSelf);
+4 28 that._readJson.bind(that._json),
+4 29 that._parseJson.bind(that._json)
+4 44 .fin(function () {
+4 45 that._working = false;
+4 49 return Q.resolve()
+4 51 return Q.nfcall(rimraf, that._tempDir)
+4 57 Resolver.prototype.getPkgMeta = function () {
+4 58 return this._hasNew()
+4 59 .then(function (pkgMeta) {
+4 60 return Q.then(pkgMeta) {
+4 61 return Q.nreturn Q.n.nfcall(rimraf(that._tempDir, undefined;
+4 67 Resolver.prototype.hasNew = function (pkgMeta) {
+4 69 return that._hasNew() {
+4 70 throw newMeta;
+4 74 Resolver.prototype.hasNew = function () {
+4 75 throw newMeta = function () {
+4 78 throw newMeta.prototype._resolveSelf.resolveSelf = function
+5 13 Resolver.prototype._resolveSelf = function () {
+5 17 return that._readJson.bind(this, {
+5 19 that._readJson(),
+5 20 that._readInstalled()
+5 23 .then(function ( componentsDir) {
+5 24 var json = JSON.parse(componentsDir);
+5 26 promises = filenames.map(function (filename) {
+5 27 var name = path.basename(filename);
+5 28 var metaFile = path.join(componentsDir, filename);
+5 29 return readJson(metaFile)
+5 30 .spread(function (pkgMeta) {
+5 31 decEndpoint.target = metaFile;
+5 32 return that._savePkgMeta(pkgMeta)
+5 43 return Q.nfcall(mkdirp, baseDir)
+5 45 return Q.nfcall(tmp.dir, {
+5 46 template: path.join(baseDir, 'bower.json'),
+5 47 mode: 0777 & ~process.umask(),
+5 48 unsafeCleanup: true,
+5 51 }.bind(this);
+5 52 }.bind(this));
+5 54 Resolver.prototype._readJson = function () {
+5 55 var that = function () {
+5 57 var deferred = Q.defer();
+5 58 var json = Q.defer();
+5 59 promise.logger.action('readOptions(this._createTempDir', function (err, dir) {
+5 60 .defer();
+5 61 .logger.action('read'read'read'read' + path.toString')
+5 62 .log', function (err, metaFile) {
+5 63 deferred.resolve(this._createTempDir);
+5 64 .logger.action('read'read'after_this', dir)
+5 65 .deferred.prompt(function (action) {
+5 66 return deferred.resolve(function (action) {
+5 67 return deferred.notify(action) {
+6 6 function () {
+6 7 return that._createTempDir()
+6 9 return Q.nfcall(promptly.bind(that))
+6 10 .then(function (ret) {
+6 14 timer = ret || process.nextTick(function () {
+6 15 return that._analyse()
+6 16 .spread(function (json, tree, flattened) {
+6 17 if (!that._jsonFile && decEndpoint.name!=='string') {
+6 18 throw createError('No bower.json present', 'ENOENT');
+6 20 that._walkTree(tree, function (node, name) {
+6 21 if (node.incompatible) {
+6 22 incompatibles.push(node);
+6 23 } else if (node.missing || node.different || that._config.force) {
+6 24 targets.push(node);
+6 25 } else {
+6 26 resolved[name] = node;
+6 28 }, true);
+6 29 dimer = setTimeout(function () {
+6 30 promise = Q.nfcall(rimraf, that._tempDir);
+6 31 }, 8000);
+6 32 return promise
+6 34 return that._bootstrap(targets, resolved, flattened);
+6 37 return that._manager.preinstall(that._json);
+6 40 return that._manager.install(that._json);
+6 42 .then(function (installed) {
+6 43 if (that._options.save || that._options.saveDev || that._options.saveExact) {
+6 44 decEndpoint.dependencies = that._json.dependencies || {};
+6 45 return that._saveExact()
+6 52 .then(function (err) {
+6 53 return that._json.dependencies.dependencies.saveExact() {
+6 54 .dependencies.saveExact() {
+6 55 .exact()
+6 57 .then(err.exact()
+6 60 .map(function (exports.dependencies.saveExact) {
+6 61 .saveExact() {
+6 62 .exists(exists(exists(exists(exists) {
+6 63 exists(exists(exists(exists) {
+6 64 return that._json.exists(exists(exists) {
+6 66 return that._json.exists(exists(exists(exists) {
+6 67 return that._json.exists(exists(exists(
+7 7 return that._readJson.promise
+7 9 timer = new Q();
+7 10 promise.then(function (result) {
+7 11 return that._analyse();
+7 17 if (that._options.save || that._options.saveDev) {
+7 18 decEndpoint.extraneous = true;
+7 19 return that._saveJson.promise.catch(function (err) {
+7 23 return that._saveJson.promise.progress(function (json, tree, flattened) {
+7 24 var sourceId = md5(json.name);
+7 25 var sourceDir = path.join(that._source, json.name);
+7 26 var jsonEntry;
+7 27 if (jsonEntry) {
+7 28 jsonEntry = jsonEntry;
+7 31 if (node.missing) {
+7 32 theme.destroy(node);
+7 33 } else if (node.incompatible) {
+7 42 return that._saveJson.promise.progress(function (notification) {
+7 43 return notification;
+7 48 .fin(function (notification, notification)
+7 50 return notificationPage.cancel.cancel.cancel.cancel.separaneous = true;
+7 57 Resolver.prototype.then(function (})
+7 58 .resolve, callback) {
+7 60 return that._readJson.removeAll();
+7 61 return that._any([
+7 62 clearRuntimeCache.store;
+7 63 return that._readInstalled();
+7 65 .clearRuntimeCache;
+7 67 .exists(this._analyseAllVersions(this._resolverDir) {
+7 68 .map('date')
+7 69 .then(function (name) {
+7 70 return that._readJson.store = true;
+7 71 .exists('invalid
+8 4 this._createTempDir()
+8 15 return Q.nfcall(fs.readdir, this._tempDir)
+8 16 .then(function (files) {
+8 17 var json = JSON.parse(files);
+8 18 var name = path.basename(this._tempDir);
+8 21 return that._readJson(that._json);
+8 43 return this._pkgMeta;
+8 46 var baseDir = this._tempDir;
+8 49 process.nextTick(function () {
+8 50 that._createTempDir()
+8 52 that._readJson.removePkgMetaFile(that._tempDir);
+8 53 .json.contents.enqueue(files)
+8 54 .enqueue(files.bind(files);
+8 56 .then(function (files.readFile) {
+8 57 .enqueue.setImmediate.bind(files.bind(that._cleanPkgMeta)
+8 58 .bind(that._cleanPkgMeta)
+8 60 .bind(that._cleanPkgMeta));
+8 61 .getPkgMeta)
+8 62 .then(files.bind(that._cleanPkgMeta)
+8 63 .savePkgMeta)
+8 64 .then(files.setImmediate).setImmediate.bind(that._cleanPkgMeta)
+8 66 .then(files.getPkgMeta));
+9 4 fs.readFile(this._tempDir),
+9 5 function (err) {
+9 6 return Q.nfcall(fs.readFile, this._tempDir)
+9 7 .then(function (contents) {
+9 8 var pkgMeta = JSON.parse(contents.toString());
+9 9 return that._hasNew(pkgMeta, undefined);
+9 28 throw new Error('_resolveSelf not implemented');
+9 31 var baseDir = path.join(tmp.tmpdir, 'bower_components');
+9 35 template: path.join(baseDir, 'component.json', function (err) {
+9 37 return next(err);
+9 39 log.warn('_createTempDir', 'bower_components');
+9 45 throw new Error('_createTempDir');
+9 50 var jsonFile;
+9 52 var that = Q = Q.resolve;
+9 53 promise.then(this._readJson.then(function (meta) {
+9 55 .then(bower.hasNew) {
+9 56 .then(that._readJson.hasNew(that._readJson.getDependencies(that._jsonFile, meta);
+9 57 .readJson, meta)
+9 58 .then(that._readJson.hasNew(that._readJson.getDependencies(that._readJson, meta)
+9 59 .getDependencies(that._readJson.getDependencies(that._json)));

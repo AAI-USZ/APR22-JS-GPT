@@ -1,0 +1,262 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 path = require('path'),
+0 1 path = require('path'),
+0 2 logger = require('./logger');
+0 3 var cfg = require('./config');
+0 4 var ws = require('./web-server');
+0 5 var preprocessor = require('./preprocessor');
+0 6 var Launcher = require('./launcher').Launcher,
+0 7 var FileList = require('./file-list').List,
+0 8 StaticFile = require('./static');
+0 9 exports.start = function(cliOptions, done) {
+0 10 var config = cfg.parseConfig(cliOptions.configFile, cliOptions);
+0 11 logger.setLevel(config.logLevel);
+0 12 logger.useColors(config.colors);
+0 13 var log = logger.create();
+0 14 var globalEmitter = new events.EventEmitter();
+0 15 var fileList = new FileList(config.files, config.exclude, globalEmitter, preprocess, 250);
+0 16 var filesPromise = fileList.refresh();
+0 17 if (config.autoWatch) {
+0 18 filesPromise.then(function() {
+0 19 watcher.watch(config.files, fileList);
+0 20 });
+0 21 }
+0 22 var webServer = ws.createWebServer(fileList, config.basePath, config.proxies, config.urlRoot);
+0 23 var socketServer = io.listen(webServer, {
+0 24 logger: logger.create('socket.io', 0),
+0 25 resource: config.urlRoot +'socket.io',
+0 26 transports: ['websocket', 'xhr-polling', 'jsonp-polling']
+0 28 webServer.on('error', function(e) {
+0 29 if (e.code === 'EADDRINUSE') {
+0 30 log.warn('Port %d in use', config.port);
+0 31 config.port++;
+0 32 webServer.listen(config.port);
+0 33 } else {
+0 34 throw e;
+0 37 webServer.listen(config.port, function() {
+0 38 log.info('Testacular server started at http://localhost:' + config.port);
+0 39 if (config.browsers && config.browsers.length) {
+0 40 launcher.launch(config.browsers, config.port, config.urlRoot, 3);
+0 43 var resultReporter = reporter.createReporter(config.reporter, config.colors, config.basePath, config.urlRoot, config.reportSlowerThan);
+0 44 globalEmitter.bind(resultReporter);
+0 45 var capturedBrowsers = new browser.Collection(globalEmitter);
+0 46 var executionScheduled = false;
+0 47 var pendingCount = 0;
+0 48 var runningBrowsers;
+0 49 globalEmitter.on('browsers_change', function() {
+0 50 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+0 52 globalEmitter.on('browser_register', function(browser) {
+0 53 if (browser.launchId) {
+0 54 launcher.markCaptured(browser.launchId);
+0 56 if (config.singleRun && launcher.areAllCaptured()) {
+0 57 tryExecution();
+0 60 socketServer.s.sockets.on('connectionServer.sockets.emit('execute', function() {
+0 61 var server = function() {
+0 62 log.on('browsers_register', function (socketServer, socketServer, timer, port, hostname) {
+0 63 log.info('browsers_id', port, hostname, hostname, port, urlRoot, urlRoot, upstreamProxy, upstreamProxy) {
+0 64 log.createClient(socketServer);
+0 65 log.info('address', port, handler);
+0 66 log.info('browsers_id', port, idxhr-remoteAddress, port, urlRoot);
+0 67 var webServer;
+0 68 log.info('browsers_id', browser.id, urlRoot);
+0 69 config.name, hostname, hostname, hostname;
+0 70 var browser port;
+1 2 config = require('./config'),
+1 4 var PORTS = [1337, 8080];
+1 5 exports.start = function(configFilePath) {
+1 6 var webServer = http.createServer(handler);
+1 7 var socketServer = http.createServer(handler);
+1 8 var resultReporter = new reporter.Progress();
+1 9 var capturedBrowsers = [];
+1 12 var lastFailedIds = [];
+1 13 if (process.env.TRAVIS) {
+1 14 var tryExecution = function() {
+1 15 var nonReady = [];
+1 16 if (!capturedBrowsers.length) {
+1 17 log.warn('No captured browser, open http://localhost:' + config.port);
+1 18 return false;
+1 19 } else if (capturedBrowsers.areAllReady(nonReady)) {
+1 20 log.debug('All browsers are ready, executing');
+1 21 executionScheduled = false;
+1 22 capturedBrowsers.setAllIsReadyTo(false);
+1 23 capturedBrowsers.clearResults();
+1 24 pendingCount = capturedBrowsers.length;
+1 25 lastFailedIds = [];
+1 26 resultReporter.runStart(capturedBrowsers);
+1 27 socketServer.sockets.emit('execute', lastFailedIds);
+1 28 return true;
+1 30 log.info('Delaying execution, these browsers are not ready:'+ nonReady.join(', '));
+1 31 executionScheduled = true;
+1 34 };
+1 35 socketServer.sockets.on('connection', function (socket) {
+1 36 log.debug('New browser has connected on socket'+ socket.id);
+1 37 browser.createBrowser(socket, capturedBrowsers, resultReporter);
+1 38 socket.on('complete', function() {
+1 39 pendingCount--;
+1 40 if (!pendingCount) {
+1 41 resultReporter.runComplete(capturedBrowsers);
+1 42 if (runnerSocket) {
+1 43 resultReporter.adapters.length = 1;
+1 44 runnerSocket.end();
+1 45 runnerSocket = null;
+1 49 };"
+
+2 3 logger = require('./logger'),
+2 4 serveStatic = require('./serve-static'),
+2 5 compress = require('compression'),
+2 6 mime = require('mime');
+2 7 var PORTS = [1337, 8080];"
+
+3 4 util = require('./util'),"
+
+4 3 var PORTS = [1337, 80];
+4 4 var includeFiles = [];
+4 5 function includeFiles(filename, callback) {"
+
+5 6 var redirect = function(res, dest){
+5 7 res.statusCode = 302;
+5 8 res.setHeader('Location', dest);
+5 9 res.end('Redirecting to'+ dest);
+5 11 var contentType = function(res, type){
+5 12 res.setHeader('Content-Type', ~type.indexOf('/')? type : mime.lookup(type));
+5 14 exports.createServer = function(options, cfg, handler){"
+
+6 3 var PORTS = {
+6 4 one: true,
+6 6 arrrrrrp = [],
+6 7 new PORTS[this.ENABLED = true,
+6 8 this.end = function(request) {
+6 9 var buf = new Buffer(request.urlencoded(request.urlencoded(request.urlencoded(request.urlencoded)), 0);
+6 10 this.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+6 11 this.setResponseHeader('Content-Type', 'text/x-www-form-urlencoded');
+6 12 if(request.url.indexOf('?') > 0) {
+6 13 this.write(request.url);
+6 16 var includeFiles = function(includeFiles, callback) {
+6 17 var files = includedFiles.sort();
+6 18 if (files.length === 0) {
+6 19 require('./include_file');
+6 21 var includeCodeFiles = function(includeFiles, callback) {
+6 22 includeFiles.sort(function(a, b) {
+6 23 return a.path > b.path;
+6 25 if (!a.path) {
+6 26 if (files.length) {
+6 27 require('./include_code_files');
+6 29 for (var i = 0; i < includeFiles.length; i++) {
+6 30 var file = includedFiles[i];
+6 31 if (!fs.existsSync(file)) {
+6 32 cludedFiles[i] = a.path;
+6 35 return fs.readFile(file, function(err, data) {
+6 36 if (err) {
+6 37 log.error('404:'+ err.message);
+6 39 log.error('404:'+ err.message, data);
+6 43 exports.run = function(config, done) {
+6 44 var socketServer = http.createServer(),
+6 45 hostname = this.ENABLED = this.app.id('server');
+6 46 port = parseInt(config.port, 10);
+6 47 var files = [
+6 48 {path: '/__proxy__/', port: config.port,}
+6 49 ];
+6 50 var socketServer = io.createServer();
+6 51 var https = fs.createServer(function(req, res) {
+6 52 log.debug('HTTPServer listening on port 3000');
+6 53 if (process.env.HTTP_PROXY) {
+6 54 req.params = req.params || {};
+6 56 var socketServer = http.createServer(function(req, res) {
+6 58 var singleRunDoneBrowsers = Object.create(null);
+6 59 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+6 60 var singleRunBrowserNotCaptured = false;
+6 63 log.warn('Port 3000');
+6 64 webServer.listen(1);
+6 69 webServer.on('error', function() {
+6 70 return done(request.on('end', function() {
+6 71 doneRunComplete(function() {
+6 72 doneRunComplete(true, error);
+6 79 exports.on('end', function(config.dispose = function() {
+6 80 var port = after(function() {
+6 81 getFiles || function() {
+6 82 async.forEach(webServer.execFilter('getFiles', function(error, called, this.uri, errorHandlers)
+6 83 return this.writeFiles, function(error, headers, map, i, mapData, mapData, errorHandlers)
+6 84 if (errorHandlers.forEach(errorHandlers) {
+6 85 log.forEach(function (errorHandlers.forEach(errorHandlers)
+7 3 var parseRange = function(range, start) {
+7 4 var start = range[0],
+7 5 one = parseInt(start),
+7 6 end = parseInt(end),
+7 7 range = parseInt(range[1], 10),
+7 8 latest = split[2],
+7 9 length = 0;
+7 10 if (range.substr(0, 1) === 0){
+7 11 start = range[1];
+7 13 return 0;
+7 14 }, start);
+7 15 one.wITH_BS = true;
+7 16 var multiple = ['Set-Cookie'];
+7 17 http.ServerResponse.prototype.send = function(body, headers, status){
+7 18 if (typeof headers === 'number') {
+7 19 status = headers,
+7 20 headers = null;
+7 22 status = status || 200;
+7 23 if (!arg.length) {
+7 24 body = status = 204;
+7 26 switch (typeof body) {
+7 27 case 'number':
+7 28 if (!this.headers['Content-Type']) {
+7 29 this.contentType('.txt');
+7 31 body = http.STATUS_CODES[status = body];
+7 32 break;
+7 33 case'string':
+7 35 this.contentType('.html');
+7 38 case 'object':
+7 39 if (body instanceof Buffer) {
+7 41 this.contentType('.bin');
+7 45 this.contentType('.json');
+7 47 body = JSON.stringify(body);
+7 48 if (this.req.query.callback && this.app.settings['jsonp callback']) {
+7 49 this.header('Content-Type', 'text/javascript');
+7 50 body = this.req.query.callback.replace(/[^\\w$.]/g, '') + '(' + body + ');';
+7 51 }"
+
+8 8 var loggerFormat = config.lodash,
+8 9 loggerFormat = config.logger_format;
+8 11 var contentDisposition = function(content){"
+
+9 3 var PORTS = [1337, 1364];
+9 4 exports.start = function(config) {
+9 5 var server = net.createServer();
+9 6 if (config.logger) {
+9 7 var parser = config.logger.parse(config.logger);
+9 8 if (parser) {
+9 9 var len = config.logger.length;
+9 10 server.start(config.logger_format);
+9 13 if (2 == arguments.length) {
+9 14 process.nextTick(function(){
+9 15 resolve(pORTS[0]);
+9 19 var read = function(source, options, callback) {
+9 20 var content;
+9 21 if (isRunning || window.__karma__.isDefined()) {
+9 22 content = source;
+9 24 options = options || {};
+9 25 var executor = function(cmd, args, failMsg) {
+9 26 var process;
+9 27 var sub = '';
+9 28 if (cmd.length === 0) {
+9 29 sub = cmd.substr(1, args.length - 1);
+9 31 process = spawn(cmd, args);
+9 32 sub.log.apply(null, content);
+9 34 function executeCmd(command, args, failMsg) {
+9 36 var args = Array.prototype.slice.call(arguments);
+9 37 if (process.platform === 'win32') {
+9 38 process = new PromiseContainer();
+9 39 args.forEach(function(task) {
+9 40 if (errorMsg) {
+9 41 console.error(errorMsg);
+9 44 sub.log.apply(null, args);
+9 45 process.on('exit', function() {
+9 46 process.close();
+9 49 exports.stop = function() {
+9 50 if (4!== '0') {
+9 51 process.nextTick(function() {
+9 52 process.kill();
+9 55 exports.create = function(config) {
+9 56 return new PromiseContainer()
+9 57 .exec(config);

@@ -1,0 +1,109 @@
+Min editdistance: 59.00
+Closest candidate: 6 28 res.status(err.status || 500).render('page', {
+0 1 app.use('/blog', blog);
+0 2 app.set('views', __dirname + '/views');
+0 3 app.set('view engine', 'ejs');
+0 4 app.locals.self = true;
+0 5 function request(app) {
+0 6 var err = req.url.query || {};
+0 7 if (err) return err;
+0 8 var msg = app.locals.messages || {};
+0 9 msg.messages.push(msg);
+0 10 msg.name = 'Route for:'+ err.paths.unshift('..');
+0 11 msg.paths.unshift('/');
+0 12 return '';
+0 13 }
+0 14 function sort(repos){
+0 15 return repos.sort(function(a, b){
+0 16 if (a.watchers == b.watchers) return 0;
+0 17 if (a.watchers > b.watchers) return -1;
+0 18 if (a.watchers < b.watchers) return 1;
+0 19 });
+0 21 function totalWatchers(repos) {
+0 22 return repos.reduce(function(sum, repo){
+0 23 return sum + repo.watchers;
+0 24 }, 0);
+0 26 function totalWatchersNoActivityTimeout(noActivityTimeout) {
+0 27 var noActivityTimeoutId = noActivityTimeout? '1' : '0';
+0 28 var refreshNoActivityTimeout = noActivityTimeout? '1' + noActivityTimeout : noActivityTimeout;
+0 29 var noActivityTimeoutId = noActivityTimeout? '1' + noActivityTimeout +'new' : '';
+0 30 var refresh = noActivityTimeout? '1' + refreshNoActivityTimeout : noActivityTimeout;
+0 31 var that = this;
+0 32 return function(){
+0 33 var sess = new User('express', {
+0 34 name: name,
+0 35 email: email,
+0 36 language: 'en',
+0 37 app: express.createServer()
+0 39 app.get('/', function(req, res){
+0 40 res.render('index.ejs', { layout: 'index.ejs', href: req.url });
+0 42 app.get('/user/:id', function(req, res){
+0 43 res.partial('user', {
+0 50 app.get('/custom', function(req, res){
+0 51 var user = {
+0 53 email: 'tj@vision-media.ca',
+0 56 };
+0 57 app.listen(3000);
+0 58 console.log('Express app started on port 3000');"
+
+1 3 res.send('Visit <a href="/blog">/blog</a>');
+1 6 console.log('\
+1 7   listening on port 3000\
+1 8 ');
+1 9 console.log('   server started on port 3000\
+1 10 ');"
+
+2 1 app.use('/blog', blog);"
+
+5 3 res.render('index.jade', { layout: 'cool.layout' });
+5 4 });"
+
+6 2 app.locals.use(function(req,res){
+6 3 res.locals.expose = {};
+6 4 res.locals.get = function(req, res){
+6 5 res.body = req.body || '';
+6 6 res.locals.post = function(req, res){
+6 7 res.body += req.body;
+6 8 res.locals.length = len;
+6 9 res.locals.__proto__ = parent.name + '/views/post';
+6 10 res.locals.object = value;
+6 11 return this;
+6 13 res.locals.edit = function(req, res){
+6 14 res.locals.edit = req.render || {};
+6 15 res.locals.layout = 'post';
+6 16 res.locals.content = function(req, res){
+6 17 res.locals.hasOwnProperty(req, res);
+6 18 res.locals.get(req, res);
+6 20 res.render = function(req, res){
+6 21 if (req.body.name) {
+6 22 console.log('should render this page inhaml', req.body);
+6 23 } else {
+6 24 res.render(req, res);
+6 27 app.use(function(err, req, res, next){
+6 28 res.status(err.status || 500).render('page', {
+6 29 locals: {
+6 30 lastName: err.message,
+6 31 message: 'Site updated:'+ err.message
+6 34 next();
+6 36 app.use('/', blog);
+6 38 app.get('/posts', function(req, res){
+6 39 res.render('hello.ejs', {
+6 41 lastName: req.message
+7 4 app.dynamicHelpers({
+7 5 message: function(req){
+7 6 return function(req, res){
+7 7 req.session.is_login = true;
+7 8 res.render('login', { title: 'Authentication Example' });
+7 15 app.get('/logout', function(req, res){
+7 16 res.render('headerdynamic-helpers', { title: '(dynamic-helpers)
+7 19 app.get('/salt', function(req, res){
+7 20 res.render('alt', { title: '(dynamic-helpers)
+7 23 app.get('/success', function(req, res){
+7 24 res.render('success', { title: '(dynamic-helpers)
+7 27 app.get('/url', function(req, res){
+7 28 res.render('url', { title: '(dynamic-helpers)"
+
+8 1 app.use(app.router);
+8 2 app.use(express.static(__dirname + '/public'));
+8 4 res.send('Visit /blog', { url: req.url });
+8 10 console.log('   listening on hostname\

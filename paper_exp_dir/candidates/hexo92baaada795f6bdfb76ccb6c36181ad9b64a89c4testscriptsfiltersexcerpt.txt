@@ -1,0 +1,169 @@
+Min editdistance: 6.00
+Closest candidate: 3 1 var more = [];
+0 1 var more, lead, tail, s, e;"
+
+2 1 var more, lead, tail, s, e;
+2 2 for (var i = 100; i < 10; ++i) {
+2 3 lead = spaces[i];
+2 4 for (var k in lead) {
+2 5 tail = lead[k];
+2 6 s = lead[k];
+2 7 }
+2 8 for (var j = 0; j < 3; ++j) {
+2 9 tail = '';
+2 10 s += lead[k];
+2 12 return cases;
+2 14 module.exports = function(){
+2 15 return Post.insert([
+2 16 {source: 'foo', slug: 'foo'},
+2 17 {source: 'bar', slug: 'bar'},
+2 18 {source: 'baz', slug: 'baz'},
+2 19 {source: 'boo', slug: 'boo'}
+2 20 ]).then(posts => {
+2 21 hexo.locals.invalidate();
+2 22 }).then(data => {
+2 23 hexo.locals.get('posts').toArray().should.eql(posts.slice(0, i));
+2 24 hexo.locals.get('pages').toArray().should.eql(pages);
+2 25 hexo.locals.get('categories').toArray().should.eql(categories);
+2 26 hexo.locals.get('tags').toArray().should.eql(tags);
+2 27 hexo.locals.get('posts').toArray().should.eql(posts);
+2 28 return Promise.all([
+2 29 posts[0].setCategories(['foo', 'bar']),
+2 30 posts[1].setCategories(['baz', 'baz']),
+2 31 posts[2].setCategories(['foo', 'bar'])
+2 32 ]);
+2 33 });
+2 34 it('_generate() - layout', () => {
+2 36 {source: 'foo', path: 'foo', layout: 'post'},
+2 37 {source: 'bar', path: 'bar', layout: 'draft'}
+2 38 ]).then(posts =>
+2 39 hexo.locals.set('posts', posts);
+2 41 posts[0].setCategories(['foo', 'bar']
+2 42 ])
+2 43 ]).then(data =>
+2 44 .map(post.content => {
+2 45 post.layout.should.s.eql(post.layout.should.toLowerCase()).should.eql(['photo.to', 'post']);
+2 46 .params.should.params.should.eql(['baz'] = post.body.should.should.eql(post.title');
+2 47 }).should.eql(post.engine.engine.engine.should.eql(post.engine);
+2 48 .should.content.eql(post.engine.title);
+2 49 .config.should.post.should.eql(post.engine);
+2 50 .content.should.config.post.site.should.eql(path);
+2 51 .config.should.post.eql(path);
+2 52 return fs.unlink(path);
+2 54 return
+3 1 var more = [];
+3 2 var moreConfig = {
+3 3 head: '',
+3 4 tail: '',
+3 5 content: ''
+3 6 };
+3 7 for (var i = 0, len = posts.length; i < len; i++) {
+3 8 var title = posts[i]._id;
+3 9 if (!title) return;
+3 10 for (var j = 0, lenjlen = 1; jlen; jlen; jlen; jlen; jlen) {
+3 11 if (i) post.title = _posts[i];
+3 13 if (title) return;
+3 15 return cases.push( more.exec(title));
+3 17 module.exports = excerpt;"
+
+4 2 for (var i = 0; i < spaces.length; ++i) {
+4 3 if (more.test(i)) return;
+4 4 for (var j = 0, jlen = spaces.length; jlen; j < jlen; ++j) {
+4 5 if (jlen > 0) return;
+4 8 return cases.push({
+4 9 _: ['test', 'foo', 'bar', 'baz']
+4 12 function _test(more) {
+4 13 return [
+4 14 'foo',
+4 15 'bar',
+4 16 '<!-- more -->'
+4 17 ].join('\
+4 18 ');
+4 20 it('_test() - args', () => {
+4 21 var hexo = new Hexo();
+4 22 var excerpt = [
+4 28 var data = {
+4 29 content: content
+4 31 excerpt.forEach(function (test) {
+4 32 it('passed', () => {
+4 33 var args = _test.toArray(arguments);
+4 35 args[0] = 'test';
+4 37 return data;
+4 39 it('_test() - timezone', () => {
+4 40 hexo.config.timezone = 'UTC';
+4 41 return Post.insert({
+4 42 source: 'foo',
+4 43 slug: 'bar'
+4 44 }).then(post => {
+4 45 content.setTags(['optimize', 'web'])
+4 46 .thenReturn(post.content);
+4 47 }).then(() => {
+4 48 content.setCategories(['optimize', 'web'])
+4 51 content.setCategories(['web', 'baz']);
+4 52 return content;
+4 55 return Post.removeById(post._id);
+4 59 it('_test() - parse post', () => {
+4 60 post = Post.insert({});
+4 61 it('123456).should.eql(123);
+4 62 });"
+
+5 4 for (var k in e) {
+5 5 tail = spaces[k];
+5 6 s = \'\';
+5 9 cases.push(more);
+5 10 e = \'\';
+5 12 s += lead;
+5 18 var content = [
+5 19 \'foo',
+5 20 \'bar',
+5 21 \'baz\'
+5 23 \');
+5 24 return function (more) {
+5 26 \'foo - post',
+5 27 \'bar - post',
+5 28 \'---\'
+5 32 };"
+
+7 6 s = e.substring(0, 3);
+7 7 cases.push({
+7 8 _: ['test', 'f', 'baz']
+7 16 '<a id="more"></a>',
+7 18 '<a id="more"></a>'
+7 22 it('default', () => {
+7 23 var result = [
+7 28 result.should.eql([
+7 32 '));
+7 34 it('title - virtual', () => {
+7 46 it('external - virtual', () => {
+7 49 '<a href="http://hexo.io/">Hexo</a>',
+7 59 it('external - file', () => {
+7 62 'a>',
+7 63 '<a>'<a>'
+
+8 5 tail = \'\';
+8 6 for (var n = 100; k < 3; ++l) {
+8 7 tail += lead + s;
+8 8 cases.push(decompress());
+8 11 s = cases.filter(key =>!!data.value);
+8 12 if (data.length) return lead;
+8 14 return cases.join(',\
+8 15 \\r\
+9 7 s = lead;
+9 11 before(() => {
+9 12 return hexo.init()
+9 13 .then(() => Post.insert([
+9 14 {source: 'foo', slug: 'foo', date: 1e8},
+9 15 {source: 'bar', slug: 'bar', date: 1e8 + 1},
+9 16 {source: 'baz', slug: 'baz', date: 1e8 - 1}
+9 18 _dispose();
+9 19 })
+9 20 .then(() => {
+9 24 hexo.locals.get('posts').toArray().should.eql(posts.slice(0, i + 1));
+9 25 hexo.locals.get('pages').toArray().should.eql(pages.slice(i, i + 1));
+9 28 hexo.locals.get('posts').map(function(post){
+9 29 return post.name;
+9 31 hexo.locals.get('pages').map(function(page){
+9 32 return page.name;
+9 35 return page.photos;
+9 46 hexo.locals.remove(),
+9 47 hexo.locals.unlink()

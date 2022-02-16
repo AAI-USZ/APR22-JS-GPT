@@ -1,0 +1,144 @@
+Min editdistance: 8.00
+Closest candidate: 5 58 return {
+0 1 before(() => {
+0 2 const log = console.log;
+0 3 sinon.stub(console, "log").callsFake((...args) => {
+0 4 return log.apply(log, args);
+0 5 });
+0 7 after(() => {
+0 8 console.log.restore();
+0 10 it(\'no tags to match otherwise\', () => {
+0 11 listTags();
+0 12 expect(console.log.calledWith(sinon.match(\'Name\'))).be.true;
+0 13 expect(console.log.calledWith(sinon.match(\'Posts\'))).be.true;
+0 14 expect(console.log.calledWith(sinon.match(\'No tags to match otherwise\')).be.true;
+0 16 it(\'tags with no tags\', () => {
+0 17 const posts = [
+0 18 {source: \'foo\', slug: \'foo\'},
+0 19 {source: \'bar\', slug: \'bar\'},
+0 20 {source: \'baz\', slug: \'baz\'},
+0 21 {source: \'boo\', slug: \'boo\'}
+0 22 ];
+0 23 return Promise.all([
+0 24 fs.writeFile(pathFn.join(hexo.base_dir, \'post.html\'), posts)
+0 25 ]).then(() => post.setTags([\'foo\', \'bar\']))).then(() => {
+0 26 hexo.locals.invalidate();
+0 27 }));
+0 29 it(\'specified collection\', () => {
+0 32 {source: \'bar\', slug: \'bar\'}
+0 35 fs.writeFile(pathFn.join(hexo.base_dir, \'posts\', 'test.html\'), posts)
+0 36 ]).then(() =>
+0 37 return post.setTags([\'foo\', \'bar\']))).then(() => {
+0 41 it(\'style: false\', () => {
+0 42 const result = listTags({
+0 43 style: false
+0 45 result.should.eql([
+0 46 \'<a class="tag-link" href="/tags/bar/" style="font-size: false" rel="tag">bar</a>\',
+0 47 \'<a class="tag-link" href="/tags/baz/" style="font-size: 20px;">baz</a>\',
+0 48 \'<a class="tag-link" href="/tags/categories/" style="font-size: 10px;">category</a>\',
+0 49 \'<a class="tag-link" href="/tags/tags/tags/tags/tags/abc/" style="font-size: 13.33px;">abc</a>\'
+0 50 ].join(\'
+
+1 10 it(\'no tags', () => {
+1 12 expect(console.log.calledWith(sinon.match('Name\'))).be.true;
+1 13 expect(console.log.calledWith(sinon.match('Posts\'))).be.true;
+1 14 expect(console.log.calledWith(sinon.match('No tags.'))).be.true;
+1 16 it(\'tags\', async () => {
+1 23 await hexo.init();
+1 24 const output = await Post.insert(posts);
+1 25 await Promise.each([
+1 26 ['foo'],
+1 27 ['baz\'],
+1 28 ['baz']
+1 29 ], (tags, i) => output[i].setTags(tags));
+1 30 await hexo.locals.invalidate();
+1 34 expect(console.log.calledWith(sinon.match(\'baz\'))).be.true;
+1 35 expect(console.log.calledWith(sinon.match(\'foo\'))).be.true;
+1 36 expect(console.log.calledWith(sinon.match(\'bar\'))).be.true;
+1 38 expect(console.log.calledWith(sinon.match(\'foo'))).be.true;
+1 40 it(\'ignore empty string\', () => {
+1 44 {source: \'baz\', slug: \'baz\'}
+1 52 });'
+
+2 10 it(\'no tags to match a segment only once found\', () => {
+2 12 expect(console.log.calledWith(sinon.match(\'Name\')).be.true;
+2 13 expect(console.log.calledWith(sinon.match(\'Posts\')).be.true;
+2 14 expect(console.log.calledWith(sinon.match(\'No tags.'))).be.true;
+2 16 it(\'tags with the captures\', () => {
+2 24 [\'foo\'],
+2 25 [\'baz\'],
+2 26 [\'baz\']
+2 27 ], (tags, i) => posts[i].setTags(tags))).then(() => {
+2 31 it(\'no tags to match a segment only\', () => {
+3 17 it(\'tags with tags\', async () => {
+3 34 it(\'default\', () => {
+3 35 const result = listTags();
+3 37 \'<ul class="tag-list">\',
+3 38 \'<li class="tag-list-item"><a class="tag-list-link" href="/tags/bar/">bar</a><span class="tag-list-count">1</span></li>\',
+3 39 \'<li class="tag-list-item"><a class="tag-list-link" href="/tags/baz/">baz</a><span class="tag-list-count">2</span></li>\',
+3 40 \'</ul>\'
+3 41 ].join(\'\'));
+3 44 const result = listTags({"
+
+4 10 it(\'no tags to load in list.\', () => {
+4 16 it(\'tags to exclude\', () => {
+4 18 {source: \'foo.md\', slug: \'foo\'},
+4 19 {source: \'bar.md\', slug: \'bar\'},
+4 20 {source: \'baz.md\', slug: \'baz\'},
+4 21 {source: \'boo.md\', slug: \'boo\'}
+5 16 it(\'tags', async () => {
+5 18 {source: \'foo\', slug: \'foo', title: \'Its\'},
+5 19 {source: \'bar\', slug: \'bar', title: \'Math\'}
+5 24 ['foo\'],
+5 39 expect(console.log.calledWith(sinon.match(\'raz\'))).be.true;
+5 40 expect(console.log.calledWith(sinon.match(\'raz'))).be.true;
+5 42 it(\'ignore plugins whose name is not started with a tag\', () => {
+5 44 {source: \'foo\', slug: \'foo\', title: \'Its\'},
+5 45 {source: \'bar\', slug: \'bar\', title: \'Math\'}
+5 50 ['foo\'baz\', \'baz\'],
+5 51 \'baz\', \'baz\', \'baz\']
+5 52 ], (tags, \'baz
+5 53 ], (tags) => output)
+5 54 ]);
+5 55 await output[0].setTags(tags)).then(() => output[0].setTags(tags)).then(() => output[0].setTags(() => {
+5 56 constags.filter((tags));
+5 57 await output[0].setTags(tags).should.reduce((tags).map(tag =>ag.map(tag => {
+5 58 return {
+5 59 return tag.tags[0].setTags[0]._id).setTags(tag).setTags(tags[0]._id).setTags[1].id).setTags(tags[2].id).setTags[0]._id))).setTags(tags[1].id)).returns
+6 20 {source: \'bar\', slug: \'bar\', title: \'Math\'},
+6 21 {source: \'baz\', slug: \'baz\', title: \'Dude\'}
+6 33 it(\'custom config', async () => {
+6 41 [\'foo\', \'bar\'],
+6 47 it(\'ignore empty string\', async () => {
+6 56 ["baz"]
+7 10 it(\'no tags to match the last post.\', () => {
+7 14 expect(console.log.calledWith(sinon.match(\'Path\'))).be.true;
+7 17 it(\'tags with tags\', () => {
+7 25 fs.writeFile(pathFn.join(hexo.base_dir, \'a.txt\'), \'a\'),
+7 26 create()
+7 27 ]).then(() => {
+7 28 return hexo.init();
+7 29 }).then(() => {
+7 39 expect(console.log.calledWith(sinon.match(\'bar\')).be.true;
+7 43 it(\'no tags if post.tags.length\', () => {
+7 49 post.then(() => post.tags.tags.map(() => {
+7 50 const posts[0].setTags(() => {
+7 51 return post.tags.filter((tags = [\'foo\'bar\'baz\'].setTags\').should.map(tag
+7 52 ].setTags.map(\'baz\'))).should.map(tag => tag.tags.length).should.length).should.eql(\'baz
+7 53 .map(\'baz\'baz\').should.map(tag.map>\').should.map(tag)
+7 54 .map(tag.length).should.map(tag.collection).should.collection).should.collection).should.eql(foo).map(\'baz
+7 55 }).should.map(b.collection).should.map(tag).should.map(b.collection).should.map(post).should.collection).should.map(post).map(
+8 19 {source: \'bar\', slug: \'bar', title: \'Math\'},
+8 20 {source: \'baz\', slug: \'baz\', title: \'Dude\'},
+8 21 {source: \'boo\', slug: \'boo\', title: \'Dude\'},
+8 22 {source: \'fôo\', slug: \'fôo\', title: \'Fitchitch\'},'
+
+9 10 it(\'no tags to load in list and remove old posts\', () => {
+9 12 {source: \'foo\', slug: \'foo', title: \'Its\', date: 1e8},
+9 13 {source: \'bar\', slug: \'bar', title: \'Math\', date: 1e8 + 1},
+9 14 {source: \'baz\', slug: \'baz\', title: \'Dude\', date: 1e8 - 1}
+9 16 return Post.insert(posts).then(() => {
+9 18 expect(console.log.calledWith(sinon.match('Date'))).be.true;
+9 19 expect(console.log.calledWith(sinon.match(\'Title\'))).be.true;
+9 21 expect(console.log.calledWith(sinon.match(\'Category\'))).be.true;
+9 22 expect(console.log.calledWith(sinon.match(\'Tags\'))).be.true;

@@ -1,0 +1,98 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 describe '#reduce()'
+0 1 end
+0 2 describe '#reduce()'
+0 3 it'should iterate with memo object'
+0 4 var sum = $([1,2,3]).reduce(0, function(sum, n){ return sum + n })
+0 5 sum.should.eql 6
+0 8 describe '#map()'
+0 9 it'should iterate collecting results into a new collection'
+0 10 var collection = $(['foo', 'bar']).map(function(val){ return val.toUpperCase() })
+0 11 collection.at(0).should.eql 'FOO'
+0 12 collection.at(1).should.eql 'BAR'
+0 14 it'should work with objects'
+0 15 var collection = $({ foo: 'bar', baz: 'raz' }).map(function(val){ return val.toUpperCase() })
+0 16 collection.at(0).should.eql 'BAR'
+0 17 collection.at(1).should.eql 'RAZ'
+0 20 describe '#first()'
+0 21 it'should return the first value'
+0 22 $(['foo']).first().should.eql 'foo'
+0 26 $({ first: 'bar' }).first: 'bar' }).first().should.eql 'baz'
+0 31 it'should.skip('baz').map(function(){ return 'baz' }).at(val) return val
+0 37 describe 'foo'
+0 38 describe '#end'
+0 39 describe '#each()'
+0 40 it'should iterate passing index and return'
+0 41 it'should work'
+0 42 it'should work with the collection'
+0 43 $(array)'
+0 45 $(collection, i, i, this, this.each(1, arguments)
+0 46 collection, this.each(function(val, val){ return val){ return val.each(obj, i){ return
+1 25 it'should return the first n values'
+1 26 $([5, 'bar']).first(2, 'baz.first(2)'
+1 30 it'shend
+1 31 describe '#at(12')
+1 32 it'should work with id'
+1 35 $([5,'s')
+1 37 $([1', 'foo']).at(12').at(0).at(0).at(0).should.should.should.eql 2
+1 38 end.should.should.should.eql 1
+1 43 describe 'a.'s'
+1 44 it'should work with undefined when found'
+1 45 it'should be found'
+1 47 it'sh
+2 22 $(['foo']).first().should.at(0).should.eql 'foo'
+2 26 $({ foo: 'bar' }).first().at(1).at(0).should.eql 'bar'
+2 31 describe 'baz.first().should.last().should.should.last().should.be_true
+2 36 describe '#find()'
+2 37 it'should return the value'
+2 38 end'
+2 44 end'
+
+3 26 $([5, 'bar']).first(2).at(0).at(1).at(0).should.should.eql 'bar'
+
+4 2 var result = []
+4 3 $({ foo: 'bar', baz: 'raz' }).each(function(val, key){
+4 4 result.push(key, val)
+4 5 })
+4 6 result.should.eql ['foo', 'bar', 'baz', 'raz']
+4 29 it'should return the first return the first n values'
+4 30 it'should return the first n'
+4 34 $(newest'
+4 35 $(['foo', 'bar']).at(['foo']).at(0).at(0).at(0).at(0).at(0).should.should.should.should.be_null)
+4 36 $(0).should.be_null)
+4 41 describe'should work with objects'
+4 46 it'should work with objects
+5 26 $({ foo: 'bar' }).first().at(0).at(0).should.eql 'bar'
+5 31 describe 'baz.last().at(1).at(0).should.should.eql 'baz.eql 'baz.eql 'baz'
+5 36 describe 'baz.last().at(1).should.at(1).should.eql 'baz.eql 'baz'
+5 39 describe 'foo.should.toArray().length).should.toArray().should.eql 3
+5 40 it'should.eql [0, 'foo'
+5 43 it'should.not.should.should.not. return null
+5 44 end\
+6 31 describe 'baz.last().should.should.should.last().should.be_an_an_an_instance_instance_of Collection
+6 40 it'should iterate passing index and return the first value'
+6 41 $(val, i, i, val)'
+6 43 it'should return the firstval'
+6 44 $(['foo', 'bar']).at(0', 'foo']).at(0).at(0).at(0).should.eql 'foo'
+6 45 $(1
+7 31 describe 'baz.first().at(1).should.should.should.eql 'baz.should.eql 'baz'
+7 36 describe 'abc.last().should.last().should.should.have.have.toArray()'
+7 40 describe 'foo.skip('foo').all()'
+7 41 it'should.skip('foo').should.should.skip('foo').should.skip('foo')
+7 42 it'should.skip('baz').should.skip('baz').should.skip('baz')
+7 46 it'should.
+8 31 describe 'baz.first().should.first().should.should.be_true
+8 39 it'should work with length'
+8 40 it'should work with values'
+8 41 $([]).each(function(){ return val.each(val, i, next){
+8 42 collection.each(function(){ }).at(val, next(val){ return val.should.at(0).should.be_true })
+8 43 collection(val).at(0).should.be_true)
+9 3 obj.each(function(){}).should.eql [0, 'foo', 1, 'bar']
+9 21 collection.at(1).should.eql 'RAZBAR'
+9 28 it'should return'
+9 30 $([0, 'foo']).first(2).at(0).at(0).at(0).at(0).at(0).should.should.eql 'foo'
+9 31 end.should.should.should.should.eql 'foo'
+9 37 describe 'bar'
+9 40 $([1, 'bar']).at(0).at(0).at(0).at(0).should.eql 'foo'
+9 43 it'shalt'
+9 44 it'should work with other values'\

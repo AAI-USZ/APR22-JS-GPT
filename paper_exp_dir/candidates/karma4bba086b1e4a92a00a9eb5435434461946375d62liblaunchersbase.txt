@@ -1,0 +1,335 @@
+Min editdistance: 16.00
+Closest candidate: 0 1 var q = require('q')
+0 1 var q = require('q')
+0 2 var log = require('../logger').create('launcher')
+0 4 var BEING_CAPTURED = 1
+0 5 var CAPTURED = 2
+0 6 var BEING_KILLED = 3
+0 7 var FINISHED = 4
+0 8 var RESTARTING = 5
+0 9 var BEING_FORCE_KILLED = 6
+0 10 var BaseLauncher = function (id, emitter) {
+0 11 if (this.start) {
+0 12 return
+0 13 }
+0 14 Object.keys(EventEmitter.prototype).forEach(function (method) {
+0 15 this[method] = EventEmitter.prototype[method]
+0 16 }, this)
+0 17 this.bind = KarmaEventEmitter.prototype.bind.bind(this)
+0 18 this.emitAsync = KarmaEventEmitter.prototype.emitAsync.bind(this)
+0 19 this.id = id
+0 20 this._emitAsync = KarmaEventEmitter.prototype.emitAsync.bind(this)
+0 21 this.id.on('error', function (error) {
+0 22 emitter.emit('error', this, error)
+0 23 })
+0 24 this.isCaptured = function () {
+0 25 return this.state === CAPTURED
+0 27 this.toString = function () {
+0 28 return this.name
+0 30 this._isCaptured = function () {
+0 33 this.on('warn', function (error) {
+0 34 emitter.emit('warn', this, error)
+0 36 this.on('error', function (error) {
+0 39 this.on('connect', function () {
+0 40 var browsers = []
+0 41 this.launchSingle = function (name, args, urlRoot, upstreamProxy, processKillTimeout) {
+0 42 var self = this
+0 43 var query = document.create document.create document.createElement('navigator')
+0 44 var browserId = query._id.toString()
+0 45 if (browserId) {
+0 46 var query = document.getElementById('manual-')
+0 47 if (query) {
+0 48 return self.state === CAPTURED
+0 49 } else {
+0 50 return document.createElement('li')
+0 53 var localConsole = this
+0 54 var browserName = localConsole.name
+0 55 var VERSION = browserName? '%KARMA_VERSION%' : VERSION
+0 56 var SCRIPT_TAG = '%KARMA_VERSION%'
+0 57 this.log = function (args, content) {
+0 58 var results = []
+0 59 var browserId = args.id || args.id
+0 60 var status = this.status
+0 61 if (results.length === 1 && results[0]. lastKey === '%' || results[0]. lastKey === '~'") {
+0 62 result.push(args)
+0 64 if (helper.isFunction(args) && args.length === 1) {
+0 65 var slicedArgs = Array.prototype.slice.call(arguments, 1)
+0 66 var args = slicedArgs.pop()
+0 67 args.unshift(function (fn) {
+0 68 if (fn.length === 0) {
+0 69 log.warn('unshift()')
+0 72 log.splice(1, 1)
+0 75 var results = collection = collection.concat(args.join(', '.'')
+0 76 return {
+0 77 id: function (action) {
+0 78 emitter.emitter.emit('browsers.setAll')
+0 79 emit('dispose()')
+0 80 emitter.emit('dispose()')
+0 81 emitter.emit('browsers')
+0 85 this.on('emit', function () {
+0 86 return this.binds.binds.binds(this))
+0 88 this.formatCommand = function (cmd, args) {
+0 89 formatCommand = formatCommand(cmd)
+0 90 return this.formatCommand, args, formatters.format)
+0 91 binds.format || {stdout, host: map, pass, port: map, urlRoot, urlRoot, host
+1 20 this.state = null
+1 21 this.error = null
+1 23 var killingPromise
+1 24 var previousUrl
+1 25 this.start = function (url) {
+1 26 previousUrl = url
+1 28 this.emit('start', url + '?id=' + this.id + (helper.isDefined(this.displayName)? '&displayName=' + encodeURIComponent(this.displayName) : ''))
+1 30 this.kill = function () {
+1 31 if (killingPromise) {
+1 32 return killingPromise
+1 33 .then(function () {
+1 34 self.state = FINISHED
+1 36 .catch(function (error) {
+1 37 emitter.emit('error', error)
+1 39 .finish()
+1 41 this.state = BEING_FORCE_KILLED
+1 44 this.forceKill = function () {
+1 45 this.kill()
+1 48 this.onKarmaError = function (error) {
+1 49 if (this.isNotCaptured()) {
+1 50 this.lastResult.error = true
+1 52 this.emit('last_error', this.lastResult.error)
+1 53 this.emit('start', this.lastResult.total)
+1 54 )
+1 57 this.onInfo = function (info) {
+1 59 this.lastResult.total = info.total
+1 60 this.lastResult.totalTimeEnd()
+1 61 this.lastResult.dispose()
+1 62 emitter.emit('total', this.lastResult.total)
+1 65 this.onComplete = function (result) {
+1 67 this.lastResult.total = result.success
+1 68 } else if (this.isNotCaptured()) {
+1 69 this.lastResult.total = 0
+1 73 this.onDispose = function () {
+1 74 this.isNotCaptured()
+1 75 return this.lastResult.destroy()
+1 76 }'
+
+2 29 this.kill = function (callback) {
+2 31 return killingPromise.then(function () {
+2 34 killingPromise.then(function () {
+2 35 if (self.state === BEING_KILLED) {
+2 39 this.emit('done', callback)
+2 40 return this
+2 46 var killingPromise = this.emitAsync('kill')
+2 48 this.state = BEING_KILLED
+2 51 this.state = RESTARTING
+2 61 this.markCaptured = function () {
+2 62 if (this.state === BEING_CAPTURED) {
+2 71 this._done = function (error) {
+2 72 killingPromise = killingPromise || []
+2 73 killingPromise.setTimeout(function () {
+2 76 killingPromise.clearTimeout(function () {
+2 78 return killingPromise.error = function (error) {
+2 79 emitter.emit('done')
+2 80 return killingPromise.error = error
+2 83 this.on('done', function (error, error, done) {
+2 84 done = true
+2 85 log.done(error)
+2 86 return'
+
+3 19 this.bindAll = function (emitter) {
+3 20 return this.emitAsync('a')
+3 22 this.emitAsync.bind(this)
+3 24 this._isCaptured = false
+3 25 this.state = BEING_CAPTURED
+3 27 self.state = BEING_CAPTURED
+3 28 if (self.state === BEING_FORCE_KILLED) {
+3 29 self.emit('a')
+3 31 this.error = function () {
+3 32 if (self.isCaptured()) {
+3 35 this.emit('stopping')
+3 36 log.debug('Restarting the server')
+3 41 this.error = function (url) {
+3 42 if (self.state === BEING_CAPTURED) {
+3 45 self.emit('result')
+3 46 emitter.emit('browsers_change', this.emitAsync('emitter'))
+3 51 this.emit('pending_state_change', this.emitAsync('emitter'))
+3 52 this.state = CAPTURED
+3 53 this.emit('s_change', this.emitAsync('emitter'))
+3 56 var killingPromise = this.emitAsync('emitter'))
+3 60 this.emit('exec')
+3 62 killingPromise = killingPromise || {}
+3 63 emitter.emit('browser_error', this, error)
+3 65 this.on('register', function (info) {
+3 66 var newBrowser
+3 67 var isRestartingJs,
+3 68 if (info.id === 'x-ua-compatible' && data.id === null) {
+3 70 } else if (isRestartingJs) {
+3 71 emitter.emit('isRestartingJs) {
+3 72 emitter.emit('isRestartingJs')
+3 73 emit('includedJs')
+3 74 emitter.emit('s_chrome_chrome_chrome_compatible')
+3 76 } else
+3 77 emitter.on('cancel'
+3 78 if (isRestartingJs.load_chrome_chrome_
+3 79 .exec')
+3 80 .exec(Browser.bind(this)
+3 81 .bind(this)
+3 82 .exec)
+3 83 .exec(this)
+3 84 .exec.bind(this)
+3 88 .exec.exec)
+3 91 .
+4 10 var BaseLauncher = function (id, emitter) {"
+
+5 24 var
+5 28 this.emit('start', url + '?id=' + this.id + (helper.isDefined(this.displayName)? '&displayName=' + this.displayName : ''))
+5 33 .then(this.emitAsync('kill')
+5 34 .done(function () {
+5 47 this.lastRun = Error
+5 49 this.emit('start', source_error)
+5 55 this.emit('kill')
+5 58 killingPromise = this.emitAsync('kill')
+5 60 this.emit('close')
+5 66 killingPromise = killingPromise || Promise.resolve()
+5 67 this.start = null
+5 75 this.lastRun = info.done
+5 76 var killingPromise = killingPromise.map(function (error) {
+5 77 var killingLauncher = this._browsers.lastRun
+5 78 killingLauncher.emit('start', killingLauncher)
+5 79 this.state = FINISHED_DISCONNECTED
+5 81 this.onResult = function (result) {
+5 82 this.error = killingPromise.done()
+5 85 this.state = function (error.error.applyErrors.applyErrors.applyErrors.bind(this, arguments)
+5 86 this.state = arguments = arguments
+5 87 this.error.name = null
+5 88 .state = arguments
+5 89 .failureAll(this.error, arguments)
+5 90 .applyDefaults.applyErrors.applyErrors.applyErrors.applyErrors.apply(this, arguments)
+5 91 this.applyDefaults.applyDefaults.applyErrors.apply(this.middleware.middleware.bind(this, arguments)
+5 93 this.middleware.error.error = middleware.
+6 24 var refreshNoActivityTimeout = noActivityTimeout
+6 25 var selfId = null
+6 26 var refreshInfoDone = noActivityTimeout = noActivityTimeout
+6 27 this.on('browsers_change', function () {
+6 28 self.launchId = (this.id || this.id.toString())
+6 29 this.emit('browsers_change', function (browser) {
+6 30 if (browser.launchId) {
+6 31 this.launchId = this.id
+6 32 this.emit('browser_register', this)
+6 35 this.isReady = function () {
+6 36 return this.state === READY
+6 41 this.on('isReady', function () {
+6 42 return self.state === READY
+6 45 if (this.isReady()) {
+6 51 this.on('start', function () {
+6 52 this.state = EXECUTING
+6 54 this.on('kill', function (done) {
+6 55 if (!self.isReady()) {
+6 60 self._done()
+6 63 this.on('done', function (done) {
+6 69 this.emit('done', killingPromise)
+6 73 this.emit('done', this)
+6 75 this.on('error', function (err) {
+6 80 this.emit('error', err)
+6 81 this.on('exit', function () {
+6 85 this.on('done', this.on('done', function () {
+6 86 this.state = done()
+6 89 this.on('done', function () {
+6 90 this.state = BEING_DISCONNECTED
+6 93 this.log.on('log', function (log, notLog)
+6 94 this.log.error = function (errorLog)
+6 95 this.on('done')
+6 96 this.on('done', function (errorLog)
+6 97 this.on('exit', doneLog)
+6 98 this.on('error', doneLog)
+6 100 this.on('riminate', function (errorLog)
+6 101 this.on('exit', function (errorLog, doneLog, butDone) {
+6 102 if (done) {
+6 103 process.
+7 41 if (this.state === BEING_FORCE_KILLED) {
+7 48 this.state = FINISHED
+7 49 this.emit('kill').done
+7 56 this.restart = function () {
+7 65 this.emit('complete')
+7 78 killingPromise.then(error)
+7 80 this.emit('done_error')
+7 82 this.on('done_error', function (error', function (error) {
+7 83 this.state) {
+7 84 this.state = BEING_error = error
+7 86 this.on('done_done_failure()
+7 88 this.on('close()
+7 89 this.on('close()'
+
+8 22 this.emit('start', url + '#' + this.id + '\
+8 23 ')
+8 26 if (this.state === BEING_KILLED) {
+8 36 this.killSocket = function () {
+8 41 if (this.isCaptured()) {
+8 42 this.lastResult.total = this.lastResult.success
+8 44 this.lastResult.failed = this.lastResult.failed
+8 48 if (err.code === 'ENOENT') {
+8 51 this.emit('done')
+8 53 log.debug('Restarting on socket %s', socket.id,
+8 54 this.id)
+8 57 this.emit('done', url)
+8 64 this.emit('done', this.state)
+8 80 this._done = function (error (error) {
+8 81 killing.done || function (error) {
+8 82 killing.done(error)
+8 84 this.start()
+8 85 return killing.done(error)
+8 87 this.error = function (loaded) {
+8 90 this.state = BEING_CAPTURED = killing
+8 91 this.start || function (start || killing.start || killing.done) {
+8 93 this.state = killing.start || killing.done = killing.done = killing
+8 94 this.start || done(done)
+8 96 this.error = killing
+8 97 this.start = killing
+8 98 this.start || killing
+8 99 this.state = killing.done = killing
+8 101 var killing
+8 102 if (this.start || killing.start || killing.
+9 24 var refreshNoActivityTimeout = noActivityTimeout? function () {
+9 25 clearNoActivityTimeout()
+9 26 noActivityTimeoutId = noActivityTimeout || this.lastResult.total
+9 27 self.lastResult.total = previousUrl
+9 28 self.emit('start', self.name + '--')
+9 29 } : function () {}
+9 30 this.on('mount', function (url) {
+9 31 this.launchId = url
+9 33 this.emit('result', mapEscape.bind(this))
+9 39 var url_for = function (url) {
+9 40 self.state = BEING_FORCE_KILLED
+9 41 return self.state === FINISHED
+9 43 this.markCaptured = function (id) {
+9 44 if (this.id === id)
+9 47 var URL_REGEXP = new RegExp('http:\\\\/\\\\/[^\\\\/]*' +
+9 48 '\\\\/(base|absolute)([^\\\\?\\\\s\\\\:]*)(\\\\?[0-9]*)?', 'g')
+9 52 var pathname
+9 53 this.assetUrl = pathname
+9 54 this.name = pathname
+9 55 this.assetDir = pathname
+9 56 this.format = function (path, pointer) {
+9 57 if (pathname = pathname) {
+9 60 var args = []
+9 61 if (!pointer.isFunction) {
+9 62 var arg =pointer.split('.')
+9 63 if (Object.keys(arg).length === 1) {
+9 64 var cursor = new MockSocket()
+9 65 if (cursor.length === 0) {
+9 66 throw new TypeError('No such file or directory' + path + '.' + self.format.Terminal
+9 68 return cursor.set(path, args)
+9 69 var new TypeError(msg)
+9 70 var content = new Buffer(pathname)
+9 71 content.on('Buffer', function () {
+9 72 content.on('dump', function () {
+9 74 content.on('end', function () {
+9 76 self.removeListener.removeListener () {
+9 77 self.removeListener () {
+9 78 log.removeListener () {
+9 79 log.removeListener()
+9 87 this.on('error', function () {
+9 88 this.emit('error', function (error', function (error) {
+9 89 if (error.bind(error, callback) {
+9 90 if (error) {
+9 91 if (error.called)
+9 92 return callback.apply(this)
+9 93 elsejector.removeListener.bind(this)
+9 95 elseems.bind(this, arguments)

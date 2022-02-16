@@ -1,0 +1,20 @@
+Min editdistance: 9.00
+Closest candidate: 0 3 _ = require('lodash'),
+0 1 colors = require('colors'),
+0 2 async = require('async'),
+0 3 _ = require('lodash'),
+0 4 extend = require('../../extend'),
+0 5 route = require('../../route'),
+0 6 config = hexo.config,
+0 7 log = hexo.log,
+0 8 publicDir = hexo.public_dir;
+0 9 extend.console.register('server', 'Run server', {alias:'s'}, function(args){
+0 10 var app = express(),
+0 11 statics = args.s || args.static? true : false,
+0 12 logFormat = args.l || args.log,
+0 13 port = args.p || args.port || config.port || 4000;
+0 14 if (logFormat){"
+
+3 3 extend = require('../../../extend'),
+3 4 route = require('../../../route'),
+8 10 statics = args.s || args.static,

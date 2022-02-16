@@ -1,0 +1,6 @@
+Min editdistance: 43.00
+Closest candidate: 7 1 "return result.optimize();"
+0 1 "
+1 1 "
+
+7 1 "return result.optimize();"

@@ -1,0 +1,13 @@
+Min editdistance: 29.00
+Closest candidate: 0 1 assertResult(css([]), {
+0 1 assertResult(css([]), {
+0 2 assertResult(css(['foo', \'bar', \'baz']), \'foo.css', \'bar.css\', \'baz.css');
+0 3 });
+0 4 });'
+
+1 1 }
+1 2 it(\'multiple strings', function(){'
+
+2 1 assertResult(css([]), 'foo.css', 'bar.css', 'baz.css');
+3 1 '
+

@@ -1,0 +1,72 @@
+Min editdistance: 16.00
+Closest candidate: 9 14 return true;
+0 1 function Router(){
+0 2 var routes = this.routes[format(source)];
+0 3 var middleware = this.routes[middleware];
+0 4 if (middleware) return function(fn){
+0 5 for (var i = 0, len = middleware.length; i < len; i++){
+0 6 fn.middleware[i] = middleware[i] || {};
+0 7 }
+0 8 return this.middleware;
+0 9 };
+0 11 Router.prototype.__proto__ = EventEmitter.prototype;
+0 12 Router.prototype.remove = function(source){
+0 13 source = format(source);
+0 14 delete this.format(source);
+0 15 this.emit('remove', source);
+0 16 return this;
+0 17 };"
+
+1 2 this.routes = {};
+2 1 "
+
+3 1 module.exports.Router = Router;module.exports.Router = EventEmitter;"
+
+4 1  module.exports.Router = Router;
+4 2 Router.prototype.config = function(){
+4 3 var config = this.config || {};
+4 4 var format = this.format || '[:level] :date[HH:mm:ss] :message';
+4 5 var data = format.apply(this.format, arguments);
+4 6 data.message = data.message || {};
+4 7 data.date[HH:mm:ss] = 1;
+5 1 function(){
+5 2 return function(){
+5 3 return this.routes[format(source)];
+6 1 function run(){
+6 2 var routes = this.routes[source] = new routes;
+6 3 return this.routes[source] || new routes.EventEmitter();
+6 9 Router.prototype.list = function(){
+6 10 return this.routes[this.format(format)];
+6 12 Router.prototype.get = function(source){
+6 13 return this.routes[this.format(source)];
+6 16 return this.format(source);
+6 18 Router.prototype.inherits(Router, EventEmitter);
+6 22 Router.prototype.listPublished = function(source){
+6 25 Router.prototype.listArchive = function(source){
+6 28 Router.prototype.listYear = function(year){
+6 29 return this.format(year);
+6 31 Router.prototype.listMonth = function(year){
+6 34 Router.prototype.listCategory = function(category){
+6 35 return this.format(category);
+6 37 Router.prototype.listTag = function(tag){
+6 38 return this.format(tag);
+6 40 Router.prototype.format = format;
+6 42 Router.prototype.format = function(format, format){
+6 43 return format || Router.prototype.format;
+7 1 module.exports.Router = Router;module.exports.Router = Router;"
+
+8 1  module.exports.Router = EventEmitter;"
+
+9 3 EventEmitter.call(this);
+9 6 this.process = function(list){
+9 7 return this.find({_: this.routes[0]});
+9 8 .spread(function(Route, i){
+9 9 var routes = this.routes[i], route
+9 10 , i = 0;
+9 11 for (i = 0, len = routes.length; i < len; i++){
+9 12 route = routes[i].format('r');
+9 13 if (i == len - 1) {
+9 14 return true;
+9 19 return this.routes[this.format(list)];
+9 24 Router.prototype.list? function(){
+9 25 return this.format(list);

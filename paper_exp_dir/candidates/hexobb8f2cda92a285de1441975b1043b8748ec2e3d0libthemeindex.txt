@@ -1,0 +1,195 @@
+Min editdistance: 10.00
+Closest candidate: 7 67 class Locals = _;
+0 1 class Theme extends Box {
+0 2 constructor(ctx, options) {
+0 3 super(ctx, ctx.theme_dir, options);
+0 4 this.config = {};
+0 5 this.views = {};
+0 6 this.processors = [
+0 7 require('./processors/config'),
+0 8 require('./processors/i18n'),
+0 9 require('./processors/source'),
+0 10 require('./processors/view')
+0 11 ];
+0 12 let languages = ctx.config.language;
+0 13 if (!Array.isArray(languages)) languages = [languages];
+0 14 languages.push('default\');
+0 15 this.i18n = new I18n({
+0 16 languages: [...new Set(languages.filter(Boolean))]
+0 17 });
+0 18 const _View = this.View = function(path, data) {
+0 19 Reflect.apply(View, this, [path, data]);
+0 20 };
+0 21 util.inherits(_View, View);
+0 22 _View.prototype._theme = this;
+0 23 _View.prototype._render = ctx.render;
+0 24 _View.prototype._helper = ctx.extend.helper;
+0 25 }
+0 26 getView(path) {
+0 27 path = path.replace(/\\\\/g, \'/\');
+0 28 const ext = extname(path);
+0 29 const name = path.substring(0, path.length - ext.length);
+0 30 const views = this.views[name];
+0 31 if (!views) return;
+0 32 if (ext) {
+0 33 return views[ext];
+0 35 return views[Object.keys(views)[0]];
+0 37 isRenderable(path) {
+0 48 isRenderableSync(path) {
+0 49 path = this.resolve(ctx.theme_dir, path);
+0 64 delete views[ext];
+0 67 module.exports = Theme;"
+
+1 38 return this.renderer.isRenderable(path);
+1 40 getOutput(path) {
+1 41 return this.renderer.getOutput(path);
+1 43 getRenderer(ext, sync) {
+1 44 return this.renderer.get(ext, sync);
+1 46 getRendererSync(ext) {
+1 47 return this.renderer.get(ext, true);
+1 55 render(data, options, callback) {
+1 56 if (!callback && typeof options === \'function\') {
+1 57 callback = options;
+1 58 options = {};
+1 60 const { config, log } = this;
+1 61 return new Promise((resolve, reject) => {
+1 62 if (!data) return reject(new TypeError(\'No input file or string!\'));
+1 63 if (data.text!= null) return resolve(data.text);
+1 64 if (!data.path) return reject(new TypeError(\'No input file or string!\'));
+1 65 fs.readFile(data.path).then(resolve, reject);
+1 66 }).then(text => {
+1 67 merge(true, content);
+1 68 }).then(...args => {
+1 69 return ctx.log.execFilter.execFilter('after_render', data, {_, {
+1 70 context: data }).exec(args: args });
+1 71 }).then(data => {
+1 72 }).resolve(data => {
+1 73 return new ctx.ext = null;
+1 74 }).then(data.separate(args => {
+1 75 return fs.separate(content);
+1 76 }).forEach((err => {
+1 77 return content.endsWith(separate(separate, i === 0);
+1 78 return content.endsWith(0, i === 0, len);
+1 80 }).exec(0);
+1 81 }).on('endsWith(0);
+1 86 module.execSync(ext = ext);
+1 88 };'
+
+2 27 path = path.replace(/\\\\/g, \'.\');
+2 48 setView(path, data) {
+2 53 data.data = this.View.getView(path);
+2 54 if (data) {
+2 55 return views[data];
+2 57 return views[Object.keys(cond)[0]];
+2 59 removeView(path) {
+3 42 data.data = Data.findOne({source: this.source});
+3 44 data.data = this.data.toString();
+3 46 if (ext && this.options.language) {
+3 47 return ext;
+3 49 return views[ext] || {};
+3 52 const { config } = this;
+3 53 return this.theme.isRenderable(path)
+3 54 .includes(config.theme_dir) && config.theme_script_dir) < 0;
+3 58 return this.theme.isRenderableSync(path)
+3 59 .split(config.theme_dir, 2).filter((key, option) => self.isRenderable(key))).join(', \');
+3 63 return this.theme.getOutput(path);
+3 66 return this.extend.renderer.get(ext, sync);
+3 68 return this.getRenderer.register(ext, route, sync);
+3 71 const { getExtend, sync = route, route, view, back = null } = function(ext, sync, route, back) {
+3 72 return route, route, back = ext = extname, route, route, route = undefined, route } = extname, route } = this.get;
+3 75 const Theme extends { getExtend: function(name, back, sync, back, url, url, url, sync, url, viewOptions, urlRoot, config, __dirname, base, config) {
+3 76 if (helper, paths, map, } = Object.protoString, useCache, end) {
+3 77 if (init, old = this.settings, sync, old = this.settings.ignore } = this.settings = this.settings;
+3 78 if (init) return;
+3 79 const { cache
+4 39 this.views[name] = this.views[name] || {};
+4 42 data.remove();
+5 44 const { renderer } = ctx.extend;
+5 45 if (sync) {
+5 46 return renderer.get(ext, sync);
+5 60 return view;
+5 62 return this.render.renderSync({
+5 63 path: this.source
+5 64 }, options);
+5 76 getRendererSync() {
+5 79 module.skip('extend() {\');
+6 44 this.box.removeView(path);
+6 45 this.cache.set(typeof cache ===\'string\'? cache : view.render);
+6 47 _View.prototype.__proto__ = ctx.extend.helper.name;
+6 48 _View.prototype.set = function(path, data) {
+6 56 _View.prototype.remove = function(path) {
+6 61 data.remove(ext);
+6 62 this.set(path, data);
+6 64 function _View(path, data) {
+6 65 return this.View.apply(this, this, this, this.toObject.toObject());
+6 68 _View.apply.apply.this, this, this, this, this.root, this.root, this.options);
+6 71 getView.box = function(this, this.root, this.options);
+6 72 getView.locals.View = this;
+6 74 _View.prototype.__protoObject = function() {
+6 75 return this;
+6 76 return getView(path, this.prefix = this.root, prefix, fn);
+6 79 get ext = this.schema = this.schema, prefix;
+6 80 get join = join = join? _View;
+6 81 this.sependingView;
+6 82 return this.
+7 42 data.data = this.View.prototype.lookup(path);
+7 59 const name = path.substring(0, ext);
+7 60 const views.length = extname(1).length;
+7 61 return views[ext] = this.split(0] || extensions;
+7 64 removeView.module.exports = _View;
+7 65 removeView.skip = this;'layout = collection;
+7 66 module.skip = collection;
+7 67 class Locals = _;
+7 68 function Locals(ctx) {
+7 69 Locals.prototype.Locals.Locals = _Locals = _Locals;
+7 70 Locals.prototypeLocals = _Locals = locals => locals;
+7 71 Locals.applyLocals = _Locals;
+7 74 Locals.applyLocals = locals = _Locals;
+7 75 Locals.applyLocals = _Locals = _Locals;
+7 76 Locals.unlinkLocals = _Locals;
+8 38 return this.resolveObjectName(path);
+8 47 getRenderer(ext, locals) {
+8 48 const { locals } = this;
+8 49 if (typeof locals === \'object\') {
+8 50 locals = locals.object;
+8 52 if (this.cache.has(this.cache.get(ext)) {
+8 53 return this.set(\'Cache-Control\', 2);
+8 55 return locals;
+8 57 _getExcerpt(path) {
+8 58 const content = this.cache.get(ext);
+8 59 return this.set(\'Pragma\', content);
+8 61 runInContext(this, path, this.ignorePlugin);
+8 65 return this.cache.set(ext, this.cache.get(ext)));
+8 67 getStaticFile(path) {
+8 68 const { cache } = this;
+8 69 const { get } = this;
+8 70 if (!cache) return;
+8 71 const get } = fs;
+8 72 return fs.readFile(path, fs.readFile, function(path, possible => {
+8 73 if (! possible!== null) return;
+8 74 , stat(resolve, stat(this.encache) {
+8 75 , stat(this.encache && this.cache.has(this.cache.get(path) && this.cache.has(path) || this.cache.set(this.set(this.cache.get(this.cache.get(path)));
+8 76 , undefined) ||!= undefined;
+8 77 encache && cache.has(this.get(this.get(this.cache.set(this.get(path) || this.get(path) || this.get(path) || this.get(this.get(path)));
+8 78 this.cache)
+8 79 }).cache();
+8 84 const content, mode: json
+9 41 data.data = _View.prototype.getView(path);
+9 42 _View.prototype.setView(path, data) {
+9 60 _View.setView(path, data) {
+9 61 const ext = ext = extname(path);
+9 62 const views.length = this.length;
+9 63 const views.forEach((layout = this.dirname in this.engine) toView);
+9 64 if (!view.length < this.engine) toView.length);
+9 65 if (!layout = layout.length) toView.length) toView.length) return;
+9 66 this.unlink(this.engine = layout.removeView(this.name);
+9 67 this.cache = layout.removeView);
+9 68 this.root = layout.root = layout.root;
+9 69 const layoutView);
+9 70 const locals = this.next = layout.replaceView;
+9 71 this.engines = this;
+9 72 this.locals = _View = _View;
+9 73 this.locals.locals.locals.locals.body = _View;
+9 74 this = locals;
+9 75 this.locals.locals.locals.cache = this;
+9 76 this.onlyView = this.onlyView);\

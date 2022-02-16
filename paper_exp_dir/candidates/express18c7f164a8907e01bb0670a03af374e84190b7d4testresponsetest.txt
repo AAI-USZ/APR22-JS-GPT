@@ -1,0 +1,103 @@
+Min editdistance: 27.00
+Closest candidate: 6 8 assert.static', app);
+0 1 assert.response(app2,
+0 2 assert.server.server.callback.callback(app)
+0 3 assert.server.listen(app, server);
+0 4 assert.server.listen(server);
+0 5 assert.listen(server);
+0 6 }).listen(server);
+0 8 assert.middleware.calledOnce.forEach(1);
+0 9 }).done();
+0 10 assert.return(function(1, middleware);
+0 11 assert.return next();
+0 12 assert.called
+1 1 assert.createServer();
+1 2 assert.response(app,
+1 3 describe('app = express();
+1 4 it('should.use(': function(){
+1 5 app.param(': function(){
+1 6 app.param(app);
+1 7 return function(app);
+1 8 return function(req, res, res.param('app, res.param('message', function(res){
+1 9 process.user', function(req, res.param('message, undefined, app.param('message'));
+1 10 assert.should.session, 'tj
+2 2 assert.send(app,
+2 4 { url: function(app){" url:app.listen(),"app.listen(),"server.listen(),"server.listen(),"sessions" });
+2 5 assert.send(),"sessions" });
+2 6 },
+2 7 assert.send(app)
+2 8 }),
+2 9 "filesPromise": function(){
+2 10 var server = express.createServer(){
+2 11 assert.redirect(),"s"s=something
+3 2 assert.response(app = function(app,
+3 4 assert.middleware.listen(app, calls();
+3 5 assert.on('errorHandler);
+3 6 assert.response(app, function(app, done);
+3 7 assert.return;
+3 8 });
+3 9 assert.end();
+3 12 describe('server = express.createServer();
+3 13 describe('server', function(){
+3 14 it('test', function(){
+3 15 it('should
+4 2 describe('should.client.createServer();
+4 3 it('should.client.createServer();
+4 4 it('should.listen(app');
+4 5 client.listen(app);
+4 8 it('sessions.listen());
+4 9 it('sessions.length', function(){
+4 10 client.port(app);
+4 12 describe('s', function
+5 1 assert.response(app.createServer()
+5 2 assert.createServer()
+5 3 assert.write('test');
+5 4 assert.server.write('test');
+5 5 assert.response(app, blog });
+5 6 }assert.response(app,
+5 7 assert.middleware);
+5 8 assert.should.middleware);
+5 9 describe('createServer()
+5 10 it('middleware', function(){
+5 11 describe('when nois() is not()', function(){
+5 12 it('should not()');
+5 13 it('should.returns true', function
+6 2 assert.response(app = createServer();
+6 3 assert.client.response(app,
+6 4 assert.client.host('http', app,
+6 5 client);
+6 6 assert.server('s', app);
+6 7 assert.server('static', app);
+6 8 assert.static', app);
+6 10 assert.static','static', 'test',
+6 11 app);
+6 12 assert.response(
+6 14 'test.server. middleware',
+7 1 assert.response(app.server) {
+7 2 assert.server.middleware = createServer();
+7 3 done();
+7 4 assert.server.listen(app.middleware.listen(app);
+7 6 }
+7 8 })
+7 10 describe('createServer(){
+7 11 it('createServer()', function(beforeExitCodeListen', function(){
+7 12 it('should.server.port', function(){
+7 13 it('should.port', function(){
+7 14 var app = createServer(
+8 1 assert.response.write('server.write('middleware',
+8 2 assert.middleware.should.should.throw();
+8 3 assert.return();
+8 5 it('should.response(app,'middleware', function(){
+8 6 assert.return function(){
+8 7 return Express.is();
+8 8 assert.response(app);
+8 9 assert.should.response(app,
+8 10 assert.body.called);
+8 12 assert.request.body,
+8 13 assert.body,
+9 2 assert.sends('middleware', function(app,
+9 3 assert.listen(app,
+9 6 assert.get('xhr', middleware);
+9 8 assert.send('xhr', middleware);
+9 11 assert.send('xhr2', middleware);
+9 12 assert.

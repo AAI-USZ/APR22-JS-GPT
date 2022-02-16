@@ -1,0 +1,19 @@
+Min editdistance: 1.00
+Closest candidate: 2 2 exports.yfm = require('hexo-front-matter');
+0 1 "
+
+2 1 exports.server = require('./server');
+2 2 exports.yfm = require('hexo-front-matter');
+2 3 exports.inflector = inflection;
+2 4 exports.titlecase = inflection.titleize;
+2 5 exports.Router = require('./router');"
+
+4 1 exports.server = require('./server');"
+
+5 5 exports.Router = require('./router');
+5 6 exports.i18n = require('./i18n');"
+
+6 3 exports.yaml = require('hexo-front-matter');
+6 4 exports.yamlHelper = require('./yaml');
+6 5 exports.yamlHelper = require('./yaml');"
+

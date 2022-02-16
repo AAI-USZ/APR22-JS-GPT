@@ -1,0 +1,192 @@
+Min editdistance: 7.00
+Closest candidate: 2 28  attrs: {
+0 1  {silent: false, line_number: true, wrap: false, escape: false },"
+
+1 1  "true");
+1 2 const result = [
+1 3 \'#title.md\',
+1 4 \'archive: 2',
+1 5 \'category: 2',
+1 6 \'tag: 2',
+1 7 \'\',
+1 8 \'More info: http://zespia.tw/hexo/docs/rules/new_post_name.md\',
+1 9 ];
+1 10 const meta = yaml.parse(meta);
+1 11 const result = meta.replace(/\\s+/g, \'\
+1 12 \');
+1 13 result.should.eql([
+1 14 meta({property: \'og:type\', content: \'website\'}),
+1 15 meta({property: \'og:title\', content: \'^loc_NUM\'}),
+1 16 meta({property: \'og:url\'}),
+1 17 meta({property: \'og:site_name\', content: hexo.config.title}),
+1 18 meta({property: \'og:loc_VN_CODES[0]},
+1 19 meta({property: \'og:updated_time\', content: \'^loc_VERSION\'}),
+1 21 meta({name: \'twitter:card\', content:\'summary\'})
+1 22 ].join(\'\
+1 23 \'));
+1 24 return result;
+1 25 };'
+
+2 1 default_category: \'uncategorized',
+2 2 category_map: {},
+2 3 tag_map: {},
+2 4 date_format: \'YYYY-MM-DD',
+2 5 time_format: \'HH:mm:ss',
+2 6 updated_option: \'1.2:3\',
+2 7 permalink: \':year/:month/:day/:title/\',
+2 8 permalink_defaults: {
+2 9 trailing_index: true,
+2 10 trailing_html: true,
+2 12 image_tag: \'photo\',
+2 14 enable: true,
+2 15 title: \'Title without a title\',
+2 16 attachment: false,
+2 17 source_dir: \'public\'
+2 18 },
+2 26 enable: false,
+2 27 title: \'Title with no title\',
+2 28  attrs: {
+2 29 src: \'/\'
+2 30 }
+2 32 date_format: \'MMM D YYYY',
+2 33 time_format: \'H:mm:ss',
+2 44 updated_option: \'1.2:3\'
+3 1  status: 1, "unixeslint: 1", "12"}, 4000);
+3 2 const _output = [
+3 4 \'output\'
+3 7 const successResult = Promise.all([
+3 8 fs.writeFile(results.data, result.data)
+3 9 ]).spread((path, i18n) => {
+3 10 const result = {
+3 11 success: true,
+3 12 url: path,
+3 13 severity: 2,
+3 14 line_number: false
+3 15 };
+3 16 if (path > 2 && result.tag_id) {
+3 17 result.tag_id = _id;
+3 18 } else {
+3 19 result.tag_id = path;
+3 21 if (i18n.is_post() && result.tag_id) {
+3 22 result.tag_id = this.id;
+3 27 }, { cwd: source_dir });
+3 46 const success = Promise.all([
+3 52 severity: 1,
+3 53 line_number: 0
+3 59 });
+3 61 const failed = errorResult = Promise.all([
+3 62 fs.writeFile(results.data);
+3 64 success.should.then(() => {
+3 65 return Promise.all([
+3 66 process.unify(success => {
+3 67 process.should.notify(true);
+3 68 this.then(...args => {
+3 69 this.calls.calls.should.calledWith(answ => {
+3 70 this.should.calledWith(args => this.args.should.not.not.some([...args) || 1, calls.length === 1))
+3 71 }));
+3 75 });'
+
+4 1  "page:lang:title.md", {
+4 2 lang: \'en\',
+4 3 line_number: true,
+4 4 tab_replace: \'\'
+4 6 const _args = ["
+
+5 1  "true")'];
+6 4 date_format: 'YYYY-MM-DD',
+6 5 time_format: 'HH:mm:ss',
+6 6 updated_option: \'[HH:mm:ss]',
+6 7 permalink = this.default_url_for(url) === \'/\' : it.path;
+6 8 const posts = this.site.posts.sort(\'date\', -1);
+6 9 if (!posts.length) return;
+6 10 const data = Post.findOne({source: url});
+6 11 if (data.categories) {
+6 12 data.categories.forEach(post => {
+6 13 const categories = post.categories;
+6 14 if (!categories.length) return;
+6 16 for (let i = 0, len = posts.length; i < len; i++) {
+6 17 const post = posts[i];
+6 18 if (!post.length) return;
+6 20 let isCurrent = false;
+6 21 if (isCurrent && posts.length) posts.archive = true;
+6 22 if (isCurrent && posts.length) posts.category = isCurrent;
+6 23 return posts;
+7 6 updated_option: \'1.2/3',
+7 7 per_page: 10,
+7 8 pagination_dir: \'page',
+7 9 theme: {
+7 18 disqus_shortname: \'',
+7 20 default_category: \'extategorized',
+7 25 updated_option: \'1.2/3\',
+7 37 disqus_html_shortname: {
+7 41 disqus_login: {
+7 43 default_category: \'does-no-exist\'
+7 46 theme_semi: {
+7 47 default_semi: {
+7 52 theme: default_semi: default_semi === \'You-semi\' }
+8 1  status: 204, "uncate" in options env);
+8 2 const code_prefix = "/" + code_path.replace(/\
+8 3 $/, \'\');
+8 4 const message_format = message_format.replace(/:\\d+\\/(\\d+)/g, \'\\d+\');
+8 5 message_format = message_format.replace(/:\\w+/g, \'\
+8 8 \'<h1>Title: <title>Title</h1>\',
+8 9 \'<h2><p>Image: <strong>Image: <em>'+ result.filename + \'</strong>\',
+8 10 \'<p>Image: <strong>Image: <strong>Image: <em>'+ result.filename + \'</strong>\',
+8 11 \'<p>Image: <strong>Image: <strong>Image: <strong>Image: <strong>*</strong>\',
+8 12 \'</h2>\',
+8 13 \'<h3><p>Image: <strong>Image: <strong>Image: <strong>*</strong>\',
+8 14 \'<h1>Filter: <strong>Filter: <strong>Function</strong>Noion: <strong>Noion: <strong>Noion</strong>\',
+8 15 \'<h1>Initial: <a>Initial: <a>Nested: <a>Custom Choices</a>',
+8 16 \'<h1>       : <a>Literal</a>',
+8 17 \'<h1>      : <a>Jane</a>',
+8 18 \'<h1>     : <a>Bandit</a>',
+8 19 \'<h1>\',
+8 27 \'<h1>\',\',
+8 28 \'<h1>\'<h1>\',\',
+8 30 \'<h1>\'<h1>\'<h1>\',\',\',
+8 41 \'<h1>2\',
+8 46 \'<h1>\'3'\',\',
+8 47 \'<
+9 1  options);
+9 2 var posts = [
+9 3 {source: \'foo\', slug: \'foo', title: \'Its', date: 1e8},
+9 4 {source: \'bar\', slug: \'bar', title: \'Math', date: 1e8 + 1},
+9 5 {source: \'baz\', slug: \'baz', title: \'Dude', date: 1e8 - 1}
+9 7 function listPostsHelper(posts, options){
+9 8 if (!options && (!posts ||!posts.hasOwnProperty(\'length\'))){
+9 9 options = posts;
+9 10 posts = this.site.posts;
+9 12 options = options || {};
+9 13 var style = options.hasOwnProperty(\'style\')? options.style : \'list\';
+9 14 var orderby = options.orderby || \'date\';
+9 15 var order = options.order || -1;
+9 16 var className = options.class || \'post\';
+9 17 var transform = options.transform;
+9 18 var separator = options.hasOwnProperty(\'separator\')? options.separator : \', \';
+9 19 var amount = options.amount || 6;
+9 20 var result = \'\';
+9 21 posts = posts.sort(orderby, order);
+9 22 if (amount) posts = posts.limit(amount);
+9 23 if (style === \'list\'){
+9 24 result += \'<ul class="\' + className + \'-list">\';
+9 25 posts.forEach(function(post){
+9 26 var title = post.title || post.slug;
+9 27 result += \'<li class="\' + className + \'-list-item">\';
+9 28 result += \'<a class="\' + className + \'-list-link" href="\' + link(data.path) + \'">\';
+9 29 result += transform? transform(data.level) : data.path;
+9 30 result += \'</a>\';
+9 31 result += \'</li>\';
+9 33 result += \'</ul>\';
+9 35 posts.forEach(function(post, i){
+9 36 var title = post.title = post.title || post.slug;
+9 37 var body = post.body = body;
+9 38 if (style === \'post.length) return result;
+9 39 throw new Promise.join(\'
+9 40 );
+9 44 if (style = style === \'list\'; style === \'list\'; style === \'list\', style === \'article\', style);
+9 45 style = \'article
+9 46 style = \'draft\', url;
+9 47 style = \'article\', url;
+9 48 style = \'article, description = \'article\', url;
+9 49 position = \'category = \'article\'
+9 50 position = \'\'

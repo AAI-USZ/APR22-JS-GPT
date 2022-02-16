@@ -1,0 +1,32 @@
+Min editdistance: 27.00
+Closest candidate: 0 1 return this.log = this;
+0 1 return this.log = this;
+0 2 }"
+
+1 1 var generate = generate;
+1 2 return this.process = generate;
+1 3 return this;
+1 4 };"
+
+2 2 };
+2 3 Hexo.prototype.process = function(options, done){"
+
+3 2 }"
+5 4 }).each(function(){
+5 5 if (this.process.exit(function(){
+5 6 process.exit(this.exit);
+5 7 return generate(this);
+5 8 return this.exit(this);
+5 9 }).then(function(){
+5 12 return this.exit(exit);
+5 13 });
+5 14 }
+5 15 }\
+6 3 return this.load_dir = this;
+7 1 var filters = engines = this;
+7 2 return this.filter = options;
+7 3 .filter.register = this;
+8 1 var versions = version = version;
+8 3 return this.process = this;
+8 4 }return this;
+9 1 var versions = this.log = this;

@@ -1,0 +1,327 @@
+Min editdistance: 1.00
+Closest candidate: 2 25 function markdownHelper(text, options){
+0 1 }
+0 2 }).asCallback(callback);
+0 3 };
+0 4 Hexo.prototype.renderSync = function(options){
+0 5 return this.renderSync({
+0 6 text: this.readSync(),
+0 7 path: this.readSync(),
+0 8 lang: this.config.language,
+0 9 timezone: this.config.timezone
+0 10 }, options);
+0 12 Hexo.prototype.__proto__ = Stream.prototype;
+0 13 Hexo.prototype.init = function(){
+0 14 var self = this;
+0 15 return this.call('test', {_: ['new']}, options);
+0 17 Hexo.prototype.call = function(name, args, callback){
+0 18 if (!callback){"
+
+1 6 engine: this.readSync(),
+1 7 path: pathFn.join(this.base_dir, 'd.html'),
+1 8 content: this.dump(new Buffer(options),
+1 9 path: path,
+1 10 replace: _.extname(path, this.localConfig)
+1 13 Hexo.prototype.loadPlugin = function(path, callback){
+1 14 if (this.paths && this.asset_dir) return callback();
+1 15 var baseDir = this.base_dir;
+1 16 return fs.exists(baseDir).then(function(exist){
+1 17 return exist? baseDir + this.asset_dir : baseDir;
+1 18 }).then(function(exist){
+1 19 if (!exist) return [];
+1 20 path = path.replace(/\\\\/g, '/');
+1 21 return this.render.renderSync({
+1 31 options = options || {};
+1 37 path: pathFn.join(baseDir, 'd.html'),"
+
+2 2 }).then(function(){
+2 3 return Reflect.apply(this, arguments);
+2 5 return Reflect.apply(this, ['m', 'an', 'and', 'as', 'at', 'but', 'en', 'for', 'if', 'in', 'of', 'on',
+2 6 'or', 'the', 'to', 'v', 'v.', 'via', 'vs', 'vs.'];
+2 10 return Reflect.apply(this, ['f', 'gi', '--real-file-tag', '--tag'], this.context.renderSync({
+2 11 path: this.source,
+2 12 content: this.content
+2 13 });
+2 15 return Reflect.apply(this, ['l', 'j', '--tag'], this.context.renderSync({
+2 20 return this.bind(this);
+2 22 this.emit('render');
+2 23 }.bind(this));
+2 25 function markdownHelper(text, options){
+2 26 return this.render.renderSync({text: text, options);
+2 28 module.exports = markdownHelper;"
+
+3 1 }).then(post => {
+3 2 return Promise.all([
+3 3 this.setTags(this.cacheName),
+3 4 this.setCookie(post.body)
+3 5 ]);
+3 6 }).spread((tags, i) => {
+3 7 const result = {
+3 8 foo: 'bar',
+3 9 arrrrrr: [],
+3 10 message: 'Site updated:'+ this.cacheName + '',
+3 11 latest: 'Not Found',
+3 12 path: this.render(this.cacheName + '%s')
+3 15 this.setCookie(this.cacheName),
+3 21 arrrrrrrr: [],
+3 22 message: 'Site updated:'+ this.cacheName + '%s')
+3 28 }).then(() => {
+3 29 const post = Post.findOne({source: this.cacheName});
+3 30 post.tags.map(item => item.name).should.eql(['false', 'off']);
+3 31 item.tags.map(item => item.name).should.eql(['true', 'false']);
+3 33 this.removeLocal(this.cacheName),
+3 34 this.removeLocal(this.cacheName + 'public')
+3 38 it('layout - post', () => {
+3 39 const layout = 'post.jade';
+3 40 const path = join(hexo.source_dir, 'post.jade');
+3 41 return post.layout.should.eql(['post', 'page', 'index'].join(hexo.config.default_layout));
+3 43 it('layout - page', () => {
+3 44 const layout = 'page.haml';
+3 45 const path = join(hexo.source_dir, 'page.haml');
+3 46 return post.layout.should.eql(['page', 'post', 'page', 'index']);
+3 48 it('layout - source', () => {
+3 49 const archiveDir = hexo.config.archive_dir;
+3 50 const data = {
+3 51 year: 1,
+3 52 month: 2,
+3 53 day: 3
+3 55 return post.layout.should.eql(['year','month', 'day', 'title']);
+3 57 it('data - destination', () => {
+3 58 const main = express();
+3 59 main.set('archive', 2);
+3 60 return main.get('engines', 2);
+3 62 it('data - post_asset_folder enabled', () => {
+3 63 hexo.config.post_asset_folder = true;
+3 64 const result = openGraph.call({
+3 65 page: {},
+3 66 config: hexo.config,
+3 67 is_post: isPost() },
+3 68 images: [
+3 69 'link:',
+3 70 'http://hexo.io/image.png',
+3 71 'image:png',
+3 72 'image:large.png',
+3 73 '---'
+3 74 ].join('\
+3 75 '));
+3 76 const keywords = page.lang;
+3 77 result.should.set('content-type', 'og:lang', 'ojs');
+3 78 result.should.should.eql('og:');
+3 80 it('categories', 'ejs' : 'foo';
+3 82 describe('keywords', () => {
+3 83 it('canonical_url: <a>', () => {
+3 84 const categories.should.should.eql(hexo.config.config.title);
+3 86 it('categories.should.should.eql(['category_url'];
+3 88 it('categories', 'baz'];
+3 89 it('_categories', 'uncategorized_url: http://hexo.com');
+3 90 it('uncategorized_link: 'jade.com');
+3 91 it('permalink: http://hexo.com/index.com/', '
+4 8 content: this.readSync(),
+4 11 method: this.readSync(),
+4 13 exec: this.readFileSync(),
+4 14 url: this.readFileSync(),
+4 15 root: this.root,
+4 16 maxage: 1000,
+4 17 locals: {
+4 18 id: this.id,"
+
+5 5 return new Promise(function(resolve, reject){
+5 7 fs.mkdirSync(this.path);
+5 8 fs.writeFile(path, this.stringify(defaultOptions({
+5 9 ignoreHidden: true,
+5 10 ignorePattern: null
+5 11 }), options);
+5 12 this.render.renderSync({
+5 13 path: this.source.substring(0, escape),
+5 14 process: this.extend.locals,
+5 15 theme: this,
+5 16 light: this.source.substring(this.length),
+5 17 env: this.params.light || \'development\',
+5 18 version: parseInt(options.version, 10),
+5 19 config: {},
+5 20 view_dir: this.source
+5 23 Hexo.prototype.render = function(options, callback){
+5 24 if (!callback) callback = options;
+5 25 options = _.extend({
+5 26 watch: false
+5 30 path: this.source.substring(this.length),
+5 31 theme_dir: this.source
+5 35 if (!callback) callback = function(){};
+5 37 return fs.readFile(path).then(function(content){
+5 38 return self.render.compile(content);
+5 41 Hexo.prototype.watch = function(callback){
+5 44 this.render.compile(path).then(function(){
+5 45 self.log.info(\'Start processing');
+5 47 self.source.process(),
+5 48 self.theme.process()
+5 51 return self._generate({cache: true});
+5 54 Hexo.prototype.watchSync = function(callback){
+5 57 this.render.compileSync({
+5 61 return this._generate({cache: false});
+5 66 this.render.compareSync({
+5 72 Hexo.prototype.unwatch = function(){
+5 73 if (this._watchExceptions) this.unwatchExceptions = true;
+5 74 var buckets = this.buckets = new Set({
+5 75 only: true,
+5 76 max_font: 20
+5 78 return this.list = function(){
+5 79 return buckets.length = this.length;
+5 83 Hexo.prototype.loadErrors = function(){
+5 85 return self.format = function(){
+5 86 return self.formatError(){
+5 88 return self.formatError()
+5 89 .formatError()
+5 90 .apply(this.error;
+5 91 })
+5 92 .apply('errorHandlers.catch(this, arguments);
+5 98 Hexports.listDir = function(){
+5 99 return {ignore = function(){
+5 100 returnDir(this.source, arguments);
+5 101 return this.formatError = this.formatError;
+5 104 };'
+
+6 2 _File.prototype.renderSync = function(options){
+6 6 mode: this.readSync(),
+6 9 stats: this.statSync(),
+6 10 filename: this.readSync(),
+6 11 method: 'GET'
+6 15 function newView(path, data){
+6 16 return new this.theme.View(path, data);
+6 18 View.prototype.render = function(options, callback){
+6 19 if (!callback && typeof options === 'function'){
+6 20 callback = options;
+6 21 options = {};
+6 34 lang: this.readSync(),
+6 35 ca: this.readSync(),
+6 36 self.config: this.config,
+6 37 filename_case: 0,
+6 38 caption: this.readConfig(),
+6 39 url: this.readOptions.url || this.config.root + 'px',
+6 40 root: '/',
+6 41 permalink: this.root + ':year/:month/:day/:title',
+6 42 permalink_defaults: {canonical_url: '/atom.xml'},
+6 43 canonical_path: this.readRange(0, 1),
+6 44 root: '/root/' + post.path.replace(/:(\\w+)/g, function(match, name){
+6 45 switch (name){
+6 46 case 'year':
+6 47 return date.format('YYYY-MM-DD HH:mm:ss'),
+6 48 year = this.params.year,
+6 49 month = this.params.month,
+6 50 day = this.params.day,
+6 51 i = 1;
+6 52 if (i >= 0){
+6 53 return next();
+6 54 } else if (i <= 12){
+6 56 } else {
+6 57 var src = src.substring(0, i + 1);
+6 58 return pathFn.join(post.source_dir, src);
+6 60 if (options.relative){
+6 61 return this.relative_url(this.path, this.asset_dir + extname + '.md');
+6 63 return pathFn.join(source.base, 'layout', 'post', 'index' + extname;
+6 66 module.exports = newView;"
+
+7 40 path:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+8 8 _content: this.readSync()
+8 12 if (!callback) return callback();
+8 14 return fs.exists(path).then(function(exist){
+8 16 return self.call(self, {_: self.renderSync({
+8 18 mode: self.read
+8 19 }, function(err, result){
+8 20 if (err) return self.log.error(err);
+8 21 if (result.length > 0){
+8 22 return Promise.resolve();
+8 24 return self.render(result);
+8 29 if (!callback) return;
+8 32 checkParent: true
+8 34 var called = false;
+8 35 async.series([
+8 36 function(next){
+8 37 if (!options.checkParent) return next();
+8 38 checkParent(self.source_dir, function(err){
+8 39 if (err) return next(err);
+8 40 var rs = fs.createReadStream(self.source_dir);
+8 41 rs.pipe(ws)
+8 42 .on('error', function(err){
+8 43 if (err &&!called){
+8 44 called = true;
+8 45 callback(err);
+8 48 ws.on('close', callback)
+8 57 Hexo.prototype.__proto__ = EventEmitter.prototype;
+8 58 module.exports = function(options){
+8 59 var cache = {};
+8 60 var join = pathFn.join;
+8 61 if (cache.hasOwnProperty('.cache')) && cache['.cache'].hasOwnProperty('.cache'))){
+8 62 join += 'index.html';
+8 64 options.maxage = options.maxAge || (options.maxAge / 1000).toFixed(2) + '…';
+8 65 options.locals = options.locals || {};
+8 66 options.locals.cache = true;
+8 67 var now = Date.now();
+8 68 var results = self.merge({cache: true}, options);
+8 69 var className = options.class || 'archive';
+8 70 var orderby = options.orderby || 'name';
+8 71 var order = options.order || -1;
+8 72 var transform = options.transform;
+8 73 var separator = options.separator || '.';
+8 74 var result = '';
+8 75 if (format = options.format) {
+8 76 result = result
+8 77 .separator = format;
+8 79 result = result;
+8 81 if (options.count = options.count || 1;
+8 82 return result;
+8 84 options.simpluralize = function(option);
+8 85 if (separator){
+8 86 return format.length = 0;
+8 88 return format.unshift();
+8 89 }'
+
+9 4 path: this.format(null),
+9 5 text: this.format(html)
+9 8 Hexo.prototype.mkdir = function(){
+9 9 var target = process.cwd();
+9 10 return fs.exists(target).then(function(exist){
+9 11 if (exist){
+9 12 return fs.mkdir(target);
+9 14 return self.renderFile(target);
+9 17 return hexo.init();
+9 19 return self.scaffold.set('post', [
+9 20 '---',
+9 21 '123456',
+9 23 '789012',
+9 24 '{2,}',
+9 25 '{2,}'
+9 28 return hexo.scaffold.set('draft', [
+9 43 path: this.format(new Date()),
+9 44 text: this.format(null)
+9 55 Hexo.prototype.register = function(name, fn){
+9 56 if (!name) throw new TypeError('name is required');
+9 57 if (typeof fn!== 'function') throw new TypeError('fn must be a function');
+9 58 if (typeof options === 'boolean') fn = options, options = {};
+9 59 var result = {
+9 60 path: this.format(name),
+9 61 text: this.format(null),
+9 62 renderable: true
+9 74 Hexo.prototype.changed = function(data){
+9 75 if (this.format) return;
+9 77 this.format = function(){
+9 78 return self.format;
+9 81 Hexo.prototype.source = function(this){
+9 82 this.source = this.format || {};
+9 83 return this;
+9 85 Hexo.prototype.view = function(options, callback){
+9 87 var view = this.source;
+9 88 view.id = this.format = this.format.format.replace('/users/:\\d=\\d=\\d\', function(){
+9 89 return this.format(this.format, i){
+9 90 return this.format('');
+9 92 var filter = this.select = _.execFilter(this.format, function(data){
+9 93 return data;
+9 94 return data.exec(data);
+9 96 this.collection.collection.unshift()
+9 97 .set('layout = false;
+9 99 var i){
+9 100 return this.__proto__proto__ = i;
+9 101 .__proto__.__.__ = i;
+9 102 .__s = i;
+9 103 return _;
+9 106 __proto__proto__.__.__.__proto__.__ = i;"
+

@@ -1,0 +1,282 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Q = require('q');
+0 1 var Q = require('q');
+0 2 var chalk = require('chalk');
+0 3 var PackageRepository = require('../core/PackageRepository');
+0 4 var defaultConfig = require('../config');
+0 5 function list(logger, packages, options, config) {
+0 6 var repository;
+0 7 config = defaultConfig(config);
+0 8 repository = new PackageRepository(config, logger);
+0 9 if (packages &&!packages.length) {
+0 10 packages = null;
+0 11 }
+0 12 return repository.list()
+0 13 .then(function (entries) {
+0 14 if (packages) {
+0 15 entries = entries.filter(function (entry) {
+0 16 return!!mout.array.find(packages, function (pkg) {
+0 17 return pkg === entry.pkgMeta.name;
+0 18 });
+0 21 return entries;
+0 22 })
+0 23 .done(function (entries) {
+0 34 return repository.eliminate(packages, entries);
+0 37 list.line = function (logger, argv) {
+0 38 var options = list.options(argv);
+0 39 var packages = options.argv.remain.slice(2);
+0 40 var idx = options.id;
+0 41 var pkg = options.argv.remain.slice(idx + 1);
+0 42 var property = options.name;
+0 43 return Q.nfcall(rimraf, pkg, property)
+0 44 .then(function () {
+0 45 return pass(pkg, property);
+0 48 list.completion = function () {
+0 49 };
+0 50 module.exports = list;"
+
+1 2 var RegistryClient = require('bower-registry-client');
+1 3 var ResolveCache = require('./ResolveCache');
+1 4 var resolverFactory = require('./resolverFactory');
+1 5 var createError = require('../util/createError');
+1 6 var PackageRepository = function (options) {
+1 7 options = options || {};
+1 8 this._options = options;
+1 9 this._config = options.config || defaultConfig;
+1 10 this._options.registryClient = new RegistryClient(mout.object.fillIn({
+1 11 cache: this._config.roaming.registry
+1 12 }, this._config));
+1 13 this._resolveCache = new ResolveCache(this._config.roaming.cache);
+1 15 PackageRepository.prototype.fetch = function (decEndpoint) {
+1 16 var res;
+1 17 var deferred = Q.defer();
+1 18 var that = this;
+1 19 resolverFactory(decEndpoint, this._options)
+1 20 .then(function (resolver) {
+1 21 res = resolver;
+1 22 decEndpoint.resolverName = resolver.getName();
+1 23 if (that._options.force) {
+1 24 deferred.notify({
+1 25 level: 'action',
+1 26 tag:'resolve',
+1 27 resolver: resolver,
+1 37 level: 'info',
+1 38 tag: 'cached',
+1 74 tag:'solve',
+1 78 tag: 'cached'
+1 81 resolverFactory(resolver, this._options)
+1 88 level: resolver,
+1 90 level: resolver.notify({
+1 91 level: 'info: 'close'
+1 96 .then(function (resolverFactory.bind(resolverFactory(resolverFactory(resolver, this._options))
+1 97 .extract(resolverFactory))
+1 98 .then(deferred, options)
+1 99 .then(function (resolverFactory)
+1 100 .getConstructor.resolverFactory)
+1 102 .extract(resolverFactory)
+1 103 .then(resolverFactory)
+1 105 .resolverFactory)
+1 114 .then
+2 4 var Logger = require('bower-logger');
+2 5 var Config = require('bower-config');
+2 6 var cli = require('../util/cli');
+2 9 function register(name, url, config) {
+2 11 var registryClient;
+2 12 var logger = new Logger();
+2 13 var force;
+2 14 config = mout.object.deepFillIn(config || {}, defaultConfig);
+2 15 force = config.force;
+2 16 config.offline = false;
+2 17 config.force = true;
+2 18 name = name.trim();
+2 19 process.nextTick(function () {
+2 20 if (!name) {
+2 21 return logger.emit('error', createError('Please type a name', 'EINVNAME'));
+2 23 url = convertUrl(url, logger);
+2 24 if (!mout.string.startsWith(url, 'git://')) {
+2 25 return logger.emit('error', createError('The registry only accepts URLs starting with git://', 'EINVFORMAT'));
+2 28 repository.fetch({ name: name, source: url, target: '*' })
+2 29 .then(function (canonicalDir, pkgMeta) {
+2 30 if (pkgMeta.private) {
+2 31 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+2 33 if (!config.interactive || force) {
+2 34 return true;
+2 36 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry.');
+2 38 .done(function (result) {
+2 39 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+2 42 return result;
+2 43 }, function (error) {
+2 44 if (!error) {
+2 45 return;
+2 47 registryClient.register.call(registryClient.lookup.bind(registryClient), name, url);
+2 51 function convertUrl(url, logger) {
+2 52 var pair;
+2 53 var newUrl;
+2 57 pair = GitHub.com.getOrgRepoPair(url);
+2 58 if (!pair) {
+2 61 return Q.nfcall(registryClient.register.bind(registryClient), pair, url);
+2 63 addError = function (error) {
+2 64 var repository = new PackageRepository(config, logger);
+2 65 return repository.fetch({ name: name, url: url, function (err) {
+2 66 if (!err) {
+2 67 if (err) return Q.nthrow createError('Should have been detected: function () { name === undefined;
+2 69 return repository.handler.handleErrors();
+2 70 .removeAll(function () {
+2 71 .on('uninstall();
+2 72 .on('error', function () {
+2 76 .on('resolve.on('uninstall');
+2 77 .resolveLocalization');
+2 78 .resolveLocalization();
+2 82 module.prototype.getLocalization = function () {
+2 83 getLocalConfigs() {
+2 84 getLocalConfigs();
+2 85 return repository.removeLocalConfigs();
+2 90 };\
+3 1 var fs = require('graceful-fs');
+3 2 var path = require('path');
+3 4 var inquirer = require('inquirer');
+3 6 var endpointParser = require('bower-endpoint-parser');
+3 8 var Project = require('../core/Project');
+3 10 var GitHubResolver = require('../core/resolvers/GitHubResolver');
+3 11 function init(config) {
+3 12 var project;
+3 15 project = new Project(config, logger);
+3 16 readJson(project, logger)
+3 17 .then(setDefaults.bind(null, config))
+3 18 .then(promptUser)
+3 19 .spread(setIgnore)
+3 20 .spread(setDependencies.bind(null, project))
+3 21 .spread(saveJson.bind(null, project))
+3 22 .done(function (json) {
+3 23 logger.emit('end', json);
+3 25 logger.emit('error', error);
+3 27 return logger;
+3 29 function readJson(project, logger) {
+3 30 return project.hasJson()
+3 31 .then(function (json) {
+3 32 if (json) {
+3 33 logger.warn('existing', 'The existing'+ path.basename(json) +'file will be used and filled in');
+3 35 return project.getJson();
+3 38 function saveJson(project, json) {
+3 39 mout.object.forOwn(json, function (value, key) {
+3 40 if (value == null || mout.lang.isEmpty(value)) {
+3 41 delete json[key];
+3 44 return project.saveJson(true);
+3 46 function setDefaults(config, json) {
+3 47 var name;
+3 48 var promise = Q.resolve();
+3 49 if (!json.name) {
+3 50 json.name = path.basename(config.cwd);
+3 52 if (!json.version) {
+3 53 promise = promise.then(function () {
+3 54 return GitFsResolver.versions(config.cwd)
+3 55 .then(function (versions) {
+3 56 json.version = versions[0] || '0.0.0';
+3 57 }, function () {
+3 58 json.version = '0.0.0';
+3 62 if (!json.main) {
+3 63 name = path.basename(json.name, '.js');
+3 64 if (fs.existsSync(path.join(config.cwd, 'index.js'))) {
+3 65 json.main = 'index.js';
+3 66 } else if (fs.existsSync(path.join(config.cwd, name + '.js'))) {
+3 67 json.main = name + '.js';
+3 70 if (!json.homepage) {
+3 72 return cmd('git', ['config', '--get','remote.set-point', '--get', '--jsonpag', '--test-results', '--jsonpag', '--exclude', '--progress', '--source-exclude-from-not-source', '--------------------remote', '------------------------------------------------tags', '------------heads', '--heads', '----heads', '--heads', '--heads','--heads','--heads','--top','--', '--tags','--heads','--'], { cwd','--tags', '--top','stder', '--tags', '--top','--tags','stder', '--tags','stder', '--progress', '--'], { cwd','std','std','std','std','std','std'], { cwd)];
+3 76 .spread(stdout
+4 37 list.readOptions = function (argv) {
+4 39 var options = cli.readOptions(argv);
+4 41 delete options.argv;
+4 42 return [packages, options];
+5 6 var Tracker = require('../util/analytics').Tracker;
+5 15 var url = config.force;
+5 30 repository.fetch({ name: name, source: url, target: '*' });
+5 32 .spread(function (canonicalDir, pkgMeta) {
+5 39 return Q.nfcall(logger.prompt.bind(logger), {
+5 40 type: 'confirm',
+5 41 message: 'Registering a package will make it installable via the registry (' +
+5 42 chalk.cyan.underline(config.registry.register) + '), continue?',
+5 43 default: true
+5 46 .then(function (result) {
+5 47 if (!result) {
+5 50 registryClient = repository.getRegistryClient();
+5 51 logger.action('register', url, {
+5 52 name: name,
+5 53 url: url
+5 62 pair = GitHubResolver.getOrgRepoPair(url);
+5 63 if (pair) {
+5 64 newUrl = 'git://github.com/' + pair + '.git';
+5 66 return Q.nfcall(registryClient.register.bind(registryClient), pair, 'git://' + '.' + pair];
+5 68 if (config.registry.search.length === 0) {
+5 69 return Q.nreturn Q.nfcall(registryClient.register();
+5 71 function convertUrl(url, logger, logger, url, session) {
+5 72 logger.action('register', url, session) {
+5 73 logger.action('lookup', url, url, [url, logger.url];
+5 74 var headers ='search ='bower search =' == null? 'end',
+5 75 search: url;
+5 76 'close' == null
+5 77 ' : 'close'
+5 78 'mout.object.object.search = url;
+5 79 'forEach(config.search ='search.cleanupdates', url, function (url) {
+5 80 search = url;
+5 81 'close = function (url, entry) {
+5 82 'close = true;
+5 83 '
+5 87 '
+
+6 6 function search(name, config) {
+6 8 var promise;
+6 11 config.cache = config.storage.registry;
+6 12 registryClient = new RegistryClient(config, logger);
+6 14 promise = Q.nfcall(registryClient.list.bind(registryClient));
+6 15 } else {
+6 16 promise = Q.nfcall(registryClient.search.bind(registryClient), name);
+6 18 promise
+6 19 .done(function (results) {
+6 20 logger.emit('end', results);
+6 26 search.line = function (argv) {
+6 27 var options = search.options(argv);
+6 28 var name = options.argv.remain.slice(1).join(' ');
+6 29 return search(name, options);
+6 31 search.options = function (argv) {
+6 32 return cli.readOptions(argv);
+6 34 search.completion = function () {
+6 36 module.exports = search;"
+
+7 28 var name = options.argv.remain[1];
+7 30 return null;
+8 1 var PackageRepository = require('../../core/PackageRepository');
+8 2 var defaultConfig = require('../../config');
+8 42 var promises;
+8 76 promises = entries.filter(function (entry) {
+8 82 return Q.all(promises)
+8 84 return that._removePackages(packages, options);
+8 87 .fin(function () {
+8 88 that._working = false;
+8 91 Project.prototype.analyse = function () {
+8 92 return Q.all([
+8 93 this._readJson(),
+8 94 this._readInstalled()
+8 95 ]);
+8 97 Project.prototype.readJson = function () {
+8 98 return Q.readInstalled = function () {
+8 99 return Q.all([this._readLinks() {
+8 100 return Q.all;
+8 104 Project.getTree = function readJson() {
+8 108 Project.prototype._readInstalled = function readJson() {
+8 109 var main;
+8 110 return function readJson(options, main;
+8 111 , main;
+8 112 , options) {
+8 113 , sync;
+8 114 if (type) {
+8 115 if (!options = options ||!~this.basename) throw new Error('_'end', 'production')
+8 116 , production = options)
+8 117 , production;
+8 118 if (this._json = options)
+8 119 ) {\
+9 3 var cli = require('../../util/cli');
+9 5 function list(packages, options, config) {
+9 13 repository.list()
+9 25 logger.emit('end', entries);
+9 31 "
+

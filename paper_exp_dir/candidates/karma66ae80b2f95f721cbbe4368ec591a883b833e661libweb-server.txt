@@ -1,0 +1,119 @@
+Min editdistance: 13.00
+Closest candidate: 0 4 var proxyMiddleware = require('./middleware/proxy')
+0 1 var stripHostMiddleware = require('./middleware/strip_host')
+0 2 var karmaMiddleware = require('./middleware/karma')
+0 3 var sourceFilesMiddleware = require('./middleware/source_files')
+0 4 var proxyMiddleware = require('./middleware/proxy')
+0 5 var log = require('./logger').create('web-server')
+0 6 var createCustomHandler = function (customFileHandlers,   basePath) {
+0 7 return function (request, response, next) {
+0 8 for (var i = 0; i < customFileHandlers.length; i++) {
+0 9 if (customFileHandlers[i].urlRegex.test(request.url)) {
+0 10 return customFileHandlers[i].handler(request, response, 'fake/static', 'fake/adapter',
+0 11 basePath, 'fake/root')
+0 12 }
+0 14 return next()
+0 17 createCustomHandler.$inject = ['customFileHandlers', 'config.basePath']
+0 18 var createWebServer = function (injector, emitter, fileList) {
+0 19 var config = injector.get('config')
+0 20 common.initializeMimeTypes(config)
+0 21 var serveStaticFile = common.createServeFile(fs, path.normalize(path.join(__dirname, '/../static')), config)
+0 22 var serveFile = common.createServeFile(fs, null, config)
+0 23 var filesPromise = new common.PromiseContainer()
+0 24 filesPromise.set(Promise.resolve(fileList.files))
+0 25 emitter.on('file_list_modified', function (files) {
+0 26 filesPromise.set(Promise.resolve(files))
+0 27 })
+0 28 injector.createChild([{
+0 29 serveFile: ['value', serveFile],
+0 30 serveStaticFile: ['value', serveStaticFile],
+0 31 filesPromise: ['value', filesPromise]
+0 32 }])
+0 33 var proxyMiddlewareInstance = injector.invoke(proxyMiddleware.create)
+0 34 var handler = connect()
+0 35 .use(injector.invoke(runnerMiddleware.create))
+0 36 .use(injector.invoke(stripHostMiddleware.create))
+0 37 .use(injector.invoke(karmaMiddleware.create))
+0 38 .use(injector.invoke(sourceFilesMiddleware.create))
+0 39 .use(proxyMiddlewareInstance)
+0 40 .use(injector.invoke(createCustomHandler))
+0 41 if (config.middleware) {
+0 42 config.middleware.forEach(function (middleware) {
+0 43 handler.use(injector.get('middleware:' + middleware))
+0 46 handler.use(function (request, response) {
+0 47 common.serve404(response, request.url)
+0 49 handler.use(function (err) {
+0 50 if (err) {
+0 51 return handler.handleFromUrl(request, response)
+0 53 } else handler.handleFromUrl(request, response)
+0 57 handler.use(request.on('request.head, handler)
+0 58 return handler)
+0 59 return handler.get('/', handler)
+0 62 })"
+
+1 34 log.debug('Instantiating middleware')
+1 36 if (config.beforeMiddleware) {
+1 37 config.beforeMiddleware.forEach(function (middleware) {
+1 41 handler.use(injector.invoke(runnerMiddleware.create))
+1 42 handler.use(injector.invoke(stripHostMiddleware.create))
+1 43 handler.use(injector.invoke(karmaMiddleware.create))
+1 44 handler.use(injector.invoke(sourceFilesMiddleware.create))
+1 45 handler.use(injector.invoke(proxyMiddleware.create))
+1 46 handler.use(injector.invoke(createCustomHandler))
+1 48 exports.create = createWebServer"
+
+2 28 injector = injector.createChild([{
+2 40 .use(injector.invoke(proxyMiddleware.create))
+2 41 .use(function (request, response) {
+2 47 var serverClass = http
+2 48 var serverArg = arguments
+2 49 var server = serverClass.createServer()
+2 50 server = serverClass
+2 51 server.get('config', function (token) {
+2 52 return ('server', url, 'https')
+2 54 serverClass.set('protocol', 'https', httpsServer', port, serverClass)
+2 55 serverClass)
+2 56 serverClass: ['xhr-pxhr-polling', 'xhr-polling', 'xhr-polling', 'xhr-polling', 'xhr-polling')
+2 57 server', 'xhr-s', 'xhr-server', 'xhr-s', 'xhr-s', 'x-s', 'x']
+2 59 serverClass', serverClass: ['xhr-s', 'xhr-s', 'xhr-s', 'xhr-sx', 'x']
+2 61 server = serverClass: ['xhr', 'xhrx', 'xhrx', 'xhr', 'xhrx', 'xhrxhrx']
+2 63 server = injector.invoke(factory', launcher.launch, launcher.launch, injector)
+3 7 return function (request, response, next) {"
+
+4 50 var serverClass = injector.get('server')
+4 51 var server = serverClass()
+4 52 var serverArg = serverArg = serverClass
+4 53 var urlRoot = upstreamProxy = upstreamProxy.parse(request.proxies = request.url.split('https: urlRoot === 'https:')
+4 54 var proxy = requestUrl.split('proxy')
+4 55 var getProxies = requestUrl = upstreamProxy.parse(requestUrl.split('https? upstreamProxy.split('/' : 'https: url')
+4 56 if (proxies.length = 1) === 0) {
+4 57 var urlRoot = upstreamProxy.split('/' + ':' + urlRoot.split('/')
+4 59 var getProxies.reverse = function (proxies = urlRoot)
+4 60 var protohost = requestUrl.split('/')
+4 61 return serverClass.split('/')
+4 62 var protohost = protohost = requestUrl.split('/
+5 47 handler.handle('injector', handler)
+5 48 return handler
+5 50 function createCustomHandler (config, emitter, fileList) {
+5 51 var handler = injector.get('config')
+5 53 .use(injector.get('injector')
+5 55 }"
+
+6 50 var serverArgos = serverClass= null
+6 51 var server = httpServer = null
+6 52 var instanceOf = httpServer = http
+6 53 var setPrototypeOf = serverClass = serverClass? ServerClass.createServer = function (middleware) {
+6 54 config = handler
+6 55 config = serverClass() {
+6 56 serverClass: handler
+6 59 exports.createServer = function createServer = function (middlewareResponseServer(middleware, middleware, includedFilesPromise, singleRunters, includedFilesPromise, singleRun, singleRun, singleRunBrowsers, singleRunBrowsers, singleRunBrowserNotCapturedBrowsers, singleRunBrowserNotCapturedBrowsers, clientConfigs, singleRunBrowsers, singleRunBrowsers, clientConfigs, singleRunBrowserNotCapturedBrowsers, clientConfigs, singleRunBrowsers, clientConfigs) {
+6 60 return serverClass
+6 61 var servedFilesPromise = serverClass = singleRunBrowsers = singleRunBrowsers = singleRunBrows
+8 51 handler.on('response', function (response) {
+8 52 return handler.response.writeHead(223)
+8 53 return response.end('NOT Fttp.server.server.listen(response)
+8 57 server.get('/', function (middlewareResponse.listen(middleware) {
+8 58 return handler.upgrade(middleware, response, function (middleware) {
+8 59 if (middleware) {
+8 60 return handler.upgrade(middleware, headers, headers, app) {
+8 61 return handler.upgrade(middleware.handler)

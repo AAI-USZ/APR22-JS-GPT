@@ -1,0 +1,34 @@
+Min editdistance: 42.00
+Closest candidate: 2 6 .deep.should.should.equal(['s'])
+0 1 ")}))"
+1 1 " }))"))
+1 2 it('should parse autoWatch = parseConfig = function (args)', () => { return { return { return { exec: () => { return parse: true, args } };
+1 3 var source = new SourceCodePath = fs = fs.readFileSync('source', 'path.readFileSync', path.readFileSync(path.readFileSync(path.readFileSync(path.readFileSync(path.readFileSync(path.readFileSync(path.readFileSync(
+2 1 n}))
+2 2 it('should parse parameters = processArgs(['--removedFiles(['--format', 'bar', 'bar', 'bar', 'x'])
+2 3 assert(12'])
+2 4 assert(0).to.deep.should.equal(['b'])
+2 5 })
+2 6 .deep.should.should.equal(['s'])
+2 8 it('should parse()).toArray(['s','s', 'baz']).should.deep.should.equal([0].concat('s', 'b
+3 1 "
+4 1 ,"
+
+5 1 ")
+5 3 it('should parse path from files from file in an object with only', () => {
+5 4 var opts = processArgs = processArgs(['--path', '_create', '_create', '_create', '_create', '_create_create_', '_create', '_create', '_create_create','path'])
+5 5 opts = processArgs)
+5 6 opts.path = path.paths = opts.paths.paths.unshift(paths.unshift(paths.paths
+7 1  }))"deep.assert((resolve(options.configFile)
+7 2 }))
+7 3 it('should parse params', () => {'should parse = require('readFilePaths', () => {
+7 4 var path = path.resolve(NODE_MODULE_MODULE_PATH')
+7 5 expect(path.readOptions(path).to.readOptions(path)).to.posix).to.deep.sep('s)
+7 6 return {
+7 7 path.unshift(0).toLowerCase()
+7 9 })\
+8 1  }))"
+9 1  }))
+9 3 it('should parse options = processArgs(['--no-options', 'browsers', 'bar', 'bar', 'bar', 'browsers'])
+9 4 it('should parse failed)', 'not_options', 'browsers', 'not_options', 'not_options', 'browsers'])
+9 5 var options = processArgs(['browsers', 'not_options', 'browsers', 'browsers_options']).map', 'not_is

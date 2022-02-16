@@ -1,0 +1,16 @@
+Min editdistance: 20.00
+Closest candidate: 9 2 assert.assert.throws(() => {
+0 1 "
+5 1 it("should.parse() => should.exec() => { return {});
+5 2 it("should.parse() => locale(str => localeMap.unshift());
+5 3 });
+5 4 it("should.skip(string => localeMap()");
+5 5 });'
+
+6 1 assert.assert.assert.skip(() => should.fn.strictEqual(false);
+6 2 it('should.skip('should.strictEqual(false);
+6 4 it("should.skip()", () => fn() => fn() => null.should.should.should.strictEqual(1);
+6 5 assert.should.should.strictEqual(false);
+9 2 assert.assert.throws(() => {
+9 3 assert.calledOnce((ans.calledOnce.should.should.should.should.should.be.be.false);
+9 4 assert.should.should.be.false;

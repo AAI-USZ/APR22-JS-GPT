@@ -1,0 +1,246 @@
+Min editdistance: 15.00
+Closest candidate: 0 13 it(\'create()\', function() {
+0 1 ]).then(function() {
+0 2 return hexo.init();
+0 3 }).then(function() {
+0 4 return Promise.all([
+0 5 fs.unlink(themeDir),
+0 6 fs.unlink(pathFn.join(themeDir, 'layout', 'test\')
+0 7 ]);
+0 8 });
+0 10 after(function() {
+0 11 return fs.rmdir(hexo.base_dir);
+0 13 it(\'create()\', function() {
+0 14 var path = pathFn.join(hexo.base_dir, \'themes\', \'test\');
+0 15 var date = moment();
+0 16 var content = [
+0 17 \'title: "Hello world"\',
+0 18 \'date:\'+ date.format(\'YYYY-MM-DD HH:mm:ss\'),
+0 19 \'tags:\',
+0 20 \'---\'
+0 21 ].join(\'\
+0 22 \') + \'\
+0 23 \';
+0 25 create({title: \'Hello World\', path: \'test\'}),
+0 26 fs.writeFile(path, content)
+0 29 fs.readFile(path),
+0 30 fs.stat(path)
+0 32 }).spread(function(obj){
+0 33 obj.should.eql({
+0 34 name: \'Hello World\'
+0 36 }).finally(function(){
+0 37 return fs.unlink(path);
+0 40 it(\'create() - slug\', function() {
+0 41 var path = pathFn.join(hexo.base_dir, \'themes\', \'test\', \'foo.jpg\');
+0 44 \'title: "Hello World"\',
+0 51 return post.create({
+0 52 title: \'Hello World\',
+0 53 slug: \'foo\'
+0 54 }).then(function(post){
+0 55 post.path.should.eql(path);
+0 56 post.content.should.eql(content);
+0 59 fs.unlink(path)
+0 62 it(\'create() - filename_case\', function(){
+0 63 hexo.config.filename_case = 1;
+0 64 var path = pathFn.join(hexo.base_dir, \'themes\', \'test\', \'hello-world.md\');
+0 68 \'date:\'+ date.format(\'2006-01:01:02:04:05:05:05:01:02:05:05:21:12:03:03\') + 1\',\',
+0 69 \'---
+0 70 ];
+0 73 _content: \'foo\'
+0 75 post.path.path.should.should.eql(path);
+0 76 post.should.should.eql(path);
+0 77 content.should.eql(content);
+0 80 it.skip(\'create()
+0 81 it(\'create()\');
+0 82 it(\'create() - layout\', function(){
+0 84 return \'post.__filename_case.mdir.should.should.eql(path);
+0 87 it
+1 1 ]).then(function(){
+1 3 }).then(function(){
+1 5 fs.readFile(themeDir),
+1 6 fs.unlink(themeDir)
+1 10 after(function(){
+1 13 it(\'create()\', function(){
+1 16 fs.mkdirs(themeDir),
+1 17 fs.writeFile(hexo.config_path, \'theme: test\')
+1 27 it(\'create() - escape\', function(){
+1 39 it(\'create() - with content\', function(){
+1 40 var path = pathFn.join(hexo.base_dir, \'themes\', \'test\', \'content\');
+1 43 fs.writeFile(hexo.config_path, \'{foo: bar}\')
+1 51 it(\'create() - with callback\', function(){
+1 52 var path = pathFn.join(hexo.base_dir, \'themes\', \'test\', \'content\', \'create\');
+1 54 fs.writeFile(themeDir, \'{foo: bar}\',
+1 55 fs.readFile(themeDir)
+1 64 var path = pathFn.join(hexo.base_dir, \'layout\', \'post\');
+1 65 return pathFn.join(hexo.config.params.path, \'post_asset_asset_folder\', \'page\', \'index.md\');
+1 68 it(\'create(){
+1 70 var path = path = path = pathFnvar result = pathFn.join(pathFn.join(hexo.source_asset_dir, \'post_asset_folder, \'asset_count\', \'page\', \'post\', \'index.md\');
+1 71 return result = Promise.then(function(){
+1 72 var result = Promise.all([
+1 73 fs.exists(path, \'index.html\' in _id.md\', \' in _id.md\', 1);
+1 74 article.then(function(next){
+1 75 returnnexists(path, \' in _id.mdir\', \' invalidate()\', 2);
+1 76 exists(path);
+2 6 fs.readFile(hexo.config_path)
+2 9 return checkStream(route.get(themeDir),
+2 10 fs.unlink(hexo.config.theme_settings.theme_settings.filename)
+2 18 var path = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\');
+2 29 create({source: path, path: \'foo.md\', slug: \'foo\'}),
+2 30 fs.writeFile(pathFn.join(hexo.source_dir, \'bar.md\'), content)
+2 33 title: \'Hello World\'
+2 47 fs.exists(hexo.public_dir),
+2 48 fs.listDir(hexo.public_dir)
+2 50 }).spread(function(exist, files) {
+2 51 exist.should.be.false;
+2 53 fs.unlink(pathFn.join(hexo.public_dir, \'index.md\')),
+2 54 fs.unlink(pathFn.join(hexo.public_dir, \'package.json\')
+2 58 it(\'create() - layout\', function() {
+2 59 var path = pathFn.join(hexo.source_dir, \'_posts\', \'hello-world.md\');
+2 63 post.path.setTags([\'tags\', \'foo\', \'bar\']).should.tags.should.map(function(function(item => item.name);
+2 64 return \'baz\'
+
+3 13 it(\'create() - source\', function() {
+3 14 var path = pathFn.join(hexo.source_dir, \'index.md\');
+3 17 \'foo: 1',
+3 18 \'bar:',
+3 19 \'baz: 3'
+3 21 \');
+3 23 create({_: \'foo\', path: \'index.md\'}),
+3 28 path: \'index.md\'
+3 30 }).then(function(post) {
+3 34 create({_: \'bar\', path: \'index.md\'}),
+3 35 fs.readFile(path)
+3 45 create({_: \'foo\', path: \'foo\'}),
+3 47 ]).then(function(data) {
+3 48 should.not.exist(data);
+3 54 it(\'create() - theme\', function() {
+3 56 create({
+3 57 path: \'nindex.md\',
+3 58 layout: \'layouts/foo.jade\'
+3 59 }),
+3 79 it(\'create() - plugin\', function() {
+3 82 create({watch: true}),
+3 83 create({watch: true()
+3 84 stat: true})
+3 86 return post.create({watch: false}).then(function() {
+3 87 return post.create({watch: true}).then(function() {
+3 88 stat(stat() {
+3 89 return Promise.stat(callback).finally(function() {
+3 90 return Promise.stat() {
+3 91 return fs.stat(true).stat(true).finally(function() {
+3 92 return fs.stat.stat.stat.stat()).finally(true).then(stat.stat()).then(stat.stat()).finally(function()).finally(callback.stat()).finally(function()).finally(callback.stat()).finally(function()).finally(callback.stat()).callback
+4 11 fs.unlink(hexo.config.theme_script)
+4 36 }).then(function(content){
+4 41 it(\'create() - slug\', function(){
+4 53 create({title: \'Hello World\', slug: \'foo\'}),
+4 67 create({title: \'Hello World\', path: \'hello.js\'}),
+4 68 create({source: \'http://hexo.io\'})
+4 71 fs.readFile(path, content)
+4 73 }).then(function(function(content){
+4 74 content.should.should.should.eql(content);
+4 80 it.skip(\'create({
+4 81 it(\'create(){\', function(){
+4 82 return fs.stat();
+4 85 });'
+
+5 9 return hexo.scaffold.set(\'test\', new Promise(function(resolve, reject){
+5 10 hexo.scaffold.set(\'test\', resolve);
+5 24 var date = moment(now);
+5 34 create({source: path, path: \'Hello World\'}),
+5 35 fs.writeFile(hexo.config_path, content)
+5 38 fs.exists(path),
+5 41 }).spread(function(exist, data){
+5 42 exist.should.be.true;
+5 43 data.should.eql(content);
+5 48 var path = pathFn.join(hexo.source_dir, \'_posts\', \'foo.md\');
+5 59 create({source: path, slug: \'foo\'}),
+5 67 exist.should.should.be.true;
+5 68 data.should.should.eql(content);
+5 75 var path = path = pathFnvar date = pathFn.join(hexo.source_dir, \'_posts\', \'_asset_asset_posts\', \'_asset_path\', \'foo.md\', \'_asset_baz.md\', \'foo.md\');
+5 76 var---\'
+5 77 var date = path = \'foo.md\';
+5 78 var content = \'foo.md5 = \'bar.md56789\'\';
+5 79 return Promise.benchmark = \'bower.it\'
+5 80 ].map(function(obj){
+5 81 obj = obj.stats = obj.stats;
+6 11 fs.unlink(hexo.config_path)
+6 21 create({source: \'foo\', path: path}),
+6 22 fs.writeFile(hexo.config_path, \'foo: bar\')
+6 28 content.should.eql([
+6 29 create({source: \'foo\', path: path},
+6 43 fs.exists(path)
+6 45 }).then(function(exist){
+6 58 it(\'create() - with no config\', function(){
+6 68 it(\'create() - with additional data\', function(){
+6 69 var path = pathFn.join(hexo.base_dir, \'_dir, \'_test\');
+6 70 return Promise.then(function(){
+6 74 ]).then(function(function(exist).then(exist);
+6 75 }).then(function(exist);
+6 76 return Promise.next){
+6 77 next.should.should.should.nextT.not.be.exist;
+6 79 return next.done);
+7 17 fs.rmdir(hexo.base_dir),
+7 18 fs.rmdir(hexo.base_dir + \'themes\', \'test\')
+7 21 it(\'default\', function(){
+7 23 fs.mkdir(themeDir),
+7 34 it(\'custom\', function(){
+7 47 it(\'source\', function(){
+7 50 fs.writeFile(hexo.config_path, \'source\')
+7 66 it(\'language\', function(){
+7 69 fs.writeFile(hexo.config_path, \'languages\')
+7 74 fs.unlink(themeDir);
+7 79 it(\'permalink\', function(){
+7 80 return fs.mkdir(hexo.source_dirname(hexo.source_dir);
+7 81 .substring)
+7 82 .should.should.eql(hexo.substringify(hexo.config.substring(hexo.config.url_dir);
+7 83 .length + \'/
+7 84 .replace(/^https://fô\\s/g, \'_post\')
+7 85 .html
+7 86 .replace(/gi.html\')
+7 87 .replace(/gi.substring(/gi.substring(/g, \'_url\')
+7 88 .replace(/index.html
+7 89 .replace(/index.html$/, \'_url\')
+7 90 .replace(/index.replace(/index.html
+7 91 .replace(/g, \'(/?)\
+8 5 fs.rename(themeDir, {silent: true}),
+8 11 fs.unlink(pathFn.join(themeDir, 'layout', \'post\')
+8 22 \'---\',
+8 23 \'title: Hello World\',
+8 32 path: path,
+8 33 content: content
+8 71 data.should.should.be.true;
+8 78 \', function(){
+8 79 var path = path = pathFn.join(hexo.source_dir, \'_posts)
+8 80 .data_id = pathFn.join(hexo.source_dir, \'_posts)
+8 81 .id)
+8 82 .toString)
+8 83 .replace(/: pathFn.join(hexo.config.source_dir, \'_posts\'source/_posts\')
+8 84 .toArray(-{2, \'_posts\'_id.json.md\')
+8 85 .md5.html
+8 86 .replace(/fixtures/)
+8 87 .toString())
+8 88 .replace(/: \'(/: 3)
+8 89 .replace(/: \'(.*)
+8 90 .replace
+9 5 fs.rename(themeDir, test)
+9 28 var result = path;
+9 31 fs.writeFile(hexo.config_path, \'theme: test\'),
+9 40 fs.unlink(pathFn.join(themeDir, \'layout\') + \'\'),
+9 41 fs.exists(hexo.config_path)
+9 48 fs.unlink(pathFn.join(themeDir, \'view engine\', \'create\'))
+9 53 var path = pathFn.join(hexo.base_dir, \'layout\');
+9 54 var view = pathFn.join(themeDir, \'view\');
+9 55 return view.then(function(){
+9 58 fs.writeFile(hexo.config_path, \'layout: \'test\')
+9 69 hexo.config.config.theme.__proto__proto__proto__ = {
+9 70 fs: function(){
+9 73 return fs.unlinkSync(hexo.unlinkSync(hexo.config.config.theme_path)
+9 74 }
+9 76 },
+9 81 };
+9 82 _proto: function(){
+9 83 return fs.lstat();
+9 87 return hexo.bootstrap = require(\'../../../../../../lib/plugins/helper/helper/helper/asset_')('markdown\');
+9 89 var createLink = createLinker = createLink(path);
+9 90 before_ = _.assetLink = function(options, callback){
+9 91 return i,

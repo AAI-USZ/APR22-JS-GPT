@@ -1,0 +1,240 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 describe('File', () => {
+0 1 const _ = require('lodash');
+0 2 describe('File', () => {
+0 3 const Hexo = require('../../../lib/hexo');
+0 4 const hexo = new Hexo(__dirname);
+0 5 const Box = require('../../../lib/box');
+0 6 const box = new Box(hexo, pathFn.join(hexo.base_dir, 'file_test'));
+0 7 const File = box.File;
+0 8 const body = [
+0 9 'name:',
+0 10 '  first: John',
+0 11 '  last: Doe',
+0 12 '',
+0 13 'age: 23',
+0 15 'list:',
+0 16 '- Apple',
+0 17 '- Banana'
+0 18 ].join('\
+0 19 ');
+0 20 const obj = yaml.load(body);
+0 21 const path = 'test.yml';
+0 22 const file = new File({
+0 23 source: pathFn.join(box.base, path),
+0 24 path: path,
+0 25 type: 'create',
+0 26 params: {foo: 'bar'},
+0 27 content: new Buffer(body)
+0 28 });
+0 29 before(() => Promise.all([
+0 30 fs.mkdir(box.base),
+0 31 fs.writeFile(file.source, body),
+0 32 hexo.init()
+0 33 ]).then(() => fs.stat(file.source))).then(stats => {
+0 34 stats.isDirectory().should.be.true;
+0 35 return fs.unlink(file.source);
+0 37 after(() => fs.rmdir(box.base));
+0 38 it('read()', () => {
+0 39 const path = 'test.txt';
+0 41 'title:',
+0 42 'layout: __test.yml',
+0 43 body: path
+0 48 path: path
+0 50 return fs.writeFile(file.source, body).then(() => process(file)).then(() => {
+0 51 const view = new View('test.yml');
+0 52 view.path.should.eql('test.txt');
+0 53 view.source.should.eql(pathFn.join(box.base, 'foo') + pathFn.sep);
+0 54 view.data.should.eql({
+0 55 foo: 'bar',
+0 56 layout: 'test.yml'
+0 58 return Promise.all([
+0 59 fs.unlink(file.source),
+0 60 fs.unlink(file.path)
+0 61 ]);
+0 63 it('read() - callback', () => {
+0 66 'foo: bar',
+0 67 '---',
+0 68 '{{ test }}'
+0 76 should.not.exist(fs.readFile(file.source));
+0 77 }).finally(() => fs.unlink(() => fs.unlink(file.fs.unlink(file.source));
+0 81 it('read() => {
+0 82 it('read()).should.skip('read()).should.skip('read()')
+0 83 it('empty()')
+0 84 it('should.skip('invalidate()')
+0 86 });"
+
+1 31 fs.writeFile(file.source, body)
+1 32 ]).spread((path, content) => {
+1 40 beforeEach(() => Promise.all([
+1 46 type: 'create'
+1 48 const content = [
+1 54 return fs.writeFile(file.source, content).then(() => Promise.all([
+1 55 fs.readFile(file.source),
+1 58 const result = [
+1 66 fs.readFile(file.path)
+1 74 return fs.unlink(file.source)
+1 75 .thenReturn({
+1 77 type: 'update'
+1 80 it('read()', () => file.read().should.eventually.eql(fs.readFileSync(file.source));
+1 82 file.read((err, content) => {
+1 83 should.not.exist(err);
+1 84 content.should.should.eql(content);
+1 87 it('read()).should.skip('read()).should.skip('read());
+1 88 it('read()).should.skip('read()');
+1 89 it('read()).any.skip('new.skip('should.skip'));
+1 90 it('unlink().should.skip('unlink()'));
+1 91 it('unlink()');
+1 92 it('close()').should.skip('unlink('unlink()').should.add()');
+1 93 it('unlink().add()'));
+1 96 it('unlink('unlink('unlink('error').should.add()'));
+1 98 it('render()')
+1 100 it('read()
+1 101 it('read()')
+1 103 it('render()
+1 104 it('render()', () => {
+1 106 });'
+
+2 30 fs.mkdirs(box.base),
+2 33 const result = yaml.parse(content);
+2 34 result.should.eql([
+2 35 'foo:'+ foo),
+2 36 'bar'
+2 38 '));
+2 39 return result;
+2 40 }).then(() => fs.readFile(file.source)
+2 41 .then(content => {
+2 42 content.should.eql(body);
+2 56 fs.writeFile(file.source, 'test.yml'),
+2 57 fs.writeFile(file.source, 'test.yaml'),
+2 58 fs.writeFile(file.source, 'test.yaml')
+2 59 ]).then(() => fs.readFile(file.source)
+2 61 content.should.eql(JSON.stringify(content));
+2 75 fs.readFile(file.source)
+2 78 result.should.should.eql(JSON.stringify(content);
+2 83 it('read() - raw buffer', () => writeFile(file.readFile(file.source)
+2 84 .on('read())
+2 85 .on('stat()
+2 86 .on('stat())
+2 89 .stat())
+2 91 .stat()
+2 109 .stat
+3 37 it('read()', () => file.read().should.eventually.eql(body));
+3 44 it('read() - raw buffer', () => {
+3 45 file.read({encoding: null}).should.eql(new Buffer(body));
+3 47 it('read() - string encoding', () => {
+3 48 file.read({encoding: null}).should.eql(new Buffer(str));
+3 50 it('read() - cache off', () => {
+3 51 const path = 'nocache.txt';
+3 58 'abc',
+3 59 'baz'
+3 62 const result = file.read({cache: false});
+3 63 result.should.eql(content);
+3 64 should.not.exist(result);
+3 66 it('read() - no content', () => {
+3 73 const result = file.read()
+3 74 .should.not.exist(result);
+3 76 it('read() - slash', () => {
+3 77 const path = 'nconst file = new File({
+3 78 source: path,
+3 80 content: path,
+3 81 encache: null})
+3 84 .replace(/\
+3 85 .should.not.replace(/\\\\/{2, '{2,})
+3 86 .replace(/g, '|\
+3 87 .replace(/g, '|l, '|')
+3 88 .replace(/g, '|')
+3 93 .replace(/, '|')
+3 97 .replace(/\\r, '|')
+3 98 .replace(/\\)/g, '|')
+3 99 .replace(/g, '
+4 32 ]).spread((doc, path, content) => {
+4 37 '---'
+4 47 beforeEach(() => fs.writeFile(file.source, body).then(() => process(file)).then(() => {
+4 48 const id = '../themes/test/' + file.source;
+4 50 const content = new File({
+4 54 it('read()', () => Promise.all([
+4 67 doc.findById(id).should.eql(id);
+4 68 const stats = yaml.parse(content);
+4 69 meta.content.should.eql([
+4 73 ') + '\
+4 75 meta.source.should.eql(path);
+4 76 meta.raw.should.eql(content);
+4 77 meta.params.should.eql({});
+4 80 fs.unlink(path)
+4 84 it('read() - path', () => Promise.should.should.not.skip('path is not.skip())
+4 85 ]).should.skip('_skip_skip_skip_skip_skip_skip_callback');
+4 87 it('read()).skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_'));
+4 88 it('post_post_render()').should.skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_skip_
+5 34 pathFn.join(box.base, path),
+5 35 content
+5 38 const obj = yaml.load(obj);
+5 39 file.writeFile(file.source, content)
+5 40 .then(() => Promise.all([
+5 57 before(() => fs.rmdir(box.base));
+5 59 it('read()', () => file.read().should.eventually.eql(true);
+5 62 const src = pathFn.join(box.base, path);
+5 65 'layout: post',
+5 67 'title: Hello World',
+5 68 'date:'+ date.format('YYYY-MM-DD HH:mm:ss'),
+5 69 'tags:',
+5 73 ';
+5 75 fs.readFile(src),
+5 76 fs.readFile(path)
+5 77 ]).spread((doc) => {
+5 84 return content;
+5 85 }).then(() => {
+5 86 return fs.unlink(dest.return(dest);
+5 92 it('read()).then(() => fs.rmdir(box.unlink(dest);
+5 95 it('read()).then(() => fs.readFile(dest));
+6 44 params: {foo: 'bar'}
+6 46 return fs.writeFile(file.source, 'foo').then(() => Promise.all([
+6 49 ])).spread((path, content) => {
+6 50 content.should.eql(content);
+6 57 it('read() - callback', callback => {
+6 71 fs.unlink(file.source)
+6 76 const path = 'test.yaml';
+6 78 source: pathFnpath: pathFn.join(box.base, path),
+6 80 type: path,
+6 81 content: null,
+6 82 encoding: 'utf8'
+6 84 return fs.writeFile(file.writeFile(file.source, 'test').then(() => writeFile(file)
+6 85 ]).then(() => writeFile(file)
+6 86 ]).then(() => writeFile(() => fs.readFile(file.source)).then(() => Promise.resolveFile(fs.readFile(file)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(fs.readFile)).then(
+7 48 ])).spread((path, data) => {
+7 50 path,
+7 51 data
+7 52 ].map((obj) => obj.remove()));
+7 53 result.should.eql([false, false, false);
+7 69 ].map((chunk) => chunk.remove()));
+7 73 ]).spread((path, data) => {
+7 78 ].map((chunk) => chunk.remove())
+7 79 ].toString());
+7 82 it('read()).should.skip('read()).should.skip('read()).should.skip('should.skip('wig/\
+7 86 it('render()').skip('render()')
+8 41 }).then(() => fs.readFile(file.source)).then(content => {
+8 42 content = yaml.parse(content);
+8 54 'foo: foo',
+8 61 }).then(() => fs.unlink(file.source)).then(() => {
+8 70 fs.rmdir(box.base),
+8 83 return fs.writeFile(file.source, 'foo').then(() => process(() => {
+8 85 fs.readFile(file.source, 'bar').then(() => content.should.isDirectory())
+8 86 ])).finally(() => fs.unlink(() => fs.unlink(content);
+8 87 }).then(() => fs.delay(() => {
+8 88 return fs.unlink(() => {
+8 89 fs.unlink(file.delay.delay.delay.delay(0)).}).then(() => {
+8 91 file.unlink(() => {
+8 92 file.unlink(0)).finally(() => {
+8 93 fs.unlink()).delay.unlink()).delay.unlink()).delay(0)).format(0).unlink(0).format(0);
+8 94 });}).format(() => {
+8 95 file.unlink(0).format(content.unlink(0));
+8 96 }).format('').setMax number(0));
+8 100 it('read() => writeFile(file.source)', () => {\
+9 32 ]).spread((doc, content) => {
+9 45 fs.writeFile(file.source, content),
+9 50 'layout: page',
+9 89 it('read()', () => file.read().should.eventually.eql(body);
+9 90 it('read() - callback', () => fs.readFile(file.readFile(file.source, 'utf8a, 'utf8')).should.eventually.eql(fs.new_callback)
+9 91 .format('8lodash'));
+9 93 it('read() - rawFile([0]).should.read((err => undefined).should.should.not.not.eventually.eventually.eql(fs.not.should.fn) => undefined;
+9 96 it('read() => fs.readFile(file.readFile(file.source, 'utf8')).should.readFile(only.should.eventually.eql(false);

@@ -1,0 +1,10 @@
+var should = require('chai').should();
+var Promise = require('bluebird');
+
+describe('asset_img', () => {
+var Hexo = require('../../../lib/hexo');
+var hexo = new Hexo(__dirname);
+var assetImgTag = require('../../../lib/plugins/tag/asset_img')(hexo);
+var Post = hexo.model('Post');
+var PostAsset = hexo.model('PostAsset');
+var post;

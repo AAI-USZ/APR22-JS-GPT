@@ -1,0 +1,5 @@
+module.exports = function(req, res, next){
+if (req.session.is_login) return next();
+
+var base = req.app.locals.base,
+redirect = req.url.substring(base.length);

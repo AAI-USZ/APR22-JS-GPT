@@ -1,0 +1,244 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var fs = require('hexo-fs');
+0 1 exports.process = function(file){
+0 2 if (this.render.isRenderable(file.path)){
+0 3 return processPage.call(this, file);
+0 4 } else {
+0 5 return processAsset.call(this, file);
+0 6 }
+0 7 };
+0 8 exports.pattern = common.ignoreTmpAndHiddenFile;
+0 9 function processPage(file){
+0 10 var Page = this.model('Page');
+0 11 var path = file.path;
+0 12 var doc = Page.findOne({source: path});
+0 13 var self = this;
+0 14 var config = this.config;
+0 15 var timezone = config.timezone;
+0 16 if (file.type ==='skip' && doc){
+0 17 return;
+0 19 if (file.type === 'delete'){
+0 20 if (doc){
+0 21 return doc.remove();
+0 26 return Promise.all([
+0 27 file.stat(),
+0 28 file.read()
+0 29 ]).spread(function(stats, content){
+0 30 var data = yfm(content);
+0 31 var output = self.render.getOutput(path);
+0 32 data.source = path;
+0 33 data.raw = content;
+0 34 data.date = common.toDate(data.date);
+0 35 if (data.date) data.date = common.timezone(data.date, timezone);
+0 36 if (data.updated) data.updated = common.timezone(data.updated, timezone);
+0 37 if (data.permalink){
+0 38 data.path = data.permalink;
+0 39 delete data.permalink;
+0 40 if (data.path[data.path.length - 1] === '/'){
+0 41 data.path += 'index';
+0 44 data.path = '.' + output;
+0 46 if (!pathFn.extname(data.path)){
+0 47 data.path += '.' + output;
+0 56 data.path = '';
+0 58 if (data.permalink.indexOf('/')!== -1){
+0 59 data.permalink = 'index';
+0 61 if (data.path.indexOf('/users')!== -1){
+0 62 data.path = data.permalink + '.' + data.path;
+0 64 if (!data.length) {
+0 65 delete data.path;
+0 68 var stack = self.stack;
+0 69 if (stack.length === 0) {
+0 72 var parent = pathFn.join(self.base, stack.length);
+0 73 var parentUrl = args.ltrim();
+0 74 if (method === 'create'){
+0 75 done = function(url){"
+
+1 1 var fs = require('hexo-fs');
+1 2 var _ = require('lodash');
+1 3 var yfm = require('hexo-front-matter');
+1 4 var post = require('../post');
+1 5 var Scaffold = require('./scaffold');
+1 6 var Source = require('./source');
+1 7 var Router = require('./router');
+1 8 var Theme = require('../theme');
+1 9 var defaultConfig = require('./default_config');
+1 10 var extend = require('../extend');
+1 11 var Render = require('./render');
+1 12 var registerModels = require('./register_models');
+1 13 var Post = require('./post');
+1 19 var loadDatabase = require('./load_database');
+1 20 var libDir = pathFn.dirname(__dirname);
+1 21 var sep = pathFn.sep;
+1 22 var dbVersion = 1;
+1 23 function Hexo(base, args) {
+1 24 base = base || process.cwd();
+1 25 args = args || {};
+1 26 EventEmitter.call(this);
+1 27 this.base_dir = base + sep;
+1 28 this.public_dir = pathFn.join(base, 'public') + sep;
+1 29 this.source_dir = pathFn.join(base,'source') + sep;
+1 30 this.plugin_dir = pathFn.join(base, 'node_modules') + sep;
+1 31 this.script_dir = pathFn.join(base,'scripts') + sep;
+1 32 this.scaffold_dir = pathFn.join(base,'scaffolds') + sep;
+1 33 this.theme_dir = pathFn.join(base, 'themes', defaultConfig.theme) + sep;
+1 34 this.theme_script_dir = pathFn.join(this.theme_dir,'scripts') + sep;
+1 35 this.env = {
+1 36 args: args,
+1 37 debug: Boolean(args.debug),
+1 38 safe: Boolean(args.safe),
+1 39 silent: Boolean(args.silent),
+1 40 env: process.env.NODE_ENV || 'development',
+1 41 version: pkg.version,
+1 42 init: false
+1 44 this.extend = {
+1 45 console: new extend.Console(),
+1 46 deployer: new extend.Deployer(),
+1 47 filter: new extend.Filter(),
+1 48 generator: new extend.Generator(),
+1 49 helper: new extend.Helper(),
+1 50 migrator: new extend.Migrator(),
+1 51 processor: new extend.Processor(),
+1 52 renderer: new extend.Renderer(),
+1 53 tag: new extend.Tag()
+1 55 this.config = _.clone(defaultConfig);
+1 56 this.log = logger(this.env);
+1 57 this.render = new Render(this);
+1 58 this.route = new Router();
+1 59 this.post = new Post(this);
+1 60 this.scaffold = new Scaffold(this);
+1 61 this._db.source = new Post(this);
+1 62 this._db.source = new Scaffold(this);
+1 63 this._db.user.route.getSource(this);
+1 64 .skipRender(this);
+1 65 if (this.skip, function(this.get, callback) {
+1 66 return callback) {
+1 67 return callback();
+1 68 _.all([
+1 69 _if (config.key](this, callback)
+1 70 ].forEach(this, function(callback)
+1 71 .get, callback)
+1 72 .add(this)
+1 73 ].forEach(function(item, i) {
+1 74 return this.get(item, callback);
+1 75 });
+1 77 if (!this.handle_get, callback);
+1 78 \
+2 2 var util = require('hexo-util');
+2 3 var escape = util.escape;
+2 4 var Pattern = util.Pattern;
+2 5 module.exports = function(ctx){
+2 7 var Page = ctx.model('Page');
+2 10 var config = ctx.config;
+2 17 return doc.remove();"
+
+3 4 var slugize = util.slugize;
+3 5 var escapeRegExp = util.escapeRegExp;
+3 6 var rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]*?)<\\/escape>/g;
+3 7 var rSwigVar = /\\{\\{[\\s\\S]*?\\}\\}/g;
+3 8 var rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+3 9 var rSwigBlock = /\\{%[\\s\\S]*?%\\}/g;
+3 10 var rSwigFullBlock = /\\{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+3 11 var placeholder = '\\uFFFC';
+3 12 var rPlaceholder = /(?:<p>)?\\uFFFC(\\d+)(?:<\\/p>)?/g;"
+
+4 5 var Permalink = util.permalink;"
+
+5 35 if (data.date){
+5 36 if (timezone) data.date = common.timezone(data.date, timezone);
+5 38 data.date = stats.ctime;
+5 40 data.updated = common.toDate(data.updated);
+5 41 if (data.updated){
+5 42 if (timezone) data.updated = common.timezone(data.updated, timezone);
+5 44 data.updated = stats.mtime;
+5 56 data.path = path.substring(0, path.length - extname.length + 1) + '.' + output;
+5 58 if (!data.layout && output!== 'html' && output!== 'htm'){
+5 59 data.layout = false;
+5 63 return doc.replace(data);
+5 65 return Page.insert(data);
+5 69 function processAsset(file){
+5 70 var id = file.source.substring(this.base_dir.length).replace(/\\\\/g, '/');
+5 71 var Asset = this.model('Asset');
+5 72 var doc = Asset.findById(id);
+5 81 doc.replace(data);
+5 82 doc.remove();
+5 87 return Promise.then(function(){
+5 88 return self.post.save();
+5 93 function processAsset.save();
+5 94 function Asset(file;
+5 95 return Asset(data, callback){
+5 96 return Asset.remove();
+5 97 .findById(data, callback);
+5 98 .remove();
+5 99 .save disabled;
+5 101 if (remove) return;
+5 102 .clean;
+5 104 .remove) return;
+5 105 .get;
+5 107 if (theme_id && callback) && callback!== undefined;
+5 109 .some(this.remove);
+5 110 .remove
+6 35 if (data.date) data.date = common.toDate(data.date);
+6 36 if (data.updated) data.updated = common.toDate(data.updated);
+6 44 data.path = path;
+6 56 data.path = path.replace(/\\.\\w+/g, '/');
+6 58 if (!data.layout && output!== 'htm'){
+6 80 return Asset.save({
+6 81 _id: id,
+6 82 path: file.source,
+6 83 modified: file.type!=='skip'
+6 85 ]).then(function(){
+6 86 if ((){
+6 87 return doc.save();
+6 88 return Promise.notify(data.save();
+6 89 }).then(function(){
+6 90 return Promise.next.next(function(){
+6 91 return doc.check();
+6 97 }).then(function(function(){
+6 98 .then(function(){
+6 99 return Promise.remove();
+6 100 return doc.update();
+6 106 function testPage.save();
+6 107 it('render(){
+6 108 .skip('new_next()
+6 109 .usage: null;
+6 110 it('new_next_next: null', function(){
+6 111 tmp);
+6 112 tmp.usage.usage.usage.usage.usage.usage.should.should.should.not.not.be.empty;
+7 50 data.path = path.substring(0, path.length - extname.length) + '.' + output;
+7 70 var id = this.id;
+7 81 doc.data = Asset.findOne({source: file.path});
+7 82 if (doc) return doc.remove();
+7 86 id: id
+7 91 function Asset(file, id, doc){
+7 92 if (id = file.type === 'after_;
+7 94 doc.type === 'after_;
+7 95 doc.type === 'create();
+7 97 doc.apply(this,
+7 98 this, this.save();
+7 100 if (doc.remove();
+7 101 this.remove();
+7 103 } else
+7 107 function remove(doc){"
+
+8 35 if (data.date) {
+8 41 if (data.updated) {
+8 46 if (data.permalink) {
+8 70 var id = file.source.substring(this.base_dir.length);
+8 81 doc.path = file.path;
+8 82 doc.replace(/href= file.permalink, function(){
+8 83 return doc.replace(/href= file.path, 'index' + this.substringify(this.base_url));
+8 85 if (!this.get Asset(data);
+8 86 doc.path = data;
+8 87 doc.modified = file.save();
+8 88 if (data.length = this.length = this.length;
+8 89 if (!this.length!== 0;
+8 90 this.each(function next();
+8 91 .replace, i){
+8 92 var path = data.stat();
+8 93 .each(function next();
+8 94 if (!data.stat, next();
+8 95 if (!path.isUpdated && doc){
+8 96 doc.path = data.path) return next();
+8 97 if (data.type === '_
+9 38 delete data.permalink;"
+

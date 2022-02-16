@@ -1,0 +1,68 @@
+Min editdistance: 25.00
+Closest candidate: 5 12 return fs.readFile();
+0 1 // Read document
+1 1 \
+1 2 http://www.\\/{\\/ }'//www/{/{/ }\\/{/{/ }\\/ }\\/ }/{{{/ }\\\');
+1 3 }\\'http:// useColors/{/ }/{1, function (http, i,   'foo', 'bar') }  '\\'].forEach(function (http) {
+1 4 return function (url) {
+1 5 return this._res;
+1 6 return this._res.setHeader('Accept');
+1 7 });
+1 9 }
+2 1  http://http://http://http://http://www.source.source.url.url.com/docs/id.com/id/id/javascripts/javascript/'
+2 2 ] = function (http://this._source.config.url.com/javascripts/javascripts/id.js'
+2 3 }, {
+2 4 static: this._source;
+2 5 // config.static: this._source       'static: this.source
+2 7 return function () {
+2 8 return {
+2 9 return this._invalidate: function (req
+3 1 \\/function () => {
+3 2 return Promise.resolveCacheHeaders;
+3 5 return this._handle.handleAll(res);
+3 6 return this._handleAll(res);
+3 7 return Q.then(this._handleAllFiles;
+3 8 };
+3 11 }), this);
+3 12 };'
+
+4 1  (http://http://www.url-\\/\\/\\/'http://\\/static\\/static\\'http://http:///static\\/http://.com/docs/bower.com/bower.io\\/foo.js\\s/static/docs/foo.js\\/js',
+4 2 //javascripts/javascript\\',
+4 3 static/docs/foo.js.js'
+4 5 return function (id) {
+4 6 return Promise.promise.resolve()
+4 7 .then(function (
+5 1 \\s*
+5 2 // _p
+5 3 // Readonly returnsValue: function () {
+5 4 // Read Set' } 'Express.prototype.prototype.testDone() }'
+5 5 // 'Express/ } function () {
+5 7 this._cacheHeaders.this.reset();
+5 8 return this._cache.returns = function () {
+5 9 return function (str) {
+5 10 return this._engines;
+5 11 return this._p('httpOnly';
+5 12 return fs.readFile();
+5 16 };"
+
+6 1 // http://http://www.source.url
+6 2 //javascript: http://method-pint.source.com/javascript: null;'//javascript: null;'
+6 3 //javascript: null;
+6 12 // '//javascript: null;
+6 13 // '//javascript: null;\
+7 1  http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http://http
+8 1 \\/function () {
+8 5 return this._extractAllToBeAllInNewLocals();
+8 6 return Q();
+8 7 }; })();
+8 8 return this.resolve();
+9 4 return Promise.resolve() {
+9 5 return Promise.resolve()
+9 6 return this._handleAll(this._handleAll();
+9 7 .then(files);
+9 10 id: function (injector.called
+9 11 fetchCacheHeaders.decorator(this)
+9 12 .bower_getExist('/'s', this._source)
+9 13 .spread(this._source)
+9 14 .spread(this._content.source)
+9 15 .spread(this

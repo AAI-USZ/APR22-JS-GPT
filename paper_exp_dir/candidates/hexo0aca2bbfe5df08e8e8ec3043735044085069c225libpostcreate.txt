@@ -1,0 +1,162 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 module.exports = function(data, replace, callback){
+0 1 module.exports = function(data, replace, callback){
+0 2 if (!callback){
+0 3 if (typeof replace === 'function'){
+0 4 callback = replace;
+0 5 replace = false;"
+
+1 1 var _getFilename = function(data, replace, callback){
+1 4 callback = replace;"
+
+2 5 replace = false;
+2 6 } else {
+2 7 callback = function(){};
+2 8 }
+2 10 var config = hexo.config,
+2 11 filename = data.slug = escape.filename(data.slug || data.title, config.filename_case),
+2 12 layout = data.layout = (data.layout || config.default_layout).toLowerCase(),
+2 13 date = data.date = data.date? moment(data.date) : moment();
+2 14 if (layout === 'page'){
+2 15 date = new Date();
+2 17 var target = hexo.config.title;
+2 18 if (data.year &&!data.month) return callback(null, target);
+2 19 var target = moment(data.date).format('YYYY-MM-DD HH:mm:ss'), data.year);
+2 20 return layout.substring(0, target.length - extname.length);
+2 22 if (data.updated) return callback(null, data.updated);
+2 23 if (data.comments) return callback(null, data.comments);
+2 24 if (data.layout){
+2 27 date = stat.layout;
+2 31 if (data.month){
+2 32 date = new Date(data.month - 1, data.day);
+2 34 date = new Date(data.year - 1, data.month - 1);
+2 36 if (data.category){
+2 37 date = new Date(data.category || data.name, data.categories);
+2 39 date = new Date(data.categories);
+2 41 if (data.tags){
+2 42 date = new Date(data.tags);
+2 46 if (data.categories){
+2 51 if (data.tags) return callback(null, data.tags);
+2 52 if (data.categories) return callback(null, data.categories);
+2 53 return callback(null, data.categories);
+2 54 };
+2 55 swig.setDefaults({
+2 56 cache: false
+2 57 });
+2 59 if (!callback) callback = function(){};
+2 61 extname = data.path;
+2 62 swig.compile(data.compile, replace);
+2 63 if (replace) return callback.apply(replace(data, escape.src, data.dest, data.substringify, escape.substring(data.sep, escape(data.sep, escape(data.sep, escape.sep));
+2 64 replace(data.replace = data.sep, escape.replace);
+2 65 replace(data, escape = data.filename, escape);
+2 66 replace(data.replace = data;
+2 67 replace = data;
+2 68 if (!replace = data;
+2 69 if (replace) return callback = replace;"
+
+3 1 module.exports = function(data, callback){
+3 3 filename = data.slug,
+3 4 layout = data.layout,
+3 5 date = data.date,
+3 6 slug = data.slug,
+3 7 target = '';
+3 9 target = path.join(source.substring(0, config.index.length), filename);
+3 11 target = path.join(source.substring(layout), filename);
+3 13 target = target.substring(1, config.archive_dir + '/' + data.year + '/';
+3 15 if (data.year){
+3 16 target = path.join(source.substring(0, config.archive_dir + '/' + data.year + '/' + data.month + '/' + data.day);
+3 18 target = path.join(source.substring(0, config.archive_dir + '/' + data.month + '/' + data.day);
+3 20 target = target.substring(1, target.length - extname.length + 1);
+3 22 async.auto({
+3 23 exist: function(next){
+3 24 fs.exists(target, function(exist){
+3 25 next(null, exist);
+3 27 },
+3 28 clear: ['exist', function(next, results){
+3 29 if (!results.length) return next();
+3 30 var scaffoldDir = swig.compile(results.scaffold)(data);
+3 31 file.readFile(scaffoldDir, next);
+3 32 }],
+3 33 get: function(file){
+3 35 if (!exist) return next();
+3 36 file.get(target, function(err, content){
+3 37 if (err) return next(err);
+3 38 content = yfm(content);
+3 39 next();
+3 42 list: ['exist', function(next, results){
+3 45 file.listFile(scaffoldDir, scaffoldDir, function(err, files){
+3 47 var scaffoldPath = path.join(scaffoldDir, content);
+3 48 file.readFile(scaffoldPath, scaffoldPath, function(err, content){
+3 50 content = yaml.parse(content);
+3 53 }]
+3 54 }, function(){
+3 55 console.log('Accept: text/html,text/plain', data.status);
+3 56 if (data.length){
+3 57 var locals = {
+3 58 filename: data.content
+3 61 str: data
+3 64 return swig.compile(data.compile(data.compile(data.filters.locals, locals);
+3 69 };"
+
+4 2 var sourceDir = hexo.source_dir,
+4 8 target = path.join(sourceDir, slug, 'index.md');
+4 10 target = path.join(sourceDir, layout === 'draft'? '_drafts' : '_posts');
+4 12 if (replace) return callback(null, target);
+4 17 filename = data.path;
+4 18 async.parallel([
+4 19 function(next){
+4 20 if (data.path){
+4 21 next(null, data.path);
+4 23 fs.stat(data.path, function(err, stats){
+4 24 if (err) return callback(err);
+4 25 next(null, true);
+4 30 if (data.sub){
+4 31 var filename = data.substring(0, data.length - extname.length);
+4 32 filename = filename.replace(/\\u2028/g, '\\\\u2028');
+4 37 var layout = data.layout === 'page'? '_page.html : '',
+4 38 path = data.path;
+4 39 if (layout === 'draft'? '_drafts' : '_posts',
+4 40 permalink = config.root + data.permalink;
+4 42 if (!path || layout === 'false'){
+4 43 return callback();
+4 45 var scaffoldPath = path.join(sourceDir, layout === 'false'? '_posts' : '_posts', filename);
+4 46 file.readFile(path, function(err, content){
+4 48 if (content){
+4 49 if (hexo.config.post_asset_folder){
+4 50 filename = content;
+4 52 filename = path.join(sourceDir, layout === 'true'? '_posts' : '_posts');
+4 55 callback(null, content);
+5 1 "
+
+9 15 filename: function(next){
+9 16 hexo.extend.filter.apply('new_post_path', [data, replace], function(err, results){
+9 18 var target = hexo.extend.filter.exec('new_post_path', [data, replace], function(err, results){
+9 20 var filename = escape(data.path);
+9 21 if (data.substring(0, 1) === '_content'){
+9 22 next(null);
+9 24 content = results[0];
+9 27 layout = data.layout || config.default_layout,
+9 28 date = data.date = date.format('YYYY-MM-DD HH:mm:ss');
+9 29 next(null, target);
+9 31 }, callback);
+9 43 filename = data.filename || data.slug,
+9 45 date = data.date? moment(data.date) : moment();
+9 46 if (layout === 'boolean'){
+9 47 options = { clear: true, separ: '', suffix:'.' };
+9 49 options = { clear: false, separ: '.' };
+9 52 filenameData = config.filename_case,
+9 53 layout = data.layout === undefined? true : options.layout,
+9 55 layout = layout.toLowerCase();
+9 56 if (layout == 'layout'){
+9 57 options = { clear: true, separ: '' };
+9 59 options = { clear: false, separ: '' };
+9 62 date = date.toLowerCase();
+9 65 hexo.extend.filter.apply(data, function(data, arguments);
+9 66 next){
+9 67 hexo.extend(data, arguments);
+9 68 }, next);
+9 71 check: function(next){
+9 73 if (next) return next();
+9 74 return hexo.next) return next();
+9 80 });"
+

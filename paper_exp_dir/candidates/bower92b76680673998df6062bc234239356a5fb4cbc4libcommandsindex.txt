@@ -1,0 +1,26 @@
+Min editdistance: 9.00
+Closest candidate: 7 11 'search': require('./search'),"
+
+0 1 'install': require('./install'),
+0 2 'list': require('./list'),
+0 3 'ls': require('./list'),
+0 4 'uninstall': require('./uninstall'),
+0 5 'update': require('./update'),
+0 6 'unregister': require('./unregister'),"
+
+1 5 'link': require('./link'),
+1 7 'lookup': require('./lookup'),
+1 9 'uninstall': require('./uninstall'),"
+
+2 1  'install': require('./install'), 'list': require('./list'), 'uninstall': require('./uninstall')},
+2 2 'ls': require('./list'), 'uninstall': require('./uninstall'), 'link': require('./link'), 'list': require('./list'), 'lookup': require('./lookup'), 'install': require('./install'),
+2 4 'list': require('./list'), 'lookup': require('./lookup'),
+2 5 'info': require('./info'),
+2 6 'register': require('./register'),"
+
+3 9 'uninstall': require('./uninstall')"
+
+7 9 'init': require('./init'),
+7 10 'register': require('./register'),
+7 11 'search': require('./search'),"
+

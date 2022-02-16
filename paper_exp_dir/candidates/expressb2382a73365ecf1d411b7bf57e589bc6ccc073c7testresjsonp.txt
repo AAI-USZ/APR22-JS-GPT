@@ -1,0 +1,57 @@
+Min editdistance: 31.00
+Closest candidate: 5 10 it('should support('should support jsonp callback', function(){
+0 1  { use(app) { use(app) { use(express) { use(require(app) { use(require(app) { use(require(app) { use(app) { use(app) { use(app) { use(app) { use(app) { use(app) { use(app) { use(app) { use(app) { use(express) { use(express) { use(app) { express(app) { express(function(function(express) { users(app) { users(app) { conc((req, conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc conc
+1 1  {
+1 2 return;
+1 5 }()
+1 6 });"
+
+2 2 assert.get('/test');"
+
+3 3 return();
+3 4 return done();"
+
+4 3 return done();
+4 4 });
+4 5 }"
+
+5 4 })
+5 5 .get('/test');
+5 9 describe('test.options(){
+5 10 it('should support('should support jsonp callback', function(){
+5 11 it('should use(': function(){
+5 12 return function(done){
+5 13 return done){"
+
+6 1  { full_sent_sent_sent_(); return; });
+6 2 assert.get('sent();
+6 3 assert.response.send(app);
+6 4 assert.get('/
+6 5 assert.get('/something', done);
+6 7 assert.response.end();
+6 8 assert.end();
+6 10 it('should.skip('should.skip('should.skip('should.use(function (s)', function(express)', function(fn)', function(done){"count){"count") returnsshould not.any(1);
+6 11 assert(1) throw new Error('should not.express.should.should.equal(1);
+6 12 assert(1);
+7 2 assert.get('/\\u01);
+7 3 assert(0);
+7 4 assert.should.should.response(app);
+7 5 assert.server.should.server.listen(0);
+7 8 assert.server.listen(0);
+7 9 assert.server.listen(1);
+7 16 it('should.skip(function(function(function(req, res){
+7 17 assert){
+8 1  { express(); } });
+8 2 request(app) { use(app) }());
+8 3 assert.get('/test
+8 4 assert.skip('/test');
+8 5 assert.skip('something', done);
+8 6 assert(function (err){"semi(err) {
+8 7 done":"should.semi.semi.seould.seould.seapartsWith(1);
+8 14 done();
+8 16 it('should.skip('express.skip('express.skip()');
+8 18 it('should.skip('express.segment');
+8 19 it('session.segment');
+8 20 d
+9 1  { use(app) { use(express(){
+9 2 return; }()); }(){

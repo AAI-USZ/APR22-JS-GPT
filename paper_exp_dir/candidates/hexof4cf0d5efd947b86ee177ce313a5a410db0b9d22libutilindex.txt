@@ -1,0 +1,44 @@
+Min editdistance: 1.00
+Closest candidate: 2 2 file2: require('./file2'),
+0 1 titlecase: require('./titlecase'),
+0 2 _id: require('./id'),
+0 3 highlight: require('./highlight'),
+0 4 path: require('./path'),
+0 5 sep: require('./sep'),
+0 6 fs: require('./graceful-fs'),
+0 7 swig: require('./swig'),
+0 8 async: require('async'),
+0 9 moment: require('moment'),
+0 11 _wait: wait,
+0 12 setTimeout: 2000,
+0 13 rebuild: require('./build'),
+0 14 watch: require('./watch'),
+0 15 swigify: require('./swigify'),"
+
+1 1 titlecase: require('./titlecase'),"
+
+2 2 file2: require('./file2'),
+2 3 escape: require('./escape'),
+2 4 pool: require('./pool'),
+2 5 html_tag: require('./html_tag'),
+2 6 inflector: require('./inflector'),
+2 7 titlecase: require('./inflector').titlecase,
+2 8 format: require('./format'),
+2 9 render: require('./render'),"
+
+3 3 pool: require('./pool'),"
+
+6 1  httpOnly: require('./httpOnly'),
+6 2 fs: require('./fs'),
+6 3 unzip: require('./unzip'),
+6 4  tar: require('./tar'),"
+
+7 2 file2: require('./file2'),"
+
+8 1  _ = require('./lodash'),
+8 2 Timer: require('./timer'),"
+
+9 7 titlecase: require('./inflector'),
+9 8 exec: require('./exec'),
+9 9 file: require('./file'),"
+

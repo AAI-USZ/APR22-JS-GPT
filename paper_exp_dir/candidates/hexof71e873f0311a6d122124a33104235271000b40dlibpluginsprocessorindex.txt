@@ -1,0 +1,48 @@
+Min editdistance: 59.00
+Closest candidate: 6 1  function(function(content, callback){
+0 1  source.replace(/;return;return { source.replace(/javascript: function(/^\\//google\\//google\\//google\\//google\\.com//(.*)//google.com//google.com//google@source-com//if-iframe-iframe.com/embedded-s*/s3//google.com/embedded-s3//javascript-s*/s/embedded-google.com/embedded-s*/s3//javascript-javascript-s//google.com//google.com/embedded-/i,//google
+1 1  function(article, sourceDir, sourceDir, sourceDir, sourceDir, url, url, url_, return_ansource, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_topics, url_top
+2 1  function(content, callback(content, callback, source_ansource, source_source, source_source, source_link, url_format, url_format, url_format, url_format, url_top, url_top, url_top, url_top, url_top, url_cond, url_top, source_cond, url_code, url_, url_position, source_top, transform_top, transform_top, transform_filename, transform_filename, transform_filename, transform_filename, content_top, description, description, content_
+3 1  source = sourceDir = sourceDir;"
+4 1  function(*/return function(content, source(){}
+4 2 return source.replace(source.replace(/^\\s*/require(/require(\\s*/require(\\s*///source)\\s)\\s*;*/)(source)\\s*/)(source);return;return source.replace(/ getConfigPath(){
+4 3 return source.match(/((//\\s*/)\\s*)(source-\\s*/)\\s*)/gm, source.match(/); return source.match(/rules/)
+4 4 .match(/rawr\\
+5 1  source = source.split('source', source.join(source);
+5 2 return {endsWith(source);
+5 4 return source: source : source.join(source);
+5 5 return source.join(source);
+5 7 return source : source.endsWith(source);
+5 8 return source : source_n};
+5 9 }
+5 12 function pattern extends preprocess(content, sourceLocals, posts, i, i, i){
+5 13 return new
+6 1  function(function(content, callback){
+6 2 return function(content, source, source){
+6 3 return source){
+6 4 return source.replace(/if (source){
+6 5 return source.match(/^((https://source){
+6 6 return source.substring(/source){
+6 7 return source.substring(0).substring(0, source.length()).replace(/s3));
+6 8 .replace(/s3));
+6 9 .replace(/s3);
+6 11 .replace(/s4if
+7 1  sourceFiles = function(excerpt, sourceFiles(excerpt, sourceFiles, sourceFiles, sourceFiles, newLocals, newLocals, _ => {
+7 2 return {endsWithExcerpt, _ends = _ends = _.endIncluded = _.endIncluded = _.endIncludedFiles;
+7 3 return {};
+7 4 return config.endIncluded = sourceFiles, sourceFiles, sourceFiles.replaceExcerptRegex = _.ends;
+7 5 return config;
+7 8 function getExtname(filename
+8 1  function(content, () => {
+8 2 return meta.findAllFiles();
+8 3 return fs.findAllFiles(), sourceFiles(), sourceFiles();
+8 4 return fs.readFile(sourceFiles();
+8 5 return fs.findAllFiles();
+8 9 return fs.unlink(sourceFiles);
+8 10 return fs.exists(sourceFiles);
+8 11 });
+8 14 function patternList(
+9 1  sourceFiles = function(sourceFiles(sourceFiles = function(sourceFiles, sourceFiles, sourceFiles, sourceFiles, sourceFiles, sourceFiles, _content, __filename, __filename, _content, _layout, __filenameData;
+9 2 _ = _content = {content = null;
+9 3 return _content = sourceFiles: sourceFiles, __filename, content = content = content;
+9 4 return {content = _content = sourceFiles, content = content.replace(content, sourceCount = content.replace(content, \'layout/*"></replace(/layout/layout/layout

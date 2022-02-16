@@ -1,0 +1,212 @@
+Min editdistance: 1.00
+Closest candidate: 0 5 _ = require('lodash'),
+0 1 util = require('../../util'),
+0 2 file = util.file,
+0 3 fs = require('graceful-fs'),
+0 4 async = require('async'),
+0 5 _ = require('lodash'),
+0 6 config = hexo.config;
+0 7 extend.helper.register('partial', function(){
+0 8 return function(content, options){
+0 9 return renderSync(content, options);
+0 10 }
+0 11 });"
+
+1 3 path = require('path'),
+1 4 _ = require('underscore'),
+1 5 cache = {};
+1 6 var resolve = function(base, part){
+1 7 return path.resolve(base, part).then(function(str){
+1 8 return str.substring(1, 3);
+1 9 }).join('/');
+1 10 };
+1 11 var render = function(source, template, locals){
+1 12 return function(part, options){
+1 13 var partial = resolve(source, part),
+1 14 extname = path.extname(partial).substring(1);
+1 15 if (cache.hasOwnProperty(partial)){
+1 16 var content = cache[partial];
+1 17 } else {
+1 18 var content = file.readSync(partial);
+1 19 cache[partial] = content;
+1 20 if (hexo.cache.watch){
+1 21 file.watch(partial, { interval: interval }, function(){
+1 22 if (watch) return content;
+1 23 var result = renderSync(content, extname, next);
+1 24 if (result.skipped) result = result.skipped;
+1 25 if (result.success) throw new Error('FAILED: %s', partial);
+1 27 var route = hexo.route;
+1 28 return result;
+1 30 var resultCallback = callback(render);
+1 31 if (result.success){
+1 32 file.write(partial, result.data + '\
+1 33 ');
+1 38 var meta = _.isDefined(option)? option : config.meta_release;
+1 39 if (config.post_asset_folder){
+1 40 var content = cache[post_asset_folder] || partial;
+1 47 ', next);
+1 53 };"
+
+2 1 _ = require('underscore');
+2 2 extend.tag.register('pullquote', function(args, content){
+2 3 var src = args._[0],
+2 4 dest = args._[1],
+2 5 result = args._[2],
+2 6 content = args._[3],
+2 7 engine = args.l || args.output,
+2 8 filename = args.p || args.filename,
+2 9 url = args.url,
+2 10 path = args.p || args.path,
+2 11 result = args.if ||!layout || layout === 'false',
+2 12 result = result.andCallback(callback);
+2 14 }, true);"
+
+3 8 return path.resolve(base, part).replace(/\\/*$/, '/');
+3 20 watch = true;
+3 22 watch = false;
+3 25 var newLocals = _.clone(locals);
+3 26 newLocals.partial = render(partial, content, _.extend(locals, options));
+3 27 return renderSync({text: content, path: partial}, _.extend(locals, options));
+3 30 extend.helper.register('partial', render);"
+
+4 7 return path.resolve(base, part).replace(/\
+4 8 __dirname + '/../public' + path.basename(base).replace(/^\\./, '');
+4 22 self.watch();
+4 23 }).on('update', function(session, content){
+4 24 set('cache view contents', content);
+4 25 nextname += '/' + partial;
+4 26 }).on('delete', function(){
+4 27 var content = self.cache.get(partial);
+4 28 if (destroyed) content = permanently;"
+
+5 6 swig = require('swig'),
+5 8 var config = hexo.config;
+5 9 extend.helper.register('render', function(path, callback){
+5 10 render.compile(hexo.extend.renderer.list(), function(err, result){
+5 11 if (err) throw err;
+5 12 if (result.skipped) swig.compile(result.skipped, result);
+5 13 if (result.success) swig.compile(result.success, result.skipped);
+5 14 callback(result);
+5 15 });
+6 7 return path.resolve(base, part).replace(/\\./g, '_config.yml');
+7 6 config = hexo.config,
+7 7 baseDir = hexo.base_dir;
+7 8 extend.helper.register('paginator', function(options){
+7 9 var options = _.extend({
+7 10 base: this.page.base || '',
+7 11 current: this.page.current || 0,
+7 12 format: this.config.pagination_dir + '/%d/',
+7 13 total: this.page.total || 1,
+7 14 current_url: this.config.pagination_dir + '/' + this.page.base + '/',
+7 15 prev_next: true,
+7 16 next_text: 'Prev',
+7 17 last_text: 'Next',
+7 18 space: '&hellip;',
+7 19 prev_next: false,
+7 20 end_size: 1,
+7 21 mid_size: 2,
+7 22 show_all: false,
+7 23 ignore: false,
+7 24 render_drafts: false,
+7 25 post_asset_folder: false,
+7 26 relative_link: false,
+7 27 future: true,
+7 28 highlight: {
+7 29 enable: true,
+7 30 auto_detect: false,
+7 31 line_number: true,
+7 32 tab_replace: ''
+7 33 },
+7 34 wrap: false,
+7 35 hljs: false,
+7 36 wrap_html: false,
+7 37 htm: false,
+7 38 coffee: false,
+7 39 yml: false,
+7 40 plit: false,
+7 41 unique: false,
+7 42 filename: false,
+7 43 ctime: false,
+7 44 message: 'Site updated:'+ moment.format('YYYY-MM-DD HH:mm:ss'),
+7 45 root: '/',
+7 46 permalink: :year/:month/:day/:title/',
+7 47 tag_dir: 'tags',
+7 48 archive_dir: 'archives',
+7 49 category_dir: 'categories',
+7 50 code_dir: 'downloads/code',
+7 51 permalink_defaults: {},
+7 52 server: {
+7 53 port: 4000,
+7 54 server_ip: 'localhost',
+7 56 static: false,
+7 57 logger: false,
+7 58 logger_format: 'dev',
+7 62 logger_format: 'ogg',
+7 63 browser_format: 'ogg',
+7 64 date_format: 'MMM D YYYY',
+7 65 time_format: 'H:mm:ss',
+7 66 per_page: 10,
+7 67 pagination_dir: 'page',
+7 69 next_text: 'Next',
+7 70 prev_next: false
+7 74 ip: 'localhost',
+7 76 per_link: ':index.html',
+7 77 permalink_defaults: {canonical_url: this.page.canonical_url + '/', port: this.port} + '/', host_ip: this.path }
+7 79 archive_dir: {
+7 80 cache: {};
+7 81 switch (config.archive) {
+7 82 case 'index.archive() {
+7 83 var result = 2;
+7 84 break;
+7 85 case 1:
+7 87 case 2;
+7 88 case 2:
+7 89 case 1:break;
+7 91 case 3:break;
+7 93 case 2:break: 1;
+7 95 case 3:break: 2;
+7 96 case 3: 1;
+7 97 case 4: 1;
+7 98 break: 1;
+7 99 case 3: 2;
+7 104 var before_each = _layout = function(i, i, len){
+7 105 return after_render = render.render = this.render.renderSync({ layout: { layout: { layout: {}, filename: 'index.css', url: this.config.filename_dir + '/', url: this.path + '/' } || '' } || '' })
+8 3 extend.helper.register('paginator', function(){
+8 4 return function(options){
+8 5 var config = this.config,
+8 6 current = this.page.current || 0,
+8 7 total = options.total,
+8 8 end_size = options.hasOwnProperty('end_size')? +options.end_size : 1;
+8 9 var pageNum = function(i){
+8 10 return \'<a class="page-number" href="\' + this.url_for(i) + \'">\' + num + \'</a>\';
+8 12 if (options.prev_next){
+8 13 total = options.prev_text.length;
+8 14 if (num === 1){
+8 15 pageNum(num, 1);
+8 17 total = options.next_text.length;
+8 19 if (num === total){
+8 20 var pageLink = this.page.permalink;
+8 22 var result = '';
+8 24 var result = base + pageLink + num + \'/\';
+8 27 var pageLink = this.page.permalink + \'/\';
+8 35 extend.helper.register(\'paginator', function(){
+8 38 current = this.page.current || 1;
+8 39 var posts = this.site.posts.sort(\'date\', -1);
+8 40 if (!posts.length) return;
+8 41 var paginator = function(base, posts){
+8 42 var length = posts.length;
+8 43 posts.forEach(function(item){
+8 44 var link = base + item + \'/\';
+8 45 if (prev == null){
+8 46 posts.splice(i, 1);
+8 49 var result = \'<a class="archive-1">\' +
+8 50 (num - 1);
+8 51 if (num == 2){
+8 52 result += base + item + \'/\';
+8 54 result += base + '/\';
+9 7 return path.resolve(base, part);
+9 18 if (hexo.cache.watch) cache[partial] = content;
+9 20 var result = renderSync(content, extname, newLocals);
+9 24 extend.helper.register('partial', render);
+9 25 extend.helper.register('cache', render);"
+

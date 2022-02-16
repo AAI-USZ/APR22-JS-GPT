@@ -1,0 +1,90 @@
+Min editdistance: 4.00
+Closest candidate: 0 6 data.should.eql('');
+0 1 }, 5);
+0 2 const data = {
+0 3 foo: \'bar\'
+0 4 };
+0 5 pp(data, () => {
+0 6 data.should.eql('');
+0 7 return data.toString();
+0 8 });
+0 9 pp.unregister('test\', filter1, filter2);
+0 10 await unregister();
+0 13 it("unregister()", () => {});'
+
+1 1  {});
+1 2 const filter1.called.should.be.true;
+1 3 filter1.args[0].should.equal(f);
+1 5 return checkStream(f.get('test-f.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.12.test.test.test.test.12.test.test.test.12.12.test.12.12.12.12.test.12.12.12.12.12.12.12.12.12.12.12.12.12.12.12.12.12.12.12.12.third.12.12.12.12.12.third.12.12.12.12.12.12.12.12.12.12.12.12.
+2 1  return data + \'bar' })._s => { return data + \'bar' } });
+2 2 const filterId = spy(data => { return data + \'baz\' })._s => {
+2 3 return data + \'baz\' }).lengthOf(0);
+2 5 const filter = spy(data => { return data.toString()).toArray().should.eql(...s(...s) || [...s]; });
+2 6 filterId; });
+2 7 filter.called.should.should.not.should.to.eql(...s.should.to.eql(s);
+2 8 filter(...s);
+2 10 return checkStream(...s(...s);
+2 11 return checkStream(() => {
+2 12 return checkStream(route);
+2 13 return checkStream(route.new testStream);
+2 14 }
+2 15 });'
+
+3 2 await f.exec('test', filter1, filter2);
+3 3 filter1.should.exist;
+3 4 filter2.should.exist;
+3 6 it("unregister()", async () => {
+3 7 const f = new Filter();
+3 8 const filter1 = spy(data => {});
+3 9 f.unregister('test.should.should.exist;
+3 10 filter.should.not.exist;
+3 12 it("unregister() - typeofix()", async () => { require("unregister()") >= require("unregister()") }).should.to.unix()");
+4 2 const filter1.should.not.exist;
+4 3 const filter2.should.exist;
+4 4 const result = await post.render(null, data);
+4 5 result.should.eql(null, data);
+4 7 filter1.called.should.be.false;
+4 9 it("unregister() - type is required", () => {});
+4 10 it("unregister() must be a function", () => {});
+4 11 it("unregister() must be a function"));
+4 13 it("unregister() must a function"));
+4 14 it("unregister()", ()", ()", unregister()).should(unregister() == null);
+5 2 const filter1.should.eql(...data);
+5 6 const filter1.should.be.false;
+5 8 it("unregister()", async () => {});
+5 9 it("unregister() - type is required", async () => {});
+5 10 it("unregister()", async () => {}, async () => {});
+6 1 }, 15);
+6 2 const data = {};
+6 3 f.register('test', filter1, filter2);
+6 4 f.unregister('test', filter1);
+6 6 it("unregister() - fn must be a function", () => {
+6 8 const errorCallback = spy(errorCallback);
+6 9 try {
+6 10 f.unregister('test.calledOnce.should.should.be.be.true;
+6 11 } catch (errorCallback.should.should.be.true;
+6 12 errorCallback.should.be.true;
+6 14 } finally(errorCallback.should.callback => {
+6 15 errorCallback.should.callback.callback.should.callback.should.be.true;
+6 18 it("unregister() => {
+6 19 done();
+6 21 it("unregister()"
+
+7 2 const filter1.should.not.eql(data);
+7 3 return checkStream(f.get('test'), 10).then(() => {
+7 4 filter1.should.eql('');
+7 9 const errorCallback = spy();
+7 10 it("unregister()() is required");
+7 12 it("unregister() is a function should have.should.not.throw(errorCallback is required", "error callback must be a function");
+8 1  'data.should.eql('');
+8 2 return data + \'bar';
+8 4 '
+
+9 2 filter1.called.should.be.true;
+9 3 filter2.call(this, filter1);
+9 4 return this;
+9 6 it("should not return a string by default", () => {
+9 8 should.unregister('test', filter1);
+9 10 it("should return a string in other instanceof f", () => {
+9 11 const f.unregister() == null;
+9 14 it("should return a string in msgs", () => null;

@@ -1,0 +1,116 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 global.hexo = {
+0 1 global.hexo = {
+0 2 get base_dir(){return root + sep},
+0 3 get public_dir(){return root + sep + 'public' + sep},
+0 4 get source_dir(){return root + sep +'source' + sep},
+0 5 get theme_dir(){return root + sep + 'themes' + sep + config.theme + sep},
+0 6 get plugin_dir(){return root + sep + 'node_modules' + sep},
+0 7 get version(){return version},
+0 8 get config(){return config},
+0 9 get extend(){return require('./extend')},
+0 10 get util(){return require('./util')},
+0 11 get render(){return require('./render')},
+0 12 get i18n(){return i18n.i18n}
+0 13 };
+0 14 if (config){
+0 15 require('./renderer');
+0 16 require('./tag');
+0 17 require('./deployer');
+0 18 require('./processor');
+0 19 require('./helper');
+0 20 require('./generator');
+0 21 }
+0 22 "
+
+1 2 var version = config.version;
+1 3 } else {
+1 5 console.log(version, 'YYYY-MM-DD HH:mm:ss');
+1 6 if (hexo.config){"
+
+2 8 get env(){return config},
+2 11 get util(){return require('./util')}
+2 21 return callback();
+2 22 });"
+
+3 12 get i18n(){return require('./i18n').i18n}
+4 21 require('./migrator');
+4 22 var generate = function(base, args){
+4 23 var result = base + sep;
+4 24 args = args || {};
+4 25 base.should.eql(base + sep);
+4 26 args.setup(args);
+4 27 var exclude = args.exclude || base;
+4 28 if (args.debug){
+4 29 result.replace(/\\x3C/g, '\\x3F\\x6F')
+4 30 .replace(/[\\]/g, '\\x3F\\x6F')
+4 31 .replace(/[\\]\\(/g, '\\x1F\\u0180\\u2028\\u30FF]/g, '\\x1F\\u30FF)))
+4 33 return result;
+4 34 };"
+
+5 8 get env(){return process.env},
+5 19 var generate = function(callback){
+5 20 spawn({
+5 21 command: callback,
+5 22 args: ['-avze','ssh -p'+ config.port, 'public/', config.user + '@' + config.host + ':' + config.root],
+5 23 exit: function(code){
+5 24 if (code === 0) callback();
+5 26 });
+6 2 var version = config.version,
+6 3 root = config.root;
+6 4 if (version){
+6 5 if (!version ||!version.assume){
+6 6 throw new Error('No tag found for'+ root + '_config.yml');
+6 9 var tag = config.tag;
+6 10 if (tag){
+6 11 if (!tag.length) return next(null, '');
+6 13 var error = new Error('Tag'+ root +'not found');
+6 14 error.details = 'The tag'+ tag +'could not be found within the repository';
+6 15 throw error;
+6 18 var cleanedTag = yaml.parse(result[0], { tag: tag});
+6 19 if (cleanedTag){
+6 20 _.each(removeSwigTags, function(tag){
+6 21 if (tag.hasOwnProperty(tag.name)){
+6 22 return _.extend(context.tag, { object: tag });
+6 24 var tags = this._tags;
+6 26 cleanedTag.swig({ tag: tag, json: config.tag + ':' + cleanedTag.swigComment(tag.name) + '\
+6 27 ' + cleanedTag.description;
+6 30 next();
+6 33 ], callback);
+7 15 var Theme = module.exports = function Theme(){
+7 16 this.config = {};
+7 17 this.i18n = new i18n({
+7 18 code: 'layout',
+7 19 views: this.config.theme,
+7 20 process: function(next){
+7 21 if (this.i18n.layout){
+7 22 this.i18n.layout = 'layout';
+7 23 } else if (this.i18n.layout){
+7 28 if (options.language){
+7 29 var lang = options.language;
+7 30 if (Array.isArray(config.language)){
+7 31 return config.language;
+7 33 var lang = config.language;
+7 36 if (options.permalink){
+7 37 var link = this.get('home');
+7 38 if (link){
+7 39 return link + (link[1] === '/' || link[2]) + 'index.' + getHome(config.language);
+7 41 return link + this.get('posts').slice(0, -1).join(',');
+8 20 swig.init({
+8 21 _.each(arguments, function(val, key){
+8 22 require('./` + key).set(key, val);
+9 1 if (!config ||!config.verbose){
+9 2 var yaml = require('../package.json');
+9 3 console.log('\
+9 4 You should configure deployment settings in _config.yml first!\
+9 5 \
+9 6 <root>
+9 7 var content = [
+9 8 'Content-Type: rss,
+9 9 'Content-Type': 'text/css'
+9 10 ].join('\
+9 11 ');
+9 12 file.write(target + yaml.stringify(content));
+9 13 content.should.eql(content);
+9 16 }"
+

@@ -1,0 +1,56 @@
+Min editdistance: 12.00
+Closest candidate: 3 28 content: [
+0 1 '
+
+3 1 <!--\\s*chalk>\
+3 2 </p>\
+3 4 <!--\\s*chalk>`;
+3 5 }
+3 6 const _restoreAllSwigTags = (tags, str) => {
+3 7 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags);
+3 8 if (restored === str) return restored;
+3 9 return this.cache.set({
+3 10 _restoreCode: true,
+3 11 _content: \'```
+3 12 });
+3 13 };
+3 14 class PostRenderCache {
+3 15 constructor() {
+3 16 this.cache.set({
+3 17 _content: \'``` js',
+3 18 slug: \'foo\'
+3 21 describe(\'Meta-Generator\', () => {
+3 22 const Hexo = require(\'../../../lib/hexo\');
+3 23 const hexo = new Hexo(join(__dirname, \'meta_generator\'));
+3 24 const metaGenerator = require(\'../../../lib/plugins/filter/meta_generator\').bind(hexo);
+3 25 const { config } = hexo;
+3 26 const { content } = page;
+3 27 let locals = {
+3 28 content: [
+3 29 \'``` js Hello world\',
+3 30 \'```\'
+3 31 ].join(\'\
+3 32 \')
+3 34 const beforeListener = sinon.spy();
+3 35 const afterListener = sinon.spy();
+3 36 const body = [
+3 37 \'```\',
+3 38 \'{% endblockquote %}\',
+3 40 \'{% quote Hello World %}\',
+3 41 \'quote content\',
+3 42 \'{% endquote %}\'
+3 44 \');
+3 45 it(\'default\', () => {
+3 46 const result = yaml.load(result);
+3 47 const $ = cheerio.load(result);
+3 48 $(\'meta[name="generator"]\').length.should.eql(1);
+3 50 it(\'title - swig var inside backtick code block\', () => {
+3 51 const content = \'<!--{{lead}}s` for example.\';
+3 52 const result = str.replace(rSwigPlaceHolder, escapeSwigTag(content)));
+3 53 result.should.eql(content);
+3 55 it(\'title - markdown\', () => {
+3 57 result.should.replace(rMarkdown();
+3 59 it(\'link = \'\', () => {
+3 60 return \'</a>\', \'<!--\';
+3 62 });'
+

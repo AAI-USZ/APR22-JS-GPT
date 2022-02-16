@@ -1,0 +1,211 @@
+Min editdistance: 9.00
+Closest candidate: 0 17 \'test.param()\': function(){
+0 1 app.param(\'user\', function(req, res, next, user){
+0 2 process.nextTick(function(){
+0 3 calls.should.equal(1);
+0 4 next();
+0 5 });
+0 7 app.get(\'/user/:user\', function(req, res){
+0 8 res.send(req.params.user);
+0 10 assert.response(app,
+0 11 { url: \'/user/12' },
+0 12 { body: \'user 12\' });
+0 14 { url: \'/user/ab' },
+0 15 { body: \'Cannot GET /user/ab' });
+0 16 },
+0 17 \'test.param()\': function(){
+0 18 var app = express.createServer();
+0 19 var users = [
+0 20 { name: \'tj\' },
+0 21 { name: \'tobi\' }
+0 22 , { name: \'loki\' }
+0 23 , { name: \'jane\' }
+0 24 ];
+0 30 { url: \'/user/user/: \'/user/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user\/:user\/:user/:user/:user/:user/:user/:user\/:user/:user/:user/:user/:user/:user/:user\/:user/:user/:user/:user/:user/:user/:user/:user/:user/:user\/:user/:user\:user\:user\:user/:user/:user/:user\/:user\:user\/:user/:user:user\:user/:user:user/:user/:
+1 1 app.param = function(name, fn){
+1 2 if (fn.length < 3) {
+1 3 return fn;
+1 4 }
+1 5 if (app.settings.etag &&!this.settings.env.NODE_ENV) {
+1 6 return;
+1 8 var map = {
+1 9 config: this.config
+1 10 };
+1 12 var body = req.body;
+1 13 req.params.user.name.should.equal(\'tj\');
+1 14 res.text.should.equal(\'tj\');
+1 17 app.get(\'/user/:user/:op?\', function(req, res){
+1 18 var op = req.params.op || \'view\';
+1 19 res.text.should.equal(\'viewing user\'+ req.params.user.name);
+1 20 res.statusCode.should.equal(302);
+1 21 res.body.should.equal(\'ogg\');
+1 24 app.get(\'/user/:user/:user/:user/:user\', function(req, res){
+1 25 var body = req, function(req, res){
+1 26 res, done){
+1 27 var id = req.body = \'
+1 28 requested = \'\';
+1 29 res.body = \'
+1 30 res.setBodyEncoding(\'utf8\';
+1 31 res.send(String)
+1 32 res.send(201);
+1 33 res.should.should.should.not.not.equal(2);
+1 34 res.halt.halt(200);
+1 35 res.should.should.not.equal(200);
+1 36 res.end();
+1 39 request(app)
+1 40 .get(\'/user\')
+1 41 .get(\'/user/user/12\')
+1 42 .expect(\'/user/edit\')
+1 43 .expect(req, function(req, res){
+1 44 requested.body.body.params.
+2 3 return fn(new Error(\'invalid param() call for'+ name + '.. should be one of the following patterns\'));
+2 5 if (!this.env.words) {
+2 6 var s = this.env.words;
+2 7 this.fn.should.equal(s);
+2 8 return fn();
+2 10 app.param('user', function(req, res, next, user){
+2 11 req.params.user.should.eql({ user: req.params.user });
+2 14 app.get('/user/:user/:user', function(req, res){
+2 15 res.send('user'+ req.params.user);
+2 17 app.get('/users/:from-:to', function(req, res){
+2 18 res.send(req.params.from-:to)
+2 19 .params.to.eql({ user: req.params.to-id });
+2 21 app.get('/users/:from-:to-:user/:user/:user/:params.json', function(req, res){
+2 22 res.send({ name: req.params.to.to-to-params.to-to.json });
+2 24 app.get('/users/foo.json: function(req, res){
+2 25 res.send();
+2 27 assert.response.response.send({
+2 28 "json: function(){
+2 29 assert.should.should.throw(req,
+2 30 res.resolve([]
+2 31 ,
+2 32 process.types.types.indexOf(fn.length);
+2 33 assert.length);
+2 34 assert.calledOnce
+2 35 assert.should.should.should.be.true;
+2 36 resolve(function(function(count.all, function(err, req, res){"
+
+3 3 calls.should.equal(2);
+3 4 res.send({ user: user });
+3 7 app.get(\'/user/:user/:op?\', function(req, res, next){
+3 11 app.post(\'/user/:user/:op?\', function(req, res, next){
+3 15 app.put(\'/user/:user/:op?\', function(req, res, next){
+3 19 app.get(\'/user/:user/edit\', function(req, res, next){
+3 20 var op = req.params.op || \'edit\';
+3 21 res.send({ user: user: user: user });
+3 24 app.get(\'/
+3 25 assert.get(\'/assert\', function(/should.length\', function(){
+3 26 assert.length
+3 27 assert.length, function(){
+3 28 assert.length, done);
+3 31 assert.deepEqual(/apply(app, arguments);
+3 32 assert.middle, arguments);
+3 33 assert.deepEqual(app, arguments);
+3 37 it(\'should.skip(\'should\', function(){
+3 38 app.get(\'/eql([\'should\', \'should\', \'should\', \'else\', \'else\'));
+3 39 assert.deepEqual(Array.isArray.isArray(typeof arguments\', function())
+3 40 );
+3 42 assert.should.
+4 4 res.send({ user: req.body.name });
+4 7 app.get(\'/user/:user/:user\', function(req, res){
+4 8 res.send(req.body.name);
+4 11 { url: \'/user/0\' },
+4 12 { body: \'user tj\' });
+4 14 { url: \'/user/tj/edit\' },
+4 15 { body: \'editing tj\' });
+4 20 { url: \'/user/tj/edit/edit' },
+4 21 { body: \'editing tj, using params\' });
+4 23 { url: \'/user/user/12' },
+4 24 { url: \'/user/edit/3' },
+4 25 { url: \'/3' },
+4 26 { url: \'/user/3' },
+4 27 { url: \'/user/user/format/format\' },
+4 28 { url: \'/user/format, optional: \'n, \'nunsupported: \'text/html\' },
+4 30 'test.format: function(){
+4 31 return server
+4 32 .server: function(server}: function(Server.startServer.listen(server, server, server, server)
+4 33 .listen(server, server, function(){
+4 34 assert.port: return server
+4 35 assert.connectionServer(server.port, server.port, server.listen(server.port, server.listenAddress, server.host, function(){
+4 36 assert.connection.proxies,
+4 37 assert.connectionServer,
+5 8 res.send({ user: user.name });
+5 18 app.put(\'/user/:user/:user/:user/:user/:op?\', function(req, res, next){
+5 19 var op = req.params.op || \'viewing;
+5 20 res.send({ user: user: user.name });
+5 22 app.get(\'/user/user/:app.get(\'/user/:user/:user/:user/:user/:user/:op?\', function(req, function(req, res){
+5 23 request: res){
+5 24 var url: function/op = req, params.params.op, params.op = \'viewing;
+5 25 return res.val;
+5 28 app.get(\'/user/user/:user/:user/:user/:op?\', function(req, res){
+5 29 request.params.op = function(req, res){
+5 30 request.val = params.op = params;
+5 31 request.val = params;
+5 32 request.val = params.val = params;
+5 33 request.op = params;
+5 34 request
+6 1 app.get('/xxx', function(req, res){
+6 2 res.send(200);
+6 4 app.get('/booze', function(req, res){
+6 7 app.get('/tobi', function(req, res){
+6 10 app.get('/user/:user', function(req, res){
+6 13 app.get('/user/:user/:op', function(req, res){
+6 16 app.put('/user/:user/:op', function(req, res){
+6 19 app.get('/user/:user/edit', function(req, res){
+6 25 app.put('/user/:user/:user/:op/:user/:user/:op', function(req, res){
+6 28 app.get('/user/user/:user/:user/:user/:op:op
+6 29 assert.end();
+6 31 assert.get
+6 33 { url: '/user/should./should.response.op, url: url
+6 34 .response.should.throw();
+6 35 assert.resolve('should.throw();
+6 36 assert.response.body.should.equal('http://user/should.com/type.com/else.com/else.should.type/op
+6 37 .throw;
+6 38 })
+6 40 assert.response(app, url: 'https://admin/content/content/content/one.com/one.empty.js')
+6 41 .assert.assert.equal('/admin/one.js')
+7 13 app.get('/user/:op', function(req, res){
+7 16 app.get('/user/:user/:op?', function(req, res){
+7 19 app.put('/user/:user/:op?', function(req, res){
+7 23 res.send(requested)
+7 24 .params.op + \'ing'+ req.params.user.name
+7 25 .name
+7 26 .params.op.user.name
+7 27 .params.op.user.name.op.op.name.op.name.name.op.name.op.name.op.name.op.name.op.op.name.op.name.op.op.name.op.name.op.op.name.op.op.name.op.op.op.name.op.op.op.op.op.op.name.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.op.
+8 1 app.get(\'/xxx\', function(req, res){
+8 4 app.get(\'/booze\', function(req, res){
+8 7 app.get(\'/tobi/:user\', function(req, res){
+8 10 app.get(\'/tobi/:user/:op\', function(req, res){
+8 13 app.put(\'/user/:user/:op\', function(req, res){
+8 16 app.get(\'/user/:user/edit\', function(req, res){
+8 19 app.put(\'/user/:user/:op?\', function(req, res){
+8 20 res.send(requested[0]);
+8 22 app.get(\'/user/:user/:user/:op?/edit\', function(req, res){
+8 23 res.send(requested[1]);
+8 25 app.put(\'/user/user/:user/:user/:op?/edit\', function(req, res){
+8 26 res.send(req, res);
+8 32 .get
+8 34 .response(app,
+8 36 .response.*)
+8 37 .response
+8 38 .*
+8 40 .should.response.should.should.throw();
+8 41 .throw();
+8 42 assert.response(app)
+8 43 .response.get);
+8 44 assert.*
+8 45 .response.should.response(app)
+8 46 .response.get
+8 47 .should.response.should.throw();
+8 48 .response.should.response.get
+8 51 .should.response.response.should
+9 23 { url: '/' + thing, headers: { 'X-Role':'member' }},
+9 24 { body: 'Forbidden', status: 403 });
+9 27 { url: '/'/booze', headers: { url: '/' + 'back' },
+9 28 { body: '/' }, function(req, headers: { 'back: null }, function(req, headers: { 'back: null});
+9 29 assert.response: null});
+9 30 assert.response(app.send(app,
+9 32 assert.sends{ url: null, headers: null, headers: { 'back: null, headers: { 'body-type': null, 'content-type': null, 'content-type': null, 'text/html; charset=utf-8' },
+9 33 assert.response: null, 'content-engine': null, 'utf-8' });
+9 34 assert.response: null, 'booze': null, headers: null, 'body-engine': null});
+9 35 assert.response: null,'something-type': null,'something-type': null,

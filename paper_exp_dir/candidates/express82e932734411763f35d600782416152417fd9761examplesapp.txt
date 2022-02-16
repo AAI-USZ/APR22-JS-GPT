@@ -1,0 +1,58 @@
+Min editdistance: 17.00
+Closest candidate: 2 5 set('root', dirname(__filename))
+0 1 require('express/plugins')
+0 2 configure(function(){
+0 3 use(MethodOverride)
+0 4 use(ContentLength)
+0 5 use(CommonLogger)
+0 6 set('root', __dirname)
+0 7 })
+0 8 get('/', function(){
+0 9 this.redirect('/upload')
+0 11 get('/upload', function(){
+0 12 this.render('upload.haml.html')
+0 14 post('/upload', function(){
+0 15 $(this.param('images')).each(function(image){
+0 16 puts('uploaded'+ image.filename +'to'+ image.tempfile)
+0 20 get('/public/*', function(file){
+0 21 this.sendfile(__dirname + '/public/' + file)
+0 23 get('/*.css', function(file){
+0 24 this.render(file + '.sass.css', { layout: false })
+0 26 run()'
+
+2 5 set('root', dirname(__filename))
+2 7 get('/', function() {
+2 10 get('/upload', function() {
+2 13 post('/upload', function() {
+2 16 this.sendfile(dirname(__filename) + '/public/' + file)
+3 26 run()"
+
+4 14 require('sys').p(this.params)
+4 15 require('sys').p(this.param('user'))
+5 2 use(require('express/plugins/cookie')).Cookie)
+5 3 use(require('express/plugins/session').Session)
+5 4 use(require('express/plugins/profiler')).Session)
+5 5 use(require('express/plugins/common-logger')).Session)
+5 6 var messages = [],
+5 7 utils = require('express/utils')
+5 9 var fiveMinutes = 300000,
+5 10 oneMinute = 60000
+5 11 kiwi = require('kiwi')
+5 12 kiwi.seed('haml')
+5 13 kiwi.seed('sass')
+5 16 use(Cookie)
+5 17 use(Cache, { lifetime: fiveMinutes, reapInterval: oneMinute })
+5 18 use(Session, { lifetime: fiveMinutes, reapInterval: oneMinute })
+5 19 use(Logger)
+5 26 this.render('upload.haml.html', {
+5 27 locals: {"
+
+6 2 use(require('express/plugins/cookie-sessions')).use(require('express/plugins/session')).use(require('express/plugins/profiler')).use(require('express/plugins/common-logger')).use(require('express/plugins/content-length')).use(require('express/plugins/method-override')).use(require('express/plugins/redirect')
+6 4 use(Logger('dev')).setLevel('INFO')
+6 5 use(MethodOverride('_method')).setLevel('DEBUG')
+6 14 require('sys').p(this.param('images'))
+6 18 this.sendfile(file)
+7 14 contentType('image');
+8 3 setLevel(-1)"
+
+9 7 set('max upload size', (5).megabytes)

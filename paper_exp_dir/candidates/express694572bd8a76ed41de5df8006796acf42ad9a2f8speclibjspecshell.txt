@@ -1,0 +1,475 @@
+Min editdistance: 34.00
+Closest candidate: 3 1 success: ["Program', function() { }],
+0 1 success: [this.success, this.failed to talk to you)",
+0 2 init: function(){ this.init() }
+0 3 }, 2000);
+0 4 this.emit("exit", "exit"], 0);
+0 5 return this;
+0 6 };
+0 7 this.success = function(){
+0 8 return this.success;
+0 10 this.failed = function(){
+0 11 return m.error.apply(this.emit, arguments);
+0 13 this.success.error = function(){
+0 16 this.loaded = function(){
+0 17 this.start()
+0 19 this.start = function(){
+0 20 return this.loaded;
+0 23 this.onRegister = function(info){
+0 24 this.launchId = info.id;
+0 25 this.message = info.name;
+0 26 if (info.type === "launcher" && info.type === "dump"){
+0 27 this.start();
+0 28 } else {
+0 29 this.store[this.id] = info;
+0 30 }
+0 31 if (!this.isCaptured()){
+0 32 this.emit('error', new Error(
+0 33 'Can\\\'t configure while working\'+
+0 34 info.type +\'\' +
+0 35 '!!\'));
+0 37 this.store = function(){
+0 39 this.start = this.name;
+0 40 this.error.stack = function(){
+0 41 var message = this.formatMessage(error.stack || error.toString());
+0 42 process.nextTick(function(){
+0 43 msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+0 44 })
+0 45 .setImmediate(this);
+0 47 this.onError = function(error){
+0 48 this.emit('error', this, error);
+0 50 this.onInfo = function(info){
+0 51 if (util.isDefined(info.dump)){
+0 52 emitter.emit(
+0 53 'error', this, info.dump,
+0 54 'dump'+ this.stack
+0 55 );
+0 57 if (util.isDefined(info.log)){
+0 59 'info', this, info.log,
+0 60 'warn'+ this.stack
+0 63 if (util.isDefined(info.total)){
+0 64 if (this.total > 1) {
+0 65 this.total = info.total;
+0 68 this.onComplete = function(result){
+0 69 if (this.isReady()){
+0 70 return;
+0 72 this.state = this.STATE_CONNECTED;
+0 73 this.lastResult = this.lastResult;
+0 74 this.clearLocal();
+0 75 if (this.isReady()) return;
+0 76 this.clearLinks();
+0 77 this.setCWDs(this.name);
+0 78 this.use(this);
+0 79 this.locals.settings = this.settings.tildify({
+0 80 clear: this.settings.settings.tildify,
+0 81 admin: this.settings.tildify,
+0 82 only: this.settings.settings.admin
+0 83 });
+0 85 this.ndisDefined = function(){
+0 86 return config.isDefined();
+0 87 return config.try {
+0 88 var adminize();
+0 89 return adminize(this.settings.toObject());
+0 93 adminize = function(){
+0 94 return config;
+0 97 adminize.adminize.search = function(url) {
+0 98 return config.length = function(url) {
+0 99 return config.url = _.length;
+0 100 return config.url.any;
+0 103 adminize.search.
+1 1 options: {},
+1 2 } : {},
+1 3 location: {'You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".\
+1 4   Please, set spaces with # serves as a separator for the detailed information. Leave it instead.'},
+1 5 send: function(request, done){
+1 6 var blogDir = this._blogDir;
+1 7 var path = pathFn.join(self.process.cwd(), 'index.md');
+1 8 var config = cfg.parseConfig(request[0], config);
+1 9 done = done || process.exit;
+1 10 var onceKilled = restarting;
+1 11 var baseDir = cfg.base_dir;
+1 12 var options = {
+1 13 create: function(a, b) {
+1 14 return { type: "create" },
+1 15 remove: function(d) {
+1 16 if (d) return false;
+1 19 var validatePattern = function(path) {
+1 20 if (!glob.sync(path).length) {
+1 21 log.warn("There is no file matching this pattern.\
+1 22 ")
+1 25 var validateBrowser = function(name) {
+1 26 var baseDir = this._baseDir;
+1 27 var captureTimeout = 2000;
+1 28 var done = function() {
+1 29 var baseDir = cfg.base_dir + \'/\';
+1 30 var outDir = pathFn.join(this.process.cwd(), name);
+1 31 if (!outDir) {
+1 32 this.log.warn(\'No binary for %s.\
+1 33   Create symlink at "%s", or set "%s" env variable.\
+1 34   \', config.directory + \'/\' + name);
+1 36 if (process.versions.node.indexOf(proxy) === -1) {
+1 37 outDir += \'/node.routing/index.md\';
+1 38 if (config.proxies && config.proxies.length) {
+1 39 outDir += \'/client/mocks/proxy.js\';
+1 41 var socketServer = io.listen(webServer, {
+1 42 logger: logger.create(\'socket.io\', constant.LOG_ERROR),
+1 43 resource: config.urlRoot +\'socket.io\',
+1 44 transports: config.transports,
+1 45 forceJSONP: config.forceJSONP
+1 47 webServer.on(\'error\', function(e) {
+1 48 if (e.code === \'EADDRINUSE\') {
+1 49 log.warn(\'Port %d in use\', config.port);
+1 50 config.port++;
+1 51 webServer.listen(config.port);
+1 53 throw e;
+1 56 var oldBrowser = pb.config.id
+1 57 ? arg.resolve()
+1 58 : arg;
+1 59 frameworks = ['qunit'];
+1 60 files = config.files.split(\'\
+1 61 \');
+1 62 var socketServer = io.createServer(createServer(handler);
+1 63 logger.createServer(function() {
+1 64 logger.createServer(newServer);
+1 67 return server.on(\'error
+1 68 .on(\'config\', function(request, done) {
+1 69 throw new Error(done || done)
+1 74 return server.on(\'inherits
+1 75 .puts\', function() {
+1 76 return server.lookup.forEach(function() {
+1 77 return done(function() {
+1 78 throw new Server(request, i) {
+1 79 throw new Server(request, responseServer)
+1 81 .remove = handler.urlServer();
+1 88 server.on(\'
+
+2 1 printOptions: function(options){
+2 2 return {
+2 3 settings: _settings,
+2 4 data: [
+2 5 {title: \'testsuite\', desc: \'Setup without deployment\'},
+2 6 {title: \'testsuite\', desc: \'Setup with several calls\'}
+2 7 ]
+2 10 Log.prototype.__proto__ = EventEmitter.prototype;
+2 11 Log.prototype.test = function(){
+2 12 var args = arguments;
+2 13 this.log.writeln([
+2 14 this.LOG_SINGLE_BROWSER
+2 15 ]);
+2 18 Log.prototype.help = function(){
+2 19 var str = [
+2 20 \'You should configure deployment settings in _config.yml first!\
+2 21 \
+2 22 \' +
+2 23 \'first!\
+2 25 \'{% *(.+?)(https?:\\/\\/|\\/(.+)/g, function(args, content){
+2 26 var url = args[0];
+2 27 if (!url) return;
+2 28 if (typeof url === \'object\'){
+2 29 args[0] = url;
+2 31 args[1] = text;
+2 33 return args.join(\' \');
+2 36 Log.prototype.replace = function(log){"
+
+3 1 success: ["Program', function() { }],
+3 2 kipped: false,
+3 3 error: {print: true, fail: true }
+3 5 this.onRunStart = function() {
+3 6 this._browsers = [];
+3 7 this._isCaptured();
+3 9 this.onBrowserStart = function(browser) {
+3 10 _isCaptured = true;
+3 11 if (this._isCaptured) {
+3 14 this._browsers.push(browser);
+3 15 this._isCaptured = false;
+3 16 return this._browsers.length;
+3 18 this.onRunComplete = function(browsers, results) {
+3 19 if (browsers.length > 1 &&!results.disconnected &&!results.error) {
+3 20 if (!results.failed) {
+3 21 this.reportErrors();
+3 27 this.onRunComplete = function() {
+3 29 this.trackComplete();
+3 38 if (this._isReady) {
+3 41 this.lastRun = {
+3 42 error: 2,
+3 43 stdout: 3,
+3 44 stderr: 3,
+3 45 kill: true
+3 47 this.onDisconnect = function() {
+3 48 if (!this._isReady) {
+3 49 this.isReady = true;
+3 50 this.lastRun.destroy();
+3 51 } else if (this._isReady) {
+3 54 this._isReady = false;
+3 55 return this._remove()
+3 56 .fin(function() {
+3 57 this._working = false;
+3 58 }.bind(this));
+3 60 module.exports = function() {
+3 61 var args = Array.prototype.slice.call(arguments);
+3 62 if (args.length){
+3 63 var id = args[0];
+3 64 return killing.done(function(){
+3 65 return args[1] && args[1]!== undefined;
+3 66 }, function(){
+3 67 var target = args[0];
+3 69 var cmd = args[1];
+3 70 args[0] = function(err) {
+3 71 if (err) {
+3 72 return killing.error(err);
+3 74 this._browsers.forEach(function(browser) {
+3 75 if (browser.isReady) {
+3 76 depath = this._isReady[id] || [];
+3 77 this.emit('exit');
+3 81 return cmd;
+3 84 this._isReady = true;
+3 85 this.lastRun.reset();
+3 87 .fin(function(){
+3 90 };'
+
+4 1 success: { callback: true }
+4 2 },"
+
+5 2 throws: [],
+5 3 tail: {}
+5 6 assert.response(server,
+5 7 { url: \'/\' },
+5 8 { body: "YAML:YAML"
+5 10 { url: \'/connect\' },
+5 13 { url: \'/large.json\' },
+5 16 { url: \'/minutes\' },
+5 18 },
+5 19 \'test #error()\'
+5 20 beforeExit(function(){
+5 21 assert.ok(called, false);
+5 24 \'test #sendfile() Accepts string syntax and messages in the middleware chain\': function(beforeExit){
+5 25 var app = express.createServer()
+5 26 , calls = 0;
+5 27 app.get(\'/file/*\', function(req, res, next){
+5 28 var file = req.params[0]
+5 29 , path = __dirname + \'/fixtures/\' + file;
+5 30 res.contentType(path);
+5 31 res.sendfile(path);
+5 33 assert.response(app,
+5 34 { url: \'/forum\' },
+5 35 { body: \'got an error\' });
+5 37 { url: \'/does-not-exist\' },
+5 41 { headers: { \'Accept-Ranges\': \'bytes\' }});
+5 43 calls.should.equal(1);
+5 46 \'test #sendfile() Range() Accepts 10 syntax and messages in the middleware\': function(beforeExit){
+5 60 { headers: {
+5 61 Accept-Ranges\': \'bytes\'
+5 62 , \'Cache-Control\': \'public, max-age=3600\'
+5 63 }});
+5 68 \'test #sendfile() Range() Range invalid syntax\': function(beforeExit){
+5 74 res.contentType;
+5 75 res.sendfile = path;
+5 76 ignoreFile = path;
+5 79 ignoreExclude = path;
+5 82 ignore = path;
+5 83 ignorePath = path;
+5 84 ignoreMatch = match;
+5 85 res.params = match;
+5 86 res = match;
+5 88 if (!path.hasExclude = match;
+5 89 if (match.startsWithExclude.length) return match.length === 0);
+5 90 if (match.length && match.length) return true;
+5 91 if (ignorePath) return match.startsWith(path);
+5 92 if (excludePath) return match.startsWith(match.substring(0, path));
+6 2 throws: [{ start: true, end: true }]
+6 3 }), {
+6 4 default: defaults
+6 6 error: function(fn){
+6 7 process.exit(1);
+6 10 info: function(fn){
+6 15 info.line = function(arg){
+6 16 var options = this.params
+6 17 , args = arguments
+6 18 , format = args.l || args.log
+6 19 , arg = arg.replace(/\
+6 20 /g, ",")
+6 22 , argType = args.type || args.type
+6 24 /g, ",");
+6 25 if (! format) format = config;
+6 26 if (args[0].match(/\\d+/)){
+6 27 var target = args.shift();
+6 28 if (args.length === 1) format = args.shift();
+6 30 var target = format[0];
+6 32 if (options[2]!== undefined) format = args.shift();
+6 33 if (format) {
+6 34 var args = format.replace(/\\d+/g, ",");
+6 35 args.unshift(format);
+6 40 if (args) args = args.slice(1);
+6 42 if (args.length) args = args.slice(0, args.length);
+6 43 return args;
+6 45 info.first = function(arg){
+6 46 return new Promise(function(resolve, reject){
+6 47 var str = env.format = args.shift();
+6 48 if (!str) return reject(new Error("First argument must be a function"));
+6 49 if (!~type.indexOf(\'skip\')) type = mime.lookup(type);
+6 50 try {
+6 51 var data = require(type);
+6 52 } catch (e){
+6 53 var err = new Error("First argument must a callback function");
+6 54 err.status = 406;
+6 55 err.types = normalizeTypes(types);
+6 56 if (error) {
+6 57 emitter.emit(\'error\', error);
+6 60 fn(error);
+6 63 reject(error);
+6 66 .on(\'end\', function(){
+6 67 var str = env.format
+6 68 , args = [
+6 69 {
+6 70 id: \'exclude\',
+6 71 cache: false
+6 74 str.replace(/<\\/gi, "\\"\')
+6 75 .replace(/\\r?\
+6 76 /g, "\\"\')
+6 77 .replace(/</g, \'\\"\')
+6 78 .replace(/\\t=(.*?)\\/g, \'\\"\');
+6 79 args.unshift(/gi);
+6 81 return format;
+6 83 info.titlecaseSect = function(line){
+6 84 return line.split(/^(/^(\\d);
+6 88 info.exec = function(format){
+6 89 if (this.typeof format = format) return format.exec(format);
+6 90 if (this.exec === i === 1 */format) return format;
+6 92 if (should = i || format.exec = i.exec */()!== 2;
+6 93 }'
+
+7 1 success: { self: _quit }
+7 3 assert.response(this,
+7 5 { body: \'Yoooo\'
+7 7 .done();
+7 9 it(\'should split the version number\', function(done){
+7 10 var app = express();
+7 11 app.use(function(req, res, next){
+7 12 res.render(req.params[0]);
+7 14 request(app)
+7 15 .get(\'/\')
+7 16 .expect(200, \'{"0":"0","1","2"}\', done);
+7 18 it(\'should restore req.params after leaving run\', function(done){
+7 21 res.render(\'req.params.removed/user/:user\', function(err, user){
+7 22 assert.equal(user.name, \'TJ\');
+7 23 user.message.should.equal(\'Remembered :\\\\\' + user.name);
+7 24 done();
+7 29 .expect(200, \'[^\\/user]*\
+7 30 \', done);
+7 33 describe(\':name - ignore tab character\', function(){
+7 34 it(\'should remove the capture group on run\', function(done){
+7 36 app.use(function(req, res){
+7 37 res.end();
+7 41 .expect(200, \'test\', done);
+7 43 it(\'should remove only the capture group\', function(done){
+7 50 .expect(404, done);
+7 52 it(\'should work with several\', function(done){
+7 62 describe(\'.format(obj)\', function(){
+7 63 it(\'should format as obj\', function(done){
+7 70 .expect(200, \'[\\]\\(\\)])\', done);
+7 72 it(\'should keep the capture group\', function(done){
+7 79 .expect(200, \'\\\', done);
+7 82 describe(\'.format(decode)\', function(){
+7 83 it(\'should format(){\', function(done) {\', done) {
+7 86 app.use(function(req.get(\'/html)
+7 87 .get(\'/html\')
+7 88 .is(\'
+
+8 1 success: [this.state === EXECUTING_DISCONNECTED]
+8 3 console: this.state === CONNECTED
+8 4 comments: true,
+8 5 layout: false
+8 6 }]
+8 8 Log.prototype.exit = function(){
+8 9 var msg = util.format.apply(null, arguments);
+8 10 this.state = EXECUTING_DISCONNECTED;
+8 11 msg.success = 2;
+8 12 this.failed = 1;
+8 13 this.success.reset();
+8 16 Log.prototype.log = function(){
+8 18 this.log.apply(null, args);
+8 19 if (this.args[0] === undefined) {
+8 20 var err = args.shift();
+8 21 this.log.apply(null, args.shift());
+8 22 err.message = format.stripHtml(args.join(\' \'));
+8 23 this.log.apply(null, args.join(\' \'));
+8 26 this.success.andCallFake(function(args) {
+8 27 return args.some(function(val, i){
+8 28 return val instanceof Date? arguments[i] : val;
+8 32 Log.prototype.error = function(msg){
+8 33 this.log.apply(this.log, arguments);
+8 34 this.error.apply(this.log, arguments);
+8 35 this.loaded();
+8 38 Log.prototype.start = function(config, launcher, globalEmitter, preprocess, fileList, webServer,
+8 39 resultReporter, capturedBrowsers, socketServer, executor, done) {
+8 40 var self = this;
+8 41 var filesPromise = fileList.refresh();
+8 42 if (config.autoWatch) {
+8 43 filesPromise.then(function(){
+8 44 watcher.watch(config.files, config.exclude, fileList);
+8 47 filesPromise.forEach(function(filepath) {
+8 48 if (self._isExcluded(filepath)) {
+8 49 fileList.addFile(filepath);
+8 50 self._isIncluded(filepath);
+8 54 resultReporter.reporters.forEach(function(reporter) {
+8 55 globalEmitter.bind(reporter);
+8 57 resultReporter.port = function(){
+8 58 var port = config.port || 80;
+8 59 var filePath = format.split(\'%s\');
+8 60 config.port = format.format(config.port);
+8 61 log.info(\'Starting web server at http://localhost:\' + port);
+8 62 var webServer = http.createServer(fileList, baseFolder, urlRoot, config.proxies, config.urlRoot);
+8 63 var socketServer = io.createServer(fileList, function(logger, newServer) {
+8 64 logger.launch(config.port, config.urlRoot);
+8 65 var resultReporter = new reporter.Progress();
+8 66 if (config.proxies.length && config.proxies.length) {
+8 67 resultReporter.inject(function(config.urlRoot) {
+8 68 config.urlRoot.prefix === \'httpOnly\'? [
+8 69 config.urlRoot: \'http://localhost:
+8 70 :
+8 71 : port;
+8 74 var resultReporter.on(\'resultReporter.write(resultReporter);
+8 75 var capturedBrowsers.on(\'change\', function(){
+8 76 \', function(){
+8 77 log.write(config.port, capturedBrowsers.length);
+8 78 if (config.length);
+8 80 return resultReporter.on(\'changeFilesPromise.\', function(){
+8 81 var browser.removeFilesPromise.progress(config.name)
+8 82 .on(\'changeFilesPromise.bind(resultReporter);
+9 1 success: [this.title = _quit.success; }]
+9 2 }, 1000);
+9 3 this.onRunComplete = function(){
+9 4 this.emit("exitCode 0);
+9 6 this.onBrowserComplete = function(){
+9 10 if (this.isReady) {
+9 11 this.lastRunComplete = this.lastRunComplete;
+9 21 this.onDisconnect = function(){
+9 32 this.onResult = function(result) {
+9 36 if (result.skipped) {
+9 44 var cmd = this.child.kill();
+9 45 cmd += this.isReady = false;
+9 46 if (!cmd) {
+9 51 cmd +=onerror + 1;
+9 55 var disconnected = this.isReady = true;
+9 56 connect.destroyed = false;
+9 57 this.emit("error", disconnected);
+9 64 this.emit("complete", this.lastRunComplete);
+9 76 connect.destroy();
+9 81 var validatePattern = function(value) {
+9 82 if (!glob.sync(value).length) {
+9 83 value = u.normalizePackage(value);
+9 89 var skipped = this.xhr()
+9 90 .setDefault({
+9 91 return value: false
+9 92 } catch (this.getDefaultPath()
+9 95 } else if (this.getFormatters.getName() === null
+9 98 } else if (this.getName() === null)
+9 99 delements.get())
+9 100 .getHeader()
+9 101 .setHeader()
+9 106 .setHeader('Location(this.ENABLEDServerHeaders)
+9 107 .add(this.calculatePatterns)
+9 109 .calculatePatternsWith(this.calculatePatternsWithDefaults)
+9 110 .calculatePatternsWithDefaults)
+9 111 .calculatePreprocess(this.getDirective preprocess)
+9 112 .getDirectivePreprocess)\

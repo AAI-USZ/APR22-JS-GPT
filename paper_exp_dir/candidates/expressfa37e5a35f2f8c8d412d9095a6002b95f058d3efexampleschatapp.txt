@@ -1,0 +1,98 @@
+Min editdistance: 10.00
+Closest candidate: 4 22 run()"
+
+0 1 {"
+
+4 1  require('./middlewares/logger')})
+4 2 set('root', __dirname)
+4 3 })
+4 4 get('/', function(){
+4 5 this.redirect('/upload')
+4 7 get('/upload', function(){
+4 8 this.render('upload.haml.html')
+4 10 post('/upload', function(){
+4 11 $(this.param('images')).each(function(image){
+4 12 puts('uploaded'+ image.filename +'to'+ image.tempfile)
+4 16 get('/public/*', function(file){
+4 17 this.sendfile(__dirname + '/public/' + file)
+4 19 get('/*.css', function(file){
+4 20 this.render(file + '.sass.css', { layout: false })
+4 22 run()"
+
+5 1 setLevel(config.logLevel);
+5 2 const messages = [],
+5 3 length = messages.length,
+5 4 path = set('path'),
+5 5 posix = require('posix')
+5 7 this.redirect('/chat')
+5 9 get('/chat', function(){
+5 10 contentType('html')
+5 11 return '<h1>' + this.param('message')) + '</h1>';
+5 13 get('/chat/messages', function(){
+5 14 contentType('json')
+5 15 return JSON.encode(messages)
+5 17 get('/public/:file', function(file){
+5 18 var path = set('path') + path.replace(/\\/*$/, '')
+5 19 var self = this
+5 20 Session.store.length(function(err, session){
+5 21 self.render('session.haml.htmls', { layout: false })
+5 24 post('/chat', function(){
+5 25 this.session.name = this.param('name')
+5 26 messages.push(utils.escape(this.param('message')))
+5 27 this.halt(200)
+5 29 get('/error', function(){
+5 30 throw new Error('oh noes!')
+5 32 get('/buffer', function(){
+5 33 return new Buffer(0)
+5 35 get('/noargs', function(){
+5 36 return this.param('message'))
+5 38 get('/error:time', function(){
+5 41 get('/simple', function(){
+5 42 return 'Hello :)'
+5 44 get('/favicon.ico', function(){
+5 45 this.halt()
+7 1 setLevel(config.root, require('express/plugins/logger'));
+7 2 use(MethodOverride)
+7 3 setLevel('root', __dirname);
+7 5 this.redirect('/upload');
+7 8 this.render('upload.haml.html', {
+7 9 locals: {
+7 10 flashes: this.flash('info')
+7 11 }
+7 16 puts('uploaded'+ image.filename +'to'+ image.tempfile);
+7 17 });
+7 26 get('/include/*', function(file){
+7 29 get('/include/:file/*', function(file){
+7 35 render(function(err, result){
+7 36 if (err) throw err;
+7 37 include({
+7 38 path: file,
+7 39 render_drafts: false
+7 40 }, function(err, files){
+7 42 var settings = [
+7 43 {
+7 44 basepath: '/upload',
+7 45 maxAge: 60000,
+7 46 format: 'GET'
+7 47 }]
+7 48 set('filename', file.params.path)
+7 49 .replace(/\\.css$/, '')
+7 50 .replace(/\\.html$/, '')
+7 71 .replace(/]/g, '-')
+7 72 .replace(/\\]/g, '-');
+7 73 return callback.end()
+7 75 call('/call', arguments.exports.exec(require('./utils')
+7 76 function(){
+7 77 return {
+7 78 request.parseCookie(args).should.cookieParser()
+7 79 .parseCookie('url).should.unshift()
+7 81 .should.set('url.parse(args).should.set-cookie.split(function(function(str){"
+
+9 1  require('./middlewares/content-length')})
+9 2 configure(function(){
+9 4 use(ContentLength)
+9 14 this.param('images').each(function(image){
+9 15 puts(image.filename +'->'+ image.tempfile)
+9 17 }, this)
+9 26 run()'
+

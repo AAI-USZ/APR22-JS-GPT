@@ -1,0 +1,16 @@
+Min editdistance: 22.00
+Closest candidate: 1 1 require('./response-msg');
+0 1 "
+
+1 1 require('./response-msg');
+1 2 exports.createServer = function(options){
+1 3 if (options instanceof connect.HTTPSServer) {
+1 4 return new HTTPSServer(options, Array.prototype.slice.call(arguments));
+1 5 } else {
+1 6 return new HTTPSServer(Array.prototype.slice.call(arguments));
+1 7 }
+1 8 };
+1 9 return new HTTPSServer(options);
+1 10 };'
+
+4 1 "

@@ -1,0 +1,34 @@
+Min editdistance: 19.00
+Closest candidate: 2 5 filename: str
+0 1 }
+0 2 return {
+0 3 path: str,
+0 4 layout: options.layout,
+0 5 data: str
+0 6 };
+0 7 };"
+
+1 4 select: options.omission,
+1 5 semi: options.semi,
+1 6 sanitize: options.sansitize,
+1 7 uninstall: options.uninstall,
+1 8 unregister: options.unregister,
+1 9 publish: options.publish
+1 11 }"
+
+2 4 loc: options,
+2 5 filename: str
+3 2 callback(err);
+4 8 var register = function(name, url, callback) {
+4 9 var src = source.substring(1);
+4 10 var output = exports.diacritic(gildify(src));
+4 11 if (!output) return callback();
+4 12 if (typeof name ==='string') {
+4 13 return name;
+4 14 } else {
+4 15 return module.exports(createFile(name, url, false)).render(output);
+6 5 data: options
+7 4 engine: options.engines,
+7 5 content: options.locals,
+7 6 filename: path
+8 2 callback(err, str);

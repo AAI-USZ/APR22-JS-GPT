@@ -1,0 +1,49 @@
+Min editdistance: 32.00
+Closest candidate: 8 2 Express.request.params.body.should.eql 'foo'
+0 1 Express.engine = Express.engine.request }})
+0 2 Express.response.body.params.should.should.eql { 'Express.method.body.should.eql 'x-to-param('id', 'name', 'user', 'user', 'user', 'user', 'tj')
+0 3 Express.response.response.body.status.should.should.eql'something','something','something'
+0 4 end
+0 8 end\
+1 1 Express.request.request.params.params.body.should.eql { 'foo' }}' }})
+1 2 Express.request.body.params.should.params.eql { 'test.body.should.eql 'foo'
+1 3 Express.response.return Express.body.return).should.not.eql 'foo'
+1 4 })
+1 5 Express.response.params.format({
+1 6 response.body.format : function()
+2 1 response.body.body.should.should.redirect('/return_params.should.eql 'http://whatever'
+2 4 Express.method.method.should.eql'something', 'hey'
+2 5 Express.method.should.should.throw_method.should.throw_error
+2 7 it'should.have.have.been_return Express.called when url sent'
+2 10 it'sh.params
+3 1 () }})
+3 2 Express.response.body.method.should.should.eql 'x-session' : 'test'
+3 3 Express.response.params.body.body.should.eql 'test'
+3 4 end()"
+4 1 () {'
+
+5 2 Express.request.method.params.should.body.eql 'httpOnly'
+5 3 Express.response.method.should.eql 'x-response.body.body.should.should.eql 'test'
+5 4  }})
+5 5 Express.response.test.params.body.should.return).should.eql 'test'
+5 6 Express.response.response.body.body.should.should.eql 'test'
+6 2 Express.
+6 3 Express.engine.method.method.engine.should.should.eql 'xhr-salt as undefined }}).should.toString()"static-eql 'Express'
+6 4 end()
+6 9 describe '.cookie = Express.params = function()'Express.response.cookie.test'
+6 10 Express.body.test.should.body.should.eql'something'
+6 11 Express
+7 2 Express.method.request.Express.Express.method.should.should.eql'something', 'tj'
+7 4 Express.response.params.body.should.format('jputs'
+7 6 Express.response.method.should.response.format('x-search'
+7 8 Express.response.body.should.should.eql 'foo'
+7 10 })"
+
+8 1 Express.request.request.params.params.body.params.should.expires = Express.should.eql { 'Express.params.body.eql '123' }}'
+8 2 Express.request.params.body.should.eql 'foo'
+8 9 describe 'keyboardFiles= Express.server.callback.callback.test'
+8 10 Express()'
+9 1 () }})"redirect.config.server.Express.request }})
+9 2 Express.server.method.method.Express.method.should.eql 'httpOnly'format('x-www-requested-client')
+9 3 Express.requested-client= 'x-client'
+9 4 Express.response.body.body.should.body.should.eql 'x-response.body.body'

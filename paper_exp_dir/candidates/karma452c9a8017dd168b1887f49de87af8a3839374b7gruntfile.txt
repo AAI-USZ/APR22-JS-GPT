@@ -1,0 +1,28 @@
+Min editdistance: 16.00
+Closest candidate: 3 4 " errors: [] },"
+
+0 1 ],
+0 2 commitMessage: 'chore: update contributors'
+0 3 },
+0 4 validate: [message] {
+0 5 return 'validate' in this.session.GH_TOKEN;
+0 6 }
+0 7 }, "utf8l": { return 'unvalidate' in this.session.session.GH_to_GH_CONFIG_ING; return { return 'validate' in this.session.admin_settings.location; }" });"
+
+1 1 ,"
+
+3 2 options: { 'commitMessage': 'chore: update contributors' }
+3 3 }, "checkout": {#(.*?)%\
+3 4 " errors: [] },"
+
+4 2 options: { 'keyboard cat' }"
+
+5 2 options: { GitHubReleaser: 'oauth' }"
+
+6 2 options: {changelogOpts: { semi: "not-a-fs-real-changelog" } }" }" }"789012");
+6 4 };"
+
+7 1 ,"stylus: {type: 'oauth'}, "https://github.com/{{{ endpoint }}}" },"
+
+8 1 ,"stylus: {cucumberjs: {cucumberjs: {cucumberjs: {cucumberjs: {}} } } } } },"
+

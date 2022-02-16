@@ -1,0 +1,535 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 , dirname = path.dirname
+0 1 , utils = require('./utils')
+0 2 , dirname = path.dirname
+0 3 , basename = path.basename
+0 4 , extname = path.extname
+0 5 , exists = path.existsSync
+0 6 , join = path.join;
+0 7 module.exports = View;
+0 8 function View(view, options) {
+0 9 options = options || {};
+0 10 this.view = view;
+0 11 this.root = options.root;
+0 12 this.relative = false!== options.relative;
+0 13 this.defaultEngine = options.defaultEngine;
+0 14 this.parent = options.parentView;
+0 15 this.basename = basename(view);
+0 16 this.engine = this.resolveEngine();
+0 17 this.extension = \'.\' + this.engine;
+0 18 this.name = this.basename.replace(this.extension, \'.\');
+0 19 this.path = this.resolvePath();
+0 20 this.dirname = dirname(this.path);
+0 21 if (options.attempts) options.attempts.push(this.path);
+0 22 };
+0 23 View.prototype.__defineGetter__(\'exists\', function(){
+0 24 try {
+0 25 stat(this.path);
+0 26 return true;
+0 27 } catch (err) {
+0 28 return false;
+0 29 }
+0 30 });
+0 31 View.prototype.resolveEngine = function(){
+0 32 if (~this.basename.indexOf(\'.\')!== -1) return extname(this.basename).substr(1);
+0 33 if (this.parent) return this.parent.engine;
+0 34 return this.defaultEngine;
+0 36 View.prototype.resolvePath = function(){
+0 37 var path = this.view;
+0 38 if (!~this.basename.indexOf(\'.\')!== -1) return path;
+0 39 if ('/\' == path[0]) return path;
+0 40 if (this.relative && this.parent) return this.parent.dirname + \'/\' + path;
+0 41 return this.root
+0 42 ? this.root + \'/\' + path
+0 43 : path;
+0 45 View.prototype.__defineGetter__(\'contents\', function(){
+0 46 return fs.readFileSync(this.path, \'utf8\');
+0 48 View.prototype.__defineGetter__(\'templateEngine\', function(){
+0 49 var ext = this.extension;
+0 50 return cache[ext] || (cache[ext] = require(this.engine));
+0 52 View.prototype.__defineGetter__(\'rootPath\', function(){
+0 53 this.relative = false;
+0 54 return this.resolvePath();
+0 56 View.prototype.__defineGetter__(\'indexPath\', function(){
+0 57 return this.dirname
+0 58 + \'/\' + this.basename.replace(this.extension, \'.\') + \'/index\' + this.extension;
+0 60 View.prototype.__defineGetter__defineGetter__(\'upIndexPath\', function(){
+0 62 + \'/
+0 63 + \'/\';
+0 65 View.prototype.__defineGetter__defineGetter__defineGetter__defineGetter__(\'upIndexPathType\', function(){
+0 67 + \'/../dirname
+0 70 View.addView: function(){
+0 71 if ( View.isLayout = function(){
+0 72 applyGetter.view, view, view, options, options, fn, parentView, options) {
+0 73 options = options = options || {};
+0 74 }'
+
+1 1 , bowerJson = require("bower-json")
+1 2 , VERSION = require("../../package.json').VERSION
+1 3 , cli = require("../../util/cli"),
+1 4 _ = require("lodash");
+1 5 var mainPackage = new helpers.TempDir({
+1 6 \'bower.json\': {
+1 7 name: \'package\'
+1 9 }).prepare();
+1 10 var version = helpers.require(\'../../package.json\').version;
+1 11 var logger = new Logger();
+1 12 var mainPackage.prepare();
+1 14 var install = function(packages, options, config) {
+1 16 var names = _.extend({
+1 17 \'underscore\': \'*\'
+1 18 }, options);
+1 19 if (options.save ||!options.saveDev) {
+1 20 packages[name] = config;
+1 21 } else if (options.save) {
+1 24  logger.setLevel(config.directory, \'test\');
+1 25 logger.useColors(config.colors);
+1 26 return logger;
+1 29 var loggerCache = {};
+1 30 var config = {};
+1 31 var jsonPackage = new helpers.TempDir({
+1 36 var gitPackage = new helpers.TempDir();
+1 37 async.each(function(item, next) {
+1 38 logger.emit(\'end\', item);
+1 39 }, function() {
+1 40 if (options.save) {
+1 41 assets[package.path] = info[package.path] || {};
+1 44 next();
+1 47 return helpers.install(packages, options, config);
+1 49 it(\'reads.bowerrc from cwd\', function() {
+1 50 mainPackage.prepare();
+1 52 install();
+1 53 } catch (e) {
+1 54 if (e.code === \'ENOENT\') throw e;
+1 56 var result = fs.readFileSync(mainPackage.path, property);
+1 57 expect(result).to.eql(\'[main package.path]\');
+1 60 it(\'runs preinstall hook\', function() {
+1 76 it(\'does not run hooks for non-install hook.\', function() {
+1 77 var result = fs.readFileSync(mainPackage.path, undefined);
+1 79 result.prepare();
+1 80 } catch (e = fs.unlinkSync(mainPackage.path);
+1 81 } catch (e) { throw e = \'No hooks.hasAllIsModified();
+1 82 } finally {
+1 86 var output = true;
+1 87 var endpoints = true;
+1 88 for (some.prepare.done();
+1 89 for (some.prepare();
+1 90 for (some.prepare.prepare();
+1 91 done.on(\'bowerJson.removeIgnore.clean(promise.bind(this);
+1 92 .exec(this);
+1 93 return helpers.uninstall.exec(this);
+1 94 return helpers.exec(this);
+1 95 })();
+1 96 \
+2 1 , bower_url = require(\'bower-url\')
+2 2 , rc = require("./util/rc')
+2 3 , paths = require('./util/paths')
+2 4 , defaults = require("../config/bower-json-default-cli-options")
+2 5 , fs = require("fs");
+2 6 var config = defaultConfig({
+2 7 urlRoot: \'/\',
+2 8 relative: \'/\',
+2 9 path: \'/\'
+2 11 config.offline = false;
+2 12 config.force = false;
+2 13 function parseUrl(urlStr) {
+2 14 return new URL(urlStr);
+2 16 function search(urlStr, force) {
+2 17 var str = parseUrl(urlStr, { timeout: 5000 });
+2 18 var qs = parseUrl(urlStr, { timeout: 5000 });
+2 19 if (!qs) {
+2 22 return Q.all([
+2 23 fs.readFile(path.join(config.cwd, config.urlRoot),
+2 24 process.nextTick(function () {
+2 25 var promises = [];
+2 26 that._logger.action(\'install\',
+2 27 that._manager.install.bind(that._manager));
+2 28 promises.push(promise);
+2 29 return Q.all(promises)
+2 30 .done(function () {
+2 31 return that._removePackages(promises);
+2 32 })
+2 33 .done(function (that._readJson(that._jsonFile) {
+2 35 that._analyse()
+2 36 ]);
+2 38 .then(function (json) {
+2 39 .warn(\'No packages at the bower.json present\');
+2 40 that._jsonFile = path.join(that._config.cwd, json.name);
+2 41 return that._json = json;
+2 45 function removePackages(that._jsonFile) {
+2 46 var pkgs = {};
+2 47 var previousPackages = {};
+2 48 var jsonStr = JSON.stringify(json, null,' ');
+2 49 if (beforePackages.has(that._jsonFile)) {
+2 51 that._jsonFile = path.join(that._config.cwd, deprecated? deprecated : true);
+2 54 return that._readJson(that._jsonFile)
+2 55 .spread(function (json, jsonStr) {
+2 56 var promises;
+2 57 var decEndpoints = {};
+2 58 promises = mout.object.map(that._json.dependencies, function (decEndpoint) {
+2 59 var name = decEndpoint.name;
+2 60 var endpoint = decEndpoint.source;
+2 61 that._jsonFile = path.join(that._config.cwd, source);
+2 63 .then(function () {
+2 64 return that._json.filters.filter(function (pkg) {
+2 65 return!decEndpoint.pkgMeta.version;
+2 68 .then(function (result) {
+2 69 return result.main = result.pkgMeta._release;
+2 72 .sort(function (name = this._json) {
+2 73 return this._json = json.pkgMeta;
+2 75 .version;
+2 76 }.bind(this._sort(this._pkg);
+2 78 return this._writeFile = fs.writeFile(path.join(that._config.cwd, this._config.jsonFile, this._config.jsonFile, this._config.jsonFile);
+2 79 }, function (err) {
+2 80 if (err) {
+2 82 process.next) {
+2 83 process.nextTick(this._writeFile);
+2 86 }.bind(this));
+2 88 dbower.jsonFile.readOptions = function () {
+2 89 .
+3 2 , Manager = require("../core/manager) {
+3 3 var json = require(\'bower-json/bower-jsonjson\')
+3 4 , message = require(\'../message\');
+3 5 var defaultConfig = require(\'../config\');
+3 6 function list(options, config) {
+3 7 var that = this;
+3 8 var promise;
+3 9 var decEndpoint = mout.object.deepFillIn(config || {}, defaultConfig);
+3 12 if (options.paths && options.relative == null) {
+3 13 options.relative = true;
+3 15 if (options.relative == 1) {
+3 16 options.relative = false;
+3 18 return that._getTree(options)
+3 19 .spread(function (tree, flattened) {
+3 20 var baseDir = path.dirname(path.join(that._config.cwd, config.directory));
+3 21 var flattened = mout.object.map(flattened, function (node) {
+3 22 return this._manager.toData(node, additionalKeys);
+3 23 }, this);
+3 24 mout.object.forOwn(flattened, function (decEndpoint) {
+3 25 if (!decEndpoint.extraneous) {
+3 26 this._json.extraneous = true;
+3 27 this._json.message = message;
+3 28 this._json.name = decEndpoint.name || path.basename(that._config.cwd) || "";
+3 31 function prepareJson(decEndpoint, flattened) {
+3 32 var key;
+3 33 var promise = Q.resolve();
+3 34 this._json = json = this._json = json;
+3 35 if (this._jsonp) {
+3 36 promise = promise.then(function () {
+3 37 return that._manager.toData(that._json);
+3 39 } else {
+3 40 promise = this._json.name;
+3 45 return promise.then(function () {
+3 49 return promise.error(err);
+3 51 return promise.that._analyse();
+3 54 function addDependency(pkg) {
+3 55 var path;
+3 56 var tag;
+3 57 var key = \'packages-\' + pkg.name + \'.zip\';
+3 58 var endpoint;
+3 59 if (pkg.looked) {
+3 60 tag = pkg.originalTag || \'~\' + pkg.version;
+3 62 path =  (pkg.gitUrl || pkg.assetUrl || pkg.originalAssetUrl).replace(/\
+3 63 $/, \'\');
+3 64 if (pkg.originalTag) {
+3 65 path = pkg.originalTag || \'~\'version\' + pkg.version;\';
+3 68 tag = function () {
+3 69 return Q.push(pkg.root + path;
+3 72 return Q.then(function paths(flattract.bind(this._manager) {
+3 73 return that._analyse.bind(this._manager));
+3 74 .install(this._json));
+3 77 addDependencies = function removeDependenciesFolder = function (pkg) {
+3 78 if (target) {
+3 79 var path = path.dirname(this._resolve(this._config.directory) && that._jsonp) || path.resolve(this._json.assetDir) || this._jsonp) || 
+3 80 .assetDir || \'.zip
+3 81 .then(this._manager.
+4 2 , pathSync = require("path-sync")
+4 3 , _ = require("lodash")
+4 4 , rewire = require("rewire")
+4 5 , sinon = require("sinon')
+4 6 , config = require("../lib/config')
+4 7 , debug = require('debug')('express:router:layer')
+4 8 , View = require('./view/view')
+4 9 , http = require('http');
+4 10 describe("View', function(){
+4 11 var view, options, config;
+4 12 var sourceDir = config.source_dir;
+4 14 var config = this.config;
+4 15 var helper = require('./helper');
+4 16 var template = require(\'../util/template\');
+4 17 var escapeContent = function(content){
+4 18 return content.replace(/<!--\\s*more\\s*-->/g, \'<!--\\s*more\\s*-->\');
+4 20 var file = new View(sourceDir, options);
+4 21 return function(content, options, fn){
+4 22 if (!options) options = {};
+4 23 var viewOptions = _.extend({
+4 24 path: this.dirname,
+4 25 title: options.join(\', \'),
+4 26 homepage: options.join(\', \')
+4 28 if (options.path) {
+4 29 file.read(sourceDir + \'/\' + options.path, function(err, content){
+4 30 if (err) throw new Error("Can\\\'t find appropriate path for View source");
+4 31 var page = options.page;
+4 32 if (!page.length) {
+4 33 content = page.slice(0, 1);
+4 35 var newLocals = _.extend({
+4 47 return fs.readFile(sourceDir + \'/\' + options.path, function(err, content){
+4 49 var view = options.view;
+4 50 if (!view.length) {
+4 51 content = page.slice(1, 1);
+4 53 return Promise.all([
+4 54 fs.stat(sourceDir),
+4 55 process(content)
+4 56 ]).spread(function(stats, content){
+4 57 var data = yfm(content);
+4 58 var output = Json.parse(content);
+4 59 data.source = sourceDir;
+4 60 data.raw = content;
+4 61 data.slug = escapeString(data.slug);
+4 62 if (options.relative_link){
+4 63 return 1;
+4 66 return path;
+4 68 var layout = options.layout = false;
+4 69 if (typeof style === \'page\') {
+4 70 style = \'draft\';
+4 71 } else if (style = \'photo\'string\';
+4 73 style = \'page\';
+4 75 var result = \'photo = \'photo\'s\';
+4 77 var byline = byline = options.replace = byline;
+4 78 if (position = options.position = 1;
+4 79 if (position = '';
+4 80 if (position = 0;
+4 81 ) {
+4 82 if (position = left;
+4 84 returnposition = left;
+4 85 position = left;
+4 89 return page.push(answers[position];
+4 91 var left;
+4 92 if (layout = (position > 1;
+5 2 , json = require("application-json");
+5 3 var config = bowerJson.config = config || {};
+5 4 function readJson(file, options) {
+5 5 var bowerJson = json(fs.readFileSync(file), options);
+5 6 if (bowerJson.exists) {
+5 7 options.warn = true;
+5 9 options.warn = false;
+5 11 return json;
+5 13 function parseJson(file, options) {
+5 14 var bowerJson = json.parse(file, options);
+5 16 return bowerJson.exists;
+5 20 function getJsonFrom-Zespia(file) {
+5 21 var parsedJson = json.parse(file);
+5 22 if (!parsedJson.startsWith(parsedJson.substr(0, 1)) {
+5 23 return parsedJson;
+5 27 function convertJsonToObject(object) {
+5 28 var key = \'\';
+5 29 var value = {};
+5 30 if (typeof name === \'object\') {
+5 31 return object.map(function (m) {
+5 32 return m.toString();
+5 34 } else if (name === \'object\') {
+5 35 return Q.resolve(options[name]);
+5 44 value = object;
+5 45 } else if (isDefined(value)) {
+5 46 value = value.toString();
+5 56 value = null;
+5 58 return value;
+5 60 function convertJsonToObj(object) {
+5 70 function convertJsonToObjSync(object) {
+5 71 return (
+5 72 !(value instanceof Date) &&
+5 73 value instanceof Date)
+5 74 &&
+5 75 !(value instanceof Number || value.toString())
+5 77 value instanceof Date &&
+5 78 !(value.toString())
+5 80 !(value instanceof Buffer);
+6 1 , mout = require(\'mout\')
+6 2 , bowerJson = require(\'bower-json\')
+6 3 , json = require(\'bower-json\')
+6 4 , proxyquire = require(\'proxyquire\').noCallThru().noPreserveCache();
+6 5 var fs = require(\'fs\');
+6 6 var zlib = require(\'zlib\');
+6 7 var config = require(\'../lib/config\');
+6 8 function convertPathToPosix(file, baseDir, proxyquire, urlRoot) {
+6 9 return function (file) {
+6 10 return path.normalize(file);
+6 13 function convertPathTo an absolute path
+6 16 , extname = path.extname;
+6 17 function normalizeConfig(config);
+6 22 function normalizeConfigWithDefaults(config) {
+6 23 var baseDir = config.base_dir;
+6 24 return function (files, defaults) {
+6 25 var defaults = config.default_urlRoot;
+6 26 if (files) {
+6 27 _.each(files, function (file) {
+6 28 var normalizedPath = path.normalize(file);
+6 29 normalizedPath = normalizedPath;
+6 32 return normalizedPath;
+6 34 config.files = config.files.map(function (file) {
+6 35 if (normalizedPath.indexOf(file)!== -1) {
+6 36 return [normalizedPath, dirname, basename];
+6 38 return paths(config.cwd, config.directory);
+6 52 function convertPathTo an absolute path with indexed values and length
+6 53 , len = accepted = 0;
+6 54 for (var i = 0; i < len; ++i) {
+6 55 for (var j = i ;
+6 56 if (dep.length < len; ++j) {
+6 57 return accepted[i];
+6 60 return accepted[i] = value;
+6 62 return found: false;
+6 65 function convertPathToPosix(baseDir) {
+6 66 return function convertPathToPosix(baseDir) {
+6 67 return baseDir
+6 68 .length
+6 69 .split(baseDir, 2) {
+6 70 var newPath = 2;
+6 71 , sep = 0;
+6 72 return new (
+7 2 , cli = require("../util/cli")
+7 3 , root = global || window || this
+7 4 , json = require(\'json\');
+7 5 var jsonFile = require(\'bower-json\').File
+7 6 , config = require("../config")(bowerJson, config.jsonFile);
+7 7 var config = {
+7 8 json: json,
+7 9 default: config.default,
+7 10 language: config.languages,
+7 11 timezone: config.timezone
+7 14 config.force = true;
+7 15 function formatPath(base, endpoints) {
+7 16 return base + (endpoints &&!endpoints.length) && fs.existsSync(base).then(function(exist) {
+7 17 if (!exist) return;
+7 18 return fs.readFile(base).then(function(content) {
+7 19 var json = JSON.parse(content);
+7 20 if (json) {
+7 21 return mout.object.mixIn(json, null, { assume: true });
+7 26 function convertPathToPosix(base, endpoints) {
+7 27 var posix = require("posix");
+7 28 if (posix.existsSync(base)) {
+7 29 return [base];
+7 31 return path.resolve(base + "/" + extname(base).substring(1);
+7 34 var posix = new World(base, endpoints);
+7 35 return (process.env.NODE_ENV || \'development\') + \'"\' + typeof engines[Base] + \'"\')
+7 36 .replace(/\\\\/g, \'\\\
+7 37 \')
+7 38 .replace(/\\r/g, \'\\\\r\')
+7 39 .replace(/\\u2028/g, \'\\\\u2029\');
+7 40 var file = newFile({
+7 41 path: base + \'/some/b.js\',
+7 42 published: true,
+7 43 type: \'create\',
+7 44 renderable: true
+7 47 var source = file.source;
+7 48 var resolved = source.replace(/\\\\ source/, \'.md\');
+7 49 var sourceId = options.save? \'source\' : source;
+7 50 var param = options.save? \'source\' : source;
+7 51 options.params = options.params || {};
+7 52 switch (name) {
+7 53 case \'json\':
+7 54 return date.parse(source).toISOString();
+7 55 case \'xml\':
+7 57 case \'png\':
+7 59 case \'image\':
+7 60 return options.image.toString();
+7 63 case \'svg\':
+7 64 return options.video.toString();
+7 67 var contentType = function sendToBuffer(file) {
+7 68 var chunk = fs.readFile(file.source, config.type, config.path) {
+7 69 var headers = file.contentType = file.type;
+7 70 contentType = file.path = file.path = file.path;
+7 71 if (config.type && path.type!== config.type) && config.type!== \'file.type && fs.isFile(file.path)
+7 72 if (config.type && config.type &&!== file.type) config.type) config.type) config.type!== file.type) config.type) {
+7 73 contentType(file.type);
+7 74 if (config.type!== undefined) config.type!== file.type) return;
+7 75 if (contentType) return;
+7 76 if (config.set(file.type === \'undefined
+7 77 file.type === \'undefined
+7 78 file.type === \';
+7 79 file.read
+8 18 this.name = this.basename.replace(this.extension, \'\');
+8 32 if (~this.basename.indexOf(\'.\') < 0) {
+8 33 return extname(this.basename).substr(1);
+8 40 if (!~this.basename.indexOf(\'.\') < 0) {
+8 43 if (this.relative && this.parent) return this.parent.dirname + \'/' + path;
+8 57 + \'/\' + this.basename.replace(this.extension, \'\') + \'/index\';
+8 59 View.prototype.__defineGetter__(\'upIndexPath\', function(){
+8 60 return this.dirname + \'/../\' + this.name
+8 61 + \'/index\';
+8 63 View.prototype.__defineGetter__(\'upIndexPathType\', function(){
+8 64 return this.dirname + \'/../\' + this.basename;
+8 66 View.each(function this.engine = function(){
+8 67 return this.resolveEngine.resolveEngine(this.extension;
+8 69 .engine.__define(this)
+8 70 .set(\'ecelpagmentType(require(require(require(this)
+8 71 .extension, \'.'s\', engines[extension\'s\', engines[extension] = require(this.engine] = engines[ext] || require(this.engine]))
+8 72 .exec(this));
+8 74 .add(this);
+8 75 View.__protoArray = function(){
+8 76 .__proto__proto__proto__ = View.extension = View.prototype;
+8 78 exports.dirname = View.
+9 2 , json = require(\'json-fs\')
+9 3 , fs = require(\'fs\')
+9 4 , os = require(\'os\')
+9 5 , pkg = require(\'../../package.json\')
+9 6 , template = require(\'../util/template\');
+9 8 cwd: \'/bower_components/\',
+9 9 pkg: bowerJson.read(\'config.cwd2\', {
+9 10 url: \'/__bower_components/bower_components/foo.zip\'
+9 11 }, 
+9 12 proxy: proxy,
+9 13 proxyPath: \'/__bower_components/proxy.zip\'
+9 15 var baseDir = os.tmpdir()
+9 16 , tmpConfig = os.tmpDir()
+9 17 , configEnv = {
+9 18 resolve: function () {
+9 19 return path.resolve(baseDir, configEnv) {
+9 20 },
+9 21 installed: function (name) {
+9 22 return [
+9 23 QUNKNOWNCMD[0],
+9 24 newConfig
+9 25 ]
+9 26 .then(function (dir) {
+9 27 return paths.map(function (file) {
+9 28 return file + \'/\' + path.basename(file)
+9 32 promises = bowerJson.map(\'bower-json\', function (decEndpoint) {
+9 33 return decEndpoint.promise;
+9 35 return QUNKNOWNCMD[0]
+9 36 .then(function (pkgMeta) {
+9 38 {
+9 39 name: name,
+9 40 version: pkgMeta.version,
+9 41 main: main,
+9 42 homepage: page,
+9 43 canonicalDir: config.cwd,
+9 44 root: config.root
+9 53 ];
+9 55 .then(function (str) {
+9 57 json,
+9 78 version: str,
+9 79 homepage: str
+9 86 paths: map(fs.readFileSync(str),
+9 87 pkgMeta: str
+9 92 return obj.version;
+9 95 return module.exports = require('./bower/bower.json'));
+9 98 expect(pkgMeta._release).to.equal(dir);
+9 99 expect(pkgMeta._release);
+9 104 it("should read all config file in bower.json from bower.json")
+9 105 .json from bower.json")
+9 106 it("should.commands
+9 107 it("should read config file in bower.json from bower.json")
+9 108 it("should read from bower.commands", function should contain 3 string")
+9 109 it("should read string")
+9 110 it("simple", function string")
+9 111 it("simple", function()", function() {
+9 112 "));
+9 113 it("simple"));
+9 115 it("should validate("should validate("should validate string") > 1 string")
+9 116 ")
+9 117 it("simple")
+9 118 it("should validate string")
+9 122 it("should validate("simple")
+9 126 it("simple()")
+9 128 });'
+

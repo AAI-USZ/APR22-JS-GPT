@@ -1,0 +1,109 @@
+Min editdistance: 14.00
+Closest candidate: 6 11 describe 'onRequest'
+0 1 batch(function(key, val){
+0 2 return val === undefined?
+0 3 Express.server.finished :
+0 4 Express.response.body.should.eql([key, val]
+0 5 end
+0 6 })
+0 7 response.sendHeader(200, { 'Content-Type': 'application/x-www-form-urlencoded' },
+0 8 { body: 'pj' }
+0 9 Express.response.status.should.eql 200
+0 10 Express.request = response
+0 11 Express.originalResponse.sendHeader(200, { 'Content-Type': 'application/x-www-form-urlencoded' },
+0 13 response.sendBody(Express.response.body || '')
+0 14 Express.originalResponse.finish()
+0 15 }
+0 17 describe 'onResponse'
+0 18 it'should return a string in the format'
+0 19 Express.response.status = function(code){
+0 20 return Express.server.finishedWith(code)
+0 22 it'should be case insensitive'
+0 24 return  Express.server.finishedWith(code)
+0 26 it'should not return an empty string'
+0 27 Express.response.status = function(){ return 'body' }
+0 28 Express.response.body.should.eql 'empty'
+0 31 describe'session Store'
+0 32 describe 'Memory'
+0 33 it'should persist'
+0 34 Express.session.store.Memory = function(){
+0 35 return Express.server.settings.session.Memory
+0 39 describe '#fetch()'
+0 40 describe 'when the session does not exist'
+0 41 it'should return a new Session'
+0 42 Express.fetch('1').should.have_property 'lastAccess'
+0 45 describe 'when the session instanceof Session'
+0 46 it'should return the lastAccess'
+0 47 Express.Session.fetch('1').should.have_property 'lastAccess'
+0 50 describe '#clear()'
+0 51 it'should remove memory from req.session.memory'
+0 52 memory = new (require('express/session').Store.clear())
+0 55 describe '#destroy()'
+0 56 it'should destroy a single session'
+0 57 memory = new (require('express/session').Store.destroy()
+0 62 memory = new (require('express/session').Store.fetch())
+0 63 memory.commit({ id: '1' })
+0 64 memory.clear()
+0 65 memory.should.not.be_null
+0 70 memory = new (require('express/session').Store.destroy())
+0 72 memory.destroy()
+0 73 memory.should.should.not.be_null
+0 79 describe '#length = 100()'
+0 80 it'should work.for (optional) when_ null is the most_ the capture file exists'
+0 81 memory.length = 2 to avoid(123 = 100
+0 82 memory.stat.stat().should.should.be_null
+0 88 describe 'Memory.skip('Memory Store.Memory', function()'
+0 89 it'should work8.').should.toString()'
+0 95 describe 'Memory.skip('x-me-chrome-chrome-middleware-middleware-chrome-middleware-chrome-middleware-chrome-middleware-chrome-middleware-chrome-chrome-middleware'
+0 96 it'sh8-chrome-middleware-chrome-chrome-
+1 1 '
+
+6 1  }})
+6 2 response.body.should.eql 'p'
+6 6 it'should set the Set-Cookie header'
+6 7 get('foo', function() { this.response.cookie.bar 'SID', this.response.body)
+6 8 this.response.body.should.eql 'SID'
+6 11 describe 'onRequest'
+6 12 it'should parse the response status'
+6 13 get('/user', function(status){
+6 14 this.status(404)
+6 15 return this.response.status = status
+6 17 get('/user').headers['content-type'].should.eql 'application/x-www-form-urlencoded'
+6 21 it'should send the status code and body'
+6 22 get('/user', function(status, body){
+6 23 this.status(500, status)
+6 24 body.should.eql status
+6 30 it'should set the response status'
+6 40 it'should set the body'
+6 41 get('/user', function(body){
+6 42 this.response.body.should.eql body
+6 43 this.response.status = status
+6 48 describe 'onXMLHttpRequest'
+6 49 it'should parse XMLHttpRequest'
+6 50 get('/shared/object', function(val){
+6 51 this.header('x-requested-with')
+6 53 this.header('x-requested-body-type') :
+6 54 this.response.body.should.eql val
+6 58 it'should parse the request header'
+6 59 get('/user', function(param){
+6 60 return this.param('user')
+6 62 get('/user').headers.should.have_property 'x-requested-body-type', 'xml,image/png')
+6 63 return this.response.status
+6 65 get('/user').headers.should.have_property 'x-requested-with', 'png')
+6 67 it'should not override when manually set'
+6 68 get('/user'
+6 69 get('/user')
+6 70 get('/user').headers')
+6 71 get('/user').headers.headers.should.not.have_property 'x-session')
+6 78 describe '#param = function get'
+6 79 describe 'when given a session does the session does the specific path'
+6 80 it'should match'
+6 83 get(/user.param('/user/:id')
+6 84 get('/:id')
+6 85 get('/user/:id')
+6 88 get('/user/id')
+6 89 get('/id')
+6 90 get('/')
+6 92 get('/user/')
+6 99 describe 'exec'
+6 100 d

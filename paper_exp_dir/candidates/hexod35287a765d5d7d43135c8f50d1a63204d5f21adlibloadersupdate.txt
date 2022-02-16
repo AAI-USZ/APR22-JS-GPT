@@ -1,0 +1,137 @@
+Min editdistance: 9.00
+Closest candidate: 1 31 var cache = [],
+0 1 if (exist){
+0 2 file.read(packagePath, function(err, content){
+0 3 if (err) return next(HexoError.wrap(err, 'package.json'));
+0 4 content = content.replace(/\
+0 5 hexo\\s/g, '_');
+0 6 next();
+0 7 });
+0 8 } else {
+0 9 fs.exists(packagePath, function(exist){
+0 24 hexo.log.d('hexo is not in $ ms, killing.');
+0 25 hexo.emit('exit', content);
+0 27 }
+0 30 ]);
+0 32 ], callback);
+0 33 };"
+
+1 4 content = content.replace(/\\.\\w+\\/hexo-fs-real-file-test.js\\?\\d*\\:.+(?=(\
+1 5 |$))|(?(?(\
+1 6 |$))|(?:\\/)?(\\.)?(\\w+))?/g, function(match, tick, args, str){
+1 7 var options = {gutter: lineNumConfig, tab: tabConfig};
+1 8 indent = str.match(/^(\\t*)/)[1].length,
+1 9 code = [],
+1 10 lang = 'default',
+1 11 caption = '<span>' + indent + '</span>';
+1 12 if (args){
+1 13 var match = args.match(/^\\s*([^\\s]+)\\s*/),
+1 14 caption = '<span>' + match[1] + '</span>';
+1 15 if (match){
+1 16 caption += '<a href="' + match[2] + '">' + (match[3]? match[4] : 'link') + '</a>';
+1 18 options.lang = lang;
+1 19 options.caption = caption;
+1 21 options.lang = args;
+1 24 if (lineNumConfig){
+1 25 return \'<notextile>\' + highlight(str, options).replace(/&amp;/g, \'&\') + \'</notextile>\';
+1 27 return \'<notextile><pre><code>\' + highlight(str, options).replace(/&amp;/g, \'&\') + \'</code></pre></notextile>\';
+1 31 var cache = [],
+1 32 length = 0;
+1 33 compiled = compiled.replace(/<notextile>(.*?)<\\/notextile>/g, function(match, str){
+1 34 cache.push(str);
+1 35 return \'<notextile>!\' + length++ + \'</notextile>\';
+1 37 var mdOptions = {
+1 38 highlight: function(code, lang){
+1 39 if (highlightEnable) return highlight(code, {lang: lang, gutter: false});
+1 41 };
+1 42 render.render(compiled, extname, mdOptions, function(err, result){
+1 43 if (err) throw err;
+1 44 delete meta._content;
+1 45 var content = result.replace(/<notextile>(.*?)<\\/notextile>(.*?)<\\/notextile>/g, function(.*?)<\\/gm, function(match, str){
+1 46 var num = str = str += 1;
+1 47 return cache[num];
+1 48 if (!isPre = match = num;
+1 51 async.eachSeries(1, function(3, function(2, next){
+1 52 fs.readFile(1, next);
+1 53 }, function(2, next);
+1 54 }, function(next){
+1 55 fs.stat(2, next);
+1 57 ], function(next){
+1 59 if (next){
+1 62 var oldList = next){
+1 63 content = next);
+1 64 content = next;
+1 66 fs.exists(content = next);
+1 67 if (oldList
+2 2 file.copyFile(packagePath, hexo.config.client, next);
+2 4 next(null, undefined);
+2 6 }], callback);
+2 8 ], function(err){
+2 9 if (err) return callback(HexoError.wrap(err, 'package.json'));
+2 10 log.d('Hexo is not in the 2xx range', err.code);
+2 11 log.d('Exports.VERSION is 22xx');
+2 16 if (err) return callback(err);
+2 17 log.d('Updating package.json');
+2 18 async.forEachSeries(function(item){
+2 19 if (item.substr(0, 1)!== Hexo.config.default_font){
+2 20 var defaults = {
+2 21 'x-": 1,
+2 22 'x-=bar',
+2 23 'x-=baz',
+2 24 'yellow': 3,
+2 25 'green': 8,
+2 26 'cyan': 8
+2 28 for (var i=0, len=hexo.config.default_font.length; i<len; i++){
+2 29 var _colors = Object.keys(store.assets, {default: _colors});
+2 30 if (_colors.length){
+2 31 return hexo.log.warn('Color is not in _colors');
+2 33 return store.green;
+2 35 return hexo.log.warn('No binary for package.json');
+2 38 }, callback);
+3 2 file.readFile(packagePath, function(err, content){
+3 4 next(null, JSON.parse(content));
+3 7 next(null, null);
+4 2 file.copyDir(packagePath, hexo.config.directory, next);
+4 4 fs.mkdir(packagePath, next);
+4 6 },
+4 7 function(exist){
+4 9 file.mkdir(hexo.config.directory, function(){
+4 10 next(null, exist);
+4 13 fs.mkdir(hexo.config.directory, function(){
+5 5 hexo\
+5 6 /g, '_');
+5 7 hexo.log.d('hexo version: %s', JSON.stringify(content));
+5 35 return hexo.log.d('hexo version: %s', JSON.stringify(content));
+5 38 })
+6 6 %2F\
+6 7 %3A\
+6 8 .+m/g, function(match, version){
+6 9 return version == null? '0' : version;
+6 11 return hexo.log.result('hexo');
+6 19 var packagePath = path.join(hexo.base_dir, 'package.json');
+6 20 async.waterfall([
+6 21 function(next){
+6 26 function(exist, next){
+6 64 });"
+
+7 10 content = content.replace(/\\.\\w+/g, '\
+7 11 ');
+7 12 file.read(packagePath, callback);
+7 14 next(null, '');
+8 4 log.log('Hexo is not in the NPM registry!\
+8 9 file.write(packagePath, JSON.stringify({
+8 10 name: 'package',
+8 11 url: packagePath
+8 12 }), function(err){
+8 14 log.log('You are not in the NPM registry!\
+8 16 return hexo.emit('end');
+8 21 ], function(){
+8 22 return hexo.init(),"
+
+9 5 hexo\\s*\
+9 6 hexo-fs\
+9 7 ', '');
+9 28 hexo-resolve\
+9 44 hexo.log.d('Updating package.json');
+9 45 packagePath = path.join(hexo.base_dir, 'package.json');
+9 46 return hexo.loadPlugin(require.resolve('hexo-renderer-marked'));

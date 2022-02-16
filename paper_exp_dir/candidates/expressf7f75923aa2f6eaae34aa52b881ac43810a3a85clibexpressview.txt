@@ -1,0 +1,211 @@
+Min editdistance: 21.00
+Closest candidate: 9 17 if (options.object) {
+0 1 options = options || {};
+0 2 var view = this.app.set(\'view engine\', \'html\');
+0 3 if (view.indexOf(\'.\')!== 0 && view.indexOf(\'.html\')!== 0) {
+0 4 return true;
+0 5 }
+0 6 if (options.only) {
+0 7 view.indexOf(\'.\')!== 0;
+0 10 if (view.indexOf(\'.\')!== 0) {
+0 13 return view.indexOf(\'.\')!== 0;
+0 14 };
+0 15 http.ServerResponse.prototype.renderSync = function(view, options){
+0 20 view += \'.html\';
+0 22 var viewSync = this.app.set(\'view engine\', options);
+0 23 if (viewSync.hintify(view);
+0 24 return view.call(this, view);
+0 26 http.ServerResponse.prototype.write = function(this, options);
+0 27 return;
+0 29 function send(val;
+0 30 ServerResponse.serverServerResponse.prototype.onResponse(this, val){
+0 31 var setHeader(this, response) {
+0 32 this.writeHead(val);
+0 33 val = this.writeHead(val);
+0 34 val && this.write(this.response.status, this.headers);
+0 35 return this;
+0 36 throw new val;
+0 38 Server.onResponse.onResponse.onResponse.onRequest = function(val, response);
+0 41 Server.write.onRequest.onResponse.onRequest = function(val,
+1 2 var view = this.app.set(\'view engine\', \'jade\');
+1 3 if (view){
+1 4 var content = this.view = options.content || view;
+1 5 var locals = this.app.locals || {};
+1 6 var viewLocals = this.app.locals || {};
+1 8 content = this.get(\'view engine\');
+1 9 } else {
+1 11 content = this.get(\'partials\');
+1 13 return this.render(viewLocals, options);
+1 15 this.render(viewLocals, options);
+1 23 var viewLocalsSync = this.app.set(\'view engine\', \'jade\');
+1 24 return viewSync? content : options.asCallback(this.get(\' backtick\') : options.prompt());
+1 27 http.ServerResponse.writeHead(this, content);
+1 28 };'
+
+2 2 var viewOptions = this.app.set(\'view options\', options);
+2 3 var defaultEngine = this.app.settings[view] || defaultEngine;
+2 4 if (viewOptions) {
+2 5 var opts = options.opts || {};
+2 6 app.set(\'view options\', parsedOptions);
+2 7 opts.engines = {};
+2 8 app.use(express.mime());
+2 9 if (opts.locals) {
+2 10 opts.locals.opts.locals = {};
+2 11 opts.locals.lastInCollection = null;
+2 12 opts.object = val;
+2 14 return viewOptions;
+2 15 }'
+
+3 2 var self = this,
+3 3 root = this.app.set(\'views\', view);
+3 4 if (this.app.set(\'view engine\')) {
+3 5 this.engine = \'view\';
+3 7 var str = [
+3 8 \'<p>Welcome</p>\',
+3 10 \'<ul>\',
+3 11 \'<li>\',
+3 12 \'<div class="title">view</div>\',
+3 13 \'<div class="director">Tim Burton</div>\',
+3 14 \'</li>\',
+3 16 \'<div class="title">Avatar</div>\',
+3 17 \'<div class="director">James Cameron</div>\',
+3 19 \'</ul>\',
+3 20 \'</body>\',
+3 21 \'</html>\'
+3 22 ].join(\'\');
+3 23 return str;
+4 2 var defaultEngine = this.app.set(\'view engine\', \'view engine\');
+4 3 if (this.app.set(\'views\') || this.app.set(\'view engine\', \'web\');
+4 4 var self = this;
+4 5 if (this.app.settings.views.indexOf(\'?\') > -1) {
+4 6 options.views.indexOf(\'?\', 1);
+4 9 self.extend.filter.apply(this, arguments);
+4 11 if (this.app.settings.view.indexOf(\'.') > 0) {
+4 12 options.view.indexOf(\'.');
+4 14 options.locals = options.locals || {};
+4 15 this.render(this.app.locals, options);
+4 17 this.only.sizes.should.eql([\'bogus\', \'cogus\', \'flac\', \'\'];
+4 19 self.render(this.app.locals.only.sizes.sizes.should.eql({});
+4 22 var users = this;
+4 23 function locals(req, res, app) {
+4 24 return res.render(req, res, res, app, blog, options)
+4 25 , options = options = options || {};
+4 26 if (!req.session = this.session = this;
+4 27 if (!res.session.session = this;
+4 28 app.get(\'sessions\') return this;
+4 29 if (!res.session.exclude = function(){
+4 30 if (\'length\':\'session\' in users; users;\') return;
+4 31 \'sess.collection\'<h1 <h1>For you.
+5 2 var defaultEngine = this.app.set(\'view engine\', \'jade\');
+5 3 if (this.app.set(\'views\', \'view options\') && this.app.set(\'view engine\', \'jade\');
+5 4 if (this.app.set(\'view engine\', \'html\') && this.app.set(\'views\', \'excerpt\', \'<span id="more"></span>\') <span id="more"></span>\') {'
+
+6 3 viewOptions.filename = this.path;
+6 4 viewOptions.partial = this.app.get(\'/\', options);
+6 8 var options = options || {},
+6 9 viewOptions = this.app.set(\'view options\', options);
+6 11 viewOptions.object = options.object;
+6 12 if (options.locals) {
+6 16 root = viewOptions.root || this.root;
+6 17 if (root!== fixtures) {
+6 18 options.root = root;
+6 20 this.app.set(\'views\', path.resolve(fixtures, \'name.md\'));
+6 21 this.views = viewviews;
+6 23 this.add = function(req){
+6 24 var val = this.app.settings[pendingDisposition.format(req.method] || {};
+6 25 this.params.exclude = function(val){
+6 26 if (!this.app.settings[this.params.exclude]) return this.exclude];
+6 27 return val;
+6 28 if (!this.settings[this.settings[this.app.app.settings.app.settings.exclude];
+6 29 this.exclude];
+6 30 this.settings.id = this.id = this.site.settings.id];
+6 31 if (!this.app.settings.exclude = this.exclude = this.app.id) return this.site.settings.
+6 32 this];
+6 33 this.settings.exclude = this.settings.settings.exclude = val;
+6 34 if (!this.app.exclude). return this.app.settings.exclude];
+6 35 this.settings.settings.settings.settings.exclude = this.settings.exclude = this.app.map(val);
+6 36 if (!this.settings
+7 5 var viewName = this.app.set(\'view options\', options);
+7 6 if (opts.opts.expect) {
+7 7 opts.expect = true;
+7 9 opts.expect = false;
+7 12 options.locals.settings = this.app.settings;
+7 13 viewOptions = options.opts;
+7 14 this.writeHead(view, opts);
+7 15 this.end(view);
+7 17 http.ServerResponse.prototype.contentType = function(view){
+7 18 return this.headers[\'content-type\'].indexOf('application/x-www-form-urlencoded') > -1?
+7 19 this.headers[\'content-type\'].indexOf('application/x-www-form-urlencoded') :
+7 20 {}
+7 22 function request(opts) {
+7 23 var response = new Request(opts);
+7 24 return response.body = opts[opts] || {};
+7 25 return response;
+7 28 function send(server) {
+7 29 returnserver.on(\'get\', function(req, response)
+7 30 return function(req, fn){
+7 31 var headers, app, fn){
+7 32 fn.writeHead(req.headers, res){
+7 33 if (res.headers, headers, app, options.cookie.key);
+7 34 fn.params.key.top);
+7 35 if (fn.headers.appHeader)
+7 36 fn.app = fn.params.top == undefined;
+7 37 if (app.headers.headers.key.app.id === undefined) return fn.app.headers[opts.app.app.id);
+7 38 return(app.headers[opts.app.id);
+7 42 function handler(req, res, res.header, app
+8 4 var locals = this.app.set(\'view options\', options);
+8 5 locals.set(\'views\', options.collectionLength);
+8 6 if (this.app.settings.exclude) {
+8 7 locals.exclude = this.app.settings.exclude;
+8 10 locals.locals.firstInCollection = i === 0;
+8 11 locals.indexInCollection = i;
+8 12 locals.lastInCollection = i === len - 1;
+8 13 return this.render(view options);
+8 14 }, this);
+8 15 return this.render(view, options);
+8 17 return this.render(this.source, options);
+8 22 root = this.app.set(\'views\', options);
+8 24 options.locals.set(\'cache view\', cacheView);
+8 25 fs.readFile(this.app.html
+8 26 , function(this.engine
+8 27 , fs.readFile(this.path, function(path, null, arg) {
+8 28 if (!viewOptions.isFile()) {
+8 29 if (options.isFile()) {
+8 30 viewOptions.render(this.source, options, this.path, this.engine);
+8 31 } else
+8 32 if (fs.readFile(this.readFile(this.path, this.engine, this.engine, this.path, this.engine);
+8 33 arg, arg)
+8 35 view options.attempts.push(this);
+8 37 })
+8 38 .done(function(function(answ, view, view, options, resolved, content, content){
+8 39 options.object) {
+8 40 options.locals.
+9 3 var defaultEngine = this.app.set(\'view engine\', \'ejs\');
+9 5 var locals = options[view options] || defaultEngine;
+9 6 var view = this.app.set(\'views\', options);
+9 7 var viewLocals = this.app.set(\'view options\', options);
+9 8 if (viewLocals) {
+9 9 var locals = locals.split("<h1 id="more"></h1>");
+9 11 var object = options[viewLocals] || {};
+9 12 if (object) {
+9 13 var locals = {
+9 14 fn: view.indexOf(\'object\') +
+9 16 locals.forEach(function(fn){
+9 17 if (options.object) {
+9 18 locals[\'foo\'] = options.object;
+9 19 } else if (options.object) {
+9 20 locals[\'bar\'] = options.object;
+9 22 locals.push(object);
+9 23 });
+9 24 return this.render(viewLocals);
+9 26 return this.render(this.locals);
+9 30 this.writeServerResponse.prototype.write = function(view, content, options, options, fn){
+9 31 options = options = options || {};
+9 32 this.contentType = options.encodingTypes = options.encodingTypes || {};
+9 33 this.contentType = options.contentTypes = options.encodingTypes || {};
+9 34 return this.write.fn = fn.length = fn.length = options.length;
+9 35 var self.options = options.length;
+9 36 return this.fn.filename;
+9 38 this.cache = options.unshift = options.cache = options.length = options.length;
+9 39 return this.collection;
+9 41 this.ServerResponse.prototype.contentType = options.attachment = options.attachment = options

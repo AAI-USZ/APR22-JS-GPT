@@ -1,0 +1,56 @@
+Min editdistance: 45.00
+Closest candidate: 4 7 return Promise.exec('migrate();
+0 1 };"
+1 1 "
+2 1 }
+2 2 };
+2 3 module.exit('.server"
+3 2 });
+3 4 function clear(){
+3 5 return Promise.then((){
+3 7 return fs.exec([
+3 8 clear()
+3 10 .exec([
+3 11 process.exec([
+3 12 process.exists(github.completedFiles(themeDir),
+3 13 {
+3 17 ]);
+3 21 function done(next){
+3 22 if (args) {
+3 23 return fs.exists(publicDir
+4 4 function Locals(){
+4 5 Locals.prototype.lazyLoading = function(){
+4 6 return function () {
+4 7 return Promise.exec('migrate();
+4 10 Locals.generate();
+4 11 Locals.theme_layout = function () {
+4 12 Locals.invalidate();
+4 13 Locals.theme_layout = true;
+4 15 Locals.layout = false;
+4 16 Locals.enqueue = function () {
+5 3 return config.unregister()
+5 4 } else if (!_else{javascripts.unregister();
+5 8 exports.watchFn
+5 9 exports.watchHexports.watch = function(fn){
+5 10 exports.watchAllOptions = function(){
+5 11 exports.watch**/*(function(false);
+5 12 exports.watch, callback){
+5 13 exports.watchAll = function(false, duration, callback){
+5 14 if (1, i){
+5 15 var config = this.watchDir
+6 2 return();
+6 4 }"
+7 2 if (1.exec(function () {
+7 3 console.log('Deployer());
+7 6 });'
+
+9 6 }());
+9 12 return Promise.exec(next){
+9 13 return posts(){
+9 14  posts()
+9 15  posts.length();
+9 16 .filter(function(content);
+9 17 return posts.map(function(fn){
+9 18 content = fs.readFile.exec(content);
+9 19 content = fs.unlink(content);
+9 23 \

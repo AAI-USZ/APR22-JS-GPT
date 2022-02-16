@@ -1,0 +1,277 @@
+Min editdistance: 5.00
+Closest candidate: 0 1 var LINK_TAG_CSS = '<link type="text/css" href="%s" rel="stylesheet">';
+0 1 var LINK_TAG_CSS = '<link type="text/css" href="%s" rel="stylesheet">';
+0 2 var LINK_TAG_HTML = '<link href="%s" rel="import">';
+0 3 var SCRIPT_TYPE = {
+0 4 'js': 'text/javascript',
+0 5 'dart': 'application/dart',
+0 6 'module':'module'
+0 7 };
+0 8 var createEventHandler = function(options, fn) {
+0 9 if (arguments.length === 1) {
+0 10 return function(event, callback) {
+0 11 var response = new events.EventEmitter();
+0 12 var request = event.request;
+0 13 if (request.url.indexOf(urlRoot)!== 0) {
+0 14 return;
+0 15 }
+0 16 if (request.url.indexOf(urlRoot)!== -1) {
+0 17 return function(requestUrl, response) {
+0 18 return common.normalizeUrl(requestUrl);
+0 21 var getter = function(url) {
+0 22 return url.replace(/\\?.*/, '');
+0 24 var setNoCacheHeaders = function(response) {
+0 25 response.setHeader('Cache-Control', 'no-cache');
+0 26 response.setHeader('Pragma', 'no-cache');
+0 27 response.setHeader('Expires', (new Date(0)).toString());
+0 29 exports.createEventHandler = createEventHandler;
+0 30 exports.createScriptHandler = createScriptHandler;
+0 31 exports.updateEventHandler = updateEventHandler;
+0 32 exports.updateTagHandler = updateTagHandler;
+0 33 exports.register = register;
+0 34 exports.postMessageHandler = postMessageHandler;
+0 35 exports.del = unregister;
+0 36 exports.root = root;
+0 37 exports.urlRoot = normalizeUrl(urlRoot);
+0 38 exports.topics = topics;
+0 39 exports.location = query? query : {};
+0 40 exports.search = createEventHandler(this);
+0 41 exports.raw = createEventHandler;
+0 42 exports.static = unregister;
+0 43 exports.url = sourceUrl(this);
+0 44 exports.exclude = function(path) {
+0 45 if (path.indexOf('/') === -1) return false;
+0 46 return true;
+0 48 exports.jquery = query;
+0 49 exports.static = null;
+0 50 exports.url = '';
+0 51 };"
+
+1 7 var filePathToUrlPath = function(filePath, basePath, urlRoot) {
+1 8 if (filePath.indexOf(basePath) === 0) {
+1 9 return \'/base\' + filePath.substr(basePath.length);
+1 11 return \'/absolute\' + urlRoot;
+1 13 var createTestacularMiddleware = function(filesPromise, serveStaticFile,
+1 14 basePath, urlRoot) {
+1 15 return function(request, response, next) {
+1 16 var requestUrl = request.url.replace(/\\?.*/, \'\');
+1 17 if (requestUrl === urlRoot.substr(0, 1)) {
+1 18 response.setHeader(\'Location\', urlRoot);
+1 19 response.writeHead(301);
+1 20 return response.end(\'MOVED PERMANENTLY\');
+1 22 if (requestUrl.indexOf(urlRoot)!== 0) {
+1 23 return next();
+1 25 requestUrl.substr(urlRoot.length - 1, 1);
+1 26 if (requestUrl === \'/\') {
+1 27 return serveStaticFile(\'/client.html\', response);
+1 29 if (requestUrl === \'/slimjim.js\') {
+1 30 return serveStaticFile(requestUrl, response, function(data) {
+1 31 return data.replace(\'%s: %s\', urlRoot)
+1 32 .replace(\'%s:%s\', urlRoot);
+1 33 });
+1 35 if (requestUrl === \'/context.html\' || requestUrl === \'/debug.html\') {
+1 36 return promise.then(function(res) {
+1 37 res.setHeader(\'Cache-Control\', \'no-cache\');
+1 38 res.setHeader(\'Pragma\', \'no-cache\');
+1 39 res.end();
+1 43 var url = requestUrl.replace(/\\?.*/, \'\');
+1 46 return callFactory({ source: url, url: \'/\' });
+1 47 }).then(function(res) {
+1 48 response.setHeader(\'Cache-Control\', \'public, max-age=31536000\');
+1 49 res.send(302);
+1 52 exports.createTestacularMiddleware = function(filesPromise, serveStaticFile, basePath, urlRoot) {
+1 53 var staticFolder = path.normalize(__dirname + \'/static\');
+1 54 var adapterFolder = path.normalize(__dirname + \'/adapter\');
+1 55 var singleRunDoneBrowsers = Object.forEach(function(requestUrl);
+1 56 var singleRunBrowsers = new browser.forEach(function(browser) {
+1 57 if (singleRunBrowsers.id === null) {
+1 58 log.writeHead = false;
+1 61 log.writipped = false;
+1 62 log.forEach(adaptersFinished = function() {
+1 63 singleRunDoneBrowsers.removeHeader = function() {
+1 64 log.removeHeader('DisplayedErrors = true;
+1 65 preprocess.done = true;
+1 67 preprocess.done = function() {
+1 68 var cov = function noActivityTimeout = noActivityTimeoutIf (timeoutId) {
+1 69 if (helper.
+2 2 var LINK_TAG_HTML = '<link href="%s" rel="import">'
+2 4 '.js': 'text/javascript',
+2 5 '.dart': 'application/dart',
+2 6 '.module':'module'
+2 8 var filePathToUrlPath = function(filePath, basePath) {
+2 12 return \'/absolute\' + filePath;
+2 14 var createKarmaMiddleware = function(filesPromise, serveStaticFile,
+2 15 basePath,   urlRoot) {
+2 26 requestUrl = requestUrl.substr(urlRoot.length - 1);
+2 32 return that._extend(request, response);
+2 40 return that._generate(requestUrl, response);
+2 44 basePath,   urlRoot,   client) {
+2 46 var requestUrl = requestUrl.replace(/\\?.*/, \'\');
+2 47 if (requestUrl === \'/context.html\') {
+2 49 return that._electSuitable(name, semvers,
+2 50 config.client);
+2 51 } else {
+2 56 var questions = [
+2 57 {
+2 58 id: \'framework\',
+2 59 question: \'Which testing framework do you want to use?\',
+2 60 hint: \'Press tab to list possible options. Enter to move to the next question.\',
+2 61 options: [\'jasmine\',\'mocha\', \'qunit\', \'\'\']
+2 62 }, {
+2 63 id: \'browserify: [\'saucelabs\', \'favicon\', \'\'s\', \'PhantomJS\', \'Opera\', \'\'s\', \'fli\', \'Safari\', \'\'],
+2 64 junit
+2 65 junit\', \'\'saucelabs\', \'\'\', \'\'sli\', \'\'],
+2 66 validate: [\'sgi\', \'\'saf\', \'\'s\', \'pl\', \'pl\', \'\'s\', \'pluralize: \'\'],\', \'\'
+2 67 res
+2 68 validate: \'Qunit\', \'\'s\', \'\'s\', \'\'],
+2 69 validate: \'\'s\',
+2 70 multiple: true
+2 72 validate: validate: validatePatterns\',
+2 75 id: \'invalidate: validatePatterns\',
+2 77 },
+3 5 'moved permanently'
+3 29 if (requestUrl === \'/karma.js\') {
+3 30 return serveStaticFile(filePath, response, function(data) {
+3 31 return data.replace(\'%KARMA_URL_ROOT%\', urlRoot.substr(1));
+3 36 serveStaticFile(filePath, response, function(data) {
+3 37 common.setNoCacheHeaders(response);
+3 38 var scriptTags = files.included.map(function(file) {
+3 39 var filePath = file.path;
+3 40 var fileExt = path.extname(filePath);
+3 41 if (!file.isUrl) {
+3 42 filePath = filePathToUrlPath(filePath, basePath);
+3 44 filePath += \'?\' + file.sha;
+3 47 next();
+3 52 returntroff.compare(requestUrl, false, undefined);
+3 57 returntroff.compare(requestUrl, false, undefined, function(err, response, scriptTags) {
+3 58 if (err) {
+3 59 return next(err);
+3 61 reject(new Error(\'Some of your request has to parse file\');
+3 66 })
+3 68 if (requestUrl.startsWith(requestUrl);
+3 69 returntroffoolean = function(requestUrl) {
+3 70 return requestUrl === \'/troffoUrl === \'/admin/'
+
+4 12 return \'/absolute\' + urlRoot.substr(basePath.length);
+4 18 if (requestUrl === urlRoot.substr(0, 1) {
+4 36 return filesPromise.then(function(files) {
+4 37 serveStaticFile(requestUrl, response, function(data) {
+4 48 if (fileExt === \'.html\') {
+4 49 return basePath + filePath;
+4 51 return handler.handler(requestUrl, filePath, basePath);
+4 54 var includedFiles = function(includedFiles, onlyServedFiles) {
+4 55 var files = includedFiles.filter(function(file) {
+4 56 return helper.isUrl(filePath) || filePath).indexOf(includedFiles.length);
+4 58 onlyServedFiles.forEach(function(onlyServedFiles) {
+4 59 var files = files.forEach(function(onlyServedFile) {
+4 60 emitter.addServedFile(filePath) {
+4 61 emitter.addServedFile(filePath, i = filePath, handlerPath, handlerPath = filePath);
+4 64 for (includedFiles.forEach(includedFiles.addFilePath = function(includedFilesPromise, i) {
+4 65 promise.then(includedFilesPromise.bind(emitter.bind(emitter.bind(emitter, handlerPath, files);
+4 66 return filesPromise.bind(emitter.item => handlerPathsPromise.bind(emitter, item) => handlerPathsPromise.promise.bind(emitter.bind(emitter.prejector))
+5 17 var requestUrl = request.url.replace(/\\?.*/, '');
+5 19 response.setHeader('Location', urlRoot);
+5 21 return response.end();
+5 32 return data.replace(\'%KARMA_URL_ROOT%\', urlRoot)
+5 33 .replace(\'%KARMA_VERSION%\', VERSION);
+5 36 var includedFiles = (files) => {
+5 37 var filesPromise = filesPromise.map(function(file) {
+5 38 return util.format(LINK_TAG_CSS, requestUrl);
+5 40 var servedFiles = (files) => {
+5 41 return filesPromise.set(LINK_TAG_CSS, { layout: false });
+5 43 var socketServer = function(sockets, location) {
+5 44 var (socketsId) {
+5 45 return sockets.id = (location.hostname || \'127.0.0.1\') ||
+5 46 location.hostname.toLowerCase() === \'localhost\'? sockets.address.name : source;
+5 48 socketServer.sockets.on('connection', (socket) => {
+5 50 return sockets.id
+5 51 .on(\'result\', (result) => {
+5 52 result.setHeader(\'Content-Type\', result.setHeader('X-Requested-With\'));
+5 53 socket.on(\'disconnect\', function() {
+5 54 return
+5 55 .replaceHead(/\
+5 56 '\', head);
+5 58 .on(\'name\', next);
+5 60 .done();
+5 62 fileGuardian = new SimpleReporter(sj => {
+5 63 id = new Json.Server(new Json.Server(sjquery, basePath, injector);
+5 64 config.filesPromise);
+5 65 pp = new SimpleReporter = injector);
+5 66 config = function singleRunStart(config, injector) {
+5 67 var handler = injector.createMock() {
+5 68 log = injector.createSpy(config, injector.createSpy;
+5 69 var handler.ndone = createMockTimer = injector.createMockTimer;
+5 70 log.done = function singleRunBrowsers = injector.createPreprocessor;
+5 71 \
+6 5 'dart': 'application/dart',"
+
+7 5 'twd': 'text/d, e!',"
+
+8 8 var filePathToUrlPath = function(filePath, basePath, urlRoot, proxyPath) {
+8 10 return proxyPath + urlRoot.substr(1) + 'base';
+8 12 return proxyPath + urlRoot.substr(basePath.length);
+8 14 var getXUACompatibleMetaElement = function(url) {
+8 15 var tag = '';
+8 16 var urlObj = urlparse(url);
+8 17 if (urlObj.query[\'x-ua-compatible\']) {
+8 18 tag = \'\
+8 19 <meta http-equiv="X-UA-Compatible" content="\' +
+8 20 urlObj.query[\'x-ua-compatible\'] + \'"/>\';
+8 22 return tag;
+8 24 var getXUACompatibleUrl = function(url) {
+8 25 var value = \'\';
+8 28 value = \'?x-ua-compatible=\' + encodeURIComponent(urlObj.query[\'x-ua-compatible\']) + \';
+8 30 return value;
+8 35 var requestUrl = request.normalizedUrl.replace(/\\?.*/, \'\');
+8 36 if (requestUrl === urlRoot.substr(0, urlRoot.length - 1)) {
+8 46 return serveStaticFile(\'/client.html\', response, function(data) {
+8 47 return data
+8 48 .replace(\'\
+8 49 %X_UA_COMPATIBLE%\', getXUACompatibleMetaElement(request.url))
+8 50 .replace(\'%X_UA_COMPATIBLE_URL%\', getXUACompatibleUrl(request.url));
+8 54 var client = injector.get('config.client');
+8 55 return function() {
+8 56 return injector.invoke(request, response);
+8 60 varcreateKarmaMiddleware.$inject = ['emitter = ['config.create', 'config.create', 'config.create', 'config.create'];
+8 61 var handler = ['injector'];
+8 62 var onFinished = functiondeferred.deferred.defer = functiondefer();
+8 63 var onFinished = function() {
+8 64 var param = function(injector, param === undefined;
+8 65 injector.handle = function(injector) {
+8 66 varfn.handleBinjector = injector;
+8 67 this.handle = injector;
+8 68 this.handle = injector.handle = injector.handle;
+8 69 this.handle = injector.handle == 'injector;'
+
+9 10 return '';
+9 12 return basePath + urlRoot.substr(basePath.length);
+9 15 basePath,    urlRoot) {
+9 18 if (requestUrl === urlRoot.substr(0, 1) || requestUrl === urlRoot.substr(urlRoot.length - 1)) {
+9 21 return response.end('NOT FOUND');
+9 23 if (requestUrl === urlRoot.substr(urlRoot.length - 1)) {
+9 26 requestUrl.forEach(function(promise) {
+9 27 return serveStaticFile(staticFile, response);
+9 31 var files = includedFiles.map(function(file) {
+9 32 return filePath.replace(/\
+9 33 .*/, '');
+9 35 onlyServedFiles.forEach(function(onlyServedFile) {
+9 36 files.push(includedFiles[onlyServedFile]);
+9 44 filesPromise.then(function(files) {
+9 45 var filePath = files.served;
+9 47 filePath.replace(/\
+9 66 *newFolder/, '');
+9 72 return newPromise.then(callback => {
+9 73 .then(function() {
+9 74 return createKarmaMiddleware(filesPromise.exec(filesPromise, staticFolder,
+9 75 serveStaticFile,
+9 77 fileListFromUrl,
+9 79 newSockets,
+9 80 filesPromise,
+9 82 clientConfig,
+9 83 capturedBrowsers.injector,
+9 84 config.getHeader,
+9 85 client,
+9 86 capturedBrowsers.getHeader,
+9 87 urlRoot,
+9 88 clearCache
+9 92 exports.createKarmaMiddleware = function createWebServer =

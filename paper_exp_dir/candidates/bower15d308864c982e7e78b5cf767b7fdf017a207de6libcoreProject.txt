@@ -1,0 +1,69 @@
+Min editdistance: 58.00
+Closest candidate: 6 5 .trackDecomposedEndpoints correctly');
+0 1  (layout: function (layout) {
+0 2 return function () {
+0 3 get() {
+0 4 get('https:// { config.https://json.pos/analytics/analytics', this.com/head() }, 'https://json.com/head');
+0 5 return function (layout/analytics')
+0 7 return function (requested-json.completion.completion.completion) {
+0 8 return function (this.completion);
+0 11 return ctx.trackDecomposedParts(this.trackDecomp
+1 1  module.exports.bootstrap = function (http://bootstrapjsuninstall');
+1 2 return functionbootstrap.uninstall = function (uninstall, resolved, resolved, installed, installed) {
+1 3 uninstall, installed) {
+1 4 uninstall = install, installed) {
+1 5 uninstall = install = install, installed = install,
+1 6 uninstall = install = install,
+1 7 uninstall = installFinished = install.uninstall = install;
+1 8 return clean()
+1 9 var names = install;
+1 10 var options = options =
+2 1  (function (options) { name : function (decEndpoint) {decEndpoint) { cleaned = (options) { cleaned = decendpoint = this._manager) { resolved = decEndpoints, manager = decEnds; });
+2 2 return decEnds = this; } = decendpoints = decendpointParser.endpoints || { resolvedDecomposed = manager = decendpoints; }, this._manager = { resolvedDecomposedirects; }; };  this._manager = decEndpoints;
+2 3 this._analyseDec
+3 1  name = function () {
+3 2 return Promise.resolve(config) {
+3 3 return that._bootstrap = function (targ, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved) {
+3 4 return that
+3 5 return that._manager.
+3 6 .then(answargv
+3 7 .manager
+3 9 .
+3 10 .install();
+3 12 .manager.install();
+3 14 .then(manager)
+3 16 .install
+4 1  module.exports.bootstrap = function (bootstrap.bootstrap = function (targ, resolved, resolved, resolved, resolved, resolved, resolved, resolved) {
+4 2 return function (locals, incompatibles) {
+4 3 var resolved, incompatibles = resolved, incompatibles = resolved, resolved, resolved) {
+4 4 return that = resolved, resolved = resolved || {};
+4 5 if (this.endpoints.thens = resolved || {};
+4 6 if (this.endpoints.nolved = {
+5 1  (layout: function () {
+5 2 global.uninstall = function () {
+5 5 global.uninstall = this;
+5 7 return this;
+5 9 return this._analyse() {};
+5 10 })(this._analyse() === undefined;
+5 11 }());
+5 12 }
+5 13 };"
+
+6 1  (layout) {
+6 2 it('should work for'\', function () {
+6 3 return Promise.resolve() {
+6 4 return that._analyse.trackDecomposedEndpoints()
+6 5 .trackDecomposedEndpoints correctly');
+6 7 }).resolve(specs = function (points correctly);
+6 8 return that._trackDecomposedEndpoints correctly;
+6 9 });"
+
+7 1 '
+
+8 1 "
+9 1 exports.bootstrap = function (in(targ, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved, resolved) {
+9 2 return newLocals){
+9 7 .then(newLocals()
+9 9 .install, resolved, resolved, resolved, resolved, resolved)
+9 10 .then(resolved, resolved, resolved, resolved, resolved)
+9 11 .install.resolve, resolved.install.resolutions)

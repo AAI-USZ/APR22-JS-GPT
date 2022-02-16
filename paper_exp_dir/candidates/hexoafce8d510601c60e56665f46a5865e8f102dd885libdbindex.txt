@@ -1,0 +1,164 @@
+Min editdistance: 12.00
+Closest candidate: 2 1 this.end = function Database(){
+0 1 var Collection = module.exports = function(name, schema, parent, store){
+0 2 this.name = name;
+0 3 this.primary = store? store._.primary : 1;
+0 4 this.schema = schema;
+0 5 this.store = store? _.omit(store, '_') : {};
+0 6 this.parent = parent;"
+
+1 1 this.end = function(){
+1 2 var obj = this.toArray().filter(function(a){ return a[0] === a[1]; });
+1 3 return obj;
+1 4 };
+1 5 this.end = function(obj){
+1 6 this.each(function(val, i){
+1 7 obj.each(function(val, key){
+1 8 this.schema = val;
+1 9 obj[key] = this.schema[key];
+1 10 });
+1 14 this.remove = function(obj){
+1 15 var _id = this.store[_id];
+1 16 if (this.data){
+1 17 if (!this.data) return;
+1 18 this.each(function(data){
+1 19 data.remove(function(){
+1 20 return _id.equals(this.data, data);
+1 25 Query.prototype.collection = function(obj){
+1 26 if (obj) this.collection.push(obj);
+1 27 return this;
+1 29 Query.prototype.parse = function(obj){
+1 30 var arr = this.store;
+1 31 if (arr.length){
+1 32 arr.forEach(function(item){
+1 33 this.collection.each(function(item, i){
+1 34 data.parse(item);
+1 36 }, this);
+1 37 }
+1 38 return arr;
+1 39 } else {
+1 40 return this.collection;
+1 43 Query.prototype.__proto__ = EventEmitter.prototype;
+1 44 Query.prototype.db;
+1 45 Query.prototype.collectionLength = function(length){
+1 46 this.length = 0;
+1 49 Query.prototype.each = function(iterator){
+1 50 for (var i in this.store){
+1 51 iterator(this.get(i), i);
+1 55 Query.prototype.insert = function(obj, callback){
+1 56 if (!_.isFunction(callback)) callback = function(){};
+1 57 if (_.isArray(obj)){
+1 58 var arr = [];
+1 59 for (var i=0, len=obj.length; i<len; i++){
+1 60 this.insert(obj[i], function(item){
+1 61 arr.push(item);
+1 64 callback.call(this, arr);
+1 66 var id = this.primary++;
+1 67 this.schema.save(obj);
+1 68 var item = this.schema.save(obj);
+1 69 if (this.collection){
+1 70 var length = this.collection.length;
+1 71 this.collection.splice(length, 1);
+1 72 this.collection.push(item);
+1 76 Query.prototype.update = function(id){
+1 77 this.each(function(_, i){
+1 78 this.update(i, this.count());
+1 81 Query.prototype.replace = function(id){
+1 82 this.replace(/\\\\/\\\\/g, '1/g, '/');
+1 83 this.replace(this.replace(this.count);
+1 84 this.replace(this.count);
+1 86 Query.prototype.collection.each = function(){
+1 87 Query.each = function(){
+1 88 Query.each.each.splice(function(function(item, i){
+1 89 Query.val, i){
+1 91 this.each(function(item, i){
+1 93 collection){
+1 94 collection.each(function(item, i){
+1 95 collection.each(item, i){
+1 100 collection.each(item
+2 1 this.end = function Database(){
+2 2 this.store = {};
+2 3 this.raw = {};
+2 6 Database.prototype.collection = function(name, schema){"
+
+3 6 this.parent = parent;
+3 8 Collection.prototype.__proto__ = Schema.prototype;
+3 9 Collection.prototype.count = function(){
+3 10 return this.toArray().length;
+3 12 Collection.prototype.first = function(obj){
+3 13 if (typeof obj === 'undefined'){
+3 14 return this.toArray()[0];
+3 16 this.store[this.first()._id] = obj;
+3 19 Collection.prototype.last = function(obj){
+3 21 return this.toArray()[this.count() - 1];
+3 23 this.store[this.last()._id] = obj;
+3 26 Collection.prototype.toArray = function(){
+3 28 this.each(function(item){
+3 29 arr.push({
+3 30 _id: item._id,
+3 31 primary: item._id,
+3 32 schema: item.schema,
+3 33 array: item.array
+3 38 Collection.prototype.toJSON = function(){
+3 39 var obj = {};
+3 41 obj[item] = item;
+3 45 Collection.prototype.stringify = function(){
+3 46 return JSON.stringify(this.toJSON());
+3 48 Collection.prototype.Schema = Schema;
+3 49 Collection.prototype.Query = Query;"
+
+4 8 this.__defineGetter__('parent', function(){
+4 9 return parent;"
+
+5 1 function Collection(name, schema, parent, store){
+5 7 this.index = [];
+6 1 this.__proto__ = Schema;
+6 37 delete item._id;
+6 38 obj[i] = item;
+6 46 Collection.prototype.Collection = Collection;
+6 47 Collection.prototype.Memory = function(){
+6 48 this.toString = function(){
+6 49 return this.name;
+6 52 Collection.prototype.check = function(obj){
+6 59 Collection.prototype.replace = function(obj){
+6 62 Collection.prototype.update = function(data, callback){
+6 63 if (!callback){
+6 64 if (typeof this.store === 'undefined'){
+6 65 return this.toArray()[this.count()];
+6 67 this.store[this.last()._id] = this;
+6 69 var _this = this;
+6 70 this.emit('update', data, callback);
+6 72 Collection.prototype.replaceSet = function(obj, callback){
+6 74 _.each(obj.toArray().forEach(function(item){
+6 76 this.emit.remove(item, callback);
+6 81 Collection.prototype.insert = Collection.each = function(callback){
+6 82  Collection.remove = function(doc, callback){
+6 83 Collection.remove(doc, callback);
+6 85 Collection.each(function(item, callback){
+6 86 query, callback){
+6 87 query.remove(item, callback);
+6 90 Collection.schema.each(function(callback);
+6 91 Collection.each(callback);
+6 95 Collection.limit, callback);
+6 99 exports.schema.each(function(callback, schema
+7 45 Collection.prototype.each = function(iterator){
+7 51 Collection.prototype.insert = function(obj, callback){
+7 63 this.store[id] = this.schema.save(obj);
+7 64 var item = this.get(id);
+7 65 this.emit('insert', item);
+7 66 callback.call(this, item);
+7 70 Collection.prototype.update = function(id, obj){
+7 71 if (_.isObject(id)){
+7 72 for (var i in id){
+7 73 this.update(i, id[i]);
+7 76 var item = this.store[id];
+7 78 _.each(obj.update(obj, function(obj, function(item, id, id){
+7 79 if (_.isObject(id){
+7 82 for (obj.isObject(id)){
+7 84 for (obj.is(id)){
+7 85 for (obj.type){
+7 86 for (obj.type in obj.type in obj.type in obj.serialize(obj.serialize(obj.serialize(obj.type)))){
+7 87 var _.type in obj.type in _.serialize(obj.type).serialize(obj.type);
+7 90 var obj.type = _.type = obj;
+7 93 if (_.is.is(obj.type) || obj.type == null) return;
+8 1 function Collection(decEndpoint, schema, parent, store){

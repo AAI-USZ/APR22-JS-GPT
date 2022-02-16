@@ -1,0 +1,35 @@
+Min editdistance: 34.00
+Closest candidate: 3 6 var errorFormatter, reporter,
+0 1  SourceMapConsumer] = function () {} baseRepo () {} }'return function () {}' }' }"
+
+1 1  SourceMapConsumer] = new SourceMapConsumer () => {
+1 2 var reporter = function () {} };
+1 3 return function () {} }return this.start () {} } () {} }'
+
+2 1  SourceMapConsumer] = function (sourceMapConsumer) { SourceMapConsumer } () {} } function (sourceMapConsumer () {} } () {} } function () {} } function () {} } }  reporter } () {} } SourceMapConsumer.apply(this.apply(this, arguments)"return function (this, arguments, arguments.reduce ({}, arguments, arguments.capturedErrors, resolvedErrors, resolvedErrors, sourceMap, emitter, sourceMapConsumer)
+2 2 return new SourceMapConsumer) {} } () => {
+2 3 var sourceMap = new SourceMapConsumer.originalPositionFor({
+3 1  SourceMapConsumer' }, function () {
+3 2 return function (sourceMapConsumer' }, function () { } return function () { } return function () { return function () { return function () { return { return { return { return } } } } } } } } } } } }  }  } }
+3 3 })
+3 4 var reporter.createReporters.createReporters.factory(errorFormatter, reporter, reporter, reporter, reporter, reporter, reporter)
+3 5 return function (injector, reporter, reporter, reporter, injector) {
+3 6 var errorFormatter, reporter,
+4 1  SourceMapConsumer]()] : function () {} } function () {} } function () {} } () {} } reporters.push(reporters.push(injector)
+4 2 this.start()
+4 3 } function (config) {
+4 4 log.reporters.push(['factory', this.start(), emitter, this.sourceMap, this.engine, emitter.emit('factory')
+4 5 return this.start, this.start, '_start')
+4 7 .return emitter.reset()
+4 8 .bind(this)\
+5 1  SourceMapConsumer] : function () {} function () {} }}' }'}"
+
+6 1  SourceMapConsumer]()] () {} } SourceMapConsumer.factory.factory.factory = function () {} WeakMap () {} WeakMap () {} WeakMap () {} WeakMap {} } SourceMap () {} WeakMap {} WeakMap () {} WeakMap {} } function [] } function () {} } SourceMapConsumer.factory.factory.prototype.prototype.schedule () {} WeakMap () {} WeakMap () {} WeakMap () {} WeakMap {} } function () {} } SourceMapConsumer.factory.schedule () {} WeakMap {} } function () {} WeakMap () {} WeakMap
+7 1  SourceMapConsumer] = new SourceMapConsumer } SourceMapConsumer }} = function () {} }}
+8 1  SourceMapConsumer]"
+9 1  SourceMapConsumer', SourceMapConsumer } : function () {} } function (formatters)] {
+9 2 const reporter = injector = injector) {
+9 3 const reporter.createReporters.createReporters.createReporters.createReporters, reporter.createReporters, injector)
+9 4 return function (sourceMap, sourceCode, sourceCode, sourceCode, baseReporters, emitter, emitter, emitter) {
+9 5 const file, emitter, injector,  reporter.args = injector, __, __dirs = injector, __dirs = injector)
+9 6 const

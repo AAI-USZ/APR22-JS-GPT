@@ -1,0 +1,219 @@
+Min editdistance: 15.00
+Closest candidate: 0 1 var helper = require('./helper');
+0 1 var helper = require('./helper');
+0 2 var log    = require('./logger').create('preprocess');
+0 3 var sha1 = function (data) {"
+
+1 3 var sha1 = function (data) {
+1 4 var hash = crypto.createHash('sha1');
+1 5 hash.update(data);
+1 6 return hash.digest('hex');
+1 7 };
+1 8 var createPreprocessor = function (config, basePath, injector) {
+1 9 var patterns = Object.keys(config);
+1 10 return function(file, done) {
+1 11 var preprocessors = [];
+1 12 var nextPreprocessor = function(content) {
+1 13 if (!preprocessors.length) {
+1 14 return fs.writeFile(file.contentPath, content, function() {
+1 15 done();
+1 16 });
+1 17 }
+1 18 preprocessors.shift()(content, file, nextPreprocessor);
+1 20 var instantiatePreprocessor = function(preprocessors) {
+1 21 if (instances.has(patterns)) {
+1 22 return helper.isFunction(preprocessors)? preprocessors : [preprocessors];
+1 24 return function(content, file, done) {
+1 25 var preprocessors = Object.keys(config);
+1 27 var lines = fs.readFileSync(content, 'utf8');
+1 28 var retryCount = lines.length;
+1 29 for (var i = 0; i < processor.length; i++) {
+1 30 if (mm(file.originalPath, content)) {
+1 31 processors.push(content);
+1 34 if (processor.target === '*') {
+1 35 return fs.writeFileSync(file.contentPath, content, function() {
+1 39 return nextPreprocessor;
+1 42 createPreprocessor.$inject = ['config.preprocessor', 'config.basePath', 'injector'];
+1 43 var TPL = function (config, emitter) {
+1 44 var executor = new EventEmitter();
+1 45 log.debug('Pre-processor set to ', function () {
+1 46 exec(TPL, function(err, buffer) {
+1 47 var executor.defer();
+1 48 if (process.ENOENT) {
+1 49 command('create', {
+1 50 '  init',
+1 51 '  add -A'+ config.exclude, function (a) {
+1 52 var p = new Glob(config.basePath, config.ignore);
+1 53 return function(file) {
+1 54 var deferred = Q.defer();
+1 55 var files = fs.createReadStream(file.contentPath);
+1 56 var retryCount = 3;
+1 57 for (var i = 0; i < files.length; i++) {
+1 58 if (files[i].charAt(0) === '_') {
+1 59 processors.splice(i, 1);
+1 62 return deferred.promise;
+1 66 var TPL_FILE_PATH = __dirname + '/../../' +
+1 67 autoWatch = function (cmd, pointer) {
+1 68 FilePath = path.normalize(cmd);
+1 69 log.rlstat(cmd, function (err, stat) {
+1 70 if (!stat.isDirectory()) {
+1 71 if (stat.isDirectory()) {
+1 72 log.isDirectory()) {
+1 73 log.ignore = true;
+1 74 log.push(cmd);
+1 76 } else if (pointer = pointer instanceof FilePath) === null) === 'object'
+
+2 3 var sha1 = function(data) {"
+
+3 3 var sha1 = function(data) {
+3 8 var createPreprocessor = function(config, basePath, injector) {
+3 11 var processor;
+3 12 for (var i = 0; i < patterns.length; i++) {
+3 13 if (mm(file.originalPath, patterns[i])) {
+3 14 try {
+3 15 processor = injector.get('preprocessor');
+3 16 } catch (e) {
+3 17 log.warn('Pre-processor "%s" is not registered!', config[patterns[i]]);
+3 20 if (processor) {
+3 21 return fs.readFile(file.originalPath, function(err, buffer) {
+3 22 var env = process.env;
+3 23 file.contentPath = (env.TMPDIR || env.TMP || env.TEMP || '/tmp') + '/'  + sha1(file.originalPath) + '-preprocessed';
+3 24 processor(buffer.toString(), file, function(processed) {
+3 25 fs.writeFile(file.contentPath, processed, function() {
+3 31 return process.nextTick(done);
+3 35 exports.createPreprocessor = createPreprocessor;"
+
+5 15 processor = injector.get('preprocessor:' + config[patterns[i]]);
+5 16 break;
+5 24 file.contentPath = (env.TMPDIR || env.TMP || env.TEMP || '/tmp') + '/'  + sha1(file.originalPath) + '-light';
+5 36 exports.createPreprocessor = createPreprocessor;'
+
+6 20 var instantiatePreprocessor = function(preprocessorName) {
+6 21 if (already exists) {
+6 22 return;
+6 25 preprocessors.push(injector.get('preprocessor:' + preprocessorName));
+6 28 return injector.createChild([{
+6 29 id: ['value', value],
+6 30 path: ['value', path],
+6 31 seag: ['value', name],
+6 32 config: ['value', config],
+6 33 preprocess: ['factory', preprocessor.createPreprocessor],
+6 34 file: ['value', file],
+6 35 skip: ['factory', createPreprocessor],
+6 36 serveFile: ['factory', createServeFile],
+6 37 serveStaticFile: ['factory', createServeStaticFile],
+6 38 filesPromise: ['factory', createFilesPromise],
+6 39 socketServer: ['factory', createSocketIoServer],
+6 40 executor: ['factory', Executor.factory],
+6 42 preprocess: ['factory', config.createPreprocessor],
+6 43 fileList: ['factory', createFilesPromise],
+6 45 serveFile: ['factory', createServeStaticFile],
+6 46 capturedBrowsers: ['factory', null],
+6 47 reporter: ['factory', null],
+6 48 executor: ['factory', null],
+6 49 args: ['value', {}],
+6 50 timer: ['value', {
+6 51 setTimeout: function () {
+6 52 return setTimeout.apply(root, arguments);
+6 53 },
+6 54 clearTimeout: function (timeoutId) {
+6 55 clearTimeout(timeoutId);
+6 57 }]
+6 58 }]);
+6 59 this.on('error', function(e) {
+6 60 if (e.code === 'ENOENT') {
+6 61 this.emit('error', e);
+6 62 } else {
+6 63 throw e;
+6 66 this.on('resolve', function () {
+6 67 if (this.isTargetable()) {
+6 68 this.lastRun = this._browsers.lastRun === Browser.lastRun;
+6 70 this.emit('browsers_change', this.emit.bind(this,'refresh'));
+6 71 return this;
+6 73 this.this.on('browser_register', function (browser_register) {
+6 74 launcher.launch.markCaptured(this.id);
+6 75 if (this.markCapturedBrowsers.areAllCaptured();
+6 76 if (this.areAllCaptured()) {
+6 77 launcher.some.called = this.state = false;
+6 78 this.markCaptured();
+6 80 if (this.markCaptured = this.isCaptured()) {
+6 81 launcher.some(this.state = false;
+6 82 return launcher.done();
+6 83 if (this.toString) {
+6 84 return launcher.launchSingleRun = function (id, hostname) {
+6 85 path = this.id = this.id;
+6 86 if (config.id = this.id = this.id === 'about: id)
+6 87 return this.id = this.id;
+7 24 if (e.message.indexOf('No provider for'+ config.preprocessors[config.id] === -1) {
+7 27 log.error('Can not load "%s", it is not registered!\
+7 28  \'+
+7 29 \'Perhaps you are missing some plugin?\', name);
+7 30 return fs.writeFile(file.contentPath, processed, function() {
+7 31 return fs.readFileSync(file.contentPath, function(err, buffer) {
+7 32 nextPreprocessor(buffer.toString());
+8 20 var instantiatePreprocessor = function(preprocess, fileList) {
+8 21 return function(content) {
+8 22 var pkg = injector.get('preprocessor');
+8 23 var alreadyDisplayedErrors = {}
+8 24 var instances = Object.create(null);
+8 25 for (var i = 0; i < pkg.length; i++) {
+8 26 if (mm(file.originalPath, pkg)) {
+8 27 return instances[i].apply(instantiatePreprocessor, pkg.name + '_' + pkg.version);
+8 30 return pkg;
+8 33 exports.createPreprocessor = createPreprocessor;
+8 35 exports.injector = injector;
+8 36 exports.injector = i;
+8 37 exports.processor = function(config, done) {
+8 38 var alreadyDisplayedErrors = Object.create(null);
+8 39 var instances = this.config.preprocessors;
+8 41 var thisFileIsBinary = isBinary === undefined? null : isBinary;
+8 42 thisFileIsBinary = isBinary === undefined? null : isBinary;
+8 44 return thisFileIsBinary;
+8 46 exports.watcher = function(interval) {
+8 47 interval = interval === 1
+8 48 ? 300000
+8 49 : interval;
+8 50 (function pass(i, args) {
+8 51 var i =
+8 52 .replace(/\\\\/g, '.')
+8 53 .replace(/\\\\/g, '-')
+8 54 .replace(/_/g, '-');
+8 55 var cases = [];
+8 56 var key = '';
+8 57 if (!thisFileIsBinary) {
+8 58 thisFileIsBinary = true;
+8 60 var noFileIsBinary = isBinary? null : isBinary;
+8 62 return noFileIsBinary;
+8 63 }, (e, i) => {
+8 64 if (e.cause.code === 'ENOENT' || e.message.indexOf('No binary' === 0) return;
+8 69 exports.statics = function send(enqueue, buffer) {
+8 70 var newPreprocessor = newPreprocessor(buffer);
+8 71 var type = newPreprocessor(buffer);
+8 72 var headers = newBuffer(buffer);
+8 73 if (!preprocessors.hasAllPreprocessor = () => {
+8 74 return!== undefined;
+8 76 return Object.assignoredDirectives = false;
+8 78 for (typeof Object.keys = function preprocessing.some(enodises = undefined) {
+8 79 return Object.resolve(thisFileIsBinary) || front = pattern.preprocessors == null;
+8 81 var i = 2;
+8 82 for (request.typeof deferred = function (fn) {
+8 83 var done
+9 24 file.contentPath = (env.TMPDIR || env.TMP || env.TEMP || \'/tmp\') + \'/'  + sha1(file.originalPath) + \'.js\';
+9 35 createPreprocessor.$inject = [\'config.preprocessor\\\\b.js\'];
+9 38 exports.updatePreprocessor = updatePreprocessor;
+9 40 exports.updatePreprocessor = createPreprocessor;
+9 41 exports.config = function(config, done) {
+9 42 var config = this.config || this;
+9 43 this.log.debug('Config loaded: %s', config.port);
+9 44 config.frameworks.forEach(function(framework) {
+9 46 this.log.debug('X-Hexo is setup at %s.', framework.name, framework.version);
+9 48 this.config.basePath = basePath + path.resolve(config.basePath);
+9 49 config.files.forEach(function(filepath) {
+9 50 var helper = new helper.Injector(config.files, config.exclude, config.autoWatch, config.autoWatchInterval);
+9 51 helper.init(config.files, config.exclude, config.autoWatchInterval);
+9 53 this.bindOriginalPath = function() {
+9 54 return this.bindOriginalPath;
+9 56 this.processors.forEach(function(pattern) {
+9 57 this.processors.forEach(instantiatePreprocessor);
+9 60 };"
+

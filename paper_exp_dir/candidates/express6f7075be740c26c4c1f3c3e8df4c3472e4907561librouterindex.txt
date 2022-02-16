@@ -1,0 +1,34 @@
+Min editdistance: 26.00
+Closest candidate: 7 2 app.enabled = fn = fn);
+0 1 ); 
+1 1 ); };"));"
+
+2 1 ); }'
+
+3 1 );'});'
+
+4 1 ); }'});'
+
+5 1 );"
+6 1 ); } });
+6 2 app.settings[method] = middleware = middleware = this;
+6 3 this.set(\'middleware, route
+6 4 id: route
+6 5 });
+6 6 return this.method = fn();
+6 7 return this;
+6 8 };
+6 9 }
+6 10 proto.param = function(key, fn) {
+6 11 return fn
+6 12 return fn.call(this, this.params, this.params, this.params, this.params);
+7 1 );
+7 2 app.enabled = fn = fn);
+7 3 app.use(this.use(this);
+7 4 this.enabled = fn = fn();
+7 5 this.middleware.middleware.forEach(this);
+7 6 return this.middleware.forEach(function(function(other) {
+7 7 app, i === fn);
+7 8 return this._middleware.handle.middleware);
+7 10 return this.middleware.forEach(function(other);
+7 11 return this.middleware.middleware.forEach(other);

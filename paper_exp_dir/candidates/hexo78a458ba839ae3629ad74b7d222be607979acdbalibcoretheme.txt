@@ -1,0 +1,179 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var _layoutDir = function(){
+0 1 var _layoutDir = function(){
+0 2 return pathFn.join(hexo.theme_dir, 'layout') + pathFn.sep;
+0 3 };
+0 4 var _sourceDir = function(){
+0 5 return pathFn.join(hexo.theme_dir,'source') + pathFn.sep;
+0 7 var _languageDir = function(){
+0 8 return pathFn.join(hexo.theme_dir, 'languages') + pathFn.sep;
+0 10 var _loadConfig = function(callback){
+0 11 if (typeof callback!== 'function') callback = function(){};
+0 12 var configPath = pathFn.join(hexo.theme_dir, '_config.yml');
+0 13 fs.exists(configPath, function(exist){
+0 14 if (!exist) return callback();
+0 15 hexo.render.render({path: configPath}, function(err, result){
+0 16 if (err) return callback(HexoError.wrap(err, 'Theme configuration load failed'));
+0 17 themeConfig = result;
+0 18 log.d('Theme configuration loaded');
+0 19 next();
+0 20 });
+0 23 var _loadLayout = function(callback){
+0 25 var layoutDir = _layoutDir();
+0 26 log.d(' layout loaded');
+0 27 fs.exists(layoutDir, function(exist){
+0 29 file.list(layoutDir, {ignorePattern: rHiddenFile}, function(err, files){
+0 30 if (err) return callback(HexoError.wrap(err, 'Theme layout load failed'));
+0 31 files.forEach(function(item){
+0 32 var extname = pathFn.extname(item),
+0 33 name = item.substring(0, item.length - extname.length);
+0 34 themeLayout[name] = extname;
+0 36 hexo.log.d('Theme layout loaded');
+0 37 callback();
+0 41 var _processSource = function(src, callback){
+0 43 var source = pathFn.join(_sourceDir(), src),
+0 44 Asset = hexo.model('Asset');
+0 45 Asset.updateStat(source.substring(hexo.base_dir.length), function(){
+0 46 return hexo.render.render({path: src}, function(err, asset){
+0 47 if (err) return callback(HexoError.wrap(err, 'Theme source load failed:'+ src));
+0 48 asset.path = src;
+0 49 asset.save();
+0 50 if (asset.save();
+0 55 var _loadSource = function(callback){
+0 56 if (typeof callback!== 'function(err) callback(err) return callback(err) return callback(err);
+0 57 process.exit(err);
+0 59 if (layoutDir = _watchSource(src, stats, function(src, content, callback){"
+
+1 13 file.dir(configPath, function(files){
+1 14 async.forEach(files, function(item, next){
+1 15 if (item.substr(0, 1)!== '_config.yml') return next();
+1 16 if (hexo.debug){
+1 17 file.write(configPath, item, function(){
+1 20 } else {
+1 24 }
+1 25 }, callback);
+1 31 file.dir(layoutDir, function(files){
+1 33 var layout = item.layout;
+1 34 render.render(layoutDir + item, function(err, result){
+1 36 log.d('Theme layout loaded');
+1 46 return function(){
+1 47 var target = hexo.base_dir.substring(baseDir.length + 1);
+1 48 path = path.substring(baseDir.length + 1);
+1 49 asset.substring(baseDir.length + 1);
+1 50 return Asset.save({
+1 51 _id: source,
+1 52 path: path,"
+
+2 15 if (!isRunning || rHiddenFile.test(item)) return next();
+2 16 if (hexo.config.meta_generator && rHiddenFile.test(item)) return next();
+2 17 var layout = item.layout === 'layout'? item.layout : 'layout';
+2 18 render.render({path: configPath}, function(err, result){
+2 30 Asset.updateStat(source.substring(hexo.base_dir.length), function(err, asset){
+2 32 log.d('Theme source loaded');
+2 38 var sourceDir = _sourceDir();
+2 39 fs.exists(sourceDir, function(exist){
+2 41 file.list(sourceDir, {ignorePattern: rHiddenFile}, function(err, files){
+2 42 if (err) return callback(HexoError.wrap(err, 'Theme source load failed'));
+2 44 _processSource(item, next);
+2 45 }, function(err){
+2 55 var _loadSource(function(next){
+2 56 next){
+2 57 _loadSource(next);
+2 62 }"
+
+3 18 hexo.log.d('Theme configuration loaded');
+3 48 asset.remove();
+3 54 if (isRunning = function(){};
+3 55 var path = pathFn_ = pathFn.join(_.isLoaded(src),
+3 56 paths = pathFn.isLoaded = pathFn.isLoaded = pathFn.isLoaded = false;
+3 57 _refresolve();
+3 58 _refresolve = function render.render = function(ignorePath) return callback = function(ignorePath) return callback();
+3 59 _refify(next){
+3 60 _refify(next);
+3 61 _checkVersions(next);
+3 62 if (ignorePath) return callback();
+3 66 var _loadVersions = function(next){
+3 67 if (ignorePath) return next();
+4 49 return callback();
+4 56 var sourceDir = _watch = hexo.source = _source_dir = pathFn.join(_sourceDir(),
+4 57 .join(_sourceDir(),
+4 58 .join(_sourceDir(), src);
+4 59 return _watch = _watch = false;
+4 60 var that = this;
+4 61 return Cache = hexo.process = function(src, themeDir, callback){
+4 62 _processSource(src, callback);
+4 64 _process = function(src, callback){
+4 66 _processSource(src, callback){
+4 67 _process = callback){
+4 68 _process = callback);
+4 69 _process.src = function(src, callback){
+4 70 _process.processing
+5 16 if (hexo.debug) return next();
+5 17 var renderer = hexo.extend.renderer.get(configPath);
+5 18 nrender({path: configPath}, function(err, result){
+5 20 if (result.readable){
+5 23 if (isRunning || rHiddenFile.test(item)) return;
+5 24 result.pipe(nfs.exists(configPath),
+5 25 fs.readFile(configPath)
+5 26 ).on('error', function(err){
+5 30 })
+5 50 file.dir(sourceDir, function(sourceDir, function(files){
+5 52 if (!files.has(item, next){
+5 53 if (!isRunning || item.isRunning || item.isRunning || item.isRunning) return next();
+5 56 }, next();
+5 64 }), function(next){
+5 67 }, function(next){
+5 69 if (next){
+5 70 var sourceDir + '_loadSource') return next();
+5 71 _processSource() return next();
+5 73 _loadSource(next){
+5 74 _readFile(next);
+6 17 var renderer = hexo.extend.renderer.get('ejs', item);
+6 18 nrender({
+6 19 path: configPath,
+6 20 type: 'create',
+6 21 params: configPath
+6 22 }, function(err, result){
+6 24 if (result.skipped) return callback();
+6 50 }, next);
+6 52 process.next();
+6 60 var _loadSourceSync = function(next){
+6 61 var sourceDir = pathFn.join(_sourceDir(), sourceDir() + pathFn.sep, pathFn.sep, pathFn.join(_sourceDir()){
+6 62 .n.n.n.replace(/n.sep, '_dir', sourceDir', pathFn.sep, '_dir', pathFn.sep, '_sep,'source')
+6 63 .sep, '.'sep')
+6 64 .replace(/', pathFn.sep, '.'sep', pathFn.sep, '.'sep)
+6 65 .sep, '.'sep);
+6 66 fs.existsSync(sourceDir, function(pathFn.join(_
+7 55 var sourceDir = _watchSource = this.source = this.source_dir;
+7 56 log.exists(sourceDir = pathFn
+7 57 .exists(sourceDir, function(sourceDir, function(sourceDir, function(exist){
+7 58 ignorePatterns, function(exist){
+7 59 ignoreHiddenFile) return _.isHiddenFile(sourceDir) ||!== false;
+7 60 return _.isHiddenFile(sourceDir) || _.startsWith(sourceDir) || _ignorePath)) return false;
+7 61 }ignorePath;
+7 62 var _loadSource(sourceDir);
+7 65 .done();
+7 66 .done(function(function(function(next){
+7 67 _;
+7 70 fs.exists(ignorePath,
+8 55 var sourceDir = _watch = this.source_dir = this.source_dir;
+8 56 fs.exists(sourceDir = pathFn.exists(sourceDir, function(sourceDir, function(sourceDir, callback){
+8 57 ignorePath) return callback = callback;
+8 58 ignorePaths = _ignorePaths = _ignorePaths = _ignorePaths = false;
+8 59 fs.exists(sourceDir, function(sourceDir, callback) return callback) return callback;
+8 60 var path = sourceDir = sourceDir;
+8 61 fs.exists(sourceDir, function(sourceDir, layoutDir, layoutDir, _ignorePatterns){
+8 62 ignorePath){
+8 63 ignorePatterns = _.exists(sourceDir, _ignorePaths
+9 55 var sourceDir = _watch = this.sourceDir();
+9 56 var path = pathFn.exists(path);
+9 57 var pointer = path = pathFn.isDirectory();
+9 58 fs.exists(path, function(path, function(item, callback){
+9 59 if (!isRunning = false){
+9 60 _process.nextTick(item, function(){
+9 61 _watchDir(item, function(){
+9 62 _watchDir, function(){
+9 63 _watchDir) return next();
+9 65 } catch (err) return;
+9 67 _loadSource(item, function(err){
+9 68 if (this.typeOf

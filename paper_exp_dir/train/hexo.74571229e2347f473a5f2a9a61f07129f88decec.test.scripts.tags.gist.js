@@ -1,0 +1,10 @@
+'use strict';
+
+var cheerio = require('cheerio');
+var should = require('chai').should();
+
+describe('gist', function(){
+var gist = require('../../../lib/plugins/tag/gist');
+
+it('id', function(){
+var $ = cheerio.load(gist(['foo']));

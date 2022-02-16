@@ -1,0 +1,40 @@
+Min editdistance: 14.00
+Closest candidate: 0 7 lang: lang,
+0 1 }
+0 2 return Promise.all([
+0 3 fs.exists(src),
+0 4 fs.readFile(src)
+0 5 ]).spread(function(result) {
+0 6 var expected = highlight(code, {
+0 7 lang: lang,
+0 8 caption: caption,
+0 9 gutter: config.line_number,
+0 10 tab: config.tab_replace
+0 11 });
+0 12 code = code.split(\'\
+0 13 \').join(\'\
+0 14 \');
+0 17 return code;
+0 18 };'
+
+9 4 fs.exists(source),
+9 5 fs.readFile(source)
+9 6 ]).spread(function(count) {
+9 7 var args = arguments;
+9 8 return args.some(function(path) {
+9 9 return ctx.config.url.pathname.replace(/\\.\\/(\\w+)/g, function(_, args) {
+9 10 args.push(_replace(/([^\\/]+)/g, function() {
+9 11 return ctx.config.root + codeDir + path;
+9 24 args.push(_replace(/\\(.*)/g, function() {
+9 29 return args.join("\
+9 30 ");
+9 36 ]).spread(function(true, fs) {
+9 37 return fs.exists(source) {
+9 38 return fs.some(source) {
+9 39 return fs.some(source.substring(0, 2).length < 2).length;
+9 40 }).length;
+9 42 }).join(0);
+9 44 }).join(', 2);
+9 50 return Promise.skip(function(callback);
+9 51 }"
+

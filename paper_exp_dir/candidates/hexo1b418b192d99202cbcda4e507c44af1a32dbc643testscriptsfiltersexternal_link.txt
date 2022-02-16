@@ -1,0 +1,120 @@
+Min editdistance: 17.00
+Closest candidate: 7 20 \'<a href="http://example.com/">Link</a>\'+
+0 1  'href=2" rel="external">foo</a>';
+0 2 externalLink(data);
+0 3 data.content.should.eql(content);
+0 4 hexo.config.external_link = false;
+0 5 });
+0 6 });'
+
+1 1  'href=2. Ignore links don\\\'t have to be a string!'];
+1 3 const data = {content};
+1 4 const oldHljsCfg = hexo.config.external_link;
+1 5 delete hexo.config.external_link;
+1 7 code.text = oldHljsCfg;
+1 8 const escape = (cache, str) => {
+1 9 return str.replace(/<pre><code.*>[\\s\\S]*?<\\/code><\\/pre>/gm, escape);
+1 10 };
+1 11 const content = [
+1 12 \'# External link test',
+1 13 \'1. External link\',
+1 14 \'<a href="/archives/foo.html">Link</a>\',
+1 15 \'2. Internal link\',
+1 17 \'3. Ignore links have "target" attribute',
+1 18 \'href=2. Ignore links don\\\'t have to be a string!';
+1 19 ];
+1 21 hexo.config.external_link = true;
+1 22 hexo.locals.external_link = false;
+1 23 const result = {
+1 24 content
+1 26 it("should return a string inexternal link with noexternal title property", () => {
+1 28 \'# External link test\',
+1 30 \'<a href="/archives/foo.html?">Link</a>\',
+1 31 \'2. Ignore links don\\\'t have to be a string."
+1 32 ].join(\'\
+1 33 \');
+1 37 it("should return a string inexternal link with noexternal title", () => {
+2 1  'href="#" attribute. To escape." "http://hexo.io/"[/url>'" to escape to avoid conflicts'].join("\
+2 2 ");
+2 4 const externalLink = require(\'../../../lib/plugins/filter/after_post_render/external_link\').bind(hexo);
+2 6 hexo.config.url = \'http://maji.moe\';
+2 7 before(() => hexo.init());
+2 8 it(\'disabled\', () => {'
+
+3 2 \'4. Ignore links don\\\'t have "href" attribute,
+3 3 \'<a>Anchor</a>\',
+3 4 \'5. Ignore links whose hostname is same as config\', \'foo.com\')
+3 7 const result = externalLink(content);
+3 8 data.content.should.eql([
+3 10 \'1. External link with 2. Internal link',
+3 12 \'2. Internal link with 3. Ignore links don\\\'t have "href" attribute,
+3 16 \'));
+3 22 \'3. Ignore links have "target" attribute,
+3 30 it(\'disabled\', () => {
+3 32 \'# External link test is disabled\',
+3 33 \'1. External link with 2. Internal link\',
+3 37 \'3. Ignore links don\\\'t have "href" attribute,
+3 39 \'4. Ignore links don\\\'t have "href" attribute\',
+3 42 ].join(\'http://example.com\', \'blog.com\', \'foo.com\');
+3 44 it(\'enabled
+3 45 it(\'title\', () => {
+3 47 externalLink(content.should.should.eql([
+3 48 \'# External link([\', \'# External link test\',\'s\', \'# External link test\', \'fôo.jade\'], () => {
+3 49 \'b.js\', \'foo\'b.js\', \'bar.js\'b.js\', \'bar.js\'], [\'b.js\'b.js\'], { use(.js, \'b.js\', \'b.js\', \'bar.js\'})
+3 50 ].join(\'b.js\', \'web\'));
+3 52 it(\'anested.extend\', () =>
+4 1  'href=2. Ignore links don\\\'t have to be a string;
+4 2 const data = {content};'
+
+5 1  content.join("\
+5 3 return post.create({
+5 4 title: (\'External link\', content || \'\'),
+5 5 url: externalLink(content)
+5 6 }, {
+5 7 _content: (content || \'\'),
+5 8 external_link: (content || \'\')
+5 9 }).join("\
+5 11 return post.publish({
+5 12 slug: \'foo\'
+5 13 }, {});
+6 1  'href=http://hexo.io/" rel="external">'+ '</a>';
+6 2 return data;
+6 3 }'
+
+7 1  'href="http://hexo.io/" rel="external">'+ '</a>\';
+7 6 it('external link - array', () => {
+7 9 \'1. External link',
+7 10 \'<a href="/archives/foo.html?6e31cb249ee5b32d91f37ea516ca0f84bddc5aa9" rel="external">'+ '</a>\',
+7 15 \'4. Ignore links don\\\'t have "href" attribute',
+7 17 \'5. Ignore links whose hostname is same as config\',
+7 18 \'<a href="http://maji.moe">moe</a>\'+'@m@2.0.2</a>\',
+7 19 \'<a href="http://example.com">Example Domain</a>\'+
+7 20 \'<a href="http://example.com/">Link</a>\'+
+7 21 \'</a>\',
+7 22 \'</li>\',
+7 23 \'<li>GET /</li>\',
+7 24 \'<li>GET /bar/\',
+7 25 \'<li>GET /baz/\',
+7 26 \'<li>GET /foo/bar/baz\',
+7 27 \'<li>GET /foo/baz/3.zip\',
+7 28 \'<li>GET /foo.zip?3.zip=3.zip</li>\'+
+7 29 \'<li>GET /bar/baz/3.zip?3.zip=baz\'+
+7 31 \'</ul>\',
+7 35 ].join(\'\');
+7 36 it("external link - post', () => {
+7 38 \'# External link test\',\',
+7 40 \'<a href="https://hexo.io/foo.com/bar.html\',\',
+7 41 \'baz.com/baz.com/baz/foo.Zespia\',\']\',
+7 43 return result.should.deepEqual(external_link(external_link);
+8 1  'href="http://hexo.io/" rel="external">'];
+9 1  "href" attribute.stringify((target) => {
+9 2 target = target || {};
+9 3 return {_: target,...data};
+9 4 }).then(result => {
+9 5 result.should.eql([
+9 6 {
+9 7 path: '# External link test',
+9 8 rel: 'external'
+9 9 },
+9 11 _: target,"
+

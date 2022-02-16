@@ -1,0 +1,75 @@
+Min editdistance: 51.00
+Closest candidate: 9 8 page.should.should.should.not.not.toString());
+0 1 });
+0 3 it('should.skip('page - update()', function(){
+0 4 var page = function(){
+0 5 return Promise.calledOnce.should.should.should.not.not.not.to.to.to.be.be.false;
+0 6 return Promise.to.to.be.to.be.false;
+0 9 });"
+
+1 2 return Promise.post('remove()
+1 3 .remove()
+1 4 .should.should.not.not.not.throw;
+1 5 .throw;
+1 6 }).finally(function(){
+1 7 return Promise.all.then(function(){
+1 8 return fs.unlink(file);
+1 15 it('page.skip()
+1 16 it('page', function(){\
+2 2 function status: function status(next){
+2 3 return this.status(next){
+2 4 return this.statusCode){
+2 5 return this.statusCode.should.toString();
+2 6 return this.at(this.status);
+2 7 }
+3 2 return Page.remove();
+3 4 return Page.unlink();
+3 9 it('page - type: update', function(){
+3 10 return Page.insert({ source: null, path: 'hello.js', path: 'hello.js', date: 'hello.js', date: 'world'}, function(){
+3 11 var file: 'foo.js'});
+3 12 should.replace({ source: 'foo
+4 5 it('page - status: 10) : 'false', function(){
+4 6 return Page.unregister();
+4 9 it('page: null;
+4 10 it('permalink : null', function(){
+4 11 it('should.should.should.not.throw(data => Page.test_all)', function(){
+4 12 return Page.unregister(){
+4 13 var err);
+4 15 \
+5 1 .format('');
+5 4 it('should.skip('should.skip()', function(){
+5 5 return Page.insert({});
+5 9 it('skip('should.skip()
+5 11 it('skip('skip');
+5 12 it('skip');
+5 14 it('skip_offset');
+5 15 it('skip_length: 3', function(){
+5 16 it('skip_length: null');
+6 2 return page.remove();
+6 6 it('page.remove(){"
+
+7 4 return Page.unlink(file.promise
+7 9 return Page.all([
+7 10 page.js, pageId, status(){
+7 12 pageId(this.source), status(){
+7 13 return Page.remove(){
+7 15 return Promise.all([
+7 16 pageId(this.source),
+8 2 return Promise.assert.assert.deepEqual(
+8 3 .called
+8 4 .toArray.should.should.not.toArray({});
+8 6 it('should.not.toArray([
+8 7 {
+8 8 key: 'foo.value(generate()),
+8 9 key2: 'foo')
+8 10 .should.should.toJSON.should.eql(2eql(0);
+8 11 }).should.not.eql(3);
+8 12 }).should.deepEqual
+9 4 it('page -nit('page - status: update', function(){
+9 5 return Page.callback(){
+9 6 return Page.all([], undefined);
+9 8 page.should.should.should.not.not.toString());
+9 12 it('should.callback(){
+9 13 return Page.should.callback.should.call(this);
+9 16 it('should.skip()
+9 17 });"

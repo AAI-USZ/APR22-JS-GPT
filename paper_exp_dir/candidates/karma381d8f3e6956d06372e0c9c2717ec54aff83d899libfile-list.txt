@@ -1,0 +1,324 @@
+Min editdistance: 20.00
+Closest candidate: 3 16 var files = buckets.length;
+0 1 if (pattern && helper.isDefined(pattern) && pattern.pattern && helper.isDefined(pattern.pattern)) {
+0 2 return helper.isUrlAbsolute(pattern.pattern)? pattern.pattern : path.pattern;
+0 3 }
+0 4 });
+0 6 var pending = 0;
+0 7 var finish = function() {
+0 8 pending--;
+0 9 if (!pending) {
+0 10 watcher.watch(pattern, this.path, function(){
+0 11 if (pending) {
+0 12 this.isUrlAbsolute(pattern.pattern) && (pending.length > 0) && (pending.length > 0) {
+0 14 if (pending.length > 0) {
+0 15 this.isUrlAbsolute(pattern.pattern) && (pending.length > 0) {
+0 16 this.charset = 'utf-8';
+0 17 this.contentPath = 'en';
+0 22 };
+0 26 timer.clearTimeout(pending);
+0 36 var pendingLength = 0;
+0 43 var index = function(req, res) {
+0 44 return window.__proxies.indexOf(q) === 0;
+0 47 index.id = function(res.id = function(res) {
+0 48 return window.id;
+0 51 index.camel = function(res) {
+0 52 return null;
+0 54 };"
+
+1 1 if (pattern === null) throw new ExtendError('Pattern object is required');
+1 3 emitter.emit('browsers_change', this);
+1 6 tc.emit('emitter_pending', this);
+1 10 var resolve = function(patterns, done) {
+1 11 var buckets = this.buckets;
+1 12 var promise = Promise.map(this.patterns, function(bucket) {
+1 13 var endpoint = patternObject.name;
+1 14 return new Promise(function(resolve, reject) {
+1 15 var bundrowsers = this.buckets = new Array(patterns.length);
+1 16 bucket.add(decEndpoint);
+1 17 return promise.then(function() {
+1 18 return that._removePackages(bucket);
+1 19 }, function() {
+1 20 var promises = Promise.map(function(pattern) {
+1 21 return that._analyse();
+1 23 promises.forEach(function(promise) {
+1 24 addPackages(promise);
+1 25 return Promise.all([
+1 26 clearPackages(promise),
+1 27 clearLinks(promise)
+1 28 ]);
+1 31 var resolveFiles = function(buckets, done) {
+1 32 var files = this.buckets = new Array(patterns.length);
+1 33 var waiting = 0;
+1 34 patterns.forEach(function(pattern) {
+1 36 waiting--;
+1 37 if (!waiting) {
+1 38 if (!waiting--;
+1 39 log.clearTimeout(done);
+1 43 files.forEach(function() {
+1 44 waiting = Promise.map(done, function() {
+1 45 var files = null;
+1 46 async = Promise.map(self.map(self, function(self, done);
+1 47 var data = self.removeListener);
+1 48 return self.removeListener.onComplete;
+1 49 .onComplete;
+1 50 return self._removeListener.removeListener.removeListener.removeListener.removeListener. onComplete;
+1 56 var finish = function noActivityTimeout = function() {
+1 57 clearTimeout(done) {
+1 58 clearTimeout(done, noActivityTimeout);
+1 59 return noActivityTimeoutId = noActivityTimeout? function() :
+2 1 var sub = function(){
+2 2 return this.findPatterns(this.patterns, function(pattern) {
+2 3 return self.isUrl(pattern);
+2 8 timer.track(function(){
+2 13 var resolveFiles = function(buckets) {
+2 14 var uniqueMap = {};
+2 15 var files = {
+2 16 served: [],
+2 17 included: []
+2 19 buckets.forEach(function(bucket, i) {
+2 20 if (!uniqueMap[pattern]) {
+2 21 bucket.sort(function(a, b) {
+2 22 return a.path > b.path;
+2 24 if (a.path === mtime) {
+2 25 return 1;
+2 27 return 0;
+2 30 var readDir = function(path, callback) {
+2 31 var promise = Q.resolve();
+2 34 var self = this;
+2 35 bucket.forEach(function(bucket, i) {
+2 36 if (!bucket.length) {
+2 37 return Promise.resolve(false);
+2 39 return self.stat()
+2 40 .spread(function(stats, files) {
+2 41 var stat = files.stat;
+2 42 var idx = 0;
+2 43 var mtime = mtime.getTime();
+2 44 var file;
+2 45 if (file) {
+2 46 file = getFile(path, function(path) {
+2 47 if (!mtime) {
+2 48 return Promise.resolveFiles(files.path);
+2 50 } else {
+2 51 self.buckets.set(path, function() {
+2 52 return Promise.concat(files);
+2 53 return Promise.fs.readFile(path);
+2 58 return [];
+2 59 box.setFiles(path, stat.setFiles(path, function() {
+2 60 return fs.readFile(path, done);
+2 64 return fs.unlink(path, function() {
+2 65 return fs.unlink(path, done);
+2 70 var writeFile = function(path, content, done) {
+2 71 var done = function() {
+2 72 var interval = setFormatters = this.asPreprocess);
+2 73 var buckets = this
+3 2 clearTimeout(pending);
+3 6 complete();
+3 9 var resolved = function() {
+3 10 var buckets = this.buckets = new Array(patterns.length);
+3 11 return this.emit('processBefore');
+3 14 var promises;
+3 15 var pendingFilesWritings = 0;
+3 16 var files = buckets.length;
+3 18 bucket.sort(by, -1);
+3 20 files.forEach(function(pattern) {
+3 21 if (!pendingFileWritings) {
+3 22 buckets.set(pattern, newPromise());
+3 28 return that.emit('processAfter');
+3 36 return Q.all([
+3 37 this.emit('processAfter'),"
+
+4 1 if (pattern && helper.isDefined(pattern)) {
+4 2 buckets.set(pattern, new Stats(pattern));
+4 5 var index = function(path, pointer) {
+4 6 var buckets = this.buckets
+4 7 .filter(function(bucket) {
+4 8 return!bucket.some(function(pattern) {
+4 9 return mm(path, pattern, {dot: true});
+4 10 }).forEach(function(path) {
+4 11 bucket.add(function(file) {
+4 12 if (util.isUrlAbsolute(file)) {
+4 13 bucket.set(path, [
+4 14 pattern,
+4 15 statCache], function(err, stat) {
+4 16 if (err) {
+4 17 return done(err);
+4 19 if (stat.isDirectory()) {
+4 20 buckets.unshift(path);
+4 24 this.emit('done');
+4 26 this.load = function(path) {
+4 27 var interval = 2000;
+4 28 log.debug('Config loaded in %s', clb.bold('%s'));
+4 29 start = function(injector, config, launcher, globalEmitter, preprocess, fileList, webServer,
+4 30 resultReporter, capturedBrowsers, done) {
+4 31 log.debug('%s filesPromise.\', config.pattern);
+4 32 resultReporter.createReporters(config, launcher);
+4 33 var qsPromise = function(emitter, fileList, capturedBrowsers, done) {
+4 34 var promise;
+4 35 var alreadyDisplayed = false;
+4 36 var filesPromise;
+4 37 var filesPromise = _ = this;
+5 2 patterns[i] = this.isDefined(patterns[i])? new Url(patterns[i]) : new Pattern(patterns[i]);
+5 6 log.debug('Pending for all the patterns');
+5 7 if (waiting) {
+5 8 tc.pattern = pattern;
+5 9 waiting++;
+5 12 var noDone = function() {
+5 13 this.pending = 0;
+5 15 var pendingAllPending = function() {
+5 18 var schemat = null;
+5 19 var files = Object.keys(files);
+5 20 buckets.forEach(function(bucket, idx) {
+5 21 bucket.sort(by, second).forEach(function(file) {
+5 22 if (uniqueMap[file.path]) {
+5 23 files.idx = -1;
+5 24 if (exclude.some(function(exclude) {
+5 25 return exclude.some(function(exclude) {
+5 26 return mm(file.path, file.content, pattern);
+5 29 files.idx = 1;
+5 33 return files;
+5 35 var resolveFiles = function(buckets, uniqueMap) {
+5 36 var names = this.buckets
+5 37 var uniqueResults = []
+5 38 varbuckets.forEach(function(bucket, idx) {
+5 39 bucket.sort(by, idx / self.length).forEach(function(file) {
+5 40 if (bucket.has(idx) {
+5 41 if (uniqueMap[idx].served) {
+5 42 if (uniqueMap[file.isSinglePattern) {
+5 43 return true;
+5 44 uniqueMap[file.served) {
+5 45 uniqueMap[file.served] = true;
+5 46 uniqueMap[file.included.included.included.served] = true;
+5 47 uniqueMap[file.included.served = true;
+5 48 count === 0;
+5 49 uniqueMap[file.watched.watched.length] = true;
+5 50 if (uniqueMap[file.included] = 0) {
+5 51 return;
+5 53 }).forEach(function(bucket) {
+5 54 if (field) {
+5 56 if (uniqueMap[file.included.included).served).every(function(servedMap[file.included, idx].
+6 1 if (pattern === null) {
+6 2 log.warn('Pattern "%s" does not match any file');
+6 5 self.emit('pending', pattern);
+6 9 var interval = function() {
+6 10 return function() {
+6 11 return self.on(process.exit, function() {
+6 16 var createWinGlob = function(realGlob) {
+6 17 return function(pattern, options, done) {
+6 18 var batchInterval = 250;
+6 20 var pendingDeferred;
+6 21 var pendingTimeout;
+6 23 buckets.forEach(function(bucket) {
+6 24 self.buckets.set(bucket.path, newBox(pattern));
+6 26 if (pendingTimeout) {
+6 27 clearTimeout(pendingTimeout);
+6 30 var resolveDeferred = function(files) {
+6 34 pendingDeferred.resolve(files || resolveFiles(self.buckets));
+6 35 pendingDeferred = pendingTimeout = null;
+6 37 var fireEventAndDefer = function() {
+6 41 if (pendingDeferred) {
+6 42 pendingDeferred = q.defer();
+6 43 emitter.emit('emit', pendingDeferred.promise);
+6 47 return emitter.emit('install', resolveFiles, resolveDeferred, function() {
+6 48 pendingDeferred.then(function() {
+6 49 pendingDeferred.resolveFiles(self.files) {
+6 50 pendingDeferred.then(answatcher.emitFiles(self.files.deferred.files) {
+6 51 pendingDeferred.deferred.deferred.deferred.resolveFiles(files || null);
+6 52 clearTimeout(files.deferred.done(files.done);
+6 53 clearTimeout(files.done.done.bind(self.done);
+6 58 var noFiles = function noFiles(patterns, resolveDeferred, noDeferred, pendingDeferred, done) {
+6 59 patterns, done) {
+6 60 var noDeferred = pendingTimeoutIds = pendingTimeout?
+7 1 if (pattern && pattern.pattern && helper.isString(pattern)) {
+7 2 return helper.isUrlAbsolute(pattern.pattern)? new Url(pattern.pattern) : new Pattern(pattern.pattern);
+7 4 if (helper.isObject(pattern) && pattern.pattern && helper.isString(pattern.pattern)) {
+7 5 return helper.isUrlAbsolute(pattern.pattern)?
+7 6 new Url(pattern.pattern) :
+7 7 new Pattern(pattern.pattern, pattern.served, pattern.included, pattern.watched);
+7 9 log.warn('Invalid pattern %s!\
+7 10 \\tObject is missing "pattern" property.\', pattern);
+7 11 return new Pattern(null, false, false, false);
+7 14 \\tExpected string or object with "pattern" property.\', pattern);
+7 15 return new Pattern(null, false, false);
+7 17 var resolve = function(patterns, exclude, done) {
+7 19 return done(done);
+7 22 var excludePointer = -1;
+7 24 var buckets = this.buckets.get(patterns);
+7 25 buckets.set(patterns.length, excludePointer);
+7 26 if (!buckets.length) {
+7 27 return reject(new TypeError('Nobuckets clear failed'));
+7 29 var data = {
+7 30 _content: null,
+7 31 path: null,
+7 32 _content: null
+7 34 if (typeof data.modified === 'included') {
+7 35 return done(done_error) {
+7 36 done: pattern.done_error = true
+7 39 return files.set(included = true;
+7 41 async function allTests = this._options = this._options = this._options = this._optionsForExecutor.execFilter(problems);
+7 42 var called = function noopTests = optionserred = options.some;
+7 43 var pendingList = options.some(done, done;
+7 44 var done = function this.done = function done_error = function noopests(answatched) {
+7 45 var error;
+7 47 var null;
+7 49 if (!pending = function noopending = function () {
+8 2 log.warn('%s\', pattern, done);
+8 7 watcher.watch(pattern, done);
+8 11 var resultSets = new Set();
+8 13 var excludeRegExps = exclude.map(function(pattern) {
+8 14 return new RegExp('^' + pattern.replace(/\\*/g, '(.*?)');
+8 16 patterns.forEach(function(pattern, index) {
+8 17 var pattern = patternObject.pattern;
+8 18 if (util.isUrlAbsolute(pattern)) {
+8 19 resultSets[index] = true;
+8 21 resultSets[index] = false;
+8 24 return resultSets;
+8 26 var resolveLocal = function() {
+8 27 var posts = this.buckets;
+8 32 posts.forEach(function(post) {
+8 33 var match = post.match(pending);
+8 34 if (!match) {
+8 35 if (patterns[0] === undefined) {
+8 36 posts.splice(pending);
+8 37 callback();
+8 40 log.debug('%solved', results.length === 0;
+8 43 var resolveEndpoints = function(app) {
+8 44 return this._isExcludedFiles(this._patterns, exclude, exclude = function(path) {
+8 45 return this.buckets.some(this.buckets.map(function(function(pattern) {
+8 46 return mm(path) {
+8 48 return mm(path, pattern) {
+8 49 return this.substr) {
+8 50 return!== undefined;
+8 51 }).substrs(this.length === undefined;
+8 52 }.filter(function(path) {
+8 54 }.substringify(path) {
+8 55 return!=='s');
+8 56 }.subify(this.subify(this.bucket.subify(this.bucket.subify(this.buck
+9 1 if (helper.isUrlAbsolute(pattern)) {
+9 2 buckets[i] = true;
+9 5 if (helper.isObject(pattern)) {
+9 6 if (pattern.pattern && helper.isString(pattern.pattern)) {
+9 8 new Url.isPlainObject(pattern.pattern) :
+9 19 function normalizeUrl(url) {
+9 20 if (url.charAt(0)!== '/') {
+9 21 url = '/';
+9 23 return url;
+9 25 var normalizeUrlRoot = function(urlRoot) {
+9 26 var normalizedUrlRoot = normalizeUrl(urlRoot);
+9 27 if (normalizedUrlRoot.charAt(normalizedUrlRoot.length - 1)!== '/') {
+9 28 normalizedUrlRoot = normalizedUrlRoot + '/';
+9 30 return normalizedUrlRoot;
+9 32 function normalizeConfig(config, configFilePath) {
+9 33 var basePathResolve = function(relativePath) {
+9 34 if (helper.isUrlAbsolute(relativePath)) {
+9 35 return relativePath;
+9 37 var urlRoot = normalize(config.urlRoot);
+9 38 if (helper.normalizeWinPath = normalizeWinPath(config.urlRoot);
+9 39 if (helper.normalizeProxyPath = normalizeProxyPath) {
+9 40 return urlRoot = normalizeProxyPath;
+9 42 return urlRoot;
+9 43 var normalizeProxy = normalizeProxy = normalizeConfig;
+9 44 var proxy = normalizeConfigs = normalizeProxyConfigs.forEach(proxy, proxyPaths, proxyPaths, path.split(', proxyPaths);
+9 45 var normalizeProxy = helper.isDefined = config.isDefined = config.normalizeProxyPaths);
+9 46 var normalizeProxy = normalizeProxyTypes(proxyPaths, proxyPaths);
+9 47 if (normalizeConfigs.length ===

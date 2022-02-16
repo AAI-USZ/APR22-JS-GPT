@@ -1,0 +1,31 @@
+'use strict';
+
+const { sep, join } = require('path');
+const fs = require('hexo-fs');
+const Promise = require('bluebird');
+const { spy } = require('sinon');
+const testUtil = require('../../util');
+const { full_url_for } = require('hexo-util');
+
+describe('Hexo', () => {
+const base_dir = join(__dirname, 'hexo_test');
+const Hexo = require('../../../lib/hexo');
+const hexo = new Hexo(base_dir, {silent: true});
+const coreDir = join(__dirname, '../../..');
+const { version } = require('../../../package.json');
+const Post = hexo.model('Post');
+const Page = hexo.model('Page');
+const Data = hexo.model('Data');
+const { route } = hexo;
+
+async function checkStream(stream, expected) {
+const data = await testUtil.stream.read(stream);
+data.should.eql(expected);
+}
+
+function loadAssetGenerator() {
+hexo.extend.generator.register('asset', require('../../../lib/plugins/generator/asset'));
+}
+
+before(async () => {
+await fs.mkdirs(hexo.base_dir);

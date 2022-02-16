@@ -1,0 +1,39 @@
+Min editdistance: 1.00
+Closest candidate: 0 6 function postPermalinkFilter(data){
+0 1 var permalink;
+0 2 var ignoreKeys = {
+0 3 path: true,
+0 4 permalink: true
+0 5 };
+0 6 function postPermalinkFilter(data){
+0 7 var config = this.config;
+0 8 var meta = {
+0 9 id: data.id || data._id,
+0 10 title: data.slug,
+0 11 name: typeof data.slug ==='string'? path : '',"
+
+5 5 module.exports = function(data){
+5 10 year: data.date.format('YYYY'),
+5 11 month: data.date.format('MM'),
+5 12 day: data.date.format('DD'),
+5 13 i_month: data.date.format('M'),
+5 14 i_day: data.date.format('D')
+5 16 if (!permalink || permalink.rule!== config.permalink){
+5 17 permalink = new Permalink(config.permalink);
+5 18 }
+5 19 var categories = data.categories;
+5 20 if (categories.length){
+5 21 meta.category = categories.last().slug;
+5 22 } else {
+5 23 meta.category = config.default_category;
+5 25 var keys = Object.keys(data);
+5 26 var key = '';
+5 27 for (var i = 0, len = keys.length; i < len; i++){
+5 28 key = keys[i];
+5 29 if (!ignoreKeys[key] &&!meta.hasOwnProperty(key)){
+5 30 meta[key] = data[key];
+5 33 return meta;
+5 34 };"
+
+6 6 name: typeof data.slug ==='string'? path.basename(data.slug) : '',"
+

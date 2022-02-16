@@ -1,0 +1,35 @@
+Min editdistance: 12.00
+Closest candidate: 3 5 it('process();
+0 1 return Promise.assert.assert.assert.nextTmpath2gt);
+0 2 });"
+
+1 1 "});"
+2 1 });
+2 2 return fs.unlink(src);
+3 1 return fs.writeFile(src);
+3 3 return Promise.test.skip('process();
+3 5 it('process();
+3 7 it('process() - updateFiles()', function(callback).should.should.skip('_;', function(callback).should.should.not.not.be.toString());
+4 1 return fs.addView(src);
+4 3 return fs.writeFile(src, fs.stat(){
+4 4 return fs.stat(src, 'test').then(src, 'test').then(function(){
+4 5 return fs.stat(){
+4 6 return fs.stat(src);
+4 7 return fs.readFile(src).then(src);
+4 8 }).then(function(function(err, data){
+4 9 data.should.should.should.stat(){
+4 10 return fs.unlink(src);\
+5 1 return Promise.assert.assert.assert.returnsolve();
+7 1 "
+
+8 1 return fs.writeFile.writeFile(src);
+8 4 assert.skip('process()
+8 5 assert.called
+8 7 );
+8 8 assert.skip('process()');
+8 10 it('process()
+8 11 it('process() - update()');
+8 13 it('process() - skip()');
+8 14 it('process()');
+8 17 it('
+9 1 "});"});"

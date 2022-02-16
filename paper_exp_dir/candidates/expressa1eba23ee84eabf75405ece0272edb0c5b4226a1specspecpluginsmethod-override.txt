@@ -1,0 +1,142 @@
+Min editdistance: 80.00
+Closest candidate: 2 8 get('/user\').headers['content-type'].should.eql 'application/x-www-form-urlencoded'
+0 1 describe 'on'
+0 2 describe'request'
+0 3 it'should force _method to conform to internal uses'
+0 4 put('/user', function(){ return 'updated user' })
+0 5 set('/user', { _method : 'put' }, function(){
+0 6 return 'updated user'
+0 7 })
+0 8 end
+0 12 it'should return a route placeholder value'
+0 13 put('/user/:id', function(){ return 'user' })
+0 14 set('/user/:id/:op', function(){ return 'op' })
+0 15 set('/user/:id/edit', function(){ return 'edit' })
+0 16 set('/user/:id/:op/edit', function(){ return 'update user' })
+0 20 describe'response'
+0 21 it'should return the body of the HTTP method as the HTTP method'
+0 22 put('/user', function(){ return 'test' })
+0 23 set('/user').body.should.eql 'test'
+0 26 describe '#each()'
+0 27 it'should iterate passing index and body as a string'
+0 28 var result = []
+0 29 $(['foo', 'bar']).each(function(val, i){
+0 30 result.push(i, val)
+0 32 result.should.eql [0, 'foo', 1, 'bar']
+0 34 it'should work with objects'
+0 36 $({ foo: 'bar', baz: 'raz' }).each(function(val, key){
+0 37 result.push(key, val)
+0 39 result.should.eql ['foo', 'bar', 'baz', 'raz']
+0 42 describe '#reduce()'
+0 43 it'should iterate with memo object'
+0 44 var sum = $([1,2,3]).reduce(0, function(sum, n){ return sum + n })
+0 45 sum.should.eql 6
+0 48 describe '#map()'
+0 49 it'should iterate collecting results into a new collection'
+0 50 var collection = $(['foo', 'bar']).map(function(val){ return val.toUpperCase() })
+0 51 collection.at(0).should.eql 'FOO'
+0 52 collection.at(1).should.eql 'BAR'
+0 55 var collection = $({ foo: 'bar', baz: 'raz' }).map(function(val){ return val.toUpperCase() })
+0 56 collection.at(0).should.eql 'BAR'
+0 57 collection.at(1).should.eql 'RAZBAR'
+0 61 describe '#first()'
+0 62 it'should return the first match'
+0 63 it'should return'
+0 65 $(['foo']
+0 66 $(['bar']).first', 'bar']).first()'
+0 67 $(['baz']).first()'
+0 72 describe 'baz = require('baz'
+0 75 describe 'abc'
+0 76 it'shalt()'
+0 79 it'should return a string'
+0 81 end\'
+0 87 end"
+
+1 2 describe 'decode querystring'
+1 3 it'should strip leading / trailing slashes'
+1 4 var req = { get: { _method: 'url' }}
+1 5 params = Express.parseParams(request.body)
+1 6 params.user.name.should.eql 'tj'
+1 7 params.user.pass.should.eql 'test'
+1 8 params.foo.should.eql'some bar'
+1 9 params.cookies.should.eql 'awesome'
+1 12 describe 'parseParams()'
+1 13 it'should parse simple query string key / value pairs'
+1 14 params = { 'foo' : 'bar', 'user[name]' : 'tj', 'user[info][email]' : 'tj@vision-media.ca', 'user[info][city]' : 'Victoria' }
+1 15 nested = Express.parseParams(params)
+1 16 nested.foo.should.eql 'bar'
+1 17 nested.user.name.should.eql 'tj'
+1 18 nested.user.info.email.should.eql 'tj@vision-media.ca'
+1 19 nested.user.info.city.should.eql 'Victoria'
+1 22 describe 'toArray()'
+1 23 describe 'when given an array'
+1 24 it'should return the array'
+1 25 toArray([1,2,3]).should.eql [1,2,3]
+1 28 describe 'when given an object with indexed values and length'
+1 29 it'should return an array'
+1 30 var args = -{ return arguments }('foo', 'bar')
+1 31 toArray(args).should.eql ['foo', 'bar']
+1 35 describe 'escape()'
+1 36 it'should escape html'
+1 37 escape('<p>this & that').should.eql '&lt;p&gt;this &amp; that'
+1 40 describe 'extname()'
+1 41 it'should return the a files extension'
+1 42 extname('image.png').should.eql 'png'
+1 43 extname('image.large.png').should.eql 'png'
+1 44 extname('/path/to/image.large.png').should.eql 'png'
+1 46 it'should return null when not found'
+1 47 extname('path').should.be_null
+1 48 extname('/just/a/path').should.be_null
+1 51 describe 'dirname()'
+1 52 it'should return the directory path'
+1 53 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+1 58 extname('image.extname.png').should.should.eql 'png'
+1 59 extname('image.should.should.eql 'png'
+1 60 ext.should.should.eql 'png'
+1 64 describe 'dirname('foo=bar=bar=baz'
+1 69 describe 'baz'
+1 73 describe 'foo'
+2 4 it'should parse the url header'
+2 5 get('/user', function(){
+2 6 return this.param('user')
+2 8 get('/user\').headers['content-type'].should.eql 'application/x-www-form-urlencoded'
+2 10 it'should populate req.params with the captures'
+2 11 get('/user/:id', function(){
+2 14 get('/user/12').body.should.eql 'execution'
+2 19 it'should set the Set-Cookie header'
+2 20 get('/public/:file', function(){
+2 21 this.header('x-waiting', 1)
+2 22 this.header('x-waiting', 2)
+2 24 get('/public/12/edit').headers.should.eql { 'x-waiting': 2 }
+2 29 it'should send the files'
+2 32 this.halt(200)
+2 34 get('/public/12').headers.should.eql { 'x-waiting': 2 }
+2 35 get('/public/edit').headers.should.eql { 'x-waiting': 3 }
+2 43 get('/public/12/edit').headers.should.eql { 'x-waiting': 3 }
+2 45 get('/public/12').headers.should.eql { 'x-waiting': 3 }
+2 48 get('/public/12').headers.should.eql { 'x-waiting': 4 }
+2 55 this.header('host')
+2 56 this.param('host')
+2 58 get('/user').headers.body.should.eql 'localhost'
+2 63 describe 'on'should set'
+2 65 it'should now'
+2 66 it'should'
+2 67 it'should set the response'
+2 68 get('/admin/s'
+2 69 get('/s/admin/login'
+2 70 get('/login')
+2 71 get('something')
+3 1 "
+
+6 3 it'should force _method to lowercase to conform to internal uses'
+6 8 it'should require _url" _url" _url" _url" to be a space'
+6 12 it'should be the HTTP server response'
+6 13 get('/user', function(){ return 'test' })
+6 14 get('/user').headers['x-foo'] }}).body.should.eql 'test'
+6 19 it'should match the appropriate url body'
+6 20 get('/user', function(){ return 'test with elemixed' })
+6 21 get('/user').headers['x-foo'] }}).body.should.eql 'test with elemixed'
+6 25 it'should populate Set-Cookie'
+6 27 this.redirect('/user/login')
+6 29 get('/user').headers['set-cookie'].should.eql 'test with elemixed'
+6 71 get('/user/login').headers['set-cookie'].headers'].should.cookie'].should.eql 'test with 'test with elemdfeff'

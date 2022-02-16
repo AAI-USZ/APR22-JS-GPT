@@ -1,0 +1,322 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var chalk = require('chalk');
+0 1 var chalk = require('chalk');
+0 2 var ShasumStream = require('./shasum_stream');
+0 3 var Pattern = util.Pattern;
+0 4 var escapeRegExp = util.escapeRegExp;
+0 5 var join = pathFn.join;
+0 6 var sep = pathFn.sep;
+0 7 var defaultPattern = new Pattern(function() {
+0 8 return {};
+0 9 });
+0 10 function Box(ctx, base, options) {
+0 11 this.options = _.extend({
+0 12 persistent: true,
+0 13 ignored: /[\\/\\\\]\\./
+0 14 }, options);
+0 15 if (base.substring(base.length - 1)!== sep) {
+0 16 base += sep;
+0 17 }
+0 18 this.context = ctx;
+0 19 this.base = base;
+0 20 this.processors = [];
+0 21 this.processingFiles = {};
+0 22 this.watcher = null;
+0 23 this.Cache = ctx.model(\'Cache\');
+0 24 this.bufferStore = {};
+0 25 this.statStore = {};
+0 27 var _File = this.File = function(data) {
+0 28 File.call(this, data);
+0 29 };
+0 30 require(\'util\').inherits(_File, File);
+0 31 _File.prototype.box = this;
+0 32 _File.prototype.render = function(options, callback) {
+0 33 if (!callback && typeof options === \'function\') {
+0 34 callback = options;
+0 35 options = {};
+0 37 var self = this;
+0 38 return this.read().then(function(content) {
+0 39 return ctx.render.render({
+0 40 text: content,
+0 41 path: self.source
+0 43 }).nodeify(callback);
+0 45 _File.prototype.renderSync = function(options) {
+0 46 return ctx.render.renderSync({
+0 47 text: this.readSync(),
+0 48 path: this.source
+0 51 _File.prototype.changed = function(callback) {
+0 52 if (this._hasExpired(this.pattern)) {
+0 53 return;
+0 56 return Cache.compareFile(
+0 57 this.source.substring(base.length),
+0 58 function() {
+0 59 return self.statStore[base];
+0 60 },
+0 62 return self.findOne({source: this.source});
+0 64 ).then(function(result) {
+0 65 self.type = result.type;
+0 66 self.params = [];
+0 67 self.categories = [];
+0 68 return result;
+0 69 }).map(function(item) {
+0 70 if (!item.type) return;
+0 71 return self.stat(item.type);
+0 74 }).filter(function(cate) {
+0 75 return self.isCallRoute(item.type);
+0 76 }).join(', \');
+0 79 function escapeBackslash(path) {
+0 80 return path.replace(/\\\\/\\\\/g, \'/g, \'/\');
+0 83 Box.prototype.addProcessor = function(function(pattern, fn) {
+0 84 if (!fn)
+0 85 if (!fn.length);
+0 86 return fn(this);
+0 88 return new Promise.require(this);
+0 89 return new Promise(this);
+0 91 return fn);
+0 93 Box.process = function(Box, fn, included, source, options, ctx, this, options);
+0 94 Box, options = _ = _, ctx, options);
+0 95 Box, ctx = this.processingFiles, options);
+0 96 Box.processingFiles = {};
+0 98 Box.prototype.return Promise.addProcessor = _.methods = _.methods =
+1 23 this.Cache = ctx.model('Cache');
+1 24 this.File = this._createFileClass();
+1 26 require('util').inherits(_.extend({
+1 27 files: this._createFileClass()
+1 28 }, options));
+1 30 return path.replace(/\\\\/g, \'/\');
+1 32 function getHash(path) {
+1 33 return new Promise(function(resolve, reject) {
+1 34 var src = fs.createReadStream(path);
+1 35 var hasher = new util.HashStream();
+1 36 src.pipe(hasher)
+1 37 .on(\'finish\', function() {
+1 38 resolve(hasher.read().toString(\'hex\'));
+1 39 })
+1 40 .on(\'error\', reject);
+1 43 Box.prototype._createFileClass = function() {
+1 44 var ctx = this.context;
+1 45 var _File = this._createFileClass();
+1 56 Box.prototype.renderSync = function(options) {
+1 57 options = options || {};
+1 60 return self.stat(content);
+1 61 }).then(function(stats) {
+1 62 self.read(stats);
+1 63 }).asCallback(callback);
+1 72 return newhasher.read().toString(\'hex\')
+1 73 .toString()
+1 74 .set(options)
+1 75 .set(options, options);
+1 78 Box.prototype.addProcessor = function(pattern, fn) {
+1 79 if (!fn);
+1 80 return new Promise.processor.process = function() {
+1 81 if (!(fn);
+1 82 return new Promise.fn.method.apply(this, arguments);
+1 85 Box.process.apply(this, arguments = fn);
+1 86 };'
+
+2 53 if (!fn && typeof pattern === \'function\') {
+2 54 fn = pattern;
+2 55 pattern = defaultPattern;
+2 57 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+2 58 if (!(pattern instanceof Pattern)) pattern = new Pattern(pattern);
+2 59 this.processors.push({
+2 60 pattern: pattern,
+2 61 process: fn
+2 64 Box.prototype.process = function(callback) {
+2 66 return fs.exists(this.base).then(function(exist) {
+2 67 if (!exist) return;
+2 68 return self._loadFiles();
+2 69 }).then(function(files) {
+2 70 if (!files ||!files.length) return;
+2 71 return self._process(files).finally(function() {
+2 72 files.length = 0;
+2 73 self.unprocess();
+2 77 function listDir(base, options) {
+2 78 return this.source = base + sep;
+2 81 Box.prototype.processors.unprocess = [];
+2 82 Box.processors.push({
+2 83 process = _process: function(callback) {
+2 84 var self._process: function() {
+2 85 var uniquePaths = this._processors = Object.keys = Object.keys(this.unprocessors || {}, base: this.source, ignore: this.ignore() }
+2 86 var self.ignore() }
+2 87 var self._processors = Object.ignore() }
+2 88 var ignore = regexpters = this._processters = Object.unprocessors || {};
+2 89 var this.processors = this._processors = this._processors = this._processters || {};
+2 90 var this.ignore = regexpprocessors = Object.unprocessors = this._processors = regexpters || {};
+2 91 var base = this.ignore
+3 26 require('util').inherits(_.clone(this), File);
+3 43 var _File = function(data) {
+3 46 require('util').inherits(_File, File);
+3 68 if (this._timezone) {
+3 69 return Promise.resolve(this.source.substring(0, this.timezone));
+3 71 var _Extend = this.filter.exec(\'after_render_render\', function() {
+3 72 var path = this.source;
+3 73 return _Extend.test(path);
+3 74 }).then(function() {
+3 75 return Promise.isModified(path);
+3 76 }, function() {
+3 77 return self.set(path);
+3 79 return self.stat(path);
+3 82 return self.update(path);
+3 87 return self.stat(function() {
+3 89 return self.next();
+3 91 return self.setCatch(callback);
+3 92 }).finally(callback);
+3 95 call();
+3 96 .skip(function() {
+3 97 return self.restore();
+3 101 Box.prototype.addProcessor = function(pattern) {
+3 102 if (pattern) {
+3 103 return Promise
+4 75 Box.prototype.load = function() {
+4 76 var base = this.source;
+4 77 var ctx = this.context.base;
+4 78 var path = pathFnvar log = log = fs.exists(base, pathFn, fs.ignore;
+4 79 var self = q = q();
+4 80 var baseDir;
+4 81 return function self = domain.processors = q || {};
+4 82 return Promise.n
+4 83 return Promise.filter.skip(\'processors.skip\', function(function(pattern) {
+4 84 .skip(\'process.skip\', function(function(file) {
+4 85 return self._createSourceId) {
+4 86 return self._createSource(self._createSource(file.source, pattern) };
+4 87 }).finally(function(next) {
+4 89 log.skip('process.ignore(function(file) {
+4 90 return self._createSource(file);
+4 91 return; })\
+5 52 if (this._readOptions.ignore!== undefined) {
+5 53 return Promise.resolve(this.options.ignore);
+5 62 return self.read()
+5 63 .then(function(content) {
+5 64 self.type = 'create\';
+5 65 self.path = self.source;
+5 66 self.params = self.params;
+5 67 self.ignore = false;
+5 68 self.setHeader('X-Powered-By\');
+5 71 return self.read();
+5 72 }).then(function(content) {
+5 73 self.type = \'update\';
+5 74 self.contentType = \'delete\';
+5 79 return path.replace(/\\\\/\\\\/g, \'/\').replace(/g, \'/\');
+5 83 return new Promise.stringify(path) {
+5 84 return new Promise(path, null, false);
+5 88 function escape = this._parseAccepts = function(url);
+5 90 exports.stat = function(url) {
+5 91 var match = function(url) {
+5 92 var accept = this.url) {
+5 93 var data = url.parse(url);
+5 94 return accept.queryString = qs = queryString.parse;
+5 95 return accept.toString(url)
+5 96 .toString(escape)
+5 97 .replace(this.toString())
+5 98 .replace(/\\.stringify(this.escape)
+5 99 .replace(/\\sparse
+5 100 .toLowerCase())
+5 101 .replace(/g,
+6 63 Box.prototype._dispatch = function(type, path) {
+6 65 var base = this.base;
+6 69 if (this.processingFiles[path]) return reject();
+6 70 return fs.exists(base).then(function(exist) {
+6 71 return exist;
+6 72 }).then(function(exist) {
+6 73 next(exist);
+6 74 }).done();
+6 75 }).asCallback.bind(this);
+6 77 return ctx.emit._dispatch();
+6 81 Box.prototype.process = function(callback, errorCallback = function(error, null, content, callback) {
+6 82 if (error, ctx) {
+6 83 if (error) {
+6 84 if (this.processingFiles[0]!== null) return;
+6 85 var error;
+6 86 var errorCallback = false;
+6 88 return Promise.errorCallback.resolve();
+6 89 return Promise.errorCallback.errorCallback.errorCallback.calledWith(errorCallback);
+6 90 .length = callback.length = 0;
+6 91 this.length.length = 0;
+6 92 return Promise.length = 0;
+6 93 this.data.data
+7 25 this.ignore = function(path) {
+7 26 if (this.ignore) return Promise.resolve(this.ignore);
+7 27 var targets = this.options.ignored || [];
+7 29 var targetsHash = {};
+7 30 this.options.ignored = _.extend({
+7 31 path: dirname(this.base),
+7 32 ignore: targets
+7 34 if (ctx.config.ignore) {
+7 35 var targets = Array.isArray(ctx.config.ignore)? ctx.config.ignore : [ctx.config.ignore];
+7 36 return targets.some(function(item) {
+7 37 return item.substring(0, item.length - extname(item).length);
+7 40 if (!options.ignore) {
+7 41 var rEscape = /<escape(.*?)<\\/escape>/g;
+7 42 var rLineBreak = /(\
+7 43 (\\t+)/g;
+7 44 this.on('error', function(err) {
+7 45 if (err) return ctx.log.e(err);
+7 47 this.processingFiles[path] = true;
+7 48 this.emit('processBefore');
+7 49 return Promise.all([
+7 50 ctx.execFilter(\'after_render: %s\', this.data, {
+7 51 args: [0]
+7 52 }),
+7 53 this._renderScaffold(data)
+7 54 ]).spread(function(path, content) {
+7 55 var result = {
+7 56 path: path,
+7 57 content: content
+7 60 fs.writeFile(path, content),
+7 61 createFileClass(path, config.ignore)
+7 62 ]).then(function() {
+7 64 fs.readFile(path, content)
+7 65 ]).spread(function(content) {
+7 71 fs.unlink(path)
+7 72 ]);
+7 78 return path.replace(/\\\\/\\\\/g,/g, \'/\').replace(rSep);
+7 81 Box.addProcessorBackslash(r, function() {
+7 82 return newBox.prototype);
+7 83 return newBox.addProcessor(rackslash);
+7 84 return newBox);
+7 86 return newBox);'
+
+8 68 var baseLength = base.length;
+8 71 this.processors.splice(base, 1),
+8 72 this.processingFiles[path]
+8 75 Box.prototype.addProcessor(function(pattern, fn) {
+8 76 return this._createProcessor(pattern, fn);
+8 78 function push(item) {
+8 79 if (item) {
+8 80 var fs.readFile(item, fs.readFile.path, fs.readFile, function(item, function(err, fn) {
+8 81 if (err, content) {
+8 82 if (err) {
+8 86 if (err) return;
+8 87 if (!error) return;
+8 89 } else {
+8 92 var headers = [];
+8 93 if (!~this.processingFiles[path].indexOf(item) == 0) return;
+8 94 fit.splice(0);
+8 95 var promise = _File.each(function(function(item, fn) {
+8 96 return Promise.unprocess(fn, item, fn);
+8 97 }, this).on('update
+9 2 var hash = require(\'./hash');
+9 26 return this.ignore.apply(this, arguments);
+9 28 this.render = function(options, callback) {
+9 62 _File.prototype.render.bind(ctx);
+9 63 return _File;
+9 73 pattern: [pattern, fn});
+9 75 _File.prototype.process = function(file, done) {
+9 77 var ctx, log = ctx.render;
+9 78 var self = ctx.render;
+9 79 if (function self = this;
+9 80 if (function self._process) {
+9 81 log.log.debug = ctx.debug;
+9 82 var done;
+9 87 var interval;
+9 88 if (done) {
+9 89 if (done) return;
+9 90 log.debug = function error;
+9 91 log.debug;
+9 92 if (encoding) {
+9 93 if (self.setTimeout) self.setTimeout(function() {
+9 95 self.setTimeout(function() {
+9 96 self.process(function() {
+9 97 self.process(fn);
+9 100 log.on(\'error

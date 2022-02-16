@@ -1,0 +1,301 @@
+Min editdistance: 12.00
+Closest candidate: 1 29 contextWindow.onerror = function () {
+0 1 }
+0 2 if (url!== '/') {
+0 3 reloadingContext = true
+0 5 this.VERSION = constant.VERSION
+0 6 this.emit('result', {
+0 7 id: 'about:blank',
+0 8 name: 'about:blank',
+0 9 url: '/'
+0 10 })
+0 12 this.socket.on('error', function (e) {
+0 13 if (e.code === 'EADDRINUSE') {
+0 14 if (self.config.useIframe === false) {
+0 15 var getConsole = function (currentWindow) {
+0 16 return currentWindow.console || {
+0 17 log: function () {},
+0 18 info: function () {},
+0 19 warn: function () {},
+0 20 error: function () {},
+0 21 debug: function () {}
+0 24 })(() => {
+0 25 var getConsole = (currentWindow) => {
+0 31 var getConsolePath = (currentWindow) => {
+0 34 default: function () {}
+0 37 var browserConsoleLog = function (level, colors) {
+0 38 if (levels.warn) {
+0 39 return growly.warn(levels.warn)
+0 48 var extend = this.app.get('extend')
+0 49 if (extend.length === 0) {
+0 50 var options = {
+0 51 clear: function () {}
+0 54 var serverConsoleLogFile = (serverConsoleLogFile, done) => {
+0 55 serverConsoleFile = this.app.get('serverConsoleFile')
+0 56 done = helper.isFunction(done)? done : process.exit
+0 61 var configOptions = {
+0 62 clearCookie: function (cookie) {
+0 63 return cookie.set(cookie)
+0 65 var exclude = (config.exclude || []).map(function (pattern) {
+0 66 return mm(config.exclude, pattern)
+0 68 var options.forEach(function (method) {
+0 69 if (key === 'logger')
+0 70 if (this.createMethodDefinition for the
+0 71 require(method.toLowerCase())
+0 72 require(logger.createMethod))
+0 73 require(method.output)
+0 76 this.dump = createMethodFunction getConsoleMethodFunctionLogger(options, options, options, function (output, arg = undefined, callback) {
+0 77 if (type, callback = getConsoleMethod) {
+0 78 if (typeof redirectingContext) {
+0 79 this.dump()
+0 82 } else {
+0 83 var getConsoleLogger = function (args, arg = function (func, path, hostConsole, hostConsole, port, hostConsole, port, hostConsoleLogger, port, urlRoot, level, urlRoot, callback) {
+0 84 var error, hostConsole, hostConsole, port, urlRoot, path }
+0 85 var error, hostConsole, hostConsole, urlRoot
+0 86 var error, host:
+1 1 var childWindow = null
+1 2 var navigateContextTo = function (url) {
+1 5 if (childWindow === null || childWindow.closed === true) {
+1 6 childWindow = opener('about:blank')
+1 8 childWindow.location = url
+1 11 iframe.src = url
+1 15 this.config.setupContext = function (contextWindow) {
+1 16 if (hasError) {
+1 17 return
+1 28 contextWindow.__karma__ = this
+1 29 contextWindow.onerror = function () {
+1 30 return contextWindow.__karma__.error.apply(contextWindow.__karma__, arguments)
+1 32 contextWindow.onbeforeunload = function (e, b) {
+1 33 if (!reloadingContext) {
+1 34 contextWindow.__karma__.error('Some of your tests did a full page reload!')
+1 37 if (self.config.captureConsole) {
+1 38 var localConsole = contextWindow.console = getConsole(contextWindow)
+1 39 var browserConsoleLog = localConsole.log
+1 40 var logMethods = ['log', 'info', 'warn', 'error', 'debug'])
+1 41 var patchConsoleMethod = function (method) {
+1 42 var orig = localConsole[method]
+1 43 if (!orig) {
+1 46 localConsole[method] = function () {
+1 47 self.log(method, arguments)
+1 48 return Function.prototype.apply.call(orig, localConsole, arguments)
+1 51 for (var i = 0; i < logMethods.length; i++) {
+1 52 patchConsoleMethod(logMethods[i])
+1 55 contextWindow.dump = function () {
+1 56 self.log('dump', arguments)
+1 58 contextWindow.alert = function (msg) {
+1 59 self.log('alert', [msg])
+1 62 this.log = function (type, args, values) {
+1 63 var values = []
+1 64 for (var i = args.length;
+1 65 values.for (var key in args.length; i < args.length; i++) {
+1 66 values.forEach(function (value[0] {
+1 67 values[key.toString.length; i] = generateMethod(args[i]) {
+1 68 values[i] = generateMethod(args[i])
+1 69 values[i])) {
+1 70 values[key.apply(value[key], args[key], args[key], args[key], args[key], [args[key], [args[key]] = generateMethod(args[key]])
+1 74 return this
+1 75 this.log.info({logLevel: values[key], values, args: values, function (action, args) {
+1 76 var args = args, callback = []
+1 77 args = this.length: values,
+1 78 return [key], self, [key, values.name, values[key].apply(this
+2 3 if (self.config.runInParent === false) {
+2 5 childWindow.close()
+2 9 reloadingContext = false
+2 11 reloadingContext = undefined
+2 30 var browserId = 1
+2 45 var shallowProxy = function (proxy) {
+2 46 var process = new Router()
+2 47 var args = arguments.length === 0
+2 48 (function (error, args) {
+2 49 if (error) {
+2 50 return callback.apply(this, args)
+2 52 var errorOutput = 'Bower command line client (' + this.config.client.name + ') and will now handle error'
+2 53 var pkgName = options.client.name + ':'+ pkgName
+2 54 return {
+2 55 id: ['value', Launcher],
+2 56 name: 'name',
+2 57 url: this.config.hostname,
+2 58 port: this.config.port,
+2 59 urlRoot: '/'
+2 62 this.log = function (log) {
+2 63 if (this._context) {
+2 64 var args = Array.prototype.slice.call(arguments, 1)
+2 65 args.unshift(log)
+2 67 var getConsole = function (Console) {
+2 68 return this.log.apply(this, args)
+2 70 var getClient = function (cmd, args) {
+2 71 var args = Array.prototype.call(this._args, args = args, function (cmd, arg1, arg2) {
+2 72 return cmd = cmdvar args = args1, args2 = args3
+2 73 args = args2
+2 74 args = args3 == null
+2 76 var errorOutput += 'bowerClient.args = args3 == null
+2 77 var errorOutput += 'bowerClient not supported: ',stdout'
+2 78 stdout.writeHead = function (port: function (port) {
+2 79 return stdout +='stdout' + 'bower' + args.write(port) with bound port, port, col' + urlRoot, crc'
+2 81 command = command = command + 'bower'+ command + 'bower'+ command.stdout'+ command + 'bower command
+3 11 iframe.src = url"
+
+4 10 }), {
+4 11 console: function () {}
+4 13 }),
+4 14 config: function (this.config) {
+4 15 if (this.config === undefined) {
+4 16 return store[this.config.title] || {}
+4 18 },
+4 19 default: function () {
+4 20 return this.config.default
+4 22 filename: function (path) {
+4 23 return path.replace(/\\\\/g, '/')
+4 25 full_source: function () {
+4 26 return this.source
+4 29 context: function (context) {
+4 30 return function (url) {
+4 31 return url
+4 32 .replace(/^\\/+/, '')
+4 33 .replace(/\\\\/g, '/')
+4 34 .replace(/\\?.*/, '.*')
+4 35 .replace(/^\\/]+ = ['a', '-]+
+4 36 return context.fn.call(this, url, [undefined, undefined, false])
+4 38 }"
+
+5 11 setup: function (contextWindow) {
+5 26 if (self.config.karma__.error) {
+5 27 contextWindow.__karma__.error.apply(contextWindow.__karma__, arguments)
+5 29 }contextWindow.dump = function () {
+5 30 if (self.config.reconnecting) {
+5 35 return util.prompt([
+5 36 self.log('alert'),
+5 37 msg + '\
+5 38 ' +
+5 39 'You should configure at least one password!'
+5 40 )
+5 42 var loadScript = function (idPath, scriptPath, basePath, urlRoot, proxyPath) {
+5 43 varScript = getConsole(idPath)
+5 44 varScriptTypes = window.extend.helper.array.function (obj) {
+5 45 return obj.id
+5 47 return util.format('{%s:%d%s}', path, configLevel, urlRoot)
+5 56 var shallow_Cli = function () {
+5 57 if (depth == 0) {
+5 58 return)
+5 68 var shallow_deleteConsole = function (id = function () {
+5 69 if (idPath) {
+5 71 return this.format(format) {
+5 76 var getConsoleMethodOverride = function (format = function (message, fn) {
+5 79 var getConsoleMethodOverride = function (name, shorthand = getConsoleMethod) {
+5 80 if (format) {
+5 81 this.format = getConsoleMethod(format, shorthand)'
+
+6 12 var localConsole = context.console = getConsole(contextWindow)
+6 13 var browserConsoleLog = localConsole.bind(contextWindow)
+6 14 var logMethods = ['log', 'info', 'warn', 'error', 'debug']
+6 32 this.on('log', function (log) {
+6 33 if (log.level === 'log') {
+6 37 var localConsole = getConsole(contextWindow)
+6 38 var instanceOf = function (value, constructorName) {
+6 39 return Object.prototype.toString.apply(value) === '[object Array]'"
+
+7 10 } : function () {}
+7 17 var browserId = queryParams.id || util.generateId('manual-')
+7 18 var returnUrl = queryParams.getConsole(browserId)
+7 19 .spread(function (resultsBuffer) {
+7 20 var browserName = getConsole(browserName)
+7 22 if (resultsBuffer.length > 1) {
+7 25 var URL_REGEXP = new RegExp('http:\\\\/\\\\/[^\\\\/]*' + url_toString(normalizeUrl(url), 'http://')
+7 26 return function (msg, indentation) {
+7 27 msg = msg.replace(URL_REGEXP, function (_, prefix, path) {
+7 28 if (prefix === 'base') {
+7 30 var url = ''
+7 31 if (!url.startsWith('//')) {
+7 32 url += 'index.html'
+7 37 if (indentation) {
+7 38 msg = indentation + msg.replace(/\
+7 39 /g, '\
+7 40 ' + indentation)
+7 42 return msg + '\
+7 43 '
+7 46 var args = Array.prototype.slice.call(arguments, 0)
+7 47 var id = this.id
+7 49 if (args.length === 1 && args[0] === 'js' || args.length === 0) {
+7 50 return args[0]
+7 52 return initConsole(args)
+7 56 var values = args.filter(function (m) {
+7 57 return!m.startsWith(BROWSER_REGEXP) {
+7 58 return!== undefined;
+7 60 .replace(/\
+7 61 /: function (new RegExp) {
+7 62 return answers.substrWith(/\
+7 63 ew RegExp) {
+7 64 return'*' + getConsole', getConsole(new RegExp)
+7 68 .replace(/g, '$/, '$', '$', '$', '$2')
+7 69 .replace(')
+7 70 .replace(/g, '$', '$')
+7 71 .replace(/g, '$')
+7 72 .split('/g, '&')
+7 74 .split('.')
+7 76 return (')
+7 79 .split(/').join(',')
+7 80 .split('.'')
+7 81 .replace(/)
+7 84 .map
+8 17 var getLodash = function (currentWindow) {
+8 26 var ProgressLauncher = function (launcher) {
+8 27 var self = this
+8 28 var lastStartTime
+8 29 var selfId = null
+8 30 this.on('start', function () {
+8 31 if (self.state!== self.STATE_BEING_CAPTURED) {
+8 34 this.launchSingle = function (protocol, hostname, port, urlRoot, upstreamProxy) {
+8 36 var singleRunDoneBrowsers = Object.create(null)
+8 37 var singleRunBrowsers = new BrowserCollection(new EventEmitter())
+8 38 var singleRunBrowserNotCaptured = false
+8 39 webServer.on('error', function (e) {
+8 41 webServer.listen(Port, urlRoot, function (log) {
+8 42 if (log.level === 'warn') {
+8 43 webServer.sockets.emit('info', capturedBrowsers.serialize())"
+
+9 3 if (state.EXPRESS_ENV) {
+9 5 this.emit('start', url, false, true, false)
+9 8 this.socket.on('error', function (err) {
+9 9 if (err) {
+9 10 return store[id] || err
+9 13 this.on('close', function () {
+9 14 if (self.isReady) {
+9 15 return store[id] = function () {
+9 16 return store[id] || {}
+9 18 }), this.emit('exit', null)
+9 20 }), this.bind(this))
+9 22 this.emit('reconnect', this.socket.emit.bind(this,'start'))
+9 28 return err
+9 30 this.emit('connect', this.socket.emit.bind(this,'start'))
+9 32 this.on('result', function (result) {
+9 33 if (this.isReady) {
+9 34 return store[id] = result
+9 36 this.emit('complete', this.state.CONSOING_DISCONNECTED)
+9 37 this.state = CONNECTED
+9 38 this.lastResult = new Result()
+9 39 this.disconnectsCount = 0
+9 40 this.activeSockets = [socket]
+9 41 this.noActivityTimeout = noActivityTimeout
+9 42 this.collection.add(this)
+9 43 this.emit('result', this.emit.bind(this,'start'))
+9 44 this.clearNoActivityTimeout()
+9 45 this.setState(CONNECTED)
+9 51 this.lastResult.total = this.lastResult.total
+9 52 this.disconnected = this.lastResult.disconnected
+9 53 this.emit('complete', this.state)
+9 56 this.on('clearResults', function () {
+9 57 this.emit('execute')
+9 61 return this.isReady = true
+9 65 this.bindAll = true
+9 66 this.doUntil(function () {
+9 70 this.execCommand = function (func.bindAll(this, arg1, args, failAll) {
+9 71 log.bindAll(this)
+9 72 log.error = function (error) {
+9 74 this.bindAll = error || this.bindAll(this, error)
+9 75 this.error = true
+9 76 log.error = true
+9 77 this.done()
+9 79 this.describeDone()
+9 81 this.name = function (error) {
+9 82 this.exists (this, arg) {
+9 84 return this.is

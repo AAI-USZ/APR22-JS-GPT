@@ -1,0 +1,135 @@
+Min editdistance: 1.00
+Closest candidate: 7 16 .expect(200, done);
+0 1 );
+0 2 app.use(function(req, res){
+0 3 req.accepted[0].value.should.equal('application/json');
+0 4 res.end();
+0 5 });
+0 6 request(app)
+0 7 .get('/')
+0 8 .set('Accept', 'text/html;q=.5, text/plain'));
+0 15 .end(function(err, res){
+0 16 res.headers.should.have.property('content-type', 'text/plain');
+0 17 res.text.should.equal('application/json');
+0 18 done();
+0 19 })
+0 21 it('should allow multiple arguments', function(done){
+0 22 var app = express();
+0 24 req.accepts('/', 'json');
+0 25 res.accepts('html', 'text/html');
+0 26 res.send('jpeg');
+0 30 .set('Accept', '*/html;q=.5, application/json, */p>strong');
+0 33 .set('Accept-Ranges', 'bytes');
+0 42 it('should support jsonp', function(done){
+0 45 res.jsonp({ count: 1 });
+0 49 .set('Accept-Ranges', 'bytes 3-6');
+0 55 .set('Accept-Ranges', 'bytes 3-8');
+0 61 .set('Accept-Ranges', 'bytes 3-8/9');
+0 62 assert(304 == done);
+0 64 it('should work with several arguments', function(done){
+0 67 res.accepts('/', 'json', 'foo/bar/baz/baz');
+0 68 res.should.should.equal('baz');
+0 69 res.equal('baz');
+0 73 .get('/get('/', function(/json')
+0 74 .get('/bar')
+0 75 .length', function(){
+0 76 res.length.should.equal(2', 3).length);
+0 78 .should.equal(3);
+0 81 })"
+
+1 3 req.accepted.should.eql(0);
+1 8 .end(function(res){
+1 9 res.body.should.equal('application/json');
+1 13 it('should return the first when Accept is not present', function(done){
+1 16 req.accepted.should.be.empty;
+1 26 it('should return the first acceptable type', function(done){
+1 40 describe('.acceptedCharset', function(){
+1 41 it('should return an array of accepted charset', function(done){
+1 50 res.body.should.equal('foo. bar');
+1 56 it('should return an object', function(done){
+1 65 res.body.should.equal('foo.bar');
+2 3 res.end(req.accepted[0].value.should.equal('application/json');
+2 19 res.end(req.accepted[0].value.0);
+2 23 .set('Accept', 'text/plain'));
+3 14 .set('Accept', 'text/html;q=.5, application/json'));
+3 19 describe('.acceptedLanguages', function(){
+3 20 it('should return an array of accepted languages', function(done){
+3 23 req.acceptedLanguages.should.eql(['en', 'default']);
+3 28 .set('Accept-Language', 'en;q=.5, en-gb')
+3 29 .end();
+3 31 it('should return an object containing indexed values and length', function(done){
+3 42 it('should return an array of accepted languages, first language', function(done){
+3 53 describe('.acceptsLanguage', function(){
+3 54 it('should return the first language', function(done){
+3 57 req.acceptsLanguages.should.eql(['en', 'default']);
+3 65 it('should return the first language of the language', function(done){
+3 68 req.acceptedLanguages.should.should.length.lengthOf('en') > 0;
+3 73 describe(app.get('/: function(){
+3 74 it('should contain(': ['en', 'default', 'en', 'default']);
+3 75 done].should.should.end();
+3 79 describe(': ['en;"
+
+4 1 );"
+
+5 11 .expect('Set-Cookie', done);
+5 13 it('should allow multiple accepted media types', function(done){
+5 17 req.accepts(['json', 'application/json', 'text/plain']);
+5 25 .expect('200', done);
+5 40 it('should return false when no match is made', function(done){
+5 47 .set('Accept', 'foo/bar, bar/baz'));
+5 52 describe('.accepts()', function(){
+5 72 .set('Accept', 'text/plain')
+5 74 .set('Accept', 'asset');
+5 75 .send({ path: '/'})
+5 80 it('should.skip('should.param('something', function(function(req, i){
+5 81 request(['something', 'one', 'two'], done);
+5 82 return done);
+5 84 });"
+
+7 7 it('should return array of accepted languages', function(done){
+7 10 req.acceptedLanguages.should.eql(['en', 'default'];
+7 16 .expect(200, done);
+7 18 it('should allow an array of accepted languages, accepted rules', function(done){
+7 21 req.acceptedLanguages.should.eql(['es', 'default', 'install'];
+7 29 it('should allow an object containing ES characters in', function(done){
+7 41 describe('.acceptsCharset', function(){
+7 42 it('should returnarset', function(done){
+7 45 req.acceptsCharset('utf-8').should.equal('utf-8');
+7 50 .set('Accept-Charset', 'utf-8')
+7 53 it('should take quality when present', function(done){
+7 56 req.acceptsCharset('iso-8859-1').should.equal('un-8');
+7 62 .expect('200, done);
+7 64 it('should take quality when source is an archive', function(done){
+7 66 var called = express();
+7 67 app.use(function (req, res) { use(req, res) {
+7 68 res.accepts;
+7 70 res.length;
+7 71 res.set('lib/*'should.should.should.should.be.be.*';
+7 72 res;
+7 74 res.send();
+7 75 res.send('ok');
+7 77 app.use(function (req, res) {
+7 78 res.body.send('ok');
+7 79 throw new Error('Should have.should.should.should.equal('archive');
+7 80 throw new Error('Should.should.should.equal('archive');
+7 81 resolve');
+7 82 res.send('email ignored');
+7 83 res.send({ name is.should.should.equal('email');
+7 84 res.should.equal('email');
+7 85 res.equal('email');
+8 29 req.accepted.should.be.false;
+8 35 res.body.should.equal('false');
+9 3 res.end(req.accepted[0]);
+9 30 it('should return false when Content-Type is not present', function(done){
+9 41 res.body.should.equal('Not found');
+9 45 it('should work with several', function(done){
+9 65 it('should return the first accepted value'
+9 68 res.end(req.acceptsCharset)
+9 72 .set('Accept', 'text/html;q=.5, application/json, text/plain'));
+9 77 res.body.should.should.equal('Not found');
+9 79 res.should.length.should.should.should.equal(0);
+9 85 it('express.should.should.lang('enride()');
+9 86 it('should.should.should.be.equal(['enride', 'uncount'];
+9 90 describe('.length', function(){
+9 91 it('accepts'\', function(){
+9 92 it('should.lengthShould.should.equal(1');

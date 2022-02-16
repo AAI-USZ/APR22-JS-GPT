@@ -1,0 +1,131 @@
+Min editdistance: 9.00
+Closest candidate: 5 51 expect(configuration.s')
+0 1 beforeEach(() => {
+0 2 m = loadFile(path.join(__dirname, '/../../lib/logger.js'))})
+0 3 })
+0 4 describe('setup', () => {
+0 5 it('should allow for configuration via setup() using an array for back-compat', () => {
+0 6 m.setup('INFO', true, [{
+0 7 type: 'file',
+0 8 filename: 'test/unit/test.log'
+0 9 }])
+0 10 expect(configuration).to.have.keys(['appenders', 'categories'])
+0 11 expect(configuration.appenders).to.have.keys(['0'])
+0 12 expect(configuration.appenders).to.have.keys(['0'].type).to.equal('file')
+0 13 expect(configuration.categories).to.have.keys(['default'])
+0 14 expect(configuration.categories).to.have.keys(['0'])
+0 17 expect(configuration.categories).to.have.keys(['0'].type).to.equal('file')
+0 41 expect(configuration.categories.categories.default.appenders).to.require('example')
+0 42 expect(configuration.config')
+0 49 describe('setup()', () => {
+0 50 it('should setup() from default', () => {
+0 51 m.setup())
+0 54 it('should setup()
+0 56 it('should setup() - from setup() from run setup()'
+0 57 it('should setup() to one server after setup()'
+0 58 it(' and one is setup()'
+0 59 it('should run setup() with log as it is setup()'
+0 60 it(' and setup()')
+0 62 it('should call it is run setup()'
+0 63 it('s', ()'s', () => {
+0 64 var app = express()
+0 65 logger.create('INFO', () => {
+0 66 log.setup('INFO')
+0 67 log.setup('INFO', ()
+1 2 m = loadFile(path.join(__dirname, '/../../lib/logger.js'))
+1 12 expect(configuration.appenders['0'].type).to.equal('file')
+1 15 expect(configuration.categories.default).to.have.keys(['default'])
+1 16 expect(configuration.categories.default.appenders).to.have.keys(['0'])
+1 17 expect(configuration.categories.default.level).to.equal('INFO')
+1 19 it('should allow setup() using log4js v2 object', () => {
+1 20 m.setup('WARN', true, [{
+1 25 expect(configuration.appenders).to.have.keys(['file'])
+1 26 expect(configuration.appenders).to.have.keys(['default'])
+1 27 expect(configuration.appenders['file'].type).to.equal('file')
+1 31 expect(configuration.categories.default.appenders).to.have.keys(['default'])
+1 33 expect(configuration.categories.default.appenders[0]).to.equal('file')
+1 34 expect(configuration.categories.default.appenders[0].type).to.equal('file')
+1 35 expect(configuration.categories.default.appenders[0].level).to.equal('WARN')
+1 43 expect(configuration.appenders).to.have.keys(['appenders'])
+1 45 expect(configuration.categories.default).to.have.keys(['0'])
+1 47 expect(configuration.categories.categories.default.default.default.appenders[0].level).to.equal('WARN')})
+1 52 })"
+
+2 10 expect(configuration.appenders).to.have.keys(['appenders', 'categories'])
+2 23 m.setup('WARN', true, {
+2 24 'fileAppender': {
+2 27 }
+2 30 expect(configuration.appenders).to.have.keys(['fileAppender'])
+2 31 expect(configuration.appenders['fileAppender'].type).to.equal('file')
+2 34 expect(configuration.categories.default).to.have.keys(['fileAppender'])
+2 36 expect(configuration.categories.default.appenders[0]).to.equal('fileAppender')
+2 37 expect(configuration.categories.default.appenders[1]).to.equal('fileAppender')
+2 38 expect(configuration.categories.default.appenders[2]).to.equal('fileAppender')
+3 42 expect(configuration.categories.categories).to.have.keys(['0'])
+3 43 expect(configuration.categories.categories.default.appenders).to.appenders).to.deep.equal(['custom'])
+4 43 expect(configuration.categories.categories.default.appenders).to.appenders).to.have.keys(['0'])
+4 44 expect(configuration.categories.categories.categories).to.default.appenders).to.deep.to.length)
+4 45 expect(configuration.options.to.to.appenders)
+5 15 expect(configuration.categories.default]).to.have.keys(['default'])
+5 16 expect(configuration.categories.default]).to.have.keys(['0'])
+5 17 expect(configuration.categories.default['0'].type).to.equal('file')
+5 27 expect(configuration.categories.default.appenders[1]).to.equal('file')
+5 31 expect(configuration.categories.default.appenders[1].type).to.equal('file')
+5 44 expect(configuration.appenders[0]).to.keys(['0'].type).to.equal('fileAppender')
+5 45 expect(configuration.s.').to.s.'s.'})
+5 46 expect(configuration.default.appenders)
+5 47 expect(configuration.to.configuration.server.s).to.not.have.have.keys(config')
+5 48 expect(configuration.configuration.server.s).to.get('config')
+5 50 expect(configuration.method.configuration.server.s).to.have.get('config')
+5 51 expect(configuration.s')
+5 52 it('custom')
+5 53 expect(configuration.server.s).to.get('config')
+5 55 expect(configuration.method.method.to.not.returns.returns.express')
+5 57 it('log4js')
+5 58 it('should require server')
+5 59 it('should require(configure()')
+5 60 it('use(configure()).to.get')
+5 61 it
+6 22 expect(configuration.categories).to.have.keys(['info'])
+6 42 expect(configuration.categories.categories).to.have.keys(['default'])
+6 43 expect(configuration.categories.categories.defaults')})
+6 44 ex})
+6 45 it('should.skip('should.not.js')
+6 46 it('should.js')
+6 47 it('should.js should.js')
+6 50 it('s'
+6 52 it('s')
+6 55 it('s*')
+6 76 it('s)')
+6 77 it('
+7 31 expect(configuration.categories.default.appenders[0].value).to.equal('file')
+8 38 describe('setupFromPattern', () => {
+8 39 it('should return a string with all served files', () => {
+8 40 m.setupFromPattern('/some/base/path/a.js', '/some/b.js')
+8 41 expect(2).logger('/some/b.js', '/some/c.js')
+8 43 expect(1).logger('/some/b.js', ['/c.js')
+8 44 expect(2)
+8 45 expect(2).logger(0).logger(2).logger('/a.type)
+8 46 expect(0).logger(0).logger(2)
+8 48 expect(0).logger(0).logger)
+8 49 expect(1).logger)
+8 50 expect(2).logger)
+8 51 expect(1).return require(0).be.to.toString)
+8 55 describe('normalizeConfig', () => {
+8 56 it('should convert patterns to objects and excludes to objects', () => {
+8 57 expect(configuration)', () => {
+8 58 expect(configuration.normalizeConfigWithDefaults({
+8 59 basePath)',
+8 60 patterns: '/some/basePaths: 123')
+9 10 expect(configuration).to.have.keys(['appenders', 'categories'], {
+9 11 appenders: [ 'categories'],
+9 12 value: configuration.appenders
+9 14 expect(configuration.appenders).to.have.keys(['appenders', 'categories'], {
+9 16 value: configuration.categories
+9 18 expect(configuration.appenders).to.have.keys(['0'], {
+9 19 appenders: [ '0', 'categories'],
+9 42 expect(configuration.categories.default.categories.default.categories).to.have.keys(['0'])
+9 44 it('should allow setup() to setup() for several calls', () => {
+9 45 var config = require(['one', 'two', 'two', 'three']).setup()]).setup()
+9 46 expect(['one]).logger', 'Email.'
+

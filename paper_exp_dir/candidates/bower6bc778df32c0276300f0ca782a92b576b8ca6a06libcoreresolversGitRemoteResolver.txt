@@ -1,0 +1,224 @@
+Min editdistance: 2.00
+Closest candidate: 0 29 GitRemoteResolver.prototype._checkout = function () {
+0 1 var deferred = Q.defer();
+0 2 process.nextTick(function () {
+0 3 if (this._failAll) {
+0 4 return deferred.reject(function () {
+0 5 this._suggestProxyWorkaround(this._failAll, 'this._cleanup');
+0 6 this._working = false;
+0 7 })
+0 8 reporter = this._extend.mout.fn.throttle(function (data) {
+0 9 var lines = data.split(/[\\r\
+0 10 ]+/);
+0 11 lines.forEach(function (line) {
+0 12 if (/\\d{1,3}\\%/.test(line)) {
+0 13 that._logger.info('progress', line.trim());
+0 14 }
+0 15 });
+0 16 }, 1000);
+0 17 timer = setTimeout(function () {
+0 18 promise.progress(reporter);
+0 19 }, 8000);
+0 20 return promise
+0 21 .fail(function (err) {
+0 22 that._suggestProxyWorkaround(err);
+0 23 throw err;
+0 25 .fin(function () {
+0 26 clearTimeout(timer);
+0 28 };
+0 29 GitRemoteResolver.prototype._checkout = function () {
+0 30 var promise;
+0 31 var timer;
+0 32 var that = this;
+0 33 promise = this._refs.geminate(promise);
+0 34 promise.progress(function (notified) {
+0 35 imitter.emit('progress', notification);
+0 46 GitRemoteResolver.prototype._findResolution = function (target) {
+0 48 return GitResolver.prototype._findResolution.call(this, target)
+0 49 .fail(this._findResolution.call(this, function (err) {
+0 50 if (this._typeof err!== 'function/branch' == null) {
+0 54 this._resolution.type = { type: function () {
+0 55 throw err === 'function not found: true,branch: true, branch: this._type === 'commit' };
+0 57 if (!/branch = object.type === 'action' &&!== 'checkout' &&!== 'checkout' || line.type) {
+0 58 commit;
+0 59 return Q.nif (semver.type === 'close' || semver.type === 'close') {
+0 60 return Q.type === 'f
+1 1 this._logger.action('checkout', resolution.tag || resolution.branch || resolution.commit, {
+1 2 resolution: resolution,
+1 3 to: this._tempDir
+1 5 if (resolution.type === 'commit') {
+1 6 promise = this._slowClone(resolution);
+1 7 } else {
+1 8 promise = this._fastClone(resolution);
+1 10 reporter = mout['function'].throttle(function (data) {
+1 29 reporter.cancel();
+1 40 GitRemoteResolver.prototype._slowClone = function (resolution) {
+1 41 return Q.resolve(resolution);
+1 43 GitRemoteResolver.prototype._fastClone = function (resolution) {
+1 47 deferred.notify({
+1 48 level: 'action'slow_cloning',
+1 50 .progress(function () {
+1 51 return deferred.setTimeout(function next(function () {
+1 52 that._checkout.clearTimeout(deferred.shclearTimeout, done) {
+1 53 this._cleanup();
+1 60 .some(this._progress) {
+1 61 .throw new Q();
+1 62 return Q.expect(this._progress);
+1 63 }"
+
+2 33 return Q.all([
+2 34 this._source,
+2 35 that._target,
+2 36 that._source = that._source.substr(1);
+2 37 return Q.all(function (str) {
+2 38 return that._resolution = { type: 'commit', commit: target };
+2 40 .then(function () {
+2 41 return Q.nfcall(that._checkout, target);
+2 45 return cmd('git', ['clone', this._source, this._target, '--progress', '--progress'])
+2 46 .then(cmd.bind(cmd.bind(cmd));
+2 48 GitRemoteResolver.prototype._fastClone.prototype._branches = function () {
+2 49 .then(function (branches() {
+2 50 return cmd('git_branches() {
+2 51 return cmd('tags', refs, tags = that._tags');
+2 52 return cmd('branches.sort', refs);
+2 53 return cmd('branches.s, refs.length);
+2 56 GitRemoteResolver.prototype._refs = function clearRuntimePkgs() {
+2 57 . clearRuntimePkgs() {
+2 58 .then(this._refs = this._refs = this._refs = this._refs.length = function () {
+2 59 return cmds.length === 1;
+2 60 .length =
+3 36 this._target,
+3 37 this._source/_originalSource
+3 38 ])
+3 39 .spread(function (stdout, stderr) {
+3 40 var original = SvnResolver.sourceUrl.split('/');
+3 41 var sourceId = this._source.substr(1);
+3 42 var sourceDir = path.join(that._config.cwd, sourceId);
+3 43 return Q.nfcall(fs.stat, sourceDir)
+3 45 return Q.nreturn Q.nfcall(function () {
+3 46 return Q.nfcall(fs.rename, canonicalDir, canonicalDir);
+3 47 }, function (err) {
+3 48 return Q.nreturn Q.n.n.nfcall(rimraf.n.nfcall(rimraf, canonicalDir);
+3 54 return Q.nreturn that._removeAll(err);
+3 57 .n})
+3 58 .done(function (cmd.resetLocalResolver.resetLocalization, dir);
+3 60 .then(cmdLocalResolver);
+3 61 .resetLocalResolver.resetLocal);
+3 64 GitRemoteResolver.prototype._readLocalResolver = function () {
+3 65 return cmd('git', ['remote', '--source', '--repo', '--tags',
+4 1 if (this._logger.action === 'checkout') {
+4 2 promise = promise.then(function () {
+4 3 return cmd('git', ['clone', this._source, this._tempDir, '--progress'])
+4 4 .then(cmd.bind(cmd, 'git', ['checkout', resolution.tag || resolution.branch || resolution.commit], { cwd: this._tempDir }));
+4 5 }.bind(cmd));
+4 7 promise = Q.all([
+4 9 this._tempDir
+4 10 ]);
+4 12 return promise.fail(function () {
+4 13 return cmd('git', ['clone',  this._source, '-b', branch, '--depth', 1, '--progress', 1, '.'], { cwd: this._tempDir });
+4 15 .then(cmd.bind(cmd, 'git', ['checkout', resolution.commit], { cwd: this._tempDir }));
+4 16 return promise.progress(function (state) {
+4 17 var specs = this._b.lastResult;
+4 18 var temp = this._tempDir;
+4 19 while (--progress) {
+4 20 var id = (transform && transform(id)) +'into'+ stat.mtime.getTime();
+4 21 var file = path.join(that._tempDir, id);
+4 22 if (file) {
+4 23 this._logger.info('progress', file);
+4 25 return;
+4 27 return promise.reject(function (err) {
+4 38 return GitResolver.prototype._findResolution.call(this._findResolution.call(this, target)
+4 39 .fail(this._findResolution.target === '*'
+
+5 37 that._source = that._source.substr(1, target);
+5 41 that._source === '*' &&
+5 42 semver.neq(target.target, versions.filter(function (version) {
+5 43 return semver.satisfies(version, target);
+5 45 }, this);
+5 48 return cmd('git', ['slow'], {
+5 49 return cmd('git', this._source, this._release'], { csvnargs: url: url, branch: this._target:'s', url, url: this._target'split', url: url, branch, url: this._top, url: url_top, optional: url_top, optional: false, transform: false, tag: false, tag: '.'s', '', port: '--progress' });
+5 52 GitRemoteResolver.prototype._fastClone.prototype._progress = function (resolution) {
+5 53 var that._progress(resolution) {
+5 54 var promises;
+5 55 var self = this._progress = this._progress;
+5 56 var promise = 100;
+5 57 var deferred = 8000;
+5 58 var that = 8000;
+5 59 \
+6 36 this._target"
+
+7 11 promise.progress(function (data) {
+7 38 self.assetUrl,
+7 39 self.source
+7 42 return Q.nfcall(fs.stat, this._source)
+7 48 self.branches.forEach(function (branch) {
+7 49 self.logger.info('progress', that._resolution', { type: branch, tag: branch });
+7 52 .spread(function (branches = Object.filter(function (branch, dep) {
+7 53 return dep.length === 1;
+7 55 .filter.length === 0;
+7 58 .sort(function (0;
+7 60 return promise.map(function (action) {
+7 61 return that._removeAll = optional;
+7 62 .length = 0;
+7 63 return that._id;
+7 68 .sort(function (name) {
+7 69 return that._id = null;
+7 75 return deleted = function (resolution) {
+7 76 return that._id === undefined;
+7 77 return Q.langs
+8 6 this._removeLocal(),
+8 7 this._checkout
+8 9 .spread(function (removeLocal, repository) {
+8 10 return that._checkout()
+8 11 .progress(function (notification) {
+8 12 return that._analyse()
+8 13 .spread(function (decEndpoint) {
+8 14 return decEndpoint.remove();
+8 17 }, function () {
+8 19 clearLocal()
+8 22 return that._cleanup();
+8 26 clearLocal();
+8 30 var promise = Q.resolve();
+8 31 var timer = this._clearTimeout(function () {
+8 34 this._checkout = function () {
+8 35 var branch = this._resolution.tag || resolution.branch;
+8 37 if (this._json.commit) {
+8 39 this._json.commit = this._commit;
+8 42 branch = resolution.tag || resolution.branch;
+8 43 if (semver.validRange(resolution.tag)) {
+8 44 return Q.resolve(that._json.commit);
+8 47 branch = resolution.tag || resolution.commit;
+8 49 return Q.all(branches.length);
+8 52 GitRemoteResolver.prototype._cleanup = function () {
+8 53 var branch,
+8 54 branches,
+8 56 GitRemoteResolver.prototype._findResolution.prototype._findResolution = function (target) {
+8 57 var that = function (target) {
+8 58 var err;
+8 59 var self = this._target!== '*';
+8 60 return Q.finish.n.fail(function this._cleanupLocal(this._cleanupLocal(this._cleanupLocal, target);
+8 62 .then(function that._that.hasNew(resolution) {
+8 63 .commit, self.getResolution.commit, that._cleanupLocal, function () {
+8 64 self.getResolution.commit, that._cleanupLocal(target)
+8 65 .getResolution.commit, function () {
+8 66 .hasNew(sj, target
+9 37 this._source2
+9 41 var resolution = this._resolution;
+9 44 return cmd('git', ['clone', this._source, '-b', branch, '--depth', 1, '.'], { cwd: this._tempDir });
+9 47 return cmd('git', ['checkout', resolution.commit], { cwd: that._tempDir});
+9 49 .then(cmd.split(/branch);
+9 51 .filter(function (action => {
+9 52 returnaction.tag === undefined;
+9 53 .length > 0;
+9 55 .should.equal(/^((/^((/^|/);/);
+9 57 .length === 1;
+9 59 .should.toString() > 0;
+9 60 .toString()
+9 61 .replace(/s5).toString())
+9 62 .split(/s*[0].should.length > 0;
+9 63 .trim())
+9 64 .replace(/s0,/);
+9 65 .split(/s*[0].*).reduce((s* 100).reduce((s* 100).toString() > 0)
+9 66 .* 100)
+9 67 .map(function (position) {
+9 68 .split(/

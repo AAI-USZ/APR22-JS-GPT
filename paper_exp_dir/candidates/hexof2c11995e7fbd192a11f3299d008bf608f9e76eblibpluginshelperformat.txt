@@ -1,0 +1,152 @@
+Min editdistance: 1.00
+Closest candidate: 6 3 exports.strip_html = function(content){
+0 1 module.exports = function(tags, options){
+0 2 if (!options){
+0 3 options = tags;
+0 4 tags = this.site.tags;
+0 5 }
+0 6 if (!tags ||!tags.length) return '';
+0 7 options = options || {};
+0 8 var min = options.min_font || 10;
+0 9 var max = options.max_font || 20;
+0 10 var orderby = options.orderby || 'name';
+0 11 var order = options.order || 1;
+0 12 var transform = options.transform;
+0 13 var separator = options.hasOwnProperty('separator')? options.separator : ', ';
+0 14 var showCurrent = options.show_current || false;
+0 15 var suffix = options.suffix || '';
+0 16 var childrenIndicator = options.hasOwnProperty('children_indicator')? options.children_indicator : false;
+0 17 var result = '';
+0 18 var self = this;
+0 19 tags = tags.sort(orderby, order);
+0 20 tags = tags.filter(function(tag){
+0 21 return tag.length;
+0 22 });
+0 23 if (options.amount) tags = tags.limit(options.amount);
+0 24 if (style === 'list'){
+0 25 result += '<ul class="\' + options.class + '">' +
+0 26 '<li class="\' + options.class + '">' +
+0 27 \'<a class="\' + options.class + '">' +
+0 28 \'</a>\' +
+0 29 options.name +
+0 30 (options.each) {
+0 31 result += self.format(format, tag.length);
+0 32 } else {
+0 33 result += tags.findRaw({
+0 34 name: tag.name,
+0 35 permalink: self.url_for(tag.path) + \'/\' + tag.id
+0 38 result += \'</li>\';
+0 40 if (options.orderby === \'random\' || options.orderby === \'rand\'){
+0 41 tags = tags.random();
+0 45 tags.each(function(tag){
+0 48 return result;
+0 49 };"
+
+1 1 module.exports = function(options){
+1 2 options = _.extend({
+1 3 base: this.page.base,
+1 4 format: this.config.pagination_dir + '/%d/',
+1 5 total: this.page.total || 1,
+1 6 current: this.page.current || 0,
+1 7 prev_text: 'Prev',
+1 8 next_text: 'Next',
+1 9 space: '&hellip;',
+1 10 prev_next: true,
+1 11 end_size: 1,
+1 12 mid_size: 2,
+1 13 show_all: false
+1 14 }, options);
+1 15 var current = options.current;
+1 16 var total = options.total;
+1 17 var endSize = options.end_size;
+1 18 var midSize = options.mid_size;
+1 19 var space = options.space;
+1 20 var base = options.base;
+1 21 var format = options.format;
+1 23 return function(base, format){
+1 24 return base + format.replace(/%d/g, '/');
+2 1 var render = module.exports = function(source){
+2 2 var content = source.replace(/^-{3}/, '').split('---');
+2 3 if (content.length === 1){
+2 4 var result = {_content: content[0]};
+2 6 var result = yaml.parse(content.shift());
+2 7 result._content = content.join('---');
+3 1 var Permalink = util.permalink;
+3 2 var permalink;
+3 3 function postPermalinkFilter(data){
+3 4 var config = this.config;
+3 5 var meta = {
+3 6 id: data.id || data._id,
+3 7 title: data.slug,
+3 8 name: typeof data.slug ==='string'? path.basename(data.slug) : '',"
+
+4 1 var format = util.format;
+4 2 exports.strip_html = format.strip_html;
+4 3 exports.trim = format.trim;
+4 4 exports.titlecase = util.titlecase;
+4 5 exports.word_wrap = format.word_wrap;
+4 6 exports.truncate = format.truncate;"
+
+5 15 var current = options.current,
+5 16 total = options.total,
+5 17 endSize = options.end_size,
+5 18 midSize = options.mid_size,
+5 19 space = options.space,
+5 20 base = options.base,
+5 21 format = options.format,
+5 22 front = '',"
+
+6 1 var renderFn = hexo.render,
+6 2 renderSync = renderFn.renderSync;
+6 3 exports.strip_html = function(content){
+6 4 return content.toString().replace(/<[^>]*>/g, '');
+6 5 };
+6 6 exports.trim = function(content){
+6 7 return content.toString().trim();
+6 10 exports.markdown = function(text){
+6 11 return renderSync({text: text, engine:'markdown'});
+6 13 exports.word_wrap = function(text, width){
+6 14 width = width || 80;
+6 15 var arr = [];
+6 16 for (var i = 0, length = text.length; i < length; i += width){
+6 17 arr.push(text.substr(i, width));
+6 19 return arr;
+7 1 var BaseReporter = function(formatError, reportSlow, adapter) {
+7 2 this.adapters = [adapter || process.stdout.write.bind(process.stdout)];
+7 3 this.onRunStart = function() {
+7 4 this._browsers = [];
+7 6 this.onBrowserStart = function(browser) {
+7 7 this._browsers.push(browser);
+7 9 this.renderBrowser = function(browser) {
+7 10 var results = browser.lastResult;
+7 11 var totalExecuted = results.success + results.failed;
+7 12 var msg = util.format('%s: Executed %d of %d', browser, totalExecuted, results.total);"
+
+8 2 render = renderFn.render,
+8 3 isRenderable = renderFn.isRenderable,
+8 4 getOutput = renderFn.getOutput;
+8 5 var baseDir = hexo.base_dir;
+8 6 module.exports = function(args, callback){
+8 7 var config = hexo.config;
+8 8 if (!config.external_link) return callback();
+8 9 var $ = cheerio.load(render, {preview: false});
+8 10 $('a').each(function(){"
+
+9 1 var escape = util.escape;
+9 2 var rParam = /(\\()?([:\\*])(\\w*)\\)?/g;
+9 3 module.exports = function(data, callback){
+9 4 if (!data) return callback();
+9 5 data.content = data.content.replace(rParam, function(match, optional, operator, name){
+9 6 params[name] = options[name] || [];
+9 7 if (operator === '*'){
+9 8 var str = [],
+9 9 rec = new RegExp(message.replace(/([^\\\\/]+)\\/(.*?)\\))?/g,"[^\\\\/]+)(namespace === '\\'? '' :'s');
+9 10 if (optional) str += '?';
+9 11 callback(new RegExp('^' + regex + '$', 'i'));
+9 13 module.exports.index = function(req, res, next){
+9 14 res.render(req.params[0]), function(err, result){
+9 15 if (err) return next(err);
+9 16 res.render(result, function(err, result){
+9 22 result.content = result.content.replace(rParam, function(match, optional, operator){
+9 23 params[user.name] = result;
+9 24 if (optional) str += '?' + (optional - 1) + '?' + (key === '?)'));

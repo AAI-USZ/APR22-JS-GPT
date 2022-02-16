@@ -1,0 +1,295 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 require('./resolve/resolvers/urlResolver');
+0 1 require('./resolve/resolvers/urlResolver');
+0 2 require('./resolve/resolvers/fsResolver');
+0 3 require('./resolve/resolvers/gitResolver');
+0 4 require('./resolve/resolvers/gitFsResolver');
+0 5 require('./resolve/resolvers/gitRemoteResolver');
+0 6 require('./resolve/resolvers/gitHubResolver');
+0 7 require('./resolve/resolvers/svnResolver');
+0 8 require('./resolve/resolverFactory');
+0 9 describe('resolverFactory', function () {
+0 10 beforeEach(function () {
+0 11 try {
+0 12 resolverFactoryHexo = require(\'../lib/core/resolverFactory\');
+0 13 } catch (err) {
+0 14 err.message.should.equal(
+0 15 \'resolverFactory is not registered yet\');
+0 16 }
+0 17 });
+0 18 it(\'should setup the registry for the source (http://)', function () {
+0 19 resolverFactoryHexo.call(this, \'http://bower.io\');
+0 20 resolverFactoryHexo.configure({
+0 21 storage: {
+0 22 packages: [
+0 23 \'bower.json\',
+0 25 \'_config.yml\',
+0 27 \'something-Else\',
+0 29 ]
+0 30 }, function (err) {
+0 31 expect(err).to.be.an(Error);
+0 32 expect(err.code).to.equal(\'EMALFORMED\');
+0 33 expect(err.message).to.equal(
+0 34 \'The registry only accepts URLs starting with git://\');
+0 35 expect(err.code).to.equal(\'EINVFORMAT\');
+0 38 it(\'should set the registry entry type to the latest version\', function () {
+0 45 \'version: \'0.0.0\'
+0 46 }, function () {
+0 47 return Q.nfcall(resolverFactory)
+0 48 .then(function (resolver) {
+0 49 expect(resolver).to.be.a(resolvers.GitRemoteResolver);
+0 50 expect(resolver.code).to.equal(\'0.0.0\');
+0 53 it(\'should assume the default registry entry type\', function () {
+0 60 \'index.js\',
+0 61 \'pkg-bower-json/index.js\',
+0 64 \'something-else\',
+0 69 .then(function (resolverFactory)
+0 71 .getConstructor)
+0 73 .resolverFactory)
+0 77 .resolverFactory.resolverFactory.resolverFactory.resolverFactory.resolverFactory.resolve.resolverFactory.resolve().then(resolverFactory)
+0 78 .resolverFactory.resolverFactory.resolverFactory.resolve(resolverFactory)
+0 80 .then(resolverFactory)
+0 90 .resolverFactory
+1 9 require('./resolve/worker');
+1 10 require('./resolve/resolverFactory/user-Repos');
+1 11 require('./resolve/resolverFactory/user-Repos/postinstall');
+1 12 require('./resolve/resolverFactory/server-wip');
+1 13 require('./resolve/resolverFactory/new-PostLink');
+1 14 require('./resolve/resolverFactory/try-new-PostLink');
+1 15 require('./resolve/resolverFactory/urlResolver');
+1 16 require('./resolve/resolverFactory/v2/resolverFactory-resolve-exact');
+1 17 require('./resolve/resolverFactory/4/test-as-promised');
+1 18 require('./resolve/resolverFactory/nope.js');
+1 20 require('./resolve/resolverFactory/query');'
+
+2 1 describe('./resolve/resolvers/urlResolver');
+2 2 before(function () {
+2 3 return resolve.resolve({
+2 4 "http://bower.io/foo.js"
+2 6 })
+2 13 describe('./resolve/resolvers/urlRoot');
+2 19 describe('./resolve/resolvers/urlRoot/bar.js"
+2 25 describe('./resolve/resolvers/urlRoot/bower.json"
+2 26 it.skip('should handle null and undefined');
+2 27 it.skip('should handle 403);
+2 29 describe('./resolve/resolvers/urlRoot/abc.json"
+2 31 it.skip('should handle registry field with bower.json');
+2 32 it.skip('should handle search string for bower.json');
+2 33 it.skip('should handle redirect');
+2 34 it.skip('should handle noopenner for any URL');
+2 35 it.skip('should handle nox-www-form-urlencoded');
+2 37 describe('./resolve/resolvers/urlRoot.js"
+2 38 it.skip(\'should handle noopenner for browser');
+2 42 it.skip(\'should handle all pretty-urls', function () {
+2 43 var error;
+2 45 error = require("./error');
+2 46 error.should.be.an(Error);
+2 47 error.message.should.equal(\'urlRoot normalized to http://bower.io\');
+2 48 error.message.should.equal(
+2 49 'http://bower.io/\',
+2 50 'http://bower.io/
+2 51 )
+2 52 );
+2 53 } catch (e) {
+2 61 it('should urlRoot normalized to http://bower.io/');
+2 69 \'http://bower.io/\',
+2 70 \'http://bower.io/\'
+2 75 \'http://bower.io/bower.io/\',
+2 79 it("should handleSSL/proxy/proxy.js", function () {
+2 80 var config = require('./static/test-asf\')
+2 81 var errorHandler = resolve();
+2 82 assert.Handler.Handler.Handler.on(\'should.on(\'sha', function (testHandler)
+2 83 .on(\'sha\', function (testHandler)
+2 84 .on(\'sha', function (testHandler)
+2 85 .sha.on(\'sha.test)
+2 86 .testHandler.sha.test(errorHandler)
+2 87 .on(\'sha.testHandler)
+2 88 .testHandler.sha.should.testHandler.test.sha.test.test.sha.should.test.test.test.sha.test.test.sha.test.test.test.function (config.sha.top) < 3).should.handle(errorHandler.urlRoot);
+2 90 itHandler
+3 1 describe("using " + parser + " and " + test + " assertion");
+3 2 it("should retrieve the name from the URL when guessing the name", function (done) {
+3 3 var resolver = create({ source: "foo"}, function (err, resolver) {
+3 4 assert.equal(resolver.getName()), "foo');
+3 5 done();
+3 8 it("should not return the name", function (done) {
+3 14 it("should return the name in the URL when guessing the name", function (done) {
+3 16 assert.equal(resolver.getName(), "foo');
+3 20 describe("with a normal enclosing function", function () {
+3 21 it("should return an object containing ES6 syntax and config", function (done) {
+3 22 var resolver = create({ source: "foo", config: config });
+3 23 resolver.hasNew(function (assert) {
+3 24 assert.equal(resolver.getName(), \'foo');
+3 28 });'
+
+4 1 describe("resolve/resolverFactory")
+4 2 describe("bindAllListeners()", () => {
+4 3 before(() => {
+4 4 const tempDir = this._tempDir;
+4 5 this._resolve = {};
+4 6 }.bindAllListeners();
+4 8 it("should resolve a promise to the latest commit on a key", () => {
+4 9 const resolver = create(\'foo\');
+4 10 resolver.resolve()
+4 11 .then(function (dir) {
+4 12 expect(fs.existsSync(path.join(dir, \'foo\'))).to.be(true);
+4 13 expect(fs.existsSync(path.join(dir, \'bar\'))).to.be(true);
+4 14 expect(fs.existsSync(path.join(dir, \'package-a-b\'))).to.be(true);
+4 15 expect(fs.existsSync(path.join(dir, \'package-a-b-enc-9\'))).to.be(false);
+4 16 next();
+4 18 .done();
+4 20 it("should remove any untracked files and directories", () => {
+4 31 it("should remove a single set of failed files and directories", () => {
+4 43 it("should remove any unhandled exception thrown by the adapter", () => {
+4 47 expect(fs.existsSync(path.join(dir, \'foo\'))).to.be(false);
+4 54 it("should remove an unhandled exception thrown by the adapter and no result", () => {
+4 55 const resolver = create({ source: null })
+4 56 .create({ source: null })
+4 60 .create(null})
+4 61 .get(null})
+4 62 .get(null)
+4 65 .get(undefined)
+4 66 .export.export.isUndefined)
+4 67 .normal)
+4 68 .should.should.not.should.not.not.not.return;
+4 69 .throw(content.exports.salt)
+4 70 .should.not.instanceof.should.completed;
+5 1 describe("Initialize DummyResolver", () => {
+5 2 const tempDir = new Resolver({ source: \'foo\', target: \'~0.2.2\' }, defaultConfig, new Logger());
+5 3 before(() => tempDir.prepare({
+5 4 name: \'foo\',
+5 5 url: \'http://bower.io\',
+5 6 proxy: { useFakeTimers: true, urlRoot: \'/foo' }
+5 8 it("should throw an error if a conflict in the resolve() call for a key", () => {
+5 9 assert.throws(() => {
+5 10 tempDir.prepare({
+5 11 name: \'test\',
+5 12 url: \'http://bower.io\'
+5 22 it("should throw an error if a conflict in the resolve() call for a non-interactive mode", () => {
+5 29 it("should throw an error if an conflict in the resolve() call for a key", () => {
+6 1 describe('.create', () => {
+6 2 it("should create a temp directory"
+6 3 var resolver = create({ source: \'foo\', target: \'bower_components\' }, { target: \'~2.1.2\' })
+6 4 .then(resolver._createTempDir()).then(exist => {
+6 5 expect(exist).to.be.a(\'string\');
+6 6 expect(reolver._tempDir).to.equal(tempDir);
+6 11 it("should remove the temp directory\', () => {
+6 12 var resolver = create({ source: \'foo\', target: \'bower_components\' }, { target: \'~2.1.3\' })
+6 20 it("should remove the source and the temp directory\', () => {
+6 24 expect(resolver._tempDir).to.equal(tempDir);
+6 29 it("should set the default registry contents\', () => {
+6 30 var resolver = create({ source: \'foo\', target: \'bower_components\' });
+6 31 resolver._createTempDir()
+6 32 .then(resolver._createTempDir())
+6 33 .then(config => {
+6 34 config.set({
+6 36 packages: Object.keys(pkg.json.dependencies),
+6 37 only: \'dependencies\'
+6 41 expect(config.cache).to.equal(false);
+6 42 expect(config._tempDir).to.equal(tempDir);
+6 43 expect(notifier).to.have.property(\'end\');
+6 54 config.cache.should.equal(true);
+6 60 it("should keep the mode", () => {
+6 64 .then(resolver._readJson.bind(resolver)))
+6 65 .then(function (meta) {
+6 66 expect(meta).to.containEql([
+6 67 {
+6 69 version: \'bar\'
+6 71 ]);
+6 72 }));
+6 73 resolver._tempDir.getTempDir()
+6 74 .then(tempDir()
+6 75 .then(resolver._readJson.bind(resolver)
+6 76 .bind(resolver)
+6 78 .getTempDir())
+6 81 .then(resolver._readPkgMeta)
+6 82 .then(resolver.bind(resolver._readPkgMeta)
+6 83 .bind(resolver))
+6 84 .then(resolver._savePkgMeta)
+6 87 .then(resolver.resolvePkgMeta)
+6 89 .then(resolver.resolvePkgMeta))
+6 90 .then(res
+7 4 it(\'should send error and no resolver for a single non-string as the first argument\', () => {
+7 5 var resolver;
+7 7 resolver = new resolvers.UrlResolver({ source: \'http://localhost:8080/foo\' }, { target: \'0.0.1\' });
+7 9 err.message.should.equal(\'URL sources can\\\'t resolve targets\');
+7 12 it(\'should error and no resolver for a second argument\', () => {
+7 15 resolver = new resolvers.UrlResolver({ source: \'http://localhost:8080/foo', target: \'0.0.1\' });
+7 20 it(\'should throw an error if a resolved to a lower version for a range\', () => {
+7 23 resolver = new resolvers.UrlResolver({ source: \'http://localhost:8080/foo\', target: \'~0.0.1\' });
+7 28 it(\'should not throw an error if resolved to the same commit as a second argument\', () => {
+7 31 resolver = new resolvers.UrlResolver({ source: \'http://localhost:8080/foo\', target: \'0.0.1\' });
+7 36 it(\'should not throw an error if any resolver for a non-function as the second argument\', () => {
+7 44 it(\'should not throw an error if any resolver for a non-function as the first argument is a function\', () => {
+7 49 err.message.should.equal(\'Resolver source must be a function\');
+7 52 it(\'should not throw an error if any resolver for a second argument is a function\', () => {
+7 55 resolver = new resolvers.UrlResolver({ source: \'http://localhost:808080/foo\', target: \'0.1.0\' });
+7 57 err.message.message.should.equal(\'Resolver source must be a function\');
+7 60 it(\'shouldthrow new Error(\'should not throw new Error(\'should not implemented for a middleware\');\');
+7 62 describe(\'.hasNewlyDisallowResolver = resolve = resolve succeeded;\', () => function () => {
+7 63 it(\'should.hasNew([] => {
+7 64 \');
+7 66 it(\'should.skip(\'should.skip(\'should resolve succeeded;\');
+7 67 it(\'should.skip\');
+7 68 it(\'should.skip(\'should resolve by default\');
+7 69 it(\'should set.skip\');
+7 70 it(\'should work.skip\');
+8 1 describe("resolve/resolvers/urlResolver()", function () {
+8 3 this.asset = create({ source: \'foo\', url: \'/foo.js\' });
+8 5 it("should extractURL from the registry settings", function (next) {
+8 6 var resolver = create({ source: \'foo\', url: \'/foo.js?6e8234:2780808076b7e92d33e9 and http://127.0.0.1:8080/absolute/foo.js?6e8234:2780808077b7e92d33e9;
+8 9 expect(fs.existsSync(path.join(dir, \'index.js\'))).to.be(true);
+8 10 expect(fs.existsSync(path.join(dir, \'package-resolver\'))).to.be(false);
+8 11 expect(fs.existsSync(path.join(dir, \'package-repo'))).to.be(false);
+8 16 it("should extract in an absolute config.url, when not guessing the name", function (next) {
+8 17 var resolver = create({ source: \'foo\', url: \'/foo.js?6e8234:278080808077b7e92d33e9\', target: \'~0.1.0\' });
+8 22 expect(fs.existsSync(path.join(dir, \'package-zip\'))).to.be(false);
+8 27 it("should extract in an absolute config.url and config.rootroot is the highest case", function (next) {
+8 28 var resolver = create({ source: \'foo\', url: \'/foo.js?6e8234:27808080/absolute/foo.js?6e8234:://127.0.1\', target: \'~0.1.0\' });
+8 33 expect(fs.existsSync(path.join(dir, \'package-zip.min\'))).to.be(false);
+8 38 it("should not return a resolver for a key", function (next) {
+8 39 var resolver = create({ source: \'foo\', url: \'/foo.js?6e8234: 7ecko/absolute/foo.js?6e8234: 7ecko/bower.js\' });
+8 42 expect(resolver.resolver.resolve() == null;
+9 9 require('./resolve/resolverFactory-Hexo');
+9 11 require('./resolve/resolve/resolverFactory-As-promised');
+9 12 require('./resolve/worker-types-depd');
+9 13 require('./resolve/worker-keys-post');
+9 14 require('./resolve/worker-posts');
+9 15 require('./resolve/worker-sep);
+9 16 require('./resolve/blog posts');
+9 17 require('./resolve/new-post-name-locale');
+9 18 describe('resolve/', function () {
+9 19 var tempDir = this._tempDir;
+9 20 var resolveSinglePattern = function(pattern) {
+9 21 var parts = [];
+9 22 var results = [];
+9 23 var waiting = 0;
+9 24 pattern.split(/(\\/[^\\/\\*]*\\*[^\\/\\*]*)/).forEach(function(str) {
+9 25 if (str) parts.push(str);
+9 27 var finish = function() {
+9 28 waiting--;
+9 29 if (!waiting) return;
+9 30 results.sort(function(a, b) {
+9 31 return a.path > b.path;
+9 33 results.forEach(function(str) {
+9 34 waiting++;
+9 35 for (var i = 0; i < parts.length; i++) {
+9 36 result.push(waiting upers[i]));
+9 38 result.push(waitingSourceId());
+9 43 var pages = [];
+9 44 var space = separator + '&hellip;';
+9 45 var leftEnd = new RegExp(\\'^' + space + '\\uFFFC\\u30FFFC\\u30FFF\\u30FF;\\\\u30FFFC\\u30FFFC\\u30FF;\' +
+9 46 \'(\\S\\\\S\\\\u\\\\' + space + '\\uFFFC\\u30FFFC\\u30FF;\\\\u30FFig\\u30FF;\\u30FF\\u30FF;\\u30FF;\\u30FF;\\u30FF;' +
+9 47 \'\\u30FF;\\u30FF;\\u30FF;
+9 48 };
+9 49 it('should work with several capture groups in the resolve', function(next) {
+9 50 var idx = 1000;
+9 51 var capture groups = [\'bob\', \'captures\', \'$1\', \'$2\', \'$3\', \'$4\', \'$5\', \'$1\', \'$2\', \'$5\', \'$2\', \'$3\', \'captures\', \'$4\', \'$5', \'$6'];
+9 52 var promise = function sendCompletion(pendingDissectingErrors) {
+9 53 validateErrors = function(err) {
+9 54 validateErrors.suite.suite.addErrors.bind(err || "PendingDissectingErrors = nooply;");
+9 55 if (eventTypeof validateErrors.expect(err) >= 0) {
+9 56 clearTimeout(err)
+9 58 priority = function () {
+9 59 return sendCompletionErrors.resolve(error)
+9 60 .reportErrors.bind(resolveEndpointsToPendingDissectingErrors);
+9 62 if (

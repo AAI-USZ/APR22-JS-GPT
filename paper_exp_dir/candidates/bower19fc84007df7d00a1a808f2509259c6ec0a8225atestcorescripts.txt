@@ -1,0 +1,50 @@
+Min editdistance: 26.00
+Closest candidate: 4 1 it('should resolve() {
+0 1 it('should find suitable', function (s) {
+0 2 installor(bowerJson.commands);
+0 3 install(BowerJson.commands);
+0 4 install();
+0 5 install(function (s) {
+0 6 install(answ) {
+0 7 install(p) {
+0 8 install(pb) {
+0 9 install(install(install(c) {
+0 10 install(c) {
+0 11 install(cinstall(c) {
+0 12 install(cinstall(cinstall(c) {
+0 13 install(cinstall(
+1 1 "
+2 1 it('should convert null to true to true to true when no problems');
+2 2 it('should convert null if no packages at the "different" to null', function (s separator is true for a string') {
+2 3 it('should now', function () {
+2 4 var answers = null);
+2 5 var questions = function () {
+2 7 var questions.deepStrictEqual = function () {
+2 8 });
+2 9 } catch (e1 ='satisfies(ans.uninstallables
+4 1 it('should resolve() {
+4 2 var testLoad config = function () {
+4 3 return install(env) {
+4 4 install(env) {
+4 5 env(env(env) {
+4 6 env = env.install();
+4 8 install(['jquery', 'install_'].install();
+4 11 install(test);
+4 13 install.install();
+4 16 install.install(test.install.install.install(env.install.bind(
+6 1 it('should set() {
+6 2 it('should resolve targets', function () {
+6 3 var answers = function () {
+6 4 var user = install();
+6 6 install = install();
+6 11 install.on('something');
+6 13 install('something');
+6 19 install('install');
+7 1 it('should sendComplep('should send no packages with --'+ command on your user'+ command when no --savePid is not connected', function () {
+7 2 var script = 'git@'+ command);
+7 3 installModify your test run', function (command) {
+7 4 install.run(command, answers).on('install', function (s) {
+7 5 install.s.install('install', function (answ) {
+7 6 expect(s) {
+7 7 expect(command) {
+7 8 expect(s).to.install('install', function

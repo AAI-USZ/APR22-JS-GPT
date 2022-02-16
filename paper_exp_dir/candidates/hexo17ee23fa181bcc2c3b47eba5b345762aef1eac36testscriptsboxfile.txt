@@ -1,0 +1,262 @@
+Min editdistance: 10.00
+Closest candidate: 8 37 it(\'delete()\', () => {
+0 1 it(\'read() - callback - raw buffer', async () => {
+0 2 const body = [
+0 3 \'title: "Hello world"\',
+0 4 \'---\'
+0 5 ].join(\'\
+0 6 \');
+0 7 const file = writeFile({
+0 8 path: \'test.yml\',
+0 9 content: body
+0 10 });
+0 11 await writeFile(file.source, body);
+0 12 const content = [
+0 13 \'{% test foo bar %}\',
+0 17 await Promise.all([
+0 18 writeFile(file.source, body),
+0 19 function() {
+0 20 return \'foo bar\'
+0 21 }).then(() => {
+0 22 result.should.eql({
+0 24 content: \'foo bar\'
+0 26 }).finally(() => {
+0 27 box.unwatch();
+0 28 return fs.rmdir(box.base);
+0 31 it(\'watch() - update with simple "ignore" option\', async () => {
+0 32 const box = newBox(\'test\', {ignore: \'**/ignore_me\'});
+0 33 const path = join(box.base, \'_test\', \'ignore_me\');
+0 34 const filter = spy();
+0 35 box.addProcessor(processor);
+0 36 await writeFile(file.source, \'test.txt\');
+0 38 \'{% test %}\',
+0 39 \'test\',
+0 40 \'_test: \'ignore_me\'
+0 44 writeFile(file.source, \'test.txt\'),
+0 45 fs.statSync(path)
+0 46 ]);
+0 48 it(\'watch() => {
+0 49 const box.unwatch()
+0 50 .on(\'readFiles([\', () => {
+0 51 const stat(2, 456) => {
+0 52 const files.should.should.removeFile(2);
+0 53 await unlink(3);
+0 55 return Promise.on(\'readFile(file.rimraf.rimraf(box.base,\'should.js\', done);
+0 56 })
+0 60 const doneFiles = box.unwatchFiles([\'readFiles=\'readFiles=\'readFiles=\' + 1\'readFiles= 2\' }, function() {\
+0 61 \', doneFiles=1, doneFiles=\'readFiles=\'readFile= 3\' }, function() {\
+0 62 \', done = Promise.mapFiles.mapFilesSync=
+1 1 it("read() - callback", () => {
+1 2 const src = join(box.base, \'_test\');
+1 4 \'foo: bar\',
+1 8 await writeFile(file.source, content);
+1 10 fs.writeFile(src, content),
+1 11 process(content)
+1 13 await hexo.locals.invalidate();
+1 15 foo: \'bar\',
+1 16 bar: \'boo\'
+1 23 return fs.unlink(file.source);
+1 25 it("read() - console not registered") => {
+1 33 await Promise.delay(500).then(() => {
+1 34 const result = await writeFile(file.source, content);
+1 35 result.should.eql(content);
+1 41 return Promise.all([
+1 42 fs.unlink(join(box.base, \'_test\')),
+1 47 it("read() - helper not registered") => box.insert({
+1 48 const src: join(box.base, \'_test\', \'_helper_item\'}).then_()}).then_()
+1 50 it("read() => read()).then(content(content => {
+1 51 const content.should.should.eql(content.eql(content);
+1 52 return Promise.log.logger.should.should.eql([\'some_invalidate()\'some_invalidate()\'))\']);
+1 54 it("list()\'return Promise.should.should.should.toArray.js does not.toArray()\');
+1 55 }).should.fn.not.not.toArray().should.eql(content.toArray());
+1 56 }).should.skip(keys() => content.join(\'\
+1 57 \'));
+1 59 it("set() => content.should.list()
+2 2 const src = join(box.base, "hello.txt");
+2 3 const dest = join(box.base, "world.txt");
+2 5 \'---\',
+2 6 \'title: Hello World\',
+2 7 \'date: Hello World\',
+2 13 writeFile(dest, content),
+2 16 await hexo.locals.set(\'test\', args => {
+2 17 const message = \'Hello World\';
+2 18 const path = join(box.base, message);
+2 19 const obj = yaml.load(obj);
+2 20 obj.should.eql(message);
+2 26 it("read() - callback - not read a file name", async () => {
+2 27 const src = join(box.base, "test.txt");
+2 28 const dest = join(box.base, "test.txt");
+2 42 const message = \'test.txt\';
+2 45 const content = obj.toString();
+2 46 foo.should.should.should.eql(path);
+2 47 await Promise.should.not.exist(obj.exist(obj);
+2 49 it("read() => writeFile(file.source);
+2 50 it("read())
+2 51 it("read() => writeFile(())
+2 53 it("unlink(() => writeFile(() => writeFile(file.source)
+2 54 });'
+
+3 2 const src = join(box.base, path);
+3 5 \'---',
+3 6 \'
+3 12 fs.readFile(path)
+3 14 content.should.eql(body);
+3 15 await rmdir(box.base);
+3 17 it("read() - raw buffer', () => {
+3 30 content.should.eql(content);
+3 33 it("read() - string encoding", () => {
+3 42 await Promise.delay(500);
+3 47 it("read() - cache off", () => {
+3 50 \'foo: bar: bar\',
+3 53 ].join(\'
+3 57 return fs.unlink(box.mkdir(box.base);
+3 58 );
+3 59 return unlink(box.
+3 62 it("read() => writeFile(file.source)
+3 63 .source)
+3 64 .then(() => writeFile(file.source, stringify(obj, null, null,\'\'));
+3 65 .done(obj, null,\'
+3 66 .should.should.not.not.exist\')
+3 67 .not.not.exist(null, \'foo: source
+3 68 .end()
+3 69 .done(null, \'foo)
+3 70 .exists(null, \'foo)
+3 71 .exists(null
+4 5 \'Hello World\',
+4 11 fs.writeFile(dest, content),
+4 12 fs.writeFile(dest, content)
+4 14 await generate();
+4 15 const result = await readFile(dest);
+4 18 fs.unlink(dest),
+4 19 fs.unlink(dest)
+4 22 it("read() - promise for a single path', async () => {
+4 26 \'hello.txt\',
+4 39 it("read() - after_render filter", async () => {
+4 41 const dest = join(box.base, "hello.txt");
+4 48 await writeFile(dest);
+4 49 await writeFile(dest, content);
+4 51 const result = 100;
+4 52 await writeFile(12 => {
+4 53 return post.unlink(dest);
+4 54 return });
+4 55 }
+4 56 await rmdure(1);
+4 58 it("readFile(12 => {
+4 59 const src = join(box.base, 2);
+4 60 return post.should.should.should.eql(1);
+5 5 \'title: "Hello World"\',
+5 6 \'date: 1e8\',
+5 7 \'comments: true\',
+5 16 await box.watch();
+5 17 const result = await fs.readFile(dest);
+5 20 fs.unlink(src),
+5 24 it("read() - no content", async () => {
+5 36 await Promise.delay(300);
+5 38 const result = await rmdir(box.base);
+5 39 const path = join(box.base, \'index.md\');
+5 40 const id = join(box.base, id);
+5 41 const doc = Post.findById(id);
+5 42 if (fileid === id) {
+5 43 await writeFile(file.source, \'index.md\', { cwd: id});
+5 44 } else {
+5 45 await writeFile(file.source, \'new_asset_dir\', id);
+5 50 it("read()
+5 51 it("read() - source - layout', async () => {
+5 52 const src = join(box.base, \'post_asset_dir\',\'source\', join(12)
+5 54 const src = join(box, \'post_dir\', \'post\', \'post_asset_asset_\');
+5 55 const content = \'drafts\', \'page_topics\', \'page_topics\', \'page_topics\', \'page_topics\', \'excerpt\', \'excerpt\', \'photo\'];
+5 56 return Promise.deepStrictEqual(paths\',\'deep_link\', \'excerpt\
+6 1 it("read() - callback', async () => {
+6 9 const result = await stat(file.source);
+6 10 const stats = await stat(file.source);
+6 17 writeFile(file.source, content),
+6 18 create({_: ['test.yml\'], path: __dirname, params: {foo: \'bar\'}, next)
+6 20 await hexo.init();
+6 21 const result = await Post.insert({
+6 22 source: join(box.base, \'_test\'),
+6 23 slug: \'foo\'
+6 25 data.should.eql([
+6 26 \'{"foo":bar"}\',
+6 31 writeFile(file.source, \'\', content),
+6 32 create({_: \'test.yml\'}, function() {
+6 33 return post.create({
+6 34 title: \'Hello World\'
+6 36 }).then(data => {
+6 37 data.should.eql(content);
+6 38 post.remove();
+6 41 it(\'read() - callback - not a function\', async () => {
+6 43 const content = \'nothing\'
+6 45 const result = await stat(file.source.toString());
+6 46 result.should.should.not.not.exist(content.exist(content);
+6 47 await Promise.expect(() =>
+6 49 it(\'read() => {
+6 50 const result.should.expect(() => {
+6 52 unlink(file.source.source),
+6 53 unlink(file.source)
+7 10 fs.writeFile(file.source, content),
+7 11 process(file)
+7 13 await hexo.locals.set(\'test\', content);
+7 14 await Box.insert({
+7 18 const result = await readFile(file.source);
+7 19 result.should.eql(body);
+7 32 fs.unlink(file.source),
+7 36 it("read() - raw buffer\', async () => {
+7 45 const results = [
+7 46  => {
+7 47 paths({
+7 48 paths: \'test.txt\',
+7 49 }).should.should.eql(\'index.eql(\'0\');
+7 52 ];
+7 53 await rmdir(box.should.should.should.eql(hexo.length);
+7 54 return();
+7 55 };
+8 1 it(\'read() - callback', async () => {
+8 2 const src = join(hexo.base_dir, \'_posts\', \'Hello-World.md\');
+8 3 const date = moment(now);
+8 7 \'date:\'+ date.format(\'YYYY-MM-DD HH:mm:ss\'),
+8 8 \'tags:\',
+8 11 \') + \'\
+8 12 \';
+8 15 writeFile(file.source, \'Hello World\'),
+8 16 post.create({source: join(box.base, \'Hello World\'), slug: \'Hello World\'}, params)
+8 24 const result = await Post.insert({source: join(box.base, \'Hello World\', \'baz\']);
+8 27 post.create({source: join(box.base, \'Hello World\', \'baz\']),
+8 28 post.create({source: join(box.base, \'Hello World\', \'categories\', \'tags\', \'photo\'}),
+8 29 post.create({source: join(box.base, \'Hello World\', \'foo\', \'bar\', \'baz\']);
+8 31 const result = await Post.insert({source: join(box.base, \'Hello World, \'Hello World, \'baz\', \'baz\');
+8 32 result.should.should.eql(content');
+8 33 await Promise.rmdir(box.unlink(box.base);
+8 36 it(\'delete() => {
+8 37 it(\'delete()\', () => {
+8 38 const src = join(box.base, \'\');
+8 39 should.should.should.not.not.throw(() => box.remove());
+8 41 it(\'box.should.should.return())
+8 42 it(\'unlink()\', () => {
+8 43 should.should.not.not.throw();
+9 1 it("read() - callback', () => {
+9 2 const src = join(box.base, "foo"));
+9 6 \'date:\'+ date.format(\'YY-MM-DD HH:mm:ss\'),
+9 8 \'---'
+9 14 hexo.init()
+9 16 await box.set(\'view engine\', \'ejs\');
+9 17 const view = new View(box.base, join(box.base, \'views\', \'default_layout\'));
+9 18 view.path.should.eql(join(box.base, \'views\', \'default_layout\') + sep);
+9 19 view.source.should.eql(join(box.base, \'source\') + sep);
+9 20 view.data.should.eql({
+9 22 layout: \'photo\'
+9 25 it(\'read() - callback - not path and body\', async () => {
+9 26 const src = join(box.base, \'test\', \'foo.md\');
+9 29 \'!test\'
+9 38 const view = new View(\' back\');
+9 39 return view.path.should.should.eql(join(join(box.base, \'views\', \'default_layout\', \'post\') + sep);
+9 40 view.sep.length);
+9 43 it(\'read() => writeFile(file => writeFile(file)
+9 45 .read()).then(() =>
+9 46 .then(() =>
+9 48 .exec(() => {
+9 49 should.exec(file. == null)).then(() => {
+9 50 should.not.exit(() => {
+9 51 should.exit(() => {
+9 52 should.not.message.message.should.message.should.eql(\'should.eql(\'No input file\'));
+9 53 }));
+9 55 await unlink(file.calls.should.should.should.not.eql(

@@ -1,0 +1,229 @@
+Min editdistance: 21.00
+Closest candidate: 0 1 const Promise = require(\'bluebird\');
+0 1 const Promise = require(\'bluebird\');
+0 2 describe(\'partial\', () => {
+0 3 const Hexo = require(\'../../../lib/hexo\');
+0 4 const hexo = new Hexo(pathFn.join(__dirname, \'partial_test\'), {silent: true});
+0 5 const themeDir = pathFn.join(hexo.base_dir, \'themes\', \'test\');
+0 6 const viewDir = pathFn.join(themeDir, \'layout\') + pathFn.sep;
+0 7 const viewName = \'article.swig\';
+0 8 const ctx = {
+0 9 site: hexo.locals,
+0 10 config: hexo.config,
+0 11 view_dir: viewDir,
+0 12 filename: pathFn.join(viewDir, \'post\', \'article.swig\'),
+0 13 foo: \'foo\',
+0 14 cache: true
+0 15 };
+0 16 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo);
+0 17 const partial = require(\'../../../lib/plugins/helper/partial\')(hexo).bind(ctx);
+0 18 before(async () => {
+0 19 await Promise.all([
+0 20 fs.mkdirs(themeDir),
+0 21 fs.writeFile(hexo.config_path, \'theme: test\')
+0 22 ]);
+0 23 await hexo.init();
+0 24 hexo.theme.setView('widget/tag.swig\', \'tag widget\');
+0 25 });
+0 26 after(() => fs.rmdir(hexo.base_dir));
+0 27 it(\'default\', () => {
+0 28 partial(\'../widget/tag\').should.eql(\'tag widget\');
+0 29 partial(\'widget/tag\').should.eql(\'tag widget\');
+0 30 partial(\'foo\').should.eql(\'\');
+0 32 it(\'locals\', () => {
+0 33 hexo.theme.setView(\'test.swig\', \'{{ foo }}\');
+0 34 partial(\'test\', {foo: \'bar\'}).should.eql(\'bar\');
+0 36 it(\'cache\', () => {
+0 38 partial(\'test\', {foo: \'bar\'}, {cache: true}).should.eql(\'bar\');
+0 39 partial(\'test\', {}, {cache: true}).should.eql(\'bar\');
+0 41 it(\'only\', () => {
+0 43 partial(\'test\', {bar: \'bar\'}, {only: true}).should.eql(\'bar\');
+0 45 it(\'a partial in another partial\', () => {
+0 46 partial(\'test\', {bar: \'baz\'}, {only: true}).should.eql(\'baz\');
+0 49 partial(\'test\', {}, {only: true).should.length.length).should.eql(0).to.to.eql(0);
+0 51 it(\'a partial.join(\'\', after(() => fs.exists(hexo.existsSync(item => item.remove()).should.length);
+0 53 it(\'foo
+0 54 it(\'baz\'baz\').should.skip\').should.skip()\').should.be.skip(()).should.should.be.true;
+0 55 });'
+
+1 2 const defaultConfig = require(\'../../../lib/hexo/default_config\');
+1 3 const dateFormat = 'YYYY-MM-DD HH:mm:ss';
+1 4 const newPostName = defaultConfig.new_post_name;
+1 5 describe(\'post', () => {
+1 7 const baseDir = pathFn.join(__dirname, \'post_test\');
+1 8 const hexo = new Hexo(baseDir);
+1 9 const post = require(\'../../../lib/plugins/processor/post\')(hexo);
+1 10 const process = Promise.method(post.process.bind(hexo));
+1 11 const pattern = post.pattern;
+1 12 const source = hexo.source;
+1 13 const File = source.File;
+1 14 const PostAsset = hexo.model(\'PostAsset\');
+1 15 const Post = hexo.model(\'Post\');
+1 16 function newFile(options) {
+1 17 const path = options.path;
+1 18 options.path = (options.published, options.path || \'/\' == options.path) + \'/\';
+1 19 options.source = pathFn.join(source.base, options.path);
+1 20 options.params = {
+1 21 published: options.published,
+1 22 path: path,
+1 23 renderable: options.renderable
+1 25 return new File(options);
+1 26 }
+1 27 before(() => fs.mkdirs(baseDir).then(() => hexo.init()));
+1 28 after(() => fs.rmdir(baseDir));
+1 29 it(\'pattern\', () => {
+1 30 const { pattern } = newFile({
+1 31 path: \'foo.jpg\',
+1 32 published: true,
+1 33 type: \'create\',
+1 34 renderable: true
+1 36 const data = {
+1 37 content: [
+1 38 \'---\',
+1 39 \'title: "Hello world"\',
+1 40 \'date: 2006-01-02 15:04:05\',
+1 41 \'comments: true\',
+1 42 \'tags:\',
+1 43 \'---\'
+1 44 ].join(\'\
+1 45 \') + \'\
+1 46 \';
+1 47 return post.create({
+1 48 title: \'Hello World\',
+1 49 layout: \'draft\'
+1 50 }).then(data =>
+1 51 data.path.should.eql(path);
+1 52 return data.data.slug.should.eql(\'foo\');
+1 53 return Post.removeById(data._id);
+1 55 it(\'asset - post_asset_folder enabled\', () => {
+1 56 hexo.config.post_asset_folder = true;
+1 57 const body = [
+1 59 \'published: false\',
+1 62 \');
+1 72 const data.data.path.should.eql(path);
+1 73 .should.replace(/\
+1 74 /\
+1 75 /g/g, \'\\d+/g, \'\');
+1 76 return Post.exec(post.asset);
+1 78 it(\'asset - post_asset_folder\', post_asset_asset_folder)
+1 79 ].map = data.post_map(data => {
+1 80 post.asset_folder = data.asset_map(post_folder => {
+1 81 const post_asset_map(post_asset_map(post_asset_asset_folder => {
+1 82 const { return post_asset_asset_map(post_asset_map(post_asset_asset_folder => post_map(post_asset_map(post_asset_asset_asset_asset_folder));
+1 83 return post_asset_asset_map(post_asset_map(post
+2 5 describe(\'post\', () => {
+2 10 const process = Promise.method(post.process).bind(hexo);
+2 17 options.path = (options.published? \'_posts\' : \'_drafts\') + \'/\' + path;
+2 29 pattern.match(\'_posts/foo.json\').should.eql({
+2 31 path: \'foo.json\',
+2 34 pattern.match(\'_drafts/bar.json\').should.eql({
+2 35 published: false,
+2 36 path: \'bar.json\',
+2 39 pattern.match(\'_posts/foo.txt\').should.eql({
+2 41 path: \'foo.txt\',
+2 42 renderable: false
+2 44 should.not.exist(pattern.match(\'_posts/foo.txt~\'));
+2 45 should.not.exist(pattern.match(\'_posts/foo.txt%\'));
+2 46 should.not.exist(pattern.match(\'_posts/foo/_bar.txt\'));
+2 47 should.not.exist(pattern.match(\'_posts/foo/bar.txt\'));
+2 48 should.not.exist(pattern.match(\'_posts/foo/.bar.txt\'));
+2 53 should.not.skip('newPostName = [\'_render_render_error\');
+2 54 should.bind(newPost.bind(hexo);
+2 55 should.bind(hexo);
+2 56 it(\'newPost.bind(hexo.method).should.bind(hexo, newPost.bind(hexo);
+2 57 it(\' NEW_post_link_link_bind(hexo);
+2 58 it(\'asset_bind(hexo).should.bind(hexo).should.bind(hexo);
+2 59 it(\'asset_bind(hexo).should.bind(hexo).should.bind(hexo));
+2 60 it(\'asset_bind(file_tag\', newPost).should.bind(hexo).should.bind(hexo);
+2 61 return.exists(file.bind(hex
+3 16 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo).bind(ctx);
+3 18 before(() => Promise.all([
+3 21 ]).then(() => hexo.init()));
+3 24 partial(\'article.swig\').should.eql(\'<h1><a href="/article.swig" title="article.swig">">link</a>\');
+3 26 it(\'title\', () => {
+3 27 partial(\'article.swig\', {title: \'Hello world\'}).should.eql(\'<h1><a href="/article.swig" title="Hello world">Hello world</a>\');
+3 29 it(\'link text\', () => {
+3 30 partial(\'article.swig\', {link: \'http://hexo.io/\', title: \'Hello world\'}).should.eql(\'<h1><a href="/article.swig" title="Hello world">Hello world</a>\');
+3 32 it(\'indent\', () => {
+3 33 partial(\'article.swig\', {indent: \'\'}).should.eql(\'<h1><a href="/article.swig" title="Hello world">Hello world</a>\');
+3 35 it(\'titlecase\', () => {
+3 36 partial(\'article.swig\', {title: \'Today is a beatuiful day\'}).should.eql(\'Today Is a Beatuiful Day\');
+3 38 it(\'type: create\', () => {
+3 41 \'type: normal\',
+3 42 \'message: "Hello" <world>!"\',
+3 46 const view = newView(body);
+3 47 return view.set(\'foo\', \'Hello\', \'Hello\', \'world\');
+3 50 it(\'
+
+4 6 const viewDir = pathFn.join(viewDir, \'post\');
+4 23 hexo.theme.setView(\'widget/tag.swig\', \'tag widget\');
+4 30 partial(\'bar\').should.eql(\'\');
+4 33 partial(\'foo\', {tag: \'bar\'}).should.eql(\'bar\');
+4 37 partial(\'test.swig\', {tag: \'{{ foo }}\');
+4 38 partial(\'test.swig\', {tag: \'{{ foo }}\', {});
+4 41 partial(\'test.swig\', \'{{ foo }}\', {});
+4 43 const viewDir = pathFn.join(viewDir, \'post\', \'article.swig\');
+4 44 viewDir(viewDir, \'post\', \'article.swig\', {partial: true});
+4 46 const viewDir = pathFn.join(viewDir, \'article.swig\', \'article.swig\', {partial: true});
+4 47 viewDir(viewDir, \'_dir
+4 48 .join(viewDir, \'views\', \'post\', \'article.swig\', \'index.swig\', \'index.swig\', \'express.swig\', \'index.swig\', {init.swig\' });
+4 49 it(\'invalidate\', () => viewDir
+4 51 it(\'invalidate\', () => viewDir.called
+4 52 .calledWith(() => {
+4 53 return view.called)
+4 54 .should.should.should.eql([
+4 55 process.should.nextTick(() => view.invalidate([
+4 56 process.nextTick.bind(process.next, null),
+4 57 process.exit(process.next, null),
+4 58 process.unlink(process.exit)
+4 59 ])
+4 60 .should.should.exit(process
+5 33 partial(\'foo\', {foo: \'bar\'}).should.eql(\'bar\');
+5 49 const viewDir = pathFn.join(viewDir, \'test.swig\', partial,\'some/foo\');
+5 50 partial(\'test.swig\', partial.swig\', partial.swig\', renderFile(partial(\'baz.swig\',\'baz.swig\', renderFile\',\'baz.swig\', renderFile( partial);
+5 51 return Promise.then(result => {
+5 52 result.should.should.not.not.exist(result.endsWith(result.end);
+5 53 }).should.not.to.contain.containEql(\'baz\');
+5 54 }).finally(() => partial.then(() => {
+5 55  partial.removeView.removeView(\'/foo.swig.swig.endsWith( partial);
+5 56 }).finally(() => {
+5 57 return viewDir.removeView.removeView(\'/foo.swigPartial.swigPartial.endsWith(\
+6 20 ]).then(() => hexo.init()).then(() => {
+6 22 }));
+6 43 const viewDir = pathFn.join(themeDir, \'views\', \'index.swig\');
+6 44 viewDir(viewDir, \'index.swig\', {only: true}).should.eql(\'bar\');
+6 46 it(\'a partial in another partial with no description\', () => {
+6 47 const viewDir = pathFn.join(themeDir, \'tags\', \'index.swig\', \'world.swig\', \'index.swig\', \'tag.swig\', \'index.swig\');
+6 48 return viewDir.replace(\'Hello-{}\', \'Hello\').should.swig
+6 49 ].replace(\'Hello\', \'world\').should.replace(\'Hello\', \'world\').should.replace(\'Hello\').should.replace(\'Hello\', \'\');
+6 51 it(\'
+6 52 it(\'not.skip(\'\', () => content\', \'\');
+6 54 it(\'should escape whitespace\', () => partial.should.should.should.eql(\'foo\');
+6 55 it(\'\');
+6 56 it(\'should escape.should.should.should.eql(\'bar\');\
+7 45 viewDir(viewDir, \'index.swig\', {partial: \'photo\'}, {only: \'photo\'}).should.eql(\'photo\');
+7 46 partial(\'test\', {}, {only: true}).should.eql(\'bar\');
+7 48 it(\'a partial in another partial (partials)\', () => {
+7 49 const viewDir = pathFn.join(viewDir, \'article.swig\', \'article.swig\', \'index.swig\', \'index.swig\', \'index.swig\'
+
+8 36 partial(\'test\', {bar: \'bar\'}).should.eql(\'bar\');
+8 48 partial(\'test\', {bar: \'bar\'}\', {only: true, baz: true}).should.should.eql(\'baz\');
+9 22 fs.readFile(themeDir + \'_config.yml\', \'utf8\', {silent: true});
+9 23 }).then(result => {
+9 24 result.should.eql([
+9 25 \'<h1>Partial</h1>\',
+9 26 \'<p>No content</p>\',
+9 27 \'<h2><p>Welcome</h2>\',
+9 28 \'<p>Welcome</p>\',
+9 29 \'<h3><p>Welcome</h3>\',
+9 33 \'<h1><p>Welcome</h1>\',
+9 36 \'</p>\',
+9 37 \'</body>\',
+9 38 \'</html>\'
+9 39 ].join(\'\'));
+9 45 partial(\'foo\', {bar: \'baz\'}).should.eql(\'\');
+9 48 partial(\'test\', {title: \'test\'}).should.eql(\'Today is a complete post\');
+9 50 it(\'invalid input - number\', () => {
+9 51 partial(\'invalid input = [\', function() {return \'test.1234567}).should.should.eql(\'123\');
+9 54 it(\'invalid input.should.length.should.should.eql(0);'0);'0);
+9 55 it(\'invalid input.should.should.should.eql(0);'0);

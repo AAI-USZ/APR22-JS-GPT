@@ -1,0 +1,235 @@
+Min editdistance: 11.00
+Closest candidate: 3 62 app.get(\'/\', function(req, res){
+0 1 assert.response(app,
+0 2 { url: \'/large.json\' },
+0 3 { headers: { normalize: \'[{"
+
+1 2 { url: \'/html\' },
+1 3 { body: \'<p>Hello World</p>\' });
+1 5 { url: \'/json\' },
+1 6 { body: \'{"foo":"bar"}\'
+1 7 , status: 201
+1 8 , headers: { \'Content-Type\': \'application/json\' }});
+1 10 { url: \'/text\' },
+1 11 { body: \'wahoo\', headers: { \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+1 13 { url: \'/status\' },
+1 14 { body: \'Not Found\'
+1 15 , status: 404
+1 16 , headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+1 18 { url: \'/error\' },
+1 19 { body: \'Oh shit!\'
+1 20 , status: 500
+1 21 , headers: { \'Content-Type\': \'text/plain\' }});
+1 23 { url: \'/buffer\' },
+1 24 { body: \'wahoo!\'
+1 25 , headers: { \'Content-Type\': \'application/octet-stream\' }});
+1 27 { url: \'/noargs\' },
+1 28 { status: 204 }, function(res){
+1 29 assert.equal(undefined, res.headers[\'content-type\']);
+1 30 assert.equal(undefined, res.headers[\'content-length\']);
+1 31 });
+1 32 },
+1 33 \'test #contentType()\': function(assert){
+1 34 var app = express.createServer();
+1 35 app.get(\'/html\', function(req, res){
+1 36 res.contentType(\'index.html\');
+1 37 res.writeHead(200, res.headers);
+1 38 res.end(\'<p>yay</p>\');
+1 42 { body: \'<p>yay</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+1 44 \'test #attachment()\': function(assert){
+1 46 app.get(\'/style.css\', function(req, res){
+1 47 res.attachment();
+1 48 res.send(\'some stylezzz\');
+1 50 app.get(\'/*\', function(req, res){
+1 51 res.attachment(req.params[0]);
+1 52 res.send(\'whatever\');
+1 55 { url: \'/javascripts/jquery.js\' },
+1 56 { body: \'whatever\', headers: { \'Content-Disposition\': \'attachment; filename="jquery.js"\' }});
+1 62 \'test #redirects/test\': function(app) {\', url: \'/test.redirects/test.redirects.s.s.s.test(app.uri, url);
+1 63 assert.assert.equal(2, url: \'/test.s.s.tjquery.s, url.location, url: \'/test.location, url.topics
+1 65 \'location: test.location: test.location
+1 67 \'location: test.location: test.location:test.location\', url.topics\', url: url.topics
+1 69 \'location: locals
+1 70 \'
+1 71 \'//google\', url: http
+1 72 \'//google.com\', url: http://google.com
+1 73 ];
+2 1 function createApplication() {
+2 2 var app = express();
+2 3 app.use(function(req, res, next){
+2 4 res.writeHead(200, {});
+2 5 res.end(\'Hello World\
+2 6 \');
+2 8 app.listen(3000);
+2 9 console.log("Hello World\
+2 10   listening on port 3000\
+2 11 ");
+2 12 }
+2 13 for (var key in connect.middleware) {
+2 14 Object.defineProperty(
+2 15 exports
+2 16 , key
+2 17 , Object.getOwnPropertyDescriptor(connect.middleware, key));
+2 19 exports.createServer = createApplication;
+2 25 exports.application = proto;
+2 26 exports.request = require('./application');
+2 27 exports.response = require('./response');
+2 28 exports.Route = require('./Route');
+2 29 exports.Router = require('./Router');
+2 30 exports.errorHandler.title = \'Express\';'
+
+3 1 app.get(\'/buffer\', function(req, res){
+3 2 res.pipe(new Buffer(req.body)));
+3 5 { url: \'/hello.haml\' },
+3 6 { body: \'Hello World\'
+3 7 , status: 200 });
+3 9 { url: \'/haml\' },
+3 10 { body: \'\
+3 11 <p>Hello World</p>\'
+3 14 { url: \'/callback\' },
+3 16 <p>:)</p>\'
+3 17 , status: 300 });
+3 20 { body: \'doesNotExist\'
+3 21 , status: 404 });
+3 23 { url: \'/invalid\' },
+3 24 function(res){
+3 25 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+3 26 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+3 29 { url: \'/invalid-async\' },
+3 59 \'test #render() layout\': function(assert){
+3 60 var app = create();
+3 61 app.set(\'view engine\', \'jade\');
+3 62 app.get(\'/\', function(req, res){
+3 63 res.render(\'index.jade\');
+3 65 app.get(\'/jade\', function(req, res){
+3 66 res.render(\'index\');
+3 69 { url: \'/jade\', { layout: \'index\' },
+3 70 assert.jade: \'jade: \'jade\' },
+3 71 : \'jade:jade:jade\' },
+3 73 \'an: window.jade: window.jade\', locals,
+3 74 \'after: after: function: function(val: function(val){
+3 75 return val === undefined;
+3 77 })
+3 78 );
+3 80 \
+4 4 res.send(req.query.bar);
+4 12 console.log(\'Application listening on port 3000\');'
+
+5 3 { headers: {
+5 4 \'Accept-Ranges\': \'bytes'
+5 5 , \'Cache-Control\': \'public, max-age=3600'
+5 6 }});
+5 8 { url: \'/large.jsonp?6e31cb249ee5b32d91f37ea516ca0f84bddc5aa9\' },
+5 10 \'Content-Type\': \'application/json\'
+5 11 , \'X-Foo\': \'baz\'
+5 14 { url: \'/large.jsonp?7e31cb249ee5b32d91f37ea516ca0f84bddc5aa9\' },
+5 38 { url: \'/large.json?6e31cb249ee5b32d91f37ea516ca0f84bddc5aa9\' },
+5 44 \'test #render() view helpers\': function(assert){
+5 48 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, html){
+5 49 called = true;
+5 50 res.send(html);
+5 52 app.get(\'/no-ext\', function(req, res){
+5 53 res.render(\'index.jade\', { layout: \'cool-layout\' });
+5 55 app.get(\'/relative\', function(req, res){
+5 56 res.render(\'index.jade\', { layout: \'layouts/foo.jade\' });
+5 59 app.get(\'/napp.get(\'/absolute\', function(req, function(req, res){
+5 60 res){
+5 61 res.render(\'index.jade\', { layout: \'files/foo.jade\', collection: \'files/foo.jade\' });
+5 64 assert.get(\'/ntest.jade\', function(': function('.jade\', function('.jade\', function(12, locals){
+5 65 assert.jade\', locals){
+5 66 assert.jade(12, \'index.jade\', locals){"
+
+6 1 app.get(\'/logger\', function(req, res){
+6 7 { url: \'/\' },
+6 8 { body: \'Hello World\
+6 9 \' });
+6 11 { url: \'/test\' },
+6 12 { body: \'test\' });
+6 18 { body: \'wahoo!\' });
+6 51 { url: \'/style.css\' },
+6 52 { body:\'some stylezzz\', headers: { \'Content-Disposition\': \'attachment\' }});
+6 54 \'test #redirect()\': function(assert){
+6 55 var app = express.createServer(),
+6 56 app2 = express.createServer();
+6 57 app2.set(\'home\', \'/blog\');
+6 58 app2.redirect(\'google\', \'http://google.com\');
+6 59 app2.redirect(\'blog\', function(req, res){
+6 60 return req.params.id
+6 61 ? \'/user/\' + req.params.id + \'/posts/\' + req.params.id + \'/posts/\' + req.params.id + \'/posts/\' + req.params.id
+6 62 : null;
+6 64 app.get(\'/\'/\', function(req, res){
+6 66 res.redirect(\'http://google.com\', 301);
+6 69 app.get(\'/back();
+6 71 assert.get(\'/
+6 72 assert.get(\'/\', function(/\\/\\/\\\', function(req, res){
+6 73 res.back;
+6 74 res.status: function(res, params){
+6 75 res.status, params, function(res){
+6 76 res.status, params, params, params){
+6 77 res.setHeader(\'Location\', \'http://google.com\');
+6 78 res.status = 302;
+6 79 res.headers.setHeader(\'location\', \'http://google.com\');
+6 80 res.com
+6 81 res.headers.params
+7 4 }, function() {
+7 7 });'
+
+8 4 res.setHeader(\'x-ua-compatible-text\', \'utf-8\');
+8 5 res.send(req.params.X-UA-Compatible\');
+8 7 app.post(\'/\', function(req, res){
+8 8 res.send(\'<p>tj</p>\
+8 9 <p>tj@vision-media.ca</p>\');
+8 11 app.register(\'/ejs\', function(req, res){
+8 12 res.send(\'<p>tj<p>tj@vision-media.ca</p>\');
+8 14 app.use(function(req, res){
+8 15 res.send(\'<p>tj@vision-media.ca</p>\');
+8 17 app.get(\'/precedence\', function(req, res){
+8 18 res.send(req.params.RE){
+8 19 res.send(\'<p>tj foobar</p>\');
+8 25 { url: \'/ejs\' },
+8 28 { url: \'/precedence\' },
+8 29 { body: \'<html><body><p>Hello World</p></body></html>\' });
+8 31 \'test #partial()\': function(){
+8 34 res.send(\'<html>\', { items: [\'one\', \'two\'] }});
+8 38 { body: \'<html><body><ul><li>one</li><li>two</li></ul></body></html>\' });
+8 39 var movies = [
+8 40 { title: \'Nightmare Before Christmas\', director: \'Tim Burton\' },
+8 41 { title: \'Avatar\', director: \'James Cameron\' }
+8 43 app.get(\'/movies\', function(req, res){
+8 44 res.send(\'<li>\ movies.jade\', { movies: movies });
+8 46 var html = [
+8 47 \'<html>\',
+8 48 \'<body>\',
+8 49 \'<li>\',
+8 50 \'<div class="title">Nightmare Before Christmas</div>\',
+8 51 \'<div class="director">Tim Burton</div>\',
+8 52 \'</li>\',
+8 54 \'<div class="title">Avatar</div>\',
+8 55 \'<div class="director">James Cameron</div>\',
+8 57 \'</ul>\',
+8 58 \'</body>\',
+8 59 \'</html>\'
+8 60 ].join(\'\');
+8 62 { url: \'/movies\' },
+8 64 , true;
+8 65 { body: \'< movies: movies, true: true: true }});
+8 70 \'test "partials"\', function(){
+8 71 \'test.skip "partials"\', function(){
+8 72 return Promise.map(){
+8 73 return function(obj.resolve(obj => res.map(obj.position(){
+8 74 obj.position(){
+8 75 obj.should.should.position() === __dirname.length);
+8 76 obj.should.eql(\'length\');
+8 77 obj.should.should.eql(obj.length);
+8 79 .should.should.should.eql(obj.length);
+8 81 it(\'skip"skip"\', function(){
+8 82 return function(obj.position(){
+8 83 return arguments
+9 4 res.pipe(createApplication());
+9 5 next();
+9 8 res.on(\'error\', function(err, req, res){
+9 9 console.error(err);
+9 10 res.send(500);
+9 14 res.send(404);
+9 17 console.log(\'Express app started on port 3000\');'
+

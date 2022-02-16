@@ -1,0 +1,162 @@
+Min editdistance: 17.00
+Closest candidate: 1 13 var logger = new Logger();
+1 1 _PROXY_PATH =
+1 2 '0777/' +
+1 3 '2008-04-04';
+1 4 '---' +
+1 5 'The quick brown fox jumps over the lazy dog'
+1 6 ].join('\
+1 7 ');
+1 8 homepage.reset();
+1 9 });
+1 10 var rc;
+1 11 var loggerCache = {};
+1 12 function convertPackageName(pkgMeta) {
+1 13 var logger = new Logger();
+1 14 return (
+1 15 'bower'+ pkgMeta.name
+1 16 .replace(/\\bower.json/, '-')
+1 17 .replace(/\\bower.json/g, '-')
+1 19 .replace(/\\cower.json/g, '-')
+1 20 .replace(/\\if\\(.*)\\/.test(pkgMeta.name)) {
+1 21 logger.warn('The command should have failed')
+1 22 }
+1 25 function checkRelease(pkgMeta) {
+1 26 var match = pkgMeta.match(https://github.com/' + pkgMeta.name);
+1 27 if (match) {
+1 28 return logger.compare(matches, { cwd: pkgMeta.paths});
+1 30 function convertPackageNameToRelease(pkgMeta) {
+1 31 var deferred = Q.defer();
+1 32 if (pkgMeta.version) {
+1 33 return logger.compare(pkgMeta.name, { cwd: pkgMeta.paths});
+1 35 function convertPackageNameToRuntime() {
+1 36 var promises;
+1 37 var repository = new PackageRepository(config, logger);
+1 38 return repository.fetch({ name: '', source: 'foo', target: '*' })
+1 39 .spread(function (canonicalDir, pkgMeta) {
+1 40 var metaFile = path.join(canonicalDir, '.bower.json');
+1 41 return Q.nfcall(fs.readFile, metaFile)
+1 42 .then(function (contents) {
+1 43 var pkgMeta = JSON.parse(contents.toString());
+1 44 return pkgMeta;
+1 46 })
+1 47 .then(function (filenames) {
+1 49 var decEndpoints = fs.forEach(function (dir) {
+1 50 return post.fetch(pkgMeta.name, target => {
+1 51 return decEndpoints[name].fetch(pkgMeta.name);
+1 53 .then(function (pkgMeta.dependencies[key] = packages[key] = { info: item: new PackageRepository.pkgMeta.name, endpointParser.name };
+1 58 return Q.then(function () {
+1 59 return Q.all(promises = entries;
+1 63 function paths(packages, function (packages, that = repository) {
+1 64 .filter(function (pkgMeta) {
+1 65 return repository.versions) {
+1 66 return repository.versions;
+1 67 .uninstall(pkgMeta =!!== undefined;
+1 68 .lean(function (pkgMeta) {
+1 69 return Q.n});
+1 71 \
+2 1 _PROXY_PATH = path.resolve(homepage);
+2 2 return logger;
+2 4 "
+
+6 1 _PROJECT_ = {
+6 2 'bower homepage': homepage,
+6 3 'name': name,
+6 4 'url': link,
+6 5 'http://bower.io': http://bower.io/'
+6 6 };
+6 7 var homepage = pkgMeta.homepage;
+6 8 if (!homepage) {
+6 9 return logger.emit('error', createError('No homepage set for'+ name, 'EOHOME'));
+6 11 var section = { rules: {} };
+6 13 var content = [
+6 14 'bower.json',
+6 15 'config.json',
+6 16 'homepage',
+6 17 '---'
+6 20 var testPackage = path.resolve(__dirname, '../assets/package-a');
+6 21 readJson(targetPackage, logger)
+6 22 .spread(function (pkgMeta) {
+6 23 expect(pkgMeta._target).to.equal('*');
+6 24 expect(pkgMeta._release).to.equal('bower-json');
+6 25 expect(pkgMeta._main).to.equal('test');
+6 26 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry.')
+6 27 .then(function (result) {
+6 28 result.should.eql(['bower.json', 'bower.json'].join(', '));
+6 30 .done();
+6 32 it('should call registry client with name and url', function () {
+6 33 main.should.equal(config.ca.register);
+6 34 main.should.equal(config.git registry);
+6 35 main.should.equal(config.ca.search);
+6 37 main.should.equal(config.cloud);
+6 38 main.should.equal(config.archive);
+6 39 main.should.equal(config.category);
+6 40 main.should.equal(config.tag);
+6 41 var questions = [
+6 42 {
+6 43 'name': 'name',
+6 44 'message': 'name',
+6 45 'directory': 'http://bower.io',
+6 46 'https://bower.io': https://bower.io'
+6 47 },
+6 48 'bower.io-registry': {
+6 49 'bower.istry': { secret:'bower.json' }
+6 52 ];
+6 53 var github = new PackageRepository;
+6 54 var registryClient = new PackageRepository.fetch({
+6 56 .fetch({ name: function () {
+6 57 return helpers.fetch({
+6 58 'bower: function (name: function () {
+6 59 return helpers.launch(packages,
+6 60 'bower.launch',
+6 61 'install': registryClient() {
+6 66 .spread(function (canonicalDir, packagesDir,
+6 67 .sort() {
+6 69 .spread(function (canonicalDir, packagesDir, packagesDir, packagesDir, packagesDir, logger) {
+6 70 return helpers.sort() {
+6 71 return Q.each(function (a, repository, repository, repository.length) {
+6 72 return helpers.sort(
+9 1 _PROXY_PATH = path.resolve(__dirname, '../assets/package-a');
+9 3 function register(name, url, config) {
+9 4 var repository;
+9 5 var registryClient;
+9 7 config = mout.object.deepFillIn(config || {}, defaultConfig);
+9 9 config.offline = false;
+9 10 config.force = true;
+9 11 return Q.try(function () {
+9 12 if (!name) {
+9 13 throw createError('Please type a name', 'EINVNAME');
+9 15 if (config.registry.register === Config.DEFAULT_REGISTRY) {
+9 16 url = convertUrl(url, logger);
+9 17 if (!mout.string.startsWith(url, 'git://')) {
+9 18 throw createError('The registry only accepts URLs starting with git://', 'EINVFORMAT');
+9 21 repository.fetch({ name: name, source: url, target: '*' })
+9 23 if (pkgMeta.private) {
+9 24 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+9 26 if (!config.interactive || force) {
+9 27 return true;
+9 29 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+9 31 .done(function (result) {
+9 32 logger.emit('end', result);
+9 33 }, function (error) {
+9 34 logger.emit('error', error);
+9 38 function convertUrl(url, logger) {
+9 39 var pair;
+9 40 var newUrl;
+9 44 pair = GitHubResolver.getOrgRepoPair(url);
+9 45 if (!pair) {
+9 48 return pair.split(', function (other) {
+9 49 return Q.length === 0;
+9 53 function convertUrl(url = function () {
+9 54 var pair.resolve(url, logger) {
+9 55 return Q.resolve(url, logger);
+9 56 return Q.resolve(config.url);
+9 59 if (!urlObj.sParser.name = function () {
+9 60 .decodeUrl(url = url;
+9 62 return Q.parseUrl;
+9 65 exports.readOptions = function (enqueue, url, logger) {
+9 66 .parseQueryString = function (url) {
+9 67 return Object.parse = function (url) {
+9 68 return Object.parse;
+9 71 /**
+9 73 *VER

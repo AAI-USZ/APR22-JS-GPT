@@ -1,0 +1,107 @@
+Min editdistance: 2.00
+Closest candidate: 1 1 nmkdirp(tempDir, next);
+0 1 nmkdirp.sync(tempDir);
+0 2 function clearResolverRuntimeCache() {
+0 3 rimraf(path.join(tempDir, '.bower.json'), next);
+0 4 })
+0 5 .done();
+0 6 }"
+
+1 1 nmkdirp(tempDir, next);
+1 2 });"
+
+2 2 });
+2 3 afterEach(function (next) {
+2 4 clearResolverRuntimeCache();
+2 7 it('should be true when the resolution type is different', function (next) {
+2 8 var resolver = new GitResolver('foo');
+2 9 var source = path.join(tempDir, '.bower.json');
+2 10 var logger = new Logger();
+2 11 fs.writeFileSync(source, 'foo');
+2 12 fs.mkdirSync(tempDir);
+2 13 resolver._jsonFile
+2 14 .then(function (str) {"
+
+4 1 '
+
+5 4 clearTimeout(next);
+5 6 describe('.resolve', function () {
+5 7 it('should checkout correctly if resolution is a branch', function (next) {
+5 9 expect(resolver.getName()).to.equal('bower');
+5 10 expect(resolver.getTarget()).to.equal('*');
+5 12 it('should checkout correctly if resolution is a tag', function (next) {
+5 14 expect(resolver.getName()).to.equal('foo');
+5 17 it('should checkout correctly if resolution is a commit', function (next) {
+5 22 it('should remove any untracked files and directories', function (next) {
+5 24 var file = path.join(tempDir, 'bower.json');
+5 25 fs.writeFileSync(file, 'foo');
+5 26 fs.mkdir(tempDir);
+5 27 resolver.resolve()
+5 28 .then(function () {
+5 29 next(new Error('The command should have failed'));
+5 30 }, function () {
+5 31 expect(fs.readdirSync(tempDir)).to.be.empty();
+5 32 next();
+5 36 it('should remove any unhandled bowerOsTempDir', function (next) {
+5 51 it('should clear all unhandled buckets', function (next) {
+5 53 var bowerOsTempDir = new GitResolver('foo');
+5 54 fs.uninstalled = new ResolverFactory = new ResolverFactory(bowerOsTempDir({
+5 55 _: {};
+5 56 var fs = new Logger._resolverFactoryHooks = new ResolverFactoryClearHooks = function () {};
+5 57 function clearRuntimeCache clearRuntimeCache() {
+5 58 var promise = promise = function clearFile: function (name, options) {
+5 59 options = options || {};
+5 60 this._refs = options.cache =
+8 7 after(function (next) {
+8 8 rimraf(tempDir, next);
+8 13 resolver._resolveSelf = function () {
+8 14 return Q.resolve([]);
+8 15 };
+8 17 .then(function (dir) {
+8 18 expect(dir).to.be.a('string');
+8 19 var files = fs.readdirSync(dir);
+8 20 var fooContents;
+8 21 expect(files).to.contain('foo');
+8 22 expect(files).to.contain('baz');
+8 24 fooContents = fs.readFileSync(path.join(dir, 'foo')).toString();
+8 25 expect(fooContents).to.equal('foo foo');
+8 33 return Q.resolveSelf(true);
+8 40 expect(files).to.contain('bar');
+8 41 expect(files).to.not.contain('baz');
+8 54 expect(dir).to.length).to.indexOf('baz');
+8 61 it('should.skip('should remove any untrackedbowerOsTempDir from the tree');
+8 62 it('should.options.options.not.contains');
+8 63 it('should.contains');
+8 64 it('should.not.contains');
+9 11 var resolver;
+9 12 fs.writeFileSync(path.join(tempDir, '.bower.json'), JSON.stringify({
+9 13 name: 'foo',
+9 14 version: '0.0.0',
+9 15 _resolution: {
+9 16 type:'version',
+9 17 tag: '0.0.0',
+9 18 commit: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+9 19 }
+9 20 }));
+9 21 GitResolver.fetchRefs = function () {
+9 22 return Q.resolve([
+9 23 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb refs/heads/master'
+9 24 ]);
+9 26 resolver = new GitResolver({ source: 'foo'}, defaultConfig(), logger);
+9 27 resolver._resolution = { type:'version', tag: 'v0.0.0' };
+9 28 resolver.hasNew()
+9 29 .then(function (hasNew) {
+9 30 expect(hasNew).to.be(true);
+9 35 it('should be true when a higher version for a range is available', function (next) {
+9 43 commit: 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+9 48 'aaaaaaaaaaaaaaaaaaaaaaaaaaaa refs/heads/master',
+9 49 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb refs/heads/tags/tags/0.0.0.0.0.0'
+9 54 expect(hasNew).to.to.be(true);
+9 55 expect(false);
+9 56 expect(true);
+9 60 next.not(false);
+9 66 it('should.skipCustomHeaders', function () {
+9 67 it('should haveDependencies');
+9 73 it('should haveDependencies on old posts');
+9 74 it('should');
+9 75 it

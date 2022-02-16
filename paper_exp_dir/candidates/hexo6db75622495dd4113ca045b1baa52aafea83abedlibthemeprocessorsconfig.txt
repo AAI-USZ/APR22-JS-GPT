@@ -1,0 +1,66 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 exports.process = function(file){
+0 1 exports.process = function(file){
+0 2 if (file.type === 'delete'){
+0 3 file.box.config = {};
+0 4 return;
+0 5 }
+0 6 var self = this;
+0 7 return file.render().then(function(self){
+0 8 self.log.debug('Theme config loaded.');
+0 9 }).catch(function(err){
+0 10 self.log.error('Theme config load failed.');
+0 11 throw err;
+0 12 });
+0 13 };
+0 14 exports.pattern = new Pattern(/^_config\\.\\w+$/);"
+
+1 2 if (this.render.isRenderable(file.path)){
+1 3 return processPage.call(this, file);
+1 4 } else {
+1 5 return processAsset.call(this, file);
+1 8 exports.pattern = new Pattern('layout/*path');"
+
+2 1 var common = require('../../plugins/processor/common');
+2 3 var Asset = this.model('Asset');
+2 4 var id = file.source.substring(this.base_dir.length);
+2 5 var path = file.params.path;
+2 6 var doc = Asset.findById(id);
+2 8 if (doc){"
+
+4 8 if (doc){
+4 9 return doc.remove();
+4 15 doc.path = path;
+4 16 doc.modified = file.type === 'update';
+4 17 return doc.save();
+4 19 return Asset.insert({
+4 20 _id: id,
+4 21 path: path
+4 25 exports.pattern = new Pattern(function(path){
+4 26 if (path.substring(0, 7)!=='source/') return false;
+4 27 path = path.substring(7);
+4 28 if (common.isHiddenFile(path) || common.isTmpFile(path)) return false;
+4 29 return {path: path};
+4 30 });"
+
+6 4 file.box.config.post.include({
+6 5 path: path,
+6 6 renderable: file.renderable
+6 7 }, options);
+6 15 file.box.config.put.apply(this, arguments);
+8 7 return file.render().then(function(){
+8 8 self.process(file);
+8 9 }).then(function(){
+8 10 return self.process();
+8 12 self.log.error('Theme config loaded.');
+9 4 file.box.config.post.path = path;
+9 8 return Promise.all([
+9 9 file.box.config.new_post_pathFn]);
+9 10 }).spread(function(post){
+9 11 post.path = post.path;
+9 13 post.create({title: post.source}, function(){
+9 14 post.path.should.eql(path);
+9 15 post.content.should.eql(content);
+9 17 post.remove(),
+9 18 fs.unlink(file.source)
+9 19 ]);

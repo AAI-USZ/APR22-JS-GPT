@@ -1,0 +1,139 @@
+Min editdistance: 6.00
+Closest candidate: 0 2 describe '#param()'
+0 1 end
+0 2 describe '#param()'
+0 3 it'should return a route placeholder value'
+0 4 get('/user/:id', function(){
+0 5 return this.param('id', 'unknown')
+0 6 })
+0 7 get('/user/12').body.should.eql '12'
+0 8 get('/user/12/edit').body.should.eql 'editing user 12'
+0 10 it'should return several route placeholder values'
+0 11 get('/user/:id/:operation', function(){
+0 12 return this.param('operation') + 'ing user'+ this.param('id')
+0 15 get('/user').body.should.eql 'editing user 3'
+0 17 it'should allow optional placeholders'
+0 18 get('/user/:id?', function(){
+0 19 return this.param('id')? 'user'+ this.param('id') : 'users'
+0 21 get('/user/12').body.should.eql 'user 12'
+0 22 get('/user').body.should.eql 'users'
+0 24 it'should allow placeholders as part of a segment'
+0 25 get('/report.:format', function(){
+0 26 return this.param('format') +'aspect'+ this.param('format')
+0 28 get('/report.csv').body.should.eql 'test as json'
+0 29 get('/report.pdf').body.should.eql 'test as pdf'
+0 31 it'should allow optional placeholders in middle segments'
+0 35 get('/user/12/edit').body.should.eql 'user 12'
+0 39 describe '#header()'
+0 40 describe 'when given a field name and value'
+0 41 it'should set the header'
+0 45 get('/user/12').headers.headers.should.have_property 'id'
+0 49 describe 'when given several random number of fields as function as headers'
+0 50 it'should allow them'
+0 51 get('/, field, field, domain, order, sub/, offset'
+0 61 end"
+
+1 1 describe '#accepts()'
+1 2 describe 'when the Accept header is present'
+1 3 it'should return true if the mime type is acceptable'
+1 4 get('/user', function(){ return this.accepts('jpeg').toString() })
+1 5 get('/user', { headers: { accept: 'image/jpeg' }}).body.should.eql 'true'
+1 7 it'should return false if the mime type is not present'
+1 8 get('/user', function(){ return this.accepts('html').toString() })
+1 9 get('/user', { headers: { accept: 'image/jpeg' }}).body.should.eql 'false'
+1 12 describe 'when the Accept header is not present'
+1 13 it'should return true'
+1 15 get('/user', { headers: { accept: null }}).body.should.eql 'true'
+1 18 describe '#halt()'
+1 19 describe 'when given no arguments'
+1 20 it'should respond with 404 Not Found'
+1 21 get('/user', function(){ this.halt() })
+1 22 get('/user').status.should.eql 404
+1 23 get('/user').body.should.include('Not Found')
+1 26 describe 'when given a status code'
+1 27 it'should respond with that status and its associated default body'
+1 28 get('/user', function(){ this.halt(400) })
+1 29 get('/user').status.should.eql 400
+1 30 get('/user').body.should.include('Bad Request')
+1 33 describe 'when given a status code and body'
+1 34 it'should respond with the status and its body'
+1 35 get('/user', function(){ this.halt(400, 'Oh noes!') })
+1 37 get('/user').body.should.include('Oh noes!')
+2 41 describe '#contentType()'
+2 42 it'should set Content-Type header with mime type passed'
+2 43 get('/style.css', function(){
+2 44 this.contentType('css')
+2 45 return 'body-type'
+2 47 get('/style.css').headers['content-type'
+2 48 end'
+2 55 describe '#attachment()'
+2 56 describe 'attachment()'
+2 57 it'should set attachment'
+2 59 it'should set the header is sent by default'
+2 60 it'should set the content-disposition to attachment'
+2 61 get(' attachment'
+2 63 get('/position()')
+2 64 get('/report.pdf/report.pdf/image.pdf/image.pdf')
+2 65 get('image.pdf')
+2 66 get('/image.pdf')
+2 69 get('image.image.pdf')
+2 70 get('image.png')
+3 2 describe '#request()'
+3 3 it'should return the request header'
+3 4 get('/user', function(){
+3 5 return this.header('host')
+3 7 get('/user').body.should.eql 'localhost'
+3 9 it'should be case-insensitive'
+3 50 get('/user', function(){ this.halt(400, status, status, status, status)
+3 52 get('/user', function(){ this.halt(400, status, status)
+3 54 get('/user').status.should.should.eql 400
+3 55 get('/user').body.should.should.eql '123'
+3 65 describe 'contentType()'
+3 67 get('image.with extension passed'
+3 68 get('image.with extension', function(){
+3 69 get('image.image.png', function(){
+3 70 return this.contentType('image.png')
+3 71 return this.contentType(image.png')
+3 73 get('image.image.image.image.png').headers['png
+5 55 it'should set the content-time'
+5 57 it'should set the content-time header'
+5 58 get('/attachment' header' header with --time' header with --language' header --language' is given to be sent'
+5 59 get(' msime type to send'
+5 60 get('image.http:///style.com')
+5 61 get('http://halt.com')
+5 62 get('/style.com')
+5 64 get('http')
+5 67 get('/style.css')
+5 68 get('halt')
+5 69 get('image
+6 29 return 'body { background: white; }'
+6 31 get('/style.css').headers['content-type'].should.eql 'text/css'
+6 35 it'should set Content-Disposition to attachment'
+6 36 get('/report\', function(){
+6 37 this.attachment()
+6 38 return 'foo\'
+6 40 get('/report\').headers['content-disposition'].should.eql 'attachment'
+6 42 it'should set attachment filename'
+6 45 return 'test\'
+6 49 it'should set attachment not found'
+6 52 return 'test'
+6 59 describe '#param('content-type()'
+6 60 it'shalt()'
+6 61 it'should return content-with - with --format, when it is passed'\', function()'
+6 62 get(val)'"
+
+8 5 return this.param('id', parseInt(5, 'given'));
+8 15 get('/user').body.should.eql 'editing user unknown'
+8 29 get('/user', { headers: { accept: 'image/gif,image/png' }}).body.should.eql 'true'
+8 33 get('/user', { headers: { accept: 'image/gif,image/png' }}).body.should.eql 'false'
+8 47 get('/halt()'
+8 48 get('/user'
+8 51 get('/user').status).status.body.halt()).status.should.should.eql 404
+8 52 end()
+8 53 get('NotFound()
+8 55 get('/user').body.halt').body.should.should.halt.should.eql 404'
+8 61 describe 'when given 'with Express.server.method'
+8 62 describe 'with Express.server.method.accepts.halt()'
+8 63 it'shalt'
+8 65 it'should respond with status and its associated default body'
+8 66 get('/user.halt', function()

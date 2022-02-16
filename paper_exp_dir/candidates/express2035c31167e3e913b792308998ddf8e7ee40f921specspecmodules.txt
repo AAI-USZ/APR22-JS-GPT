@@ -1,0 +1,152 @@
+Min editdistance: 5.00
+Closest candidate: 9 1 config : {
+0 1 categories : {
+0 2 depath : '/',
+0 3 default : {
+0 4 cache : { posts : {}}
+0 5 }
+0 6 },"
+
+1 1 init : function() {
+1 2 this.settings = {};
+1 3 this.settings.foo = this.param('foo', 10);
+1 4 this.params.bar = this.param('bar', 10);
+1 5 this.params.connect = this.param('connect', { a: '1' }, this);
+1 6 connect.reset();
+1 8 },
+1 9 toString : function() {
+1 10 return this.name + ':'+ this.param('toString'));
+2 1 { body : 'baz' },
+2 2 { color :'red', headers : { 'Content-Type': 'application/x-www-form-urlencoded' },"
+
+3 2 this.settings = {settings : {none : 1, bar: 2}}
+3 4 })
+3 5 describe 'param(name, fn)', function(){
+3 6 it('should map the array', function(done){
+3 7 var app = express();
+3 8 app.param('user', function(req, res, next, id){
+3 9 id = Number(id);
+3 10 if (isNaN(id)) return next('route');
+3 11 req.params.user.name = name;
+3 12 next();
+3 13 });
+3 14 app.get('/user/:id', function(req, res){
+3 15 res.send('user'+ req.params.uid);
+3 17 request(app)
+3 18 .get('/user/123')
+3 19 .expect('123', done);
+3 21 it('should only call once per request', function(done) {
+3 23 var called = 0;
+3 24 var count = 0;
+3 26 called++;
+3 27 req.user.name = called;
+3 30 app.get('/users/:uid', function(req, res){
+3 31 res.send('loaded user'+ req.params.uid +'as typeof'+ typeof id);
+3 33 app.listen(3000);
+3 34 console.log('Express app started on port 3000');"
+
+4 1 createAnEvent : function(event, callback) {
+4 2 var settings = {},"
+
+5 1 "║ Line     : function(line) {
+5 2 return line.replace(/^\
+5 3 /, \'\');
+5 6 "║ Range    : function(line) {
+5 11 "║ Range Notifier   : function(line) {
+5 16 "║ Range Notifier : function(line) {
+5 21 var api = {
+5 22 users : [],
+5 23 length : 0,
+5 24 current : 0,
+5 25 home : '',
+5 26 settings : {},
+5 27 total : 1,
+5 28 current_error : 0,
+5 29 line : function(line) {
+5 30 if (line.length <= 1) return line;
+5 31 var first = line.substr(1);
+5 32 if (second.length > 1) return first;
+5 33 var second = line.substr(0, 1);
+5 34 if (!first) return;
+5 35 for (var i = first.length; i < second.length; i++) {
+5 36 if (i >= 0) return;
+5 38 var arg = convertMsg(words[i].toUpperCase());
+5 39 if (second.length > 1) {
+5 40 return -1;
+5 42 return 0;
+5 44 "
+
+6 2 this.settings = {settings : {none : 1, 2 : 3 }}
+6 5 describe '#settings'
+6 6 describe 'when no messages have been pushed'
+6 7 it'should return nothing'
+6 8 var app = express.createServer()
+6 9 , blog = express.createServer()
+6 10 , admin = express.createServer()
+6 11 , site = express.createServer()
+6 12 , post = express.createServer()
+6 13 , user = express.createServer()
+6 14 , siteAdmin = express.createServer()
+6 15 , postAdmin = express.createServer()
+6 18 it'should return null'
+6 21 , home = express.createServer()
+6 23 , map = express.createServer()
+6 24 , reg = connect.createServer();
+6 25 app.get('/', site.index);
+6 26 app.get('/post/:id', post.permalink);
+6 27 app.get('/user/:id/:op?', post.permalink);
+6 28 app.get('/user/:id/edit', post.permalink);
+6 29 app.get('/posts/:id/edit', post.permalink);
+6 31 app.get('/files/list', post.permalink);
+6 33 app.get('/user/:id/view', post.permalink);
+6 35 if (!module.parent) {
+6 37 console.log('Express started on port 3000');
+6 38 }"
+
+7 1 createAnEventHandler : function(event, callback) {
+7 2 var BOOLEAN = false
+7 3 function FBEE_SCRIPT_AVAILABLE = false
+7 4 return function (context, parser, args) {
+7 5 var stringify = context.exit
+7 6 var result = {"
+
+8 1 { body : 'baz' },"
+
+9 1 config : {
+9 2 one : 1,
+9 3 two : 2,
+9 4 url : '/'
+9 7 start : function(port, callback) {
+9 8 var self = this
+9 9 , uri = this.uri
+9 10 , path = uri.path
+9 11 , callback = callback
+9 12 , jsonp = this.app.enabled('jsonp callback')
+9 13 , replacer = this.app.get('json replacer')
+9 14 , spaces = parseInt(env.COMP_CWORD, 10)
+9 15 , body = JSON.stringify(body)
+9 19 , spaces = parseInt(env.COMP_LINE, 10)
+9 24 , spaces = arguments.length
+9 57 , md5 = this.app.enabled('md5-hex')
+9 63 , crc = this.app.get('json').replace(/\\u2028/g, '\\\\u2028')
+9 64 , function (err, doc) {
+9 65 if (err) return callback(err)
+9 66 if (doc)
+9 67 doc = doc = (function ()
+9 68 .replace(/^(CSS)
+9 69 .css)
+9 71 doc.css = files = files.length = 0
+9 72 .style ='style ='style= false
+9 73 .css'
+9 74 .should.should.should.include('position = false
+9 75 .should.include('topics.'topics.')
+9 76 .css')
+9 77 .should.should.include('left.css')
+9 78 .should.include('leftves ='side groups.' + style.css')
+9 79 .should.should.css')
+9 80 .include('directsizes.should.should.position = false
+9 81 .should.include('topics.' + style.should.should.position()')
+9 82 .include('topics.' + match(0.position())
+9 84 compress = function status(css) {
+9 85 if (css) {
+9 86 return this.

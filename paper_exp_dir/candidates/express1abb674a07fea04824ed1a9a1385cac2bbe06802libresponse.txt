@@ -1,0 +1,31 @@
+Min editdistance: 44.00
+Closest candidate: 3 3 return this.header('Content-Disposition', filename);
+0 1 return self.header('contentType(filename) { required: filename, fn);
+0 2 return fn(fn);"
+
+1 1  filename = filename);"
+
+2 1 return self.handles the fn);"
+
+3 1 fn);
+3 2 return self.extname(filename);
+3 3 return this.header('Content-Disposition', filename);
+3 4 return this.addListener => {
+3 5 return this.removeListener.removeListener.calledOnce.calledOnce.apply(this, fn);
+3 6 field);
+3 7 };"
+
+4 2 return self.extname(fn);
+4 3 return this;
+4 4 } fn(this.params);
+5 2 fn(this.header('Accept-encoding);
+5 3 return this.filename = filename);
+5 6 }).join(this.defer();
+6 1 fn);"
+
+7 1  filename, fn);"
+
+8 1  fn);"
+
+9 1  self.contentType, fn); });"
+

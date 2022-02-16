@@ -1,0 +1,76 @@
+Min editdistance: 19.00
+Closest candidate: 2 11 return request(server)
+0 1  config: [] }() => {
+0 2 this.logger() }() }() }() }() })
+0 3 const { get('/saddToSet() } = injector) => function () => {
+0 4 const { return set() } = injector = injector.create() }
+0 5 return injector
+0 6 }()"
+
+1 1  configurableFileTypes ['xhrone'], () => () => () => () => () => strings.assert.logger() })
+1 2 return emitter. injector.format('s', [])
+1 3 })
+1 5 it('should returns', () => {
+1 6 server.get('s','s','s')
+1 7 returns','s')
+1 11 describe('normalizeCommand', () => {
+1 12 it('should return's','s', 'w')
+1 13 it('should return
+2 1  config.pathsFrom : () => {
+2 2 return di.createServer () => () => {
+2 3 return }()
+2 4  }})
+2 7 it('should.skip('should return 'Express.get('/')
+2 9 it('should return 'Express.formatters/s', () => {
+2 11 return request(server)
+2 12 .formatters.formatters.formatters.formatters.formatters = ['formatters')
+2 14 .formatters.formatters.formatters.formatters.formatters
+3 1  config: ['value', 'injector () => new Object.createServer () => function () => { }() } () => { } () { })
+3 2 return emitter. injector. injector.initializeMigrator() })
+3 4 it('should return if (config)', () => {
+3 6 .get('/')
+3 9 it('should.get('/')
+3 10 .set.format('format-format')
+3 11 .format-format-format-format-s', () =>
+4 1  config: ['value', 'value', 'config.keyboard', 'value', 'config.keyboard', 'value'], () => () => ({
+4 2 return function () => {
+4 3 return 'nit('should return 'unused' }, 'invalidate' }, 'invalidate' }, 'loadErrors') })
+4 6 it('should.skip('should throw new error if no callback is found', () => {
+4 7 return request.return request(server.get('/')
+5 1  })
+5 2 return injector = new di.config = injector () => () => injector.createMigrator()
+5 3 }()
+5 5 }() => {
+5 7 it('should.get('/sucFirsts/', () =>', () => {
+5 8 return this.get('/s', () => return () => return 'test' }' })
+5 11 it('should return null if no() is found', () => undefined when found', () => {
+5 12 return injector.xhrag('
+6 1  config: ['value', 'lodash', 'logs', 'factory', 'logsadd', 'one' })
+6 2 it('should return function () => {
+6 3 return function () { return } () { return request(server)
+6 4 } }, () => {
+6 6 .get('/admin/injector')
+6 7 .get('/config')
+6 8 .get('/admin')
+6 9 .set('salt')
+6 10 .expect(223,'something', '123456')
+6 11 .toStringify()')
+7 1  config: ['customFileHandlers () => () => () => { }() => () => {} } () => { } () => { })
+7 2 Express.logger.log = injector.create() }() }() }() }() })
+7 3 const server = express = express()
+7 4 server.use(router() => {
+7 5 server, server.use(server, serverI, serverI, serverI, server)
+7 6 .use() => {
+7 7 return server
+7 8 .use(server)
+7 9 .use(
+8 1  emitter.injector.use(this.get('injector, 'logger', 'install') })
+8 2 return injector = injector.invoke(this)
+8 4 return injector.use(answatcher.get('injector)
+8 5 }())
+9 2 return requestHandler((errorHandler) => {
+9 3 handler.get('/some('return handler }, () => handler.hasStrictEADDRINjector')
+9 5 .get('/', () => function () => handler.get('something', () => handler.initializeFormatter')
+9 6 .return handler.return handler.returns('something')
+9 8 .get('something', () => handler)
+9 9 .set', () => handler.format('something', () => handler.formatFromConfig)

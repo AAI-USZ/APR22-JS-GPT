@@ -1,0 +1,607 @@
+
+process.stdout.columns = 130;
+
+var expect = require('chai').expect;
+var helpers = require('../helpers');
+var multiline = require('multiline').stripIndent;
+
+var StandardRenderer = helpers.require('lib/renderers/StandardRenderer');
+
+describe('StandardRenderer', function () {
+
+it('logs generic simple message', function () {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.log({
+id: 'foobar',
+message: 'hello world'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.eq(multiline(function(){ }) + '\n');
+});
+});
+
+it('logs simple error', function () {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.error({
+code: 'EFOOBAR',
+message: 'Hello error'
+});
+}).spread(function(stdout, stderr) {
+expect(stderr).to.eq(multiline(function(){ }) + '\n');
+});
+});
+
+it('logs error with details', function () {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.error({
+code: 'EFOOBAR',
+message: 'Hello error',
+details: '  Some awesome details\nMultiline!    '
+});
+}).spread(function(stdout, stderr) {
+expect(stderr).to.eq(multiline(function(){ }) + '\n');
+});
+});
+
+it('logs system details in verbose mode', function () {
+return helpers.capture(function() {
+var renderer = new StandardRenderer(undefined, { verbose: true });
+renderer.error({
+code: 'EFOOBAR',
+message: 'Hello error',
+details: '  Some awesome details\nMultiline!    '
+});
+}).spread(function(stdout, stderr) {
+expect(stderr).to.match(new RegExp(multiline(function(){ }) + '\n'));
+});
+});
+
+it('logs stack trace in verbose mode', function () {
+return helpers.capture(function() {
+var renderer = new StandardRenderer(undefined, { verbose: true });
+renderer.error({
+code: 'EFOOBAR',
+message: 'Hello error',
+details: '  Some awesome details\nMultiline!    ',
+stack: [
+'./one.js:1',
+'./two.js:2'
+]
+});
+}).spread(function(stdout, stderr) {
+expect(stderr).to.string(multiline(function(){ }));
+});
+});
+
+it('logs console trace in verbose mode', function () {
+return helpers.capture(function() {
+var renderer = new StandardRenderer(undefined, { verbose: true });
+renderer.error({
+code: 'EFOOBAR',
+message: 'Hello error',
+details: '  Some awesome details\nMultiline!    '
+});
+}).spread(function(stdout, stderr) {
+expect(stderr).to.match(new RegExp(multiline(function(){ })));
+});
+});
+
+it('outputs checkout command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.log({
+id: 'checkout',
+origin: 'jquery#master',
+message: 'foobar'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs full progress for wide command', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('install');
+renderer.log({
+id: 'progress',
+origin: 'jquery#master',
+message: 'foobar'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs full progress for narrow command', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('help');
+renderer.log({
+id: 'progress',
+origin: 'jquery#master',
+message: 'foobar'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs extract log just as progress log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('install');
+renderer.log({
+id: 'extract',
+origin: 'jquery#master',
+message: 'foobar'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs incompatible log with suitable package', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.log({
+id: 'incompatible',
+data: {
+resolution: '~0.1.1',
+suitable: {
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'foobar'
+}
+},
+picks: [
+{
+pkgMeta: {
+_release: '0.0.0'
+},
+endpoint: {
+name: 'fizfuz',
+target: '~0.0.0'
+},
+dependants: [
+{
+pkgMeta: {
+_release: 'release1'
+},
+endpoint: {
+name: 'dependant1'
+}
+},
+{
+pkgMeta: {
+_release: 'release2'
+},
+endpoint: {
+name: 'dependant2'
+}
+}
+]
+},
+{
+endpoint: {
+name: 'fizfuz2'
+},
+dependants: [
+{
+pkgMeta: {
+
+},
+endpoint: {
+name: 'jquery2'
+}
+}
+]
+}
+]
+}
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n\n');
+});
+});
+
+it('outputs solver log without suitable package', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.log({
+id: 'solved',
+data: {
+resolution: '~0.1.1',
+picks: [
+{
+pkgMeta: {
+_release: '0.0.0'
+},
+endpoint: {
+name: 'fizfuz',
+target: '~0.0.0'
+},
+dependants: [
+{
+pkgMeta: {
+_release: 'release1'
+},
+endpoint: {
+name: 'dependant1'
+}
+},
+{
+pkgMeta: {
+_release: 'release2'
+},
+endpoint: {
+name: 'dependant2'
+}
+}
+]
+},
+{
+endpoint: {
+name: 'fizfuz2'
+},
+dependants: [
+{
+pkgMeta: {
+
+},
+endpoint: {
+name: 'jquery2'
+}
+}
+]
+}
+]
+}
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n\n');
+});
+});
+
+it('outputs json log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer();
+renderer.log({
+id: 'json',
+data: {
+json: {
+foo: 'bar',
+fiz: {
+fuz: 'faz'
+}
+}
+}
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n\n');
+});
+});
+
+it('outputs cached entry log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('install');
+renderer.log({
+id: 'cached-entry',
+origin: 'origin',
+message: 'message'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('adjusts whitespace when package id too long', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('install', {});
+renderer.log({
+id: 'generic',
+origin: 'short-origin',
+message: 'message'
+});
+
+renderer.log({
+id: 'generic',
+origin: 'very-very-long-origin-string',
+message: 'message'
+});
+
+renderer.log({
+id: 'generic',
+origin: 'short-origin',
+message: 'message'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs install command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('install', {
+cwd: '/tmp'
+});
+
+renderer.end([
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+}
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+version: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+}
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+},
+missing: true
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+},
+different: true
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+},
+linked: true
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery',
+target: '~0.1.2'
+},
+incompatible: true
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery',
+target: '~0.1.2'
+},
+extraneous: true
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery',
+target: '~0.1.2'
+},
+update: {
+target: '0.1.5',
+latest: '0.2.0'
+}
+},
+{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+},
+dependencies: {
+angular: {
+canonicalDir: '/tmp/components/angular',
+pkgMeta: {
+_release: '0.1.3'
+},
+endpoint: {
+name: 'angular'
+}
+},
+ember: {
+canonicalDir: '/tmp/components/ember',
+pkgMeta: {
+_release: '0.2.3'
+},
+endpoint: {
+name: 'ember'
+},
+dependencies: {
+
+react: {
+canonicalDir: '/tmp/components/react',
+pkgMeta: {
+_release: '0.2.3'
+},
+endpoint: {
+name: 'react'
+}
+}
+}
+}
+}
+}
+]);
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs short info command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('info', {});
+renderer.end({
+version: '1.2.3'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs full info command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('info', {});
+renderer.end({
+name: 'foo',
+latest: {
+version: '1.2.3'
+},
+versions: [
+'1.2.0',
+'1.2.1',
+'1.2.2'
+]
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs lookup command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('lookup', {});
+renderer.end({
+name: 'bower',
+url: 'http://bower.io'
+});
+renderer.end({
+name: 'bower'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs link command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('link', { cwd: '/tmp' });
+renderer.end({
+src: './foo',
+dst: './bar',
+installed: [{
+canonicalDir: '/tmp/components/jquery',
+pkgMeta: {
+_release: '0.1.2'
+},
+endpoint: {
+name: 'jquery'
+}
+}]
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs search command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('search');
+renderer.end([
+{
+name: 'jquery',
+url: 'http://jquery.io'
+},
+{
+name: 'bower',
+url: 'http://bower.io'
+}
+]);
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs register command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('register');
+renderer.end({
+name: 'jquery',
+url: 'http://jquery.io'
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs cache list command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('cache list');
+renderer.end([
+{
+pkgMeta: {
+name: 'awesome-jquery',
+_target: '0.1.1',
+_source: 'jquery'
+}
+}
+]);
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+
+it('outputs help command log', function() {
+return helpers.capture(function() {
+var renderer = new StandardRenderer('help');
+renderer.end({
+'command': 'uninstall',
+'description': 'Uninstalls a package locally from your bower_components directory',
+'usage': [
+'uninstall <name> [<name> ..] [<options>]'
+],
+'options': [
+{
+'shorthand':   '-h',
+'flag':        '--help',
+'description': 'Show this help message'
+},
+{
+'shorthand':   '-S',
+'flag':        '--save',
+'description': 'Remove uninstalled packages from the project\'s bower.json dependencies'
+},
+{
+'shorthand':   '-D',
+'flag':        '--save-dev',
+'description': 'Remove uninstalled packages from the project\'s bower.json devDependencies'
+}
+]
+});
+}).spread(function(stdout, stderr) {
+expect(stdout).to.equal(multiline(function(){ }) + '\n');
+});
+});
+});

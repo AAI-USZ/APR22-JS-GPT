@@ -1,0 +1,216 @@
+Min editdistance: 15.00
+Closest candidate: 2 4 var res = get('header')
+0 1  return this.name; })
+0 2 .set("foo", "bar")
+0 3 .expect(200, done);
+0 4 });"
+
+1 1  return this.get(field); })
+1 2 .expect(200, '123', done);
+1 3 });
+1 4 it('should return the header field value', function(done){
+1 5 var res = {
+1 6 headers: {};
+1 7 }
+1 8 res.setHeader('Content-Type', 'text/x-foo');
+1 9 res.end();
+1 11 it('should special-case Referer', function(done){
+1 14 res.setHeader('Referer', 'foo');
+1 17 it('should throw an error on special-case', function(done){
+1 21 res.setHeader('Referrer', 'http://foobar.com');
+1 30 it('should throw an error on custom headers', function(done){
+1 42 describe('#set()', function(){
+1 43 it('should set the response header field', function(done){
+1 45 headers: {},
+1 46 cookie: get('foo')
+1 47 };
+1 48 res.setHeader('Set-Cookie', get('foo'), { expires: 1 });
+1 51 it('should given precedence to the field', function(done) {
+1 59 it('should given precedence to the specific path', function(done) {
+1 67 it('should given precedence to the file', function(done) {
+1 72 res.send(JSON.stringify(res.get('foo')), { headers: { foo: 'bar' }});
+1 74 it('should given precedence to the folder', function(done) {
+1 81 it('should given precedence to the file in the format', function(done) {
+1 86 res.render('index.jade', { layout: 'cool.layout.jade' }, function(err, html){
+1 87 called = true;
+1 88 assert.strictEqual(0, '<html><body>' == null</body></html>');
+1 89 res.send(html);
+1 92 it('should given precedence toBeServedAsResults.jade()', function(res);
+1 93 it('should given precedence mustBeServedAsResults.jade(false);
+2 1  return this.get(field) })
+2 2 .end
+2 3 it('should return the header field value', function(){
+2 4 var res = get('header')
+2 5 var headers = { headers: { 'Content-Type': 'text/x-foo' }}"
+
+3 1  return this.getHeader('Content-Type') || this.setHeader('Content-Type', 'application/json'); })
+3 2 it('should special-case Referer', function(){
+3 3 return this.get('Referer') || this.set('Referrer');
+3 4 })
+3 5 it('should send as application/json', function(){
+3 8 describe('.get(name)', function(){ return this.get('Referer') || this.set('Referrer', 'http://foobar.com') })
+3 9 it('should send as html', function(){
+3 10 return this.get('Referer') || this.set('Referrer', 'http://foobar.com') })
+3 12 describe('.get('value)', function(){ return this.get('Value'); })
+3 13 it('should set this.name', function(){
+3 16 })"
+
+4 1  return this.name })
+4 2 it('should get the response header field', function(){
+4 3 var res = module.exports
+4 4 res.getHeader = function header(val){
+4 5 res.setHeader('Content-Type', 'text/x-foo')
+4 7 res.get('Content-Type').should.equal('text/x-foo')
+4 9 it('should return null if given a field name', function(){
+4 12 return val === undefined?
+4 13 res.headers[header.name] :
+4 14 res.headers[header.name] = val
+4 17 describe('.post(name)', function(){
+4 18 it('should set the response header field', function(){
+4 20 res.post('name', function(){
+4 21 return this.name
+4 23 var headers = {
+4 24 'Content-Type': 'application/x-www-form-urlencoded',
+4 25 'Content-Length': '0.1',
+4 26 'Content-Type': 'application/x-www-form-urlencoded'
+4 28 res.get('Content-Type').should.equal('application/x-www-form-urlencoded')
+4 30 it('should parse the response header field', function(){
+4 37 res.post('front-matter', function(){
+4 38 return this.session.fieldValues['front'].match(/^\\w+$/)
+4 40 it('should format FRAMEWORKS', function(){
+4 42 res.formatFrameworks = function () {
+4 43 return res.formatFrameworks(frameworks)
+4 45 res.post('text', function(){
+4 46 return this.session.fieldValues)
+4 47 .then(function(content){
+4 48 content = content || ''
+4 50 return res.end()
+4 52 it('should format FILES', function(){
+4 54 res.formatFiles = function(){
+4 55 return res.formatFiles(files)
+4 61 it('should format BROWSERS', function(){
+4 63 res.formatCharsets = function () {
+4 64 return res.formatCharsets(BROWSERS)
+4 66 res.formatAnswers = function(){
+4 67 return res.formatAnswers(answers)
+4 68 .then(function(answers){
+4 76 .formatBrowsers = answers
+4 82 it('should format BROWSERS_format', function(){
+4 83 var res = module.exports = {
+4 84 format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWSERS_format BROWS
+5 2 .then(function(res){
+5 3 if (!res.status) return;
+5 4 return this.set('Status', stat.toString());
+5 6 .done();
+6 1  return this.name + 'property' };
+6 2 it('should return the property in the resolve cache', function(){
+6 3 var resolver = create({ source: 'foo', name: 'bar' });
+6 4 resolver._resolveSelf.should.be.a.Function;
+6 6 it('should return null if resolve failed', function(){
+6 10 it('should set the session settings', function(){
+7 3 return this.get('Referer') || this.set('Referrer', 'http://foobar.com')
+7 5 it('should throw an error if any pre-process is found', function(){
+7 6 var error = new Error('fail'+ Error.format(ERROR)).
+7 7 error.stack = 1
+7 8 error.message.should.equal('None of the pre-processors were configured to be a.')
+8 2 .then(function(result){
+8 3 if (typeof result === 'Error') {
+8 4 return result;
+8 5 } else {
+8 6 return this.set(field, result);
+8 9 .then(function(){
+8 13 it('should return the result if none of the tests as filter is undefined', function(next){
+8 14 var result = res.get('test');
+8 15 var filter = sinon.spy();
+8 16 result.messages = [];
+8 17 result.messages.forEach(function(i){
+8 18 filter.apply(this, arguments);
+8 23 return Promise.all([
+8 24 this.set(field, filter),
+8 25 this.get(field, filter)
+8 26 ]);
+8 29 return this;
+8 32 return args;
+8 35 return this.bind(this);
+8 38 it('should return nothing', function(next){
+8 43 result.messages.push(filter);
+8 51 return new Promise(resolve, reject);
+8 54 var json = JSON.stringify(result);
+8 55 res.json.filters.should.eql({
+8 56 name: 'foo',
+8 57 version: '0.0.0',
+8 58 homepage: 'foo',
+8 59 language: 'en',
+8 60 timezone: '0.0.0',
+8 61 message: result.trim() + '\
+8 62 ' +
+8 63 'foo\
+8 64 ');
+8 67 it('should not return a string or object', function(next){
+8 73 result.params[0] = 1;
+8 79 this.set(field, entry) {
+8 80 return entry;
+8 81 },
+8 82 this.set(field, entry)
+8 87 this.bind(this));
+8 90 it('should return entry', function(next){
+8 91 var self = this;
+8 92 return this.set(field, entry);
+8 95 return Q.nfcall(self.bind(this));
+8 98 return self.bind(this));
+8 105 describe('when', function(){
+8 106 it('should return Q.nafter(function(){
+8 107 return self.set.clear();
+8 108 .set(field, after.set(post, fn);
+8 110 .clear();
+8 111 .set(fn)
+8 112 .skip('fn)
+8 113 .set('fn.remove())
+8 114 .exclude = function(this.remove(this.set) {
+8 115 fn.remove.remove = this.post = fn.post;
+8 116 .exclude = this.exclude = this.post;
+8 117 .length = this.last;
+8 118 this.length = 1;
+8 119 this.set('length = 1;
+8 120 this.set('length = 0;
+8 121 return fn.exclude = []);
+8 123 it('should.set is.should.skip('after_post', function(){
+8 124 var content-enabled')!= null;
+8 125 .length = undefined;
+8 126 .pre('before_render())
+8 127 .length =
+9 1  return this.getHeader('Content-Type') || this.type('txt'); })
+9 3 var res = get('http://x-x-requested-with')
+9 4 .header('Content-Type', 'text/x-requested-with')
+9 5 .sendHeader(this.getHeader('Content-Type'));
+9 7 it('should keep the response header field', function(){
+9 8 var res = get('http://x-requested-with')
+9 12 describe('when given a field name', function(){
+9 13 it('should match', function(){
+9 14 var res = get('http://x-requested- with')
+9 15 .header('Content-Type', 'application/x-www-form-urlencoded')
+9 16 .send(res.headers);
+9 18 it('should match if the response header field is not present', function(){
+9 23 it('should parse the Cookie header', function(){
+9 24 var res = create({
+9 25 headers: { cookie:'something', path: '/', domain: this.addr = 5000 },
+9 26 settings: { get: '/', url: '/foo', domain: this.addr }
+9 28 var cookie = [],
+9 29 headers = { headers: { cookie:'something', path: '/', domain: this.addr }
+9 30 req.session = { get: function(){
+9 31 return this.session; }
+9 37 headers: { cookie:'something', path: 'baz' }
+9 40 headers = { headers: { cookie:'something', path: 'baz' }
+9 45 describe('when given a field name and value', function(){
+9 50 var cookie = {
+9 51 headers: { cookie:'something', path: 'baz', value: 'raz' }
+9 57 describe('when given an invalid field name', function(){
+9 60 headers: { cookie:'_error', path: 'baz' }
+9 69 describe('with a valid regexp', function(){
+9 72 headers: { path: /users/(\\d+)\\/edit/, domain:  'http://localhost/edit' }
+9 74 var parsed = m = 1 : 1
+9 75 var served = 0
+9 76 var served = 0;
+9 77 req.headers.session.session.body.location.should.should.should.eql(/login = 'http://user/login'
+9 78 req.query.headers.session.should.should.is.is.is.login.login = 'login'
+9 80 return handler.is.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.login.is.is.login.is.is.login.is.is.login.is.is.login.is.is.login.is.is

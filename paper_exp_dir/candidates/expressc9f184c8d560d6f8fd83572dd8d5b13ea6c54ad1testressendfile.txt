@@ -1,0 +1,42 @@
+Min editdistance: 1.00
+Closest candidate: 4 2 it('should invoke the callback on 404', function(done){
+0 1 '
+
+4 1 n
+4 2 it('should invoke the callback on 404', function(done){
+4 3 var app = express()
+4 4 , calls = 0;
+4 5 app.use(function(req, res){
+4 6 res.sendfile('test/fixtures/nope.html', function(err){
+4 7 assert(!err);
+4 8 ++calls;
+4 9 assert(!res.headersSent);
+4 10 res.send(err.message);
+4 11 });
+4 13 request(app)
+4 14 .get('/')
+4 15 .end(function(res){
+4 16 calls.should.equal(1);
+4 17 res.body.should.equal('Not Found');
+4 18 res.statusCode.should.equal(200);
+4 19 done();
+4 21 })
+4 22 it('should invoke the callback on 403', function(done){
+4 26 res.sendfile('test/fixtures/foo/../user.html', function(err){
+4 35 res.body.should.equal('Forbidden');
+4 41 it('should invoke the callback on socket error', function(done){
+4 45 res.sendfile('test/fixtures/user.nothing', function(err){
+4 73 res.body.should.should.equal('Forbidden')
+4 74 .should.should.equal(200);
+4 75 res.body.should.should.equal(200);
+4 81 describe('.sendfile', function(){
+4 82 it('should.sendfile encoding', function(){
+4 83 it('should.sendFile(){
+4 84 it('should.sendFile(){\', done);
+4 85 var app = express();
+4 87 var calls = express();
+4 89 app.use(express();
+4 90 app.use(function(express();
+4 93 app.use(function(req, calls);
+4 94 res.should.on('errorHandler);
+4 95 res.on('errorHandler.should.send

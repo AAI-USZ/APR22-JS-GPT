@@ -1,0 +1,45 @@
+Min editdistance: 22.00
+Closest candidate: 6 6 res.render('invalid.jade', { layout: 'invalid-' });
+0 1 app.get('/pets', function(req, res){
+0 2 res.render('search');
+0 3 });
+0 4 app.listen(3000);
+0 5 console.log('Express app started on port 3000');"
+
+1 1 "
+
+4 1 app.get('/blockquote', function(req, res){
+4 2 res.render('blockquote', { layout: 'layouts/foo.jade', errors: ['
+
+6 1 app.get('/invalid', function(req, res){
+6 2 res.render('invalid.jade', { layout: 'invalid.jade', name: 'invalid' });
+6 4 app.get('/invalid-async', function(req, res){
+6 5 process.nextTick(function(){
+6 6 res.render('invalid.jade', { layout: 'invalid-' });
+6 8 app.get('/error', function(req, res){
+6 11 app.get('/absolute', function(req, res){
+6 12 res.render('invalid.jade', { layout: __dirname + '/views', name: 'invalid' });
+6 14 app.get('/nope', function(req, res){
+6 15 res.render('invalid.jade', { layout: 'nope.jade', name: 'nope.jade' });
+6 18 res.render('invalid.jade', { layout: 'invalid-async' }, function(err){
+6 19 res.send(err.arguments[0]);
+6 25 app.get('/pope', function(req, res){
+6 26 res.render('invalid.jade', { layout: 'pattern' });
+6 28 app.get('/pope-async', function(req, res){
+6 29 var path = __dirname + '/public/' + path;
+6 30 var view = new express.Server(process.cwd(), { parentView: path });
+6 31 view.set('views', path);
+6 33 app.get('/pope.jade', function(req, res){
+6 36 app.get('/relative', function(req, res){
+6 39 app.get('/absolute/index.jade', function(req, res){
+6 40 res.render('index.jade', { layout: 'absolute' });
+6 42 app.get('/index.jade', function(req, res){
+6 43 res.render('index.jade', { layout: 'index.jade', name: 'index.jade' });
+6 46 app.get('/relative/join(', function(', function(req, res){
+6 47 res){
+6 48 res.render('/index.jade.jade', name = '');
+6 51 app.get('/', function(/index.jade.jade.jade, 'index);
+6 54 app.get('/join(/', function(/^\\dynamic/, function(':should.jade', function(q){
+6 55 return 'index.jade', 'index.jade', '');
+6 57 app.get('/n});"
+

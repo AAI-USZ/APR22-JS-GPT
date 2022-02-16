@@ -1,0 +1,3 @@
+app.dynamicHelpers({
+basepath: function(){
+

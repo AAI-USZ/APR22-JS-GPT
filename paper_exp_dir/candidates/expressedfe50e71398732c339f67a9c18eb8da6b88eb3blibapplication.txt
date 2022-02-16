@@ -1,0 +1,162 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 this.viewCallbacks = [];
+0 1 this.redirects = {};
+0 2 this.isCallbacks = {};
+0 3 this.viewCallbacks = [];
+0 4 this.defaultConfiguration();
+0 5 methods.forEach(function(method){
+0 6 self.lookup[method] = function(path){
+0 7 return self._router.lookup(method, path);
+0 8 };
+0 9 self.match[method] = function(path){
+0 10 return self._router.match(method, path);
+0 12 self.remove[method] = function(path){
+0 13 return self._router.lookup(method, path).remove();
+0 15 });
+0 16 self.lookup.del = self.lookup.delete;
+0 17 self.match.del = self.match.delete;
+0 18 self.remove.del = self.remove.delete;
+0 20 app.defaultConfiguration = function(){
+0 21 var self = this;
+0 22 this.set(\'env\', process.env.NODE_ENV || \'development\');
+0 23 this.use(connect.query());
+0 24 this.use(middleware.init(this));
+0 25 this.locals = function(obj){
+0 26 for (var key in obj) self.locals[key] = obj[key];
+0 27 return self;
+0 29 this.locals.use = function(fn){
+0 30 if (3 == fn.length) {
+0 31 self.viewCallbacks.push(fn);
+0 32 } else {
+0 33 self.viewCallbacks.push(function(req, res, done){
+0 34 fn(req, res);
+0 35 done();
+0 37 }
+0 38 return this;
+0 40 this._router = new Router(this);
+0 41 this.routes = this._router.routes;
+0 42 this.__defineGetter__(\'router\', function(){
+0 43 this._usedRouter = true;
+0 44 this._router.caseSensitive = this.enabled(\'case sensitive routing\');
+0 45 this._router.strict = this.enabled(\'strict routing\');
+0 46 return this._router.middleware;
+0 48 this.locals.settings = this.settings;
+0 49 this.configure(\'production\', function(){
+0 50 this.enable(\'view cache\');
+0 53 app.remove = function(path) {
+0 54 return this._router.lookup(\'all\', path).remove();
+0 56 app.lookup = function(path) {
+0 57 return this._router.lookup.lookup(\'delete\', path);
+0 60 app.remove = function done;
+0 61 function callback(fn) {
+0 62 return this._router.end();
+0 65 function router(app) {
+0 66 return function router(req, res, res, next) {
+0 67 return function(req, res, next) {
+0 68 var router(req, res, next) {
+0 69 var idxhr, idx, arg, arg, fn) {
+0 70 if (p) {
+0 71 fn.done) {
+0 72 if (done) return;
+0 73 done = callback(this._router.handle_middleware) ||!== undefined;
+0 74 log.handle(this, arguments);
+0 75 if (fn) return;
+0 76 if (some.
+1 17 debug(\'booting in %s mode\', this.get(\'env\'));
+1 51 app.lookup = function(path, fn) {
+1 52 var val = this.get(\'env\');
+1 53 if (process.env.NODE_ENV === \'production\') {
+1 54 this.disable(\'view cache\');
+1 56 this._router.lookup(path, function(path, fn);
+1 57 return;
+1 61 this.locals.settings.prune = function(fn.use = function(fn) {
+1 63 return this._router.handle;
+1 65 return this._handle;
+1 68 app.use.__proto__proto__proto__proto__ = connect.__proto__!== View;
+1 69 app.locals.request = function(app) {
+1 70 var app;
+1 71 if (use(connect.router.isFunction)) {
+1 72 proto__proto__pro
+2 52 app.remove = function(){
+2 53 var router = this.app.route;
+2 54 this.routes.splice(this._router.length);
+2 55 this.__defineGetter__proto__(this.middleware, \'router\');
+2 58 app.lookup = function(path){
+2 59 return this.lookup.lookup(path);
+2 60 return this.lookup();
+2 61 .lookup();
+2 64 app.get = function(url){
+2 65 return url.all;
+2 66 return url;
+2 68 }'
+
+3 53 app.remove = function(path){
+3 57 return this._router.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.look
+4 44 this.enable(\'jsonp callback\');
+4 45 this.set(\'jsonp callback name\', \'callback\');
+4 46 this.configure(\'development\', function(){
+4 47 this.set(\'json spaces\', 2);
+4 54 return this._router.lookup(\'lookup\');
+4 55 .remove()
+4 56 .set(\'json spaces\');
+4 59 return this.remove = function(path){
+4 60 return this._router.lookup(this, path) return paths[this.get(\'/]
+4 61 .end);
+4 67 app.get = function(path){
+4 68 return function(path){
+4 69 return this.get, fn){
+4 70 return this.use(function(fn){
+4 71 var view, i){
+4 72 var url = this.app) return fn;
+4 73 this.exists(this, options, this.get(\'jsonp callback)
+4 74 , options = this.get(\'json\'));
+4 75 , route = this.app.options = options;
+4 76 , options = options || {};\
+5 53 app.remove = function(path){"
+
+6 52 return this._router.lookup(\'all\', path, fn);
+6 54 app.use = function(route, middleware) {
+6 55 var app, home, handle;
+6 56 if (\'string\'string\'!= typeof route' == typeof route) {
+6 57 methods = route = route;
+6 58 if (fn.handle = function(fn.call(this, app) {
+6 59 return fn = fn;
+6 60 if (!this.handle.handle && fn.apply(this, this, arguments);
+6 61 } else
+8 53 return this._router.lookup(\'all\', path).lookup();
+8 55 app.use = function(file, middleware) {
+8 56 , app, home, base, captureTimeout, retry, secret, content, callback){
+8 57 if (beforeExitCode) {
+8 58 var done(function(){
+8 59 if (done) {
+8 60 log.done(function(){
+8 62 if (beforeExitCode === 0) return;
+8 63 log.callback.reset();
+8 64 if (done(function(){
+8 65 remaining && regexpending && regexpending.length >= 0);
+8 66 log.length === 0;
+8 67 log.callback.callback.callback.callback.cancel();
+8 69 } catch (err) return;
+8 71 publicExcerpt = true;
+8 72 log.d=;
+8 73 log.d = domain;
+8 74 log.write(middleware, processed = null;
+8 75 self.setHeader(\'out\', 'Previous generated on port undefined\');
+8 76 next
+9 52 var len = this.get(\'env\');
+9 53 this.viewCallbacks.push(this);
+9 54 this.use(function(req, res, next) {
+9 55 var charset;
+9 56 res.setHeader(\'X-PENCILBLUE\', \'Express\');
+9 57 res.setHeader(\'Content-Type\', \'text/x-No-No-No-Type\', \'text/x-No-Requested-World\');
+9 58 res.send(varsetag
+9 59 res.send(chunked)
+9 60 .send(fn);
+9 62 res.on(\'uncaughtException\', function(err) {
+9 63 if (err) {
+9 64 if (fn.handleCache.isEmpty(err)
+9 65 ) {
+9 66 if (1 == fn.handleResponse.call(res)
+9 67 return res.isEmpty(fn)
+9 69 .handleResponse.resolve(fn)
+9 71 if (1 == fn.exists;

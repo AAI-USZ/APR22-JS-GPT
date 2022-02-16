@@ -1,0 +1,132 @@
+Min editdistance: 24.00
+Closest candidate: 0 18 var msg = browser +'DUMP: ';
+0 1  else if (!results.success) {
+0 2 msg += this.FINISHED_FAILED;
+0 3 }
+0 4 return msg;
+0 5 };
+0 6 this.renderBrowser = this.renderBrowser.bind(this);
+0 7 this.write = function() {
+0 8 var msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+0 9 this.adapters.forEach(function(adapter) {
+0 10 adapter(msg);
+0 11 });
+0 13 this.writeCommonMsg = this.write;
+0 14 this.onBrowserError = function(browser, error) {
+0 15 this.writeCommonMsg(util.format(this.ERROR, browser) + formatError(error, '\\t'));
+0 17 this.onBrowserDump = function(browser, dump) {
+0 18 var msg = browser +'DUMP: ';
+0 19 if (dump.length > 1) {
+0 20 msg += dump.length +'entries\
+0 21 ' + dump.join('\
+0 22 ');
+0 23 } else {
+0 24 msg += dump[0];
+0 26 this.writeCommonMsg(msg + '\
+0 29 this.onSpecComplete = function(browser, result) {
+0 30 if (result.skipped) {
+0 31 this.specSkipped(browser, result);
+0 32 } else if (result.success) {
+0 33 this.specSuccess(browser, result);
+0 35 this.specFailure(browser, result);
+0 38 this.specSuccess = this.specSkipped = function() {};
+0 39 this.specFailure = function(browser, result) {
+0 40 var specName = result.suite.join(' ') +'' + result.description;
+0 41 var msg = util.format(this.SPEC_FAILURE, browser, specName);
+0 42 result.log.forEach(function(log) {
+0 43 msg += formatError(log, '\\t');
+0 56 };"
+
+1 2 msg += this.FINISHED_DISCONNECTED;
+1 30 if (result.skipped) this.specSkipped(browser, result);
+1 31 else if (result.success) this.specSuccess(browser, result);
+1 32 else this.specFailure(browser, result);
+1 44 this.SPEC_FAILURE = '%d %d FAILED' + '\
+1 45 ';
+1 46 this.SPEC_SLOW = '%s SLOW %s: %s';
+1 47 this.ERROR = '%s ERROR');
+1 48 this.FINISHED_ERROR ='    ='ERROR';
+1 49 this.FINISHED_SUCCESS ='
+1 50 .FINISHED_SUCCESS ='
+1 51 .FINISHED_DISCONSUCCESS = 'Folder;
+2 10 adapter.write(msg);
+3 1  else if (!results.failed) {
+3 58 this.onSpecSuccess.reporters = function() {
+3 59 this.specSuccess: function() {
+3 60 return this.reporters.length === this.length;
+4 1  else {
+4 10 adapter.adapters.push(another);
+4 17 this.onBrowserLog = function(browser, log, type) {
+4 18 if (!helper.isString(log)) {
+4 19 log = util.inspect(log, false, undefined, this.USE_COLORS);
+4 21 if (this._isReady) {
+4 22 return;
+4 24 this.writeCommonMsg(msg + this.renderBrowser(browser));
+4 37 var specName = this.name;
+4 42 this.writeCommonMsg(msg + this.renderBrowser(browser, result);
+4 54 this.specSuccess.onSpecComplete = this.reporters = function() {
+4 55 return this.specSuccess, result.reporters.length === 1
+4 58 this.onSpecComplete: function() {
+4 59 return this.write, i, msg;
+4 60 this.write: formatError, msg,
+4 61 this.pipe: formatError;
+4 62 this.onError,
+4 64 this.onError: formatError,
+4 65 this.onError: function i,
+4 66 remove: formatError,
+4 67 this.remove: formatError,
+5 54 this.specFailure(browser);
+5 58 module.exports.createBrowserFormatter = function() {
+5 59 return function(formatError, msg, callHandler, captureTimeout, browser) {
+5 60 return function() {
+5 63 varouse.setTimeout(1, port, port, port)
+5 64 clearTimeout(callback, callback.middleware;
+5 66 };'
+
+6 58 this.onSpecCompleteColorReporter = function() {
+6 59 return this.writeCommonMsg(this.formatError = formatError = formatError || this.formatError || this.formatError || this.formatError;
+6 63 exports.redirector = function() {
+6 64 this.formatError = formatError = formatError;
+6 65 this.formatError = formatError;
+6 66 exports.__proto__proto__proto__proto__ = arguments;
+6 67 exports.__proto__proto__ = this;
+6 68 exports.__proto__proto__ = arguments;
+6 69 exports.__proto__ = _;
+6 70 exports.__proto__proto__ = _;
+6 71 exports.__proto__
+7 15 this.writeCommonMsg(util.format(this.ERROR, browser) + u.formatError(error, '\\t'));
+7 19 log = util.inspect(log, false, undefined, this.formatError(error, '\\t'));
+7 21 if (this.renderBrowser.args[0] === undefined) {
+7 24 this.writeCommonMsg(util.format(this.FINISHED_ERROR, browser) + u.formatError(error, '\\t'));
+7 28 if (this.isReady) {
+7 31 this.setFormFieldValues(this.calculateWinPath('%s', result.suite.join(' '));
+7 32 this.writeCommonMsg(this.FINISHED_END, this.getActivePaths());
+7 33 this.writeCommonMsg(this.FINISHED_DISCONNECTED, this.getActivePaths());
+7 34 this.setFormFieldValues(this.calculateWinPath('%s', this.value.suite.join(' '));
+7 39 this.setFormFieldValues(this.calculateWinPath('%s', this.value.value.suite.join(' '));
+7 40 this.writeCommonMsg(this.getActivePaths());
+7 42 this.onSpecComplete = function() {
+7 43 return this.exec(this.calculateColumns()!== undefined? this.dispose() : this.calculateColumns);
+7 45 this.exec('log.offset = function()!== undefined;
+7 46 },'
+
+8 1  else if (!results.failed) { msg += this.FINISHED_DISCONNECTED; }
+8 2 msg += util.format(' (%d / %d secs)', results.totalTime, results.netTime);
+8 18 if (this.renderBrowser) {
+8 19 msg += formatError(util.format(this.ERROR, browser) + formatError(log, '\\t'));
+8 20 } else if (this.renderBrowser) {
+8 24 ' + this.formatError(log, '\
+8 25 '));
+8 42 var specName = this.format.replace(/\\./g, '-') +'' + result.suite.join(' ');
+8 43 var msg = util.format(this.format(this.formatError, result);
+8 44 result.suite.forEach(function(browser) {
+8 45 if (browser.lastResult[0] === result[1]) {
+8 49 if (result.writeCommonMsg = formatError = formatError = this.formatError(formatError(formatError(formatError(browser, result);
+8 51 return result;
+8 53 this.onSpecSuccess.onSpecComplete = function(browser, result) {
+8 54 this.writeCommonMsg = this.formatSuccess(browser, result) {
+8 55 this.formatSuccess(browser, result);
+8 58 this.formatSuccess(browser, result) {
+8 63 this.onSpecComplete = function(
+9 58 this.specSuccess.onSpecComplete = this.done = function() {
+9 59 return this;

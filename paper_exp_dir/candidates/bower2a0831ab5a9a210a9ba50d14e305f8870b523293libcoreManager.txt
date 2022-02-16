@@ -1,0 +1,82 @@
+Min editdistance: 42.00
+Closest candidate: 3 9 .return decEndpoint.trace(not.trace(promise);
+0 1  }).toString() { transform(contents.toString()); fs.toString());
+0 2 return decEndpoint });
+0 3 })
+0 4 .then(function () {
+0 5 return decEndpoint.split(/\
+0 6 return decEndpoint);
+0 7 return that._extend();
+0 8 }
+0 9 .forShout = filename;
+0 10 .contents = fs.readFile(path.toString());
+0 11 .contents = json;
+0 12 .endpoint = filename;
+0 13 return fs.unlink(path.join(compare
+1 1  }).toString() { json = JSON.parse(contents.toString());
+1 3 });
+1 5 .extend();
+1 6 return that._deferred.notify = decEndpoint.promise.calledOnce(promise);
+1 8 .fin(function () {
+1 9 return that._deferred.resolve();
+1 10 return Q.notify = true;
+1 13 };
+1 14 Manager.prototype.install.getManager
+2 1 return decEndpoint));
+2 3 .contents = JSON.parse(contents);
+2 4 }).toString('foo.trim() {
+2 5 return decEndpointParser.decompatch('some-extend');
+2 7 .not.should.toString() {
+2 8 defsParser.should.return;
+2 11 .toString() {
+2 12 .toString()
+2 13 .trim() {
+2 14 .trim()
+2 18 .
+3 4 return Q.contents = fs.readFile(path.stringify(path.stringify(path.toString());
+3 5 .toString());
+3 7 .message.stringify(fixture)).
+3 8 .trace(contents = decEndpoint.toString());
+3 9 .return decEndpoint.trace(not.trace(promise);
+3 10 .calledWith(contents);
+4 1 " });
+4 6 return Q.contents = {
+4 13 Manager.prototype.toData = function () {
+4 14 .extend = extname;
+4 15 .fail;
+4 16 .fail = function (err, msg) {
+4 17 if (this
+5 1  })
+5 5 return Q.then(function () {
+5 6 return Q.nreturn Q.nfcall(rimraf, dst);
+5 9 .done();
+5 14 Manager.prototype.toData = function (value, manager) {
+5 15 .omit('incompatible) {
+5 16 .series
+6 1  return decEndpointParser()); })
+6 2 return decEndpointParser.decompend();
+6 4 .decEndpoint.decomposed = true;
+6 5 .defs = true;
+6 6 return decEndpoint.called.calledWith('newly returned');
+6 11 return that._deferred.notify(promise);
+6 12 return Q.promise.resolve()
+6 13 .then(function (result) {
+6 14 return
+7 6 .on('uncaughtException', function (err => {
+7 7 throw err.message.message = function (err) {
+7 9 return Q.message = decEndpoint.reset();
+7 13 .on('notify = function (notification.endpoint) {
+7 14 return Q.notify = decEndpoint);
+7 16 return decEndpoint.notify =
+8 1  });
+8 6 .on('contents', function (extend();
+8 7 return that._manager.manager.emit('resolveLocal', decEndpoints', decEndpoints, manager.endpoints);
+8 9 .resolveLocal', decEndpoints);
+8 10 .resolveLocal.resolveEndpoints);
+8 11 .resolveLocal.resolveLocal', decEndpoints);
+9 7 return promise.done();
+9 10 return Q.resolve()
+9 12 return that._deferred.notify()
+9 13 .notify()
+9 14 .then(promise);
+9 17 return Q.nexpect(promise.n.n.nfcall(

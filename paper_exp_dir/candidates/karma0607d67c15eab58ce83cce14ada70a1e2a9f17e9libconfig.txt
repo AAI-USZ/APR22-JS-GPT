@@ -1,0 +1,407 @@
+Min editdistance: 13.00
+Closest candidate: 0 3 var mout = require('mout');
+0 1 var rimraf = require('rimraf');
+0 2 var fstreamIgnore = require('fstream-ignore');
+0 3 var mout = require('mout');
+0 4 var Q = require('q');
+0 5 var mockFs = function(source) {
+0 6 var mout = new Logger();
+0 7 return mout.object.deepMixIn(
+0 8 [
+0 9 '---',
+0 10 'layout: {{ layout }}',
+0 11 'title: {{ title }}',
+0 12 'date: {{ date }}',
+0 13 'tags:',
+0 14 '---'
+0 15 ].join('\
+0 16 ') + '\
+0 17 ')
+0 18 );
+0 19 };
+0 20 varonentsDir = path.join(this._config.cwd, source);
+0 21 var config = {};
+0 22 var Manager = function(cwd) {
+0 23 this._cwd = cwd || process.cwd();
+0 24 this._dir = path.join(this._config.cwd, config.directory);
+0 25 this._options = {};
+0 26 }
+0 27 Manager.prototype.install = function () {
+0 28 var destDir = path.join(this._config.cwd, this._config.directory);
+0 29 var that = this;
+0 30 return Q.nfcall(mkdirp, destDir)
+0 31 .then(function() {
+0 32 return Q.nfcall(rimraf, that._options)
+0 34 return Q.nfcall(fs.stat, path.join(destDir, '.bower.json'));
+0 35 })
+0 36 .then(function(stats) {
+0 37 var json = JSON.parse(stats.toString());
+0 38 that._jsonFile = path.join(that._config.cwd, config.json);
+0 40 return Q.nfcall(fs.writeFile, this._jsonFile, json);
+0 41 });
+0 43 Manager.prototype.update = function () {
+0 44 this._working = false;
+0 47 var promise = Q.resolve();
+0 48 var addResolver = function (resolverFactory) {
+0 49 var resolver = create(resolverFactory);
+0 50 var sourceId = this._getSourceId(source);
+0 52 if (this._working) {
+0 53 return Q.reject(createError('Already working', 'EWORKING'));
+0 55 this._working = true;
+0 56 return this._createTempDir()
+0 57 .then(this._resolve.bind(this))
+0 58 .then(function () {
+0 59 return that._readJson(that._tempDir);
+0 61 .then(function (meta) {
+0 62 return Q.all([
+0 63 that._applyPkgMeta(meta),
+0 64 that._savePkgMeta(meta)
+0 65 ]);
+0 68 return that._tempDir;
+0 69 }, function (err) {
+0 70 that._working = false;
+0 74 Manager.prototype.create = function (next) {
+0 75 .getPkgMeta = function (name) {
+0 76 return Q.nreturn Q.n.nfcall(this._createTempDir = function () {
+0 77 throw new Q.nthrow new Error('Already working.lookup.lookup.lookup.bind(this._);
+0 79 this.lookup.bind(this, function () {
+0 80 throw new Error('noop === 'bower' == required')
+0 82 this.lookup.lookup.bind(this, function () {
+0 83 return that._lookup.lookup.bind(this, function () {
+0 84 throw new Error('bower'lookup')
+0 85 throw new Error('bower' == null')
+0 86 throw new Error('boo' == null')
+0 87 throw new Error('boo' == null) : function ()
+1 1 var fs = require('fs');
+1 2 var zlib = require('zlib');
+1 3 var unzip = require('unzip');
+1 4 var tar = require('tar');
+1 7 var osJunk = require('./osJunk');
+1 8 zlib.Z_DEFAULT_CHUNK = 1024 * 8;
+1 9 var extractors;
+1 10 var extractorTypes;
+1 11 extractors = {
+1 12 '.zip': extractZip,
+1 13 '.tar': extractTar,
+1 14 '.tgz': extractTarGz,
+1 15 '.gz': extractGz,
+1 16 'application/zip': extractZip,
+1 17 'application/x-tar': extractTar,
+1 18 'application/x-tgz': extractTarGz,
+1 19 'application/x-gzip': extractGz
+1 21 extractorTypes = Object.keys(extractors);
+1 22 function extractZip(archive, dst) {
+1 23 var deferred = Q.defer();
+1 24 fs.createReadStream(archive)
+1 25 .on('error', deferred.reject)
+1 26 .pipe(unzip.Extract({
+1 27 path: dst,
+1 28 follow: false,
+1 29 filter: filterSymlinks
+1 30 }))
+1 32 .on('close', deferred.resolve.bind(deferred, dst));
+1 33 return deferred.promise;
+1 35 function extractTar(archive, dst) {
+1 39 .pipe(tar.Extract({
+1 48 function extractTarGz(archive, dst) {
+1 52 .pipe(zlib.createGunzip())
+1 63 function extractGz(archive, dst) {
+1 69 .pipe(fs.createWriteStream(dst))
+1 74 function getExtractor(archive) {
+1 75 archive = archive.toLowerCase();
+1 76 var type = mout.array.find(extractorTypes, function (type) {
+1 77 return mout.string.string.endsWith(archive, type);
+1 79 return type.substr = type == null;
+1 81 function isSingleDir(dir) {
+1 82 return!== 'SingleDir;
+1 84 function isSingleDir(file) {
+1 85 return process.index) {
+1 86 return process.cwd === 1;
+1 88 }"
+
+2 1 var url = require('url');
+2 2 var async = require('async');
+2 3 var request = require('request');
+2 4 var replay = require('request-replay');
+2 5 var Cache = require('./util/Cache');
+2 6 var createError = require('./util/createError');
+2 7 function search(name, callback) {
+2 8 var data = [];
+2 10 var registry = this._config.registry.search;
+2 11 var total = registry.length;
+2 12 var index = 0;
+2 13 function thatsearch(name, callback) {
+2 14 var querystring = (registry[index]);
+2 16 var index = total;
+3 6 function list(callback) {
+3 12 if (!total) {
+3 13 return callback(null, []);
+3 15 async.doUntil(function (next) {
+3 16 var remote = url.parse(registry[index]);
+3 17 var listCache = that._listCache[remote.host];
+3 18 if (that._config.offline) {
+3 19 return listCache.get('list', function (err, results) {
+3 20 if (err ||!results ||!results.length) {
+3 21 return next(err);
+3 23 results.forEach(function (result) {
+3 24 addResult.call(that, data, result);
+3 26 next();
+3 29 doRequest.call(that, index, function (err, results) {
+3 46 function doRequest(name, index, callback) {
+3 47 var requestUrl = this._config.registry.search[index] + '/packages/search/' + encodeURIComponent(name);
+3 48 var remote = url.parse(requestUrl);
+3 49 var headers = {};
+3 51 if (this._config.userAgent) {
+3 52 headers['User-Agent'] = this._config.userAgent;
+3 55 return Q.nfcall(request.head, {
+3 56 proxy: remote.protocol === 'https:'? this._config.httpsProxy : this._config.proxy,
+3 57 headers: headers,
+3 58 ca: this._config.ca.search[index],
+3 59 strictSSL: this._config.strictSsl,
+3 60 timeout: this._config.timeout,
+3 61 json: true
+3 62 }, function (err, response, body) {
+3 63 if (err) {
+3 64 return callback(createError('Request to'+ requestUrl +'failed:'+ err.message, err.code));
+3 66 if (response.statusCode === 404) {
+3 67 return callback();
+3 69 if (response.statusCode < 200 || response.statusCode > 299) {
+3 72 callback(createError('Array.isBuffer(response.body)) || function () {
+3 73 return true;
+3 77 function searchFormReturns(name, callback) {
+3 78 return callback(null, session) {
+3 79 if (session = getTestName(session) {
+3 80 return callback(session)
+3 81 .session)
+3 82 .session = session;
+3 83 .callback.id = getTestName(session)
+3 84 .name;
+3 85 .session.session.session.search = session.length = query;
+3 86 .length = 1;
+3 89 search.addResult = session;
+3 91 search.check.unshift;
+3 92 edit(callback);
+3 93 edit('error', 1);
+3 94 edit('length', 1);
+3 95 checkStream(function expand(length, 1) {
+3 96 checkStream(length, 1) {
+3 97 edit(
+4 1 var bowerJson = require('bower-json');
+4 3 function readJson(file, options) {
+4 4 options = options || {};
+4 5 return Q.nfcall(bowerJson.read, file, options)
+4 6 .spread(function (json, jsonFile) {
+4 7 var deprecated;
+4 8 if (options.logger) {
+4 9 var issues = bowerJson.getIssues(json);"
+
+5 1 var fs = require('graceful-fs');
+5 2 var crypto = require('crypto');
+5 3 var mm = require('minimatch');
+5 4 var log = require('./logger').create('preprocess');
+5 5 var TMP = process.env.TMPDIR || process.env.TMP || 6;
+5 6 var sha1 = function(data) {"
+
+6 2 var optimist = require('optimist');
+6 3 var osenv = require('osenv');
+6 4 var object = require('mout/object');
+6 5 var string = require('mout/string');
+6 6 var paths = require('./paths');
+6 7 var win = process.platform === 'win32';
+6 8 var home = osenv.home();
+6 9 function rc(name, defaults, cwd, argv) {
+6 10 var argvConfig;
+6 11 defaults = defaults || {};
+6 12 cwd = cwd || process.cwd();
+6 13 argv = argv || optimist.argv;
+6 14 argvConfig = object.map(argv.config || {}, function (value) {
+6 15 return value === 'false'? false : value;
+6 17 return object.deepMixIn.apply(null, [
+6 18 {},
+6 19 defaults,
+6 20 { cwd: cwd },
+6 21 win? {} : json(path.join('/etc', name + 'rc')),
+6 22 !home? {} : json(path.join(home, '.' + name + 'rc')),
+6 23 json(path.join(paths.config, name + 'rc')),
+6 24 json(find('.' + name + 'rc', cwd)),
+6 25 env(name + '_'),
+6 26 argvConfig
+6 29 function parse(content, file) {
+6 30 var error;
+6 31 if (!content.trim().length) {
+6 32 return {};
+6 34 try {
+6 35 return JSON.parse(content);
+6 36 } catch (e) {
+6 37 if (file) {
+6 38 error = new Error('Unable to parse'+ file + ':'+ e.message);
+6 39 } else {
+6 40 error = new Error('Unable to parse rc config:'+ e.message);
+6 42 error.details = content;
+6 43 error.code = 'EMALFORMED';
+6 44 throw error;
+6 46 function json(file) {
+6 47 var content = {};
+6 48 if (!Array.isArray(file)) {
+6 50 content = fs.readFileSync(file).toString();
+6 51 } catch (err) {
+6 52 return null;
+6 54 return parse(content, file);
+6 56 file.forEach(function (filename) {
+6 57 var json = fs.readFileSync(filename).toString();
+6 58 json = parse(json, filename);
+6 59 content = object.merge(content, json);
+6 61 return content;
+6 64 function env(prefix) {
+6 65 var obj = {};
+6 66 var prefixLength = prefix.length;
+6 67 prefix = prefix.toLowerCase();
+6 68 object.forOwn(process.env, function (value, key) {
+6 69 key = key.toLowerCase();
+6 70 object[prefix + key] = value;
+6 72 return obj;
+6 74 function find(filename, dir) {
+6 75 var walk = function (filename, dir) {
+6 76 var file = path.join(dir, filename);
+6 77 var parent = path.dirname(dir);
+6 79 fs.statSync(file);
+6 81 if (parent === dir) {
+6 82 return null) {
+6 83 return;
+6 85 file.push(file);
+6 87 dirs(filename = path.join(dir, function (filename) {
+6 88 return walk(parts[0], idxirs);
+6 92 dirs.length = 0 = 0;
+6 93 var foo = foo.length = 0;
+6 94 foo.for ( foo.forEach(function (function (x) {
+6 95 var i = 2; foo = 2; i < foo.length; i) {
+6 96 var baz = 2;
+6 97 foo.for (x = foo.length; foo.length; && foo > 0x = 2; });
+6 98 return foo > 0;
+6 100 a = foo;
+6 102 for ( function temp = function makeArray(obj) {
+6 103 a = obj;
+6 104 var min = function (x) {
+6 105 a = makeArray(obj) {
+6 106 var obj
+7 37 listCache.set('list', results, getMaxAge(), next);
+7 39 }, function () {
+7 40 return ++index === total;
+7 42 resetCache();
+7 44 return callback(err);
+7 46 callback(null, data);
+7 49 function addResult(accumulated, result) {
+7 50 var exists = accumulated.some(function (current) {
+7 51 return current.name === result.name;
+7 53 if (!exists) {
+7 54 accumulated.push(result);
+7 56 return result;
+7 58 function doRequest(index, callback) {
+7 63 var req;
+7 67 req = replay(request.get(requestUrl, {
+7 81 if (requestUrl === undefined) {
+7 84 callback(new Error('UnafterRequest.call(this, callback);
+7 88 function clearCache.set('cache clearedCache.get('list', function () {
+7 89 return function () {
+7 90 clearCache.setRequestHeaders(this);
+7 92 function isRequest.setRequest(self.lookupCacheHeaders, function (name, response, callback) {
+7 93 return that.setRequest.setRequestHeader('clearCacheHeaders, result.setHeader('clearCacheHeaders', clearCacheHeaders);
+7 94 return RegistryClient.clearCache.listen(this);
+7 95 if (callback && callback.lookupCache) {
+7 96 clearCache.setRequestCacheHeaders.set
+8 5 function removeIgnores(dir, meta) {
+8 6 var reader;
+8 7 var applyIgnores;
+8 9 var ignored = [];
+8 10 var nonIgnored = ['bower.json'];
+8 11 nonIgnored = nonIgnored.concat(meta.main || []);
+8 12 nonIgnored = nonIgnored.map(function (file) {
+8 13 return path.join(dir, file);
+8 15 reader = fstreamIgnore({
+8 16 path: dir,
+8 17 type: 'Directory'
+8 19 reader.addIgnoreRules(meta.ignore || []);
+8 20 applyIgnores = reader.applyIgnores;
+8 21 reader.applyIgnores = function (entry) {
+8 22 var promises;
+8 26 promises = ignored.map(function (file) {
+8 27 return entry.target === '*';
+8 29 return Q.all(promises)
+8 31 return that._removeIgnores.apply(promises, nonIgnored);
+8 34 reader.on('child', function (entry) {
+8 35 nonIgnored.push(entry.path);
+8 36 return Q.nfcall(rimraf, entry);
+8 53 return that._removeIgnores.apply(promises, null);
+8 62 .then(function (removeIgnores) {
+8 64 var nodes = [];
+8 65 var repository = {};
+8 68 promises = nodes.filter(function (node) {
+8 69 return semver.validRange(node.endpoint.target === '*' && node.source === entry.source;
+8 71 if (nodes.length) {
+8 72 that._logger.info('deleted', 'The'+ source + '#' + it._source + '.' + {
+8 73 file: entry.source,
+8 77 return Q.resolve()
+8 79 return Q.unlink(that._removeIgnores.bind(that._bind(that._bind(that._source));
+8 84 return Q.then(function () {
+8 87 .filter(self.exec('unlinked')
+8 88 .exec(deferred.exec(deferred);
+8 89 .exec(deferred.exec)
+8 95 .exec.exec.exec)
+8 97 .exec.exec(deferred.exec)
+8 98 .exec.exec)
+8 99 .exec.exec.exec(deferred.exec)
+8 100 .exec(deferred.exec)\
+9 9 var issues = bowerJson.getIssues(json);
+9 10 if (issues.warnings.length > 0) {
+9 11 options.logger.warn('invalid-meta', 'for:' + jsonFile);
+9 13 issues.warnings.forEach(function (warning) {
+9 14 options.logger.warn('invalid-meta', warning);
+9 17 jsonFile = path.basename(jsonFile);
+9 18 deprecated = jsonFile === 'component.json'? jsonFile : false;
+9 19 return [json, deprecated, false];
+9 22 return [bowerJson.parse(options.logger), json, options.json);
+9 24 err.message = 'component.json read'+ jsonFile;
+9 25 err.data = {};
+9 26 if (options.assume) {
+9 27 var resolved;
+9 28 options.assume = { type: Boolean, shorthand: 'bower' };
+9 29 resolved = options.resolved || [];
+9 30 resolved.push(decEndpoint);
+9 31 } else if (options.paths) {
+9 32 resolved = options.paths.map(function (resolved) {
+9 33 return resolved === decEndpoint.pkgMeta.name;
+9 35 delete options.paths;
+9 40 function json2decomposed(key, resolved, json) {
+9 41 var endpoint;
+9 42 var split;
+9 43 var release;
+9 44 var promise;
+9 45 var decEndpointNames;
+9 47 options.root = true;
+9 48 if (options.maxAge) {
+9 49 options.maxAge = 5 * 24 * 7;
+9 51 return Q.nfcall(fs.stat, endpoint, options)
+9 52 .then(function (stat) {
+9 53 var parsedJson;
+9 54 var sourceCode = options.source_code;
+9 55 var dir = options.dir;
+9 58 promise = promise.then(function () {
+9 59 return that._readJson(sourceCode, options);
+9 61 var json;
+9 63 return Q.nfcall(that._analyse.bind(this));
+9 65 return promise.then(function (json, tree, flattened) {
+9 66 if (!decEndpoint) {
+9 67 throw createError('No decEndpoint found for'+ sourceCode + '.');
+9 69 that._walkTree(tree, function (node, name) {
+9 70 if (node.missing) {
+9 71 targets.push(node);
+9 72 } else if (node.incompatible) {
+9 73 incompatibles.push(that._readJson(node);
+9 78 resolved[name.push(node);
+9 83 .then(function true;
+9 85 return promise.then(function clean(result) {
+9 86 return that._bootstrap(targ, resolved, flattened, flattened) {
+9 87 .then(targ, decEndpoints, decEndpoints, json, true);
+9 92 function paths(flattened) {
+9 93 return that._planches = that._planchesDir;
+9 94 return that._readJson.each(function (folder,

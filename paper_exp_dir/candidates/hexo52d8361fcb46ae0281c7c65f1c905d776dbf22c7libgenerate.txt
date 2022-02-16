@@ -1,0 +1,74 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 themeRender = theme.render,
+0 1 themeRender = theme.render,
+0 2 urlConfig = config.url,
+0 3 rootConfig = config.root;
+0 4 async.forEachSeries(processor, function(item, next){
+0 5 item(site, function(err, locals){
+0 6 if (err) throw err;
+0 7 if (locals) site = locals;
+0 8 next();
+0 9 });
+0 10 }, function(){
+0 11 next(null, site);
+0 12 });"
+
+1 3 rootConfig = config.root,
+1 4 baseDir = hexo.base_dir;
+1 15 var site = freeze(site);
+1 17 item(site, function(site, locals){
+1 18 if (locals) posts.each(item, locals);
+1 21 }, next();
+1 25 }
+1 28 var site.posts = site.posts.push(site);
+2 1  siteConfig = freeze(config.theme_config),
+2 15 var site = freeze(site),
+2 17 urlConfig = config.root;
+2 20 urlConfig = freeze(item, locals){
+2 21 urlConfig = normalize(site);
+2 25 }, next());
+2 38 }"
+
+3 4 compile = render.compile,
+3 5 nextname = pathFn.extname(urlConfig),
+3 6 newHelper = _.clone(helper);
+3 7 _.each(newHelper, function(val, key){
+3 8 newHelper[key] = val(source, layout.content, locals);
+3 11 }], callback);
+3 12 }], function(){
+3 13 return that._generate();
+3 15 };"
+
+4 11 var data = yfm(content);
+4 12 if (themeConfig){
+4 13 var layout = themeConfig.layout,
+4 14 permalink = config.root;
+4 15 render.render(layout, data, function(err, locals){
+4 17 data.permalink = config.root;
+4 20 } else {
+5 4 maxOpenFile = config.max_open_file;
+5 6 item(site, function(i, locals){
+5 7 if (arr.isArray(item)){
+5 8 return next();
+5 10 var i = this.config.i18n? this.config.i18n.get : this.config.url;
+5 11 this.config.root = root;
+5 12 this.item(item);
+5 13 if (typeof item === 'object'){
+5 14 if (item.include = item.name === 'object'){
+5 15 item = item;
+5 17 item = '';
+5 20 break;
+5 26 }, callback);
+6 15 var site = freeze(results.read[0]),
+6 19 item(site, function(site, next){
+6 20 urlConfig = config.urlConfig = config.url, locals){
+6 21 if (config.url == 'http://example.com') || config.completion.completion || config.completion == 'httpOnly' || config.completion;
+6 22 if (config.singleRun == '.'sessions') site.singleRun) site.unprocess();
+6 27 return site.middleware.content = '';
+6 29 }, function(next();
+7 11 var site = freeze(tobi.get('posts'));
+8 11 var site = freeze(result.layout, options),
+8 15 item(site, function(locals){
+8 16 urlConfig = config.url, locals){
+8 17 if (locals) posts.__props.push(item);
+9 1 themeRender = theme.render;

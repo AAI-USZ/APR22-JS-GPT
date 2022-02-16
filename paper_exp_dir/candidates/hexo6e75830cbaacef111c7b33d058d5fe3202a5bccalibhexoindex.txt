@@ -1,0 +1,257 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var _ = require('lodash');
+0 1 var _ = require('lodash');
+0 2 var EventEmitter = require('events').EventEmitter;
+0 3 var pkg = require('../../package.json');
+0 4 var logger = require('hexo-log');
+0 5 var extend = require('../extend');
+0 6 var Render = require('./render');
+0 7 var registerModels = require('./register_models');
+0 8 var Post = require('./post');
+0 9 var Scaffold = require('./scaffold');
+0 10 var Source = require('./source');
+0 11 var Router = util.Router;
+0 12 var defaultConfig = require('./default_config');
+0 13 var libDir = pathFn.dirname(__dirname);
+0 14 var dbVersion = 1;
+0 15 require('colors');
+0 16 function Hexo(base, args){
+0 17 base = base || process.cwd();
+0 18 args = args || {};
+0 19 EventEmitter.call(this);
+0 20 this.base_dir = base + pathFn.sep;
+0 21 this.public_dir = pathFn.join(base, 'public') + pathFn.sep;
+0 22 this.source_dir = pathFn.join(base,'source') + pathFn.sep;
+0 23 this.plugin_dir = pathFn.join(base, 'node_modules') + pathFn.sep;
+0 24 this.script_dir = pathFn.join(base,'scripts') + pathFn.sep;
+0 25 this.scaffold_dir = pathFn.join(base,'scaffolds') + pathFn.sep;
+0 26 this.env = {
+0 27 args: args,
+0 28 debug: Boolean(args.debug),
+0 29 safe: Boolean(args.safe),
+0 30 silent: Boolean(args.silent),
+0 31 env: process.env.NODE_ENV || 'development',
+0 32 version: pkg.version,
+0 33 init: false
+0 34 };
+0 35 this.config_path = args.config? pathFn.resolve(base, args.config)
+0 36 : pathFn.join(base, '_config.yml');
+0 37 this.extend = {
+0 38 console: new extend.Console(),
+0 39 deployer: new extend.Deployer(),
+0 40 filter: new extend.Filter(),
+0 41 generator: new extend.Generator(),
+0 42 helper: new extend.Helper(),
+0 43 migrator: new extend.Migrator(),
+0 44 processor: new extend.Processor(),
+0 45 renderer: new extend.Renderer(),
+0 46 tag: new extend.Tag()
+0 48 this.config = _.clone(defaultConfig);
+0 49 this.log = createLogger(this.env);
+0 50 this.render = new Render(this);
+0 51 this.route = new Router();
+0 52 this.post = new Post(this);
+0 53 this.scaffold = new Scaffold(this);
+0 54 this.source = new Source(this);
+0 55 this._dbLoaded = false;
+0 56 this._isGenerating = false;
+0 57 this._options = {};
+0 58 this.config.site = new Startup = false;
+0 59 this.per_config = false;
+0 60 this.source_layout = 'page: false;
+0 61 this.site_number = 'page: false;
+0 62 this.archive: false;
+0 63 this.language: false;
+0 64 this.year: false;
+0 65 this.categories: false;
+0 66 this.tag_format: 'year' = 'year'
+0 68 this.time_posts: false;
+0 69 this.topics: false;
+0 70 this.tags: false;
+0 71 this.posts.categories: false;
+0 72 this.posts.tags = _.length = _.toArray = function(){
+0 73 var posts.length;
+0 75 this.pages = new Posts = new Posts();
+0 76 this
+1 2 var chalk = require('chalk');
+1 4 var fs = require('hexo-fs');
+1 5 var Module = require('module');
+1 6 var vm = require('vm');
+1 59 this._isGenerator = false;
+1 61 ignore = function Locals(locals(){
+1 62 var startLocals(){
+1 63 var startLocals, endLocals, endLocals, i, route, { path, theme } = locals, self } = _;
+1 64 if (!isRenderable, sourceLocals = _.isRenderable(source)) return false;
+1 65 if (typeof locals == null) return;
+1 66 this.locals = _.initializeLocals = true;
+1 67 this.locals.forEach(locals, function(item => {
+1 68 if (url = locals.path == null) return;
+1 69 if (this.isRenderable(item)) return;
+1 70 \
+2 19 var stopWatcher = box.get('dev');
+2 20 var self = this;
+2 21 var startWatcher = box.get('static');
+2 22 var createLoadThemeRoute = function(generatorResult, locals, ctx) {
+2 23 var totalExecuted = 1;
+2 24 locals.on('browsers_change', function() {
+2 25 return self.emit('browsers_change', locals);
+2 26 });
+2 27 var removeExtensions = function(extname) {
+2 28 return _.extend(filter.after(function(register) {
+2 29 return!~exclude.indexOf(extname) === -1;
+2 32 var shallowGetters = function() {
+2 33 return Q.all([
+2 34 function(next) {
+2 35 return self.extend.generator.fn.apply(this, arguments);
+2 36 },
+2 37 function(init) {
+2 38 return self.init();
+2 39 }
+2 40 var layout = self.config.layout;
+2 41 var sourceDir = this.source_dir;
+2 42 var config = ctx.config;
+2 43 return fs.exists(config).then(function(exist) {
+2 44 if (!exist) return next();
+2 45 file.list(config.source, function(err, files) {
+2 46 if (err) return next(err);
+2 47 var extname = pathFn.extname(config.source).substring(1);
+2 48 if (extname === '_posts') {
+2 49 return Promise.resolve([]);
+2 51 return files;
+2 52 }).map(function(item) {
+2 53 if (!item._is_post() ||!site.config.post_asset_folder) return next();
+2 54 return self._loadFiles();
+2 55 }).then(function() {
+2 56 var post = Post.findOne({source: config.source});
+2 57 var path = item.path;
+2 58 if (config.permalink) {
+2 59 if (!config.urlRoot) {
+2 60 if (config.root.substring(0, 1)!== '/') path += 'index.html';
+2 62 return self._resolve();
+2 65 var layoutLength = config.length = layout.length;
+2 66 posts.forEach(function() {
+2 67 return posts.forEach(function(post, i){
+2 68 if (!layoutCache.has(post) return self.layout.has(post, i);
+2 71 return Promise.set(layoutLength(self, function(){
+2 72 var layoutLength = layout.separator = sinon(layout, fn){
+2 73 var layout.length = i, i + 1;
+2 74 return self.length = 0;
+2 80 exports.loadLayout = _.set('post', function(next){
+2 81 return self._getScaffoldPath = function(layout, layoutPath, fn){
+2 82 var layout = self.post, newPost, layoutLength = _.content;
+2 83 return self.assetDir = baseDir;
+3 19 var stopWatcher = box.move || 1;
+3 20 var dbCache = new WeakMap();
+3 21 function Hexo(base, args) {
+3 60 this._isGenerator = function start() {
+3 61 return this.root() {
+3 62 return this.then(function() {
+3 63 return this.execFilter.apply(this, arguments);
+3 65 return this.then(this.skip, arguments);
+3 67 return _.then(function(this.middleware) {
+3 68 return self.isBinary == null;
+3 73 createSyntaxFilesMiddleware = libDir => {
+3 74 return function(next){
+3 77 return self.isBinary || (name) && self.isBinary) || self.isBinary) || ~this.isBinary;
+4 19 var stopWatcher = box.get('env');
+4 60 this._isGenerating = function(){
+4 61 return this.database.create();
+4 62 return this.then(function(){
+4 63 return this._createServer(this, this.source, this.schema.createServer, this._createServer, this._createServer, _.settings, function(this, this)
+4 64 {
+4 65 returnServer)
+4 67 this.then(function(){
+4 68 return self._generate, this._generate, _.getFiles();
+4 69 return self._isGenerated();
+4 70 })
+4 71 .then(function(){
+4 72 return self._db.createServer()
+4 73 .then(this._db.listen(this._db)
+4 74 , function(){
+4 75 return self._isGener
+5 19 var stopWatcher = box.move = null;
+5 20 var routeCache = new WeakMap();
+5 59 this.source = new Scaffold(this);
+5 60 this.theme = new Source(this);
+5 61 this._ = new Source(this);
+5 62 this._preprocess = _.use = Promise.methodOverride();
+5 64 require('create', libDir = _.readOptions = function('./readOptions, callback){
+5 65 if (!callback){"
+
+6 56 this.database = new Database({
+6 57 version: dbVersion,
+6 58 path: this.source_dir,
+6 59 select: this.select: this.params.path,
+6 60 sepending: this.sepending: this.condition
+6 62 this.processingFiles: this.processingFiles: this.processingFiles: this.options.processingFiles,
+6 64 this.processingFiles: this.processingFiles = this.options.length = {};
+6 65 this.model('exclude: newRequest().forEach(function(path){
+6 66 this.method){
+6 67 this.method = undefined;
+6 68 return this.processor.method.forEach(function(exports, i){
+6 69 return this.method.toU.toUpperCase(){
+6 70 return this.processor.apply(this, arguments);
+6 71 }, this);
+6 73 this.next();
+6 74 return this;
+6 78 createReadme.init(){\
+7 57 version: db.version,
+7 58 path: this.source,
+7 59 select: this.asset_dir,
+7 60 serpermalink: this.slug
+7 64 console: new extend: new extend,
+7 67 create: createDependencies: function init,
+7 68 init: function init, databaseGenerator: init,
+7 69 this.logger: init, apiGenerator: init,
+7 70 .filter: initDependencies: initDependencies,
+7 72 init: clearRuntimeCache: initDependencies: clearRuntimeCache,
+7 73 init: clearRuntimeCache: clearRuntimeCache
+7 75 init: clearRuntimeCache: clearRuntimeCache()
+7 76 var that = initDependencies: clearRuntimeCache
+8 57 this._database = new Database({
+8 58 version: {
+8 59 path: base,
+8 60 select: new Set(),"
+
+9 19 var stopWatcher = box.get('stop_watcher');
+9 21 var unique = array.filter(function(item, index, self){
+9 22 return self.config.interactive;
+9 24 var createLoadThemeRoute = function(generatorResult, locals, ctx){
+9 25 var baseDir = ctx.base_dir;
+9 26 varpublicDir = ctx.public_dir;
+9 27 var layout = unique.filter(function(item){
+9 28 return layout === 'false';
+9 30 var layoutLength = layout.length;
+9 31 var combinedConfig = {};
+9 32 var count = 0;
+9 33 var libDir = pathFn.dirname(__dirname) + pathFn.sep;
+9 34 var semverTitle = /validate/;
+9 37 var match = function(path){
+9 38 var obj = _.compact(path);
+9 39 if (obj.substring(0, 1)!== '.'){
+9 40 obj.substring(0, 1);
+9 43 var scaffoldDir = pathFn.join(baseDir,'scaffold');
+9 44 var scaffoldType = obj.default_layout;
+9 45 var scaffoldPath = pathFn.join(baseDir,'scaffold');
+9 46 return fs.exists(scaffoldPath).then(function(exist){
+9 47 if (!exist) return [];
+9 48 return fs.readFile(scaffoldPath).then(function(content){
+9 49 var content = content.replace(/\\\\{2,}/g, '\
+9 50 ');
+9 51 if (content){
+9 52 content = content.replace(/\\\\{3,}/g, '\
+9 55 return Promise.all([
+9 56 fs.unlink(scaffoldPath),
+9 57 fs.unlink(post.get(post.get(post.get(post.get(post.get(post.get(post.get(post.get(post.get(post.get(post.get(post.get(post.get(asset))), ')))
+9 58 ]);
+9 64 var create_create_post.process = function(file = function(file){
+9 65 var path = file = pathFn.join(this.source, path);
+9 66 var doc = file = this;
+9 67 return doc = this;
+9 69 if (!this.isRenderable = doc){
+9 70 if (isRenderable(path) || doc){
+9 71 return doc.isRenderable(path)) return;
+9 72 return doc.isRenderable;
+9 75 if (isRenderableSync(path)) return;
+9 76 if (doc){
+9 77 return doc.length

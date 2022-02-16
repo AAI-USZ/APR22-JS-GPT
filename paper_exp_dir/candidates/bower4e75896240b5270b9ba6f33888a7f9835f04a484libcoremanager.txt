@@ -1,0 +1,374 @@
+Min editdistance: 13.00
+Closest candidate: 0 1 var baz      = require('baz');
+0 1 var baz      = require('baz');
+0 2 var fs         = require(\'fs\');
+0 3 var path       = require(\'path\');
+0 4 var request      = require(\'request\');
+0 5 var GitRemoteResolver   = require(\'./GitRemoteResolver\');
+0 6 var extract     = require(\'../../util/extract\');
+0 7 var createError = require(\'../../util/createError\');
+0 8 function GitHubResolver(decEndpoint, config, logger) {
+0 9 var split;
+0 10 GitRemoteResolver.call(this, decEndpoint, config, logger);
+0 11 split = this._source.split(\'/\');
+0 12 this._org = split[split.length - 2];
+0 13 this._repo = split[split.length - 1];
+0 14 if (mout.string.endsWith(this._repo, '.git\')) {
+0 15 this._repo = this._repo.substr(0, this._repo.length - 4);
+0 16 }
+0 18 util.inherits(GitHubResolver, GitRemoteResolver);
+0 19 mout.object.mixIn(GitHubResolver, GitRemoteResolver);
+0 20 GitHubResolver.prototype._checkout = function () {
+0 21 if (!this._resolution.tag) {
+0 22 return GitRemoteResolver.prototype._checkout.call(this);
+0 24 var tarballUrl = fs.readFileSync(this._source.substr(1),
+0 25 'archive/\' + this._org + \'.zip\');
+0 26 var file = path.join(this._tempDir, this._name + \'-archive.tar.gz\');
+0 27 var reqHeaders = {};
+0 28 var that = this;
+0 29 if (this._config.userAgent) {
+0 30 reqHeaders[\'User-Agent\'] = this._config.userAgent;
+0 32 this._logger.action(\'download\', tarballUrl, {
+0 33 url: that._source,
+0 34 to: file
+0 35 });
+0 36 return download(tarballUrl, file, {
+0 37 proxy: this._config.proxy,
+0 38 strictSSL: this._config.strictSsl,
+0 39 timeout: this._config.timeout,
+0 40 headers: reqHeaders
+0 41 })
+0 42 .progress(function (state) {
+0 43 var msg;
+0 44 if (state.retry) {
+0 45 msg = \'Download of'+ tarballUrl +\'failed with'+ state.error.code + ', \';
+0 46 msg +='retrying in'+ (state.delay / 1000).toFixed(1) +\'s';
+0 47 return that._logger.warn(\'retry\', msg);
+0 49 msg ='received for'+ (state.received / 1024 / 1024).toFixed(1) +
+0 50 \'of'+ (state.total / 1024 / 1024).toFixed(1) +
+0 51 \'of OS OS X, OS X.');
+0 52 msg += ((!this._dir = process.env.TRAVIS[0] || \'\\\\.\\\\/\\\\d+\') + os.tmpdir()] + os.tmpDir()).toString());
+0 53 msg += (msg += (typeof OS X_UA_QUNKNOW_INSUCCESS || OS X_IN_SUCCESS = process.format) === \'Windows_SUCCESS_DISCONSOLE_ACCESS_ENVARS === \'Linux\'? os.format : os.formatters_NO_NO_AS_MID_SUCCESS_BROWSER_ACCESS_ENACCESS_ACCESS_ENTERNALize : os.formatters_NO_ACCESS_ACCESS_ACCESS_ACCESS_ENTERNALize : os.formatters_NO_NO_MID_MID
+0 54 || null;
+0 55 msg += (unsupported Media CenterFolder && ~path.dirname!==\'source-Nox-BROWSER_ASKILL_PROXY_PATH || path.path && browser.dirname!==\'s\') +
+0 56 : path.dirname!==
+1 1 var fs       = require(\'fs\');
+1 2 var path      = require(\'path\');
+1 3 var fileExists = require(\'../util/file-exists\');
+1 4 var fileListExists = require(\'../util/file-list-exists\');
+1 5 function Scaffold (context) {
+1 6 this.context = context;
+1 7 this.scaffoldDir = context.scaffold_dir;
+1 8 this.defaults = {
+1 9 normal: [
+1 10 \'---\',
+1 11 \'layout: {{ layout }}\',
+1 12 \'---\'
+1 13 ].join(\', \'),
+1 14 post: [
+1 17 page: [
+1 20 draft: [
+1 22 ].join(\'\
+1 23 \')
+1 24 };
+1 25 Scaffold.prototype.defaults = {
+1 36 ].join(\', \')
+1 38 Scaffold.prototype.customScaffold = function (defaults) {
+1 39 var scaffoldDir = this.scaffoldDir;
+1 40 default:
+1 41 fs.exists(defaults, function (exists) {
+1 42 if (!exists) {
+1 43 this.defaults.forEach(function (layout) {
+1 44 this.defaults[layout] = defaults[layout];
+1 47 return scaffoldDir + this.defaults.replace(/\\.\\$$/, \'\');
+1 48 }).forEach(function (name) {
+1 49 return this.scaffold.set(\'default\', name);
+1 50 }.bind(this));
+1 52 Scaffold.prototype.defaults.forEach(function (layout) {
+1 54 }, this);
+1 55 return scaffoldDir + this.defaults.replace(/\\.\\$$/, \'\')
+1 56 .replace(/\\.\\$$/, \'\')
+1 57 .replace(/^\\./g, \'\')
+1 58 .replace(/^\\*/g, \'\');
+1 59 Scaffold.prototype.defaults.forEach(function (name) {
+1 65 fs.exists(scaffoldDir, function (exists) {
+1 72 }).then(function () {
+1 73 return this.scaffold.set(\'default\', this.defaults[layout]);
+1 76 Scaffold.prototype.customDocumentArray = function (defaults) {
+1 78 return this.defaults.for (function (layout) {
+1 79 return this.defaults.for (layout) {
+1 80 return this.defaults.length == null;
+1 85 Scaffold.normal.normal.normal.initialize = function (obj => {
+1 86 return {
+1 87 return new Scaffold(obj => {
+1 88 return new Scaffold(obj)
+1 89 .asset => {
+1 90 obj = obj.asset.asset.asset.defaults = obj;
+1 91 return this.assetType!= null;
+1 94 Scaffold.valuePath
+1 96 Scaffold.__proto__proto__proto__pro
+2 5 var extract    = require(\'../../util/extract\');
+2 23 var tarballUrl = "http://github.com/' + this._org + \'/' + this._repo + \'.tar.gz";
+2 24 var file = path.join(this._tempDir, this._name);
+2 34 return Q.nfcall(fs.stat, file)
+2 35 .spread(function (stat) {
+2 36 var headers,
+2 37 ca,
+2 38 headers = headers,
+2 39 strictSSL;
+2 40 if (stats.isDirectory()) {
+2 41 headers = tags.map(function (tag) {
+2 42 return tag.name;
+2 45 if (!path.extname(that._archiveDir)) {
+2 46 headers = path.extname(that._archiveDir);
+2 48 return Q.nfcall(fs.stat, headers)
+2 49 .then(function (stat) {
+2 50 var mout = stat.mtime;
+2 52 if (!that._config.interactive) {
+2 53 throw createError(\'No binary for'+ path.basename(that._archiveDir) + \'"\', \'ENOENT\');
+2 55 return that._logger.warn(\'no binary for'+ path.join(that._config.archiveDir) + \'"\', {
+2 56 archive: file,
+2 57 to: this._tempDir
+2 60 .then(function () {
+2 61 return Q.nfcall(fs.rename, canonicalDir, main);
+2 65 return Q.nreturn Q.n.nfcall(process.nfcall(that._removePackages.branches.bind(that._));
+2 66 .filter(self));
+2 68 .map(function (skip, function (skip) {
+2 69 return that._removedFolder) {
+2 70 return that._unlink.length === 0;
+2 73 .map(function (skip) {
+2 74 return that._unlinkedFolder;
+2 75 .length = false;
+2 77 .map(action = false;
+2 78 .map(action) {
+2 79 return that._id = info = removeFolder;
+2 83 Package.prototype.remove = function (action) {
+2 84 return that._id = function (name) {
+2 85 var oldFolder;
+2 86 if (
+3 1 var ret     = require(" ret"),
+3 2 warning      = require("../lib/commands/bower-json-error");
+3 3 describe("The\'select\' method", () => {
+3 4 var jsonEncode = "var pb = function (str) { return str.replace(/\\x1B\\[\\d+m/g, " "); };";
+3 5 var expected = [
+3 6 "",
+3 7 "',
+3 8 "x-1B\\uFEFF",
+3 11 "x-1EACompatible",
+3 12 "x-1EAA",
+3 14 "x-1EACompatibleatible\\x1EACompatible\\x1EAA\\u1EACompatible\\x1EACompatible\\x1EAA\\u1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EACompatible\\x1EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u1EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u1EAC\\u01EAC\\u01EAC\\u1EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u1EAC\\u1EAC\\u1EAC\\u1EAC\\u1EAC\\u1EAC\\u01EAC\\u01EAC\\u1EAC\\u01EAC\\u01EAC\\u1EAC\\u1EAC\\u1EAC\\u1EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u01EAC\\u1EAC\\u01EAC\\u1EAC\\u01EAC\\u01EAC\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01EAC\\u01EAC\\u01EAC\\u1EAC\\u1EAC\\u01DE\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01EAC\\u01EAC\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01EAC\\u01DE\\u01EAC\\u01EAC\\u01EAC\\u01E\\u01DE\\u01EAC\\u01EAC\\u01EAC\\u01E\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01DE\\u01EAC\\u01DE\\u01DE\\u01DE\\u01EAC\\u01E
+4 1 var nopt      = require('nopt');
+4 2 var fs        = require(\'fs\');
+4 3 var path     = require(\'path\');
+4 4 var proxy     = require(\'proxy\');
+4 5 var _         = require(\'lodash\');
+4 6 var template   = require(\'../util/template\');
+4 7 var fileExists  = require(\'../util/file-exists\');
+4 8 var optionTypes = { help: Boolean, force: Boolean };
+4 9 var shorthand   = { \'h\': ['--help\', \'--force\'] };
+4 10 module.exports = function (names, options) {
+4 11 var emitter = new events.EventEmitter;
+4 12 var commands = options || {};
+4 13 if (!names) {
+4 14 names = null;
+4 16 var validCommand =!!options.validCommand;
+4 17 var command =!!options.command;
+4 18 commands.forEach(function (name) {
+4 19 var command = validCommand? `help="${name}">` : \'help\';
+4 20 if (!message) {
+4 21 emitter.emit(\'error\', {});
+4 23 var questions = [{
+4 24 id: \'framework\',
+4 25 question: \'Which testing framework do you want to use?\',
+4 26 hint: \'Press tab to list possible options. Enter to move to the next question.\',
+4 27 options: [\'jasmine\',\'mocha\', \'qunit\', \'nodeunit\', \'nunit\', \'\'],
+4 28 validCommand: validateCommand,
+4 29 multiple: true
+4 30 }, {
+4 31 id: \'browsers\',
+4 32 question: \'Do you want to capture any browsers automatically?\',
+4 33 hint: \'Press tab to list possible options. Enter empty string to move to the next question.\',
+4 34 options: [\'Chrome\', \'ChromeCanary\', \'Firefox\', \'Safari\', \'PhantomJS\', \'Opera\', \'IE\', \'\'],
+4 35 validate: validateCommand,
+4 36 condition: function (answers) {return answers.requirejs;}
+4 38 id: \'files\',
+4 39 question: \'What is the location of your source and test files?\',
+4 40 hint: \'You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".\
+4 41 \' +
+4 42 \'Enter empty string to move to the next question.\',
+4 43 multiple: true,
+4 44 validate: validatePattern
+4 46 id: \'exclude\',
+4 47 question: \'Should any of the files included by the previous patterns be excluded?\',
+4 48 hint: \'You can use glob patterns, eg. "**/*.swp".\
+4 54 id: \'includedFiles\',
+4 55 question: \'Which files included by the files included by the previous patterns be included with <notextile> tag?\',
+4 63 id: validatePattern: validatePattern
+4 64 id: validatePattern
+4 66 id: \'exclude: \'exclude\',
+4 67 unlink: \'does your validate: \'**/*.swp\'
+4 72 var run = function runInThisContextToShort = function (context) {
+4 73 return context = function (s) {
+4 74 return function (s, args, context) {
+4 75 return answers = getContext(s, head = answers, opts, opts, cbailContext)
+4 76 return repository.hasStrictHelpers, returnServedFiles, returnServedFiles, clearResults;
+4 80 context.stdout.stdout.on(\'data\', function (data,                    
+5 1 var bower      = require(\'../lib/commands/bower');
+5 2 var fs          = require(\'fs\');
+5 5 var GitFsResolver   = require(\'./resolvers/GitFsResolver\');
+5 6 var GitRemoteResolver = require(\'./resolvers/GitRemoteResolver\');
+5 7 var FsResolver     = require(\'./resolvers/FsResolver\');
+5 8 var UrlResolver    = require(\'./resolvers/UrlResolver\');
+5 9 var testPackage = path.resolve(__dirname, "../assets/github-test-package");
+5 10 function removeResolverRuntimeCache() {
+5 11 var config = {
+5 12 cache: false
+5 14 function createPackageFile(name) {
+5 15 var resolverFactoryHexo = function (endpoint, options) {
+5 16 options = options || {};
+5 17 options.cache = options.cache || getConstructor(options.cache, options.clean);
+5 18 return Q.fcall(fs.readFile, path.join(tempDir, \'.bower.json\'));
+5 20 addErrorListener()
+5 21 .on(\'error\', function handleMessage(error) {
+5 22 if (this.name === \'Error\') {
+5 23 return;
+5 25 var message = error.message;
+5 26 var stack = error.stack || function (err) {
+5 27 var stack = message.replace(/\
+5 28 .+\\/g, \'\
+5 29 \');
+5 30 if (stack.length === 0) {
+5 31 return next();
+5 33 var fullRefs = fs.readFileSync(path.join(tempDir, \'.bower.json\'));
+5 34 return Q.nfcall(fs.stat, str)
+5 35 .fail(function (err) {
+5 36 if (err.code === \'ENOENT\') {
+5 37 return str;
+5 39 throw err;
+5 43 .on(\'end\', function (data) {
+5 44 var stat = data;
+5 45 if (data && stat.isDirectory()) {
+5 48 dbower.json.encode = json;
+5 49 return Q.nfcall(fs.stat, data)
+5 50 .then(function (str) {
+5 52 }, function (err) {
+5 59 addErrorListener('error\', function (err) {
+5 63 var message = \'Warning: function () {\
+5 64    at(0).apply(this, arguments);
+5 65 return isIP_error(this, arguments);
+5 67 var callHandler.on(\'error\', function (err, type) {
+5 68 return function (err, doc.apply(this, arguments);
+5 69 return callHandler.apply(this, arguments);
+5 72 return handler.on(\'return function (typeof error in function (typeof error === \'function (code) {
+5 73 return function (typeof error === \'function) {
+5 75 return callHandler.apply(this, url, arguments, arguments);
+5 80 return function () {
+5 81 return function (func, url, url, url, url, response) {
+5 82 return call, headers, headers, url, headers, url, body;
+5 86 function createHandler.test
+6 1 var request     = require("request-count");
+6 2 var GitRemoteResolver   = require('./GitRemoteResolver');
+6 22 var file = path.join(this._tempDir, \'archive.tar.gz\');
+6 25 var deferred = Q.defer();
+6 27 reqHeaders['User-Agent'] = this._config.userAgent;
+6 33 replay(progress(request(tarballUrl, {
+6 38 }), {
+6 39 delay: 8000
+6 40 }))
+6 41 .on(\'progress\', function (state) {
+6 42 var totalMb = Math.round(state.total / 1024 / 1024);
+6 43 var receivedMb = Math.round(state.received / 1024 / 1024);
+6 44 that._logger.info(\'progress\', receivedMb + \'MB of\'+ totalMb + \'\');
+6 46 .on(\'error\', deferred.reject)
+6 47 .pipe(fs.createWriteStream(file))
+6 49 .on(\'close\', function () {
+6 50 var promises = [];
+6 51 promises.forEach(function (promise) {
+6 52 var decEndpoint = endpointParser.decompose(name);
+6 53 that._json.dependencies = {
+6 54 name: name,
+6 55 url: path.join(that._config.url, \'.\')
+6 57 promises.push(promise.progress(state.received / 1024 / 1024)
+6 58 .concat(path.split(\'.\')
+6 59 .filter(function (main) {
+6 60 return semver.clean(function (pkg) {
+6 61 return semver.satisfains(pkg) {
+6 62 return!== expected;
+6 64 .should.contains(main;
+6 66 .should.equal(path.split(0);
+6 67 .deepCloses(0);
+6 72 return Q.promises.sum.unshift(promises = function (that._json) {
+6 73 return Q.unshift(this._json) {
+6 74 return Q.unresolve(this._json) {
+6 75 return Q.unify(this._json) {
+6 80 return Q.unify
+7 5 var temp = process.env.TMPDIR
+7 6 || process.env.TMP
+7 7 || process.env.TEMP
+7 8 || process.platform === "win32"? "c:\\\\windows\\\\temp" : "/tmp";
+7 9 var home = (process.platform === "win32"
+7 10 ? process.env.USERPROFILE
+7 11 : process.env.HOME) || temp;
+7 12 var roaming =  process.platform === "win32"
+7 13 ? path.resolve(process.env.APPDATA || home || temp)
+7 14 : path.resolve(home || temp);
+7 15 var folder = process.platform === "win32"
+7 16 ? 'bower'
+7 17 : '.bower\';
+7 18 var config = require(\'rc\') ('bower', {
+7 19 cache          :  path.join(roaming, folder, \'cache\'),"
+
+8 4 var setNoCacheHeaders = function(response) {
+8 5 response.setHeader(\'Cache-Control\', \'no-cache\');
+8 6 response.setHeader(\'Pragma\', \'no-cache\');
+8 7 response.setHeader(\'Expires\', (new Date(0)).toString());
+8 9 var contentDisposition = function(content) {
+8 10 var idx = content.indexOf(\'0\');
+8 11 return (must.not.exist(content))? content.replace(/^\
+8 12 *([\\s\\S]+?)\
+8 13 *\
+8 14 */g, \'\')
+8 15 .split(\'/\')
+8 16 .slice(0, -1).map(function(line, i) {
+8 17 return line.replace(/:(\\d+)/g, function(_, key){
+8 18 return \'<div class="video-container"><p>\' + key + \'</div></li>\';
+8 21 module.exports = function(sourceCode, options) {
+8 22 var config = this.config || {};
+8 23 var sourceCode = fs.readFileSync(sourceCode, options);
+8 24 var content = sourceCode? fs.readFileSync(sourceCode, options) : {};
+8 25 var content = helper.isString(options.encoding)? options.encoding : \'utf8\';
+8 26 content = (options && options.content) === undefined?
+8 27 options.content.replace(/([\\w+-9]*\\-\\(\\d+))/g, function(_, key){
+8 28 return \'<div class="video-container"><p>\' + key + \'</div></body>\';
+8 30 return content;
+8 31 };'
+
+9 1 var tree     = require("../");
+9 2 var request       = require("request-count");
+9 3 var GitRemoteResolver   = require("./GitRemoteResolver');
+9 4 var extract     = require(\'../../util/extract');
+9 17 var tarballUrl = "http://github.com/strongloop/karma/archive/0.1.0"
+9 19 var req  = this._req;
+9 20 var next = req.next;
+9 21 var config   = this._config;
+9 22 var args = Array.isArray(config.branches)? config.branches : null;
+9 23 if (args) {
+9 24 var target = decEndpoint.target;
+9 25 if (this._config.force) {
+9 26 logger.action('checkout', tarballUrl, {
+9 27 url: this._source,
+9 30 } else {
+9 31 logger.action(\'download\', tarballUrl, {
+9 36 return Q.nfcall(fs.stat, path.join(this._tempDir, '.bower.json\'));
+9 39 return cmd('git', ['checkout', '-f', this._source, '-d\'], {
+9 40 cwd: this._tempDir
+9 43 GitHubResolver.fetchRefs = function (source) {
+9 44 if (this._refs && this._refs[source]) {
+9 45 return Q.resolve(this._refs[source]);
+9 47 return cmd('git', ['show-ref', '--tags', '--heads', source])
+9 48 .then(function (stdout) {
+9 49 var refs = stdout.toString().split(\'\
+9 51 this._refs = this._refs  || {};
+9 52 return this._refs[source] = refs;
+9 55 module.exports = GitHubResolver;"
+

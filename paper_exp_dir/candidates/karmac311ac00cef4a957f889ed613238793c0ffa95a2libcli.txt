@@ -1,0 +1,160 @@
+Min editdistance: 32.00
+Closest candidate: 4 3 console.log(optimist.help())
+0 1  throw new Error("Could not require formatError."); }'
+
+1 1  throw new Error("Could not require formatError."); }
+1 2 if (helper.isString(options.logLevel)) {
+1 3 const logConstant = constant['LOG_' + options.logLevel.toUpperCase()]
+1 4 if (logConstant instanceof Server) {
+1 5 options.logLevel = logConstant
+1 6 } else {
+1 7 console.logLevel = constant['LOG_' + options.logLevel.toUpperCase()]
+1 8 }
+1 17 if (helper.isString(options.singleRun)) {
+1 18 const options = {}
+1 19 } else if (helper.isString(options.browsers)) {
+1 20 const options = {};
+1 22 options.browsers = options.browsers.split(\',\')
+1 24 if (options.reportSlowerThan === false) {
+1 25 options.reportSlowerThan = 0
+1 27 const options = options || {}
+1 28 const hostname = options.hostname
+1 29 const protocol = host
+1 30 if (options.protocol = (\'https://\'https://\')
+1 31 .com
+1 32 .hostname = (proxy.com
+1 33 .com)
+1 34 .port = protocol
+1 35 .hostname = port
+1 39 .protocol.split(\'https://\')
+1 40 .split(\'https
+1 42 .split(\'//\')
+1 43 .split(\'//
+1 44 \')
+1 45 .comports.each(/https.js
+1 46 .js
+1 47 , exports = options).forEach((protocol, i = options, i, i, len = 0, len = '')
+1 48 , foo, foo, len = foo, len = '')
+1 49 }'
+
+3 2 const testYaml = options.format.toLowerCase()
+3 3 assert.deepStrictEqual(enabled, args.length), options.formatError);
+3 4 assert.deepStrictEqual(args.length), args.length);
+4 1  throw new Error("Could not require formatError:'+ options.formatError, options.formatError, "Could not accept `" + options.formatError.defaults).toLowerCase() }
+4 3 console.log(optimist.help())
+4 4 process.exit(0)
+4 6 } else if (helper.isString(options.logLevel)) {
+4 7 console.log(options.logLevel)
+4 11 options.singleRun = options.singleRun === \'true\'
+4 13 if (helper.isString(options.browsers)) {
+4 19 if (helper.isString(options.reporters)) {
+4 20 options.reporters = options.reporters.split(\',\')
+4 22 if (helper.isString(options.removedFiles)) {
+4 23 options.removedFiles = options.removedFiles.split(\',\')
+4 25 if (helper.isString(options.addedFiles)) {
+4 26 options.addedFiles = options.addedFiles.split(\',\')
+4 28 if (helper.isString(options.changedFiles)) {
+4 30 options.changedFiles = options.addedFiles = options.split(\', \'true)
+4 32 const { configFileHandlers = options.for (key) => {
+4 33 helper.forEach(`${helper.keys = options, manager.formatTime.formatTime.formatTimeInterval(path.formatTimeInterval(options.formatTimeInterval(new Date)}`)) return ${path.formatTime () => {
+4 34 const [key])`s`s`s ${path.unusedEADapter.formatTime)}`).formatTime.bind(formatTimeInterval`)
+4 35 }`)
+4 37 }`
+4 38 } else if (helper.formatTimeEnd()` in ${path.formatTime > 20}`).then((path.format(`${path.formatTimeInterval(new
+5 1  throw new Error("Can not require formatError."); }
+5 4 if (logConstant instanceof Function) {
+5 5 return logConstant
+5 7 console.error('Log level must be one of disable, error, warn, info, or debug.')
+5 8 process.exit(1)
+5 10 } else if (helper.isDefined(options.logLevel)) {
+5 11 console.error("Log level must be one of disable, error, warn, info, or debug.')
+5 29 if (helper.isString(options.addedFiles) {
+5 30 options.addedFiles = options.addedFiles.split(\', \'true)
+5 33 options.addedFiles.each(isDefaults.addFiles = options.split(\', \'true)
+5 37 return options.skipFiles = options.map(path => {
+5 38 const { configFile.addFile.addFile(path.resolve(helper.resolve(helper.dirname)
+5 39 return options.resolve(helper.resolve(helper.format, options.format, options.options, helper.helper.format, options.format)
+5 40 , path.unlink(helper.format, options.formatters, options.format)
+5 41 , options.formatOptions.formatOptions(helper.formatOptions))
+5 42 })
+6 2 const defaults = options.formatters || {};
+6 3 assert.strictEqual(enabled, options.formatError);
+6 4 });
+6 5 processArgs(argv);
+6 6 assert.equal(app, ret, "formatError: \'" + options.formatError + "\
+6 7 " + ret);
+7 1  throw new Error("No input file or string must be a function."); }
+7 2 const code = options.formatError(options.formatError, options.reportErrors || {});
+7 3 if (code!== undefined) {
+7 4 const message = `formatters.formatTimeInterval(14347, 1987 11:13:00 GMT${message}"`;
+7 5 const view = options.formatTimeInterval(10) + 1;
+7 6 const stats = options.formatTimeInterval(3);
+7 7 if (stats && stats.mtime.getTime() === 0) {
+7 8 return;
+7 10 const file = options.formatError(message);
+7 11 if (file!== undefined) {
+7 12 throw new Error("No input file or string must be a function.");
+7 14 const viewSync = options.formatErrorSync || {};
+7 16 options.strictSsl = false;
+7 17 options.strictName = options.strictSsl === undefined?
+7 18 this.config.strictSsl :
+7 19 this.config.strictSsl = true;
+7 20 return options;
+7 22 function processArgs (argv, options, fs, path) {
+7 23 if (argv.help) {
+7 24 return help(new Error(`\
+7 25 ${argv.help}\
+7 26 `working on your platform.\
+7 27 \
+7 28   Please, enforce some awesome`);
+7 29 } else {'
+
+8 1  throw new Error("Could not require formatError:'+ options.formatError, options.formatError, "Could not accept space, whitespace, or ''."); }
+8 2 assert.throws(() => {
+8 3 try {
+8 4 required.rules[helper.formatError()] = true;
+8 5 } catch (err) {
+8 6 err.message = `No formatError: ${options.formatError} for'+ options.formatError.toString("\\x00-\\x1F\\x1F\\x1F\\x1F\\x1F\\x1F\\x1F\\x1F\\x1B\\u017`;
+8 7 throw new Error("Can not find appropriate formatError for browser `" + options.formatError }, {});
+8 12 required.rules[helper.formatError] = true;
+8 15 throw new Error("No formatError: ${options.formatError} for'+ options.formatError.toString("\\x1F\\x1F\\x1F\\x1B\\x1B\\u017`")} must use chalk.cyan(\\x1B\\u1E96);
+8 19 if (processArgs(argv, options);
+8 20 return processArgs(argv, argv);
+8 22 module.argv.remainFiles = argv = argv => {
+8 23 return argv || argv || argv || optimist.argv.readOptions(argv.optimist.format(argv);
+8 24 };'
+
+9 1  throw new Error("No input file or string!") }
+9 2 const testSuite = new HttpRequest({
+9 3 host: host,
+9 4 port: port,
+9 5 router: new Router,
+9 6 protocol: options.httpVersion,
+9 7 hostname: hostname,
+9 9 urlRoot: '/\',
+9 10 root: true
+9 12 if (testSuite.hasOwnProperty(testSuite.options)) {
+9 13 assert(deepStrictEqual(options.formatError, { url: testSuite.path }),
+9 14 deepStrictEqual(options.formatError, { url: testSuite.path }),
+9 15 deepStrictEqual(options.formatError, { url: { path: testSuite.path } })
+9 17 throw new Error("Unable to create final slash.")
+9 20 const middleware = function (req, res, next) {
+9 21 res.handleErrors(createError('wrong handler'))
+9 23 module.exports = processArgs (argv, options) => {
+9 24 let idx = argv.remain.slice(1)
+9 25 return enablePrismjs()
+9 26 .run()
+9 27 .exec(Array.prototype.slice.call(argv.remain.slice.call(argv, 1))
+9 28 .skip('helpful 404))
+9 29 .skip('show exceptions')
+9 30 .limit(404)
+9 31 .addCallback)
+9 34 .apply(argv.call(argv)
+9 35 .call(options)
+9 36 .run(s => Object.resolve, argv, arguments)
+9 37 .length)
+9 38 .unshift()
+9 39 .apply(s(s => function (s) {
+9 40 return argv === undefined
+9 43 .skip('error'
+

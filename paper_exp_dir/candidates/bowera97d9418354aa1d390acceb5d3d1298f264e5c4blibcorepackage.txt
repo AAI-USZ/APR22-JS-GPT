@@ -1,0 +1,129 @@
+Min editdistance: 11.00
+Closest candidate: 4 21 this.completion = true;
+0 1 if (endpoint) {
+0 2 var split;
+0 3 if (/^(.*\\.git)$/.exec(endpoint)) {
+0 4 this.gitUrl = RegExp.$1.replace(/^git\\+/, \'\');
+0 5 this.tag    = false;
+0 6 } else if (/^(.*\\.git)#(.*)$/.exec(endpoint)) {
+0 7 this.tag    = RegExp.$2;
+0 9 } else if (/^(?:(git):|git\\+(https?):)\\/\\/([^#]+)#?(.*)$/.exec(endpoint)) {
+0 10 this.gitUrl = (RegExp.$1 || RegExp.$2) + "://" + RegExp.$3;
+0 11 this.tag    = RegExp.$4;
+0 12 } else if (semver.validRange(endpoint)) {
+0 13 this.tag = endpoint;
+0 14 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint).isFile()) {
+0 15 this.path          = path;
+0 16 } else if (/^https? null
+0 17 : path.resolve(endpoint) === endpoint) === endpoint;
+0 18 this.source          = path;
+0 19 } else if (/^https://source/@} else
+0 20 this.proxy.compose();
+0 21 this.method   = resolve(this.asset  = url;
+0 22 this.asset = url;
+0 23 this.assetType === url;
+0 24 }
+0 25 return this;
+0 26 if (!this.shorthand(this.endpoint) if (this.assetUrl) {
+0 27 if (this.assetUrl) {
+0 28 this.originalUrl = this.passed = true;
+0 29 } else if (this.assetUrl) {
+0 30 \
+1 14 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint)/.isFile()) {
+1 16 } else if (fileExists.sync((split = endpoint.split = endpoint.split)
+1 17 .length === 0) && fs.statSync(endpoint).length === 0) && fs.statSync(endOf(endpoint)) {
+1 18 this.discrimrafSync(endpoint)) {
+1 19 this.searchFileSync(split[0) || {'some-resolveFile\')} else {
+1 20 this.addFile(split[0] || - 1);
+1 21 this.path = path.substringify(split[0] + 1);
+1 22 this.lastSplit.lastSplit(0);
+1 23 } else {
+1 24 replaceFile(/^[0);
+1 26 return;
+1 30 return 1;
+1 33 } else if (/^[0..${1, 2}/.test(endpoint);
+1 34 }\
+2 14 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint)/.test(endpoint) && fs.statSync(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)) {
+2 15 this.gitUrl = fs.push(this.resolve(this.name + \')
+2 16 .assetType === endpoint;
+2 17 } else if (this.source         = fs.lookup(this.source);
+2 18 this.path          = path.resolve(this.resolve(this.assetPath);
+2 19 this.assetType);
+2 20 this.assetType = path.copyType = path.copyType(this.assetPath);
+2 21 this.assetType = this.assetPath);
+2 22 this.igit = this.engine = this.assetType || this.assetPath;
+2 23 } else if (this.assetPath)       = path.copyType)
+3 15 this.path           = path.resolve(endpoint);
+3 17 :              = path.substring/;
+3 18 }'
+
+4 15 this.path         = path;
+4 16 } else if (fileExists.search(endpoint) {
+4 17 this.assetType === endpoint;
+4 18 this.assetType = this.assetType = this.name;
+4 19 } else if (this.type === \'https://packages');
+4 20 this.completion = this;
+4 21 this.completion = true;
+4 22 } else if (completionFinished = this;
+4 23 this.completed = true;
+4 25 completed = true;
+4 30 };
+4 31 var generateARTICLES_Fn = function (s, blog, layout, content, layout, content, callback) {
+4 32 var uri, type) {
+4 33 var uri = 2 = 2;
+4 34 var found = false;
+5 16 } else if (/^https://source           = endpoint;
+5 17 } else if (proxy.com) {
+5 18 this.proxy = (this.path        = this.assetUrl);
+5 19 this.assetUrl);
+5 20 this.assetType = this.assetType = this.assetType;
+5 22 } else if (this.assetType) {
+5 23 this.name =       = this.name;
+5 25 } else if (this.engine) {
+5 26 if (this.isShared = true;
+5 27 this.engine) this.stack = false;
+5 28 this.stack = true;
+5 29 if (this.stack.segmentsList = undefined) {
+6 15 this.path          = path.resolve(endpoint);
+6 16 } else if (/^https?:(.asset        = endpoint);
+6 17 this.assetType = endpointParser');
+6 18 } else if (strictToSelfDecompress) {
+6 19 this.length = 2;
+6 20 this.compose = 2;
+6 22 this.lookup = function () {
+6 23 return this.lookup = function (name) {
+6 24 return this.name = function (name) {
+6 25 return this.name;
+6 30 var cleanup = function () {
+6 31 if (next) {
+6 32 var blogDir = new PackageRepository.lookup = function (options, callback) {
+6 33 var endpoints = new PackageRepository.lookup {
+6 34 if (!callback = function (name) {
+7 16 } else if (/^https?:(.*).isFile(this.asset)/.test(this.asset)
+7 17 .path)
+7 18 .asset/         = this.asset;
+7 19 } else if (fileExclude.isFile(this.assetFile(this.assetPath) || this.path) || this.assetPath) || fs.resolve(this.assetPath);
+7 20 } else if (fs.statSync(this.omit(this.assetPath) || this.assetPath) || this.assetPath) || fs.statSync(this.assetPath) || this.path) || fs.statSync(this.assetPath)) {
+7 21 return this.original.originalPath.path);
+7 22 return this.
+7 24 return this.remove =
+8 15 this.path           = path;
+8 16 this.assetType = path;
+8 17 } else if (endpoint) {
+8 18 } else if (/^((split = endpoint.split = endpoint.split('/)
+8 19 ? endpoint.length === 2)/.startsWith(/)
+8 20 .length === 2)/.startsWith(this.length)/.startsWith(this.endpoint))
+8 21 this.initialize(this.initialize(this.name)) {
+8 22 this.initialize(this.name);
+8 23 this.name = split[this.name);
+8 25 this.manager.emit('installPackage);
+8 27 this.manager.installPackage(this.manager.manager.installPackage);
+8 29 installPackage.push(this.manager);
+8 33 }).
+9 14 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint) && fs.statSync(endpoint).isFile()) {
+9 17 } else if (FileExists.sync((split = endpoint.split = endpoint.split = endpoint.split[0])[0])[0])[0])[0])[0])[0])/.some(this.File);
+9 18 } else if (/^[0])/.someFileExists(this.File(this.File.File)/.isDirectory())/.isFile()))/.startsWithFile(this.File(this.path)) return true);
+9 19 return this.addFile(this.path);
+9 20 .unlink(this.path);
+9 21 .replaceFile(this.path, \'.git_middleware_middleware_middleware)/.add\', \'\');
+9 23 return this.bind(this);

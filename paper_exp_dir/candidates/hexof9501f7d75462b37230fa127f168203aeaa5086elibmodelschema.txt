@@ -1,0 +1,141 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Cache = new Schema({
+0 1 var Cache = new Schema({
+0 2 source: String,
+0 3 path: String,
+0 4 content: String,
+0 5 mtime: Number
+0 6 });
+0 7 var dateGetter = function(){
+0 8 return moment(this.date);
+0 9 };
+0 10 var updatedGetter = function(){
+0 11 return moment(this.updated);
+0 13 var ctimeGetter = function(){
+0 14 return moment(this.ctime);
+0 16 var mtimeGetter = function(){
+0 17 return moment(this.mtime);
+0 19 var catGetter = function(){
+0 20 return moment(this.categories);
+0 22 var tagGetter = function(){
+0 23 return this.tags;
+0 25 var permalinkGetter = function(){
+0 26 return siteUrl + this.path;
+0 28 var postsGetter = function(){
+0 29 return model('Post')._init(this.posts);
+0 31 var excerptGetter = function(){
+0 32 return this.content.substring(0, this.excerpt);
+0 34 var postCountGetter = function(){
+0 35 return this.posts.length;
+0 37 var fullPathGetter = function(){
+0 38 return this.path;
+0 40 schema.virtual('full_source', fullPathGetter);
+0 41 schema.virtual('path', fullPathGetter);
+0 42 schema.virtual('path', schemaGetter);
+0 43 schema.virtual('posts').getter);
+0 44 schema.virtual('pages.virtual('pages.length', schemaGetter);
+0 45 schema.virtual('categories', schemaGetter);
+0 47 schema.virtual('tags', schemaGetter);
+0 49 schema.virtual('posts.virtuals', schemaGetter);
+0 50 schema.virtuals', schemaGetter);
+0 51 schema.virtuals.discrimrafis().get,'
+
+1 20 return dbCats._init(this.categories);
+1 23 return dbTags._init(this.tags);
+1 29 return dbPosts._init(this.posts);
+1 38 return pathFn.join(this.path, this.source_dir, this.slug);
+1 40 schema.virtual('date', dateGetter);
+1 41 schema.virtual('updated', dateGetter);
+1 42 schema.virtual('permalink', permalinkGetter);
+1 43 schema.virtual('categories', permalinkGetter);
+1 44 schema.virtual('categories', permalinkGetter);"
+
+2 38 return pathFn.join(this.source_dir, this.slug);
+2 40 schema.virtual('post_permalink', permalinkGetter);
+2 42 schema.virtual('archive_dir', permalinkGetter);
+2 43 schema.virtual('categories', this.category_dir', this.category_dir);
+2 44 schema.section_replace) + this.config.category_id = this.config.site_id);
+2 45 schema.slug = this.config.format('posts'));
+2 46 schema.site_id = this.config.config.format('new_posts');
+2 47 };"
+
+3 2 _id: {type: String, required: true},
+3 3 static: {type: String, default: ''},
+3 4 renderable: {type: Boolean, default: true},
+3 5 version: {type: Boolean, default: true},
+3 26 return config.url + this.path;
+3 29 return postsGetter.call(this, this.posts);
+3 38 return '';
+3 40 schema.virtual('date', permalinkGetter);
+3 43 schema.virtual('tags', permalinkGetter');
+3 45 schema.virtuals', schemaGetter);"
+
+4 37 return sourceDir + this.source;
+4 39 schema.virtual('date').get(dateGetter);
+4 40 schema.virtual('permalink').get(fullPathGetter);
+4 41 schema.virtual('categories').get(categories').get(categories').get(categories).get(categories).get(categories).get(categories).get(categories).get(categories).get(categories));
+4 42 schema.get(names).get(categories).get(sections).get(sections)).get(sections)).get(sections)).get(sections)).get(sections)).get(s)).get(sections)).get(sections)).get(sections)).get(s)});"
+
+5 38 return this.content.substring(this.full_source);
+5 41 schema.virtual('path', dateGetter);
+5 44 schema.virtual('posts', permalinkGetter);
+5 45 schema.virtual('posts', permalinkGetter);"
+
+6 33 }
+6 38 return this.content.substring(this.fullPath.length);
+6 42 schema.virtual('permalink', this.permalinkGetter);
+6 43 schema.virtual('permalink_default', this.permalink_default', this.getter);
+6 44 schema.type', this.type);
+6 46 schema.type', schemaGetter);
+6 47 schema.type('categories', schemaGetter);
+6 49 schema.type('tags', schemaGetter);"
+
+7 5 excerpt: Number,
+7 6 more: String,
+7 9 ctime: Date,
+7 10 mtime: Date
+7 28 return moment(this.tag);
+7 43 return pathFn.join(this.path, this.source);
+7 45 schema.virtual('index', dateGetter);
+7 46 schema.virtual('categories', dateGetter);
+7 47 schema.virtual('tags', dateGetter);
+7 48 schema.virtual('ctimeGetter');
+7 49 schemaGetter');
+7 50 schemaGetter);
+7 51 schemaGetter = schemaGetter = schemaGetter = schemaGetter;
+7 52 schemaGetter = schemaGetter;
+7 54 schemaGetter = schemaGetters = schemaGetters = schemaGetters;
+7 55 var postsGetter = schemaGetter = schemaGetters = schemaGetters;
+7 56 schemaGetters = schemaGetters = schemaGetters;
+7 57 return schemaGetters = schemaGetters = schemaGetters;
+7 58 SchemaGetters = schemaGetters = schemaGetters;
+7 59 schemaGetters = schemaGetters = schemaGetters = schemaGet
+8 23 return moment(this.tags);
+8 42 schema.virtual('permalink_scope', dateGetter);
+8 45 schema.virtual('posts', schemaGetter);
+8 46 schema.virtual('categories', schemaGetter_categories', schemaGetter);
+8 49 schema.virtual('posts', schemaGetter_posts', schemaGetter);
+8 52 schema.virtual('posts', schemaGetter);"
+
+9 3 path: {type: String, required: true},
+9 4 content: {type: String, default: ''},
+9 5 excerpt: {type: String, default: ''},
+9 6 more: {type: String, default: ''},
+9 7 more_url: {type: String, required: true},
+9 8 posts: [Number]
+9 15 more: {type: String, default: ''}
+9 17 var Asset = new Schema({
+9 27 content: {type: String, default: ''}
+9 32 content: {type: String}
+9 35 , path: new Schema({
+9 36 , required: new Schema({
+9 37 , _id: new Schema({
+9 38 , _id: {type: {type: null}
+9 41 var self = new Schema({
+9 43 var date: new Schema({
+9 48 function dateHelper(){
+9 49 function date(obj){
+9 50 return date(){
+9 51 return this.date = new DateHelper.apply(this, arguments);
+9 52 return obj.date, arguments);
+9 54 before

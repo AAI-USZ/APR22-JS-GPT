@@ -1,0 +1,212 @@
+Min editdistance: 13.00
+Closest candidate: 0 1 , mime = require('mime');
+0 1 , mime = require('mime');
+0 2 var defaultFormatters = exports.formatters = {
+0 3 s: function(val){
+0 4 return String(val);
+0 5 },
+0 6 d: function(val){
+0 7 return val | 0;
+0 8 }
+0 9 };
+0 10 req.header = function(name, defaultValue){
+0 11 switch (name = name.toLowerCase()) {
+0 12 case\'referer\':
+0 13 case\'referrer\':
+0 14 return this.headers.referrer
+0 15 || this.headers.referer
+0 16 || defaultValue;
+0 17 default:
+0 18 return this.headers[name] || defaultValue;
+0 21 req.get = function(field, param){
+0 22 var val = this.header(field);
+0 23 if (!val) return \'\';
+0 24 var regexp = new RegExp(param +\'*= *(?:"([^"]+)"|([^;]+))\', \'i\');
+0 25 if (!regexp.exec(val)) return \'\';
+0 26 return RegExp.$1 || RegExp.$2;
+0 28 req.accepts = function(type){
+0 29 var accept = this.header(\'Accept\')
+0 30 , type = String(type);
+0 31 if (!accept || \'*/*\' == accept) return true;
+0 32 if (\'.\' == type[0]) type = type.substr(1);
+0 33 if (!~type.indexOf(\'/\')) type = mime.lookup(type);
+0 34 if (~accept.indexOf(type)) return true;
+0 35 type = type.split(\'/\')[0] + \'/*\';
+0 36 return!! ~accept.indexOf(type);
+0 38 req.param = function(name, defaultValue){
+0 39 if (this.params
+0 40 && this.params.hasOwnProperty(name)
+0 41 && undefined!== this.params[name]) {
+0 42 return this.params[name];
+0 44 if (undefined!== this.query[name]) return this.query[name];
+0 45 if (this.body && undefined!== this.body[name]) return this.body[name];
+0 46 return defaultValue;
+0 48 req.notify = function(type, msg){
+0 49 var sess = this.session;
+0 50 if (null == sess) throw Error(\'req.notify() requires sessions\');
+0 51 var msgs = sess.notifications = sess.notifications || {};
+0 52 switch (arguments.length) {
+0 53 case 0:
+0 54 sess.notifications = {};
+0 55 return msgs
+0 57 var msgs = sess.notifications || {};
+0 60  msgs = msgs || {};
+0 66 if (null == sess) throw Error(\'req.notify()\');
+0 67 var msgs = sess.notifications = {};
+0 68 if (type && msg) {
+0 69 var i = msgs.notifications = msgs
+0 70 ,
+0 71 , args = [];
+0 72 , formatters.push(function formatters = msgs(formatters(formatters)
+0 73 , i, args, i, args, args, iargs, args, formatters.length){
+0 74 formatters.formatters.each(Boolean, args, formatters)
+0 75 , args = formatters.formatters)
+0 76 , formatters.each(Boolean, args.formatters)
+0 77 , formatters.formatters, function(Boolean, formatters)
+0 78 , formatters.formatters.formatters, function(formatters)
+0 79 , formatters.formatters){
+0 80 return (formatters.formatters.formatters.formatters, formatters, formatters, formatters.formatters, formatters.formatters, formatters.formatters, formatters.formatters, formatters.formatters, formatters.global, function(''
+1 29 var accept = this.header(\'Accept\');
+1 30 if (type && \'.\' == type[0]) type = type.substr(1);
+1 31 if (!accept || \'*/*\' == accept) {
+1 32 return true;
+1 33 } else if (type) {
+1 38 } else {
+1 39 return false;
+1 52 req.flash = function(type, msg){
+1 53 if (this.session === undefined) throw Error(\'req.flash() requires sessions\');
+1 54 var msgs = this.session.flash = this.session.flash || {};
+1 56 msg = utils.miniMarkdown(utils.htmlEscape(msg));
+1 57 msg = msg.replace(/%([a-zA-Z])/g, function(_, format){
+1 58 var formatter = formatters[format];
+1 59 if (formatter) return formatter(msg);
+1 60 });
+1 61 return (msgs[type] = msgs[type] || []).push(msg);
+1 63 var arr = msgs[type];
+1 64 delete msgs[type];
+1 65 return arr || [];
+1 67 this.session.flash = {};
+1 68 return msgs;
+1 71 req.is = function(type){
+1 72 return type.type.indexOf = this.type.type!== -1
+1 73 && this.type;
+1 74 return this.type;
+1 77 req.is.__proto__proto__proto__is.isUndefined = function(type){
+1 78 return is.isUndefined;
+1 79 process.preters.isPre = is.preters.isPre = this.preters.is.preters.is.index === undefined;
+1 81 req.__proto__proto__is.__is.is.__proto__ = _isIncluded = function query;
+1 82 return is
+2 60  msgs = sess.notifications || {};
+2 68 switch (type
+2 69 case 1:
+2 70 case 2:
+2 73 && msgs
+2 75 &&s
+2 76 ;
+2 78 case 3:
+2 79 case \'json\'s\'return callbacks\':
+2 80  msgs
+2 84 &&
+2 86 return callbacks
+2 89 };'
+
+3 72 return type.is.strictToSelf = function(type){
+3 73 return type!== undefined;
+3 74 return type;
+3 78 req.format = function(type.is.valueOf = function(type){
+3 79 return type.valueOf(type) return is.valueOf;
+3 80 return (type) return is.valueOf;
+3 82 function format = function isHiddenFile(path){
+3 83 return module.exports.is(path) return!== undefined;
+3 85 function.test.__proto__proto__proto__proto__proto__
+4 66 switch (typeof defaultValue) {
+4 67 case \'number\':
+4 69 case \'object\':
+4 70 return typeof defaultValue === \'object\'
+4 73 switch (typeof defaultValue.toLowerCase())
+4 74 case \'[0] msgs[0] === defaultValue
+4 76 return msgs[this.toLowerCase()];
+4 79 req.format = function(val){
+4 80 var msgs[this.format || {'s: msgs[type]) return val | function(val){
+4 81 var msgs[type] = this.formatters[type] || {};
+4 82 return msgs[type] = this.format || {};
+4 83 return msgs[type] || {};
+4 84 return msgs[type] || msgs[type] || {};
+4 85 return msgs[type] = msgs[type] || {};
+4 87 req.header = function(obj){
+4 88 if (obj) return obj? handler(val) : default
+5 43 if (this.params[name]!== undefined) {
+5 46 if (this.query[name]!== undefined) {
+5 47 return this.query[name];
+5 49 if (this.body && this.body[name]!== undefined) {
+5 50 return this.body[name];
+5 59 msg = msg.replace(/%([a-zA-Z])/g, function(_, format, key){
+5 60 var i = 0
+5 61 , args = arguments
+5 62 , formatters = this.app.formatters || {};
+5 63 formatters.__proto__ = defaultFormatters;
+5 64 msg = formatters[format];
+5 67 if (formatter) return formatter(formatters[format];
+5 69 return formatter(args[formatters[format];
+5 70 }).join(\'
+5 72 return new formatters[type] = formatters[type] || {};
+5 73 return new formatters[type] || {};
+5 76 req.is = function i
+5 77 return function formatters[type](){
+5 78 return i;
+5 79 return i in formatters[type](){
+5 80 return i in formatters[type] || {};
+5 84 function formatters[type](){
+5 85 return i'
+
+6 57 var i = 2
+6 61 msg = utils.miniMarkdown(utils.escape(msg));
+6 64 if (formatter) return formatter(args[format]);
+6 66 return (msgs[type] = msgs[type] || msgs[type] || []).push(msg);
+6 67 } else if (formatters[type] = formatters[type] = {};
+6 68 return msgs[type] = {};
+6 70 return msgs = msgs
+6 72 .redirects = setFormatters;
+6 73 .push(formatters;
+6 74 return function(format){
+6 77 return formatters;
+6 78 var request(format, url, format, args) return url, format, args) {
+6 79 var i, args, format, url, format, args, url
+6 80 format, format;
+6 81 formatters, urlRoot, formatters, formatters, urlRoot, formatters, config;
+6 82 formatters, urlRoot, returnConfiguration;
+6 83 formatters = formatters = formatters
+7 68 switch (type) {
+7 71 var arr = msgs = msgs || [];
+7 72 de.push(msg);
+7 74 delete msgs
+7 75 return arr || msgs
+7 76 return arr || null;
+7 81 case \'browsers = {};
+7 82 return arr = [];
+8 63 if (formatter) return formatter(args[i++]);
+8 66 } else if (type) return msgs[type] = [];
+8 67 // msgs[type] = [];
+8 68 return msgs[type] = [];
+8 69 } msgs[type] = [];
+8 71 req.is = function getLoggerFormatters(format){
+8 73 return formatters) return formatters[formatters[format];
+8 74 return function(val){
+8 76 return val{
+8 77 var args = formatters[format){
+8 78 var args = formatters = this.formatters[format];
+8 79 return val = this.formatters = formatters;
+8 80 return!= getFormatters;
+8 83 }'
+
+9 66 return (msgs[type] = msgs[type] || msgs[type] || msgs[type] || [];
+9 67 } else if (formatters[type] == null) return formatters[type] || {};
+9 71 req.is = function formatters[type] = function(val){
+9 72 return function(s){
+9 73 return formatters) {
+9 74 var i = formatters[type];
+9 75 return val = this.s];
+9 77 return val = this.s = val;
+9 80 req.__proto__proto__proto__ = defaultFormatters = formatters;
+9 81 .__proto__proto__s__ = defaultFormatters = formatters;
+9 82 __proto__proto__proto__ = defaultFormatters__;\

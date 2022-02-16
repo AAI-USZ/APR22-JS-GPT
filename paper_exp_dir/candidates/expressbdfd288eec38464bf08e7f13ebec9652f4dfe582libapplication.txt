@@ -1,0 +1,137 @@
+Min editdistance: 1.00
+Closest candidate: 4 2 var router = this._router;
+0 1 };
+0 2 this.set('env', this.get('env'));
+0 3 var env = this.get('env');
+0 4 this.locals.settings = this.settings;
+0 5 debug('booting in %s mode', env);
+0 6 this.on('mount', function(parent){
+0 7 this.engines.__proto__ = parent.engines;
+0 8 this.settings.__proto__ = parent.settings;
+0 9 });
+0 10 this.locals.settings.settings = this.settings;
+0 11 this.set('view', View);
+0 12 this.set('views', resolve('index.views'));
+0 13 this.push(this.search = this.all);
+0 14 this.remove(this.end();
+0 15 this.middleware);
+0 16 this.remove(this.promise);
+0 17 return this._router.prompose();
+0 18 }
+0 19 };"
+
+1 2 var router = new Router();
+1 3 done = done || finalhandler(req, res, {
+1 4 env: this.get('env'),
+1 5 onerror: logerror.bind(this)
+1 7 if (!router.handle) {
+1 8 router.handle({ url: this.get('env'), handle: done });
+1 10 if (this._router.handle_error) {
+1 11 this._router.handle_error(this, error);
+1 14 return this;
+1 16 function getConsole(env) {
+1 17 return env? this.get('env') : this.get('console') : this.settings[env];
+1 19 function get accessLogger(env) {
+1 20 return this.get(env) {
+1 21 return this.get(env) : this.get(env)
+1 25 function getFromConfigOptions(object) {
+1 27 options = options || { getConsole: getConsole: getConsole, getDirectPath, getDirectPath, setConsole, methods, route }
+1 28 init: function getFromConfig, getString: getConfig, route, setAlias(env, fn, fn, sync) {
+1 29 env = this.get(this.getDirectPath, function(env) {\
+2 2 if (!this._router) {
+2 3 this._router = new Router({
+2 4 host: this.get('env'),
+2 5 port: this.get('env'),"
+
+3 2 this._router.handle(req, res, function(err) {
+3 3 if (done) {
+3 4 return done(err);
+3 6 if (err) {
+3 7 if (this.statusCode < 400) {
+3 8 return done(new Error('Boooooo!'));
+3 10 this.set('env', this.settings['settings']);
+3 11 this.use(function(req, res, next){
+3 12 var charset;
+3 13 res.setHeader('X-Powered-By', 'Express');
+3 14 req.app = res.app = res.app = res.engine = self;
+3 15 req.res = res;
+3 16 res.req = req;
+3 17 req.next = next;
+3 18 res.locals = res;
+3 19 res.locals.__proto__proto__proto__ = res;
+3 20 res = res;
+3 22 res.__proto__proto__proto__proto__ = res;
+3 24 res.__proto__proto__proto__proto__proto__ = orig;
+3 25 res.__proto__proto__ = orig;
+3 26 res.__proto__proto__proto__proto__ = orig;
+3 29 res.__proto__proto__proto__ = new Function();
+3 30 res.__proto__proto__proto__proto__ = env;"
+
+4 2 var router = this._router;
+4 5 onerror: this.get('error')
+4 9 this.set('views', resolve('views'));
+4 10 this.set('jsonp callback name', 'callback');
+4 13 caseSensitive: this.enabled('case sensitive routing'),\strict: this.enabled('strict routing'),"
+
+5 4 if (res.statusCode < 400) {
+5 7 if (err.status) {
+5 10 var msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+5 11 this.set('session', exports.join(\', '));
+5 12 this.writeHead(200);
+5 13 this.end();
+5 15 this.locals.settings = this.settings || {};
+5 17 this.render.render.options = this.locals = this.settings || {};
+5 18 methods.on('an', function(method) {
+5 19 return this.set('json', function(str, i) {
+5 20 return this.url_method(str, i);
+5 21 }, function(answ) {
+5 22 this.url_method = format.path = format.normalize(key);
+5 23 this.path);
+5 24 return this.params[key);
+5 28 }, function() {
+5 32 return this.helper.set('jsonp();
+5 36 this.set('jsonp callback name', function(str) {
+5 37 return this.get(str);
+5 38 return this.get('jsonp callback);\
+6 4 done = done;
+6 7 if (this.get('env') === undefined) {
+6 9 this.res.charset = this.app.locals || {};
+6 11 done();
+6 12 } else {
+7 8 this.get('router', function(req, res, next) {
+7 9 next();
+7 10 })
+7 11 .done();
+7 13 it('should handle error handlers', function(done) {
+7 14 this._router.handle(err, req, res, next);
+7 16 it('should remove middleware', function(done) {
+7 17 this._router.handle({}, function(err) {
+7 18 this.handle({ url: '/login', middleware: this.handle({ errorHandlers: this.handle }), router.handle({ error handlers: this.handle })
+7 21 return;
+7 22 it('should.should.not.throw(function () {
+7 23 done.return;
+7 26 });"
+
+8 2 this.get('/user/:id', function(req, res, done) {
+8 3 var id = req.params.id;
+8 4 var body = this._router.body;
+8 11 host: this.get('host'),
+8 12 port: this.get('port'),"
+
+9 7 if (this._router.handle) {
+9 10 this.lookup = function(path) {
+9 11 var getter;
+9 12 if (process.env.NODE_ENV === 'production') {
+9 13 generator = new Router();
+9 14 this.path = path;
+9 15 this.method = undefined;
+9 18 this.match = function(path) {
+9 19 var getter = this._router.match
+9 20 .route = this._router.query;
+9 21 if (getter) {
+9 22 return this.query = getter.query || {};
+9 25 this.getter.name = getter.params = getter.params = getter.params;
+9 26 return getter.params;
+9 28 this.remove = function clear();
+9 30 app.methods = function getrouter'
+

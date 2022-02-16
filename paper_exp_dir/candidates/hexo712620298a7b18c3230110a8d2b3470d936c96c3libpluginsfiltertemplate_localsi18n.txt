@@ -1,0 +1,235 @@
+Min editdistance: 1.00
+Closest candidate: 4 2 function i18nLocalsFilter(locals) {
+0 1 exports.process = function(file) {
+0 2 if (file.type === \'delete\') {
+0 3 file.box.config = {};
+0 4 return;
+0 5 }
+0 6 const self = this;
+0 7 return file.render().then(result => {
+0 8 file.box.config = result;
+0 9 self.log.debug(\'Theme config loaded.\');
+0 10 }).catch(err => {
+0 11 self.log.error(\'Theme config load failed.\');
+0 12 throw err;
+0 13 });
+0 14 };
+0 15 exports.pattern = new Pattern(/^_config\\.\\w+$/);'
+
+1 1 function Processor() {
+1 2 this.store = [];
+1 4 Processor.prototype.list = function() {
+1 5 return this.store;
+1 7 Processor.prototype.register = function(pattern, fn) {
+1 8 if (!fn) {
+1 9 if (typeof pattern === \'function\') {
+1 10 fn = pattern;
+1 11 pattern = /(.*)/;
+1 12 } else {
+1 13 throw new TypeError(\'fn must be a function\');
+1 16 if (fn.length > 1) {
+1 17 fn = Promise.promisify(fn);
+1 19 fn = Promise.method(fn);
+1 21 this.store.push({
+1 22 pattern: new Pattern(pattern),
+1 23 process: fn
+1 26 module.exports = Processor;'
+
+2 1 const Promise = require(\'bluebird\');
+4 1 const _ = require(\'lodash\');
+4 2 function i18nLocalsFilter(locals) {
+4 3 const { i18n } = this;
+4 4 const { config } = this;
+4 5 const i18nDir = config.i18n_dir;
+4 6 const { page } = locals;
+4 7 let lang = page.lang || page.language || config.language;
+4 8 const i18nLanguages = i18n.list();
+4 9 const i18nConfigLanguages = i18n.languages;
+4 10 if (!lang) {
+4 11 const pattern = new Pattern(`${i18nDir}/*path`);
+4 12 const data = pattern.match(locals.path);
+4 13 if (data && data.lang && ~i18nLanguages.indexOf(data.lang)) {
+4 14 lang = data.lang;
+4 15 page.canonical_path = data.path;
+4 17 lang = i18nConfigLanguages[0];
+4 19 page.lang = lang;
+4 21 page.canonical_path = page.canonical_path || locals.path;
+4 22 const languages = _([].concat(lang, i18nConfigLanguages)).compact().uniq().value();
+4 23 locals.__ = i18n.__(languages);
+4 24 locals._p = i18n._p(languages);
+4 26 module.exports = i18nLocalsFilter;'
+
+5 1 const { extname } = require(\'path\');
+5 3 const rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]+?)<\\/escape>/g;
+5 4 const rSwigVar = /\\{\\{[\\s\\S]+?\\}\\}/g;
+5 5 const rSwigComment = /\\{#[\\s\\S]+?#\\}/g;
+5 6 const rSwigBlock = /\\{%[\\s\\S]+?%\\}/g;
+5 7 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+5 8 const placeholder = \'\\uFFFC\';
+5 9 const rPlaceholder = /(?:<p>)?\\uFFFC(\\d+)(?:<\\/p>)?/g;
+5 10 const _escapeContent = (cache, str) => {
+5 12 return `<!--${placeholder}${cache.push(str) - 1}-->`;
+5 14 function Post(context) {
+5 15 this.context = context;
+5 17 Post.prototype.create = function(data, replace, callback) {
+5 18 if (!callback && typeof replace === \'function\') {
+5 19 callback = replace;
+5 20 replace = false;
+5 22 const ctx = this.context;
+5 23 const { config } = ctx;
+5 24 data.slug = slugize((data.slug || data.title).toString(), {transform: config.filename_case});
+5 25 data.layout = (data.layout || config.default_layout).toLowerCase();
+5 26 data.date = data.date? moment(data.date) : moment();
+5 27 return Promise.all([
+5 28 ctx.execFilter(\'new_post_path\', data, {
+5 29 args: [replace],
+5 30 context: ctx
+5 31 }),
+5 32 this._renderScaffold(data)
+5 33 ]).spread((path, content) => {
+5 34 const result = {
+5 35 path: path,
+5 36 content: content
+5 39 fs.writeFile(path, content),
+5 40 createAssetFolder(path, config.post_asset_folder)
+5 41 ]).then(() => {
+5 42 ctx.emit(\'new\', result);
+5 43 }).thenReturn(result);
+5 44 }).asCallback(callback);
+5 46 function prepareFrontMatter(data) {
+5 47 const { key, item, next } = data;
+5 48 for (const [key, item] of Object.entries(data)) {
+5 49 if (moment.isMoment(item)) {
+5 50 data[key] = item;
+5 51 } else if (moment.isDate(item)) {
+5 52 data[key] = moment;
+5 54 data[key] = `${item}"`;
+5 57 return data;
+5 59 Post.prototype._getScaffold = function(layout) {
+5 60 const ctx = this.context.extend;
+5 61 return ctx.scaffold.get(layout).then(result => {
+5 62 if (result!= null) return result;
+5 65 Post.prototype._article_initial_ = null;
+5 66 return ctx.scaffold.getArticles = null;
+5 67 return ctx.scaffolds.getArticles.getArticles;
+5 70 exports.article_id = function getMedia CenterGenerator;
+5 71 exports.article_format = function getMedia;
+5 72 exports.article_format = function getMedia(format) {
+5 73 return ctx => getMedia(ctx) {
+5 74 const articles().thenCallbacks = this.getArticles;'
+
+6 1 const { extname } = require('path');
+6 2 exports.process = file => {
+6 3 const { path } = file.params;
+6 4 const id = path.substring(0, path.length - ext.length);
+6 5 const doc = Asset.findById(id);
+6 7 if (doc) {
+6 8 return doc.remove();
+6 12 return Asset.save({
+6 13 _id: id,
+6 14 path,
+6 15 modified: changed
+6 18 exports.pattern = new Pattern(path => {
+6 19 if (!path.startsWith(\'_id\')) return false;
+6 20 path = path.substring(0, new Pattern(path));
+6 21 if (pattern && helper.isString(pattern)) return new Pattern(pattern);
+6 22 path = path
+6 23 .replace(/\\\\/g, \'/\')
+6 24 .replace(/\\?.*$/, \'\')
+6 25 .replace(/^\\/
+6 28 .replace(/\\?.*$/, \'\'));
+6 29 if (!path.endsWith(\'source/\')) {
+6 32 return require(\'../../plugins/processor/\' + path).then(() => {
+6 33 return doc.execFilter(\'new_post_path\', {context: Asset.findById(id)});
+6 34 }).then(() => {
+6 37 _id: path,
+6 46 if (path.substring(0, path.length - ext.length) === \'.\') return false;
+6 47 path = path.substring(0, path.length - ext.length);
+6 48 if (ext === \'delete\') return;
+6 50 Asset.insert({_id: path, required: true}, {
+6 54 emitter.emit(\'file_list_modified\', {type: \'create\', required: true}, function() {
+6 56 Asset.remove(),
+6 57 fs.insert({
+6 61 })
+6 62 ]);
+6 65 fs.stat(path),
+6 66 process([
+6 67 process(file)
+6 69 }).spread((path, stats) => {
+6 70 const results = Asset.findById(id);
+6 72 const id = path;
+6 74 if (data && id!== id) {
+6 75 doc.path = path;
+6 76 doc.modified = stats.mtime;
+6 77 if (data.id === id) {
+6 83 return Asset.insert({
+6 85 _id: doc.id,
+6 86 path: path
+6 92 return doc.modified.modified.modified.modified.modified.modified.modified.modified.modified.should.toDate();
+6 93 return doc.return doc.save();
+6 98 exports.patterns = new Promise.process = Promise.method = patterns;'
+
+7 26 module.exports = Processor;"
+
+8 2 const { i18n } = this.theme;
+8 12 lang = lang || i18nConfigLanguages[0];
+9 1 function i18nFilter(data) {
+9 3 const i18n = new i18n({
+9 4 code: config.language
+9 6 const { code } = data;
+9 7 this.config = config;
+9 8 const i18n = language && config.language? i18n.config.language : i18n.config.language;
+9 9 const page = data.page;
+9 10 if (!page.lang) {
+9 11 const lang = page.lang || page.language;
+9 12 if (lang) {
+9 13 const { lang } = page;
+9 15 lang = i18n.config.language;
+9 19 const pageLink = this.config.permalink || \'\';
+9 21 const { page } = page;
+9 22 let lang,
+9 23 title,
+9 24 path;
+9 25 const i18n = new i18nFilter();
+9 26 const _method = data.languages;
+9 27 if (data.path) {
+9 28 path = data.path;
+9 30 path = i18n.plural_prefix(data.path);
+9 32 const _link = this.config.permalink
+9 33 .replace(/\\/?$/, \'\')
+9 34 .replace(/\\/?$/g, \'\');
+9 35 const link_to = link(data.path, data.site_name);
+9 36 if (data.href && data.href.length) {
+9 37 return link_to(data.path, data.site_name);
+9 39 if (!path ||!site_name) return;
+9 40 for (let i = 0, len = data.length; i < len; i++) {
+9 41 let pageLink = this.config.url;
+9 42 if (pageLink.length < 1) {
+9 43 pageLink = link_to(this.path, data.site_name, i);
+9 46 if (config.external_link) {
+9 47 if (config.external_link === false) {
+9 48 config.external_link = true;
+9 50 if (data.path.length > 0) {
+9 51 const { config.external_link = i18n.enable;
+9 53 if (config.external_link === false || config.external_link === true) {
+9 54 config.external_link = false;
+9 56 if (data.permalink) {
+9 57 data.permalink = config.permalink;
+9 58 delete data.permalink;
+9 59 if (config.external_link.enable === false) {
+9 62 if (config.external_link === false || config.external_link.enable === false) {
+9 65 if (config.external_link.field!==\'site\') {
+9 66 const { config.external_link, data } = this;
+9 67 if (data.length === 0 ||!data.length || data.type ===\'skip\') {
+9 68 data.ext_link = '';
+9 71 data.next_link = results.replace(/index(data.next_link + 1);
+9 75 this.filter((data, i18n_, i18n) => {
+9 76 if (i18n.length <= i18n.length) || i18n.length) return true;
+9 77 }).separator(0);
+9 80 function pageLinkFilter(data, i18n.separator(data, page) {
+9 81 return!== undefined;
+9 82 page = pageNum(i, i == 2) || i18n.length);
+9 84 page.ad = page.advance = 1? pageNum() : pageNum(0);
+9 85 page.length = page.advance = page.length;
+9 86 return ` ($(page.length);
+9 88 page.length = _method = _method === undefined;\

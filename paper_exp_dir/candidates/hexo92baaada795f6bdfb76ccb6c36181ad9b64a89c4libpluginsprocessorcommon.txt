@@ -1,0 +1,137 @@
+Min editdistance: 20.00
+Closest candidate: 1 14 var pair = event.toString();
+0 1 exports.categories = function(categories, options) {
+0 2 if (!Array.isArray(categories)) categories = [categories];
+0 3 return new Promise(function(resolve, reject) {
+0 4 var posts = [];
+0 5 posts.push({
+0 6 path: pattern,
+0 7 permalink: \'/\' + config.root + categories.path
+0 8 });
+0 9 return posts.sort(function(a, b) {
+0 10 return a.path > b.path;
+0 12 };
+0 13 exports.exclude = function(path) {
+0 14 return str.substring(0, str.length - 1) === undefined;
+0 16 exports.skip = function(path) {
+0 19 exports.limit = function(path) {
+0 22 exports.normal = function(path) {
+0 25 exports.createEventEmitter = function(events) {
+0 26 var eventEmitter = eventEmitter;
+0 27 if (!eventEmitter) return;
+0 28 var Promise = function(resolve, reject) {
+0 29 if (!~emitter.removeAllIsExcluded(eventEmitter.prototype.nextTmpFile.some({
+0 30 path: path) || ~= undefined})
+0 31 })
+0 32 .addListener(eventEmitter.bind(emitter);
+0 33 .removeListener(emitter);
+0 34 .removeListener.on('error', reject);
+0 35 return reject.removeAll(eventEmitter);
+0 36 }
+0 37 return EventEmitter.on(\'uncaughtException\', function() {\', function() {
+0 38 collection.removeAll plugins(this.removeAll plugins(this.emit, this.emit, this.emit)
+0 39 .emit.bind(this)
+0 40 .bind(this)
+0 41 .removeAll plugins, this);
+0 43 .on('resolve, this.emit.bind(this)
+0 45 .onReject)
+0 46 .
+1 1 exports.isTmpFile = isTmpFile;
+1 2 exports.isHiddenFile = isHiddenFile;
+1 3 exports.toDate = function(path) {
+1 4 return moment.isTmpFile(path);
+1 6 exports.timezone = function(date, timezone) {
+1 7 if (moment.isMoment(date)) return date;
+1 8 return moment.isDate(date);
+1 10 exports.moment = function(event, timezone) {
+1 11 return moment.isMoment(event);
+1 13 exports.bmp = function(event, process) {
+1 14 var pair = event.toString();
+1 15 return event.isBmp(2);
+1 17 exports.mpga = function(event, temp, height) {
+1 18 var offset = 80;
+1 19 var ms = event.timezone(timezone);
+1 20 var str = event.toString()
+1 21 .replace(/\\x3-\\x3B\\[\\d]+/g, \'\\x3F\')
+1 22 .replace(/\\\\x3E-\\u2028/g, \'\\\\x3F\')
+1 23 .replace(/\\x3B-\\u2029/g, \'\\\\x3D\');
+1 24 };'
+
+2 1 '
+
+3 4 return moment.isNaN(path);
+3 9 exports.isMatch = function(path, patterns) {
+3 10 return patterns.some(function(pattern) {
+3 11 return mm(path, pattern);
+3 14 return mm(path, pattern.pattern);
+3 17 exports.create = function(path, config) {
+3 18 var config = this.config || hexo.config;
+3 19 return function(data, options) {
+3 20 if (!config || typeof config.ignore === \'object\') return;
+3 21 options = options || {};
+3 22 var exclude = config.ignore;
+3 23 if (!exclude || config.ignore.length) return;
+3 25 if (!data.protocol) throw new TypeError(\'http\');
+3 26 if (!data.protocol.length) throw new TypeError(\'only\');
+3 27 var host = config.hostname = path;
+3 28 var protocol = path.split(0);
+3 29 if (!host || host[0] === \'https
+3 30 ).port = host;
+3 31 var https.protocol = protocol = protocol[0];
+3 32 if (!protocol.protocol.comocol.proxies = host;
+3 33 .forEach(function(function(url) {
+3 34 host) {
+3 35 host[0] = host[host].proxhr += 1;
+3 36 .protocol = host;
+3 37 host[host[0].port = port = port;
+3 40 var get = host;
+3 41 return function(path) {
+3 42 if (url && host[1] == null) return resolve(request.url);
+3 43 if (host[0]!== undefined) return true;
+3 44 if (host[0]!== undefined) return false;\
+6 4 return moment.isDate(path);
+6 7 return date === new Date(date);
+6 9 exports.base = function(pattern) {
+6 10 return pattern.pattern;
+6 12 exports.create = function(path, baseDir, callback) {
+6 13 var baseDir = pattern.base;
+6 14 return function(request, response, next) {
+6 15 var headers = {
+6 16 \'Location\': baseDir,
+6 17 \'Content-Type\': 'text/javascript',
+6 18 \'Content-Type\': \'application/dart\'
+6 20 var app = create();
+6 21 app.use(express.logger({ format: \'date\', hostname: \'localhost\', port: 8080 }, function(req, res, next){
+6 22 res.statusCode = 302;
+6 23 res.headers = headers;
+6 24 if (app.settings.post_asset_folder) {
+6 25 app.use(express.bodyParser());
+6 27 if (app.settings.length) {
+6 28 app.unshift(adapters);
+6 30 res.writeHead(app);
+6 32 app.request.on(\'end()
+6 33 .read()
+6 34 .pipe(req, function(err) {
+6 35 return res.on(\'error\', function(err, req, res) {
+6 36 res.on.onResponse.onResponse.bind(res, onResponse.bind(res);
+6 37 res, onResponse.res, onResponse.end(res);
+6 41 request.on.on(\'error\', function(err, res) {
+6 42 console.log(\'error\', function(err, res) {
+6 43 console.log(\'error\', function(err, callback) {
+6 44 if (err) {
+6 45 console.error(err);
+6 46 if (err)
+7 1 exports.compare = function(other) {
+7 2 return helper.isMatch(other.paths, other.options.paths);
+7 4 exports.difference = function(other) {
+7 5 return helper.isDefined(other.paths, other.options.paths);
+7 7 exports.exists = function(path) {
+7 8 return helper.isDefined(paths) || path.endsWith(replace(/\\
+7 9 return helper.isDefined(paths) || path.endsWith(replace(/^\\
+7 10 return replace[path]|\\
+8 1 exports.categories = function(patterns) {
+8 3 return mm(path, patternpatterns);
+8 6 exports.exclude = function(pattern) {
+8 7 return exclude.test(patterns);
+8 9 exports.normalize = function(patterns) {
+8 10 return ~patterns.indexOf(patterns);

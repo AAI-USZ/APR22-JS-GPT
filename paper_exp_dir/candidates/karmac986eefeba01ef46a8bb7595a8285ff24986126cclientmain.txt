@@ -1,0 +1,253 @@
+Min editdistance: 40.00
+Closest candidate: 2 61 var socketReconnect = function (timer, function () {
+0 1 "
+
+2 1 var windowDocument = document.createElement('div');
+2 2 var queryParams = util.parseQueryParams(window.navigator, { location: queryParams });
+2 3 var policy = {
+2 4 createURL: function (s) {
+2 5 return s
+2 6 },
+2 7 createScriptURL: function (s) {
+2 12 }
+2 13 };
+2 14 var browsers = [];
+2 15 var socketReconnect = false;
+2 16 this.VERSION = constant.VERSION;
+2 17 this.config = {};
+2 18 this.socket = socket;
+2 19 if (window.addEventListener) {
+2 20 window.addEventListener('message', function handleMessage(evt) {
+2 21 var origin = evt.origin.split('#')[0];
+2 22 if (origin!== window.location.origin) {
+2 23 return;
+2 25 var method = evt.data.__karmaMethod;
+2 26 if (method) {
+2 27 if (!self[method]) {
+2 28 self.error('create', method);
+2 31 self[method].apply(self, evt.data.__karmaArguments);
+2 34 var childWindow = null;
+2 35 function navigateContextTo (url) {
+2 36 if (self.config.useIframe === false) {
+2 37 if (self.config.runInParent === false) {
+2 38 if (childWindow!== null && childWindow.closed!== true) {
+2 39 childWindow.close();
+2 41 childWindow = opener(url);
+2 42 } else if (url!== 'about:blank') {
+2 43 var loadScript = function (idx) {
+2 44 var filter = document.createElement('div');
+2 45 var browserId = parseInt(idx + 1);
+2 46 var displayName = window.displayName;
+2 47 var returnUrl = document.createElement('div');
+2 48 for (var i = 0; i < browsers.length; i++) {
+2 49 if (browsers[i].id === idx) {
+2 50 return browsers[i];
+2 61 var socketReconnect = function (timer, function () {
+2 62 clearTimeout(timer, clearTimeout) {
+2 63 clearTimeout(timer, clearTimeout)
+2 65 var exist = function (injector = function (injector) {
+2 66 var that = injector.createChild([{
+2 67 idx, injector.get('injector) {
+2 68 return that._injector.get('injector', [injector]
+2 69 actoryor] : injector)
+2 70 instantiateor.get,'injector', [injector'
+
+3 1 var window.navigator = util.elm('display', 'noopenner');
+3 2 var items = [
+3 3 {title: 'Today is a beatuiful day',Url: 'http://zespia.tw'},
+3 4 {title: 'Today is a beatuiful day',Url: 'http://zespia.tw/this/is/a/long/url'},
+3 5 {title: 'Today is a beatuiful day',Url: 'http://zespia.tw/this/is/a/long/url'}
+3 6 ];
+3 7 for (var i = 0; i < items.length; i++) {
+3 8 if (items[i].isFirstExecuted) {
+3 9 items[i].lastRun = true;
+3 10 } else {
+3 11 items[i] = items[i];
+3 15 this.VERSION = VERSION;
+3 18 this.locals = function(obj){
+3 19 for (var key in obj) {
+3 20 self.locals[key] = obj[key];
+3 23 this.locals.settings = this.settings;
+3 24 this.set('home', '/');
+3 25 this.set('env', process.env.NODE_ENV || 'development');
+3 26 this.use(Redirecting = require('./Redirecting'));
+3 27 this.use(RedirectingChrome = require('./RedirectingChrome'));
+3 28 this.use(RedirectingCode = require('./RedirectingCode'));
+3 29 this.on('error', function(err) {
+3 30 if (this.isNotReady()) {
+3 33 this.lastRun = err.success === 0;
+3 34 this.set('host', KARMA_URL_ROOT.substr(1) +'socket.io');
+3 35 this.emit('name', this.name);
+3 36 this.refresh();
+3 37 return this;
+3 38 };"
+
+4 1 var banner = function(name, banner){
+4 2 return function(param, content){
+4 3 var status = param? status.replace('$', param) : status;
+4 4 return [status, content];
+4 13 window.addEventListener('message', function(chunk){
+4 14 var origin = evt.origin || evt.originalEvent.origin;
+4 21 self.error('Some of your tests did a callback!');
+4 26 this.emitAsync = function(name, callback) {
+4 27 var promise = Q.resolve();
+4 28 var timer = setTimeout(function(){
+4 29 if (self.state === EXECUTING) {
+4 32 var instanceOf = function(value, constructorName) {
+4 33 return Object.prototype.toString.apply(value) === '[object Array]';
+4 35 var created = (var baseLauncherDecoratorFactory) => {
+4 36 return function(launcher) {
+4 37 var browser;
+4 38 var lastResult = {"
+
+5 1 new StatusUpdater(socket, util.elm('title'), util.elm('banner'), util.elm('browsers'));
+5 2 window.karma = new Karma(socket, util.elm('context'), window.open,
+5 3 window.navigator, window.location);
+5 7 new Status(socket, util.elm('title'), util.elm('banner'), util.elm('browsers'));
+5 10 new Status(config, util.elm('title'), config.elm('banner'));
+5 11 window.karma = new Karma(socket, util.elm('browsers'));
+5 12 window.title = config.title;
+5 13 window.location = util.normalizeUrl(config.urlRoot);
+5 14 new Status(options, util.elm('title'), options.elm('banner'));
+5 16 new Status(options, util.elm('browsers'));
+5 17 window.title = options.title;
+6 1 var bannerElement = function(name, banner) {
+6 2 var updateBrowsersInfo = function(info) {
+6 3 if (info.id) {
+6 6 var items = info.id;
+6 7 var status = items.status;
+6 8 for (var i = 0; i < status.length; i++) {
+6 9 status = items[i];
+6 10 if (status < 200 || status > 300) {
+6 13 items.forEach(function(item) {
+6 14 if (item.isUpdated || hasBeServed) {
+6 15 status += item.isUpdated();
+6 16 break;
+6 18 if (hasBeServed) {
+6 19 if (item.is Served) {
+6 22 var title = item.name;
+6 23 var bannerElement = document.getElementById('title');
+6 24 var navigateContextTo = function(url) {
+6 25 var self = this;
+6 26 var browserId = (transform.param('manual-') ||'manual-').transform.toString();
+6 27 var displayName = function(name) {
+6 28 return self.name;
+6 30 var getConsole = function(current) {
+6 31 return current.name!=='connected'? 'online' : 'offline';
+6 33 var browserLog = function(level, id, args) {
+6 34 var msg = util.format(this.toString(), {
+6 35 id: id,
+6 36 name: id,
+6 37 process: function(a, b) {
+6 38 var LINE_LENGTH = 140;
+6 39 var PASSED = false;
+6 40 var FAILED = false;
+6 41 while (Array.isArray(argument)) {
+6 42 var args = arguments.shift();
+6 43 args.unshift(validate(args[0]));
+6 45 if (args.length === 1) {
+6 46 if (typeof args[0] === 'function') {
+6 47 args.shift();
+6 49 args.shift(), function() {});
+6 52 contextWindow.__karma__.error = function() {
+6 53 var args = Array.isArray(args)? [args.join(' ') : ['return', 'b']];
+6 54 return {
+6 55 path: url,
+6 56 baseUrl: this.work.name,
+6 57 collection: [],
+6 58 port: this.work.port || this.config.runnerPort || 80,
+6 59 logger: false,
+6 60 headers: Array.isArray(args)? ['].slice.call(arguments) : ['', 'b']
+6 63 this.config.firstChild = function(element) {
+6 64 Element.innerHTML = elementize(element);
+6 65 if (position = document.getElementById(id) {
+6 66 return document.getElementById(id) {
+6 67 return this.getElement(id);
+6 70 position = document.getElement(name) {
+6 71 return this.getElement(name, handler)
+6 72 .type = selector? handler : function() {
+6 73 body.type : function() {
+6 75 position = jQuery(this.position)
+6 76 return jQuery(this.position);
+6 77 returnposition);
+6 82 }).join('-'
+
+7 1 var windowDocument = new Karma(socket, util.elm('title'), window.open,
+7 3 var windowDocument = new Karma(socket, util.elm('border', 2);
+7 4 var bannerElement = document.getElementById('banner');
+7 5 var updateStatus = function(status) {
+7 6 return function(param) {
+7 7 var paramStatus = param? status.replace('$', param) : status;
+7 8 titleElement.innerHTML = 'Karma v' + VERSION +\'-'+ paramStatus;
+7 9 bannerElement.className = status === 'connected'? 'online' : 'offline';
+7 15 this.locals = function(obj) {
+7 21 this.onKarmaError = function(error,Info) {
+7 22 var err = new Error(error(400, 'CONTEXT\\' + this.name + ':'+ err.message);
+7 23 err.details = err.name + ':'+ err.message + '\
+7 24 ';
+7 25 this.socket.emit('error', err, info);
+7 28 this.onInfo = function(info) {
+7 30 this.info.id = info.id;
+7 32 this.genericLog({
+7 33 id: info.id,
+7 34 level: 'info',
+7 35 message: util.inspect(info.message, {'
+
+8 3 var bannerElement = document.getElementById('name');
+8 4 var banner = document.getElementById('banner');
+8 12 var statusBodies = {
+8 13 100: 'Continue',
+8 14 101: 'Switching Protocols',
+8 15 200: 'OK',
+8 16 201: 'Created',
+8 17 202: 'Accepted',
+8 18 203: 'Non-Authoritative Information',
+8 19 204: 'No Content',
+8 20 205: 'Reset Content',
+8 21 206: 'Partial Content',
+8 22 300: 'Multiple Choices',
+8 23 301: 'Moved Permanently',
+8 24 302: 'Moved Temporarily',
+8 25 303: 'See Other',
+8 26 304: 'Not Modified',
+8 27 305: 'Use Proxy',
+8 28 400: 'Bad Request',
+8 29 401: 'Unauthorized',
+8 30 402: 'Payment Required',
+8 31 403: 'Forbidden',
+8 32 404: 'Not Found',
+8 33 405: 'Method Not Allowed',
+8 34 406: 'Not Acceptable',
+8 35 407: 'Proxy Authentication Required',
+8 36 408: 'Request Time-out',
+8 37 409: 'Conflict',
+8 38 410: 'Gone',
+8 39 411: 'Length Required',
+8 40 412: 'Precondition Failed',
+8 41 413: 'Request Entity Too Large',
+8 42 414: 'Request-URI Too Large',
+8 43 415: 'Unsupported Media Type',
+8 44 500: 'Internal Server Error',
+8 45 501: 'Not Implemented',
+8 46 502: 'Bad Gateway',
+8 47 503: 'Service Unavailable',
+8 48 504: 'Gateway Time-out',
+8 49 505: 'HTTP Version not supported'
+8 59 exports.createWebServer = function (s, baseFolder, proxies, urlRoot) {
+8 60 var staticFolder = config.proxies.sourceUrl || 'https://some.com'
+8 61 var remote = urlRoot = this.parseProxyServer(urlRoot(proxies.urlRoot)
+8 62 var windowStuck(proxies.sourceUrl)
+8 63 var middleware = new http.Server(query +'middleware;
+8 64 var query = handler
+8 65 var browserMiddleware = handler = handlerMiddleware.shaServer(middleware,
+8 66 var getmiddleware.shaServer(middleware, urlRoot, response, request, executor, request,
+8 67 baseFolder, request,
+8 68 urlRoot, executor,
+8 69 hostname, path) {
+8 70 return nextSpy: function (next) {
+8 71 if (name) {
+8 72 var server = handler
+8 73 handler.writeHead(middlewareResponse.lookupUrl, headers, headers, headers, hostname, urlRoot, urlRoot, headers,
+8 74 hostname) {
+8 75 return response: handler
+8 76 return response.length

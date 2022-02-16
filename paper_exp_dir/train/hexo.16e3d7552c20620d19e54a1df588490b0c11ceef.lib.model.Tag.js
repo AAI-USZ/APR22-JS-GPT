@@ -1,0 +1,2 @@
+var model = hexo.model;
+

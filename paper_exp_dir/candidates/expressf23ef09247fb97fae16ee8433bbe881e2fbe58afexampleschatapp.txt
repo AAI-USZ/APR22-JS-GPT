@@ -1,0 +1,118 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 kiwi.seed('haml')
+0 1 var fiveMinutes = 300000,
+0 2 oneMinute = 60000
+0 3 kiwi.seed('haml')
+0 4 kiwi.seed('sass')
+0 5 use(MethodOverride)
+0 6 use(ContentLength)
+0 7 use(Cookie)
+0 8 use(Cache, { lifetime: fiveMinutes, reapInterval: oneMinute })
+0 9 use(Session, { lifetime: fiveMinutes, reapInterval: oneMinute })
+0 10 set('root', __dirname)
+0 11 })
+0 12 get('/', function(){
+0 13 this.redirect('/upload')
+0 15 get('/upload', function(){
+0 16 this.render('upload.haml.html', {
+0 17 locals: {
+0 18 title: 'upload'
+0 19 }
+0 22 post('/upload', function(){
+0 23 this.param('images').each(function(image){
+0 24 puts(image.filename +'->'+ image.tempfile)
+0 25 this.flash('info', 'Uploaded'+ image.filename)
+0 26 }, this)
+0 29 get('/public/*', function(file){
+0 30 this.sendfile(__dirname + '/public/' + file)
+0 32 get('/*.css', function(file){
+0 33 this.render(file + '.sass.css', { layout: false })
+0 35 get('/error/view', function(){
+0 36 this.render('does.not.exist')
+0 38 get('/error', function(){
+0 39 throw new Error('oh noes!')
+0 41 get('/simple', function(){
+0 42 return 'Hello :)'
+0 44 get('/fixtures/:file', function(){
+0 45 return this.render(file + '.sass.css', { layout: 'fake' })
+0 48 return this.param('images')
+0 53 get('/buffer', function(){
+0 54 return new Buffer(5)
+0 56 get('/noargs', function(){
+0 57 return '<args>'
+0 62 get('/buffer-size', function(){
+0 63 var self = this
+0 64 this.param('images').forEach(function(image){
+0 65 self.render(image.filename +'->'+ image.tempfile)
+0 74 puts('/upload')
+0 78 this.sendfile(file)
+0 80 get('/upload/pause', function(){
+0 81 this.troff()
+0 83 get('/s/s/section', function(){
+0 84 return this.require('s/section')
+0 87 get('/new section', function(){
+0 88 return this.require('s')
+0 89 require('s/section')
+0 90 require('s')
+0 103 require('s/')
+0 105 require(')
+0 110 require('s/javascript')
+0 111 require('javascript')
+0 112 require('require')
+0 114 require(
+1 17 locals: {"
+
+2 1 function(){
+3 1 this.root })
+3 3 this.redirect('/chat')
+3 5 get('/chat', function(){
+3 6 contentType('urlencoded')
+3 7 return '<h1>' + this.param('message')) + '</h1>'
+3 9 get('/chat/messages', function(){
+3 10 var self = this,
+3 11 previousLength = messages.length,
+3 12 timer = setInterval(function(){
+3 13 if (messages.length > previousLength)
+3 14 self.contentType(messages.shift())
+3 15 }, 100)
+3 17 get('/public/:file', function(file){
+3 26 get('/favicon.ico', function(){
+3 27 this.halt()
+3 29 run()"
+
+4 1 this.kiwi = true}})
+4 6 this.halt(200)
+4 9 contentType('json')
+4 10 return JSON.encode(messages)
+4 21 get('/fixtures', function(){
+4 22 var body = this.session.body
+4 24 get('/user/:id', function(id){
+4 25 var message = this.session.name + ':'+ this.param('id')
+4 26 message.replace(/[^\\)/g, function(_, message){
+4 27 this.halt(400, 'Oh noes!')
+4 30 get('/:title', function(id){
+4 31 this.header('title', id)
+4 33 get('/:url', function(url){
+4 34 this.halt(200, 'http://example.com/' + this.param('id') +'s', this.param('url'));
+4 36 get('/:category', function(name, depth){
+4 37 this.header('category', name, depth);
+4 39 get('/:year', function(req, res){
+4 40 var id = req.params.id
+4 41 var user = users[id]
+4 42 if (user) {
+4 43 var query = {
+4 44 headers: {
+4 45 'X-Foo': 'bar'
+4 46 },
+4 47 'Content-Type': 'text/html; charset=utf-8'
+4 51 post('/chat', function(){
+4 52 p(Express.server.request.body)
+4 54 get('/chat/:file', function(file){
+4 55 this.render(file + '.html.haml', { layout: 'front' })
+5 1 var fiveMinutes = 300000, __super__ = 60000;
+5 2 kiwi.seed('haml'),"
+
+6 1 var fiveMinutes = 300000, __filename = __filename;
+6 9 use(Logger)
+7 1 var fiveMinutes = 300000, injector = new di.Injector([], function(){
+8 18 this.render('chat.haml.html', {

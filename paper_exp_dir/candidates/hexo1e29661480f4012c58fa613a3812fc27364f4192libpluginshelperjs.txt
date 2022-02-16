@@ -1,0 +1,95 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 if (!Array.isArray(args)) items = [args];
+0 1 if (!Array.isArray(args)) {
+0 2 items = [args];
+0 3 }
+0 4 items.forEach(item => {
+0 5 if (typeof item ===\'string\' || item instanceof String) {
+0 6 let path = item;
+0 7 if (!path.endsWith(\'.js\')) {
+0 8 path += \'.js\';
+0 10 result += `<script src="${this.url_for(path)}"></script>`;
+0 11 } else {
+0 12 let tmpResult = \'<script\';
+0 13 Object.keys(item).forEach(attribute => {
+0 14 if (attribute === \'href\') {
+0 15 item[attribute] = this.url_for(item[attribute]);
+0 16 if (!item[attribute].endsWith(\'.js\')) {
+0 17 tmpResult += `<script src="${this.url_for(item[attribute]}" type="text/javascript"></script>`;
+0 21 });
+0 22 tmpResult += \'</script>\
+0 23 \
+0 24 <script>\';
+0 26 return result;
+0 28 module.exports = jsHelper;'
+
+1 1 if (!Array.isArray(args)) items = [args];
+1 3 if (typeof item === "object" || item instanceof String) {
+1 4 return item;
+1 6 return [item];
+1 11 return htmlTag('a', items).then(...args);
+2 4 result += Reflect.apply(item, [{}, {
+2 5 rule: item.rule,
+2 6 semi: item.semi,
+2 7 s: item.s,
+2 8 ct: item.ct,
+2 9 th: item.th + str => {
+2 10 return [pathFn.join(', \'), items[i].join(\', \')];
+3 4 return;
+3 6 const [key] = item;
+3 13 let [key, value];
+4 4 result += `<script src="${url_for.call(this, item)}"></script>`;
+4 6 result += '<link rel="stylesheet" href="${url_for.call(this, item)}"></link>`;
+5 6 return items.reduce((result, eql) => {
+5 7 if (eql === true) {
+5 8 return eql(true);
+5 10 }, { bgColor: true });
+6 8 items.unshift(key, item);
+6 12 return htmlTag(\'a\', items).join(\'\
+6 13 \');
+7 6 if (!item instanceof String || typeof item ===\'string\') {
+7 12 if (typeof item ===\'string\' || item instanceof String ||
+7 13 item instanceof Object) {
+8 4 result +='';
+8 6 result += item[0];
+8 11 return Promise.all([
+8 12 fs.exists(assetDir),
+8 13 fs.readFile(path.join(assetDir, \'index.js\'),
+8 14 fs.exists(path.join(assetDir, \'package.js\'))
+8 15 ])
+8 16 .then(result => {
+8 17 result = result.concat(...args);
+8 19 if (!item[0] === true) {
+8 20 result += \'\
+8 21 \';
+8 23 result += `<script src="${this.url_for(path.join(assetDir, \'index.js\'), \'index.js\');
+8 24 result += ctx.script_output;
+8 25 result += ctx.config.highlight? \'\' : \'\';
+8 28 result += \'</script>\
+8 29 `;
+8 32 }).then(() => {
+8 33 ctx.emit(\'browsers_change\', this);
+9 6 return {
+9 7 items.push({
+9 8 name: item,
+9 9 path: item
+9 12 return items;
+9 18 fs.writeFile(pathFn.join(hexo.public_dir, item),
+9 19 createAssetFolder(pathFn.join(hexo.source_dir, assetFolder),
+9 20 createScriptFolder(pathFn.join(hexo.core_dir, \'themes\', \'light\', \'flatten\'),
+9 21 renderFn(options = {})
+9 22 );
+9 23 return [
+9 24 createAssetFolder(options, undefined),
+9 25 renderFn(options, unjucks = options.unjucks || [],
+9 26 newAssetFolder = options.newAssetFolder || \'themes\',
+9 27 options.postMessage = options.postMessage || \'date\',
+9 28 options.changedFiles = options.changedFiles || [];
+9 29 const { files } = Object.assign({}, options);
+9 30 if (files) {
+9 31 object.forOwn(files, function(item, i) {
+9 32 if (typeof files[i] === \'object\' && files[i].substring(0, 1)!== \'.js\') {
+9 33 items[i] = object.assign({
+9 36 }, options);
+9 38 classes.push(item);
+9 42 return files;

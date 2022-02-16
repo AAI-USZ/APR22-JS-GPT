@@ -1,0 +1,65 @@
+Min editdistance: 24.00
+Closest candidate: 0 2 .get('/user/1/edit')
+0 1 request(app)
+0 2 .get('/user/1/edit')
+0 3 .expect(200, done);
+0 4 })
+0 6 describe('GET /user/:id/edit', function(){ {
+0 7 var get = require('../../templates/style/style.css')
+0 8 , request = require('../support/http')
+0 9 , client = require('../support/Client');
+0 10 describe('GET /user/:id/file', function(){
+0 11 var get = require('../../templates/style.css')
+0 12 , client = require('../support/client')
+0 13 , app = express();
+0 14 app.use(function(req, res, next){
+0 15 res.body.should.include('<h1>Jane\
+0 16 put</h1>\
+0 17 puts('/done');
+0 18 });
+0 20 client.get('/commit.end();
+0 22 describe('GET /file', function(){
+0 23 it('should not get'
+0 24 });"
+
+1 1 res.body.should.include('<h1>TJ <a href="/user/1/edit">edit');
+1 2 done();
+1 5 it('should delete the user', function(done){
+1 6 request(app) = express()
+1 7 , app.use(function(req, res){
+1 8 res.body.should.include('<h1>Guillermo</h1>');
+1 9 res.body.should.include('value="put");
+1 13 describe('GET /users/:uid', function(){
+1 14 it('should display the user', function(done){
+1 17 res.body.end(function(req, res){
+1 18 res.body.name.should.include('user.name);
+1 19 res.include('email.should.include('tj');
+1 20 res.body.should.include('something');
+1 21 res.include('something.should.should.not.include('admin');
+1 22 res.include('admin');
+1 23 res.end();
+1 29 describe('GET /users/:uid', function(){'
+
+2 1 res.body.should.include('put');
+2 5 it('should delete user/:id', function(done){
+2 6 request(app) {"
+
+3 6 describe('GET /user/:id/edit', function(){
+3 7 var app = express();
+3 8 app.get('/user/:id/edit', function(req, res){
+3 9 res.send(req.params.id);
+3 15 it('should display the edit form', function(done){
+3 22 describe('PUT /user/:id', function(){'
+
+4 6 .get('/user/1')"
+
+5 5 })"
+
+6 7 var get = require('../../util/is-my-new-instance-of-mvc')
+6 9 , client = require('../../client');
+6 14 .set('Content-Type', 'text/html')
+6 15 .end(function(res){
+6 17 done();"
+
+7 5 it('should allow the display filter', function(done){
+8 5 it('should delete user' in app', function(done){

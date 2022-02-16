@@ -1,0 +1,98 @@
+Min editdistance: 4.00
+Closest candidate: 6 1 const { escapeHTML } = require(\'hexo-util\');
+0 1 const util = require(\'hexo-util\');
+0 2 const htmlTag = util.htmlTag;
+0 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+0 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+0 5 module.exports = ctx => {
+0 6 const config = ctx.config;
+0 7 function makeUrl(path) {
+0 8 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+0 9 return path;
+0 10 }
+0 11 const data = url.parse(path);
+0 12 if (data && data.protocol) {
+0 15 path = config.root + path;
+0 16 return path.replace(/\\/{2,}/g, \'/\');
+0 18 return function imgTag(args, content) {
+0 19 const classes = [];
+0 20 let width, height, title, alt, src;
+0 21 let i = 0;
+0 22 for (const len = args.length; i < len; i++) {
+0 23 const item = args[i];
+0 24 if (rUrl.test(item) || item[0] === \'/\') {
+0 25 src = makeUrl(item);
+0 26 break;
+0 27 } else {
+0 28 classes.push(item);
+0 31 args = args.slice(i + 1);
+0 32 '
+
+2 1 const { htmlTag } = require(\'hexo-util\');
+2 5 const { config } = ctx;
+2 20 while (args.length > 0) {
+2 21 const item = args.shift();
+2 29 if (args && args.length) {
+2 30 if (!/\\D+/.test(args[0])) {
+2 31 width = args.shift();
+2 32 if (args.length &&!/\\D+/.test(args[0])) {
+2 33 height = args.shift();
+2 35 }'
+
+3 1 function urlForHelper(path = '/', options) {
+3 5 const { config } = this;
+3 6 const { root } = config;
+3 8 options = Object.assign({
+3 9 relative: config.relative_link
+3 10 }, options);
+3 11 if (data.protocol) {
+3 14 if (options.relative) {
+3 15 return this.relative_url(this.path, path);
+3 17 path = root + path;
+3 20 module.exports = urlForHelper;'
+
+4 2 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=+$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=+$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[+~%/.\\w-_]*)?\\??(?:[-+=&;%@.\\w_]*)#?(?:[.!/\\\\w]*))?)/;
+4 4 function imgTag(args, content) {
+4 6 let src, width, height, title, alt;
+4 10 src = url.parse(item);
+4 23 const meta = args.join(\' \');
+4 25 if (meta && rMeta.test(meta)) {
+4 26 const match = meta.match(rMeta);
+4 27 title = match[1];
+4 28 alt = match[2];
+4 30 const attrs = {
+4 31 src,
+4 32 class: classes.join(\' \'),
+4 33 width,
+4 34 height,
+4 35 title,
+4 36 alt
+4 37 };
+4 38 return htmlTag(\'img\', attrs);
+4 40 module.exports = imgTag;'
+
+5 20 let width, height, title, alt;
+5 22 const len = args.length;
+5 23 if (args.length > 0) {
+5 25 if (args.length && args.length!== 1) {
+6 1 const { escapeHTML } = require(\'hexo-util\');
+6 3 const PostAsset = ctx.model(\'PostAsset\');
+6 4 return function assetLinkTag(args) {
+6 5 const slug = args.shift();
+6 6 if (!slug) return;
+6 7 const asset = PostAsset.findOne({post: this._id, slug});
+6 8 if (!asset) return;
+6 9 let escape = args[0];
+6 10 if (escape === \'true\' || escape === \'false\') {
+6 11 args.shift();
+6 13 escape = \'false\';
+6 15 let title = args.length? args.join(\' \') : asset.slug;
+6 16 const attrTitle = escapeHTML(title);
+6 17 if (escape === \'true\') title = attrTitle;
+6 18 const link = encodeURL(res.resolve(ctx.config.root, asset.path));
+6 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+6 21 };'
+
+7 31 if (args.length) {
+8 29 args = args.slice(args.length - 1);
+9 30 args = args.slice(0, args.length);

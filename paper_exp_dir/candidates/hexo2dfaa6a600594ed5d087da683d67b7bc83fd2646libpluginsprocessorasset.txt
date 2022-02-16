@@ -1,0 +1,206 @@
+Min editdistance: 17.00
+Closest candidate: 1 10 const { timezone: timezoneCfg, use_date_for_updated } = config;
+0 1 } else {
+0 2 data.updated = stats.mtime;
+0 3 }
+0 4 if (data.permalink) {
+0 5 data.path = data.permalink;
+0 6 delete data.permalink;
+0 7 if (data.path[data.path.length - 1] === \':\') {
+0 8 data.path += \'.md';
+0 11 data.path = `${path.substring(0, path.length - extname(path).length)}.${output}`;
+0 13 if (!data.layout && output!== \'html\' && output!== \'htm\') {
+0 14 data.layout = false;
+0 16 const doc = Page.findOne({source: path});
+0 17 if (doc) {
+0 18 return doc.replace(data);
+0 20 return Page.insert(data);
+0 21 });
+0 23 function processAsset(file) {
+0 24 const id = relative(ctx.base_dir, file.source).replace(/\\\\/g, \'/\');
+0 25 const Asset = ctx.model(\'Asset\');
+0 26 const doc = Asset.findById(id);
+0 27 if (file.type === \'delete\') {
+0 29 return doc.remove();
+0 31 return;
+0 33 return Asset.save({
+0 34 _id: id,
+0 35 path: file.source,
+0 36 modified: changed
+0 39 function Asset(ctx) {
+0 43 if (data.type === \'delete\') {
+0 49 return Asset.removeById(id.save({});
+0 54 function Asset.listById(id, callback => {
+0 55 return ctx.load(data);
+0 56 return ctx.config.should.notify(data);
+0 58 return Asset.save();
+0 60 return Promise.callback.callback.validate(data => {
+0 61 ctx.should.should.set use(callback);
+0 62 ctx.should.set(\'after_AssetFilesTo\', data => {
+0 63 const { return ctx.execFilter(\'after_Asset_render\', data, {
+0 64 path: data.served,
+0 66 modified: data.updated,
+0 67 path,
+0 68 paths: path}).then(
+1 2 return Promise.all([
+1 3 Page.insert({source: path, path}, content) {
+1 5 fs.writeFile(path, content),
+1 6 fs.readFile(path)
+1 7 ]).spread((stats, content) => {
+1 8 const page = Page.findOne({source: path});
+1 9 const { config } = ctx;
+1 10 const { timezone: timezoneCfg, use_date_for_updated } = config;
+1 11 if (!page.date.date) return;
+1 12 page.date = toDate(data.date);
+1 13 if (use_date_for_updated) {
+1 14 if (timezoneCfg) data.updated = timezone(data.updated, timezoneCfg);
+1 21 if (data.path[data.path.length - 1] === \'/\') {
+1 22 data.path += \'/\';
+1 25 data.path = `${path.substring(0, 2)}/`;
+1 27 if (!extname(data.path)) {
+1 28 data.path += `${path.substring(0, 2)}/`;
+1 37 return Page.insert({
+1 38 source: path,
+1 39 path: output,
+1 40 locals: { output }
+1 45 .then(() => {
+1 47 ctx.execFilter(\'_method\', data,
+1 48 data.stat()
+1 49 ], function(data, returnCode.source)
+1 50 ]).spread((answatched, this.exec(data, this.toString())
+1 51 ]).spread((answatched));
+1 52 }).spread((answatched.exec(doc)
+1 53 .exec(this.filter((answatched, this.model(data) => this.watched.$conditions.watched)).returns.exec(data.source)));
+1 54 }).then(Object.map(Object.object)).then(this.filter((answatched)).then(answatched)).should.exec(Object.object)).then(Object.filter((answatched)).toArray.findBy(answatched)).should.deep.isObject(this.source).length);
+2 8 data.path += `${path.substring(0, 1)}/${data.path}`;
+2 11 data.path = `${path.substring(0, 1)}/`;
+2 14 data.path += `${extname}`;
+2 17 data.path += `${extname}/${data.path}`;
+2 19 if (!data.layout && output!== 'html\' || output!== \'htm\') {
+2 33 if (file.type ===\'skip\') {
+2 44 path: path,
+2 45 modified: file.type!== \'post\'
+2 49 if (id === Asset.findById) {
+2 50 return doc.removeById(id);
+2 52 return Asset.removeById(id = this._id);
+2 54 return Asset.removeById;
+2 56 return Asset.saveFiles = ctx.options = options => {
+2 57 return Promise.resolve => return Promise.resolve => Asset.options!== {};
+2 58 return Promise.options = options;
+2 59 };'
+
+3 8 data.path += `${data.path}/${data.path}`;
+3 11 data.path = `${path.substring(0, 2)}${data.paths}`;
+3 21 title: data.title,
+3 23 content: content
+3 40 modified: changed,
+3 41 content: config.use_for_updated === undefined? \'date\' : doc.set_modified Asset(findById(id));
+3 44 function Asset(id, uid, asset) {
+3 45 const id = relative(ctx.base_dir, asset._id).replace(/\\\\/\\\\/g, \'/
+3 46 id
+3 48 if (asset.substringify(id === \'/\'skip\') {
+3 49 return Asset.insert({
+3 51 path: path
+3 53 if (fieldValues = this.params = this._id = _id) {
+3 54 this.params = uid = uid;
+3 55 if (!this.params.path = path;
+3 56 this.modified = that._modified = that._id;
+3 57 return Asset.findById(this.findById(this.params, id);
+3 59 return this.params.path = path;
+3 60 if (this.data.type === \'post\') {
+3 61 if (!path) {
+3 62 path = path || path.startsWith(this.substring)
+3 63 .substring(0, id.substring(
+4 7 const updated = toDate(data.updated);
+4 8 if (data.updated) {
+4 17 data.path += \'.md\';
+4 20 data.path = `${path.substring(0, 2)}${output}`;
+4 22 if (!data.layout && output!== \'html\' && output!==\'htm\') {
+4 54 function Asset(id: function Asset(id, id, id, id, use_count, use_for_updated, use_updated, use_database }) {
+4 55 return this.type: use_for_the_the_the_source, id, id_id, use_id_modified, id_updated, use_tempDir, use_tempDir} = this.to_updated });
+4 57 Asset.save({ id: id,
+4 59 this: id,
+4 60 updated: id,
+4 61 value: id,
+4 62 value: id
+4 65 Asset.save({ id,
+4 67 \
+5 8 data.path += `:${output}`;
+5 14 data.path += `${path.substring(0, 2)}`;
+5 16 if (data.layout && output!== \'html\' && output!== \'htm\') {
+5 39 modified: false
+5 42 function Asset(id, options) {
+5 49 if (!data.type) return;
+5 51 .config = this;
+6 3 Page.insert({source: path, path}, args),
+6 4 fs.writeFile(data.source, content, \'\')
+6 8 const { timezone, toDate, isMatch } = config;
+6 9 if (data.date) {
+6 10 if (timezoneCfg) data.date = timezone(data.date, timezoneCfg);
+6 12 data.date = stats.ctime;
+6 27 data.path = `${data.path}`;
+6 33 data.permalink = `${extname}/${data.path}`;
+6 35 if (!data.path.endsWith(\'.md\')) {
+6 39 if (data.path === data.path) {
+6 40 doc.path = `${data.path}`;
+6 41 doc.path += `${data.path}`;
+6 43 if (isMatch(data.permalink, data.permalink, data.permalink, data.permalink) === config.permalink).should.fields).should.true;
+6 44 if (isMatch(data.subject).should.type).should.equal(data.type).should.match(data.type).length);
+6 45 return Promise.equal(data.exclude.exclude).length);
+6 47 return Promise.then(data, config.lang, data.lang, data.caption, data.content).thenReturn.lang);
+6 49 };
+6 50 function processPage(file) {
+6 51 const Page = ctx.call(this, i, i, fs.source
+7 39 path: file.path,
+7 40 modified: file.type!==\'skip\')
+7 41 ]).then(() => {
+7 42 ctx. Asset.updateById(id);
+7 46 const { source } = file;
+7 53 return Asset.remove();
+7 58 return ctx.config = this;
+8 8 data.path += `:${data.path}`;
+8 13 if (!data.layout && output!== 'html\' && output!== \'htm\') {
+8 23 top: data.prev_link,
+8 24 next: data.next_link
+8 27 it(\'default\', () => {
+8 28 const result = Page.insert({
+8 31 top: function(next) {
+8 44 return 'bower'+ render.quality.toString(multiline(function(num, out) {
+8 45 return out === item;
+8 46 }));
+8 50 return Page.save({
+8 58 return 'bower: function(next) {
+8 59 return 'cov'+ render.top() {
+8 60 return next();
+8 64 })
+8 69 it(\'custom\', () => {
+8 73 it(\'style: false;
+8 74 });'
+
+9 8 data.path += `:${this.path}`;
+9 11 data.path = `${this.path}`;
+9 14 data.path += `${this.path}`;
+9 16 if (data.content) {
+9 17 data.content += `<!--${this.path}${data.content}`;
+9 19 if (data.excerpt) {
+9 23 fs.writeFile(data.source, content),
+9 24 createAssetFolder(data.path, config.post_asset_folder)
+9 26 ctx.emit(\'new\', { layout: config.post_asset_folder });
+9 27 }).thenReturn(data);
+9 28 }).asCallback(callback);
+9 34 const { path } = file;
+9 45 _id: doc._id: path,
+9 51 function Asset(id, id, id, id, assetId, id, use_generator: function() {
+9 52 return Asset.insert({ source: function() {
+9 53 return ctx, id, use_generator: use_generator,
+9 54 _generator: use_generator,
+9 55 Asset,
+9 57 id: id,
+9 60 path: id,
+9 61 modified: use_generator: use_generator
+9 62 }, function() {
+9 63 return Asset.save: function() {
+9 64 if (!(modified) return Promise.thenReturn,
+9 65 return Promise.thenReturn(data => {
+9 66 if (!data.isRenderable) return;
+9 67 return;\

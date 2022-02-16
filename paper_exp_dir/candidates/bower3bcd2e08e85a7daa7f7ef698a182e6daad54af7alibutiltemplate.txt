@@ -1,0 +1,229 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 module.exports = function (name, context, sync) {
+0 1 module.exports = function (context, sync) {
+0 2 var emitter = new events.EventEmitter;
+0 3 var colors = fs.existsSync(context.base_dir);
+0 4 var paths   = fs.existsSync(context.base_dir + \'/\');
+0 5 if (!colors) {
+0 6 console.log(\'No template for "template. "template. "template. "template. "off".\
+0 7    at %s"\', chalk.magenta(tildify(process.env.template)));
+0 8 return emitter;
+0 9 }
+0 10 var templateName = name? \'{{\' + name + \'"    at the \\\'s\' + templateName + \'"\': \'\';
+0 11 if (sync){
+0 12 emitter.emit(\'template\', templateName);
+0 15 };
+0 16 module.exports.line = function (argv) {
+0 17 var options  = nopt({}, {}, argv);
+0 18 var paths   = options.argv.remain.slice(1);
+0 19 if (options.colors!= null) template.showColors(options.colors);
+0 20 if (options.paths.length) return help('install');
+0 21 return module.exports(paths[0]);
+0 22 };'
+
+1 1 var _ = require(\'underscore\');
+1 2 module.exports = function (name, context, sync) {
+1 4 var commands = {};
+1 5 var nopt = require(\'nopt\');
+1 6 if (!name) {
+1 7 var templateName = name;
+1 8 if (fs.existsSync(path.join(__dirname, \'/../templates\' + name)) {
+1 9 process.nextTick(function () {
+1 10 emitter.emit(\'error\', new Error("Please specify a plugin with\\" + name + \'"\\" to the list.");
+1 11 });
+1 12 } else {
+1 13 packages[name] = [{
+1 14 name: name,
+1 15 path: path.join(__dirname, \'/templates\', name),
+1 16 line: name,
+1 17 column: name,
+1 18 ruleId: fn
+1 20 ]);
+1 23 var template = nopt({}, {}, arg);
+1 24 if (!names.length) {
+1 26 emitter.emit(\'error\', new Error(\'Please specify a plugin name for the list!\')));
+1 31 var options  = nopt({}, argv);
+1 32 var paths    = options.argv.remain.slice(1);
+1 34 if (options.paths!= null) template.showColors(options.paths);
+2 1 var nopt   = require('nopt');
+2 2 var templateName = name.replace(/\\.js$/, \'\');
+2 3 module.exports = function (name) {
+2 4 var context = this;
+2 5 var emitter = new events.EventEmitter();
+2 6 var commands = this.commands;
+2 7 var templateName = name? \'help\' + name : \'help\';
+2 8 if (!name) context = { commands: Object.keys(commands).join(', \') };
+2 9 _.extend(context, config);
+2 10 template(templateName, context).on(\'data\', emitter.emit.bind(emitter, 'end\'));
+3 1 module.exports = function (context, partials, callback) {
+3 2 context = context || this;
+3 3 if (!event.length) return callback();
+3 4 var colors = options. colors;
+3 5 if (mode == 2) {
+3 7 if (mode == 0) {
+3 8 return callback();
+3 10 mode = 2;
+3 13 var content = template.render('front-matter.md', data);
+3 14 compiled = fs.readFile(path.join(__dirname, \'/../templates/\' + pkgName + \'.html\'), content
+3 15 .replace(/\
+3 16 (\\r\\t+)/g, function (err, content) {
+3 17 if (err) return callback(err);
+3 18 var details = JSON.parse(content);
+3 19 var keys = Object.keys(data);
+3 20 var key = "This is a template for events."
+
+4 1 var templates = {};
+4 4 var templateName = name + '.mustache';
+4 5 var templatePath = path.join(__dirname, \'.templates/\');
+4 6 if (sync) {
+4 7 emitter.emit(\'end', paths(templates[templateName]).renderWithColors(context));
+4 9 emitter.emit(\'error\', templates[templateName]).renderWithColors(context));
+4 17 if (options.help) return help('install');
+4 20 module.exports.completion = function (opts, cb) {
+4 21 var cache = {};
+4 22 var args =opts.opts.usage;
+4 23 if (opts.length === 0) {
+4 24 return Promise.resolve();
+4 26 return function (name) {
+4 27 var pkg     = {};
+4 31 if (opts.length > 0) {
+4 34 return cb;
+5 1 var register = function (name, url, emitter) {
+5 2 return function (name, url, emitter) {
+5 3 return function (req, res, next) {
+5 4 var json    = cache[name];
+5 5 if (!name) return emitter.emit(\'error\', new Error("Please type a name="name" did not exist!"));
+5 6 if (process.env.NODE_ENV) {
+5 7 process.env.NODE_ENV = \'test\';
+5 11 var plugins = {};
+5 12 function convertPathToBaseDir(baseDir) {
+5 13 return function (path, obj) {
+5 14 realGlob(path, require(\'glob\'));
+5 17 var getConsole = function (current) {
+5 18 return current? function (current) {
+5 19 return current.console || new events.Console(true);
+5 22 var _createEventEmitter = function (name, url, emitter) {
+5 23 var eventEmitter = new events.EventEmitter;
+5 24 var generatePath = function (name) {
+5 25 return path? path + \'/\' + name : url;
+5 27 var self = this;
+5 28 if (!eventEmitter.prototype.isFunction(name)) {
+5 29 if (name == null) {
+5 30 return emitter.emit(\'error\', new Error(\'Please type a name must be a string\'));
+5 32 if (typeof name === \'object\') {
+5 33 var str = []
+5 34 .push(name)
+5 35 .replace(/\\\\/g, \'/\')
+5 36 .split(\' \').join(\'\');
+5 37 str.push(function (str) {
+5 38 return str.replace(/[\\r\
+5 39 ]+/g, \'\\\
+5 40 \')
+5 42 })
+5 43 .push(function (fn) {
+5 44 if (fn.length < 0) {
+5 45 return fn(fn);
+5 47 return Promise.all([
+5 48 fs.exists(localPath),
+5 49 createPackageFile(path)
+5 50 ]).spread(function (exists) {
+5 51 return!exists;
+5 53 .then(function (exists) {
+5 54 if (!exists) return [];
+5 55 return function () {
+5 56 var args = Array.prototype.slice.call(arguments);
+5 57 args.unshift({});
+5 58 var id = args[0];
+5 59 return {
+5 60 id: id,
+5 62 process: function (cmd, args) {
+5 63 args = args || {};
+5 64 var error = new Error("Expected \'function\' to be \'fxunction\'");
+5 65 error.level = \'ERROR\';
+5 66 if (error.message === \'No binary for\' ) {
+5 67 error.message = \'No binary for\'+ id.message;
+5 69 error.message = \'None of undefined;
+5 71 emitter.emit(error);
+5 75 module.exports.createEventEmitter = _createEventEmitter;'
+
+6 4 var templateName = name + \': \';
+6 5 var templatePath = path.join(__dirname, \'.templates\');
+6 7 emitter.emit(\'template_render\', templateName, { cwd: context.compile(name) }, function (err) {
+6 8 if (err) return emitter.emit(\'error\', err);
+6 9 return hogan.compile(templates[templateName]) || {};
+6 10 }).on(\'end\', function () {
+6 11 return fs.readFile(path.join(templates[templateName]).then(function (contents) {
+6 12 var json = JSON.parse(contents.toString());
+6 13 json._target = (json.substr(0, 1) == \': \') + \'\
+6 14 \';
+6 15 return json;
+6 17 }).resolve();
+6 18 var template = new templateName.template(name);
+6 19 if (!templates[template]) return emitter.emit(\'error\', template, { cwd: context.compile(name) }, function (err) {
+6 21 var json   = JSON.parse(contents.toString());
+6 27 var install = function (name) {
+6 28 var paths    = this.extend.helper.list();
+6 29 if (!paths) return;
+6 31 emitter.emit(\'install\', install);
+6 38 if (options.logLevel) return help('install');
+6 42 var filter = cb.exec;
+6 43 var args =opts.opts;
+6 44 var command = args.length? [opts] : {};
+6 45 filter.action(name, args, function (err, result) {
+6 46 if (err) return log.e(err);
+6 47 if (result.readable) {
+6 48 file.copy(result.path, publicDir + args.join(\' \'));
+6 50 file.write(publicDir + args.join(\' \', result.path\', publicDir + args.join(\' \'));
+6 54 filter.completion.completion.on(\'end\', function (exit) {
+6 55 return result.end();
+7 1 module.exports = function (context, partials, indent) {
+7 3 var jsonp = path.join(__dirname, \'../templates\');
+7 4 if (!p) {
+7 5 var templateName = escape(templateName);
+7 6 if (exports.hasOwnProperty(templateName)) {
+7 7 emitter.emit(\'end\', templateName);
+7 9 fs.readFile(path.join(templates[templateName] || \'\'), function (err, content) {
+7 11 templates[templateName] = content;
+7 12 emitter.emit(\'end\', content);
+7 21 if (options.partial) {
+7 22 return content.replace(/([\
+7 23 \\r\\t ]*\
+7 24 ]).split(\', \'));
+7 25 } else if (options.paths!= null) template.showColors(options.paths);
+7 26 return content;
+7 29 var cache = path.join(__dirname, \'../templates\');
+7 30 cache.completion.register(\'completion\',opts.completion, cb);
+7 31 return function (opts) {
+7 32 var names    = options.argv.remain.slice(1);
+7 33 if (opts.completion) {
+7 34 return cache;
+7 37 return name? module.exports(name) : name;
+7 41 var templateName = escape(opts.completion[name]);
+7 42 if (typeof opts!== \'function\') {
+7 43 return function (name, args, options, callback) {
+7 50 var regexp = new RegExp(\'^\' + regexp.test(name), \'\');
+7 51 var filteredWords = options.argv.remain.slice(1);
+7 52 var validWords = options.argv.remain.slice(1);
+7 53 if (validWords.length) {
+7 54 return Promise.resolve(opts.word);
+7 56 var validWords = [];
+7 57 var validWords.forEach(function (word) {
+7 58 validWords.push({ name: name, regexp: regexp.test(word), _id: user.name });
+7 61 return validWords.forEach(function (word) {
+7 62 return validWords[word].filter(validWords[word] = function (word) {
+7 63 return validWords[word] == null;
+8 2 var templateName = "./{{{.*}.*";
+8 4 var context     = {};
+8 5 var emitter      = new events.EventEmitter;
+8 6 var commands      = require("../commands");
+8 7 var templateName = name? `./${name}` : "";
+8 8 if (!name) context = { commands: Object.keys(commands).join(', ') };
+8 10 template(templateName, context).on('data', emitter.emit.bind(emitter, 'end'));
+8 16 if (!paths.length) return emitter.emit(\'end\', paths[0]);
+9 1 module.exports = function (context) {
+9 2 return context.on("error", function (err, _event) {
+9 3 if (err) {
+9 4 return callback(err);
+9 6 var templateName = context.param? _event.message :
+9 7 "
+

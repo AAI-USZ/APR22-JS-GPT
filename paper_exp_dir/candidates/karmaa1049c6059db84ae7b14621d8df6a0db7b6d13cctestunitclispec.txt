@@ -1,0 +1,485 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 cwd: {'karma.conf.js': true},
+0 1 cwd: {'karma.conf.js': true},
+0 2 cwd2: {'karma.conf.coffee': true},
+0 3 cwd3: {'karma.conf.ts': true},
+0 4 cwd4: {'karma.conf.ts': true},
+0 5 cwd5: {\'karma.conf.ts': true}
+0 6 })
+0 7 mock.process = mocks.loadFile(path.join(__dirname, \'/../../lib/cli.js\'))
+0 8 function setupFromConfig (config) {
+0 9 const { basePath, proxy, logLevel } = config
+0 10 function checkMeta(config) {
+0 11 if (config.proxies && config.proxies.hasOwnProperty(config.urlRoot)) {
+0 12 logLevel = config.urlRoot
+0 13 }
+0 14 if (e.url === undefined) {
+0 15 logLevel = 0
+0 17 return cleansingNeeded
+0 19 function cleanseIfNeeded () {
+0 20 if (this.cache) {
+0 21 this.cache.set(home, undefined, config.exclude))
+0 22 } else {
+0 25 return this.cache.set(basePath, undefined, config.exclude)
+0 28 function checkMetaDocs(config) {
+0 29 const { tags } = this.cache
+0 30 const meta = {
+0 31 id: config.id,
+0 32 name: config.name,
+0 33 homepage: config.urlRoot + \'\',
+0 34 doc: config.urlRoot + \'\',
+0 35 sections: config.keywords,
+0 36 top: config.name,
+0 37 name: (config.urlRoot || \'\').trim() === \'blog\'),
+0 38 name: config.urlRoot + \'\',
+0 40 doc: config.keywords,
+0 41 page: config.urlRoot + \'\',
+0 42 meta: meta
+0 45 this.cache.set(basePath, this.cache.exclude, config.exclude)
+0 47 return this
+0 49 function clearRuntimeCache() {
+0 50 function clearFile(filename) {
+0 52 this.cache.del(filename)
+0 55 function createPackageFile (name) {
+0 56 var promise = new Promise((resolve, reject) => {
+0 57 var src = fs.createReadStream(name)
+0 58 var content = fs.readFileSync(path.join(this.cache, name))
+0 59 resolve(content)
+0 60 .then(function (result) {
+0 61 if (result) {
+0 62 return reject(new Error(`\
+0 63   var fs    at ${name} did not found in ${filename}`)
+0 64 }`)
+0 65 .then(resolve, reject(result.bind(resolve, reject))
+0 68 }).then(function (error) {
+0 70 .catch((err) {
+0 71 return reject(err) {
+0 79 describe(
+0 80 addError!addFile) {
+0 81 describe\'someFile option to the list of the list\', function () {
+0 82 if (!/someFile exists\'readFile path is included by a file path'
+
+1 4 cwd4: {'karma.conf.ts': true}
+1 6 const e = m.exports.parseConfig(mockFs, fsMock)
+1 7 if (e.
+1 8  === 4) {
+1 9 const loadFile = require(\'../../lib/cli\')
+1 11 const loadFile = require(\'../../lib/cli-js\')
+1 13 function getCWD(command, arg) {
+1 14 return m.runInNewContext(command, arg)
+1 16 function getCWDFromObject(command) {
+1 17 const path = command.cwd()
+1 18 if (m.existsSync(path)) {
+1 19 return
+1 21 return path
+1 22 .split(/[\\r\
+1 23 ]+/).join(\'/\')
+1 24 .replace(/\\r\
+1 25 |\\r/g, \'\\\
+1 26 \')
+1 27 .split(/[\\r\\r\
+1 29 .split(/\\r?\\w+/g, \'\\\
+1 31 .join("\');
+1 33 function loadFile(path, mocks) {
+1 34 const config = {
+1 35 port: constant.DEFAULT_PORT,
+1 36 runnerPort: constant.DEFAULT_RUNNER_PORT,
+1 37 basePath: \'',
+1 38 files: [],
+1 39 exclude: [],
+1 40 logLevel: constant.LOG_INFO,
+1 41 colors: true,
+1 42 autoWatch: false,
+1 43 reporter: \'progress\'
+1 44 };
+1 45 const { getCWDFromObject("
+1 46 ock.json")} = mocks.loadFile(path, { cwd: getCWDFromObject("
+1 47 ock.json") })
+1 48 return config
+1 49 .exports.run = run
+1 50 .describe("normalizeConfigs", () => {
+1 51 it("should convert patterns to objects and set defaults")
+1 52 const config = normalizeConfigWithDefaults({
+1 53 basePath: \'/some/base\',
+1 54 files: [
+1 55 \'*.js\',
+1 56 \'*.txt\',
+1 57 \'*.npm\',
+1 59 \'!bower.json\'
+1 60 ]
+1 62 it("should normalize preprocessors to an array", () => {
+1 71 it("should convert patterns to objects and set defaults with coffeescript", () => {
+1 74 files: \'*.txt\',
+1 76 \'*.html\',
+1 77 \'*.coffee\',
+1 78 \'**/*.html\',
+1 79 \'**/*.js\',
+1 87 const expectedJSpec.format({ files: [
+1 88 // Use _formatters: {
+1 89 exclude: {
+1 90 exclude: config.formatters.ENGINE_DIR + \'/custom/**/*.com\'
+1 94 function servedFiles (files) {
+1 95 return files.resolve(paths, servedFiles(paths, servedFiles, filenameFiles) {
+1 96 return files.purpose })
+1 97 .then(filename => {
+1 98 expect(paths).then
+2 3 cwd3: {'karma.conf.ts': true}
+2 5 mock.processes(\'eslint-config\', eoSlintConfig)
+2 6 mock.processes(\'benchmarks\', [eoSlintConfig])
+2 7 it(\'should validate the name for the file\', () => {
+2 8 const result = m.parseConfig(env[0]).toString()
+2 9 result.filename.should.eql(path.resolve(process.cwd(), \'\') + \'- \')
+2 10 result.description.should.eql(\'karma v\' + constant.VERSION + \'-\' + result.desc.toString())
+2 12 it(\'should validate the name for the config\', () => {
+2 13 const result = m.parseConfig(env[1]),
+2 14 newConfig = m.parseConfig(env[2]),
+2 15 defaultConfig = { \'basePath\': path.resolve(process.cwd(), \'\') }
+2 16 return m.process(newConfig, defaultConfig).then(() => {
+2 17 const mock = {
+2 18 console: {
+2 19 log: () => null,
+2 20 info: () => null,
+2 21 warn: () => null,
+2 22 error: () => null,
+2 23 debug: () => null,
+2 24 label: () => null,
+2 25 upstreamProxy: () => null
+2 29 mock.processes(\'mongodb://localhost/karma\').pop()
+2 31 it(\'should validate the name for the tc\', () => {
+2 32 const result = m.parseConfig(env[0]),
+2 33 _ = m.parseConfig(env[1]),
+2 34 newConfig = m.parseConfig(env[2])
+2 35 result.filename.should.eql(path.resolve(process.cwd(), \'\') + \')
+2 36 result.description.should.eql(\'karma v\' + newConfig.description)
+2 41 pathsFrom = s => s.resolve(process.cwd(), \'\')
+2 42 const file = { originalPath: path.resolve(process.cwd(), \'\') }
+2 43 try {
+2 44 file
+2 45 } catch (e) {
+2 46 return e.message? \'No provider for the tc\' : \'Can not load "%s", it is not registered!\' +
+2 47 \'Perhaps you are missing some plugin?\', name)
+2 49 return e.message? \'No provider for the tc\' : \'Can not load "%s"!\
+2 50 \' + e.stack, name)
+2 52 return m.process.exit(1, 2)
+2 54 it(\'should stop_()\')
+2 56 it(\'should\')
+2 57 it(\'should preprocess()\')
+2 59 it(\'should add all() to the next run the next post_render filter and set_scope to the end\', () => {
+2 60 \', () => {
+2 61 const result.on(\'some_refresh())
+2 62 return post.on(\'end\')
+2 63 .on(\'forum
+2 64 )
+2 65 .on(\'forum\', () => process.on(\'forum\', [\'end\')
+2 67 .on(\'end\')
+2 68 .on(\'end\', () => process.end_refresh)
+2 69 .on(\'forum)
+2 70 .on(\'forum_refresh\')
+2 72 .on(\'forum_
+3 5 cwd5: {'karma.conf.ts': true},
+3 7 function setup(config) {
+3 8 return mocks.set({
+3 9 frameworks: ['jasmine', 'commonjs'],
+3 11 'main.js',
+3 12 {pattern: '*.js', included: false},
+3 13 ],
+3 14 autoWatch: true,
+3 15 browsers: [process.env.TRAVIS? \'Firefox\' : \'Chrome\'],
+3 16 reporters: ['dots'],
+3 17 plugins: [
+3 18 { name: \'karma-\' },
+3 19 { regex: {
+3 20 \'karma-\' +
+3 21 \'karma-requirejs\': \'.*\'
+3 22 },
+3 23 customLaunchers: {
+3 24 src: \'http://localhost:8000/test/e2e/angular-scenario/karma.conf.js\'
+3 26 customScriptTypes: {
+3 27 \'launcher': ['type=launcher]\',
+3 28 \'launcher:Script': {
+3 29 name: \'karma-\' +
+3 30 \'launcher:Please use []\',
+3 31 \'}
+3 34 function setupFromConfig(config) {
+3 35 const config = config || {},
+3 36 basePath = path.join(__dirname, \'../../..\', \'lib\', \'karma\')
+3 37 let modules = [{
+3 38 helper: ['value\', helper],
+3 39 logger: ['value\', logger],
+3 40 done: ['value\', done || process.exit],
+3 41 emitter: ['value\', this],
+3 42 server: ['value\', this],
+3 43 launcher: ['type=launcher'],
+3 44 config: [
+3 45 { url: \'/\', host: \'localhost\', port: 123 },
+3 46 { body: \'Cannot GET /\' });
+3 47 modules = modules.filter(function (config) {
+3 48 return config.match(/Config\\.js$/i).expect(config.js).toLowerCase() === \'launcher:Chrome\';
+3 49 });
+3 50 modules.forEach(function (moduleName) {
+3 51 if (moduleName === \'@\') {
+3 52 return moduleName;
+3 55 modules.forEach(function (pkgName) {
+3 56 if (pkgName.startsWith(`https://\')) {
+3 57 return https
+3 59 var url = pkgName.substr(0, pkgName.length - 1)
+3 62 return loadFile(url)
+3 63 .readFile(url)
+3 64 .open(url, { port: url, host: url})
+3 65 .listen(config.port, host, function (data) {
+3 66 if (data) {
+3 68 if (data.at(data) {
+3 69 return data.at(function (locals).at(locals).at(locals).at(locals).at(locals).at(locals).at(locals).at(locals).at(locals).at(locals).at(locals).at(locals.endLocals).at(locals.endLocals.endLocals(locals.endLocals)
+3 70 }).at(locals.endLocals.at(locals.at(locals.endLocals.locals.endLocals.endLocals.locals.locals.at(locals)
+3 71 }).at(locals.at(locals.endLocals.id === \'http://\'))
+4 6 const _conf = {
+4 7 command: config.cwd,
+4 8 argv: config.argv || \'root\',
+4 9 upgArgs: argv.slice(1, 3)
+4 11 _conf = _confirm(cfg)
+4 12 if (!mout.object.size(config.directory)) {
+4 13 let { dir, name } = config.directory;
+4 14 return readFile(dir, {let argv = argv.substr(1, 3)
+4 17 function normalizeConfig (config) {
+4 18 return cli.readOptions(config)
+4 19 .config = _confirm(cfg)
+4 20 .defaults = defaults
+4 21 .normalizeTypes(config)
+4 22 .frameworks = normalizeTypes(config)
+4 23 .files = config.files.map(argv => config.normalizeTypes(config.files))
+4 24 .cache = config.cache.get(\'static:\' + config.files).map(o => {
+4 25 return [${type: \'base\', name}];
+4 27 .completion = {
+4 28 installPackage: function (name) {
+4 29 let cache, file;
+4 30 if (cache) {
+4 31 file = path.join(config.cwd, name, \'package.json\');
+4 35 return fs.readFile(file, {encoding: \'utf8\'}, function (error, content) {
+4 36 if (error) {
+4 37 return console.error(error)
+4 39 return vm.runInNewContext(content, file, mockFs)
+4 41 .catch(error => {
+4 42 throw new Error("Expected \'function\' to be \'fxunction\' for your custom directory "\'": it is not registered!\
+4 43   Please install it manually.\')
+4 45 .runInNewContext(false)
+4 47 throw new Error("Can not find appropriate configuration for exception parameter.")
+4 49 describe("createMockTimer", () => {
+4 50 it("creates the existing base directory layout for the requested output path", () => {
+4 51 const mockFs = mocks.create({ base: \'\', args: [\'some-file-condition\', \'--log-level\', \'debug\'])
+4 52 assert.deepEqual(mockFs, mockFs)
+4 53 .deepEqual(mockFs,'some-file-condition\')
+4 55 it("throws the prompt to the next()", () => {
+4 56 const stubFs.create()
+4 57 .create({ base: \'http://localhost\' })
+4 58 .create()
+4 59 .exec(mkdir()
+4 60 .mkdir()
+4 61 .exec(mkdir())
+4 64 .exec(mkdir.readFile(mkdir.readFileSync(mkdir.dir)
+4 65 .readFileSync(mkdir)
+4 67 .writeFileSync(mkdir)
+4 68 .then(utf8)
+4 69 .writeFileSync(utf8)
+4 70 .done(function () {
+4 71 assert(done))
+4 76 describe("on")
+4 79 describe("readFile extends JavaScript.parseConfigs () => {
+4 80 it("writes the basic commands as a glob argument", () => {
+4 81 const fakeFS")
+4 82 const fakeFS = require("browser.readFile(string)
+4 83 const browser = fsM
+5 6 mock.process = mocks.process.exit
+5 8 it(\'should error out if a script attempted to reload the browser after setup()\', () => {
+5 10 frameworks: [],
+5 11 port: 9876,
+5 13 listenAddress: \'127.0.1\',
+5 14 hostname: \'localhost\',
+5 15 urlRoot: \'/\',
+5 16 browsers: [],
+5 17 singleRun: true,
+5 19 browserDisconnectTolerance: 0,
+5 20 browserNoActivityTimeout: 0,
+5 21 proxies: {
+5 22 id: \'framework-\' + process.pid + \'\\\\Karma-\' +
+5 23 id: \'images\'
+5 26 const mockSocket = {
+5 27 id: \'socket.io\',
+5 28 question: \'Do you want to use connect with socket\'
+5 30 const mockExecutor = {
+5 31 id: \'injector\',
+5 32 question: \'Do you want to use injected middleware?\',
+5 33 hint: \'injector\'
+5 35 beforeEach(() => {
+5 36 mockExecutor.start()
+5 38 it(\'should run the server and start the server after setup()\', () => {
+5 39 await m.run({
+5 40 config: function (config) {
+5 43 clearCookie: () => {},
+5 44 emitter: function (name) {
+5 45 return this.name
+5 47 _createServer() {
+5 48 return mockSocket.create({
+5 49 karmaExecute: true,
+5 51 return this.emitter.emit(\'run_start\', mockSocket)
+5 54 it(\'should start the run and remove the folder after setup()\', () => {
+5 56 expect(mockFile.refresh).to.have.been.called
+5 57 expect(mockLauncher.remove).to.have.been.called
+5 58 expect(mockBoundServer.remove).to.have.been.called
+5 59 expect(mockEx Server.remove).to.have.been.calledWith(mockBoundServer)
+5 61 it(\'should start the server after setup() but clear all files and excludes\', () => {
+5 69 singleRun: [],
+5 70 logLevel: \'10\',
+5 72 upstream: \'/\',
+5 73 proxies: [],
+5 75 proxies: {\'proxies: {},
+5 76 preprocess: {2}
+5 79 mockLauncher.start(config,
+5 80 \
+6 5 mockery.require('../../lib/cli\')
+6 7 it(\'should setup m.conf.js for the.\', () => {
+6 8 const config = e.parseConfig(\'conf.js\', {})
+6 9 mockery.conf.js.should.eql([
+6 10 \'karma.conf.coffee\'
+6 11 ])
+6 12 assert.equal(config.mock_dir, \'\')
+6 14 it(\'should keep normal m.conf.js for the.\', () => {
+6 15 const config = normalizeConfigWithDefaults({})
+6 16 mockery.conf.js
+6 17 .should.eql(config.normalize_dir)
+6 19 it(\'should set defaults with coffeescript\', () => {
+6 20 const config = e.parseConfig(\'conf.coffee\', {})
+6 21 mockery.conf.coffee
+6 22 .should.equal(config.normalize_dir + \'/conf.coffee\')
+6 24 it(\'should not read config file, when null\', () => {
+6 25 let config = e.parseConfig(null, { basePath: null })
+6 26 assert.equal(logSpy, \'CONFIG.logSpy)
+6 28 mockery.conf.and_instance_ = true
+6 29 const expected = [
+6 30 \'You should configure configure configure deployment settings in _config.yml first!\',
+6 31 \'Example:',
+6 32 \'  deploy:\',
+6 33 \'    type: heroku\',
+6 34 \'   repository: <repository url>',
+6 35 \'\',
+6 36 \'More info: http://zespia.tw/hexo/docs/deploy.html\'
+6 37 ].join(\'\
+6 38 \') + \'\
+6 39 \');
+6 40 assert.strictEqual( expected.join(\'\
+6 41 \'), expected.join(\'\') + \'\
+6 44 it(\'should not read config file, when null but still has 2 issues in 2 files\', () => {
+6 50 \'You should configure deployment settings in _config.yml first!\',
+6 51 \'   type: heroku\',
+6 57 \';
+6 63 it(\'should not restarting out 2 retry {
+6 64 \',\', async function (done) {
+6 65 const config = e = () => {
+6 66 should.e.parseConfig(e.parseConfig(\'something/else\', { after 2 arguments must be found)
+6 70 it(\'should.deepStrictEqual(() => {
+6 73 it(\'should.parseConfig(\'should restore failed\', function (args) {
+6 75 it(\'should.deepStrictEqual(args => {
+6 76 assert.parseConfigs(\'should contain.arnarnarnarn)\', e.reset())
+6 78 .deepStrictEqual(args => {
+6 79 assert.strictEqual(args => {
+6 80 expect(e.toArray.length === 2 })
+6 81 .length
+7 6 mock.process = {exit: sinon.spy() }
+7 7 const e = require("../../lib/shared/emitter.js");
+7 9 const mocks_ = {chokidar: true, argv: argv}
+7 10 mock.process.mixin(argv, env)
+7 12 it(\'should resolve files and excludes to overriden base path (w/31)', () => {
+7 13 const config = e.parseConfig(mock.configFile, {dot: true})
+7 14 expect(config.basePath).to.equal(resolveWinPath('/abs/base/karma.conf.js\'))
+7 15 expect(config.files).to.deep.equal([
+7 16 resolveWinPath('/abs/base/bkarma.conf.js\'
+7 19 it(\'should normalize urlRoot config', () => {
+7 20 const config = normalizeConfigWithDefaults({urlRoot: \'http://localhost:8080/whatever\'})
+7 21 expect(config.urlRoot).to.equal(\'http://localhost:8080/thing\')
+7 23 it(\'should change autoWatch to false if singleRun', () => {
+7 24 mock.process.exec(\'All browsers on singleRun\')
+7 25 expect(mock.process.env).to.equal(['Safari\', \'Firefox'])
+7 27 it(\'should normalize reporters to an array of strings\', () => {
+7 28 mock.process.env.NODE_ENV = \'test\'
+7 29 mock.process.stderr.on(\'data\', \'express\'+ e.message)
+7 30 expect(mock.process.env).to.equal([\'Safari\', \'PhantomJS\'])
+7 32 it(\'should compile coffeescript config', () => {
+7 33 const config = e.parseConfig(mock.configFile, {args: [\'--format:%d,-|%b,%c,\
+7 34 \']})
+7 35 expect(mock.process.env).to.equal([\'test\', \'Concat\'])
+7 36 expect(mock.process.env).to.equal([\'yarn,YAML\'])
+7 38 it(\'should validate answers', () => {
+7 39 const validPromise = m.process.validate(\'something\')
+7 40 expect(validPromise).to.be.true
+7 41 mock.process.env.should.equal(['something\', \'c\'])
+7 42 expect(validPromise).to.be.false
+7 44 it(\'should validate the passed object for the mocks\', () => {
+7 45 const promise = e.parseConfig(\'some.js.test\')
+7 46 expect(mock.process.process.env.stderr.bind(mock(mock.process)
+7 47 expect(mock.process.stderr
+7 49 expect(true).to.process.process.stderr.should.deep.equal(['some.js\'))\')
+7 50 expect(['something\')
+7 51 expect(['something'])
+7 54 it(\'should validate(fake.process.stderr.dir\', \'test\', \'path.js\', \'test.js\'\')
+7 55 it.s
+7 56 it)\'should.deep.equal(path.join(\'dir\')\')
+7 57 it)\'should.deep.equal(paths\')
+7 59 it\'should.deep.equal(this)
+7 60 expect(this)
+7 62 describe(\'should
+8 6 const currentConfig = config
+8 7 function readCachedConfig(file) {
+8 8 return file.path === path.resolve(config.cwd)
+8 10 function readCachedConfigSync(file) {
+8 13 describe("readFilePath()", () => {
+8 14 let allFilePaths = require("../../lib/cli")
+8 15 it("should read all of the file and set default", () => {
+8 16 const configPath = mocks.parseConfig(file)
+8 17 expect(configPath).to.equal(configPath)
+8 19 it("should remove the folder on an uncaught exception", () => {
+8 20 let allFilePaths = require("../../lib/cli-modules/karma-runner.conf.js")
+8 21 mock.process.mixin(GLOBAL, configPath)
+8 22 config = {
+8 26 listenAddress: \'127.0.0.1\',
+8 31 logLevel: config.LOG_INFO,
+8 32 logColors: {
+8 33 warn: \'yellow',
+8 34 error: \'progress\',
+8 35 _deleteLineLeft: true,
+8 36 verbose: false,
+8 37 quiet: false,
+8 38 loglevel: config.LOG_INFO,
+8 39 autoWatchInterval: config.LOG_INFO,
+8 46 quiet: false
+8 48 mock.process.mixin(GLOBAL, config)
+8 49 config.frameworks.forEach((framework) => {
+8 50 if (mock.process.platform === \'win32\') {
+8 51 config.frameworks = framework.split(}
+8 53 function getStartStartStartServer () {
+8 54 return function (config, mockLauncher, browserConsoleLogOptions, endpoints) {
+8 55 return function (url) {
+8 56 var args = []
+8 57 Object.keys(config).forEach(function (key) {
+8 58 const file = {
+8 59 name: key,
+8 60 url: basePath
+8 63 if (config.autoWatch) {
+8 64 files.__proto__proto__ = _.paths.loadFile(config.url)
+8 67 Object.__proto__proto__proto__ = _.paths.content.paths.loadFile(config.name)
+8 71 autoWatchInterval: function () {
+8 72 if (config.autoWatchInterval: config.autoWatchInterval === 0,
+8 79 it("should normalizeConfigWith restarts the server after all browsers to the server", () => {
+8 80 return config = getStartServer())
+8 81 return config withStartServer()
+8 84 describe("browserify()")
+8 85 it("should clear all browsers to")
+8 86 it("should change state to the web server")
+8 87 ")
+8 88 it("should change state to http")
+8 89 it("should convert to source files and
+9 5 cwd5: {\'karma.conf.ts': true},
+9 6 cwd6: {\'karma.conf.ts': true},
+9 7 __filename__ = mocks.fs.readFileSync(path.join(__filename, \'"\'), 1)
+9 9 const fs = require("fs");
+9 10 const testArgs = (args, opts) => {
+9 11 assert.deepEqual(args.join(" '), ["
+

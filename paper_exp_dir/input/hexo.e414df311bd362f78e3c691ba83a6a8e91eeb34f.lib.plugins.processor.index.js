@@ -1,0 +1,9 @@
+module.exports = function(ctx){
+var processor = ctx.extend.processor;
+
+function register(name){
+var obj = require('./' + name);
+processor.register(obj.pattern, obj.process);
+}
+
+register('asset');

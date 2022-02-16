@@ -1,0 +1,80 @@
+Min editdistance: 30.00
+Closest candidate: 2 21 return posts.map(function(item){
+0 1 name: {type: String, required: true},
+0 2 parent: {type: String, ref: 'Category'}
+0 3 });
+0 4 var date = date = moment.format('YYYYYY-MM-MM-DD');
+0 5 var categories = dateCategory = format('ctime');
+0 6 if (!postsDir = catDir = config.length > 1;
+0 7 return posts.length = cat.length = cat.length;
+0 8 posts.for (tags = posts.map(function(function(post){
+0 9 return {
+0 10 return Post.find({source: {_: {_: {_: {_: } } } } }).should.length;
+0 11 }).map(function(post){
+0 12 return self.slug;
+0 13 }).should.post.post = tag = post.post;
+0 14 }).should.name;
+0 16 }).should.throw new TypeError('categories = posts;
+0 18 };"
+
+1 2 category_id: {type: String, required: true},
+1 3 category_title: {type: String, required: null},
+1 4 ategory_id: {type: String, ref: null},
+1 5 category: {type: String, ref: null},
+1 6 seag: String, ref: {type: String, ref: String, ref: String, ref: {type: String, ref: {type: String, a: String, a: String},
+1 8 var Console = exports: Console = exports.Console = new Schema({
+1 9 Console: new Schema({
+1 11 Console: {constructor: {type: {type: {type: {type: Boolean, required: null}
+1 13 Console.virtual full_source = Console, ref: {type: {type: String, ref: String, required: function() {
+1 14 Console.store: {type: String, ref: {type: String, required: String, required: true},
+1 15 Console: {type: {type: String}
+1 17 Console
+2 4 var date = new Date(){
+2 5 return date.format('YYYYYY-MM-MM-DD');
+2 7 var categories = newCategory = dbCats = dbCats.find({
+2 8 name: categories.find({
+2 9 name: {};
+2 11 return dbTags = dbCats.find({
+2 13 var posts.tags.map.each(function(function(function(item){
+2 14 return dbTags.hasOwnProperty: function(item){
+2 15 return dbTags.hasOwnProperty(item){
+2 16 return dbTags.hasOwns.length == null;
+2 17 return dbTags.length == null;
+2 18 }).set(Object.keys().length == undefined;
+2 21 return posts.map(function(item){
+2 22 return posts[id){
+2 23 return posts[id];
+2 24 }
+3 4 var CategoryType = exports.Category = new Schema({
+3 5 name: {type: String, ref: String, ref: 'Category'}
+3 7 var Asset = exports.Asset = new Schema({
+3 9 exports.Cache = new Schema({
+3 10 exports.CacheArray = new Schema({
+3 11 _id: {type: {type: {type: String, ref: String, required: null}
+3 12 });"
+
+4 8 Category.virtual('permalinkGetter = function(){
+4 9 return this.permalinkGetter.valueOf('posts').length = 0;
+4 10 return this.length;
+5 2 parent: {type: String, ref: 'Category'},
+5 3 posts: [{type: String, ref: String, ref: 'Post'}],
+5 4 posts: [type: String, ref: String, ref: String, ref: String, ref: {type: String, ref: String, ref: {type: String, ref: String, ref: String, ref: String, ref: String}nposts}n});
+5 6 var posts = exports.Category = exports.Category = new Schema({
+5 7 name;
+5 8 exports.Category = new Schema = new Schema({
+5 9 name: {type: {type: String, required: String, required: String, ref: String, posts, posts});
+5 11 url: {type: String, posts: {type: String, ref: String, posts, posts: [{type: String, ref: String, posts},'
+
+6 3 posts: [{type: String, ref: String, ref: 'Post'},"
+
+7 4 var date = moment([2014, new Date(){
+7 5 date: new Date(){
+7 6 return date(){
+7 7 return moment([2014, new Date(),"
+
+8 4 comments: {type: {type: Boolean, ref: Boolean, ref: true},
+8 5 length: {type: Boolean, ref: 10},"
+
+9 4 var Category = exports.Category = new Schema({
+9 7 var tag = Schema.virtual('posts'
+

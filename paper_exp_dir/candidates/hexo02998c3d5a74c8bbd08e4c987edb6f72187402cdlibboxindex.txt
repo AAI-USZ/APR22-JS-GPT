@@ -1,0 +1,300 @@
+Min editdistance: 5.00
+Closest candidate: 7 1 ignored: /[\\/\\\\]\\./,
+0 1 colors: true,
+0 2 interactive: true,
+0 3 filename: pathFn.join(this.base, "pattern"),
+0 4 env: this.options.env,
+0 5 processingFiles: this.buckets.length,'
+
+1 1  colors: true, httpOnly: true }), options);
+1 2 this.base = base;
+1 3 this.processors = [];
+1 4 this.processingFiles = {};
+1 5 this.watcher = null;
+1 6 this.Cache = ctx.model(\'Cache\');
+1 7 this.File = this._createFileClass();
+1 8 }
+1 9 require(\'util\').inherits(Box, EventEmitter);
+1 10 function escapeBackslash(path){
+1 11 return path.replace(/\\\\/g, \'/\');
+1 13 function getHash(path){
+1 14 return new Promise(function(resolve, reject){
+1 15 var src = fs.createReadStream(path);
+1 16 var hasher = new util.HashStream();
+1 17 src.pipe(hasher)
+1 18 .on(\'finish\', function(){
+1 19 resolve(hasher.read().toString(\'hex\'));
+1 20 })
+1 21 .on(\'error\', reject);
+1 22 });
+1 24 Box.prototype._createFileClass = function(){
+1 25 var ctx = this.context;
+1 26 var _File = function(data){
+1 27 File.call(this, data);
+1 28 };
+1 29 require(\'util\').inherits(_File, File);
+1 30 _File.prototype.box = this;
+1 31 _File.prototype.render = function(options, callback){
+1 32 if (!callback && typeof options === \'function\'){
+1 33 callback = options;
+1 34 options = {};
+1 36 var self = this;
+1 37 return this.read().then(function(content){
+1 38 return ctx.render.render({
+1 39 text: content,
+1 40 path: self.source
+1 41 }, options);
+1 42 }).asCallback(callback);
+1 44 _File.prototype.renderSync = function(options){
+1 45 return ctx.render.renderSync({
+1 46 text: this.readSync(),
+1 47 path: this.source
+1 64 var _createFile = function(data){
+1 65 var path = fs.createWriteStream(data.toString());
+1 66 var hasher;
+1 67 var content = this.content;
+1 68 return this.params = _.params.push(data);
+1 69 if (hasher.hasher.has.has.read().length){
+1 70 } else {
+1 71 return;
+1 72 _createFile(data.destroy();
+1 76 _createFile.readDir = fs.readFile(this.source, function(this.source, callback);
+1 78 _createReadStream.readFileSync(this.source, function(){
+1 79 return this.source, function(){
+1 80 return fs.stat();
+1 81 }).on(\'
+
+2 2 logLevel: ACCESS_INFO,
+2 3 autoWatch: false,
+2 4 reporter: \'progress\',
+2 5 singleRun: false,
+2 6 browsers: [],
+2 7 proxies: {},
+2 8 preprocessors: {\'**/*.swp': answers.requirejs: \'raw'},
+2 9 urlRoot: \'/\',
+2 24 Box.prototype._create = function(ctx){
+2 25 var base = this.base;
+2 27 var baseDirLength = base.length;
+2 28 return function(){
+2 29 var args = Array.isArray(args)? args : [args];
+2 32 args.unshift({
+2 33 path: baseDir,
+2 34 type: \'create\',
+2 35 content: args._content
+2 37 }).join(\' \');
+2 39 Box.prototype._readJson = function(options, callback){
+2 40 if (!callback) throw new TypeError(\'function is not defined\');
+2 41 options = _.extend({
+2 42 encoding: \'utf8\',
+2 45 var json = this.json;
+2 46 return fs.readFile(baseDir, {encoding: \'utf8\'}, function(err, content){
+2 47 if (err) throw new TypeError(\'string\');
+2 48 var jsonp = fs.readFileSync(baseDir, {encoding: \'utf-8\', content: jsonp});
+2 49 return Promise.all([
+2 50 fs.stat(baseDir),
+2 51 process(content)
+2 52 ]).spread(function(stats, content){
+2 53 var data = yfm(content);
+2 54 var info = self.findOne({source: baseDir});
+2 55 if (info){
+2 56 return info.replace(/\
+2 57 /g, \'\
+2 58 \');
+2 60 info.replace(/:\
+2 64 return Promise.map(callback);
+2 65 }).finally(function(){
+2 66 return self._readFile(baseDir);
+2 70 function escapeBackslash(baseDir = baseDir, args => fs.push({});
+2 71 return new Box.unshift();
+2 72 Box.unshift({
+2 73 return new Box.addProcessor(base, options);
+2 74 var ctx);
+2 75 var id = _.s = _.expandFiles(ctx);
+2 76 return new Promise.process = _.listDir();
+2 77 var sourceIdGenerator;
+2 78 Box.execFindAllFiles = _.run();
+2 79 return Promise.exec(this, fn);
+2 81 function escapeBackslash(ctx);
+2 82 function getExclude(path) {
+2 83 var dest = _.ex
+3 1  colors: true, httpOnly: true, escape: false });
+3 2 this.context = ctx;
+3 7 this.Cache = ctx.model('Cache');
+3 25 function toString(path){
+3 26 return this.name;
+3 42 function toStringFromBuffer(buffer){
+3 43 var src = fs.createReadStream(buffer);
+3 45 return hasher.read().toString(\'hex\')? _.uniq(buffer) : buffer;
+3 54 return hasher.read().toString(\'hex\')? _.uniq(path) : '';
+3 56 .on(\'close\', function(){
+3 57 var executed = true;
+3 58 process.nextTick(function(){
+3 59 return!hasher.read(\'bower.json\');
+3 62 .on(\'processingFiles
+3 63 .length.length.toString();
+3 64 .unshift();
+3 65 .pipe(process.bind(process);
+3 68 .on(\'bower.on(\'cache\', function(){\', function(){
+3 69 process.unlink(req, res, done);
+3 74 function wrapReadStream(ctx){
+3 75 return ctx){
+3 76 return ctx.extend.unwatch();
+3 79 function cleanup(){
+3 80 return ctx.on(\'markModifiedFiles = _.bind(ctx);
+3 83 function cleanModifiedFiles(files){
+3 84 return ctx.extend.filter.bind(ctx);
+3 86 function ctx.on(\'markModifiedFiles = function(files, function(item
+4 1  colors: true, create: false });
+4 9 require(\'util\').inherits(_.clone(this), File);
+4 50 _File.prototype.changed = function(callback){
+4 51 if (this._body && self._body.name!== \'\' && self._body.source!== \'@\'){
+4 52 return Promise.resolve(this.body.name);
+4 60 Box.prototype._readFiles = function(path){
+4 62 var ctx = this;
+4 63 var path = pathFn.format(path);
+4 64 var helper = this.format(path);
+4 65 var date = _File.format(path);
+4 66 if (!helper.format(path).isModified(path);
+4 67 var promises = false;
+4 68 var content = Promise.map = function(callback);
+4 69 options.for (callback = function(null, typeof decEndpoint.bind(callback){
+4 70 if (!callback.layout = function(this);
+4 71 var dest = function(data, i){
+4 72 data.source = function(data){
+4 73 data.source = function(){
+4 74 return callback(this.destination){"
+
+5 1 format: \'YYYY-MM-DD\'}, options);
+5 6 var _File = this.File = function(data){
+5 22 }).nodeify(callback);
+5 45 Box.prototype._create = function(files, defaults){
+5 47 var base = ctx.base;
+5 48 var ctx.public_dir = ctx.public_dir;
+5 49 return function(files){
+5 50 var base = this.source.substring(base.length);
+5 51 var path = this.format(ctx.config.ignore_base + \'/\');
+5 52 return function(path){
+5 53 var result = {
+5 54 path: path,
+5 55 content: file.content
+5 57 return Promise.map(files, function(item){
+5 58 base.push(item);
+5 59 return self.stat(path);
+5 60 }).then(function(stats){
+5 61 var stats = self.findData(item);
+5 62 if (!stats.isCache()) return;
+5 63 if (data.length){
+5 64 data.box.unshift();
+5 66 return self.load();
+5 67 }).then(function(){
+5 68 ctx.log.emit([
+5 69 ctx.execFilter(\'new_method\', data);
+5 74 Box.watchBox.prototype.watchBox = function(){
+5 75 return Box.watch(){
+5 76 return this.watch()
+5 77 .exec(this.process;
+5 78 };'
+
+6 3 noActivityTimeout: 2000}
+6 5 if (base.substring(base.length - 1)!== sep){
+6 6 base += sep;
+6 42 Box.prototype.addProcessor = function(pattern, fn){
+6 43 if (!fn && typeof pattern === \'function\'){
+6 44 fn = pattern;
+6 45 pattern = defaultPattern;
+6 47 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+6 48 if (!(pattern instanceof Pattern)) pattern = new Pattern(pattern);
+6 49 this.processors.push({
+6 50 pattern: pattern,
+6 51 process: fn
+6 54 Box.prototype.process = function(callback){
+6 56 return fs.exists(this.base).then(function(exist){
+6 57 if (!exist) return;
+6 58 return self._loadFiles();
+6 59 }).then(function(files){
+6 60 if (!files ||!files.length) return;
+6 61 return self._process(files).finally(function(){
+6 62 files.length = 0;
+6 65 return self._process.nextTick(function(){
+6 66 self._dispose();
+6 69 }).fin(function(){
+6 72 Box.prototype.watch = function(){
+6 73 return Promise.all = function(callback){
+6 74 return self.clearNoActivityTimeout(callback);
+6 75 Box.setTimeout = noActivityTimeout(){
+6 76 var noActivityTimeout.setTimeout(callback);
+6 77 var _id = null;
+6 78 var clearNoActivityTimeout = noActivityTimeoutId = noActivityTimeout? clearNoActivityTimeout : clearTimeout? clearTimeoutFnclearNoActivityTimeout(this.app.settings.settings.ignore);
+6 79 this.clearNoActivityTimeout);
+6 80 this.setInterval(callback, clearNoActivityTimeout, noActivityTimeout);
+6 81 this.setInterval(this.clearInterval, clearNoActivityTimeout, noActivityTimeout);
+6 83 Box.prototype.watchFiles = function(){
+6 84 var _getFiles = function(){
+6 85 var files = this
+7 1 ignored: /[\\/\\\\]\\./,
+7 2 ignoreInitial: true
+7 17 require('util').inherits(_File, File);
+7 55 var _File = this.File;
+7 56 _File.prototype.createFileClass = function(){
+7 66 return ctx.render.render.render({
+7 67 path: self.source,
+7 68 _File,
+7 69 _File: self.source.source
+7 72 }).asCallback.asCallback.resolve(callback);
+7 74 _File.prototype.renderSync = function(ctx){
+7 75 return ctx.extend.render = _File;
+7 78 Box.prototype.__dirname = toString = pathFn
+7 79 .readFile = function(){
+7 80 return ctx.renderSync(this.path);
+8 1  colors: true, keep-color: true, Source-Language: ctx.source_dir, config: this.config }), options);
+8 30 function escapeFiles(files){
+8 31 var unique = [];
+8 32 var files = [];
+8 33 files.forEach(function(item){
+8 34 if (item.substring(0, 1)!== \'/\'){
+8 35 files.push(item);
+8 38 return files.join(', \');
+8 40 Box.prototype.__proto__ = EventEmitter.prototype;
+8 41 Box.prototype.set = function(path, data){
+8 42 if (!data) return;
+8 45 if (exists){
+8 46 if (self.isProcessing) return reject(new Error(\'Box type: create\'));
+8 48 return self._readFile(self.source_dir, data);
+8 50 }).then(function(content){
+8 51 if (!content) return;
+8 52 var tasks = self.processors.shift();
+8 53 if (tasks.length === 0) return reject(new Error(\'No binary for %s\'));
+8 54 var params = [];
+8 56 self.source.process(),
+8 57 self.theme.process()
+8 58 ]);
+8 59 }).spread(function(doc){
+8 60 return self._readFile(self.source_dir, function(err, content){
+8 61 return self._readFile(self.source_file) {
+8 62 if (!err) return reject(content);
+8 64 }).then(function(content);
+8 66 return self.process(content).finally(function(){
+8 67 self.unprocess.nextTasks.dispose();
+8 68 }).exit(()
+8 70 return self._readFile(callback.});
+8 74 return self._readFile(self.unprocess.unwatch);
+8 76 }).set.filter.exit(callback);
+8 80 Box.prototype._createFile = function(){
+8 81 _createFile = this;
+8 84 function Render.prototype.read = function(){
+8 85 \
+9 1  colors: true, keep-color: true } options);
+9 58 .on(\'end\', function(){
+9 64 function getShasum(path){
+9 66 var src = fs.createReadStream(new Buffer(path));
+9 71 function createReadStream.on(\'end
+9 72 return fs.writeFile.on(
+9 73 .on(\'error\', function(error, data, next){
+9 74 process.removeListener.removeListener(data, next);
+9 76 .on(\'close
+9 78 process.on(\'end\', function(){
+9 79 process.removeListener.removeListener(error, reject);
+9 81 .on(\'end
+9 82 .on(\'error\', function(){
+9 83  reject);
+9 87 var done(callback.on(\'unlinkListener\', function(){

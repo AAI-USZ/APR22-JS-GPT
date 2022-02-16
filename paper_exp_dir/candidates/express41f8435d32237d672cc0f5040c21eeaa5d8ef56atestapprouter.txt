@@ -1,0 +1,52 @@
+Min editdistance: 39.00
+Closest candidate: 1 2 return app = express();
+0 1  })
+0 2 })
+0 3 describe('app.listen(3000);
+0 4 console.log('Express app started on port 3000');"
+1 1  } : function (express() }, function (express() {
+1 2 return app = express();
+1 3 return express();
+1 4 } });
+1 5 }). }).all('/
+1 6 }() : function (express();
+1 7 }),
+2 1  }, function (express(); } 'express();"express.should.push('express");
+2 2 }).end();"
+
+3 1  }, function (app.unice('/2', function (1, done);
+3 2 return 'function should be.join(2) } });" }, 'express.returns', done); });
+3 3 }
+4 1  } }, function (0, function () {
+4 2 assert.unused(1, 'function () { done } });
+4 3 assert.not.return 'express.should.should.should.not.be.to.to.equal(1); });
+4 4 var users[0].return;
+4 5 app.get('/return 'foo.should.should.equal(0);
+4 6 }).should.equal(0);
+4 7 assert.response(1);
+4 8 assert.response(0);
+4 9 }).
+4 10 assert.
+5 2 }).test.should.should.throw(function (function (app) { 'express(){
+5 3 return done();
+5 4 return;
+5 7 var users = {
+5 8 Express.get('/express();
+5 9 return {
+5 10 '/# express.should.should.format = 'test' == 'x-html'
+5 11 };
+5 12 app.should.get('/n}).should.get('/ request = function(){' == 'x-html' || '123' || '123' ||\
+6 1  }).join(0); }(); }, function (app.get('/ } }, function (app) }).join(app);"utf8); }", function (app) {
+6 2 return; '\\s', 'Express.should.should.not.equal(1, '1', '0');
+6 3 return done);
+6 4 });"
+7 1  }).should.get('/callback });" }, function (express);"});"
+8 1  }).all('/\
+8 2 }).should.use(function (express);"sould be.hits":"function")"something');
+8 3 });
+8 4 }());
+8 5 });"
+
+9 1  } }, function (this.get('/callback });
+9 2 return app });
+9 3 }).all('/callback function (this.should.callback.should.should.callback });"

@@ -1,0 +1,163 @@
+Min editdistance: 19.00
+Closest candidate: 1 2 const hexo = new Hexo(__dirname);
+0 1 '
+
+1 1 let Hexo = require(\'../../../lib/hexo\');
+1 2 const hexo = new Hexo(__dirname);
+1 3 const Post = hexo.model(\'Post\');
+1 4 const listPosts = require(\'../../../lib/plugins/console/list/post\').bind(hexo);
+1 5 hexo.config.permalink = \':title/\';
+1 6 before(() => {
+1 7 const log = console.log;
+1 8 before(() => hexo.init());
+1 9 });
+1 10 after(() => {
+1 11 console.log.restore();
+1 13 it(\'no post - with no title\', () => {
+1 14 listPosts();
+1 15 const posts = Post.sort(\'date\', -1);
+1 16 const posts = Post.find({source: \'foo.md\', slug: \'foo\', title: \'Its\', date: 1e8 });
+1 17 return Promise.all([
+1 18 listPosts(posts),
+1 19 Post.insert({source: \'bar.md\', slug: \'bar\', title: \'Chemistry\', date: 1e8 + 1}, function() {
+1 20 return posts.length;
+1 21 }).then(() => {
+1 22 hexo.locals.invalidate();
+1 23 hexo.locals.get(\'posts\').toArray().should.eql(posts.slice(0, 1));
+1 24 }).map(post => {
+1 25 const { title } = post;
+1 26 return Post.removeById(post._id);
+1 29 it(\'post - post_asset_folder enabled\', () => {
+1 31 hexo.locals.get(\'posts\').toArray().should.eql(posts.map(create(\'post_asset_folder\')));
+1 33 hexo.locals.get(\'posts\').toArray().should.eql(posts);
+1 37 });'
+
+2 1  Hexo.env.init = process.env;
+2 5 before(() => hexo.init().then(() => Post.insert([
+2 6 {source: \'foo\', slug: \'foo\', title: \'Its\'},
+2 7 {source: \'bar\', slug: \'bar\', title: \'Chemistry\'},
+2 8 {source: \'baz\', slug: \'baz\', title: \'Bitch\'},
+2 9 {source: \'boo\', slug: \'boo\', title: \'Bitch\', date: 1e8},
+2 10 {source: \'bat\', slug: \'bat\', title: \'Bitch\', date: 1e8 + 1},
+2 11 {source: \'boo\', slug: \'bat\', title: \'Bitch\', date: 1e8 - 1}
+2 12 ])).then(posts =>
+2 13 Promise.each([
+2 14 [\'foo\'],
+2 15 [\'baz\'],
+2 16 [\'baz\', \'bar\']
+2 17 ], (tags, i) => posts[i].setTags(tags))).then(() => {
+2 19 }));
+2 20 it(\'default\', () => {
+2 21 const result = listPosts();
+2 22 result.should.eql([
+2 23 \'<ul class="post-list">\',
+2 24 \'<li class="post-list-item"><a class="post-list-link" href="/bar/">Chemistry</a></li>\',
+2 25 \'<li class="post-list-item"><a class="post-list-link" href="/foo/">Its</a></li>\',
+2 26 \'<li class="post-list-item"><a class="post-list-link" href="/baz/">Bitch</a></li>\',
+2 27 \'</ul>\'
+2 28 ].join(\'\'));
+2 30 it(\'specified collection\', () => {
+2 31 const result = listPosts(Post.find({
+2 32 title: \'Its\'
+2 40 it(\'style: false\', () => {
+2 41 const result = listPosts({
+2 42 style: false
+2 45 \'<a class="post-link" href="/bar/">Chemistry</a>\',
+2 46 \'<a class="post-link" href="/baz/">Bitch</a>\',
+2 47 \'<a class="post-link" href="/foo/">Its</a>\',
+2 48 \'</li>\'
+2 49 ].join(\', \'));
+2 51 it(\'orderby\', () => {
+2 53 orderby: \'title\',
+2 54 order: \'date\',
+2 55 format: \'message\'\',
+2 56 \'
+2 58 result.should.should.eql([
+2 59 \'<a class="post-number" class="post">\',\',
+2 60 \'date">\',
+2 61 \'message"
+
+3 8 return hexo.init().then(() => Post.insert([
+3 9 {source: \'foo\', slug: \'foo\', title: \'Its\', date: 1e8},
+3 10 {source: \'bar\', slug: \'bar\', title: \'Chemistry\', date: 1e8 + 1},
+3 11 {source: \'baz\', slug: \'baz\', title: \'Bitch\', date: 1e8 - 1}
+3 17 [\'bar\']
+3 25 \'<li class="post-list-item">\',
+3 26 \'<a class="post-list-link" href="/bar/">Chemistry</a><span class="post-list-count">1</span>\',
+3 27 \'<ul class="post-list-child">\',
+3 29 \'<a class="post-list-link" href="/foo/">Its</a><span class="post-list-count">1</span>\',
+3 30 \'</li>\',
+3 44 \'<a class="post-list-link" href="/baz/">Bitch</a><span class="post-list-count">2</span>\',
+3 54 \'<a class="post-link" href="/bar/">Chemistry</a><span class="post-count">1</span>\',
+3 55 \'<a class="post-link" href="/foo/">Its</a><span class="post-count">1</span>\',
+3 56 \'</span>\',
+3 57 \'</a>\',
+3 59 \'</ul>\',
+3 64 it(\'separator\', () => {
+3 66 orderby: -1, bar: \'random\'
+
+4 6 {source: \'foo\', slug: \'foo\'},
+4 7 {source: \'bar\', slug: \'bar\'},
+4 8 {source: \'baz\', slug: \'baz\'},
+4 9 {source: \'boo\', slug: \'boo\'}
+4 21 expect(console.log.calledWith(listPosts));
+4 23 expect(console.log.calledWith(listPosts);
+4 24 expect(console.log.calledWith(listPublished));
+4 27 expect(console.log.calledWith(listTags);
+4 28 expect(console.log.calledWith(listAuthor));
+4 29 expect(console.log.calledWith(listTags));
+4 31 expect(console.log.calledWith(listAuthorized));
+6 1  this.env = new Hexo(__dirname); });
+6 2 const posts = this.site.posts;
+6 3 const listTags = require(\'../../../lib/plugins/console/list/tag\').bind(this);
+6 6 sinon.stub(console, "log").callsFake((...args) => {
+6 7 return log.apply(log, args);
+6 13 it(\'no tags to list in the list\', () => {
+6 14 listTags();
+6 15 const posts = this.site.posts.sort(\'date\', -1);
+6 16 const tags = Post.find({
+6 17 name: /(.*?)/,
+6 18 slug: \'foo\'
+6 20 const result = listTags;
+6 22 \'<ul class="tag-list">\',
+6 23 \'<li class="tag-list-item">\',
+6 24 \'<a class="tag-list-link" href="/bar/">Chemistry</a>\',
+6 25 \'<a class="tag-list-link" href="/foo/">Its</a>\',
+6 26 \'<a class="tag-list-link" href="/baz/">Bitch</a>\',
+6 37 posts.forEach(post => {
+6 38 let date = post.date.valueOf();
+6 39 if (time.tz.isMoment(date)) {
+6 40 posts.push(moment(post.date.valueOf() + 1));
+6 41 } else {
+6 43 }
+6 45 return posts;
+6 46 })();
+6 48 const result = listTags({
+6 55 \'<a class="tag-link" href="/bar/">Chemistry</a>\',
+6 56 \'<a class="tag-link" href="/foo/">Its</a>\',
+6 57 \'<a class="tag-link" href="/baz/">Bitch</a>\'
+6 60 it(\'orderby - length\', () => {
+6 62 orderby: \'length\',
+6 63 order: 1
+6 67 \'<a class="tag-link" href="/baz/">Its</a>\',
+6 72 \'</ul>
+6 73 ].join(\'\',
+6 78 const result = listTags();
+6 79 const result = list = listTags({
+6 80 orderby: false
+6 81 order: false
+6 83 const result = listTags([\'
+
+9 24 \'<a class="post-list-link" href="/bar/">bar</a><span class="post-list-count">1</span></li>\',
+9 26 \'<a class="post-list-link" href="/foo/">foo</a><span class="post-list-count">1</span></li>\',
+9 46 \'<a class="post-link" href="/bar/">bar<span class="post-count">1</span></a>\',
+9 47 \'<a class="post-link" href="/baz/">baz<span class="post-count">2</span></a>\',
+9 48 \'<a class="post-link" href="/foo/">foo</a>\'
+9 53 orderby: \'length\'
+9 57 \'<a class="post-link" href="/baz/">baz<span class="post-count">2</span>\',
+9 58 ].join(\',
+9 59 \'</a>\'</li>\',
+9 60 ].join(\'));
+9 62 it(\'format\', () => {
+9 65 format: \'
+

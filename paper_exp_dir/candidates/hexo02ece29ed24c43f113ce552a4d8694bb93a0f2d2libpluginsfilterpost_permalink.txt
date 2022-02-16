@@ -1,0 +1,102 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 for (let i = 0, len = keys.length; i < len; i++) {
+0 1 return Promise.all([
+0 2 fs.exists(this.id),
+0 3 this._id.substr(0, 1),
+0 4 this._id.length)
+0 5 ]).spread((exist, data) => {
+0 6 const pair = data.box.collection;
+0 7 return readCategories(data.categories, data.args);
+0 8 }).then(exist => {
+0 9 if (!exist) return;
+0 10 for (let i = 0, len = pair.length; i < len; i++) {
+0 11 if (!pair.length) return;
+0 12 }
+0 13 return this.set(\'Content-Type\', \'application/json\');
+0 14 }).then(() => {
+0 15 const json = JSON.parse(content);
+0 16 return {
+0 17 name: typeof json,
+0 18 path: this.id.substring(0, 1),
+0 19 bcc: this.id.substring(1),
+0 20 filename: path
+0 21 };
+0 22 }).then(result => {
+0 23 const content = result.replace(/\\
+0 25 fs.readFile(path, \'utf8\'),
+0 26 createAssetFolder(pathFn.join(hexo.base_dir, assetFolder),
+0 27 createPostAssetFolder(pathFn.join(hexo.base_dir, assetFolder + \'/\', \'post\', \'archive\', \'index\'], {silent: true});
+0 29 id: this.id,
+0 30 path: this.id.substring(0, this.length),
+0 31 post: this.post.format(\'MMM D YYYY\'),
+0 32 archive: this.archive,
+0 33 year: this.year,
+0 34 month: this.month,
+0 35 day: this.day,
+0 36 i_month: this.i_day
+0 39 module.exports = postPermalinkFilter;'
+
+1 1 for (let i = 0, len = keys.length; i < len; i++) {
+1 2 const key = keys[i];
+1 3 if (!meta.hasOwnProperty(key)) continue;
+1 4 Object.defineProperty(meta, key, Object.getOwnPropertyDescriptor(data, key));
+1 6 return permalink.stringify(defaults(meta, config.permalink_defaults));
+2 2 id: data.id || data._id,
+2 3 name: typeof data.slug ==='string'? pathFn.basename(data.slug) : '',
+2 4 post_title: util.slugize(data.title, {transform: 1}),
+2 5 year: data.date.format('YYYY'),
+2 6 month: data.date.format('MM'),
+2 7 i_month: data.date.format(\'M'),
+2 8 day: data.date.format('DD'),
+2 9 i_day: data.date.format(\'D'),"
+
+5 2 postPermalink.insert({
+5 3 slug: \'og:title\',
+5 4 slug: \'blog\',
+5 5 permalink: config.permalink
+5 6 }, config.filename_case),
+5 7 excerpt: postLink
+5 8 }),
+5 9 pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\')
+5 10 ]).then(function (path) {
+5 11 return postLink.setTags(['Hello World']);
+5 12 }).then(function (post) {
+5 13 return post.publish({
+5 14 slug: \'Hello-World\'
+5 15 });
+5 17 post.path.should.eql(path);
+5 18 post.content.should.eql(content);
+5 20 post.remove(),
+5 21 fs.unlink(path)
+5 22 ]);
+5 25 function removeExtname(str) {
+5 26 return str.endsWith(\'/\').replace(/^\\./
+7 1 const meta = {
+7 3 name: typeof data.slug ===\'string'? pathFn.basename(data.slug) : '',"
+
+8 2 fs.exists(defaults(?!\\/_/),
+8 3 fs.readOptions(meta._conditions, {
+8 4 se: Object.keys(meta._conditions),
+8 5 name: meta.name,
+8 6 path: keys
+8 8 meta: meta
+8 9 })
+8 10 .then(result => {
+8 12 path: keys,
+8 16 return fs.readFile(path, result);
+8 17 }).then(content => {
+8 24 }).then(data => {
+8 25 data.content.trim().should.eql([
+8 26 meta({name: path, content: \'<span id="more"></span>\'),
+8 27 meta({property: \'og:type\', content: \'application/json\'}),
+8 28 meta: \'og:title\', content: hexo.config.title}),
+8 32 fs.exists(defaults(?!\\/_/) &&
+8 33 !data.doesNotExist(data.exists)
+8 34 ])).then(exist => {
+8 35 exist.should.be.false;
+8 37 fs.readFile(path, \'utf8\')
+8 40 exist.should.be.true;
+8 42 fs.readFile(path, \'utf-8\')
+8 45 .then(data => {
+8 48 fs.unlink(path, \'utf-8\')
+9 6 return permalink.stringify(_defaults(meta, config.permalink_defaults));

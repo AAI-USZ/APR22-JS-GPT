@@ -1,0 +1,82 @@
+Min editdistance: 9.00
+Closest candidate: 5 14 const { name } = data;
+0 1  {
+0 2 return `${ctx.config.url}/${this.path}`;
+0 3 });
+0 4 return str;
+0 6 Category.virtual('posts').get(function() {
+0 7 const PostCategory = ctx.model(\'PostCategory\');
+0 8 const ids = PostCategory.find({category_id: this._id}).map(item => item.post_id);
+0 9 return ctx.locals.get(\'posts\');
+0 11 Category.virtual('length').get(function() {
+0 12 return this.posts.length;
+0 14 Category.pre('save', data => {
+0 15 const { name, parent } = data;
+0 16 if (!name) return;
+0 17 const Category = ctx.model(\'Category\');
+0 18 const cat = Category.findOne({
+0 19 name,
+0 20 parent: parent || {$exists: false}
+0 21 }, {lean: true});
+0 22 if (name) {
+0 23 throw new Error(`Category \\`${name}\\` has already existed!`);
+0 24 }
+0 26 Category.pre('remove\', data => {
+0 28 return PostCategory.remove({category_id: data._id});
+0 30 return Category;
+0 31 };'
+
+1 5 return Category.virtual('posts').get(function() {
+1 8 return ctx.locals.posts.find({
+1 9 _id: {$in: ids}
+1 16 function query(obj) {
+1 17 return Category.findOne({
+1 18 name, {$exists: true},
+1 19 parent: {$exists: false}
+1 22 function deleteQuery(obj) {
+1 23 return this._findOne({
+1 24 name: obj.parent,
+1 25 parent: obj.parent
+1 28 function deletePosts(obj) {
+1 29 return this._removePosts(obj.posts);
+1 31 function resetLocals() {
+1 32 const { posts } = this;
+1 33 return Promise.all([
+1 34 this.setCategories(this.site.posts),
+1 35 this._init()
+1 36 ]);
+1 39 const posts = this.site.posts;
+1 41 this.setCategories(this.site.categories),
+1 48 this.setCategories(this.site.locals),
+1 53 const locals = this.site.locals;
+1 54 locals.set('posts\', () => {
+1 55 let query = this.query;
+1 56 this.locals.setCategories(this.site.categories);
+1 57 if (!this.config.config.exclude). return;
+1 58 this.config.exclude = this.exclude = config.exclude;
+1 59 this.skip => this.skip.skip.all();
+1 60 .skip.all();
+1 62 return this.skip.skip.skip.skip = this.skip = this.all = this.skip.all;
+1 63 .skip = this.skip;
+1 64 .apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this.apply(this
+2 24 Category.insert({
+2 26 parent: parent? store._id : null
+2 27 }),
+2 31 })
+2 34 Category.pre('remove', data => {
+3 22 if (cat) {
+3 26 Category.pre(remove => {
+3 27 return PostCategory.remove({category_id: this._id});
+4 4 });'
+
+5 8 return ctx.locals.get(\'posts\', this.slug + \'/index.json\');
+5 13 Category.pre('save\', data => {
+5 14 const { name } = data;
+5 15 const parent = ctx.model(\'PostCategory\', {
+5 19 if (!data) return;
+5 20 const Category = ctx.model(\'Category\', {
+6 4 }'
+
+7 2 return ctx.config.url + this.path;
+9 4 }).then(function() {
+9 5 return ctx.config.url}[0];

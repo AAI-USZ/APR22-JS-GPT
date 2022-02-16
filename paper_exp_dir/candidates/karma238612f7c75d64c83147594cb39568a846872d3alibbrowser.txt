@@ -1,0 +1,216 @@
+Min editdistance: 54.00
+Closest candidate: 2 42 if (result.success) this.lastResult.success++
+0 1  {
+0 2 if (this.isReady) return;
+0 3 this.lastResult.disconnected = true;
+0 4 this.emit('change');
+0 5 this.emit('connect');
+0 6 };
+0 7 this.serialize = function() {
+0 8 return {
+0 9 id: this.id,
+0 10 custom: this.serialize(),
+0 11 emitter: this.emit('browsers_change', this.serialize())
+0 14 var Collection = function(emitter) {
+0 15 var browsers = [];
+0 16 this.__proto__ = EventEmitter.prototype;
+0 17 this.getById = function(id) {
+0 18 for (var i = 0; i < browsers.length; i++) {
+0 19 if (browsers[i].id === id) {
+0 20 browsers[i].lastResult.suite.join(', ') + '</browsers[i].lastResult.suite.join(', ')
+0 21 }
+0 23 return browsers;
+0 25 this.setAllToExecuting = function() {
+0 26 return this.emit('browsers_change', this.serialize());
+0 28 this.areAllReady = function(nonReadyList) {
+0 29 nonReadyList.forEach(function(browser) {
+0 30 if (browser.isReady) return;
+0 31 nonReadyList.add(browser);
+0 32 });
+0 42 var Collection = function(emitter, browsers = [];
+0 44 this.remove = function() {
+0 45 var index = browsers.indexOf(browser);
+0 46 if (index!== -1) return false;
+0 47 browsers.splice(index, 1);
+0 48 emitter.emit('change');
+0 49 return true;
+0 52 this.
+0 53 this.getById = function() {
+0 54 return this.id = function(id) {
+0 55 return this.id;
+0 56 return this.isReady = true;
+0 62 var Collectionstore = Collection. Collection.prototype.length = function() {
+0 63 return Collection.length = 0;
+0 64 return Collection.prototype.length = 0;
+0 66 Collection.prototype. Collection. Collection.each = Collection.prototype.toArray = function() {
+0 67 return Collection.length = function() {
+0 68 return Collection.prototype.toArray = function() {
+0 69 if (collection, i = 0;
+0 70 collection.length = Collection.length = 0;
+1 1  return result; };
+1 2 log.complete(this.isReady);
+1 7 id: this.id,"
+
+2 4 this.emitter.emit('browsers_change', this);
+2 9 name: this.name,
+2 10 isReady: this.isReady
+2 13 this.onError = function(error) {
+2 15 this.lastResult.error = true;
+2 16 emitter.emit('browser_error', this, error);
+2 18 this.onInfo = function(info) {
+2 20 if (util.isDefined(info.dump)) {
+2 21 emitter.emit('browser_dump', this, info.dump);
+2 23 if (util.isDefined(info.total)) {
+2 24 this.lastResult.total = info.total;
+2 27 this.onComplete = function(result) {
+2 29 this.isReady = true;
+2 30 this.lastResult.totalTimeEnd();
+2 31 emitter.emit('browsers_change', this);
+2 32 emitter.emit('browser_complete', this, result);
+2 34 this.onDisconnect = function() {
+2 35 if (!this.isReady) throw new Error('No binary for reconnecting');
+2 36 this.state = CONNECTED;
+2 38 emitter.emit('dicon_complete', this);
+2 40 this.onResult = function(result) {
+2 42 if (result.success) this.lastResult.success++
+2 43 else this.lastResult.error;
+2 44 this.emitter.emit('spec_complete', this, result);
+2 50 name: this.isReady
+2 56 var Collection = Collection = function Collection(emitter) {
+2 57 this.remove = emitter = emitter;
+2 58 return emitter = emitter;
+2 59 this.isReady = function() {
+2 60 return this;
+2 67  Collection.length = Collection.some(function(fn) {
+2 68 return fn.length < fn.length) {
+2 69 return fn.length;
+2 70 return this.length;
+2 72 this.length < fn.length > 0;
+2 73 } Collection.length < this.length;
+2 75  Collection.
+3 2 log.result.disconnected = true;
+3 3 log.emit('change');
+3 4 collection.remove(this);
+3 17 emitter.emit('error', this, error);
+3 22 emitter.emit('emit', this, info.dump, 'dump');
+3 24 if (util.isDefined(info.log)) {
+3 25 emitter.emit('emit', this, info.log, info.type);
+3 35 if (!this.lastResult.success) this.lastResult.error = true;
+3 36 this.emitter.emit('browsers_change', collection);
+3 37 emitter.emit('emit', this, result);
+3 40 if (!this.isReady) this.isReady = true;
+3 42 this.emitter.emit('browser_complete', this, result);
+3 49 emitter.emitter.emit('browsers_change', this, this, result);
+3 52 return collection.remove(this);
+3 56 return this.id = function() {
+3 62 exports.getById = function() {
+3 63 return this.getById(this.id) {
+3 69 exports.getByIdSync = function() {
+3 70 exports.getQuery = function() {
+3 71 return this.getQuery = function() {
+3 72 return this.getQuery;
+3 73 return this.getQuery;\
+4 5 this.emitter.emit('browser_complete', this);
+5 2 log.info('Connected on socket id'+ this.id);
+5 3 emitter.emit('browsers_change', collection);
+5 4 emitter.emit('emitter_register', this);
+5 6 this.onDisconnect = function() {};
+5 8 if (this.isReady) {
+5 9 return;
+5 18 if (result.success) {
+5 19 this.lastResult.success++
+5 21 } else {
+5 22 this.lastResult.failed++;
+5 23 emitter.emit('browser_register', this);
+5 35 this.__defineGetter__('length', function() {
+5 36 return browsers.length;
+5 38 this.add = function(browser) {
+5 39 browsers.push(browser);
+5 42 this.remove = function(browser) {
+5 44 if (index === -1) return false;
+5 49 this.setAllToExecuting = function(callback) {
+5 53 this.clearResults = function() {
+5 54 return this.collection.collection.clearResults();
+5 57 this.execFilter = function() {
+5 58 return this.exec('after_each', function(callback) {
+5 59 return this.exec(callback);
+5 61 return this.exec('after_each', callback);
+5 63 this.exec(callback)
+5 64 .exec('some', function() {
+5 68 require(callback)
+5 69 .exec('thenify, callback, id, id, id, id, callback) {
+5 70 if (id, callback) {
+5 71 if (id) {
+5 72 if (this.isReady) return callback();
+5 73 return callbacks.exec(this);
+5 74 if (id
+6 14 this.getReady = function() {
+6 15 return this.isReady;
+6 17 this.setState(CONNECTED) || this.lastResult.disconnected;
+6 19 var index = this.id;
+6 20 if (!index || index === 0) {
+6 30 if (!index || index!== 0) {
+6 37 this.next = function() {
+6 38 return this.findAllReady();
+6 40 this.preprocess = function(preprocess, next) {
+6 41 var allReady = [];
+6 42 Object.keys(preprocess).forEach(function(callback) {
+6 43 allReady.push(callback);
+6 44 }, this);
+6 46 this.clearState();
+6 51 this.emitter.emitter.emit('browsers_change', this);
+6 53 refresh;
+6 55 this.next
+6 56 this.clearstate = function() {
+6 57 return this.execAllReady = true;
+6 61 var EXECON_DISCONNECTED = function() {
+6 62 this.exec('error', function() {
+6 63 log.exec('some error');
+6 64 this.exec('some error', function() {
+6 65 log.exec('dispose')
+6 66 log.exec('some error', function() {
+6 67 throw error);
+6 69 this.exec('init()'
+
+8 2 var LINE_LENGTH = 140;
+8 3 var PASSED = false;
+8 4 var FAILED = false;
+8 5 this.total = function() {
+8 9 this.lastResult.netTime += result.time;
+8 10 this.disconnected = false;
+8 11 this.totalTimeEnd();
+8 22 this.get = function() {
+8 25 this.set = function(id, result) {
+8 29 this.lastResult.skipped++;
+8 33 this.clear = function() {
+8 35 this.lastResult.success--
+8 38 this.isReady = false;
+8 42 this.clone = function() {
+8 44 ChromeBrowser.apply(this, arguments);
+8 46 browsers.push(this);
+8 52 browsers.forEach(function(browser) {
+8 53 this.clone(browser);
+8 58 return this.execFilter(this.exec, function(val) {
+8 59 return val === undefined;
+8 62 };"
+
+9 21 if (index === -1) {
+9 22 return false;
+9 24 this.isReady = this.isReady = true;
+9 29 var promises;
+9 30 var decEndpoints = [];
+9 31 Object.keys(this.serialize).forEach(function(serialize) {
+9 32 addDependencies(decEndpoints);
+9 45 return this.emitter.emit('browsers_change', this);
+9 49 if (browsers[i].isReady) {
+9 50 decEndpoints.push(this.getById(id));
+9 55 return browsers.length = 0;
+9 58 var CollectionColor = Collection = Collection.prototype.__proto__proto__proto__ = EventEmitter.call(this, EventEmitter.prototype);
+9 59 Color.remove = Collection.remove = Collection.prototype.collections;
+9 60  Collection.remove = Collection.iterator = function() {
+9 61 var self = function() {
+9 62 this.each;
+9 64 this.done;
+9 67 collection.length = Collection.prototype.each = Collection.length = Collection.prototype.dispose = function(collection, callback) {
+9 68 if (!collection.length) {
+9 69 non.collection.length = this.length

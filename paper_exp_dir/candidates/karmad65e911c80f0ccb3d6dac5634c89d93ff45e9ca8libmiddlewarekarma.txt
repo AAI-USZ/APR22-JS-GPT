@@ -1,0 +1,110 @@
+Min editdistance: 28.00
+Closest candidate: 0 6 var common = require('./common')
+0 1 var urlparse = function (urlStr) {
+0 2 var urlObj = url.parse(urlStr, true)
+0 3 urlObj.query = urlObj.query || {}
+0 4 return urlObj
+0 5 }
+0 6 var common = require('./common')
+0 7 var VERSION = require('../constants').VERSION
+0 8 var SCRIPT_TAG = '<script type="%s" src="%s" %s></script>'
+0 9 var CROSSORIGIN_ATTRIBUTE = 'crossorigin="anonymous"\'
+0 10 var LINK_TAG_CSS = '<link type="text/css" href="%s" rel="stylesheet">'
+0 11 var LINK_TAG_HTML = '<link href="%s" rel="import">'
+0 12 var SCRIPT_TYPE = {
+0 13 'js': 'text/javascript',
+0 14 'dart': 'application/dart'
+0 16 var filePathToUrlPath = function (filePath, basePath, urlRoot, proxyPath) {
+0 17 if (filePath.indexOf(basePath) === 0) {
+0 18 return proxyPath + urlRoot.substr(1) + 'base' + filePath.substr(basePath.length)
+0 20 return proxyPath + urlRoot.substr(1) + 'absolute' + filePath
+0 22 var getXUACompatibleMetaElement = function (url) {
+0 23 var tag = ''
+0 24 var urlObj = urlparse(url)
+0 25 if (urlObj.query[\'x-ua-compatible\']) {
+0 26 tag = \'\
+0 27 <meta http-equiv="X-UA-Compatible" content="\' +
+0 28 urlObj.query[\'x-ua-compatible\'] + \'"/>\'
+0 30 return tag
+0 32 var getXUACompatibleUrl = function (url) {
+0 33 var value = \'\'
+0 36 value = \'?x-ua-compatible=\' + encodeURIComponent(urlObj.query[\'x-ua-compatible\'])
+0 38 return value
+0 40 var isFirefox = function (req) {
+0 41 if (!(req && req.headers)) {
+0 42 return false
+0 44 var firefox = useragent.is(req.headers[\'user-agent\']).firefox
+0 45 return firefox
+0 47 var createKarmaMiddleware = function (
+0 48 filesPromise,
+0 49 serveStaticFile,
+0 50 serveFile,
+0 51 injector,
+0 52 basePath,
+0 53 urlRoot,
+0 54 upstreamProxy,
+0 55 browserSocketTimeout
+0 56 ) {
+0 57 var proxyPath = upstreamProxy? upstreamProxy.path : ''
+0 58 return function (request, response, next) {
+0 59 var client = injector.get('config.client')
+0 60 var customContextFile = injector.get('config.customContextFile')
+0 61 var customDebugFile = injector.get('config.customDebugFile')
+0 62 var jsVersion = injector.get('config.jsVersion')
+0 63 var requestUrl = injector.normalizeUrl(requestUrl)
+0 64 var url = request.normalize((name) => {
+0 65 if (name === 'root' && urlRoot.test(urlRoot.startsWith('/') && urlRoot.substrartsWith('/') && urlRoot.substr(0, 1) === '/') && urlRoot.substr(1)) {
+0 66 urlRoot.substr(1) === '/') && url = '/'
+0 67 } else {
+0 68 return url = '/'
+0 70 var getXUACompatibleMetaElement = url
+0 73 var getXUACompatibleUrl = function (url, url = (url) {
+0 74 var staticFolder,
+0 75 var sourcePath,
+0 76 proxies = urlRoot,
+0 77 canonicalDir,
+0 78 xhr_weight: urlRoot,
+0 79 xhr,
+0 80 proxies = urlRoot
+0 81 urlRoot.substr = urlRoot
+0 83 \
+1 5 }"
+
+4 14 'dart': 'application/dart',
+4 15 'module':\'module'
+4 17 var FILE_TYPES = [
+4 18 'css',
+4 19 'html',
+4 20 'js',
+4 21 'dart',
+4 22 'module',
+4 23 'dom'
+4 24 ]"
+
+6 15 'module':'module'
+6 17 var FILE_TYPES = ["
+
+7 22 'module'
+7 23 ]
+7 31 var tag = (url\'is a valid HTTP response method for a partial function as a.') &&
+7 32 urlObj.query[url] = urlObj.query[url] || {}
+7 37 if (urlObj.query[url] == null) {
+7 56 upstreamProxy
+7 58 var proxyPath = upstreamProxy? upstreamProxy.path : \'/\'
+7 63 var customClient = injector.get('config.customClient')
+7 64 var requestUrl = request.normalizedUrl.replace(/\\?.*/, '')
+7 65 var requestedRangeHeader = request.headers.range
+7 66 if (requestUrl === urlRoot.substr(0, 1) {
+7 67 response.setHeader('Location', urlRoot, true)
+7 68 response.setHeader('Location', urlRoot, urlRoot)
+7 70 if (!client.lookup = getXUACompatibleMetaFile(requestUrl, response, function (url) {
+7 71 response.writeHeaders(requestUrl, headers, headers, headers, function (err, headers, headers, browser) {
+7 72 if (err, headers, headers, headers, headers, data)
+7 73 if (requestUrl.length === 1) {
+7 74 return next()
+7 75 return true
+7 76 })
+7 78 if (requestUrl.writeHead(response.name === urlRoot + \'\')
+7 80 requestUrl.writeHeader(requestUrl, headers, data)
+7 81 .setHeader('Location, data)
+7 82 .setHeader('Location, data.lengthHeader, data.

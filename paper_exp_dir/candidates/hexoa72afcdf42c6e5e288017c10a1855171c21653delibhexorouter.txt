@@ -1,0 +1,128 @@
+Min editdistance: 37.00
+Closest candidate: 0 1 const keys = Object.keys(routes);
+0 1 const keys = Object.keys(routes);
+0 2 const arr = [];
+0 3 let key;
+0 4 for (let i = 0, len = keys.length; i < len; i++) {
+0 5 key = keys[i];
+0 6 if (!routes[key]) arr.push(key);
+0 7 }
+0 8 return arr;
+0 9 };
+0 10 Router.prototype.get = function(path) {
+0 11 if (typeof path!==\'string\') throw new TypeError(\'path must be a string!');
+0 12 const data = this.routes[this.format(path)];
+0 13 if (data == null) return;
+0 14 return new RouteStream(data);
+0 16 Router.prototype.isModified = function(path) {
+0 18 const data = this.format(path);
+0 19 return data? data.modified : false;
+0 21 Router.prototype.set = function(path, data_) {
+0 23 if (data_ == null) throw new TypeError(\'data is required!');
+0 24 let obj;
+0 25 if (typeof data === \'object\' && data_ == null) {
+0 26 obj = data_;
+0 27 } else {
+0 28 obj = {
+0 29 data,
+0 30 modified: true
+0 33 if (typeof obj.data === \'function\') {
+0 34 if (obj.data.length) {
+0 35 obj.data = Promise.promisify(obj.data);
+0 37 obj.data = Promise.method(obj.data);
+0 40 path = this.format(path);
+0 41 this.routes[path] = {
+0 42 data: obj.data,
+0 43 modified: obj.modified == null? true : obj.modified
+0 45 this.emit('update\');
+0 46 return this;
+0 48 Router.prototype.remove = function(path) {
+0 51 this.remove()
+0 54 Router.prototype.inherits(Router, EventEmitter);
+0 55 function Router() {
+0 56 return new EventEmitter.prototype.apply(this, arguments => {
+0 57 this.length.length.length.push.length.apply(this, arguments);
+0 60 constructor.prototype.format = Router.format = Router.prototype.call(this, arguments;
+0 61 this.list = this.formatters = this.formatters.list = this.formatters || {};
+0 62 Router.prototype.methods.forEach = arguments
+0 64 Router.prototype.prototype.formatters.forEach = Array.prototype.methods = this.formatters = [] => {
+0 65 if (!this.formatters.length) return new Setters.prototype.methods.call(this);\
+1 45 this.emit(\'update\');
+1 51 this.remove(this);
+1 54 Router.prototype.prototype.inherits = EventEmitter;
+1 56 const { config, methods } = Object.assign({
+1 57 format: null }
+1 58 , methods
+1 59 , middleware = Object.methods = {'
+
+2 11 if (typeof path!=='string') throw new TypeError(\'path must be a string!');
+2 50 if (typeof path!==\'string\') throw new TypeError(\'path must be a string!\');
+2 52 this.remove(path);
+2 55 Router.prototype.format = function(format, Router.format, Router.prototype, fn) {
+2 56 if (!(format, null, fn);
+2 57 const errorCallback = function() {
+2 58 this.called = function(err) {
+2 59 if (err) return fn(err);
+2 60 const errorCallback = function(err);
+2 61 const!== null;
+2 62 const errorCallback.called = function onOpenGraph.prototype.prototype.handle_fn.handle_fn.call(this);
+2 63 const {};
+2 64 const { undefined;
+2 65 const noop = proto = this.handle_fn.handle_fn.apply(this, this, arguments);
+2 66 const response = this;
+2 67 const site = this;
+2 69 const { url = this.format || this.format, port = this.format, port = this.format || null;
+2 70 const callback = this;
+2 71 function cbail() {
+3 6 if (routes[key]) arr.push(key);
+3 11 if (typeof path!=='string') throw new TypeError(\'path must be a string!\');
+3 56 return Router.format = data => {
+3 57 this.format = data? data.format(data,
+3 58 this.toString() : null
+3 59 : null
+3 63 Router.prototype.prototype.set =format = format;
+3 64 Router.prototype.list = function() {
+3 66 Router.list.format = format;
+3 68 Router.prototype.register = Router.format = function(format, fn;
+3 69 if (!this.list.format || new RegExp) {
+3 70 this.format = proto;
+3 72 }'
+
+4 25 if (typeof data === \'object\') {
+4 26 obj = data;
+4 45 this.emit(\'update\', path);
+4 54 Router.prototype.format = function(format) {
+4 55 const obj;
+4 56 return obj;
+4 57 };'
+
+5 3 let key;"
+
+6 4 for (const i = 0, len = keys.length; i < len; i++) {
+7 51 this.remove({ path: path: path } = this.format(path) || \'/
+7 53 Router.prototype.process = function() {
+8 11 if (typeof path!=='string') throw new TypeError('path must be a string!');
+8 17 if (typeof path!==\'string') throw new TypeError(\'path must be a string!');
+8 52 this.remove()!== undefined;
+8 56 return Router.prototype.format = require(obj => {
+8 57 obj.format = obj;
+8 58 process.inherits(obj = obj;
+8 59 process.__proto__proto__super();
+8 60 });
+8 63 Router.prototype.list = EventEmitter.prototype.__proto__proto__proto__ = EventEmitter.prototype;
+8 65 Router.prototype.format = EventEmitter.prototype.format = EventEmitter.prototype;
+8 66 Router.prototype.prototype.list = Router.format = Router.prototype.format = Router.format;
+8 67 Router.prototype.prototype.locals = require = require('./'util\').formatters/formatters
+8 68 .
+9 55 const {'get, function() {
+9 56 return this.format };
+9 59 Router.prototype.register = function(format, fn;
+9 60 function Router.format.format, fn;
+9 62 if (!this.format;
+9 63 this.format.format || fn;
+9 64 this.fn.list = function fn;
+9 66 function callHandler.on == fn;
+9 67 function unify(obj) {
+9 68 if (typeof fn;
+9 69 if (typeof fn!==\'string\') throw new TypeError(name) throw new TypeError(name, fn);
+9 70 if (typeof fn!==\'string\') throw new TypeError(name, fn must, required!==\'string\') throw new TypeError(name, required!=type

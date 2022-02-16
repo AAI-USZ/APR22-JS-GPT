@@ -1,0 +1,82 @@
+Min editdistance: 19.00
+Closest candidate: 9 18 return hexo.filter
+0 1 log.log.forEach(function(function(){
+0 2 return next();
+0 3 next();
+0 4 log.log.log('save();
+0 5 return;
+0 6 });
+0 8 }
+0 10 ], function(){
+0 11 return hexo.log('close();
+0 12 return hexo.log('error');
+0 16 };'
+
+1 1 log.log.saveDatabase.log();
+1 2 return hexo.log('save();
+1 5 }, function(){
+1 6 require('.loadJSON');
+1 9 };
+1 10 }());'
+
+2 3 return hexo.log = function(){
+2 4 return Promise.log('exit(1, args);
+2 5 return generateFile(args);
+2 8 }, function(err){
+2 12 function commandFnreturn hexo(args, args, callback){
+2 13 return hexo.process(err);
+2 14 return callback);
+2 15 return hexo.db(ansr);
+3 1 log.d('saveDatabase.logger.remove(function(){
+3 2 logPath(newLogPath){
+3 3 return null;
+3 6 }).log.reset();
+3 8 ], next();
+3 9 }], function(){
+3 16 module.createFile = function(){
+3 17 return hexo.extend = function(){
+3 18 return newConsoleStream(callback);
+3 19 return newConsoleStream);
+4 1 ], function(next(){
+4 2 log.log.log.exit(1);
+4 10 })
+4 13 ], callback();
+4 16 }), function(){
+4 17 async.autoWatch(next){
+4 18 return next(){
+4 19 return hexo.watch((){
+5 1 log.saveDatabase.log();
+5 2 }).log.save();
+5 5 }).forEach(function(){
+5 6 var savedFiles = new();
+5 7 return newDatabase;
+5 8 return newLocals.reset();
+5 11 function saveDatabase(){
+5 12 return newLocals.exit([]);
+5 13 return newLocals.resolve();
+5 17 function create();
+5 18 function saveFilesProm
+6 1 log.log.on('error', function(err => next(err);
+6 2 return logger.remove();
+6 7 async.dump = function(function(){
+6 8 return posts();
+6 9 async.forEach(args => posts.length, next(() => {
+6 10 async.forEach(() => {
+6 11 async.forEach(posts.toArray(posts, function(posts, function(item, next){
+6 12 return posts.toArray(args => {\
+7 1 "
+
+8 2 return();
+8 5 }]);
+8 7 return hexo.logger.on('exit', next);
+8 13 });'
+
+9 2 return content.log.forEach(function(answ){
+9 3 logPath.logger.log('removeFile(logPath);
+9 4 return content.saveFile(logPath);
+9 5 return content);
+9 6 return content.unlink(logPath);
+9 14 var interval = 1000;
+9 15 return posts.forEach(){
+9 16 return new Posts();
+9 18 return hexo.filter

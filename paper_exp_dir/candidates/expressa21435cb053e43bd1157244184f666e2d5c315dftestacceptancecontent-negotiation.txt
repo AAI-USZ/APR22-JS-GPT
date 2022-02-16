@@ -1,0 +1,73 @@
+Min editdistance: 1.00
+Closest candidate: 5 2 describe('GET /', function(){
+0 1 }, function(){
+0 2 it('should default to text/html', function(done){
+0 3 request(app)
+0 4 .get('/')
+0 5 .expect('<ul><li>Tobi</li><li>Loki</li><li>Jane</li></ul>')
+0 6 .end(done);
+0 7 })
+0 8 it('should accept to text/plain', function(done){
+0 11 .set('Accept', 'text/plain')
+0 12 .expect(' - Tobi\
+0 13  - Loki\
+0 14  - Jane\
+0 15 ')
+0 19 describe('header', function(){
+0 20 it('should default to headers', function(done){
+0 27 .end(function(err, res){
+0 28 res.headers.should.have.property('content-type', 'text/plain');
+0 29 res.text.should.equal('tobi');
+0 30 done();
+0 34 describe('when Accept is not present', function(){
+0 35 it('should default to []', function(done){
+0 38 .expect(200, done);
+0 41 describe('when no match is made', function(){
+0 42 it('should respond with json', function(done){
+0 45 .set('Accept', 'foo/bar, bar/baz')
+0 49 })"
+
+2 18 it('should default to application/json', function(done){
+2 21 .set('Accept', 'application/json')
+2 22 .expect(' - json\
+2 23  - normal-text/plain')
+3 8 it('should accept to text/plain',function(done){
+3 25 .end(function(res){
+3 26 res.body.should.equal('tobi');
+4 1  || request.get('/'));
+4 4 var app = express();
+4 5 app.use(function(req, res, next){
+4 6 res.end(req.accepts('txt')? 'yes' : 'no');
+4 7 });
+4 10 .expect('Set-Cookie', 'Tobi', done);
+5 1  || require('../support/http');
+5 2 describe('GET /', function(){
+6 19 it('should accept. text', function(done){
+6 23 .expect('Set-Cookie', /set-cookie')
+6 26 it('should allow multiple-line', function(done){
+6 33 it('should allow arbitrary js', function(done){
+6 36 .set('Accept','text/plain')
+8 34 describe('when a match is found', function(){
+8 35 it('should respond with the same object', function(done){
+9 4 app.use(function(req, res){
+9 5 res.header('x-negotiation', { type: 'GET' }, { type: 'GET' });
+9 6 res.end();
+9 11 res.body.should.equal('<ul><li>Download <a href="/files/amazing.txt">amazing.txt</a>.</li>');
+9 18 res.header('x-negotiation', { type: 'GET' }, { type: 'PUT' });
+9 24 res.body.should.equal('<ul><li>Download <a href="/files/missing.txt">missing.txt</a>.</li>');
+9 31 res.header('x-form-input', { type: 'GET' }, { type: 'PUT' });
+9 37 res.body.should.equal('<p>Download <a href="/files/blogazing.txt">blogazing.txt</a>.</p>');
+9 50 res.headers.should.have.property('content-type', 'text/plain; charset=utf-8');
+9 51 res.text.should.equal('hey');
+9 52 res.statusCode.should.equal(200);
+9 56 it('should allow multiple streams', function(done){
+9 59 res.header('x-form-input', { type: 'GET' }, { type: 'HEAD' });
+9 65 res.headers.should.have.property('content-type', 'application/json,application/x-form-input');
+9 66 res.text.should.equal('{"foo":"bar"}');
+9 71 it('should support json', function(done){
+9 74 res.header('x-form-input', { type: 'POST' }, { type: 'DELEFT; bar: 1}, { bar: 2}, { b: 3});
+9 79 request(app.get('/user.get('/user/something', function(req, req){
+9 80 res){
+9 81 res.type.type.json', function(res){
+9 82 res.json', function(res.json', function(res.params[0).end();
+9 83 res);

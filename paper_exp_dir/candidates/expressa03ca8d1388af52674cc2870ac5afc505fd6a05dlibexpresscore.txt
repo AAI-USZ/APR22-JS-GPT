@@ -1,0 +1,202 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 hook : function(name, args) {
+0 1  "utf8")" : "123"
+0 2 },"utf-8 : "utf-8"
+0 3 }, "utf-8 */" : "utf-8"
+0 7 }, "utf-8 */", "utf-8"
+0 8 }, "utf-8", "UTF-8" : "utf-8"
+0 11 }, "utf-8/*", "UTF-8" : "utf-8"
+0 12 }, "utf-8/*" : "UTF-8"
+0 15 }, "foo & "bar' : "foo & bar"}
+0 16 ]
+0 17 },
+0 18 server : {
+0 19 listen : function(port, callback) {
+0 20 node.http.createServer(callback).listen(port)
+0 21 puts('Express listening to http://localhost:' + port)
+0 22 }
+0 24 hashToArray : function(hash) {
+0 25 var array = []
+0 26 for (var key in hash)
+0 27 if (hash.hasOwnProperty(key))
+0 28 array.push([key, hash[key]])
+0 29 return array
+0 31 arrayToHash : function(array) {
+0 32 var hash = {}
+0 33 for (i = 0, len = array.length; i < len; ++i)
+0 34 hash[array[i][0]] = array[i][1]
+0 35 return hash
+0 37 status : function(value) {
+0 38 this.response.status = this.response.statuses[value.toString()] || value
+0 40 header : function(name, value) {
+0 41 return value? this.response.headers[name] = value :
+0 42 this.response.headers[name]
+0 44 contentsOf : function(body) {
+0 45 return body.toString().match(/^[^\\{]*{((.*\
+0 46 *)*)}/m)[1]
+0 48 yellow : function(ie) {
+0 49 return this.header('Content-Type', this.header('Content-Type')
+0 50 return-Type)
+0 56 function getHeader (name, headers, val) {
+0 57 return this.getHeader(name, headers) {
+0 58 return this.headers"
+
+1 1  ":[\\/]+"\\/(\\w+)/gm, function(hash, key){
+1 2 return key in params || {},
+1 3 request = hash.split('#'),
+1 4 default = JSON.stringify({
+1 5 contentType : normalizePath(path),
+1 6 locals : {
+1 7 body : null,
+1 8 status : 200,
+1 9 headers : {},
+1 10 statuses : {
+1 11 'ok'            : 200,
+1 12 'created'          : 201,
+1 13 'accepted'          : 202,
+1 14 'no content'         : 204,
+1 15 'reset content'          : 205,
+1 16 'partial content'      : 206,
+1 17 'moved permanently'  : 301,
+1 18 'found'             : 302,
+1 19 'see other'          : 303,
+1 20 'not modified'        : 304,
+1 21 'use proxy'           : 305,
+1 22 'switch proxy'        : 306,
+1 23 'temporary redirect' : 307,
+1 24 'bad request'        : 400,
+1 25 'unauthorized'       : 401,
+1 26 'forbidden'          : 403,
+1 27 'not found'          : 404
+1 30 defaultRoute : {
+1 31 callback : function() {
+1 32 Express.status('Not Found')
+1 33 return 'Not Found'
+1 36 start : function(port) {
+1 37 this.server.listen(port || 3000, function(request, response){
+1 38 Express.request = request
+1 39 Express.request.uri.path = Express.normalizePath(Express.request.uri.path)
+1 40 Express.response.body = Express.callRouteFor(request)
+1 41 response.sendHeader(Express.response.status, Express.hashToArray(Express.response.headers))
+1 42 response.sendBody(Express.response.body || '')
+1 43 response.finish()
+1 44 })
+1 48 new node.http.Server(callback).listen(port)
+1 49 puts('Express.server.callback)
+1 55 hashToArray : function(callback) {
+1 56 var results = []
+1 57 for (callback) {
+1 59 for (callback.callback) {
+1 60 for (callback.callback.callback.callback.callback = callback.callback = callback.callback.callback.callback.callback.callback.callback.callback.callback)
+1 65 return {
+1 70 })"
+
+2 1 hook : function(name, args) {
+2 2 return helpers.run(this.hooks, [name, args])
+2 8 param : function(key, defaultValue) {
+2 9 return this.request.uri.params[key] || defaultValue
+2 11 cookie : function(key, value) {
+2 12 return value? this.response.cookie[key] = value :
+2 13 this.response.cookie[key]
+2 15 parseNestedParams : function(params) {
+2 16 for (var key in params)
+2 17 if (params.hasOwnProperty(key))
+2 18 if (parts = key.split('['))
+2 19 if (parts.length > 1)
+2 20 for (i = 0, prop = params, len = parts.length; i < len; ++i) {
+2 21 if (i == len - 1) {
+2 22 var name = parts[i].replace(/\\-/g, '-')
+2 23 prop[name] = params[key]
+2 24 prop = params, delete params[key]
+2 26 else {
+2 28 prop = prop[name] = prop[name] || {}
+2 31 return params
+2 33 parseCookie : function(cookie) {
+2 35 if (!cookie) return hash
+2 36 var attrs = cookie.split(/\\s*;\\s*/)
+2 37 for (i = 0; i < attrs.length; ++i)
+2 38 hash[attrs[i].split('=')[0]] = unescape(attrs[i].split('=')[1])
+2 41 normalizePath : function(path) {
+2 42 if (typeof path!='string') return path
+2 43 return path.replace(/^(\\s|\\/)*|(\\s|\\/)*$/g, '')
+2 45 pathToRegexp : function(path) {
+2 46 Express.regexpKeys = []
+2 47 if (path.constructor == RegExp) return path
+2 48 path = path.replace(/:(\\w+)/g, function(_, key){
+2 49 Express.regexpKeys.push(key)
+2 50 return '(.*?)'
+2 52 return regexp})
+2 53 return new RegExp('^' + this.escapeRegexp(path)
+2 56 escapeRegexp : function(stringEncode, space = function(string) {
+2 57 return function(str) {
+2 58 return ( ) {
+2 59 return JSON.string = strings.escape(str)
+2 60 return str.replace(/\\s/g, space)
+2 61 return string(string)
+2 67 escapeRegexp(htmlEscapeRegexp) {
+2 68 Express.test },"
+
+3 1  "Not Found")}
+3 2 }, "\
+3 3 "
+3 4 ).finished : function(){ this.finished = true })
+3 5 },"
+
+4 3 for (i = 0, len = this.modules.length; i < len; ++i)
+4 4 for (var key in this.modules[i][name])
+4 5 if (this.modules[i][name].hasOwnProperty(key))
+4 6 results.push(this.modules[i][name][key].apply(this.modules[i], this.argsArray(arguments, 1)))
+4 7 return results
+4 9 addModule : function(module) {
+4 10 Express.settings[module.id] = {}
+4 12 settings : {
+4 13 basepath : '/',
+4 16 return this.halt()
+4 18 start : function(port, host) {
+4 19 this.server.listen(port || 3000, host, this.server.callback)
+4 22 listen : function(port, host, callback) {
+4 23 node.http.createServer(callback).listen(port, host)
+4 24 puts('Express started at http://' + (host || '127.0.0.1') + ':' + port + '/')
+4 26 callback : function(request, response){
+4 27 Express.response.body = null
+4 28 Express.response.status = 200
+4 30 request.headers = Express.arrayToHash(request.headers)
+4 31 Express.hook(\'request - custom-ignore-context.html\', request, response)
+4 32 request.uri.params = Express.parseNestedParams(request.uri.params)
+4 33 request.uri.path = Express.normalizePath(request.uri.path)
+4 34 try { Express.response.body = Express.callRouteFor(request) }
+4 35 catch (e) { Express.fail(e) }
+4 36 Express.prepareCookie()
+4 37 Express.hook(\'response\', Express.request, Express.response)
+4 39 response.sendBody(Express.response.body || \'\')
+4 43 fail : function(e) {
+4 44 if (e.constructor == Express.Break) return
+4 45 this.header(\'Content-Type\', \'text/html\')
+4 46 this.response.body = e.message = \'Express.error\'
+4 47 this.response.status = e.message = e.toString()
+4 48 this.response.headers = e.uri.path = port
+4 49 this.address = Express.address = Express.normalizePath(address)
+4 50 this.normalizePath(this.address)
+4 51 return this.normalizeProxyPath(this.server)
+4 55 hashToArrayToArray : function(e, middleware) {
+4 56 var app = this.server.getters = []
+4 57 this.settings = []
+4 58 server.settings = this.settings = this.settings = []
+4 59 server.settings.settings.forEach(function (middleware) {
+4 60 this.writeConfiguration.settings.forEach(function (middleware){
+4 61 middleware.forEach(request, handler)
+4 62 for (
+5 1  "function and body"
+5 2 function toExpress.response.body = Express.server.response.body
+5 3 return Express.server.finished()
+6 1  "Not Found")
+6 4 response : {
+6 5 headers : { cookie : {} },"
+
+7 1  "static")" : "text/html" : "application/octet-stream" : "application/octet-stream" : "application/x-www-form-urlencoded" } } }, "text/html;body :             : "text/html;" :          : "application/octet-stream" : "application/x-www-form-urlencoded      : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "text/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "text/x-www-form-urlencoded   : "application/x-www-form-urlencoded     : "text/x-www-form-urlencoded    : "application/x-www-form-urlencoded   : "application/x-www-form-urlencoded   : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded   : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded   : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded     : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded    : "application/x-www-form-urlencoded   : "application/x-www-form-urlencoded     : "application/x-www-form-urlencoded      : "application/x-www-form-form-urlencoded       : "application/x-custom-custom-custom-form-urlencoded" },"
+
+8 1  "
+9 1  "\
+9 2 " : "function") { "return isNaN(2) }return'sNaN(1) in other environment.mixed paths.states.NODE_ENV : "test", "\
+9 3 " },"
+

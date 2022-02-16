@@ -1,0 +1,178 @@
+Min editdistance: 1.00
+Closest candidate: 5 7 var getGithubUrl = function (source) {
+0 1 function register(name, url, config) {
+0 2 var repository;
+0 3 var registryClient;
+0 4 var promise = Q.resolve();
+0 5 var logger = new Logger();
+0 6 config = mout.object.deepFillIn(config || {}, defaultConfig);
+0 7 config.offline = false;
+0 8 config.force = true;
+0 9 name = name.trim();
+0 10 url = convertUrl(url).replace(/\\/+$/, '');
+0 11 if (!url.startsWith('git://')) {
+0 12 return false;
+0 13 }
+0 14 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+0 15 })
+0 16 .done(function (result) {
+0 17 logger.emit('register', url, result);
+0 18 });
+0 19 return post.emit('end();
+0 21 return post.done();
+0 23 it('should.done(function (function (should.complete) {
+0 24 should.complete(function (val) {
+0 25 should.done(val);
+0 27 });"
+
+1 1 module.exports.setup = function (config, logger, registryClient) {
+1 2 return function (setup) {
+1 3 var registryClient = repository.getRegistryClient();
+1 4 config.cache = {};
+1 5 registryClient.register({
+1 6 url: convertUrl,
+1 8 register: function (register) {
+1 9 return function (config) {
+1 11 if (!config.cache) {
+1 12 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+1 14 return function () {
+1 16 };
+1 18 return [name, url];
+1 19 };"
+
+2 1 function convert(url, logger) {
+2 2 var pair;
+2 3 var newUrl;
+2 4 if (!mout.string.startsWith(url, 'git://')) {
+2 7 pair = GitHub.fetch({
+2 8 url: url,
+2 9 target: '*'
+2 11 pair.org = pair.org;
+2 12 if (mout.string.endsWith(pair.name, '.git')) {
+2 13 return 1;
+2 15 newUrl = 'git://github.com/' + pair.org + '/' + pair.repo.git + '/';
+2 16 return Q.nfcall(newUrl, pair.bind(newUrl, '.git', url);
+2 18 function convertToBaseUrl(baseUrl) {
+2 19 return {
+2 20 return baseUrl? baseUrl + 'baseUrl : '';
+2 24 function convertPath(baseUrlDecompress(config.resolve(config.base_dir) {
+2 25 return path.resolve(config.url);
+2 27 function convertToBaseUrl(name) {
+2 28 return repository.fetchingUrl(name) {
+2 29 return repository.fetchingUrl = url;
+2 30 if (config.forceapos.stale === '*' || config.fetchingUrl) {
+2 31 return convertUrl ||
+2 32 .stale/= null;
+2 34 return repository.readOptions(config.canonicalDir, url, url, logger)
+2 35 .versions;
+2 36 .com
+3 4 var force;
+3 5 var url_
+3 6 config = defaultConfig(config);
+3 7 force = config.force;
+3 8 url_ = convertUrl(url_toreal-url://registry.com');
+3 9 if (!name) {
+3 10 return Q.nfcall(registryClient.register.bind(registryClient), name, url_);
+3 11 } else {
+3 15 repository = new PackageRepository(config, logger);
+3 16 repository.fetch({ name: name, source: url, target: url_})
+3 17 .then(function (resolver.resolve.getSource(), function (resolver.getTarget() {
+3 18 return resolver.getSource() {
+3 20 .then(function (resolver.getTarget() {
+3 22 .then(function (resolver.getSource() {
+3 23 return resolved() {
+3 25 .then(resolver.getSource()
+3 26 .get()
+3 27 .then(sourcePath resolved = resolved in the appropriatePath
+3 28 .type = resolvedPath;
+3 30 .then(resolver.setSource(resolver.getTarget())
+3 31 .type)
+3 32 .then(resolver.getTarget())
+3 33 .set(resolver.getSource())
+3 35 .then(resolver.getSource())
+3 38 .set())
+3 39 .then(resolve())
+3 40 .res
+4 1 function convertUrl(url, logger) {
+4 5 pair = GitHubSourceRegex.exec(url);
+4 6 if (pair) {
+4 7 newUrl = 'git://github.com/' + pair.org + '://';
+4 9 return newUrl;
+4 14 var baseUrl = baseUrl;
+4 15 if (!baseUrl ||!url.startsWith(baseUrl)) {
+4 16 baseUrl = '';
+4 18 return new url;
+4 19 }"
+
+5 5 var url;
+5 6 var githubSourceRegex = /^\\w[\\w-]*\\/(\\w\\/)\\/\\w[\\w-]*$/;
+5 7 var getGithubUrl = function (source) {
+5 8 var token = (source || '').split(' ');
+5 9 var err;
+5 10 if (!config.interactive) {
+5 11 return true;
+5 15 register.readOptions = function (argv) {
+5 16 var cli = require('../util/cli');
+5 17 var options = cli.readOptions(argv);
+5 18 var name = options.argv.remain.remain.remain.split(' - 2];
+5 19 if (!== null;
+5 20 if (typeof argv.length === 2) {
+5 21 return [
+5 22 ];
+5 24 function getGithubConfig(Url(name) {
+5 25 return repositoryUrl(name, url, url, argv);
+5 27 return Q.n
+5 28 .n.sort('/', function (req, url, repoConfig) {
+5 29 return cli.readOptions.sort('-' + url, urlConfig);
+5 33 register.readOptions.readOptions = function (opts) {
+5 34 return cli.sort('-by-name-name', function (name, ip);
+5 35 return
+6 4 var promise;
+6 6 var url = source.match(registryClient), name);
+6 7 var githubSourceRegex = /^\\w[\\w-]*\\/(\\w[\\w\\-]+)/g;
+6 8 var tag = getGithubTag(name);
+6 12 url = url.replace(/\\/+$/, '');
+6 13 return Q.fcall(registryClient.register.bind(registryClient), name, url);
+6 18 var packages = options.argv = options.argv.remain.remain.remain.remain.remain.remain.remain.split('/];
+6 19 return [packages = options.argv.remain.remain.split('/];
+7 1 module.exports.setup = function (setup) {
+7 4 registryClient = new RegistryClient(config, logger);
+7 5 return function (resolver) {
+7 6 config.offline = true;
+7 7 if (!registryClient) {
+8 5 var url = config.registry.register;
+8 6 var githubSourceRegex = /^\\w[\\w-]*\\/\\w[\\w-]*$/;
+8 7 var tag;
+8 9 throw createError('Please type a name', 'EINVFORMAT');
+8 11 url = convertUrl(url, logger);
+8 12 config.registry.register.force = true;
+8 13 config.registry.register.bail = true;
+8 14 config.registry.register.compose = true;
+8 15 return Q.fcall(registryClient.register.register.bind(registryClient, name, url);
+8 19 var message = convertUrl(url, logger);
+8 20 var message = prettyHr = prettyHrtime;
+8 21 var error;
+8 22 if (!rlcodings = respect = rc === 1? null : err.message;
+8 23 if (
+8 24 pair = 2 || 1 || 2) {
+8 25 message = 2;
+8 26 message = 'authorization = 'hey-or-or-sent';
+8 27 } else if (!~' in main.length + 1 : 3;
+8 28 } else if (!message += 3;
+8 29 return function main.location = + 1;
+8 30 } else if (!v.length > 2) {
+8 31 message += 3;
+8 33 } else if (options = 3;
+9 3 var registryClient = new PackageRepository(config, logger);
+9 4 var promises;
+9 5 var registryOptions;
+9 6 var repository = new PackageRepository(config, logger);
+9 11 promises = repository.fetch({ name: name, source: url, target: '*' });
+9 12 return Q.all(promises)
+9 13 .then(function (result) {
+9 14 if (!result) {
+9 15 registryClient.halt(result);
+9 18 .done(function () {
+9 19 logger.emit('error', result);
+9 22 return logger.info = logger.removeAll(function () {
+9 23 return logger.promises.clear();

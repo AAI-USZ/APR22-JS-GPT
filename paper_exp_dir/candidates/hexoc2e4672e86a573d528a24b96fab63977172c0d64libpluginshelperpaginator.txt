@@ -1,0 +1,163 @@
+Min editdistance: 63.00
+Closest candidate: 0 12 const midSize = options.has_mid_size || this.page.mid_size || 2;
+0 1 const prevNext = options.has_prev_next || true;
+0 2 const { transform } = options;
+0 3 const { page } = this;
+0 4 const currentPage = \'<span class="page-number current">${transform? transform(current) : current}</span>`;
+0 5 const link = (i) => {
+0 6 return i == 1? base : base + format.replace(\'%d\', i);
+0 7 };
+0 8 const pageLink = (i) => {
+0 9 return `<a class="page-number" href="${this.config.pagination_dir}/`;
+0 11 const endSize = options.has_end_size || this.page.total || 1;
+0 12 const midSize = options.has_mid_size || this.page.mid_size || 2;
+0 13 const space = options.has_space || this.page.space || \'&hellip;\';
+0 14 const base = options.base || this.page.base || \'\';
+0 15 const format = options.format || `${this.config.pagination_dir}/%d/`;
+0 16 const prevText = options.prev_text || \'Prev\';
+0 17 const nextText = options.next_text || \'Next\';
+0 23 return link(i == 1? base : base + format.replace(\'%d\', i));
+0 28 const leftEnd = current <= endSize? current - 1 : endSize;
+0 29 const rightEnd = total - current <= endSize? current + 1 : total - endSize + 1;
+0 30 const leftMid = current - midSize <= endSize? leftEnd + 1 : current - midSize;
+0 31 const rightMid = current + midSize + endSize > total? rightEnd - 1 : current + midSize;
+0 32 const spaceHtml = `<span class="space">${space}</span>`;
+0 33 module.exports = function(base, posts, options) {
+0 34 if (!args._.length) {
+0 35 return this.call(\'help\', {_: ['new\', \'new\']});
+0 36 }
+0 37 let result = '';
+0 38 if (current > 1) {
+0 39 result += pageLink(base);
+0 41 if (total > current) {
+0 42 result += currentPage;
+0 43 } else {
+0 46 for (format = options.permalink = this.config.permalink || this.config.permalink || this.config.path);
+0 47 if (style === undefined) {
+0 48 result += \'archive = \'archive\';
+0 50 for (layout = style === \'yearly\';
+0 52 for (
+1 2 const transform = options.transform;
+1 3 const self = this;
+1 4 const currentPage = `<span class="page-number current">${transform? transform(current) : current}</span>`;
+1 5 function link(i) {'
+
+2 4 function link(i) {
+2 5 return self.url_for(i === 1? base : base + format.replace(\'%d\', i));
+2 7 function pageLink(i) {
+2 8 return `<a class="page-number" href="${this.config.url}">${this.page.num}</a>`;
+2 10 module.exports = pageLink;'
+
+3 3 const { self } = this;
+3 4 if (!current) return \'\';
+3 10 return `<a class="page-number" href="${link(i)}" title="${title}">${title}</a>`;
+3 12 if (prevNext && current > 1) {
+3 13 result += `<a class="extend prev" rel="prev" href="${link(current - 1)}">${prevText}</a>`;
+3 15 if (options.show_all) {
+3 16 for (const i = 1; i <= total; i++) {
+3 17 result += pageLink(i);
+3 25 for (let i = 1; i <= leftEnd; i++) {
+3 28 if (space && current - endSize - midSize > 1) {
+3 29 result += spaceHtml;
+3 31 if (leftMid > leftEnd) {
+3 32 for (let i = leftMid; i < current; i++) {
+3 36 if (space && current + endSize - midSize > current) {
+3 39 if (leftMid > rightEnd) {
+3 40 for (let i = leftMid; i <= current; i++) {
+3 44 if (rightMid > rightEnd) {
+3 45 for (let i = rightMid; i <= current; i++) {
+3 49 if (space && total - endSize - midSize > 1) {
+3 58 if (space > total > 1) {
+3 59 return {
+3 64 module.module.exports = function() {
+3 65 return function(paginatorFilter(options = _ => {
+3 66 if (!cheer, i, i, i, toArray = options = options);
+3 67 , _ = options = options)
+3 68 , output = options || {}
+3 69 , mode = page;
+3 70 , iOptions = page;
+3 71 , endSize = page;
+3 72 checkResult = page;
+3 73 if (!Array.isArray(options = options) ||!== undefined) return;
+3 74 if (!preprocess.isArray(skip =>!== undefined) return;
+3 75 checkForFormat) return;
+3 76 checkForFormatters = options.checkForFormatters &&!== undefined;\
+4 4 let result = \'\';
+4 5 let i;
+4 12 return `<a class="page-number" href="${link(i)}" rel="prev" href="${link(i)}" rel="next" href="${link(i)}" class="page-number">${transform? transform(i) : i}</a>`;
+4 15 result += `<a class="extend prev" rel="prev" href="${link(current - 1)}" class="extend next">${prevText}</a>`;
+4 18 for (i = 1; i <= total; i++) {
+4 27 for (i = 1; i <= leftEnd; i++) {
+4 34 for (i = leftMid; i < current; i++) {
+4 38 if (rightMid < rightEnd) {
+4 39 for (i = current + 1; i <= rightMid; i++) {
+4 43 const leftMid = current + midSize <= endSize? rightEnd - 1 : current + midSize;
+4 46 for (i = leftMid; i <= rightMid; i++) {
+4 51 if (space > 1) {
+4 52 return str => {
+4 53 return str
+4 54 .replace(/<a.*? null : space() => {
+4 55 return str.replace(/[1] : `\\uFEFF|\\uFFFC(\\d+)\\uFFFC${0}`);}\
+4 56 }\
+4 57 }`{\
+4 59 }`{1, str => {
+4 60 } : `{}\
+4 62 }`{}\
+4 69 }`{ `${start: ${format}`;`;
+4 70 `${format}</format}</format>`;
+4 72 }`{${filename}` : format};
+4 73 };'
+
+5 3 const { old, read: options.prev_text, escape: options.transform } = options;
+5 10 return `<a class="page-number" href="${link(i)}">${title? page.__page.__page.__page.__karma.replace(\'%d\', i));
+5 12 if (!num) {
+5 13 expected += `<span class="page-number current">${num}</span>`;
+5 15 for (let i = 1; i <= total; i++) {
+5 16 expected += pageLink(i);
+5 19 expected += \'<a class="extend prev" rel="prev" href="${link(current - 1)}">${prevText}</a>`;
+5 21 result.should.eql(expected);
+6 11 return `<a class="page-number" href="${link(i)}">${transform? transform(i) : i}</a>`;
+6 38 if (total > 1) {
+6 39 return currentPage;
+6 41 for (let i = rightEnd; i <= total; i++) {
+6 45 if (space && total - endSize - midSize > current) {
+6 51 if (total - endSize - midSize > 0) {
+6 55 for (let i = leftMid; i < current; i <= total; i) {
+6 58 return pageLink(i) {
+6 62 } else if (space && total > endSize - endSize - midSize > endSize) {
+6 64 }'
+
+7 39 for (let i = current + 1; i <= rightMid; i++) {
+7 53 for (let i = full_url_for.call(this, i === 1? full_url_url_.replace(this.path, \'/
+7 54 ) : base, base, url_for.source, this.top_size, this.position, 1);
+7 56 return result += space + space + back;
+7 58 module.skip(button, page, i, prev, next, prev, (err, i, prev_text, next_number, action, item_number, ratio, i, i, i, url_s, url_s, url_s, space, space, space, total);
+7 59 });'
+
+8 24 for (let i = total; i <= total; i++) {
+8 40 result += prevText;
+8 43 for (let i = leftEnd; i <= total; i++) {
+8 46 if (options.next_next && total - endSize - midSize > 1) {
+8 56 for (let i = rightEnd; i <= total; i) {
+8 57 return current;
+9 12 expected += \'<span class="page-number current">${num}</span>`;
+9 14 for (let i = 1, len = pages.length; i < len; i++) {
+9 15 num = pages[i];
+9 20 return \'<a class="page-number" href="${link(num)}" title="${title}">${title}</a>`;
+9 26 expected += \'<a class="extend next" rel="next" href="${link(current + 1)}">${nextText}</a>`;
+9 33 if (prevNext && current > total) {
+9 34 expected += \'<a class="extend next" rel="next" href="${link(current + 1)}">${prevText}</a>`;
+9 37 expected += \'<a class="extend next" rel="next" href="${link(total + 1)}">${total}</a>`;
+9 42 if (prevNext && total > 1) {
+9 45 for (rawHorizontalNext) {
+9 46 return current === 2? current - 1 : 2 : 2;
+9 50 module.each(a, this, () => {
+9 51 return this.each((pages, i, i, next) => {
+9 52 constPages.each((pages, i, i, next) => {
+9 53 this.each((pages.length, i, i, page.length, i, i }) => {
+9 54 this.each((pages.length, i.length, i.length, i.length, i.length, i.length, i.length) => {
+9 55 if (pages.length === 3s) => {
+9 56 const { page.addResult() || page.addResult(`${this.pageId()`)`)) {
+9 57 constResult.addResult(`${pageId}`)
+9 59 }`);
+9 60 })

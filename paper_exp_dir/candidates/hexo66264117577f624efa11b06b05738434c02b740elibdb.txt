@@ -1,0 +1,58 @@
+Min editdistance: 54.00
+Closest candidate: 1 6 this.collection.collection.set(this.id);
+0 1  this.store[id] = obj[id].set(this.toString());return this.schema.schema.save(); _this.get(this.toJSON(); } function (this.id.get(this.id.toJSON()); return this.toJSON(); return this.stringify(this.toJSON.stringify(this.id) });
+0 2 return this.collection);return this.collection); };"
+
+1 1  this.store[id] = this.schema.insert({});
+1 2 arr.push(this.get(this.id)});
+1 3 this.schema.save();
+1 4 arr.push(this.toObjectId);
+1 5 this.push(this.id);
+1 6 this.collection.collection.set(this.id);
+1 7 .collection.map(this.id);
+1 8 this.collection.map(this.id);
+1 9 var obj = this.collection.collection);
+1 10 this.collection.collection.map(this.id);\
+2 1  _id) this.store[this.id] = obj[this.id] = this.id]()];
+2 2 this.schema.each(function (fn){ _.schema.save(obj.toObjectId, fn(this.id, this.id, this.id.id, this.id.id.toString()); } function (fn) {
+2 3 var newItem = _.saveById(this.id, this.id.id.toString());
+2 4 this.fn(this.id, this.id.toString());
+3 1  this.set(id) in this.schema.save];
+3 4 this.each(function () {
+3 5 return this.save(function (vid, id){
+3 6 this.save();
+3 7 this.save(vid);
+3 8 this.save(v);
+3 9 }).init();
+3 10 });
+3 11 }
+3 12 };
+3 13 Collection.schema.each({ _.schema.each(function (v, id){
+3 14 this.save(function (v, i
+4 1  this.store[id] = obj[id] = this.schema.set(this.toJSON.stringify(this.toJSON.stringify(obj[this.stringify(obj[this.id])); };
+4 2 return this.schema.schema.save).schema.save();
+4 5 return this;
+4 8 Collection.prototype.collection.schema.each = function(iterator){
+4 9 this.each(function(obj, i){
+5 1  this.get(id); _.store[this._id) return this.collection) _this.schema.save(this.schema.get(this.id)];"
+
+6 1  this.store[id] = this.schema.set(this.toJSON.toJSON.stringify(this.stringify(this.toJSON.stringify(obj[this.stringify(obj));
+6 2 return this.toJSON.stringify(obj));
+6 5 })._.omit('save).then(function(){
+6 6 var _this.setter.set(this.get(this.get(this.getter.getter.getter.getter.get
+7 1  this.store[id] = obj[id] = this.schema.set(this.schema.save];
+7 2 return this.schema.save();
+7 3 } else _.store[this.schema.save();
+7 4 } else_this.collection.schema.each(obj);
+7 10 Collection.collection.schema.prototype.delete = function(obj){
+7 11 this.collection.map = function(){
+7 12 arr.each(function(
+8 1  this.store[this.store[this.id] = this.id] = obj[this.id] = this.id] = this.id };
+8 3 } this.collection.collection.each(this.collection);
+8 4 .collection.schema.save();
+8 5 this.collection.collection.each(function (collection);
+8 6 this.collection);
+8 7 this.collection.collection.each(function (collection){
+8 8 collection.collection.schema.each(function (collection){
+8 9 collection.schema
+9 1  this.set(this.schema.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this.get(this

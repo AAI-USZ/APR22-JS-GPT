@@ -1,0 +1,57 @@
+Min editdistance: 29.00
+Closest candidate: 2 12 ]).spread(function(doc){
+0 1 extend.helper.register('partial', render, locals);
+0 2 extend.helper.register('list_archives', renderSync, locals);
+0 3 extend.helper.register('list_categories', renderSync, options);
+0 4 extend.helper.register('list_posts', renderSync, options);
+0 5 extend.helper.register('get_posts', renderSync, options);
+0 6 extend.helper.register('post_assets', renderSync, options);
+0 7 extend.helper.register('number_format', renderSync, options);
+0 8 extend.helper.register('tagcloud', renderSync, options);"
+
+1 1 "
+
+2 1 module.exports = function(locals, render, callback){
+2 2 var content = cache[partial];
+2 3 if (cache.hasOwnProperty(partial)){
+2 5 } else {
+2 6 var content = fs.readFileSync(partial, 'utf8');
+2 7 }
+2 8 if (options.cache) content = content.replace(/<h3 id="more"></h3>/g, '');
+2 9 return Promise.all([
+2 10 fs.readFile(partial, content),
+2 11 fs.readFileSync(partial, 'utf8')
+2 12 ]).spread(function(doc){
+2 13 var result = renderSync(content, options);
+2 14 var $ = cheerio.load(result);
+2 15 $('h3').each(function(){
+2 16 if (!path.extname(partial) === '_content'){
+2 17 content = _.extend(content, options);
+2 19 return result;
+2 20 }).then(function(){
+2 24 ]);
+2 25 }).spread(function(doc){
+2 26 var $ = cheerio.load(partial);
+2 29 content = fs.readFileSync(partial, 'utf8');
+2 37 }).then(function(content){
+2 46 fs.readFile(partial, 'utf8', function(){
+2 47 return $.trim();
+2 48 })
+2 51 var content = partial.replace(/<h3 id="more"></h3>/g, '');
+2 52 content += renderSync(content);
+2 53 return content;
+2 56 fs.readFile(partial, content);
+2 57 }).then(function(function(result){
+2 58 return result.then(...args.mergeDeep(callback);
+2 59 });
+2 60 }).then(callback.exec(callback);
+2 64 };"
+
+6 2 if (!callback) callback = function(){};
+6 3 var content = renderSync({}, _.extend({filename: config.filename_case), content: content}, locals);
+6 4 return fs.exists(content, function(exist){
+6 5 if (!exist) return callback();
+6 6 file.readFile(file.source, function(err, content){
+6 7 if (err) throw err;
+6 8 content.should.eql(content);
+6 11 callback();

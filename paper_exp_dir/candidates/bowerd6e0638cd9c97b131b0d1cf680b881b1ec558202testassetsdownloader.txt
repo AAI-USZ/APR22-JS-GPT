@@ -1,0 +1,152 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var githubTestPackage = path.join(__dirname, 'github-test-package');
+0 1 var githubTestPackage = path.join(__dirname, 'github-test-package');
+0 2 function fetchBranch(branch, dir) {
+0 3 return cmd('git', ['checkout', '-b', branch, 'origin/' + testPackage)
+0 4 .then(null, function (err) {
+0 5 if (/already exists/i.test(err.details)) {
+0 6 return cmd('git', ['checkout', branch], { cwd: dir })
+0 7 .then(function () {
+0 8 return cmd('git', ['pull', 'origin', branch], { cwd: dir });
+0 9 });
+0 10 }
+0 13 function updateBranches() {"
+
+1 3 return cmd('git', ['checkout', '-b', branch, '--depth', 1, '.'], { cwd: dir })
+1 13 function updateBranches() {
+1 14 console.log('Updating for git..');
+1 15 return fetchBranch('master', githubTestPackage)
+1 17 return fetchBranch('some-branch', githubTestPackage);
+1 18 })
+1 20 console.log('Successfully updated for git://github.com/bower/test-package');
+1 23 if (!fs.existsSync(githubTestPackage)) {
+1 24 console.log('Cloning temp directory');
+1 25 return updateBranches();
+1 26 } else {
+1 27 console.log('Fetching foo..');
+1 30 console.log('Successfully downloaded');
+1 33 .done();
+1 35 console.log('Fetching bar.');
+1 36 return fetchBranch('baz', githubTestPackage);
+1 38 }).then(function () {
+1 39 console.log('Successfully fetched');
+1 40 return fetchBranch('foo', githubTestPackage);
+1 46 return Promise.all([
+1 47 fs.exists(githubTestPackage),
+1 48 fs.exists(githubTestPackage)
+1 49 ]);
+1 53 it('should update to the latest version', function () {
+1 54 return fetchBranch('master', {
+1 55 cwd: githubTestPackage,
+1 56 version: '0.0.1'
+1 58 return fetchBranch('some-branch', githubTestPackage)
+1 67 console.log('Fetching foo.');
+1 82 console.log('Fetch();
+1 84 .then(function (branches) {
+1 85 console.log('Accept:');
+1 88 });"
+
+3 1 var fetchBranch = require('../util/fetchBranch');
+3 4 return cmd('git', ['checkout', '-b', branch, 'origin/' + testPackage, '--progress', '.'], { cwd: dir })
+3 7 return cmd('git', ['checkout', branch], { cwd: dir });
+3 12 console.log('Updating "test-package" branches..');
+3 18 console.log('Successfully updated "test-package" branches\
+3 19 ');
+3 23 console.log('Cloning "test-package"..');
+3 24 cmd('git', ['clone', 'git://github.com/bower/test-package.git', githubTestPackage])
+3 26 console.log('Successfully downloaded "test-package" from git@github.com:twitter/bower');
+3 27 githubTestPackage.prepare();
+3 54 console.log('Successfully updated "test-package"\
+3 61 console.log('Successfully downloaded "test-package"\
+3 68 function updateDependencies() {
+3 80 function updateLauncher() {
+3 81 var l = function (names, args, temp;
+3 82 install = new GitHubResolverFactoryHook;
+3 83 install = function (cmd, logger = new Configstore) {
+3 84 installer = new Configstore = new Configstore.Generator();
+3 85 return init = function initCacheHooks = function clearCache.get();
+3 86 return initCache.setHeader('home', function () {
+3 87 logger.setHeader('x-dir', './test/admin/cache/sessions/init/config.yml');
+3 88 return commands = initCache.set('access-dir', tempDir, tempDir, function (err, secret, sync
+4 4 return cmd('git', ['checkout', '-b', branch, 'origin/' + testPackage] || new Logger();
+4 23 console.log('Successfully downloaded "test-package"\');
+4 28 console.log('Fetching "test-package"..');
+4 44 function checkRelease(dir, release) {
+4 45 var branch,
+4 46 branch;
+4 47 if (semver.valid(release)) {
+4 48 return cmd('git', ['checkout', '-f', branch, '--depth', 1, '.'], { cwd: githubTestPackage })
+4 50 return cmd('git', ['clean', '-f', branch, '--tags', '--heads', sourceDir, '--arch', 1, '.'], { cwd: githubTestPackage })
+4 52 return cmd('git', ['checkout', '-f', branch, '--branch', '--depth', 1, '.'], { cwd: githubTestPackage })
+4 56 return cmd('git', ['checkout', '-f', branch, '--branch', '--commit', '-m', '--tags', '--heads', sourceDir, '--arch', 1, '.'], { cwd: githubTestPackage })
+4 59 return cmd('git', ['checkout', '-f', branch, '--tags', '--heads', sourceDir, '--branch', '--arch', 1, '--something', '--'], { cwd: githubTestPackage })n.config.branch, '--cwd: githubTestPackage'})
+4 60 .config.cwd, 'root');
+4 63 console.log('Successfully returned);
+4 70 }"
+
+5 11 console.log('Updating for git.json.');
+5 17 console.log('Successfully updated 3.1.2');
+5 21 console.log('Cloning temp package');
+5 24 console.log('Successfully downloaded theme.');
+5 29 console.log('Fetching package %s.', cmd('git', ['fetch']);
+5 32 console.log('Successfully fetched 1.2.3');
+5 43 it('should update to 3.1.2 after pering up', function () {
+5 44 var branch = githubTestPackage;
+5 45 var newVersion = '0.0.2';
+5 46 var newSvn = resolve(3);
+5 48 return fetchBranch('master', newSvn);
+5 51 console.log('Comparing new version.');
+5 52 var queue = 5;
+5 53 var testPackage = path.join(__dirname, '../assets/github-test-package');
+5 54 var githubTestPackage = path.join(__dirname, '../assets/github-test-package');
+5 55 var cmd = 'git', ['checkout', '-b', branch], { cwd: githubTestPackage });
+5 60 return updateBranches()
+5 62 console.log('Fetching new version.');
+5 63 return cmd('git', ['pull', 'origin', '--progress', '--depth', 1, '.'], { cwd: githubTestPackage });
+6 17 console.log('Successfully updated for git.json.');
+6 20 describe('checkout', function () {
+6 21 var tempDir = path.join(__dirname, 'assets/tmp');
+6 22 before(function () {
+6 23 tempDir.prepare();
+6 25 it('Should have line method', function () {
+6 26 return fetchBranch('some-branch', tempDir);
+6 28 it('Should check release', function () {
+6 31 it('Should check for new tag', function () {
+6 32 return fetchBranch('some-tag', tempDir);
+6 34 it('Should check for new commit', function () {
+6 36 return fetchBranch('new-tag', tempDir);
+6 38 it('Should resolve to the latest version', function (next) {
+6 39 var pkg = new helpers.TempDir({
+6 40 'bower.json': {
+6 41 name: 'package',
+6 42 version: '0.0.0'
+6 44 }).prepare();
+6 45 return fetchBranch('master', 'Wrap version from 0.0.0'
+6 46 ).then(function () {
+6 47 return fetchBranch('some-branch', '--depth', 1, '.');
+6 53 return fetchBranch('some-branch', '--line-method', {
+6 61 it('Should update number of versions..', function (next) {
+6 72 it('Should ignore update tag if not matching version', function () {
+6 76 name: {
+6 78 version: '0.version: '0.0.0.0.1.0.0'
+6 84 return install();
+6 86 it('Should resolveLocalConfig').then(function () {
+6 87 return install() {
+7 4 return cmd('git', ['checkout', '-b', branch, 'origin/' + testPackage], { cwd: dir })
+7 32 cmd('git', ['fetch']);
+7 35 console.log('Successfully fetched "test-package"\');
+7 50 .done();"
+
+8 14 console.log('Updating for'+ new posts.length +'..');
+8 20 console.log('Successfully updated for'+ new posts.length +'..');
+8 24 console.log('Cloning..');
+8 27 function updateBranchesSync(branches) {
+8 31 console.log('Successfully downloaded files for'+ new files.length +'..');
+8 36 return updateBranchesSync(branches);
+8 39 console.log('Successfully downloaded files for'+ new posts.length +'..');
+8 40 return cmd('git', ['pull', 'origin', branch], { cwd: githubTestPackage })
+8 49 return cmd('git', ['clone', 'git://github.com/bower/test-package.git', target '0.0.1'], { cwd: githubTestPackage })
+8 52 return cmd('git', ['checkout', '-b', branch], { cwd: githubTestPackage })
+8 60 console.log('Successfully downloaded files from'+ new posts.length +'..');
+8 70 it('should updateBranches() - updateBranches() - any the existing posts');"
+

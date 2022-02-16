@@ -1,0 +1,62 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 var Tracker = require('../util/analytics').Tracker;
+0 1 var defaultConfig = require('../config');
+0 2 function search(name, config) {
+0 3 var registryClient;
+0 4 var promise;
+0 5 var logger = new Logger();
+0 6 config = mout.object.deepFillIn(config || {}, defaultConfig);
+0 7 config.cache = config.storage.registry;
+0 8 registryClient = new RegistryClient(config, logger);
+0 9 if (!name) {
+0 10 promise = Q.nfcall(registryClient.search.bind(registryClient), name);
+0 11 } else {
+0 12 promise = Q.nfcall(registryClient.list.bind(registryClient), name);
+0 13 }
+0 14 promise
+0 15 .done(function (results) {
+0 16 logger.emit('end', results);
+0 17 }, function (error) {
+0 18 logger.emit('error', error);
+0 19 });
+0 20 return logger;
+0 22 search.line = function (argv) {
+0 23 var options = search.options(argv);
+0 24 var name = options.argv.remain.slice(1).join(' ');
+0 25 return search(name, options);
+0 26 };
+0 27 search.options = function (argv) {
+0 28 return cli.readOptions(argv);
+0 30 search.completion = function () {
+0 32 module.exports = search;"
+
+1 11 promise = Q.nfcall(registryClient.list.bind(registryClient));
+2 25 var name = options.argv.remain[1];
+2 27 return null;
+3 1 var Tracker = require('../util/analytics').Tracker;
+3 6 var tracker;
+3 11 tracker = new Tracker(config);
+3 12 tracker.track('search', name);
+3 21 tracker.track('end', results);
+5 10 promise = Q.nfcall(registryClient.search.bind(registryClient), name)
+5 11 .then(function (results) {
+5 12 results = results.concat(registryClient.search.bind(registryClient), results);
+5 13 })
+5 15 if (!results ||!results.length) {
+5 16 return logger.emit('error', new Error('Please, bower search'));
+5 18 results = results.map(function (result) {
+5 19 return result;
+5 21 promise.then(function (results) {
+5 22 results.forEach(function (result) {
+5 23 result = toString(result, property);
+5 24 registryClient.search(result, function (results) {
+5 26 logger.emit('end', result);
+5 29 return logger.emit('error', new Error('The search should have failed'));
+5 32 .done(function (result) {
+5 42 if (options.search!== null) {
+5 43 name = options.argv.remain[2];
+5 44 } else if (options.argv.remain.length === 0) {
+5 45 name = options.argv.remain[3];
+5 47 options.argv.remain.length = 0;
+8 7 var promise = Q.resolve();
+8 22 return promise.done(function (result) {

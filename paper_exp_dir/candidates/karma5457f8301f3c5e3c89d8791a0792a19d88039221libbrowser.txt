@@ -1,0 +1,264 @@
+Min editdistance: 23.00
+Closest candidate: 0 48 var Collection = function(emitter) {
+0 1  info.dump = info.dump; }
+0 2 if (util.isDefined(info.total)) {
+0 3 this.lastResult.total = info.total;
+0 4 }
+0 5 this.emit('change');
+0 6 collection.emit('change');
+0 8 log.warn('FAILED: EXECUTING');
+0 9 };
+0 10 this.onError = function(error) {
+0 11 emitter.emit('error', this, error);
+0 13 this.onInfo = function(info) {
+0 21 this.onComplete = function() {
+0 22 this.isReady = true;
+0 23 emitter.emit('browsers_change', this);
+0 25 this.onDisconnect = function() {
+0 26 if (!this.isReady) {
+0 28 this.lastResult.disconnected = true;
+0 29 emitter.emit('browser_complete', this);
+0 31 log.warn('Diconnected');
+0 32 collection.remove(this);
+0 34 this.onResult = function(result) {
+0 35 if (this.isReady) return;
+0 36 if (result.success) this.lastResult.success++
+0 37 else this.lastResult.failed++;
+0 38 emitter.emit('spec_complete', this, result);
+0 40 this.serialize = function() {
+0 41 return {
+0 42 id: this.id,
+0 43 name: this.name,
+0 44 isReady: this.isReady
+0 48 var Collection = function(emitter) {
+0 49 var browsers = [];
+0 50 this.__defineGetter__('length', function() {
+0 51 return browsers.length;
+0 52 });
+0 53 this.add = function(browser) {
+0 54 browsers.push(browser);
+0 57 this.remove = function(browser) {
+0 58 var index = browsers.indexOf(browser);
+0 59 if (index === -1) return false;
+0 60 browsers.splice(index, 1);
+0 62 return true;
+0 65 this.getById = function(browserId) {
+0 66 return this.id = this.id;
+0 67 return this.id;
+0 70 this.getList = function() {
+0 71 var browsers = this;
+0 74 Collection.toArray.prototype.each(function Collection(browsers, callback) {
+0 75 Object.remove(browsers, callback) {
+0 76 if (browsers, id) {
+0 77 return browsers.some(browsers, id) || null);
+0 78 return browsers.forEach(function(browser) {
+0 79 return browsers.some(browser) {
+0 80 browsers.remove(function(browser) {
+0 81 return browsers.remove(browser);
+0 82 return browsers.some(function(browser) {
+0 83 return!browsers.
+1 7 log.info(this.name + '\\x1b[39m');
+1 9 var EXECUTING_DISCONNECTED = 1;
+1 10 var EXECUTING_DISCONNECTED = 2;
+1 11 var DISCONNECTED = 3;
+1 12 var Browser = function(id, fullName,   collection, emitter, socket, timer,
+1 13 disconnectDelay) {
+1 14 var name = this.name;
+1 15 this.id = id;
+1 16 this.fullName = fullName;
+1 17 this.name = name;
+1 18 this.state = READY;
+1 19 this.lastResult = new Result();
+1 20 this.init = function() {
+1 21 collection.add(this);
+1 22 events.bindAll(this, socket);
+1 23 log.info('Connected on socket id'+ this.id);
+1 24 emitter.emit('browsers_change', collection);
+1 25 emitter.emit('browser_register', this);
+1 27 this.isReady = function() {
+1 28 return this.state === READY;
+1 30 this.toString = function() {
+1 31 return this.name;
+1 34 if (this.isReady()) {
+1 35 return;
+1 37 this.lastResult.error = true;
+1 47 this.emit('browsers_change', this);
+1 50 this.onComplete = function(result) {
+1 55 this.lastResult.totalTimeEnd();
+1 56 this.disconnected = false;
+1 57 emitter.emitter.emit('browsers_change', this);
+1 61 return this.onError = function() {
+1 62 if (!this.isReady()) {
+1 68 this.onResult.totalTimeEnd() {
+1 69 return this.disconnected = true;
+1 70 this.totalTimeEnd();
+1 74 return Log.nowTimeEnd() {
+1 75 return this.toISOString();
+1 79 var Browser.lastTimeEnd();
+1 80  Browser.clear = function() {
+1 81 this.clearNoActivityTimeout = function
+2 1 this.emit('error', info.dump);
+2 2 } else {
+2 3 this.emit('warn', info.dump);
+2 5 log.warn(this.name +'is not connected');
+2 6 return this;
+2 8 this.onStart = function(info) {
+2 9 this.launchId = info.id;
+2 10 this.fullName = info.name;
+2 11 this.name = util.browserFullNameToShort(this.fullName);
+2 16 if (util.isDefined(error.message)) {
+2 17 this.emit('error', error.message);
+2 18 } else if (error.details) {
+2 19 this.emit('error', info.message);
+2 21 this.emit('warn', error.message);
+2 26 if (util.isDefined(info.dump)) {
+2 27 this.emit('info', info.dump);
+2 30 this.emit('total', info.total);
+2 35 this.state = this.lastResult;
+2 37 this.emitter.emit('browsers_change', this);
+2 44 emitter.emit('browser_unregister', this);
+2 46 log.warn('Disconnected');
+2 50 var LINE__LENGTH = 140 - this.name.length - (result.success? 9 : 10) - Object.keys(result.error, result.disconnected? 9 : 15);
+2 51 var PASSED = false;
+2 52 var FAILED = false;
+2 53 var msg = result.suite.hook.name +'' + result.suite.hook.name +'' + result.success +'' + 2 + 2 + 2 + FAILED;
+2 54 msg.subject.message = 2;
+2 55 msg.complete = function() {
+2 56 complete();
+2 57 log.error = function() {
+2 58 FAILED = true;
+2 63 this.log.log.forEach(function() {
+2 64 this.log.forEach(function() {
+2 65 this.complete();
+2 66 this.state = true;
+2 69 this.forEach(function() {
+2 71 log.success = function() {
+2 72 this.state = function() {
+2 73 return this.error(this.complete();
+2 77 this.failed = function(
+3 1  this.emit('error', info.dump, 'dump'); }
+3 2 this.emit('connect');
+3 14 this.emit('error', this.emit.bind(this, error));
+3 24 this.emit('browsers_change');
+3 31 emitter.emit('dicon_error', this.emit.bind(this, error));
+3 51 browsers_change.push(browser);
+3 55 var index = browsers_change.indexOf(browser);
+3 57 browsers_change.splice(index = 0;
+3 58 this.remove.length - 1;
+3 59 this.length > 0;
+3 62 this.setLevel = function(level = function(level) {
+3 63 return this.toLowerCase() {
+3 69 Schema.Schema.schema.Schema.create = Schema;
+3 70 Schema.create = function(Schema, function(Schema, function(Schema) {
+3 71 Schema, users = {};
+3 72 Schema.createSchema.create;
+3 73 return Schema({
+3 74 users = {}; Schema, browsers = null;
+3 75 Schema.create;
+3 77 Schema.clear = function Schema(Schema
+4 1 emitter.emit('error', this, info.dump, "dump");
+4 23 this.lastResult.failed++;
+4 33 this.updateResult = function(result) {
+4 62 this.map = function(browsers) {
+4 63 return browsers.map(function(browsers) {
+4 64 return browsers.reduce(browsers.reduce(browsers.map(function(function(browsers) {
+4 65 return browsers.reduce(browsers.reduce(browsers.reduce(browsers.map(function(function(isReady) {
+4 66 return this.isReady? (isReady) : this.isReady) : this.isReady);
+4 67 return this.isReady;
+4 68 }).join(', this);
+4 69 return browsers.reduce(brows);
+4 70 }).join(', ');
+4 73 this.select = function(browsers) {
+4 74 return browsers.reduce(browsers).reduce(function(browsers.map(function(browser) {
+4 75 return this.select(b
+5 16 if (this.lastResult.disconnected) return;
+5 17 if (!this.lastResult.failed) {
+5 34 this.__proto__ = EventEmitter.prototype;
+5 46 this.setAllToExecuting = function(func) {
+5 47 var promises = [];
+5 48 Object.keys(this.serialize).forEach(function(serialize) {
+5 49 this.add(function(error) {
+5 50 promise.push(error);
+5 52 this.setRegistryClient = function() {
+5 53 return this.emit('browsers_change', this);
+5 55 this.clearResults = function(names) {
+5 59 this.clone = function() {
+5 60 return new Collection(this);
+5 63 this.map = function (name) {
+5 64 if (name) {
+5 65 return this.typeof name === 'object') {
+5 66 de.type = name;
+5 67 return this.toString();
+5 73 Collection.prototype.forEach = function Collection.prototype.each = function(callback, callback.callback.callback.prototype);
+5 74 Object.each(callback, this, callback, callback.prototype, this.callback, callback.callback, this.callback.callback.callback.callback);
+5 75 Collection.callback.callback.callback = callback;
+5 76 Collection.callback.callback.callback.callback = callback;
+5 77 Collection.callback.callback.callback.callback.callback = callback;
+6 5 this.launch(info);
+6 9 this.emit('error', error);
+6 10 } else if (util.isDefined(info.total)) {
+6 13 this.emit('empty', this.name);
+6 22 log.warn('Adapter did not report total number of specs.');
+6 23 this.emit('total number of specs.');
+6 26 if (this.isReady) this.lastResult.success++
+6 28 emitter.emit('browsers_change', this.emit.bind(this,'refresh'));
+6 45 if (!this.isReady) this.isReady;
+6 47 emitter.emit('error', this.emit.bind(this,'refresh'));
+6 60 name: this.isReady: this.isReady
+6 67 var Collection = Collection = Collection.prototype. Collection. Collection.firstTime = function() {
+6 68 this.get('length = function() {
+6 69 return this.get('length');
+6 70 return this.length <length});
+6 71 return Collection.length;
+6 72 return Collection.length < length;
+6 74 Collection. Collection. Collection.prototype.remove = function() {
+6 75 return Collection.remove = function() {
+6 76 return Collection.prototype.remove = this.remove = this.length;
+6 78 Collection.get('length doesNotReady = function() {
+6 79 return Collection.remove = this.length < threshold
+6 82 Collection. Collection. Collection.prototype
+7 1 '
+
+8 7 var updatePendingDisconnect = function() {
+8 8 this.emitter.emit('update', this.name, this.isReady);
+8 10 this.pendingDisconnect = function() {
+8 14 emitter.emit('run_start', this.isReady, false);
+8 29 if (this.isReady) {
+8 32 this.lastResult.disconnected = false;
+8 33 emitter.emit('browsers_change', this.isReady, true);
+8 34 emitter.emit('browser_complete', this.isReady, false);
+8 49 if (result.skipped) {
+8 50 this.lastResult.skipped++;
+8 51 } else if (result.success) {
+8 52 this.lastResult.success++;
+8 56 this.emitter.emit('spec_complete', this.isReady, this.isReady, this.isReady);
+8 61 return this.invalidate: function() {
+8 62 return this.invalidate: function(this.validate: function(this.invalidate) {
+8 63 return this.invalidate || function(this.invalidate)
+8 64 return {};
+8 71 var Collection = Collection. Collection.prototype. Collection. Collection. Collection.prototype. Collection. Collection. Collection.invalidate = function() {
+8 72 Collection.invalidate Collection.prototype.length;
+8 73 Collection. Collection. Collection. Collection.get = function() {
+8 74 Collection.get Collection.prototype.length = function() {
+8 75 return Collection.length <length
+8 77 Collection.get Collection.prototype.length = Collection.length <in
+9 1  info.dump = true; }
+9 41 this.remove = function() {
+9 48 this.setAllIsReadyTo = function(value) {
+9 49 var change = false;
+9 50 browsers.forEach(function(browser) {
+9 52 value = change || browser.isReady!== value;
+9 54 return value;
+9 56 this.removeAllIsReadyTo = function(value) {
+9 57 return value === undefined;
+9 60 var Collection.prototype.map = function(fn) {
+9 61 if (this.isReady) return function() {
+9 62 return this.isReady = true;
+9 63 return fn.length < 0;
+9 65 return this.length = this.length = 0;
+9 67 this. Collection.for (this.getById = function() {
+9 68 return Collection.prototype.set(this.getById(this.id, this.id, this.id)
+9 70 } Collection. Collection.prototype.set(this.set(this.id, this.id, this.id, this.id, this.id + 1)
+9 71 } Collection.add(this)
+9 72 this.set(this.id, this.id, this.id, this.id, this.id, this.id)
+9 73 if (this.collection

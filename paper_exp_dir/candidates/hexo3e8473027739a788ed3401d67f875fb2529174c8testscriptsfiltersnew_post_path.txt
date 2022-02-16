@@ -1,0 +1,299 @@
+Min editdistance: 3.00
+Closest candidate: 1 6 var sinon = require(\'sinon\');
+0 1 describe('paginatorHelper', () => {
+0 2 var Hexo = require(\'../../../lib/hexo\');
+0 3 var hexo = new Hexo(__dirname);
+0 4 var ctx = {
+0 5 page: {
+0 6 base: \'\',
+0 7 total: 10
+0 8 },
+0 9 site: hexo.locals,
+0 10 config: hexo.config
+0 11 };
+0 12 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+0 13 var paginator = require(\'../../../lib/plugins/helper/paginator\').bind(ctx);
+0 14 function link(i) {
+0 15 return ctx.url_for(i === 1? \'\' : \'page/\' + i + \'/\');
+0 16 }
+0 17 it(\'default\', () => {
+0 18 var result = $([
+0 19 \'<a href="\' + this.url_for(i) + \'" title="\' + this.config.title + \'">\' + result + \'</a>\',
+0 22 \'<a>\' + this.url_for(i) + \'</a>\',
+0 23 \'<a>\' + this.url_for(i + 1) + \'</a>\',
+0 24 \'</li>\',
+0 25 \'<li>\' + this.url_for(i) + \'</li>\',
+0 26 \'<div class="tag">\' + title + \'</div>\',
+0 27 \'<h1>\' + this.url_for(i) + \'</h1>\',
+0 28 \'<p>\' + this.config.title + \'</p>\',
+0 31 \'<li>\' + this.config.title + \'</li>\',
+0 32 \'<p>\' + this.url_for(i) + \'</p>\',
+0 33 \'</ul>\'
+0 34 ].join(\'\');
+0 35 result.should.eql([
+0 38 \'<h2><em>\' + this.url_for(i) + \'</h2>\',
+0 39 \'<p>\' + this.config.title + \'</p>\'
+0 40 ].join(\'\'));
+0 41 });
+0 42 it(\'title - link\', () => {
+0 44 \'<a href="\' + this.url_for(i) + \'" title="\' + this.config.title + \'" type="application/\' + typeof \'text/html;">\' +
+0 45 \'</a>\',
+0 47 \'<p>\'<p>\'\',\',
+0 48 \'<ul class="url">\' + url + url +\'<li class="\' + class="\' + class="\' + class="\' + url + url + url + class + config.length + 1 + 2 + 2 + 2 + 3 + 3 + 3 + 3 + \'">\'">\'">\'</li>\',\',
+0 50 \'</ul>\'\',
+0 51 ].join(\'
+
+1 1 var fs = require(\'hexo-fs\');
+1 2 var pathFn = require(\'path\');
+1 3 var yaml = require(\'js-yaml\');
+1 4 var _ = require(\'lodash\');
+1 5 var rewire = require(\'rewire\');
+1 6 var sinon = require(\'sinon\');
+1 7 describe(\'config\', function(){
+1 9 var hexo = new Hexo(pathFn.join(__dirname, \'config_test\'), {silent: true});
+1 10 var config = require(\'../../../lib/plugins/console/config\').bind(hexo);
+1 11 var configModule = rewire(\'../../../lib/plugins/console/config\');
+1 12 before(function(){
+1 13 return fs.mkdir(hexo.base_dir).then(function(){
+1 14 return hexo.init();
+1 17 beforeEach(function(){
+1 18 config.title = \'Nightmare Before Christmas\';
+1 19 var spy = sinon.spy();
+1 20 console.log(\'Today is "not" \\\'Xmas\\\'!\' +
+1 21 \'  Please install it manually.\');
+1 22 return fs.writeFile(configPath, \'\');
+1 24 after(function(){
+1 25 return fs.rmdir(hexo.base_dir);
+1 27 it(\'create()\', function(){
+1 28 var config = {
+1 29 port: 12345
+1 32 config.create({
+1 33 name: \'world\',
+1 34 version: \'0.0.0\'
+1 37 name: \'world.js\',
+1 38 version: \'0.1.0\'
+1 40 spy.args[0].should.eql({
+1 41 useEsl: true,
+1 42 title: \'Hello World\'
+1 45 it(\'create() - escape\', function(){
+1 47 port: 3,
+1 48 version: \'0.0.0\',
+1 49 homepage: \'<span>Hello World</span>\'
+1 56 name: \'world.html\'
+1 60 it(\'create() - with custom config\', function(){
+1 64 homepage: \'<span>Hello World</span><a href="http://hexo.io/">hexo.io</a>\'
+1 71 name: \'world.html\',
+1 76 it(\'create() - with additional config\', function(){
+1 78 config: {
+1 80 path: \'bar\',
+1 81 dat: \'baz: \'baz\'\',
+1 84 config.create();
+1 86 config.create({});
+1 87 config.set(\'foo.should.should.should.eql({
+1 88 ignore();
+1 90 it(\'baz.should.should.eql(false);
+1 91 });'
+
+2 1 describe(\'Helper - css\', function() {
+2 2 var css = require(\'../../../lib/plugins/helper/css\');
+2 3 var genResult = function(arr) {
+2 4 var result = [];
+2 5 arr.forEach(function(item) {
+2 6 result.push(\'<link rel="stylesheet" href="\' + item + \'.css" type="text/css">\');
+2 8 return result.join(\'\
+2 9 \');
+2 11 it(\'a string\', function() {
+2 12 var result = genResult([\'/style\']);
+2 13 css(\'style\').should.eql(result);
+2 14 css(\'style.css\').should.eql(result);
+2 16 it(\'an array\', function() {
+2 17 var result = genResult([\'/foo\', \'/bar\', \'/baz\']);
+2 18 css([\'foo\', \'bar\', \'baz\']).should.eql(result);
+2 20 it(\'multiple strings\', function() {
+2 22 css(\'foo\', \'bar\', \'baz\').should.eql(result);
+2 24 it(\'multiple arrays\', function() {
+2 25 var result = genResult([\'/s1\', \'/s2\', \'/s3\', \'/s4\', \'/s5\', \'/s6\']);
+2 26 css([\'s1\',\'s2\'], [\'s3\',\'s4\',\'s5\'], [\'s6\']).should.eql(result);
+2 28 it(\'mixed\', function() {
+2 30 css([\'s1\',\'s2\'],\'s3\',\'s4\', [\'s5\'],\'s6\']).should.eql(result);
+3 1 describe(\'Meta Generator\', function(){
+3 3 var hexo = new Hexo();
+3 4 var metaGenerator = require(\'../../../lib/plugins/filter/meta_generator\').bind(hexo);
+3 5 var cheerio = require(\'cheerio\');
+3 6 it(\'default\', function(){
+3 7 var content = \'<head><link></head>\';
+3 8 var result = metaGenerator(content);
+3 9 const $ = cheerio.load(result);
+3 10 $(\'meta[name="generator"]\').length.should.eql(1);
+4 1 var Promise = require(\'bluebird\');
+4 2 describe(\'tagcloud\', function(){
+4 5 var Post = hexo.model(\'Post\');
+4 6 var Tag = hexo.model(\'Tag\');
+4 11 var tagcloud = require(\'../../../lib/plugins/helper/tagcloud\').bind(ctx);
+4 13 return Post.insert([
+4 14 {source: \'foo\', slug: \'foo\'},
+4 15 {source: \'bar\', slug: \'bar\'},
+4 16 {source: \'baz\', slug: \'baz\'},
+4 17 {source: \'boo\', slug: \'boo\'}
+4 18 ]).then(function(posts){
+4 19 return Promise.each([
+4 20 [\'bcd\'],
+4 21 [\'bcd\', \'cde\'],
+4 22 [\'bcd\', \'cde\', \'abc\'],
+4 23 [\'bcd\', \'cde\', \'abc\', \'def\']
+4 24 ], function(tags, i){
+4 25 return posts[i].setTags(tags);
+4 27 }).then(function(){
+4 28 hexo.locals.invalidate();
+4 29 ctx.site = hexo.locals.toObject();
+4 33 var result = tagcloud();
+4 35 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\',
+4 36 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\',
+4 37 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\',
+4 38 \'<a href="/tags/def/" style="font-size: 10px;">def</a>\'
+4 39 ].join(\' \'));
+4 41 it(\'specified collection\', function(){
+4 42 var result = tagcloud(Tag.find({
+4 43 name: /bc/
+4 44 }));
+4 46 \'<a href="/tags/abc/" style="font-size: 10px;">abc</a>\',
+4 47 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\'
+4 50 it(\'font size\', function(){
+4 51 var result = tagcloud({
+4 52 min_font: 15,
+4 53 max_font: 30
+4 56 \'<a href="/tags/abc/" style="font-size: 20px;">abc</a>\',
+4 57 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\'
+4 60 it(\'no collection\', function(){
+4 63 min_font: 30,
+4 64 max_font: 35,
+4 66 min_font: 35
+4 68 result.should.should.should.not.equal(2);
+4 70 it(\'an array
+4 71 it(\'tagcloud\', function(){\', function(){
+4 72 var result = genResult = tagcloud({ files: [\'bcd/*.html\'].should.html\'}).should.bind(ctx);
+4 73 collection.bind(ctx).should.bind(ctx);
+4 74 var result.bind(ctx);
+4 75 .then(collection.bind(ctx);
+4 76 collection.each(ctx);
+4 77 collection.each(function(function(item, i){
+4 78 result.bind(ctx);
+5 1 describe('feed_tag', () => {
+5 8 var feed = require(\'../../../lib/plugins/helper/feed_tag\').bind(ctx);
+5 9 it(\'path\', () => {
+5 10 feed(\'atom.xml\').should.eql(\'<link rel="alternate" href="/atom.xml" title="Hexo">\');
+5 12 it(\'title\', () => {
+5 13 feed(\'atom.xml\', {title: \'RSS Feed\'}).should.eql(\'<link rel="alternate" href="/atom.xml" title="RSS Feed">\');
+5 15 it(\'type\', () => {
+5 16 feed(\'rss.xml\', {type: \'rss\'}).should.eql(\'<link rel="alternate" href="/rss.xml" title="Hexo">\');
+6 2 describe(\'asset_link\', function() {
+6 5 var assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+6 7 var PostAsset = hexo.model(\'PostAsset\');
+6 8 var post;
+6 9 hexo.config.permalink = \':title/\';
+6 10 function assetLink(args) {
+6 11 return assetLinkTag.call(post, args.split(\' \'));
+6 13 before(function() {
+6 14 return hexo.init().then(function() {
+6 15 return Post.insert({
+6 16 source: \'foo.md\',
+6 17 slug: \'foo\'
+6 19 }).then(function(post_) {
+6 20 post = post_;
+6 21 return Promise.all([
+6 22 PostAsset.insert({
+6 23 _id: \'bar\',
+6 24 slug: \'bar\',
+6 25 post: post._id
+6 26 }, function() {
+6 27 return post.save();
+6 28 }).then(function() {
+6 31 _id: \'bár\',
+6 32 slug: \'bár\',
+6 34 }),
+6 36 _id:\'spaced asset\',
+6 37 slug:\'spaced asset\',
+6 39 })
+6 40 ]);
+6 42 return PostAsset.removeById(post._id);
+6 45 it(\'default\', function() {
+6 46 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+6 48 it(\'title\', function() {
+6 49 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+6 51 it(\'with space\', function() {
+6 52 assetLinkTag.call(post, [\'spaced asset\',\'spaced title\'])
+6 53 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced title">spaced title</a>\');
+6 55 it(\'no slug\', function() {
+6 56 should.not.exist(assetLink(\'\'));
+6 58 it(\'asset not found\', function() {
+6 59 should.not.exist(assetLink(\'boo\'));
+7 3 describe(\'Tag - blockquote\', () => {
+7 6 var blockquote = require(\'../../../lib/plugins/tag/blockquote\')(hexo);
+7 7 before(() => hexo.init().then(() => hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'))));
+7 8 var bq = (args, content) => {
+7 9 return args.split(\' \').eq(args.length - 1);
+7 12 var result = bq(\'\', \'123456 **bold** and *italic*\');
+7 13 result.should.eql(\'<blockquote><p>123456 <strong>bold</strong> and <em>italic</em></p>\
+7 14 </blockquote>\');
+7 16 it(\'author\', () => {
+7 17 var result = bq(\'John Doe\', \'\');
+7 18 result.should.eql(\'<blockquote><footer><strong>John Doe</strong></footer></blockquote>\');
+7 20 it(\'source\', () => {
+7 21 var result = bq(\'Jane Austen, Pride and Prejudice\');
+7 22 result.should.eql(\'<blockquote><footer><strong>Jane Austen</strong><cite>Pride and Prejudice</cite></footer></blockquote>\');
+7 24 it(\'link\', () => {
+7 25 var result = bq(\'John Doe http://hexo.io/\');
+7 26 result.should.eql(\'<blockquote><footer><strong>John Doe</strong><cite><a href="http://hexo.io/">hexo.io</a></cite></footer></blockquote>\');
+7 28 it(\'link title\', () => {
+7 29 var result = bq(\'John Doe http://hexo.io/ Hexo\');
+7 30 result.should.eql(\'<blockquote><footer><strong>John Doe</strong><cite>Pride and Prejudice</cite></footer></blockquote>\');
+7 32 it(\'titlecase\', () => {
+7 33 hexo.config.titlecase = true;
+7 34 var result = bq(\'Jane Austen, pride and prejudice\');
+7 36 it(\'external (boolean)\', () => {
+7 37 hexo.config.external_link = true;
+7 41 it(\'external (object)\', () => {
+7 42 hexo.config.config.external_link = true;
+7 43 var result = {external: true};
+7 44 result.should.should.should.equal(\'object\', \'<a href="http://hexo.io/\');
+7 48 it(\'equipment => {
+7 49 exports.lengthOf(\'equipment => {
+7 50 exports.length === 1\');
+7 51 return Object.length === 2;
+8 34 _id: \'cár\',
+8 35 slug: \'cár\',
+8 39 }).then(function(post) {
+8 43 _id: \'abc7\',
+8 44 slug: \'abc7\',
+8 60 it(\'should escape tag in title by default\', function() {
+8 61 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+8 63 it(\'should escape tag in title\', function() {
+8 64 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+8 66 it(\'should not escape tag in title\', function() {
+8 67 assetLink(\'bar "Hello" <world> false\').should.should.should.eql(\'<a href="/foo/bar" title="&quot;world&quot;world&quot;not"> false" >\' + reason;baz = require(\'baz" > baz" > > true">\');
+9 1 describe(\'search_form\', function(){
+9 2 var searchForm = require(\'../../../lib/plugins/helper/search_form\').bind({
+9 3 config: {url: \'http://hexo.io\'}
+9 6 searchForm().should.eql(\'<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">\' +
+9 7 \'<input type="search" name="q" results="0" class="search-form-input" placeholder="Search">\' +
+9 8 \'<input type="hidden" name="q" value="site:\' + url + \'">\' +
+9 9 \'</form>\');
+9 11 it(\'class\', function(){
+9 12 searchForm({class: \'foo\'}).should.eql(\'<form action="//google.com/search" method="get" accept-charset="UTF-8" class="foo">\' +
+9 13 \'<input type="search" name="q" results="0" class="foo-input" placeholder="Search">\' +
+9 17 it(\'text\', function(){
+9 18 searchForm({text: \'Find\'}).should.eql(\'<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">\' +
+9 19 \'<input type="search" name="q" results="0" class="search-form-input" placeholder="Find">\' +
+9 23 it(\'text - null\', function(){
+9 24 searchForm({text: null}).should.eql(\'<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">\' +
+9 28 it(\'button - true\', function(){
+9 29 searchForm({button: true, text: \'Find\'}).should.eql(\'<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">\' +
+9 31 \'<button type="submit" class="search-form-submit">Find</button>\' +
+9 35 it(\'button - null, text: \'Find\'}).should.eql(\'<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">\' +
+9 36 \'<input type="search" name="q" results="0" class="search-form-input" placeholder="Find">\' +\'' +
+9 37 \'<button type="submit>\' +
+9 38 \'<input type="submit>\' + typeof button type="submit" class="search-form-submit">Find</button type="submit">Find">\' + url_else>\' + typeof button typeof button === \'true" clearborder="0" rel="0" clearborder="0" clearborder="0" clearborder="0" clearborder="0" clearborder="0" clearborder="0" clearout>">\' + url = \'media-loading">\' + url = \'#" navwebsite">\' + url + url +
+9 39 \'#id="mailto:blank">\' + url + url + url + url + url + url +
+9 40 \'</form>\'#\' + url + url +
+9 43 it(\'button -right - link\', function(){
+9 44 searchForm({button: true, text: \'Find\'}).should.should.eql(\'

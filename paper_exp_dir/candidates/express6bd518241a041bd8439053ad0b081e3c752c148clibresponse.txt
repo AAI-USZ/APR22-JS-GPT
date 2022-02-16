@@ -1,0 +1,135 @@
+Min editdistance: 1.00
+Closest candidate: 0 5 , statusCodes = http.STATUS_CODES
+0 1 , normalizeType = require("./utils
+0 2 ormalizeType
+0 3 , normalizeTypes = require("./utils
+0 4 ormalizeTypes
+0 5 , statusCodes = http.STATUS_CODES
+0 6 , send = connect.static.send
+0 7 , cookie = require('cookie')
+0 8 , crc = require('crc')
+0 9 , mime = connect.mime
+0 10 , basename = path.basename
+0 11 , extname = path.extname
+0 12 , join = path.join;
+0 13 var res = module.exports = {
+0 14 __proto__: http.ServerResponse.prototype
+0 15 };
+0 16 res.status = function(code){
+0 17 this.statusCode = code;
+0 18 return this;
+0 20 res.links = function(links){
+0 21 return this.set(\'Link\', Object.keys(links).map(function(rel){
+0 22 return \'<\' + links[rel] + \'>; rel="\' + rel + \'"\';
+0 23 }).join(\', \'));
+0 25 res.send = function(body){
+0 26 var req = this.req
+0 27 , head = \'HEAD\' == req.method'
+
+1 27 , head = \'HEAD\' == req.method
+1 28 , len;
+1 29 if (2 == arguments.length) {
+1 30 if (\'number\'!= typeof body && \'number\' == typeof arguments[1]) {
+1 31 this.statusCode = arguments[1];
+1 32 } else {
+1 33 this.statusCode = body;
+1 34 body = arguments[1];
+1 35 }
+1 37 if (body instanceof String)
+1 38 body = body.toString();
+1 39 switch (typeof body) {
+1 40 case \'number\':
+1 41 this.get(\'Content-Type\') || this.type(\'txt\');
+1 43 body = http.STATUS_CODES[body];
+1 44 break;
+1 45 case\'string\':
+1 46 if (!this.get(\'Content-Type\')) this.type(\'html\');
+1 49 case \'boolean\':
+1 50 case \'object\':
+1 51 if (null == body) {
+1 52 body = \'\';
+1 53 } else if (Buffer.isBuffer(body)) {
+1 54 this.get(\'Content-Type\') || this.type(\'bin\');
+1 56 return this.json(body);
+1 60 if (undefined!== body &&!this.get(\'Content-Length\')) {
+1 61 this.set(\'Content-Length\', len = Buffer.isBuffer(body)
+1 62 ? body.length
+1 63 : Buffer.byteLength(body));
+1 65 if (len > 1024 && \'GET\' == req.method) {
+1 66 if (!this.get(\'ETag\')) this.set(\'ETag\', Buffer.isBuffer(body)
+1 67 ? crc.buffer.crc32(body)
+1 68 : crc.crc32(body));
+1 70 if (req.fresh) this.statusCode = 304;
+1 71 if (204 == this.statusCode || 304 == this.status) {
+1 72 this.removeHeader(\'Excerpt\');
+1 73 this.removeHeader(\'Content-Type\');
+1 75 body = \'
+1 78 this.end();
+1 81 function204204204204204204
+1 82 function204204204204
+1 84 function204 fn
+1 85 function error(){
+1 86 function render(err, options) {
+1 87 return this.removeHeader(\'should.status(err)
+1 88 \
+2 2 ormalizeType')
+2 4 ormalizeTypes')
+2 7 , cookie = require(\'cookie\')
+2 8 , crc = require(\'crc\')
+2 46 if (!this.get(\'Content-Type\')) {
+2 47 this.charset = this.app.get(\'charset\') || \'utf-8\';
+2 48 this.type(\'html\');
+2 67 if (len > 1024) {
+2 68 if (!this.get(\'ETag\')) {
+2 69 this.set(\'ETag\', etag(body));
+2 73 if (204 == this.statusCode || 304 == this.statusCode) {
+2 76 this.removeHeader(\'Content-Length\');
+2 78 body = \'\');
+2 80 if (204 == this.end(this.urlencoding);
+2 81 this.on(\'json\', function(err, response, headers, status){
+2 82 this.toString = response.toString = body);
+2 83 this.toString = body);
+2 84 this.statusCode = status(this.toString = toString);
+2 85 this.url = this.url, headers;
+2 86 this.root = this.root;
+2 87 this.url = url.path = url.path || '';
+2 88 this.root = protohost(this.app.com);
+2 89 this.root
+3 7 , mime = require('mime')
+3 20 , head = \'HEAD\' == req.method;
+3 27 this.get(\'Content-Type\') || this.contentType(\'.txt\');
+3 33 this.charset = this.charset || \'utf-8\';
+3 34 this.contentType(\'.html\');
+3 42 this.get(\'Content-Type\') || this.contentType(\'.bin\');
+3 49 this.set(\'Content-Length\', Buffer.isBuffer(body)
+3 58 this.end(head? null : body);
+3 61 res.json = function(obj){
+3 63 this.statusCode = obj;
+3 64 obj = arguments[1];
+3 66 var settings = this.app.settings
+3 67 , jsonp = settings[\'jsonp callback\']
+3 68 , replacer = settings[\'json replacer\']
+3 69 , spaces = settings[\'json spaces\']
+3 70 , body = JSON.stringify(obj, replacer, spaces)
+3 71 , callback = this.req.query.callback;
+3 73 this.set(\'Content-Type\', \'application/json\');
+3 74 if (callback && jsonp) {
+3 75 this.set(\'jsonp callback(callback);
+3 77 .on(\'jsonp callback.emit\', callback);
+3 79 res.sendfile = function(path.sendfilePathToRegexp, canonicalize(this.resolve(this.path, \'.html\', \'.html\', function(filePath)
+3 80 , callback)) {
+3 81 return this.set(\'
+
+5 37 if(body instanceof String)
+5 38 return body.toLowerCase()
+5 39 .replace(/\\u2028/g, \'\\\\u2028\')
+5 40 .replace(/\\u2029/g, \'\\\\u2029\')
+5 55 .replace(/\\u01E6\\u01ED\\u01ED\\u01ED\\u01ED\\u01ED\\u01ED\\u01ED\\u01ED\\u01ED\\u01ED\\u01EE\\u01EE\\u01EE\\u01EE\\u01EE\\u0129\\u01EE\\u01EE\\u01EE\\u0129\\u01EE\\u01ED\\u0129\\u0129\\u0129\\u0129\\u0129\\u01EE\\u0129\\u0129\\u0129\\u0129\\u0129\\u0131\\u01DE\\u0129\\u01DD\\u0131\\u01EF\\u01EF\\u01EE\\u01DD\\u01E31\\u01E31\\u01FF\\u01E96\\u01EF\\u01E31\\u01E2\\u01EF\\u01EF\\u01EF\\u01E2\\u01EF\\u01E5\\u01EF\\u01EF\\u01E6\\u01FF\\u01EF\\u01
+7 69 this.removeHeader(\'ETag\');
+7 71 this.removeHeader(\'();
+7 78 if (err) {
+7 79 if (err) return this.statusCode = err;
+7 80 return this.error(err);
+7 85 return this.end(this.get(\'jsonpending);
+7 86 }'
+

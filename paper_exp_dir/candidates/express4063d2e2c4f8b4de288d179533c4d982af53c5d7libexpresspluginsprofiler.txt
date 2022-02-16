@@ -1,0 +1,113 @@
+Min editdistance: 18.00
+Closest candidate: 7 6 "options" : options,
+0 1  }
+0 2 Express.pb.save({
+0 3 users: [n{ name: \'tj\' },"
+
+1 1  + (new Date)
+1 2 }
+1 3 }, __extend: { {
+1 4 "
+
+2 2 }, __extend__super__)
+2 3 )"
+
+3 1  }, function() {
+3 2 return n? new n() : new Number(new Date)
+3 3 })
+3 4 .set(function(argv) {
+3 5 return n? argv.slice(2) : argv.join(' ')
+3 7 .__super__.apply(this, arguments)
+3 8 .save({
+3 9 path: this.source,
+3 10 content: this.content,
+3 11 source: this.source
+3 12 }, this.emit.bind(this))
+3 15 })"
+
+4 1  + 5000; } });
+4 2 return n({
+4 3 locals: {
+4 4 lastName: \'foo\',
+4 5 source: \'http://www.gravatar.com/avatar/\'
+4 7 }, {
+4 8 path: \'/some/abc/a.js\',
+4 9 format: \'GET\'
+4 11 .on('data', function(chunk) {
+4 12 switch (chunk) {
+4 13 case \'object\':
+4 14 return this.headers[chunk];
+4 15 break;
+4 18 default:
+4 22 .on('end\', function() {
+4 23 this.contentType(\'html\');
+4 24 return this.engines[this.message.replace(/\
+4 25 /g, \'&amp;\')] || this.contentType(\'json\');
+4 26 }).on('error\', function(err) {
+4 27 if (err) return this.emit(\'error\', err);
+4 28 this.contentType(\'ogg\');
+4 29 });
+4 31 })'
+
+5 1  - 2 }
+5 3 return n;
+6 1  },'succeeded' in this new new XML format."
+7 1  + \'"something"\'.*[\
+7 2 "3>/thing"
+7 3 ].join("\
+7 4 ") }
+7 6 "options" : options,
+7 7 paths: this.start
+8 1  })
+8 2 After(function (callback) {
+8 3 comments.push({
+8 4 id: arguments[1],
+8 5 type: "ExpressionStatement",
+8 6 function parseInt(val) {
+8 7 return parseInt(val, 10);
+8 9 }), 1000);
+8 10 return n.split(/[\\r\
+8 11 ]+/).join("\
+8 12 ");
+8 14 function parseArray(targets, location) {
+8 15 var items = {};
+8 16 var n = location.split("#")[0];
+8 17 var len = args.length;
+8 18 return n.concat(s*(n? args[0] : "Number"),
+8 19 newObj = { type: String, required: false };
+8 20 for (var i = 0, len = items.length; i < len; i++) {
+8 21 newObj[items[i].type.should.eql(njQuery(item[0]));
+8 23 return n.join("\
+8 26 function json2decomposed(key, value) {
+8 27 var keys = Object.keys(value);
+8 28 var ret = {};
+8 29 for (var i = 0, len = keys.length; i < len; i++) {
+8 30 ret[key] = value[keys[i]];
+8 32 return ret;
+8 34 module.exports = Plugin.extend({
+8 35 extend: {
+8 36 init: function(options) {
+8 37 options = options || {};
+8 38 var self = this;
+8 39 this.merge(options || {}, this.defaults);
+8 40 this.start = Number(new Date);
+8 41 this.total = this.skipped = this.failed = this.success = false;
+8 42 this.netTime = this.totalTime = 0;
+8 43 this.totalTimeEnd = function() {
+8 44 return this.totalTime > 0;
+8 45 };
+8 46 on: {
+8 47 return (this.data) => {
+8 48 return this.start || Number(new Date);
+8 51 }])(this);
+8 53 };'
+
+9 3 return n.exports
+9 4 .start = function(config) {
+9 5 return config.set({
+9 6 console: new pb.db.model(profile),
+9 7 error: new Error("None of the tests in %d ms, I'm sending error.",
+9 8 filename: parseInt(config.failOnEmptyTestSuite, 10),
+9 10 filename: parseInt(config.failOnFailingTestSuite, 10),
+9 11 error: new Error("None of the tests in %d ms,I'm sending error.",
+9 12 filename: parseInt(config.failOnFailingTestSuite, 10)

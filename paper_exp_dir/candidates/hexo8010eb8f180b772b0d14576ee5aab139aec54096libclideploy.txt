@@ -1,0 +1,156 @@
+Min editdistance: 27.00
+Closest candidate: 9 17 command('cd', [target + '/.deploy'], next());
+0 1 file.dir(publicDir, function(files){
+0 2 async.forEach(files, function(item, next){
+0 3 file.copy(publicDir + item, target + '/.deploy/' + item);
+0 4 next();
+0 5 }, next);
+0 6 });
+0 7 } else {
+0 8 log.error('You have to use `%s` to generate files first.', clc.bold('hexo generate'));
+0 9 }
+0 13 ], callback);
+0 15 ], function(){
+0 16 log.success('Deploy complete.');
+0 18 };
+0 19 exports.setup = function(args){
+0 20 var repo = args.repo || args.repository;
+0 21 var target = process.cwd(),
+0 22 remote = args.remote || this,"
+
+1 3 var dirs = item.split(path.sep);
+1 4 for (var i=0, len=dirs.length; i<len; i++){
+1 5 if (dirs[i].substring(0, 1) === '.'){
+1 6 return next();
+1 12 },
+1 13 function(next){
+1 14 var publicDir = hexo.public_dir;
+1 20 for (var j=0, len=dirs.length; j<len; jlen; j++){
+1 25 file.copy(publicDir + item, deployDir + item, next);
+1 31 module.exports = function(args){
+1 32 var command = args.shift(),
+1 33 spawn = args.shift(),
+1 34 default = args.pop(),
+1 35 cache = args.shift(),
+1 36 remote = args.shift(),
+1 37 branch = args.shift(),
+1 38 remoteAddress = args.shift(),
+1 39 defaultPath = args.shift(),
+1 40 log = args.shift(),
+1 41 env = args.shift(),
+1 46 rimraf = args.shift(),
+1 48 rimify = args.shift(),
+1 49 config = args.sh(),
+1 50 rimifyConfig = args.sh(),
+1 51 apply = args.pop(),
+1 52 applyIgnores = args.pop(),
+1 54 apply = args.apply = args.apply = args.applyIgnores = args.applyIgnores = args.apply;
+1 55 async = args.applyIgnores = args.applyIgnores = args.applyIgnores = args.applyIgnores = args.applyIgnores = args.applyIgnores = args.applyIgnores = args.applyIgnores = args.applyIgnores;
+1 56 if (env = args.length < command === 0;
+1 57 async.apply = new RegExp.apply.apply.apply.apply.apply.apply.apply.apply.apply(apply(applyIgnores, arguments);
+1 58 commanderync.eachSeries(commands, function(commands, function(commands, command, command, command, commandArgs, commandArgs, commandArgs, commandArgs, commandName){\
+2 1 log.info('Copying public to deploy.');
+2 12 }, callback);
+2 19 var repo = args[0];
+2 20 if (repo === undefined) return callback();
+2 21 var target = process.cwd();
+2 22 if (args[0]){
+2 23 var branch = args[1];
+2 25 if (repo.match(/^(https?:\\/\\/|git(@|:\\/\\/))([^\\/]+)/)[3].match(/github\\.com/)$/)){
+2 26 var branch = args[0];
+2 28 var message = 'Site updated:'+ moment.format(args[0].format);
+2 29 log.info('Commiting for'+ repo + '.deploy.');
+2 30 command('git', ['commit', '-m', message], {cwd: deployDir});
+2 33 exports.setupFromDeployer = function(args){
+2 37 if (args[1]){
+2 44 };"
+
+3 11 }, function(){
+3 16 var args = [
+3 17 args.join(' '),
+3 18 commands
+3 19 ];
+3 20 if (args.indexOf('help')!== -1){
+3 21 var help = [
+3 22 'You should configure deployment settings in _config.yml first!',
+3 23 '',
+3 24 'Example:',
+3 25 '  deploy:',
+3 26 '   type: git',
+3 27 '    repository: <repository>',
+3 28 '    branch: <branch>',
+3 30 'More info: https://zespia.tw/hexo/docs/deploy.html'
+3 32 console.log(help.join('\
+3 33 ') + '\
+3 34 ');
+3 35 return callback();
+3 37 ]);
+4 15 log.info('Deploy complete.');
+5 25 '   repository: <repository>',
+5 28 'More info: https://zespia.tw/hexo/docs/deploy.html',
+5 31 '));
+5 40 if (repo === undefined) return false;
+5 41 if (args.length){
+5 59 if (branch){
+5 60 var newbranch = args[1];
+5 62 var newbranch = '<branch>';
+5 65 var newTag = newPostTag = newPostTag.bind(newPostTag);
+5 66 var newPostTag.endPage.render = newPostTag;
+5 67 var escape = escape = escape = escape.replace = require('{'---' + escape: escape() },
+5 68 var escape = escape.replaceText()
+5 69 .replaceText = escape.replace(/{/g, '\
+5 70 ' + escape() }, '\
+5 71 replace: '}'}, replace = escape }, replace];
+5 72 var escape = _ = _.replace = _.replace = _.replace === ';
+5 73 replace = _;
+5 74 var target = escape.replace = _.replace = _;
+5 75 return '\
+5 76 function' = escape;
+5 77 if (replace === '\\s').replace.replace.replaceWith(/g,
+6 9 file.copy(publicDir + item, deployDir + '/' + item);
+6 20 command('cd', [target + '--setup', args.join(' '))], next);
+6 23 var blogDir = path.join(baseDir, 'debug (' + now.toISOString() + ')');
+6 24 var deployDir = target + '/.deploy';
+6 26 command('git', ['add', '.'], next);
+6 29 var message = 'Site updated:'+ moment.format(hexo.config.date_format +'' + hexo.config.time_format);
+6 30 log.info('Commiting.');
+6 31 command('git', ['commit', '-m', message], next);
+6 34 log.info('Pushing files for remote deployment.');
+6 35 command('git', ['push', 'github', config.deploy, '--force'], next);
+6 38 rimraf(deployDir, function(){
+7 4 file.copy(publicDir + item, target + '/.deploy' + item); next();
+7 14 })
+7 22 var message = 'Site updated:'+ new Date(args[1]) + '\
+7 23 ';
+7 24 console.log('Deploy complete.');
+8 3 var dirs = item.split('/');
+8 29 if (args[2]){
+8 30 var branch = args[2];
+8 32 if (args[3]){
+8 33 var branch = args[3];
+8 35 var message = 'Site updated:'+ moment(args[3]).format(hexo.config.date_format +'' + args[4]);
+8 36 if (message ===' valid for the deployer') tag = args[1];
+8 37 else {
+8 38 var message ='Site updated:'+ moment(args[2]).format(hexo.config.date_format +'' + args[3]);
+8 41 var localConsole = new Console({
+8 42 log: function(name, args){
+8 45 create: function(args){
+8 47 return function(err, target){
+8 48 if (err) throw new Error('Deployer not found');
+8 51 log.info({
+8 52 command: message,
+8 53 args: args: args,
+8 54 format: args,
+8 55 format: config.format || config.format || config.format +'' + args.format +'' + args.format
+8 61 var newLocals.alias = function(args){
+8 62 console.log = args;
+8 63 return newLocals.log = newLocals(args);
+8 64 return newLocals(args);
+9 17 command('cd', [target + '/.deploy'], next());
+9 21 fs.exists(publicDir, function(exist){
+9 22 if (exist){
+9 34 command('git', ['add', '.'], next());
+9 38 log.info('Commiting for you now..');
+9 39 command('git', ['commit', '-m', message], next());
+9 42 log.info('Pushing files to remote');
+9 43 command('git', ['push', 'github', config.deploy, '--force'], next());

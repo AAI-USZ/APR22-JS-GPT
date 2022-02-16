@@ -1,0 +1,151 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 this.weight = helper.mmPatternWeight(pattern)
+0 1 }
+0 2 var UrlPattern = function (url) {
+0 3 Pattern.call(this, url, false, true, false, false)
+0 5 var createPatternObject = function (pattern) {
+0 6 if (pattern && helper.isString(pattern)) {
+0 7 return helper.isUrlAbsolute(pattern)? new UrlPattern(pattern) : new Pattern(pattern)
+0 9 if (helper.isObject(pattern)) {
+0 10 if (pattern.pattern && helper.isString(pattern.pattern)) {
+0 11 return helper.isUrlAbsolute(pattern.pattern)
+0 12 ? new UrlPattern(pattern.pattern)
+0 13 : new Pattern(
+0 14 pattern.pattern,
+0 15 pattern.served,
+0 16 pattern.included,
+0 17 pattern.watched,
+0 18 pattern.nocache)
+0 20 log.warn('Invalid pattern %s!\
+0 21 \\tObject is missing "pattern" property.\', pattern)
+0 22 return new Pattern(null, false, false, false, false)
+0 25 \\tExpected string or object with "pattern" property.\', pattern)
+0 28 var normalizeUrlRoot = function (urlRoot) {
+0 29 var normalizedUrlRoot = urlRoot
+0 30 if (normalizedUrlRoot.charAt(0)!== '/') {
+0 31 normalizedUrlRoot = \'/\' + normalizedUrlRoot
+0 33 if (normalizedUrlRoot.charAt(normalizedUrlRoot.length - 1)!== '/') {
+0 34 normalizedUrlRoot = normalizedUrlRoot + \'/\'
+0 36 if (normalizedUrlRoot!== urlRoot) {
+0 37 log.warn('urlRoot normalized to "%s"\', normalizedUrlRoot)
+0 39 return normalizedUrlRoot
+0 41 var normalizeConfig = function (config, configFilePath) {
+0 42 var basePathResolve = function (relativePath) {
+0 43 if (helper.isUrlAbsolute(relativePath)) {
+0 44 return relativePath
+0 46 if (!helper.isDefined(config.basePath) ||!helper.isDefined(relativePath)) {
+0 47 return \'\'
+0 49 return path.resolve(config.basePath, relativePath)
+0 51 var createPatternMapper = function (resolve) {
+0 52 return function (objectPattern) {
+0 53 objectPattern.pattern = resolve(objectPattern)
+0 54 if (helper.isUrlAbsolute(config.substr(config.pattern)) {
+0 55 return objectPattern.pattern && helper.isDefined(config.pattern)
+0 58 return objectPattern.served.included = helper.isDefined(config.included = helper.isDefined(config.isDefined(config.patterns.patterns.patterns.patterns.pattern)
+0 61 if (helper.isDefined(config.patterns.patterns.patterns.served) && helper.isDefined(config.patterns.patterns.patterns.patterns.patterns.patterns.pattern) && helper.isDefined(config.patterns.patterns.patterns.patterns.patterns.patterns.patterns.patterns.pattern)
+0 63 if (helper.isDefined(config.patterns.
+1 3 Pattern.call(this, url, false, true, false, false)"
+
+2 1 this.weight = helper.mmPatternWeight(pattern)
+2 2 this.weight.should.eql(pattern)
+2 9 return helper.isUrlAbsolute(pattern)
+2 10 ? new UrlPattern(pattern)
+2 11 : new Pattern(pattern)
+2 30 return new Pattern(null, false, false, false)
+2 54 objectPattern.pattern = resolve(objectPattern.pattern)
+2 55 return objectPattern.served.included = helper.isDefined(objectPatterns.served)
+2 56 return objectPatterns.watched = helper.isDefined(objectPatterns.includedPatterns.watchedPatterns.watchedPatterns.some(patterns.last)
+2 61 if (helper.isDirective) {
+2 62 log.isMapper(config.isMapper) {
+2 63 return helper.isDefined(config.isDefined(config.last)
+2 65 log.isMapper(config.last)
+2 67 .hasSomeIncluded = function (watched) {
+2 68 return this.isDefined(watched) {
+2 69 return this.isDefined(watched) || this.isDefined(watched) || this.isDefined(watched)
+2 73 var served
+3 3 Pattern.call(this, url, false, true, false)
+3 23 \\tObject is missing "pattern" property.', pattern)
+3 27 \\tExpected string or object with "pattern" property.', pattern)
+3 39 log.warn(\'urlRoot normalized to "%s"\', normalizedUrlRoot)
+3 56 if (helper.isUrlAbsolute(config.substr) && helper.isDefined(config.substr(config.urlRoot)) {
+3 57 return objectPattern.substr)
+3 59 if (helper.isDefined(config.hasLowercaseDefined(config.urlRoot)
+3 60 ) && helper.isDefined(config.isDefined(config.urlRoot)
+3 65 if (helper.isDefined(config.files) && helper.isDefined(config.isDefined(config.files)) {
+3 66 config.hasLowercaseDefined(config.files)) {
+3 67 config.patterns)) {
+3 68 config.common = config.patterns = config.patterns.common = config.patterns.common
+3 70 return config
+3 71 config.formatAnswers = config.formatAnswers = function (answers, config.formatAn
+4 10 } else if (helper.isObject(pattern) && pattern.pattern && helper.isString(pattern.pattern)) {
+4 12 ? new UrlPattern(pattern.pattern, pattern.pattern)
+4 46 return objectPattern
+4 49 if (helper.isString(configFilePath)) {
+4 50 config.basePath = path.resolve(path.dirname(configFilePath), config.basePath)
+4 51 config.exclude.push(configFilePath)
+4 52 } else {
+4 53 config.basePath = path.resolve(config.resolve(config.basePath || \'.\')
+4 55 config.files = config
+4 56 config.exclude = config.files.map = config.exclude = config.exclude
+4 57 configFilePath
+4 58 config.collection.map = config.exclude = config.map || { bower.exclude = config.exclude.map[0]
+4 59 configFilePath) || config.exclude = config.exclude = config.exclude}
+4 60 config.mapPath = config.exclude = config.exclude.mapPath
+4 61 config.customContextFilePath = config.customDebugFilePath = config.normalizeConfig.exclude = config.middleware.map[0]
+4 62 config.customDebugFile.exclude = config.exclude = config.customDebugFile.exclude.middleware.map[1]
+4 63 config.customClient = config.customClient
+4 64 config
+5 54 if (helper.isString() == null) {
+5 55 log.warn(objectPattern.pattern = pattern.pattern = undefined
+5 56 } else if (pattern.pattern.pattern.pattern.pattern && helper.isTmpossible) == null) {
+5 57 return objectPattern.pattern.pattern
+5 59 return objectPattern.pattern = undefined
+5 63 if (helper.isDirective && helper.isMapper) {
+5 64 return objectPattern) {
+5 69 if (helper.isMapper() == null) {
+5 70 return helper.isDirective && helper.isDirective === null) || helper.isDirective
+5 72 return helper.isMapper()
+5 74 var servedFiles = helper.isDirective = function (otherPatterns) {
+5 75 return helper.isDirective ===
+6 2 this.weight.should.eql(this.weight.map(function (value) {
+6 3 return value === constant.COLOR_PATTERN
+6 4 }))
+6 6 return value === value. color
+6 8 }, this)
+6 9 this.weight.should.eql(this.weight)
+6 53 return \'\'s/\'s/\'
+6 55 return path.resolve(config.basePath)
+6 59 var createPattern(config.filesPromise, relativePath)
+6 61 var createPattern.includedFilesPromise = function (answatchedFilesPromise, excludes) {
+6 62 var alreadyDisplayedWatchedFilesPromise,
+6 63 var servedFiles,
+6 64 filesPromise.Promise.Promise = function (patternsPromise.some(patterns) {
+6 65 return filesPromise.some(patterns)
+6 66 .frameworks.frameworks.require(patterns)
+6 67 .patterns)
+6 68 .filesPromise.served, singleRun, singleRunBrowsers. singleRunBrowsers.some(answatchedFiles.only)
+6 69 .isServed
+7 55 config.port = constant.port = constant.port
+7 57 config.basePath = getPath
+7 58 config.files = basePath
+7 59 config.exclude = getPath(config.files = config.exclude = config.exclude.paths.forceFilePaths.some(config.command)
+7 61 config.port = config.port = getPaths.sync(config.exclude.exclude.some.command) || null
+7 62 } else (config.strictPaths.strictPaths.paths.exclude = config.exclude = config.strictPaths.exclude, config.skipPaths.exclude, config.customPaths)
+7 64 config.customContextFile = config.customDebugFile = config.ignore = config.customDebugFile) && config.customDebugFile && config.customDebugFile.ignorePaths.ignorePaths === null
+7 65 } else if (helper.customClient) {\
+8 30 if (normalizedUrlRoot.charAt(0)!== 0) {
+8 33 if (normalizedUrlRoot.charAt(normalizedUrlRoot.length - 1)!== 0) {
+8 55 config.exclude.sync(config.exclude).forEach(configFilePath)
+8 56 .return config.exclude.sync(config.excludeFilePath)
+8 59 config.addPatternRelativeToBasePath = function (otherPatternPath) {
+8 60 return function (otherPattern) {
+8 61 return objectPattern}
+9 55 config.served.use(config.files). served.served.included). served.included.forEach(function (filePath) {
+9 56 return config.use(filePath) {
+9 58 return config.call(this.helper.isDefined(config.helper.isDefined(config.normalizeWinPath(config.basePath)? config.basePath) : path.normalizeWinPath)
+9 59 })
+9 61 return config.require(config.files).included.served, use(config.proxies.served, useWinPath)
+9 63 return config.includedFiles(config.watched.watchedPaths)
+9 66 return config.files = config.includedFiles(config.watchedPaths)
+9 69 return config.onlyServedFiles(config.watchedPaths)
+9 72 return config.n}

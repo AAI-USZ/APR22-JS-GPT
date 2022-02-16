@@ -1,0 +1,149 @@
+Min editdistance: 1.00
+Closest candidate: 4 33 exist.should.be.false;
+0 1 exist.should.eql(false);
+0 2 });
+0 3 it("delete public folder, on clean()", async () => {
+0 4 const publicDir = hexo.public_dir;
+0 5 const clean = require('../../../lib/plugins/console/clean).bind(hexo);
+0 6 await writeFile(extraDbPath, '');
+0 7 await clean();
+0 8 const exist = await exists(publicDir);
+0 11 it("delete source public folder, on clean()", async () => {
+0 13 const clean = require(\'../../lib/plugins/console/clean).bind(hexo);
+0 19 it("delete source source endpoints correctly", async () => {
+0 20 const sourceDir = hexo.source_dir;
+0 21 const resolved = {};
+0 22 const writeFile = unlink(extraDbPath, '');
+0 24 await generate();
+0 25 const exist = await exists(source);
+0 26 const validPromise = true;
+0 27 await promise.then(() => {
+0 28 unlink(extraDbPath);
+0 31 it("delete all source files in the public folder, when async() is next", async () => {
+0 38 const validPromise = false;
+0 39 const resolve = Promise.then(() => {
+0 43 it("delete source files\', async () => {
+0 45 const testDir = pathFn
+0 46 .unlink(pathFn.join(pathFn.join(hexo.tmpdir, \'index.js\') + pathFn.join(hexo.tmpdir, \'index.js\');
+0 47 await writeFile(`./lib/foo.js
+0 48 );
+0 49 await writeFile(`./test
+0 51 await unlink(`./test
+0 54 it("replaceFile(/test\', \'(`/foo.js\', testDir, foo);
+0 55 await unlink(`/.test\', matchFiles(`{.*\', ignoredFiles} docs_\', done);
+0 57 it("should.skip("unlink(@only_
+1 3 });'
+
+2 1 const newResult = await new Promise();
+2 2 const hexo.once('save_all', async () => {
+2 3 const exist = await exists(dbPath);
+2 4 if (!exist) return next();
+2 5 hexo.extend.filter.register(\'after_save\', async () => { next(newResult); });
+2 6 const databasePath = hexo.database.options.path + \'/db.json\';
+2 7 await writeFile(dbPath, '');
+2 10 const newResult = await databasePaths.find({_id: Object.keys(dbKeys).length});
+2 11 const clean = async () => {
+2 15 const mcp = spy();
+2 16 for (const [key, callback] of Object.entries(dbKeys)) {
+2 17 newResult[key] = true;
+2 18 }
+2 19 await mkdirs(publicDir);
+2 22 const newResult = await unlink(dbPath);
+2 23 const mcp2 = spy();
+2 27 await writeFile(dbPath, newResult);
+4 2 const exist = await exists(extraDbPath);
+4 4 const dbPath = hexo.database.options.path;
+4 8 const clean = await unlink(dbPath);
+4 10 for (const t in other) {
+4 15 const require = await exists(dbPath);
+4 16 const path = await mkdirs(target);
+4 17 const contents = await readFile(dbPath);
+4 18 contents.should.eql([
+4 19 \'---\',
+4 20 \'title: "Hexo\',
+4 21 \'date: 1e8\',
+4 22 \'tags:',
+4 23 \'---\'
+4 24 ].join(\'\
+4 25 \'));
+4 26 await unlink(dbPath);
+4 28 it(\'removes the folder inside the database\', async () => {
+4 29 const dbPath = hexo.database.options.paths.join(pb.config.db.name);
+4 30 const cleanInternalHsl = fs.unlink(dbPath);
+4 33 exist.should.be.false;
+4 34 unlink(dbPath);
+4 36 it(\'removes the public folder\', async () => {
+4 50 it(\'removes publicDir.should.should.not.be.be.empty;
+5 1 const newResult = await exists(newResult);
+5 2 const isShared = false;
+5 3 const _saveDatabase saved = async (() => {
+5 4 if (true) return saved();
+5 8 for (const key in saved) {
+5 9 emitter.emit('browsers_change', _saveDatabase(dbPath));
+5 16 const result = await list.find({_id: Object.keys(dbKeys).filter(key => self.name === key);
+5 17 if (exist) return saved();
+5 45 const lastGeneratedId = 1000;
+5 46 after(() => {
+5 47 return writeFile(() => {
+5 48 return unlink(db => {
+5 51 return unlink(db);
+6 1 const extraDbPath = hexo.database.options.path + \'.tmp';
+6 2 await unlink(extraDbPath);
+6 4 const content = await exists(extraDbPath);
+6 5 const result = await Promise.all([
+6 6 fs.writeFile(extraDbPath, content),
+6 7 fs.writeFile(extraDbPath, content)
+6 8 ]);
+6 9 return clean();
+6 11 it(\'returns the same object, as the separator style is same\', async () => {
+6 12 const dbPath = hexo.database.options.paths.join(\' \');
+6 17 fs.exists(dbPath),
+6 18 fs.exists(path)
+6 22 it(\'returns the canonical package is decEndpointed\', async () => {
+6 23 const packagePath = hexo.extend.filter.register(\'before_post_render\', () => {
+6 24 const packagePath = hexo.extend.filter.register(\'after_render\', () => {
+6 25 const packageName = hexo.extend.filter.register(\'before_post_render\', () => {
+6 26 const packageDir = hexo.extend.filter.register(\'after_post_render\', () => {
+6 30 return packageDir + \'#\' + packageName; });
+6 32 await writeFile(packagePath, '');
+6 34 const exist = await exists(packageDir);
+6 35 const result = await unlink(packagePath);
+6 37 it(\'return Promise.all([
+6 38 fs.exists(packagePath),
+6 39 fs.readFile(packagePath)
+7 3 it("delete public folder, callback", () => {
+7 10 it("execute corresponding filter, callback - not callback", () => {
+7 11 const extraDbPath = hexo.database.options.path + \'/tmp/test.js\';
+7 12 hexo.extend.filter.register(\'after_clean\', () => { callback});
+7 21 hexo.config.delete = true;
+7 23 exist.should.eql(true);
+7 26 const hexo = new Hexo(__dirname, {silent: true});
+7 28 hexo.config.delete = false;
+7 30 exist.should.not.be.null;
+7 35 hexo.config.extend.filter.register(\'after_clean\', () => { callback});
+7 37 const result[
+7 38 ].forEach((err) => {
+7 39 it(path => {
+7 40 const post.removeFile(post => {
+7 41 hexo.path === undefined);
+7 42 return unlink(path);
+7 47 it(err => {
+7 48 it.skip => {
+7 49 it(`process.next(() => {
+7 50 await writeFile(`${path);
+7 51 const publicDir(path);
+8 3 it("delete public folder, async() => {
+8 8 const expected = [
+8 10 \'create\',
+8 11 \'link removed\',
+8 14 \');
+8 17 exist.should.eql(expected);
+8 19 it("delete source directory, async() => {
+9 2 hexo.config.title,
+9 3 ["title","message","data",
+9 4 ["error",
+9 5 {
+9 6 paths: Object.keys(dbNames).sort().join("\
+9 7 ")
+9 9 ];
+9 10 await writeFile(extraDbPath, expected);

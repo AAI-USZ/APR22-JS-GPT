@@ -1,0 +1,231 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var common = require('./common');
+0 1 var common = require('./common');
+0 2 function listPost() {
+0 3 var Post = this.model(\'Post\');
+0 4 var data = Post.sort({published: -1, date: 1}).map(function(post) {
+0 5 var date = post.published? post.date.format(\'YYYY-MM-DD\') : \'Draft\';
+0 6 var tags = post.tags.findOne({source: post.path});
+0 7 if (!tags.length) return;
+0 8 var categories = post.categories.findOne({source: post.path});
+0 9 if (!categories.length) return;
+0 10 var data = Asset.findOne({
+0 11 source: post.path,
+0 12 path: post.content
+0 13 });
+0 14 var date = date.format(\'YYYY-MM-DD\');
+0 15 var content = [
+0 16 \'---\',
+0 17 \'The quick brown fox jumps over the lazy dog\'
+0 18 ].join(\'\
+0 19 \');
+0 20 return post.create({
+0 21 title: \'Hello World\',
+0 22 alt: \'Chemistry\',
+0 23 date: date.format(\'YYYY-MM-DD\'),
+0 24 content: post.content
+0 25 }, function() {
+0 26 return Promise.all([
+0 27 fs.writeFile(file.source, \'a\'),
+0 28 Post.insert({source: file.path, slug: \'foo\'}, function() {
+0 29 post.title.should.eql(\'Hello world\');
+0 31 post.create({title: \'bar\'}, true),
+0 32 post.create({title: \'baz\'}, true),
+0 33 post.create({title: \'boo\'}, true)
+0 34 ]).then(function() {
+0 35 return post.publish({
+0 36 slug: \'foo\'
+0 38 }).then(function(post) {
+0 39 post.path.should.eql(file.path);
+0 40 post.content.should.eql(content);
+0 43 post.create({title: \'baz\'}, true)
+0 53 post.create({title: \'bar\'}, true)
+0 63 post.create({title: \'baz\'})
+0 69 post.path.should.eql(post.path);
+0 72 post.create({title: \'baz\', true}).should.setTags(false);
+0 76 }
+0 77 function saveDatabase() {
+0 78 function Locals() {
+0 79 this.series([
+0 80 .series([
+0 81 ]).series([
+0 83 ], function() {
+0 86 return this.uninstall() {
+0 88 }).then(this.setCategories(this.settings.settings.posts)
+0 89 .uninstallModified()
+0 90 .uninstall()
+0 91 .then(this.collection.exclude.settings.bind(this)
+0 92 .collection.exclude.exclude = this)
+0 93 .collection.collection.exclude.exclude = this._settings.exclude.settings.exclude = _.
+1 5 var date = post.published? post.date.format(\'YYYY-MM-DD\') : \'Drafts\';
+1 6 var tags = post.tags.map(function(tag) {
+1 7 return tag.name;
+1 9 var categories = post.categories.findOne({source: \'foo\', slug: \'foo\'});
+1 10 return [chalk.gray(date), post.title, chalk.magenta(post.source), categories, tags.join(\', \')];
+1 12 var header = [
+1 14 \'title: length\',
+1 15 \'date: 1\',
+1 16 \'---\'
+1 19 var data = Post.sort({source: \'foo\', path: \'foo.html\', title: \'Its\', date: 1}).map(function(post) {
+1 20 return post.content.length;
+1 22 var headerColor = header.Color;
+1 23 if (!data.length) {
+1 24 return chalk.gray(data.slug + \'\
+1 25 \';
+1 27 return chalk.magenta(tildify(post.source)) + \'\
+1 30 this.insert = function(data) {
+1 32 data.findById(data._id);
+1 33 if (data.categories) {
+1 34 data.categories.forEach(function(cat) {
+1 35 varName = cat.name;
+1 36 var post = Post.findOne({source: data.categories, slug: cat.name});
+1 37 if (!post) return;
+1 38 if (data.tags) {
+1 39 data.tags.forEach(function(tag) {
+1 40 Tag.call(this.post, tag.name);
+1 43 return data;
+1 44 };
+1 45 this.update = function(data) {
+1 46 this.set(\'Content-Type\', \'text/html\');
+1 47 this.remove = function() {
+1 50 return Post.remove({
+1 51 _id: data._id,
+1 52 path: data.path,
+1 53 posts: [data.categories, \'foo\', \'bar\'],
+1 54 paths: [data.tags, \'baz\'],
+1 55 locals: {
+1 56 post: data.posts,
+1 57 page: data.path
+1 60 this.removePost();
+1 62 return Post;
+1 64 module.exports = listPost;'
+
+2 9 var categories = post.categories;
+2 12 var header = post.content,
+2 13 unlink = highlight(title, {lang: \'foo\'}, permalink);
+2 14 return [
+2 15 \'<h1 id="title_1">Title 1</h1>\',
+2 16 \'<p>Image: <span>Image:</span><a href="http://zespia.tw">zespia.tw/</a>"></span>\'
+2 18 \') + \'</h1>\';
+2 20 function highlight(code, options) {
+2 21 return chalk.yellow(code, options || {})
+2 22 .replace(/{/g, \'&#123;\')
+2 23 .replace(/}/g, \'&#125;\');
+3 9 if (!categories.length) return [];
+3 11 _id: id,
+3 12 post: post._id,
+3 13 archive: post.published,
+3 14 categories: [],
+3 15 tags: [],
+3 16 comments: Boolean,
+3 17 layout: \'post\',
+3 18 content: chalk.enabled? \'post\' : \'\',
+3 19 excerpt: post.content.replace(/\\
+3 20 return \'<h1>\';
+3 22 var header = \'<h1>\';
+3 23 if (data.length < 1) {
+3 24 header += \'<h1>\' + chalk.magenta + \'</h1>\';
+3 26 return [chalk.gray(data.length - 1) + \'</h1>\';
+3 28 function removeAssetFolder(data) {
+3 29 return Post.insert({
+3 30 source: data.source,
+3 31 slug: data.slug,
+3 32 path: data.path
+4 12 var header = ['Date', \'Title', \'Path', \'Category', \'Tags'].map(function(str) {
+4 13 return chalk.underline(str);
+4 15 data.unshift(header);
+4 18 function pluralize(Handlebars) {
+4 19 Handlebars.registerHelper(\'pluralize\', function(context) {
+4 21 {_: ['Title', this.title],
+4 22 {_: \'Path\', path: this.post.path}
+4 23 ];
+5 2 function listPost(){
+5 4 var data = Post.sort({published: -1, date: 1}).map(function(post){
+5 10 return [chalk.gray(date), post.title, chalk.magenta(post.source), categories.join(\', \')];
+5 12 var header = ['Date', \'Title', \'Path', \'Category', \'Tags'].map(function(str){
+5 17 chalk.gray(str),
+5 18 post.title,
+5 19 chalk.magenta(tildify(post.source))
+5 22 function json2Console(args){
+5 25 \'title: Hexo\',
+5 26 \'date: 1,
+5 27 \'tags:\',
+5 31 var data = {
+5 32 content: content
+5 34 var min = args.min_font || args.max_font || config.min_font
+5 36 var max = args.max_font || config.max_font || config.max_font || 20;
+5 37 var orderby = args.orderby || \'name\';
+5 38 var order = options.order || 1;
+5 39 var transform = options.transform;
+5 40 var separator = options.separator || \';\';
+5 41 var result = [];
+5 42 if (args.length){
+5 43 var match = args.match(/([^\\/]+), function(err, target){
+5 44 if (err) return match;
+5 45 if (result.length){
+5 46 result.push(parseInt(args[0], 10));
+5 47 } else {
+5 48 result.push(baseDir + \'/\');
+5 51 result.push(
+5 52 \'<a href="\' + root + post.source + \'">\',
+5 53 {
+5 54 chalk.magenta(tildify(post.source)) + \'</a>\',
+5 55 \'<a href="\' + root + post.path + \'"">\',
+5 61 \'</form>\',
+5 64 \'<a class="\' + class + \'-item">\',
+5 65 \'<a href="\' + root + item.path + \'"\',
+5 68 result.push(item => {
+5 69 result.push(item.startsWith(item));
+5 72 return result.push(item);
+5 74 return result.join([
+5 75 output(JSON.stringify());
+5 77 return result = JSON.stringify = require(\'{\', data);
+5 78 output = JSON.stringify);
+5 79 if (JSON.stringify = require(\'{\', data);
+5 80 }'
+
+6 9 var categories = post.categories.findOne({name: /categories/, posts: [post.name], posts: [post.params[0]]});
+6 10 var header = post.content.replace(/([\\u4e00-\\u9fa5\\u3040-\\u30FF])([a-z0-9@#&;=_\\[\\$\\%\\^\\*\\-\\+\\,\\.\\/(\\\\)\\?\\:\\\'\\"\\[\\]\\([\\)])/g, \'$1 $2\');
+6 11 var data = Post.findOne({source: file.path});
+6 12 data.content.trim()
+6 13 .replace(/([\\u4e00-\\u9fa5\\u3040-\\u30FF])([a-z0-9@#&;=_\\[\\$\\%\\^\\*\\-\\+\\(\\/])/g, \'$1 $2\')
+6 14 .replace(/([a-z0-9#!~&;=_\\]\\,\\.\\:\\?\\$\\%\\^\\*\\-\\+\\)\\/])([\\u4e00-\\u9fa5\\u3040-\\u30FF])/g, \'$1 $2\');
+6 16 function pluralize(Post, post) {
+6 17 var result = \'\';
+6 18 var length = post.length;
+6 19 var i = 0;
+6 20 for (; i < length; i++) {
+6 21 result += post.slice(i, i + 1);
+6 23 result += raw\';
+6 24 result += value;
+6 25 return result;
+7 9 var categories = post.categories.findOne({}).name;
+7 17 \'<ul>\',
+7 18 \'<li>\',
+7 19 \'<div class="title">Title</div>\',
+7 20 \'<div class="director">Tim Burton</div>\',
+7 21 \'</li>\',
+7 23 \'<div class="title">Avatar</div>\',
+7 24 \'<div class="director">James Cameron</div>\',
+7 26 \'</ul>\',
+7 27 \'</body>\',
+7 28 \'</html>\'
+7 29 ].join(\'\');
+7 30 function jsonRenderer(data){
+7 32 data.title = title;
+7 33 if (data.length == 1){
+7 34 return this.remove(data.title);
+7 36 data.title = \'\';
+7 37 return this.post.uri.path.replace(/\\
+8 2 function listPage() {
+8 3 var Page = this.model(\'Page\');
+8 4 var data = Page.sort({date: 1}).map(function(page) {
+8 5 var date = page.date.format(\'YYYY-MM-DD\');
+8 6 return [chalk.gray(date), page.title, chalk.magenta(page.source), chalk.gray(date), page.title, chalk.magenta(page.source), page.target];
+8 8 var header = ['Date', \'Title', \'Path'].map(function(str) {
+8 12 return [chalk.gray(str), page.title, chalk.magenta(page.source), page.target];
+8 15 module.exports = listPage;'
+
+9 9 var categories = post.categories.findOne({name: /categories/, posts: [Post.title, String(tag)});
+9 12 var header = ['Date', 'Title', 'Path', 'Category', 'Tags'].map(function(str) {
+9 16 return Post.removeById(data._id);

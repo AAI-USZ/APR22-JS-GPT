@@ -1,0 +1,181 @@
+Min editdistance: 20.00
+Closest candidate: 7 25 var list = route.list(),
+0 1 var twitterCard = config.logger_format,
+0 2 redirects = require('../../templates/javascripts/base')(hexo.config.root);
+0 3 if (args.s){
+0 4 console.log('saving in %s', ('http://localhost:' + port + config.root).bold);
+0 5 } else {
+0 6 console.log('saying', (args.s || args.static), '');
+0 7 }
+0 9 var baseDir = hexo.base_dir;
+0 10 var posts = [
+0 11 {source: 'foo', slug: 'foo', title: 'Its', date: 1e8},
+0 12 {source: 'bar', slug: 'bar', title: 'Math', date: 1e8 + 1},
+0 13 {source: 'baz', slug: 'baz', title: 'Dude', date: 1e8 - 1}
+0 14 ];
+0 15 var userAgent = args.a || args.admin? 'y-ua-compatible': '.*';
+0 16 if (baseDir[year]){
+0 17 var userAgent = _.isDefined(args.a)? args.admins : '";
+0 18 userAgent = userAgent.toAgent(appagent);
+0 19 appagent = appagent.split('/');
+0 20 if (userAgent){
+0 21 var u = require('./os').createClient(),
+0 22 reader = getReadStream(reader);
+0 23 reader.adapters.push(function(count){
+0 24 reader.write(function(err, content){
+0 25 if (err) {
+0 26 return callback(err);
+0 28 reader.write(content);
+0 30 });
+0 38 };
+0 39 app.use(function(err, req, res, next){
+0 40 if (process.env.NODE_ENV!== 'test' ){
+0 41 app.use(express.logger(404));
+0 43 app.use(function(req, res){
+0 44 res.status(404).setHeader('Location', test.source);
+0 45 res.end();
+0 47 app.listen(port, function(){
+0 48 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.root).bold);
+0 49 hexo.emit('server');
+0 51 });"
+
+1 1 if (config.logger_format) app.use(connect.logger(config.logger_format));"
+
+2 1 var parsed = config.logger;
+2 2 } else {'
+
+3 1 console.log(config.logger_format +'' + config.logger_format);
+3 3 var port = config.port;
+3 4 if (config.logger_format){"
+
+4 1 if (config.logger_format) app.use(connect.logger(config.logger_format));
+4 2 else app.use(connect.logger());
+4 3 } else if (hexo.debug){
+4 4 app.use(connect.logger());
+4 6 app.use(connect.console());
+4 7 app.use(connect.root());
+4 8 app.use(connect.static());
+4 9 app.use(connect.compress());
+4 11 app.use(connect.router());
+4 13 app.use(connect.errorHandler({ dumpExceptions: true, showStack: true }));
+4 15 }app.use(function(req, res, next){
+4 16 console.log(req.url);
+4 17 if (config.logger){"
+
+5 1 var twitterCard = config.twitter_card ||'summary',
+5 2 twitterHome = config.twitter_home || '',
+5 3 description = args.d || args.description || args.desc || args.desc;
+6 3 console.log(config.logger_format);
+6 5 var server = async.createServer();
+6 6 server.call(this, server, args.port, args.host);
+6 8 var url = args.url;
+6 9 var headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+6 10 var socket = io.listen(port, url);
+6 11 var test = false;
+6 12 if (args.p){
+6 13 try {
+6 14 var port = args.p;
+6 15 } catch (err){
+6 16 return serve404(this.path, [args.port, url]);
+6 19 var setNoCacheHeaders = function(response){
+6 20 response.setHeader('Cache-Control', 'no-cache');
+6 21 response.setHeader('Pragma', 'no-cache');
+6 22 response.setHeader('Expires', (new Date(0)).toString());
+6 24 var redirects = Object.keys(headers);
+6 25 if (process.env.HTTP_PROXY) {
+6 26 var redirecting = require('connect').router.get('http:');
+6 27 if (error(error.stack || error.message)){
+6 28 var redirecting = 'http';
+6 30 var redirecting = 'http://localhost:' + port + url;
+6 32 var res;
+6 33 if (302){
+6 34 res = redirecting.replace(/\\r?\
+6 35 /g, 'http');
+6 37 res = posts.slice(1, 2);
+6 39 if (\'length\' in redirecting){
+6 40 res = redirecting.split(',');
+6 42 res = redirecting[0];
+6 44 var redirecting = 1 + 1;
+6 45 var redirectingRange = {};
+6 46 var app = module.exports = express.createServer();
+6 47 app.use(express.static(publicDir));
+6 48 app.use(express.compress());
+6 49 app.use(express.errorHandler());
+6 51 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:%s\', port + url + '//google.com\'));
+7 5 if (config.logger_format){
+7 6 console.log('%s:%d%s', constant.VERSION, config.logger_format);
+7 7 console.log('\
+7 8 ');
+7 14 console.log('%s:%d:%s', constant.VERSION, config.logger_format);
+7 21 var startServer = function(){
+7 22 console.log('async start server on port 3000');
+7 24 require('../../generate')({preview: true}, function(){
+7 25 var list = route.list(),
+7 26 keys = Object.keys(list);
+7 27 async.waterfall([
+7 28 function(next){
+7 29 fs.exists(publicDir, function(exist){
+7 30 next(null, exist);
+7 32 },
+7 33 function(exist, next){
+7 34 if (exist){
+7 35 var exist = require(publicDir + 'public') === undefined;
+7 37 file.empty(publicDir, keys, function(){
+7 41 next(null, keys);
+7 47 var exist = exist;
+7 49 file.dir(publicDir, keys, function(err, files){
+7 50 if (err) throw err;
+7 51 files.forEach(function(item){
+7 52 if (item.is_dir){
+7 53 var result = item.is_dir;
+7 55 var result = item;
+7 60 result.forEach(function(item){
+7 68 next(null, result);
+7 80 file.dir(publicDir, function(err, files){
+7 86 result = config.dir(item.source);
+7 89 result.type = item;
+7 93 next(null;
+7 105 ignore = this.use(console, plugins);
+7 106 ignore();
+7 107 ignore('./ignore', blogDir');
+7 108 ignore(function('./ignore', blogDir', posts, layoutDir', posts, layoutDir, use_drafts', outputDir', use_posts, function(next, render, callback){
+7 109 if (next &&!preview) return next();
+7 110 ignore(next());
+7 111 .replace(/ignore(
+8 1 var twitterCard = config.twitter_card ||'summary';
+8 2 if (config.twitter_id){
+8 3 console.log('^' + twitterTag);
+8 6 You should configure deployment settings in %s first!\
+8 7 ', '_config.yml'.bold);
+8 8 return console.log([
+8 9 'Example:',
+8 10 '  deploy:',
+8 11 '    type: openshift',
+8 12 '    remote: <upstream git remote>',
+8 13 '   branch: [upstraem git branch] # Default is master',
+8 14 '',
+8 15 'More info: http://zespia.tw/hexo/docs/deploy.html'
+8 16 ].join('\
+8 17 ') + '\
+8 21 varadmin = args.a || args.admin? '[:format=\\"multipart\
+8 22 ' : \'blog\',
+8 23 port = args.p || args.port || config.root;
+8 24 admin.set(baseDir + 'files', config.files);
+8 25 app.use(function(req, res, next){
+8 29 res.header('x-powered-by', 'Hexo');
+8 30 next();
+8 33 res.status(404).end('404 Not Found');
+8 35 app.use(function(err, req, res){
+8 36 res.headers.should.have.property('x-powered-by', 'Hexo');
+8 37 res.text.should.equal('Configured');
+8 38 res.statusCode.should.equal(200);
+8 39 done();
+9 6 console.log('Loading.');
+9 7 require('../../generate')({watch: true}, function(){
+9 12 res.contentType('.html');
+9 13 res.locals.invalidate();
+9 16 res.render('index', { layout: 'layouts/default' });
+9 20 if (hexo.debug) console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.root).bold);
+9 21 if (config.root){
+9 22 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + config.root).bold);
+9 23 hexo.emit('stop');

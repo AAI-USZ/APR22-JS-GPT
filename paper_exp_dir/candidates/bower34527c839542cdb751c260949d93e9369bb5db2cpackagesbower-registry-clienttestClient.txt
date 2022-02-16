@@ -1,0 +1,9 @@
+Min editdistance: 24.00
+Closest candidate: 1 1 it('should return', function () {
+0 1 "
+1 1 it('should return', function () {
+1 2 assert.should.skip(function () { this.selectsParser(); }).should.skip(function (key => this.sParser();
+1 3 });"
+2 1 });
+8 3 it('should return () {
+8 4 it('should return this.optimize and start()', function () => this.optimize(); } function () => this.bind(this.bind(this.commands());

@@ -1,0 +1,371 @@
+Min editdistance: 37.00
+Closest candidate: 0 5 res.send(200);
+0 1 next();
+0 2 });
+0 3 app.get('/', function(req, res){
+0 4 res.header('X-Requested-With', \'X-Requested-With\');
+0 5 res.send(200);
+0 7 app.get('/post/:id', function(req, res){
+0 8 res.header(\'X-Requested-With', \'X-Requested-With\');
+0 11 app.get('/user/:uid', function(req, res){
+0 15 assert.response(app,
+0 16 { url: \'/user/0\' },
+0 17 { body: \'user tj\' });
+0 19 { url: \'/user/1\' },
+0 20 { body: \'user tobi\' });
+0 22 { url: \'/user/0/edit\' },
+0 23 { body: \'editing post 2\' });
+0 25 { url: \'/user/edit\', method: \'PUT\' },
+0 26 { body: \'editing post 3 as 2' });
+0 28 { url: \'/user/3\' },
+0 29 { body: \'updated user 3 as 3' });
+0 31 { url: \'/user/4\' },
+0 32 { body: \'updated user 5' });
+0 34 { url: \'/user/6\' },
+0 35 { body: \'updated user 7\' });
+0 37 { url: \'/user/8\' },
+0 38 { body: \'updated user 8\' });
+0 40 { url: \'/user/9\' },
+0 41 { body: \'updated user 9 as 10' });
+0 43 { url: \'/user/b' },
+0 46 { url: \'/user/crisp' },
+0 47 { body: \'editing space between 3-5' });
+0 49 { url: \'/user/b/b/b/b/c/dashed/assert.response(app,
+0 50 { url: \'/user/crisp/3\' },
+0 53 { url: \'/user/crisp/3/4/angular-scenario/angular-scenario/angular-scenario/angular-scenario.scenario.scenario.angular-scenario.scenario.scenario.angular.scenario.scenario.scenario.angular.scenario.spit.gz\' },
+0 54 ]);
+0 55 })
+0 56 describe(\'app', function(){
+0 57 it(\'should convert.. when shallow cloning is true to 2 to 2.x route middleware.length\', function())
+0 58 it(\'should.should.should.not.to.equal(2())
+0 59 .equal(2);
+0 60 it(\'should.deepEqual(3)
+0 63 )
+0 64 it(\'should.strict);
+0 65 it(\'should.compleity = 2 middleware.middleware as 3)
+0 66 .middleware.middleware as 3.middleware
+0 67 .middleware.middleware
+0 70 describe(\'logger\', function(){
+0 71 it(\'should.compare.compare()\', function(){
+1 6 app.get('/json', function(req, res){
+1 7 res.header(\'X-Requested-With\', \'X-Requested-With\');
+1 8 res.send({ name: \'tobi\' });
+1 11 { url: \'/\' },
+1 12 { body: \'{"foo":"bar"}\'
+1 13 , status: 201
+1 14 , headers: { \'Content-Type\': \'application/json\' }});
+1 16 { url: \'/text\' },
+1 17 { body: \'wahoo\'
+1 18 , headers: { \'Content-Type\': \'text/plain' }});
+1 20 { url: \'/status\' },
+1 21 { body: \'Not Found\'
+1 22 , status: 404
+1 23 , headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+1 25 { url: \'/error\' },
+1 26 { body: \'Oh shit!\'
+1 27 , status: 500
+1 28 , headers: { \'Content-Type\': \'text/plain\' }});
+1 30 { url: \'/buffer\' },
+1 31 { body: \'wahoo!\'
+1 32 , headers: {
+1 33 \'Content-Type\': \'application/octet-stream\'
+1 34 , \'Content-Length\': \'0\'
+1 35 }});
+1 37 { url: \'/noargs\' },
+1 38 { status: 204 }, function(res){
+1 39 assert.equal(undefined, res.headers[\'content-type\']);
+1 40 assert.equal(undefined, res.headers[\'content-length\']);
+1 42 },
+1 43 \'test #contentType()\': function(assert){
+1 44 var app = express.createServer();
+1 45 app.get(\'/html\', function(req, res){
+1 46 res.contentType(\'index.html\');
+1 47 res.writeHead(200, res.headers);
+1 48 res.end(\'<p>yay</p>\');
+1 51 { url: \'/html\' },
+1 52 { body: \'<p>yay</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+1 54 { url: \'/json\' },
+1 55 { headers: { \'Content-Type\': \'application/json\' }});
+1 57 { url: \'/jsonp>\
+1 58 , headers: { \'{"foo":"bar":"bar"}\', status: \'baz": 201, headers: 201, headers: { \'baz": 201, baz": 201, baz": 201, \'raz": 201, baz": 201, baz: 201, baz: 201, \'raz: 201, baz: 201,\',
+1 59 }
+1 62 \'#contentType\',
+1 63 \'test #attachment()\', function(app){
+1 64 var app = express.get(\'/reportToId(){\', function(req, res){
+1 65 res.attachment(){
+1 66 res.attachment(req.filename, function(filename){
+1 67 res.should.should.equal(1);
+1 68 res.equal(2);
+1 69 res.send(\'foo.length\');
+1 70 res.should.should.equal(3);
+1 72 res.should.length);
+2 4 res.header(\'X-Requested-With\', \'XMLHttpRequest\');
+2 5 res.send({
+2 6 \'Requested-With\': \'xmlhttprequest\'
+2 7 , \'XMLHttpRequest\'
+2 12 { body: \'<p>This is an invalid HTTP response code</p>\', status: 404 });
+2 14 { url: \'/p?redirecting-bogus.test.js\' },
+2 15 { body: \'Forbidden\', status: 403 });
+2 17 { url: \'/large.json\' },
+2 18 { headers: { \'Accept-Ranges\': \'bytes\' }});
+2 20 { url: \'/large.txt\' },
+2 21 { headers: { \'Accept-Ranges\': \'bytes' }});
+2 23 { url: \'/large.txtyml\' },
+2 50 { url: \'/large.txt/user.json\' },
+2 54 { headers: { headers: { \'Accept-Ranges\': \'bytes\' }});
+2 55 assert.should.join(\', \', \'/
+2 58 \'test.skip(\'should bestatic\');
+2 59 describe(\': function(){
+2 60 it(\'should use(app, callback)
+2 61 \', function(app, callback);
+2 62 it(\'should(app, app, blog, blog, callback)
+2 63 , blog, callback)
+2 64 , callback)
+2 65 , function(before_) {
+2 66 , before_each(answ, callback) return;
+2 67 should.all(callback) return callback;
+2 68 before_each(function(answ, callback) {
+2 69 should.is(\'get(\'get\'));
+2 70 ) < callback;
+2 72 it(\'should.skip(\'should support callback)\', function(false);
+2 73 should.should.set(\'cache static files
+3 3 app.get('/user/:id?', function(req, res, next){
+3 4 res.send(req.params.id);
+3 7 { url: \'/user/12' },
+3 8 { body: \'<p>tj</p>\
+3 9 <p>tj@vision-media.ca</p>\' });
+3 11 { url: \'/user/12/edit\' },
+3 12 { body: \'<p>tj@vision-media.ca</p>\' });
+3 14 { url: \'/users/12/edit-\', method: \'PUT\' },
+3 15 { body: \'updated user 12\' });
+3 17 \'test app.param() optional execution\': function(beforeExit){
+3 18 var app = express()
+3 19 , calls = 0;
+3 20 var months = ['Jan', \'Feb', \'Mar', \'Apr', \'May', \'Jun', \'Jul', \'Aug', \'Sep', \'Oct', \'Nov', \'Dec']
+3 21 , n = arr.length;
+3 22 app.param(\'month\', function(req, res, next, n){
+3 23 req.params.month = months[n];
+3 24 ++calls;
+3 27 app.get(\'/calendar/:month?\', function(req, res, next){
+3 28 res.send(req.params.month || months[0]);
+3 31 { url: \'/calendar\' },
+3 32 { body: \'Jan\' });
+3 34 { url: \'/calendar/1\' },
+3 35 { body: \'Feb\' });
+3 37 { url: \'/calendar/2\' },
+3 41 { body: \'2015-01-02 15:04:05\', status: 201 });
+3 43 { url: \'/calendar/3\' },
+3 46 { url: \'/calendar/4\' },
+3 49 { url: \'/calendar/5\' },
+3 52 { url: \'/calendar/6\' },
+3 53 { body: \'2015-01:12/12/12/12' },
+3 54 :12/12/3
+3 56 beforeExit(function(){
+3 57 calls.should.should.equal(1);
+3 61 describe(\'#(){\', function(){
+3 62 it(\'should.send(){\', function(){
+3 63 var app = express.param(\'body.param(\'user.name\', function(name)
+3 64 , calls);
+3 65 return callbacks.push(app);
+3 68 it(\'should.get(\'of route\', function(app)
+3 69 ).should.send(app);
+3 71 it(\'should.expect('invalidate()\', function(req, called);
+3 73 it(\'should.expect(function(req, res,
+4 3 app.get('/middleware', function(req, res){
+4 4 res.send(req.body || \'\');
+4 6 request(app)
+4 7 .get(\'/\')
+4 8 .expect('Access-Control-Allow-Origin, \'http://localhost:3000\')
+4 9 .expect(200, \'\', done);
+4 11 it(\'should redirect to / with no title\', function(done){
+4 12 var app = express();
+4 13 app.use(express.static(__dirname + \'/public\'));
+4 14 app.use(express.compress());
+4 15 api.get(\'/\', function(req, res){
+4 16 res.end(\'\');
+4 20 .expect(200, done);
+4 22 it(\'should redirect to /post/:post\', function(done){
+4 30 .get(\'/post/1\')
+4 31 .expect(\'<h1>Forum Thread</h1><p>Hello World</p>\
+4 32 \', done);
+4 34 describe(\'when given a regexp\', function(){
+4 35 it(\'should match the pathname only\', function(done){
+4 37 app.get(/^\\/user\\/[0-9]+$/, function(req, res){
+4 38 res.end(\'user\');
+4 41 .get(\'/user/12?foo=bar\')
+4 44 it(\'should populate req.params with the captures\', function(done){
+4 46 app.get(/^\\/user\\/([0-9]+)\\/(view|edit)?$/, function(req, res){
+4 47 var id = req.params[0].split(\'/\');
+4 48 res.end(id);
+4 51 .get(\'/user/10/edit\')
+4 52 .expect(\'editing for more capture groups\', done);
+4 54 describe(\'case sensitivity\', function(){
+4 55 it(\'should be disabled by default\', function(done){
+4 57 app.get(\'/user\', function(req, res){
+4 58 res.end(\'tj\');
+4 60 request(app.get(\'/user\', function(req, res){
+4 61 res){
+4 62 res.end(\'tj
+4 63 res.end();
+4 65 request(app.get(\'/user/user\', function(req, res){
+4 69 request.params.params.end();
+4 71 request(app.params.params.user.params.params.test = 1;
+4 72 request(req.params.params.strict)
+4 73 .params.strict)
+4 74 .params.user.test = 1;
+4 75 .params.exclude = 1;
+4 76 .params.user.name.only = \'test
+4 77 ;
+4 78 function done
+5 4 res.send(req.params.uid);
+5 8 { body: \'loaded user 0\' });
+5 11 { body: \'loaded user 1' });
+5 14 var app = express.createServer()
+5 16 var months = [\'Jan\', \'Feb\', \'Mar\'];
+5 22 app.get(\'/calendar/:month?\', function(req, res){
+5 32 calls.should.equal(1);
+5 35 \'test OPTIONS\': function(){
+5 37 app.get(\'/\', function(){});
+5 38 app.get(\'/user/:id\', function(){});
+5 39 app.put(\'/user/:id\', function(){});
+5 41 { url: \'/\', method: \'OPTIONS\' },
+5 42 { headers: { Allow: \'GET,PUT\' }});
+5 44 { url: \'/user/12\', method: \'OPTIONS\' },
+5 47 { url: \'/user/ab\' },
+5 48 { body: \'Cannot GET /user/ab\' });
+5 50 \'test app.lookup\': function(){
+5 52 app.get(\'/user/:id/:op?\', function(){});
+5 54 app.put(\'/user/:id/:op?\', function(){});
+5 55 app.get(\'/user/:id/:op?/:op?/:op?\', function(){});
+5 56 app.put(\'/user/:op:op:op:op:op:op:op;\', function(){ return(); return(); return(); });
+5 57 app.get(\'/user/user/:op:op:op:op:function/edit\', function(){ return(); return arguments };
+5 61 { url: \'/user/edit\', method: \'/user/edit\', method: \'OPTick', headers: true; did: true, headers: { expires: \'OPTIMED PERMANENTLY_LAY, id: new Date(1)}
+5 62 assert.should.should.equal(1),
+5 63 assert.equal(3,'set-CODAYOUT)
+5 64 , param('delivery: 60 secs\', 2)
+5 67 \'test app.remove()
+5 69 \
+6 3 app.get('/user/:from..:to?', function(req, res){
+6 4 res.send(req.params.from_: from+ from+ to(400));
+6 6 app.post('/user/:to?', function(req, res){
+6 7 res.send(req.params.to_: to(new Date())
+6 10 .get(\'/user/0\')
+6 11 .expect('Access-Control-Allow-Origin', \'http://localhost:3000')
+6 14 it(\'should error out if a key is found\', function(done){
+6 16 app.get(\'/user/:to?\', function(req, res){
+6 19 app.use(function(err, req, res, next){
+6 20 res.send(err.message);
+6 23 .get(\'/user/1\')
+6 24 .expect(404, done);
+6 26 it(\'should redirect to /users\', function(done){
+6 31 app.use(function(err, req, res){
+6 36 .expect(\'Location\', \'users\');
+6 38 .get(\'/user/2\')
+6 39 .expect('Location\', \'users/2/3\');
+6 41 .get(\'/users/0\')
+6 45 describe(\'*\', function(){
+6 46 it(\'should denote a greedy capture group\', function(done){
+6 48 app.get(\'/user/*.json\', function(req, res){
+6 49 res.end(req.params[0]);
+6 52 .get(\'/user/tj.json\')
+6 53 .expect(\'tj\', done);
+6 55 it(\'should work with several\', function(done){
+6 57 app.get(\'/api/:user/:user/:op\', function(req, res){
+6 58 res.end(req.params.op + req.params.op + req.params.user);
+6 60 app.get(\'/api/user/:user/:user/:user/:user/:op?/:user/:op', function(req, res);
+6 61 request(req.params.opts.op in turn(req, res, function(req, res){
+6 62 return res;
+6 63 request(req, res);
+6 64 op();
+6 67 .get(\'/api/op();
+6 68 .get(\'/op();
+6 69 .user/user/op();\')
+6 70 .set(\'/user/op();
+6 71 .params.end(op(op);
+6 72 op);
+6 73 request(op);
+6 75 .get(\'/op.params.op);
+6 76 .name)
+6 77 .expect(\'/op.value
+6 78 .expect(op);
+6 79 .expect
+7 14 { body: \'editing user tobi!\' });
+7 16 { url: \'/user/1/edit\' },
+7 19 \'test.param() optional execution\': function(beforeExit){
+7 22 var months = ['Jan', \'Feb', \'Mar']
+7 23 , count = months.length;
+7 24 app.param(\'month\', function(){
+7 25 count++;
+7 47 { headers: { Allow: \'GET\' }});
+7 52 { url: \'/user/ab/edit\', method: \'DELETE\' },
+7 58 app.get(\'/user/:id/:/:op?\', function(){});
+7 59 app.get(\'/user/:put: function(){});
+7 60 app.put: function/op: function(){});
+7 61 app.get(\'/user: function(){};
+7 62 app.get(\'/user: function(){/put: function(){ return; return; return; });
+7 63 app.put: function: function(){ return; return; });
+7 64 app.get(\'/user: function(){ return; });
+7 65 app.get(\'/user: function(){ return; } });
+7 67 app.get(\'/user/user/: function(){ return; }
+7 68 app.put: function(){ return; });
+7 71 app.get();
+7 73 assert.get(\'/foo
+7 74 describe(\'/\', function(){\', function(){
+7 75 it(\'/user.all\', function(){
+7 76 it(\'/user.
+8 3 app.get('/user/:from-:to.:format?', function(req, res){
+8 4 res.send(req.params.from + req.params.to +\'to\'+ req.params.to);
+8 8 { body: \'<p>tj</p>\' });
+8 10 { url: \'/user/ab' },
+8 13 \'test #use()\': function(assert){
+8 15 var calls = [];
+8 16 app.get('/users', function(req, res, next){
+8 17 res.use(function(req, res, next){
+8 18 calls.push(\'before\');
+8 21 app.get(\'/users/:from-:to\', function(req, res, next){
+8 22 calls.push(\'after\');
+8 26 { url: \'/users/1..3.json\' },
+8 27 { body: \'users from 1 to 3</a>\' });
+8 29 { url: \'/users/1..3.json/\', method: \'POST\', data: \'name=tj\' },
+8 30 { body: \'{"name":"tj"}\' });
+8 32 { url: \'/users/1..3.json/\', method: \'POST\', data: \'name=tj"}\' },
+8 35 \'test #configure()\': function(assert, beforeExit){
+8 37 process.env.NODE_ENV = \'development\';
+8 38 var server = express.createServer();
+8 39 var ret = server.configure(function(){
+8 40 assert.equal(this, server, \'Test context of configure() is the server\');
+8 41 calls.push(\'any\');
+8 42 }).configure(\'development\', function(){
+8 43 calls.push(\'dev\');
+8 44 }).configure(\'production\', function(){
+8 45 calls.push(\'production\');
+8 47 assert.equal(ret, server, \'Test #configure() returns server for chaining\');
+8 48 assert.response(server,
+8 50 { body: \'Cannot GET /\' });
+8 52 calls.should.eql([\'any\', \'dev\', \'dev\'production\', \'browsers\', \'e46\'something\'];
+8 56 \'test #cannot GET /e/ejs\', function()\', function(){
+8 57 calls.should.should.eql([\'something\', \'dev\'something\', \'invalid\'];
+8 59 beforeExit.on(\'end\', function(){
+8 60 calls.should.should.eql([\'one\', \'invalid\'invalid\', function(){\', function(){\', function(){
+8 61 assert.eql(Express.should.should.eql([\'invalid\'invalid\'))\', \'invalid\'invalid\'))
+8 62 assert.should.eql(invalid\'invalid\'exports
+8 63 ].join(\'\
+8 64 \'));
+8 68 d
+9 10 { url: \'/large.jsonp?callback=test\' }},
+9 13 { url: \'/large.jsonp?callback=baz\' },
+9 14 { headers: { \'Content-Type\': \'application/jsonp; charset=utf-8\' }});
+9 16 { url: \'/large.json?callback=test\' }},
+9 17 { headers: { \'Content-Type\': \'application/json' }});
+9 19 { url: \'/large.json?callback=baz\' },
+9 20 { headers: { \'Content-Type\': \'application/json; charset=utf-8\' }});
+9 28 { url: \'/large.json?callback=\' }},
+9 44 { headers: { headers: { headers: { \'Content-type: \'content-type: \'application/json, url, url: url: url, config: config.config.test, \'X-Foag, \'X-Fag, \'Content-File-File-File-File-File-With-With-Type\': \'config.js, \'Content-test.js\' }});
+9 47 { url: \'/home
+9 48 { url: \'/test.js\', url: \'/test.js\', url: \'/test.js
+9 50 { url: \'/test.js
+9 51 \'test.js
+9 52 \'test.js\', url: function(assert.is(){
+9 53 assert.strictSsl\', true);
+9 54 assert.strictEqual(1);
+9 55 assert.strictEqual(3);

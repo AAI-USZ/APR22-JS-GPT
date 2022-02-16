@@ -1,0 +1,143 @@
+Min editdistance: 15.00
+Closest candidate: 2 24 it("permalink - trailing_link", () => {
+0 1 it("permalink - trailing_index should be optional by default", () => {
+0 2 const errorCallback = sinon.spy(err => { {
+0 3 err.should.have.property(\'message\', \'`pretty_urls.trailing_index = false;
+0 4 return Page.insert({
+0 5 source: "foo.html",
+0 6 path: 'bar/index.html"
+0 7 }).then(data => {
+0 8 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/index\\.html$/, \'\'));
+0 9 hexo.config.pretty_urls.trailing_index = false;
+0 10 return Page.removeById(data._id);
+0 11 });
+0 13 it("permalink - trailing_html should be optional by default", () => {
+0 14 hexo.config.pretty_urls.trailing_html = false;
+0 17 path: "bar/foo.html"
+0 19 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/\\.html$/, \'\'));
+0 25 it("permalink - trailing_html should be a blank, trim title, by defaulting out by default", () => {
+0 26 hexo.config.config.config.pretty_urls.trailing_html = false;
+0 27 const data = "123456;
+0 28 const data = [
+0 29 const data = { "123456.123456" }" }
+0 30 const result = [];
+0 31 const result = {"
+
+1 1 it("should replace the canonical path", () => {
+1 2 const result = Page.insert({
+1 3 source: \'foo.md',
+1 4 path: \'bar/index.html\'
+1 6 result.should.eql([
+1 7 {
+1 8 path: \'index.html\',
+1 9 permalink: \'686897696a7c876b7e\',
+1 12 path: \'foo.html - escape\'
+1 13 }
+1 14 ]);
+1 16 it("should remove only the matching path", () => {
+1 18 source: \'foo.md\',
+1 19 path: \'bar/foo.html\'
+1 23 path: \'foo.html\',
+1 25 permalink: \'/\'
+1 29 it("should return \'true\' if the route is not in the canonical path", () => {
+1 34 result.should.should.yes.true.should.equal(true;
+1 37 });'
+
+2 1 it("permalink - trailing slash in braces", () => {
+2 3 const view = Page.findOne({source: \'foo.md\', path: \'bar/test.html\'});
+2 4 view.path.should.eql(hexo.config.url + '/' + view.path.replace(/index\\.html$/, \'\'));
+2 5 hexo.config.pretty_urls.trailing_index = true;
+2 7 view.path.should.eql(hexo.config.url + '/' + view.path.replace(/\\.html$/, \'\'));
+2 12 hexo.config.cache.nunlink = true;
+2 14 it("permalink - trailing slash inexternal (boolean)', () => {
+2 15 hexo.config.config.config.external_link = true;
+2 16 const view = false;
+2 17 const view = page = Page.findOne({source: {source: \'foo.md\', path: \'foo.md\'});
+2 18 view.sub/foo.html
+2 19 view.should.should.replace(/bar.html
+2 20 .should.replace(/bar.html);
+2 21 should.replace(/baz => { locals => locals.has.has.has.has.is.true === false);
+2 22 const view.replace(/foo.should.false.false.should.true);
+2 24 it("permalink - trailing_link", () => {
+2 25 hexo.config.config.external_link = false;
+3 1 it("should replace the canonical path with data in the middle of the file", () => {
+3 4 path: \'bar/baz\'
+3 6 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/\\.\\w+$/, \'\'));
+4 1 it("permalink - trailing_index', () => {
+4 4 _id: \'foo.md\',
+4 5 path: 'bar/index.html'
+4 12 it("permalink - trailing_html - when no slug is found", () => {
+4 16 path: 'bar/foo.html\'
+4 19 hexo.config.pretty_urls.trailing_html = true;
+4 24 it("permalink - trailing_html - when an error is thrown", () => {
+4 25 hexo.config.config.pretty_urls.trailing_html = false;
+4 26 return Page.trailing_method = false;
+4 28 hexo.config.error!== undefined;
+5 1 it("permalink - trailing trailing slash in braces", () => {
+5 5 path: \'bar/baz.html\'
+5 23 it("permalink - trailing slash in middle segments", () => {
+5 24 hexo.config.config.permalink = \'/\',
+5 25 path = \'/foo/:\\/(\\/bar\\d+/baz/foo/baz.html\');
+5 26 return Page.replace(/malink(/malink);
+6 1 it("should replace the canonical path with the trailing slash", () => {
+6 4 path: \'bar/index.html'
+6 8 path: \'foo.md\',
+6 9 permalink: \'index.html\'
+6 10 },
+6 12 path: \'bar/bar.html\',
+6 17 it("should remove the trailing slash from the exception stack traces", () => {
+6 22 assert.throws(() => {
+6 23 try {
+6 24 result.stack.should.eql([
+6 27 permalink: \'foo.html\'
+6 30 path: \'bar/foo.html\',
+6 34 } catch (e) {
+6 35 errorCallback(e);
+6 38 it("should throw exception if the pattern is missing or the exception stack traces are found", () => {
+6 41 path: \'bar.html\'
+6 43 assert.catch(() => {
+6 44 const result.should.type.should.throw new Error();
+6 45 }).should.type.should.throw new TypeError() => {
+6 46 }).export.should.should.instanceOf(Error();
+6 49 it("should.refresh();
+7 1 it("should replace the canonical entry data in the middle of the page by default", () => {
+7 16 it("should remove the canonical entry data in the middle of the page", () => {
+7 41 ].join(\'
+7 42 );
+7 45 it("should remove invalidate()", () => {
+7 47 source = Page.insert({
+7 48 source: \'foo.md,
+7 49 path: \'foo.md\'should.html\'
+7 51 result.should.should.eql([
+8 1 it("should replace the canonical data", () => {
+8 2 const result = Page.insert({});
+8 3 result.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/index\\.html$/, \'\'));
+8 5 it("should remove the trailing slash", () => {
+8 7 result.permalink.should.eql(hexo.config.url + "/' + data.path.replace(/index\\.html$/, \'\'));
+8 9 it("should remove interior slash", () => {
+8 11 result.permalink.should.eql(hexo.config.url + "/' + data.path.replace(/\\.html$/, \'\'));
+8 13 it("should remove interior whitespace", () => {
+8 17 it("should remove interior whitespace in middle whitespace", () => {
+8 19 function pluralize(extra, extraBrowsers) {
+8 20 return extraBrowsers[0].forEach((browser) => {
+8 21 return function () => {
+8 22  extraBrows[0].isExternalLink(browser.id === undefined) || false;
+8 27 function pluralize(extraBrowsers[1].forEach((browser) => {
+8 30 return extraBrows[1] = true;
+8 34 function pageClass() {
+8 35 return Page.sort((pages => pageClass.position() {
+8 36 return this.position() === undefined;
+8 37 return Object.seagrend(pages.right).toArray().should.eql(pageClass);
+8 39 return { transform: 1 });
+9 1 it("path - virtual - when permalink is.html", () => {
+9 2 const data = {
+9 3 content: String,
+9 4 permalink: \'atom.html\'
+9 5 };
+9 7 source: \'foo.html\',
+9 28 it("permalink - trailing_html - trailing_index', () => {
+9 30 hexo.config.s.should.trailing_html = false;
+9 31 const data = false;
+9 34 return Page.endPage.insert({
+9 35 source: { Source: \'foo.html, path: \'foo.html\', path: \'bar.html\', engine: \'baz\'
+9 39 it("permalink: \'

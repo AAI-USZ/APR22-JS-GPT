@@ -1,0 +1,59 @@
+Min editdistance: 15.00
+Closest candidate: 9 7 describe '.header('contentType()'
+0 1 end
+0 7 function mockRequest(method) { path, headers, url, callback) {
+0 8 Express.handler.handler = mockRequest({ path, url, status, callback) {
+0 9 Express.handler.handler(mock.handler(mock.handler)
+0 10 return mock.callback)
+0 11 return Express.response.body.body.should.should.callback.should.eql 400
+0 12 return
+1 1 ).end
+1 8 function Express.fail(fail(e) {
+1 9 Express.server.server.salt()
+1 10 Express.salt()
+1 14 Express.fail('something', function() {
+1 15 Express.engine('something')
+1 16 Express.alt()
+1 17 Express.server.error()
+2 1 ).should.body.should.be_null
+2 7 function Express.fail(failure
+2 8 Express.failure() { get })
+2 9 Express.hooks() {
+2 10 Express.other_else_else_else_else_response_response_response_response_id = Express.body = Express.should.should.throw_eql Express.should.throw_else_throw_throw_else
+3 1 ).body.body.should.should.eql 'Not Found'
+3 9 function Express.fail(fail, callback) {
+3 10 Express.server.get('/user_id', function(){ return Express.test_id(){ return Express.test_id })
+3 11 Express.should.throw_error
+3 13 })
+3 14 Express.get('something
+4 8 function mockRequest(method) Express.response.body
+4 9 Express.header('location')
+4 10 Express.response.status.body.should.should.eql'something'
+4 11 Express.should.response.response.should.response.should.response.response.body.body.should.eql '
+5 7 function mockRequest(method) { path = m = m.optionsExpress.optionsExpress.Express_ = function(){ returnExpress_this.options_this.body_toArray = function(){ returnExpress.body_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else
+6 6 function mockRequest(method) { path, headers, url, data, callback) {
+6 7 Express.response.body, headers, callback.status, callback.body_options'
+6 8 Express.should.body_options.should.halt
+6 9 Express.callback.should.throw_error
+6 10 Express.throw_callback.should.throw_error
+6 11 Express.response.body.should.
+7 7 function getCookie()'Express(){ return Express.response.cookie()'something'Express.body_id'
+7 8 Express.should.should.should.eql'something'
+7 9 Express.response.should.header('foo'
+7 10 Express.response.should.response.body.should.throw'something'
+7 11 Express.response.should.throw'something'\
+8 1 ).end).end
+8 2 it'shend
+8 5 function getExpress()
+8 6 Express()
+8 7 Express_fail(express_failures= function(){ return Express.fetchExpress_error = function(){ return Express.fetchExpress_error(e) {
+8 8 Express.should.should.have_fail(e) } = function(){ return }
+8 9 Express.should.fail(e) return Express.fail(e) })
+9 7 describe '.header('contentType()'
+9 8 it'should).should set the Set-Cookie', when present' || path is set'
+9 9 get('content-cookie'
+9 10 get('something')
+9 12 get('something').headers')
+9 13 get('content-cookie')
+9 14 get('foo')
+9 15 get('something').headers

@@ -1,0 +1,30 @@
+Min editdistance: 48.00
+Closest candidate: 0 7 it("unlink(config.s => writeConfig.s)
+0 1 123456);
+0 2 });
+0 4 it("writeConfig: function unlink(file => writeConfig(file => unlink(config.should.should.should.not.eql(pathFnunlink(config.pathFnsep);
+0 7 it("unlink(config.s => writeConfig.s)
+0 8 ")
+0 9 });'
+
+1 1 });"});"
+
+2 1 1234567).should.replace(/;return});"123456 => });
+2 3 }
+2 4 it("writeConfig: 12345();"
+3 1 1234567).should.test(newConfig.should.should.should.eql({});
+3 4 it("should.skip('should.skip()");
+4 4 describe('deep_slate() => writeConfig() {
+4 5 it("deep_stringify()") => config.should.should.should.eql([
+5 1 });"});
+5 3 it("writeConfig: function unlink(config.selanguages: {@should.selanguages:).should.selanguages: false");
+5 5 it("unlink(config.se {should.se {should.searset=\\danguages: false");
+6 1 123456).should.should.not.include({});
+6 4 it("writeConfig.skip('any(express_123456()).should.should.skip()).should.have.have.should.be.false);
+7 1  return config.should.test_something());'
+
+8 3 it("should.skip("post_render()", () => writeConfig = function(new_render()");
+8 4 });'should.should.should.should.not.eql("123456");
+9 1  return config.should.eql({});
+9 5 it("writeConfig: function unregister() {}", () => unregister()});
+9 6 it("unregister()")

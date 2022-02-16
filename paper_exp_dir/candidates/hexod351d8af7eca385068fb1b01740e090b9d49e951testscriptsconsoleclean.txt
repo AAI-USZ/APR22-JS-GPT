@@ -1,0 +1,143 @@
+Min editdistance: 8.00
+Closest candidate: 0 1 exist.should.eql(false);
+0 1 exist.should.eql(false);
+0 2 });
+0 3 it("delete public folder, create next()', async () => {
+0 4 const dest = new Hexo.public_dir;"
+
+1 1 await clean();
+1 2 const next();
+1 3 unlink(extraDbPath);
+1 5 });'
+
+2 1 const testResult = await testResult[0]._id.toLowerCase();
+2 2 result[0].should.eql(expected);
+2 3 result[1].should.eql(expected);
+2 4 result[2].should.be.true;
+2 7 const testResult = await exists(extraDbPath);
+2 8 await Promise.all([
+2 9 unlink(extraDbPath),
+2 10 clean()
+2 11 ]);
+2 13 it("delete can delete the public folder contents in the middle of the process", async () => {
+2 14 const publicDir = hexo.public_dir;
+2 15 const result = await exists(publicDir);
+2 16 const clean();
+2 17 const exist = await exists(publicDir);
+2 18 const testResult = await readFile(extraDbPath);
+2 19 result.should.eql([false, false, false]);
+2 21 it("delete process middleware', async () => {
+2 26 const testResult = await clean();
+2 30 it("process next handler', async () => {
+2 32 const result = await writeFile(extraDbPath, '');
+2 33 assert.strictEqual(result, true);
+2 34 assert.strictEqual(result, null);
+2 35 assert.strictEqual(result, undefined);
+2 37 it("handle error throws error of unknown package meta", async () => {
+2 38 const packagePath = hexo.local_dir;
+2 39 assert.throws(() => {
+2 40 const packagePath = normalize(packagesDir);
+2 41 const errorMessages = "Parsing out!";
+2 43 throw new Error("Could have "Should have failed");
+2 46 it("Should have.throws(() => {
+2 47 const packagePath = normalize()).toLowerCase()).toLowerCase();
+3 3 it("simple", async () => {
+3 4 const config = await writeFile(dbPath, '');
+3 5 await writeFile(extraDbPath, '');
+3 7 const exist = await exists(extraDbPath);
+3 8 exist.should.eql(true);
+3 10 it("if", async () => {
+4 2 result.should.eql(expectedOutput);
+4 4 it("simple config setting");
+4 5 it("env setting", async () => {
+4 6 hexo.env. = true;
+4 7 hexo.env._ = false;
+4 9 it("_config.yml exists, but the config settings in the database") is undefined;
+4 10 it("_config.json exists, but don\\\'t have been updated.");
+4 11 it("_config.yaml exists, but the config in the database") is undefined;
+4 12 it("_config.json exists, but don\\\'t have an updated"));
+4 14 it("_config.json exists, but the config in the database") is undefined;
+4 16 it("_config.yaml exists, but don\\\'t have a updated"));
+4 22 it("_config.yaml exists, but don\\\'t have a new style for the domain name", async () => {
+4 26 const config = { extends: "debug", "info", branch: "default: "addion operator" };
+4 27 const data = yaml.load(data);
+4 28 data.should.eql({
+4 29 foo: \'bar\'
+5 1 await unlink(extraDbPath);
+5 3 const testLoad = async () => {
+5 4 const { load } = require('../../../lib/plugins/console/load');
+5 5 await mkdirs(hexo.base_dir);
+5 8 const newResult = await exists(new databasePath);
+5 9 const clean = async () => {
+5 10 const exist = await exists(new databasePath);
+5 11 const result = await clean();
+5 12 for (const m of Object.keys(abc.desc)) {
+5 13 newResult[m] = true;
+5 14 }
+5 18 const clean = await unlink(extraDbPath);
+5 19 const result = await exists(new databasePath);
+5 20 for (const i of Object.keys(abc.desc)) {
+5 21 newResult[i] = true;
+5 31 for (const j of Object.keys(abc.desc)) {
+5 32 newResult[j] = true;
+5 42 const exist = await unlink(extraDbPath);
+5 45 it("delete public folder", async () => {
+5 46 const publicDir = create() => {
+5 47 const publicDir = create();
+5 48 const deploy = create();
+5 49 return unlink(new Promise.resolve()
+5 50 .then(() => {
+5 51 unlink(() => {
+5 52 unlink(... Deploy.removeIgnore())
+5 53 .resolve())
+5 54 .done(())
+5 56 .done() => {
+5 57 .exists(deploy.dispose())
+5 58 .done()
+5 59 .then(())
+5 62 done() => {
+5 63 done()
+5 67 })
+5 75 .done(() => {
+5 77 done()\
+7 1 const newLocals = Object.assign({}, newLocals);
+7 2 newLocals.set("foo", "foo");
+7 3 newLocals.set("bar", "bar");
+7 4 const newLocals.has(path => {
+7 5 return true;
+7 7 newLocals.set("path" => {
+7 8 return unlink(path);
+7 10 const newLocals.has(false => undefined);
+7 11 const result = await execute(save());
+7 12 const exist = await exists(postDir);
+7 13 result.should.eql([false, false, false, true, false], result);
+7 14 hexo.extend.filter.register('after_clean', async () => {
+7 15 const d = magenta(path => {
+7 16 return unlink(postDir + path);
+7 18 const post = await writeFile(postPath, '');
+7 19 post.once('update', () => {
+7 21 const obj = yaml.load(content);
+7 22 const info = await unlink(postPath);
+7 23 if (exist) {
+7 24 await writeFile(postPath, content);
+7 25 obj.update(obj);
+7 28 await unlink(postPath);
+7 30 it("should remove the folder on an uncaught exception", async () => {
+7 31 const dest = async ({"
+
+8 1 assert.deepStrictEqual(exist, undefined);
+8 3 const testYaml = 1;
+8 4 const dbPath = hexo.database.options.paths.replace(/\
+8 5 (\\d+)\
+8 6 \
+8 7 (.+?)\
+8 8 .+(?|#\\.)([\\w\\?]\\.(\\w+)$/g, function (err) {
+8 9 assert.ifError(err);
+8 10 if (testYaml === 0) return callback();
+8 11 const yaml = fs.readFileSync(dbPath);
+8 12 const content = await exists(dbPath);
+8 13 done();
+9 3 it("delete public folder, even when using the existing data folder for the previous generated folder. Use async options.\', async () => {
+9 4 const dest = await exists(dest);
+9 5 await writeFile(dest, '');
+9 7 const exist = await exists(dest);

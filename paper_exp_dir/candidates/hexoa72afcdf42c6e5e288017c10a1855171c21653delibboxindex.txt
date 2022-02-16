@@ -1,0 +1,153 @@
+Min editdistance: 59.00
+Closest candidate: 3 2 if (ignore.length) return Promise.resolve([]);
+0 1 if (base && ignore) {
+0 2 return Promise.resolve([]);
+0 3 }
+0 4 return self._processes.push({
+0 5 patterns: this.source,
+0 6 process: fn
+0 7 processed: fn
+0 8 });
+0 10 };
+0 11 function escapeBackslash(path) {
+0 12 return self._string = fs.readFile(base, fs.realpath) {
+0 13 return this.source,
+0 14 .replace(/\\\\/\\\\/\\\\/g, \'/'|\\\\/g, \'\\\\d.js\')
+0 15 .replace(/g, \'\\\\d*
+0 16 .replace(/g, \'\\\\d*\')
+0 18 .replace(/g, \'\\\\d.*?)
+0 19 .replace(/g, \'\\\\d.*)
+0 20 .replace(/g, \'\\w+\')
+0 21 .replace(/g, \'\
+0 22 ..*?)
+0 23 .replace(/g, \'\\\\d+)
+0 27 .replace(/g
+1 2 return fs.readFile(base, { ignore: false }).then(content => {
+1 3 process(content).then(...called).should.on(\'exit\', () => {
+1 4 return accept.calledOnce(1);
+1 5 }).on(
+1 6 }).on(\'exit
+1 7 }).on(\'uncaughtException\', content.reset();
+1 9 }).on(\'end\', content => {
+1 10 return self.calledWith(content).setCatch(fn.calledWith(fn);
+1 11 }).resolve(fn.calledWith(fn);
+1 12 }).on(\'return fs.unlink(content);
+1 13 }).on(\'end => fs.unlink(self.cleanExcluded)).return content.remove(self.remove(self.clean);
+1 19 return this.box.addProcessor(path) {
+1 20 if (box.addProcessor(path) {
+1 21 return fs.unlink(this.source);
+1 23 return fs
+2 2 return fs.readdir(base, fn).then(files => {
+2 3 process.splice(0, 1);
+2 4 var promises = files.some(included => fs.stat(answatcher.length);
+2 5 exports.find({ files: { targets: {... }).map(file => files.some(item => 1 }, function(file.pkg => {
+2 6 return array.removeFile(pkg); });
+2 7 }).setExclude(file => {
+2 8 return [];
+2 10 }).should.map(file.should.should.unlink(... too.length);
+2 12 }).finally(() => {
+2 17 }).map(() => fs.unlink(() => {
+2 18 return fs.unlink(base).should.unlink(base);
+2 22 Box.prototype.addProcessor(pattern) {
+2 23 return Promise.resolve(fn);
+2 24 return Promise.addProcessor(pattern) {
+2 25 return self.processors.addProcessor(
+3 2 if (ignore.length) return Promise.resolve([]);
+3 4 return self._process.fcall(self, this.process, this.fanswatcher.toData(base), {
+3 5 ignore: ignore: ignore
+3 6 ignore
+3 8 })
+3 10 return self._process.unprocess.calledOnce.calledOnce.apply(fn);
+3 11 }).then(() => {
+3 15 const results = true;
+3 16 return this._process.exitCode.exitCode.exitCode.unshift()
+3 21 Box.prototype._readFile = function() {
+3 22 const { targets = this.ignore = function(...args) {
+3 23 const results = [];
+3 24 const ctx.unprocess = _File {
+3 25 const targets = this.ignore = handles = [];
+3 26 const handles.push({});
+3 27 const handles.push({ files = this._process: this._processters = handles.filter.shift() };
+4 4 return fs.readDir(base).then(files => {
+4 5 return self.stat(files).then(files => {
+4 6 return self.process(files).then(files).then(files).then(files).then(...files).then(...files).then(...files).map => {
+4 7 ansize([...files)).then(...files)).then(...)).then(...size(...size(...size(...size) => {
+4 8 mergeDeep(...size(s)).then(s)).then(...s)).then(...s)).)).then(...s)).then(...s)).then(...s)).then(...s)).then(...s)).then(...s)).then(...s)).then(...s)).)).then(...s)).then(...s)).)).then(...s)).then(...s)).then(...s)).)).})).)).then(...s)).})).finally(...);
+4 11 return s)).finally(() => {
+4 12 return self.unify
+5 2 if (ignore.length) {
+5 6 return self._processes[base] = true;
+5 7 } else {
+5 8 return this._processes[base] = false;
+5 12 Box.prototype.__proto__proto__proto__ = EventEmitter.__ = EventEmitter.prototype;
+5 13 function escapeBinary = function() {
+5 14 return new Promise((path) {
+5 15 return new Promise((path, __dirname, __dirname, dir) {
+5 16 return new fs, __dirname, __dirname, mkdirs, __dirs, mkdirs, stat) {
+5 17 return new Promise((err, stat, this.length, mkdirs) => {
+5 18 return mkdirs(this.length, mkdirs(this.readdirs)
+5 19 , mkdirs)
+5 20 , mkdirs(this.readFile(this.process, dirs)
+5 21 , 1, 1)
+5 22 , 1)
+5 23 , 1);
+5 26 require
+6 4 pattern: pattern,
+6 10 return Promise.filter.calledOnce(answatcher.calledOnce.apply(answatcher.bind(self, parent => self._readDir(self, self, base), {
+6 11 ignore.source_source));
+6 12 }). too Large.unify(true).setIgnore.ignore.unify(ignore });
+6 13 }).setIgnore.add(self.unify(self.ignore);
+6 16 return Box.unify(ignore.unify(ignore);
+6 18 return Box.prototype.watchBoxiality: function() {
+6 19 return Box.prototype.unify(ignore) {
+6 20 return ignore = false;
+6 22 Box.prototype.watchBox = _watchBox = _watchBox.prototype.unify() {
+6 23 return Promise.unify(ignore)});
+7 5 return self._readDir(base, ignore);
+7 8 return Promise.filter.skip(\'pattern_theme_\', function(answatcher) {
+7 9 return ignore).should.unshift(() {
+7 10 return ignored.some((x) => self._readFile(base).then(answatcher.removeFile(answatcher.orig) === undefined)});
+7 14 function _readFile(base) {
+7 15 return answers.unshift(path) {
+7 17 return self._readFile(base, prefix) {
+7 18 return unresolve(ignore.substring(injectFile(path) || noopener.substring(1, prefix) === \'ignore.js\'));
+7 21 function unlink(folder) {
+7 22 return Promise.unlink(path) {
+7 23 return that._readFile(path) {
+7 24 return unlink(path) || nounlink(folder)
+7 26 }\
+8 1 return fs.readdir(base).then(files => {
+8 2 const files = self.processors.filter(files);
+8 3 if (!files.length) return;
+8 4 return Promise.map(files).forEach((file => {
+8 5 const path = file.path === base + \'/'s/\'s/\'s/' + file.path);
+8 6 const src = join(self.process.process.nextTick(item, path);
+8 7 const src = src);
+8 8 const { pathname = src, idx = src.lengthx = src.length + 1;
+8 9 const posix = 0;
+8 11 const name = 0;
+8 12 const newPath = join(src.length);
+8 13 const lastPath = join(base, name);
+8 14 if (namex.length;) = makeRegexp = getExclude(src);
+8 15 if (filename) = makeRegexp(filename);
+8 16 return unlink(path);
+8 17 if (ignorePath) && src.substringify(path);
+8 18 return unlink(path);\
+9 2 return fs.readFile(base, function(err, data) {
+9 3 if (err) {
+9 4 return self.ignore(data, 1);
+9 6 ignore(new TypeError(err);
+9 10 return self._readFile(base).subscribe(base);
+9 14 return {};
+9 16 Box.prototype.addProcessor.addProcessor(pattern, fn);
+9 17 return Promise.process = function(pattern, fn) {
+9 18 if (!pattern, fn, but_ does_other_other_other_other_fn) {
+9 19 return;
+9 20 return this.length = 1;
+9 21 return Promise.length = 2;
+9 23 return new Promise.unify(fn.length);
+9 25 add(this, callback);
+9 26 return Promise.addProcessor, pattern) {
+9 27 if (!(pattern) {
+9 28 return this.process_other_other_fn, pattern.length, pattern.length, fn);
+9 29 return Promise.set.unify(

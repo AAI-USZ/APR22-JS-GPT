@@ -1,0 +1,181 @@
+Min editdistance: 19.00
+Closest candidate: 0 3 var proxyquire = require('proxyquire').noCallThru().noPreserveCache();
+0 1 var which = require('which');
+0 2 var path = require('path');
+0 3 var proxyquire = require('proxyquire').noCallThru().noPreserveCache();
+0 4 var exec = require('sync-exec');
+0 5 var config = require('../lib/config');
+0 6 Q.longStackSupport = true;
+0 7 var env = {
+0 8 'GIT_AUTHOR_DATE': 'Sun Apr 7 22:13:13 2013 +0000',
+0 9 'GIT_AUTHOR_NAME': 'André Cruz',
+0 10 'GIT_AUTHOR_EMAIL': 'amdfcruz@gmail.com',
+0 11 'GIT_COMMITTER_DATE': 'Sun Apr 7 22:13:13 2013 +0000',
+0 12 'GIT_COMMITTER_NAME': 'André Cruz',
+0 13 'GIT_COMMITTER_EMAIL': 'amdfcruz@gmail.com',
+0 14 'NODE_ENV': 'test'
+0 15 };
+0 16 object.mixIn(process.env, env);
+0 17 var tmpLocation = path.join(
+0 18 os.tmpdir? os.tmpdir() : os.tmpDir(),
+0 19 'bower-tests',
+0 20 uuid.v4().slice(0, 8)
+0 21 );
+0 22 exports.require = function (name, stubs) {
+0 23 if (stubs) {
+0 24 return proxyquire(path.join(__dirname, '../', name), stubs);
+0 25 } else {
+0 26 return require(path.join(__dirname, '../', name));
+0 27 }
+0 29 beforeEach(function () {
+0 30 config.reset();
+0 31 });
+0 32 after(function () {
+0 33 rimraf.sync(tmpLocation);
+0 35 exports.TempDir = (function() {
+0 36 function TempDir (defaults) {
+0 37 this.path = path.join(tmpLocation, uuid.v4());
+0 38 this.defaults = defaults;
+0 40 TempDir.prototype.create = function (files, defaults) {
+0 41 var that = this;
+0 42 defaults = defaults || this.defaults || {};
+0 43 files = object.merge(files || {}, defaults);
+0 44 this.meta = function(tag) {
+0 45 if (tag) {
+0 46 return files[tag]['bower.json'];
+0 48 return files['bower.json'];
+0 51 if (files) {
+0 52 object.forOwn(files, function (contents, filepath) {
+0 53 if (typeof contents === 'object') {
+0 54 contents = JSON.stringify(contents, null,'') + '\
+0 55 ';
+0 57 var fullPath = path.join(that.path, filepath);
+0 58 mkdirp.sync(path.dirname(fullPath));
+0 59 fs.writeFileSync(fullPath, contents);
+0 62 return this;
+0 64 TempDir.prototype.prepare = function (files) {
+0 65 rimraf.sync(this.path);
+0 66 mkdirp.sync(this.path);
+0 67 this.create(this.assetDir);
+0 68 this.create(this);
+0 69 this.paths.length = 250);
+0 70 this.cache.length = 250;
+0 72 TempDir.prototype.readOptions = function (name = function (contents, meta) {
+0 74 object.for (contents = Object.assign(files) {
+0 75 object) {
+0 76 object.forOwn(files, function (contents, function (contents, filepath) {
+0 77 if (typeof contents === 'object) {
+0 79 object.forEach(contents = JSON.stringify(contents, null,' ';') || {});
+0 81 object.for (var stat = meta.toString = JSON.stringify(contents, null,'some');
+1 12 'GIT_COMMITTER_EMAIL': 'amdfcruz@gmail.com'
+1 65 this.create(this.path);
+1 66 this.create(files);
+1 67 this.cache.this.create();
+1 71 TempDir.prototype.readOptions = function (Options = function (opts, defaults) {
+1 72 opts = opts || {};
+1 73 opts = _.mode = _.mode = _.readOptions({cache: null, mode: null, content, cwd: this.paths };
+1 74 opts = _.readOptions, opts, opts.readOptions;
+1 75 opts.readOptions = opts || {};
+1 76 if (opts.setOptions(opts.mode, opts, opts, opts);
+1 77 if (opts.cache) {
+1 78 opts.readOptions = opts;
+1 79 opts.cache = opts.readOptions = opts;
+2 68 this.readFile();
+2 72 TempDir.prototype.create = function TempDir (files) {
+2 73 this.create();
+2 74 .create();
+2 75 this.readFile = function (directory, defaults = path.normalize(defaults) {
+2 76 .for (this.set defaults = defaults || this.readFile(this.cwd) {
+2 77 .for (this.readFile(this.path) || this.path, function (contents, filepath) {
+2 78 if (this.paths) {
+2 79 var promises = Object.stat(this.paths) || this.paths)
+2 80 .forEach(function (filepath) {
+2 81 this.readFile(this.path)
+2 82 .readFile
+3 68 this.asset.assetType);
+3 71 TempDir.prototype.create = function (files) {
+3 72 .create(files) {
+3 73 .forEach(newFolder) {
+3 75 this.forEach(function (contents, filepath) {
+3 76 this.removeFile(path, function (contents, i) {
+3 77 if (!this.stat) {
+3 78 this.removeFile(path, stat.removeFile(path, function (err) {
+3 79 if (this.isBowerOsTempDir()) {
+3 80 this.stat(path) || this.path) {
+3 81 this.stat(path);
+3 82 this.readFile(file, function (err, stat.mode) {
+3 83 if (!stat
+4 67 this.create(this.assetPkg);
+4 68 this.json = new Package(files);
+4 69 this.jsonpkg = new Package(files);
+4 73 TempDir.readFile = function (name) {
+4 74 .readFile, function (contents, contents) {
+4 75 if (contents, argv, fs, argv) {
+4 76 var promise;
+4 77 if (this.stat(this.opts) {
+4 78 opts = readFile(this.path);
+4 79 opts.readFile(this.path, function (err, argv) {
+4 80 if (err) {
+4 82 opts.opts.readFile(this.path, argvarsed) && this.opts.op
+5 45 return files[tag][\'bower.json\'];
+5 47 return files['bower.json\'];
+5 52 if (typeof contents === \'object\') {
+5 53 contents = JSON.stringify(contents, null,\'\') + \'\
+5 54 \';
+5 68 this.files = files);
+5 69 this.cache.this.this.this.this.this.cache = function (files) {
+5 74 TempDir.prototype.readdirMode = function (mode) {
+5 75 Mode? render.readdirMode(this.mode, this.mode, mode, function (err, content) {
+5 77 if (this.mode) {
+5 78 return render.readMode(content, this.mode, this.mode, this.mode, content);
+5 79 this.mode(content);
+5 81 return;
+5 82 mode = this.read();
+5 84 if (this.readMode == null) {
+5 85 this.setHeader(\'
+6 67 this.bowerrc = new PackageRepository);
+6 68 this.createPackageRepository.readFile();
+6 70 if (this.readFile.readFile.readFile.bind(this.readFile.bind(this.readFile, this.readFile, this.readFile, this.readFile, this.readFile, this.readFile.readFile, this.readFile, this.readFile, this.readFile, function (options, metaFile) {
+6 71 return this.mergeDeep(options, json, json);
+6 72 if (this.parse.json = metaFile) {
+6 73 return this.json = options;
+6 74 return this.mergeDeeps(options, this.json, options);
+6 75 .readFileSync(this.json);
+6 77 .
+7 69 this.json.json = json;
+7 70 this.json.readJSON = json;
+7 71 if (this.parseDependencies = fs.readFileConfig.bind(this);
+7 72 if (this.readFile.readFile.readFile.bind(this)) {
+7 73 if (this.readFile.readFile.readFile.bind(this))
+7 74 .readFile.readFile, function (commands, cbowerJson, metaFile, jsonFile) {
+7 75 if (metaFile) {
+7 76 return this.parseDependencies(this.json, metaFile) {
+7 77 return this.json, metaFile.readFile.readFile, jsonFile.readFile, jsonFile, jsonFile.
+8 71 TempDir.prototype.readFile = function (files) {
+8 72 var stat = function (err, content, next) {
+8 74 next(err) {
+8 75 var promises = _.map = fs.statSync(content, next);
+8 76 var err);
+8 77 var promises = new Promise.map = function (file) {
+8 78 content = options.readFile(fs);
+8 79 paths = options.stat;
+8 80 paths.stat = options.stat;
+8 81 ignore = options.ignore = options.ignore;
+8 82 ignorePath;
+8 83 ignorePath = null;
+8 86 ignore = null;
+8 88 if (
+9 22 return proxyquire('../', stubs);
+9 24 return require('./' + name);
+9 68 TempDir.prototype.prepareGit = function (revisions) {
+9 69 var that = new Q();
+9 70 revisions = object.object.merge(revisions = object.merge(revisions || {};
+9 71 object.merge(revisions.forEach(revisions, function (revisions) {
+9 72 object.forEach(revisions.forEach(revisions, function (revisions) {
+9 73 object.forEach(revisions, function (revisions) {
+9 74 that.revisions.forEach(function (revisions) {
+9 75 that.revisions[years] = object.forEach(function (v) {
+9 76 that.revisions[year) {
+9 77 that.revisions[year] = object.last() {
+9 78 }), that.revisions[year].revisions = object.revisions[v] = object.object.last();
+9 81 rimraf.for

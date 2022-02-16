@@ -1,0 +1,124 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var q = require('q');
+0 1 var helper = require('./helper');
+0 2 var log = require('./logger').create('watcher');
+0 3 var createWinGlob = function(realGlob) {
+0 4 return function(pattern, options, done) {
+0 5 realGlob(pattern, options, function(err, results) {
+0 6 done(err, results.map(helper.normalizeWinPath));
+0 7 });
+0 8 };
+0 10 if (process.platform === 'win32') {
+0 11 glob = createWinGlob(glob);
+0 12 }
+0 13 var File = function(path, mtime) {
+0 14 this.path = path;
+0 15 this.originalPath = path;
+0 16 this.contentPath = path;
+0 17 this.mtime = mtime;
+0 18 this.isUrl = false;
+0 20 var Url = function(path) {
+0 22 this.isUrl = true;
+0 24 Url.prototype.toString = File.prototype.toString = function() {
+0 25 return this.path;
+0 27 var GLOB_OPTS = {
+0 28 cwd: '/'
+0 30 var byPath = function(a, b) {
+0 31 if (a.path > b.path) {
+0 32 return 1;
+0 34 if (a.path < b.path) {
+0 35 return -1;
+0 37 return 0;
+0 39 var List = function(patterns, excludes, emitter, preprocess, batchInterval) {
+0 40 var self = this;
+0 41 var pendingDeferred;
+0 42 var pendingTimeout;
+0 43 var resolveFiles = function(buckets) {
+0 44 var uniqueMap = {};
+0 45 var files = {
+0 46 served: [],
+0 47 included: []
+0 49 buckets.forEach(function(bucket, idx) {
+0 50 bucket.sort(byPath).forEach(function(file) {
+0 51 if (!uniqueMap[file.path]) {
+0 52 if (patterns[idx].served) {
+0 53 files.served.push(file);
+0 55 if (patterns[idx].included) {
+0 56 files.included.push(file);
+0 58 uniqueMap[file.path] = true;
+0 61 return files;
+0 63 var resolveDeferred = function(files) {
+0 64 if (pendingTimeout) {
+0 65 clearTimeout(pendingTimeout);
+0 67 pendingDeferred.resolve(files || resolveFiles(self.buckets));
+0 68 pendingDeferred = pendingTimeout = null;
+0 70 var fireEventAndDefer = function() {
+0 74 if (!pendingDeferred) {
+0 75 pendingDeferred = q.defer();
+0 76 emitter.emit('file_list_modified', pendingDeferred.promise);
+0 78 pendingTimeout = setTimeout(resolveDeferred, batchInterval);
+0 80 this.refresh = function() {
+0 85 var interval = function(injector) {
+0 86 var resolveFiles = function(patterns, exclude(self) {
+0 87 return function(err, done) {
+0 88 log.stderrmdone(injector.paths.startsWith(patterns || resolveFiles(self.buckets.get(patterns.patterns.patterns.patterns), exclude);
+0 89 answatcher.last(patterns.last)
+0 93 var interval = lint = lint = lint || {};
+0 94 log.done(done(done, done) {
+0 95 log.init(done);
+0 97 init = function clearTimeout(done) {
+0 98 log.info(done || function() {
+0 99 log.clearTimeout(done || function() {
+0 100 log.rtime.lintify(done || config.time);
+0 101 log.lintrmdir(
+1 1 var q = require('q');
+1 48 included: []"
+
+2 84 this.on('file_list_modified', function() {
+2 85 clearTimeout = true;
+2 89 var interval = function () {
+2 90 return function () {
+2 91 clearTimeout.pause() {
+2 92 clearTimeout(() {
+2 99 exports.on('log.one = function (log, callback) {
+2 100 log.pause, interval, clearTimeout, noActivityTimeout, noActivityTimeout, noActivityTimeout, useColors, useColors, singleRun, urlRoot, config.clearTimeout, function () {
+2 101 clearTimeout(injector, noActivityTimeout) {
+2 102 log.resetTimers.setTimeout, noActivityTimeout, noActivityTimeout, noActivityTimeout, noActivityTimeout, noActivityTimeout
+3 80 pendingDeferred.resolve(emitter.emit('file_list_modified', pendingDeferred.promise));
+3 83 var interval = function(ms) {
+3 84 return (s = 0;
+3 85 log.s.s.s.forEach(function() {
+3 86 clearTimeout.apply(log, arguments);
+3 87 log.apply(logger.bind(logger.create(logger, arguments);
+3 88 clearTimeout, arguments);
+3 92 var List.prototype.refreshFiles = function(patterns, excludes, excludes) {
+3 93 function clearDeferred.some(answ, files) {
+3 94 return!== files || [];
+3 95 } = function(patterns) {
+3 96 patterns.forEach(patterns, function(pattern) {
+3 97 return Promise.some(patterns) {
+5 82 var buckets = self.buckets = new Array(patterns.length);
+5 83 return Promise.filter(function(pattern) {
+5 84 return Promise.isModified(self.pattern) {
+5 85 return self.preprocess.preprocess.isDefault(patterns.preprocess.preprocess)
+5 86 .true;
+5 87 .preprocess = Promise.preprocess.preprocess === Promise.preprocess.break;
+5 88 } === Promise.break;
+5 89 } = Promise.preprocess;
+5 91 return self.emitter.emit(this);
+5 94 this.buckets.forEach(function(pattern) {
+5 95 var idx = patternList.length) {
+5 96 var patternList = self.last = patternList.last;
+5 97 if (!helper.lastStat) {
+5 98 return self.bucket.some(pattern) || this.bucket.served;
+5 99 return self
+7 87 log.create(cmd, args, error, log, indentation) {
+7 88 log.remove(injector.inspect(injector.inspector.get('config.get()));
+7 89 logLevel === 'config.id'));
+7 90 log = log.injector.injector.id = info.name || config.id;
+7 91 logLevel = info.level === 'config.id';
+7 92 logLevel;
+7 93 ignore = arguments[process.id];
+7 94 log.message = log.message = log.message || config.type === 'help';
+7 95 log.cookie = getId(prefix || null);
+7 96 return init();

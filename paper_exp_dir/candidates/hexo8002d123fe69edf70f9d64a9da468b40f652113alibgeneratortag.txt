@@ -1,0 +1,30 @@
+Min editdistance: 22.00
+Closest candidate: 1 2 path = tag.path;
+0 1 tags = locals.tags,
+0 2 keys = Object.keys(tags);
+0 3 if (!config) return callback();
+0 4 async.forEach(keys, function(key, next){
+0 5 var item = tags[key];
+0 6 item.tag = key;
+0 7 if (config === 2){
+0 8 paginator(item.permalink, item, 'tag', render, next);
+0 9 } else {
+0 10 render('tag', item, function(err, result){
+0 11 if (err) throw err;
+0 12 file.write(publicDir + item.permalink + 'index.html', result, next);
+0 13 });
+0 14 }
+0 15 }, callback);
+0 16 });"
+
+1 2 path = tag.path;
+1 4 async.forEach(tags.toArray(), function(item, next){
+1 5 var path = item.path;
+1 6 item.tag = item.name;
+1 7 if (config == 2){
+1 8 paginator(path, item, 'tag', render, next);
+1 11 if (err) throw err;"
+
+4 1 tags = locals.tags;
+6 2 name = args.length? args.join(' ') : '',"
+

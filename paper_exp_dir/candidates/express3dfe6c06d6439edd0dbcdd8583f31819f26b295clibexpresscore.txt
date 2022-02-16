@@ -1,0 +1,53 @@
+Min editdistance: 64.00
+Closest candidate: 1 29 return Express.server.callback.apply(Express, arguments)
+1 1  : {
+1 2 name : 'Test'
+1 3 },
+1 4 settings : {
+1 6 back : function() {
+1 7 Express.server.callback.apply(Express, arguments)
+1 8 }
+1 10 utilities : {
+1 11 middleware : {
+1 12 middleware : [
+1 13 'test.middleware.length',
+1 14 'test.formatters': {
+1 15 middleware.forEach(function(i){
+1 16 Express.settings[i].last = i
+1 20 hookCallbacks : {
+1 21 request : [
+1 22 'get', function(req, res){
+1 25 ]
+1 27 hook : function(name) {
+1 28 if (name == 'My-Server') {
+1 29 return Express.server.callback.apply(Express, arguments)
+1 32 server : {
+1 33 listen : function(port, callback) {
+1 34 node.http.createServer(callback).listen(port)
+1 35 puts('Express running at http://localhost:' + port)
+1 38 hashToArray : function(hash) {
+1 39 var array = []
+1 40 for (var key in hash)
+1 41 if (hash.hasOwnProperty(key))
+1 42 array.push([key, hash[key]])
+1 43 return array
+1 45 arrayToHash : function(array) {
+1 46 var hash = {}
+1 47 for (var i = 0, len = array.length; i < len; ++i)
+1 48 hash[array[i][0]] = array[i][1]
+1 49 return hash
+1 51 status : function(value) {
+1 52 this.response.status = this.response.statuses[value.toString()] || this.response.toString()] || this.response.toString()
+1 55 header : function(name, url, headers, status) {
+1 56 return headers, headers, data,
+1 57 headers,
+1 58 args,
+1 59 statuses
+1 60 if (doHeader : function(key, headers, headers,
+1 61 meta) {
+1 62 return dataPossibleJs,
+1 63 if (key) {
+1 64 var url = onlineTemplates = this.headers.paths || this.settings.settings.paths
+1 69 init : function requestHeaders : function noopts : headers
+1 72 param : status
+1 73 isxhr : function header(

@@ -1,0 +1,107 @@
+Min editdistance: 6.00
+Closest candidate: 2 6 describe('.header(field)', function(){
+0 1 res.headers.referrer = req.header.referrer || req.header.referrer || {};
+0 2 res.end();
+0 3 });
+0 4 request(app)
+0 5 .get('/')
+0 6 .end(function(res){
+0 7 done();
+0 8 })
+0 11 })"
+
+1 1 res.header('Referer', { get: 'Referer' }, function(err, res){
+1 2 res.send(err.message);
+1 6 .post('/')
+1 7 .set('Referrer', 'http://foobar.com')
+1 9 res.body.should.equal('http://foobar.com');
+2 1 res.headers.should.have.property('referer');
+2 6 describe('.header(field)', function(){
+2 7 it('should get the response header field', function(done){
+2 8 var app = express();
+2 9 app.use(function(req, res){
+2 10 res.headers.should.have.property('referrer');
+2 15 it('should return the first match if it finds one', function(done){
+2 18 res.header('x-powered-by', 'Hexo');
+2 19 res.header('host', 'localhost', 1);
+2 20 res.header('user-agent', 'tj');
+2 21 res.body.should.equal('tj');
+2 25 describe('.header(field, values)', function(){
+2 26 it('should set multiple header fields', function(done){
+2 31 res.header('x-powered-\', 'tj');
+2 32 res.body.should.equal('localhost');
+2 35 it('should return values at the given level', function(done){
+2 40 res.body.should.equal('x-powered-\');
+2 43 it('should return a string in the format', function(done){
+2 53 describe('.header(field, values, params)', function(){
+2 62 it('should return a string in this field', function(done) {
+2 64 var headers = express();
+2 65 app.use(app.use(app);
+2 66 app.use(function(app).use(function(req, res){
+2 67 res).headers).headers.should.headers.should.have.have.property('x-powered-powered-powered-by', 'Hexports');
+2 68 res.provides(false);
+2 69 res.headers.should.provides('.x-powered-chrome-launcher');
+2 70 res);
+2 71 res.headers.should.not.toArray().should.equal(res.have.have.length(0);
+2 73 res.should.equal(0);
+2 74 res.should.equal(['Set-Cookie', 'one', 'two'].concat.toLowerCase());
+2 76 res.should.should.equal([]);
+2 77 res.should.deep
+3 1 res.statusCode.should.equal(302);
+3 2 res.headers.should.have.property('location', 'http://foobar.com');
+3 6 it('should throw exception if a critical error occurs', function(){
+3 7 var app = express()
+3 8 , blog = express()
+3 9 , blogAdmin = express()
+3 13 , blogAdmin = express();
+3 14 var req = { headers: { cookie:'sid=123' }}
+3 15 , app = express();
+3 17 res.statusCode.should.equal(200);
+3 22 describe('when an error occurs', function(){
+3 23 it('should set the session cookie', function(done){
+3 33 describe('when no error occurs', function(){
+3 56 it('should set the session only', function(done){
+3 61 res.session.should.equal(login);
+3 67 describe('when existing error occurs', function(){
+3 68 it('should return the session');
+3 69 it('should return /', function(done){
+3 70 it('should return /admin.insertText', function(req, i, err)
+3 71 , err)
+3 72 , err);
+4 1 res.headers.referrer = req.headers.referrer || req.headers.referer;
+5 1 res.headers.should.have.property('referrer', req.header('referer'));
+5 3 });"
+
+7 1 res.headers.referrer = req.headers.referrer || {};
+7 2 res.headers.referer.should.equal(req.headers.referer);
+7 7 describe('.accepts(types)', function(){
+7 8 it('should return the first when Accept is not present', function(done){
+7 11 res.accepts(['json', 'deflate']);
+7 15 .set('Accept', 'application/json')
+7 16 .expect('application/json', done);
+7 18 it('should return the first acceptable type', function(done){
+7 21 res.accepts(['json', 'compress']);
+7 25 .set('Accept', 'text/html;q=.5, application/json')
+7 28 it('should return false when no match is made', function(done){
+7 31 res.accepts(['json', 'foo']);
+7 36 .expect('no match', done);
+7 38 it('should allow an argument list of type names', function(done){
+7 48 it('should allow an optional place', function(done){
+7 55 .set('Accept', 'text/html;q=.5, text/plain')
+7 56 .expect('text/plain', done);
+7 58 it('should return true when a match is made', function(done){
+7 65 .set('Accept', 'text/plain')
+7 67 .expect('x-foo', done);
+7 69 it('should.should.should.have.have.have.set.been.called', done);
+7 71 describe('foo.to.bind(app.bind(app);
+7 72 it('app);
+7 73 describe('request', function(){
+7 74 it('app.get')
+7 75 it('s', function(){
+7 76 it('should.get')
+7 83 returns', done);
+8 1 res.headers.referrer = req.header.referrer;
+8 2 res.headers.referer = res.header.referrer;
+9 2 err.should.be.instanceof(Error);
+9 3 err.message.should.equal('applications no longer inherit from http.Server\
+9 4 ');

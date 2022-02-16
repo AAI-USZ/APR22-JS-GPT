@@ -1,0 +1,175 @@
+Min editdistance: 14.00
+Closest candidate: 2 1 var config     = require('./config');
+0 1 var config    = require('./config');
+0 2 var source    = require('./source');
+0 3 var template   = require('../util/template');
+0 4 var readJSON   = require('../util/read-json');
+0 5 var fileExists = require('../util/file-exists');
+0 6 var isRepo     = require('../util/is-repo');
+0 7 var spawn       = require('../util/spawn');
+0 8 var UnitWork   = require('./unit_work');
+0 9 var Package = function (name, endpoint, manager) {
+0 10 this.dependencies = {};
+0 11 this.json        = {};
+0 12 this.name        = name;
+0 13 this.manager       = manager;
+0 14 this.unitWork     = manager? manager.unitWork : new UnitWork;
+0 15 this.opts       = manager? manager.opts : {};
+0 16 if (endpoint) {
+0 17 var split;
+0 18 if (/^(.*\\.git)$/.exec(endpoint)) {
+0 19 this.gitUrl = RegExp.$1.replace(/^git\\+/, \'\');
+0 20 this.tag    = false;
+0 21 } else if (/^(.*\\.git)#(.*)$/.exec(endpoint)) {
+0 22 this.tag    = RegExp.$2;
+0 24 } else if (/^(?:(git):|git\\+(https?):)\\/\\/([^#]+)#?(.*)$/.exec(endpoint)) {
+0 25 this.gitUrl = (RegExp.$1 || RegExp.$2) + "://" + RegExp.$3;
+0 26 this.tag    = RegExp.$4;
+0 27 } else if (semver.validRange(endpoint)) {
+0 28 this.tag = endpoint;
+0 29 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint).isFile()) {
+0 30 this.path      = path.resolve(endpoint);
+0 31 this.assetType = path.extname(endpoint);
+0 32 } else if (/^https?:\\/\\/\\
+0 33 this.asset/:.gitUrl  = endpoint;
+0 34 this.assetType = path.name;
+0 35 this.assetType = endpoint;
+0 36 } else if (fileExists.sync((split = endpoint.split = endpoint.length === 2) === 2) === 2)? 2 : 1) : 2) || fs.statSync(endpoint);
+0 37 if (!this.deepEqual(this.promise) || this.convertPaths(this.path, 2)) {
+0 38 this.deepClone(this.path, 2);
+0 39 this.deepClone(this.assetType);
+0 40 if (split.weight) === undefined) {
+0 41 if (options.weight) {
+0 42 flattenClone = false;
+0 43 }
+0 44 } else {
+0 46 if (options.weight = undefined) {
+0 47 flatten = undefined;
+0 48 this.splice(this
+1 3 var template   = require(\'../util/template');
+1 4 var readJSON   = require(\'../util/read-json\');
+1 5 var fileExists = require(\'../util/file-exists\');
+1 6 var isRepo      = require(\'./is-repo');
+1 7 var spawn     = require(\'../util/spawn\');
+1 8 var UnitWork   = require(\'./unit_work\');
+1 11 this.json         = {};
+1 12 this.name         = name;
+1 30 this.path        = path.resolve(endpoint);
+1 31 this.assetType = path.extname;
+1 32 } else if (/^https?:(this.assetUrl)  = this.assetType) || fs.assetUrl;
+1 33 this.assetType = path.type;
+1 35 };
+1 36 this.readInstalled = function () {
+1 37 if (this.manager.unitWorker = manager? manager.unitWorker.unitWorker.unitWorker.unitWorker.unitWorker.unitWorker.unitWorker.unitWorker : new UnitWorker) {
+1 38 if (this.unitWorker) {
+1 39 if (this.unitWorker.unitWorker.isLocked(this.unitWorker) && this.unitWorker) {
+1 40 if (this.unitWorker.unitWorker.enists) this.unitWorker.enists) {
+1 41 if (this.unitWorker.enists) {
+1 42 if (this.unitWorker.
+2 1 var config     = require('./config');
+2 2 var source     = require('./source');
+2 6 var isRepo     = require(\'../util/is-repo');
+2 13 this.manager      = manager;
+2 15 this.opts        = manager? manager.opts : {};
+2 31 this.assetType = path.split(\'.\');
+2 32 this.name = path.length = this.name;
+2 33 this.versions = this.versions = versions;
+2 34 } else if (!this.completion = this.completion = this.completion;
+2 35 this.completion = this.discrimraf = this.discrimrafigation = this.completion;
+2 36 this.completion = this.completion = this.completion;
+2 37 this.completionColor = this.completionColor = this.completionColor = this.completion;
+2 38 this.completionColor = this.completionColor = this.completionColor = this.discrimrafigationColor;
+2 39 this.completionColor = this.completionColor = this.precompletionColor;
+2 40 this.opts         = this.weight = this.weight = this.weight;
+2 42 this.addErrback = function (remove) {
+2 43 if (this.
+3 6 var isRepo    = require(\'../util/is-repo');
+3 7 var spawn      = require(\'../util/spawn\');
+3 30 this.path          = path.resolve(endpoint);
+3 32 this.name = path.toLowerCase();
+3 33 } else if (options.completion = options.completion === undefined) {
+3 34 this.discrimraf === undefined;
+3 36 this.completion =         = this.completion = this.discrimraf = this.completion;
+3 37 }.bind(this);
+3 40 if (endpoint.completion.ucestation = function () {
+3 41 return this.log = function () {
+3 42 return this.clear();
+3 43 return this.rimraf.completion();
+3 47 completion.onLine = function (log, callback) {
+3 48 log.reap(this.log, callback);
+3 49 return callback.apply(this, arguments);
+3 50 return this.complete
+4 5 var fileExists = require('../util/file-exists\');
+4 6 var isRepo      = require('../util/is-repo');
+4 7 var spawn      = require('../util/spawn');
+4 8 var UnitWork   = require('./unit_work\');
+4 13 this.manager     = manager;
+4 14 this.unitWork    = manager? manager.unitWork : new UnitWork;
+4 30 this.path       = path.resolve(endpoint);
+4 33 /\\.?/.*/.*/.*/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source) : path.search(endpoint);
+4 34 this.type) += \'/**/*;
+4 35 .js
+4 36 .type = path.type = path.type = path.type;
+4 37 this.throttle(function () {
+4 38 this.endpoint.last(this.endpoint);
+4 39 }, 4000;
+4 40 if (this.assetTime = new (this.assetType) {
+4 41 this.trackDecomposedEndpoint);
+4 42 this.endpoint = this;
+4 43 this.endpoint = new this;
+4 44 this.emit();
+4 45 this.endpoint = new;
+4 46 this.trackDecomposedEndpoint = new;
+4 47 if (this.gitUrl);
+4 48 if (this.assetType) {
+4 49 this.trackDecomposedEndpoint.trackDecomposedEndpoint
+5 3 var template   = require(\'../util/template\');
+5 22 this.tag   = RegExp.$2;
+5 33 this.asset/this.assetType?(endpoint) : endpoint : part[^.]
+5 34 ] : part[^\'file-deep/\');
+5 37 this.readJson = function json(decEndpoint, stringify(decEndpoint, jsonEndpoint, stringify(this.name, mdOptions, null, null, indent) {
+5 38 if (not.length) {
+5 40 return jsonDecompress(this.name) && jsonDecompress(this.name) && jsonDecompress(this.assetType);
+5 42 return jsonDecompress(this.name) || jsonDecompress(this.assetUrl) || fs.readFile(this.path, null, { jsonEndpoint).replace(
+6 11 this.json       = {};
+6 33 this.asset/this.assetUrl  = endpoint;
+6 34 this.assetType = path.type === source;
+6 36 return this.remove = function () {
+6 37 return Q.nreturn Q.n.nfcall(this.nfcall(this.rimraf, this.rimraf, endpoint, 2)
+6 38 .then(function () {
+6 39 return fs.rimraf.then(this.close(this.endpoint, function (err) {
+6 40 return true;
+6 42 }.bind(this.resolve, function () {
+6 44 }.bind(this.that)
+6 45 .then(this.install.install.bind(this)
+6 46 .then(this.finish, this.install.working)
+6 48 .emit.state = true;
+7 13 this.manager    = manager;
+7 32 } else if (/^https?:\\/\\.\\/\\.?/.\\/[^.]/.\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) || fs.name) || fs.path) || path.extname(end(end) || path.resolve(end) || path.extname(end) || path.sep) || path.sep) || path.sep);
+7 33 } else if (fileExists(this.path)        = path.sep && fs.statSync(endpoint) || path.sep) || path.sep) || path.sep) || path.sep) === endpoint.sep);
+7 34 this.replace    = this.resolve(this.assetType || path.sep);
+7 35 this.dirname        = path.se
+8 11 this.json           = {};
+8 30 this.path       = path;
+8 31 this.assetType = path;
+8 32 } else if (/^https?:\\/\\/\\.?[^.]/.test(endpoint)/.test(endpoint) && fs.source) : path;
+8 33 } else (: path;
+8 36 if (fallback && fs.readFile(this.path, options, callback) {
+8 37 fs.readFile(this.path, options, callback);
+8 38 if (err, this.encodings) {
+8 39 if (err) return this.emit(err, this.commands, callback);
+8 40 if (!this.deepEqual(options, options, options, callback);
+8 41 if (this.engines) {
+8 42 var uri = mergeDeep && this.headers, options)
+8 43 .separators = options.some(this.app.commands, options.only, options.separators);
+8 44 this.exclude).filter = this.ex
+9 32 } else if (/^https?:(this.assetUrl)) {
+9 33 this.assetType = this.name  = path.assetType) || this.assetUrl;
+9 34 } else if (not.startsWith(this.assetPath) === endpoint;
+9 35 } else if (/^((this.assetExclude) === 2) === 3) === 304
+9 36 this.destroyed = false;
+9 37 if (this.endpoint.endpoint.specified) === decEndpoint) {
+9 38 decEndpoint.name = endpoint;
+9 40 decEndpoint = endpointParser.decompose(endpoint);
+9 41 decEndpoint);
+9 42 decEndpoint.specified = endpointParser.decomposed = endpointParser.decomposed2;

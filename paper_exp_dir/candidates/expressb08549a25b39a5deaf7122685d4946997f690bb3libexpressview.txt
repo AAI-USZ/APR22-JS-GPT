@@ -1,0 +1,362 @@
+Min editdistance: 37.00
+Closest candidate: 0 29 utils.merge(options.locals, options.object);
+0 1 }
+0 2 options.locals = options.locals || {};
+0 3 utils.merge(locals, locals);
+0 4 options.locals.body = options.body || {};
+0 5 utils.merge(locals, options.locals);
+0 6 options.partial = true;
+0 7 options.layout = false;
+0 8 var name = options.as || view.split(\'.\').slice(-1)[0].split(\'.\');
+0 9 var collection = options.collection.split(\'.\');
+0 10 if (collection) {
+0 11 var len = collection.length
+0 12 , buf = \'\';
+0 13 delete options.collection;
+0 14 options.locals.collectionLength = len;
+0 15 for (var i = 0; i < len; ++i) {
+0 16 var val = collection[i];
+0 17 options.locals.firstInCollection = i === 0;
+0 18 options.locals.indexInCollection = i;
+0 19 options.locals.lastInCollection = i === len - 1;
+0 20 options.object = val;
+0 21 buf += this.partial(view, options);
+0 23 return buf;
+0 24 } else {
+0 25 if (options.object) {
+0 26 if ('string' == typeof name) {
+0 27 options[name] = options.object;
+0 28 } else if (name === global) {
+0 29 utils.merge(options.locals, options.object);
+0 31 options.scope = options.object;
+0 34 return this.render(view, options);
+0 36 };
+0 37 http.ServerResponse.prototype.render = function(view, options, fn, parent){
+0 38 if (typeof options === \'function\') {
+0 39 fn = options, options = {};
+0 41 var options = options || {}
+0 42 , app = this.app
+0 43 , viewOptions = app.settings['view options']
+0 44 , defaultEngine = app.settings['view engine'];
+0 45 if (viewOptions) options.__proto__ = viewOptions;
+0 46 if (view.indexOf(\'.\') < 0 && defaultEngine) {
+0 47 view += parent.extension;
+0 49 var orig = view = new this.app.ServerResponse.prototype.partial.apply(app, viewOptions, options);
+0 50 app.route.routeFunction = orig;
+0 51 app.__proto__proto__ = orig;
+0 52 app.locals = app;
+0 53 app.route = app;
+0 54 app.__proto__proto__proto__ = app;
+0 55 return app;
+0 57 return this.locals.__proto__proto__ = app;
+0 58 .locals.resolveObject = function()
+0 59 .redirects = options;
+0 60 return this;
+0 62 http.ServerResponse.prototype.prototype.attachment = function(filename){
+0 63 return this.header(\'content-\', filename
+0 64 resolve(this.filename = path) {
+0 65 if (this.app.app.set(\'Prox-PATTERNEDENT\') || this.app.position() == 0) {
+0 66 return this.headers.settings[filename];
+0 68 if (this.headers
+1 3 options.locals.__length__ = len;
+1 4 options.locals.__isFirst = true;
+1 5 options.locals.__index = utils.inspect(options.locals, options.locals);
+1 6 options.locals.cache = true;
+1 7 options.locals.view_dir = viewCache[view] || fs.readFileSync(view.source, 'utf8');
+1 8 var collection = options.collection;
+1 11 , buf = '';
+1 45 if (view.indexOf(\'.\')!== 0 && defaultEngine) {
+1 46 view += \'.\';
+1 48 var self = this
+1 49 , app = defaultEngine
+1 50 , suiteExists = app.settings[view] || defaultEngine
+1 51 , layout = options.layout === undefined
+1 52 , locals = options.locals;
+1 53 options.locals = options.locals.body = body;
+1 54 options.layout = layout;
+1 57 var content = function name = savedExports = options.filename = (engines[engines[engines[engine] = engines[engine] || (engines[engine] = engines[engine] || fs] || fs] || fs.readFile(engine]).toString(content, engine, filename)
+1 58 , viewOptions, fs = engines[engine] = engines[engine] || fs;
+1 59 , viewOptions = engines[engine] || fs;
+1 60 , viewOptions = options.readFileSync(viewOptions, layoutFile] || layoutFile] = options.content, options.filename, options.filename, function(view, fn, fn, prefix = app, engine){
+1 61 if (layout = layout!== \'layout\'mark
+2 4 options.locals.__proto__ = options.locals
+2 5 .replace(/<h3 id="(.*?)">view raw</h3>/g, \'<p>this is a view processor</p>\')
+2 6 .replace(/<h2 id="(.*?)">view content</h2>/g, \'<p>this is another view processor</p>\');
+2 8 options.locals.settings = options.settings || {};
+2 9 utils.merge(options.locals, options.locals);
+2 10 options.renderName = function(view, options, fn){
+2 11 if (ext && view.indexOf(\'.\') < 0) {
+2 12 view += ext;
+2 14 var orig = viewCache[ext] || (view.split(\'.\').slice(-1)[0] || view.split(\'.\').join(\'.\');
+2 15 if (options) {
+2 16 orig = new view.apply(orig, arguments);
+2 18 return view.render(view, options, fn);
+2 20 function renderName(view, options, fn) {
+2 30 function renderPosts(view, options, fn) {
+2 34 var posts = this.app.locals
+2 35 , posts = this.app.locals
+2 36 , done = function(arr, posts, i){
+2 37 var length = posts.length;
+2 38 var i = 0;
+2 39 for (; i < length; i++){
+2 40 var title = posts[i].format(\'hr\');
+2 41 if (!title) break;
+2 43 var categories = posts.slice(i + 1);
+2 44 if (!categories.length = 2;
+2 45 for (; i - 1){
+2 46 var i = 2 = 2;
+2 49 arr.push(/((; i = posts.length - 1, i == 3; i++){
+2 50 var i = 3;
+2 53 return posts.splice(i;
+2 55 /<length>/*
+2 56 });
+2 58 function renderPosts(view, options = options = options || {};
+2 59 function renderPosts.sort
+2 60 if (style = _.length = _.length > 0 || false;
+2 61 function renderPosts(data, fn) {
+2 62 var result = _.each(/
+3 2 options = options || {};
+3 5 options.locals.version = '1.2.3';
+3 6 options.locals.site = options.site.locals || {};
+3 7 options.locals._content = options.transform;
+3 8 options.locals.partial = function(){
+3 9 return this.partial.apply(self, arguments);
+3 11 options.locals.cache = function(){
+3 12 var view = this.view;
+3 13 if (!view) view = undefined;
+3 14 if (view.indexOf(\'.\')!== -1) view += this.render.renderSync(\'home/ext/index.html\');
+3 15 if (this.app.set(\'view engine\')) {
+3 16 this.cache.extend(view);
+3 20 var ext = this.ext;
+3 21 return view.partial.apply(this, arguments);
+3 23 options.locals.content = function(){
+3 24 return this.partial.apply(this, arguments);
+3 26 options.filename = \'/\' + view;
+3 27 this.register(\'view engine\', view, options.filename);
+3 28 this.set(\'views\', options.collection);
+3 29 this.set(\'view engine\', \'html\');
+3 30 this.set(\'view engine\', \'ejs\');
+3 31 this.register(\'views\', options.collection);
+3 39 , viewOptions = app.settings.view options || {}
+3 40 , defaultEngine = app.settings.view engine
+3 41 , ext = this.ext;
+3 42 if (ext && viewOptions) {
+3 43 options.ext = ext;
+3 45 if (options.locals) {
+3 46 app.locals.set(\'view options\', options.locals);
+3 48 if (\'length\': this.app.ext = ext;
+3 49 this.length = ext;
+3 50 this.engine = this.collection.collection.length
+3 51 , this.lastIndexOf(\'.'
+
+4 5 options.view_dir = pathFn.join(pathFn.dirname(this.filename.substr(view.length));
+4 34 http.ServerResponse.prototype.render = function(view, options, fn){
+4 36 var defaultEngine = this.app.set('view engine');
+4 37 if (view.indexOf(\'.\') < 0 && defaultEngine.hasOwnProperty(view.indexOf(\'.\') + 1)
+4 38 == 0) {
+4 39 options.scope = defaultEngine;
+4 43 , options = options || {}
+4 44 , helpers = app.viewHelpers
+4 45 , dynamicHelpers = app.dynamicViewHelpers
+4 47 , cacheTemplates = app.settings['cache views'];
+4 48 if (viewOptions) options = merge(options, viewOptions);
+4 49 if (view.indexOf(\'.\') < 0 && defaultEngine
+4 50 .hasOwnProperty(view.indexOf(\'.\') + 1)
+4 51  > 0)
+4 52 && engine
+4 53 !== viewOptions.hasOwnProperty(view.indexOf(\'.\')
+4 54 ))
+4 55 ])
+4 56 );
+4 57 var view = viewOptions = viewOptions, options = options || { layout: false };
+4 58 , app.set(\'view options = this.settings[viewOptions, url: app.settings[view] };
+4 59 , app.settings[viewOptions = app.settings.settings[viewOptions] = app.settings[viewOptions] || defaultEngine];
+4 60 if (view.debug)
+4 61 .disable(\'view\', app.settings.settings.view\', cacheTemplates)
+4 62 .set(\'view options.view\',!= undefined) app.settings.settings.view)
+4 63 .only
+4 64 .set(\'only content on the server does not\'tplah\'));
+4 65 .set(\'root view to the server does not\', function(){ self.log.enable
+5 5 options.locals.layout = options.layout === undefined? true : options.layout;
+5 6 options.locals.cache = options.cache || {};
+5 7 var view = exports;
+5 8 app.set(\'view engine\', 'ejs\');
+5 9 app.set(\'views\', __dirname + \'/fixtures/view\');
+5 10 var cache = viewCache[ext] || fs.readFileSync(view.source, \'utf8\'));
+5 11 if (cache views in cache) {
+5 12 return cache[ext] || fs.readFileSync(view.source, \'utf8\'));
+5 14 return view.renderSync({
+5 15 path: view.indexOf(\'hello.ejs\')
+5 16 , ext: view.ext
+5 17 , locals: options.locals
+5 21 view.dirname = \'/fixtures/\' + view;
+5 22 var result = extname(view),
+5 23 filename = view.substring(1);
+5 24 if (ext && view.indexOf(\'.ejs\') > 0) {
+5 28 path: view.indexOf(\'Hello.ejs\')
+5 33 function send(str) {
+5 34 str = engine.render(str, options);
+5 35 fs.readFile(str, \'utf8\', function(err, str){
+5 36 if (err) {
+5 37 return res.send(str);
+5 39 res.send(str);
+5 43 function error(err) {
+5 45 return res.error(err);
+5 47 function sendFromDisc() {
+5 48 var err = err.message;
+5 49 try {
+5 50 fs.readFile(__dirname + \'/fixtures/error.html\', err)
+5 51 .reply(err);
+5 52 } catch (err) {
+5 53 return res.send(err);
+5 55 } finally {
+5 56 fn(err);
+5 59 function errorMessagesServerResponse.prototype.on(\'error\', function send(err) {
+5 60 fs.exists(error)
+5 61 .exists(404, function (str) {
+5 62 return error(error)
+5 63 .exists(error)
+5 65 .exists(1, function (1) {
+5 66 .exists(1) {
+5 78 .exists(1) {\
+6 5 options.view_dir = viewCache[ext] || fs.readFileSync(path, 'utf8');
+6 6 var view_prefix = \'/\';
+6 7 view_dir = options.root + \'/\';
+6 8 var layout = options.layout === undefined?
+6 9 options.layout : options.layout;
+6 10 var view_obj = view_obj || {};
+6 11 if (view_obj) {
+6 12 var split = view.split(\'.\');
+6 13 if (!split.length) {
+6 17 var collections = options.collection.map(function(val, i){
+6 22 return this.partial(view, options);
+6 23 }, this).join(\'\');
+6 26 var name = options.as || view.split(\'.\');
+6 27 if (typeof name ===\'string\') {
+6 28 options.locals[name] = options.object;
+6 40 var defaultEngine = this.app.set(\'view engine\', defaultEngine);
+6 47 , helpers = options.helper
+6 48 , dynamicHelpers = options.dynamicViewHelpers
+6 49 , viewOptions = options.directViewHelpers
+6 50 , cacheTemplates = options.settings;
+6 51 if (viewOptions) options = merge(viewOptions, app);
+6 52 if (viewOptions.set(\'root\', \'/\', \'/\')
+6 53 ).set(\'views
+6 54 , path = \'/views
+6 55 , cacheTemplates\', function(){
+6 56 viewOptions = self.set(\'cache views);
+6 57 }).set(\'static views = view options.comp views;
+6 59 options.set(\'jsonp callback name\', function(){
+6 60 fs.readFile(self, path, function(str, arg) {
+6 61 fs.readFile(self.readFile(path, \'utf8\', function(err, 2))
+6 62 , 2))
+6 66 , function(err, arg = _method) {
+6 67 options = _;
+7 5 options.locals.partial = true;
+7 11 collection.call(this, options.locals);
+7 17 options.locals.collectionLength = collection.length
+7 18 .replace(/\\./g, \'_\')
+7 19 .split(\'.\').forEach(function( i){
+7 20 var val = options[i]
+7 21 , locals = options[i]
+7 22 , viewOptions = this.app.set(\'view options\') || {};
+7 23 if (viewOptions) {
+7 24 var val = viewOptions[i] || viewOptions[i]
+7 25 , args = options.args || {};
+7 26 viewOptions[i] = val;
+7 30 if ('string\' == typeof name) {
+7 33 utils.merge(options[name], this.app.set(\'view options\'));
+7 50 , viewServer = app.settings.view });
+7 51 if (viewOptions) options = merge(options, { merge: true });
+7 52 if (\'length\' == 1 && no.length > 0) {
+7 53 options[0] = 1;
+7 55 var options = { collection: options };
+7 56 options.locals = options;
+7 57  = options;
+7 58 if (\'production\'production\' == app.settings.settings.env.env.production) {
+7 59 options.production = \'production = \'production\' == app.env.env.settings.env.production;
+7 60 opts\' == app.env;
+7 61 \'view options.settings.settings.settings.mime
+7 62 )'non error\' == app.locals\' == app.settings.engines\' == app.settings.settings.settings.custom'
+7 63 ) {
+7 64 edit.settings.custom.settings.custom.settings.custom.mime = \'true;
+7 65 opts.view options.body = \'true;
+7 66 opts.redirects = \'http.navServer.settings.ls\' == app.settings.settings.body.redirects' ==
+8 5 options.view_dir = viewCache[ext];
+8 7 view = view.split(\'.\');
+8 8 if (!view.length) {
+8 9 return viewCache[ext] = new LRU({
+8 10 path: view.split(\'.\'),
+8 11 locals: options.locals
+8 14 }));
+8 16 return view.renderSync(view, options);
+8 18 function renderPartial(res, view, options, fn) {
+8 19 var parts = view.split(\'.\');
+8 20 var idx = options.as || view.split(\'.\');
+8 22 var viewOptions = options.hasOwnProperty(\'view\')? options.collection : true;
+8 23 var viewName = options.as || view.split(\'.\');
+8 25 var lang = options.as || view.split(\'.\');
+8 26 if (lang) {
+8 27 if (options.caption) {
+8 28 options.caption = \'<span>\' + options.caption + \'</span>\';
+8 29 if (options.tags) {
+8 30 options.caption += \'<a href="\' + options.tags + \'">\' + (options.caption? \'<span>\' + options.caption + \'</span>\' : \'\') + \'</a>\';
+8 33 options.lang = lang;
+8 35 return options.collection.map(function(val, i){
+8 41 }, this).join(\' \'));
+8 46 options.locals[name] = options.locals[name] = options.locals;
+8 47 } else if (options.object) {
+8 48 options.options.object = options.options = { object.merge(options.object};
+8 52 options.object = options;
+8 55 options.omit = options.filename = this;
+8 56 if (this.engine = toString = toString.render.render, options.engine);
+8 57 return this.stringify = toString = stringify(this.stringify(this.stringify, options.stringify, options.filename, options.encoding);
+8 59 var locals = options.layout = options.external = options.layout === undefined;
+8 60 ? this.layout : options.layout
+8 61 : layout
+8 62 , options.options = layout;
+8 63 ,
+9 5 options.locals.__index = ext;
+9 6 return view.render(view, options);
+9 11 return this.engine(str);
+9 13 function render(str, options, fn) {
+9 15 var view = options.hasOwnProperty(\'length\')? options.depth : 0;
+9 16 var self = this;
+9 17 if (view.indexOf(\'..\')!== -1) {
+9 20 if (options.isFirst) {
+9 21 return self.engine(view.indexOf(\'.') > 0;
+9 23 var ext = extname(view).substring(1);
+9 24 if (ext && view.indexOf(\'.\')!== -1) {
+9 31 this.engine(str);
+9 33 function renderSync(str) {
+9 34 return this.renderSync(str);
+9 36 function sendCompletion(p) {
+9 37 varWords = this.app.get(\'word-nums\');
+9 38 var num = this.num();
+9 39 this.words.push(num);
+9 40 if (num) {
+9 41 this.sendCompletion(num);
+9 42 } else if (num === 0) {
+9 45 this.sendCompletion(0);
+9 49 function complete(p) {
+9 50 var idx = errors > 0?
+9 51 this.activeSockets.emit(\'error\', idx);
+9 52 var args = arguments[0];
+9 53 var msg = args.length;
+9 54 var spec = args.join(\' \');
+9 55 if (!validate) {
+9 56 var err = new Error(\'validate\');
+9 57 error.filename = formatError(msg);
+9 58 error.message = \'Parsing requires a validate the entire capture group to part of the collection.\';
+9 59 error.action = function (a = function (a) {\';
+9 60 return this.action = a
+9 62 return this.s[idx[idx] = 1;
+9 64 if (error.action) {
+9 65 return this.start = 1;
+9 67 this.queue.push(result);
+9 69 }.bind(this);
+9 70 this.length = 1;
+9 71 this.element = [];
+9 75 exports.onKarma.collection.prototype.elementBy = function(err) {
+9 76 return this.element.element.toString = function(value, i, i, val) {
+9 77 var l = this.element;\

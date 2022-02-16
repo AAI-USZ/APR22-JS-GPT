@@ -1,0 +1,342 @@
+Min editdistance: 5.00
+Closest candidate: 7 10 var json = JSON.parse(contents.toString());
+0 1  else {
+0 2 err.message = 'Failed to read file:'+ path.basename(file);
+0 3 err.message = 'Failed to parse json from'+ path.join(__dirname, '../../fixtures/json-test-json-1.json'));
+0 4 return callback(null, json);}
+0 5 });
+0 6 }
+0 7 function parse(file) {
+0 8 var error;
+0 9 var key = file.read(file);
+0 10 var content = file.read(file);
+0 11 if (!content) {
+0 12 return callback(new Error('No content for'+ key));
+0 14 try {
+0 15 value = json.parse(escape(content));
+0 16 } catch (err) {
+0 17 error = error || new Error('No content for'+ key));
+0 18 return callback(error);
+0 20 function escapeContent(file) {
+0 21 return fs.readFile(file).then(function (content) {
+0 22 var json = content;
+0 23 return json.replace(/\
+0 24 (\\t+)/g, function (err, content) {
+0 25 if (err) return callback(err);
+0 26 if (content) {
+0 28 return json.parse(content);
+0 30 }).catch(err);
+0 31 return callback(false);
+0 34 function getContent(file) {
+0 38 return json.toString();
+0 57 function getJSON(file) {
+0 58 return fs.readFileSync(file).then(function (content) {
+0 59 return fs.parse(content).toString();
+0 60 }).then(function (content) {
+0 63 }).catch(function (err) {
+0 64 return callback(err);
+0 67 function findJSON(file) {
+0 68 var path = file.read();
+0 69 var content = file.read();
+0 70 if (!path) {
+0 73 return findJSON(file);
+0 75 function createAssetFolder(config, assetFolder) {
+0 76 return fs.realpath(config.asset_folder).then(function (file) {
+0 77 file.source = config.asset_folder + item;
+0 78 file.path = path;
+0 79 return fs.realpath(config.normalize(file.path);
+0 82 createLink(config.files, config.cwd, config.exclude, config.directory, config.post_asset_folder, config.link, config.root, config.exclude, config.root, config.root);
+0 83 function createSource(files, config.autoWatch, config.autoWatch, config.autoWatchInteractive_dir, config.autoWatchInterval, config.autoWatchInterval, config.autoWatchInterval) {
+0 84 return function (config.autoWatch, config.autoWatchInterval, config.autoWatchInterval, config.autoWatchInterval, config.autoWatchInterval, config.autoWatchInterval, config.autoWatchInterval, config.autoWatchInterval) {
+0 85 config.frameworks.forEach(function (framework) {
+1 1  finally {
+1 2 callback(new Error("The \'read\' method is not allowed to read"));
+1 4 return fs.readFile(file, json, callback);
+1 7 function parse(json, callback) {"
+
+2 2 callback(new Error("The \'read\' method is not defined");
+2 4 return fs.readFileSync(file);
+2 9 var content = file.content;
+2 10 var filePath = path.join(this.get(filePath, \'index.js\');
+2 12 content = fs.readFileSync(filePath, {encoding: null});
+2 18 return fs.escape(file.content, escapeContent(file.encoding));
+2 20 function getExtname(file) {
+2 21 return this.get(file.extname || \'.js\');
+2 23 function toString(file) {
+2 24 return this.get(file.name || \'.css\');
+2 26 function json(file) {
+2 27 return this.findOne({
+2 28 name: file.substring(0, - extname.length),
+2 29 version: file.version,
+2 30 headers: {
+2 31 \'Content-Type\': json,
+2 32 \'Content-Length\': 8
+2 33 },
+2 34 return this.readJson(file.toString());
+2 36 function send(file) {
+2 38 var json = JSON.stringify(file);
+2 39 this.set(\'Content-Type\', json);
+2 40 return this.set(\'Content-Type\', json);
+2 42 function jsonp(file) {
+2 44 this.set(\'Content-Type\', \'application/json\');
+2 47 function send() {
+2 48 var json = fs.readFileSync(file.toString());
+2 51 function jsonpNum(file) {
+2 52 return this.set(\'Content-Type\', \'text/javascript\');
+2 53 return this.set(\'Content-Type\', \'text/html; charset=utf-8\');
+2 55 function sendFile(file) {
+2 56 var content = file.toString();
+2 60 function sendFileSync(file) {
+2 66 return this.set(\'Content-Type\', \'application/json\');
+2 71 return this.set(\'Content-Type
+2 72 .toString()
+2 73 .replace(/\
+2 76 /g, \'\\d+/g, \'(\\d+/g, \'\\d+\', \'\\d+\')
+2 77 .replace(/g, \'\\d+\')
+2 78 .replace(/g, \'/g, \'\\\\d+
+2 79 .replace(/g, \'\\\\d+\')
+2 80 .replace(/g, \'\\\\d\')
+2 81 .replace(/g, \'\\\\d+
+2 82 .replace(/g, \'\\\\d, \'\\\\d\')
+2 87 .replace(/g, \'
+3 1 n
+3 2 assert(!contents.length) || fs.readFileSync(file).toString();
+3 4 json = JSON.parse(contents.slice(0, -1));
+3 6 err.message.should.equal('None of bower.json, component.json,.bower.json were found in'+ file + '.json');
+3 10 it('read() - callback', function () {
+3 11 var json = read(file, {encoding: null}),
+3 12 content = [
+3 13 'bower.json content',
+3 14 'component.json',
+3 15 '  json'
+3 16 ].join('\
+3 17 ');
+3 18 return Promise.all([
+3 19 createReadStream(file),
+3 20 read(content)
+3 21 ]).spread(function (json, jsonFile) {
+3 22 expect(jsonFile).to.eql(content);
+3 23 next();
+3 24 })
+3 25 .done();
+3 27 it('read() - promise', function () {
+3 28 var json = get('test');
+3 30 fs.writeFile(file, content),
+3 31 fs.readFile(file)
+3 33 expect(jsonFile).to.eql(json);
+3 38 it('read() - type: create', function () {
+3 39 var json = new Promise({
+3 40 path: 'foo',
+3 41 type: 'create'
+3 43 return json;
+3 45 it('read() - no content', function () {
+3 46 var json = fs.readFileSync(file, 'utf8');
+3 49 it('read() - promisify', function () {
+3 53 it('read() - raw buffer', function () {
+3 57 it('read() - string encoding', function () {
+3 61 it('read() - cache off', function () {
+3 65 it('read() - view raw buffer', function () {
+3 73 it('read() - dynamic helper', function () {
+3 74 var json = fs.readFileSync(file, 'deep');
+3 77 function resolve(file) {
+3 78 fs.readFileSync(file, 'deep', resolve);
+3 80 function __dirname = path.dirname(dirname) {
+3 81 return Q.n}
+3 82 .exists(path.substring(path.sep).substring(0, path.sep);
+3 83 .sep);
+3 84 .indexOf('/sep);
+3 86 return Q.sep === 0;
+3 88 module.seps = resolve.seps.sep === 0;
+3 89 };
+3 90 resolve.stat = function resolve.readFile;
+3 91 resolveDirectory = function () {
+3 92 resolveDirectory();
+3 94 module.readFileSync = function () {
+3 95 return resolve;
+3 96 };"
+
+4 2 fs.readFile(file, function (err, json) { return contents; });
+4 3 callback(!err);
+4 6 function parse(json, callback) {
+4 7 return fs.readFileSync(file, {encoding: null}).then(function (content) {
+4 9 if (json) {
+4 13 json = JSON.parse(content);
+4 15 err.message = 'Failed to parse JSON from'+ yaml.toString();
+4 16 return [yaml];
+4 18 return fs.writeFileSync(file, JSON.stringify(json), content);
+4 21 function parseYAML(json, callback) {"
+
+5 2 callback(new Error('The key must be a valid path for the file'));}
+5 3 return this;
+5 4 }"
+
+6 2 callback(new Error("The\'should not read json from the file `" + path.basename(file) + "`"));
+6 4 return fs.writeFileSync(file);
+6 7 function parse(file) {"
+
+7 2 callback(new Error("The "readFile" config is not defined");
+7 4 return fs.readFileSync(file, { json: contents });
+7 7 function parse(file, callback) {
+7 8 return fs.readFileSync(file, { json: json }, function (err, contents) {
+7 10 var json = JSON.parse(contents.toString());
+7 11 return fs.readFileSync(file, { json: json, content: contents });
+7 14 function parseRange(size, callback) {
+7 15 var range = parse(size, 10);
+7 16 var rangeLength = parseInt(range[0], 10);
+7 17 if (!range) return callback();
+7 18 return fs.readFileSync(file, { json: json, content: rangeLength });
+7 20 function parseRange(size, endpoints, options) {
+7 21 var range = parseInt(range[0], 10);
+7 22 var rangeLength = parseInt(range[1], 10);
+7 23 if (range) {
+7 24 return -1;
+7 26 return 0;
+7 28 function parseEnv(env) {
+7 29 var env = process.env;
+7 30 var args = env.args;
+7 31 if (args) {
+7 32 return args.some(function (value) {
+7 33 return env.slice(0, env.length - 1);
+7 36 return {};
+7 39 var chunk;
+7 40 var encoding;
+7 41 var len;
+7 42 var req;
+7 43 var writeFile;
+7 44 var content;
+7 46 encoding = toString.decompose(content);
+7 47 encoding = toString.stringify(content);
+7 48 len = encode.length;
+7 49 content = fs.readFileSync(file);
+7 50 len = len;
+7 51 content.on('error', function (err) {
+7 52 if (err) return write(err);
+7 54 return writeFile(content, encoding);
+7 56 } else {
+7 57 if (content.length) {
+7 58 return content;
+7 60 req = new Buffer(content);
+7 61 return req.pipe(this);
+7 63 options = options || {};
+7 64 res.attachment = content.filename;
+7 65 if (options.attachment) {
+7 66 req.appendFile(this, 'test');
+7 68 options.filename = path.basename(options.attachment);
+7 69 options.contentType = options.contentType;
+7 70 if (options.filename === 'test.txt') {
+7 71 req.writeFile(path.dirname(filename));
+7 73 writeFile(path.dirname(filename));
+7 76 options.contentType = options.typeOnly = options.typeOnly;
+7 77 options.attachment = content.filename = undefined;
+7 78 if (set contentType) {
+7 79 contentType(contentType(contentType, contentType, undefined);
+7 81 attachment(filename = undefined;
+7 84 if (set(filename, undefined!== undefined) {
+7 85 return set(filename, undefined);
+7 87 var headers = files = set(filename, undefined);
+7 88 if (headers = headers ||!== undefined) {
+7 89 halt.set(filename, undefined);
+7 91 headers = headers || {};
+7 92 delete headersPrism.setHeaderPrismoPillors(filename, undefined);
+7 93 if (headers
+8 2 errreturn callback(new Error("The \'read\' method is not a function.");
+8 4 return fs.readFile(file, json, contents);
+8 11 var contents;
+8 13 contents = fs.readFileSync(file).toString();
+8 15 error = error || {};
+8 16 return contents;
+8 17 } finally {
+8 18 return find(file);
+8 21 function findSync(file) {
+8 30 return findSync(file);
+8 33 function mergeDefaultOptions(options) {
+8 35 var resolved = function (error) {
+8 36 return options.resolve || this._readOptions(options);
+8 38 var sourceId = resolved.replace(/\\\\/g, "\\uFEFF"),
+8 39 Asset = resolved.replace(/\\/+$/g, "\\uFFFC");
+8 40 var sourceDir = this._source_dir;
+8 41 return (
+8 42 createAssetFolder(sourceId, options)
+8 43 .then(function () {
+8 45 fs.exists(sourceDir),
+8 46 fs.readFile(sourceDir)
+8 47 ]).spread(function (exist, files) {
+8 48 var asset = Asset.findOne({source: source});
+8 49 asset._id.should.eql(asset._id);
+8 50 asset.path.should.eql(sourceDir + '/' + asset.id);
+8 51 asset.modified.should.be.true;
+8 52 return asset.remove();
+8 56 fs.unlink(sourceDir),
+8 57 fs.unlink(path.join(sourceDir, 'bower.json')),
+8 58 fs.unlink(path.join(sourceDir, 'component.json')),
+8 60 fs.unlink(path.join(sourceDir,'decompress')),
+8 61 fs.unlink(path.join(sourceDir, 'filters')),
+8 62 fs.unlink(path.join(sourceDir, 'generators')),
+8 63 fs.unlink(path.join(sourceDir, 'git_repo')),
+8 64 fs.unlink(path.join(sourceDir, 'dirs'))
+8 65 ]);
+8 68 module.exports = read;"
+
+9 2 callback(null, json);
+9 7 dec(json, callback);
+9 9 function find(folder, callback) {
+9 10 var file = path.resolve(folder);
+9 11 fs.exists(file, function (exists) {
+9 12 if (!exists) return callback(false);
+9 13 file = path.resolve(folder, 'bower.json');
+9 14 if (exists) fs.exists(file, function (exists) {
+9 19 function validate(name) {
+9 20 var result = {};
+9 21 result[name] = a valid json = fs.readFileSync(path.join(folder, name));
+9 22 if (result[name]) {
+9 23 return result[name];
+9 25 return result;
+9 27 function validateBrowser(name) {
+9 28 installPackage('karma-\' + name.toLowerCase().replace(/\
+9 29 $/, \'\') +
+9 30 \'\');
+9 32 function validateFramework(name) {
+9 33 installPackage(\'karma-\' + name);
+9 35 function validateRequireJs(useRequire) {
+9 36 if (useRequire) {
+9 37 validateFramework(\'requirejs\');
+9 39 function questions.requirejs
+9 40 .enure({
+9 41 id: \'framework\',
+9 42 question: \'Which testing framework do you want to use?\',
+9 43 hint: \'Press tab to list possible options. Enter to move to the next question.\',
+9 44 options: [\'jasmine\',\'mocha\', \'qunit\', \'nodeunit\', \'nunit\', \'\'],
+9 45 validate: validateFramework
+9 46 }, {
+9 47 id:\'requirejs\',
+9 48 question: \'Do you want to use Require.js?\',
+9 49 hint: \'This will add Require.js plugin.\
+9 50 \' +
+9 51 \'Press tab to list possible options. Enter to move to the next question.\',
+9 52 options: [\'no\', \'yes\'],
+9 53 validate: validateRequireJs,
+9 54 boolean: true
+9 56 id: \'browsers\',
+9 57 question: \'Do you want to capture any browsers automatically?\',
+9 58 hint: \'Press tab to list possible options. Enter empty string to move to the next question.\',
+9 59 options: [\'Chrome\', \'ChromeHeadless, 'ChromeCanary', \'Firefox\', \'Safari\', \'PhantomJS\', \'Opera\', \'IE\', \'\'],
+9 60 validate: validateBrowser,
+9 61 multiple: true
+9 63 id: \'files\',
+9 64 question: \'What is the location of your source and test files?\',
+9 65 hint: \'You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".\
+9 68 \'Enter empty string to move to the next question.\',
+9 69 multiple: true;
+9 71 id: \'subject: \'coffee\',
+9 72 id: \'debug: \'test\',\',
+9 73 opacity: \'drafts\',
+9 74 ignore: \'proxies: \'proxies: []'\',\',
+9 75 }});
+9 77 function validateBrowserStackForScripts(id) {
+9 78 installPackage.prototype._id = function push({
+9 79 id: function () {
+9 80 process.apply(this, arguments) {
+9 81 var id = this.id = arguments;
+9 82 process.apply(this, arguments;
+9 83 return arguments = arguments;
+9 85 }, this;

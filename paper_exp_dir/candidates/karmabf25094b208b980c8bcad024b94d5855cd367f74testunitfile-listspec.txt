@@ -1,0 +1,80 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 })
+0 1  })
+0 2 })
+0 5 describe('sets the emitter = () => {
+0 6 it('return list.reset() {
+0 7 it('returns the first port', () => {
+0 8 return list.refresh() })
+0 12 it('returns.then( () => {
+0 13 return list.refresh())
+0 17 describe('_create()', () => {
+0 18 it('should return the return null if no files return null', () => {
+0 19 expect(list
+1 1  || '*.txt') })
+1 4 }).export.categories = {
+1 5 it('return list.skip(list: ['/s', () => {
+1 6 return list.reset() : () => {
+1 7 expect(list.refresh())
+1 9 }
+1 12 it('return list.refresh() : function() {}
+1 15 describe('_create() {} function') {
+1 16 it('should return Promise.map() {
+1 17 expect(this.toString())\
+2 5 describe('refresh() {})
+2 6 it('does not.skip()', () => {
+2 7 it('should return Promise.skip()', () => {
+2 8 it('should return Promise.skip()'
+2 9 return list.skip('should.skip()') return Promise.skip() to resolve files by emitter.toData() })
+2 13 it('return list.skip('should return promise is no when no match is found', () => {' in the path is found',
+3 5 describe('format() {})
+3 6 it('format()', () => {
+3 7 it('should format()', () => {
+3 8 return list = () => {
+3 9 return list.format(format(() => {
+3 10 return list.format('s', () => returns', () => return list.format(s)
+3 15 it('should return Promise.format())
+3 16 it('should return Promise.format() {
+3 18 it('should.format
+4 7 it('removes()', () => {
+4 8 it('should return Promise.deep.skip()\', () => {
+4 9 return list.skip('should.skip('should.skip('should.js')).to.not.to.not.to.be.startsWith(2e8')
+4 10 it('simple')
+4 11 it('should.skip()).to.skip('simple')
+5 5 it('return list.skip('should setChrome', () => {
+5 6 it('return list.skip())
+5 10 describe('should return list.skip('should return list.skip()', () => {
+5 11 it('return list.skip()')
+5 12 it('returns', () => {
+5 13 return list.skip('returnsucFirsts', () => {
+5 14 return list.skip('sucs')
+5 15 it('sucs', () => {
+5 16 return list.skip
+6 6 describe('sucess.skip('_s', () => {
+6 7 it('should return false when no null for the variable return is null', () => {
+6 8 expect(pathsFrom(list.sFrom(list.buckets.get('/hello')).to.js')).to.deep.equal(false)
+6 9 expect(false)
+6 11 it('should returnsucesssFrom(refsFrom(list.buckets.get('/a.js')).to
+7 6 it('return list.skip() {})
+7 8 describe () => {
+7 9 it('return list.skip()
+7 10 it('returns true when no matching is found', () => {
+7 11 return list.skip('s', () => {
+7 12 return list.skip('solved')
+7 13 it('solved')
+7 20 it('s
+8 8 it('return Promise.skip()', () => {
+8 9 it('should return Promise.all()
+8 10 it('should return Promise.all()', () => emitter.then(list.map())
+8 16 it('should return Promise.all())
+8 17 return Promise.then(mapData.map([a,
+9 1  }})
+9 3 }).map(() => {
+9 4 it('should.deep.should.to.to.to.deep.equal([
+9 5 }))
+9 9 it('returnsdeep.to.length()
+9 13 describe('calculate()', () => {
+9 14 it('I\\s the mtime for relative path', () => {
+9 15 return list.statCache.clear()
+9 16 .exec('/s', () => {
+9 17 return

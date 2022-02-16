@@ -1,0 +1,21 @@
+Min editdistance: 14.00
+Closest candidate: 0 3 external_link({
+0 1 describe('external_link', function(){
+0 2 it('internal link', function(){
+0 3 external_link({
+0 4 content: '<a href="foo.html">foo</a>'"
+
+1 4 content: '<a href="foo.html">foo</a>'
+1 5 }, function(err, data){
+1 6 should.not.exist(err);
+1 7 data.content.should.eql(content);
+1 8 });
+1 10 it('external link but already has target="_blank" attribute', function(){
+1 12 content: '<a href="http://zespia.tw">Zespia</a>'
+1 15 data.content.should.eql('<a href="http://zespia.tw" target="_blank">Zespia</a>');
+1 18 });'
+
+3 18 });"
+
+7 2 var external_linkFilter = require('../../../lib/plugins/filter/external_link');
+7 4 external_linkFilter.call({

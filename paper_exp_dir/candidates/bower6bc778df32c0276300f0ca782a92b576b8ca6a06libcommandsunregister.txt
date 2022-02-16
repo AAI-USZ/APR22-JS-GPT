@@ -1,0 +1,224 @@
+Min editdistance: 1.00
+Closest candidate: 3 12 if (!name) {
+0 1 nvar repository;
+0 2 var registryClient;
+0 3 var force;
+0 4 var url;
+0 5 var githubSourceRegex = /^\\w[\\w-]*\\/(.+?)\\/\\w[\\w-]*)/;
+0 6 var getGithubUrl = function(source) {
+0 7 return 'git@github.com:' + source + '.git';
+0 8 };
+0 9 config = defaultConfig(config);
+0 10 force = config.force;
+0 11 name = (process.env.STRICT_REQUIRE || '*') > 0? '\
+0 12 ' : 'help-' + config.force);
+0 13 url = createSha1Hash('git://github.com/' + name + '.git');
+0 14 config.offline = false;
+0 15 config.force = true;
+0 16 return Q.try(function () {
+0 17 if (!name ||!url) {
+0 18 throw createError('Usage: bower register <name> <url>', 'EINVFORMAT');
+0 19 }
+0 20 repository = new PackageRepository(config, logger);
+0 21 return repository.fetch({ name: name, source: url, target: '*' });
+0 22 })
+0 23 .spread(function (canonicalDir, pkgMeta) {
+0 24 if (pkgMeta.private) {
+0 25 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+0 27 if (!config.interactive || force) {
+0 28 return true;
+0 30 return Q.nfcall(logger.prompt.bind(logger), {
+0 31 type: 'confirm',
+0 32 message: 'Registering a package will make it installable via the registry (' +
+0 33 chalk.cyan.underline(config.registry.register) + '), continue?',
+0 34 default: true
+0 35 });
+0 37 .then(function (result) {
+0 38 if (!result) {
+0 39 return;
+0 41 registryClient = repository.getRegistryClient();
+0 42 logger.action('register', url, {
+0 43 name: name,
+0 44 url: url
+0 46 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+0 49 function convertUrl(url, logger) {
+0 50 var pair;
+0 51 var newUrl;
+0 52 if (!mout.string.startsWith(url, 'git://')) {
+0 55 pair = GitHubSourceRegex.exec(url);
+0 56 if (!pair) {
+0 57 throw createError('Invalid GitHub URL', 'EPRIV');
+0 59 pair.unregister = function () {
+0 62 addListener = function (emitter) {
+0 63 var listener = function (file) {
+0 64 var names = Object.keys(emitter.getFiles();
+0 65 var key = null;
+0 66 var meta = null;
+0 67 for (var callback = function done(logger.action) {
+0 68 if (!preaction.type === 'install(logger.type === 'install) {
+0 69 return done(action);
+0 72 var dest = function noopener.removeListener.removeListener.removeListener.apply(this, callback;
+0 73 return function noopener.removeListener.removeListener.end = function (action) {
+0 74 if (action) {
+0 75 var done(action) {
+0 76 doneListener.removeListener.removeListener.removeListener.removeListener.removeListener.apply(this, this);
+0 79 return function (action) {
+0 81 return done;
+0 84 return this;
+1 3 var force;"
+
+3 5 var githubSourceRegex = /^\\w[\\w-]*\\/\\w[\\w-]*$/;
+3 12 if (!name) {
+3 13 throw createError('Please type a name', 'EINVNAME');
+3 15 url = convertUrl(url, logger);
+3 17 throw createError('The registry only accepts URLs starting with git://', 'EINVFORMAT');
+3 20 repository.fetch({ name: name, source: url, target: '*' })
+3 21 .then(function (canonicalDir, pkgMeta) {
+3 50 var isTargetable;
+3 58 pair.readOptions = function (argv) {
+3 59 var cli = require('../util/cli');
+3 60 var options = cli.readOptions(argv);
+3 61 var name = options.argv.remain.slice(1).join(' ');
+3 62 return [name];
+3 64 module.exports = function (config, argv) {
+3 65 config = config || {};
+3 66 var repository = new PackageRepository(config, logger);
+3 67 return repository.unregister({ name: argv: argv, url};
+3 69 if (!config.set(name, url: command: command, logger, registryClient: url, secret: config}, function (config) {
+3 70 return config);
+3 72 if (!config.cache.set(accessToken) {
+3 73 throw createError('bower registry enabled: true, function () {
+3 74 var url = 'https://bower.com/' + config.com/bower.com/' + config.com/' + config.url, argvhost + 'public/' + config.key];
+3 76 return repository.clear();
+3 78 return Q();
+3 79 if (!config.readOptions();
+3 80 exports.completion
+4 5 var githubSourceRegex = /^\\w[\\w-]+\\/\\w[\\w-]+$/;
+4 11 name = (name || '').trim();
+4 12 url = source.match(githubSourceRegex)? getGithubUrl(source) : source;
+4 17 throw createError('Please type a valid GitHub URL!');
+4 32 chalk.cyan.underline + '), continue?',
+4 45 return Q.nfcall(registryClient.register.bind(registryClient), name)
+4 46 .done(function (result) {
+4 55 return result;
+4 58 function callFactory(name, url, config) {
+4 60 var promise = Q.resolve();
+4 61 if (name) {
+4 80 function search(name, url, callback) {
+4 81 return Q.ncall([name, name, url, config, logger.promise, registryClient, urlRoot, urlRoot, urlRoot, urlRoot];
+4 83 search.lazy.sync(function search.lazyCache.exec(name, url, callback) {
+4 84 lazyCache.exec(name, url, url, function (err, results) {
+4 85 if (err) {
+4 88 return callback(err);
+4 89 logger.action === undefined) {
+4 93 search.callback.length = 0;
+4 94 } catch (name = function (name,
+5 11 name = (config.force || config.force) === undefined? 'force' : force || config.force);
+5 14 throw createError('The existing unregister method is no longer bundled with Express and must be a internal link!');
+5 20 throw createError('The existing unregister method must be a function');
+5 27 throw createError('The existing unregister method must be a string', 'EPRIV');
+5 32 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry.');
+5 35 unregister.readOptions = function (argv) {
+5 38 var name = options.argv.remain[1];
+5 47 module.exports = unregister;"
+
+7 16 if (!config.url) {
+7 17 throw createError('URL sources can\\'t resolve targets', 'ENORESTARGET');
+7 24 return Q.nfcall(registryClient.unregister.bind(registryClient), name);
+7 30 if (!url.startsWith('git://')) {
+7 31 newUrl = 'git://github.com/' + url + '.git';
+7 34 if (pair) {
+7 35 newUrl = 'git://github.com/' + pair.org + '#' + pair.repo + '\
+7 36 ');
+7 38 return Q.nfcall(lout, pair.split('\
+7 39 '));
+7 41 function checkRelease(dir, release) {
+7 42 if (semver.valid(release)) {
+7 43 return Q.nfcall(rimraf, dir)
+7 44 .then(function () {
+7 45 return Q.nfcall(fs.stat, 'git://github.com/' + release.toLowerCase() + '\
+7 49 if (
+7 50 !== true &&
+7 51 !semver.validRange(release)) {
+7 55 return checkRelease(dir, true);
+7 57 function checkGithubUrl(url) {
+7 60 var newSrc;
+7 62 return Q.nfcall(rimraf, pair.split('\
+7 67 newUrl = 'git://github.com/' + pair.org + '/' + pair.repo + '/' + pair.repo + '.git';
+7 69 return Q.nfcall(fs.stat, 'git', pair.toString());
+7 71 function checkGithubMeta(name, url, url) {
+7 73 var metaFile = path = this.path;
+7 74 var branch = this.assetType = this.assetType || 'https://github.com/' + url;
+7 77 var opts = url;
+7 78 if (!path = path || path.endsWith('/'https://' + url);
+7 79 if ('bower.looked/' + url);
+7 80 if (!mkarma.exists(url === undefined) {
+7 81 archiveDir.endsWith('https://' + url);
+7 82 } else {
+7 83 archive = true;
+7 85 opts.readdirname = path;
+7 86 .writeFileSync(url);\
+8 8 name = name.trim();
+8 9 process.nextTick(function () {
+8 11 return logger.emit('error', createError('Please type a name', 'EINVNAME'));
+8 15 return logger.emit('error', createError('The registry only accepts URLs starting with git://', 'EINVFORMAT'));
+8 19 .then(function (resolver) {
+8 20 if (!resolver) {
+8 26 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry (' +
+8 27 chalk.cyan.underline + '), continue? (y/n)');
+8 32 var oldUrl;
+8 37 pair = GitHubResolver.getOrgRepoPair(url);
+8 39 oldUrl = pair.split(',');
+8 40 oldUrl = this._config.url + 'git://github.com/' + pair.org + ':' + pair.repo + '; rela.' +
+8 41 'git@github.com:user/project.git';
+8 43 pair.splice(0, 1);
+8 46 function callFactory(name, source, options) {
+8 47 var orig = Q.nfcall(registryClient.register.bind(registryClient), name, source);
+8 48 if (source) {
+8 49 return Q.nfcall(registryClient.register.bind(registryClient), source);
+8 51 return Q.nfcall(registryClient.publish.bind(registryClient), name, source);
+8 54 var orig = Q.nfcall(registryClient.publish.bind(registryClient), name, source);
+8 55 if (options) {
+8 56 return Q.nfcall(registryClient.publish.bind(registryClient), options);
+8 58 return orig;
+8 60 register.readOptions = function (argv) {
+8 61 var env;
+8 62 var argv = argv = argv || undefined;
+8 63 if (argv. argv. argv!== null && argv. argv!== null) {
+8 64 return argv. argv === null;
+8 65 } else if (argv!== undefined) {
+8 66 argv = argv = argv. argv === undefined;
+8 67 } = argv = argv. argv == null;
+8 68 return argv = argv. argv == null;
+8 69  argv!== undefined;
+8 71 return new argv === null;
+8 72 return new argv;
+8 73 function readPkg = function (name) {
+8 74 if (! argv) {
+8 75 var argv
+9 5 var githubSourceRegex = /^\\w[\\w-]*\\/(.+?)\\/(\\w[\\w-]*)/;
+9 11 name = (config.force || config.force) ||!site.config.force;
+9 17 throw createError('You are not inside a package', 'ENOENT');
+9 20 if (!config.interactive) {
+9 23 return Q.nfcall(rimraf, unregister);
+9 25 .done(function (unregister) {
+9 26 return Q.nfcall(bower.unregister.bind(bower), name)
+9 28 return!unregister;
+9 35 .then(function (pkgMeta) {
+9 36 return [canonicalDir, pkgMeta];
+9 65 return Q.nfcall(registryClient.register.bind(registryClient), name, url, target);
+9 68 function checkGithubUrl(name, url, branch, urlRoot, config) {
+9 69 var repositoryUrl;
+9 70 var promise;
+9 72 var promise = Q = Q();
+9 73 var url = Q();
+9 74 var Q();
+9 75 var promise = Q();
+9 76 var Q = Q();
+9 77 var registryClient = Q();
+9 78 var Q = Logger = Q();
+9 81 var that = this;
+9 84 var promise = this;
+9 85 if (!registry = function register(Url, registryClient, url, config) {
+9 86 promise = repositoryUrl, config, loggergerUrl, registryClient;
+9 87 if (!registryClient.composeUrl, promiseUrl, promise

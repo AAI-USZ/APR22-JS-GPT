@@ -1,0 +1,207 @@
+Min editdistance: 1.00
+Closest candidate: 5 1 code_dir: 'downloads/code',
+0 1 recommended: false,
+0 2 filename_case: 0,
+0 3 render_drafts: false,
+0 4 post_asset_folder: false,
+0 5 relative_link: false,
+0 7 render_relative_link: false,
+0 8 path: '',
+0 9 ctime: '',
+0 10 mtime: '',
+0 11 logger: false,
+0 12 port: 4000,
+0 13 logger_format: 'dev',
+0 14 date_format: 'MMM D YYYY',
+0 15 time_format: 'H:mm:ss',
+0 16 per_page: 10,
+0 17 pagination_dir: 'page',
+0 18 disqus_shortname: '',
+0 19 theme: 'light',
+0 20 exclude_generator: [],
+0 21 deploy: {}
+0 22 };
+0 23 var loadScripts = function(path, crtical_err, item_err, success){
+0 24 fs.exists(path, function(exist){
+0 25 if (!exist) return success();
+0 26 fs.readdir(path, function(err, files){
+0 27 if (err) return crtical_err(err);
+0 28 files.forEach(function(item){
+0 29 if (item.substring(0, 1)!== '.'){
+0 30 try {
+0 31 require(path + item);
+0 32 } catch (err){
+0 33 item_err(err, item);
+0 34 }
+0 36 });
+0 37 success();
+0 40 module.exports = function(args){
+0 41 var safe =!!args.safe,
+0 42 debug =!!args.debug,
+0 43 dirname = __dirname,
+0 44 baseDir = process.cwd() + '/',
+0 45 version = require('../package.json').version,
+0 46 log = new Log({hide: debug? 9 : 7}),
+0 47 config = {};
+0 48 var hexo = global.hexo = {
+0 49 get base_dir(){return baseDir},
+0 50 get public_dir(){return baseDir + 'public/'},
+0 51 get source_dir(){return baseDir +'source/'},
+0 52 get theme_dir(){return baseDir + 'themes/' + config.theme + '/'},
+0 53 get plugin_dir(){return baseDir + 'node_modules/'},
+0 54 get script_dir(){return baseDir +'scripts/'},
+0 55 get scaffold_dir(){return baseDir +'scaffolds/'},
+0 56 get core_dir(){return path.dir(){return path.dirname + '/' + '/'},
+0 57 get lib_dir(){return path.dirname + '/'}}}
+0 59 hexo.extend = require('console');
+0 60 require('./require('./plugins/scripts');
+0 61 require('./renderer');
+0 62 require('./processor');
+0 64 require('./helper');
+0 65 require('./generator');
+0 66 require('./tag');"
+
+1 1 new_post_name: ':title.md',
+1 2 default_layout: 'post',
+1 3 filename: '',
+1 4 max_open_file: 100,
+1 6 highlight: {
+1 7 enable: true,
+1 8 line_number: true,
+1 9 tab_replace: '',
+1 10 },
+1 11 default_category: 'uncategorized',
+1 12 category_map: {},
+1 13 tag_map: {},
+1 14 date_format: 'YYYY-MM-DD',
+1 15 time_format: 'HH:mm:ss',
+1 56 get core_dir(){return path.dir(){return path.dirname() + '/'core/' + 'lib/'},
+1 57 get lib_dir}},
+1 58 get lib_dir(){return path }}},
+1 59 get version }],
+1 60 get scaffold_dir(){return path(){return path.dirname }}return path}return config},
+1 61 get site_dir(){return config}return new Scaffold_dir(){return new Source(config)},
+1 62 get helper}
+1 64 hexo.extend = require = require('../plugins/extend');
+1 65 require('./plugins/renderer');
+1 72 require('./tag');
+1 73 require('./processor
+2 2 filename: '',"
+
+3 3 url_for: ':category',
+3 11 render_original_content: '',
+3 12 model: db.model('Asset'),
+3 13 urlRoot: '/',
+3 14 root: '/',
+3 15 permalink: ':category/:title',
+3 16 titlecase: false,
+3 17 meta_key: {
+3 18 return _.extend(defaults, {}, function(err, val){
+3 19 return val === undefined?
+3 20 this.config.title :
+3 21 this.config.title = val;
+3 24 module.exports = function(args, callback){
+3 40 get core_dir(){return path.dirname(dirname) + '/'},
+3 41 get lib_dir(){return dirname + '/'},
+3 42 get version(){return version},
+3 43 get env(){return process.env},
+3 44 get safe(){return safe},
+3 45 get debug(){return debug},
+3 46 get config(){return config},
+3 47 get extend(){return extend},
+3 48 get render(){return render},
+3 49 get util(){return util},
+3 50 get render()}
+3 51 };"
+
+4 4 message: 'Site updated:'+ new Date(),"
+
+5 1 code_dir: 'downloads/code',
+5 2 permalink_defaults: {},
+5 3 source_dir:'source',
+5 4 public_dir: 'public',
+5 7 auto_spacing: false,
+5 9 external_link: {
+5 11 field:'site',
+5 12 exclude: ''
+5 18 future: true,
+5 20 enable: false,
+5 33 date_format: 'YYYY',
+5 35 updated_option:'mtime',
+5 36 var log = module.exports = function(args, callback){
+5 37 var watch = args.w || args.watch,
+5 38 deploy = args.d || args.deploy,
+5 39 start = new Date(),
+5 40 cache = {};
+5 41 if (watch){
+5 42 var schema = this.app.get('config');
+5 43 if (base_dir){
+5 44 var uri = new uri.parse(config.url).pathname,
+5 45 target = args.l || this.config.url;
+5 46 if (path.extname(uri.path)){
+5 47 target += path.extname(uri.path);
+5 48 } else {
+5 49 target += path.substring(0, 1);
+5 52 if (this.app.settings.post_asset_folder){
+5 53 var self = this;
+5 54 this.log.info('Creating temp dir at'+ path.dirname + ':' + self.app.settings.post_asset_folder + '/' + self.app.static.root);
+5 55 fs.mkdirSync(this.path.dirname);
+5 56 fs.writeFileSync(this.path, this.asset_folder + '/' + this.path);
+5 59 this.exclude = function(err, files){
+5 60 if (err){"
+
+6 3 exclude: [],
+6 6 filter: filter,
+6 13 auto_detect: false,
+6 28 deploy: {},
+6 29 ignore: [],
+6 30 meta_generator: []
+6 32 var loadScripts = function(path, crc, args, callback){
+6 33 var baseDir = cwd,
+6 34 configPath = path.join(baseDir, '_config.yml');
+6 35 var module = {
+6 36 VERSION: 1,
+6 37 commands: [
+6 38 'version',
+6 39 'help',
+6 40 'Display help for more information on how to update your site.',
+6 41 '',
+6 42 'or you can check the online docs:'+ 'http://zespia.tw/hexo/'.underline
+6 43 ];
+6 44 console.log(modules);
+6 45 return module;
+6 47 var Post = exports.Post = function Post(title, body){
+6 48 this.title = title;
+6 49 this.body = body;
+6 50 this.createdAt = new Date();
+6 52 Post.prototype.create = function(data, replace){
+6 53 if (!callback){
+6 54 if (typeof replace === 'function'){
+6 55 callback = replace;
+6 56 replace = false;
+6 58 callback = function(){};
+6 61 var config = this.config;
+6 62 return newPost(data.substring(0, 1), config);
+6 64 Post.prototype.create = function(data, replace){"
+
+7 5 _content: '[^\\/]+\\w+\\/(\\w+)\\?/g,"
+
+8 23 tab_replace: ''
+8 63 var hexo = global.hexo = new Hexo(base_dir,
+8 64 config,
+8 65 logger = config, version);
+8 66 var version = require(function(prefix, obj){
+8 67 return baseDir = prefix + '_dir() + '_dir' + '_log' : baseDir + 'db.log' + 'public/' + prefix + config.exclude' : baseDir + 'public/' + config.exclude' + config.logger + 'processing' : 'processing' + obj.version' + 'processing' + obj.version' + 'processing' + obj.version;
+8 68 processing = obj.processing;
+8 69 processing = obj.processing > 1? 3 : 3;
+8 70 })"
+
+9 8 helper: false,
+9 9 object_type: 'object',
+9 14 separator: '.'
+9 21 updated_format: 'YY-MM-DD',
+9 34 db = new Database(baseDir + 'db.json'),
+9 54 get util(){return render(){return render},
+9 55 get, new extend(){return render }},
+9 56 get run(){return render }},
+9 57 get run(){return run(){ return run},

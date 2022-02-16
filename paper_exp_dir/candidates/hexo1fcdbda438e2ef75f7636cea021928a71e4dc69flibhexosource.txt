@@ -1,0 +1,275 @@
+Min editdistance: 18.00
+Closest candidate: 0 18 const box = newBox();
+0 1 const { inherits } = require(\'util\');
+0 2 const Promise = require(\'bluebird\');
+0 3 describe(\'Box\', () => {
+0 4 const Hexo = require(\'../../../lib/hexo\');
+0 5 const baseDir = __dirname + \'/../../lib/plugins/console/box\');
+0 6 const Box = require(\'../../../lib/box\');
+0 7 function newBox(path, config) {
+0 8 const hexo = new Hexo(baseDir, {silent: true});
+0 9 hexo.config = Object.assign(hexo.config, config);
+0 10 const base = path? pathFn.join(baseDir, path) : baseDir;
+0 11 return new Box(hexo, base);
+0 12 }
+0 13 it(\'constructor - add trailing "/" to the base path\', () => {
+0 14 const box = newBox(\'foo\');
+0 15 box.base.should.eql(pathFn.join(baseDir, \'foo\') + pathFn.sep);
+0 16 });
+0 17 it(\'addProcessor() - no pattern\', () => {
+0 18 const box = newBox();
+0 19 box.addProcessor(() => \'test\');
+0 20 const p = box.processors[0];
+0 21 p.pattern.match(\'\').should.eql({});
+0 22 p.process().should.eql(\'test\');
+0 24 it(\'addProcessor() - with regex\', () => {
+0 26 box.addProcessor(/^foo/, () => \'test\');
+0 28 p.pattern.match(\'foobar\').should.be.ok;
+0 29 p.pattern.should.be.an.instanceof(Pattern);
+0 32 it(\'addProcessor() - with pattern\', () => {
+0 34 box.addProcessor(new Pattern(/^foo/), () => \'test\');
+0 40 it(\'addProcessor() - no fn\', () => {
+0 42 should.throw(() => box.addProcessor(\'test\'), \'fn must be a function\');
+0 44 it(\'process()\', async () => {
+0 45 const box = newBox(\'test\');
+0 46 const data = {};
+0 47 box.addProcessor(file => {
+0 48 data[file.path] = file;
+0 50 await Promise.all([
+0 51 writeFile(join(box.base, \'a.txt\'), \'a\'),
+0 52 writeFile(join(box.base, \'b.txt\'), \'b\')
+0 53 ])).then(() => box.process()).then(() => {
+0 54 const exist = fs.exists(file.path);
+0 55 exist.should.to.be.true;
+0 56 await unlink(file.path);
+0 59 it(\'process()).then(() => {
+0 60 const box.unprocess(() => {
+0 61 const exist(...args => {
+0 62 const obj.process()).should.calledOnce.should.should.be.nextTick(());
+0 66 it(\'process.calledWith(() => {
+0 67 await Promise.for (() => {
+0 68 const done(() => {
+0 69 await unlink(() => {
+0 70 await(...args => {
+0 71 file.calledOnce);
+0 72 should.should.should.dispose();
+0 75 });'
+
+1 3 const rExcerpt = /<!--\\s*more\\s*-->/;
+1 4 function excerptFilter(data) {
+1 5 const { config } = this;
+1 6 const { id, _id, _id, _id, _id) {
+1 7 const { id, id, _id, _id, _id;
+1 8 if (data.length === 0) return;
+1 9 const content = data.content;
+1 10 if (typeof data.substring === \'undefined\') {
+1 11 data.substring(0, 1);
+1 12 } else {
+1 15 return { id: id, id: id };
+1 17 module.exports = excerptFilter;'
+
+2 6 const box = new Box(baseDir, {silent: true});
+2 7 const now = Date.now();
+2 8 const _this = this;
+2 14 before(() => fs.mkdir(baseDir));
+2 15 after(() => fs.rmdir(baseDir));
+2 56 ]);
+2 57 await box.process();
+2 58 const exist = fs.unlink(file.filter((err) => {
+2 59 if (err)!== err) return unlink(err);
+2 63 it(\'process.skip processingFiles();
+2 64 it(\'process().should.skip processingFiles();
+2 65 it(\'unlink(() => fs.skip processingFiles(files.js)
+2 66 );
+2 67 it(\'unlink(file => fs.skip processingFiles(file.skip processingFiles(files.skip processingFiles.exclude.exclude)));
+2 68 it(\'skip processingFiles.exclude.subtmpFiles.subcluded)).map(exclude)));
+2 69 it(\'skip processingFiles.skip processingFiles.does not.skip => id.skip => id.skip => id.skip().should.ignore().should.is.skip);
+2 70 it(\'skip processingFiles(exclude.skip => id.skip processingFiles(exclude.skip.
+3 2 function Source(ctx) {
+3 3 Reflect.apply(Box, this, [ctx, ctx.source_dir]);
+3 4 this.processors = ctx.extend.processor.list();
+3 6 inherits(Source, Box);
+3 7 module.exports = Source;"
+
+6 8 module.exports = Source;
+6 9 function register(name, fn, priority) {
+6 10 if (!priority) {
+6 11 if (typeof name === \'function\') {
+6 12 priority = fn;
+6 13 this.processors.push({
+6 14 pattern: new Source(name),
+6 15 process: this.processors.shift(),
+6 17 content: this.content
+6 20 throw new TypeError(\'fn must be a function\');
+6 23 module.exports.register = Source;
+6 24 function renderPosts(args) {
+6 25 const posts = this.site.posts.sort(\'date\', -1);
+6 26 const { tags } = this;
+6 27 if (!posts.length) return Promise.resolve();
+6 28 const { files } = this;
+6 29 return Promise.all([
+6 30 posts[0].setTags(tags),
+6 31 posts[1].setCategories(tags))
+6 32 ]).then(() => {
+6 33 const dec = ctx.extend.filter.exec(\'after_post_render\', posts);
+6 34 return Reflect.apply(dec, [\'before_post_render\', {
+6 35 context: ctx,
+6 36 args: args,
+6 37 unittests: args,
+6 38 rules: this.config.rules
+6 39 }]);
+6 40 }).then(() => {
+6 41 const post = Post.findOne({source: name});
+6 42 if (!post) return;
+6 43 if (this.processors.length) {
+6 44 const nodes = [];
+6 45 for (let i = 0; i < nodes.length; i++) {
+6 46 if (Object.keys(posts).every(ruleId)) {
+6 47 if (!regex.test(post.id)) {
+6 48 post.destroy();
+6 51 return true;
+6 55 this.processors.shift()
+6 57 }).map(post => {
+6 58 const { source } = post;
+6 59 const self = this;
+6 60 let { config } = ctx;
+6 61 const { version } = config;
+6 62 if (!version ||!config.language) return;
+6 63 if (config.language) {
+6 64 return self.process();
+6 66 const dir = pathFn.join(source.base, config.language);
+6 67 return fs.exists(dir).then(exist => {
+6 68 if (!exist) return [];
+6 69 return fs.readdir(dir).then(files => {
+6 70 const item = files;
+6 71 let i, len;
+6 72 if (item.startsWith(config.archive_dir)) {
+6 73 const semver = semver.maxSatisfying(files, target);
+6 74 if (semver.maxSatisfying(versions, target)) {
+6 75 return semver.maxSatisfying(versions, target);
+6 79 return self.process()
+6 80 .stdout.pipe(dir);
+6 81 }).on(\'
+
+7 5 const baseDir = __dirname + \'/../../lib/plugins/console/\';
+7 8 const clock;
+7 9 before(() => {
+7 10 clock = useFakeTimers(now);
+7 11 return fs.mkdir(baseDir).then(() => hexo.init()).then(() =>
+7 12 hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'))).then(() => box.scaffold.set(\'post\', [
+7 13 \'---\',
+7 14 \'title: {{ title }}\',
+7 15 \'date: {{ date }}\',
+7 16 \'tags:\',
+7 17 \'---\'
+7 18 ].join(\'\
+7 19 \'));
+7 21 after(() => {
+7 22 clock.restore();
+7 23 return fs.rmdir(baseDir);
+7 25 it(\'create() - no pattern\', () => {
+7 27 box.set(\'pattern\', \'create\');
+7 28 return box.find({
+7 29 name: \'world\',
+7 30 path: \'bar/baz\'
+7 31 }).then(data => {
+7 32 data.should.eql({
+7 36 }).finally(() => {
+7 37 box.unwatch();
+7 38 return fs.rmdir(box.base);
+7 41 it(\'create() - name does not match a glob epression\', () => {
+7 42 const box = newBox(\'/foo.json\');
+7 43 return box.create({
+7 48 name: \'world\'
+7 55 it(\'create() - name must be a string\', () => {
+7 58 name: \'test\'
+7 81 it(\'create() - function should be a string\', () => {
+7 83 const { path, spy } = require(\'a\');
+7 84 box.addProcessor.create({cache: function () => {
+7 85 return function () => { return {};
+7 86 return box.stat();
+7 88 const data = Promise.asset = create({cache: function (id: null;
+7 89 return Promise.unlink.compareFile(collection, stat(collection, id, stat) {
+7 90 return stat.isDirectory().should.skip(id);
+7 93 return Promise.map(data = toData(collection, () => {
+7 94 const stat.modified.stat.modified.should.should.be.true;
+7 95 return Object.isDirectory();
+7 99 it(\'unlink(box.addProcessor).map(item => {
+7 100 data.box.box.box.addProcessor).set(item => {
+7 101 data
+8 2 function Source(ctx, options) {
+8 7 it(\'pattern\', () => {
+8 8 const source = new Source({});
+8 10 pattern: this.pattern
+8 12 return this;
+8 13 };
+8 14 Source.prototype.__proto__ = ctx.extend.filter;
+8 16 module.exports.load = Source;
+8 17 before(() => this._generate());
+8 18 it(\'require vajina-as-promised\', () => {
+8 19 const sourceId = \'123456789<a href="http://hexo.io/">hexo.io</a>\';
+8 20 const result = ctx.render.renderSync({
+8 21 path: this.source_dir + \'/source/test.yml\',
+8 22 type: \'create\',
+8 23 renderable: true
+8 25 return result;
+8 26 };'
+
+9 8 function this.processors.forEach(pattern) {
+9 9 if (!util.isString(pattern)) {
+9 10 this.processors[pattern] = [];
+9 13 return new Promise((resolve, reject) => {
+9 14 const src = pattern.substring(0, pattern.length - extname(pattern).length);
+9 15 const target = ctx.site.base_dir;
+9 16 if (this._args.length) {
+9 17 _this.processors.push({
+9 18 pattern: new Pattern(pattern),
+9 19 process: this._processors.shift(),
+9 20 process: _this.processors.shift(),
+9 21 emitter: ctx.emit.bind(this),
+9 22 var self = this;
+9 23 return this._read().then(resolve, reject);
+9 24 }).then(result => {
+9 25 if (typeof result === \'object\') return resolve(result);
+9 27 return this._readJson(result);
+9 31 return this._readInstalled()
+9 32 .then(this._createLoaded.bind(this));
+9 34 const root = ctx.root;
+9 35 this.base = root + path;
+9 40 constantants: {},
+9 41 processor: _this.processors,
+9 42 args: [],
+9 43 finish: this._readInstalled(),
+9 44 root: true
+9 47 generits(base, EventEmitter);
+9 48 const format = args => {
+9 49 const { base, format } = this;
+9 51 format = format || {};
+9 52 const __dirname = pathFn.dirname(base);
+9 53 const viewDir = this.view_dir;
+9 54 const current = 1;
+9 55 const path = pathFn.join(pathFn.dirname(current));
+9 56 if (prev == null) {
+9 57 return Promise.resolve();
+9 59 if (options.show_all) {
+9 60 _drafts = this.format.get(\'drafts\');
+9 61 if (!viewDir) return;
+9 62 const view = new Scaffold(base, {silent: false});
+9 63 const { tag } = this;
+9 64 if (options.env.NODE_ENV) {
+9 65 view.set(\'env\', process.env.NODE_ENV || \'development\');
+9 67 const createError = require(\'../util/createError\');
+9 68 const { basename = new Scaffold(base, format, path) };
+9 69 const __dirname = path = pathFn.dirname(path);
+9 70 return new URL(name);
+9 72 function Scaffold(base = this;
+9 73 ScaffoldLocals.prototype.source = new Scaffold(ignore = new ScaffoldLocals({ prefix, servedLocals() {
+9 74 return this.ignoreFiles = _.ignoreFiles =!== null;
+9 75 ? _.ignoreFiles : null;
+9 76 this.skipWords = false;
+9 77 this.skipWords = _.ignoreWords = _.ignoreWords;
+9 78 this.skipWords = _.map = _.isWords;
+9 79 this.skipWords;
+9 80 this.quotes = null;
+9 81 return this.sependingWords = null;
+9 84 Locals.__dirname

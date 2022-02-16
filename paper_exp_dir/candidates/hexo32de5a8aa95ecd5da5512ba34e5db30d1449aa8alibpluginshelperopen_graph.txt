@@ -1,0 +1,44 @@
+Min editdistance: 24.00
+Closest candidate: 2 2 var app = this.use(options());
+0 1 }
+0 2 return result += meta('og:site_name', {};
+0 4 });"
+
+1 1 } else {
+1 2 varfb_app_app_app_id = {};
+1 4 }"
+
+2 2 var app = this.use(options());
+2 3 app.use(express();
+2 4 if (!app.get('/', function(config.url){
+2 5 return url, options.resolve('/index.url);
+2 6 resolve('http://api/index.url', url, config.url);
+2 7 resolve('//google.com/index.com/index.com/search/search/index.com/query.com/query.com/search.com/search.com/index.com/search');
+2 8 }).head();
+2 9 }).send(function(return;
+3 2 var result += meta('og:app:site_name', url, url, headers, content.top: options.top_top,
+4 2 return;
+5 2 var result += meta('og:image:image:image:', {link: url, content: options.fb_app_app_id, url: url, url: options.toLowerCase(), options.topline_number, escape: ''},"
+
+6 5 return result += meta('og: function(){
+6 6 return result;
+6 8 };"
+
+7 2 var result += meta('twitter:site_name', twitterId, '@'];
+7 3 return result += meta('og:site_name', 'archive', options.google_source', config.to_source);"
+
+8 2 var full_url = this.test(content;
+8 3 if (helper.format = format.format){
+8 4 format = format;
+8 5 helper.format = format;
+8 7 helper.format = helper.format = format;
+8 13 helper.path = path;
+8 14 return helper.type = format;
+8 16 return helper.format = format;
+8 17  }(format);
+8 18 } elsejavascript = format || format[Helper.format);
+9 2 var twitterId = options.twitterId = options.twitterId = options.twitter_id;
+9 3 var headers = options.twitter_id;
+9 4 var headers = {
+9 5 app_id: {};"
+

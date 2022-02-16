@@ -1,0 +1,520 @@
+'use strict';
+
+const { join } = require('path');
+const { mkdirs, rmdir, unlink, writeFile } = require('hexo-fs');
+const Promise = require('bluebird');
+const defaultConfig = require('../../../lib/hexo/default_config');
+
+const dateFormat = 'YYYY-MM-DD HH:mm:ss';
+
+describe('post', () => {
+const Hexo = require('../../../lib/hexo');
+const baseDir = join(__dirname, 'post_test');
+const hexo = new Hexo(baseDir);
+const post = require('../../../lib/plugins/processor/post')(hexo);
+const process = Promise.method(post.process.bind(hexo));
+const { pattern } = post;
+const { source } = hexo;
+const { File } = source;
+const PostAsset = hexo.model('PostAsset');
+const Post = hexo.model('Post');
+
+function newFile(options) {
+const { path } = options;
+
+options.path = (options.published ? '_posts' : '_drafts') + '/' + path;
+options.source = join(source.base, options.path);
+
+options.params = {
+published: options.published,
+path,
+renderable: options.renderable
+};
+
+return new File(options);
+}
+
+before(async () => {
+await mkdirs(baseDir);
+hexo.init();
+});
+
+beforeEach(() => { hexo.config = Object.assign({}, defaultConfig); });
+
+after(() => rmdir(baseDir));
+
+it('pattern', () => {
+
+pattern.match('_posts/foo.html').should.eql({
+published: true,
+path: 'foo.html',
+renderable: true
+});
+
+pattern.match('_drafts/bar.html').should.eql({
+published: false,
+path: 'bar.html',
+renderable: true
+});
+
+
+pattern.match('_posts/foo.txt').should.eql({
+published: true,
+path: 'foo.txt',
+renderable: false
+});
+
+pattern.match('_drafts/bar.txt').should.eql({
+published: false,
+path: 'bar.txt',
+renderable: false
+});
+
+
+should.not.exist(pattern.match('_posts/foo.html~'));
+should.not.exist(pattern.match('_posts/foo.html%'));
+
+
+should.not.exist(pattern.match('_posts/_foo.html'));
+should.not.exist(pattern.match('_posts/foo/_bar.html'));
+should.not.exist(pattern.match('_posts/.foo.html'));
+should.not.exist(pattern.match('_posts/foo/.bar.html'));
+
+
+should.not.exist(pattern.match('_foo/bar.html'));
+should.not.exist(pattern.match('baz.html'));
+
+
+hexo.config.skip_render = ['_posts/foo/**'];
+pattern.match('_posts/foo/bar.html').should.have.property('renderable', false);
+hexo.config.skip_render = [];
+});
+
+it('asset - post_asset_folder disabled', async () => {
+hexo.config.post_asset_folder = false;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'create',
+renderable: false
+});
+
+await process(file);
+const id = 'source/' + file.path;
+should.not.exist(PostAsset.findById(id));
+});
+
+it('asset - type: create', async () => {
+hexo.config.post_asset_folder = true;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'create',
+renderable: false
+});
+
+
+const doc = await Post.insert({
+source: '_posts/foo.html',
+slug: 'foo'
+});
+await writeFile(file.source, 'test');
+const postId = doc._id;
+await process(file);
+
+const id = 'source/' + file.path;
+const asset = PostAsset.findById(id);
+
+asset._id.should.eql(id);
+asset.post.should.eql(postId);
+asset.modified.should.be.true;
+asset.renderable.should.be.false;
+
+await Promise.all([
+Post.removeById(postId),
+unlink(file.source)
+]);
+});
+
+it('asset - type: update', async () => {
+hexo.config.post_asset_folder = true;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'update',
+renderable: false
+});
+
+const id = 'source/' + file.path;
+
+const post = await Post.insert({
+source: '_posts/foo.html',
+slug: 'foo'
+});
+await writeFile(file.source, 'test');
+const postId = post._id;
+
+await PostAsset.insert({
+_id: id,
+slug: file.path,
+modified: false,
+post: postId
+});
+await process(file);
+const asset = PostAsset.findById(id);
+asset.modified.should.be.true;
+
+await Promise.all([
+Post.removeById(postId),
+unlink(file.source)
+]);
+});
+
+it('asset - type: skip', async () => {
+hexo.config.post_asset_folder = true;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'skip',
+renderable: false
+});
+
+const id = 'source/' + file.path;
+
+const post = await Post.insert({
+source: '_posts/foo.html',
+slug: 'foo'
+});
+await writeFile(file.source, 'test');
+const postId = post._id;
+
+await PostAsset.insert({
+_id: id,
+slug: file.path,
+modified: false,
+post: postId
+});
+await process(file);
+const asset = PostAsset.findById(id);
+asset.modified.should.be.false;
+
+await Promise.all([
+Post.removeById(postId),
+unlink(file.source)
+]);
+});
+
+it('asset - type: delete', async () => {
+hexo.config.post_asset_folder = true;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'delete',
+renderable: false
+});
+
+const id = 'source/' + file.path;
+
+const post = await Post.insert({
+source: '_posts/foo.html',
+slug: 'foo'
+});
+const postId = post._id;
+
+await PostAsset.insert({
+_id: id,
+slug: file.path,
+modified: false,
+post: postId
+});
+await process(file);
+should.not.exist(PostAsset.findById(id));
+
+Post.removeById(postId);
+});
+
+it('asset - skip if can\'t find a matching post', async () => {
+hexo.config.post_asset_folder = true;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'create',
+renderable: false
+});
+
+const id = 'source/' + file.path;
+
+await writeFile(file.source, 'test');
+await process(file);
+should.not.exist(PostAsset.findById(id));
+
+unlink(file.source);
+});
+
+it('asset - the related post has been deleted', async () => {
+hexo.config.post_asset_folder = true;
+
+const file = newFile({
+path: 'foo/bar.jpg',
+published: true,
+type: 'update',
+renderable: false
+});
+
+const id = 'source/' + file.path;
+
+await Promise.all([
+writeFile(file.source, 'test'),
+PostAsset.insert({
+_id: id,
+slug: file.path
+})
+]);
+await process(file);
+should.not.exist(PostAsset.findById(id));
+
+unlink(file.source);
+});
+
+it('post - type: create', async () => {
+const body = [
+'title: "Hello world"',
+'date: 2006-01-02 15:04:05',
+'updated: 2014-12-13 01:02:03',
+'---',
+'The quick brown fox jumps over the lazy dog'
+].join('\n');
+
+const file = newFile({
+path: 'foo.html',
+published: true,
+type: 'create',
+renderable: true
+});
+
+await writeFile(file.source, body);
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.title.should.eql('Hello world');
+post.date.format(dateFormat).should.eql('2006-01-02 15:04:05');
+post.updated.format(dateFormat).should.eql('2014-12-13 01:02:03');
+post._content.should.eql('The quick brown fox jumps over the lazy dog');
+post.source.should.eql(file.path);
+post.raw.should.eql(body);
+post.slug.should.eql('foo');
+post.published.should.be.true;
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - type: update', async () => {
+const body = [
+'title: "New world"',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'foo.html',
+published: true,
+type: 'update',
+renderable: true
+});
+
+
+const doc = await Post.insert({source: file.path, slug: 'foo'});
+await writeFile(file.source, body);
+const id = doc._id;
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post._id.should.eql(id);
+post.title.should.eql('New world');
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - type: delete', async () => {
+const file = newFile({
+path: 'foo.html',
+published: true,
+type: 'delete',
+renderable: true
+});
+
+await Post.insert({
+source: file.path,
+slug: 'foo'
+});
+await process(file);
+should.not.exist(Post.findOne({ source: file.path }));
+});
+
+it('post - parse file name', async () => {
+const body = [
+'title: "Hello world"',
+'---'
+].join('\n');
+
+const file = newFile({
+path: '2006/01/02/foo.html',
+published: true,
+type: 'create',
+renderable: true
+});
+
+hexo.config.new_post_name = ':year/:month/:day/:title';
+
+await writeFile(file.source, body);
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.slug.should.eql('foo');
+post.date.format('YYYY-MM-DD').should.eql('2006-01-02');
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - extra data in file name', async () => {
+const body = [
+'title: "Hello world"',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'zh/foo.html',
+published: true,
+type: 'create',
+renderable: true
+});
+
+hexo.config.new_post_name = ':lang/:title';
+
+await writeFile(file.source, body);
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.lang.should.eql('zh');
+
+post.remove();
+return unlink(file.source);
+});
+
+it('post - file name does not match to the config', async () => {
+const body = [
+'title: "Hello world"',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'foo.html',
+published: true,
+type: 'create',
+renderable: true
+});
+
+hexo.config.new_post_name = ':year/:month/:day/:title';
+
+await writeFile(file.source, body);
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.slug.should.eql('foo');
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - published', async () => {
+const body = [
+'title: "Hello world"',
+'published: false',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'zh/foo.html',
+published: true,
+type: 'create',
+renderable: true
+});
+
+await writeFile(file.source, body);
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.published.should.be.false;
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - always set published: false for drafts', async () => {
+const body = [
+'title: "Hello world"',
+'published: true',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'foo.html',
+published: false,
+type: 'create',
+renderable: true
+});
+
+await writeFile(file.source, body);
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.published.should.be.false;
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - use the status of the source file if date not set', async () => {
+const body = [
+'title: "Hello world"',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'foo.html',
+published: true,
+type: 'create',
+renderable: true
+});
+
+await writeFile(file.source, body);
+const stats = await file.stat();
+await process(file);
+const post = Post.findOne({source: file.path});
+
+post.date.toDate().setMilliseconds(0).should.eql(stats.birthtime.setMilliseconds(0));
+post.updated.toDate().setMilliseconds(0).should.eql(stats.mtime.setMilliseconds(0));
+
+post.remove();
+unlink(file.source);
+});
+
+it('post - use the date for updated if updated_option = date', async () => {
+const body = [
+'date: 2011-4-5 14:19:19',
+'title: "Hello world"',
+'---'
+].join('\n');
+
+const file = newFile({
+path: 'foo.html',
+published: true,
+type: 'create',

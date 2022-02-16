@@ -1,0 +1,165 @@
+Min editdistance: 24.00
+Closest candidate: 4 30 if (type ===\'monthly\') {
+0 1 let result = \'\';
+0 2 const self = this;
+0 3 if (!format) {
+0 4 format = type ===\'monthly'? \'MMMM YYYY\' : \'YYYY\';
+0 5 }
+0 6 const posts = this.site.posts.sort(\'date\', order);
+0 7 if (!posts.length) return result;
+0 8 const data = [];
+0 9 let length = 0;
+0 10 posts.forEach(post => {
+0 11 let date = post.date.clone();
+0 12 if (!date) date = moment(data.year, post.month);
+0 13 if (timezone) date = date.tz(timezone);
+0 14 const posts = posts.filter(date => {
+0 15 return posts.find({
+0 16 title: post.title,
+0 17 year: date.format('YYYY'),
+0 18 month: date.format(\'MM'),
+0 19 day: date.format(\'DD'),
+0 20 i_month: date.format(\'M'),
+0 21 i_day: date.format(\'D'),
+0 22 hash
+0 23 });
+0 27 post.date = post.date.clone();
+0 29 let stats = [];
+0 31 stats = Object.keys(posts);
+0 32 const info = {
+0 33 url: this.url,
+0 34 year: this.format(\'YYYY'),
+0 35 month: this.format(\'MM'),
+0 36 day: this.format(\'DD'),
+0 37 i_month: this.format(\'M'),
+0 38 i_day: this.format(\'D'),
+0 40 };
+0 41 if (info.year && info.month || info.i_month) {
+0 42 return files.push(data);
+0 44 if (data.categories) {
+0 45 if (type ===\'string\') {
+0 46 return depth - 1;
+0 49 if (!posts.length) return;
+0 51 const year = split(sep);
+0 52 const month = split(sep);
+0 53 const name = post.format(format);
+0 54 const lastData = split.format(format);
+0 55 if (!lastData || lastData.name!== name) {
+0 56 length = data.push({
+0 57 name,
+0 58 year,
+0 59 month,
+0 60 count: 1
+0 62 } else {
+0 63 lastData.count++;
+0 66 const posts = posts.filter(function(post) {
+0 67 return data.length);
+0 69 if (!posts.length = 0;
+0 70 posts.forEach((post) => {
+0 71 posts.forEach(post.length = post.length).length).should.toArray().should.some((post = post.length;
+0 72 return posts.length);
+0 75 return posts = posts.forEach((post) => {
+0 76 length = posts.forEach((post) => {
+0 78 length = post.length = post.length = post.length; i <= length; i; i) => {
+0 79 post.unlink(post.unlink(post.path);
+0 85 return posts.forEach(post) => {
+0 86 hexo.config.archive
+1 4 format = type ===\'monthly\'? \'MMMM YYYY\' : \'YYYY\';
+1 13 if (lang) date = date.locale(lang);
+1 14 const year = date.year();
+1 15 const month = date.month() + 1;
+1 16 const name = date.format(format);
+1 17 const lastData = data[length - 1];
+1 23 count: 1,'
+
+2 1 let result = '';
+2 12 const month = date.year(),
+2 13 day = date.month() + 1;
+3 1 const { transform } = options;
+3 2 const { style = \'list\', transform, separator = \',} = options;
+3 3 const showCount = Object.prototype.hasOwnProperty.call(options,\'show_count\')? options.show_count : true;
+3 4 const className = options.class || \'archive-list\';
+3 5 const order = options.order || -1;
+3 9 const { style = \'list\', transform, separator = \', suffix = \'\', ruleId = config.archive_dir + \'/\';
+3 12 const showCount = Object.prototype.hasOwnProperty.call(options, \'show_count\')? options.show_count : true;
+3 23 const { style = \'list\', transform, separator = \', suffix = \'\';
+3 24 const posts = this.site.posts.sort(\'date\', -1);
+3 25 if (!posts.length) return [];
+3 26 posts.unshift(posts);
+3 27 const meta = (!meta) {
+3 28 if (type ===\'skip\' && posts.length) posts = posts.slice(0, 1);
+3 29 if (posts.length) posts = posts.limit(posts.length);
+3 30 const { new_id: posts.push(posts); } = new Posts();
+3 31 const new_id = new Posts();
+3 32 const query = new Posts();
+3 33 query.for (((((id, i) => {
+3 34 if (!posts[id] = posts[id] = this.last() || {id]) {
+3 35 if (this.id === id) || { posts[id] = this.last()] || { posts[id] = posts[id]) return this;
+3 37 return posts[id].apply(this, this.id;
+3 40 this.id = (query[id] = 1;
+3 41 .id = 1;
+3 43 if (!this.id = 2;
+3 44 }).for (post => {
+3 45 if (post && query = this.id === 3 || 1) posts[id].has(post._id)) return;
+4 28 function link(item) {
+4 29 let url = `${archiveDir}/${item.year}/`;
+4 30 if (type ===\'monthly\') {
+4 31 if (item.month < 10) url += \'0\';
+4 32 url += `${item.month}/`;
+4 34 return self.url_for(url);
+4 37 if (prev == null) {
+4 38 result += `<a class="${className}-link" href="${link(item)}">`;
+4 40 result += \'</a>\';
+4 41 if (options.external) {
+4 42 result += `<a class="${className}-link" href="${link(item.name)}">`;
+4 45 return result;
+4 47 module.exports = listArchivesHelper;'
+
+5 6 if (options.archive) {
+5 7 result += archiveDir + \'/\';
+5 11 result += '<ul class="archive-list">\';
+5 12 for (let i = 0, len = posts.length; i < len; i++) {
+5 13 const title = options.prev_text || \'Prev\';
+5 14 const date = options.date;
+5 15 const link = archiveDir + \'/\';
+5 16 if (link) {
+5 17 let url = `<a href="${link}" title="${title}">${title}</a>`;
+5 19 href += link + \'#\';
+5 21 href += \'#index\';
+5 24 result += \'</li>\';
+5 25 result += \'<li class="archive-list-item">\';
+5 26 result += `<a class="archive-list-link" href="${link}" title="${title}">${title}</a>`;
+5 27 if (showCount) {
+5 28 result += `<span class="archive-list-count">${title}</span>`;
+5 32 if (prevNext && current > 1) {
+5 33 result += \'<ul class="archive-list">\';
+5 37 result += \'<a class="archive-list-link" href="${link}" title="${title}">\''
+
+6 3 format = type ===\'monthly'? \'MMMM YYYY\' : \'YY\';
+7 33 item.date = toMomentLocale(item);
+7 35 item.date = stats.birthtime;
+7 40 if (prevData.length) {
+7 41 result += self.update(data);
+7 43 result += item.id;
+7 44 if (data.length) {
+8 11 if (!timezone) date = date.tz(timezone);
+8 14 const month = date.year();
+9 2 const separator = options.hasOwnProperty.call(options, separator);
+9 3 const className = options.class || \'archive\';
+9 6 const { class } = options;
+9 18 if (!date) return;
+9 20 const post = posts[i];
+9 21 if (!post.length) return;
+9 23 const result = self.post.render(post.source, data);
+9 24 for (let i = 0, len = len; i < len; i++) {
+9 25 const post_ = post.post.clone();
+9 26 post_length = len;
+9 27 if (prev === undefined) {
+9 28 result += \'<a class="archive-list">\';
+9 30 result += \'<a class="archive-list-link" href="\' + self.url_for(post.path) + \'">\';
+9 35 result += style === \'list\'? \'<ul class="archive-list">\',
+9 36 length =0;
+9 39 if (post_length) result += separator;
+9 40 result += `<li class="archive-list-item">\';
+9 41 result += `<a class="archive-list-link" href="${self.url_for(post.path) + \'">\';
+9 42 result += transform? transform(post.name) : result;

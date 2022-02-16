@@ -1,0 +1,227 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var replay = require('request-replay');
+0 1 var GitRemoteResolver = require('./GitRemoteResolver');
+0 2 var extract = require('../../util/extract');
+0 3 function GitHubResolver(decEndpoint, config, logger) {
+0 4 var split;
+0 5 GitRemoteResolver.call(this, decEndpoint, config, logger);
+0 6 split = this._source.split('/');
+0 7 this._org = split[split.length - 2];
+0 8 this._repo = split[split.length - 1];
+0 9 if (mout.string.endsWith(this._repo, '.git')) {
+0 10 this._repo = this._repo.substr(0, this._repo.length - 4);
+0 11 }
+0 13 util.inherits(GitHubResolver, GitRemoteResolver);
+0 14 mout.object.mixIn(GitHubResolver, GitRemoteResolver);
+0 15 GitHubResolver.prototype._checkout = function () {
+0 16 if (!this._resolution.tag) {
+0 17 return GitRemoteResolver.prototype._checkout.call(this);
+0 19 var tarballUrl = 'http://github.com/' + this._org + '/' + this._repo + '/archive/' + this._resolution.tag + '.tar.gz';
+0 20 var file = path.join(this._tempDir, 'archive.tar.gz');
+0 21 var reqHeaders = {};
+0 22 var that = this;
+0 23 var deferred = Q.defer();
+0 24 if (this._config.userAgent) {
+0 25 reqHeaders['User-Agent'] = this._config.userAgent;
+0 27 this._logger.action('download', tarballUrl, {
+0 28 url: that._source,
+0 29 to: file
+0 30 });
+0 31 replay(progress(request(tarballUrl, {
+0 32 proxy: this._config.proxy,
+0 33 strictSSL: this._config.strictSsl,
+0 34 timeout: this._config.timeout,
+0 35 headers: reqHeaders
+0 36 }), {
+0 37 delay: 8000
+0 38 }))
+0 39 .on('progress', function (state) {
+0 40 var totalMb = Math.round(state.total / 1024 / 1024);
+0 41 var receivedMb = Math.round(state.received / 1024 / 1024);
+0 42 that._logger.info('progress', receivedMb + 'MB of'+ totalMb + 'MB downloaded,'+ state.percent + '%');
+0 43 })
+0 44 .on('error', deferred.reject)
+0 45 .pipe(fs.createWriteStream(file))
+0 47 .on('close', function () {
+0 48 var promises;
+0 49 promises = that._promises.map(function (promise) {
+0 50 var promise = Q.resolve();
+0 52 promises.forEach(function (promise) {
+0 53 var decEndpoint = endpointParser.decompose(promise);
+0 54 return that._extract(promise)
+0 55 .progress(state)
+0 56 .progress(deferred.reject)
+0 57 .progress(deferred.resolve.reject)
+0 58 .progress(deferred.notify)
+0 60 .progress(deferred.notify(deferred.notify)
+0 61 .notify())
+0 62 .progress(deferred.progress)
+0 63 .notify(deferred.progress)
+0 64 .notify(deferred.notify)
+0 66 .progress(deferred.notify())
+0 67 .notify(deferred.notify())
+0 68 .progress())
+0 72 .close())
+0 73 .close();
+0 75 .on('error', deferred.done())
+0 76 .done(deferred.notify, deferred.notify, deferred.notify)
+0 77 .progress)
+0 78 .then(deferred.progress)
+0 79 .progress.then(def
+1 1 var replay = require('request-replay');
+1 45 .on('replay', function (nr, error) {
+1 46 that._logger.info('retry', 'Retrying request to'+ tarballUrl +'because it failed with'+ error.code);
+1 50 var promises = [];
+1 51 that.walkTree(tree, function (node, name) {
+1 52 nodes.push(node.path);
+1 54 .on('progress', function () {
+1 55 var promises.push(function (state) {
+1 56 var totalMb = Math.round(state.total / 1024 / 1024 / 1024 / 1024);
+1 57 var receivedMb;
+1 58 var receivedMb += 1;
+1 59 var receivedMb += 0;
+1 60 var index = '';
+1 61 if (0 === 2) {
+1 62 that.walkTree(tree.root
+1 63 .canonicalDir, function (pkg, node, root, flattened) {
+1 64 if (pkg, paths) {
+1 65 var flattened) {
+1 66 var paths = paths = paths.push(this._dissected = '';
+1 67 if (0 == paths.length) {
+1 68 that.walkTree(tree, paths.length) {
+1 69 } else
+1 73 .on('releases', function (key) {
+1 74 if (name) {
+2 52 decEndpoint.promise = promise.then(function () {
+2 53 return that._electSuitable(name, plural, semver, nonSemvers, nonSemvers.end);
+2 56 return Q.all(promises)
+2 57 .then(function (that._electSuitable) {
+2 58 .then(function (suitable) {
+2 59 suitables.splice(1, 2, 2);
+2 63 .done(that._electSuitable.then(self.then(function (suitable)
+2 64 .doneSuitable)
+2 65 .done.done.doneBail(suitable)
+2 66 .done();
+2 70 };
+2 71 GitHubResolver.prototype._ClickResolver.prototype._itable = function (name) {
+2 72 .exec('_id:'something', function () {
+2 73 var Q.n.n.n.then(function () {
+2 74 return Q.n.n.n.n.nfcall(this._cancel.name,'something', plural
+3 4 var createError = require('../../util/createError');
+3 54 promises.forEach(function (promise.progress) {
+3 55 var retry = progress(request.progress.split('/; '; '; ';'+ 1');
+3 56 that._logger.action('retry ='
+3 57 .remove', that._removeListener.removeListener(error', retry.bind(error);
+3 59 .on('end', that._removeListener.removeListener.bind(promache.bind(that);
+3 61 .resolve();
+3 62 .on('progress.reset();
+3 63 return that._removeListener.done();
+3 64 .progress.progress.resetHistory(promache.bind(retry);
+3 67 .done(promises.map(promise);
+3 68 return deferred.exec('progress', function () {
+3 69 return that._removeListener.waitUnlockDone();
+3 70 \
+4 51 promises = that._dissect.map(function (decEndpoint) {
+4 52 var err;
+4 53 var promise = Q.resolve;
+4 54 if (that._config.userAgent) {
+4 55 promise.that._release = decEndpoint.target;
+4 56 } else {
+4 57 promise.repo = retry.reject(error;
+4 59 return promise.then(promise.progress(function () {
+4 60 return that._extract(deferred.progress(request, response);
+4 64 .on('extract.progress(deferred.progress(deferred.progress)
+4 66 .then(deferred.reject)
+4 67 .progress.done(deferred.resolve, deferred.reject)
+4 68 .resolve, deferred.reject)
+4 69 .progress.then(deferred.reject)
+4 70 .progress.failure.deepEADDR);
+4 71 .failureTimeout(deferred.resolve, that._cleanup);
+4 73 .on('finish())
+4 74 .progressDelay.progressDel
+5 55 var tarballUrl = that._tempDir = path.normalize(promise.getPath());
+5 56 var file = path.join(that._tempDir());
+5 57 that.downloads = that.deferred.logger.action('downloads.download(that.getDirectPath())
+5 58 .action('downloads', that.download())
+5 59 .download()
+5 60 .progress(progress(progress)
+5 61 .logger.bind(progress)
+5 62 .bind(that)
+5 63 .logger.info('extracts', that._manager)
+5 64 .extract(progress)
+5 67 .rename = function () {
+5 68 .extracts(that)
+5 69 .removeListener () {
+5 71 .progress(that)
+5 72 .action('rename', that._extracts(that._manager
+6 53 that._queue = {};
+6 54 return Q.fin(function () {
+6 55 clearTimeout: function () {
+6 56 clearTimeout(timeoutId) {
+6 58 clearTimeout(nameTimeoutId) {
+6 59 rimraf(nameTimeoutId) : function (err) {
+6 60 clearTimeoutId = null;
+6 61 this.callLame.done();
+6 62 done();
+6 65 }, function (err) {
+6 66 }, 100;
+6 68 .on('progressDelay.forEach(function (state) {
+6 69 progressDelay.progressDelay = function (state) {
+6 70 progressDelay = function (state) {
+6 71 clearInterval = _handle.apply(prompts, self, self) {
+6 72 if (on) {
+6 73 if (queue.length === undefined) {
+6 74 return;
+6 75 self.apply(self, arguments)
+6 77 }, self.onComplete.removeListener.apply(self, self, arguments)
+7 6 var split = endpoint.split('#');
+7 7 GitRemoteResolver.call(this, split, 1);
+7 53 return that._removeIgnore();
+7 55 .on('completion', function () {
+7 56 return that._readJson();
+7 57 .removeIgnore();
+7 59 .pipe(fs.bind(this._cleanAll(this)
+7 60 .getIgnore);
+7 61 .bindAll(this._readFileSystemBar();
+7 62 .listenqueue.bind(this))
+7 63 .on('completion)
+7 64 .on('completion', function (name) {
+7 65 return that._readFileSystem.removeIgnoreAllPre('files')
+7 66 .removeAllPreprocess.bind(this))
+7 67 .execFilter('browsers.addPreprocess)
+7 68 .applyIgnores)
+7 69 .applyPreempts.apply(this));
+7 71 .bind(this._readFiles.bind(this._getCompletion.preprocess)
+7 72 .bindAllPrecludes)
+7 73 .apply(this._readFileSystem)
+7 74 .execPrecludes.bindAllPrecludes.bind(this));
+7 75 .bindAllPrecludes.bindAll(this));
+7 76 .
+8 55 var tarballUrl = that._source.ract(that._source, that._tempDir, {
+8 56 proxy: that._config.getProxy()
+8 58 progress.progress.progress(progress.split('/progress(function (state) {
+8 59 progress.split('/dissected'+' + '/*')
+8 60 .split('/' + '/*' + file '/' + file);
+8 62 .filter(function (action', name) {
+8 63 return that._position = name optionalMath.gtimer.end([progress.end(name, optional optional.endpoint)
+8 65 .progress(name, function (position = optional.name) {
+8 66 return optional.name + '--progress' + word.endpoint.split('/ optional.type)
+8 68 .on('/opacity', function (position) {
+8 69 return that._onResolve(
+9 49 .on('end', function () {
+9 51 that._queue = [];
+9 53 var entry;
+9 54 var pkgMeta = entry = entry.pkgMeta;
+9 55 var deferred = entry.deferred;
+9 56 if (!opkgMeta || err.code === 'ENOOPTIONS') {
+9 57 deferred.reject(err);
+9 60 .defer = function () {
+9 62 return Q.nreturn Q.nfcall(that._writeFile(that._logger.promise, entry, entry, opts, opts)
+9 63 .finish(function () {
+9 64 return that._clearLog(function () {
+9 65 throw new Q.n
+9 66 .n.n.progress(state, response)
+9 67 .progress(state, response)
+9 71 .length, that._content, function (notification) {
+9 72 return that._extract(deferred, that._extracts) {
+9 73 .progress(

@@ -1,0 +1,89 @@
+Min editdistance: 12.00
+Closest candidate: 2 1 _ = require('underscore'),
+0 1 _ = require('underscore');
+0 2 module.exports = function(){
+0 3 var Filter = module.exports;
+0 4 var Filter.store = {};
+0 5 this.store = {};
+0 6 this.list = function(){
+0 7 var args = _.toArray(arguments),
+0 8 list = this.list(),
+0 9 keys = Object.keys(list);
+0 10 if (keys.length){
+0 11 var result = [];
+0 12 } else {
+0 14 }
+0 15 list.forEach(function(list){
+0 16 for (var i = 0, len = list.length; i < len; i++){
+0 17 result.push(list[i], key);
+0 19 });
+0 20 return result;
+0 21 };"
+
+1 2 module.exports = function(command, safe, args){
+1 3 async.series([
+1 4 function(next){
+1 5 require('./config')(process.cwd(), next());
+1 6 },
+1 8 if (safe) next();
+1 9 else require('./loader')(next);
+1 11 ], function(){
+1 12 var list = require('./extend').console.list(),
+1 14 if (keys.indexOf(command) === -1){
+1 15 var maxLen = 0,
+1 16 result = '\
+1 17 Usage: hexo <command>\
+1 18 \
+1 19 Commands:\
+1 20 ';
+1 21 var helps = [
+1 22 ['version', 'Display version'],
+1 23 ['help', 'Display help']
+1 24 ];
+1 25 _.each(list, function(val, key){
+1 26 helps.push([key, val.description]);
+1 28 helps = helps.sort(function(a, b){
+1 29 var orderA = a[0],
+1 30 orderB = b[0];
+1 31 if (orderA.length >= orderB.length && maxLen < orderA.length) maxLen = orderA.length;
+1 32 else if (maxLen < orderB.length) maxLen = orderB.length;
+1 33 if (orderA < orderB) return -1;
+1 34 else return 0;
+1 36 _.each(helps, function(item){
+1 37 result +=''+ clc.bold(item[0]);
+1 38 for (var i=0; i<maxLen + 3 - item[0].length; i++){
+1 39 result +='';
+1 41 result += item[1] + '\
+1 44 result += '\
+1 45 More info: http://zespia.tw/hexo/docs/cli.html\
+1 47 console.log(result);
+1 49 list[command](args);
+2 1 _ = require('underscore'),
+2 2 extend = require('../extend'),
+2 3 util = require('../util'),
+2 4 file = util.file;
+2 5 extend.generator.register(function(locals, render, callback){
+2 6 var publicDir = hexo.public_dir;
+2 7 console.log('Generating pages.');
+2 8 async.forEach(locals.pages.toArray(), function(item, next){
+2 9 var layout = item.layout? item.layout : 'page',
+2 10 permalink = publicDir + item + (link? '' : 'index.html');
+2 11 render(layout, item, function(err, result){
+2 12 if (err){
+2 13 render('page', item, function(err, result){
+2 14 if (err) throw err;
+2 15 file.write(permalink, result, next);
+2 21 }, callback);
+2 22 });"
+
+3 5 require('./config')(process.cwd(), next);
+4 2 module.exports = function(command, safe, stdout, callback){
+6 3 route = require('../route'),
+6 5 file = util.file,
+6 6 spawn = util.spawn;
+6 7 extend.console.register('generate', 'Generate static files', function(args){
+6 8 var ignoreTheme = (args.indexOf('-t')!== -1 || args.indexOf('--theme')!== -1),"
+
+8 2 module.exports = function(command, safe, stdout, archy, config){"
+
+9 8 require('./loader')(next);

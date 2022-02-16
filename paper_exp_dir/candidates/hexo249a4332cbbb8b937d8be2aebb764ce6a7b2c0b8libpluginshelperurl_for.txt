@@ -1,0 +1,296 @@
+Min editdistance: 13.00
+Closest candidate: 7 1 module.exports = function(ctx) {
+0 1 const { join } = require(\'path\');
+0 2 const Promise = require(\'bluebird\');
+0 3 const File = require(\'./file\');
+0 4 const { Pattern, HashStream } = require(\'hexo-util\');
+0 5 const fs = require(\'hexo-fs\');
+0 6 const chalk = require(\'chalk\');
+0 7 const { EventEmitter } = require(\'events\');
+0 8 const micromatch = require(\'micromatch\');
+0 9 const defaultPattern = new Pattern(() => ({}));
+0 10 function Box(ctx, base, options) {
+0 11 Reflect.apply(EventEmitter, this, []);
+0 12 this.options = Object.assign({
+0 13 persistent: true
+0 14 }, options);
+0 15 if (!base.endsWith(sep)) {
+0 16 base += sep;
+0 17 }
+0 18 this.context = ctx;
+0 19 this.base = base;
+0 20 this.processors = [];
+0 21 this._processingFiles = {};
+0 22 this.watcher = null;
+0 23 this.Cache = ctx.model(\'Cache\');
+0 24 this.File = this._createFileClass();
+0 25 this.ignore = ctx.config.ignore;
+0 26 if (ctx.config.ignore) {
+0 27 const targets = Array.isArray(ctx.config.ignore)? ctx.config.ignore : [ctx.config.ignore];
+0 28 this.options.ignored = (this.options.ignored || []).concat(targets.map(s => toRegExp(ctx, s)).filter(x => x));
+0 31 require(\'util\').inherits(Box, EventEmitter);
+0 32 function escapeBackslash(path) {
+0 33 return path.replace(/\\\\/g, \'/\');
+0 35 function getHash(path) {
+0 36 return new Promise((resolve, reject) => {
+0 37 const src = fs.createReadStream(path);
+0 38 const hasher = new HashStream();
+0 39 src.pipe(hasher)
+0 40 .on(\'finish\', () => {
+0 41 resolve(hasher.read().toString(\'hex\'));
+0 42 })
+0 43 .on(\'error\', reject);
+0 44 });
+0 46 function toRegExp(ctx, arg) {
+0 47 if (!arg) return null;
+0 48 if (typeof arg!==\'string\') {
+0 49 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" is not invalid (not a string)\');
+0 50 return null;
+0 52 const result = micromatch.makeRe(arg);
+0 53 if (!result) {
+0 54 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" can not be converted to RegExp:\' + arg);
+0 57 return result;
+0 59 Box.prototype._createFileClass = function() {
+0 60 const ctx = this.context;
+0 61 const _File = function(data) {
+0 62 Reflect.apply(File, this, [data]);
+0 63 };
+0 64 require(\'util\').inherits(_File, File);
+0 65 _File.prototype.box = this;
+0 66 _File.prototype.render = function(options, callback) {
+0 67 if (!callback && typeof options === \'function\') {
+0 68 callback = options;
+0 69 options = {};
+0 71 const self = this;
+0 72 return this.processors.push({
+0 73 patterns: this.process: this.patterns,
+0 75 const _this.process: function(answatcher: function(patterns, database) {
+0 76 return this.process: this.process,
+0 80 const { numPaths: 1, File.length, useCache: this.length, useCache: numPaths, useCache: useCache } = this.ignore, useCache, content-Dir, function(patterns, idx, options = self) {
+0 81 const {0, numPaths: self.length, idx};
+0 82 const { Cache } = _File, options = config: {};
+0 83 const _File.prototype.ignore = new Array(0, 1, 0, 0
+1 1 var url = require(\'url\');
+1 2 var util = require(\'hexo-util\');
+1 3 var htmlTag = util.htmlTag;
+1 4 var stripHTML = util.stripHTML;
+1 5 var escapeHTML = util.escapeHTML;
+1 6 var cheerio;
+1 7 function externalLinkFilter(data) {
+1 8 var config = this.config;
+1 9 if (!config.external_link) return;
+1 10 if (!cheerio) cheerio = require(\'cheerio\');
+1 11 var $ = cheerio.load(data.content, {decodeEntities: false});
+1 12 var siteHost = url.parse(config.url).hostname || config.url;
+1 13 $(\'a\').each(function() {
+1 14 if ($(this).attr(\'href\')!== siteHost) return;
+1 16 if (!href[this.config.url.pathname]) return;
+1 17 var data = url.parse(href[this.config.url.name]);
+1 18 if (data && data.protocol) return;
+1 19 var header = {
+1 20 href: baseUrl,
+1 21 title: config.title,
+1 22 name: path,
+1 23 alt: alt
+1 25 if (!data.protocol) return;
+1 26 content = $(this).htmlTag(\'a\', data);
+1 27 if (data.path) {
+1 28 data.path = data.path;
+1 30 if (content.length === 0) {
+1 31 content = $.trim();
+1 33 content += meta(\'img\', data);
+1 34 if (data.protocol) {
+1 35 if (path.substr(0, 2) === \'/\') {
+1 36 content += \'/index.html\';
+1 38 return content;
+1 39 }'
+
+2 2 const typeAlias = {
+2 3 pre: \'before_post_render\',
+2 4 post: \'after_post_render\',
+2 5 swig: \'after_post_render\',
+2 6 _: \'[Post] #title] #',
+2 7 archive: \'en','
+
+3 1 const pathFn = require(\'path\');
+3 4 const defaultConfig = require(\'../../../lib/hexo/default_config\');
+3 5 const dateFormat = 'YYYY-MM-DD HH:mm:ss\';
+3 6 const newPostName = defaultConfig.new_post_name;
+3 7 describe(\'post\', () => {
+3 8 const Hexo = require(\'../../../lib/hexo\');
+3 9 const baseDir = pathFn.join(__dirname, \'post_test\');
+3 10 const hexo = new Hexo(baseDir);
+3 11 const post = require(\'../../../lib/plugins/processor/post\')(hexo);
+3 12 const process = Promise.method(post.process.bind(hexo));
+3 13 const source = hexo.source;
+3 14 const File = source.File;
+3 15 const PostAsset = hexo.model(\'PostAsset\');
+3 16 const Post = hexo.model(\'Post\');
+3 17 function newFile(options) {
+3 18 const path = options.path;
+3 19 options.path = (options.published? \'_posts\' : \'_drafts\') + \'/\' + path;
+3 20 options.source = pathFn.join(source.base, options.path);
+3 21 options.params = {
+3 22 published: options.published,
+3 23 path: path,
+3 24 renderable: options.renderable
+3 26 return new File(options);
+3 28 before(() => fs.mkdirs(baseDir).then(() => hexo.init()));
+3 29 after(() => fs.rmdir(baseDir));
+3 30 it(\'pattern\', () => {
+3 31 const { pattern } = newFile({
+3 32 path: \'foo.md\',
+3 33 published: true,
+3 34 type: \'create\'
+3 36 pattern.match(\'foo.md\').should.eql({
+3 38 type: \'update\'
+3 40 pattern.match(\'bar.md\').should.eql({
+3 41 published: false,
+3 42 type: \'delete\'
+3 44 pattern.match(\'_posts/foo.md\').should.eql({
+3 48 pattern.match(\'_drafts/bar.md\').should.eql({
+3 60 it(\'asset - post_asset_folder enabled\', () => {
+3 61 hexo.config.post_asset_folder = true;
+3 62 const body = [
+3 63 \'title: "Hello world"\',
+3 64 \'published: false\',
+3 65 \'---\'
+3 66 ].join(\'\
+3 67 \');
+3 68 const file = newFile({
+3 71 type: \'create\'skip\'
+3 73 return fs.writeFile(file.source).then(file).then(() => process(() => {
+3 74 process(() => {
+3 75 const post.called.calledOnce.should.should.calledOnce.should.should.be.true;
+3 76 return fs.should.should.returnsucFirst(true;
+3 77 }).should.should.not.exist(false);
+3 78 .return fs.unlink(file.finally(() => fs.unlink(file.sha.called);
+3 79 .calledOnce);
+3 83 it(\'asset - updateFiles = (files => {
+3 84 return Promise.setImmediate(path => {
+3 85 return Promise.resolve(name) {
+3 86 return Promise.resolve(name) => {
+3 87 return Promise.resolve(name);
+3 88 .setImmediate(name) && fs.exists(path
+4 1 const url = require(\'url\');
+4 2 module.exports = ctx => {
+4 3 const PostAsset = ctx.model(\'PostAsset\');
+4 4 return function assetLinkTag(args) {
+4 5 const slug = args.shift();
+4 6 if (!slug) return;
+4 7 const asset = PostAsset.findOne({post: this._id, slug});
+4 8 if (!asset) return;
+4 9 let escape = args[0];
+4 10 if (escape === \'true\' || escape === \'false\') {
+4 11 args.shift();
+4 12 } else {
+4 13 escape = \'false\';
+4 15 let title = args.length? args.join(\' \') : asset.slug;
+4 16 const attrTitle = escapeHTML(title);
+4 17 if (escape === \'true\') title = attrTitle;
+4 18 const link = encodeURL(res.url(ctx.config.root, asset.path));
+4 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+4 21 };'
+
+5 9 if ($(this).attr(\'href\') === config.url) return;
+5 10 var href = $(this).attr(\'href\');
+5 11 if (!href) return;
+5 12 var data = url.parse(href);
+5 14 if (data.hostname === config.url) return;
+5 15 $(this)
+5 16 .attr(\'target\', \'_blank\')
+5 17 .attr(\'rel\', \'external\');
+5 19 data.content = $.html();
+5 21 module.exports = externalLinkFilter;'
+
+6 5 const process = (name, ctx, args) => {
+6 6 return Promise.filter(ctx.model(name).toArray(), asset => fs.exists(asset.source).then(exist => {
+6 7 if (exist) return exist;
+6 8 return asset.remove().thenReturn(exist);
+6 9 })).map(asset => {
+6 10 const { source } = asset;
+6 11 let { path } = asset;
+6 12 const data = {
+6 13 modified: asset.modified
+6 15 if (asset.renderable && ctx.render.isRenderable(path)) {
+6 16 const extname = pathFn.extname(path);
+6 17 const filename = path.substring(0, path.length - extname.length);
+6 18 path = `${filename}.${ctx.render.getOutput(path)}`;
+6 19 data.data = () => ctx.render.render({
+6 20 path: source,
+6 21 toString: true
+6 22 }).catch(err => {
+6 23 ctx.log.error({err}, \'Asset render failed: %s\', chalk.magenta(path));
+6 26 data.data = () => fs.createReadStream(source);
+6 28 return { path, data };
+6 30 function assetGenerator(locals) {
+6 31 return Promise.all([
+6 32 process(\'Asset\', this),
+6 33 process(\'PostAsset\', this)
+6 34 ]).then(data => Array.prototype.concat.apply([], data));
+6 36 function processAsset(name) {
+6 37 const { config } = this;
+6 38 const asset = Asset.findOne({
+6 39 _id: this._id,
+6 40 path: name,
+6 45 const len = args.length;
+6 46 return this.configureAsset(asset._id, self.config.post_asset_folder)
+6 47 .then(() => self.loadAsset(asset)).thenReturn(exist);
+6 50 function processPostAsset(name) {
+6 60 return self.config.post_asset_folder = self.config.root;
+6 63 function renderPostAsset(data) {
+6 64 const id = this._id;
+6 65 const asset = Asset.findById(id);
+6 66 asset._id.should.eql(id);
+6 67 asset.post_asset_folder = self.config.root;
+6 68 asset.modified.should.be.true;
+6 69 return assetLinkTag(args) => {
+6 72 asset.post_asset_folder.should.should.be.true;
+6 74 return args.length.some(asset.length === 1? args.join(\' \'/\').reduce((a.concat(obj.remove()).concat(obj, asset) : null) : null;
+6 80 function assetFiles = assetFilesmap(data) {
+6 81 const { path = data = data.dest.remove();
+6 82 .should.should.should.not.not.eql(a.skip(a(assetPath);
+6 83 .should.skipPath) : assetFolder) || assetFolder) ||
+6 84 data.should.should.eql(path);
+6 85 return Promise.skip('bower_bower_compat(asset_folder)
+6 86 .then(asset_folder);
+6 87 .skip_bower_bower_bower
+7 1 module.exports = function(ctx) {
+7 2 var PostAsset = ctx.model(\'PostAsset\');
+7 3 return function assetImgTag(args) {
+7 4 var slug = args.shift();
+7 6 var asset = PostAsset.findOne({post: this._id, slug: slug});
+7 8 return ctx.config.root + asset.path;
+8 2 const { htmlTag } = require(\'hexo-util\');
+8 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+8 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+8 6 const { config } = ctx;
+8 7 function makeUrl(path) {
+8 8 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+8 9 return path;
+8 11 const data = url.parse(path);
+8 12 if (data && data.protocol) {
+8 15 path = config.root + path;
+8 16 return path.replace(/\\/{2,}/g, \'/\');
+8 18 return function imgTag(args, content) {
+8 19 const classes = [];
+8 20 let src, width, height, title, alt;
+8 21 while (args.length > 0) {
+8 22 const item = args.shift();
+8 23 if (rUrl.test(item) || item[0] === \'/\') {
+8 24 src = makeUrl(item);
+8 25 break;
+8 27 classes.push(item);
+8 30 args = args.slice(i + 1);
+8 31 '
+
+9 2 const util = require(\'hexo-util\');
+9 3 const htmlTag = util.htmlTag;
+9 7 const config = ctx.config;
+9 21 let width, height, title, alt, src;
+9 22 let i = 0;
+9 33 if (args.length) {
+9 34 if (!/\\D+/.test(args[0])) {
+9 35 width = args.shift();
+9 36 if (args.length &&!/\\D+/.test(args[0])) {
+9 37 height = args.shift();

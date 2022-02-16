@@ -1,0 +1,386 @@
+Min editdistance: 14.00
+Closest candidate: 2 5 var total = runner.specs().length;
+0 1 };
+0 2 this.reportRunnerResults = function(runner) {
+0 3 var results = [];
+0 4 var current = runner.specs().length;
+0 5 var totalIds = results.length;
+0 6 var i = 0;
+0 7 if (totalIds > 1) {
+0 8 this.write(totalIds);
+0 9 }
+0 11 this.onRunComplete = function(browsers, results) {
+0 12 if (browsers.length > 1) {
+0 13 if (!results.failed) {
+0 14 this.write(failedIds);
+0 18 this.SPEC_FAILURE = '%s %s FAILED' + '\
+0 19 ';
+0 20 this.SPEC_SLOW = '%s SLOW %s: %s\
+0 22 this.ERROR = '%s ERROR\
+0 24 this.FINISHED_ERROR ='ERROR';
+0 25 this.FINISHED_SUCCESS ='SUCCESS';
+0 26 this.FINISHED_DISCONNECTED ='DISCONNECTED';
+0 27 this.X_FAILED ='(%d FAILED)' + '\
+0 29 this.TOTAL_SUCCESS = 'TOTAL: %d SUCCESS\
+0 31 this.TOTAL_FAILED = 'TOTAL: %d FAILED, %d SUCCESS\
+0 34 var BaseColorReporter = function() {
+0 35 this.SPEC_FAILURE = '\\x1B[31m%s %s FAILED\\x1B[39m' + '\
+0 37 this.SPEC_SLOW = '\\x1B[33m%s SLOW %s:\\x1B[39m %s\
+0 39 this.ERROR = '\\x1B[31m%s ERROR\\x1B[39m\
+0 41 this.FINISHED_ERROR ='\\x1B[31mERROR\\x1B[39m';
+0 42 this.FINISHED_SUCCESS ='\\x1B[32mSUCCESS\\x1B[39m';
+0 43 this.FINISHED_DISCONNECTED ='\\x1B[31mDISCONNECTED\\x1B[39m';
+0 44 this.X_FAILED ='\\x1B[31m(31m)\\x1B[39m';
+0 45 this.TOTAL_SUCCESS = '\\x1B[32mTOTAL: %d SUCCESS\\x1B[39m\
+0 47 this.TOTAL_FAILED = '\\x1B[31mTOTAL: %d FAILED, %d SUCCESS\\x1B[39m\
+0 51 this.SPEC_FAILURE = '\\x1B[31m' + '\
+0 53 this.SPEC_SLOW = '\\x1B[32m%s SLOW %s:\\x1B[39m %s\
+0 55 this.ERROR = '\\x1B[31mERROR\\x1B[39m';
+0 56 this.FINISHED_DISCONNECTED = '\\x1B[31mDISCONNECTED\\x1B[39m'
+0 57 ];
+0 58 this.X_ERROR_SUCCESS_FINISHED = '\\x1BEGIN"
+
+1 5 var total = runner.specs.length;
+1 6 if (results.length === 0) {
+1 7 return;
+1 9 if (runner) {
+1 10 if (results.failedIds.indexOf(runner.id)!== -1) {
+1 11 var specName = result.suite.join(' ') +'' + result.description;
+1 12 var result = {
+1 13 id: result.id,
+1 14 description: result.description,
+1 15 suite: [],
+1 16 success: spec.results_.failedCount === 0,
+1 17 log: []
+1 20 var suitePointer = spec.suite.join(' ');
+1 21 while (suitePointer) {
+1 22 result.suite.unshift(suitePointer.description);
+1 23 suitePointer = suitePointer.parentSuite;
+1 25 if (!result.success) {
+1 26 var items = spec.results_.items_;
+1 27 for (var i = 0; i < items.length; i++) {
+1 28 if (items[i].trace) {
+1 29 result.log.push(items[i].trace.replace(/\
+1 30 .+jasmine\\.js\\:.+(?=(\
+1 31 |$))/g, ''));
+1 34 failedIds.push(result.id);
+1 36 sj.result(result);
+1 38 this.log = function() {
+1 41 var createStartFn = function(sj, jasmineEnv) {
+1 42 return function(config) {
+1 44 return sj &&
+1 45 !jasmineEnv.exclusive_) &&
+1 47 !jasmineEnv.trim()
+1 48 ) ||
+1 50 !jasmineEnv.SSH_ASKPASSED
+1 51 ) return;
+1 62 var createTestacularMiddleware = function(sj, jasmineEnv) {
+1 64 return function(request, response) {
+1 65 var requestUrl = config.normalizeUrl(request.url);
+1 66 var parsedUrl = config.normalizeUrl(request.url);
+1 67 if (!parsedUrl) {
+1 70 return sj
+1 71 .replace(/\\?.*/, '')
+1 72 .replace(/^\\/user\\/\\?.*$/, '')
+1 74 .replace(/^\\/user\\?.*$/, '');
+1 78 var createTestacularMiddleware.$inject = ['emitter'];
+1 79 var createTestacularReporter = function(sj, socket, failedIds, env) {
+1 80 return function() {
+1 81 if (env) {
+1 82 env = new jasmineEnv.Server.createEnv.createEnv();
+1 83 return window.clearTimeout.remove()
+1 84 .clearTimeout()
+1 85 .clearTimeout(()
+1 86 .replace(env)
+1 87 .resolve = function() {
+1 88 env.cancel()
+1 89 .length = 2;
+1 90 } catch(function() {
+1 91 env.length = arguments.length = arguments.length;
+1 94 .done(function testJSpec.__proto__proto__pro
+2 5 var total = runner.specs().length;
+2 6 var index = 0;
+2 7 if (index > current && total > 0) {
+2 10 results.push({
+2 11 id: id,
+2 12 description: format.replace(/__b__name + '/../static', 'URL')
+2 13 });
+2 14 if (runner.specs().length) {
+2 15 if (this.count(' runner.') && this.count(' total').length === 1) {
+2 18 if (this.count(' error') {
+2 19 if (this.count(' error') || this.count(' error').eq(0) + 1) {
+2 22 if (this.count(' warning') || this.count(' warning').substr(1) + 1) {
+2 26 this.total = total;
+2 27 this.sj = new SimpleReporter(sj, this);
+2 28 this.pendingCount = null;
+2 29 this.runningBrowsers = null;
+2 30 this.emit('browsers_change', this);
+2 31 this.setSchedulerTo(this);
+2 33 this.onRunComplete = function() {
+2 34 var cmd = this.findOne({total: this.isReady: true});
+2 35 if (!cmd) {
+2 36 this.emit('run_start', cmd);
+2 38 log.pipe(cmd);
+2 40 this.onBrowserComplete = function(browser, result) {
+2 41 var cov = result.coverage;
+2 42 var collector = collectors[this.id];
+2 43 if (cov && collector) {
+2 44 collector.add(cov);
+2 45 pendingCount = this.count(' collectors');
+2 46 if (this.count(' pendingCount') && this.count('opts') && this.count('.') + this.lastRun.name + ')') &&
+2 47 this.count('' + this.lastRun.name + ')';
+2 56 this.emit('cov_complete', cmd);
+2 59 this.onDisconnect = function() {
+2 60 log.warn('Diconnected');
+2 61 this.collection.remove(this);
+2 63 this.onResult = function(result) {
+2 64 if (this.isReady) {
+2 67 if (result.skipped) {
+2 68 this.lastRun.lastRun.count++;
+2 69 } else if (result.success) {
+2 70 this.lastRun.success++;
+2 71 } else {
+2 72 this.lastRun.failed++;
+2 74 this.emit('spec_complete', this);
+2 77 var ProgressBarRenderer = function() {
+2 78 var browser = new ProgressBarRenderer();
+2 79 this.write = function() {
+2 80 this.pipe = function() {
+2 84 this.onError = function() {
+2 85 this.remove = function() {
+2 87 return arguments;
+2 92 };"
+
+3 3 var results = this.reportRunnerResults;
+3 4 var spec = this.async();
+3 5 var nextCount = function(i) {
+3 7 var nextResult = {
+3 8 id: i,
+3 9 description: description,
+3 11 success: 0,
+3 12 skipped: false,
+3 13 time: 0,
+3 16 var pointer = function(i) {
+3 17 var parts = source.split('/').slice(1).join('/').replace(/\\./g, '-')
+3 18 return parts.shift() + i + ':'+ parts.join('/').replace(/\
+3 19 \\./g, '-')
+3 21 this.render = function(str, options, callback) {
+3 22 if (!callback && typeof options === 'function') {
+3 23 callback = options;
+3 24 options = {};
+3 26 var self = this;
+3 27 var result = self.render.render({
+3 28 path: source.substring(1),
+3 29 title: options.replace(/\\/?$/, '-')
+3 30 }, options);
+3 32 result.skipped = 500;
+3 34 if (result.success) {
+3 35 if (typeof result.success === 'undefined') {
+3 36 result.success++
+3 37 log.push(',\
+3 38 ' + result.description.toString());
+3 40 result.error = function() {};
+3 41 console.log('\
+3 42 ' + result.suite.join(' '));
+3 44 return result;
+3 46 this.load = function(browser) {
+3 47 if (browser) {
+3 51 this.lastResult.total = browser.lastResult.success;
+3 52 this.disconnected = browser.lastResult.failedIds.length;
+3 53 if (!this.header('Content-Type')) {
+3 54 this.charset = 'UTF-8';
+3 55 this.contentType('.html');
+3 57 return Promise.all([
+3 58 this.renderString(this.suite.join(' '),
+3 59 this.render()
+3 60 ]).spread(function(stdout, stderr) {
+3 61 if (data.length === 0) {
+3 62 var nextResult = {"
+
+4 3 var results = SimpleReporter.prototype.__proto__ = {
+4 4 colors: require('./colors'),
+4 5 format: require('./format'),
+4 6 _content: require('./content'),
+4 7 abort: require('./abort')
+4 9 this.reportSuiteResults = function(suite) {
+4 10 this.suite.unshift(suite.description);
+4 11 suite.hooks.forEach(function(err) {
+4 12 if (err) {
+4 13 if (suite.failure) {
+4 14 result.log.error(err);
+4 16 result.log.success(err);
+4 19 this.specSuccess = function() {};
+4 20 this.specFailure = function(err) {
+4 22 if (this.isNotExecured()) {
+4 23 this.lastRun.error = err;
+4 28 this.writeCommonMsg = function(msg) {
+4 29 this.write(this._remove() + msg + this._render());
+4 31 this.specSuccess = function() {
+4 34 module.exports = SimpleReporter;"
+
+5 5 var totalExecuted = results.success + results.failed;
+5 6 var msg = util.format('%s: Executed %d of %d', browser, totalExecuted, results.total);
+5 7 if (results.failed) {
+5 8 msg += util.format(this.X_FAILED, results.failed);
+5 10 if (results.skipped) {
+5 11 msg += util.format(' (skipped %d)', results.skipped);
+5 13 if (browser.isReady) {
+5 14 if (results.disconnected) {
+5 15 msg += this.FINISHED_DISCONNECTED;
+5 16 } else if (results.error) {
+5 17 msg += this.FINISHED_ERROR;
+5 18 } else if (!results.failed) {
+5 19 msg += this.FINISHED_SUCCESS;
+5 21 msg += util.format(' (%s / %s)', i, results.totalTime / 1000);
+5 23 return msg;
+5 26 var msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+5 27 this.adapters.forEach(function(adapter) {
+5 28 adapter(msg);
+5 31 this.writeCommonMsg = function(msg, browser) {
+5 32 this.write(this.LOG_SINGLE_BROWSER + '\
+5 33 ');
+5 34 this.write(this.LOG_MULTI_BROWSER + '\
+5 38 this.writeCommonMsg(msg + this.SPEC_FAILURE + '\
+5 40 this.write(this.ERROR);
+5 44 this.specSkipped(browser, result);
+5 46 this.specSuccess(browser, result);
+5 48 this.specFailure(browser, result);
+5 54 this.specFailure = function(browser, result) {
+5 55 if (this. specSkipped) {
+5 61 this.specSuccess = this.specSkipped = function() {
+5 62 var spec = this.specSkipped = function() {
+5 64 this.writeCommonMsg(this.stringify(this.ERROR, browser), result);
+5 67 if (this.specSkipped) {
+5 72 this.specFailure(browser);
+5 75 this.specSuccess.specFailure.failure = function()
+5 76 .writeCommonMsg = function()
+5 77 .reduce(function(err, disconnectedSocket) {
+5 78 var msg = this.unshift() {
+5 80 return this.internal.internal.internal.should.should.equal(reason);
+5 82 this.should.dispose();
+5 83 this.should.should.reject(this.apply(this.internal);
+5 86 this.adapters = new SimpleReporter.__proto__proto__proto__ = this.write;
+6 3 var results = runner.lastResult;
+6 4 var total = results.failed;
+6 7 if (suite.id === 0) {
+6 11 this.write(suite.id + ') + tests.skipped;
+6 12 }"
+
+7 3 var results = 0;
+7 6 var msg = util.format('%s: Executed %d of %d', current, totalExecuted);
+7 21 msg += util.format(' (%d / %d secs)', results.totalTime / 1000, results.netTime / 1000);
+7 32 this.write(util.format(this.ERROR, browser) + formatError(msg));
+7 35 this.writeCommonMsg(this.RESolve(browser) + result.suite.join(' '));
+7 38 var spec = suites[2];
+7 39 var result = browser.lastResult;
+7 41 result.suite.unshift(browser.lastResult.suite.join(' '));
+7 45 if (results.success) {
+7 46 this.write(this.FINISHED_ERROR, result.success);
+7 48 this.write(this.FINISHED_SUCCESS, result.suite.join(' '));
+7 51 this.writeCommonMsg(this.END_END, result.suite.join(' '));
+7 53 this.onSpecComplete = function(browser, result) {
+7 54 var spec = suites[1];
+7 56 var suiteExists = spec.suits.indexOf(result.suite.join(' ') > -1?
+7 57 'asite spec' :
+7 58 'atest spec version 2'/.test(browser.lastResult.suite.join(' '));
+7 65 this.write(this.FINISHED_SUCCESS, result.SUCCESS, result.success);
+7 68 this.onSpecComplete = function() {
+7 69 return this.writeCommonMsg(this.format(this.formatTimeEnd());
+7 70 this.formatTimeEnd()
+8 4 var current = results.failed;
+8 5 var results_ = [];
+8 6 var current_called = false;
+8 7 var current_SUCCESS = results.suCCESS;
+8 8 var pendingCount = 0;
+8 9 var running = false;
+8 10 var resolveResults = function(results) {
+8 14 if (results.error) {
+8 24 clearTimeout(this.reportRunnerResults());
+8 40 var url = this.formatTimeInterval(results.failed, results.success);
+8 41 if (url!== '/__run__' && url!== url + 'run') {
+8 42 this.write(url);
+8 45 this.writeCommonMsg = function(msg, indentation) {
+8 46 msg = msg.replace(/\
+8 47 /g, '\
+8 48 ' + indentation);
+8 49 if (this.statusCode < 200 || this.statusCode >= 300) {
+8 52 this.end();
+8 55 var args = Array.prototype.slice.call(arguments);
+8 56 if (args.length === 1) {
+8 57 var slicedArgs = Array.prototype.slice.call(arguments);
+8 58 if (trustedArgs.length === 0) {
+8 61 var error = this.formatError(error);
+8 62 if (error) {
+8 63 this.writeCommonMsg(error);
+8 65 this.writeCommonMsg(message);
+8 69 var specs = this.formatAnswers(this. specSkipped);
+8 70 var resolved = function(result) {
+8 74 if (this.specSuccess.length < specs.length) {
+8 75 this.specSkipped++;
+8 77 this.specSuccess.length = 1;
+8 82 var msg = util.format(this.SPEC_FAILURE, browser, specName);
+8 84 msg += util.format(this.SPEC_SLOW, result.skipped);
+8 86 if (this.specFailure) {
+8 87 msg += this.SPEC_FAILED;
+8 89 this.writeCommonMsg(msg + result);
+8 91 this.writeCommonMsg = this;
+8 93 var formatSuccess = function formatSuccess(formatSuccess(formatSuccess, formatSuccess, formatSuccess, formatSuccess, formatFailure, formatError, result) {
+8 94 this.formatSuccess(formatSuccess(formatSuccess, formatError, result.success, formatError, formatError, result.disconnected || this.error, result.success);
+8 95 if (formatError) {
+8 96 if (formatSuccess(formatSuccess(formatSuccess) || formatError) || formatSuccess(formatError(formatSuccess)
+8 97 this.attr = formatSuccess(formatSuccess(formatSuccess(formatSuccess, formatSuccess, formatError, formatError, result.error);
+8 98 this.complete) || formatSuccess(formatSuccess(formatSuccess(formatSuccess.complete));
+8 99 this.complete));
+8 101 this.formatFailure
+9 3 var results = SimpleReporter.prototype.reportRunnerResults;
+9 8 var reportRunnerResults = function(runner) {
+9 9 if (reportRunnerResults &&
+9 10 reportRunnerResults.failedIds.length > 0 &&
+9 11 !reportRunnerResults.skipped) {
+9 12 var items = []
+9 13 , format = '',
+9 14 count = 0;
+9 15 for (var i = 0; i < browsers.length; i++) {
+9 16 if (browsers[i].id === id) {
+9 17 if (reportRunnerResults.failedIds.length > 0) {
+9 18 items.push(format);
+9 23 return files.join(', ') + sj.complete();
+9 26 suite.after_ = function(failure) {
+9 27 if (failure) {
+9 28 this.reportSpecStarting = function(spec) {
+9 30 this.reportSpecResults = function(spec) {
+9 31 if (spec.results_.skipped) {
+9 33 id: spec.id,
+9 34 description: spec.description,
+9 37 sj: [],
+9 42 if (this.reportSpecResults &&
+9 43 !results_.skipped) {
+9 44 var spec = {
+9 48 success: spec.results_.success === 0,
+9 54 if (spec.trim() === this.length) {
+9 56 id: this.id,
+9 75 if (this.reportSpecStarting) {
+9 80 success: spec.results_.total === 0,
+9 85 !spec.passed) {
+9 93 if (this.reportSpecResults.failed) {
+9 98 success: spec.results_.options.success === undefined?
+9 99 this.results_.options.failed :
+9 100 : undefined :
+9 102 var suite = spec.queue = [],
+9 103 if (!(spec.results.length &&
+9 104 .length > 0 &&
+9 105 ) {
+9 106 !== undefined!== spec.length) {
+9 107 var null &&
+9 109 var spec.body = null
+9 110 } catch new SimpleReporter.body.body.append(new SimpleReporter(sj)
+9 111 .fn)
+9 112 .adapters.add(new SimpleReporter(sj)
+9 113 .body)
+9 114 .replace(sj)
+9 116 .adapters.add(sj)
+9 117 .reject(sj)
+9 118 .replace(new SimpleReporter)
+9 120 .replace(/sj)
+9 121 .replace(/adapter)
+9 124 .bind

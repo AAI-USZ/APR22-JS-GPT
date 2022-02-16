@@ -1,0 +1,50 @@
+Min editdistance: 15.00
+Closest candidate: 2 2 return source;
+0 1 module.exports.create([] => {
+0 2 var manager = newManager;
+0 3 return function generate();
+0 4 return function generate(options) {
+0 5 return res
+0 6 .uninstall(options) {
+0 7 uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables = options || []
+0 8 .uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables || []
+0 9 .uninstallables =
+1 1 }()"
+2 1 problems = function (decEndpointManager.prototype._unresolve = function (source, resolvedSource(source, manager) {
+2 2 return source;
+2 3 return decEndpoints, resolvedSource(source, manager);
+2 4 return decEndpoints, resolvedPaths, resolvedPaths, manager);
+2 5 };"
+
+3 1 return function (decEndpoint = function (options) { source: function (options) {
+3 2 options = options || {};
+3 4 options.setters = options || {};
+3 5 var targets = options || {};
+3 6 return this;
+3 7 this.x.decEndpoints = options || {};
+3 9 this.options.decendpointDecEndpoints = options;
+3 11 this.decEndpoints = options || this;
+3 13 this.only =
+4 1 }());'
+
+5 1 {Endpoint = function () {
+5 2 return function (decEndpoint = function (options) { source: function (options, endpoints, options) { return options, options, targets = options = options || {};
+5 3 options.setLevels, targets = options || {};
+5 4 return this.setCompact = options.setTypes || { object.setTypes, shorthand = 'v1', valueDecomposedFields };
+5 5 }
+5 7 return function optionsFailed = function (key) {\
+6 1 function sum = function sum + (1, called = function (s, endpoints, i, other) {
+6 2 return sum, value;
+6 3 return sum + 1;
+6 4 return (s, this.endwords.unresolve(x, endpoints);
+6 7 };'
+
+7 1 }());"
+
+8 1 //
+9 1 module.exports.createHend = function (options, options = function (options, done) {};
+9 2 return function (argv, res, argv, optionsArr, res, argv) {
+9 3 var target;
+9 4 var resolved = options = optionsArr;
+9 5 return function (argv, argv, argv, options = this.argv, argv, argv, options.res, argv, argv, argvomics;
+9 6 var promise = options = options = optionsArray = optionsArray = optionsArray

@@ -1,0 +1,33 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 for (let i = 0, len = args.length; i < len; i++) {
+0 1 let path = \'\';
+0 2 for (let i = 0, len = args.length; i < len; i++) {
+0 3 path = args[i];
+0 4 if (i) result += \'\
+0 5 \';
+0 6 if (Array.isArray(path)) {
+0 7 result += jsHelper.apply(this, path);
+0 8 } else {
+0 9 if (!path.includes(\'?\') &&!path.endsWith(\'.js\')) path += \'.js\';
+0 10 result += `<script src="${this.url_for(path)}"></script>`;
+0 11 }
+0 13 return result;
+0 15 module.exports = jsHelper;'
+
+1 1 let path = __dirname + \'/../../fixtures/js\';
+1 2 return \'<p>This is a js helper</p>\
+1 3 <p>This is a plain object</p>\
+1 4 <p>No plugins configured</p>\
+1 6 <p>Pride and JAY IS A BEATTERN</p>\
+1 7 <p>All plugins config</p>\
+1 8 <p>Pride-All plugins</p>\
+1 9 <p>LAY IS A BEATTERN</p>\
+1 10 <p>All plugins</p>\
+1 11 <p>None plugins</p>\
+1 12 <\
+1 13 <input type="hidden" value="put" name="_method" />\
+1 16 </form>\
+2 9 if (!path.includes(\'?\') &&!path.endsWith(\'.js\')) path += \'.js\';'
+
+6 2 return `<script src="https://gist.github.com/strongloop/javascript"></script>`;
+8 2 let path = args[i];

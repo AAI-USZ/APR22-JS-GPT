@@ -1,0 +1,12 @@
+Min editdistance: 9.00
+Closest candidate: 1 1  : null }"
+0 1  = true } } : null } : null } : function () { throw new window.__karma.end() } : function (error(error, but the window.__karma.end() } : function (error, state) { if (error) {} } } } : function (error)
+0 2 Express.debug.addErrors = function () {} : function () {} : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} }
+1 1  : null }"
+3 1  : null }", () => null }"
+4 1  : null } : null } : null } : null } : null } : null } : function (config.all() {} } : function () {
+4 2 return this.config.clear() } : function () {} } : function () {} } : function () {} } : function (this.configure (configure() {} } : function () {} } : function () {} } : function () {} } : function (configure () {} } : function () {} } : function () {} } } : function (configure () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function (configure () {} } : function () {} } : function () {} } : function
+6 1 () } : null } } : null } : null } : null } : null } : null } : function () {} } : function () {} } : function () {} } : function () {} } : function (configuredPort (configured() {} } : function () { } : function () {} } : function (configured () { } } : configured : configured () {} } } } : configured() {} }
+8 1  : null } : null } : null } : null } : null } : null } : function (configuredBrowsers (configuredBrowsers option must be found for your browser not found to have no browser to be found')
+8 2 return { stringify (included Status to reconnect') } : function () {} } : function () {} } : function () {} }
+8 3 return () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } : function () {} } } : function () {} } : function () {} } : function () {} } : function (configured Status this.addConfigured () {} } : function (configuredServer

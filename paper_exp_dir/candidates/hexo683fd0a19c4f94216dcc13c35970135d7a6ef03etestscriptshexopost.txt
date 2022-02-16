@@ -1,0 +1,24 @@
+Min editdistance: 34.00
+Closest candidate: 0 5 it('render() - skip render() - escaping swig blocks', function', function(){
+0 1 return post.end();
+0 2 }).join(content.trim();
+0 3 });
+0 4 it('render()
+0 5 it('render() - skip render() - escaping swig blocks', function', function(){
+0 6 var content = [false, content){
+0 7 return post.toString = []
+0 8 return post.render(null, { escape = true, path){
+0 9 return post.escape = true, engine = true, escape_html = '123456' };
+0 10 }).then(function (data.content.content){
+0 11 return post.
+1 1 "
+
+2 1 return post.render(content.next());
+2 2 }).then(content.trim('Hello_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else
+3 1 });"
+
+4 2 }).then(function(function(post){
+4 3 return post.render(null, { content);
+4 4 return post.foot.content.content.trim().should.should.eql(content);
+4 5 return 'world.engine.trim();"
+

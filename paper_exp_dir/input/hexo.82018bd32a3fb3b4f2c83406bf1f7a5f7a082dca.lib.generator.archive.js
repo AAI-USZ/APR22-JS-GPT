@@ -1,0 +1,52 @@
+var paginator = require('./paginator'),
+extend = require('../extend'),
+util = require('../util'),
+file = util.file,
+async = require('async'),
+_ = require('underscore');
+
+extend.generate.register(function(locals, render, callback){
+var posts = locals.posts,
+config = hexo.config,
+publicDir = hexo.public_dir;
+
+if (!config.archive) return callback();
+
+async.parallel([
+
+function(next){
+var target = config.archive_dir + '/';
+
+posts.archive = true;
+
+paginator(target, posts, 'archive', render, next);
+} else {
+render('archive', posts, function(err, result){
+if (err) throw err;
+file.write(publicDir + target + 'index.html', result, next);
+});
+}
+},
+
+function(next){
+var yearly = {},
+monthly = {};
+
+var year = item.date.year(),
+month = item.date.format('MM');
+
+if (yearly.hasOwnProperty(year)){
+yearly[year].push(item);
+} else {
+yearly[year] = posts.slice(i, i + 1);
+}
+
+if (!monthly.hasOwnProperty(year)) monthly[year] = {};
+
+if (monthly[year].hasOwnProperty(month)){
+monthly[year][month].push(item);
+} else {
+monthly[year][month] = posts.slice(i, i + 1);
+}
+});
+

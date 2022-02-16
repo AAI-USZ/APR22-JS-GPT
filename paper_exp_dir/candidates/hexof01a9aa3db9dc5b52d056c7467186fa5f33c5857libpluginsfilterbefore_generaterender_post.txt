@@ -1,0 +1,224 @@
+Min editdistance: 1.00
+Closest candidate: 6 1 function renderPostFilter() {
+0 1 var pathFn = require(\'path\');
+0 2 var tildify = require(\'tildify\');
+0 3 var Database = require(\'warehouse\');
+0 4 var _ = require(\'lodash\');
+0 5 var chalk = require(\'chalk\');
+0 6 var EventEmitter = require(\'events\').EventEmitter;
+0 7 var fs = require(\'hexo-fs\');
+0 8 var Module = require(\'module\');
+0 9 var vm = require(\'vm\');
+0 10 var pkg = require(\'../../package.json\');
+0 11 var logger = require(\'hexo-logger\');
+0 12 var extend = require(\'../extend\');
+0 13 var Render = require('./render\');
+0 14 var registerModels = require('./register_models\');
+0 15 var Post = require('./post\');
+0 16 var Scaffold = require('./scaffold\');
+0 17 var Source = require('./source\');
+0 18 var Router = require('./router\');
+0 19 var Theme = require(\'../theme\');
+0 20 var Locals = require('./locals\');
+0 21 var defaultConfig = require("./default_config\');
+0 22 var loadDatabase = require("./load_database\');
+0 23 var libDir = pathFn.dirname(__dirname);
+0 24 var sep = pathFn.sep;
+0 25 var dbVersion = 1;
+0 26 function Hexo(base, args) {
+0 27 base = base || process.cwd();
+0 28 args = args || {};
+0 29 EventEmitter.call(this);
+0 30 this.base_dir = base + sep;
+0 31 this.public_dir = pathFn.join(base, \'public\');
+0 32 this.source_dir = pathFn.join(base, \'source\');
+0 33 this.plugin_dir = pathFn.join(base, \'node_modules\');
+0 34 this.script_dir = pathFn.join(base, \'scripts\');
+0 35 this.scaffold_dir = pathFn.join(base, \'scaffolds\');
+0 36 this.theme_dir = pathFn.join(base, \'themes\', defaultConfig.theme) + sep;
+0 37 this.theme_script_dir = pathFn.join(this.theme_dir, \'scripts\');
+0 38 this.env = {
+0 39 args: args,
+0 40 debug: Boolean(args.debug),
+0 41 safe: Boolean(args.safe),
+0 42 silent: Boolean(args.silent),
+0 43 env: process.env.NODE_ENV || \'development\',
+0 44 version: pkg.version,
+0 45 init: false
+0 46 };
+0 47 var multiConfigPath = require(\'../lib/cli/multi_config_path\');
+0 48 this.config_path = multiConfigPath(base, args);
+0 49 this.extend = {
+0 50 console: new extend.Console(),
+0 51 deployer: new extend.Deployer(),
+0 52 filter: new extend.Filter(),
+0 53 generator: new extend.Generator(),
+0 54 helper: new extend.Helper()
+0 56 this.config = _.cloneDeep(defaultConfig);
+0 57 this.log = logger(this);
+0 58 this.render = new Render(this);
+0 59 this.route = new Router();
+0 60 this.post = new Post(this);
+0 61 this.scaffold = new Scaffold(this);
+0 62 this.source = new Post(this);
+0 63 this._db.source = new Database({
+0 64 });
+0 65 this._db.route = new Source(this);
+0 66 }
+0 67 debug = new Router();
+0 68 function Scaffold(base, db, db, path, callback) {
+0 69 var db, tag) {
+0 70 if (!this.has(this);
+0 71 if (null, callback) {
+0 73 return callback = callback();
+0 75 this.log.stack = callback = function() {};
+0 76 this.callback.site = new FB()
+1 1 function Migrator() {
+1 2 this.store = {};
+1 4 Migrator.prototype.list = function() {
+1 5 return this.store;
+1 7 Migrator.prototype.register = function(name, fn) {
+1 8 if (!name) throw new TypeError('name is required');
+1 9 if (typeof fn!== \'function\') throw new TypeError('fn must be a function');
+1 10 if (fn.length > 1) fn = Promise.promisify(fn);
+1 11 this.store[name] = Promise.method(fn);
+1 14 if (!name) throw new TypeError(\'name is required');
+1 15 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function');
+1 18 module.exports = Migrator;'
+
+2 1 function Generator() {
+2 2 this.id = 0;
+2 5 Generator.prototype.list = function() {
+2 8 Generator.prototype.get = function(name) {
+2 9 return this.store[name];
+2 11 Generator.prototype.register = function(name, fn) {
+2 12 if (!fn) {
+2 13 if (typeof name === \'function\') {
+2 14 fn = name;
+2 15 name = `generator-${this.id++}`;
+2 16 } else {
+2 17 throw new TypeError(\'fn must be a function\');
+2 23 module.exports = Generator;'
+
+3 1 function renderPostFilter(data){
+3 2 return Promise.all([
+3 3 function(data){
+3 4 process.nextTick(function(){
+3 5 return data.content;
+3 7 })
+3 8 .then(function(){
+3 23 return checkStream(route.get(data.path));
+3 26 var posts = this.model(\'Post\');
+3 27 var query = post.findOne({source: data.path});
+3 28 var self = this;
+3 29 post.content = post._content;
+3 30 post.site = {data: data.site};
+3 32 self.post.save(posts),
+3 33 self.post.remove(posts)
+3 34 ]);
+3 37 it(\'post - post_asset_folder enabled\', function(){
+3 41 return self.post.create({
+3 42 title: \'Hello World\',
+3 43 layout: \'post\',
+3 44 _content: post._content
+3 48 return self.post.save(posts);
+3 51 var asset = Asset.findById(data._id);
+3 52 var post = post._content;
+3 53 asset.path.should.eql(data.path);
+3 54 asset.modified.should.be.true;
+3 55 asset.post.should.be.true;
+3 57 self.post.remove(),
+3 58 self.post.remove()
+3 62 it(\'post - post_asset_folder enabled with unpublished posts\', function(){
+3 76 var post = Asset.findById(data._id);
+3 78 post.path.should.eql(data.path);
+3 79 post.modified.should.be.true;
+3 93 layout: \'draft\'
+3 97 var post = Post.findById(data._id);
+3 99 post.lang.should.should.lang.should.lang.should.lang.should.lang.should.lang.toLowerCase();
+3 100 return Promise.should.not.exist;
+3 104 it(\'post - post.limit(){
+3 105 return Promise.all.all([
+3 108 process.nextTick(false)
+3 112 });'
+
+4 1 function postGenerator(locals) {
+4 2 var posts = locals.posts.sort(\'-date\', -1);
+4 3 var length = posts.length;
+4 4 return posts.map(function(post, i) {
+4 5 var layout = post.layout;
+4 6 var path = post.path;
+4 7 if (!layout || layout === \'false\') {
+4 8 return {"
+
+5 3 var testUtil = require(\'../../util\');
+5 4 describe(\'asset\', function(){
+5 5 var Hexo = require(\'../../../lib/hexo\');
+5 6 var hexo = new Hexo(pathFn.join(__dirname, \'asset_test\'), {silent: true});
+5 7 var generator = require(\'../../../lib/plugins/generator/asset\').bind(hexo);
+5 8 var Asset = hexo.model(\'Asset\');
+5 9 function checkStream(stream, expected){
+5 10 return testUtil.stream.read(stream).then(function(data){
+5 11 data.should.eql(expected);
+5 14 before(function(){
+5 15 return fs.mkdirs(hexo.base_dir).then(function(){
+5 16 return hexo.init();
+5 19 after(function(){
+5 20 return fs.rmdir(hexo.base_dir);
+5 22 it(\'renderable\', function(){
+5 23 var path = \'test.yml\';
+5 24 var source = pathFn.join(hexo.base_dir, path);
+5 25 var content = \'foo: bar\';
+5 27 Asset.insert({_id: path, path: path}),
+5 28 fs.writeFile(source, content)
+5 29 ]).then(function(){
+5 30 return generator(hexo.locals);
+5 31 }).then(function(data){
+5 32 data[0].path.should.eql(\'test.json\');
+5 33 data[0].data.modified.should.be.true;
+5 34 return data[0].data.data().then(function(result){
+5 35 result.should.eql(\'{"foo":"bar"}\');
+5 37 }).then(function(){
+5 39 Asset.removeById(path),
+5 40 fs.unlink(source)
+5 44 it(\'not renderable\', function(){
+5 45 var path = \'test.txt\';
+5 47 var content = \'test content\';
+5 54 data[0].path.should.eql(path);
+5 56 return checkStream(data[0].data.data(), content);
+5 64 it(\'skip render\', function(){
+5 67 Asset.insert({_id: path, path: path})
+5 71 data[0].path.type.should.eql(\'skip\');
+5 72 data[0].data.path.modified.should.should.be.true;
+5 73 return checkStream(data[0].data[0].data.data.data.data).then(function(){
+5 74 return Promise.save();
+5 75 return Promise.then(function(){
+5 76 return Promise.all(){
+5 78 return Promise.then(true);
+5 86 }).then(function.then(false);
+5 88 return false);
+6 1 function renderPostFilter() {
+6 3 function renderPosts(model) {
+6 4 var posts = model.toArray().filter(function(post) {
+6 5 return post.content == null;
+6 7 return Promise.map(posts, function(post) {
+6 9 post.site = {data: post};
+6 10 return self.post.render(post.full_source, post).then(function() {
+6 11 return post.save();
+6 16 renderPosts(this.model('Post')),"
+
+7 9 if (typeof fn!== 'function') throw new TypeError('fn must be a function');
+7 10 if (fn.length > 1) {
+7 11 fn = Promise.promisify(fn);
+7 13 fn = Promise.method(fn);
+7 15 this.store[name] = fn;
+7 17 module.exports = Migrator;"
+
+9 1 function Deployer() {
+9 4 Deployer.prototype.list = function() {
+9 7 Deployer.prototype.get = function(name) {
+9 10 Deployer.prototype.register = function(name, fn) {
+9 11 if (!name) throw new TypeError(\'name is required\');
+9 12 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+9 16 module.exports = Deployer;'
+

@@ -1,0 +1,127 @@
+Min editdistance: 1.00
+Closest candidate: 3 8 it('should expose app.locals with `name` property', function(done){
+0 1 res.render('user.jade', { users: { users: { users: { users: { users: { users: { users: { users: { _id: 1 } } } });
+0 2 });
+0 3 app.use(function(req, res){
+0 4 res.render('user.jade', { users: { users: { users: { users: { users: { users: { users: { users: { users: { _id: 0 } } } });
+0 6 app.use(function(err, req, res, next){
+0 7 res.end(err.message);
+0 9 request(app)
+0 10 .get('/')
+0 11 .expect('<p>tobi</p>', done);
+0 13 it('should expose app.locals', function(done){
+0 14 var app = express();
+0 15 app.set('views', __dirname + '/fixtures');
+0 16 app.locals.user = { name: 'tobi' };
+0 18 res.render('user.jade');
+0 21 res.render('user.jade', { user: { name: 'loki' } });
+0 24 res.render('user.jade', { user: { name: 'jane' } });
+0 26 app.use(function(err, req, res){
+0 31 .expect('<p>loki</p>', done);
+0 33 it('should support using urlencoded middleware', function(done){
+0 37 res.redirect('/login');
+0 38 res.redirect('login');
+0 39 res.end();
+0 41 app.use(function(req.session());
+0 42 app.use(app);
+0 44 app.use(app.use(function(app);
+0 45 app.use(function(req);
+0 48 app.use(function(req.router);
+0 50 res){
+0 51 res.session({
+0 53 res.cookieParser');
+0 54 res.app.session({
+0 55 req.session({ secret: 'keyboard', secret: 'keyboard cat');
+0 56 res.
+1 1 res.render('user.jade', { users: { users: { users: { users: { users: { users: { users: { users: { users: { clear: false } } } } });
+1 4 res.render('user.jade', {
+1 5 users: { jade: true } });
+1 10 app.get('/')
+1 13 it('should support index.<engine>', function(done){
+1 16 app.set('view engine', 'jade');
+1 18 res.render('blog/post');
+1 21 .expect('<h1>blog post</h1>', done);
+1 23 describe('when an error occurs', function(){
+1 24 it('should next(err)\', function(done){
+1 29 user: { name: 'tobi' }
+1 35 .expect(/user is not defined/, done);
+1 36 })
+1 38 describe('when given a callback', function(){
+1 39 it('should be passed', function(){
+1 40 it('shouldBe passed', function(){
+1 41 var app = express(){
+1 45 app.set('views.render('user.jade', { url: { return 'foo' }, done);
+1 46 app.set('foo', port: 3).should.should.toString();
+1 47 }).should.toString();
+1 52 describe(': function clear();
+1 53 it('should.skip('should.toString', function(){
+1 54 app.toString())
+1 57 describe(': function(){
+1 58 it('should.toString()', function(){
+1 59 it('should.toString()')
+1 65 it('should.expect(app)', function()
+2 1 res.render('user.jade', { users: [ 'tobi', 'loki' ], { users: { done: done: done: done }); } });
+2 4 .end(function(res){
+2 5 res.body.should.equal('tobi');
+2 6 done();
+2 24 res.render('user.jade', { user: { name: 'tobi' }, { error: "Cannot find user" });
+2 27 res.render('user.jade', { user: { name: 'loki' }, { error: "Loki" });
+2 30 .expect(404, done);
+2 32 })"
+
+3 1 res.render('blog/post.jade');
+3 8 it('should expose app.locals with `name` property', function(done){
+3 11 app.locals.name = 'tobi';
+3 13 res.render('name.jade');
+3 17 .expect('<h1>tobi</h1>', done);
+3 45 request(function testJade.end();
+3 50 describe('.jade', function(': function(){
+3 51 it('should.end(){
+3 52 it('should.not.not.equal(function(function(err, done){"
+
+4 1 res.render('user.jade', { users: { users: { users: { users: { users: { users: { users: { users: { users: { users: { users: { users: { _id: 1 } } } } } });
+4 4 res.render('user.jade', { user: { name: 'loki' }, { user: { user: { user: { user: { user: { name: 'jane' } } } });
+4 12 res.body.should.equal('jade');
+4 33 res.body.should.equal('<h1>blog post</h1>');
+4 38 it('should next(done)', function(done){"
+
+5 18 it('should handle render error throws', function(done){
+5 20 function express(req, res, next) {
+5 21 res.render('something.jade', { layout: false });
+5 22 }
+5 23 function test(app, url, title){
+5 24 var str = [
+5 25 ': function() { return 'foo'; },
+5 26 'bar: function() { return 'bar'; },
+5 27 'baz: function() { return 'baz'; }
+5 28 ];
+5 39 app.use(function(str, res){
+5 40 str.render('something.jade', { layout: false });
+5 43 describe('when('when', function(){
+5 44 it('should.restore(){\', function(){
+5 45 it('should.should.restore(){\', function(){
+5 46 return done.should.should.be.true;
+5 48 it('should.should.restore();
+5 49 });"
+
+6 1 res.render('user.jade', { users: { name: 'tobi' } });
+6 4 res.status(404).end('Not Found');
+6 5 res.send({ url: { error: 'Cannot find user' }});
+6 7 app.listen(3000);
+6 8 console.log('Express app started on port 3000');"
+
+7 1 res.render('user.jade', { users: [ 'tobi', 'loki' ], });
+7 34 res.render('blog');
+7 38 .expect('<h1>blog</h1>', done);
+7 40 describe('when no messages have been sent', function(){
+7 41 it('should have.forEach(fn){', function(done){
+7 42 request(app){
+7 43 request(app.get('/<strong)});
+7 45 .put('/strong)
+7 46 .remove();
+8 3 request(app) {
+8 4 .get('/')"
+
+9 1 res.render('user.jade', { user: { name: 'tobi' } });
+9 18 it('should next(err => {
+9 22 res.render('user.jade', { user: { name: 'tj' } });

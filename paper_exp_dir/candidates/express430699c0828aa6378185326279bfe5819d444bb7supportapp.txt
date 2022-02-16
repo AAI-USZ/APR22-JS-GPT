@@ -1,0 +1,258 @@
+Min editdistance: 6.00
+Closest candidate: 7 13 app.get('/user/:id', function(req, res){
+0 1 assert.response(app,
+0 2 { url: \'/pj2' },
+0 3 { body: \'<p>Welcome tobi</p>\' });
+0 5 { url: \'/pj3' },
+0 8 { url: \'/pj4' },
+0 9 { body: \'<p>Welcome tobi</p>' });
+0 11 { url: \'/pj5' },
+0 14 { url: \'/pj6\' },
+0 17 { url: \'/pj7' },
+0 20 { url: \'/pj8\' },
+0 23 { url: \'/pjv' },
+0 26 { url: \'/context.title' },
+0 29 { url: \'/favicon.ico\' },
+0 32 { url: \'/user.json\' },
+0 33 { body: \'{"name":"tobi"}\', status: 201 });
+0 35 { url: \'/user.jsonp?callback=test\' },
+0 36 { body: \'test with jsfiddle\', status: 201 });
+0 38 { url: \'/user.jsonp?callback=btest\' },
+0 42 { body: \'test with jsonp, status: 201 });
+0 46 assert.assert.response(app,
+0 48 { url: \'/user.jsonp?callback=baz\' },
+0 49 { body: \'test with jsonp=baz\' },
+0 50 },
+0 51 assert.response: \'baz
+0 52 assert.response: \'raz.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.test.
+1 1 app.get('/text', function(req, res){
+1 2 res.send('Hello World
+1 3 ');
+1 4 });
+1 5 app.get('/status', function(req, res){
+1 6 res.send(404);
+1 8 app.get('/error', function(req, res){
+1 9 res.send(\'got an error');
+1 11 app.get('/hello', function(req, res){
+1 12 res.send({ name: \'Tobi\', role: \'admin\', posts: [req.params.id] }));
+1 14 app.get('/future', function(req, res){
+1 15 res.send(201);
+1 17 app.get(\'/invalid', function(req, res){
+1 20 app.get(\'/invalid-async\', function(req, res){
+1 21 process.nextTick(function(){
+1 22 res.render(\'invalid.jade\', { layout: false });
+1 25 app.get(\'/error', function(req, res){
+1 26 res.send(\'invalid.jade\', { layout: false }, function(err){
+1 27 res.send(err.arguments[0]);
+1 29 app.get(\'/absolute/', function(req, res){
+1 30 res.send(__dirname + \'/fixtures/index.jade\', { layout: false });
+1 32 app.get(\'/ferret/:name/regex\', function(req, res){
+1 33 res.send(arguments[0]);
+1 35 app.get(\'/status', function(req, res){
+1 42 { url: \'/ferret/test.json\' },
+1 43 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/json; charset=utf-8\' }});
+1 45 { url: \'/ferret/test.json' },
+1 46 { body: \'<p>Welcome</p>\' });
+1 48 { url: \'/ferret/test.jsonp?\' : \'test.jsonp>\' },
+1 49 { body: \'{"
+
+2 2 res.send(message);
+2 8 res.send(\'Oh shit!\', { 'Content-Type': \'text/plain\' }, 500);
+2 10 app.get('/buffer', function(req, res){
+2 11 res.send(new Buffer(\'wahoo!\'));
+2 13 app.get('/noargs', function(req, res, next){
+2 14 res.send();
+2 16 app.get('/relative', function(req, res){
+2 17 res.send(res.locals.parent);
+2 19 app.get(\'/absolute', function(req, res){
+2 20 res.send(__dirname + \'/fixtures/index.html\', { layout: \'layouts/index.html\' });
+2 22 app.get(\'/ferret/:user', function(req, res){
+2 23 res.send(req.params.user);
+2 25 app.get(\'/status/:op', function(req, res){
+2 28 app.get(\'/error/:err', function(req, res){
+2 29 res.send(\'got an error\');
+2 31 app.get(\'/buffer/:wahoo!\', function(req, res){
+2 35 { url: \'/html\' },
+2 36 { body: \'<p>test</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+2 38 { url: \'/json\' },
+2 39 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+2 41 { url: \'/text\' },
+2 42 { body: \'wahoo\', headers: { \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+2 44 { url: \'/status
+2 45 .send({ url: \'/text\', headers: \'/user/: { url: \'/user/: \'}\', headers: { url: { url: \'/user: \'{"name":"{ url: \'/user: \'/user/12"}}\', headers: { url: { url: \'users: { url: { url: { url: \'users: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: req.params.params.user.name } } } } } }}}
+2 46 }, headers: { \'X-Foo\', \'X-Foo\': \'baz\', \'baz
+2 47 }, status: \'bar
+2 48 }, headers: {
+2 49 X-X
+3 1 app.get(\'/text', function(req, res){
+3 2 res.send(\'wahoo\');
+3 8 res.send(\'Oh shit!\', { error: \'No input file or string\' }, 500);
+3 10 app.get(\'/buffer', function(req, res){
+3 13 app.get(\'/noargs', function(req, res, next){
+3 18 { body: \'<p>Welcome</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+3 26 { url: \'/status\' },
+3 27 { body: \'Not Found\', status: 404, headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+3 29 { url: \'/error\' },
+3 30 { body: \'Oh shit!\', status: 500, headers: { \'Content-Type\': \'text/plain\' }});
+3 32 { url: \'/buffer\' },
+3 33 { body: \'wahoo!\' });
+3 35 { url: \'/noargs\' },
+3 36 { status: 204 }, function(res){
+3 37 assert.equal(undefined, res.headers[\'content-type\']);
+3 38 assert.equal(undefined, res.headers[\'content-length\']);
+3 41 \'test #contentType()\': function(){
+3 42 var app = express.createServer();
+3 43 app.get(\'/html\', function(req, function(req, res){
+3 44 res){
+3 45 res.contentType(\'index.content-type= 500 });
+3 46 res.writeHead(){
+3 47 res.writeHead();
+3 48 res.end(\'index.set(\'<p>index.html\');
+3 49 res.send(\'<p>\');
+3 51 res.end(\'
+
+4 18 { body: \'<p>Hello tobi</p>\' });
+4 21 { body: \'{"foo":"bar"}' });
+4 27 { body: \'Not Found\' });
+4 30 { body: \'Oh shit!\' });
+4 41 \'test #render() layout\': function(assert){
+4 42 var app = express();
+4 43 app.set(\'view engine\', \'jade\');
+4 44 app.get(\'/\', function(req, res){
+4 45 res.render(\'index.jade\');
+4 47 app.get(\'/jade\', function(req, res){
+4 48 res.render(\'index\');
+4 51 { url: \'/jade\' },
+4 52 { layout: \'jade\', headers: { \'jade\', \'jade\', \'jade: false;">\' }});
+4 55 { url: \'/hamlazy\', res){
+4 56 assert.options: true, \'all
+4 57 }, function(res.should.should.be.be.true;
+4 58 assert.strict);
+4 62 app.strict);
+4 64 it("should.skip("should.should.get("should.get("should.get("hello.js");" is deprecated"); is deprecated behavior should be false");
+4 65 it("should.skip("should.");
+4 66 should.skip("should.get("hello.js"); should.get("hello.is()");should.is() recommended);should.skip("should.is());"));
+5 2 res.header(\'X-Role\', \' admin');
+5 3 res.contentType(\'.txt\');
+5 6 app.get(\'/status\', function(req, res){
+5 9 app.get(\'/error\', function(req, res){
+5 10 res.send(\'Oh shit!\', { \'Content-Type\': \'text/plain\' }, 500);
+5 12 app.get(\'/buffer\', function(req, res){
+5 15 app.get(\'/noargs\', function(req, res, next){
+5 18 app.get(\'/undefined\', function(req, res, next){
+5 19 res.send(undefined);
+5 21 app.get(\'/bool\', function(req, res, next){
+5 22 res.send(true);
+5 25 { url: \'/bool\' },
+5 26 { body: \'true\'
+5 27 , headers: { \'Content-Type\': \'application/json\' }});
+5 30 { body: \'false\'
+5 31 , status: 200 });
+5 39 , status: 404 });
+5 49 { url: \'/true\' },
+5 53 { url: \'/p?callback=test\' },
+5 54 { body: \'test\'
+5 55 , headers: {
+5 56 \'Content-Type\': \'test.js\'
+5 57 , \'X-Foo\': \'bob
+5 58 , \'baz\'
+5 61 }});
+5 64 { url: \'/middleware: function(app){
+5 65 assert.get(\'/middleware: function(res, next){
+5 66 res.middlewareResponse.error, next(){
+5 67 assert.send(res, next();
+5 68 assert.send(res.header(\'content-type\', \'text/html\')
+5 69 , \'Not Found
+5 70 , response.send(res.body)
+5 71 , response.status)
+5 73 , response.body)
+5 74 , \'Not Found\'else\')
+5 75 , function(res.send(res.body)
+5 76 , \'Not Found')
+5 77 , function(){ res.send(res.body)
+5 78 , status: res.sendHeader(res.body)
+6 2 res.send(\'Hello World
+6 3 );
+6 9 res.send(\'Oh shit!\', { error: "Lame, can\\\'t find that" });
+6 34 { body: \'wahoo!\', headers: { \'Content-Type\': \'application/octet-stream\' }});
+6 42 assert.assert.equal(undefined, 3, 3);
+6 44 }
+6 46 function error(err) {
+6 47 done(err, app, app, blog, callback) {
+6 48 if (err) {
+6 49 if (err) return done(err);
+6 50 called, callback(err);
+6 51 called = true;
+6 54 app.handle(err);
+6 55 app.handle(app, blog);
+6 57 }'
+
+7 2 res.send('missing\');
+7 4 app.get('/headers', function(req, res){
+7 7 app.get('/license', function(req, res){
+7 8 res.send(200);
+7 10 app.get('/keyboard cat', function(req, res){
+7 11 res.send('keyboard cat\');
+7 13 app.get('/user/:id', function(req, res){
+7 16 app.get('/user/:id/:op?', function(req, res){
+7 17 res.send('opener');
+7 19 app.put('/user/:id/edit', function(req, res){
+7 20 res.send('Editing user'+ req.params.uid);
+7 22 app.listen(3000);
+7 23 console.log(\'Express app started on port 3000\');'
+
+8 1 app.get('/submit', function(req, res){
+8 5 app.get('/search/:query?', function(req, res){
+8 6 res.send(req.params.query);
+8 11 app.get(\'/uSer\', function(req, res){
+8 14 app.get(\'/user/:title\', function(req, res){
+8 18 app.get(\'/user/:url\', function(req, res){
+8 19 res.send(\'Forbidden\');
+8 21 app.get(\'/user/:category\', function(req, res){
+8 24 app.get(\'/user/:tag\', function(req, res){
+8 25 res.send(\'<h1>Forbidden</h1>\');
+8 27 app.get(\'/user/:alt\', function(req, res){
+8 28 res.send(\'<h1>Forbidden</h1>\', { error: "Lame, can\\\'t find that" });
+8 30 app.get(\'/user/:id\', function(req, res){
+8 31 res.send(req.params.id);
+8 34 { url: \'/user/0\' },
+8 35 { body: \'<p>tobi</p>\' });
+8 37 { url: \'/user/1\' },
+8 38 { body: \'<p>loki</p>\' });
+8 40 { url: \'/user/2\' },
+8 41 { body: \'<p>jane</p>\' });
+8 43 { url: \'/user/3\' },
+8 44 { body: \'<p>Jane</p>\' });
+8 47 { body: \'<p>q.vision-media.ca</p>\' });
+8 50 { body: \'<p>Asdf</p>\' });
+8 52 assert.method.should.equal(/^\\/^\\/user\\/user\\/:id/:id\', 1);
+8 53 assert.equal(/admin: 1);
+8 55 assert.equal(/root: null);
+8 56 assert.should.equal(app.should.toArray(app.id);
+8 57 assert.toArray(app.id);
+8 58 assert.should.should.equal(app);
+8 59 assert.toArray.should.equal(app);
+8 60 assert.ok(app);
+8 61 assert.should.ok(app);
+8 64 assert.ok.ok.ok(app);
+8 69 assert.ok);
+9 8 app.get('/hello/:id', function(req, res){
+9 11 app.get('/error:site_name', function(req, res){
+9 12 res.send({ error: "Lame, can\\\'t find that" });
+9 15 { url: \'/user/12' },
+9 16 { body: "Cannot find user" });
+9 18 { url: \'/user/ab' },
+9 19 { body: \'Cannot find user" });
+9 21 { url: \'/user/ntj' },
+9 22 { body: \'Cannot find user tj" });
+9 24 { url: \'/user/ab/Zoze' },
+9 27 { url: \'/user/invalid' },
+9 28 function(res){
+9 29 assert.ok(res.body.indexOf(\'Error: ENOENT\') >= 0);
+9 30 assert.ok(res.body.indexOf(\'nope.jade\') >= 0);
+9 33 { url: \'/user/invalid-async' },
+9 36 assert.ok(res.body.indexOf(\'invalid-async\') >= 0);
+9 39 { url: \'/user/invalid-async-async\' },
+9 45 { url: \'/user/invalid-async\' },
+9 53 { url: \'/error\'should not be a valid HTTP response handler\', function() { url: \'/invalid' },
+9 54 assert.to: \'invalidize-async function() { url: function (req, app) { url: \'/invalidize() { url: \'/invalidate() { url: \'/invalidate() { url: \'/invalidate() { url: \invalidate() { url: \'/invalidate() { url: \invalidate() { url: \'invalidate() { url: \'invalidate() { url: \invalidate() { url: \'invalidate() { url:\' }, function (req, arg) { clear: \'invalidate: \'invalidate: \'invalidate() { url:invalidate: function (req, arg)

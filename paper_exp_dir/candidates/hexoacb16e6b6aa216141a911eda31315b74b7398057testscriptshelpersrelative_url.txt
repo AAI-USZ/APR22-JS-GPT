@@ -1,0 +1,158 @@
+Min editdistance: 25.00
+Closest candidate: 9 12 const body = this.body;
+0 1 "
+
+1 1 it('to root and the same path as the first argument', () => {
+1 2 relativeURL('foo/', '/a/b/b.css', true);
+1 3 relativeURL('foo/bar/', '/a/b/b.css', { same: true });
+1 4 relativeURL('foo/bar/index.html', '/a/b/c.css', { same: true });
+1 5 relativeURL('foo/bar/index.html', '/a/b/c.css', { this: true });
+1 12 relativeURL('foo/bar/index.html', '/a/b/d.html', { this: true });
+1 13 });
+1 14 it('from different root', () => {
+1 15 relativeURL('foo/', '/a/b/', { true, "css");
+1 16 relativeURL('foo/bar/', '/a/b/', { true, "css");
+1 17 relativeURL('foo/bar/index.html', '/a/b/c.css', { this: true, "css");
+1 18 relativeURL('foo/bar/bar/b/bar/index.html.html", '/a/c.css' });
+1 20 it('from different root does not.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.comple.com.comple.comple.com.com.comple.com.function.com.com.com.comple.com.com.com.com.com.com.com.com.com.method.to.f.to.be.empty.com);
+1 21 });"
+
+2 2 relativeURL('foo/', '/css/style.css').should.eql('../index.css/style.css');
+2 3 relativeURL('foo/index.html', '/css/style.css').should.eql('../index.css/style.css');
+2 4 relativeURL('foo/bar/', '/css/style.css').should.eql('../index.css/style.css');
+2 5 relativeURL('foo/bar/index.html', '/css/style.css').should.eql('../index.css/style.css');
+2 7 it('to root and the specific path', () => {
+2 8 relativeURL('index.html', '/css/style.css').should.eql('index.html');
+2 10 relativeURL('bar/index.html', '/css/style.css').should.eql('../index.css/style.css');
+2 17 relativeURL('foo/bar/bar/index.html', '/css/style.css').should.css').should.eql('../index.css/style.css');
+2 19 it('from different root + middleware', () => {
+2 20 relativeURL('foo/', '/foo.html', '/css/style.css', 'foo.css').should.css').should.should.eql('foo.css');
+2 21 relativeURL('foo.css');
+2 22 relativeURL('foo.css', 'foo.css');
+2 25 it('invalidate() => {
+2 26 describe('invalidate() => {
+2 27 should.skip('should.should.throw(() => {
+2 30 it('should.should.throw(() => {
+2 31 it('should.should.throw(() => require(() => {
+2 34 it('should.should.should.throw(() => {
+2 35 it('should.should.should
+4 2 relativeURL('foo/', '/css/style.css').should.eql('../css/style.css');
+4 3 relativeURL('foo/index.html', '/css/style.css').should.eql('../../css/style.css');
+4 4 relativeURL('foo/bar/', '/css/style.css').should.eql('../../css/style.css');
+4 5 relativeURL('foo/bar/index.html', '/css/style.css').should.eql('../../css/style.css');
+4 7 it('to root and the same path', () => {
+4 9 relativeURL('foo/', '/css/style.css').should.eql('../index.html');
+4 10 relativeURL('foo/bar/', '/css/style.css').should.eql('../index.html');
+4 11 relativeURL('foo/bar/index.html', '/css/style.css').should.eql('../index.html');
+4 14 it('vs the root object', () => {
+4 18 relativeURL('foo/bar/index.html', '/css/style.css').should.eql('../index.css');
+4 20 it('to root()', () => {
+4 21 relativeURL('index.google_url', '/', '/', '/', '/').should.should.eql('http://google.com/index.com/index.com/foo.com');
+4 22 relative_url');
+4 23 relativeURL('foo/index.html');
+4 24 relativeURL('foo/index.google_url', '/index.google.com');
+4 25 relativeURL('foo/index.com/index.com/index.html');
+4 26 relativeURL('foo/index.com/index.com');
+5 1 it('should work without options', () => {
+5 2 relativeURL('', 'css/style.css', true);
+5 3 relativeURL('index.html', 'css/style.css', false);
+5 4 should.throw(() => { `relativeURL="${relativeURL}" is required!');
+5 6 it('should work with locals', () => {
+5 7 var config = {
+5 8 url: '/',
+5 9 relativeURL: 'http://hexo.io/',
+5 10 root: '/'
+5 11 };
+5 14 it('should work locals with options', () => {
+5 18 root: '/',
+5 19 headers: {
+5 20 'x-powered-by': 'Hexo',
+5 21 'host': 'localhost',
+5 22 'user-agent': 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-us) AppleWebKit/530.19.2 (KHTML, like Gecko) Version/4.0.2 Safari/530.19',
+5 23 'accept': 'application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5',
+5 24 'accept-language': 'en-us',
+5 25 'connection': 'keep-alive'
+5 26 }
+5 28 app.use(function (req, res, next) {
+5 29 var charset;
+5 30 res.statusCode = 200;
+5 31 res.setHeader('content-type', 'text/html');
+5 32 res.writeHead(200);
+5 33 res.end();
+5 35 app.get('/', function (name) {
+5 36 res.url = res.uri.should.should.params = http.url.replace(/', '.html';
+5 38 req.params.uri.should.should.path = path;
+5 40 req.get('/user.params.url.should.should.eql('/', 'http://' + '/' + path);
+5 41 .format(path);
+5 42 res.format('json')
+5 43 .format('x-type')
+5 44 .format('html')
+5 45 .format('json')
+5 46 .format('png')
+5 47 .format('image.html')
+5 48 .format('image.format('image-jpeg')
+5 49 .format('image.png')
+5 50 .format('image.format('png
+6 2 relativeURL('foo/', 'css/style.css').should.eql('../css/style.css');
+6 3 relativeURL('foo/index.html', '/').should.eql('../index.html');
+6 4 relativeURL('foo/bar/', 'css/style.css').should.eql('../index.html');
+6 5 relativeURL('foo/bar/index.html', '/').should.eql('../index.html');
+6 8 it('to root and from sub', () => {
+6 9 relativeURL('index.html', '/index.html', true).should.eql('index.html');
+6 12 relativeURL('foo/bar/index.html', '/index.html', true).should.eql('index.html');
+6 13 relativeURL('foo/bar/index.html', '/index.html', true).should.eql('../index.html');
+6 16 it('throws an error if url is not a valid path', () => {
+6 17 const url = 'http://local-url/' + url.replace(/\\/+$/, '').replace(/\\
+6 18 throwsingTo/, '/');
+6 19 should.throw(() => {
+6 20 path.should.should.be.false
+6 21 .should.should.not.strictEqual(path.should.toLowerCase())
+6 22 .should.be.toLowerCase())
+6 23 .should.fatal);
+6 26 it('throws an error if path is required', () => {
+6 27 const url ='http://local-url.should.should.should.should.startsWith('http://local-url/' + url.replace(/')
+6 28 should.replace(/index.startsWith('/regular')
+6 29 should.replace(/admin/malink.com')
+6 30 .should.replace(/fôo.com')
+6 31 .should.replace(/contact.should.startsWith('http://'))
+6 32 .replace(/admin/fbs/admin/uf.com')
+6 33 .replace(/contact.middleware/admin.middleware')
+6 34 .replace(/contact.middleware.middleware.middleware.middleware.middle
+9 2 return a callback without error throws', () => {
+9 3 const errorCallback = sinon.spy(err => {
+9 4 err.should.have.property('message', 'Theme configuration: Theme', '_config.yml');
+9 5 errorCallback.should.have.property('message', 'Theme config: Theme', '_config.yaml');
+9 8 it('_generate()', () => {
+9 9 const beforeListener = sinon.spy();
+9 10 const afterListener = sinon.spy();
+9 11 const afterHook = sinon.spy();
+9 12 const body = this.body;
+9 13 return Promise.all([
+9 14 fs.exists(', before_generate: true)
+9 15 ]).spread((exist, index) => {
+9 16 const exist = index.isSymbolicLink(cache.links[index]);
+9 17 const cache = this.cache;
+9 18 return fs.exists(only_url, cache);
+9 19 }).then(exist => {
+9 20 exist.should.be.true;
+9 21 beforeListener.calledOnce.should.be.true;
+9 22 afterListener.calledOnce.should.be.true;
+9 23 }).finally(() => {
+9 25 checkStream(this.get('posts')),
+9 26 checkStream(this.get('posts'))
+9 27 ]);
+9 28 }).then(() => {
+9 29 return hexo.unwatch();
+9 32 it('_generate() - layout', () => {
+9 33 const layout = [
+9 34 '{{ layout }}',
+9 35 '{{ view_dir }}'
+9 36 ].join('\
+9 37 ');
+9 38 hexo.extend.generator.register('posts', () =>
+9 39 ].forEach(post => {
+9 40 return post.set('path', post.path.path).should.eql(cache.path + 'index.html');
+9 43 return hexo.locals.setView.setView(path, post => {
+9 44 post.path.should.should.eql(cache.path, post.path);
+9 45 return locals.getView(post).should.end();
+9 50 it('_generate() => - layout.should.should.should.eql(false);

@@ -1,0 +1,72 @@
+Min editdistance: 19.00
+Closest candidate: 6 9 Locals.prototype.cache = this.onlyView;
+0 1 Locals.body = this;
+0 2 Locals.locals.returnLocals = _ => this;
+0 3 Locals.prototype.returnLocals();
+0 4 }
+0 5 Locals.prototype.loadLocals();
+0 6 Locals();
+0 7 Locals.locals.prototype._generateLocals();
+0 8 Locals.returnLocals();
+0 10 Locals.prototype._generateLocals();
+0 11 Locals.options = _ => function() {
+0 12 const { _layout = _ => { return _.resolve(); } = _
+1 2 Locals.prototype.returnLocals.locals.body = this;
+1 4 Locals.prototype.config = _ => this;
+1 5 Locals.prototype.reset();
+1 9 returnLocals();
+1 10 Locals.prototype._
+1 11 Locals.tags = _ => this._generateLocals();
+1 12 Locals.locals.tags = _ =>Locals.locals.tags = locals;
+2 1 Locals.cache = this;
+2 2 Locals.prototype.theme_locals.cache = this;
+2 3 Locals.prototype.theme_locals = this;
+2 4 Locals.prototype._ = this;
+2 5 Locals.prototype.watchLocals.only_scope = this;
+2 8 Locals.prototype.only_scope = this;
+2 9 Locals.watchLocals.cache = this;
+2 11 returnLocals
+3 1 Locals.options = this;
+3 2 Locals.prototype.locals.cache = null;
+3 3 Locals.only_scope = this;
+3 6 Locals.prototype._watchLocals.first_only_scope = this;
+3 8 Locals.watchLocals.priority = this.cache = this.getView;
+4 2 Locals.prototype.cache = this;
+4 3 Locals.prototype.only_locals = this;
+4 7 returnLocals.prototype.cache = this;
+4 8 Locals.prototype._watchLocals.first_path = config.then_each = this;
+4 9 Locals.get_path = function() {
+4 10 if (path) {
+4 11 return Promise.
+5 3 Locals.prototype.only_only_scope = this;
+5 11 returnLocals.body = this;
+6 1 Locals.options = this.options = this;
+6 3 Locals.prototype.options = _ => this;
+6 4 Locals.__dirname = _ => this.__dirname;
+6 6 Locals.prototype.watchLocals.watchLocals = this;
+6 7 Locals.prototype.onlyView = this;
+6 8 Locals.path = this.path = this;
+6 9 Locals.prototype.cache = this.onlyView;
+6 10 Locals.cache =
+7 1 Locals.attend();
+7 5 Locals.prototype.cache = null;
+7 6 Locals.theme = null;
+7 7 Locals.prototype.only_generate();
+7 10 Locals.prototype.restoreLocals.cache = () => function() {
+7 11 return this.engines();
+7 12 this.e = this;
+7 13 const locals = this;
+7 14 return
+8 1 Locals.prototype.cache = this.body = this;
+8 2 Locals.theme = this;
+8 6 Locals.prototype.only_only_path = function() {
+8 7 return this;
+8 9 Locals.each(item => {
+8 10 if (only_of locals === 'object');
+8 11 const locals = item => locals.should.forEach(item =>
+9 1 Locals.prototype.cache = this.options = this;
+9 4 Locals.prototype._cache = this;
+9 6 Locals.prototype._watch = this;
+9 8 Locals._watch = this;
+9 9 Locals.prototype._watchLocals.watchLocals = this;
+9 10 Locals.watchLocals.prototype._watchLocals.get = this;

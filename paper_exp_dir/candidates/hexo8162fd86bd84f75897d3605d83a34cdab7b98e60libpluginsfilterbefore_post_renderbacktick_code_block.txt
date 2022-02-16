@@ -1,0 +1,87 @@
+Min editdistance: 20.00
+Closest candidate: 5 4 var args = arguments[3];
+0 1 if (options.gutter) {
+0 2 config.first_line_number = config.first_line_number || \'always1\';
+0 3 if (config.first_line_number === \'inline\') {
+0 4 arguments[3] = arguments[3].replace(\'=+\', \'=\');
+0 5 options[3].endsWith(\'=\');
+0 6 } else {
+0 7 if (args[3].length){
+0 8 options[3] = args[3].split(\'=\');
+0 9 }
+0 11 content = highlight(stripIndent(content), options)
+0 12 .replace(/{2,}/g, \'&#123;\')
+0 13 .replace(/}/g, \'&#125;\');
+0 14 return start + \'<escape>\' + content + \'</escape>\' + (end? \'\
+0 15 \
+0 16 \' : \'\');
+0 17 });
+0 19 module.exports = backtickCodeBlock;'
+
+1 4 _args = _args.replace(\'=+\', \'=\');
+1 5 options.gutter = _args.includes(\'=\');
+1 6 options.firstLine = options.gutter? _args.split(\'=\')[1] || 1 : 0;
+1 9 if (args) {
+1 10 var match;
+1 11 if (rAllOptions.test(args)) {
+1 12 match = args.match(rAllOptions);
+1 13 } else if (rLangCaption.test(args)) {
+1 14 match = args.match(rLangCaption);
+1 16 if (match) {
+1 17 options.lang = match[1];
+1 18 if (match[2]) {
+1 19 options.caption = \'<span>\' + match[2] + \'</span>\';
+1 20 if (match[3]) {
+1 21 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+1 26 .replace(/{/g, \'&#123;\')
+2 1 if (data.content){
+2 2 data.content = data.content.replace(rBacktick, function(){
+2 3 var args = arguments[1];
+2 4 var options = {
+2 5 indent: config.line_number,
+2 6 tab: config.tab_replace
+2 7 };
+2 8 var indent = str.match(/^(\\t*)/)[1].length,
+2 9 code = [
+2 10 '``` js Hello world\
+2 12 <notextile> tag holowaychuk</notextile>\
+2 13   '
+2 14 ].join(\'\
+2 15 \');
+2 16 return highlight(code, {
+2 17 lang: lang,
+2 18 caption: caption,
+2 19 gutter: config.line_number,
+2 23 var rAllOptions = /(\\s*)(\\s*(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+3 4 options.gutter = arguments[3];
+3 5 if (args){
+3 7 if (rAllOptions.test(args)){
+3 9 } else if (rLangCaption.test(args)){
+3 14 if (match[2]){
+3 16 if (match[3]){
+4 5 options[3].var match;
+4 6 if (regex.test(content)) {
+4 7 match = regex.match(content);
+4 9 options.gutter = arguments[1];
+4 11 options.first_line_number = 1;
+5 4 var args = arguments[3];
+5 5 var content = arguments[4];
+5 7 indent: start,
+5 8 tab: end
+5 10 args.forEach(function( i) {
+5 12 var match = args.match(rAllOptions);
+5 16 options.first_line_number = match[2];
+5 22 content = highlight(content, {
+5 23 lang: this.config.caption,
+5 25 tab: escape
+5 27 return highlight(content, {
+7 2 content = data.content.replace(rBacktick, function(){
+7 4 var content = arguments[2];
+8 3 var start = arguments[1];
+8 4 var end = arguments[5];
+8 8 auto_detect: config.auto_detect,
+8 22 options.caption = `<span>${match[2]}</span>`;
+8 24 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+8 31 return start + \'<escape>${content}</escape>${end? \'\
+8 33 \' : \'\'}'}'
+

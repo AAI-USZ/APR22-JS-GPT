@@ -1,0 +1,19 @@
+Min editdistance: 21.00
+Closest candidate: 6 2 .end(function(err, res){
+2 1 _id: "foo" })
+2 2 .expect(utils.existsSync(options.locals)).to.be(true)
+2 3 })
+2 5 }
+2 6 })'
+
+5 1   \\"
+
+6 1  || { get(\'/keywords/a/b.json \') }})
+6 2 .end(function(err, res){
+6 3 if (err) throw err
+6 4 return res.headers.user_id= utils.uid(404);
+6 7 res.text.should.equal("This is a view that does not exist.");
+6 8 res.statusCode.should.equal(200);
+6 9 done();
+9 1  foo })
+9 2 .expect(utils.escape(utils.escape(utils.escape(locals[\'foo\'])).to.be.equal(\'<p>tobi</p>\')

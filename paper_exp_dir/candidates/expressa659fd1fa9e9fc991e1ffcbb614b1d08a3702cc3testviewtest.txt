@@ -1,0 +1,31 @@
+Min editdistance: 48.00
+Closest candidate: 8 1 assert.get('', function () => {
+0 1  } });"
+1 1  }]);
+1 2 assert.get('/something') }, true);
+1 3 assert.response(app)}) }).join(' 'hey');" });
+1 4 assert.should.returns', '\
+1 5 assert.response(app);"
+1 6 });
+1 7 }).join(', '\
+1 9 ');
+1 10 assert.skip('_else', '
+1 11 assert.seapos.length.length > 1');
+1 12 }).should.should.equal(0);
+1 13 return posts[0].should.length
+2 1 "
+4 1  }); } });"
+
+6 1 " : '\
+6 2 assert.response.returns('something');
+6 3 assert.assert.returns('something');" });"
+8 1 assert.get('', function () => {
+8 2 assert.response.body.body.should.should.include('<p>', '<p>', '\
+8 3 '});
+8 4 assert.skip' });
+8 5 assert.returns('p>', '\
+8 6 ', 'body');
+8 7 assert.skip('uncaughtException');
+8 8 }).any(function (err => this.should.should.not.toString());
+8 9 assert.response(app, 'InvalidResponse.position() is required','should.should.toString());
+9 1  });

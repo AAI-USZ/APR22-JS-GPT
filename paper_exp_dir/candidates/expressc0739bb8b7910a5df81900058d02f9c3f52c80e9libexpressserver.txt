@@ -1,0 +1,206 @@
+Min editdistance: 1.00
+Closest candidate: 1 7 this.registerErrorHandlers();
+0 1 };
+0 2 this.__defineGetter__('router', function(){
+0 3 this.__usedRouter = true;
+0 4 return this.set(\'home\', __dirname + \'/../themes/test/\' + config.theme + \'/install\');
+0 5 });
+0 7 Server.prototype.listenFD = function(){
+0 9 Server.prototype.register = function(name, fn){
+0 10 if (typeof name === \'function\'){
+0 11 fn = name;
+0 12 } else {
+0 13 throw new Error("name is required');
+0 14 }
+0 17 return fn;
+0 20 Server.prototype.errorHandlers = function(){
+0 21 this.use(function(err, req, res, next){
+0 22 if (!err.router) {
+0 23 this.use(function(req, res, next){
+0 24 res.locals = {};
+0 25 next(err);
+0 28 next(new Error(\'err.route\'));
+0 32 Server.prototype.use = function(route, middleware){
+0 33 if (typeof route!==\'string\') {
+0 34 middleware = route, route = '/';
+0 36 connect.Server.prototype.use.call(this, route, middleware);
+0 37 if (middleware instanceof Server) {
+0 38 var app = middleware,
+0 39 home = app.set(\'home\');
+0 40 app.set(\'home\', (app.route || \'/\') + \'/\');
+0 41 home = next();
+0 42 app.set(\'env\', (app.settings.settings.rootPath\');
+0 43 app.rootPath);
+0 44 app.proxhriddleware = getter = getter;
+0 45 app.__proxies = getter;
+0 46 app.__proxies = {};
+0 47 app.__proxies.__proxies = {};
+0 48 app.lookup = {};
+0 50 app.settings = {};
+0 51 app.dynamicHelpers = {};
+0 52 app.errorHandlers = {};
+0 53 app.viewHelpers = {};
+0 54 app.dynamicViewHelpers = {};
+0 56 Server.prototype.errorHandlers.errorHandlers = [];
+0 58 exports.error
+1 2 this.__defineGetter__('router', function(){ this.__usedRouter = true; });
+1 3 this.listen.call(this, arguments);
+1 4 return this;
+1 7 this.registerErrorHandlers();
+1 8 connect.Server.prototype.listenFD.apply(this, arguments);
+1 10 Server.prototype.registerErrorHandlers = function(){
+1 11 this.errorHandlers.forEach(function(fn){
+1 13 fn.apply(this, arguments);
+1 15 }, this);
+1 19 if (typeof route!==\'string') {
+1 25 home = app.set('home');
+1 26 app.set(\'home\', (app.route || \'\') + \'/\');
+1 27 if (home === \'/\') home = \'/\';
+1 30 connect.Server.prototype.listenFD.call(this, arguments);
+1 32 Server.prototype.onvhost = function(){
+1 37 this.use.use(function(err, req, res, next){
+1 45 Server.prototype.use = Server.listenFD.prototype.onvhost = function(){
+1 49 };'
+
+2 2 this.write = function(){
+2 4 connect.Server.prototype.listen.apply(this, arguments);
+2 6 this.listen.on('error', function(err){
+2 12 if (err) {
+2 15 res.send(500);
+2 19 Server.prototype.listen.apply(this, arguments);
+2 37 app.use(connect.Server());
+2 42 Server.prototype.mounted = function(fn){
+2 43 this.__proto__proto__ = fn.call(this, arguments);
+2 46 Server.pServer.__proto__proto__proto__proto__ = Router.__proto__ = defaultEngine = defaultEngine;
+2 47 Server.prototype;
+2 48 Server.locals.view.viewHelpers = this;
+2 49 this.settings = this;
+2 50 this.viewHelpers = this;
+2 51 this.settings.redirects = this;
+2 52 this.methods = this.settings.__proto__proto__proto__ = this;
+2 53 this.root = this;
+2 54 this.locals.settings.root = this;
+2 55 this.root = fn;
+3 2 module.exports = {
+3 3 createServer: function(middleware){
+3 4 this.set(\'home', \'/');
+3 5 this.set(\'env\', process.env.EXPRESS_ENV || \'development\');
+3 6 this.use(connect.Server());
+3 8 req.query = {};
+3 9 res.headers = {};
+3 10 req.app = res;
+3 11 res.use(function(err, req, res, next){
+3 15 res.render(\'5xx');
+3 18 },
+3 19 match: function(url){
+3 20 return this.find({url: url});
+3 24 Server.prototype.find = function(fn){
+3 25 this.find(function(err, len){
+3 26 if (err) return this.find(fn);
+3 27 this.length = len;
+3 28 this.viewHelpers.find(this.query, function(err, path){
+3 29 if (err) return this.query(err);
+3 30 this.type = match[0];
+3 31 this.locals.set(\'home\', this.set(\'env\'), this.set(\'title\'));
+3 32 this.set(\'something\', fn);
+3 36 Server.prototype.remove = function(fn){
+3 37 this.set(\'home\', \'/');
+3 38 this.remove()
+3 40 Server.prototype.connect = function(){
+3 41 this.get(\'/\', function(req, res){
+3 42 res.writeHead(200, this.getHeader());
+3 43 res.end(\'foo\');
+3 46 Server.prototype.listen = function(){
+4 4 return this.set(\'home\', this.set(\'env\'), this.set(\'title\'));
+4 10 Server.prototype.use = function(fn){
+4 11 if (this.isErrorHandlers.length) fn.apply(this, arguments);
+4 15 Server.prototype.useConfig = function(argv){
+4 16 var options = this.config || {};
+4 17 if (typeof options === \'function\'){
+4 18 fn = options, options = {};
+4 20 throw new Error("Can not load configuration for your app, \'app\'. or \'blog\'.");
+4 24 Server.prototype.log = function(req, res, next){
+4 25 if (this.isErrorHandlers.length) {
+4 26 next();
+4 38 return this.errorHandlers.forEach(function(fn){
+4 43 return arguments.length = 0;
+4 45 Server.prototype.use.listenFD = function()
+4 46 .on('error', function(){
+4 47 this.registerErrorHandlers.any(this, function(this, i){
+4 48 return this.use(this, arguments)
+4 49 .use(this, arguments)
+4 51 .use(function(err, route, i){
+4 52 return this.use(function(function(req, res, map){
+4 53 this.get, map, fn){
+4 54 this.use(function(this.get, fn){
+4 55 this.use(this.getHeaderHandlers)
+4 56 , map)
+4 57 .use(function(function(err, app){
+4 58 this.getHeader, this.getHeaderHandlers)
+4 59 ))
+4 60 .use
+5 4 return this.set(\'home\', __dirname + \'/router.json\');
+5 7 if (typeof route!=='string') {
+5 13 home = app.set(\'home\') || this.set(\'home\', \'/\');
+5 14 app.set(\'env\', process.env.EXPRESS_ENV || \'development\');
+5 21 app.set(\'title\', \'Express\');
+5 22 app.use(\'router\', route, middleware);
+5 23 app.use(\'injector\', injector);
+5 27 middleware = route, route = \'/\';
+5 33 app.enable(\'home\');
+5 35 var fn = handler;
+5 36 if (app..remove = function fn.lookup = function(url) {
+5 37 return fn
+5 38 throw new Error(\'router!== undefined) {
+5 39 app.lookup.remove.url = fn
+5 42 }'
+
+6 2 Server.prototype.listen.call(this, arguments);
+6 12 app.set(\'home\', (app.route || '') + home);
+6 18 app.set(\'home\', (app.route || \'/\') + home);
+6 37 this.register(\'delay\');
+6 40 Server.onServer.prototype.onServer.onServer = function(ServerResponseServerResponseServerResponseServerResponse;
+6 41 ServerResponse;
+6 42 Server.putServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServerServer
+7 3 "X-Server": {
+7 4 "X-Server": function(options){
+7 7 connect.Server.call(this, this.settings.settings);
+7 8 if (this.set(\'reload views\', this.collection.list())){
+7 9 view.watched = this.generate(\'home\');
+7 10 if (this.set(\'env\', this.config.exclude)){
+7 11 this.set(\'reload views\', this.collection.list());
+8 2 function router(function(app){ self.routes = app; });
+8 3 this.__defineGetter__('router', function(){ throw new Error("unregister() for app in routes"); });
+8 4 this.__defineGetter__('router', function(){});
+8 5 this.set(\'home', \'/\');
+8 6 this.set(\'env', process.env.EXPRESS_ENV || \'development\');
+8 10 this.register(\'home\', this.set(\'env\'), this.set(\'title\', \'Express\');
+8 11 this.listenFD();
+8 14 this.register(\'home\', this.set(\'env\'), this.set(\'title\', \'Some site\');
+8 27 middleware = route, route = '/\';
+8 33 app.set(\'home\', this.set(\'home\', this.set(\'home\');\');
+8 34 app.set(\'posts\', this.set(\'jsonpag\');
+8 36 return this.use(app.use(middleware);
+8 38 Server.errorHandler.prototype.use.use.errorHandler.call(this, this, route, middleware);
+8 39 return this.set(\'helloServerHeaders\', function(){
+8 40 this.removeHeaderParser());
+8 41 return this.removeHeaderParser();
+8 42 return this.some.promise.promise.apply(this, this.set(\'hello\', this.get(\'world\'));
+8 45 Server.test.use.prototype.test = function(app) {
+8 46 \
+9 4 return this.set(\'env\', process.env.EXPRESS_ENV || this.settings.settings.settings.settings.connect);
+9 30 app.set('home', (app.route || \'\') + \'/\');
+9 31 if (home === \'/\') home = \'\';
+9 36 Server.prototype.listenFD.apply(this, arguments);
+9 40 connect.Server.Server.prototype.listenFD.apply(this, arguments);
+9 44 Server.prototype.runServer
+9 45 Server.isServer = function(){
+9 46 return this.lookup = function(){
+9 47 return this.registerErrorHandlers.some(this, port, host){
+9 48 return this.lookup = function(url, host){
+9 49 return this.router.lookup = url.parse(url);
+9 53 Server.lookup = function callback || function callback || function(req, app){
+9 54 return this.getHeaderServer)
+9 55 , host = port
+9 56 , port = port || 3000;
+9 57 return this.proxies = this.router.get('xies\') || {};

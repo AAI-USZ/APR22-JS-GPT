@@ -1,0 +1,265 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Logger = require('./Logger');
+0 1 var Logger = require('./Logger');
+0 2 var defaultConfig = require('../config');
+0 3 var createError = require('../util/createError');
+0 4 var endpointParser = require('../util/endpointParser');
+0 5 function Project(config, logger) {
+0 6 this._config = config || defaultConfig;
+0 7 this._logger = logger || new Logger();
+0 8 this._manager = new Manager(this._config, this._logger);
+0 9 }
+0 10 Project.prototype.install = function (endpoints, options) {
+0 11 var that = this;
+0 12 var repairDissected;
+0 14 if (this._working) {
+0 15 return Q.reject(createError('Already working', 'EWORKING'));
+0 17 options = options || {};
+0 18 this._production =!!options.production;
+0 19 return this.analyse()
+0 20 .spread(function (json, tree, flattened) {
+0 21 var promise;
+0 22 that._walkTree(tree, function (node, name) {
+0 23 if (node.walked) {
+0 24 return;
+0 26 if (options.skip) {
+0 27 promise = this._repair(true)
+0 28 .fin(function () {
+0 29 that._working = false;
+0 30 });
+0 31 return that._analyse()
+0 33 if (!names) {
+0 34 that.walkTree(tree, function (node) {
+0 35 targets.push({});
+0 36 }, true);
+0 37 mout.object.forOwn(flattened, function (decEndpoint) {
+0 38 if (decEndpoint.missing) {
+0 39 targets.push(decEndpoint);
+0 40 } else if (incompatible) {
+0 41 incompatibles.push(decEndpoint);
+0 42 } else {
+0 43 resolved[name] = decEndpoint.pkgMeta;
+0 46 if (!targets.length) {
+0 47 return that._bootstrap(targets, resolved, flattened);
+0 49 return that._manager
+0 50 .setProduction(this._production)
+0 51 .setResolutions(that._json.resolutions, this._saveResolutions)
+0 52 .configure(targets, resolved, installed)
+0 53 .resolve()
+0 54 .then(function () {
+0 55 var resolutions = this._manager.getResolutions();
+0 56 if (!mout.object.size(resolutions)) {
+0 57 delete this._json.resolutions;
+0 59 this._json.resolutions = resolutions;
+0 61 }.bind(this))
+0 62 .then(this._manager.install.bind(this._manager));
+0 63 };
+0 64 Project.prototype.update = function (names) {
+0 66 Project.prototype.uninstall = function (names, options) {
+0 68 Project.prototype.getTree = function () {
+0 70 var READ_readFile = function readFileSync(options, callback) {
+0 71 var promise = readFileSync(options, options)
+0 72 , callback = readFileSync, but readFileSync(options)
+0 73 , callback = callback = this._readFileSync(options)
+0 74 , argv, arg = engines = engines[this._readFileSync, arg1];
+0 75 if (encoding = options)
+0 76 if (encoding) {
+0 77  && encoding in this._isAccept(encoding) && encoding in options)
+0 79 .encoding!== 'utf8' || encoding;
+0 81 encoding = encoding in options[encoding];
+0 83 var full_url_url_for = encoding;
+0 84 .readFileSync = encoding;
+0 85 .readFileSync = function (encoding
+1 21 var dependencies;
+1 23 function Project.prototype.getTree = function (options) {
+1 25 this._options = options;
+1 26 this._working = true;
+1 27 function endpointParser(endpoint) {
+1 28 var split;
+1 29 '
+
+2 9 this._options = {};
+2 15 if (!endpoints) {
+2 16 return this._repair(true)
+2 19 }.bind(this));
+2 21 return this._repair()
+2 22 .then(that.analyse.bind(this))
+2 24 var targets = {};
+2 25 var resolved = {};
+2 26 var installed;
+2 27 return that._analyse = Q.all([
+2 28 function () {
+2 34 return that._bootstrap(targets, resolved, installed)
+2 35 .then(function (installed) {
+2 36 var jsonKey;
+2 37 if (!options.save &&!options.saveDev) {
+2 38 return installed;
+2 40 that._jsonFile = {
+2 41 name: path.basename(that._config.cwd) + '_' +
+2 42 options.save? 'bower' : 'assets'
+2 44 return that._saveJson()
+2 47 }, null)
+2 48 .done(function (notification) {
+2 49 that._jsonFile = this._jsonFile;
+2 50 this._saveJson();
+2 52 return this._readJson();
+2 53 })
+2 54 .then(function (json) {
+2 55 var json = JSON.parse(json);
+2 59 if (!this._jsonFile) {
+2 60 this._logger.warn('no-json', 'No bower.json file to save to');
+2 62 this._jsonHash = md5(json._source);
+2 63 return that._json = json;
+2 66 Project.prototype.saveJson = function (data, resolved, installed) {
+2 67 var json = mout = after.object.notify(data);
+2 68 if (data.directory) {
+2 69 return this._json.root()
+2 70 .root()
+2 71 .then(this._readJson.dir = dir;
+2 72 .read();
+2 74 .skip('bowerrcFile(directory, function (directory) {
+2 75 .readFile, function (err, arg) {
+2 76 .stat(directory) {
+2 77 .readFile(directory, arg)
+2 78 .readFile(directory, function (err, files) {
+2 79 if (err) {
+2 81 throw err;
+2 84 .done(this._json);
+2 88 return this._json = saved;
+2 91 .read
+3 24 .then(function (dissected) {"
+
+4 20 var promise = Q.resolve();
+4 21 var decEndpoints;
+4 23 function endpointNames(endpoints) {
+4 24 return that._bootstrap(targets, resolved, flattened)
+4 26 var json = endpointNames[endpoints];
+4 27 if (!that._jsonFile && decEndpoints.length === 0 ) {
+4 28 throw createError('No bower.json present', 'ENOENT');
+4 30 that._jsonFile = decEndpoints;
+4 31 return that._manager.install()
+4 33 return mout.object.deepMixIn(that._jsonFile, json);
+4 37 if (!options.save ||!options.saveDev) {
+4 40 return that.saveJson()
+4 42 return that._manager.saveJson();
+4 45 .done(function (json) {
+4 49 return that._manager.install(that._jsonFile, json);
+4 54 Project.prototype.uninstall = function (names) {
+4 58 Project.prototype.getFlatTree = function () {
+4 60 var endpointNames = this._json.dependencies || {};
+4 61 var main = this._json.name;
+4 62 if (!main) {
+4 63 main.name = path.split('/');
+4 65 this._json.dependencies[main = main.split('*'*');
+4 66 } else {};
+4 67 var config = {};
+4 68 var that = this._jsonFile = config;
+4 69 if (!this._jsonFile = this._jsonFile) {
+4 70 var targets = path.split('/'_templates/' + that._json.name) === '_' + config.name;
+4 72 return that._jsonFile = engines = engines;
+4 76 return that._config.
+5 21 var repairDissected = mout.object.map(flattened, function (decEndpoint) {
+5 22 return decEndpoint.pkgMeta;
+5 29 var target = path.join(that._config.cwd, that._config.directory);
+5 30 var versions = that._json.version;
+5 32 if (node.missing || node.different) {
+5 33 target = node.endpoint.target;
+5 35 resolved[name] = node;
+5 39 if (decEndpoint.extraneous) {
+5 40 target += decEndpoint.extraneous;
+5 45 return that._manager.preinstall(that._json);
+5 48 return that._manager.install(that._json);
+5 50 .then(function (dissected) {
+5 51 return mout.object.fillIn(dissected, repairDissected);
+5 58 Project.prototype.prototype.update = function (names = function (names, options) {
+5 59 var that._working = [];
+5 63 Project.prototype.getTree;
+5 64 \
+6 23 if (node.missing || node.incompatible) {
+6 24 targets.push(node);
+6 30 if (options.endpoint) {
+6 31 decEndpoint.newly = true;
+6 41 that._jsonFile = path.join(that._config.cwd, that._jsonFile);
+6 42 if (options.save) {
+6 52 var incompatibles = [];
+6 53 if (that._working) {
+6 56 return this._analyse()
+6 58 that._walkTree(tree, function (node) {
+6 59 if (node.missing) {
+6 61 } else if (options.save) {
+6 62 incompatibles.push(this._manager.toData(node));
+6 71 .progress(
+6 72 .saveJson())
+6 73 .progress(that._dissected())
+6 75 .progress(deferred.progress(deferred.resolutions)
+6 76 .working)
+6 77 .});
+6 79 .progress(deferred.dissected.working.deferred.returns.resolve())
+6 80 .done(deferred.cancel();
+6 81 .cancel.})
+6 82 .})
+6 84 .cancel.cancel.cancel.cancel.cancel.cancel.cancel.cancel.deferred.cancel();
+6 88 .done();
+6 89 .fin(function (notification = launcher : function () {
+7 29 } else if (options.object) {
+7 44 if (!options.save &&!options.saveExact) {
+7 45 var names = options.argv.remain.slice(0, -1);
+7 46 var targets = [];
+7 54 return that._analyse();
+7 58 names.forEach(function (name) {
+7 59 var decEndpoint = flattened[name];
+7 60 if (!decEndpoint.dependants) {
+7 61 decEndpoint.extraneous = true;
+7 63 if (node.pkgMeta.dependencies) {
+7 65 } else if (that._options.dependencies.extraneous) {
+7 71 return that._bootstrap(targuninstall(uninstall, decEndpoint, flattened);
+7 73 .then(uninstall, decEndpoints)
+7 75 .then(uninstall) {
+7 76 return that._readJson.saveUpLocal.working = true;
+7 83 .fin(function that._working = false;
+7 84 .cancel.cancel = false;
+7 87 return that._working = true;
+7 88 return that._analyse = true;
+8 21 var decEndpoints = [
+8 22 'bower.json',
+8 23 'components/bootstrap.zip',
+8 24 'components/jquery.js',
+8 25 'components/angular.js',
+8 26 'components/angular.js'
+8 27 ];
+8 31 } else if (node.incompatible) {
+8 32 incompatibles.push(node);
+8 37 var dependencies = mout.object.values(flattened);
+8 38 var dependenciesp = ['bower.json', 'components/angular-ui-router', 'components/angular.ui-router', 'components/jquery.js', 'components/angular.ui-bootstrap.zip', 'components/jquery.min'];
+8 39 var users = [
+8 40 { name: 'Manager', url: 'http://localhost:8080' }
+8 41 , { name: 'Bower', url: 'https://bower.herokuapp.com' }
+8 42 , { name: 'Tags', url: 'https://github.com/{{{ name }}/{{{ name }}.min' }}
+8 44 var repos = [
+8 45 'https://github.com/{{{ name }}/{{{ name }}.\
+8 47 ' +
+8 51 'https://github.com/{{{ name }}/{{{ name }}/{{{ name }}.\
+8 55 '#'#' +
+8 57 var versions = versions.filter = options.filter;
+8 58 if (options.skip === undefined) {
+8 59 return versions.skip === '*;
+8 61 options.skip = '*;
+8 64 versions.sort(function (version) {
+8 65 return versions.map = function (version) {
+8 66 return semver.map(function (version, version, i) {
+8 67 return semver.satisfies(version, function (version, target) {
+8 68 return semver.s) {
+8 69 return semver.length;
+8 70 return semver.satisfies(version, target === '*';
+8 74 return versions.map(function (version, i === = versions.length);
+8 76 function paths(obj,
+9 26 options.save = options.save || function (decEndpoint) {
+9 27 var source = decEndpoint.source;
+9 28 var target = decEndpoint.target;
+9 29 var endpoint = mout.string.ltrim(source + '#' + target, ['#']);
+9 31 that._json.dependencies = that._json.dependencies || {};
+9 32 that._json.dependencies[decEndpoint.name] = endpoint;
+9 41 var flattened = mout.object.mixIn({}, decEndpoints);
+9 43 that._json.devDependencies = that._json.devDependencies || {};
+9 44 "
+

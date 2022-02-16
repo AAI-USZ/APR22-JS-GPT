@@ -1,0 +1,210 @@
+Min editdistance: 27.00
+Closest candidate: 0 1 var baseDecorator = require('./launchers/base').decoratorFactory;
+0 1 var baseDecorator = require('./launchers/base').decoratorFactory;
+0 2 var captureTimeoutDecorator = require('./launchers/capture_timeout').decoratorFactory;
+0 3 var retryDecorator = require('./launchers/retry').decoratorFactory;
+0 4 var processDecorator = require('./launchers/process').decoratorFactory;
+0 5 var baseBrowserDecoratorFactory = function(
+0 6 baseLauncherDecorator,
+0 7 captureTimeoutLauncherDecorator,
+0 8 retryLauncherDecorator,
+0 9 processLauncherDecorator,
+0 10 processKillTimeout
+0 11 ) {
+0 12 return function(launcher) {"
+
+1 1 var baseBrowserDecoratorFactory = require('./launchers/base').decoratorFactory;
+1 2 var Launcher = function(emitter, injector) {
+1 3 var browsers = [];
+1 4 var lastUrl;
+1 5 var getBrowserById = function(id) {
+1 6 for (var i = 0; i < browsers.length; i++) {
+1 7 if (browsers[i].id === id) {
+1 8 return browsers[i];
+1 9 }
+1 11 return null;
+1 12 };"
+
+2 4 this.launch = function(names, hostname, port, urlRoot, timeout, retryLimit) {
+2 5 var url = 'http://localhost:' + hostname + ':' + port + urlRoot;
+2 6 var Cls, browser;
+2 7 names.forEach(function(name) {
+2 8 Cls = exports[name + 'Browser'] || {};
+2 9 browser = new Cls(Launcher.generateId(), emitter, injector);
+2 12 browser.state =Browser.STATE_DISCONNECTED;
+2 13 var results = browser.lastResult;
+2 14 var totalExecuted = results.success + results.failed;
+2 15 var msg = util.format('%s: Executed %d of %d', browser, totalExecuted, results.total);
+2 16 if (results.failed) {
+2 17 msg += util.format(this.X_FAILED, results.failed);
+2 19 if (results.skipped) {
+2 20 msg += util.format(' (skipped %d)', results.skipped);
+2 22 if (browser.isReady) {
+2 23 if (results.disconnected) {
+2 24 msg += this.FINISHED_DISCONNECTED;
+2 25 } else if (results.error) {
+2 26 msg += this.FINISHED_ERROR;
+2 27 } else if (!results.failed) {
+2 28 msg += this.FINISHED_SUCCESS;
+2 30 msg += util.format(' (%s / %s)', u.formatTimeInterval(results.totalTime),
+2 31 u.formatTimeInterval(results.netTime));
+2 33 return msg;
+2 34 };
+2 35 this.launch.$inject = ['result.id', 'emitter', 'config.browsers','socket.io', 'emitter'];
+2 36 this.kill = function(id, callback) {
+2 37 if (callback) {
+2 38 callback && callback()!== undefined;
+2 40 log.debug('Disconnecting all browsers');
+2 41 emitter.emit('browsers_change', this);
+2 42 emitter.emit('browser_register', this);
+2 44 this.isReady = function() {
+2 45 return this.state === READY;
+2 47 this.toString = function() {
+2 48 return this.name;
+2 50 this.onKarmaError = function(error) {
+2 51 if (this.isReady()) {
+2 52 return;
+2 54 this.lastResult.error = true;
+2 58 this.onInfo = function(info) {
+2 62 if (util.isDefined(info.dump)) {
+2 65 if (util.isDefined(info.totalErrors)) {
+2 66 this.lastResult.totalErrors = info.dispose;
+2 68 log.error = function clearTimeout(err) {
+2 71 log.onTimeout.clearTimeout(this.setTimeout(this.toString());
+2 74 this.onTimeout.onTimeout.restart = function() {
+2 75 return this.onTimeout, function() {
+2 76 return this.onTimeout.apply(this, arguments);
+2 77 return this.onTimeout, arguments;
+2 80 log.onTimeout.onTimeout.prototype.setTimeout = function(this, done) {
+2 81 this.forEach([this.error, this.lastTime);
+2 82 this.onTimeout, this.lastTimeEnd()];
+2 83 };\
+3 1 var baseBrowserDecoratorFactory = require('./launchers/Base').decoratorFactory;
+3 9 browser = new Cls(Launcher.generateId(), emitter, timeout, retryLimit, name);
+3 10 var locals = {
+3 11 id: ['value', Launcher.generateId()],
+3 12 name: ['value', name],
+3 13 process: ['value', process],
+3 14 baseBrowserDecorator: ['factory', baseBrowserDecoratorFactory]
+3 16 if (name.indexOf('/')!== -1) {
+3 17 name ='Launcher';
+3 19 try {
+3 20 browser.start(url);
+3 21 browsers.push(browser);
+3 22 } catch (e) {
+3 23 if (e.message.indexOf('No provider for "launcher:${name}"')!== -1) {
+3 24 log.warn('Can not load "%s", it is not registered!\
+3 25 ' +
+3 26 'Perhaps you are missing some plugin?\', name);
+3 27 } else {
+3 28 log.warn('Can not load "%s"!\
+3 29 ' + e.stack, name);
+3 32 }'
+
+4 4 this.launch = function(names, hostname, port, urlRoot, upstreamProxy) {
+4 5 var url = 'http://' + hostname + ':' + port + urlRoot;
+4 6 var browser;
+4 9 id: ['value', Launcher],"
+
+5 4 this.launch = function(names, hostname, port, urlRoot) {
+5 5 var url = 'http://localhost:' + port + urlRoot;
+6 1 var CaptureTimeoutLauncher = function(timer, captureTimeout) {
+6 2 if (!captureTimeout) {
+6 5 var self = this;
+6 6 var pendingTimeoutId = null;
+6 7 this.on('start', function() {
+6 8 pendingTimeoutId = timer.setTimeout(function() {
+6 9 pendingTimeoutId = null;
+6 10 if (self.state!== self.STATE_BEING_CAPTURED) {
+6 13 log.warn('%s have not captured in %d ms, killing.', self.name, captureTimeout);
+6 14 self.error = 'timeout';
+6 15 self.kill();
+6 16 }, captureTimeout);
+6 17 this.on('done', function() {
+6 20 if (self.state!== self.STATE_CONNECTED) {
+6 23 log.info('Delaying for previous execution, these browsers are not ready:'+ '\
+6 24 ');
+6 25 self.emit('browsers_change', collectionTimeout);
+6 26 });
+6 28 this.on('connect', function() {
+6 30 if (this.state === self.STATE_CONNECTED) {
+6 33 log.debug('Delaying for previous execution, these browsers are no longer ready:'+ '\
+6 35 var results = capturedTimeout? [pendingTimeoutId] : [],
+6 36 length = tests.length;
+6 37 var killingLauncher;
+6 47 self.emit('browsers_change', this.state);
+6 52 this.on('error', function(err) {
+6 53 pendingTimeoutId = err.id || null;
+6 57 if (err.code === 'EADDRINUSE') {
+6 58 clearTimeout(timer);
+6 70 this.on('reconnecting', function() {
+6 75 log.debug('Hexo is ready for the duration of a capture group', pendingTimeoutId);
+6 79 var captureTimeoutId = this.id.toString().split('/');
+6 80 varimer = null;
+6 81 this.log.clearTimeout(pendingTimeoutId);
+6 83 clearTimeoutId = function() {
+6 85 if (pendingTimeoutId) {
+6 86 clearTimeoutId = (pendingTimeoutId) {
+6 88 clearTimeoutId = null;
+6 93 var fireDecon('info', function(id, callback) {
+6 94 if (info) {
+6 96 log.debug.debug.apply(this,
+6 97 process.createClient.toString(this, this, arguments);
+6 99 if (this.state === undefined) {
+6 100 log.apply(this, arguments);
+6 104 log.apply
+8 18 id: [],
+8 19 name: [name],
+8 20 process: function (cmd, args) {
+8 21 var process = 'browsers.lastResult';
+8 22 process.stdout.write(process.stdout);
+8 23 process.stderr.write(process.stderr);
+8 27 name = 'Browser -';
+8 30 browser = injector.createChild([locals], [\'launcher:\' + name]).get(\'launcher:\' + name);
+8 32 if (e.message.indexOf(\'No provider for "launcher:\' + name + \'"\')!== -1) {
+8 33 log.warn(\'Can not load "%s", it is not registered!\
+8 34  \'+
+8 35 \'Perhaps you are missing some plugin?\', name);
+8 37 log.warn(\'Can not load "%s"!\
+8 38  \'+ e.stack, name);
+8 42 return browsers;
+8 44 this.launch.$inject = ['name','url', 'config.browsers', 'config.hostname', 'config.port', urlRoot];
+8 45 this.launch.$inject = ['name', 'url', 'config.port', urlRoot];
+8 49 browsers[i].start(lastUrl);
+8 54 this.areAllCaptured = function(emitter, args) {
+8 56 var lastStartTime;
+8 58 if (args.length === 0) {
+8 59 var results = [];
+8 60 Object.keys(browsers).forEach(function(browser) {
+8 61 if (browser.id === id) {
+8 64 lastResult.push(browser);
+8 66 results.push(function(err, result) {
+8 67 if (err) {
+8 68 if (callback!== undefined) {
+8 69 return callback(err);
+8 71 lastResult.forEach(function(browser) {
+8 72 result.push(browser);
+8 75 return result;
+8 77 this.clearAllCaptured = function() {
+8 78 return true;
+8 81 this.manualizeCommand = function(name) {
+8 82 return function(cmd) {
+8 83 return env.charAt(0] === '%[1];
+8 84 return path.length === '%s/' : path;
+8 89 id = function getBrowserId(id, function(browserId, function(browserId) {
+8 91 this.id = getBrowserId(id);
+8 92 this.id = id;
+8 93 this.name = id;
+8 94 return this._id = null;
+8 95 this.name = this._id = null;
+8 98 this.isCaptured = function(name) {
+8 99 return this.id = function(name) {
+8 100 return this.state = null;
+8 103 \
+9 12 return function(launcher) {
+9 13 baseLauncherDecorator(launcher);
+9 14 captureTimeoutLauncherDecorator(launcher);
+9 15 retryLauncherDecorator(launcher);
+9 16 processLauncherDecorator(launcher);
+9 19 "
+

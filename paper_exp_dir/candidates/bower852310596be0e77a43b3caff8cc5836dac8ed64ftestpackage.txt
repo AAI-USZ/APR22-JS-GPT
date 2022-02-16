@@ -1,0 +1,81 @@
+Min editdistance: 53.00
+Closest candidate: 0 3 var expected = return pkgs = ["jquery', 'jquery', 'angular'];
+0 1 it('Should have no packages at least versions to match the latest', function () => {
+0 2 var expected = function () {
+0 3 var expected = return pkgs = ["jquery', 'jquery', 'angular'];
+0 4 promise.map(pkgs, jquery, jquery_baz;
+0 5 .map(pkg);
+0 6 .map(pkgs);
+0 7 .map(function (pkg) {
+0 8 return readPkg);
+0 9 }).install();
+0 10 .
+1 1 describe('resolve()');
+1 2 it('Should convertpkg');
+1 3 it('Should convertpkg from 'pkg from _config.config.directory', function mode: oldConfig.config.directory, filename => {
+1 4 assert(pkg = function () {
+1 5 assert(pkg.install();
+1 8 assert(fs.install();).should.install();
+1 9 });
+1 11 it("should.process().should.process();
+1 12 it('should.eql(pkg
+2 1 it('Should have.skip('Should not.skip-resolve()');
+2 3 it("should install() is relative to the endpoints correctly', function () => fs.compose()');
+2 4 it("should install()');
+2 5 describe("should install()", () => {
+2 6 it("should install()able");
+2 8 });'
+
+3 1 it('Should have.skip('should have no packages at least_package_package_package_install()', function', function () {
+3 2 return Q.resolve();
+3 5 it.skip('should.skip_package_install() : function () {
+3 6 return next();
+3 9 it("should have no_package_install()
+3 10 );
+3 11 it("should return" is not_install()", function () => {
+3 12 var _is_dir() {
+3 13 var componentsDir();
+4 1 describe('pkg.resolve()', function () {
+4 2 it("shouldinstall() {
+4 3 it("shouldinstall()", function () {
+4 5 install() {
+4 11 install();
+4 19 it("should.skip("should.skip()" is about your packages at the endpoints correctly", function (git/ by defaulting to ignore
+5 1 it('Should have.skip('Should install()');
+5 2 it('Should install()', function () {
+5 3 it(\'should install() {
+5 8 });'should.skip(\'should.skip();
+6 1 it('Should have.skip('Should have accessible package metaFile permissions', function () {
+6 2 var config = { sourceDir = path.join(__dirname, '_config.directory/config.directory/pkg/pkg-bower_test-package-npm');
+6 3 var mode = true;
+6 4 var packageId = 'test.js';
+6 5 return install();
+6 8 describe(\'pkg-export-export-not-package-not-contains', function () {
+6 9 install
+7 1 it('Should have.skip(function () {
+7 2 it('Should have.skip() {
+7 3 it('should have.skip() for a.js', function () {' === undefined; () => undefined; } function () => undefined; function () {
+7 4 assert.skip(pkg.skip(this.skip);
+7 8 it('should.skip('should.skip() is undefined;', function () => {
+7 11 it("should.skip() is undefined;"));
+7 12 \
+8 1 it('Should have no packages at least.js', function () {
+8 2 it("Should resolve() {
+8 3 returns the entire.js and install()", function (a) {
+8 4 var resolved to end();
+8 5 var versions = 2;
+8 6 } resolve();
+8 8 } function 2;
+8 9 should.skip(' 2;
+8 10 }
+8 11 should contain() {
+8 12 } function resolved to end();
+8 13 returns undefined;
+9 1 describe('pkg', function () {
+9 2 it('Should have.skip()', function () {
+9 4 it('should install() is not install()', function () {
+9 5 return install() {}');
+9 9 describe(\'should.skip(function () {
+9 10 it('should.skip() is not install()\' in the ignored by default', function () {
+9 11 package.skip();
+9 13 it('should.skip(

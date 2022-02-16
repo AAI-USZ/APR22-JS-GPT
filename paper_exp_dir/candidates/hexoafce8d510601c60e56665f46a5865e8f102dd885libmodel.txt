@@ -1,0 +1,76 @@
+Min editdistance: 12.00
+Closest candidate: 3 5 root: '/',
+0 1 "
+
+2 1 exports.posts = db.collection('posts', schemaPosts);
+2 2 exports.pages = db.collection('pages', schemaPages);
+2 3 exports.categories = db.collection('categories', schemaCats);
+2 4 exports.tags = db.collection('tags', schemaCats);
+2 5 exports.assets = db.collection('assets', schemaassets);
+2 6 exports.callbacks = db.collection('callbacks', callbackbacks);
+2 7 exports.exclude = db.exclude;
+2 8 exports.browsers = db.browsers;
+2 9 exports.host = db.host;
+2 10 exports.port = db.port;
+2 11 exports.server = db.server;
+2 12 exports.runner = db.runner;
+2 13 exports.home = db.home;
+2 14 exports.post = db.post;
+2 15 exports.archive = db.archive;
+2 16 exports.year = db.year;
+2 17 exports.month = db.month;
+2 18 exports.category = db.category;
+2 19 exports.tag = db.tag;"
+
+3 1 var schemaPosts = new Schema({
+3 2 _id: String,
+3 3 title: 'Hello World',
+3 4 url: 'http://yoursite.com',
+3 5 root: '/',
+3 6 permalink: ':id/:category/:year/:month/:day/:title'
+3 7 });
+3 8 var schemaPages = new Schema({
+3 13 permalink: ':id/:category/:title'
+3 15 var schemaCats = new Schema({
+3 19 root: '/'
+3 21 var schemaTags = new Schema({
+3 26 permalink: ':id/:tag/:title'
+3 34 var schemaLink = new Schema({
+3 44 url: 'foo'
+3 47 var user: new Schema({
+3 48 id: new Schema({
+3 50 _id: 'foo'
+3 53 var users = new Schema({
+3 55 var users.count: new Schema({
+3 56 users.count: new Schema({
+3 58 var users.counts: new Schema({
+3 60 var userIds: new Schema({
+3 62 var users.stat: new Schema({
+4 5 exports.assets = db.collection('assets', schemaAssets);
+4 6 exports.data = db.collection('data', schemaData);
+4 7 exports.excerpt = db.collection('excerpt', data);
+4 8 exports.more = db.collection('more', function(){
+4 9 return db.collection('more', {excerpt: db.collection('more','more-ops')});
+4 10 });"
+
+6 1 exports.createCategory = function(req, res, next){
+6 2 var categories = this.categories;
+6 3 if (!category) return next();
+6 4 var model = db.model;
+6 5 var query = function(obj){
+6 6 if (obj == null) return res.send(obj);
+6 7 };
+6 8 if (doc){
+6 9 query.date = new Date();
+6 10 } else {
+6 11 query.date = stat.ctime;
+6 12 }
+6 21 if (query.categories){
+6 22 if (categories.length) return res.send(query.categories);
+6 24 res.send(query.categories);
+6 27 exports.updateCategory = function(req, res, next){
+6 39 exports.updateCategory();
+6 40 exports.createTag = function(req, res, res, next){
+6 41 exports.end();
+6 42 };"
+

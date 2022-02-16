@@ -1,0 +1,3 @@
+reset = function() {
+Express.routes = []
+}

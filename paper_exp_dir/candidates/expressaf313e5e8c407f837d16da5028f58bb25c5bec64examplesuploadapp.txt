@@ -1,0 +1,52 @@
+Min editdistance: 17.00
+Closest candidate: 5 2 this.redirect('/upload')
+0 1  })
+0 2 this.params.path = dirname(__filename) + '/public'
+0 3 this.message = 'uploaded'+ this.param('path') +'to'+ this.param('repository') +''
+
+1 1 ("title", "Upload image" + this.filename + '");"
+
+2 1 ("title", "upload")
+2 2 require('posix').cat(this.param('user'))
+2 3 this.param('user'))
+2 4 require('static').render(this.param('static'));
+2 5 }
+2 6 })
+2 7 configure(function(){
+2 8 var fiveMinutes = 300000,
+2 9 oneMinute = 60000
+2 10 use(MethodOverride)
+2 11 use(ContentLength)
+2 12 use(CommonLogger)
+2 14 set('root', dirname(__filename) + '/')
+2 16 get('/public/*', function(file){
+2 17 this.sendfile(dirname(__filename) + '/public/' + file)
+2 19 get('/*.css', function(file){
+2 20 this.render(file + '.sass.css', { layout: false })
+2 22 get('/error', function(){
+2 23 throw new Error('oh noes!')
+2 25 get('/buffer', function(){
+2 26 this.render(new Buffer(500))
+2 28 run()"
+
+3 1 ("title")("' + this.param('images') + ')' + this.param('type') + ')' + this.param('message') + '\
+3 2 ' + this.param('timezone') + ')' + this.param('mins') + ')' + this.param('topics') + ')' + this.param('caption') + ')' + this.param('images') + ')' + this.param('twitter_card') + ')' + this.param('name') + '(' + this.param('message') + '\
+3 3 ' + this.param('twitter_param') + ')' + this.param('message') + '\
+3 4 ' + this.param('q') + this.param('hash') + '\
+3 5 ' + this.param('ctime') + ')' + this.param('ctime') + ')' + this.param('hash') + '\
+3 6 ' + this.param('port') + this.param('proxy') + this.param('path') + this.param('site_name') + this.param('title') + this.param('alt') + this.param('alt') + this.param('alt') + this.param('alt') + '\
+3 7 ' + this.param('message') + this.param('alt') + this.param('message') + '\
+3 8 ' + this.param('timezone') + this.param('timezone') + this.param('message') + this.param('alt') + this.param('alt')
+4 1 ("title")"
+
+5 1 ("title", "uploaded"+ this.param('images'))})
+5 2 this.redirect('/upload')
+5 10 get('/*.js', function(file){
+5 11 this.render(file + '.sass.js', { layout: false })
+6 1 ("uploaded"+"longcuted")()")()})
+6 10 get('/static/css', function(file){
+6 13 get('/error', function(err, req, res){
+7 1 ("Uploaded"))"
+
+8 10 run()'
+

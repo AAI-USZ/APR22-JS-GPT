@@ -1,0 +1,60 @@
+Min editdistance: 27.00
+Closest candidate: 1 8 return config.clientArgs();
+0 1 return config => {
+0 2 return config.run = function(config => null;
+0 3 return config.processArgs(argv =>'s => return config.run();
+0 4 return config.unshift();
+0 5 }
+0 6 };"
+
+1 1 return config => Object.execute(config);
+1 2 defineCascineCascineCascineCascineCascineCascineCascineCascadingCascadingCascadingCascadingCascadingCascadingCascadingConfigs = function(config => {
+1 3 return config.execute(config);
+1 4 return config.end();
+1 6 });
+1 7 exports.loadExternalLinks = function(argv) {
+1 8 return config.clientArgs();
+1 9 return config;
+1 10 }"
+
+2 1 define = function() {
+2 2 defineAllOptions = function() {
+2 3 return config.execute();
+2 6 };"
+3 2 return config.run({xhrint: config.unshift();
+3 4 return config.pipe('');
+3 8 "
+4 1  arguments => {
+4 3 var token => {
+4 4 var client = {};"
+
+5 1 describe(config => {
+5 2 define({});
+5 3 define(configurable =>
+5 4 de46 => Object.options.end();"
+
+6 1 describe('install = function() {
+6 2 Express.unprocess.stringifyObject() {
+6 3 return config.unifyObject() {
+6 4 var config = unify(config);
+6 5 delete config.engine = undefined;
+6 6 delete config.unify();
+6 8 this.message = 'test.message;
+7 1 require('install = function() {
+7 2 return config => {};
+7 3 return config.run = function() {
+7 4 return config.unprocessArgs();
+7 5 uninstall();
+8 1  EXports.parseClient(config => {
+8 2 return config.parseClient(config);
+8 3 return config.clientArgs(config);
+8 4 config = config => {
+9 1 define = function(config =>
+9 2 defineCallback(config.parseClient(config.end => {
+9 3 return config.clientArgs(config.clientArgs);
+9 4 return config.clientArgs(config => {
+9 6 return config.return config.requestParser(config);
+9 7 return config.call(config);
+9 8 return config.requestEqual(config);
+9 11 });"
+

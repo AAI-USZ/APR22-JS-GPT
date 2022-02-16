@@ -1,0 +1,218 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var val = this.header(field);
+0 1 var val = this.header(field);
+0 2 if (!val) return \'\';
+0 3 var regexp = new RegExp(param +\'*= *(?:"([^"]+)"|([^;]+))\', 'i');
+0 4 if (!regexp.exec(val)) return \'\';
+0 5 return RegExp.$1 || RegExp.$2;
+0 6 };
+0 7 return RegExp.$3;
+0 9 req.accepts = function(type){
+0 10 return utils.accepts(type, this.header(\'Accept\'));
+0 12 req.acceptsCharset = function(charset){
+0 13 var accepted = this.acceptedCharsets;
+0 14 return accepted.length
+0 15 ? ~accepted.indexOf(charset)
+0 16 : true;
+0 18 req.acceptsLanguage = function(lang){
+0 19 var accepted = this.acceptedLanguages;
+0 21 ? ~accepted.indexOf(lang)
+0 24 req.range = function(size){
+0 25 var range = this.get(\'Range\') || [];
+0 26 if (!range) return;
+0 27 return parseRange(size, range);
+0 29 req.__defineGetter__(\'accepted\', function(){
+0 30 var accept = this.header(\'Accept\');
+0 31 return accept
+0 32 ? utils.parseAccept(accept)
+0 33 : [];
+0 34 });
+0 35 req.__defineGetter__(\'acceptedLanguages\', function(){
+0 36 var accept = this.header(\'Accept-Language\');
+0 38 ? utils
+0 39 .parseQuality(accept)
+0 40 .map(function(obj){
+0 41 return obj.value;
+0 42 })
+0 45 defineGetter__(\'acceptedCharsets\', function(){
+0 46 var accept = this.header(\'Accept-Charset\');
+0 60 .toString()
+0 61 .split(/ *, */)
+0 62 .map(function(var accept){
+0 63 .unsupported;
+0 64 return that.headers[accept]
+0 70 defineGetter__defineGetter__defineGetter__(\'acceptedFiles\', function(){
+0 71 var accept = this.collection;
+0 72 var accept = this;
+0 73 return accept;
+0 76 .collection;
+0 78 });'
+
+1 7 return this.headers[field] = val;
+1 25 var range = this.get(\'Range\') || 32 * 30;
+1 44 req.__defineGetter__(\'acceptedCharsets\', function(){
+1 54 req.param = function(name, defaultValue){
+1 55 if (this.body && undefined!== this.body[name]) return this.body[name];
+1 56 if (this.params
+1 57 && this.params.hasOwnProperty(name)
+1 58 && undefined!== this.params.hasOwnProperty(name)
+1 59 && undefined!== this.params[name)
+1 60 && undefined!== this.params.hasOwnProperty(this.hasOwnProperty)
+1 61 && undefined!== this.hasOwnProperty)
+1 62 && undefined!== undefined;
+1 63 } else {
+1 64 return this.params[name];
+1 65 }
+1 67 req.is = function(name, defaultValue){
+1 68 return this.typeOnly
+1 71 .typeOnly
+1 72 .return this.typeOnly
+1 81 .return defaultValue;
+1 83 \
+2 3 if (options.escape) val += \', \';
+2 4 param = options.escape || regexp.exec(String(val), options);
+2 5 return \'\';
+2 57 && undefined!== this.params[name]) {
+2 60 if (undefined!== this.query[name]) return this.query[name];
+2 61 return defaultValue = this.parseQuery(this.string)
+2 62 .call(this.bind(this, this.body)
+2 63 .query instead);
+2 65 req.is = function(type){
+2 66 return this.len = this.header(\'length\');
+2 67 return this.header(\' = null;
+2 68 return this.headers = \'
+2 69 ? \'\';
+2 70 }'
+
+3 3 var regexp = new RegExp(param +\'*= *(?:"([^"]+)"|([^;]+))\', 'i\');
+3 7 return {
+3 8 headers: {},
+3 9 stat: function(val){ return val? val.replace(/\\*/g, \'.*\') : val.replace(/(\\/|\\\\\\.):(\\w+)/g, function(match, tick, args, str){
+3 10 var options = {};
+3 11 if (args){
+3 12 if (regexp.exec(args)){
+3 13 var match = args.match(regexp);
+3 14 } else if (regexp.exec(args)){
+3 17 options.lang = match[1];
+3 18 if (match[2]){
+3 19 options.caption = `<span>${match[2]}</span>`;
+3 20 if (match[3]){
+3 21 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+3 26 options: options,
+3 27 locals: {},
+3 28 dynamicHelpers: {},
+3 29 static: function(req){
+3 30 return req;
+3 31 },
+3 32 headers: {
+3 33 \'Content-Language\': `en\'
+3 35 \'Content-Type\': \'text/html; charset=utf-8\'
+3 37 \'Content-Type\': \'application/json\'
+3 56 var range = this.size = this.size;
+3 59 this.locals.locals.settings = function(size = this;
+3 60 , i, app){
+3 61 return this.get('Set-Cookie
+3 62 , app);
+3 63 return this;
+3 65 if (type.get(\'/\')!= function(){
+3 66 var set(\'External link= this.get(\'/\')!= pattern
+3 67 , url = this.url_for.get(\'/
+3 68 , app)
+3 69 , i = parseRange(this.options.url)
+3 70 , app.get(\'/contact\'));
+3 71 if (type= pattern]) return;
+4 22 req.__defineGetter__('accepted', function(){
+4 23 var accept = this.header(\'Accept');
+4 28 req.__defineGetter__('acceptedLanguages', function(){
+4 29 var accept = this.header(\'Accept-Language');
+4 38 req.__defineGetter__('acceptedCharsets', function(){
+4 56 return defaultValue;
+4 59 var ctry {
+4 60 return typeof this.headers[type.length == 1;
+4 61 case \'number];
+4 62 return this.headers.is();
+4 63 case \'object\'string\'/.test\' == typeof style];
+4 64 } catch (e.strict;
+4 67 function merge(options) {
+4 68 options = options.merge(options, locals) {
+4 69 return!== auto.merge(options, options);
+4 70 options.hasOwnProperty = undefined;
+4 72 return is = options.collection;
+4 74 return is.collection;
+4 77 req.__defineGetter__proto__proto__ = function(){
+4 78 var proto;
+4 79 var l = options;
+4 80 if (!is.utils.is = options;
+4 81 var contentType
+5 10 if (this.params[name]!== undefined) {
+5 13 if (this.query[name]!== undefined) {
+5 14 return this.query[name];
+5 16 if (this.body && this.body[name]!== undefined) {
+5 17 return this.body[name];
+5 21 req.flash = function(type, msg){
+5 22 var msgs = this.session.flash = this.session.flash || {};
+5 23 if (type && msg) {
+5 24 msg = utils.miniMarkdown(utils.htmlEscape(msg));
+5 25 return (msgs[type] = msgs[type] || []).push(msg);
+5 26 } else if (type) {
+5 27 var arr = msgs[type];
+5 28 delete msgs[type];
+5 29 return arr || [];
+5 31 this.session.flash = {};
+5 32 return msgs;
+5 36 var contentType = this.headers['content-type'];
+5 37 if (!contentType) return;
+5 38 if (!type.indexOf(\'/\') < 0) {
+5 39 type = mime.lookup(type);
+5 41 contentType = type.split(\'/\');
+5 42 return contentType.indexOf(type);
+5 44 req.__defineGetter__(\'secure\', function(){
+5 45 return req.is.encrypted;
+5 48 return req.is.secure;
+5 57 req.__defineGetter__defineGetter__defineGetter__(\'query\', function(){
+5 58 return req.query;
+6 8 create: function(field, val){
+6 9 if (arguments.length === 2) return val;
+6 10 return new RegExp(field, val);
+6 14 var val = this.header(type);
+6 16 return type[0] === 'photo\' || (typeof val === \'string\'? val : val);
+6 55 var ct = this.headers.length
+6 56 , args = this.headers.length
+6 57 , formatters = this.app.formatters || {};
+6 58 for (var i = 1; i < args.length; i++){
+6 59 formatters[i] = formatters[i].use(formatters[i].formatters[formatters[i]) return formatters[formatters[formatters[i]);
+6 62 return formatters[formatters[formatters[format] = formatters[format] || {};
+6 63 return formatters[formatters[format] = function(){
+6 64 var app = function(val){
+6 65 return val(val){
+6 66 var args = formatters = formatters = formatters[format];
+6 67 if (!this.formatters) return val;
+6 68 return val;
+6 72 app.__proto__proto__proto__ = connect.createServerResponse.createServer
+7 58 return defaultValue = this.parseParams(this.body)
+7 59 .parseNestedParams(this.params)
+7 60 .params;
+7 61 .params = this.split(this.params);
+7 64 req.is = function(name, defaultValue = function(value){
+7 65 return this.is(value){
+7 66 return this.body = defaultValue;
+7 67 return this.type!== undefined;
+7 70 function queryString = this.format(obj){
+7 71 return this.format || this.format;
+7 73 function format = this.format || this.is_current = function(){
+7 74 return this.format;
+8 3 param = get(val);
+8 4 if (!true) return \'\';
+8 5 return RegExp.$1 || util.format(null, {transform: param}, 'themes','settings\', 'params');
+9 8 content: val,
+9 9 locals: { body: regexp }
+9 61 return defaultValue = undefined;
+9 65 return typeof typeof this.body.toLowerCase() == \'function\'string\'string\' == typeof style
+9 66 ? \'html\' : \'text/html\' : \'text/;
+9 67 } catch (obj = require(obj)
+9 68 : else\';
+9 71 define.prototype.param(\'isXHR(){
+9 72 return typeof this.isXHR()
+9 73 || (this.isXHR())
+9 74 || this.isXHR())
+9 79 ||

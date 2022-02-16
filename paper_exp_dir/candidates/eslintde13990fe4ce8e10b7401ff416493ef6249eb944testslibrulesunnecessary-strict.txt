@@ -1,0 +1,244 @@
+Min editdistance: 30.00
+Closest candidate: 4 24 returneslintTester.exec("sprintf() {\
+0 1 describe("eslint").version", () => {
+0 2 it("should convert to literal space between tokens and each ruleId', () => {
+0 3 const code = [{
+0 4 "foo: bar',
+0 5 "---",
+0 6 "foo: bar\
+0 7 ---\
+0 8 "
+0 9 ].join("\
+0 10 ");
+0 11 const expected = [
+0 12 "foo: bar",
+0 19 assert.deepStrictEqual( expected, expected);
+0 20 });
+0 21 it("should not convert to an array environment", () => {
+0 40 it("should not convert an object environment", () => {
+0 42 "foo: foo",
+0 52 "bar: bar\
+0 59 it("should convert an object environment into a glob argument", () => {
+0 62 "s": [{
+0 63 "an: 2",
+0 64 "foo: 1",
+0 67 "b: 2",
+0 69 "a: 2",
+0 70 "s"s": [{
+0 72 "s"s"a": [a: 2",
+0 73 "s"a: 2",
+0 74 "s"s"12"12"}}",
+0 75 }]
+0 78 }];
+0 80 assert.deepStrictEqual( expected.deepStrictEqual( expected, expected);
+0 82 it("should convertenciesencies().length = 2 stringify(0).length, 2).length;
+0 83 });'
+
+1 1 describe("eslintTester", () => {
+1 2 var rules = {
+1 3 foo: \'bar\'
+1 4 };
+1 5 var eslintTester = new eslintTester.Config({
+1 6 rules: { use: true }
+1 8 function test(eslint) {
+1 10 JSON: {
+1 11 enforceConst: true,
+1 12 writable: true,
+1 13 value: true
+1 14 },
+1 15 rules: {
+1 27 raw: true,
+1 28 object: true,
+1 29 filename: true
+1 30 }
+1 38 var valid = eslint.toString().filter(Boolean);
+1 40 returneslint.verify(slint);
+1 42 function validate(sj) {
+1 43 var validators = [];
+1 44 var validators.push({ valid: validate });
+1 45 validators.push({ validators.forEach(function validate: validate, validate: validate });
+1 46 validators.forEach(function validate.sortBy(function (validator) {
+1 47 validator.push({ name: validate });
+1 48 validator.each(function (validator.apply(validator, validator) {
+1 49 validator.validator.apply(validator, validator.apply(validator, validator, validator).should.right);
+1 53 return validators.forEach(function validate(validator.apply(validator, validator).should.reverse();
+1 54 return validators.reverse();
+1 57 function validateAllInvalidators.forEach(sj => {
+1 58 return validators.reduce((a, havers, index) => Object.assign({}, function ({
+1 59 var i, name) {
+1 60 return Object.assignors.reduce((a, name) => {
+1 61 return Object.assign
+2 2 it("should returneslint tokens by default when passed multiple args in an old command", () => {
+2 3 var args = eslintTester.parseParser("eslint:foo());"
+
+3 1 describe("eslintTester extends eslintTester {
+3 2 .exec(eslintTester);
+3 3 it("simple config");
+3 4 it("should default to theJSON registry settings", function(done) {
+3 5 var config = {
+3 6 foo: 1,
+3 7 bar: 2,
+3 8 az: 3
+3 10 var tester = eslint.getEnv("env");
+3 11 assert.deepStrictEqual(config, undefined);
+3 13 it("should contain the parsed array environment only", function(done) {
+3 15 parsed: [],
+3 16 rules: {},
+3 17 comments: [{
+3 18 sep: 2,
+3 19 f: 2,
+3 20 quotes: [\'a\', \'b\', \'c\']
+3 22 tester.exec("eslintTester config");
+3 25 it("should contain the array environment only", function(done) {
+3 30 sep: 1,
+3 37 it("should contain the valid array environment", function(done) {
+3 41 comments: []
+3 43 tester.exec("eslinttester config");
+3 44 assert.deepStrictEqual(config, ["a", 'b", "c", "d", "f", "f"],
+3 45 rules: {parsed: {p", "faces: {p}
+3 46 };"];
+3 47 tester.exec(tester.exec(tester.exec("eslint-parser");
+3 48 done();
+3 50 it("simple");
+3 51 it("should use strict";
+4 2 before(() => {
+4 4 describe("formatters()", () => {
+4 6 formatters: {
+4 7 desc: "JavaScript",
+4 8 default: "html",
+4 9 default: "json",
+4 11 default: "plain",
+4 14 default: "base",
+4 16 beforeEach(() => {
+4 17 rules[formatters[format] = rules[format] || {};
+4 19 after(() => {
+4 20 it("simple", () => {
+4 21 returneslintTester.exec(rules[format]);
+4 23 it("combined", () => {
+4 24 returneslintTester.exec("sprintf() {\
+4 25 "unimPLEMENTED\
+4 26   {1,}", {
+4 28  {2,}", {
+4 30  {3,}",
+4 32  {1, 2}",
+4 34  {3, 2})",
+4 36  {1, 3})",
+4 38 "},"
+
+5 1 var code = [
+5 2 "function clear() {",
+5 3 "a.reset();",
+5 4 "b.reset();"
+5 5 ];
+5 6 var expected = [
+5 7 "{\',
+5 8 "a.set(){\',
+5 9 "a.setDefault({
+5 10 "default",
+5 11 "b.setDefault({
+5 15 "3gp"
+5 16 ],
+5 17 "3gpp(){
+5 18 return a.getValue(1);
+5 21 var expectedEqual = [
+5 22 "{"a.setDefault({
+5 26 "c.setDefault({
+5 28 "d.setDefault({
+5 30 "enum"
+5 32 "enqueue(){
+5 33 var a = parseInt(a, 10);
+5 34 return an[0].toUpperCase() + 1;
+5 37 var expectedArr = [
+5 45 "else",
+5 46 "abc"
+5 48 "default"
+5 50 var sourceCode = "";
+5 53 var memo = {};
+5 54 var sourceCode2 = "";
+5 56 var memo2 = "";
+5 57 var 3 = "";
+5 58 var 3.length;
+5 59 var 3.forEach(function (sourceCode) {
+5 60 sourceCode = sourceCode[sourceCode];
+5 62 for (function get memoContents(sourceCode, memo) {
+5 63 return objContents(sourceCode);
+5 68 describe("constructor: function () {
+5 69 it("reset() {
+5 70 return sourceCode() {
+5 72 return getDefaultOptions() {
+5 73 return newOptions() {
+5 74 options() {
+5 75 return;
+5 77 }();
+5 78 }() {
+5 85 describe("parse: function() {
+5 86 it("defaults() {}",
+6 1 function validToDate(value) {
+6 2 return value instanceof Date;
+6 4 function validRange(value) {
+6 5 return typeof value === "Range" || value instanceof Date;"
+
+7 2 var eslint = create();
+7 3 var test = function(eslint) {
+7 4 returneslint.verify(defaults.config, { rules: {} });
+7 6 function createStartStartFn(config) {
+7 7 return function(config, argv) {
+7 8 var config = config || {};
+7 9 return function(config) {
+7 10 var promise = new Promise(function(resolve, reject) {
+7 11 var config = this.getConfig();
+7 12 return config.set("env") == null? config.env : undefined;
+7 16 createStartFn.call(this, config);
+7 17 return this;
+7 19 module.exports = createStartFn;"
+
+8 2 var eslintTester = new eslintTester();
+8 4 returneslint.verify(sint, { parser: "eslint-tester" }).then(function (result) {
+8 5 return result === { code: "eslint test", args: [0] };
+8 20 function test(assert: function test(eslint) {
+8 21 returneslint.parser();
+8 22 .strict
+8 23 .exec(s);
+8 24 })
+8 26 describe("simple()
+8 27 it("should exposeParser()")
+8 29 .exec(s)
+8 30 .exec(s) fantastic())
+8 41 .execs)
+8 44 .exec(
+9 2 it("should default to the parent module by default", () => {
+9 4 foo: 2,
+9 5 bar: 3
+9 7 config.rules = {
+9 8 use(function (rules) {
+9 9 return Object.assign({}, config, {
+9 10 cache: { use: { use: config: \'base\' } }
+9 11 }, config);
+9 12 assert.deepStrictEqual(config, ["eslint:2", "foo"], { config: config }]);
+9 15 describe("parseConfig()", () => {
+9 18 base: "saucelp",
+9 19 frameworks: [\'jasmine\', \'commonjs\'],
+9 22 return Object.assign({}, config);
+9 24 assert.deepStrictEqual(config, ["eslint:2", "commonjs"], { config: config }]);
+9 26 it("should default to the latest pre-release version", () => {
+9 34 assert.deepStrictEqual(config, ["eslint:2", "commonjs"]);
+9 36 it("should respect inline eslint config comments in the middle of the source", () => {
+9 39 frameworks: [\'commonjs\'],
+9 40 rules: { use(function (ans) {
+9 41 config) {
+9 42 anslint: { use(config) {
+9 43 return config.rules) {
+9 44 return config.rules[\'base\'deep-sucs\' }
+9 46 } }
+9 47 }, config.rules[\'scripts: { typeof foo }
+9 50 config.rules.anslint.lint = {
+9 51 configs = {
+9 52 configs: {
+9 53 langs: {
+9 54 langs: config.configs,
+9 55 config.language: config.language: config.language: config.language,
+9 56 config.language: config.language
+9 59 assert.assert.deepStrictEqual(config.language: config.language: config.language
+9 61 assert.deepStrictEqual(config, [
+9 62 assert.language: config.language) {
+9 63 }, config.language: config.language},'s,

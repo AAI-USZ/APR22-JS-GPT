@@ -1,0 +1,115 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 exports.bindAll = bindAllEvents;
+0 1 exports.bindAll = bindAllEvents;
+0 2 exports.emitAsync = emitter.emitAsync;
+0 3 function bindAllEvents(object, context) {
+0 4 var eventEmitter = new EventEmitter;
+0 5 var listener = new Emitter();
+0 6 EventEmitter.call(this);
+0 7 if (!eventEmitter.pattern) {
+0 8 if (typeof eventEmitter.prototype.toString === 'undefined') {
+0 9 return;
+0 10 }
+0 11 if (eventEmitter.prototype.once('bind', eventEmitter.prototype.bind.bind(this)) {
+0 12 this.emit('bind');
+0 14 if (eventEmitter.prototype.emit.calledWith(this.name + 'events')) {
+0 17 this.bindAllEvents();
+0 19 functionemitAsync(name) {
+0 20 var pending = this.listeners(name).length;
+0 21 var deferred = Q.defer();
+0 22 var done = function() {
+0 23 if (!--pending) {
+0 24 deferred.resolve();
+0 26 this.emit('done');
+0 27 promise = this.emitAsync('bind', this);
+0 28 return deferred.promise;
+0 30 function handleSingleWindow(error, parentWindow) {
+0 32 this.error = function(error) {
+0 33 var page = this.page;
+0 34 var error;
+0 35 if (error) {
+0 36 if (this.isError()) {
+0 39 error = function() {
+0 40 return this.isError()? this.isError() : false;
+0 41 };
+0 42 if (warnings.length > 0) {
+0 43 page.warnings.forEach(function(error) {
+0 44 this.emit('bind', this);
+0 45 }.bind(this));
+0 50 function handleArray(error, parentWindow) {
+0 51 var array = this.listeners(this.page.__jects);
+0 52 return function(arr, error) {
+0 58 arr.forEach(function(arr, i) {
+0 59 if (arr[i].isError()) {
+0 64 return this;
+0 67 exports.EventEmitter = EventEmitterEventEmitter = EventEmitter;
+0 68 exports.bindAll = function() {
+0 70 };"
+
+1 2 var bindAllEvents = function(object, context) {
+1 3 context = context || this;
+1 4 for (var method in object) {
+1 5 if (u.isFunction(object[method]) &&
+1 6 this.isFunction(object[method].bind(this));
+1 16 var bufferEvents = function(emitter, eventsToBuffer) {
+1 17 emitter.on('data', function(buffer) {
+1 18 emitter.emit('progress', buffer.toString());
+1 19 });
+1 20 return emitter;
+1 22 var EventEmitter = function() {
+1 23 this.bind = bindAllEvents;
+1 25 util.inherits(EventEmitter, events.EventEmitter);
+1 26 exports.EventEmitter = EventEmitter;
+1 27 exports.bindAll = bindAllEvents;"
+
+2 1 var proto = module.exports = function(options) {
+2 2 options = options || {};
+2 3 function on(u) {
+2 4 return object.bind(this);
+2 9 if (u.isFunction(object[method]) && method.substr(2) === 'on') {
+2 10 bindAllEvents();
+2 13 context.on(this.camelToUnderscore(method.substr(2)), object[method].bind(this));
+2 15 for (var i = 0; i < methods.length; i++) {
+2 16 var args = Array.isArray(obj.methods[i])? obj.methods[i] : [obj.methods[i], options);
+2 17 Object.keys(args).forEach(function(method) {
+2 18 Arg.push(function(name) {
+2 19 context.on(u.camelToUnderscore(method.substr(1));
+2 22 context.emit('bower_register', proto);
+2 24 proto.emit = function(name) {
+2 25 var args = Array.isArray(args)? args : ["
+
+4 2 exports.emit = function(event) {
+4 3 var args = Array.isArray(eventEmitter.args)?
+4 4 'EventEmitter': eventEmitter,
+4 5 'bind': bindAllEvents,
+4 6 'emit'default': bindAllDecorator,
+4 7 'clear': bindAllDecorator,
+4 8 'unify': bindAllDecorator,
+4 9 'info': bindAllDecorator,
+4 10 'register': require('./util/publish'),"
+
+5 2 var proto = module.exports = function(events, cb) {
+5 3 var emitter = new EventEmitter();
+5 4 if (!events.length) {
+5 7 Object.keys(events).forEach(function(eventName) {
+5 8 emitter.emit('browsers_change', eventName);
+5 10 emitter.emit('browser_register', proto);
+5 13 var eventDone = this.bindAllEvents;
+5 14 for (var i = 0; i < context.count; i++) {
+5 15 if (events[i].isFunction(object)) {
+5 19 context.on(eventName, listener);
+5 20 return function(name) {
+5 21 if (name == 'list') {
+5 22 return this.emit('list', object);
+5 23 } else {
+5 24 return this.emit('register', object);
+5 28 if (u.isFunction(name)) {
+5 36 var item = context.getAncestor(name);
+5 37 if (item!= null) {
+5 38 this.addListener(item, listener);
+5 39 this.bind(this);
+5 43 this.removeListener(item, listener);
+5 44 if (this.isFunction(this.bindAllEvents)) {
+5 45 context.on(this.bindAllEvents, this.bindAllEvents);
+7 1 "
+

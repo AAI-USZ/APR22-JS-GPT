@@ -1,0 +1,11 @@
+Min editdistance: 37.00
+Closest candidate: 2 3 return newBaseBrowser(options, emitter);
+0 1 "
+
+1 1 '
+
+2 1  module.exports.Callbacks = callback;
+2 2 module.exports.createWebServer = function(options, emitter) {
+2 3 return newBaseBrowser(options, emitter);
+2 4 };"
+

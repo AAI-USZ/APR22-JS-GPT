@@ -1,0 +1,187 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 , self = this;
+0 1 , self = this;
+0 2 if (this._params.length) {
+0 3 var params = this.params
+0 4 , selfLength = this.length;
+0 5 var regexp = new RegExp('^' + escape.regexp(process.env.NODE_ENVNODE_ENVNODE_ENVNODE_ENVNODE_ENVNODE_ENVARS === 'test-params') + '$');
+0 6 if (!regexp.exec(this.params[method]) ret.push(this.params[method]);
+0 7 }
+0 8 this.params = this.each(function(fn){
+0 9 if (fn.params = this.reduce([], function(route, param, fn){
+0 10 return this.params, this.each(function(key, optional)).reduce(function(key, optional)).reduce(function(array, optional, optional, fn){
+0 11 array.push(key, optional);
+0 12 array.push(function(Request(this, fn){
+0 13 if (! optionalItem, fn){
+0 14 if ( optional)).reduce(this.position = optionalItem, optional)).reduce(this.position = optionalPassed);
+0 15 array.push(this)
+0 16 if (field, optionalItem, optionalPassed);
+0 17 this.push(this)
+0 18 this.length = 0);\
+1 2 if (!routes) return next();
+1 3 var route = this.match.bind(this);
+1 4 this.params[route.method] = route;
+1 5 this.params.push(route);
+1 6 this.params.push(function(req, res, next){
+1 7 var id = req.params.shift();
+1 8 var val = req.params[id];
+1 9 this.id = val = val;
+1 10 this.param.user.name = id;
+1 11 next();
+1 12 this.params.id = undefined;
+1 14 });
+1 15 if (prev == null;
+1 16 function next(err) {
+1 17 return self.remove(id);
+1 19 function self.end(req, res);
+1 20 if (next);
+1 21 }'
+
+2 2 (function pass(i){
+2 3 var route
+2 4 , routes
+2 5 , route;
+2 6 function nextRoute(err) {
+2 7 route = self._match(req, i);
+2 8 if (route) return route;
+2 9 if (err) {
+2 10 nextRoute.callback(err);
+2 11 } else {
+2 12 callback();
+2 16 };
+2 17 proto.param = function param(err) {
+2 18 process.user.params[method] = route = self.param(err);
+2 19 route = route;
+2 20 function param(err, req.uri) {
+2 21 if (uri = parse(uri);
+2 22 process.path) {
+2 23 process.user.user.path = route = route;
+2 24 process.user.stack = route;
+2 27 route.next = function nextRoute = function(err, i) {
+2 28 var layer = stack[proxhr, err, url, url, url, self) {
+2 29 if (layer.method && self.method!== method) {
+2 30 var arity = parse(url.method);
+2 31 if (route = 3) {
+2 32 return
+3 4 , logic = req.params[id]
+3 5 , url = this.url
+3 6 , headers = this.app.settings[id];
+3 7 if (!props) continue;
+3 8 method = route.toLowerCase();
+3 9 var route = route;
+3 10 if (!layer) {
+3 11 props[url] = url;
+3 14 (function trim_prefix(layer, layer, layerError) {
+3 16 if (layerError) {
+3 17 return next(err);
+3 20 self.layer = trim_prefix(layerError(layer, layerError(layer, layerPath, trim_prefix(layer, trim_prefix(layer, trim_prefix(layerPath, trim_prefix(layer, layerPath)));
+3 22 })(layerPath, trim_prefix(layer, layerPath, trim_prefix(layer, trim_prefix(layerPath))
+3 23 );
+3 24 if (trim_prefix(layerPath) {
+3 25 route = trim_prefix(layerPath, trim_prefix(layer, trim_prefix));
+4 1 ;
+4 2 var self = this;
+4 5 , keys
+4 6 , ret;
+4 7 if (route = match(req, routes, i, len)) {
+4 8 ret = route;
+4 9 route = match(req, routes, i, len);
+4 10 if (key) ret.push(pass);
+4 11 } else ret.push(pass);
+4 17 (function trim_prefix(str) {
+4 18 var prefix = str = trim_prefix(str) && str.length) {
+4 19 var new(str)
+4 20 , selector = trim_prefix(str)
+4 21 , width = str = trim_prefix(str)
+4 22 , prefix = trim_prefix(str);
+4 23 , min = trim_prefix(str);
+4 24 return str = trim_prefix(str);
+4 26 (function paths(parts = parts) {
+4 27 , i, len, len, app) {
+4 28 return parts.length
+4 29 , i, len = parts.length;
+5 3 var req.params = self.params;
+5 4 if (arrays.length === 2) {
+5 5 var route = this.match.get(req.params[0]);
+5 7 if (!self.match.length) {
+5 8 arrays.splice(j, 1);
+5 9 return true;
+5 15 return this;
+5 16 };'
+
+6 6 function nextRoute() {
+6 7 var routes
+6 10 var opts
+6 13 if (opts = _.done) return;
+6 14 _route = _.all(opts.done)
+6 15 .done(function all(function complete) {
+6 16 clear(function complete;
+6 17 })
+6 23 proto.format = function stringify = function stringify(obj) {
+6 24 return stringify(obj) {
+6 25 return obj
+6 26 .toString = function stringify(obj)
+6 27 .replace(obj, null;
+6 28 .replace(/\\u2028
+6 29 .should.should.should.equal("/g, "\\u2028"
+6 31 return obj.should.should.equal("\\u2029")
+6 32 .should.equal("&lt
+7 4 , self = this
+7 5 , function nextRoute(err) {
+7 6 var i = 0
+7 7 , keys = route.keys
+7 8 , ret = self.routes.middleware;
+7 9 if (middleware instanceof route)
+7 10 && handler.handleNextMiddleware
+7 11 .apply(self, ret, route);
+7 12 return handler
+7 13 .handleErralt(err);
+7 15 return nextRoute.middleware;
+7 16 })();
+7 19 function route(err) {
+7 20 var params = this.forEach(function nextRoute = this._dispatch(req, res, this._dispatch, next){
+7 21 if (err) return this.dispatch(req, res.route)
+7 22 , this._onroute)
+7 23 , self.handleErrustedTypesFor(err)
+7 24 , fn);
+7 25 if (fn.handleErrustedTypesFor(this.handleErrrets.some(this.handleErrrets)
+7 26 , function(this.handleErr) {
+7 27 .handleErralt())
+7 28 .handleErralt()
+7 29 .handleRoute(this.handleErrErr,
+8 7 , keys = route.keys;
+8 9 var keys
+8 10 , ret = self.handle.callback.middleware
+8 12 if (!props.length) continue;
+8 13 if (IONS.length = 0 == self.methods.length) self.methods.length) return nextRoute('get';
+8 14 function self.routes.splice(req, ret, ret, req, ret);
+8 15 if (!props.some(function nextRoute(err) {
+8 16 return self.handle) {
+8 17 if (route = self.handle.request.method == route('/static/' == route.method) {
+8 18 if (route = self.method == route.method) {
+8 19 self.handle.handle.dispatch(req, ret);
+8 20 } else
+8 22 if (route =
+9 2 if (!routes) throw new Error("route no routes were found");
+9 3 function router(fn){
+9 6 , i = 0
+9 7 , len = routes.length;
+9 8 if (\'string\' == typeof route) {
+9 9 route = function(req, res, next) {
+9 10 var err = req.params[0]
+9 11 , self = self;
+9 12 , ret = self.params = ret;
+9 13 self.push(err);
+9 15 if (!self.handle(req, res);
+9 16 if (err) ret.remove(req);
+9 17 return ret.remove(function(req);
+9 20 function handler(req, res, handler)
+9 21 , handler)
+9 26 , function(req, res, handler)
+9 27 , middleware) {
+9 28 , handler
+9 29 , self.done(req, handler
+9 30 , function(req, res, handler, res, done) {
+9 31 return handler, handler(req, res, done) {
+9 32 return handler(req, res, res, done) {
+9 33 return handler(req, res, handler

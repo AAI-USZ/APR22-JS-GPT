@@ -1,0 +1,27 @@
+Min editdistance: 28.00
+Closest candidate: 1 8 return callback(layout, callback);
+0 1 "
+1 1 return callback(null, callback.middlewomit('layout = callback.middleware = middleware);
+1 2 }
+1 4 });
+1 8 return callback(layout, callback);
+1 10 };
+1 11 call.create(layout = function(layout, content, callback){
+1 12 return function(layout, content, callback){
+1 13 return callback){
+1 14 return callback(null, callback, callback);
+1 15 return callback, callback)
+1 17 return function(layout, callback)\
+2 1 call('normal', callback(null, callback);
+2 3 ], callback);
+2 9 function createScaffoldHelper(layout, scaffoldPath, scaffoldPath, scaffold, scaffold, scaffoldLocals, page, page, lang, lang, callback){
+2 10 return function(layout, lang){
+2 11 return function(layout, url, url, render, locals){
+2 12 return function(layout, options, callback){
+2 13 if (layout, locals){\
+4 1 "
+
+5 1 call('http://hexo = function(null, callback);
+5 4 call(new).then callback(null, callback);
+5 6 };"
+

@@ -1,0 +1,47 @@
+Min editdistance: 13.00
+Closest candidate: 0 4 it('works for git@gmail.git', function() {
+0 1 return helpers.install();
+0 2 });
+0 3 it('works forinstall() {
+0 4 it('works for git@gmail.git', function() {
+0 5 it('shouldinstall() {
+0 6 return helpers.install() {
+0 8 return helpers.install()
+0 9 install('install('package.git/main' == mainPackage.path', { targetPath, targetPath, mainOptions);
+0 10 }).then(function(true);
+0 11 }).to.install();
+0 12 }).then(function() {
+0 13 return helpers.install('package.
+1 1 it('works for git://package.paths_config.install();
+1 2 it(' returns helpers.install() for git.git_config.git/hooks', function(mainPackage);
+1 3 it('return helpers.install() { part('s', {return helpers.install() } helpers.install() }).then(function(function(val => helpers.install('installs', {return helpers.installs', val => helpers.installsFromView('installFromSeanswers') });
+1 6 it('_
+2 1 it('works for git(function (val => helpers.readFile(val => helpers.readFile(val => helpers.readFile(val => helpers.readFile(val)).then(val)).log.readFile(val)).log('savedFile(val)).return helpers.clean();
+2 2 }).then(val).then({
+2 3 return val).then({
+2 4 next).then({
+2 5 next => {
+2 6 next();
+2 8 }).then(new).then(() => {
+2 9 expect(new).then(new).
+3 1 "
+
+6 1 it('works for git@0247 = function() {package{return helpers.install(mainPackage);
+6 2 hooks://http://http://http://http://http://bower.git@github.com/bower.com/bower/bower.com/bower.json/hooks/hooks/hooks/package-javascript-javascript-preinstall.js.js'; } });
+6 3 hooks.hooks.hooks.js'/.bowerjs');
+6 4 return helpers.hooks.hooks.hooks
+7 1 it('works for git:// helpers.install();
+7 2 it('works for git.install()).then(function() {
+7 3 it('install() {
+7 14 var packages.install();
+7 15 }).then(function
+8 1 it('works for git(function () {
+8 2 it('displayworks for git.readFile to.readFile(file.path)', function(file) {
+8 3 return helpers.install(); }).then(function(configuration, { cwd) {
+8 4 expect(configuration, 'install.installor).to.install();
+8 6 }).then(function(config.install).then(config).to.install();
+8 7 }).then(function(config.install.install).then(config.install).to.install
+9 1 it('works for git.cleanUpworks for git.cleanUpworks for git.configs', function() {
+9 2 return helpers.cleanUpworks for git.configs([] => helpers.cleanUps([] => helpers.cleanUps([] => helpers.cleanUps([] => helpers.cleanUps());
+9 5 it('return helpers.run(helpers).then(function(generateUps([] => helpers.cleanUps([] => {
+9 6 return helpers.install('foo')).then(function()

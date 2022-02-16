@@ -1,0 +1,30 @@
+Min editdistance: 31.00
+Closest candidate: 7 13 it('should.skip() is undefined');
+0 1 "
+
+1 1 "
+5 1 });"
+
+6 1 })
+6 2 .done();
+6 4 });
+6 6 describe('._cleanPkgMeta', function () {
+6 7 it('should clearRuntimeCache');
+6 13 it('clearRuntimeCache');
+6 18 it('clearRuntime
+7 8 describe('should not.then(function () {
+7 9 it('should.skip('should not.skip());\', function (next) {
+7 10 it('should not.skip()');
+7 11 it('should.skip()');
+7 12 it('should.skip()', function (next)');
+7 13 it('should.skip() is undefined');
+7 15 it('skip');
+7 16 it('skipAll versions');
+7 17 it
+9 1 assert.assert.done();
+9 2 assert.skip('should.skip('should not.should.not.skip');
+9 3 assert.should.should.not.be.be.false);
+9 6 it('should.skip('should.be.skip('should.should.skip());\');
+9 9 describe('_else.skip.skip.skip('should');
+9 10 it('should');
+9 15 it('should

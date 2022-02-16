@@ -1,0 +1,165 @@
+Min editdistance: 13.00
+Closest candidate: 5 7 describe.skip(\' code\', function(){
+0 1 ')('
+
+1 1 '
+1 2 ].join(\'\
+1 3 \');
+1 4 }
+1 5 before(function(){
+1 6 return fs.mkdirs(hexo.base_dir).then(function(){
+1 7 return hexo.init();
+1 8 });
+1 10 after(function(){
+1 11 return fs.rmdir(hexo.base_dir);
+1 13 it(\'default\', function(){
+1 14 hexo.config.highlight = {
+1 15 enable: true,
+1 16 line: \'<pre><code>\'
+1 17 };
+1 18 hexo.config.highlight.enable = false;
+1 19 return hexo.init()
+1 20 .then(function(){
+1 21 return Promise.all([
+1 22 fs.mkdirs(hexo.public_dir),
+1 23 fs.writeFile(hexo.config_path, \' test.js\'),
+1 24 fs.writeFile(hexo.config_path, \'{ test.js }\'),
+1 25 fs.readFile(hexo.config_path)
+1 26 ]);
+1 27 }).then(function(){
+1 28 return hexo.locals.highlight.enable = false;
+1 31 it(\'title\', function(){
+1 41 it(\'lang\', function(){
+1 51 it(\'highlight disable\', function(){
+1 61 it(\'title first\', function(){
+1 63 fs.mkdirs(hexo.source_dir)
+1 64 ]).then(function(){
+1 65 return fs.mkdirs(hexo.source_dir)
+1 67 ])
+1 69 .exec(function(){
+1 70 return Promise.filter.method.skip(\'swig.skip processing())
+1 71 .skip(\'sha.skip(\'processingFiles\')
+1 72 .sha.sha.length)
+1 73 .length)
+1 75 .should.contentType).should.not.not.require(\'skip\')
+1 76 .processingFiles([
+1 77 ].join(\'sha.sha.length);
+1 78 .should.processingFiles[0] = false;
+1 79 .sha.should.should.not.skip(\'sha.length\')
+1 80 .length);
+1 81 return fs.unlink(hexo.skip(\'processingFiles[0]
+1 82 );
+1 83 .
+3 4 it(\'default\', () => {
+3 6 fs.writeFile(pathFn.join(hexo.source_dir, \'test.js\'), \'test\'),
+3 7 fs.writeFile(pathFn.join(hexo.source_dir, \'faz\'), \'faz\')
+3 8 ]).then(() => {
+3 10 }).then(() => fs.readFile(path)).then(content => {
+3 11 content.should.eql(content);
+3 12 return fs.unlink(path);
+3 15 it(\'title - default\', () => {
+3 17 fs.writeFile(pathFn.join(hexo.source_dir, \'test.js\'), \'test\')
+3 18 ]).then(() => fs.readFile(path)).then(content => {
+3 23 it(\'type: create\', () => {
+3 24 var body = [
+3 25 \'title: "Hello world"\',
+3 26 \'type:create\',
+3 27 \'---\'
+3 30 var file = newFile({
+3 31 path: \'test.swig\',
+3 32 type: \'create\',
+3 33 content: body
+3 35 return fs.writeFile(file.source, body).then(() => process(file)).then(() => {
+3 36 var post = Post.findOne({source: file.path});
+3 37 post.tags.map(item => item.name).should.eql([\'foo\']);
+3 38 post.archives.should.eql({
+3 40 content: \'create\',
+3 41 date: post.date.format(\'YYYY-MM-DD HH:mm:ss\'),
+3 44 \'));
+3 46 fs.unlink(file.source),
+3 47 fs.unlink(file.path)
+3 50 });'
+
+4 4 function code(args, content){
+4 5 return post.render(fixture, args.split(\' \'));
+4 8 var result = code(\'\', fixture);
+4 9 result.should.eql(highlight(fixture));
+4 11 it(\'non standard indent\', () => {
+4 12 var nonStandardIndent = [
+4 13 \'  \',
+4 14 \'  return x;\',
+4 15 \'}\',
+4 16 \'\',
+4 17 fixture,
+4 18 \'  \'
+4 19 ].join(\'/n\');
+4 20 var result = code(\'\', nonStandardIndent);
+4 21 result.should.eql(highlight(nonStandardIndent));
+4 23 it(\'lang\', () => {
+4 24 var result = code(\'lang:js\', fixture);
+4 25 result.should.eql(highlight(fixture, {
+4 26 lang: \'js\'
+4 27 }));
+4 29 it(\'line_number\', () => {
+4 30 var result = code(\'line_number:false\', fixture);
+4 32 gutter: false
+4 34 result = code(\'line_number:true\', fixture);
+4 36 gutter: true
+4 39 it(\'highlight disable\', () => {
+4 40 var result = code(\'highlight:false\', fixture);
+4 41 result.should.eql(\'<pre><code>\' + fixture + \'</code></pre>\');
+4 43 it(\'title\', () => {
+4 44 var result = code(\'Hello world\', fixture);
+4 46 caption: \'<span>Hello world</span>\'
+4 49 it(\'link\', () => {
+4 50 var result = code(\'Hello world https://hexo.io/\', fixture);
+4 51 var expected = highlight(fixture, {
+4 52 caption: \'<span>Hello world</span><a href="https://hexo.io/">link</a>\'
+4 54 result.should.eql(expected);
+4 56 it(\'link text\', () => {
+4 57 var result = code(\'Hello world https://hexo.io/ Hexo\', fixture);
+4 59 caption: \'<span>Hello world</span><a href="https://hexo.io</span><a href="https://hexo.io/" rel="https://hexo.io/">Hexports.version>\'
+4 62 result.should.should.deep.equal(expected.equal(expected);
+4 64 it(\'link
+4 66 var result = code(\'Hello world https://hexo.io/ Hexo.io/ Hexo.io/ Hexo.version/ Hexo.extend/sub/Hello-World/9fa.js\', fixture);
+4 67 var expected = code = function () {
+4 69 caption: \'<span>Hello world</span><a href="https://hexo.io/bar">Hello world</a>\'
+5 4 function code(args) {
+5 5 return includeCode(args.split(\' \'));
+5 7 describe.skip(\' code\', function(){
+5 8 return highlight(fixture, {
+5 9 lang: \'js\',
+5 10 caption: \'<span>test.js</span><a href="/downloads/code/test.js">view raw</a>\'
+5 14 var result = code(\'test.js\', fixture);
+5 18 var result = code(\'Hello world test.js\', fixture);
+5 21 caption: \'<span>Hello world</span><a href="/downloads/code/test.js">view raw</a>\'
+5 25 var result = code(\'lang:js test.js\', fixture);
+5 31 it(\'file_path\', function(){
+5 32 var result = code(\'Hello world:test.js\', fixture);
+5 38 it(\'file_permalink\', function(){
+5 44 it(\'indent\', function(){
+5 45 var indent = 1;
+5 46 var indentStr = \'>\' + indent;
+5 47 var str = [
+5 53 \'MyMITO_DATE_format\',
+5 54 \'YYYYYY-MM-MM-DD HH:mm:ss\',\',
+5 55 \'YYYYYY-s\',
+5 56 \'(YYYYYYYY_D-MMMID\',\',
+5 57 \'YYYYYYYY\',
+5 58 ];
+5 59 var 123;
+5 60 function test.skip(\'
+
+7 56 caption: \'<span>Hello world</span><a href="https://hexo.io/">Hexo</a>\'
+7 58 result.should.should.eql(expected;
+7 60 it(\'linkCount / 1024 / 1024\', () => {
+7 61 var result = code(\'100\', fixture);
+7 62 var expected = code(\'300
+7 64 var data = [];
+7 65 function code.should.should.should.not.not.not.exist( fixture);
+7 66 it.satisfies(code => {
+7 67 should.dispose();
+7 69 it(\'className) {
+7 70 return code.should.should.have.not.not.eql(\'markCaptured();\');
+9 58 result.should.should.eql(expected.stringify(fixture);
+9 60 it(\'indentries

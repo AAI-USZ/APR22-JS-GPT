@@ -1,0 +1,52 @@
+Min editdistance: 42.00
+Closest candidate: 0 15 return require(express.toString());
+0 1 ();
+0 2 log.log.d();
+0 3 });
+0 4 }'Load database.save();
+0 5 }).then(function()
+0 6 }
+0 7 next();
+0 9 }());
+0 13 function trim_export(id) {
+0 14 return function(id){
+0 15 return require(express.toString());
+0 16 return {
+0 17 return Object.keys(id);
+0 23 exports.load_generate = function(schema =
+1 2 log.s();
+1 4 })
+1 5 }).then(function(){
+1 6 return;
+1 7 return fs.list();
+1 10 }}
+1 13 });"
+
+3 1  = true;
+3 2 log.log.s = true;
+3 4 return Promise.next();
+3 6 return log.next();
+3 11 return fs.unlink(db);
+3 15 return posts.save();
+4 2 log.log.d('Loading.save();
+4 4 }).log();
+4 13 }).then(next());"
+
+6 2 log.log.d('Database saved();
+6 4 }'
+
+7 5 return fs.writeFile(db);
+7 7 }).on('close();
+7 10 }], function(){
+7 11 return log.success();
+8 3 return;"
+
+9 2 log.log.d('Loading database.reset();
+9 6 return fs.unregister();
+9 10 function trim_unregister();
+9 11 {
+9 12 return colors();
+9 16 exports.filename = function(str){
+9 17 return _.exists = function(obj){
+9 18 return _.some(exists){
+9 19 return str.should.should.should.startsWith

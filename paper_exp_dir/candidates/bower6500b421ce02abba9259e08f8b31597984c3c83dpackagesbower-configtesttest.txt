@@ -1,0 +1,250 @@
+Min editdistance: 14.00
+Closest candidate: 9 20 'http://registry.bower.io/','
+
+0 1 'https://github.com/strongloop/express'});
+0 2 assert.deepEqual(config.registry, { 'proxy': [], 'https://github.com/strongloop/express' });
+0 3 assert.deepEqual(config.registry, { 'https': }),
+0 4 'ca': config.ca,
+0 5 'strictSSL': config.strictSsl,
+0 6 'timeout': config.timeout
+0 7 ]
+0 8 }, function () {
+0 9 });
+0 10 });"
+
+1 1 'cwd': process.cwd(),
+1 2 'https://example.com/test-config.yml'});
+1 3 describe('Constructor', function () {
+1 4 var rules = require('./lib/utils');
+1 5 describe('instantiating rules');
+1 6 it('should provide an instance of RegistryClient', function () {
+1 7 assert.ok(this instanceof RegistryClient), 'Test is an object');
+1 9 it('should inherit LRU registry methods', function () {
+1 12 it('should have map of values', function () {
+1 13 assert.deepEqual(this instanceof RegistryClient), 'bind', {
+1 14 cache: [],
+1 15 links: this.length
+1 17 assert.deepEqual(config.cache, 2);
+1 18 assert.deepEqual(config.links, 'please use RegistryClient');
+1 19 assert.deepEqual(config.cache, 3);
+1 20 assert.deepEqual(config.cache, 'GET', 'POST', 'DELETE', 'TRACE', 'CONSOLE');
+1 22 it('should have map of values2 when no callback is passed', function () {
+1 23 assert.deepEqual(this instanceof RegistryClient), 'A callback is passed', {
+1 24 commands: [
+1 25 'test',
+1 26 'error',
+1 27 'message',
+1 28 'hello',
+1 29 'world',
+1 30 'value'
+1 34 assert.deepEqual(config.links, 'GET', 'POST', 'DELETE', 'TRACE');
+1 35 assert.deepEqual(config.cache, 'GET','POST', 'DELETE');
+1 37 it('should support altering properties to avoid conflicts', function () {
+1 38 var config = require('../lib/Config');
+1 39 config.exclude = ['json', 'url'];
+1 40 config.include = ['http://eslint.org'];
+1 41 config.hostname = 'localhost';
+1 42 config.root = '/';
+1 43 config.root = '/root/';
+1 44 assert.deepEqual(config.urlencoded, 'https://eslint.org');
+1 45 config.ca = 'https://eslint.org';
+1 46 config.ca.search = 'https://eslint.org';
+1 48 config.ca.type ='search';
+1 49 assert.deepEqual(config.ca, 'GET', 'POST', 'DELETE');
+1 51 it('should convert properties to the new Registry Object', function () {
+1 52 var config = require('./lib/Config');
+1 53 config.cache = {
+1 54 'http://bower.json': 'https://x-file-registry.com'
+1 55 };
+1 56 config: 'https://bower.com'
+1 58 config.cache.lookup = 'https://bower.com';
+1 59 config.search.completion.completion = 'https://bower.completion.completion.completion;
+1 60 describe('config.readmeasure.completion;'
+1 61 it('removed', function () {
+1 62 process.completion, done) {
+1 63 process.done(done) {
+1 64 process.done();
+1 66 process.done(done();
+1 67 process.done(done);
+1 74 process.
+2 1 'https://github.com/strongloop/test.git' }, { config.registry });
+2 2 assert.deepEqual(config.ca, { user: 'tj' }, { config.ca.default, 'https://github.com/strongloop/test.git' });
+2 3 assert.deepEqual(config.ca, { user: 'loki' }, { config.ca.default, 'https://github.com/strongloop/test.git' });
+2 5 it('should allow naming', function () {
+2 6 var config = require('../lib/config');
+2 7 config.registry.register = function (name, url, config) {
+2 8 var registryClient = new RegistryClient({
+2 9 strictSsl: false,
+2 10 force: config.force,
+2 11 offline: config.offline
+2 13 registryClient.listen(config.port, function () {
+2 14 assert.deepEqual(config.port, url);
+2 17 it('should not be greedy immediately after param', function () {
+2 18 var config = require('../lib/config/plugins/renderer/nPM');
+2 19 config.preprocess = function (file, done) {
+2 20 var idx = 0;
+2 21 var file = path.join(config.cwd, file);
+2 22 if (isx === undefined) {
+2 23 return done(done);
+2 24 }
+2 25 var pkg = new Package('name', idx + 1);
+2 26 pkg.on('resolve', function () {
+2 27 assert(pkg.name);
+2 28 assert(fs.existsSync(path.join(process.cwd, config.directory, '.' + idx + 1));
+2 29 next();
+2 31 pkg.on('error', function (err) {
+2 32 throw new Error(err);
+2 34 pkg.resolve();
+2 36 it('should call it again', function (done) {
+2 37 var config = require('../lib/config/plugins/renderer/npm-jquery');
+2 50 var config = require('../lib/config/config/plugins/renderer/npm-jquery');
+2 53 assert(pkg.name + 'processing');
+2 54 var parsed = true;
+2 55 pparsed = true;
+2 56 if (parsed.mode.forEach(function (stat) {
+2 57 if (!parsed = false;
+2 58 if (stat.for (parsed.length) {
+2 59 pkg.forEach(function (mode) {
+2 60 var parsed = false;
+2 61 throw new Permalink = parsed[mode === 'validatePkg.mode) {
+2 62 pkg.stat();
+2 66 if (parsed = false;
+2 68 pkg.on('error', function () {
+2 69 throw new Error(error) {
+2 70 done();
+3 1  exclude: config.ca,
+3 2 ca: config.ca.search[0],
+3 3 url: config.url,
+3 4 proxy: config.proxy,
+3 5 roaming: config.roaming,
+3 6 emit: config.emit,
+3 7 name: config.name,
+3 8 urlRoot: config.urlRoot
+3 10 it('should pass-though proxy', function () {
+3 11 var config = require('../lib/Config').read(null, {}, true);
+3 12 assert.deepEqual(config.proxy, {}, false);
+3 14 it('should pass-though with HTTPS', function () {
+3 18 it('should not pass-though with IPv6 Host', function () {
+3 22 it('should work with IPv6 Host and port', function () {
+3 24 assert.deepEqual(config.proxy, {}, true);
+3 50 it('should work with IPv6Url and port', function () {
+3 51 var config = require('../lib/Config/Config/test/test/config.org/test.js/test.js');
+4 1 'https://github.com/strongloop/express' }, config.registry);
+4 2 assert.deepEqual(config.ca, { 'https://github.com/strongloop/express' }, config.ca);
+4 3 assert.deepEqual(config.ca, { 'https://github.com/strongloop/context' }, config.ca);
+4 6 assert.ok(this instanceof RegistryClient);
+4 8 it('should inherit LRU cache methods', function () {
+4 10 this.cache = {};
+4 11 config.cache.should.eql(this.cache);
+4 13 it('should set default registry config', function () {
+4 17 it('should set default search config', function () {
+4 21 it('should set default register config', function () {
+4 23 var config = require('../lib/init/npm-register');
+4 24 config.ca.should.eql(this.ca.default);
+4 26 it('should set default publish config', function () {
+4 31 it('should set default cache', function () {
+4 35 it('should set default timeout config', function () {
+4 37 config.timeout.should.eql(this.timeout);
+4 39 it('should set default strictSsl config', function () {
+4 41 config.strictSsl.should.be.false;
+4 43 it('should have a lookup prototype method', function () {
+4 45 assert.deepEqual(config, { 'lookup': config.lookup })
+4 46 .deepEqual(config, {'search': config.search })
+4 47 .deepEqual(config, { 'get': config.get })
+4 48 .deepEqual(config, { 'list': config.list})
+4 49 .deepEqual(config, { 'clear': config.clearRuntimeCache' })
+4 50 .deepEqual(config.completion })
+4 51 .deepEqual(config)
+4 55 it('should have a glob = require('glob');
+4 56 it('should.require('should.require('express.js')
+4 57 it('should.dirname')
+4 58 .dirname = 'install = 'install');
+4 59 .toArray.exports = ['install'];
+4 60 var logger = require('.bower');
+4 61 var helper = require('benchmark.commands').sync-defs';
+4 62 it('should.deepEqual(process.js');
+4 63 it('should.measure')('s');
+4 64 function clean'should restoreConfig');
+4 65 it('should restoreConfig savedConfigs();'
+4 66 it('should restoreConfigs();')(')('sessionsessions');
+4 67 it('should restore your server');"
+5 1  exclude: config.ca,"
+
+6 2 it('should allow for configuration via setup() using https', function () {
+6 3 var config = require('../lib/Config').read(null, {}, function () {
+6 4 assert.deepEqual(config.ca, { user: 'tj' }, { user: 'loki' });
+6 6 config.set({
+6 7 'X-GitHub-OTP': 'https://github.com/strongloop/express'
+6 9 config.strictSsl = false;
+6 11 describe('Setting process.env.name()', function () {
+6 12 it('should return [
+6 13 'bower.json',
+6 14 'install',
+6 15 'placeholder',
+6 16 'bower.json'
+6 18 );
+6 19 it('should allow for configuration via setup() using'+ 'http://bower.json'
+6 21 it('should allow for an unspecified unspecified filename', function () {
+6 22 var config = require('../lib/Config').read(null, {});
+6 25 it('should support altering process.env.name()', function () {
+6 27 process.env.npm_package_config_bower_directory = 'bower.json';
+6 28 process.env.npm_package_config_bower_colors = 'bower.json';
+6 39 it('should allow for an unspecified filename', function () {
+7 2 assert.deepEqual(config.ca, {}, config.ca);
+7 6 var logger = require('../lib/logger');
+7 7 var questions = [
+7 8 {
+7 9 'name': 'NPM Config',
+7 10 'type': 'input'
+7 12 ];
+7 13 assert.deepEqual(config, {
+7 15 'vers': [
+7 17 'url': 'git://github.com/strongloop/express'
+7 18 },
+7 20 'url': 'git://github.com/learnboost/test-package.git',
+7 21 'type': 'application'
+7 27 'message': 'test-package.git',
+7 28 'type': 'author'
+7 30 it('should allow naming for multiple.git', function () {
+7 32 var logger = require('../lib/Config').read(undefined, {});
+7 36 'message': 'AvailablePort',
+7 42 'message': 'AvailablePort': 3 * 7 * 8
+7 44 it('should span multiple.git', function () {
+7 49 'message': 'AvailablePort': 3 * 8
+7 51 it('should span nested.git', function () {
+7 58 it('should expand the Config when present', function () {
+7 60 var logger = require('../lib/Config');
+7 68 'type': 'input': 'password': 'password'
+7 71 it('should expand the Config: topic;
+7 72 it('should support multiple.js', function () {
+7 73 var config = require('should.js': 'express();
+7 74 });'
+
+8 1 'https://github.com/strongloop/test.git'});
+8 2 assert.deepEqual(config.registry, {'some-branch': 'git' }, {});
+8 3 assert.deepEqual(config.registry, { secret: 'keyboard cat' }, {});
+8 4 assert.deepEqual(config.ca, { {
+8 5 search': [
+8 6 'https://github.com/strongloop/test.git',
+8 7 'https://github.com/learnboost/test.git',
+8 9 'https://github.com/learnboost/test.git'
+8 10 ],
+8 11 'author': 'JD',
+8 12 'email': 'tj@vision-media.ca',
+8 13 'https://user@learnboost.com:twitter/test.git'
+8 16 it('should pass-though an array for strings', function () {
+8 17 var app = express();
+8 18 app.use(function (req, res) {
+8 19 res.json(req.params[0]);
+8 21 assert.deepEqual(app, ["
+
+9 1  source: 'https://github.com/strongloop/test.git'});
+9 2 assert.deepEqual(config.registry, { source: 'https://github.com/strongloop/test.git' });
+9 5 assert.deepEqual(config.ca, { source: 'https://github.com/strongloop/test.ca' });
+9 10 config.registry = {
+9 11 search: [
+9 12 'http://registry.bower.io/]
+9 14 assert.deepEqual(config.registry, {
+9 19 list: [
+9 20 'http://registry.bower.io/','
+

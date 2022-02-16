@@ -1,0 +1,255 @@
+Min editdistance: 1.00
+Closest candidate: 2 10 line_number: true,
+0 1  escape: false, titlecase: false, body_size: 1, unique_keys: [], "i18n_show: true,   at 1,   at 2,     at 3,      4,      5,            6,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+1 1  colors: false, line_number: true },"
+
+2 1  default_to: 'true'},
+2 2 filename_case: 0,
+2 3 render_drafts: false,
+2 4 post_asset_folder: false,
+2 5 relative_link: false,
+2 6 future: true,
+2 7 highlight: {
+2 8 enable: true,
+2 9 auto_detect: false,
+2 10 line_number: true,
+2 11 tab_replace: ''
+2 12 },
+2 13 wrap_html: false,
+2 14 unab_replace: ''
+2 15 }
+2 16 };
+2 17 module.exports = function(args, callback){
+2 18 var args = _.toArray(arguments),
+2 19 config = args.config || {};
+2 20 var argv = args.length === 1? _.uniq(args) : undefined;
+2 21 if (typeof config.external_link === 'undefined' || config.external_link === 'object')){
+2 22 var config = {external_link: Object.assign({}, config);
+2 23 if (config.external_link === undefined) return;
+2 24 var exclude = config.external_link.exclude
+2 25 ? config.external_link.exclude
+2 26 : [config.external_link];
+2 27 if (exclude && exclude.length) {
+2 28 config.external_link = exclude.substring(0, exclude.length - 1);
+2 30 return config;
+2 31 };"
+
+3 1  escape: false, separator: ','},
+3 4 tab_replace: '',
+3 5 }, {
+3 6 enable: false,
+3 7 unlink: function(next){
+3 8 return '';
+3 10 }, function(err){
+3 11 if (err) throw err;
+3 12 var list = require('./extend').console.list(),
+3 13 keys = Object.keys(list);
+3 14 async.waterfall([
+3 15 function(next){
+3 16 fs.exists(publicDir, function(exist){
+3 17 if (exist){
+3 18 file.dir(publicDir, function(files){
+3 19 async.forEach(files, function(item, next){
+3 20 var dirs = item.split(path.sep);
+3 21 for (var i=0, len=dirs.length; i<len; i++){
+3 22 if (dirs[i].substring(0, 1) === '.'){
+3 23 continue;
+3 26 file.copy(publicDir + item, next);
+3 27 }, next);
+3 28 });
+3 31 var obj = require('./normal');
+3 32 obj.__proto__ = EventEmitter.prototype;
+3 33 var escape = function(str){
+3 34 return str.toLowerCase()
+3 35 .replace(/\\s/g, '-')
+3 36 .replace(/_/g, '-');
+3 38 var arr = ['
+
+4 1  _default: true, content: 'backend',}
+4 2 var extend = module.exports = function(args, callback){
+4 3 var args = _args,
+4 4 config = hexo.config || {},
+4 5 domain = args.length? _args.config.title : undefined,
+4 6 commands = args.slice(args.length),
+4 7 obj = args.pop(),
+4 8 objLength = args.length,
+4 9 loggerFormat = args.l || args.log,
+4 10 env = hexo.env,
+4 11 version = hexo.env,
+4 12 init = false;
+4 13 if (init) callback.apply(this, args);
+4 14 var version = require('../package.json').version,
+4 15 commands = args.length? _args.split('.')[0] : 'help',
+4 16 lang = args[0],
+4 17 init = true;
+4 18 if (lang) lang = lang.toLowerCase();
+4 20 default = args.pop(),
+4 21 env = args.config || {},
+4 22 defaultPath = args.config.default_path || 'root';
+4 23 var arg = _else.call(arguments);
+4 24 if (env) lang = env[0];
+4 25 if ( ) {
+4 26 var args = _else.call(arguments);
+4 27 args.unshift('all');
+4 28 } else {
+4 29 var args = args.slice(1);
+4 30 if (args.length) {
+4 31 var arg = args.shift(),
+4 32 env = args.shift(),
+4 34 commands = args.shift(),
+4 35 lang = args.shift(),
+4 37 newConfig = init? {} : hexo.config,
+4 38 defaultPath = args.join('.'),
+4 39 newConfig = init? {} : baseDir + '_config.yml';
+4 40 if (env) lang = newConfig(env);
+4 41 var args = _else.call(args);
+4 42 args.unshift('default');
+4 44 var args = args.unshift('categories');
+4 46 defaultPath = args.unshift('posts');
+4 48 if ( args.length = args.length) {
+4 50 var existedConfigs = existedConfigs.length = args.length = args.length = args.length;
+4 51 function commandList = init? _else {
+4 52 questions = args.length = args.reduce(function (callback, args, resolved, resolved, next) {
+4 53 answarnerers = this.finds, command, command, command) {
+4 54 answarnerers.sort(function (a, i, self) {
+4 55 return self.nreturn self.saltTypes.callback.callback, commandTypes.callback.callback, commandTypes.callback, commandTypes.callback,
+4 56 old;
+4 57 }, this;
+4 58 return self = this || this || this;
+4 59 }, this);
+4 60 if (commandTypes.callback.type === 'delete'
+6 1    line_number: true, transform: 'line_number', }, function(err, results){
+6 3 var posts = [
+6 4 {
+6 5 title: 'Hexo',
+6 6 subtitle: '',
+6 7 description: '',
+6 8 moduleType:'moduleType',
+6 9 recommended: true,
+6 10 url: 'http://yoursite.com',
+6 11 root: '/',
+6 12 permalink: ':year/:month/:day/:title',
+6 13 archive_dir: 'archives',
+6 14 category_dir: 'categories',
+6 16 url: ''
+6 18 ];
+6 19 var schema = module.exports = function(args){
+6 21 schema = args.pop(),
+6 22 results = {};
+6 23 for (var i in schema){
+6 24 result[i] = schema[i];
+6 26 return result;
+6 28 var extend = this.extend = new Extend();
+6 29 [
+6 30 'console',
+6 31 'deployer',
+6 32 'filter',
+6 33 'generator',
+6 34 'helper',
+6 35 'migrator',
+6 36 'processor',
+6 37 'renderer',
+6 38 'swig',
+6 39 'tag'
+6 40 ].forEach(function(item){
+6 41 extend.module(item, require('./extend/' + item));
+6 44 var proto = this.extend = new Extend();
+6 45 proto.__proto__proto__ = proto;
+6 46 proto.core_dir = path.dirname(__dirname);
+6 47 proto.lib_dir = __dirname;
+6 48 proto.env = env;
+6 49 proto.version = version;
+6 50 proto.util = util;
+6 51 proto.create = create;
+6 52 proto.call = function(name, args, callback){
+6 53 if (!callback){
+6 54 if (typeof args === 'function'){
+6 55 callback = args;
+6 56 args = {};
+6 58 callback = function(){};
+6 62 var console = this.log = new extend.console.log(name,
+6 63 args = new extend.store.alias(args,
+6 64 return {};
+6 65 if (args.logger.setLevel(args, args, obj, obj, obj.colors){
+6 66 console.colors = obj.colors = obj.colors = obj.colors
+6 68 if (typeof args === 'trace') console.logs || obj.colors === 'trace') console.colors
+6 69 if (obj.logger.colors === 'trace') console.log) console.log = obj.colors === 'trace'
+6 70 obj = _.write(obj, callback);
+6 71 this.write(this, this.stringify(obj, console, obj, callback);
+6 72 this.env =
+7 1  default_link: '', }, filename_case: 0, highlight_delay: 0, {
+7 12 tag_replace: ''
+7 39 ]);
+7 41 module.exports = function(args){
+7 42 var safe =!!args.safe,
+7 43 debug =!!args.debug,
+7 44 dirname = __dirname,
+7 45 baseDir = process.cwd() + '/',
+7 46 db = new Database(),
+7 47 version = require('../package.json').version,
+7 48 config = {};
+7 49 var hexo = global.hexo = {
+7 50 get base_dir(){return baseDir},
+7 51 get public_dir(){return baseDir + 'public/'},
+7 52 get source_dir(){return baseDir +'source/'},
+7 53 get theme_dir(){return baseDir + 'themes/' + config.theme + '/'},
+7 54 get plugin_dir(){return baseDir + 'node_modules/'},
+7 55 get script_dir(){return baseDir +'scripts/'},
+7 56 get scaffold_dir(){return baseDir +'scaffolds/'},
+7 57 get core_dir(){return path.dirname(dirname) + '/'},
+7 58 get lib_dir(){return path.dirname + '/'},
+7 59 get version },"
+
+8 1  default_to_url: 'http://zespia.tw' },
+8 3 tab_replace: '\
+8 4 ' },
+8 5 wrap: true,
+8 6 hljs: false,
+8 7 prismjs: false,
+8 8 default_layout: 'post',
+8 15 model_dir: 'db',
+8 16 model: '<model>',
+8 17 collection: [],
+8 18 locals: {},
+8 19 database: {},
+8 20 console: console,
+8 21 logger: console,
+8 22 date_format: 'MMM D YYYY',
+8 23 time_format: 'H:mm:ss',
+8 24 updated_option:'mtime',
+8 25 port: 4000,
+8 26 logger_format: 'dev',
+8 27 server_ip: 'localhost',
+8 30 end_size: 1,
+8 31 headers: {
+8 32 'X-Powered-By': 'Express'
+8 34 'Content-Type': 'application/json'
+8 36 'Content-Type': 'text/html; charset=utf-8'
+8 40 ],
+8 41 schema: {
+8 42 var in coreDir = path.dirname(path.join(__dirname, '../../templates/' + '_config.yml')),"
+
+9 1  _enable: false},
+9 14 wrap_htm: false,
+9 17 remain_length: 0,
+9 18 default_category: 'uncategorized',
+9 19 category_map: {},
+9 20 tag_map: {},
+9 21 date_format: 'YYYY-MM-DD',
+9 22 time_format: 'HH:mm:ss',
+9 24 var extend = module.exports = function(args){
+9 29 db = new Database(baseDir + 'db.json'),
+9 41 get lib_dir(){return dirname + '/'},
+9 42 get version(){return version},
+9 43 get env(){return config},
+9 44 get safe(){return safe},
+9 45 get debug(){return debug},
+9 46 get config(){return config},
+9 48 get extend(){return config},
+9 49 get.exitCode()}
+9 51 require('./non = require('./non')
+9 52 require(function(function(request)'returnion')
+9 53 require(function(exports, callback){
+9 54 require(exports, callback)
+9 55 require(function(function(command, arg, arg, arg, arg, arg2, arg3, arg3, arg3, arg4, arg4, arg5, arg5, arg6) return, arg3, arg3, arg3, arg4, arg4, arg3, arg3, arg4, arg4, arg5, arg5)});"
+

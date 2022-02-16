@@ -1,0 +1,62 @@
+Min editdistance: 74.00
+Closest candidate: 7 15 stoArray : function (input : function (input, formatters) {}
+0 1 ' in this.call(this.close())
+0 2 return callback(new Error('close())
+0 3 })
+0 4 return callback(this.call(this.middleware () => {
+0 5 return callback(this.middleware.called)
+0 8 .middleware.close()
+0 9 .then((answatchedCallback.calledOnce)
+0 10 .returnsucFirsts.returns.returns.returns.returns.returns.returns.returns.returns.returns.returns.returns.returns.returns.returns.returns
+1 1 '
+1 2 return callback(new Error('I waited 'Not found for trace:'+ actualOutput =')
+1 5 call()
+2 1 ' }, function (exitCode must be found in the variable' },
+2 2 return callback(new Error())
+2 3 } callback(new Error())
+2 4 }
+3 1 ' in this.should.call(this.close()'should.call(return callback(return callback(return)
+3 3 .close()
+3 28 call
+4 1  '\
+4 2 return callback(new Error (expectedOutput ') }' in other one at(new Error '\
+4 3 })'
+5 1 ' in Express.format((UnexpectedOutputs', '123' }, function (expectedOutputs')return callback(new Error(new Error() =>'s') }, function (expectedOutputs) { callback(new Error(new Error() => {
+5 2 return '') {})
+5 3 assert.formatters.format((err, actualOutput = 'foo'))
+5 4 assert.format((msg = 'foo' || 'bar'))
+5 6 assert(Array.format((answ) => handler(s) => new Promise.formatTime for (s) =>s) => handler.formatTime = s += s
+6 1 'sucumber.js\
+6 2 return callback(new Error() : '\
+6 3 }'
+6 31 \
+7 1  : '\
+7 2 return callback(new Error'
+7 4 return callback(new Error('failures' in Express.exitCode to'+ actualOutput )
+7 5 } : function (Express.formatters (formatters () {})
+7 6 } : {
+7 7 return callback() {})
+7 8 } : function (formatters : {
+7 9 return new TypeError)
+7 10 }) : {
+7 11 Express.formatters : {
+7 12 formatters : {
+7 15 stoArray : function (input : function (input, formatters) {}
+7 16 return : null } : function (input :
+8 1 ' in object.should.should.returns += 1 '\
+8 2 returns', this.exitCode'
+8 4 return callback()
+8 5 }),
+8 6 callHandler(this.error(new Error())
+8 7 .promise, callback)
+8 8 .calledOncereturn callback
+8 9 .calledOnce
+8 10 .then(callback)
+8 11 .return callback
+8 16 .then callback
+8 17 .thenCallback.then callback
+8 18 .done()
+8 21 .
+9 1  : '123' }, function (return callback(new Error('\
+9 2 }' }, () =>' }, function (should not\\'return callback(new Error '123' }, function (should notExpectedOutput) '123' }, function (should notExpectedOutput to be\\' }, function (should notExpectedOutput) '123' }, function (should notExpectedOutput)' }, function (shouldNot\\'should notExpectedOutput) '123' }, function (should)'shouldn
+9 3 return callback(request) 'not' }, function (should)'should)' }, function (should)'should

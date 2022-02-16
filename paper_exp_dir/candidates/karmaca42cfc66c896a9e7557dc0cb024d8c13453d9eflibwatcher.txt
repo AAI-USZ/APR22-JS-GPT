@@ -1,0 +1,58 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 var pathsToWatch = [];
+0 1 };
+0 2 patterns.forEach(function(pattern) {
+0 3 var pathsToWatch = [];
+0 4 var uniqueMap = {};
+0 5 var path;
+0 6 patterns.forEach(function(patternObject) {
+0 7 var pattern = patternObject.pattern;
+0 8 if (!patternObject.watched) {
+0 9 return;
+0 10 }
+0 11 pathsToWatch.push(function() {
+0 12 return pathsToWatch.some(function(path) {
+0 13 return mm(path, pattern);
+0 14 });
+0 16 pathsToWatch.forEach(function(path) {
+0 17 if (!pathsToWatch.some(function(p) {"
+
+1 2 var createReadStream = function(stream) {
+1 3 return new Promise(function(resolve, reject) {
+1 4 var pattern = new Pattern(patterns)
+1 5 return function(path, pointer) {
+1 6 path = path
+1 7 .replace(/\\\\/g, '/')
+1 8 .replace(/\\?.*$/, '')
+1 9 .replace(/^[^\\/\\\\watcher]*\\)\\?.*$/, '') || '/';
+1 10 var regexp = new RegExp(patterns.| +$/i, 'g');
+1 11 return function(path, contents) {
+1 12 var tildify = fs.readFileSync(path)
+1 13 .replace(regexp, require('./regexp'));
+1 14 contents.forEach(function(path) {
+1 15 item = regexp.createReadStream(path);
+1 16 return item;
+1 20 exports.watch = function(patterns, excludes) {
+1 21 var config = this.config || this;
+1 22 var baseDirFromPattern = function(pattern) {
+1 23 return pattern.replace(/[/\\\\]/g, '_')
+1 24 .replace(/[\\/\\\\][^\\/\\\\]*\\*.*$/, '')
+1 25 .replace(/[\\/\\\\][^\\/\\\\]*[\\]*)/g, function(match, exclude, key) {
+1 26 return mm(path, exclude.substr(1));
+1 28 if (patterns.some(function(pattern) {"
+
+2 3 return pattern.replace(/[/\\\\][^\\/\\\\]*\\*.*$/, '') || '/';
+2 5 var watchPatterns = function(patterns, watcher) {
+2 10 path = baseDirFromPattern(pattern);
+2 11 if (!uniqueMap[path]) {
+2 12 uniqueMap[path] = true;
+2 13 pathsToWatch.push(path);
+3 3 return pattern.replace(/\\/[^#]*\\*.*$/, '') || '/';
+3 8 if (!util.isUrlAbsolute(pattern)) {
+3 9 pathsToWatch.push(baseDirFromPattern(pattern));
+4 3 return pattern.replace(/[/\\/]*\\*.*$/, '') || '/';
+5 5 var watchPatterns = function(patterns, watcher) {"
+
+6 3 return pattern.replace(/[/\\/\\\\][^\\/\\\\]*\\*.*$/, '') || '/';
+6 10 if (!patternObject.pattern) {
+6 11 uniqueMap[patternObject.pattern] = true;

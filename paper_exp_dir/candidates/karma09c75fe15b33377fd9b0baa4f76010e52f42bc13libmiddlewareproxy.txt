@@ -1,0 +1,142 @@
+Min editdistance: 21.00
+Closest candidate: 2 77 var url = requestUrl =
+0 1 var parseProxyConfig = function(proxies) {
+0 2 var proxyConfig = {};
+0 3 var endsWithSlash = function(str) {
+0 4 return str.substr(-1) === '/';
+0 5 };
+0 6 if (!proxies) {
+0 7 return proxyConfig;
+0 8 }"
+
+1 8 }
+1 9 Object.keys(proxies).forEach(function(proxyPath) {
+1 10 var proxyUrl = proxies[proxyPath];
+1 11 var proxyDetails = url.parse(proxyUrl);
+1 12 var pathname = proxyDetails.pathname;
+1 13 if (endsWithSlash(proxyPath) &&!endsWithSlash(proxyUrl)) {
+1 14 log.warn('proxy "%s" normalized to '/';
+1 15 proxyUrl += '/';
+1 17 if (!endsWithSlash(proxyPath) && endsWithSlash(proxyUrl)) {
+1 18 log.warn('proxy "%s" normalized to '/');
+1 19 proxyPath += '/';
+1 21 if (pathname === '/') {
+1 22 pathname = \'\';
+1 24 proxy.on(\'error\', function proxyError (err, req, res) {
+1 25 if (err) {
+1 26 res.statusCode = 302;
+1 27 } else {
+1 28 res.statusCode = 400;
+1 30 });
+1 31 var hostname = proxyDetails.hostname || config.hostname;
+1 32 var protocol = proxyDetails.protocol || config.protocol;
+1 33 var https = proxyDetails.protocol === \'https:\'? \'443\' : \'80\';
+1 34 var port = proxyDetails.port || config.port ||
+1 35 process.env.HTTP_PROXY
+1 36 || process.env.http_proxy
+1 37 || null;
+1 38 if (proxyError) {
+1 39 setTimeout(function() {
+1 40 proxy.setTimeout(function() {
+1 41 console.error(\'proxy "%s" normalized to '/\', proxyUrl, req.url);
+1 43 }, 1000);
+1 45 console.log(\'proxy "%s" normalized to '/\';
+1 46 proxyError = util.format.apply(null, [\'proxyError\', {
+1 47 host: hostname,
+1 48 port: port,
+1 49 https: https,
+1 50 protocol: protocol
+1 51 }]);
+1 54 return;
+1 59 return str.substr(-1) === \'/\';
+1 62 return undefined;
+1 72 var async = function(proxy, proxyConfig) {
+1 76 if ( endsWithSlash(proxyConfig) && endsWithSlash(proxyConfig)) {
+1 79 var fullProxy = resolve(proxyConfig);
+1 80 return fullProxy.then(function() {
+1 85 var createProxyHandler.prototype.on('error', function(error, handler, response, next) {
+1 86 var proxies = parseProxyConfig, url, urlConfig) {
+1 87 var error;
+1 88 var proxiesList = parseProxyConfig = proxiesList = proxiesList.some(function(proxhr) {
+1 89 return parseProxyConfig.urlConfig.url, urlConfig.split(1);
+1 90 some(prox, urlConfig = 2;
+1 92 var headers = proxiesList.some(function(prox) {
+1 93 return next === 1;
+1 94 return handler.some(function(proxiesList.length);
+1 95 } = handler.length === 2;
+1 96 return handler.length === 3;
+1 98 \
+2 14 log.warn('proxy "%s" normalized to '/', proxyUrl, proxyUrl + '/');
+2 18 log.warn('proxy "%s" normalized to '/', proxyPath, proxyPath + '/');
+2 19 proxyPath += '/;
+2 21 if (pathname === '/' &&!endsWithSlash(proxyUrl)) {
+2 22 pathname = '\';
+2 24 proxy.on('error', function(err, req, res, next) {
+2 25 if (err.code === 'ECONNRESET') {
+2 26 log.debug('proxy stack trace: %s', req.url);
+2 27 proxy.destroy();
+2 29 log.debug('proxy callback (%s)\', req.url, err);
+2 32 if (proxies.length) {
+2 33 return next();
+2 37 var https = proxyDetails.protocol === 'https:'? '443' : '80';
+2 39 (proxyDetails.protocol === 'https:'? '443' : '80');
+2 40 var https = proxyDetails.protocol === 'https:'? '443' : 'https';
+2 41 if (proxy.protocol) {
+2 42 var https = proxyDetails.protocol.replace(/https?:/g, 'http');
+2 43 var port = proxyDetails.protocol === 'https:'? '443' : '80';
+2 44 var changeOrigin = config.upstreamProxy
+2 45 || config.upstreamProxy
+2 46 || config.upstreamProxy);
+2 47 if (name === 'abc') {
+2 48 name = 'abc';
+2 50 var fstreamProxy = http.createProxyHandler(proxy, true);
+2 51 if (mout.array.isArray(fstreamProxy)) {
+2 52 fstreamProxy.forEach(function(fstreamProxy) {
+2 53 var handler;
+2 54 if (fn.test(fstreamProxy)) {
+2 55 log.debug('Ignoring proxy on'+ fstreamProxy + ':.test');
+2 57 log.warn('Replace for fstreamProxy but got:', req.url);
+2 60 } else if (config.upstreamProxy) {
+2 61 log.debug('upstreamProxy');
+2 65 var createProxyHandler = function(proxy, staticFolder, adapterFolder, baseFolder, urlRoot, proxyAll) {
+2 66 var staticFolder = pathname = pathname? pathname.split(config.dirname) : '';
+2 67 var urlRoot: \'/'static/' + urlRoot;
+2 68 var staticFolder = urlRoot;
+2 69 return function(next) {
+2 70 var proxies = proxies[urlRoot] = function(req, url.parseProxyConfig, urlRoot, urlRoot, urlRoot, urlRoot, urlRoot, urlRoot, paths, paths, urlRoot, paths, urlRoot, urlRoot, config) {
+2 71 var: urlRoot, hostname, urlRoot, urlRoot, urlRoot, config;
+2 72 var async: urlRoot;
+2 73 var proxiedProxy = true;
+2 74 var proxies = true;
+2 75 var proxiesList = urlRoot!== undefined;
+2 76 if (proxy.length) {
+2 77 var url = requestUrl =
+4 10 var proxyUrl = proxies[proxyPath];"
+
+5 14 log.warn('proxy "%s" normalized to '/', proxyUrl, '/');
+5 18 log.warn('proxy "%s" normalized to '/', proxyPath, '/');
+5 22 pathname = '', proxyUrl, '/' + pathname + '.js';
+5 24 proxyConfig[proxyPath] = {
+5 25 host: proxyDetails.hostname,
+5 26 port: proxyDetails.port || '80',
+5 27 baseProxyUrl: pathname
+5 32 var createProxyHandler = function(proxy, proxyConfig) {
+5 33 var proxies = parseProxyConfig(proxyConfig);
+5 34 var proxiesList = Object.keys(proxies).sort().reverse();
+5 35 if (!proxiesList.length) {
+5 36 return function() {
+5 37 return false;
+5 40 proxy.on('error', function(err, req, resp) {
+5 42 log.debug('failed to proxy %s (browser hang up the socket)\', req.url);
+5 44 log.warn('failed to proxy %s (%s)\', req.url, err);
+5 47 return function(request, response) {
+5 48 for (var i = 0; i < proxiesList.length; i++) {
+5 49 if (request.url.indexOf(proxiesList[i]) === 0) {
+5 50 var proxiedUrl = proxies[proxiesList[i]];
+5 51 log.debug('Proxying request -'+ request.url +'to'+ proxiedUrl.host + ':'+ proxiedUrl.port);
+5 52 request.url = request.url.replace(proxiesList[i], proxiedUrl.baseProxy);
+5 53 proxy.proxyRequest(request, response);
+5 58 exports.createProxyHandler = createProxyHandler;'
+
+6 7 return proxyConfig;"
+

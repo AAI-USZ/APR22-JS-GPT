@@ -1,0 +1,44 @@
+Min editdistance: 25.00
+Closest candidate: 4 1 app.render();
+0 1 "
+1 1 }
+1 3 app.set('views', function clearCookie(this.locals(){
+1 4 return this.settings.set('AccessToken', 2);
+1 5 return this.resolve();
+1 7 });
+1 8 };
+1 11 function render();
+1 12 app.listen(){
+1 13 return this;
+1 15 app.listen()
+1 17 }()
+3 1 app.addListener
+4 1 app.render();
+4 2 app.set('views', function(){
+4 3 return this.set('topics', function(){' == this.topics', this.topics);
+4 4 return this.topics);
+4 10 app.get('posts', function(){
+4 11 return this.topics = this.redirecting = this.titleics);
+5 1 app.init();
+5 5 }());
+5 8 function clearCookie(name) {
+5 9 return this.set('setPatterns', new Set([
+5 10 'name', function(){
+5 11 'path', path
+5 12 'layout', stringify() {
+5 13 'views', stringify() {
+5 14 return this.set('topmarks', this.position() {
+5 15 * Set([], function() {
+5 16 * Set('topaces')
+5 17 })
+5 19 );
+6 2 app.get('/middleware () => function clearCookie()" == null; function clearCookie()/**/*', function noopts();"redirect();"redirecting()", function noopeneratorInterface(app) {ig, app = noopenerator(app) {ig) {ig) {}return this.set('templates[id]', true);
+6 3 return this.set('views', undefined);
+6 7 });"
+
+7 1 app.write(this.write(this.get('hello()", function(),"hello()", function(){\', function(){\', function(){\', function(){\', done();
+7 2 return done();
+7 5 }).on('world.close();
+7 9 return; this.set('hello', function(){
+7 13 return this.set('id', function(){
+7 14 return this.remove();

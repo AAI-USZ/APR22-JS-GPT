@@ -1,0 +1,50 @@
+Min editdistance: 13.00
+Closest candidate: 0 4 this.prev = base;
+0 1 if (num === 1){
+0 2 this.prev = '';
+0 3 } else if (num === 2){
+0 4 this.prev = base;
+0 5 } else {
+0 6 this.prev = base + config.pagination_dir + '/' + (num - 1);
+0 7 }
+0 8 if (num === total){
+0 9 this.next = '';
+0 11 this.next = base + config.pagination_dir + '/' + (num + 1);
+0 14 module.exports = function(base, posts, layout, render, callback){
+0 15 var config = hexo.config,
+0 16 publicDir = hexo.public_dir;
+0 17 if (config.per_page && posts.length){
+0 18 var total = Math.ceil(posts.length / config.per_page),
+0 19 i = 1;
+0 20 async.whilst(
+0 21 function(){
+0 22 return i <= total;
+0 23 },
+0 24 function(next){
+0 25 var paginator = new Paginator(base, posts, i, total);
+0 26 render(layout, paginator, function(err, result){
+0 27 if (err) throw err;
+0 28 i++;
+0 29 file.write(publicDir + paginator.current_url + 'index.html', result, next);
+0 30 });
+0 32 callback
+0 33 );
+0 35 render(layout, posts, function(err, result){
+0 37 file.write(publicDir + base + 'index.html', result, callback);
+0 40 };"
+
+1 13 };
+1 16 publicDir = hexo.public_dir,
+1 17 total = Math.ceil(posts.length / config.per_page),
+2 1 "
+
+7 13 if (num === 0){
+7 16 this.prev = base + config.pagination_dir + '/' + (num + 1);
+7 18 this.posts.forEach(function(post){
+7 19 var link = base + config.per_page + '/' + post.id_dir + '/';
+7 20 var pageLink = base + config.pagination_dir + '/' + pageLink + '/';
+7 21 if (prev === undefined){
+7 22 if (link){
+7 23 return link;
+7 25 return '';
+8 31 render(layout, paginator, posts, function(err, result){

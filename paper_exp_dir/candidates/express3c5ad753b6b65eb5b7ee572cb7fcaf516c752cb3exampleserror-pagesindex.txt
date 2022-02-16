@@ -1,0 +1,158 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 app.set('views', __dirname + '/views');
+0 1 app.set('views', __dirname + '/views');
+0 2 app.set('view engine', 'jade');
+0 3 app.use(express.favicon());
+0 4 silent || app.use(express.logger('dev'));
+0 5 app.use(app.router);
+0 6 app.use(function(req, res, next){
+0 7 if (req.url.indexOf('?') > 0) {
+0 8 res.statusCode = 200;
+0 9 res.headers = { 'X-Foo': 'bar' };
+0 10 res.redirects = { ':error'; };
+0 11 return res;
+0 12 }
+0 13 var users = [
+0 14 { name: 'tj' },
+0 15 { name: 'tj' }
+0 16 , { name: 'tj' }
+0 17 , { name: 'baz' }
+0 18 , { name: 'bitch' }
+0 19 ];
+0 20 function pluralize(str, options){
+0 21 options = options || {};
+0 22 if (options.locals) {
+0 23 options.locals = options.locals || {};
+0 25 options.locals.__proto__ = parent.app.locals;
+0 26 options.locals.root = options.root;
+0 27 return function(){
+0 28 var args = Array.prototype.slice.call(arguments);
+0 29 args.forEach(function(path){
+0 30 if (!~[' + path + ']' in options)) args[path] = options[path];
+0 31 });
+0 33 };
+0 34 if (args.length) {
+0 35 var fn = args.shift();
+0 36 } else {
+0 37 var fn = args.pop();
+0 40 fn.apply(this, arguments);
+0 42 app.use(function(err, req, res, next){
+0 43 res.statusCode = err.status || 500;
+0 44 res.headers = {};
+0 45 res.locals.error = str;
+0 46 res.title = 'Express';
+0 47 next();
+0 49 if (!module.parent) {
+0 50 app.listen(3000);
+0 51 console.log('Express started on port 3000');
+0 52 }"
+
+1 2 app.set('view engine', 'ejs');
+1 7 res.status(404).render('404', { url: req.url });
+1 10 res.locals.error = function(err, req, res){
+1 11 res.locals.message = 'Resolved'+ err.message;
+1 12 res.locals.message = 'To avoid conflicts'+ req.message;
+1 17 res.status(404).render('500', { error: 'Cannot find module '+ req.url });
+1 21 silent ||\xa0console.log('Express started on port 3000');
+2 7 if (req.env === 'production') {
+2 9 res.locals = { 'posts': 'No routes were found' };
+2 10 res.render('index.jade', {
+2 11 locals: {
+2 12 posts: posts
+2 16 app.use(function(req, res){
+2 17 res.statusCode = 302;
+2 18 res.locals.user = users[req.session.name];
+2 19 res.render('index', {
+2 21 users: users
+2 26 console.log('Express app started on port 3000');"
+
+3 8 res.statusCode = 302;"
+
+4 3 app.enable('verbose errors');
+4 4 if ('production' == app.settings.env) {
+4 5 app.disable('verbose errors');
+4 9 app.get('/', function(req, res){
+4 10 res.render('index.ejs');
+4 12 app.get('/404', function(req, res, next){
+4 15 app.get('/500', function(req, res, next){
+4 16 res.render('missing.ejs');
+4 18 app.get('/success', function(req, res, next){
+4 25 var err = new Error('keyboard cat!');
+4 26 err.status = 500;
+4 27 err.types = normalizeTypes(req.params);
+4 28 next(err);
+4 30 app.get('/json', function(req, res){
+4 31 res.header('X-Foo', 'bar');
+4 32 res.contentType('.json');
+4 33 res.send({ foo: 'bar' }, { baz: 'raz' }, 201);
+4 35 app.get('/text', function(req, res){
+4 37 res.contentType('.html');
+4 38 res.send('wahoo');
+4 40 app.get('/status', function(req, res){
+4 41 res.render('hello.ejs', { error: err.message });
+4 43 app.get('/error', function(req, res){
+4 44 res.render('doesNotExist', { error: 'Cannot read external'"
+
+5 10 res.locals.user = users[0];
+5 13 next(new Error('cannot find user'));
+5 18 res.locals.message = function(msg){
+5 19 msg = msg.replace(/\\u2028/g, '\\u2028');
+5 20 if (err.message === 'No routes were matched, try the route below.');
+6 9 res.setHeader('Location', req.url.indexOf('?'));
+6 10 res.end();
+6 11 return;
+6 17 res.format = function(obj){
+6 18 var req = res.session.error
+6 19 , msg = req.session.success;
+6 20 delete req.session.error;
+6 21 delete req.session.success;
+6 22 res.locals.message = obj;
+6 23 if (err) res.locals.message = '<p class="msg error">' + err + '</p>';
+6 24 if (msg) res.locals.message = msg;
+6 27 var users = {
+6 28 tj: { name: 'tj' }
+6 31 res.locals.error = function(err){
+6 32 res.locals.message = err.message || 500;
+6 34 log.warn('Secondata found for'+ req.session.error + ':'+ err.message);
+6 36 this.session.message = 'Authenticated as'+ req.session.user.name
+6 37 +'click to <a href="/logout">logout</a>.');
+6 40 res.locals.message = function(err){
+6 41 res.locals.message = err.message || 'hey';
+6 42 res.locals.message = msg;
+6 48 if (this == app.settings.redirect) {
+6 49 res.redirect('back');
+6 50 } else if (this == app.settings.is_post) {
+6 51 return res.redirect('home');
+6 53 return res.redirect('back');
+6 57 app.use(function clearCookie(name, options) {
+6 58 returnRes.attempt(name, options) {
+6 59 return this.session.session.cookie[name];
+6 62 app.get('/
+6 63 app.use(res).clearCookie = function clearCookie(name, options) {
+6 64 return this.app.get('/AuthenticatedStore, function(req, res){
+6 65 res.session.session.session.session. secret = this.session.name
+6 66 .session.session.clear()
+6 67 .store = this;
+6 68 return this;
+6 69 if (!this.session.get('/AuthenticatedStore fn.s', function(
+7 7 if (req.env === 'production') {"
+
+8 15 app.get('/403', function(req, res, next){
+8 16 var err = new Error('not allowed!');
+8 17 err.status = 403;"
+
+9 7 res.locals = {
+9 8 settings: app.settings
+9 9 , app: app
+9 18 msg.locals.message = msg;
+9 19 if (err) res.locals.message = '<p>Visit <a href="http://hexo.io/">hexo.io</a> to <a href="http://hexo.io/">hexo.io</a>.</p>';
+9 20 if (err) res.locals.message = \'<p>Visit <a href="http://hexo.io/">hexo.io</a> to <a href="http://hexo.io/">hexo.io</a>.</p>';
+9 26 if (err) res.locals.message = '<p>Visit <a href="http://hexo.io/">hexo.io</a>.</p>';
+9 27 if (err) res.locals.message = \'<p>Visit <a href="http://hexo.io/">hexo.io</a>.</p>\';
+9 31 if (err) res.locals.message = '<p>Visit <a href="http://hexo.io/">hexo.io</a>.</p>\'
+9 39 app.use(function(function(err, req, res, res, next){
+9 40 res.locals.message = function(err, msg){
+9 42 if (err) res.locals.message = msg;
+9 43 if (err) res.locals.message = '<p>!= err.constructor.constructor.name!== 'router') throw err;
+9 44 msg.locals.lang = format.path = format.dirname(msg.path);
+9 45 res.method = format

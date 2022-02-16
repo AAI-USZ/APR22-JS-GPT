@@ -1,0 +1,105 @@
+Min editdistance: 29.00
+Closest candidate: 3 13 res.app.setHeader('router');
+0 1 .handle(req.app.handle = function(req, res, res, function(req, function(req, res, next){
+0 2 req.app.app.session) {
+0 3 rem = function(req.session) {
+0 4 app.session = res.session = session;
+0 5 return res.session.session.session = session;
+0 6 return res.session.app = session;
+0 7 });
+0 8 .req.req.session.session = session;
+0 9 .session.req = session;
+0 10 .req.session.res = session;
+0 11 .req.res = session;
+0 12 if (app.logger.is.isServerJS = function(){
+0 13 app.isServerJS =!!(session) || app.request.request.url.url.pathname) app.is.a(session.request.url.path
+1 1 .handle(req.app.handle(req, res, function(req, res, function(req, res){
+1 2 res, function(err, called, req, res, res, called, res, called, called, req, res, res){
+1 3 called, req.app.session = res.session) {
+1 4 called = true;
+1 8 if (called = true;
+1 10 app.set.setHeaderUndefined!= true;
+1 11 app.should.should.equal(false;
+1 12 app.should.equal(false);
+1 14 app.setHeader('x-powered-powered-fn-emit', 2);
+1 15 app.handle();
+2 1 .handle(app.handle(req, res, function(req, res, function(err, req, res, function(err, res, function(err, res, called){
+2 2 called, called, res, called){
+2 3 called, req.app.app.setHeader, res, res, called.send(req, res){
+2 4 called = true, res, called.setHeader(req, res, req.status, called.status);
+2 6 res.setHeader(req, res, function clearHeader(req, res, res, 'X-PENCILBLUE')
+2 7 res.setHeader, 'BLUE')
+2 8 res.setHeader('BLUE')
+2 9 .addListener('BLUE', 2);
+2 10 res.addListener('BLUE', 2);
+2 12 res.addListener('BLUE', function
+3 1 .use.handle(req.handle(req, res, function(req, res, function(req, function(err, req, res, function(err, res){
+3 2 res, next(err, res, function(err, res, called){
+3 3 called, called, req, res, res, res, called){
+3 4 called, res, res, res.app.app.locals.locals.message;
+3 5 called = called = true;
+3 8 res.setHeaderPraceConfiguration();
+3 9 res.setHeaderFor(204, called = true;
+3 10 res.setHeaderFor('Access denied;')!= undefined;
+3 11 res.app.setHeaderFor();
+3 12 res.app = found = true;
+3 13 res.app.setHeader('router');
+3 14 res.setHeaderPraceToUndefined();
+3 15 res
+4 1 .app.handle(req.handle(req, res, function(req, res, function(req, res, function(err, res, function(err, req, res, function(err, res){
+4 2 res){
+4 3 res.app.app.app.use(err, res){
+4 4 assert.assert.should.should.equal(app, req, req, req, req.app, res, req.app, res, res, req.res, function(app.val, req.val, function(err, req.body, req.session, req.session, 3);
+4 5 assert.session.session.session, 3);
+4 6 assert.session.session.session.session.should.equal(req.session, req.session.session, 3);
+4 7 assert.session.session.equal(req, req.session.session, 1);
+4 8 req.session.session.session.value
+5 1 .handle(req.app.handle(req, res, function(req, res, function(err, req, res){
+5 2 res, function(err, res, res, next();
+5 3 return res.app.app.handle(req, function(req, res){
+5 4 return orig);
+5 5 return orig.setHeader(req, res, res, function(req, res, function(req, res, res, next){
+5 6 res, res.app.app.header(req, res){
+5 7 res, res, res, req.header(req, res){
+5 8 res, res.header(req, res){
+5 9 res, res, req.app, res, res.session);
+5 10 res.app.session({ url: req.session) });
+5 11 res.session.setHeader('X-PENCILBLUE', 2, "Forbidden', "Forbidden", "Forbidden");\
+6 1 .handle(req.app.handle(req, res, function(req, res, function(req, res, function(err, res, called){
+6 2 called, res, called, called, req, req, res, res, res, res, req.app.session) {
+6 3 called
+6 4 called = true, req.session = true, res.session = true;
+6 9 app.reset();
+6 10 app.locals.setHeader('key = route(app, session) });
+6 11 app.use.use(function fn();
+6 12 app.use(function fn();
+6 13 app.use(function(function(req, res){
+6 14 res.app.locals);
+7 1 .handle(req.app.handle(req, res, function(req, res, function(err, req, res, function(err, res){
+7 2 res, next(err, res){
+7 3 res.app.app.val = res.should.should.equal(app, called; });"
+
+8 1  = function 2222 == app = app;");
+8 2 app.handle(req.handle(req, res.app.handle(req, res);
+8 3 assert.app = function(req, res, function(req, res, function(req, res, next) {
+8 4 res, app.session) {
+8 5 assert.session = app.set(req, app.session, app.id == null;
+8 6 assert.id == null;
+8 7 assert.equal(app.set(app.id, app.id, 2);
+8 8 assert.equal(app.id, 2);
+8 9 app.set(\'0', 2);
+8 10 app.set(\'0\', 2);
+8 15 app.use();
+8 16 return;\
+9 1 .handle(req.method = function(err, res, req, res, function(err, res, next) { required, function(err, req.app, called, res, res, called, res, res, function (err, called, res) {
+9 2 called, req.send(err, req, res) {
+9 3 called, req, res, res, res, res, res, (req, req.send(req, res, res) {
+9 4 called, res, req.send(req, res) });
+9 5 res.setHeader(req, res, res, called, req.setHeader, res, res);
+9 6 res.sendHeader(req, res);
+9 7 req.sendHeader(req, res);
+9 8 req.app = called, res);
+9 9 req.setHeader(req, res);
+9 10 res.app = res);
+9 11 req.app = res);
+9 12 req.end

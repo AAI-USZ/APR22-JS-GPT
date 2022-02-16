@@ -1,0 +1,3 @@
+
+process.env.TERM = 'dumb';
+

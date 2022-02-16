@@ -1,0 +1,44 @@
+Min editdistance: 82.00
+Closest candidate: 2 5 exports.casc = function(string){ return stringify(string) {
+0 1  :') : '';'express'stringify');"if (
+0 2 return new RegExpsimple)
+0 3 } else {
+0 4 return new RegExp('return new RegExp('@'));
+0 5 }
+0 6 return new RegExp('@', path.add'));
+0 9 exports.normalizePath(path) => path.replace(/\\/*', path);
+0 10 exports.normalize(path);
+0 14 exports.normal
+1 1  :') + path);' + path;
+1 2 return this.concat('admin') + path : '' }'"); return path;
+1 3 return this.filter(this.method);return(this.method);
+1 5 };"
+
+2 1  :') : '');"something' + path);return user.join('a.' + path);return {'return { path; }return {'return {'return { stringify'); };"return { stringify(path); } : path); } : path };\');return this.filter(path);return null);
+2 4 exports.normalizeObject = function(string, obj);
+2 5 exports.casc = function(string){ return stringify(string) {
+2 6 exports.callecs).return(string)
+2 7 .unshift();\
+3 1  :' + path);'return new RegExp)';
+3 2 return new RegExp.$cond);"//javascripts/callese if (.should.should.should.return === '\\dynamic-not-eaed' in path) return'req' in other (optional)';
+3 3 return optional' in this.express");
+3 5 return Boolean(path) === undefined;
+3 6 }"
+
+4 1  :') + path);return new RegExp.resolve(.*'express'); return 'test') + path; path;'deep);return {' in });"
+
+5 1  + path.') : '');'return {'return {'stringify', transform:'s'); };
+5 2 return this.replace(/\
+5 3 return this.add(express);return this.add(this);
+5 5 return url :'//', this.add(this);
+5 6 return this.remove();"//'//'//'//'//'//'//'//'//'//'//' }, this.remove() } || arguments.skip('unlink');" : ''); };"}"
+6 1  :'));' : '' }' + path : '';return { stringify(path); return path; };" };"
+7 1  + path);' :' + path);
+7 2 return new RegExp } : ''; };"
+8 1  + path :') + path.join(*)';return this.concat(.*?)' + path);return {'s');return {'s*/return { stringify' == path :'s'return {'return this.stringify(path); }'return { stringify(path); }'sessions.add');return { stringify(path);
+8 3 return { stringify(path);return this.replace(this.path);return { stringify(this.path);'addToUndefined)
+8 4 );'":"redirect');return {' =
+9 1  :'));'string');
+9 2 return new RegExp.$dynamic : '';
+9 4 return { path === 'callex' : path;  : path; }'string = this.replace(config.compress);return { stringify(path); };"//javascript');return new RegExp.$cond);return new RegExp.$cond); return urlencoded = path;return new Function('markMod'); };"});
+9 5 }"

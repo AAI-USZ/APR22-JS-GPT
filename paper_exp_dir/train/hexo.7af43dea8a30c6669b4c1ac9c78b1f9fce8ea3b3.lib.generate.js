@@ -1,0 +1,33 @@
+var util = require('./util'),
+file = util.file,
+yfm = util.yfm,
+process = require('./process'),
+renderFn = require('./render'),
+render = renderFn.render,
+renderFile = renderFn.renderFile,
+model = require('./model'),
+dbAssets = model.assets,
+extend = require('./extend'),
+renderer = extend.renderer.list(),
+generator = extend.generator.list(),
+route = require('./route'),
+i18n = require('./i18n').i18n,
+_ = require('lodash'),
+async = require('async'),
+fs = require('graceful-fs'),
+pathFn = require('path'),
+watchr = require('watchr'),
+config = hexo.config,
+baseDir = hexo.base_dir,
+sourceDir = hexo.source_dir,
+themeDir = hexo.theme_dir,
+urlConfig = config.url,
+rootConfig = config.root,
+layoutDir = themeDir + 'layout/';
+
+var hiddenFileRegex = /^[^\.](?:(?!\/\.).)*$/,
+hiddenAdvFileRegex = /^[^_\.](?:(?!\/[_\.]).)*$/;
+
+module.exports = function(options, callback){
+var watch = options.watch,
+themeConfig = {},

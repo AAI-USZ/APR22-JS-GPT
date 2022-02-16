@@ -1,0 +1,95 @@
+Min editdistance: 1.00
+Closest candidate: 4 1 var config = hexo.config.category,
+0 1 var posts = locals.posts,
+0 2 config = hexo.config;
+0 3 async.parallel([
+0 4 function(next){
+0 5 var target = config.archive_dir + '/';
+0 6 if (config.archive === 2){
+0 7 paginator(target, posts, 'archive', render, next);
+0 8 } else {
+0 9 render('archive', posts, function(err, result){
+0 10 if (err) throw err;
+0 11 file.write(publicDir + target + 'index.html', result, next);
+0 12 });
+0 13 }
+0 14 },
+0 16 var yearly = {},
+0 17 monthly = {};
+0 18 posts.each(function(item, i){
+0 19 var year = item.date.year(),
+0 20 month = item.date.format('MM');
+0 21 if (yearly.hasOwnProperty(year)){
+0 22 yearly[year].push(item);
+0 24 yearly[year] = posts.slice(i, i + 1);
+0 26 if (!monthly.hasOwnProperty(year)) monthly[year] = {};
+0 27 if (monthly[year].hasOwnProperty(month)){
+0 28 monthly[year][month].push(item);
+0 30 monthly[year][month] = posts.slice(i, i + 1);
+0 33 async.forEach(Object.keys(yearly), function(ykey, next){
+0 36 var target = config.archive_dir + '/' + ykey + '/';
+0 37 yearly[ykey].year = ykey;
+0 39 paginator(target, yearly[ykey], 'archive', render, next);
+0 41 render('archive', yearly[ykey], function(err, result){
+0 48 async.forEach(Object.keys(monthly[ykey]), function(mkey, next){
+0 49 var target = config.archive_dir + '/' + ykey + '/' + mkey + '/';
+0 50 monthly[ykey][mkey].year = ykey;
+0 52 paginator(target, monthly[ykey], 'archive', render, next);
+0 59 }, next);
+0 61 ], callback);
+0 62 });"
+
+1 1 var config = hexo.config.tag;
+1 2 if (!config) return callback();
+1 3 async.forEach(locals.tags.toArray(), function(item, next){
+1 4 item.tag = item.name;
+1 5 if (config == 2){
+1 6 paginator(item.permalink, item, 'tag', render, next);
+1 8 render('tag', item, function(err, result){
+1 10 file.write(publicDir + item.permalink + 'index.html', result, next);
+1 13 }, callback);
+2 43 file.write(publicDir + target + 'index.html', result, callback);
+3 5 paginator('', posts, 'index', render, next);
+3 8 var newest = posts.first().date,
+3 9 oldest = posts.last().date;
+3 10 if (!oldest) return callback();
+3 11 posts.archive = true;
+3 13 paginator('archive', posts, 'archive', render, next);
+3 17 file.write(publicDir + post.permalink + 'index.html', result, next);
+3 39 async.forEach(Object.keys(yearly), function(year, next){
+3 42 var target = archive.year(),
+3 43 archive = archive.month() + '/';
+3 44 archive.year = year;
+3 45 yearly[year].year = month;
+3 46 if (archive == 2){
+3 47 paginator('archive', yearly[year], 'archive', render, next);
+3 49 render('archive', yearly[year], function(err, result){
+3 56 async.forEach(Object.keys(monthly[year]), function(monthly[year][month], function(monthly[year][month], result){
+3 68 async.forEach(Object.keys(yearly), function(monthly[year]), function(monthly[year][month]]){
+3 69 var target = archive.year,
+3 70 archive = archive.month() + '/' + '/' + '/' + month;
+3 71 archive.yearly[year].archive = archive.archive = archive.archive || true;
+3 73 paginator('archive = archive.yearly[year].mode == year;
+3 75 archive = archive.year = archive;
+4 1 var config = hexo.config.category,
+4 2 categories = locals.categories,
+4 3 keys = Object.keys(categories);
+4 5 async.forEach(keys, function(key, next){
+4 6 var item = categories[key];
+4 7 item.category = key;
+4 8 if (config === 2){
+4 9 paginator(item.permalink, item, 'category', render, next);
+4 11 render('category', item, function(err, result){
+6 5 paginator('/' + config.archive_dir + '/', posts, 'archive', render, next);
+6 10 _.each(posts.toArray(), function(item, i){
+6 28 paginator('/' + config.archive_dir + '/' + ykey + '/', yearly[ykey], 'archive', render, next);
+6 32 paginator('/' + config.archive_dir + '/' + ykey + '/' + mkey + '/', monthly[ykey][mkey], 'archive', render, next);
+6 33 }, next)
+6 35 ], next);
+7 1 var config = hexo.config;
+7 2 paginator('', locals.posts, 'index', render, callback);
+8 1 var config = hexo.config.tag,
+8 2 tags = locals.tags;
+8 4 async.forEach(tags.toArray(), function(item, next){
+8 5 var path = item.path;
+8 8 paginator(path, item, 'tag', render, next);

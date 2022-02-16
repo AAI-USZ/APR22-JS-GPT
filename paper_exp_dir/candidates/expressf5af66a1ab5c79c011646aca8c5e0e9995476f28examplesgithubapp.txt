@@ -1,0 +1,240 @@
+Min editdistance: 25.00
+Closest candidate: 2 2 var client = require('morgan');
+0 1 app.get('/', function(req, res){
+0 2 res.render('index.jade', { layout: 'cool.layout' });
+0 3 });
+0 4 app.get('/no-ext', function(req, res){
+0 7 app.get('/relative', function(req, res){
+0 8 res.render('index.jade', { layout: 'layouts/foo.jade' });
+0 10 app.get('/absolute', function(req, res){
+0 11 res.render('index.jade', { layout: __dirname + '/views/layouts/foo.jade' });
+0 13 app.get('/nope', function(req, res){
+0 14 res.render('index.jade', { layout: 'nope.jade' });
+0 16 app.get('/relative-solved', function(req, res){
+0 19 app.get('/pope.js', function(req, res){
+0 20 res.render('index.jade', { layout: 'pope.jade' });
+0 22 assert.response(app,
+0 23 { url: '/' },
+0 24 { body: '<p>Welcome</p>\
+0 25 <p>Welcome</p>\
+0 27 <p>Pride</p>\
+0 29 </ul>' });
+0 31 { url: '/pope.json' },
+0 38 { url: '/pope.json/helpers' },
+0 39 { body: '<p>Hello World</p>\
+0 40 <p>esrever</p>\
+0 41 <p>No exit</p>' });
+0 43 { url: '/__karma__/', method: 'POST', data: 'name=tj', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }},
+0 44 { body: 'tj' });
+0 45 },
+0 46 'test #render()': function(assert){
+0 47 var app = create();
+0 48 app.set('view engine', 'jade');
+0 50 res.render('index.jade', { layout: 'cool-layout' });
+0 53 res.render('index.jade', { layout: 'no-ext' });
+0 59 res.render('index.jade', { layout: 'index.jade' });
+0 62 { url: '/'should.partial(),"
+
+1 1 function request(path, fn){
+1 2 var client = redis.createClient(),
+1 3 req = client.readyState == 1? client.status : 0,
+1 4 res = res.locals || {};
+1 5 if (!res.headerSent) {
+1 6 return;
+1 7 }
+1 8 if (fn) {
+1 9 fn(new Error('DELETE called too many times'));
+1 11 req.end();
+1 13 function client(status, msg) {
+1 14 return function(param, options, fn){
+1 15 if (arg) {
+1 16 fn(null, status, options.headers[\'content-length\'] || 0, fn(new Error(\'GET /hello/world/' + status + \'"\'));
+1 18 return client.set('views', args);
+1 20 function send(msg) {
+1 21 return function(body) {
+1 22 var req = redis.createClient();
+1 23 if (req.statusCode >= 300 && req.statusCode < 400) {
+1 24 return send(body);
+1 26 if (stats.isDirectory()) {
+1 27 return 403;
+1 29 if (204 == status || 304 == status) {
+1 30 return true;
+1 32 return function(err, req, res, next){
+1 33 res.statusCode = status;
+1 34 if (err) {
+1 35 fn(err, req.url);
+1 36 } else {
+1 37 next(new Error(\'DELETE called too many times\'));
+1 41 app.use(connect.static(__dirname + \'/public\'));
+1 43 return next();
+1 45 app.get(\'/user/:id\', function(req, res){
+1 46 res.send(req.params.id);
+1 48 app.use(connect.compress());
+1 49 app.use(function(req, res, next){
+1 50 res.statusCode = 302;
+1 51 res.setHeader(\'Location\', \'components\');
+1 52 res.send({ name: \'express\', url: req.url, headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+1 54 app.listen(3000);
+1 55 console.log(\'Express app started on port 3000\');"
+
+2 1 function request(path, fn) {
+2 2 var client = require('morgan');
+2 3 if (!client.useIframe && client.runInParent) {
+2 6 return client.call(this, path)
+2 7 .spread(function (views, data) {
+2 8 return views.concat(data
+2 9 .replace('\
+2 10 %s\
+2 11 %s', 'bar')
+2 12 .pluck('%s')
+2 13 .replace(/[\\r\\t ]+)\\1/g, '-')
+2 14 .split(/\\r\
+2 15 ')
+2 16 .join('')
+2 17 })
+2 18 .
+2 19 exports.createServer = createApplication;
+2 20 function openApplication() {
+2 21 return new Promise(function (resolve, reject) {
+2 22 exports.createServer()
+2 23 .catch(function (err) {
+2 24 return self.halt(err, '');
+2 26 .expect('content-type', 'application/json');
+2 29 exports.application = proto;
+2 30 exports.request = req;
+2 31 exports.response = res;
+2 32 exports.Route = Route;
+2 33 exports.Router = Router;
+2 34 exports.errorHandler.title = 'Express';"
+
+3 1 if (!app.name) {
+3 2 app.name = 'test';
+3 5 res.render('index.jade', {
+3 6 locals: {
+3 7 lastName: 'holowaychuk',
+3 8 get: function(){
+3 9 return 'Hello World!'
+3 12 });"
+
+4 11 res.render('index.jade', { layout: __dirname + '/../../views/layouts/foo.jade' });
+4 16 app.get('/relative-s', function(req, res){
+4 22 app.get('/nope.jade', function(req, res){
+4 25 app.get('/invalid', function(req, res){
+4 26 res.render('invalid.jade', { layout: 'invalid.jade' });
+4 28 app.get('/invalid-async', function(req, res){
+4 29 process.nextTick(function(){
+4 32 app.get('/error', function(req, res){
+4 36 res.render(__dirname + '/../../assets/completion.jade', { layout: 'absolute' });
+4 38 app.get('/coverage', function(req, res){
+4 39 res.render('coverage.jade', { layout: 'invalid.jade' });
+4 43 { body: '<p>Welcome</p>' });
+4 45 { url: '/jade' },
+4 48 { url: '/absolute' },
+4 51 { url: '/haml' },
+4 52 { body: '\
+4 53 <p>Hello World</p>' });
+4 55 { url: '/callback' },
+4 57 <p>:)</p>' });
+4 60 { url: '/error' },
+4 61 { url: '/invalid' },
+4 62 function(res, headers: function(res, status: function(res){
+4 63 assert){
+4 64 assert.assert.should.should.should.equal(res.equal(res.locals, headers.location, 'http.should.connection.connection.length);
+4 65 assert.should.equal(res.strictServer.length);
+4 66 assert.strictEqual(res.length);
+4 67 assert.should.strictEqual(res.headers.length);
+4 68 assert.should.strictEqual(res.headers.location);
+4 69 assert.strictEqual(res.locals);
+4 70 assert.strictEqual(res.strict);
+4 71 res.should.should.locals.should.equal(res);
+4 72 assert.locals.should.equal(res);
+4 73 assert.should.connection.get('localhost');
+4 75 .get('
+5 16 app.get('/pets', function(req, res){
+5 17 res.render(' index.jade', { layout: 'pets' });
+5 19 app.get('/tags', function(req, res){
+5 20 res.render(' index.jade', { layout: 'tags' });
+5 22 app.get('/page', function(req, res){
+5 23 res.render('index.jade', { layout: 'page' });
+5 25 app.get('/home', function(req, res){
+5 26 res.render('index.jade', { layout: 'home' });
+5 28 app.get('/google', function(req, res){
+5 29 res.render('google.jade', { layout: 'google.jade' });
+5 31 app.get('/user/:id', function(req, res){
+5 32 res.render('user.jade', { layout: 'user.jade' });
+5 35 { url: '/html/test.jade' },
+5 36 { body: '<p>test</p>', headers: { 'Content-Type': 'text/html; charset=utf-8' }});
+5 38 { url: '/json/test.jade' },
+5 39 { body: '{"foo":"bar"}', status: 201, headers: { 'Content-Type': 'application/json' }});
+5 41 { url: '/text' },
+5 42 { body: 'wahoo', headers: { 'Content-Type': 'text/plain; charset=utf-8' }});
+5 44 { url: '/status' },
+5 45 { body: 'Not Found', status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8' }});
+5 48 { body: 'Oh shit!', status: 500, headers: { 'Content-Type': 'text/plain' }});
+5 50 { url: '/buffer' },
+5 51 { body: 'wahoo!', headers: { 'Content-Type': 'application/octet-stream' }});
+5 53 { url: '/no-s', headers: { body: 'text/plain' },
+5 54 '}
+5 56 },"
+
+6 2 var client = express.createClient(80, 'github.com'),
+6 3 req = client.request('GET', '/api/v2/json' + path, { Host: 'github.com' });
+6 4 req.addListener('response', function(res){
+6 5 res.body = '';
+6 6 res.addListener('data', function(chunk){ res.body += chunk; });
+6 7 res.addListener('end', function(){
+6 8 try {
+6 9 fn(null, JSON.parse(res.body));
+6 10 } catch (err) {
+6 11 fn(err);
+6 17 function sort(repos){
+6 18 return repos.sort(function(a, b){
+6 19 if (a.watchers == b.watchers) return 0;
+6 20 if (a.watchers > b.watchers) return -1;
+6 21 if (a.watchers < b.watchers) return 1;
+6 24 function totalWatchers(repos) {
+6 25 return repos.reduce(function(sum, repo){
+6 26 return sum + repo.watchers;
+6 27 }, 0);
+6 29 function totalWatchersNoCache() {
+6 30 return 0;
+6 33 res.redirect('/repos/visionmedia');
+6 35 app.get('/repos/*', function(req, res){"
+
+7 2 var client = require('connect').createClient(80, 'github.com'),
+7 15 app.get('/api/v2/json', function(req, res){
+7 26 app.get('/api/v2/json/dev-complex-nest', function(req, res){
+7 27 res.render('sessions/op-complex-nest.jade', { layout: 'nest.jade', included: false });
+7 29 app.get('/api/v2/console', function(req, res){
+7 30 res.render('sessions/op-form-data-nest.jade', { layout: 'dev-complex-nest' });
+7 32 app.get('/api/v2/ext/not-function', function(req, res){
+7 33 res.render('sessions/op-form-data-not-function.jade', { layout: 'invalid-' });
+7 35 app.get('/api/v2/form-data', function(req, res){
+7 36 res.render('sessions/op-form-data-form.jade', { layout: 'invalid-' });
+7 38 app.get('/api/v2/edit', function(req, res){
+7 39 res.render('sessions/op-form-data-edit.jade', { layout: 'invalid-async' });
+7 41 app.put('/api/v2/edit', function(req, res){
+7 42 res.render('sessions/op-form-discriminators/form-data.jade', { layout: 'invalid-async' });
+7 45 console.log('Express app started on port 3000');"
+
+8 2 res.render('index.jade', { layout: 'cool.layout', render: 'cool.layout' });
+8 13 app.get('/nope',' function(req, res){
+8 14 res.render('index.jade', { layout: 'nope.jade', render: 'nope.jade' });
+8 17 res.render('hello.jade', { layout: 'nope.jade', render: 'nope.jade' });
+8 27 res.render('invalid.jade', { layout: 'invalid.jade' }, function(err){
+8 28 res.send(err.arguments[0]);
+8 32 res.render(__dirname + '/../../support/ext/resolvers/absolute', { layout: 'invalid.jade' });
+8 42 app.get('/absolute/commit', function(req, res){
+8 45 app.get('/commit/:commit', function(req, res){
+8 46 res.render('invalid.jade', { layout: 'commit-canary', render: 'invalid.jade' });
+8 52 app.get('/get('/commit', function(function(req, res){
+8 53 res){
+8 54 res.render('invalidate('invalidate('invalid.jade', { layout: 'invalidate');
+8 58 app.get('/});"
+
+9 1 app.locals.layout = 'layouts/default';
+9 2 app.locals.firstInCollection = 'https://example.com/' + app.locals.lastInCollection;
+9 4 res.render('pages/default');
+9 7 res.render('pages/alternate');
+9 9 app.listen(3000);"
+

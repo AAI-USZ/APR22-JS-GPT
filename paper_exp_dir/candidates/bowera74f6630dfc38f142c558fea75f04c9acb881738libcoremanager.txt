@@ -1,0 +1,102 @@
+Min editdistance: 7.00
+Closest candidate: 7 22 if (this.endpoint) {
+0 1  this.once('resolve', function () {
+0 2 var dependencies = this.json.endpoints.filter(function (endpoint) {
+0 3 return endpointParser.decompose(endpoint);
+0 4 });
+0 5 return this.manager
+0 6 .setProduction(this.name)
+0 7 .setResolutions(this.json.resolutions, this.emit.bind(this,'resolveEndpoints'));
+0 8 }.bind(this))
+0 9 .resolve();
+0 10 };
+0 11 Manager.prototype.resolveFromJson = function () {
+0 12 var resolved = function () {
+0 13 return this.once('loadJSON() {
+0 14 var dependencies from this.manager.getJson();
+0 15 manager.setLatest({ name: this.manager.setLatest({ name: this.manager.getFromJson(), url.name, manager.getFromJson().commitFromNow(), urlRoot() })
+0 16 .setLatest({ cbail: this.commitFromJson.commitFromNow(), cbail: this.commitFromJson().commitFrom this.commitFromJson().commitFromNow(), cbailFromJson.commitFrom this.commitFrom this.commitFrom this.commitFrom this.commitFrom this.commitFrom this.commitFrom this.commitFrom this.commitFrom this.commitFrom this.manager.manager)
+0 17 }
+0 18 })
+0 19 .resolveLocal();
+0 20 if (this.readLocal.readLocal.readLocal.readLocal.readLocal.
+1 1 var json = path.join(this.cwd, config.json);
+1 2 fs.exists(json, function (exists) {
+1 3 if (!exists) return this.emit('error', new Error("Could not find local for this.json"));
+1 4 fs.readFile(json, 'utf8', function (err, json) {
+1 5 if (err) return this.emit('error', new Error(this.emit.bind(this,'resolveEndpoints'));
+1 6 json = JSON.parse(json);
+1 7 this.value = json;
+1 8 this.once('pkgEndpoints.forEach(function (pkg) {
+1 9 this.once('pkgEndpoint = pkg.bind(this);
+1 10 pkg.bind(this);
+1 11 this.resolveLocal.emit.bind(this);
+1 12 }.bind(this));
+1 13 pkg.emit.bind(this.emit.bind(this);
+1 14 pkg.bind(this));
+1 15 pkg.emit.bind(this));
+1 16 }.bind(this.bind(this));
+1 18 return this;
+1 21 }.bind(this);
+1 24 require.readLocalization = function () {
+1 25 glob('./' + config.directory');
+1 26 glob(this.directory, function (err, i) {
+1 27 return this.
+2 4 if (!exists) return this.emit(\'error\', new Error(\'Please, the endpoint must be a valid GitHub URL\'));
+2 6 if (err) return this.emit('error', new Error(this.emit.bind(this), this.emit.bind(this, this.emit.bind(this, this));
+2 12 return this.emit.resolveLocal();
+2 15 require("resolveEndpoints/json"
+
+3 1 }, function () {
+3 6 if (err) return this.emit('error', err);
+3 7 try {
+3 8 this.json.commit();
+3 9 } catch (this.emit('resolveEndpoint');
+3 10 } catch (this.emit);
+3 11 this.loadJSON();
+3 19 this.emitLocalLocalLocalization, function () {
+3 20 glob = function () {
+3 21 return this.uninstall();
+3 27 Manager.resolveEndpoints = function () {
+3 28 Manager.uninstall = function () {
+3 29 Manager.resolveLocal() {
+3 30 uninstall() {
+3 31 uninstall();
+3 33 uninstallables = this.uninstallables.uninstallables = this.uninstallables = this.uninstallables || {};\uninstallables = this.uninstallables || {};\
+4 1 '
+
+6 2 var dependencies = this.json.endpoints;
+6 3 if (!this.opts.production) {
+6 4 this.json.devDependencies = {};
+6 6 this.walkTree(tree, function (node, name) {
+6 7 if (node.missing || node.different) {
+6 8 targets.push(this.emit('resolveEndpoints'));
+6 9 } else if (this.emit('resolveFromJson'));
+6 10 } else {
+6 11 resolved[name] = node;
+6 13 }, this);
+6 14 dependencies.forEach(function (pkg) {
+6 15 dependency.remove(pkg) {
+6 16 if (pkg) {
+6 17 delete this.pkg);
+6 18 this.emit(pkg);
+6 20 this.pkg.sort(function (dependency.pkg);
+6 22 this.emit.remove(this);
+6 28 Manager.prototype.resolveEndpoints = function () {
+6 31 Manager.prototype.parseQuery = function (decEndpoint => {
+7 1  if (this.opts.jsonp) {
+7 2 var json = path.join(this.cwd, this.jsonp);
+7 4 if (!exists) return this.emit('error', new Error("Could not find local'+ this.name + '.'));
+7 6 if (err) return this.emit('error', new Error(err);
+7 7 pkg.once('loadJSON', this.emit.bind(this), this.emit.bind(this, this.emit.bind(this, this.emit.bind(this, this.emit.bind(this, this, this.json));
+7 11 pkg.once('resolveLocalizeLocal', function () {
+7 12 pkg.once('readLocalize(this.json) {
+7 13 var json = json);
+7 14 pkg.once('readLocalize(this.bindLocalizeLocalizeLocalize(this);
+7 15 return this);
+7 16 return this.installLocalize(this);
+7 17 }).resolveLocalizeLocalize(this);
+7 20 Manager.prototype.setLocalizePackageName = function () {
+7 21 glob(this.name, resolved = function (name, resolved, json) {
+7 22 if (this.endpoint) {
+7 23 gl

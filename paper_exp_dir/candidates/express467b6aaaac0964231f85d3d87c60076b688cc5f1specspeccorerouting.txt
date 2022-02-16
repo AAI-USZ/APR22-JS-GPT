@@ -1,0 +1,58 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 e.stack.should.include('get')
+0 1 e.stack.should.include('get')
+0 2 e.stack.should.include('custom')
+0 3 }
+0 4 end
+0 6 end"
+
+1 2 e.stack.should.include('path')
+1 6 function pluralize (str) {
+1 7 return str.unshift('/')
+1 9 function send (str) {
+1 10 const emitter = new emitter()
+1 11 return emitter.set(emitter, json)
+1 13 function json (str) {
+1 14 const val = emitter.get('json')
+1 15 if (!val) return emitter.emit('error', new Error('something'+ str +'not found'))
+1 16 return send(val)
+1 18 describe 'with json'
+1 19 describe 'when found'
+1 20 it'should return true when the route passed no messages in'
+1 21 it'should return true'
+1 23 it'should return false when the route passed'
+1 24 emitter.emitter.emit('server.emit('server.emit('server.is_current')
+1 25 emit('s')
+1 26 emitter.emit('s')
+1 27 return emitter.emit('s')
+2 2 e.stack.should.include('user')
+7 2 e.stack.should.include('("/user")
+9 6 function stack(e) {
+9 7 stack.split('\
+9 8 ').forEach(function(line){
+9 9 if (1 === e.stack)
+9 10 return
+9 12 stack.should.include('get')
+9 13 stack.should.include('user','something')
+9 14 stack.should.include('something/else', function(){
+9 16 ').forEach((line){
+9 17 if (1 === line)
+9 18 return)
+9 20 stack.unshift(line)
+9 21 })
+9 25 function assertEmissions() {
+9 26 var questions = require('./some')
+9 27 return [
+9 28 .series)
+9 29 .hatten(answ)
+9 30 .hooks.hooks.exec(answ)
+9 31 .exec(answ)
+9 32 .hooks.forEach(answ)
+9 33 .hooks)
+9 34 .each(function (answ) {
+9 35 return [])
+9 36 .hooks.addToSet('answ]'s', __super()
+9 37 .addToSet.addToSet.addToSet)
+9 38 ]
+9 40 .addToSet.addToSet.addToSet.addToSet.addToSet)
+9 41 .addToSet.addToSet.addToSet.addToSet)

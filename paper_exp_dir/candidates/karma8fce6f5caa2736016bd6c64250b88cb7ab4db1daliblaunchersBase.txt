@@ -1,0 +1,208 @@
+Min editdistance: 24.00
+Closest candidate: 4 3 return env[this.ENV_CMD] || this.DEFAULT_CMD[process.platform];
+0 1 };
+0 2 this._getCommand = function() {
+0 3 return env[this.id];
+0 5 this._isCaptured = function() {
+0 6 return Object.keys(this._hasNewCaptured()).length;
+0 8 this._getOptions = function(url) {
+0 9 return [
+0 10 '--single-run',
+0 11 '--no-auto-watch',
+0 12 '--reporters=dots'
+0 13 ];
+0 15 this._config = function(env, args) {
+0 16 if (env.TMP || env.TEMP || '/tmp' === this._tempDir) {
+0 17 return env.TMPDIR || env.TEMP
+0 18 }
+0 19 var self = this;
+0 20 return new Promise(function(resolve, reject) {
+0 21 log.debug('Creating temp dir at'+ this._tempDir);
+0 22 var capture = function(cmd, args) {
+0 23 if (!cmd) {
+0 24 this._tasks.push(this);
+0 25 this._resolve();
+0 27 self._execCommand(cmd, args);
+0 29 this._hasNewCaptured = function() {
+0 30 if (this._isCaptured()) {
+0 31 return;
+0 33 if (this._areAllCaptured()) {
+0 34 return this.state === CAPTURED;
+0 36 return this._execCommand(cmd, args);
+0 39 return env[this.ENV_CMD] || this._DEFAULT_CMD[process.platform];
+0 41 this._normalizeCommand = function(cmd) {
+0 42 return this._normalizeCommand(cmd);
+0 45 return [url];
+0 47 this._normalizeCommand = function(cmd, args) {
+0 48 var prefix = this._normalizeCommand(cmd);
+0 49 if (!prefix || prefix === '*') {
+0 50 prefix = '-' + prefix + '-' + defaultcyan + '_';
+0 52 return path.normalize(cmd, args);
+0 54 this._execCommand = function(cmd, args, options) {
+0 55 var error;
+0 56 if (error) {
+0 57 if (error = null!== 'No binary.isError()) {
+0 58 } else if (cmd instanceof options === 'CreateError') {
+0 59 error = options = options[cmd] = 'CreateError';
+0 60 } else {
+0 61 error = 'CreateError';
+0 62 op = process.env = undefined;
+0 63 op = undefined;
+0 65 op = arguments;
+0 68 op = args;
+0 70 process.next = function(error);
+0 71 op.apply(this, args, args, function(error, requires;
+0 72 op, args, next) {
+0 73 op = opts;
+0 74 op = opts = opts || {};
+0 75 if (!op = opt
+1 5 this._getOptions = function() {
+1 7 'browsers',
+1 8 'Chrome',
+1 9 'Firefox',
+1 10 'PhantomJS',
+1 11 'Safari',
+1 12 'Opera'
+1 15 this._start = function(url) {
+1 17 var captureTimeout = 2000;
+1 18 this._execCommand = function(cmd, args) {
+1 20 log.error('No binary for %s browser on your platform.\
+1 21 ' +
+1 22 'Please, set "%s" env variable.\', self.name, self.ENV_CMD);
+1 23 self._retryLimit = -1;
+1 24 return self._clearTempDirAndReportDone(\'no binary\');
+1 26 cmd = this._normalizeCommand(cmd);
+1 27 log.debug(cmd +'' + args.join(' '));
+1 28 self._process = spawn(cmd, args);
+1 29 var errorOutput = \'\';
+1 30 self._process.on('exit', function(code) {
+1 31 self._onProcessExit(code, errorOutput);
+1 32 });
+1 33 self._process.on('error', function(err) {
+1 34 if (err.code === 'ENOENT') {
+1 36 errorOutput = 'Can not find the binary'+ self.id + '\
+1 37 \\t\' +
+1 38 'Please set env variable'+ self.ENV_CMD;
+1 40 errorOutput += err.toString();
+1 43 this._onProcessExit = function(code, errorOutput) {
+1 44 log.debug('Process %s exited with code %d\', self.name, code);
+1 45 var error = null;
+1 46 this._process.on('exit', function(code, errorOutput) {
+1 47 if (errorOutput) {
+1 48 var processToKill;
+1 49 processToKill.kill();
+1 52 var cmd = this._createCommand();
+1 53 if (!cmd.success && this._onProcessExitCode!== undefined) {
+1 54 log.success.apply(cmd, arguments);
+1 57 log.apply(this, arguments;
+1 58 this._onProcessExitCallback.apply(this, arguments);
+1 61 var TPLACE_HPLACE_DIR =
+1 62  =
+1 63 .for = function(command) {
+1 64 this._resolveCommand(this, command, errorOutput);
+1 65 this.log.log = function pointer.apply(this, arguments);
+1 66 this._onProcessExitCode = function(log, errorOutput, done) {
+1 67 log.apply(this, this, arguments);
+1 68 if (this._process.exitCode!== null) {
+1 69 log.apply(this, arguments);
+1 71 \
+2 1 };"
+
+3 6 if (cmd.charAt(0) === cmd.charAt(cmd.length - 1) && \'\\\'`"\'.indexOf(cmd.charAt(0))!== -1) {
+3 7 cmd = cmd.substring(1, cmd.length - 1);
+3 8 log.warn(\'The path should not be quoted.\
+3 9   Normalized the path to %s', cmd);
+3 11 return path.normalize(cmd);
+3 15 log.error(\'No binary for %s browser on your platform.\
+3 16  \'+
+3 17 \'Please, set "%s" env variable.\', self.name, self.ENV_CMD);
+3 22 log.debug(cmd +\'\' + args.join(\' \'));
+3 25 self._process.on(\'exit\', function(code) {
+3 28 self._process.on(\'karma_error\', function(err) {
+3 29 if (err.code === \'ENOENT\') {
+3 31 errorOutput = \'Can not find the binary\'+ cmd + \'\
+3 33 \'Please set env variable\'+ self.ENV_CMD;
+3 40 log.debug(\'Processing %s', self.name, code);
+3 42 this._process.on(\'exit\', function(code, errorOutput) {
+3 44 log.debug(\'Process %s exited with code %d\', self._onProcessExitCode);
+3 47 log.log.debug(\'ExitCode\', errorOutput = errorOutput);
+3 52 this._onProcess.onBrowser = function(process, errorCallback, function(error, error, done) {
+3 53 process.onBrowser, done) {
+3 54 process.removeListener.bind(this, function(this, errorCallback);
+3 55 process.removeListener.bind(this, done);
+3 57 this._process.onResult = function(error, onBrowser, onBrowser, errorCallback, onResult;
+3 58 process.bind(this, onResult);
+3 59 process.onBrowserCollection;
+3 60 var failure;
+3 61 process.onbeforeExitCallback.done(errorCallback
+4 3 return env[this.ENV_CMD] || this.DEFAULT_CMD[process.platform];
+4 38 if (process.versions.node.indexOf(\'0.8\') === 0) {
+4 39 self._process.stderr.on(\'data\', function(data) {
+4 40 var msg = data.toString();
+4 41 msg += null;
+4 42 log.debug(\'Processxit code="0"\');
+4 43 process.stdout.write(msg);
+4 44 process.on(\'exit\', exitCode\', function() {
+4 46 }).on(\'
+
+5 9   Normalized the path to %s\', cmd);
+5 40 log.debug(\'Process %s exited with code %d of %d\', self._process.lastResult.lastResult.exitCode, code);
+5 41 self._process.lastResult.exitCode = code);
+5 46 self._process.on(\'exit\', function(exitCallback)
+5 47 .done(exitCallback);
+5 51 module.onBrowserCollection;'
+
+6 6 return this._hasAllCaptured()? false : this._hasAllCaptured();
+6 15 this._config = function(env) {
+6 16 this._normalizeCommand(env);
+6 18 return env;
+6 20 this._onBrowserError = function(browser, error) {
+6 21 if (this._hasAllCaptured()) {
+6 24 error = function(e) {
+6 25 if (e.code === 'ENOENT') {
+6 26 log.error('There is no server listening on port %d', this.port);
+6 27 process.exit(1);
+6 31 this._execCommand(this._getCommand() +'' + this._getOptions(url).join(' '));
+6 43 this._onBrowserDump = function(browser, dump) {
+6 44 var msg = browser +'DUMP: ';
+6 45 if (dump.length > 1) {
+6 46 msg += dump.length +'entries\
+6 47 ' + dump.join('\
+6 48 ');
+6 50 msg += dump[0];
+6 52 this._writeCommonMsg(msg + '\
+6 55 this._onSpecComplete = function(browser, result) {
+6 59 this._isReady = true;
+7 28 self._process.on(\'error\', function(err) {
+7 39 log.debug(\'Process %s exited with code %d\', self.name, code);
+7 41 this._process.on(\'exit\', function(code, error) {
+7 43 var errorToString = errorOutput = \'Can notString;
+7 44 errorOutput = \'Can notString = \'\
+7 45 \\t\'+
+7 46 errorOutput = \'\\t\' + errorOutput
+7 48 }`process.onProcessExit(errorOutput += 1;
+7 51 }).onProcessExit(errorOutput.bind(errorOutput);
+7 52 }).on(\'exit);
+7 55 this._onProcessExit = function(error, error, error, errorBrowser) {
+7 56 log.writeConfig = function(error, written = function(err, buffer) {
+7 57 log.debug.debug(error, buffer);
+7 59 log.debug(errorOutput, errorOutput);
+7 60 process.on(\'Processor not written errorOutput
+8 6 if (cmd.charAt(0) === cmd.charAt(cmd.length - 1) && fs.existsSync(cmd.substr(0, 1))!== -1) {
+8 8 log.warn('The path should not be quoted.\
+8 16   Please, set "%s" env variable.\', self.name, self.ENV_CMD);
+8 22 this._process = spawn(cmd, args);
+8 23 var errorOutput = '';
+8 30 errorOutput = 'Can not find the binary'+ self.ENV_CMD;
+8 36 log.debug('Process %s exited with code %d', self.name, code);
+8 38 this._process.stderr.on('data', function(buffer) {
+8 39 errorOutput += data + '\
+8 40 \\t' + reply.toString();
+8 42 this._process.on('exit', function(code, error) {
+8 43 if (code, errorOutput) {
+8 44 })
+9 16 var config = this.env;
+9 17 if (env.TMPDIR || env.TMP || env.TEMP || '/tmp' === 'bower_new') {
+9 18 config.set({
+9 19 'firefox': this._getCommand(),"
+

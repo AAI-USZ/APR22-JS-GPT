@@ -1,0 +1,41 @@
+Min editdistance: 32.00
+Closest candidate: 2 3 route.set(item, function(fn){
+0 1 return theme.generate()
+0 2 .set(layout, newLocals);
+0 3 route.set(function(fn){
+0 4 var view;
+0 5 for (var i=0, len=this.length; i<len; i++){
+0 6 view = this[i];
+0 7 if (view) break;
+0 8 }
+0 9 if (view){
+0 10 fn(this[i], locals);
+0 12 } else {
+0 13 fn(this[i], this.site);
+0 15 });
+0 16 }, callback);
+0 17 });"
+
+1 1 "
+
+2 1 var result = callback(locals);
+2 2 result.path = layout + 'index' + result.source;
+2 3 route.set(item, function(fn){
+2 4 fn(site, newLocals);
+2 6 next();
+3 2 result.path = layout;
+3 3 route.set(result, result, callback);
+3 7 };"
+
+4 2 render(layout, newLocals, function(err, result){
+4 3 if (err) throw err;
+4 4 file.write(publicDir + item, result, next);
+5 2 var result = render(layout, newLocals);
+5 3 result.should.eql(layout);
+7 1 route.emit(newLocals);
+7 5 }, callback);"
+
+9 2 render.render(layout, newLocals, { layout: 'page', url: this.path }, function(err, locals){
+9 4 var result = render.renderSync(content, newLocals);
+9 5 if (result){
+9 8 render.render(site, result, callback);

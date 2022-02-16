@@ -1,0 +1,90 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 meta = \'\',
+0 1 meta = \'\',
+0 2 width,
+0 3 height,
+0 4 title,
+0 5 alt,
+0 6 src;
+0 7 for (var i = 0, len = args.length; i < len; i++){
+0 8 var item = args[i];
+0 9 if (rUrl.test(item)){
+0 10 src = item;
+0 11 break;
+0 12 } else {
+0 13 if (item[0] === \'/\'){
+0 17 classes.push(item);
+0 18 }
+0 20 args = args.slice(i + 1);
+0 21 if (args.length){
+0 22 if (!/\\D+/.test(args[0])){
+0 23 width = args.shift();
+0 24 if (args.length &&!/\\D+/.test(args[0])){
+0 25 height = args.shift();
+0 28 meta = args.join(\' \');
+0 30 if (meta && rMeta.test(meta)){
+0 31 var match = meta.match(rMeta);
+0 32 title = match[1];
+0 33 alt = match[2];
+0 35 var attrs = {
+0 36 src: src,
+0 37 class: classes.join(\' \'),
+0 38 width: width,
+0 39 height: height,
+0 40 title: title,
+0 41 alt: alt
+0 42 };
+0 43 return htmlTag(\'img\', attrs);
+0 44 };"
+
+3 6 source,
+3 7 config;
+3 8 if (args){
+3 9 var url = args[0],
+3 10 text = args[1];
+3 11 url.path = url + \'/\';
+3 12 for (var i=0, len=url.length; i<len; i++){
+3 13 var item = url[i];
+3 15 source = item;
+3 19 source = url + \'/\';
+3 32 }'
+
+4 13 title = item;
+4 32 src: \'/\',
+6 9 altConfig,
+6 10 permalink;
+6 17 title = item[0];
+8 45 module.exports.css = function(args, content){
+8 46 var args = args.slice(i, args.length);
+8 48 var classes = args.slice(i + 1);
+8 49 args.forEach(function(item){
+8 50 var src = item[0];
+8 51 if (src) return img(src);
+8 52 });
+8 55 var width = args.length && args.length){
+8 56 width = args.length && args.length.length.length > 0? args.join(\' \') : item;
+8 58 var height = args.length && args.length.length > 1? args.join(\' \') : height;
+8 59 if (height){
+8 60 var title = args.length? args.join(\' \') : title;
+8 62 var src = item[1];
+9 8 altLength,
+9 9 excerpt,
+9 10 category,
+9 11 tag,
+9 12 filename;
+9 14 var args = args.slice(2),
+9 15 str = args.join(\' \');
+9 16 if (str){
+9 17 for (var i=0, len=args.length; i<len; i++){
+9 18 filename = args[i];
+9 19 if (rUrl.test(filename)){
+9 20 source = args[i];
+9 23 if (args[0] === \'og:|';
+9 24 var rUrl = escapeRule[1];
+9 26 var match = args.match(rUrl);
+9 32 source: url,
+9 34 url: source,
+9 35 path: url
+9 39 module.exports.tag = function(args, content){
+9 40 var classes = args.slice(i + 1),
+9 46 alt

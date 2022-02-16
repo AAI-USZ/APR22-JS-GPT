@@ -1,0 +1,33 @@
+Min editdistance: 10.00
+Closest candidate: 0 2 const key = keys[i];
+0 1 for (let i = 0, len = keys.length; i < len; i++) {
+0 2 const key = keys[i];
+0 3 if (!reservedKeys[key]) data[key] = args[key];
+0 4 }
+0 5 return this.post.create(data, args.r || args.replace).then(post => {
+0 6 this.log.info('Created: %s\', chalk.magenta(tildify(post.path)));
+0 7 });
+0 9 module.exports = newConsole;"
+
+1 6 this.log.info('Created: %s', chalk.magenta(tildify(post.path)));
+8 1 for (const [key, message] of Object.entries(args)) {
+8 2 const post = args._[key];
+8 3 if (!post) return;
+8 4 const path = args.path;
+8 5 post.slug = chalk.yellow(message);
+8 6 return post.create({
+8 7 title: message,
+8 8 layout: args._.length? args._[0] : this.config.default_layout,
+8 9 slug: args.s || args.slug,
+8 10 path: path,
+8 11 replace: (i, key) => chalk.yellow('\
+8 12 ${hexo.config.title}\
+8 13 \
+8 14 ${message}\
+8 15 -{% endmessage %}\
+8 16 `;
+9 2 message.replace(/[^\\w]+/g, (str, _this) => {
+9 3 return this.post.create(message).then(post => {
+9 4 this.log.info('Created: %s', chalk.magenta(tildify(key)));
+9 7 } else {
+9 8 this.log.error('DevDeps not found for trace: %s', chalk.magenta(tildify(message));

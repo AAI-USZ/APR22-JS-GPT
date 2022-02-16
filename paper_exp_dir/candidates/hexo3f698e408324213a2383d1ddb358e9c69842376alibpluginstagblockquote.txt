@@ -1,0 +1,200 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 module.exports = function(ctx){
+0 1 function footer(str, options){
+0 2 return str.replace(rFullCiteWithTitle, function(){
+0 3 return str.substr(1, 0);
+0 4 });
+0 5 }
+0 6 module.exports = function(args, content){
+0 7 var str = args.join(' ');
+0 8 var author = '';
+0 9 var footer = '';
+0 10 var title = '';
+0 12 if (str){
+0 13 var footer = new footer.In({
+0 14 id: 'Title',
+0 15 title: title,
+0 16 footer: footer,
+0 17 url: source,
+0 18 root: '/',
+0 19 permalink: ':year/:month/:day/:title'
+0 21 } else {
+0 23 id: 'Posts',
+0 28 th-child: post,
+0 29 last: 1
+0 33 var title = args.length? args.join(' ') : '';
+0 34 footer = '';
+0 36 var authorIDs = [];
+0 37 for (var i = 0; i < str.length; i++){
+0 38 var item = str.substring(i, 1);
+0 39 if (_.indexOf(item) === -1) arr.push(item);
+0 41 if (item){
+0 42 var url = item.substring(0, 1);
+0 45 if (_.indexOf(authorIDs) === -1){
+0 46 authorIDs.push({_id: _id: Object.keys(authorIDs).random()});
+0 48 authorIDs.push({_id: Object.keys(authorIDs).sort({name: 1, url: url});
+0 51 if (item.length === 1){
+0 52 footer +=''+ item[0].bold;
+0 54 footer += '<a href="' + item.substr(1) + '">' + item.name + '</a>';
+0 57 var data = {
+0 58 content: content
+0 59 };
+0 60 var meta = {
+0 61 id: data.id || data.title,
+0 62 name: path.basename(data.source),
+0 63 _id: data.slug,
+0 64 post_title: data.params[data.id]
+0 66 if (!meta.length &&!is_post_post_length) meta.length== 1){
+0 67 var result = '_create_post_'.'create;
+0 69 var result = meta.create_post_short = format = format;
+0 70 return result.substring_url = format;
+0 72 module.exports.filename = function(str, transform){
+0 73 var result = _.filename = _.toString = _str;
+0 74 var path = format = _str;
+0 75 if (transform == null!== null){
+0 76 transform = _str = _str = filters;
+0 77 if (transform && _str.substring(0, 1) == 1){
+0 78 var data = _str.length && _str.substring = 1) == 2){
+0 79 return str = '';
+0 81 if (!path = '';
+0 82 } = '';
+0 83 } else {\
+1 1 var footerPart = '';
+1 2 module.exports = function(ctx){
+1 3 return function(args, content){
+1 4 var str = args.join(\' \');
+1 5 var authorPart = args.match(rFullCiteWithTitle),
+1 6 author = args.match(rAuthorPart),
+1 7 title = args.join(\' \');
+1 9 var footer = \'<strong>\' + content + \'</strong>\';
+1 11 var footer = \'<cite><a href="\' + source + \'">\' + title + \'</a></cite></footer></cite>\';
+1 13 if (author) footer += \'<strong>\' + author + \'</strong>\';
+1 14 if (source){
+1 15 var url = source.match(/https?:\\/\\/(.+)/)[1],
+1 16 parts = url.split(\'/\'),
+1 17 link = '';
+1 18 for (var i = 0, len = parts.length; i < len; i++){
+1 19 var nextLink = link + parts[i];
+1 20 if (nextLink.length < 32){
+1 21 link = nextLink + \'/\';
+1 23 break;
+1 26 if (url.replace(/\\/?$/, \'/\')!== link) link += \'&hellip;\';
+1 27 footer += \'<cite><a href="\' + source + \'">\' + (title? title : link) + \'</a></cite></footer></cite>\';
+1 28 } else if (title){
+1 29 footer += \'<cite>\' + title + \'</cite>\';
+1 31 return \'<blockquote>\' + content + \'</footer></blockquote>\';
+1 32 };"
+
+2 1 var match;
+2 3 if (rFullCiteWithTitle.test(str)){
+2 4 match = str.match(rFullCiteWithTitle);
+2 5 author = match[1];
+2 6 source = match[2] + match[3];
+2 7 title = titlecase(match[4]);
+2 8 } else if (rFullCite.test(str)){
+2 9 match = str.match(rFullCite);
+2 12 } else if (rAuthorTitle.test(str)){
+2 13 match = str.match(rAuthorTitle);
+2 15 title = titlecase(match[2]);
+2 16 } else if (rAuthor.test(str)){
+2 17 match = str.match(rAuthor);
+2 21 author = str;
+2 37 footer += \'<cite><a href="\' + source + \'">\' + (title? title : link) + \'</a></cite>\';
+2 42 return \'<blockquote></p>\';
+2 45 var hexo = new Hexo(__dirname, {silent: true});
+2 48 hexo.config.external_link = {
+2 49 url: \'https://example.com\',
+2 50 external_link: {
+2 51 enable: true,
+2 52 field: \'post\',
+2 53 exclude: \'\'
+2 56 var result = \'<blockquote></p>\';
+2 57 result.replace(/<pre><code.*?([^\
+2 58 \']+)\
+2 59 /g, function(){
+2 60 return \'<admin\', content);
+2 62 return result.replace(/<\
+2 63 /admin
+2 64 .replace(/s/g, \'<notextile>/g, \'<notextile>\');
+3 4 var authorId = this.config.author_id;
+3 5 var source = \'\';
+3 6 var title = \'\';
+3 7 var footer = \'\';
+3 8 var url = \'\';
+3 9 var i = 0;
+3 10 var len = args.length;
+3 12 var footer = \'<strong>\' + footer + \'</strong>\';
+3 14 var match = str.match(rFullCiteWithTitle),
+3 15 author = match[1],
+3 18 var match = str.match(rFullCite),
+3 22 var match = str.match(rAuthorTitle),
+3 26 var match = str.match(rAuthor);
+3 31 var url = source.match(/https?:\\/\\/(.+)/)[1];
+3 35 return \'<blockquote>\' + content + \'</blockquote>\';
+4 2 return str.replace(rFullCiteWithTitle, function(match, tabs){
+4 3 var id = anchor(0, { title: title }, /target=/);
+4 4 var path = match[1];
+4 5 if (id) str += '-' + path;
+4 6 return str;
+4 8 if (!TY content) str += '\
+4 9 ' + title + '\
+4 10 ';
+4 13 var str = str.replace(rFullCiteWithTitle, function(match, tabs){
+4 14 var title = title + '(' + tabs);
+4 19 module.exports = function(content){
+4 20 return content;
+5 20 if (author) footer += '<strong>' + author + \'</strong>';
+5 23 parts = url.split('/');
+5 27 url = nextLink + '/';
+5 38 return \'<blockquote>\' + hexo.render.renderSync({text: content, engine:\'markdown\'}) + (footer? \'<footer>\' + footer + \'</footer>\' : \'\') + \'</blockquote>\';
+5 42 var render = hexo.render,
+5 43 renderFn = render,
+5 44 render = renderFn.render,
+5 45 isRenderable = renderFn.isRenderable;
+5 46 var model = hexo.model;
+5 47 model.extend({
+5 48 checkModified: function(source, callback){
+5 49 if (!callback) callback = function(){};
+5 50 async.series([
+5 51 function(next){
+5 52 fs.exists(source, function(exist){
+5 53 if (!exist) return next();
+5 54 next(null, function(exist);
+5 56 },
+5 58 _next(newest.load_source = function(next){
+5 59 next){
+5 60 if (!isRenderable(next){
+5 61 next) return next();
+5 65 ], function(next){
+5 68 }, function(next){
+5 69 _content = _id = _id = _id(next){
+5 72 next(next);
+5 73 next = next();
+5 78 _id.params = _id = _id = next._id;
+5 79 next = next._id = _id;
+6 2 return str.replace(rFullCiteWithTitle, str);
+6 15 title = ctx.config.titlecase? titlecase(match[4]) : match[4];
+6 23 title = ctx.config.titlecase? titlecase(match[2]) : match[2];
+6 27 if (rAuthor.test(str)){
+6 34 if (author) footer += '<strong>' + author + '</strong>';
+6 37 parts = url.split(/\\/index\\.html');
+6 41 link = nextLink + '/';
+6 46 if (url.replace(/\\/?$/, \'/\')!== link) link += 'index.html';
+6 52 return \'<blockquote>\' + hexo.render.renderSync({text: content, engine: \'markdown\'}) + (footer? \'<footer>\' + footer + footer + footer + footer + footer + footer + footer + \'</footer>\'</footer>\' : \'</footer></blockquote>\'}).join(\'\').join(\'\') + \'</blockquote>\';
+7 2 return str
+7 3 .replace(rFullCiteWithTitle, function(){
+7 4 return str.replace(/\
+7 5 /g, \'\
+7 6 \');
+7 7 })
+7 8 .replace(rFullCite, function(){
+7 9 return str.replace(rAuthorTitle, \'\');
+7 11 .replace(rAuthor, \'\');"
+
+8 9 source = match[2] + match[3],
+8 20 var match = str.match(rAuthor),
+8 29 return \'<a href="\' + source + \'">\' + title + \'</a>\';
+9 3 return str.substr(0, str.length - 1);
+9 10 var source = '';
+9 30 var rAuthor = [];
+9 43 return {_:author: author, source: source};

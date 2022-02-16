@@ -1,0 +1,29 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 async.forEach(locals.posts.toArray(), function(item, next){
+0 1 var publicDir = hexo.public_dir;
+0 2 console.log('Generating posts.');
+0 3 async.forEach(locals.posts.toArray(), function(item, next){
+0 4 var layout = item.layout? item.layout : 'post',
+0 5 permalink = publicDir + item.permalink + (linkExt? '' : 'index.html');
+0 6 render(layout, item, function(err, result){
+0 7 if (err) throw err;"
+
+1 1 async.forEach(locals, function(item, next){
+1 2 var layout = item.layout? item.layout : 'page',
+1 5 if (err) throw err;
+1 6 file.write(permalink, result, next);
+1 7 });
+1 8 }, callback);"
+
+2 5 permalink = publicDir + item.permalink + (link? '' : 'index.html');
+2 7 if (err){
+2 8 render('post', item, function(err, result){
+2 12 } else {
+2 14 }
+2 16 }, callback);
+2 17 });"
+
+4 5 link = item.permalink,
+6 2 console.log('Generating pages.');
+6 3 async.forEach(locals.pages.toArray(), function(item, next){
+6 8 render('page', item, function(err, result){

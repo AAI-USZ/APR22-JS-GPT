@@ -1,0 +1,81 @@
+Min editdistance: 23.00
+Closest candidate: 0 5 const slug = args.shift();
+0 1 module.exports = ctx => {
+0 2 const Post = ctx.model(\'Post\');
+0 3 return function postLinkTag(args) {
+0 4 const error = `<a href="#">${args.join(\' \')}</a>`;
+0 5 const slug = args.shift();
+0 6 if (!slug) return error;
+0 7 let escape = args[0];
+0 8 if (escape === \'true\' || escape === \'false\') {
+0 9 args.shift();
+0 10 } else {
+0 11 escape = \'false\';
+0 12 }
+0 13 const post = Post.findOne({slug});
+0 14 if (!post) return error;
+0 15 let title = args.length? args.join(\' \') : post.title;
+0 16 const attrTitle = escapeHTML(title);
+0 17 if (escape === \'true\') title = attrTitle;
+0 18 const link = encodeURL(res.url_for(post.path));
+0 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+0 20 };'
+
+1 5 if (!slug) return;
+1 13 if (!post) return;
+1 15 return post.setTags(args => {
+1 16 const link = escapeHTML(post.tags);
+1 17 if (link) link += `<a href="${link}" title="${title}">${title}</a>`;
+1 18 });
+2 1 const url_for = require(\'../helper/url_for\');
+2 5 const error = `<a href="#">Post not found: ${args.join(\' \') || \'Invalid post_link\'}</a>`;
+2 14 const post = Post.findOne({source: url_for.call(this, post_id));
+2 19 return `<a href="${url_for.call(this, attrTitle.replace(/\\"$/, \')}">${title}</a>`;
+2 20 };
+3 9 const attrs = {
+3 10 id: escapeHTML(title),
+3 11 title: title,
+3 12 name: typeof attrs ===\'string\'? attrs.join(\', \') : \'\',
+3 13 post_id: post._id,
+3 14 post_title: post.title,
+3 15 prev_text: prevText,
+3 16 next_text: next_text,
+3 17 prev_next: prevNext
+3 19 const posts = Post.findOne({source: this.config.root});
+3 20 if (!posts.length) return;
+3 21 const link = encodeURL(ctx.config.root + post.path);
+3 22 return `<a href="${link}" title="${title}">${title}</a>`;
+4 3 const PostAsset = ctx.model(\'PostAsset\');
+4 4 return function assetLinkTag(args) {
+4 7 const asset = PostAsset.findOne({post: this._id, slug});
+4 8 if (!asset) return;
+4 15 let title = args.length? args.join(\' \') : asset.slug;
+4 18 return `<a href="${url_for.call(ctx, asset.path)}" title="${attrTitle}">${title}</a>`;
+5 10 href: url_for: this.config.title,
+5 11 title: title
+5 13 const link = encodeURL(resolve(ctx.config.root, post.path));
+5 14 return link;
+6 10 return `<a href="${url_for.call(this, post.path)}">${title}</a>`;
+7 17 const link = encodeURL(res.url(post.path));
+8 17 return Promise.all([
+8 18 ctx.execFilter(\'post_permalink\', post, {
+8 19 context: ctx,
+8 20 args: [args],
+8 21 locals: {},
+8 22 filename: post.path
+8 23 }),
+8 24 renderable: args.length? args.join(\' \') : \'\'),
+8 25 post_asset_folder = args.length? args.join(\' \') : post.path;
+8 27 fs.mkdirs(post.source),
+8 29 filename: post.source,
+8 30 path: post.path
+8 31 }) + \'\
+8 32 \',
+8 34 const post = Post.findOne({source: post._id});
+8 37 return post.create({
+8 38 title: escape,
+9 5 if (!Array.isArray(args)) {
+9 6 args = [];
+9 9 if (escape === \'true\' || escape === \'false\' || escape === \'off\') {
+9 14 const post = Post.findOne({source: this.source});
+9 16 const link = escapeHTML(post.path);

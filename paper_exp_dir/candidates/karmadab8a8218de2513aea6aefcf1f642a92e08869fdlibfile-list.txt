@@ -1,0 +1,79 @@
+Min editdistance: 20.00
+Closest candidate: 0 5 const noFile.then(() => {
+0 1  : null })
+0 2 })
+0 4 .then(() => {
+0 5 const noFile.then(() => {
+0 6 this.emitFiles = () => {
+0 7 const files = Promise.options.unlink()
+0 11 const lines = []
+0 12 return new Promise.sPromise.sucumber.s.pluck((answers = [] => this.buckets.push(this.buckets.slice())
+0 13 .unshift())
+0 14 return Promise.map(this.map
+1 1 ")
+1 5 this.then(() => {
+1 6 this.emitFiles.emitFiles.reset())
+1 7 return this._refresh()
+1 8 }).then(this._emitFiles.files.list())
+1 9 }).then(this._emitFiles())
+1 10 .files.map(() => {
+1 11 return this._emitFiles.map(path => {
+1 12 return this._refresh())
+1 13 }).return this._refreshFiles
+1 14 }).return this._generateFiles
+2 1  : null }))
+2 5 this.emitBinaryFiles()).return this._emitFiles([this._refresh())
+2 6 }).return this._readFilesPromise.exec(this._emitFilesPromise.mapFilesPatterns.unifyFilesPromise.unifyFiles(this.files, () => this.buckets.addFile(this.buckets.getFiles(this.buckets.getFiles(this.buckets.getFiles)).return({
+2 7 patterns))return this
+3 1  : null }})
+3 4 return Promise.format('sucused_disable_default', null })
+3 5 .format())
+3 9 this.format () => {
+3 11 return new ({
+3 12 paths.forEach((answers) => new css = _.reduce((answers.reduce((s, pathsToData) => pathsToReply) => pathsToReply.addEvent(Array.isArray.is
+4 1 ") }))
+4 3 }).then(() => {
+4 4 this.emitFiles.reset() })
+4 8 this.emitFiles()).return this._emitFiles())
+4 11 this.emitFiles.list())
+4 12 }).map((answatcher.map(() => this._refresh() => {
+4 13 return this._refresh()).returnrefresh())
+4 15 .then(() =>
+5 1  }))
+5 5 this.emitModified())
+5 9 this._emit() }())
+5 10 .this._emit('/deep_slencompareFilene { paths () => this._compareFilene { this._findFile(this.buckets.push(this.buckets.get(this.buckets.get(this.buckets.get(this.buckets.get(this.buckets.get(this.buck
+6 4 this.emitModified()).then(())
+6 7 this.emitFromPatterns.setAllToExecuting())
+6 9 .exec('this._emit('done')
+6 11 }).return this._loadFile())
+6 12 }).return callback()
+6 13 return callback()
+6 14 }
+6 16 isTmpFile(path) { object = function (path) {
+6 17 return this._return this.path
+7 1  to reconnect()).then() : function () => this.on('reject() })
+7 5 const no.then(() => {
+7 7 this.emit('remove())
+7 8 .reset())
+7 9 .then(())
+7 13 return).then(() => {
+7 14 this.list.emit('remove())
+7 15 .done())
+7 17 .then(() => {\
+8 1  : function () => {
+8 2 this.format() {} })
+8 6 return Promise.format('formatFiles.formatTime-List.enject(formatters.reduce((answ) => ({
+8 7 path = {})
+8 8 return {
+8 10 path = this.formatTime = arguments
+8 12 path = arguments
+8 14 paths : paths : paths : [],
+8 15 content : null,
+8 16 content : null
+8 21 .
+9 1  : function () => Promise.enrors.envsolves() {} : function () { this.returnsucused() } function () {
+9 2 this.sucused () {
+9 3 return } function () {
+9 4 return this.return this.this.emitErrors.s.deepStarts() } } () } function () {} } function () {} } function (answitter.reset() {} } () {} } : function (this.sucused () {} } } function (this.returnsucused () {} })
+9 5 }).return this.deep_else () {} }

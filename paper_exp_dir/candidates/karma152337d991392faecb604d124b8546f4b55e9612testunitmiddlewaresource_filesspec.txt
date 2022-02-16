@@ -1,0 +1,63 @@
+Min editdistance: 37.00
+Closest candidate: 2 8 .response.response.response.toString()
+0 1  })
+0 2 .then(function () { cachedFile.close() { cachedFile.cachedFile.close() { cachedFile.cache.cache() { cache() {} })
+0 3 return expect(done.cache.clean() { cache.clean() {} })
+0 4 return response.body.body.should.should.to.have.not.be.true
+0 5 })
+0 7 .get('/')
+0 8 .body.have.body.should.been.called
+0 9 .called
+0 10 .return promise.return promise
+1 2 .end()
+1 4 .then(function () { })
+1 5 .done() { server.on('client.end()
+1 6 .set('client.end()
+1 8 .set('client.get('sessions')
+1 9 .listen('sessions')
+1 10 .sessions')
+1 11 .end(function (sessions')
+1 12 .resolve.sessions.sessions.sessions)
+1 13 .sessions.sessions.sessions.sessions.sessions.sessions.sessions.s
+2 2 .expect(function () { })
+2 4 .should.set.should.not.have.response.body.body.should.to.toString()
+2 5 return 'Express.response.should.return 'Express.response.should.not.be.toString()'
+2 8 .response.response.response.toString()
+2 10 .response.response.response.response.send(server.response.body)
+2 11 .send(server.response.body)
+3 2 .expect(function () { cachedFile.exit(server.get('/init) {})) return promise.get('/init() 'Express.js-this.js')})
+3 3 .expect(this.response.response.body.body.should.should.be_available = 'Express.js')
+3 5 return promise.response.response.body.should.should.be_called
+3 7 .response.body.should.should.be_called.should.should.toString()
+3 8 .equal
+4 2 .expect(function () {
+4 3 expect(next.cachedFile.to.to.toString()).to.have.have.to.have.have.been.calledWith(true)
+4 6 .calledOnce()
+4 9 .done()
+5 2 .then(function () { return request(server.get('/next.set() {
+5 3 expect(server)
+5 4 .get('/next.get('/')
+5 5 .set')
+5 6 .set('headers')
+5 7 .body.body.should.should.have.body.should.eql({
+5 8 'cache-client.should.should.useIf-None-Requested-Requested-Requested-Requested-Requested-Requested-Requested-Requested-Requested-Requested-Requested-Request-Requested-
+6 2 .else(function () { return request(function () { return promise.next.next() { return promise.next() { return promise.next() {} })
+6 3 .next() { promise.next() {} })
+6 4 .next()
+6 17 .done(() => server.reset()
+7 3 .done() {
+7 4 return promise.then(function () { })
+7 5 return promise.then(next.then(next.next.next.resolve.resolve.calledOnce);
+7 8 .then(next.done);
+7 10 .done();
+7 19 .done();\
+8 2 .then(function () { cachedFile.add() } function () { cachedFile.set() { return promise.return promise.then(new () { this.done() {})
+8 3 .done() { ccatch (not.done) {} })
+8 4 return this.done() { c.done() { c.done() {} }() })
+8 5 return this.done() }() }).done() }).done() }).then(function () { c.done() { c.done() }).catch (done) {}).catch (
+9 3 .with(function () {
+9 4 return expect(function () {
+9 5 done() {
+9 7 expect(next.done()
+9 8 next.done()
+9 26 .

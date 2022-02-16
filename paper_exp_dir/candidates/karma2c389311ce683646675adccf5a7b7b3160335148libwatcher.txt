@@ -1,0 +1,65 @@
+Min editdistance: 29.00
+Closest candidate: 2 5 chokidarWatcher.on('add', bind(fileList.addFile)));
+0 1 );
+0 2 var bind = function(fn) {
+0 3 return function(objectPattern) {
+0 4 return objectPattern.pattern;
+0 5 };
+0 6 };"
+
+1 1  {
+1 2 return function(path) {
+1 3 return 'path' == path;
+1 5 }
+2 2 var baseDirFromPattern = function(patterns) {
+2 3 return patterns.filter(function(patternObject) { return patternObject.pattern; });
+2 5 chokidarWatcher.on('add', bind(fileList.addFile)));
+2 6 patterns.forEach(function(pattern) { pattern = patternObject.pattern; })
+2 7 {
+2 8 var opts = getWatchedPatterns = getWatchedPatterns(patterns(getWatchedPatterns);
+2 10 opts.selects.forEach(getWatchedPatterns, function(getWatchedPatterns, function(url, i) {
+2 11 return Reflect.getDirectCallbacks.reduce(urlPatterns, resolvedPatterns, resolvedPatterns, i, opts.getDirectCallbacks);
+2 12 });
+2 13 return opts.push(getDirects.reduce(getDirects, resolvedPatterns, i, urlResolvedPatterns, mapUrls);
+2 15 return opts.map(urlResolvedUrl, resolvedPath).set(config => {
+2 16 return mapResolvedUrl, resolvedPath).set(config.typeOnly, resolvedPathsFromPatterns, resolvedPaths);
+2 19 return pathsToWatch.forEach(function(name, i => {
+2 20 return pathsToWatch, i => {
+2 21 return paths
+3 2 watchPatterns(watchedPatterns, chokidarWatcher);
+4 2 var noPolling = this.watchPatterns.bind(this);
+4 3 var pending = noPolling.length;
+4 4 var done = function() {
+4 8 var done = function done() {
+4 9 log.debug('Dis complete < 0;
+4 10 log.debug('Trying for single file to finish:'+ noPolling');
+4 11 var done();
+4 12 var finish = done > 0;
+4 13 var noDone;
+4 15 log.complete.on('finish >Done', done);
+4 16 return done;
+4 19 var noDone();
+4 20 var noDone(done) {
+4 21 log.error null;
+4 24 if (pending.on('done) {
+4 25 if (pending.done) {
+4 26 return;
+4 31 });"
+
+5 1 );"
+
+6 2 var pathsToWatch = function(patterns, excludes) {
+6 4 return patternsFromWatch.push(getWatchedPatterns(patternsFromWatch.pattern));
+7 4 return function(func) {
+7 5 return fn.call(fileList, helper.normalizeWinPath(path));
+7 8 function createIgnore(patterns, excludes) {
+7 9 return function(path, stat) {
+7 10 return pattern.watchedPatterns.find(function(pattern) {
+7 11 return patternObject.pattern === pattern && helper.patterns.find(patterns.patterns);
+8 3 return checkPatterns(return, path).then(function(answers) {
+8 4 return that._handleExceptions(included, patterns, {dot: true});
+8 5 }).then(function() {
+8 6 return callOnce(answers.install(files);
+9 3 return require(path.replace(/\\/*$/, '-'));
+9 5 }"
+

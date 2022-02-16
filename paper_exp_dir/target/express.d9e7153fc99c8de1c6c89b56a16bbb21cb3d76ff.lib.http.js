@@ -1,0 +1,1 @@
+this.enable('view cache');

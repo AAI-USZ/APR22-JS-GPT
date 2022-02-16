@@ -1,0 +1,61 @@
+Min editdistance: 23.00
+Closest candidate: 1 15 paginator(archive, posts, 'archive', render);
+0 1  else {
+0 2 var content = function(fn){
+0 3 var result = render('archive', posts);
+0 4 if (!result) result = render('index', posts);
+0 5 if (!result) result = render('archive', posts);
+0 6 fn(null, result);
+0 7 };
+0 8 content.archive = true;
+0 9 }
+0 11 return result;
+0 12 };"
+
+1 7 content.latest = latest;
+1 11 extend.generator.register(function(locals, render, callback){
+1 12 if (!locals.archive) return callback();
+1 13 posts.archive = true;
+1 14 if (mode == 2){
+1 15 paginator(archive, posts, 'archive', render);
+1 16 } else {
+1 17 render(archive, posts, function(err, result){
+1 18 if (err) throw err;
+1 19 file.write(publicDir + post.permalink + 'index.html', result, next);
+1 20 });
+1 22 }, callback);
+1 23 });"
+
+2 1  else {"
+
+3 7 content.prev = true;
+3 8 result.next = null;
+3 9 for (var i=0, len=arr.length; i<len; i++){
+3 10 var posts = posts.toArray(),
+3 11 arr = posts.toArray(),
+3 12 latest = true;
+3 14 if (!arr[i]._latest){
+3 15 latest = false;
+3 16 break;
+4 3 if (fn){
+4 4 render.compile(fn);
+4 6 render.compile(content);
+4 10 if (!latest || hexo.cache.rebuild){
+4 13 file.write(result, content);
+4 17 if (!locals ||!locals.archive) return callback();
+4 18 render.render(locals.archive, posts, function(err, result){
+4 22 callback();
+6 8 result.id = archiveId;
+7 3 var result = render(fn);
+7 8 content._latest = latest;
+7 11 return Promise.all([
+7 12 render('archive', posts),
+7 13 render('index', posts)
+7 14 ]).spread(function(locals, posts){
+8 8 content.year = null;
+8 14 console.log('archive generated.');
+8 15 async.forEach(posts, function(item, next){
+8 16 var target = item.archive? item.archive : 'latest';
+8 18 if (config == 2){
+8 19 paginator(item.permalink, item, 'archive', render);
+8 21 render('archive', posts);

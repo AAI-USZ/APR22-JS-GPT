@@ -1,0 +1,92 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 return _.find(Object.keys(this.dependencies), function (key) {
+0 1 return _.find(Object.keys(this.dependencies), function (key) {
+0 2 var dep = this.dependencies[key][0];
+0 3 return dep.name === path
+0 4 || (dep.url && dep.url === path)
+0 5 || (dep.originalPath === path)
+0 6 || (dep.originalPath). === path);
+0 7 }.bind(this));
+0 10 }
+0 11 function addDependency(pkg) {
+0 12 var path;
+0 13 var tag;
+0 14 if (pkg.lookedUp) {
+0 15 tag = pkg.originalTag || \'~\' + pkg.version;
+0 16 } else {
+0 17 path = (pkg.gitUrl || pkg.assetUrl || pkg.originalPath || '');
+0 20 if (!semver.valid(tag) &&!semver.validRange(tag)) tag = null;
+0 21 return emitter.emit(\'end\', tag, undefined);
+0 23 module.exports = save.bind(this,'resolveLocal\');'
+
+1 5 || (dep.path && dep.path === path);
+1 8 pkgs = _.compact(pkgs).map(function (name) {
+1 9 return this.dependencies[name][0];
+1 11 pkgs.forEach(addDependency.bind(this));
+1 12 this.json = json;
+1 13 this.dependencies = _.extend({}, this.json);
+1 14 this.jsonp = pkgs.reduce(function (pkg) {
+1 15 return this.dependencies.map(function (decEndpoint) {
+1 16 return decEndpoint.pkgMeta.version;
+1 17 });
+1 18 }, this);
+1 19 this.jsonp.dependencies = json;
+1 20 this.emit('loadJSON', this.jsonp);
+1 24 if (!this.json.dependencies) this.json.dependencies = {};
+1 34 return this.json.dependencies[pkg.name] = path? path + \':\';
+1 37 module.exports = save.bind(this);
+1 38 module.exports.discard = save.bind(this);'
+
+2 4 || (dep.url && dep.url === path)"
+
+3 5 || (dep.originalPath && dep.originalPath === path);
+3 12 fs.writeFileSync(path.join(this.cwd, config.json), JSON.stringify(this.json, null, 2));
+3 13 }).loadJSON.bind(manager));
+3 16 var path = (pkg.gitUrl || pkg.assetUrl || pkg.path || '');
+3 18 if (pkg.json.dependencies) {
+3 19 this.json.dependencies = _.extend({}, pkg.json.dependencies);
+3 21 this.json.dependencies = {};
+3 23 tag = pkg.name || pkg.path;
+3 24 return Q.nfcall(fs.stat, path)
+3 25 .then(function (stats) {
+3 26 if (!stats.isDirectory()) return false;
+3 27 return true;
+3 28 }, function () {
+3 29 return Q.nfcall(fs.lstat, path)
+3 30 .then(function () {
+3 35 addDependency.prototype.save = function (fn) {
+3 36 if (this.json) return fn(this.json);
+3 38 if (this.json.devDependencies) return this.json.devDependencies;
+3 39 this.json.dependencies[this.name] = this.json.dependencies || {};
+3 40 return this;
+3 41 };
+3 42 module.exports = save.bind(this,'resolve', addDependency);'
+
+4 17 var tag  = pkg.tag? \'#\' + pkg.tag : \'latest\';
+4 18 return this.json.dependencies[pkg.name] = path + tag;
+4 20 function removeDependency(pkg) {
+4 21 delete this.json.dependencies[pkg.name];
+5 4 || (dep.url && dep.url == path)
+5 25 return json.version === pkg.version || tag!== undefined;
+5 27 module.exports = save;"
+
+6 19 if (pkg.tag) {
+6 20 this.json.dependencies[pkg.name] = pkg.tag;
+6 22 this.json.dependencies[pkg.name] = (pkg.name + \'#\' + pkg.tag? \'#\' + pkg.tag : '') + \'latest\';
+6 24 if (!semver.valid(this.localConfig.env)) {
+6 25 var error = new Error();
+6 26 error.details = \'Invalid configuration: KEY="\' + this.localConfig.key + \'"    at'+ config.root.replace(/\\
+6 27 this.localConfig.key, \'\') + \':\' + this.localConfig.url.replace(/\\
+6 28 this.localConfig.root, \'\') + \':\' + config.root.replace(/\\
+6 29 this.localConfig.upstreamProxy) + \'(
+6 30 this.localConfig.upstreamProxy = \'\';
+6 32 this.emit(\'loadJSON\');
+6 33 }.bind(this), this);
+6 35 module.exports = save.bind(this);'
+
+7 25 return json.stringify(tag) + \'\
+7 26 \';
+7 30 delete this.json.dependencies;
+7 32 module.exports = save.bind(this,'resolve\');
+7 33 module.exports.discard = save.bind(this,'resolveLocal\');'
+

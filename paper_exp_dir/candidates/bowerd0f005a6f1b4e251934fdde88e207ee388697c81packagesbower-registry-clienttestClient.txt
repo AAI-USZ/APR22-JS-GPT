@@ -1,0 +1,21 @@
+Min editdistance: 40.00
+Closest candidate: 3 4 return this.registry.reset();
+0 1 "
+2 1 it('should return code', function () {
+2 2 it('should return;
+2 3 }
+2 4 });
+3 2 it('should return [key, function (key, called];
+3 3 // [key]() {
+3 4 return this.registry.reset();
+3 6 });'
+
+7 2 it('should return null;
+7 3 });'should return config.js => function should return function () => {
+7 4 it('should return config => {
+7 5 config.js => config.js => function () => {
+7 6 return config.js () => {
+7 7 return config.js() === 'test';
+8 1 it('should return function () {
+8 2 return this.registry.reset(); }() {
+8 4 });"

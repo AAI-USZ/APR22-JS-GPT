@@ -1,0 +1,173 @@
+Min editdistance: 18.00
+Closest candidate: 1 51 res.exec(res.exec(res);
+0 1 "
+
+1 1 assert.response(app,
+1 2 { url: '/\' },
+1 3 { body: \'<p>Welcome</p>\
+1 4 <p>This is an email</p>\
+1 5 </p>\
+1 6 <p>This is an return-engine for your post.</p>\
+1 7 <p>Image: <strong>bold</strong> and <em>italic</em></p>\
+1 9 </ul>'
+1 10 },
+1 11 \'test #render() layout': function(assert){
+1 12 var app = create();
+1 13 app.set(\'view engine\', \'jade\');
+1 14 app.get(\'/\', function(req, res){
+1 15 res.render(\'index.jade\', { layout: false });
+1 16 });
+1 18 { url: \'/\' },
+1 19 { body: \'<html><body><p>Welcome</p></body></html>\' });
+1 21 \'test #render() specific layout': function(assert){
+1 23 app.set(\'views\', __dirname + \'/views\');
+1 25 res.render(\'index.jade\', { layout: \'cool.layout.jade\' });
+1 29 { body: \'<cool><p>Welcome</p></cool>\' });
+1 31 \'test #partial() with several calls using locals\': function(assert){
+1 35 res.render(\'items.jade\', { locals: { items: [\'one\', \'two\'] }});
+1 39 { body: \'<html><body><ul><li>one</li><li>two</li></ul></body></html>\' });
+1 45 { body: \'<html><body><div><li>one</li><div class="title>EJS</div></div></li></body></html>\' });
+1 47 \'test #partial() locals precedence\', function(app) {
+1 48 return require(\'should.exec()\', function(req, res, res, next){
+1 49 res.exec(res, next){
+1 51 res.exec(res.exec(res);
+1 52 res);
+1 53 app.set(\'length
+1 54 .exec(function(res);
+1 56 .should.should.equal(3;
+1 57 .equal(2, 3);
+1 58 .exec(3);
+1 60 .exec([\'should.equal(\'should.equal(3);\', 3);
+1 61 .executes = 3);
+1 62 })
+1 65 .exec(\'should.query((req, done);
+1 66 .should.should.equal(\'should.deep) function should.deep);
+4 3 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+4 5 { url: \'/user/12\', method: \'POST\', data: \'name=tj\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }},
+4 6 { body: \'{"name":"tj"}\', status: 200, headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+4 8 { url: \'/user/12/edit\', method: \'PUT\', data: \'email=12.to:1\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+4 10 { url: \'/user/12/edit\', method: \'DELETE\', data: \'email=12.to:1\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+4 12 \'test #render() layout\': function(assert){
+4 16 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, html){
+4 17 called = true;
+4 19 app.get(\'/ejs\', function(req, res){
+4 20 res.render(\'index\', { layout: \'cool-layout\' });
+4 22 app.get(\'/precedence\', function(req, res){
+4 23 res.render(\'index.jade\', {
+4 24 layout: \'cool-layout\'
+4 27 app.get(\'/callback/layout/no-options\', function(req, res){
+4 28 res.render(\'hello.jade\', function(err, jade){
+4 30 assert.strictEqual(1, 0);
+4 31 assert.strictEqual(0, 0);
+4 33 app.get(\'/callback/layout\', function(req, res){
+4 34 res.render(\'hello.jade\', { layout: \'cool-layout\' });
+4 37 app.get(\'/callback/params\', function(req, res){
+4 38 assert.params = { route: { route: { params: { params: { routes: { _: { 'back: \'test\' }}
+4 40 assert.params.params.test }; };
+4 41 assert.assert.deepEqual(false;
+4 42 assert.strictEqual(false);
+4 44 assert.strictEqual(Array.isArray.isArray(writes(writes(writes);
+4 45 assert.length);
+4 46 assert.length(writes.length);
+4 48 assert.message = \'No routes =\'hello.jade\', "hello.jade\', "middleware:false\', "middleware:false");
+4 49 assert.message.forEach(function(pass, ret){
+4 50 assert.strictEqual(pass, users: { users.use(express.body, \'
+5 4 <p>Invalid post</p>\
+5 5 </p>\' });
+5 7 { url: '/valid\' },
+5 8 { body: \'[{"title":"Post","id":"\\\\d+"] Error: it is not a valid post.\' });
+5 10 { url: '/valid-async\' },
+5 11 { body: \'[{"title":"Post,"id":"\\\\d+"] Error: it is not a valid post.\' });
+5 14 function(res){
+5 15 assert.ok(res.body.indexOf(\'Error: after all plugins have been registered yet\') >= 0);
+5 16 assert.ok(res.body.indexOf(\'For more help, you can use \\' + express.compile("\
+5 17 ")));
+5 18 assert.ok(res.body.indexOf(\'for more help, you can use \\' + express.compile("\
+5 23 { body: \'<p>Forum Thread</p>\
+5 24 <p>Hello World</p>\' });
+5 26 { url: \'/p?callback=test\' },
+5 27 { body: \'test({"foo":"bar"});\' });
+5 29 { url: \'/user/12' },
+5 32 { url: \'/user/ab' },
+5 35 { url: \'/user/ab/test' },
+5 38 { url: \'/user/ab/baz\' },
+5 39 { body: \'baz({"foo":"bar"});
+5 41 { url: \'/user/ab/baz/bar' },
+5 42 { body: \'baz({"foo":"bar"});\'});
+5 48 { url: \'/user/ab/baz/baz/baz/bar' },
+5 50 { body: \'baz
+5 53 { url: \'/user/user/baz/baz'
+
+6 3 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/json" }});
+6 5 { url: \'/p?id=123&return_url=http://example.net/post/12345\', headers: { 'Content-Type\': \'application/json; charset=utf-8' }});
+6 7 { url: \'/p?id=pg&return_url=http://example.net/post/pg&return_url=http://example.net/post/12345\', headers: { 'Content-Type': \'application/pgp; charset=utf-8' }});
+6 9 { url: \'/user/12\' },
+6 10 { body: \'{"name":"tj"}\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+6 12 { url: \'/user/ab\' },
+6 13 { body: \'Cannot GET /user/ab' });
+6 15 { url: \'/user/html\' },
+6 16 { body: \'<p>test</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+6 18 { url: \'/test/ejs\' },
+6 19 { body: \'Forbidden\', status: 403 });
+6 21 { url: \'/test/invalid\' },
+6 22 { body: \'invalid-async\' });
+6 24 { url: \'/error\' },
+6 27 { url: \'/invalid-async\' },
+6 33 { url: \'/error-async\' },
+6 39 { url: \'/error', status: 404 });
+6 41 assert.response: function(app,
+6 42 { url: \'/server_failure()
+6 43 assert.should.throw()
+6 44 assert.throw();
+6 48 \'should.get('should.throw();\', function()
+6 49 .test.test.call(app, function(){
+6 50 return.ncall, function(){
+6 51 assert.ncall, callback)
+6 52 .ncall.should.should.throw();
+6 53 call('should.throw();
+6 55 .should.throw();
+6 56 .test.should.throw();
+6 58 .should.test.should.throw(
+6 59 .should.throw(
+6 60 function.test.should.throw(
+6 61 function(){
+6 62 call.should.throw(
+6 63 \'should.throw();
+6 64 );
+6 65 function.param(
+6 66 .
+7 1 app.get('/post/:id/edit', function(req, res){
+7 2 res.render('post/form', {
+7 3 locals: { Post: posts[params.id] }
+7 6 app.get(\'/post/:id/edit', function(req, res){
+7 7 res.render(\post/form
+7 8 {
+7 9 locals: { Post: posts[params.id] : { expires: new Date() }
+7 12 app.get(\'/post/:id/edit/edit', function(req, res){
+7 30 app.get(\'/post/:id/update', function(req, res){
+7 36 app.put(\'/post/:id\', function(req, res){
+7 42 app.get(\'/user/:id/:op?\', function(req, res){
+7 48 app.get(\'/user/:id/edit\', function(req, res){
+7 54 app.put(\'/user/:id/edit\', function(req, res){
+7 61 app.get(\'/post/:id/update\', function(req, res){
+7 62 res.render(\'post/form
+7 64 locals: { posts[req, res){
+7 65 res.render(\'post.body.send({\', req.params.length: \'<p>First time: \'now\' }, function(1)
+7 71 app.put(\'/post/: function/user/:id/:id/:op?\', function(req, res){
+7 72 res.send(req, res){
+7 73 res.send(res.params.body.length)
+7 75 }
+7 78 app.get(\'/post/:id/:op?\', function(req, res){
+7 79 res){
+7 80 res.format=\'put\'\')
+7 81 .body.should.send(\'put(\'put\')
+7 82 .body.should.should
+9 2 res.render('post/:id/edit', { layout: \'post\', posts: posts });
+9 4 app.get('/post/:id/edit/edit', function(req, res){
+9 10 app.get('/posts/:id/edit', function(req, res){
+9 19 app.get(\'/posts/:id/update', function(req, res){
+9 20 res.render(\'post/:id/update\', { layout: \'post\', posts: posts });
+9 22 app.get(\'/error', function(req, res){
+9 23 res.render(\'doesNotExist\', { layout: \'doesNotExist\' });
+9 25 app.get(\'/invalid', function(req, res){
+9 26 res.render(\'invalid-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-async-config-config-async-config-config-async-config-config-config-async-config-config-config-async-config-config-config-async-config-config-config-config-async-config-config-config-config-config-config-async-config-config-config-config-async-config-config-config-config-async-config-config-config-config-async-config-config-config-config-nasync-config-config-config-config-async-config-config-config-config-nasync-config-config-config-nasync-config-config-async-config-config-config-isync-config-config-config-isync-config-config-config-isync-config-config-config-isync-config-config-config-isync-config-config-config-isync-config-config-config-isync-config-config-config-isync-config-config-isync-config-config-isync-config-config-isync-config-config-isync-config-isync-config-

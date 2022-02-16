@@ -1,0 +1,167 @@
+Min editdistance: 9.00
+Closest candidate: 0 10 res.body.should.equal('foo');
+0 1 assert(!res.headerSent);
+0 2 ++calls;
+0 3 assert(1);
+0 4 assert(2);
+0 5 assert(3);
+0 6 });
+0 7 request(app)
+0 8 .get('/')
+0 9 .end(function(res){
+0 10 res.body.should.equal('foo');
+0 11 res.statusCode.should.equal(200);
+0 19 res.header.should.equal('bar');
+0 20 res.body.should.equal('bar');
+0 21 done();
+0 24 it('should invoke the callback on socket error', function(done){
+0 25 var app = express()
+0 26 , calls = 0;
+0 27 app.use(function(req, res){
+0 28 res.sendfile('test/fixtures/user.html', function(err){
+0 38 res.body.should.equal('test/fixtures/user.html');
+0 46 res.body.should.equal('test/user.html');
+0 47 res.should.should.equal('test/user.html');
+0 48 .should.not.contents.should.should.equal(1);
+0 52 })
+0 53 it('should.should.should.should.not.toArray.should.equal(function(['one', 'two', 'two', 'three']);
+0 54 should.should.should.should.should.limit(3', '3']
+0 55 .should.limit(3']
+0 56 .should.limit(3)'sshould.should.maxAge(3').should.3);
+0 57 .maxAge.3).3).should.eql(3);
+0 59 describe(function(':selects', function(){
+0 60 it('maxAge', function(){
+0 61 return call', function(){
+0 62 return call(app)
+0 64 .use(app)
+0 65 .use(function(app)
+0 66 .use(function
+1 10 assert(true);
+1 11 assert(false);
+1 13 assert(200);
+1 27 res.send(err.message);
+1 37 assert(undefined);
+1 38 assert.end(function(res){
+1 42 });"
+
+2 3 res.should.equal(1);
+2 4 assert(res.body.should.equal('foo');
+2 9 describe('.sendfile(path, fn)', function(){
+2 10 it('should invoke the callback when complete', function(done){
+2 11 var app = express()\, calls = 0;
+2 41 assert(notFinished(res.headerSent);
+2 49 , calls = express()
+2 50 , blog = express()
+2 51 , app.use(args = express();
+2 52 , fs = express();
+2 53 app.use(function (req, blog) {
+2 54 return call.use(function (req, res) {
+2 55 res.sendfile(req, res.app, __dirname, __dirname;
+2 56 res.res) {
+2 57 res.sendfile: __dirname;
+2 61 throw new error();
+2 66 describe(':name: function(': function', function', function(){
+2 67 it('should notify', function(){
+2 68 it('should sendfile does not exist',
+3 1 res.body.should.equal('EEXIST');
+3 10 res.sendfile(\'test/fixtures/user.html', function(err){
+3 38 res.sendfile(\'test/fixtures/user.html\', function(err){
+3 42 res.send('');
+3 47 .get(\'/\')
+3 48 .end(function(function(res){
+3 49 .end(1, calls.length, done);
+3 50 assert(1, done);
+4 3 res.body.should.equal(false);
+4 4 res.message.should.equal('');
+4 5 assert.strictEqual(1);
+4 51 describe('.sendfile', function(': function(){
+4 52 it('should.sendfile', function(){
+4 53 it('should.sendFile()', function(){
+4 57 var app) {
+4 58 var app = express();
+4 60 var calls = express();
+4 61 app.use(app.use(function(function(req, res){
+4 62 app.listen(1, calls);
+4 63 res.get('/foo');
+4 64 res.get('foo');
+4 65 res.sendfile('foo');
+4 69 describe('.download', function(){
+4 70 it('should.send
+5 42 app.use(function(req, called = 0);
+5 44 res.sendfile('test/fixtures/fixtures/user.html', function(''){"
+
+6 14 assert(4);
+6 15 assert(5);
+6 16 assert(6);
+6 17 assert(7);
+6 20 assert(8);
+6 21 assert(9);
+6 36 assert.equal(9);
+6 38 assert.equal(4);
+6 54 ++calls.should.should.equal(1);
+6 55 res.send(1);
+6 56 res.send(12);
+6 59 app.use(app.use(app);
+6 60 .use(function(app.use(function(req, res){
+6 61 res){
+6 62 res.sendfile('test/rest');
+6 63 res.send('test/user.send('test');
+6 64 res.send('test')
+6 66 .send('test')
+6 68 .send('server.sendfile-middleware')
+6 69 .send.sendfile-middleware')
+6 70 .send(request.send('test')
+6 71 .end();
+6 72 .end(test')
+6 73 .end(test);
+6 76 describe('.sendfile', function(){
+6 77 it('should notify', function(){\
+7 38 res.sendfile('test/fixtures/user.html', { error: "failure" });
+7 40 assert.response(app,
+7 41 { url: '/' },
+7 42 { body: 'Forbidden', status: 403 });
+7 43 assert.response: function(res){
+7 44 assert.body.should.should.remove() == null;
+7 45 assert.should.toString() == null;
+7 46 res.toString() == null;
+7 47 assert.toString() == null;
+7 48 return done();
+7 51 describe('.sendfile
+7 52 .expect(function('.sendfile)
+7 53 .exists('/user.html')
+7 54 .should.should.startWith('/tobi')
+7 55 .should.end(function(function(function(req);
+7 56 return done);
+7 58 it('should.expect(function(function(err, res){
+7 59 assert.header){"
+
+8 1 res.body.should.equal('None of GET /foo.js were found, but got:\
+8 2 \
+8 3 1 problem');
+8 21 res.body.should.equal('None of GET /foo.js were, but got:\
+8 26 it('should invoke the callback when invalid', function(done){
+8 36 it('should invoke the callback without a callback', function(done){
+8 40 res.sendfile('test/fixtures/user.html', function(''){"
+
+9 32 res.sendfile(\'test/fixtures/user.html\', { error: "Lame, can\\'t find that" });
+9 35 { url: \'/\' },
+9 36 { body: \'<p>Forbidden</p>\', status: 403 });
+9 39 { url: \'/user.headers
+9 41 , url: { url: \'/user.params.json
+9 42 , url: { url: \'/user.json
+9 43 , url: \'path
+9 44 }
+9 45 );
+9 46 assert.response: function(){
+9 47 assert.send: done();
+9 48 assert.response: done();
+9 50 assert.response.assert.send(app.send(app,
+9 51 assert.response.send(app,
+9 53 { url: \'/something
+9 54 assert.else
+9 55 assert.send(res.sendfile(\'else
+9 56 ope.middleware:\')
+9 60 assert.send(app);
+9 61 assert.response.send(app);
+9 64 },
+9 65 assert.assert

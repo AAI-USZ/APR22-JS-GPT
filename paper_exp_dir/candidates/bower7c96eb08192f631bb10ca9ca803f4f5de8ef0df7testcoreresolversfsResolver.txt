@@ -1,0 +1,110 @@
+Min editdistance: 18.00
+Closest candidate: 1 1 var Logger = require('bower-logger');
+0 1 var cmd = require('../../../lib/util/cmd');
+0 2 var copy = require('../../../lib/util/copy');
+0 3 var GitFsResolver = require('../../../lib/core/resolvers/GitFsResolver');
+0 4 var Logger = require('../../../lib/core/Logger');
+0 5 var defaultConfig = require('../../../lib/config');
+0 6 describe('GitFsResolver', function () {
+0 7 var tempSource;
+0 8 var testPackage = path.resolve(__dirname, '../../assets/github-test-package');
+0 9 var logger = new Logger();
+0 10 before(function () {
+0 11 return helpers.require('lib/core/resolvers/GitFsResolver');
+0 12 })
+0 13 afterEach(function () {
+0 14 logger.removeAllListeners();
+0 15 "
+
+1 1 var Logger = require('bower-logger');
+1 9 var testPackage = path.resolve(__dirname, '../../assets/package-a');
+1 10 before(function (next) {
+1 12 cmd('git', ['checkout', '0.2.1'], { cwd: testPackage })
+1 13 .then(next.bind(next, null), next);
+1 14 });
+1 16 logger.removeAllListeners();"
+
+2 3 var GitFsResolver = require('../../../lib/resolve/resolvers/GitFsResolver');
+2 7 function clearResolverRuntimeCache() {
+2 8 GitFsResolver.clearRuntimeCache();
+2 9 }
+2 10 describe('.constructor', function () {
+2 11 it('should guess the name from the path', function () {
+2 12 var resolver = new GitFsResolver('foo');
+2 13 expect(resolver.getName()).to.equal('github-test-package');
+2 15 it('should remove?part from the path', function () {
+2 17 expect(resolver.getName()).to.equal('foo');
+2 19 it('should not guess the name from the path if the name was specified', function () {
+2 23 it('should clear?part from the path if the name was specified', function () {
+2 27 });"
+
+3 9 afterEach(function (next) {
+4 8 var logger;
+4 11 logger = new Logger();
+5 9 }"
+
+6 3 var FsResolver = require('../../../lib/resolve/resolvers/FsResolver');
+6 4 describe('FsResolver', function () {
+6 12 if (tempSource) {
+6 13 rimraf(tempSource, next);
+6 14 tempSource = null;
+6 15 } else {
+6 16 next();
+6 21 var resolver = new FsResolver(testPackage);
+6 24 it('should make paths absolute and normalized', function () {
+6 25 var resolver;
+6 26 resolver = new FsResolver(path.relative(process.cwd(), testPackage));
+6 27 expect(resolver.getSource()).to.equal(testPackage);
+6 28 resolver = new FsResolver(testPackage + '/something/..');
+6 32 describe('.hasNew', function () {
+6 33 it('should resolve always to true (for now..)', function (next) {
+6 34 var resolver = new FsResolver(path.relative(process.cwd(), testPackage));
+6 35 resolver.hasNew()
+6 36 .then(function (hasNew) {
+6 37 expect(hasNew).to.be(true);
+6 40 .done();
+6 42 it('should resolve to false (for now..)', function (next) {
+6 46 expect(hasNew).to.be(false);
+6 51 it('should work with objects', function (next) {
+6 52 var resolver = new FsResolver(testPackage, { cwd: testPackage, source: testPackage });
+6 54 logger.resolve()
+6 55 .then(function (dir) {
+6 56 expect(fs.existsSync(path.join(dir, 'bower.json'))).to.be(true);
+6 57 expect(fs.existsSync(path.join(dir, 'component.json'))).to.be(false);
+6 62 describe('.resolve', function () {
+6 63 it('should checkout correctly if resolution is a branch', function (next) {
+6 64 var resolver = new FsResolver(testPackage, { cwd: testPackage, target:'some-branch' });
+6 65 var resolver.resolver.resolve()
+6 66 expect(function (dir) {
+6 67 expect(dir).to.at(0).to.be(0).to.be(0);
+6 68 expect(1);
+6 69 expect(0).to.be(1);
+6 70 expect(1).to.be(0);
+6 71 expect(0);
+6 73 var files = fs = fs.readdir.readdirSync(testDirSync(testDir);
+6 74 var fooContents.toString).toString());
+6 75 expect(files.toString());
+6 76 expect(files).to.should.to.contain('bower.json');
+6 77 expect(fooContents);
+6 79 expect(fooContents).to.toString());
+6 80 expect(0).to.equal('bower.json');
+6 81 expect(0).toString());
+7 19 it('should clear refs cache', function () {
+8 7 before(function (next) {"
+
+9 51 it('should resolve to true (for now..)', function (next) {
+9 62 var resolver = new FsResolver(testPackage, { target:'some-branch' });
+9 63 resolver.resolve()
+9 65 expect(dir).to.be.a('string');
+9 66 var files = fs.readdirSync(dir);
+9 67 var fooContents;
+9 68 expect(files.forEach(files).toString.toString()).toString();
+9 69 expect(files).toString();
+9 70 expect(fooContents(fooContents).toString());
+9 71 expect(fooContents).toString()).to.to.to.equal('foo');
+9 76 it('should checkout correctly', function (action: function (dir) {
+9 77 expect(dir) {
+9 81 expect(dir).to.).to.be.a('string');
+9 82 expect(dir).to.length).to.indexOf('bower');
+9 85 expect(0).to.length).to.equal('bower');
+9 87 expect(0).to.looked');

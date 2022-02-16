@@ -1,0 +1,246 @@
+Min editdistance: 69.00
+Closest candidate: 3 36 describe('watch - update', function(){
+0 1 },
+0 2 spawn = util.spawn;
+0 3 describe('Core', function(){
+0 4 describe('Initialize', function(){
+0 5 it('init', function(done){
+0 6 spawn('./bin/test-main.js', {}, done);
+0 7 });
+0 8 spawn('./bin/test-r other.js', {}, done);
+0 10 it('check', function(done){
+0 11 async.parallel([
+0 12 function(next){
+0 13 file.read(tmpDir, next());
+0 46 var f = require('../lib/util/f.')(child_process),
+0 47 dest = path.join(__dirname, '..', 'bin');
+0 48 fs.exists(f, function(exist){
+0 49 exist.should.be.true;
+0 50 dest.should.be.false;
+0 55 it('executes when run multiple times', function(){
+0 56 spawn('git', ['check', '--log-level', 'test', 1], {cwd: testDir});
+0 57 }).on('exit', function(){
+0 58 next();
+0 61 describe('check', function(){
+0 62 it('should ignore spawn', function(){
+0 63 spawn('node', ['check', '--log-level', 'test', 1], {cwd: testDir});
+0 64 spawn('node', ['check', '--log-level', 'test', 'ignore', '--commit', 1], {cwd: testDir});
+0 66 it('should ignore spawn when run', function(){
+0 67 spawn('node', [], {cwd: testDir});
+0 71 describe('close', function(){
+0 72 it('should exit with status 0', function(){
+0 76 it('should remove the exit from the session', function(){
+0 77 spawn('node', ['exit', 'exit', '--log-level', 'info', 'info', '--safe', '--debug'], {cwd: testDir});
+0 82 describe('debug = require('info', function(){
+0 83 it('reset(){
+0 84 it('exit', function(){
+0 85 it('exitCode', function(){
+0 86 it('execute', function(){
+0 87 it('execute'){
+0 88 it('exitCode(){
+0 89 spawn('execute(){
+0 91 process.exit(['init')];
+0 96 });"
+
+1 3 var command = function(comm, args, callback){
+1 4 spawn({
+1 5 command: comm,
+1 6 args: args,
+1 7 exit: function(code){
+1 8 if (code === 0) callback();
+1 9 }
+1 11 };
+1 16 command: 'bin',
+1 17 args: ['clone', 'tmp'],
+1 24 it('wolves the given file', function(){
+1 27 args: ['ls-remote', '--stdout', '--stderr', '--exit', 'timeout'],
+1 33 describe('with an absolute escape', function(){
+1 34 it('executes when run', function(){
+1 36 command: 'bin/brow ser',
+1 37 args: ['ls-remote', '--stdout','stderr']
+1 38 }, function(){
+1 41 args: ['ls-remote','stderr']
+1 43 console.log('with no arguments');
+1 46 describe('with a single run', function(){
+1 50 args: ['ls-remote', '--stdout','stderr', '--timeout'],
+1 56 describe('with an absolute and normalized', function(){
+2 2 module.exports = function(karma) {
+2 3 var baseDir = hexo.base_dir;
+2 4 return function(request, args, callback){
+2 5 var command = args._[0];
+2 6 if (command){
+2 7 var command = command.replace(/\\?.*/, '-') + '\
+2 8 ';
+2 9 commands.push({
+2 10 name: command,
+2 11 desc: (['help', 'Display help'] || {},
+2 12 options: options || {},
+2 13 '',
+2 14 'You should configure deployment settings in _config.yml first!',
+2 16 'Example:',
+2 17 '  deploy:',
+2 18 '   type: heroku',
+2 19 '   repository: <repository>',
+2 21 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline;"
+
+3 3 var run = function(command, args, callback){
+3 4 var cp = spawn(command, args, {cwd: baseDir});
+3 5 cp.stdout.on('data', function(data){
+3 6 process.stdout.write(data);
+3 8 cp.stderr.on('data', function(data){
+3 9 process.stderr.write(data);
+3 11 cp.on('close', callback);
+3 16 spawn('./bin/hexo', ['init', 'tmp'], {cwd: baseDir});
+3 18 command: 'hexo',
+3 19 args: ['-avze','ssh -p'+ config.shsh "${this.version}/base/fixtures/hexo-theme-light.md'],
+3 26 it('watcher', function(done){
+3 27 spawn('./bin/hexo', ['watch', '--log-level', 'debug'], {cwd: baseDir});
+3 30 args: ['-avze','ssh -p'+ config.sh "${this.version}/base/fixtures/hexo-theme-light.md'],
+3 36 describe('watch - update', function(){
+3 37 it('command', function(done){
+3 46 it('deploy', function(){
+3 47 spawn('./bin/hexo', ['deploy', '--log-level', 'info', '--setup', '--repoOrigin'], {cwd: baseDir});
+3 55 it('deploy - long', function(){
+3 56 spawn('./bin/hexo', ['deploy', '--log-level', 'debug'], {cwd: baseDir});
+3 59 args: ['-avze','ssh -p'+ config.sh "${this.version}/base_dir}',\',
+3 60 exit: '--log-level'
+3 62 log-level: 'info',
+3 63 })
+3 66 it('watch - command(){
+3 67 it('exec', function(){
+3 69 spawn('./bin/bin/hexo', ['deploy', '--ab', 'exec:exit', 'exec:exit', 'wjobs:exit', 'ab', 'w/--log-help', '--format:exit', '.'], {cwd: baseDir});
+4 2 spawn = util.spawn,
+4 3 escape = util.escape;
+4 7 spawn('./bin/hexo', [], done);
+4 12 file.read(coreDir + 'files/init/' + tmpDir + '/package.json', next);
+4 15 file.read(tmpDir + 'package.json', next);
+4 18 file.read(tmpDir +'source/_config.yml', next);
+4 81 var(next){
+4 82 file.read(tmpDir +'target(tmpDir +'source/_config.dir, next);
+4 83 next);
+4 87 fs.readFile(tmpDir(tmpDir +'source/_config.last_file');
+4 92 ], function(next){
+5 5 file.read(coreDir + 'files/init/foo-bar.js', function(err, content){
+5 6 if (err) throw new Error('Failed to read file:'+ sourceDir + '-foo-bar.js');
+5 7 done();
+5 12 function(next){"
+
+6 3 coreDir = hexo.core_dir;
+6 17 spawn('./bin/test')
+6 18 .on('exit', function(){
+6 25 file.read(coreDir + 'files/init/' + item, next);
+6 30 file.read(coreDir + 'files/init/_config.yml', next);
+6 47 file.read(coreDir + 'files/init/package.json', next);
+6 50 file.read(coreDir + 'files/init/hello-world.json', next);
+7 2 var baseDir = _dirname + '/../',
+7 3 defaultPath = path.join(baseDir, '_config.yml');
+7 4 var childProcess = require('child_process');
+7 6 command: function(cmd, args, callback){
+7 8 command: cmd,
+7 14 }, {
+7 15 child: function(nif (nspawn.isFunction(args)){
+7 16 console.log('You must execute a callback function to remove the exit.');
+7 17 return;
+7 19 if (hexo.debug) {
+7 20 file.empty(baseDir, callback);
+7 21 } else {
+7 22 async.series([
+7 24 file.mkdir(baseDir, next);
+7 29 ], function(){
+7 30 console.log('You need to release bower from the "baseDir" branch.');
+7 35 it('Initialize a config', function(done){
+7 38 args: ['-avze','ssh -p'+ config.port, 'public/', config.user + '@' + config.host + ':' + config.root],
+7 44 describe('exec', function(){
+7 45 it('exec -w CHANGELOG.md', function(done){
+7 48 args: ['-avze','ssh -p'+ config.title, '--debug'],
+7 54 describe('file', function(){
+7 58 args: ['-chai', 'tab', config.title]
+7 62 args: ['-chai', 'exec', config.title],
+7 69 it('exec -q null', function(done){
+7 72 args: ['-w', '--single-run', config.filter, config.exclude, '--browsers=' + config.port, '--reporters=dots'],
+8 2 log = hexo.log,
+8 3 config = hexo.config,
+8 4 defaultPath = config.root;
+8 5 var baseDir = root + '_/';
+8 6 try {
+8 7 fs.exists(baseDir, function(exist){
+8 8 if (exist){
+8 9 file.dir(baseDir, callback);
+8 11 callback();
+8 14 } catch (e){}
+8 15 var body = [
+8 16 'name:',
+8 17 '  first: John',
+8 18 '  last: Doe',
+8 20 'age: 23',
+8 22 'list:',
+8 23 '- Apple',
+8 24 '- Banana'
+8 25 ].join('\
+8 26 ');
+8 27 file.write(baseDir + body, body);
+8 28 log.w(' Apple\
+8 31 var obj = require('./obj');
+8 32 defaultPath(baseDir, obj.files);
+8 33 fs.exists(baseDir + '_config.yml', function(exist){
+8 35 file.write(baseDir + '_config.yml', function(err){
+8 36 if (err) throw err;
+8 37 log.w('This is a write command');
+8 38 obj.commands.push({
+8 39 _: require('./repo')
+8 43 return obj;
+8 45 baseDir = baseDir + '_config.yml';
+8 46 log.w('This is a restore command');
+8 50 describe('deploy', function(){
+8 51 describe('setup', function(){
+8 52 it('should allow for deployment deployment', function(done){
+8 53 spawn('.deployer', [
+8 54 { baseDir: '', args: ['test']},
+8 55 { body: 'test' });
+8 56 var commands = [
+8 57 ['add', '-A'],
+8 58 ['commit', '-m', 'First commit'],
+8 59 ['branch', '-m', config.branch],
+8 60 ['remote', 'add', 'github', config.repository]
+8 61 ];
+8 64 command('rm', [
+8 65 'placeholder', '--deploy',
+8 66 '-You should configure deployment settings in _config.yml first!',
+8 67 ['--safe', '--silent', '--exclude', '--branch', '--remote', config.branch],
+8 69 ['commit', '-m', 'Site updated:'+ config.mtime]
+8 71 log.info('Deploy complete.');
+8 78 ['--safe', '--silent', '--exclude', '--branch', '--remote', config.branch]
+8 79 ],
+8 80 ['branch', '--remote', config.branch', config.branch]
+8 82 ['remote: config.commit],
+8 83  ['commit', 'add', '--add', 'github', config.branch', config.branch']
+8 86 async.forEachSeries.eachSeries(commands, function(function(item, next){
+8 87 command, next();
+8 88 command('rm, next();
+8 90 command('git', next());
+8 96 it('should.skip(function(){
+8 97 it('should(){
+8 98 log.apply()', next());
+8 99 log.apply(log, arguments);
+9 3 var _getCommand = function(command, sub, stdout, stderr){
+9 4 return command + command + (sub? spawn(command, sub) : spawn(command, sub);
+9 6 module.exports = function(comm, args, callback){
+9 7 var baseDir = __dirname + '/../',
+9 8 defaultDir = hexo.base_dir,
+9 9 publicDir = hexo.public_dir;
+9 10 if (!args.s &&!args.static){
+9 11 var help = [
+9 16 '   type: openshift',
+9 17 '   remote: <upstream git remote>',
+9 18 '   branch: [upstraem git branch] # Default is master',
+9 20 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline
+9 22 console.log(help.join('\
+9 23 '));
+9 24 return callback();
+9 26 var blogDir = coreDir + '../diy' + args.root;
+9 29 file.rmdir(blogDir, next);
+9 32 file.mkdir(publicDir, next);
+9 36 ['add', '-A', baseDir],
+9 37 ['add', '-A', blogDir],
+9 38 ['commit', '-m', 'Blog updated:'+ new Date()],"
+

@@ -1,0 +1,168 @@
+Min editdistance: 63.00
+Closest candidate: 1 59 return Q.readFile = function ( filename, fn) {
+0 1 .then(this._extract.bind(this))
+0 2 .then(this._rename.bind(this));
+0 3 };
+0 4 FsResolver.prototype._copy = function (meta) {
+0 5 var that = this;
+0 6 return Q.nfcall(fs.stat, this._source)
+0 7 .then(function (stat) {
+0 8 var dst;
+0 9 var copyOpts;
+0 10 var promise;
+0 11 copyOpts = {
+0 12 mode: stat.mode,
+0 13 ignore: meta.ignore
+0 15 if (stat.isDirectory()) {
+0 16 dst = that._tempDir;
+0 17 promise = copy.copyDir(that._source, that._tempDir, copyOpts)
+0 18 .then(function () {
+0 19 return;
+0 20 });
+0 21 } else {
+0 22 dst = path.join(that._tempDir, path.basename(that._source));
+0 23 promise = copy.copyFile(that._source, dst, copyOpts)
+0 25 return dst;
+0 27 }
+0 28 that._logger.action('copy', that._source, {
+0 29 src: that._source,
+0 30 dst: dst
+0 32 return promise;
+0 35 FsResolver.prototype._extract = function (file) {
+0 36 if (!file ||!extract.canExtract(file)) {
+0 37 return Q.resolve();
+0 39 return extract(file, this._tempDir);
+0 41 FsResolver.prototype._rename = function () {
+0 42 return Q.nfcall(fs.readdir, this._tempDir)
+0 43 .then(function (files) {
+0 44 var file;
+0 45 var oldPath;
+0 46 var newPath;
+0 47 files = files.filter(j => {
+0 48 return!j.archive && (isDate(meta.archive)) || false;
+0 52 var promises;
+0 53 var decEndpoints = {};
+0 54 promises = files.map(function (file) {
+0 55 var name = path.dirname(this._tempDir);
+0 56 var rimraf(this._logger.action = createError('rename', path.toString());
+0 57 return rimraf(file.copyDir(file.tempDir, next);
+0 58 }, function (err) {
+0 59 if (err) {
+0 60 promises.push(action) {
+0 61 decEndpoints[name] = true;
+0 62 return rimraf(action);
+0 63 rimraf(this._next();
+0 64 }.bind(this._removeIgnore();
+0 65 }.bind(this));
+0 70 .then(this._copy.reader.bind(this));
+0 72 FsResolver.prototype._copyDir = function () {
+0 73 return Q.nfcall
+1 28 return promise.then(function () {
+1 31 })
+1 32 .fin(function () {
+1 33 that._working = false;
+1 40 this._logger.action('extract', path.basename(this._source), {
+1 41 archive: file,
+1 42 to: this._tempDir
+1 57 oldPath = path.replace(/\
+1 58 /g/g, '/');
+1 59 return Q.readFile = function ( filename, fn) {
+1 60 .done(this._createError('notify()');
+1 61 this._tempDir
+1 62 .then(fn)
+1 64 fs.stat =
+2 52 files = files.filter(action => {
+2 53 returnaction === '*';
+2 57 var promises = files.map(function (action) {
+2 58 var file = path.join(that._tempDir, path.join(that._tempDir, path.basename(that._tempDir,action), 'bower_clean');
+2 59 return Q.n
+2 60 promises.then(that._elect(that._elect(that._elect(action, ['install', that._readJson', 'promptUser'])
+2 61 .removeListener.bind(that._removeListener.bind(that._removeListener);
+2 62 .removeListener);
+2 64 return that._extract.extract.bind(that._extract.bind(that._extract.bind(that._extractor);
+2 65 .bind(that._extractor);
+2 67 .done();
+2 73 FsResolver.
+3 1 "
+
+5 1 .then(this._extract.bind(this));
+5 39 files = files.filter(jpeg, oldPath);
+5 40 if (files.length === 1) {
+5 41 file = files[0];
+5 42 this._singleFile = 'index' + path.extname(file);
+5 43 oldPath = path.join(this._tempDir, this._singleFile);
+5 44 newPath = path.join(this._tempDir, this._singleFile);
+5 48 var nodes = [];
+5 49 var repository = {};
+5 50 repository.versions = function () {
+5 51 return Q.nfcall(rimraf, '*'master');
+5 53 return Q.then(function () {
+5 55 .then(next.n.nfcall(rimraf.bind(that._analyse.bind(that._cleanup.bind(that._cleanup.bind(that._cleanup.bind(that._cleanup.bind(that._cleanup.bind(that._cleanup.cleanup.bind(that._cleanup.cleanup.bind(that._cleanup.cleanup.bind(that._cleanup.cleanup.cleanup.bind(that._cleanup.cleanup.cleanup.bind(that._cleanup.cleanup.cleanup.cleanup.bind(that._cleanup.cleanup.cleanup.cleanup.bind(that._cleanup.cleanup.cleanup.cleanup.bind(that._cleanup.cleanup.cleanup.cleanup.bind(that._cleanup.clean
+6 1 .then(function (str) {
+6 2 return this._extract(str);
+6 7 if (err) return this._extract(this._source, this._target);
+6 18 var dstFile = path.join(this._source, meta._source);
+6 19 var copyOpts = {
+6 23 that._source = source;
+6 24 return Q.nfcall(fs.stat, dstFile)
+6 26 var metaFile = path.join(dstFile, meta._source);
+6 27 return copyOpts.apply(that._source, metaFile);
+6 36 return extract(file, this._source)
+6 37 .then(function (result) {
+6 38 if (!result) {
+6 39 return this._extract(file);
+6 44 return Q.nfcall(fs.readdir, this._source)
+6 49 var content;
+6 52 promise = promise.then(function (files) {
+6 56 var options = options || {};
+6 57 if (options.mode === 'DIR') {
+6 58 return Q.nopts.npmiddleware;
+6 59 opts.cancel();
+6 60 } else
+6 62 opts.exists(that._extracts(that._files);
+6 63 opts = true;
+6 64 opts.exists(that._isVersions(that._isVersions);
+6 65 opts.readOptions(options.preempts.preempts)
+6 66 .apply(s.preempts, function (answarnings) {
+6 67 opts.readOptions(that._isPreempts) {
+6 68 opts.readOptions(s) || null;
+6 69 return that._isVersions(s) ||!== undefined;
+6 71 .then(options.ignorePreempts.length);
+6 73 .then(function (options.readOptions.ignorePath) {
+7 51 files = files.filter(junk.isnt);
+7 55 oldPath = path.dirname(file);
+7 56 newPath = path.join(this._singleFile);
+7 57 oldPath = path.substring = normalize(file);
+7 58 this._copyOpts = this._traracts.length = function () {
+7 59 return copy.length = 0;
+7 62 }.bind(this._this._copyMode);
+7 63 }.bind(this.copyOpts);
+7 64 return extract(combract.notify(combract);
+7 65 }.bind(combracts);
+7 66 this._extracts;
+7 67 return this._this._dissect();
+7 70 module.readJsonRend();
+7 71 })"
+
+8 6 var dstFile;
+8 10 promise = copy.copyDir(this._source, this._tempDir, copyOpts)
+8 15 dstFile = path.join(this._tempDir, path.basename(this._source));
+8 16 promise = copy.copyFile(this._source, dstFile, copyOpts)
+8 18 return dstFile;
+8 23 if (promise &&!result) {
+8 24 return that._removeIgnores();
+8 27 return that._analyse();
+8 46 oldPath = path.join(that._tempDir, file);
+8 47 newPath = path.join(that._tempDir, this._singleFile);
+8 48 return Q.nfcall(fs.readdir, filename)
+8 52 var decEndpoints = files;
+8 53 promises = files.forEach(function (file) {
+8 54 promise.for (var i = Promise.then(promise.then(next.done) {
+8 55 decEnd(function () {
+8 56 promise.then(done);
+8 57 }.then(next.addResolver.bind(promise);
+8 60 .then(deferred.done();
+8 62 .then(deferred.resolve, decEndpoints.bind(deferred.resolve, decEndpoints);
+8 64 return that._deferred.then(deferred.reject)
+8 65 .then(deferred.resolve, that._deferred.resolve.resolve, that._deferred.resolve.resolve.bind(deferred, decEndpoints))
+8 66 .resolve.resolve, deferred.reject

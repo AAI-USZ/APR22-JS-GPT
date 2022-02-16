@@ -1,0 +1,84 @@
+Min editdistance: 23.00
+Closest candidate: 0 1 const util = require(\'hexo-util\');
+0 1 const util = require(\'hexo-util\');
+0 2 const htmlTag = util.htmlTag;
+0 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+0 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+0 5 function imgTag(args, content) {
+0 6 const classes = [];
+0 7 let meta = \'\';
+0 8 let width, height, title, alt;
+0 9 let i = 0;
+0 10 const len = args.length;
+0 11 for (; i < len; i++) {
+0 12 const item = args[i];
+0 13 if (rUrl.test(item)) {
+0 14 src = makeUrl(item);
+0 15 break;
+0 16 } else {
+0 17 classes.push(item);
+0 18 }
+0 20 args = args.slice(i + 1);
+0 21 if (args.length) {
+0 22 if (!/\\D+/.test(args[0])) {
+0 23 width = args.shift();
+0 24 if (args.length &&!/\\D+/.test(args[0])) {
+0 25 height = args.shift();
+0 27 }'
+
+1 5 module.exports = ctx => {
+1 6 const config = ctx.config;
+1 7 function makeUrl(path) {
+1 8 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+1 9 return path;
+1 11 const data = url.parse(path);
+1 12 if (data && data.protocol) {
+1 15 path = config.root + path;
+1 16 return path.replace(/\\/{2,}/g, \'/\');
+1 18 return function imgTag(args, content) {
+1 22 while (i < args.length) {
+1 26 if (rUrl.test(item) || item[0] === \'/\') {
+1 34 '
+
+2 1 const { escapeHTML } = require(\'hexo-util\');
+2 3 const PostAsset = ctx.model(\'PostAsset\');
+2 4 return function assetLinkTag(args) {
+2 5 const slug = args.shift();
+2 6 if (!slug) return;
+2 7 const asset = PostAsset.findOne({post: this._id, slug});
+2 8 if (!asset) return;
+2 9 let escape = args[0];
+2 10 if (escape === \'true\' || escape === \'false\') {
+2 11 args.shift();
+2 13 escape = \'false\';
+2 15 let title = args.length? args.join(\' \') : asset.slug;
+2 16 const attrTitle = escapeHTML(title);
+2 17 if (escape === \'true\') title = attrTitle;
+2 18 const link = encodeURL(res.url(ctx.config.root + asset.path));
+2 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+2 20 };
+2 21 };'
+
+3 8 while (args.length > 0) {
+3 9 const item = args.shift();
+3 11 src = url.parse(item);
+3 17 if (args && args.length) {
+4 1 const { htmlTag } = require(\'hexo-util\');
+4 2 function urlForHelper(path = '/', options) {
+4 6 const { config } = this;
+4 7 const { root } = config;
+4 9 options = Object.assign({
+4 10 relative: config.relative_link
+4 11 }, options);
+4 12 if (data.protocol) {
+4 15 if (options.relative) {
+4 16 return this.relative_url(this.path, path);
+4 18 path = root + path;
+4 21 module.exports = urlForHelper;'
+
+5 20 let width, height, title, alt, src;
+5 30 args = args.slice(args.length - 1);
+8 22 for (const len = args.length; i < len; i++) {
+9 2 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=+$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=+$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[+~%/.\\w-_]*)?\\??(?:[-+=&;%@.\\w_]*)#?(?:[.!/\\\\w]*))?)/;
+9 6 let src, width, height, title, alt;
+9 16 args = args.slice(args.length);

@@ -1,0 +1,55 @@
+Min editdistance: 35.00
+Closest candidate: 5 3 it('should resolve to false if pkgMeta is not implemented', function (next) {
+0 1 });"
+
+2 1 "
+
+5 1 });
+5 2 describe('._readPkgMeta', function () {
+5 3 it('should resolve to false if pkgMeta is not implemented', function (next) {
+5 4 var resolver = new Resolver('foo');
+5 5 assert.strictEqual(2, 'foo');
+5 6 resolver._readPkgMeta(__dirname + '_pkgMeta_\')).should.not.to.be(false);
+5 7 next();
+5 9 it('should resolve to true if the pkgMeta version is not valid', function (next) {
+5 11 assert.strictEqual(0, 'foo');
+5 12 resolver._readPkgMeta(__dirname + '_pkgMeta_\')).should.be.to.a('string');
+5 13 })
+5 14 .then(function () {
+5 15 next(new Error('Should resolveSelf.next should.next')
+5 16 .should.should.not.not.to.to.be.to.be.an(resolveSelf.bind(resolver);
+5 17 }).to.bind(resolver);
+5 18 }).should.resolve();
+5 19 }).then([]);
+5 21 .done();
+5 24 it('should.skip('should resolve = function (not_pkgMeta not implemented');
+5 26 describe('._resolveShould resolveSelfShould resolveIncompatible', function () {
+5 27 it('should not implemented');
+5 30 it('should resolveIncomparePkgMetaShould resolve by default', function (incompatible)', function (incompatible) { resolve
+7 2 describe('.resolveLocal', function () {
+7 3 it('should reject the promise if there is no appropriate resolver for the variable', function (next) {
+7 5 resolver.resolve()
+7 6 .then(function () { {
+7 7 expect(resolver.resolveSelf).to.be.an(Error);
+7 8 expect(err.message).to.contain('resolveLocal is not implemented');
+7 13 it('should reject the promise if none of the functions defined', function (next) {
+7 15 function one(req, resolver;
+7 16 resolver.resolveAll([]) {
+7 17 resolver.resolve([])
+7 18 .resolve(new Error();
+7 20 .then(new Error();
+7 21 .resolver.resolve([])
+7 22 .resolve.resolve.resolve.resolve.reset();
+7 24 .should.should.not.not.not.be.to.to.be.an(false;
+7 26 .bind(resolver.require('foo');
+7 27 resolver.resolve.resolve('foo')
+7 28 .resolve.require('bar')
+7 29 .require('bower')
+7 30 .resolve();
+7 31 .require('express.resolve')
+7 32 .require('express')
+7 33 .resolve.bind(res')
+7 34 .bind(res')
+7 35 .resolve.resolve.resolve.resolve.bind(res')
+7 36 .resolve.resolve.bind(res')
+7 37 .

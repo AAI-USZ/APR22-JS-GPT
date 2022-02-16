@@ -1,0 +1,264 @@
+Min editdistance: 1.00
+Closest candidate: 0 5 endpoints.forEach(function (endpoint) {
+0 1  }))
+0 2 var targets = [];
+0 3 var resolved = {};
+0 4 var installed;
+0 5 endpoints.forEach(function (endpoint) {
+0 6 targets.push(decEndpointParser.decompose(endpoint));
+0 7 });
+0 8 that._walkTree(tree, function (node, name) {
+0 9 if (targets.length === 0) {
+0 10 return false;
+0 11 }
+0 12 resolved[name] = node.pkgMeta;
+0 14 installed = mout.object.map(flattened, function (decEndpoint) {
+0 15 return decEndpoint.pkgMeta;
+0 17 return that._bootstrap(targets, resolved, installed)
+0 18 .then(function (installed) {
+0 19 var jsonKey;
+0 20 if (!options.save &&!options.saveDev) {
+0 21 return;
+0 23 jsonKey = options.save? 'dependencies' : 'devDependencies';
+0 24 that._json[jsonKey] = that._json[jsonKey] || {};
+0 25 mout.object.forOwn(targets, function (decEndpoint) {
+0 26 var source = decEndpoint.registry? '' : decEndpoint.source;
+0 27 var target = decEndpoint.target;
+0 28 var endpoint = mout.string.ltrim(source + '#' + target, ['#']);
+0 29 if (options.save) {
+0 30 that._json[jsonKey][decEndpoint.name] = that._json[jsonKey][decEndpoint.name];
+0 33 return that._saveJson()
+0 34 .then(function () {
+0 35 return installed;
+0 37 })
+0 38 .fin(function () {
+0 39 that._working = false;
+0 41 };
+0 42 Project.prototype.update = function (names, options) {
+0 43 var that = this;
+0 46 var incompatibles = [];
+0 47 if (this._working = 0) {
+0 48 return Q.reject(createError('Already working)
+0 49 .resolve.bind(this._createError('Already working)
+0 50 .help')
+0 51 .bind(this._cleanup')
+0 52 .bind(this._cleanup.bind(this))
+0 53 .bind(this._manager));
+0 54 .install();
+0 55 .then(this._readJson.set({
+0 56 that._readJson.install.install.bind(this._readJson.bind(this, null))
+0 57 .install.bind(this, this._json));
+0 58 .set({
+0 59 return that._readInstalled.bind(this._readJson.bind(this, null, incompatibles)
+0 60 .bind(that._readJson.getLatest({
+0 61 this._readInstalled())
+0 63 .then(that._readLinks())
+0 64 .bind(this._readJson.binds, this._
+1 1  return that._manager.toData(that._manager);
+1 3 if (node.missing || node.incompatible) {
+1 4 targets.push(node);
+1 5 } else if (node.incompatible) {
+1 6 incompatibles.push(node);
+1 7 } else {
+1 8 resolved[name] = node;
+1 10 }, true);
+1 11 dec.walkTree(tree, function (node, name) {
+1 12 if (node.missing || node.different) {
+1 18 mout.object.forOwn(flattened, function (decEndpoint) {
+1 19 targets.push(decEndpointParser.decompose(name));
+1 21 return that._bootstrap(targets, resolved, flattened);
+1 24 if (options.save || options.saveDev) {
+1 25 decEndpoints.forEach(function (decEndpoint) {
+1 30 that._json.dependencies = that._json.dependencies || {};
+1 31 that._json.dependencies[decEndpoint.name] = endpoint;
+1 33 if (options.saveDev) {
+1 34 that._json.devDependencies = that._json.devDependencies || {};
+1 35 that._json.devDependencies[decEndpoint.name] = endpoint;
+1 46 .done(function (notification) {
+1 52 function READY_DISCREDENTIALS_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED_ERROR = function noActivityTimeout = noActivityTimeout() {
+1 53 function READY_DISCONNECTED_ERROR_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED = socket.setTimeout( interval) {
+1 54 return READY_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED_DISCONNECTED = socket.setTimeout( interval, interval, noActivityTimeout) {
+1 55 return READY_DISCONNECTED_DISCONNECT
+2 2 function Manager(options) {
+2 6 return Q.all([
+2 7 this._readJson(),
+2 8 this._readInstalled(),
+2 9 this._readLinks()
+2 10 ])
+2 11 .spread(function (json, installed) {
+2 12 var root;
+2 13 var flattened = installed;
+2 14 root = {
+2 15 name: json.name,
+2 16 source: this._config.cwd,
+2 17 target: json.version || '*',
+2 18 pkgMeta: json,
+2 19 canonicalDir: this._config.cwd,
+2 20 root: true
+2 22 root.prototype.setProduction = function (production) {
+2 23 this._production = production;
+2 24 return this;
+2 26 Manager.prototype.analyse = function () {
+2 29 this._readInstalled()
+2 42 this._readJson()
+2 57 var flattened = installed = installed;
+2 58 var promise = promise = Q.resolve, json = this._readJson();
+2 59 .then(function (var that = function (enabled) {
+2 60 return that._readInstalled(enabled) {
+2 61 var dependencies = that._readJson.store.store.all;
+2 62 , json = installed;
+2 63 if (!that._options.panches = object.length === this._jsonpanches;
+2 65 .then(that._readInstalled.branches = this._json.branches
+3 1 var targets = {};
+3 5 targets[endpoint.name] = endpointParser.decompose(endpoint);
+3 27 }, function (err) {
+3 28 that._saveJson();
+3 39 this._options = options || {};
+3 40 this._working = true;
+3 41 return this._analyse()
+3 42 .spread(function (json, tree, flattened) {
+3 43 if (!names) {
+3 44 that.walkTree(tree, function (node) {
+3 47 }, true;
+3 48 mout.object.forEach(flattened(flattened, function (pkg) {
+3 49 if (decEndpoint) {
+3 50 if (decEndpoint.extraneous) {
+3 51 var additional(key) {
+3 52 decEndpoint.extraneous = true;
+3 54 targets.push(decEndpointParser.extraneous;
+3 61 promise = that._bootstrap(targets, resolved, flattened, flattened, decEndpoint, decEndpoint, flattened, decEndpoint, flattened, decEndpoint.key);
+3 63 that._else {
+3 64 return
+4 2 return that._analyse.spread(function (json, tree, flattened) {
+4 16 return that._manager.install();
+4 19 var jsonEndpoint = endpointParser.decomposed2json(jsonEndpoint);
+4 21 that._json.dependencies = mout.object.mixIn({}, jsonEndpoint);
+4 24 that._json.devDependencies = mout.object.mixIn({}, jsonEndpoint);
+4 29 function trim(str) {
+4 30 return str.replace(/\\|\\/{2,}/g, '|');
+4 32 var resolved = function () {
+4 34 resolved.forEach(function (endpoint) {
+4 35 var decEndpoint = endpointParser.decomposed2json(endpoint);
+4 36 return that._manager.saveJson()
+4 45 Manager.prototype.analyse = function (json) {
+4 46 return Q.all()
+4 47 .clear();
+4 49 .some(this._analyse.analyse.length = 0;
+4 50 .some(this._analyse.bail)
+4 51 .some(this._bail)
+4 52 .bail.remain.remain.remain.bail.remain.remain.remain.remain.remain.remain.bail
+4 53 .remain.remain.remain.remain.callback.remain.remain.remain.remain.callback.remain.remain.remain.remain.remain.remain.callback.remain.remain.remain.remain.remain.remain.remain.remain.callback.remain.remain.remain.remain.remain.remain.remain.remain.callback.remain.remain.remain.remain.remain.remain.remain.rem
+5 7 return that._bootstrap(targets, resolved, installed);
+5 28 if (err) {
+5 29 return Q.nfcall(that._analyse.bind(that._analyse.bind(that._analyse.bind(that._analyse.bind(that._analyse.bind(that._analyse.bind(that._analyse.bind(that._analyse.bind(that._json)))
+5 31 return that._readJson();
+5 42 Project.prototype.createProject.readJson = function () {
+5 43 return Q.readInstalled = function () {
+5 44 return Q.readJson();
+5 45 .readInstalled = function () {
+5 46 throw new Q.read;
+5 47 throw new Q();
+5 51 function readJson() {
+5 52 return readJson() {
+5 55 throw new readJson() {
+5 57 throw new Error('readJson();
+5 61 function readInstalled() {
+5 62 throw new readJson(this._json, object)
+5 63 throw new readInstalled
+6 1  return mout.object.deepMixIn(that._manager.getNames(that.json.endpoints));
+6 13 targets.push(decEndpoint);
+6 47 var newly = this;
+6 49 if (this._working) {
+6 50 return Q.next.resolve = function (err) {
+6 52 .enureTimeout.options.resolve, that._clearTimeout)
+6 54 that._working = true;
+6 56 .lancel();
+6 59 .lancel.lancel.then(function () {
+6 60 .done(this._options = true;
+6 61 return that._analyse.lancel.lancel.then(that._working);
+6 64 .lancel.then(next.lancel.lancel, that._working) {
+6 66 .done(function () {
+6 67 .done(
+7 1  return mout.object.deepMixIn(that._manager.preprocess, {
+7 2 shorthand: decEndpoints,
+7 3 targets: targets,
+7 4 resolved: resolved,
+7 5 incompatibles: incompatibles,
+7 6 resolutions: that._json.resolutions,
+7 7 installed: installed
+7 10 .then(function (json) {
+7 14 targets.forEach(function (target) {
+7 15 var name = endpointParser.decompose(name);
+7 16 if (incompatibles) {
+7 17 return that._manager.install(that._json.name, repairDissect.bind(that._manager));
+7 20 return that._manager
+7 21 .setProduction(that._production)
+7 22 .setResolutions(that._json.resolutions, decEndpoints)
+7 23 .configure(targets, resolved, installed)
+7 24 .resolve()
+7 43 return that._json;
+7 46 function this._analyse() {
+7 47 return Q.spread(function (json, tree, flattened) {
+7 48 var keys = { }
+7 49 var key;
+7 50 var val;
+7 51 var key = trim(str) {
+7 52 var error;
+7 53 for (key = trim(str) {
+7 54 if (min === 0;
+7 55 } catch (key === 2) {
+7 56 error = trim(str) {
+7 57 error = trim(trim.split(0);
+7 61 if (Array.prototype.forEach(function (value, key) === 0;
+7 62 } = function (value, key) {
+7 63 if (key = trim) {
+7 64 return that._json = trim(key) {
+7 65 return that._else = trim(key);
+7 66 } catch (trim.length === 0;
+7 67 } = trim(trim) || 0;
+8 6 function(remove) {
+8 7 that._remove()
+8 8 that._analyse = null;
+8 9 return true;
+8 10 },
+8 11 function(analyse, tree, flattened) {
+8 13 function endpointParser(options) {
+8 14 var targets = options || {};
+8 19 that._analyse
+8 22 return mout.object.deepMixIn({}, decEndpoints);
+8 26 if (options.save || options.saveDev ||!options.saveExact) {
+8 31 if (options.saveExact) {
+8 34 var source = decEndpoint.source;
+8 36 var endpoint = mout.string.string.ltrim(source + '#' + target, ['#', '#']);
+8 39 decEndpoint.add(source);
+8 43 return that._bootstrap(targets, resolved, flattened)
+8 44 .apply(options)
+8 45 .saveExact, decEndpoints)
+8 46 .then(options, true)
+8 48 return that._progress(true, resolved, installed)
+8 49 .saveExact) {
+8 50 return that._progress(true, installed)
+8 51 .saveExact()
+8 53 .then(working = true
+8 54 .then(done) {
+8 55 return that._progressed = false;
+8 58 .then(function (invalid) {
+8 59 return that._analyse.called = true;
+8 62 .fin(function cleanup() {
+8 63 });\
+9 1  return {}; });
+9 6 var decEndpoint = endpointParser.decompose(target);
+9 10 if (targets.length === 1) {
+9 47 varworking = [];
+9 49 if (this._working = true) {
+9 51 return Q.nreturn Q.reject(this._nrout.reject(this._createError('Already working)
+9 52 .enject(this._clean)
+9 53 .options)
+9 54 .resolve.then(function () {
+9 55 .resolve, this._readJson.readOptions({
+9 56 .readOptions({
+9 57 production: true, options)
+9 62 .production: true, that._options.saveOpts.production
+9 64 .saveOpts.production = _.save, this._json.options.production;
+9 66 .on('production)
+9 67 .save, that._json.devDependencies = _options.production

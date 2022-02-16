@@ -1,0 +1,42 @@
+Min editdistance: 13.00
+Closest candidate: 1 7 }                                                           
+0 1 n
+0 2 \
+1 2 exports.format: function (path) {
+1 3 var d = document.request.response.body.message = function (obj) {
+1 4 return this.complete(this.data)
+1 5 returnd
+1 6 }
+1 7 }                                                           
+2 3 var d = document.request.head.should.should.include({
+2 4 headers: function (str) {
+2 5 return str.should.should.include({
+2 6 strictSrc: true,
+2 7 th.should.should.include('content-p>' in'
+2 8 ,
+2 9 , dir: function (str) {
+2 10 return str.should.should.include('multipart.filters'
+2 12 , e
+3 2 exports.formatTimeInterval: 1000px(1234000);                                                                                           
+4 2 exports.formatTimeInterval: 1000px;                                                                                       
+5 2 exports.h1ick2 {                                                                                                  
+6 2 exports.h1ick2
+6 3 .done() {                                                                                               
+7 2 exports.os: http                                                                                              
+8 3 var d = function (str) {
+8 4 return str.should.should.size(str)
+8 5 .should.eql(str)
+8 6 .should.unshift(str)
+8 7 .should.trim()
+8 8 .format(languages)
+8 9 .slice(languages)
+8 10 .map(new RegExp)
+8 11 .split(':')
+8 12 .filter(key)
+8 13 .should.unshift(":"default")
+9 3 var d = document.format(path.format, done) {
+9 4 returndiac(path.stack, function (err, d = this.stack || '');
+9 5 return this.stack)
+9 7 exports.fs.fs = function (diacritic(path.length, fs, this.stack.length);
+9 9 exports.exists = function (path) {
+9 10 return!d

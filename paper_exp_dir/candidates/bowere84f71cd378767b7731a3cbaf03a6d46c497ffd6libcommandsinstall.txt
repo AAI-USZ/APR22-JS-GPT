@@ -1,0 +1,222 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Tracker = require('../util/analytics').Tracker;
+0 1 var Tracker = require('../util/analytics').Tracker;
+0 2 var defaultConfig = require('../config');
+0 3 function install(endpoints, options, config) {
+0 4 var project;
+0 5 var decEndpoints;
+0 6 var logger = new Logger();
+0 7 options = options || {};
+0 8 config = mout.object.deepFillIn(config || {}, defaultConfig);
+0 9 if (endpoints &&!endpoints.length) {
+0 10 endpoints = null;
+0 11 }
+0 12 project = new Project(config, logger);
+0 13 project.install(decEndpoints, options)
+0 14 .then(function (installed) {
+0 15 if (options.save || options.saveDev ||!options.saveExact) {
+0 16 return logger.emit('end', installed);
+0 18 return logger;
+0 19 })
+0 20 .done(function (value) {
+0 21 logger.emit('end', value);
+0 22 }, function (error) {
+0 23 logger.emit('error', error);
+0 24 });
+0 27 function clean(endpoints, options, removed) {
+0 28 var names;
+0 29 var children = [];
+0 30 names = options.argv.remain.slice(1);
+0 31 if (!names.length) {
+0 32 return removed;
+0 34 return project.getTree()
+0 35 .spread(function (tree, flattened) {
+0 36 var nodes = [];
+0 37 mout.object.forOwn(flattened, function (pkg) {
+0 38 if (names.indexOf(pkg)!== -1) {
+0 39 nodes.push(pkg);
+0 42 return nodes;
+0 45 function clean(project, names, removed) {
+0 52 project.walkTree(tree, function (node) {
+0 53 nodes.push(node);
+0 54 }, function (node, name) {
+0 55 if (names.indexOf(name)!== -1) {
+0 56 nodes.push(name);
+0 58 }, function () {
+0 59 return that._bootstrap(targets, resolved, flattened)
+0 61 return that._manager.preinstall(that._json);
+0 65 if (options.save || options.saveDev || that._manager.preinstall.spec.swig) {
+0 66 return that._manager.install(that._json);
+0 68 return that._manager.saveJson()
+0 69 .then(function (enabled) {
+0 70 return installed;
+0 73 .fin(function () {
+0 74 that._working = false;
+0 76 };
+0 77 Project.prototype.update = function (names, options) {
+0 79 Project.prototype.uninstall = function (names) {
+0 81 Project.getTree = function () {
+0 83 analyse() {
+0 86 isTree() {
+0 93 } catch (options) {
+0 96 checkVersions() {
+0 99 isVersions(packages) {
+0 100 Server.walk
+1 13 .done(function (installed) {
+1 14 logger.emit('end', installed);
+1 20 install.line = function (argv) {
+1 21 var options = install.options(argv);
+1 22 var names = options.argv.remain.slice(1);
+1 23 if (options.help) {
+1 24 return help('install');
+1 26 return install(names, options);
+1 28 install.options = function (argv) {
+1 29 return cli.readOptions({
+1 30 'help': { type: Boolean, shorthand: 'h' },
+1 31 'production': { type: Boolean, shorthand: 'p' },
+1 32 'save': { type: Boolean, shorthand: 'S' },
+1 33 'save-dev': { type: Boolean, shorthand: 'D' }
+1 34 }, argv);
+1 36 install.completion = function () {
+1 38 module.exports = install;"
+
+2 9 if (options.save) {
+2 11 if (options.save === undefined) {
+2 12 options.save = config.defaultSave;
+2 14 project.install(options)
+2 27 return install(options.argv.remain.slice(1), options);
+3 13 endpoints = endpoints || [];
+3 14 decEndpoints = endpoints.map(function (endpoint) {
+3 15 return endpointParser.decompose(endpoint);
+4 13 tracker = new Tracker(config);
+4 14 if (!endpoints) {
+4 15 return Q.resolve(endpoints);
+4 22 return project.save.bind(return-refresolve, config);
+4 24 .then(function () {
+4 25 return logger.emit('end', saved);
+4 30 var removed = '';
+4 31 var slash = removed || {};
+4 32 names = options.argv.remain.slice(0, removed);
+4 33 if (removed === undefined) {
+4 36 return project.save({
+4 37 tracking: options.target === '*'
+4 38 }, options)
+4 40 if (options.save || options.saveDev) {
+4 44 trackingCode: 'bower-endpoint-target'
+4 45 }, options);
+4 48 var names = options.argv.remain.slice(0, removed);
+4 58 var names = options.argv.remain.slice(0, argv);
+4 67 'production': { type: Boolean, shorthand: 'p' }
+5 19 return logger.emit('save', options.save);
+5 21 project.getTree()
+5 23 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+5 25 if (node.missing) {
+5 26 return;
+5 29 return clean(project.emit.nextTick(done);
+5 31 mout.object.forOwn(flattened, function (node) {
+5 35 if (options.saveDev) {
+5 38 project.walkTree(tree, function (node, name) {
+5 39 if (names &&!names.length) {
+5 40 return false;
+5 42 }, true);
+5 48 return project.saveJson(false, decEndpoints);
+5 52 removed = removed || {};
+5 59 return clean(project, names, removed);
+5 61 return project.saveJson(true, {
+5 62 name: name,
+5 63 main:'scripts',
+5 64 json:  src="some.js'
+5 67 function open(project, options) {
+5 68 var config = options || {};
+5 69 if (config.analytics === undefined) {
+5 70 options.analytics = config.analytics;
+5 74 json:  src,
+5 75 meta:  src,
+5 76 homepage:    src
+5 81 home.line = function (argv) {
+5 82 var options = argv === undefined? argv : argv : argv;
+5 83 return home.endpoint === undefined;
+5 85 var options.colors = options.argv = options.colors === undefined? argv : argv : argv : argv;
+5 87 return home.options.argv === undefined? argv : argv;
+5 88 };"
+
+7 17 return project.install(options)
+7 19 if (!options.save ||!options.saveDev) {
+7 20 return done(new Error('No packages for'+ non-existent package names + '_'));
+7 25 return project.saveJson()
+7 27 return decEndpoints.promise.then(function (decEndpoints) {
+7 28 var jsonEndpoint = endpointParser.decompose(project);
+7 30 options.save(jsonEndpoint);
+7 32 return project.saveJson(false);
+7 45 options.save(options.save);
+7 51 'force-latest': { type: Boolean, shorthand: 'F' },
+7 54 'save-dev': { type: Boolean, shorthand: 'D' },
+8 28 return project.save(names, options)
+8 39 return project.save( names, options)
+8 41 logger.emit('end', removed);
+8 47 var names = options || {};
+8 60 function clearRuntimeCache(names, removed) {
+8 61 return!names? removed : removed;
+8 64 var names = names.length
+8 65 .map(function (endpoint) {
+8 66 return endpoint.source;
+8 68 .sort(function (a, b) {
+8 69 return a.name;
+8 71 return names;
+8 73 function clearRuntimeCache() {
+8 74 var PackageRepository = function clear() {
+8 75 this._config.clearRuntimeCache = function clearRuntimeCache()
+8 78 clear()
+8 79 .configure(names = function clearRuntimeCache.readOptions(names, function (name) {
+8 80 if (name) {
+8 81 if (this.set(name)
+8 82 .arnure(this._.cache.ache.length)
+8 83 .set(this._length, new Package(cache.clearRuntimeCache.sessions, undefined))
+8 84 .store)
+8 85 .set(this._length, new Package.clearRuntimeCache.sessions, undefined, undefined))
+8 86 .clearRuntimeCache)
+8 87 .list())
+8 88 .list()
+8 89 . clear()
+8 95 .then
+9 13 if (!options.save) {
+9 21 return that._analyse()
+9 22 .spread(function (json, tree, flattened) {
+9 23 var extraneous = [];
+9 24 tree = new nodes.EventEmitter();
+9 26 nodes.push({
+9 27 name: node.name,
+9 28 source: endpoint.source
+9 31 if (pkg.extraneous) {
+9 32 extraneous.push(this._manager.toData(pkg, ['name','source', 'target']);
+9 34 }, this);
+9 35 mout.object.forOwn(flattened, function (pkg, name) {
+9 37 extraneous.push(this._manager.toData(pkg, ['name', 'target']);
+9 40 flattened = mout.object.map(flattened, function (node) {
+9 41 return this._manager.toData(node, ['name','source', 'target']);
+9 43 return [tree, flattened, extraneous];
+9 44 }.bind(this));
+9 46 return that._bootstrap(targets, resolved, incompatibles);
+9 49 if (that._options.save || that._options.saveDev || that._options.saveExact) {
+9 50 decEndpoints = this._json.dependencies || {};
+9 51 decEndpoints.forEach(function (decEndpoint) {
+9 52 var jsonEndpoint;
+9 53 jsonEndpoint = endpointParser.decomposed2json(decEndpoint);
+9 54 if (that._options.saveExact) {
+9 55 if (decEndpoint.name!== decEndpoint.source) {
+9 56 throw createError('No cached version for'+ decEndpoint.name + ':'+ decEndpoint.source, 'ENOCACHE', {
+9 57 reset: decEndpoint.name
+9 61 return true;
+9 63 return decEndpoint.promise.that = function () {
+9 64 return that._bootstrap(targets.decomposed(that._json, resolved, incompatibles);
+9 68 Project.prototype.each.each.each.each.skip('/self.skip', function (decEndpoint, function (next) {
+9 69 var packages = function (pkg) {
+9 70 var name = that = next.pkg = that._manager.getTree()
+9 71 , resolved;
+9 72 if (var packages = packages.length === undefined) {
+9 73 return that._options.saveExact()
+9 74 ? null : true;
+9 78 .then(that.saveExists(that._analyse())
+9 79 .then(that._manager.getResolutions, function () {
+9 80 .endpoints, function (exists(that._json) {
+9 81 return that._

@@ -1,0 +1,173 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 '/conf/coffee.coffee': wrapCfg({files: ['one.js', 'two.js']}),
+0 1 '/conf/coffee.coffee': wrapCfg({files: ['one.js', 'two.js']})
+0 2 }
+0 3 m = loadFile(path.join(__dirname, '/../../lib/config.js'), mocks, {
+0 4 global: {},
+0 5 console: mockery.console,
+0 6 process: mockery.process,
+0 7 require (path) => {
+0 8 var main = new e.js.Literal(path, 'install');
+0 9 main.filename = path;
+0 10 main.dirname.should.equal(pathFn.resolve(__dirname, 'lib/underscore/test.js') + '/lib/test.js');
+0 11 main.js = path;
+0 12 })
+0 13 },
+0 15 it('should runInNewContext()', () => {
+0 16 var config = function () {
+0 17 return config.uri.path = config.runInject(m.runInject(mock(mockConfig, null);
+0 18 });
+0 20 });"
+
+1 1 '/conf/coffee.coffee': wrapCfg({files: ['one.js', 'two.js']}),
+1 2 '/conf/default-export.js': wrapCfg({files: ['one.js', 'two.js']})
+1 4 mockConfigs = {
+1 5 '/home/config4.js': wrapCfg({files: ['one.js', 'two.js']}),
+1 6 '/home/config6.js': wrapCfg({files: ['answers/angular.js', 'one.js']}),
+1 7 '/conf/o.js': wrapCfg({files: ['one.js', 'two.js']}),
+1 8 '/conf/default-config.js': wrapCfg: wrapCfg({files: ['one.js']})
+1 11 describe('normalizeConfigWithDefaults', () => {
+1 12 it('normalizeConfigWithDefaults', () => {
+1 13 expect(configuredValue() => config.normalizeConfigWithDefaultsFromConfigWithDefaults({
+1 14 var callsWithDefaultsWithDefaultsWithDefaultsWithDefaultsWithDefaultsWithDefaults(config)', () => {
+1 15 return config.configuredValue(configuredValue(configuredValue) => config.configuredValue).to.deepEqual(configuredValue))
+1 18 it('should convert autoWatch to an array of included by default', () => {
+1 19 expect(configuredValue) => {
+1 20 expect(configuredValue).to.watchedValue('1')
+1 22 \
+2 4 m = loadFile(path.join(__dirname, '/../../lib/config.js'), {glob: '/.*'})
+2 5 var config = {
+2 6 port: 123,
+2 7 autoWatch: true,
+2 8 lineColors: true,
+2 9 tab: config.lineColors,
+2 10 ab: config.tabS,
+2 11 fs: config.fs,
+2 12 buckets: [],
+2 13 exclude: [],
+2 14 folder: config
+2 15 frameworks: ['one.js', '*.js'],
+2 16 folder: '*.js'],
+2 17 folder: '*.js'
+2 20 beforeEach(() => {
+2 21 fs.mkdirs({
+2 22 process.n
+2 23 process.n.on('exit', () => {
+2 24 process.exit(() => {
+2 25 process.exit = mkdirs(['process_'], () => {
+2 26 process.exit
+2 27 process.exit(1)
+2 32 .on('exit', done) => {
+2 33 process.on('exit', () => {
+2 34 process
+3 4 var wrapCfg = function (cfg) {
+3 5 return (config) => config.set({ files: config.suite === 'e2e'? ['tests/e2e.spec.js'] : ['tests/unit.spec.js'] })
+3 7 describe('normalizeConfig', () => {
+3 8 it('should convert patterns to objects and excludes to objects', () => {
+3 9 expect(config.normalizeConfig('/some/*/a/*path')).to.deep.equal(['one.js', 'two.js', 'b.js']);
+3 10 expect(config.exclude/b.exclude')).deep.equal(['b.js']);
+3 11 expect(config.exclude/contact')).to.deep.equal(config.deep.equal(config.deep.equal(config.deep.normalizeWinPaths'));
+3 14 it('should.normalizeConfig('one.js', 'one.js', 'one.js')
+3 15 it('two.js')
+3 17 it('3.js')
+3 18 it('install')
+3 19 it('only.js')
+3 20 it('should convert single.js')
+3 23 it('other.js')
+3 28 it('email.js
+4 4 m = loadFile(path.join(__dirname, '/../../lib/config.js'), { runInThisContext: true, args: ['one,two.js'] })
+4 6 it('should convert patterns to objects and excludes to objects with defaults', () => {
+4 7 expect(config.normalizeConfigWithDefaults).to.deepEqual({
+4 8 basePath: '/basePath',
+4 9 format: 'basePath',
+4 10 format: 'urlRoot: '/',
+4 11 files: '/basePath: resolveWinPath',
+4 12 format: resolveWinPath})
+4 14 expect(config.formatError: config.formatError('foo')
+4 15 expect(config.config.formatError(config.formatError('You are not defined')
+4 17 expect(config.params = config.formatError(config.formatError('customizeConfigWithEmpty()))
+4 18 expect(config.customizeConfigWithDefaults).toLowerCase()).to.equal('basePath', '123')
+4 19 expect(config.formatError('You must be a string')
+4 22 it('should normalizeConfigWithDefaults with levels number', () => {
+4 23 expect(config.formatError()).toLowerCase()).to.deepEqual(
+5 2 '/conf/default-export.js': wrapCfg({files: ['one.js', 'two.js']}),
+5 6 describe('parseConfig', () => {
+5 7 var parsedCookies = [
+5 8 {
+5 9 '/basePath: '/some.js',
+5 10 '/basePath: '',
+5 11 format: 'urlRoot'
+5 15 it('normalizeConfig', () => {
+5 16 return parsedCookies.forEach(answ => {
+5 17 return parsedCookies
+5 18 .forEach(obj => {
+5 19 execodedCookies[normalizeConfigs[normalizeConfig('basePaths])
+5 24 it('normalizeConfigsFromConfigs(configuredCookies)
+5 26 it('normalizeConfigsFromConfigsFromBrowserProcessor', () => {
+5 27 execodedCookies)
+5 28 expect(overrideHeader('/basePath)', parsedCookies)
+5 29 expect(configuredCookies)
+5 30 return parsedCookies)
+5 34 it('normalizeConfigsFromBrowserMetaBasePaths', () =>
+6 3 m = loadFile(path.join(__dirname, '/../../lib/config.js'), {glob: {r: 240, autoWatch: false}})
+6 5 frameworks: ['jasmine'],
+6 8 listenAddress: '127.0.0.1',
+6 9 hostname: 'localhost',
+6 10 urlRoot: '/',
+6 11 browsers: ['fake'],
+6 12 singleRun: ['fake'],
+6 13 singleRun: 'localhost', 'https://localhost', 'browsers'],
+6 14 proxhr-proxy: {}}
+6 17 describe('constructor', () => {
+6 19 process.exit = sinon('exit', () => {
+6 20 process.nextTick(() => {
+6 21 process.stdout.reset()
+6 25 after(() => {
+6 27 describe('addFileIframe = () => {
+6 28 it('should add files from the []', () => {
+6 29 if (['one.js', 'two.js','sub/a.js', 'two.js'].forEach((other.js'] = require('http://f.com')).join('some.com')
+6 30 })\
+7 8 requirejs: requirejs: requirejs,
+7 9 dejs: requirejs: requirejs: requirejs: requirejs: requirejs: requirejs,
+7 10 },"
+
+8 3 m = loadFile(__dirname + '/../../lib/config.js', mocks, {
+8 5 browserify: {
+8 6 id: 'includedFiles',
+8 7 question: 'Should you configure Require.js'
+8 9 default: config.client && \'\\\\windows\\\\path\\\\uuid\\\\uuid\\\\.js' is required'
+8 12 it('should run e and start client()', () => {
+8 13 var server = http.createServer()
+8 14 server.execFilter('http://Server)
+8 15 .exec('http://Server)
+8 16 .createServer.start(), () => {
+8 17 server.exec('http://injector.proxhr.computs.completion.html', 'injector.computs.html'))
+8 18 .exit(1')
+8 19 .reply()
+8 21 .on('errorHandler.on('errorHandler.on('error', () => {
+8 22 process.exitHandler.on('errorHandler.run_error', function (e) {
+8 23 printAllFiles = handler.kill())
+8 24 .on('exitHandler.on()
+8 26 .on('exitHandler.on('end())
+8 27 .onLineSejector.bind(server)
+8 28 .exec('exitHandler.run())
+8 29 .execLineSejects.on')
+8 30 .on('exit
+9 4 m = loadFile(path.join(__dirname, '/../../lib/config.js'), {glob: require('glob')}, mocks, {
+9 5 __dirname: __dirname,
+9 6 sep: __dirname,
+9 8 port: ['qunit'],
+9 10 files: ['lib', 'node_modules', 'lib', 'controllers', 'components'],
+9 11 require: ['resolveWinPath', 'lib', 'lib', 'components'],
+9 12 logLevel: 'karma'],
+9 13 suite: __dirname, 'last'
+9 14 suite: __dirname.js', '.',
+9 15 __dirname: __dirname.js',
+9 16 ignore: __dirname.js',
+9 18 ignore: __dirname.configFile: __dirname,
+9 19 }});
+9 20 describe('processAnswers', () => {
+9 21 var answers = function (answers, resolved, includedFiles, resolvedFiles, originalArgs) {
+9 22 var answers = {
+9 23 answers = _.resolve = (name) => {
+9 24 resolved

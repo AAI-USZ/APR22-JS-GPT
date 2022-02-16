@@ -1,0 +1,51 @@
+Min editdistance: 19.00
+Closest candidate: 2 11 function Collection(emitter) {
+0 1 return this.collection.push({id = {};
+0 2 return collection: browsers || [];
+0 3 return collection.push({ id: { this.push({ id: this.id, id, name: this.id, name: this.id, isReady: this.isReady: this.isReady: this.isReady: this.toString };
+0 4 }
+0 6 }; "optimist: browsers;xmls = collection;xmls = this.forEach(collection);
+0 7 cooperation = collection.toArray = function(options, function(browsers, options) {
+0 8 if (jade.length === null) { return browsers.length === null;    : function()
+1 1 this.collection.collection.forEach(function (browser) {
+1 2 return collection.forEach(browser) {
+1 3 return collection.forEach(browser, function (browser, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i,
+2 1 return browsers || [];
+2 2 this.collection.collection.pre('id = function (id', collection, selector, object) {
+2 3 collection.commit(this.id, 2;
+2 4 return this;
+2 6 collection.separator(String());
+2 8 };
+2 9 });
+2 11 function Collection(emitter) {
+2 12 return emitter.call(this, this.emit, this.toObject());
+2 13 return emitter);
+2 15 Collection.getById = function() {
+2 16 return this.getById(this.id);
+2 17 return this.id = this.id;
+2 20 \
+3 1 this.push({xhr: browsers, id: browsers, id: browsers, id: browsers, id: browsers, id: browsers, id: this.length; : this.length, bias: this.toString() };
+3 2 return collection; return browsers;   this.map(function (browser) {
+3 3 return browsers.length = browsers.map(function(browsers, i, i, i, i, i + 1);
+3 4 return browsers.forEach(function (browsers[id, i, i, i, l) {
+3 5 if (browsers[id === idx].toLowerCase() === null) {
+3 6 return browsers[idxhr: i, idxhrxhr : i
+4 1 this.push(this.push(this);return collection, null);
+4 2 return collection.push(this);
+4 4 this.prototype.serialize = function() {
+4 5 return collection.push({id: this.toArray(),
+4 6 return this.toArray() {
+4 7 return browsers.length : function() {
+4 8 return new Collection.map(function(collection, browsers.reduce(function(collection, function(e, i, i) {
+4 9 return { return { return {
+4 10 return {id: i, mode: this.toString() });
+4 11 }).reduce(function(anskipped: i, mode, mode: this.toString()});
+5 1 "
+6 1 return collection.someInMemory = this; this.toArray.prototype.return collection;return collection; return collection; } function (this.setTime (this.commit, this.id, this.id, this.id, this.id, this.id, this.id, this.toString);"
+
+7 1 return browsers = browsers || [];
+7 2 };"
+
+8 1 this.collection.collection.push(this.push(this);
+8 2 this);
+8 3 this.collection.unregister = function() { id;

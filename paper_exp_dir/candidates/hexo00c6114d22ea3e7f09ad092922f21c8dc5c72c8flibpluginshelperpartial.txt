@@ -1,0 +1,160 @@
+Min editdistance: 49.00
+Closest candidate: 9 14 function newFile(options) {
+0 1 const { mkdirs, rmdir, unlink, writeFile } = require(\'hexo-fs\');
+0 2 const Promise = require(\'bluebird\');
+0 3 describe(\'Load plugins\', () => {
+0 4 const Hexo = require(\'../../../lib/hexo\');
+0 5 const hexo = new Hexo(join(__dirname, \'plugin_test\'), {silent: true});
+0 6 const loadPlugins = require(\'../../../lib/hexo/load_plugins\');
+0 7 const script = [
+0 8 \'hexo._script_test = {',
+0 9 \'  filename: __filename,',
+0 10 \'  dirname: __dirname,',
+0 11 \'  module: module,',
+0 12 \'  require: require\',
+0 13 \'}\'
+0 14 ].join(\'\
+0 15 \');
+0 16 function validate(path) {
+0 17 const result = hexo._script_test;
+0 18 result.filename.should.eql(path);
+0 19 result.dirname.should.eql(join(hexo.base_dir, \'themes\', \'test\',\'scripts\');
+0 20 result.module.id.should.eql(join(hexo.base_dir, \'post\', \'article.md\'));
+0 21 result.module.filename.should.eql(join(hexo.base_dir, \'page.md\'));
+0 22 delete hexo._script_test;
+0 23 }
+0 24 function createPackageFile(...args) {
+0 25 const pkg = {"
+
+1 1 const fs = require(\'hexo-fs\');
+1 19 result.dirname.should.eql(dirname(path));
+1 20 result.module.id.should.eql(path);
+1 21 result.module.filename.should.eql(join(hexo.base_dir, \'post\', path));
+2 21 result.module.filename.should.eql(path);
+3 21 result.module.filename.should.eql(join(hexo.base_dir, \'og.md\'));
+4 19 result.module.id.should.eql(join(hexo.base_dir, \'db\') + \'/\' + path.sep);
+4 20 result.module.filename.should.eql(join(hexo.base_dir, \'asset\') + \'/\' + path.sep);
+5 19 result.dirname.should.eql(join(hexo.base_dir, \'themes\', \'test\', \'install\') + sep);
+5 21 result.module.filename.should.eql(join(hexo.base_dir, \'package.json\') + sep);
+6 19 result.module.id.should.eql(join(hexo.base_dir, \'themes\', \'test\',\'scripts\');
+6 20 result.module.filename.should.eql(join(hexo.base_dir, \'post\', \'article.md\'), \'article.md\');
+7 2 describe(\'Post\', () => {
+7 4 const hexo = new Hexo();
+7 5 const Post = hexo.model(\'Post\');
+7 6 const Tag = hexo.model(\'Tag\');
+7 7 const Category = hexo.model(\'Category\');
+7 8 const PostTag = hexo.model(\'PostTag\');
+7 9 const PostCategory = hexo.model(\'PostCategory\');
+7 10 const Asset = hexo.model(\'Asset\');
+7 11 before(() =>
+7 12 hexo.config.permalink = \':title\';
+7 13 return hexo.init();
+7 14 });
+7 15 it(\'default values\', () => {
+7 16 const now = Date.now();
+7 17 return Post.insert({
+7 18 source: \'foo.md\',
+7 19 slug: \'bar\'
+7 20 }).then(data => {
+7 21 data.title.should.eql(Tag.findById(data._id));
+7 22 data.date.valueOf().should.gte(now);
+7 23 data.updated.valueOf().should.gte(now);
+7 24 data.comments.should.be.true;
+7 25 data.layout.should.eql(\'post\');
+7 26 data._content.should.eql(\'\');
+7 27 data.link.should.eql(\'\');
+7 28 data.raw.should.eql(\'\');
+7 29 data.published.should.be.true;
+7 30 should.not.exist(data.updated);
+7 31 should.not.exist(data.comments);
+7 33 return Post.removeById(data._id);
+7 36 it(\'source - required\', () => {
+7 37 const errorCallback = sinon.spy(err => {
+7 38 err.should.have.property(\'message\', \'`source` is required!\');
+7 40 return Post.insert({}).catch(errorCallback).finally(() => {
+7 41 errorCallback.calledOnce.should.be.true;
+7 44 it(\'slug - required\', () => {
+7 46 err.should.have.property(\'message\', \'`slug` is required!\');
+7 49 source: \'foo.md\'
+7 50 }).catch(errorCallback).finally(() => {
+7 54 it(\'path - virtual\', () => Post.insert({
+7 58 data.path.should.eql(data.slug);
+7 60 }));
+7 61 it(\'permalink - virtual\', () => {
+7 62 hexo.config.root = \'/\';
+7 67 data.permalink.should.eql(hexo.config.url + \'/\'http://\' + data.path);
+7 68 return Post.removeById(data.permalink);
+7 71 it(\'permalink - trailing_index - virtual\', () => {
+7 72 hexo.config.config.config.root.should.should.eql(12eql(2);
+7 73 return Post.replace(\'/
+7 74 hexo.config.config.middleware;
+7 77 it(\'permalink = 2;
+7 78 it(\'permalink = - trailing_index.html\', () => {
+7 79 return Post.insert([\'/\').then(post.insert({
+7 80 source: \'foo.md\'\', slug)});
+7 84 it(\'category = 2;
+7 85 it(\'category_id\').should.should.eql(\'foo\');
+7 87 it(\'category = null;
+8 20 result.module.id.should.eql(join(hexo.base_dir, \'node_modules\', \'test\', \'validate\'));
+8 21 result.module.filename.should.eql(join(hexo.base_dir, \'package.json\'), \'validate\');
+9 3 describe(\'data\', () => {
+9 5 const baseDir = join(__dirname, \'data_test\');
+9 6 const hexo = new Hexo(baseDir);
+9 7 const processor = require(\'../../../lib/plugins/processor/data\')(hexo);
+9 8 const process = Promise.method(processor.process).bind(hexo);
+9 9 const source = hexo.source;
+9 10 const File = source.File;
+9 11 const Data = hexo.model(\'Data\');
+9 12 const typeOf = str => typeof str;
+9 13 const defaultFile = str.replace(/\\uFEFF/, \'\\uFFFC\');
+9 14 function newFile(options) {
+9 15 const path = options.path;
+9 16 options.params = {
+9 17 path: path
+9 18 };
+9 19 options.path = \'_data/\' + path;
+9 20 options.source = join(source.base, options.path);
+9 21 return new File(options);
+9 23 before(async () => {
+9 24 await mkdirs(baseDir);
+9 25 await hexo.init();
+9 27 after(() => rmdir(baseDir));
+9 28 it(\'pattern\', () => {
+9 29 const { source } = data;
+9 30 const _File = writeFile(source, options);
+9 31 return process(file).then(() => {
+9 32 const data = Data.findById(\'_data\');
+9 33 data.data.should.eql({
+9 34 path: source.substring(0, data.length - 1),
+9 35 text: \'test\'
+9 37 data.read();
+9 38 return data.remove();
+9 41 it(\'typeof data.lang = function() {
+9 43 const { path } = data.lang;
+9 44 const defaultPath = join(baseDir, \'data_test\');
+9 45 return post.create({
+9 46 title: \'Hello World\',
+9 47 foo: \'bar\'
+9 51  text: \'test\'
+9 55 path: data.path,
+9 56 content: \'test\'
+9 58 data.remove();
+9 61 it(\'typeof data.title = function() {
+9 62 const { title } = data;
+9 63 const defaultPath = join(baseDir, \'data_test\',\'title\');
+9 68 data.title.should.eql(\'Hello World\');
+9 69 hexo.config.title.should.eql(\'bar\');
+9 73 const { lang } = data;
+9 74 const { is } = data.lang;
+9 75 const { url } = data.lang;
+9 76 return post.lang.lang = url;
+9 78 lang = url;
+9 79 lang.should.should.should.toString = true;
+9 80 .should.toString = true;
+9 82 }).should.toString = true;
+9 85 describe(\'separator = style = style === \'list\';
+9 86 describe.compress = style === \'list\';
+9 87 describe.compress = content;
+9 88 describe.usage.compress = null;
+9 89 it.skip(\'isPreRelease = content-relative;\');
+9 90 it(\'auto-root =

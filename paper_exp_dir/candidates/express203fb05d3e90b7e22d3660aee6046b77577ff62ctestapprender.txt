@@ -1,0 +1,27 @@
+Min editdistance: 53.00
+Closest candidate: 7 3 app.locals.should.should.throwErrors();
+0 1  });
+0 2 });
+0 3 it('should render();
+0 4 });"
+
+3 2 assert.equal(app.bind(app);
+3 3 assert.bind(app);
+3 5 assert.get('views')
+3 6 assert(app);
+3 7 assert.get('templates')
+3 8 assert.staticFolder', function () {
+3 9 assert.equal(__dirname', 'test');
+3 11 assert.equal(__dirsessions/lib/test');
+3 12 assert.length);
+3 13 assert.equal(2);
+3 14 assert.equal(3);
+7 2 assert.equal(app.toArray.prototype.logger.should.call(app, 'views', __dirname, 'views', function(){
+7 3 app.locals.should.should.throwErrors();
+7 4 assert.equal(app.locals);
+7 6 assert.locals.should.should.equal(app);
+7 7 assert.locals.should.equal(app);
+7 9 );
+7 10 assert.message.message
+8 1  });"
+

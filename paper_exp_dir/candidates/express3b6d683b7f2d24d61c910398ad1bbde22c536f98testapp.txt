@@ -1,0 +1,127 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 process.env.NODE_ENV = 'development';
+0 1 '
+
+1 1 process.env.NODE_ENV = 'development';
+1 2 })
+1 3 it('should expose app.locals', function(){
+1 4 var app = express()
+1 5 , blog = express()
+1 6 , blogAdmin = express();
+1 7 app.use('/blog', blog);
+1 8 blog.use('/admin', blogAdmin);
+1 9 app.use('/test', blogAdmin);
+1 10 blog.use('/test', blogAdmin);
+1 11 assert(!app.enabled('view cache')));
+1 12 blog.route.should.be.false;
+1 15 describe('in production', function(){
+1 16 process.env.NODE_ENV = 'production';
+1 19 process.env.NODE_ENV = 'test';
+1 21 it('should enable 'view cache' in use', function(){
+1 24 it('should not override when manually set' in app', function(){
+1 27 it('should override when manually set' in app', function(){
+1 30 it('should clear verbose messages in app', function(){
+1 41 })"
+
+2 1  this.error('shouldBe disabled by default', 'EACCESING.'); });
+2 4 it('should enable "view cache"', function(){ this.error('shouldBe disabled by default', 'EACCESING.'); });
+2 13 it('should enable 'view cache'', function(){ this.error('shouldBe disabled by default', 'EACCESING.'); });
+2 22 it('should enable 'chrome-delimited')
+2 25 .catch(function(function(e){
+2 26 assert(e{
+2 27 assert.should.should.not.not.contains(eACCESTSING);
+2 28 }).should.not.contains('aEACCES);
+2 29 assert(eACCES.should.should.should.contains('defaultOptions.defaultAdmin);
+2 30 assert.should.should.deepEACCES);
+2 31 });
+2 32 done();
+2 33 });"
+
+4 2 var app = express();
+4 4 app.enabled('view cache');
+4 5 app.use(function(req, res){
+4 6 res.end();
+4 8 app.use(function(err, req, res, next){
+4 9 res.send(err.message);
+4 12 app.use('/admin', blogAdmin);
+4 13 assert.response(app,
+4 14 { url: '/' },
+4 15 { body: 'Forbidden', status: 403 });
+4 20 { url: '/regular' },
+4 21 { body: 'hey', status: 200 });
+4 23 { url: '/blog' },
+4 24 { body: 'blog', status: 200 });
+4 26 { url: '/user/' },
+4 27 { body: 'user', status: 200 });
+4 29 { url: '/user/12' },
+4 30 { body: 'user 12', status: 200 });
+4 32 { url: '/user/ab' },
+4 33 { body: 'Cannot GET /user/ab' });
+4 38 { url: '/user/user/:abc' },
+4 39 { status: 200 });
+4 41 { url: '/user/user: null },"
+
+5 5 , api = express();
+5 8 res.send('Hello World\
+5 9 ');
+5 11 app.use('/contact', function(){
+5 15 app.use('/default', function(){
+5 19 app.use('/blog', blogAdmin);
+5 21 app.use('/root', function(){
+5 22 var blogPath = __dirname + '/views/app.path';
+5 23 var path = path
+5 24 .should.equal('/root');
+5 25 blogPath.should.equal('/root/');
+5 26 blogAdmin.path.should.equal('/root/');
+5 29 assert(!app.env.init, 'app.env.NODE_ENV') >= 2);
+5 30 assert(!blogPath.env.safe,'app.env.NODE_ENV') >= 3);
+5 31 assert.equal(blogPath.env.safe, 'app.env.NODE_ENV', 'test');
+5 40 return 'world' == 'yes' == 'yes' == 'yes' || 'yes' || 'yes' == 'yes';
+6 1 "
+
+7 1  this.app.use('invalid') })
+7 2 .done();
+7 4 it('should expose app.locals()', function(){
+7 10 app.locals.invalidate();
+7 13 .expect(blog.method).to.equal('install');
+8 1 != require('express/pages/view') })
+8 9 app.locals.user = { name: 'tobi' };
+8 10 app.use(function(req, res, next){
+8 13 app.get('/', function(req, res){
+8 14 res.send('Visit /user/0 or /users/0-2');
+8 16 app.get('/user/:user', function(req, res, next){
+8 17 res.send('user'+ req.params.user.name);
+8 21 { body: 'user tobi' });
+8 23 { url: '/user/0' },
+8 26 { url: '/user/1' },
+8 34 },
+8 35 'test.param()': function(){
+8 37 app.param('user', function(req, res, next, id){
+8 40 app.get('/user/user/: function(req, function(req, res){
+8 41 next('something', function(req, id){
+8 42 next('something', id){
+8 43 next();
+8 51 app.get('/user/: function(req, res){
+8 54 app.get('/user/:id', function(req, res){
+8 55 return ('/user/:user/:user', function(req, id){
+8 56 next('id', id);
+9 1  this.app.enabled('view cache'); })
+9 2 .on('error', function(err){
+9 3 process.nextTick(function(){
+9 5 process.exit({
+9 6 'browsers_change': 3,
+9 7 'locals_show': 'false'
+9 10 }, function(){
+9 13 'files_change': 3,
+9 14 'app_locals': {
+9 15 'setrollers': [],
+9 16 'names':
+9 17 'app.locals'
+9 18 }
+9 50 'app_locals': { 'app_locals': { 'app_locals: { '}
+9 56 }).n
+9 60 .use(app_router())
+9 65 assert.use(function(){
+9 66 it('should.use(app, blog, blogAdmin, app) {
+9 67 assert(': true);
+9 68 assert(blog.use('should.use())

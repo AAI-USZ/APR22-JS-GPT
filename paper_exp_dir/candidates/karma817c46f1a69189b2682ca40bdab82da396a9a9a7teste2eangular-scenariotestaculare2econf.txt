@@ -1,0 +1,29 @@
+Min editdistance: 18.00
+Closest candidate: 7 2 urlRoot: '/base/',
+0 1 marked = {
+0 2 createURL: function(s) {
+0 3 return s[0] || new URL(s);
+0 4 },
+0 5 schema: function(ans) {
+0 6 return ans.createObject("
+
+1 1 "
+
+7 1 marked = new marked.Renderer({
+7 2 urlRoot: '/base/',
+7 3 host: 'localhost',
+7 4 port: '9000',
+7 5 proxy: {
+7 6 web: function (req, res) {
+7 7 try {
+7 8 res.statusCode = 302;
+7 9 res.headers = req.headers || {};
+7 10 res.locals = res.locals || {};
+7 11 res.message = res.locals || 'false';
+7 12 res.body = res.body || '';
+7 13 done();
+7 14 } catch (e) {
+7 15 return done(new Error('No running ver for'+ '.'));
+7 16 }
+7 17 }, 1000);"
+

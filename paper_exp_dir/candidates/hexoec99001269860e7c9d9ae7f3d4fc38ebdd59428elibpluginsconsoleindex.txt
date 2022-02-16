@@ -1,0 +1,209 @@
+Min editdistance: 62.00
+Closest candidate: 2 4 {name: \'command', desc: \'List the information of the site.'},
+0 1  require('./generate'));
+0 2 console.register('help', \'Get help on a command.\', {
+0 3 init: true,
+0 4 desc: \'Get help on a command.\',
+0 5 usage: \'<h1>For you help, you can check the online docs: <h1>http://hexo.io/'.underline
+0 6 }, require('./help'));
+0 7 console.register('migrate', \'Migrate your site from other system to Hexo.', {
+0 9 usage: \'<type>\',
+0 10 arguments: [{name: \'type\', desc: \'Migrator type.\'}]
+0 11 }, require('./migrate'));
+0 12 console.register('new', \'Create a new post.\', {
+0 13 usage: \'[layout] <title>\',
+0 14 arguments: [{name: \'layout\', desc: \'Post layout. Use post, page, draft or whatever you want.\'}, require('./new'));
+0 15 console.register(\'publish\', \'Moves a draft post from _drafts to _posts folder.\', {
+0 16 usage: \'[layout] <filename>\',
+0 17 arguments: [{name: \'layout\', desc: \'Post layout. Use post, page, draft or whatever you want.\'}, require('./publish'));
+0 18 console.register(\'render\', \'Render the files with Markdown or other engines and tag.\', {
+0 19 usage: \'<file1> [file2] <file>\',
+0 20 arguments: [{
+0 21 path: \'/render.compile(render)
+0 22 }, require('./render\'));
+0 23 console.register(\'markdown\', \'Remove markdown from the draft posts folder.\', {
+0 27 }, require('./markdown'));
+0 28 console.register(\'render - isRenderable\', \'Renderable with Markdown or other engines.\', {
+0 30 arguments: [
+0 31 }
+0 32 }]
+0 33 }, require('./renderable'));
+0 34 console.register(\'path\', \'hiddenfile\', \'hiddenfile\', \'hiddenfile\', \'hiddenfile\', \'hiddenfile\', \'hiddenfile, url, sourcefile, sourcefile, themefile, window.js\'}, require(file,
+0 35 });'
+
+1 5 usage: \'<h1> [message]</h1>\
+1 6 \',
+1 8 name: \'command\',
+1 10 {name: \'name\', desc: \'Setting>\
+1 11 </div>\
+1 13 console.register('init', 'Create a new Hexo folder.', {
+1 15 desc: \'Create a new Hexo folder at the specified path or the current directory.',
+1 16 usage: \'<destination>\',
+1 18 {name: \'q, --source', desc: \'QUNIT\'},
+1 19 {name: \'--safe', desc: \'Disable all plugins and scripts'},
+1 20 {name: \'--silent', desc: \'Hide output on console'}
+1 21 ]
+1 22 }, require('./init'));
+1 23 console.register(\'migrate\', \'Migrate your site from other system to Hexo.', {
+1 27 {name: \'type\', desc: \'Migrator type.\'}
+1 30 console.register(\'new\', \'Create a new post.\', {
+1 33 {name: \'layout\', desc: \'Post layout. Use post, page, draft or whatever you want.\'},
+1 34 {name: \'title\', desc: \'Post title. Wrap it with quotations to escape.'}
+1 35 ],
+1 36 options: [
+1 37 {name: \'-r, --replace\', desc: \'Replace the current post if existed.\'},
+1 38 {name: \'-s, --slug\', desc: \'Post slug. Customize the URL of the post.\'},
+1 39 {name: \'-p, --path\', desc: \'Post path. Customize the path. Customize the path of the post.\'}
+1 42 }, require('./new
+1 43 options.filename_case: \'lib_case\', require(\\s/shared_files\', require(\\s/shared_files map);
+1 44 console.register();
+1 45 return Promise.register();'
+
+2 1  require('./generate"));
+2 2 console.register('listen', 'listen the first set of the server and the last set.', {
+2 4 {name: \'command', desc: \'List the information of the site.'},
+2 5 {name: \'url', desc: \'List the information of the site.'},
+2 6 {name: \'title', desc: \'Post title at the end of the server.'}
+2 8 }, require('./listen'));
+2 13 {name: \'type\', desc: \'Migrator type. String.'},
+2 14 {name: \'type\', desc: \'Migrator type. String.'}
+2 20 {name: \'layout\', desc: \'Post layout. Use post, page, draft or whatever you want.'},
+2 24 {name: \'-r, --replace\', desc: \'Replace the current post if existed.'},
+2 25 {name: \'-s, --slug\', desc: \'Post slug. Custom the URL of the post.\'},
+2 26 {name: \'-p, --path\', desc: \'Post path. Customize the path of the post.\'}
+2 28 }, require('./new\'));
+2 29 console.register(\'publishlish\', \'Moves a draft post from _drafts to _posts folder.\', {
+2 33 {name: \'filename\', desc: \'Post filename. "hello-world" for example.\'}
+2 35 }, require('./publish)
+2 36 console.register(\'markdownline\', \'Remove a draft post from _post folder.\', {
+2 37 usage: \'Post prefix: <archive> tag instead of the draft post_asset_asset_folder> tag to the draft post.\'}
+2 38 ]\'}
+2 39 ], require('./post_folder) <file_folder> tag: <file>\',
+2 40 }, require('./archive)
+2 41 }, require('./index_folder>
+2 42 ]).toArrayify()'
+
+3 2 console.register('listen', 'List the information of the site', {
+3 3 desc: 'List the information of the site.',
+3 4 usage: \'<type>',
+3 6 {name: \'type', desc: \'Available types: page, post, route, tag'},
+3 7 {name: \'type', desc: \'Available types: post, page, post, route, tag'}
+3 14 {name: \'type\', desc: \'Migrator type. String. Wrap it with other system to escape.'}
+3 17 console.register(\'new\', \'Create a new post. Wrap it with other system to ignore tab.', {
+3 20 {name: \'type\', desc: \'Post slug. Custom the type of post.\'},
+3 21 {name: \'type\', desc: \'Post slug. Customize the type of post.\'}
+3 23 }, require('./new'));
+3 28 {name: \'filename\', desc: \'Post filename. Use post, page, draft or whatever you want.\'}
+3 30 }, require('./publish'));
+3 31 console.register(\'render\', \'Render the files with renderer plugins.\', {
+3 32 usage: \'<template>\',
+3 35 {name: \'filename\', desc: \'Post layout. Use post, page, drafts, post_number, tag.123456'}
+3 38 }, require('./render'));
+3 39 console.register(\'markdown\', \'<html_tag\', \'Render the files with space = requirejs = requirejs and tag.load_tag.js.js.js to escape.js to escape.js.js to escape.js.minimpluckdown.js to escape.js to escape.s.minify as html.minify.js.', escape.js.js with space-tag.minify().minify().split(3},'markdown.js.split(6}).join(\'\')]]
+3 40 }, require('./raw_tojs = require(\\s*).uniq).toString());
+3 41 console.register(\'link_to\', \'<img\', \'<link>\', \'<link>\', \'<img src="http://icons = require(.filename-tag-js.png
+4 2 console.register('help', \'Get help on a command.\', { cwd: ctx.page.title })
+4 3 , {
+4 6 usage: \'[destination]\'
+4 7 }, require('./help\'));
+4 8 console.register('init', 'Create a new Hexo folder at the specified path or the current directory.', {
+4 9 cwd: ctx.public_dir
+4 11 console.register('list', \'List the information of the site', {
+4 12 desc: \'List the information of the site.\',
+4 15 {name: \'type\', desc: \'Available types: page, post, route, tag'},
+4 30 }, require('./list'));
+4 39 usage: \'Create a new post,\',
+4 40 usage: \'<body>\',
+4 43 }, require('./put
+4 45 body
+4 46 separator/separator\'should now.join(\'s\', \'exclude\')
+4 47 }, require(tag\'s
+4 48 }, require(tag
+4 49 })
+4 50 ]).returns\'
+
+5 2 console.register('help', \'Get help on a command.\', {init: true}, require('./help'));
+5 11 arguments: [{name: \'type\', desc: \'Migrator type. String'}, require('./migrate')]
+5 13 console.register('newigrate\', \'Create a new post.\', {
+5 15 arguments: [{name: \'type\', desc: \'Post layout. Use post, page, draft or whatever you want.\'}, require('./new'));
+5 16 console.register('new_post\', \'Create a new post.\', {
+5 19 console.register('publish\', \'Moves a draft post from _drafts to _posts folder.\', {
+5 22 console.register('render\', \'Render the files with Markdown or other engines and post.\', {
+5 23 usage: \'<file1> [file2]\',
+5 25 {name: \'file\', desc: \'Post layout. Use post, page, draft or whatever you want.\'},
+5 26 {name: \'filename: \'filename\', desc: \'Post filename. "hello-answ" for example.html.html.\'}
+5 29 console.register(\'render_drafts\', \'Render the files with Markdown/angular-engine\', {
+5 30 usage: \'Render the files with Markdown/angular.js.js with Markdown.js.js with post.minify.minify(content-embedded-templates.js with Markdown.minify(content-templates)\', {
+5 31 usage: \'UTF-8\'}, require(content-8).minify(content-templates)\', \'UTF-8).minify(content-8)\', \'No-contents.js: use post and \'&hellipart/unimPLEMENT(-{0} for your posts>\'}, require(\\dashed)\'));
+5 32 }, require('./renderable)\', \'3)\'
+
+6 4 }, require('./generate'));
+6 6 init: true
+6 8 console.register('init', require('./init'));
+6 9 console.register('migrate', require('./migrate'));
+6 10 console.register('new', require('./new'));
+6 11 console.register('publish', require('./publish'));
+6 12 console.register('markdown', require('./markdown'));
+6 14 console.register('newe', require('./new'));
+6 15 console.register('version', require('./version'));
+6 16 console.register('mime', require('./mime'));
+6 17 console.register(\'is_current', require('./is_current'));
+6 18 console.register('is_home', require('./is_home'));
+6 19 console.register(\'category', require('./category'));
+6 20 console.register('tag', require('./tag'));
+6 21 console.register('archive', require('./archive'));
+6 22 console.register('category', require('./category'));
+6 23 console.register('home', require('./home'));
+6 24 console.register(\'post\', require('./post'));
+6 25 console.register(\'tag\', require('./tag'));
+6 26 console.register('asset_link', require('./asset_link'));
+6 27 console.register(\'asset_path\', require('./asset_path'));
+6 28 console.register(\'tag_link\', require('./tag'));
+6 29 console.register(\'archive_link\', require('./archive_link'));
+6 30 console.register(\'category_link\', require('./category_link'));
+6 31 console.register(\'tag_link\', require('./tag_link'));
+6 32 console.register(\'\');
+6 33 return Promise.all([
+6 34 fs.exec([
+6 35 process_](ctx),
+6 36 process_]).exec(args => {
+6 37 module.exists(args).then(exist => {
+6 38 if (exist) return Promise.resolve(args.exists(args);
+6 39 })).then(args).then(exist) return resolve(args);
+6 40 }).thenReturn(args);
+6 41 }).thenReturn(ctx.unify(args);
+6 42 }).thenReturn(args).thenReturn(ctx.unify(args);
+6 44 }).thenAll(args).thenReturn(args);
+6 45 }).thenReturn(ctx));
+6 46 });
+6 48 };'
+
+8 1  require('./generate
+8 2 }], {
+8 3 console: ctx.extend.console,
+8 5 message: "Generate static files with help each(function() {
+8 6 console.log.apply(console, [this.config]).log.apply(this, [this.config]);
+8 7 }));
+8 8 console.register('help', \'Get help on a command.', {
+8 10 desc: \'Get help on a command.'
+8 20 arguments: [{name: \'type\', desc: \'Available types: page, post, route, tag'"}]
+8 22 console.register(\'migrate', \'Migrate your site from other system to Hexo.', {
+8 25 arguments: [{name: \'type\', desc: \'Migrator type.\'}
+8 29 arguments: [{name: \'layout\', desc: \'Post layout. Use post, page, draft or whatever you want.\'}, require('./new\'));
+8 32 arguments: [{name: \'layout\', desc: \'Post layout. Use post, page, draft or whatever you want.\'}, require('./publish)
+8 34 console.register(\'markdown\', \'<path> <strong>\', {
+8 35 usage: \'Generate. Use post.length>\',
+8 37 }, require('./strong>
+9 6 {name: \'type', desc: \'Available types: page, post, route, tag'}
+9 8 }, require('./listening'));
+9 13 {name: \'type', desc: \'Migrator type.\'}
+9 19 {name: \'type\', desc: \'Post layout. Use post, page, draft or whatever you want.\'},
+9 25 {name: \'-p, --path\', desc: \'Post path. Custom the path of the post.\'}
+9 32 {name: \'filename\', desc: \'Post filename. Customize the path of the post.\'}
+9 35 console.register(\'markdown\', \'Remove markdown from files with marked posts with marked names to lowercase.\', {
+9 36 usage: \'<!--\',
+9 38 {name: \'layout: \'Post layout\', desc: \'Post layout. Use post_asset_asset_folder\'}
+9 39 ]\',
+9 41 }, require('./markdown}, require('./category)
+9 42 ]).register(this);
+9 43 console.register(console.register(console.register(skip);

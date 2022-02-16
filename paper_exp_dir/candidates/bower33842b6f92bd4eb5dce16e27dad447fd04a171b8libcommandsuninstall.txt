@@ -1,0 +1,11 @@
+Min editdistance: 27.00
+Closest candidate: 0 1 "
+
+0 1 "
+
+5 1 uninstall.completion = function () {
+5 2 };
+5 3 uninstall.completion.completion.completion.completion = function (argv) {
+5 4 return uninstalled.completion.completion.completion.comparator === '*';
+5 5 };"
+

@@ -1,0 +1,356 @@
+Min editdistance: 10.00
+Closest candidate: 8 1  = require('events'),
+0 1  = require('events').EventEmitter;
+0 2 function transform_default(value){
+0 3 return value instanceof Date? value : { value: new Date(value); };
+0 4 }
+0 5 function Date(value){
+0 6 return value instanceof Date? value.toString() : value;
+0 8 module.exports = function(date, format){
+0 9 if (!(date instanceof Date)){
+0 10 return new Date(Number(new Date) - 1, format));
+0 11 } else {
+0 12 date = new Date(Number(new Date) + 1);
+0 14 return new Date(value);
+0 15 };"
+
+1 1  = require('os').EventEmitter;
+1 2 var HexoError = module.exports = function(msg){
+1 3 Error.call(this);
+1 4 Error.captureStackTrace(this, arguments.callee);
+1 5 this.message = msg;
+1 6 this.name = 'Error';
+1 7 this.message = this.name + ':'+ msg;
+1 8 this.path = this.localConfig.settings.path;
+1 9 this.message = util.format(this.message, '%s: %s', chalk.magenta(this.message), chalk.yellow);
+1 10 this.localConfig.log = function(){
+1 11 };
+1 13 HexoError.prototype.__proto__ = EventEmitter.prototype;
+1 14 HexoError.prototype.call(this, message);
+1 15 HexoError.prototype.setLevel = function(name, level){
+1 16 this.levels[name] = +level;
+1 17 return this;
+1 19 HexoError.prototype.use = function(name, callback){
+1 20 if (this.levels[name]) return callback();
+1 21 var self = this;
+1 22 return this.levels[name] || this.settings.default_size || {};
+1 23 return _.extend({
+1 24 levels: this.levels,
+1 25 date: new Date()
+1 26 }, function(){
+1 27 return self.emit('error', self.emit.callback);
+1 28 });
+1 30 HexoError.prototype.useSync = function(path){
+1 31 return!!data.protocol;
+1 33 HexoError.prototype.locals = function(){
+1 34 var locals = this.locals;
+1 35 locals.set('posts', this.posts);
+1 36 locals.set('pages', this.pages);
+1 37 locals.set('categories', this.categories);
+1 38 locals.set('tags', this.tags);
+1 39 locals.set('data', {};
+1 40 return locals;
+1 43 HexoError.prototype.call(this, eventEmitter.prototype);
+1 44 HexoError.prototype.use = function(plugin, options){
+1 45 if (this.env.init) return;
+1 46 var plugin = this.env.plugin;
+1 47 if (!plugin) return;
+1 48 var defaults = {
+1 49 back: this.get('home', 'posts'),"
+
+2 1  = require('events');
+2 2 var File = module.exports = function(options){
+2 3 options = _.extend({
+2 4 path: this.source
+2 5 }, options);
+2 6 this.source = options.source;
+2 7 this.path = path;
+2 9 File.prototype.__proto__ = EventEmitter.prototype;
+2 10 File.prototype.call(this, options, callback);
+2 11 if (this.target === '*'){
+2 12 return callback();
+2 14 this.source = this.source;
+2 18 File.prototype.set = function(path, callback){
+2 19 if (this.target!== '*'){
+2 20 this.target = 'create';
+2 22 if (this.path){
+2 23 var _this = this;
+2 24 this.path = _path;
+2 25 _this.replace(/\\/{2,}/g, '/');
+2 26 this.tag = _this.tag;
+2 28 _this.path = _path;
+2 30 _this.path = '/';
+2 33 return this.path.substring(0, path.length - extname(path).length) + '.' + this.tag;
+2 35 File.prototype.render = function(options, callback){
+2 36 if (!callback) callback = options;
+2 37 options = {};
+2 39 var extname = pathFn.extname(this.path),
+2 40 name = path.substring(0, extname.length);
+2 41 options[extname] = options[extname] || this.path;
+2 42 return this.render.render({
+2 43 path: this.source,
+2 44 text: _this.path
+2 47 File.prototype.renderSync = function(options){
+2 51 if (extname) return escape(this.path, _this.source);
+2 52 if (this.tag) return escape(this.path + '.' + this.tag);
+2 53 return this.renderSync[extname];
+2 55 File.prototype.changed = function(data){
+2 56 if (this.source){
+2 57 this.source = data.source;
+2 61 if (data.changed){
+2 62 return this.save(data.changed);
+2 64 this.insert(data);
+2 67 File.prototype.update = function(data, options){
+2 70 text: this.path
+2 72 if (options.save) return this.save(data.changed);
+2 74 File.prototype.replace = function(data, options){
+2 79 var sourceId = this.source.substring(0, sourceId.length);
+2 80 var sourceDir = this.source.substring(sourceDir.length);
+2 81 var twitterId = options.substring(0, twitterId.length);
+2 82 var date = options.length = options.length;
+2 83 var + 1;
+2 84 if (!options.for (options.length && 1){
+2 85 options.forEach(function(){
+2 86 var i = options.key = _this.replace(/\\w, i, i){
+2 87 this.replaceLanguages.getHome/i){
+2 88 lang = _this.extension = _this.isUndefinedLanguages/i? _this.toLowerCase() : '';
+2 89 lang: '';
+2 91 options.language = _this.language = '';
+2 92 options.language = '';
+2 94 if (!options.key = options.language = _this.language = _this.toLowerCase();
+2 95 if (key == null){
+2 96 var pageId){
+2 97 this.caption = _this.caption = '';\
+3 2 function versionConsole(args){
+3 3 if (!args._.length){
+3 4 return this.call('help', {_: ['version', 'Display version'], version: version});
+3 6 var versions = _.extend({
+3 7 '0.0.0': { 'b', '0.0.0': { 'b', '0.0.0': { 'b', '0.0.0': { 'c', '0.0.0': { 'a', 'b', '0.0.1': { 'b', '0.0.1': { 'c', '0.0.2': { 'a', 'b', '0.0.3': { 'c', '0.0.4', 'b', '0.0.5': { 'f', 'l', 'a', 'f', 'd', 'u', 'f', 'd', 'u', 'f', 'g', 'h', 'ico', 'pc', 'pic',
+3 8 'vimeo.short': function(){
+3 9 return this.video.replace(/\
+3 10 $/, '');
+3 11 },
+3 12 'svimeo.html': function(){
+3 16 'svimeo.ico': function(){
+3 21 module.exports = versionConsole;"
+
+4 2 var store = {
+4 3 generator: [],
+4 4 renderer: {},
+4 5 helper: {},
+4 6 preprocessor: [],
+4 7 tag: {}
+4 9 exports.generator = {
+4 10 list: function(){
+4 11 return store.generator;
+4 13 register: function(method){
+4 14 store.generator.push(method);"
+
+5 2 function findData(data, source){
+5 3 if (!source.length) return true;
+5 4 for (var i = 0, len = source.length; i < len; ++i){
+5 5 if (data.indexOf(source[i])!= -1) return true;
+5 7 return false;
+5 9 function compose(obj, indentation){
+5 10 if (indentation){
+5 11 obj = indentation;
+5 13 obj = obj.replace(/\
+5 14 /g, '\
+5 15 ' + indentation);
+5 17 return obj;
+5 19 function json2decomposed(key, value){
+5 20 var split = key.split('.'),
+5 21 cursor = obj;
+5 22 for (var i = 0, len = split.length; i < len; i++){
+5 23 var item = split[i];
+5 24 cursor = cursor[item];
+5 25 if (cursor == null) return false;
+5 27 return cursor;
+5 29 module.exports = function(source){
+5 30 var content = source.replace(/^\\/+/, '');
+5 31 if (content.length === 0){
+5 32 return true;
+6 7 tag: {},
+6 8 console: {}
+6 15 store.generator.push(method);
+6 18 var rendererFn = exports.renderer = {
+6 20 return store.renderer;
+6 22 register: function(tag, output, method, sync){
+6 23 if (sync){
+6 24 store.rendererSync[tag] = method;
+6 25 store.rendererSync[tag].output = output;
+6 26 store.renderer[tag] = function(){
+6 27 var args = _.toArray(arguments),
+6 28 callback = args.pop();
+6 29 callback(null, method.apply(null, args));
+6 32 store.renderer[tag] = method;
+6 34 store.renderer[tag].output = output;
+6 37 exports.rendererSync = {
+6 39 return store.rendererSync;
+6 41 register: function(tag, output, method){
+6 42 rendererFn(tag, output, method, true);
+6 45 exports.tag = {
+6 47 return store.tag;
+6 49 register: function(tag, method, ends){
+6 50 store.tag[tag] = function(indent, parentBlock, parser){
+6 51 var args = this.args,
+6 52 tokens = this.tokens.join(''),
+6 53 match = tokens.match(/^\
+6 54 (\\t*)/)[1].length,
+6 55 indent = match? match[1].length : 0,
+6 56 raw = [];
+6 57 tokens.replace(/^\
+6 58 \\t*/, '').replace(/\
+6 59 \\t*$/, '').split('\
+6 60 ').forEach(function(line){
+6 61 if (indent){
+6 62 raw.push(line.replace(new RegExp('^\\\\t{' + indent + '}'), ''));
+6 64 raw.push(line);
+6 67 var result = method(args, raw.join(', '));
+6 68 if (!result) store.tag[tag] = result;
+6 71 exports.deployer = {
+6 73 return store.deployer;
+6 75 register: function(tag, method){
+6 76 store.deployer[tag] = method;
+6 79 exports.processor = {
+6 81 return store.processor;
+6 84 store.processor.push(method);
+6 87 exports.helper = {
+6 89 return store.helper;
+6 92 store.helper[tag] = method;
+6 95 exports.console = {
+6 97 return store.console;
+6 100 store.console[tag] = method;
+6 106 exports.processor: {
+6 107 list: {
+6 112 store: function(){
+6 116 store: {},
+6 121 store: {};
+6 130 exports.helper: {
+6 133 exports.list = _.list = _.list = _.list_.toArray()
+7 6 preprocessor: {},
+7 9 var proto = module.exports = function(options) {
+7 10 options = options || {};
+7 11 var locals = {
+7 12 page: {},
+7 13 path: {},
+7 14 rule: {}
+7 16 if (!options.path) return;
+7 17 var getTree = function(packages, subPackages, result) {
+7 18 result = result || {};
+7 19 _.each(subPackages || packages, function(pkg, name) {
+7 20 result[pkg.name] = {};
+7 21 Object.keys(pkg.json.dependencies || {}).forEach(function(name) {
+7 22 result[pkg.name][name] = {};
+7 24 var subPackages = {};
+7 26 subPackages[name] = packages[name] || new Package(name, null);
+7 28 generator.add(subPackages);
+7 29 return result;
+7 31 var generatePreprocessor = function(config, basePath) {
+7 32 var preprocessors = this._precompactPreprocessors || {};
+7 33 var file, args = [];
+7 34 this.frameworks = ['jasmine'];
+7 35 this.basePath = basePath;
+7 36 frameworks.forEach(function(framework) {
+7 37 this._injector.get('framework:' + framework);
+7 40 this.prototype.main = function(name) {
+7 41 return store[name];
+7 43 this.extensions = {
+7 44 '.js': 'preprocessor',
+7 45 '.html': 'html2js'
+7 47 this.preprocessors = _.extend({
+7 48 '**/*.js': this.name,
+7 49 '**/*.html': this.name
+7 51 this.reporters = ['progress', 'coverage'];
+7 52 this.db = {
+7 53 uniquify: this.db,
+7 54 connect: this.db,
+7 55 '**/*.json': this.name
+7 57 this.db.connect(this);
+7 59 this.db.prototype.__proto__ = EventEmitter.prototype;
+7 60 this.db.settings = this.db.settings;
+7 61 this.set('home', '/');
+7 62 this.set('env', process.env.NODE_ENV || 'development');
+7 63 this.use(connect.query());
+7 64 this.locals = function(obj) {
+7 65 for (var key in obj) {
+7 66 this.locals[key] = obj[key];
+7 69 this.locals.settings = this.settings;
+7 70 this.configure('production', function() {
+7 71 this.enable('view cache');
+7 75 Generator.prototype.specSuccess = function() {
+7 76 var that = new Function(){
+7 77 throw new Error('require(this.prototype);
+7 78 return this.prototype.require('asset')('mpath');
+7 79 return that._analyse()')('s/'s/'s/exports/')('s/')('solutions/')('s');
+8 1  = require('events'),
+8 2 should = require('chai').should();
+8 3 describe('number', function(){
+8 4 var number = require('../../../lib/plugins/helper/number');
+8 5 describe('default', function(){
+8 6 it('default', function(){
+8 7 number.number_format = function(num, options){
+8 9 precision: false,
+8 10 delimiter: ',',
+8 11 separator: '.'
+8 13 var before = moment();
+8 14 var after = moment();
+8 15 var delimiter = options.delimiter;
+8 16 if (delimiter){
+8 17 var beforeArr = [],
+8 18 beforeLength = before.length;
+8 19 if (beforeLength > beforeLength){
+8 20 beforeArr.forEach(function(item){
+8 21 item = item.substr(0, item.length - 3);
+8 22 if (custom.isHiddenFile(item)){
+8 23 item.substr(3, 3);
+8 24 break;
+8 28 before = beforeArr.join(delimiter);
+8 30 it('precision', function(){
+8 38 var afterLength = after.length;
+8 39 if (beforeFirst) beforeArr.forEach(function(item){
+8 41 item = item.substr(3);
+8 46 if (afterLength > precision){
+8 47 var afterLast = after.length,
+8 48 last = before + 1;
+8 49 afterResult = after.substr(0, precision - 1);
+8 50 afterResult = after.substr(0, precision + 1);
+8 52 afterResult = after;
+8 53 for (var i = beforeFirst; i < beforeLength; i++){
+8 54 afterResult += after[i];
+8 57 it('delimiter', function(){
+8 58 number.number_format = function(num){
+8 62 afterResult += after[pre];
+8 65 var after_lines = after.length;
+8 67 after_lines.forEach(function(line){
+8 68 var after = line.length,
+8 69 last = line.substr(0, 1);
+8 70 array.remove(after_lines[last];
+8 73 it('separator', function(){
+8 75 var b=1,
+8 76 est = '';
+8 79 var after = line.substr(1);
+8 80 var id = moment(data.id || data._id);
+8 81 if (b < a) {
+8 83 var after_b = line.substr(0, 1);
+8 84 var after_b = line.substr(b);
+8 85 for (b < a;
+8 87 after_lines.push(b);
+8 90 it('separator');
+8 92 describe('uninstall', function(){
+8 93 var num = 1;
+8 94 var env = num;
+8 95 it('formatTime = 100;
+8 96 it('formatTime formatTimeInterval = formatTime = formatTimeInterval);
+8 97 var format = formatTime = function(){
+8 98 var time = formatTime = formatTimeInterval = function(formatTimezone){
+8 99 var mins = arguments = 60000;
+8 100 var secs = /=12{1, 3;
+8 102 var formatTimeInterval = formatTime = formatTime = function(time){
+8 103 var mins = this.toDate();
+8 104 var b=1;
+8 105 var formatTime = formatTime = format
+9 7 post: [],
+9 10 var proto = module.exports = function(options){
+9 12 function router(req, res, next){"
+

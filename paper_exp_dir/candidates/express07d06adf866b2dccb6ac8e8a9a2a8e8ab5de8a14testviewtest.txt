@@ -1,0 +1,84 @@
+Min editdistance: 30.00
+Closest candidate: 6 6 function test1Server(){
+0 1 assert.response(app,
+0 2 assert.get(\'/pets
+0 3 id
+0 4 id: function(){ url: function(){ url: function(){ url: \'/pets
+0 5 return this.id: \'http://pets\' },
+0 6 return this.id
+0 7 });
+0 8 assert.response(app, 'http://pets
+0 10 assert.id: function(){ url: \'pets\' },
+0 11 assert.id
+0 12 }
+0 13 },
+0 14 function pluralizeUrlHelper:
+1 3 app/pets
+1 4 , '<pixtures\', function(){ url: {\ url: '<pixtures: \'<pixtures:\
+1 5 ixtures:\
+1 6 app.pixtures:\
+1 7 app.pixtures\
+1 8 ixtures:\\s\', url: '\
+1 9 ', url: '\
+1 10 app.html.html\
+1 11 \' },
+1 12 \' });
+1 13 assert.response(app:\
+1 14 \'test #pixtures:\
+1 15 \
+1 16 ', 'test #pixtures
+2 5 \'/pets
+2 6 \'/pets/h1', function(){
+2 7 get(){
+2 8 get('/s://pets\', url: 'http://pets\\s\' }, function(){
+2 9 get(\'/pets:\\s\' }, function(){ return replies\', '123456 forEach(; return true; })
+2 12 assert.returns
+2 13 assert.response(app, '1' });
+3 5 assert.join("select(){
+3 6 app.error(){
+3 7 app.error(function(err, 'NotFoundError(){
+3 8 return callback(err, app){
+3 9 assert.get(\'should have failed to select app");
+3 10 assert.res.halt();
+3 13 })(err.expect(err, '
+4 4 , '// create()
+4 5 // create()
+4 11 assert.response.assert.should.should.response(app,
+4 13 .response(app,
+4 14 .locals)
+4 15 );
+4 17 assert.
+5 4 , '/pets
+5 5 , '<li>', '<p>', '<p>', '<p>We have 3 cool Cool Pets\
+5 6 </li>', '<li>', '<p>Jane', '<p>3 cool '<p>', 'Jane', '3 cool' });
+5 7 assert.response: function(app) { return; return; });
+5 9 assert.get(\
+6 6 function test1Server(){
+6 7 return done(app, callback);
+6 8 assert.server, server, server, done);
+6 10 function done;
+6 11 function done(err, server, server, done) {
+6 12 assert.onFinished(function(function(err, end){
+6 13 assert.serverFinished(err
+7 2 assert.get(\'/pets/pets\', function(){
+7 3 assert.length, '// '//', '//' }, 2');
+7 5 assert.response(app, '#pets\
+7 7 assert.length, '1s
+7 9 assert.response(app, '1', '1s1');
+7 10 assert.response(app, '2');
+7 11 assert.response(app2');
+7 12 assert.length,'s1);
+8 5 return this.id() {
+8 6 return this.id },
+8 10 assert.response(app, {
+8 11 return {
+8 12 id: \'<p>\', url: \'<p>p>For: \'<h1>For:p>We have found that you.</p>', name</p>\', headers: function
+9 4 , '#pets\', function(){
+9 5 return html });
+9 6 return null;
+9 7 assert.should.response(app, '<pets
+9 9 id: \'<p>We have 3 cool;\',
+9 12 }, ';
+9 14 assert.response: function should.response(app,
+9 15 assert.body,
+9 17 assert.length,

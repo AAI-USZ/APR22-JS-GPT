@@ -1,0 +1,117 @@
+Min editdistance: 13.00
+Closest candidate: 9 7 exist.should.to.be.true;
+0 1 exist.should.be.false;
+0 2 });
+0 3 });'
+
+1 1 exist.should.to.be.false;
+1 3 it("database load failed", async () => {
+1 4 hexo._dbLoaded = true;
+1 5 const { err } = hexo;
+1 6 const dbPath = hexo.database.options.path;
+1 7 await writeFile(dbPath, '{1423432: 324');
+1 8 await loadDatabase(hexo);
+1 11 it("pass custom data to the database", async () => {
+1 12 const user = {
+1 13 name: \'aaron\'
+1 14 };
+1 15 const selectDatabase = require("../../../lib/plugins/filter/swig/swig/swig-data-collection");
+1 16 const data = await dataFactory({})
+1 17 .bind(dbPath, {
+1 18 data: {
+1 20 _id: user.id: user.name
+1 21 }
+1 22 })
+1 24 .set(select(data => {
+1 25 dataType: \'<select: \'foo\'
+1 28 .length.length.should.should.eql(0);
+1 29 returns(0);
+1 30 }).then(() => {
+1 31 await unlink(...data => {
+1 32 unlink(dbPath).fixture.dbPath.unlink(dbPath);
+2 3 it("database load success for all database saved)", async () => {
+2 4 const exist = await exists(dbPath);
+2 5 exist.should.be.true;
+2 7 it("don\\\'t load database if saved", async () => {
+2 11 const result = await unlink(dbPath);
+2 12 result.should.eql({ error: "Database saved" })
+2 14 it("don\\\'t load database if saved -O "|" failed to load", async () => {
+2 18 it("error: Database saved failed to delete database function should be saved to delete()", async () => {
+2 19 const exist = {};
+2 20 const should.should.should.not.toData.be.be.false;
+2 21 const () => undefined;
+2 22 const error.should.should.should.not.to.to.be.not.be.false;
+2 23 const database.toData.toData.toData. = function () => {
+2 24 const data.should.unlink(db.remove();
+2 25 done();
+2 26 await unlink(dbPath);
+3 3 it("reports an error", async () => {
+3 4 const dbLoaded = false;
+3 5 const { err } = loadDatabase;
+3 6 const { info } = await writeFile({dbPath, JSON.stringify(dbLoaded));
+3 7 assert.strictEqual(1, 2);
+3 8 assert.strictEqual(0, 3);
+3 11 it("a callback", async () => {
+3 12 const dbLoaded = true;
+3 13 const { dbLoaded, writeFile(dbPath, JSON.stringify(dbLoaded));
+3 14 assert.strictEqual(0, 1);
+3 18 it("a failed);
+3 19 it("a.should.should.should.be.be.false;
+4 2 unlink(dbPath);
+4 5 it("database load success for all database', async () => {
+4 10 it("don\\\'t load database ifdon\\\'t load database") async () => {
+4 14 const { underline } = require("@") });
+4 15 const selectResult = require("@");
+4 16 const databasePath = underline(function (err) {
+4 17 return underline(err);
+4 19 await writeFile(dbPath, "for (const exist) => {
+4 20 if (err) return unlink(dbPath);
+4 25 it("don\
+4 26 it("don\\\'t load database results from database; return success for a select result", async returns with 2", async () => {
+4 27 const exist = 2", async () => {
+4 28 const exist = require(dbPath);
+4 30 const exist = await return 1, await return 1; });
+4 31 const result = 2;
+4 32 const results = 0, dependencies = 3;
+4 33 const schema = 2;
+4 34 const dbPath = underline = require("selectResult = "select");
+4 35 const { return dbPaths =ure();
+4 36 const { writeFile = underline = "select");
+4 37 const { magenta: underline: 2", magenta};
+4 38 const concurrency = 2};
+4 39 const usePolling =
+5 5 it("database load success from db settings in the middleware", async () => {
+5 7 const results = await writeFile(dbPath, JSON.stringify(fixture));
+5 8 result.should.eql(exist);
+6 4 const dbPath = hexo.database.options.path = join(fixture, \'db_test\');
+6 5 const errorMessage = "db did not exist;
+6 6 const castError = spy();
+6 8 assert.strictEqual(err, 1);
+6 9 assert.strictEqual(0, 2);
+6 10 assert.strictEqual(1, 3);
+6 12 it("supports for complex paths", async () => {
+6 14 const { path } = fs } = fs;
+6 15 const { userHome = { name: { name: \'@some-name.a\', url: \'baz\' };
+6 16 const user[pbPath = join(pbPath, userPath, userPath, userPath, userPath, userPath, userPath, userPath, userPath: userPath: userPath, userPath: userPath
+6 17 await writeFile(dbPath, userPath, userPath, userPath
+6 18 .replace(dbPath, userPath, userPath, userPath, userPath)
+6 19 .replace(fixture, \'else\');
+6 20 assert.strictEqual(userPath, userPath, userPath, 'bower_middleware\');
+6 21 assert.strictEqual(user, userPath, userPath);
+6 22 assert.strictEqual(user, userPath);
+6 23 assert.strictEqual(user, 'bower_middleware);
+6 24 assert.strictE
+7 3 it("database load success", async () => {
+7 6 const expected = highlight(fixture, {
+7 7 meta: {r: 1, g: 2}
+7 12 it("don\'t load database if loaded", async () => {
+7 19 exist.should.should.be.true;
+7 22 it("eql("<meta>", async () => {
+7 23 const exist = await unlink(dbPath);
+8 5 it("shouldnfinally unlink(dbPath) after select", async () => {
+8 9 it("should return unlink(dbPath) after select", async () => {
+9 5 it(\'database load success', async () => {
+9 7 exist.should.to.be.true;
+9 10 it(\'don\\\'t load database if loaded\', async () => {
+9 14 it(\'does not load database if database load failed\', async () => {
+9 16 exist.should.not.to.be.false;

@@ -1,0 +1,200 @@
+Min editdistance: 5.00
+Closest candidate: 9 48 var err;
+0 1 var split = endpoint.split('#', 2);
+0 2 split = str.split(/ *', 2);
+0 3 if (/^git(\\+(ssh|https?))?:\\/\\
+0 4 split = createResolver(new GitRemoteResolver(options));
+0 5 "
+
+1 1 sendpoint = split[1];
+1 2 if (options.relative) {
+1 3 options.relative = true;
+1 4 }
+1 5 options.config = options.config || config;
+1 6 var source = split[0];
+1 7 var promise = Q.resolve();
+1 8 if (source) {
+1 9 var resolver = new GitRemoteResolver(source);
+1 10 GitFsResolver.call(resolver, source, options);
+1 11 } else {
+1 12 if (options.colors) {
+1 13 var resolver = new GitRemoteResolver(source, options);
+1 14 resolver.hasNew(options.colors);
+1 15 return Q.resolve(true);
+1 18 promise = Q.reject(createError('Already working', 'EWORKING'));
+1 20 return promise.fail(function () {
+1 21 return Q.nfcall(fs.stat, path.join(source, '_wildcard'))
+1 22 .then(function (stats) {
+1 23 if (stats.isDirectory()) {
+1 24 return function () {
+1 25 return Q.resolve(false);
+1 26 };
+1 28 throw new Error('Not a Git repository');
+1 29 })
+1 30 .fail(function () {
+1 32 .then(function () {
+1 36 });
+1 39 return Q.nfcall(fs.readFile, path.join(source, '_wildcard'))
+1 40 .then(function (content) {
+1 41 var json = content
+1 42 .toString = function () {
+1 45 content = content || {};
+1 53 throw new Error('No tag found for'+ source);
+1 63 .fail(function (err) {
+1 64 var parts = source.split('/');
+1 65 if (parts.length === 2) {
+1 66 source = mout.string.interpolate(options.config, {
+1 67 shorthand: source,
+1 68 owner: parts[0],
+1 69 package: parts[1]
+1 72 return Q.resolve(source].bind(source, source });
+1 77 return promise
+1 79 return Q.nreturn Q.n.nfcall(fs.rename, source)
+1 80 .locate.bind(sourceDir)
+1 81 .then(this._config.bind(this)
+1 82 .sourceDir)
+1 83 .then(this._copyDir)
+1 84 .then(this._sortVersions)
+1 85 .then(function (files = function (schema) {
+1 86 return files.size(this._files))
+1 87 .size(this))
+1 90 return this._sortVersions(schema.length)
+1 91 .length)
+1 92 .filter(skip => this._isVersions(skipVersions.length);
+1 93 .length);
+2 3 sendpoint = new UrlResolver(options);
+2 4 if (resolvers.GitHub.hasOwnProperty(endpoint)) {
+2 5 sendpoint = new GitRemoteResolver(options);
+3 1 split = endpoint.split('#', 2);
+3 2 endpoint = split[1];
+3 3 return Q.fcall(new GitRemoteResolver(source, options));
+3 5 module.exports = createResolver;"
+
+4 1 split.split('/').forEach(function (value) {
+4 3 var refs = split.filter(function (value) {
+4 4 return value === split[0] || value === 'latest';
+4 6 return Q.fcall(fs.stat, split)
+4 7 .then(function (stat) {
+4 8 if (options.requires) {
+4 9 return Q.resolve(options.config.cwd, sourceId);
+4 11 options.config.cwd = sourceId;
+4 12 return Q.nfcall(fs.stat, split)
+4 14 return findResolution(options.config.cwd, sourceId);
+4 16 .then(function (resolution) {
+4 17 if (options.resolution.type ==='version' && options.varsed) {
+4 18 return true;
+4 20 var dir = path.join(this._dir, sourceId);
+4 21 return Q.nfcall(fs.stat, dir)
+4 23 var content;
+4 24 if (stat.isDirectory()) {
+4 27 content = (split[0] === '#' || split[1] === '.') + '\
+4 28 ';
+4 29 return content;
+5 1 split = this._source.split('/');
+5 2 this._target = split[1];
+5 3 this._name = split[0];
+5 4 this._config = options.config || defaultConfig;
+6 1 split.split('/').forEach(function (value, key) {
+6 3 if (mout.array.isArray( split)) {
+6 4 return Q.resolve(value);
+7 1 split.split('/').forEach(function (str) {
+7 2 return Q.fcall(fs.stat, str)
+7 4 if (!options.completion) {
+7 5 return Q.nfcall(fs.stat, str)
+7 7 return Q.nfcall(resolvers.Url, str);
+7 11 var testSource = path.resolve(endpoint, 'test.js');
+7 12 return Q.nfcall(fs.stat, testSource)
+7 14 return new GitRemoteResolver(source, options);
+7 16 .done();
+7 19 function createResolver(source, options) {
+7 20 var split = endpoint.split('#'),
+7 21 second = split.shift(),
+7 22 category,
+7 23 filename = split.length? split[0] : '';
+7 24 return Q.nfcall(fs.stat, filename)
+7 26 var stat = fs.statSync(source),
+7 27 promise;
+7 29 promise = promise.then(function () {
+7 32 return new GitFsResolver(source, options);
+7 34 .then(function (result) {
+7 35 result = result || {};
+7 36 if (typeof result === 'object' && result.code!== 'ELETE') {
+7 37 throw new Error('The string must be a valid path');
+7 39 return result;
+7 43 return Q.nfcall(fs.stat, result);
+7 46 function createReporters(decEndpoint, options) {
+7 47 var repository = new Package('reporters/github-test-package');
+7 48 var registryClient = repository.getRegistryClient();
+7 49 return Q.nfcall(registryClient.lookup.bind(registryClient), 'http://bower.herokuapp.com')
+7 50 .then(function (entry) {
+7 51 return Q.nfcall(registryClient.register.bind(registryClient), 'http://bower.herokuapp.com')
+7 53 return Q.nfcall(registryClient.search.bind(registryClient), 'http://bower.herokuapp.com')
+7 55 return entry;
+7 60 .then(function (error) {
+7 61 throw new Error('Should have thrown');
+7 64 function isRepository.fetch = function () {
+7 65 return repository.fetch.fetch({ source: source: source, url: url, name: url, source: url, dir: registryClient: registryClient: registryClient })
+7 66 .fetch({ source, function (options) {
+7 67 if (options) {
+7 68 return Q.nif (options) {
+7 69 return Q.nreturn Q.n.nfcall(registryClient.fcall(registryClient.getRegistryClient.getDirects(source), options)
+7 70 .getFs(source)
+7 71 .getFsClientClient.getExportsClientClientClientClientClientClient(source)
+7 72 .getExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExportsClientExports
+9 3 this._name = split[2];
+9 4 this._guessedName =!options.name;
+9 7 GitRemoteResolver.prototype._checkout = function () {
+9 8 this._source = this._source || this._source;
+9 9 if (this._target!== '*') {
+9 10 throw createError('No tag found that was able to satisfy'+ this._target, 'ENORESTARGET');
+9 12 return Q.all([
+9 13 this._source,
+9 14 this._target
+9 15 ])
+9 16 .spread(function (stdout, stderr) {
+9 17 var promise;
+9 18 var timer;
+9 19 var reporter;
+9 20 var that = this;
+9 21 if (this._resolution.tag) {
+9 22 promise = this._slowClone(resolution);
+9 24 promise = Q.reject(createError('Tag'+ that._slowClone +'not found', 'EINVEND'));
+9 26 reporter = mout['function'].throttle(function (data) {
+9 27 var lines = data.split(/[\\r\
+9 28 ]+/);
+9 29 lines.forEach(function (line) {
+9 30 if (/\\d{1,3}\\%/.test(line)) {
+9 31 that._logger.info('progress', line.trim());
+9 34 }, 1000);
+9 35 timer = setTimeout(function () {
+9 36 promise.progress(reporter);
+9 37 }, 8000);
+9 40 that._suggestProxyWorkaround(err);
+9 41 throw err;
+9 43 .fin(function () {
+9 44 clearTimeout(timer);
+9 47 GitRemoteResolver.prototype._findResolution = function (target) {
+9 48 var err;
+9 51 if ((/^[a-f0-9]{40}$/).test(target)) {
+9 52 this._resolution = { type: 'commit', commit: target };
+9 53 return Q.resolve(this._resolution);
+9 56 promise,
+9 57 that._source,
+9 58 that._target
+9 61 promise = promise.progress(function (line) {
+9 62 that._logger.info('progress', line.split('%', 2);
+9 63 that._resolution.branch = line.message.trim()
+9 64 .replace(/--progress', resolution);
+9 65 return that._resolution.commit = resolution;
+9 68 .on('split', function () {
+9 69 return that._branch.branch = split[1] || split[1];
+9 72 .extend(branch;
+9 73 .called = function () {
+9 74 .called = true;
+9 75 return Q.nreturn Q.nreturn Q.nfcall(this._'', i, args, args,
+9 76 args.unlink,
+9 77 return Q.n,'s', 1)
+9 78 .n.then(function (shouldNot resolve, next) {
+9 79 var oldResolution = function (err) {
+9 80 var branch,
+9 81 \

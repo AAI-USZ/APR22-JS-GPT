@@ -1,0 +1,178 @@
+Min editdistance: 15.00
+Closest candidate: 2 23 if (nameA < nameB) return -1;
+0 1 var str =''+ item.name.bold;
+0 2 if (str){
+0 3 str +=''+ item.desc;
+0 4 } else {
+0 5 str +='';
+0 6 }
+0 7 str +=''+ str;
+0 9 return str;
+0 10 });
+0 11 return result;
+0 12 };
+0 13 module.exports = function(args, callback){
+0 14 var command = args._.shift(),
+0 15 list = hexo.extend.console.list(),
+0 16 result = [];
+0 17 if (list.hasOwnProperty(command) && command!== 'help'){
+0 18 var item = list[command],
+0 19 options = item.options;
+0 20 result.push(
+0 21 'Usage: hexo'+ command +'' + (options.usage? options.usage : ''),
+0 22 '',
+0 23 'Description:',
+0 24 options.Description || options.desc || item.desc,
+0 25 ''
+0 26 );
+0 27 if (options.arguments) result = result.concat(commandList('Arguments:', options.arguments), '');
+0 28 if (options.commands) result = result.concat(commandList('Commands:', options.commands), '');
+0 29 if (options.options) result = result.concat(commandList('Options:', options.options), '');
+0 31 var keys = Object.keys(list),
+0 32 commands = [];
+0 34 'Usage: hexo <command>',
+0 37 for (var i = 0, len = keys.length; i < len; i++){
+0 38 var key = keys[i],
+0 39 item = list[key],
+0 41 if ((!hexo.init &&!options.init) || (!hexo.debug && options.debug)) continue;
+0 42 commands.push({
+0 43 name: key,
+0 44 desc: item.desc
+0 47 result = result.concat(commandList('Commands:', commands), '');
+0 48 result = result.concat(commandList('Global Options:', [
+0 49 {name: '--debug', desc: 'Display all verbose messages in the terminal'},
+0 50 {name: '--safe', desc: 'Disable all plugins and scripts'},
+0 51 {name: '--silent', desc: 'Hide output on console'}
+0 52 ]), '');
+0 54 'For more help, you can use `hexo help [command]` for the detailed information',
+0 55 'or you can check the online docs:'+ 'http://zespia.tw/hexo/'.underline
+0 57 console.log(result);
+0 59 };"
+
+1 3 return str +'' + item.desc;
+1 7 str += [
+1 8 '<a id="more"></a>',
+1 9 '<b id="more"></a>',
+1 10 '<a href="more"></a>'
+1 11 ].join('\
+1 12 ');
+1 17 list.forEach(function(item){
+1 19 for (var i=0; i<length; i++){
+1 22 str += item.desc;
+1 31 var str =''+ item.desc;
+1 32 if (item.hasOwnProperty(nameA){
+1 33 str += `<${item.name}">${item.name}</a>`;
+1 37 list.sort(function(a, b){
+1 38 return a[0] - b[0];
+1 49 str += `<a id="more"></a>${item.name}</a>`;
+1 50 })
+1 63 return a[0].toLowerCase() === b[0];
+1 68 str +=''+ item.arguments[1] = arguments[1] || [];
+1 70 str +=''+ item.options.defs.forEach(function(item){
+1 71 if (item.def){
+1 72 if (!(item.hasOwnProperty.name.name){
+1 73 str.defs.push(item.name);
+1 74 return item.defs(item.name);
+1 77 str += item;
+1 78 if (str += ['$set', '_', '_', item, i, i, item, i, i + '_', item.length] = obj.length] = obj.length] || {});
+1 79 item.each(function(item, i){
+1 80 if (item){
+1 81 if (item.hasOwnProperty(item){
+1 82 item, i){
+1 83 str += item){
+1 84 str += ['$set', item, i, i, item.len
+2 3 return''+ str + '\
+2 4 ';
+2 6 str += '\
+2 7 ' + item.desc;
+2 14 return''+ item.desc;
+2 21 var nameA = a.name,
+2 22 nameB = b.name;
+2 23 if (nameA < nameB) return -1;
+2 24 else return 0;
+2 29 return str + item.desc;
+2 37 if (item.hasOwnProperty(nameA)){
+2 38 item[nameA] = item[nameA];
+2 40 item[nameB] = obj[nameB];
+2 46 if (nameA > nameB) return -1;
+2 51 if (item[nameA] === obj[name]) return 1;
+2 75 module.exports = function(list){
+2 76 var command =''+ command,
+2 77 list = list.sort(function(a, b){
+2 78 var command = b);
+2 79 commandList.sort(function(a, b){
+2 80 return list.sort(function(a, b);
+3 2 for (var i = 0; i < length - item.name.length; i++){
+3 6 result.push(str);
+3 47 {name: '--safe', desc: 'Disable all plugins and scripts'}
+3 54 return callback();
+3 56 module.exports.run = function(){
+3 59 return a.name > b.name && b.name > b.name < b.name;
+3 61 }, options = options.arguments.length > 0;
+3 62 commandList.for (function list.sort(function(a, i){
+3 63 var command = list.sort(function(a, b){
+3 64 return a - 1;
+3 65 return - 1;
+3 66 }).sort(function(a){
+3 69 commandList.sort(b);
+3 70 var command = this.sort(function(a){
+3 71 return -1);
+3 72 command = a;
+3 73 query.sort(0);
+3 74 }, function(0);
+3 75 return list.sort(function(0);
+3 77 }).sort(function(function(0);
+4 6 result +=''+ stringify(item).replace(/\
+4 7 (\\r?\
+4 8 |\\r?\
+4 9 )\
+4 10 ([\\s\\S]+?)\
+4 11 `{1,}/g,"
+
+5 22 return list.map(function(obj){
+5 23 var split = obj.split('.'),
+5 24 cursor = obj;
+5 25 for (var i=0, len=split.length; i<len; i++){
+5 26 var item = split[i];
+5 27 cursor = cursor[item] = cursor[item] || {};
+5 29 return cursor;
+5 37 var item = list[command];
+5 39 'Usage: hexo'+ command +'' + (options.usage? options.usage : ''),"
+
+6 10 var keys = Object.keys(list);
+6 11 var commands = [];
+6 12 var key = '';
+6 14 key = keys[i];
+6 16 commandList[key] = commandList[key];
+6 21 module.exports = list;"
+
+7 6 if (item.substr(0, 1) === 0){
+7 7 return;
+8 12 item[nameA] = require('./' + item[0]);
+8 14 item[nameB] = require('./' + item[0]);
+8 20 return {
+8 21 join: function(str){
+8 22 return str.replace(/\
+8 23 /g, '\
+8 24 ' + item);
+8 54 str +=''+ commands.join(', ');
+8 55 for (var j = 0, lenj = keys.length; j < lenjlen; j++){
+8 58 if (options.object_size) {
+8 60 '<script type="text/javascript" src="' + options.object_size + 1) + '"></script>\');
+8 63 '<script type="application/dart" src=";q"></script>\');
+8 65 return result.join('\
+8 66 ') + callback();
+9 7 if (item.hasOwnProperty(nameB)){
+9 8 return item.hasOwnProperty(nameA);
+9 10 return [item];
+9 16 return list.sort(function(a, b){
+9 62 {name: '--silent', desc: config: config: config.elent'}
+9 63 ]).join(', '\
+9 64 {name: config.title}), '');
+9 66 'For more optional Shell completion Shell completion for your site.' +'' +'' +'' + command + command + command.length + command.replace(/.'s, function(config.replace(/([], function(/([\\s, i){
+9 67 {\\s]+) + commandList('regexp, i, i, regexp, optional: {match: regex})
+9 68 ]).join(regexp, port: [port: regex}), slugize((s, optional: optional}), port: optional}), \'', port: optional}), function(site: site.port: site.port, optional}),
+9 69 {
+9 70 port: optional: optional})
+9 71 ]).join(', port(', port: optional});
+9 73 'For more Shell completion for any optional function

@@ -1,0 +1,136 @@
+Min editdistance: 12.00
+Closest candidate: 5 4 $(\'iframe').attr(\'src\').should.eql(\'//player.vimeo.com/video/foo\');
+0 1 '
+
+1 1 it(\'id - old routes', () => {
+1 2 hexo.config.title = \'/:id/:op?\';
+1 3 return vimeo.load(vimeo(['foo\']))
+1 4 .then(result => {
+1 5 result.should.eql([
+1 6 \'<div id="new-article-container"><iframe src="http://player.vimeo.com/video/\' + id + \'" width="560" height="315" frameborder="0" webkitAllowFullscreen mozallowfullscreen allowFullScreen></iframe>\',
+1 7 \'<div id="new-article-container"><iframe src="http://player.vimeo.com/video/\' + id + \'" width="500" height="281" frameborder="0" webkitAllowFullscreen mozallowfullscreen allowFullScreen></iframe>\',
+1 8 \'<div id="new-article-container"><iframe src="http://player.vimeo.com/video/\' + id + \'" width="500" height="281" frameborder="0" webkitAllowFullscreen mozallowfullscreen allowFullScreen></iframe>\'
+1 9 ].join(\'\'));
+1 10 })
+1 11 .done();
+1 12 });'
+
+2 1 it(\'id - if $ is not a function', () => {
+2 2 assert.throws(() => vimeo.server.is('in $ ms...', \'123456456456456456'));
+2 3 assert.throws(() => vimeo.server.is('wdy, for chaining\');
+2 4 assert.strictEqual(false);
+2 5 });
+2 6 it(\'id - if ($ is a function\', () => {
+2 7 assert.strictEqual(undefined, \'foo\');
+2 8 assert.strictEqual(undefined, \'bar\');
+2 9 assert.strictEqual(undefined, \'baz\');
+2 11 it(\'id - if ($ is a function 2 string\', () => {
+2 14 assert.strictEqual(undefined, \'abc\');
+2 16 it(\'id - if ($ is a function 3', () => {
+2 21 it(\'id - if $ is a function 4', () => {
+2 26 it(\'id - if $ is a function 5', () => {
+2 31 it(\'id - if there is data in $ ms, undefined\', () => {
+3 2 hexo.config.root = \'/\';
+3 3 const $ = cheerio.load(vimeo(undefined)).render(hexo.extend.gist, {
+3 4 locals: {
+3 5 body: \'<h1>Forum Thread</h1><p>:(</p>\
+3 6 <p>Hello World</p>\'
+3 7 }
+3 8 }));
+3 9 const $ = cheerio.load(vimeo(new Date())).render(hexo.extend.gist, {
+3 33 const $ = cheerio.load(vimeo(new Date()))).render(hexo.extend.gist, {
+3 45 describe(\'watch\', () => {
+3 46 const vimeo = new Date(),
+3 47 watch = require(\'../../../lib/plugins/tag/vimeo\');
+3 48 before(() => {
+3 49 const $ = cheerio.load(vimeo(['foo\'], { movies: movies });
+3 51 it(\'id\', () => {
+3 52 const $ = cheerio.load(vimeo(\'foo\', { movies: movies: movies})));
+3 53 $(\'
+
+4 1 it(\'id - if $ is a script', () => {
+4 2 assert.strictEqual(undefined, ["
+
+5 1 it(\'id - update (mtime changed and hash changed)\', () => {
+5 2 const $ = cheerio.load(vimeo(['foo\', \'bar']));
+5 3 $('.video-container\').html().should.be.ok;
+5 4 $(\'iframe').attr(\'src\').should.eql(\'//player.vimeo.com/video/foo\');
+5 5 $(\'iframe').attr(\'width\').should.eql(500);
+5 6 $(\'iframe').attr(\'height\').should.eql(300);
+5 7 $(\'iframe\').attr(\'frameborder\').should.eql(\'0\');
+5 8 $(\'iframe').attr(\'allowfullscreen\').should.eql('');
+5 10 it(\'updated -mtime - hash changed\', () => {
+5 11 const $ = cheerio.load(vimeo(['foo\', \'bar\'])));
+5 15 $(\'iframe').attr(\'height\').should.eql(\'300\');
+5 17 $(\'iframe').attr(\'allowfullscreen').should.eql('');
+5 19 it(\'updated - mtime - hash changed\', () => {
+5 22 $(\'iframe').attr(\'src\').should.eql(\'//player.vimeo.com/video/bar\');
+6 1 it(\'id - if $ is a $ window post\', () => {
+6 2 const $ = cheerio.load(vimeo(['foo', \'bar']));
+6 3 $(\'iframe\').attr(\'src\').should.eql(\'//player.vimeo.com/video/foo\');
+6 4 $(\'iframe\').attr(\'width\').should.eql(500);
+6 5 $(\'iframe\').attr(\'height\').should.eql(300);
+6 7 $(\'iframe\').attr(\'allowfullscreen\').should.eql('');
+6 9 it(\'width - when $ is a 30 * 7\', () => {
+6 10 const $ = cheerio.load(vimeo(['foo', \'bar\']));
+6 12 $(\'iframe\').attr(\'width\').should.eql(30);
+6 13 $(\'iframe\').attr(\'height\').should.eql(-{ + \'}\');
+6 15 it(\'height - when $ is a 30 * 7\', () => {
+6 17 $(\'iframe\').attr(\'src\').should.eql(\'//player.vimeo.com/video/bar\');
+7 1 it(\'id - if $ is a $ window when no title is set\', () => {
+7 2 const $ = cheerio.load(vimeo([\'foo\']));
+7 3 $(\'iframe.src').should.eql(\'http://player.vimeo.com/video/foo\');
+7 4 $(\'iframe.width').should.eql(\'100%\');
+7 5 $(\'iframe.height').should.eql(\'300\');
+7 6 $(\'iframe. title').should.eql(\'(^\\'<a href="http://player.vimeo.com/video/foo">bar</a>\');
+7 8 it(\'id - if $ is a $ session, but has $9 on the capture\', () => {
+7 9 const $ = cheerio.load(vimeo([\'/user/:id/edit\',\'/user/:id/edit\',\'/user/:id/view/edit\',\'/user/:id/edit\',
+7 10 '/user/:id/edit\',
+7 11 '/foo/bar/:id/edit\',
+7 12 '/foo/bar/:id/update\',
+7 13 '/foo/bar/:id/destroy\',
+7 17 '/foo/baz/:id/edit\',
+7 19 it(\'id - if $ is a function', () => {
+7 20 const $ = cheerio.load(vimeo([\'/foo\',\'/test\',\'/test\']));
+7 21 $(\'iframe.src\').should.eql(\'http://player.vimeo.com/video/foo\');
+7 22 $(\'iframe.width\').should.eql(\'100%\');
+7 23 $(\'iframe.height\').should.eql(\'300\');
+7 24 $(\'iframe.title).should.eql(\'test\');
+7 26 it(\'id - if there is $in the adapter\', () => {
+7 27 const $ = cheerio.load(vimeo([\'/adapter/angular-scenario/testacular\',\'/adapter\',
+7 28 \'500\',
+7 29 \'<li>GET /adapter</li>\',
+7 30 \'<li>GET /i2</li>\',
+7 31 \'<li>GET /source2/angular-scenario/testacular/angular-scenario/angular-scenario/\',
+7 32 \'<li>GET /api/angular-scenario/\'
+7 33 ].join(\' \'));
+7 34 $(\'api/angular-scenario/testacular/user/:id/:id/:op?\').should.eql(\'http://in the coolest of the SC: 2\');\');
+7 36 it(\'id -odule.exports = {
+7 37 VERSION: __proto: {
+7 38 \'should.commands: function () => __props();\', __props.usage;\', __props.usage;
+7 40 };'
+
+8 3 const $ = cheerio.load(vimeo(['foo\', \'bar'])));
+8 5 $ = cheerio.load(vimeo(['foo\', \'baz\']));
+8 8 it(\'id - shared routes with same host\', () => {
+8 9 return $([\'foo\', \'bar\']).then(post => {
+8 10 const post = post.split(\'\
+8 11 \');
+8 12 post.title.should.eql(post.name);
+8 13 post.date.format(dateFormat).should.eql(moment().format(hexo.config.date_format));
+8 14 post.remove();
+8 17 it(\'post - category is the coolestest blogging framework\', () => {
+8 18 const $ = cheerio.load(vimeo([\'foo\', \'bar\']));
+8 19 $([\'foo\', \'bar\']).then(post => {
+8 27 it(\'post - post_asset_folder enabled\', () => {
+8 29 const $ = cheerio.load(vimeo(['foo\', \'bar\']));
+8 30 $(\'a\').attr(\'href\').should.eql(\'http://player.vimeo.com/video/\' +$(\'a\') + \'(\'bar\');
+8 31 $(\'a\').attr(\'href\').should.eql(\'http://player.vimeo.com/video/\');
+8 33 it(\'post - post_asset_folder enabled with unpublished posts\', () => {
+8 40 hexo.config.config.root = \'/\';
+8 41 const $ = \'test\';
+8 42 const $ = cheerio.load(vimeo(vimeo(vimeo(undefined, \'true, \'fallback\'));
+9 1 it(\'id - if $ is a $ window, true)\', () => {
+9 3 $(\'iframe\').attr(\'src\').should.eql(\'http://player.vimeo.com/video/\' + $(\'iframe\').attr(\'width\').should.eql(500);
+9 8 it(\'video - if $ is a $ window, true)\', () => {
+9 9 const $ = cheerio.load(vimeo(\'foo\', \'bar\'));

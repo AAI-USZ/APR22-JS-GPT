@@ -1,0 +1,149 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 _ = require('lodash'),
+0 1 _ = require('lodash'),
+0 2 moment = require('moment'),
+0 3 root = hexo.config.root;
+0 4 extend.helper.register('js', function(path){
+0 5 var out = [];
+0 6 _.toArray(arguments).forEach(function(path){
+0 7 if (!Array.isArray(path)) path = [path];
+0 8 path.forEach(function(item){
+0 9 if (item.substr(item.length - 4, 4)!== '.js') item += '.js';"
+
+1 1 route = require('../../route'),
+1 2 paginator = require('./paginator');
+1 3 extend.generator.register(function(locals, render, callback){
+1 4 var config = hexo.config.tag;
+1 5 if (!config) return callback();
+1 6 locals.tags.each(function(tag){
+1 7 if (!tag.length) return;
+1 8 var posts = tag.posts.sort('date', -1),
+1 9 arr = posts.toArray(),
+1 10 latest = true;
+1 11 for (var i=0, len=arr.length; i<len; i++){
+1 12 if (!arr[i]._latest){
+1 13 latest = false;
+1 14 break;
+1 15 }
+1 17 if (!latest || hexo.cache.rebuild){
+1 18 var path = tag.path;
+1 19 posts.tag = tag.name;
+1 20 if (config == 2){
+1 21 paginator(path, posts, 'tag', render);
+1 22 } else {
+1 23 route.set(path, function(fn){
+1 24 var result = render('tag', posts);
+1 25 if (!result) result = render('archive', posts);
+1 26 if (!result) result = render('index', posts);
+1 27 fn(null, result);
+1 28 });
+1 31 callback();
+1 32 });"
+
+2 2 config = hexo.config;
+2 3 extend.helper.register('paginator', function(options){
+2 4 var defaults = {
+2 5 base: '/',
+2 6 format: config.pagination_dir + '/%d/',
+2 7 total: 1,
+2 8 current: 0,
+2 9 prev_text: 'Prev',
+2 10 next_text: 'Next',
+2 11 space: '&hellip;',
+2 12 prev_next: true,
+2 13 end_size: 1,
+2 14 mid_size: 2,
+2 15 show_all: false
+2 16 };
+2 17 var current = options.current,
+2 18 total = options.total,
+2 19 endSize = options.end_size,
+2 20 midSize = options.mid_size,
+2 21 space = options.space,
+2 22 base = options.base,
+2 23 format = options.format,
+2 24 front = '',"
+
+3 4 extend.helper.register('archive', function(options){
+3 6 orderby: 'name',
+3 7 order: 1,
+3 8 show_count: true,
+3 9 style: 'list',
+3 10 separator: '.'
+3 12 var options = _.extend(defaults, options);
+3 13 var result = '<ul class="archive-list">' +
+3 14 (options.orderby? options.orderby : 'name'),
+3 15 order = options.order,
+3 16 showCount = options.show_count;
+3 17 if (options.amount) result += '<li class="archive-list-item">' +
+3 18 '<a class="archive-list-link" href="' + root + item.path + '">' +
+3 19 (options.archive_dir? root + item.path : '') +'
+
+4 4 extend.helper.register('is_current', function(path){
+4 5 var newPath = path.replace(/\\/index\\.html$/, '/');
+4 6 return function(path){
+4 7 return hexo.extend.helper.isUrlAbsolute(path)? path : path.replace(/^\\/index\\.html$/g, '/');
+5 4 extend.helper.register('list_categories', function(categories, options){
+5 5 if (!options){
+5 6 options = categories;
+5 7 categories = this.site.categories;
+5 9 var options = _.extend({
+5 10 relative: config.relative_link + 'posts',
+5 11 path: root + '/',
+5 12 permalink: config.root + '/'
+5 13 }, options);
+5 14 var style = options.hasOwnProperty('style')? options.style : 'list',
+5 15 list = options.hasOwnProperty('permalink')? options.permalink : ':year','
+
+6 12 prev_next: true,"
+
+7 23 render(path, posts);
+8 1 async = require('async'),
+8 2 fs = require('graceful-fs'),
+8 3 colors = require('colors'),
+8 4 util = require('../../util'),
+8 5 file = util.file,
+8 6 spawn = util.spawn,
+8 7 config = hexo.config.deploy;
+8 8 extend.deployer.register('rsync', function(args, callback){
+8 9 if (!config.host ||!config.user ||!config.root){
+8 10 console.log('\
+8 11 You should configure deployment settings in %s first!\
+8 12 ', '_config.yml'.bold);
+8 13 return console.log([
+8 14 'Example:',
+8 15 '  deploy:',
+8 16 '   type: rsync',
+8 17 '   host: <host>',
+8 18 '   user: <user>',
+8 19 '   root: <root>',
+8 20 '   port: [port] # Default is 22',
+8 21 '   delete: [true|false] # Default is true',
+8 22 '',
+8 23 'More info: http://zespia.tw/hexo/docs/deploy.html'
+8 24 ].join('\
+8 25 ') + '\
+8 26 ');
+8 28 var baseDir = hexo.base_dir,
+8 29 blogDir = baseDir + '../diy' + config.root,
+8 30 generatedDir = baseDir + 'public/',
+8 31 remote = config.remote,
+8 32 branch = config.branch ||'master';
+8 33 var command = function(comm, args, callback){
+8 34 spawn({
+8 35 command: comm,
+8 36 args: args,
+8 37 exit: function(code){
+8 38 if (code === 0) callback();
+8 42 async.series([
+8 43 function(next){
+8 44 command('rm', ['-fr', blogDir], next());
+8 45 },
+8 47 command('cp', ['-r', generatedDir], next());
+8 50 var commands = [
+8 51 ['add', '-A', baseDir],
+8 52 ['add', '-A', blogDir],
+8 53 ['commit', '-m', 'Blog updated:'+ new Date()],"
+
+9 8 var posts = tag.posts.sort('date', -1),"
+

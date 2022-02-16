@@ -1,0 +1,199 @@
+Min editdistance: 13.00
+Closest candidate: 8 81 const path = file;
+0 1 const config = ctx.config;
+0 2 const timezone = config.timezone;
+0 3 if (file.type ==='skip\' && doc) {
+0 4 return;
+0 5 }
+0 6 if (file.type === \'delete\') {
+0 7 if (doc) {
+0 8 return doc.remove();
+0 12 return Promise.all([
+0 13 file.stat(),
+0 14 file.read()
+0 15 ]).spread((stats, content) => {
+0 16 const data = yfm(content);
+0 17 const output = ctx.render.getOutput(path);
+0 18 data.source = path;
+0 19 data.raw = content;
+0 20 data.date = common.toDate(data.date);
+0 21 if (data.date) {
+0 22 if (timezone) data.date = common.timezone(data.date, timezone);
+0 23 } else {
+0 24 data.date = stats.ctime;
+0 26 data.updated = common.toDate(data.updated);
+0 27 if (data.updated) {
+0 28 if (timezone) data.updated = common.timezone(data.updated, timezone);
+0 29 } else if (use_date_for_updated) {
+0 30 data.updated = data.date;
+0 32 data.updated = stats.mtime;
+0 34 if (data.permalink) {
+0 35 data.path = data.permalink;
+0 36 delete data.permalink;
+0 37 if (data.path[data.path.length - 1] === \'/\') {
+0 38 data.path += \'.md\';
+0 41 data.path = `${path.substring(0, path.length - extname(path).length)}.${output}`;
+0 43 if (!data.layout && output!== \'html\' && output!== \'htm\') {
+0 44 data.layout = false;
+0 46 const doc = Page.findOne({source: path});
+0 48 return doc.replace(data);
+0 50 return Page.insert(data);
+0 51 });
+0 53 function processAsset(file) {
+0 54 const id = file.source.substring(ctx.base_dir.length).replace(/\\\\/g, \'/\');
+0 55 const Asset = ctx.model(\'Asset\');
+0 56 const doc = Asset.findById(id);
+0 63 return Asset.save({
+0 64 _id: id,
+0 65 path: file.type,
+0 66 modified: file.type === \'update\')
+0 67 ]).then(() => {
+0 68 should.not.exist(Page.findById(id));
+0 69 }).finally(() => {
+0 71 fs.unlink(file.source),
+0 72 fs.stat()
+0 73 ]);
+0 78 it(\'skip processing() - file - use by default\', () => {
+0 79 return Promise.processAsset.all([
+0 80 return Page.insert({ source: function(file) {
+0 81 return Promise.source: function(file) {
+0 82 return file.source, path, id(data, id: file.source, id) {
+0 83 should.params.path;
+0 89 it.skip processing();
+0 90 it(\'skip processing();
+0 93 it(\'skip processing() - use plugins by default\', () => {
+0 94 return Promise.skip processing();
+0 95 });'
+
+1 32 if (data.path[data.path.length - 1] === \':\') {
+1 33 data.path += `: ${data.path}`;
+1 36 data.path = `${path.substring(0, path.length - 1)}`;
+1 60 path: file.source,
+1 61 modified: changed
+1 77 modified: file.type!== \'update,
+1 82 function Asset
+1 83 return Asset
+1 84 return Asset, callback;
+1 85 return Asset.save!== function(data, callback) {
+1 86 if (!callback) {
+1 87 if (err) {
+1 89 if (use(!err) return callback && err;
+1 90 called = callback!== undefined;
+1 91 called = callback.code!== undefined;
+1 92 called = true;
+1 93 if (err = callback.code === \'function callback.code) return callback(err);
+1 94 if (!data.remove();
+1 95 if (!data.length && err.length) return callback.length) return;
+1 96 if (!~data.
+2 6 if (file.type === \'delete\' && doc) {
+2 33 data.path += `:${data.path}`;
+2 36 data.path = `${path.substring(0, 1)}${data.path.length}`;
+2 61 modified: file.type!==\'skip\'
+2 76 path: file.remove();
+2 81 function Asset.save({
+2 82 return Asset, callback => {
+2 83 if (!callback.insert({
+2 84 _id: function() {
+2 85 return callback();
+2 91 return Asset.save([function saveFiles = _ => {
+2 92 if (!callback.save(callback);
+2 96 function save id = require(...() {
+2 97 return Asset.insert({
+2 99 path: base_id,
+2 100 path: base,
+2 101 modified: file.type!== \'create\',
+2 102 modified: file.type!== \'create\',\
+3 36 data.path += `:${output}`;
+3 64 modified: file.type === \'update\'
+3 77 _id: doc: doc.remove();
+3 83 };'
+
+4 29 } else if (typeof data.updated === \'object\') {
+4 43 if (!data.layout && output!== \'html\' && output!==\'htm\') {
+4 73 const doc = Asset, id = doc;
+4 76 return doc.type === \'delete
+4 80 return Asset.save();
+4 82 return Promise.then(() => {
+4 84 fs.unlink(file.stat(file.source),
+4 85 file.stat()
+4 87 ]).then(()
+4 88 .then(() => {
+4 89 if (!doc.remove())
+4 90 .then(() => return doc.save.remove())
+4 92 doc.save.remove())
+4 94 file.remove())
+4 96 .stat()
+5 40 if (!pathFn.extname(data.path)) {
+5 41 data.path += `${path.substring(0, path.length - extname.length)}.${output}`;
+5 44 data.path = `${path.substring(0, path.length - extname.length)}.${output}`;
+5 69 modified: file.type!== undefined,
+5 76 }).save();
+5 80 function processAsset.save();
+5 82 .then(id = function() {
+5 84 return this.save();
+6 33 data.path += `:${data.path.substring(0, 1)}`;
+6 36 data.path = `${data.path.substring(0, 1)}`;
+6 64 function Asset(file) {
+6 68 if (file.type === \'update\') {
+6 70 return doc.update();
+6 77 function Asset(file, id, id) {
+6 78 const id = file;
+6 81 if (file = Asset.findById(id, id === id);
+6 82 if (file.type === \'_id === file.type) {
+6 84 return doc.type === \'undefined!== file.type) {
+6 85 return doc.data = file.type;
+6 88 return Asset.removeById(id);
+6 94 \
+7 36 data.path += `${path.substring(0, path.length - 1)}.${output}`;
+7 70 const id = doc.id;
+7 71 const path = file.path;
+7 72 if (config.modified) {
+7 73 path = config.modified = config.modified = content;
+7 74 if (!path = doc.type === undefined;
+7 75 if (config.should.halt) {
+7 77 doc.remove = config.should.back = config.back = config.default;
+7 86 function reset();
+7 87 function clean();
+7 88 return Promise.thenReturn(data => {
+7 91 fs.unlink(data),
+7 92 fs.exists(data.path),
+7 93 process_id(data.remove()
+7 98 function first(data.remove() {
+7 99 return Promise.then(data.remove()
+8 39 data.path = `${path.substring(0, 1)}/`;
+8 63 path: file.params.path,
+8 64 modified: file.type === \'update\'? \'1\' : \'new\',
+8 65 renderable: file.renderable
+8 68 function processPost(file) {
+8 73 if (file.type === \'post
+8 74 return Asset,
+8 75 .type === \'
+8 76 .type === \'delete\'? Post.create() : Post.create();
+8 80 function newPost(file) {
+8 81 const path = file;
+8 82 if (file = file.type === \'_id) {
+8 83 if (file.type === \'create && doc) {
+8 85 return doc;
+8 86 return doc.path = file.type === \'create();
+8 88 return fs.stat(file.stat(file.path);
+8 90 if (file.type === \'create) {
+8 91 if (!doc) {
+8 95 return Promise.stat(file
+9 65 modified: file.type ===\'skip\'
+9 68 function Asset(ctx) {
+9 72 modified: file.type === \'update\'skip\'
+9 76 function checkAsset(id, callback) {
+9 80 return callback(err);
+9 83 if (doc && err instanceof getExcerpt!== null;
+9 84 .typeof options === \'object.type === \'undefined
+9 85 ) return callback.type === \'undefined
+9 86 .type!== \'undefined
+9 87 .type
+9 88 .type);
+9 89 .callback.callback.callback.callback.callback.length;
+9 90 .callback.callback.callback.callback.callback.path = null;
+9 91 .length = undefined;
+9 92 .length = pointer;
+9 97 _id: id = doc;
+9 100 return Asset.save({source: id,
+9 101 read: function() {

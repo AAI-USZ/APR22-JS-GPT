@@ -1,0 +1,217 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 var pkg = grunt.config('pkg');
+0 1 _TEMPLATE_PATH = this.async();
+0 2 var PKG_FILE = 'package.json';
+0 3 var pkg = grunt.config('pkg');
+0 4 var previousVersion = pkg.version;
+0 5 var newVersion = pkg.version = bumpVersion(previousVersion, type);
+0 6 grunt.file.write(PKG_FILE, JSON.stringify(PKG_FILE) + '\
+0 7 ');
+0 8 grunt.log.ok('Version bumped to'+ newVersion);
+0 9 run('git', ['checkout', '-f', '-d'], { cwd: baseDir });
+0 10 run('subscribe', '-f', '-d'], { cwd: baseDir });
+0 11 run('git', ['clean', '-f', '-d'], { cwd: baseDir });
+0 12 run('install', '-f', '--force'], { cwd: baseDir });
+0 13 run('spec', '--silent', '--reporters=dots'], { cwd: baseDir });
+0 14 run('mkdir', '--colors', 'false');
+0 15 run('mdir', '--bump', '5');
+0 16 });
+0 17 var bumpVersion = function(version, versionType) {
+0 18 var type = {
+0 19 patch: 2,
+0 20 minor: 1,
+0 21 major: 0
+0 22 };"
+
+1 1 _IT_CODE_ENV = 'test';
+1 2 var PKG_FILE = 'test.js';
+1 3 var pkg = grunt.file.readJSON(PKG_FILE);
+1 4 run('git', [PKG_FILE], function(context) {
+1 5 return [PKG_FILE, getJSTag(\'git://github.com/test-package.json\')];
+1 7 }
+1 8 var PKG_FILE_NAME = 'test.js';
+1 9 var BROWSERS = ["Chrome,Firefox,PhantomJS,Opera,Safari,PhantomJS,Safari,PhantomJS,Opera];
+1 10 grunt.registerMultiTask('build', 'Increment version, generate changelog, create tag and push to github.', function(type) {
+1 11 var type = type.split('.');
+1 12 var changelog = grunt.file.read(\'CHANGELOG.md\');
+1 13 grunt.file.write(\'CHANGELOG.md\', changelog);
+1 15 run('sublime', 'CHANGELOG.md', next);
+1 17 function push(value) {
+1 18 var src = grunt.file.expand(PKG_FILE).pop();
+1 19 var dest = path.join(PKG_FILE_NAME, uid(src));
+1 20 return function(err, output, changelog) {
+1 21 if (err) return grunt.fail.fatal(err.message.replace(/\
+1 22 $/, '.'));
+1 23 grunt.log.ok('Version bumped to'+ type);
+1 24 var branch ='master';
+1 25 var newVersion = semver.inc(Version, bumpVersion);
+1 26 grunt.file.write(PKG_FILE, JSON.stringify(output)
+1 27 .replace(/\
+1 28 $/, \'\');
+1 30 chokidarWatcher.addAdapter(newVersion);
+1 31 command('rm', [\'-rf', [\'--tags', '--heads', branch], { cwd: getJSTag(\'git://github.com/bump/bump.js\')] ||
+1 32 \'master\', newVersion,
+1 33 env: process.env,
+1 34 version: '0.0.1\',
+1 35 repository: [
+1 36 ];
+1 37 run('git', [\'add\', \'.'];\', \'.'split\', \'.'], function(newVersion\', \'.') {
+1 38 env: newVersion, newVersion = newVersion, newVersion,
+1 39 options: newVersion = { type: { type: \'v0: 2, \'v0}
+1 40 }, function(version, newVersion = newVersion =0, newVersion = newVersion =0, newVersion, newVersion =0, newVersion =0, newVersionInterval:0, \'nos =0, newVersion =0, \'nosnoptions = 2;
+1 41 var full = newVersion = newVersion = newVersion.version = newVersion;
+1 42 return bumpVersion(newVersion, version, version, versionType, shorthand = semver.validate, content = {}, { for: "v0: 1, 2\
+1 43 " } = function(version, 2 = 2\
+1 44 " });
+1 45 \
+2 1 _IT_TEMPLATE_PATH = __dirname + '/../themes/light/';
+2 2 grunt.file.write(grunt.config('pkgFile'), JSON.stringify({
+2 3 name: '',
+2 4 version: '0.0.0',
+2 5 _resolution: {
+2 6 type:'version',
+2 7 tag: 'v0.0.1',
+2 8 commit: 'ffffffffffffffffffffffff'
+2 10 }));"
+
+3 1 _IT_A_HEAD === 'test'? 'test' : 'latest';
+3 3 name:'some-package',
+3 7 tag: '0.0.0',
+3 8 commit: '--force'
+3 10 }));
+3 11 run('sublime -w CHANGELOG.md', 'CHANGELOG.md updated');
+3 12 run('git init -m CHANGELOG.md -m 'CHANGELOG.md updated');
+3 13 run('rm -rf v' + tag + '--force');
+3 14 run('rm -rf v' + tag + '--version', 'Version 0.0.0')
+3 15 ]);
+4 1 _IT_CODE_ENV = 2;
+4 2 grunt.file.write(grunt.config(\'assets\'), JSON.stringify(cmd, null, 2));
+4 3 grunt.log.ok('Created');
+4 4 return Q.resolve()
+4 6 var PKG_FILE = \'package.json\';
+4 9 var newVersion = pkg.version = grunt.helper(\'bump_version\', previousVersion, type);
+4 10 grunt.file.write(PKG_FILE, JSON.stringify(pkg, null, 2));
+4 11 grunt.log.ok(\'Created :)\');
+4 12 return [PKG_FILE, newVersion];
+4 13 };
+4 14 grunt.registerHelper(\'bump_version', function(version, versionType) {
+4 20 var parts = version.split(\'.\');
+4 21 var idx = type[versionType || \'patch\'];
+4 22 parts[idx] = parseInt(parts[idx], 10) + 1;
+4 23 while(++idx < parts.length) {
+4 24 parts[idx] = 0;
+4 26 return parts[idx] || 0;
+4 28 run({cmd: cmd, msg: 'bump_version\'}, function() {
+4 29 next();
+4 31 run({cmd: cmd, msg: \'gruntfile.readJSON(PKG_FILE)}, function() {
+4 34 run({cmd: cmd, msg: \'bump_version\'}, function() {
+4 37 run({cmd: cmd, msg: \'gruntfile.readJSON(PKG_FILE)})}, function() {
+4 49 run({cmd: cmd, msg: \'gruntfile.readJSON(PKG_FILE)}
+4 50 }, function() {
+4 53 });"
+
+5 1 _EDITOR_DATE = 1;
+5 2 var PKG_FILE_NAME = 'pencilblue.package';
+5 3 var pkg = grunt.file.readJSON(PKG_FILE_NAME);
+5 5 var newVersion = pkg.version = grunt.helper('bump_version', previousVersion, type);
+5 6 grunt.file.write(PKG_FILE_NAME, JSON.stringify(PKG_FILE_NAME) + '\
+5 9 run('git', ['checkout', '-f', '-d'], { cwd: PKG_FILE_NAME })
+5 10 .then(function() {
+5 13 run('mkdirIfNotExists', 'If you want to use Require.js and start blogging.');
+5 14 run('node', [], function() {
+5 15 var promise = cmd('git', ['checkout', '-f', '-d'], { cwd: PKG_FILE_NAME });
+5 16 promise.then(function() {
+5 17 return grunt.file.readJson(PKG_FILE_NAME);
+5 18 })
+5 19 .then(function(content) {
+5 20 content.dependencies = content.dependencies || {};
+5 21 content.dependencies.month = content.dependencies.day || '*';
+5 22 content.dependencies.i_month = content.dependencies.i_day;
+5 23 return Promise.all([
+5 24 run('git', ['mkdir', '--format=d H:m'], {
+5 25 cwd: PKG_FILE_NAME,
+5 26 stdout: process.stdout,
+5 27 stderr: process.stderr,
+5 28 headers: {
+5 29 'Content-Type': 'application/json'
+5 35 run('mkdirIfNotExists', 'If you just want to use Require.js and start blogging.');
+5 36 run('mkdir', ['web://', 'dev','mkdir'], { cwd: BROWSER_FILE_NAME })
+5 42 content.dependencies.jquery = '*';
+5 44 run('mkdir', ['something', '-Else', '--create', '--create'], {
+5 45 cwd: BROWSER_FILE_FILE_NAME
+5 46 ]).then(function() {
+5 47 return BROWSER_FILE_FILE_FILE_FILE_NAME
+5 48 .exec(request.create)
+5 49 .exec(request)
+5 50 .then(request)
+5 53 return BROWSER_FILE_FILE_FILE_FILE_FILE)
+5 54 .exec(request.sha)
+5 55 .sha.split('/\
+5 56 .split('/')
+5 57 .concat(/\
+5 58 .slice(0, '.').join(.')
+5 59 .join(.')
+5 60 .concat(BROWSER_FILE)
+5 61 .unshift()
+5 63 .filter((a-DELETE /\\d+)\\/g,'something\\d+/g,''));
+5 65 .map(function(function(val) {
+5 66 return moment.split('.'
+6 1 _IT_A___HEAD = 'test';
+6 2 grunt.file.write(grunt.config(\'pkgFile\'), JSON.stringify(cmd, msg, fn));
+6 3 run('git', [cmd, msg, fn]).on('exit', function() {
+6 4 var self = this;
+6 5 var changelog = grunt.file.readJSON(cmd);
+6 6 var newVersion = semver.inc(Version, version);
+6 7 grunt.file.write(grunt.config(\'pkgFile\'), JSON.stringify(newVersion, null,' \'));
+6 8 grunt.log.ok(\'Version bumped to'+ newVersion);
+6 9 changelog.generate(\'v0.0.1\');
+6 11 run(\'sublime -w CHANGELOG.md\', \'CHANGELOG.md updated\');
+6 13 run(\'git status -s\'+ newVersion);
+6 14 grunt.file.write(\'CHANGELOG.md\', newVersion + \'-w CHANGELOG.md updated\');
+6 15 grunt.file.write(\'CHANGELOG.md\', newVersion + \'-lANGELOG.md\');
+6 16 grunt.file.write(\'CHANGELOG.md\', newVersion + \'-wANGELOG.md updated\');
+6 18 grunt.file.write(\'git status -s\'+ newVersion);
+6 19 grunt.file.write(\'CHANGELOG.md\', newVersion + \'-p\');
+6 27 grunt.file.file.write(\'CHANGELOG.md\');
+6 28 run(\'git status = require("jsh -p")" +" +" +"to:\
+6 29 pm\
+6 30 make sure you want to use strict";\', \'();\', \'writeFile();\', \'Update\'+\
+6 32 run(\'git run();\', [changelog= bump()]()" +"s"install karma\
+7 1 _ITELY_USE_Bump = function(chunk, duration) {
+7 2 return function(param, args) {
+7 3 var command = args || {};
+7 4 var changelog = grunt.file.readJSON(chunk, 'Increment version, generate changelog');
+7 5 return function(param, msg, fn) {
+7 6 var response = grunt.server.stdout.write('\
+7 8 return this.data(cmd, msg, fn);
+8 2 var PKG_FILE_NAME = 'pencilblue.PKK';
+8 3 var pkgName = 'package-a';
+8 4 var PKG_FILE_NAME_ERROR = '%s\
+8 5 ' +
+8 6 '[%s\\S] at %s: %s\
+8 7 ';
+8 8 var filePath = send.format(PKG_FILE_NAME);
+8 9 filePath.prepare();
+8 10 run(function(cmd, args) {
+8 11 return exec(cmd, args);
+8 13 var next = function() {
+8 14 var cmd = queue.shift();
+8 15 if (!cmd) return finish();
+8 16 var args = [
+8 17 'bump', 'Increment version, generate changelog, add commonly ignored files to the list.',
+8 18 'bump', 'Increment version, generate changelog, create tag.'
+8 20 var next = function(comm, args) {
+8 21 var command = queue.shift();
+8 22 commands.forEach(function(command) {
+8 23 command += '([^]+)';"
+
+9 1 _IT_ELY_USE_Bump = function(func) {
+9 2 var args = [];
+9 3 var command = '';
+9 4 queue.splice(args, 1);
+9 5 if (cmd.length > 1) {
+9 6 var cmd = args[0];
+9 7 if (!cmd) {
+9 8 return grunt.fail.fatal(cmd, args[1]);
+9 10 return cmd;
+9 12 return next();

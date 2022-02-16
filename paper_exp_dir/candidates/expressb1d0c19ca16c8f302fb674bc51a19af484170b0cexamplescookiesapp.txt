@@ -1,0 +1,32 @@
+Min editdistance: 32.00
+Closest candidate: 1 1 ')('express:static on port 3000');"
+0 1 ')('express:\
+0 2 ');"
+
+1 1 ')('express:static on port 3000');"
+3 2 \
+3 3 ');
+3 4 console.log('  var result = [
+3 5 '<p>Visit /forget }}');
+3 6 ' forget',
+3 7 '---',
+3 8 'white','redirect"
+3 9 ].join('\
+3 11 app.listen(8000);console.log('  var result = [
+3 12 '<p>This is an email</p>',
+3 13 '<p>This is an attachment</p>',
+3 14 '<p>This is a following paragraph</p>',
+3 15 '</listen(8000);
+3 16 });"
+
+4 1 ')('express:static\
+5 3 "
+6 4 "
+
+7 1 ')(process.env.NODE_ENV);
+7 2 app.listen(3001);"
+
+8 2   Please, set a session cookie.');"
+
+9 1 ')(app);"
+

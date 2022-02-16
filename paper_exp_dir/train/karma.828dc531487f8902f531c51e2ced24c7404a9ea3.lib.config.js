@@ -1,0 +1,32 @@
+
+var fs = require('fs');
+var path = require('path');
+var vm = require('vm');
+var log = require('./logger').create('config');
+var util = require('./util');
+var constant = require('./constants');
+
+
+
+var parseConfig = function(configFilePath, cliOptions) {
+
+
+var config = {
+port: constant.DEFAULT_PORT,
+runnerPort: constant.DEFAULT_RUNNER_PORT,
+basePath: '',
+files: [],
+exclude: [],
+logLevel: constant.LOG_INFO,
+colors: true,
+autoWatch: false,
+reporter: 'progress',
+singleRun: false,
+browsers: []
+};
+
+var configEnv = {
+
+LOG_DISABLE: constant.LOG_DISABLE,
+LOG_ERROR:   constant.LOG_ERROR,
+LOG_WARN:    constant.LOG_WARN,

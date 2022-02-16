@@ -1,0 +1,245 @@
+Min editdistance: 40.00
+Closest candidate: 0 4 if (set(\'cache static files\'))
+0 1 ,
+0 2 content = this.content || \'utf8\
+0 3 \'' + file
+0 4 if (set(\'cache static files\'))
+0 5 request.content.replace(/<%\\/a.*?%\\^\\*.*%\\^\\*\\-\\+\\, '')
+0 6 .replace(/((^|%\\*\\)\\?\\:\\d+)/g, function(_, slash, format, key, capture, optional){
+0 7 return \'${element-|<%=\' + slug}</a>\'
+0 8 }).toLowerCase(),"
+
+1 1  || \'.stylus"
+1 2 return request.contentType(cache.type),
+1 3 request.halt(200, cache.content, \'binary\')
+1 4 }
+1 5 })
+1 6 exports.Static = Plugin.extend({
+1 7 extend: {
+1 8 init: function(options) {
+1 9 options = options || {}
+1 10 options.path = options.path || set(\'root\') + \'/public\'
+1 11 if (!options.paths) throw new InvalidPathError(options)
+1 12 Request.include({
+1 13 sendfile: function(path, options, callback) {
+1 14 var self = this
+1 15 if (options.paths[path]) return callback(new Error(\'failed to create static files\'+
+1 16 this.paths[path]
+1 17 ))
+1 18 var staticFolder = this.staticFolder
+1 19 return function(request, response) {
+1 20 var baseDir = this.path
+1 21 var file = send(request.body)
+1 22 if (file) {
+1 23 return request.contentType(cache.stat.mode, options.stat.mode)
+1 24 return request.halt(200, file.content, options.headers)
+1 25 } else {
+1 26 throw new Error(\'cannot create static files\'+
+1 28 )
+1 33 })'
+
+2 1 ;
+2 3 request.halt(200, cache.content, 'binary')
+2 5 }), '/', function() {
+2 6 return this.halt()
+3 1 Express.server.finished(function(err, res){
+3 2 if (err) return res.body.error(err)
+3 3 var path = findthisFile(request.uri, file)
+3 4 if (!file) return next(new Error("failed to find"));
+3 5 file.path = path;
+3 6 return fs.stat(file, function(err, stat){
+3 7 if (err) return res.header('error', err.message);
+3 8 if (stat.isDirectory() && file.source!== this.localPath) return next(new Error("The command should have failed"));
+3 9 next();
+3 11 }, callback)
+3 15 "
+
+4 1 return fs.readFile(file, { headers: { \'Content-Type\':'application/octet-stream' } }})
+4 2 .toString()
+4 3 .replace(/[\\/]*\\*[\\w\\d]+/g, function(err, str){
+4 4 if (err) return callback(HexoError.wrap(err, 'Theme configuration load failed'));
+4 5 try {
+4 6 return Promise.all([
+4 7 function(resolve, reject) {
+4 8 if (!mkdirp(this.path),
+4 9 this.cleanUpLocal(this.path)
+4 10 ])
+4 11 .then(resolve, reject)
+4 13 .then(function(){
+4 14 var versions = arguments[0]
+4 15 , path = this.path
+4 16 , __dirname = pathFn.join(this.path, '-fixtures')
+4 17 , hexo = global.hexo = new Hexo(path, {silent: true});
+4 20 .done(function(err){
+4 21 return hexo.init();
+4 25 fs.exists(this.path),
+4 26 fs.listDir(this.path)
+4 27 ]);
+4 29 .then(function(files) {
+4 30 var obj = yaml.parse(files.shift())
+4 31 , line = lines.length
+4 32 , column = [];
+4 33 var app = module.exports = express();
+4 34 app.use(express.logger({ format: \'combined\' }, (mtime, ____, custom domain) => {
+4 35 var port = config.port || 8080
+4 36 , hostname = config.hostname
+4 37 , port = port || 27017
+4 38 , url = convert(url).format(format);
+4 39 if (port > 65535 || port > 300) {
+4 40 port = 4000;
+4 42 if (url.indexOf(\'/\')!== 0) {
+4 43 return next();
+4 45 var redirecting_url = route.format(url)
+4 46 .replace(/\\
+4 47 .replace(r\
+4 48 .replace(/g, \'&#\')
+4 49 .replace(/\\r\
+4 50 .replace(/"/g, \'&quot;\')
+4 51 .replace(/</g, \'&lt;\')
+4 52 .replace(/>/g, \'&gt;\')
+4 53 ].join(\'\');
+4 54 app.use(function(req, res){
+4 55 res.statusCode = 302
+4 56 , send = req.session.name = valueRepos.send || null
+4 57 , cookie = valueRepos.cookie = valueRepos.session.cookie || {};
+4 58 res.setHeader(\'Location\', redirecting_url + \'/\');
+4 59 res.sendTo(this.session.session.name);
+4 60 }.bind(this);
+4 61 });
+4 62 if (app.use(function(req, res){
+4 63 var headers = res.redirecting_url = this.req.headers = headers;
+4 65 , headers = this.headers = this.headers || {};
+4 66 res.cookieDecode = format;
+4 67 res.res = formatters = 3;
+4 68 res.setHeader(\'location\');
+4 69 res.cookie.app = formatters = null;
+4 70 res.cookie.path = formatters = null;
+4 71 res = null;
+4 72 res.app = formatters.length = len = 0;
+4 73 res.redirects = 0;
+4 74 res.attachment = 1;
+4 75 res.app = 1;
+4 76 res.redirects = res.app = res.session = res.session;
+4 77 res
+5 1 var headers = { 'Content-Type': 'application/octet-stream' }
+5 2 contentType(file)
+5 3 return request.setEncoding('utf8')
+5 4 if (cache) { cache = true }
+5 5 request.addListener(\'body\', headers)
+5 6 request.addListener(\'complete\', function(){
+5 7 Express.home = Express.settings.basepath
+5 8 Express.response.body = content
+5 9 Express.response.status = 200
+5 10 Express.request = request
+5 11 Express.originalResponse = response
+5 12 request.uri.params = Express.parseNestedParams(file)
+5 13 request.uri.path = Express.normalizePath(file)
+5 14 Express.hook(\'onRequest\')
+5 15 response.onResponse = function(res){
+5 16 Express.originalResponse.sendHeader(Express.response.status, Express.hashToArray(arguments)))
+5 17 response.sendBody(Express.response.body || \'\')
+5 18 response.finish()
+5 21 Express.server.finished()
+5 25 function getXUACompatibleMetaElement(str) {
+5 26 var tag = this.header(\'x-ua-compatible\')
+5 27 if (tag) {
+5 28 return tag.replace(/^\
+5 29 *(x-ua-compatible\\.\\d+)/g, function(_, key){
+5 30 return \'<li>${tag}</li>\';
+5 31 }).join(\', \')
+5 33 return this.response.headers[key] = json
+5 35 function getXUACompatibleUrl(url) {
+5 36 var value = \'\'
+5 37 var urlObj = urlparse(url)
+5 38 if (urlObj.query[\'x-ua-compatible\']) {
+5 39 value = \'?x-ua-compatible=\' + encodeURIComponent(urlObj.query[\'x-ua-compatible\'])
+5 41 return value
+5 46 process.mixin(this, options)
+5 47 this.settings = options || {}
+5 48 this.engines = options.engines || {}
+5 49 this.settings.external_link = options.external_link
+5 50 this.settings.basepath = this.settings.basepath
+5 51 this.regexp = this.regexp.exec(String(this.opts))
+5 52 this.header(\'Location\', urlObj.query[\'x-ua-compatible\'] + \'/\')
+5 53 this.halt()
+5 54 },
+5 55 header: function(name, value) {
+5 56 return value?
+5 57 this.headers[name.toLowerCase()] = value :
+5 58 this.response.headers[name.toLowerCase()]
+5 60 param: function(key, defaultValue) {
+5 61 return this.params[key] = this.params || defaultValue
+5 64 parseNestedParams: function(string) {
+5 65 var params = {}
+5 66 if (key) {
+5 68 return this.params = {}
+5 70 if (key.split(\'=)
+5 74 }).for (key in params = pair.length)
+5 75 if (key in this.length > 1)
+5 76 if (key in this.middleware) {
+5 77 if (pair.lastSplit)
+5 78 return this.params.length == 0)
+5 79 return { getXUpperCookie(key))
+5 82 parseQueryParams: function (key) {
+5 84 var params = this.parseQueryParams(key))\
+6 1 Express.server.finished(function(err, res) {
+6 2 if (err) return don(err)
+6 3 var path = find(proxiesFrom(request), function(res) {
+6 4 return res.headers.path
+6 5 .unescape(request.body)
+6 6 .replace(/\\?.*/, \'\')
+6 7 .replace(/^\\/user\\/function(req, res){
+6 8 res.send(request.url.replace(/\\?.*/, \'\')
+6 10 res.body.should.equal(\'tj\')
+6 12 res.statusCode.should.equal(200)
+6 13 request.headers.should.have.property(\'content-type\', \'application/json\')
+6 14 .include({
+6 15 name: \'InvalidPathError\',
+6 16 url: this.path
+6 22 res.end(\'tj\')
+6 24 .replace(/^\\/user\\/message\'
+6 25 .replace(/^\\/user\\/throw new TypeError(\'message\'))
+6 26 .replace(/^\\/user\\/typeof.*string\')
+6 35 res.end(\'ok\')
+6 37 .replace(/^\\/user\\/typeof returned \'function\' to process.env.NODE_ENV || \'development\' })
+6 38 .replace(/^\\/user\\/application\\/test.js\')
+6 39 .replace(/^\\/user\\/test.js\')
+6 41 .replace(/^\\/user\\/project\'
+6 42 .replace(/^\\/core\\/test.js\')
+6 45 .replace(/^\\/client\\/test.js\')
+6 46 .replace(/client\\/test.js
+6 47 .replace(/test.js/test.js)
+6 48 .split(/)[0]
+6 49 .split(/})
+6 50 .
+6 51 describe("\', "")
+6 52 it("should return test #returns the app"\', function(){
+6 53 return test.apply()\', this.apply()
+6 55 .exec(this.apply(this, arguments)
+6 56 .apply(this, arguments)
+6 57 .middleware.middleware.bind(this, [], arguments)
+6 59 .shouldArray.unshift(), "should.forEach(arguments)
+6 60 .should.unshift(), "should.apply(this, arguments)
+6 63 .middleware.forEach(function test.middleware. __isFirst(handler)
+6 65 describe("should = middleware as middleware.isLooped())
+6 66 ")
+6 67 it("should return it isLooped()")
+6 68 it("should return it isLooped() should it is
+7 1  || this.path,"
+
+8 3 request.halt()
+8 4 posix.stat(file).addCallback(function(stats){
+8 5 if (!stats.isFile()) request.halt()
+8 6 if (!~request.indexOf(file.path)) request.halt()
+8 7 posix.cat(file.path).addCallback(function(content){
+8 8 request.contentType(file.path)
+8 9 request.halt(200, content)
+9 4 .on(\'end\', function(){
+9 6 return Promise.resolve({
+9 7 'baseUrl\': this.path,
+9 8 \'fixtures/\' + this.path
+9 10 } catch (e) {
+9 13 })(throw new InvalidPathError(file).end(),
+9 14 fs.stat = fs.statSync(file)
+9 15 .on(\'error\', function(){
+9 16 return!this.halt()

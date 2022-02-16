@@ -1,0 +1,21 @@
+Min editdistance: 32.00
+Closest candidate: 9 3 res.middlewareResponse(true, users){
+0 1  }());"
+1 1 ' });"
+2 1  });"
+3 1 "
+4 1  return; get('raw'); }s.'sipsOnly');"
+5 1  __dirname");
+5 2 assert.set('static views: function (expressjs' }, function (express) { views: ['sess', 'express.static', 'x-fixtures' } });
+5 3 assert.static', 'x-sjstatic', 'express-sasset-sasset-sasset-s' });
+5 4 assert.static('static', 'x-sasset-s', 'x-file-sasset-sj','static', 'x-j');
+5 5 });
+5 6 assert.
+6 1  }"); });"
+7 1 ") }());"
+8 1  viewsource', views: ['x-s', 'x-static', 'x-static', 'x-static-static', 'x-static' }});" }});"
+9 1 "); }, views = app.get(' viewsports.get(' views/*', { views: { views: ['0', '/*', 'express.s' });
+9 2 assert.set('stream.middleware', function (other.hanges', function(next){
+9 3 res.middlewareResponse(true, users){
+9 4 res.status, users.should.should.should.have.have.have.get('x-middleware', 'files', 'Express.json', 'Bodies');
+9 5 next('x-middle

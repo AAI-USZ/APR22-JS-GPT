@@ -1,0 +1,145 @@
+Min editdistance: 1.00
+Closest candidate: 1 3 return module.exports(paths[0]);
+0 1 if (options.colors!= null) template.showColors(options.colors);
+0 2 commands.argv = _.compact([
+0 3 {
+0 4 type: "confirm",
+0 5 message: "Registering a package will make it visible and installable via the registry",
+0 6 options: options.color === false?
+0 7 options.filename.replace(/\
+0 8 $/, \'\') :
+0 9 options.type.should.eql("confirm");
+0 10 }
+0 11 return emitter;
+0 12 };
+0 13 module.exports.completion = install.completion;"
+
+1 2 if (options.logLevel) return help('install');
+1 3 return module.exports(paths[0]);
+2 5 module.exports.completion = function (opts, cb) {
+2 6 var cache =  config.exclude_generator? manager.getOptions(opts) : {};
+2 7 var Package = function (name, emitter, manager) {
+2 8 var uri  = options.uri.replace(/^https?:\\/\\
+2 9 this.dependencies[name] = {};
+2 10 if (uri) {
+2 11 var uri = url.parse(url).pathname;
+2 13 this.dependencies[name].once(\'resolve\', callback).resolve();
+2 14 } else {
+2 15 this.emit(\'resolve\');
+2 17 return this;
+2 19 Package.prototype.constant = function (name, json) {
+2 20 if (!this.name) throw new Error(\'name is required to resolve by b\');
+2 21 var pkg    = new Package(name, this);
+2 22 pkg.once(\'resolve\', function () {
+2 23 pkg.emit(\'resolve\');
+2 24 }.bind(this));
+2 27 Package.prototype.resolve = function () {
+2 28 if (this.working) {
+2 29 return Q.reject(createError(\'Already working\', \'EWORKING\'));
+2 31 var months = this.opts.length = 1;
+2 32 var names = this.opts.shift();
+2 33 var 0 = date.now();
+2 34 var seconds = this.opts.shift();
+2 35 var delimiter = options.delim().split(\',\').join(\', \');
+2 36 if (delimiter) {
+2 37 var resolved = '';
+2 40 this.emit(\'error\');
+2 44 Package.prototype.createSuccess = function () {
+2 45 return new Package(name, resolved, function () {
+2 46 if (emitter.emitter.emit('resolve', emitter.emit)
+2 47 .bind(this, emitter.bind(this)
+2 48 .bind(this)
+2 49 .emit)
+2 51 .then(this)
+2 53 .then(this.emitter.bind(this)
+2 54 .emit.bind(this)
+2 55 .bind(this));
+2 56 .then(this));
+2 58 Package.resolveLocal.resolveLocal.resolveLocal.resolveLocal.resolveLocal.resolveLocal.resolveLocal.resolveEndpoints = function () {
+2 59 return this.resolveEndpoints = function () {
+2 60 return this.resolveLocal.resolveEnd
+3 2 commands.argv = options.argv.remain.slice(1);
+3 4 if (options.paths!= null) template.showColors(options.paths);
+3 5 var paths    = options.argv.remain.slice(1);
+3 6 paths.forEach(function (name) {
+3 7 emitter.emit(\'end\', paths[name]);
+3 8 });
+3 10 };'
+
+4 2 var colors = options.colors? _.compact(options.colors) : _.compact(colors);
+4 4 var render = module.exports.render = function (options, argv) {
+4 5 if (!argv) return;
+4 6 var paths   = options.argv.remain.slice(1);
+4 9 var renderWithColors = function (context) {
+4 10 return function (name) {
+4 11 return hogan.compile(context.colors, options.colors);
+4 17 if (options.partial) {
+4 19 return hogan.compile(context.colors, options.partial);
+4 23 var renderFn = function (context) {
+4 32 var render = new renderFn.render, options = argv.remain.slice(1);
+4 33 if (!render) return;
+4 34 return render.render(locals, options, argv);
+5 2 commands.push({
+5 3 name: paths[0],
+5 4 argv: options.argv.remain.slice(1)
+6 2 var colors = options.argv.remain.slice( -1);
+6 3 var paths    = options.argv.remain.slice( -1);
+6 8 var StateMachine = function (rli, colors) {
+6 9 var currentQuestion;
+6 10 var answers;
+6 11 var currentOptions;
+6 12 var currentOptionsPointer;
+6 13 var pendingQuestionId;
+6 14 var done;
+6 15 this.onKeypress = function (key) {
+6 16 if (!currentOptions ||!key) {
+6 17 return;
+6 19 if (key.name === \'tab\' || key.name === \'right\' || key.name === \'down\') {
+6 20 this.suggestNextOption();
+6 21 } else if (key.name === \'left\' || key.name === \'up\') {
+6 22 currentOptionsPointer = currentOptionsPointer + currentOptions.length - 2;
+6 25 if (!key.ctrl &&!key.meta && key.name!== \'enter\' && key.name!==\'return\') {
+6 26 key.name = \'escape\';
+6 29 this.suggestNextOption = function (cb) {
+6 30 if (!currentOptions) {
+6 33 currentOptionsPointer = (currentOptionsPointer + 1) % currentOptions.length;
+6 34 rli._deleteLineLeft();
+6 35 rli._deleteLineRight();
+6 36 rli.write(currentOptions[currentOptionsPointer]);
+6 38 this.onLine = function (line) {
+6 39 if (pendingQuestionId) {
+6 40 if (currentOptions) {
+6 41 currentOptionsPointer = line;
+6 42 if (currentOptionsPointer === -1) {
+6 43 currentOptionsPointer === -1) {
+6 44 currentOptionsPointer = -1;
+6 49 if (line.log.log.warn(\'\');
+6 50 if (line.colors.done(());
+6 53 this.onLineIndent = function (line) {
+6 54 line.green;
+6 55 return line.green;
+6 56 return line.onLine();
+6 60 if (line.line.onLine === undefined) {
+6 66 this.lineIndent = function (line) {
+6 67 line.onLine.onLine();\
+7 4 "use strict";
+7 5 },
+7 9 ];
+7 10 return context.line.apply(context, arguments);
+8 3 if (options.logLevel) return 2;
+8 4 var message = emitter.emit.bind(emitter, 'end') + '\
+8 5 ' + options.logLevel.toUpperCase();
+8 6 if (options.assume) return 5;
+8 7 var done = function (err) {
+8 8 process.nextTick(done);
+8 10 var options = nopt({}, argv);
+8 12 var donePromise = promise.then(function (done) {
+8 13 return donePromise.then(function (str) {
+8 14 var args = _.toArray(argv);
+8 15 args.unshift({
+8 16 name: path.basename(str),
+8 17 message: message
+8 19 donePromise.then(done.bind(done, null), donePromise);
+9 2 commands.argv = _.compact(options.colors);
+9 3 commands.argv.remain.pop();
+9 4 return paths;

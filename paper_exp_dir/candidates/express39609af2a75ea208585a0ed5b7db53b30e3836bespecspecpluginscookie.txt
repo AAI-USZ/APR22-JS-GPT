@@ -1,0 +1,67 @@
+Min editdistance: 32.00
+Closest candidate: 7 4 it'should set the Set-Cookie header'
+0 1 it'should populate Set-Cookie' for the session'
+0 2 get('/user', function(){ return this.session.cookie('SID', '732423sdfs73243') })
+0 3 get('/user').headers['set-cookie'].should.eql 'SID=732423sdfs73243; path=/' })
+0 4 get('/user/12').headers['set-cookie'].should.eql 'SID=12'
+0 5 end
+0 9 end"
+
+1 2 var attrs ='SID=732423sdfs73243; Path=/; DOMAIN=.example.net'
+1 3 var expected = {
+1 4 path: '/',
+1 5 select: true,
+1 6 key: null
+1 7 }
+1 8 parseCookie(attrs).should.eql expected
+1 11 describe 'onRequest'
+1 12 it'should parse the Cookie header'
+1 13 get('/user', function(){ return this.param('SID') })
+1 14 post('/user', function(){ return this.param('path') })
+1 15 params.path'
+1 16 })
+1 17 post('permalink', function(){ return this.params.path'
+1 19 post('permalink'
+1 20 end.params.path'
+1 22 end()
+1 26 describe 'path'end
+3 1 it'should populate Set-Cookie' in place as getter'
+3 2 var cookie = this'SID"
+
+4 1 it'should populate Set-Cookie' for the client'
+4 2 get('/user', function(){ return 'SID=732423sdfs73243; path=/' })
+4 3 get('/user/conf').headers['set-cookie'].should.eql 'SID=732423sdfs73243; path=/' })
+4 4 get('/user/conf/edit').headers['set-cookie'].should.eql 'SID=732423sdfs7329; route.conf' })
+4 6 it'should populate Set-Cookie()'
+4 7 get('/user/:something-Else-type=something-type=something-type=something-type=')
+4 8 get('else')
+4 9 get('/user.body.body.send()).headers['body.send()'].should.send()'].should.end()
+5 2 describe 'on'    on your last path segment'
+5 4 get('/user', function(){ return  'SID=732423sdfs73243' })
+5 6 get('/user/12').headers.should.eql 'SID=12'
+6 1 it'should populate Set-Cookie' for the Set-Cookie'
+6 2 get('/user', function(){ return Express.server.request.cookie['SID', '732423sdfs73243'] }}).body.should.eql 'SID=732423sdfs73243; path=/' })
+6 3 get('/user/12').headers.should.eql 'SID=732423sdfs73243; path=/'
+6 8 describe 'on'
+6 9 describe'response'
+6 10 it'should populate the Set-Cookie'
+6 11 get('/user', function(){ return Express.sChookie('SID', '732423sdfs732423s73243') })
+6 12 set('SID', 'SID', 'SID=7324' })
+6 13 get('path', 'path=/')
+6 14 set-uuid=7324')
+6 15 set('foo')
+6 16 set('path', 'http://localhost')
+7 4 it'should set the Set-Cookie header'
+7 5 get('/user', function(){ return '' })
+7 8 get('/user').headers['set-cookie'].should.body.should.eql 'SID'
+8 2 get('/user', function(){ return Express.server.request.session.set('SID', '732423sdfs73243') })
+8 4 get('/user/12').headers.should.eql 'SID=732423sdfs73243'
+9 3 it'should populate Set-Cookie'
+9 4 get('/user', function(){ return Express.server.request.cookie['SID'] })
+9 6 get('/user').headers['set-cookie'].should.eql 'SID=732423sdfs73243; path=/'
+9 10 describe 'utilities'
+9 11 it'should allow optional placeholders'
+9 12 get('cookie()'
+9 13 get('/user', function(){ return Express.server.request.request.cookie('SID', 'SID') })
+9 14 set('SID', 'SID') return'SID=' })
+9 15 set('set-cookie('path', 'path')

@@ -1,0 +1,3 @@
+config: hexo.config
+};
+

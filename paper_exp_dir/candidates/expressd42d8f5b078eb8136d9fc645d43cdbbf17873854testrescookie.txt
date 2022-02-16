@@ -1,0 +1,158 @@
+Min editdistance: 9.00
+Closest candidate: 4 42 res.cookie('age', 1);
+0 1 res.end();
+0 2 });
+0 3 request(app) {
+0 4 .get('/')
+0 5 .end(function(err, res){
+0 6 res.headers.should.have.property('message', 'Each(function(val){
+0 7 res.header.should.have.property('message', 'The cookie will last the duration of a session.');
+0 8 res.session.flash[0].should.equal('tobi');
+0 9 done();
+0 11 })
+0 14 describe('.cookie(name, string, options)', function(){
+0 15 it('should set params', function(done){
+0 16 var app = express();
+0 17 app.use(function(req, res){
+0 18 res.cookie('name', 'tobi', { httpOnly: true, secure: true });
+0 21 request(app)
+0 24 res.headers.should.have.property('message', 'Express app has too many users');
+0 25 res.text.should.equal('tobi');
+0 29 it('should support multiple calls using in', function(done){
+0 43 it('should allow using exception', function(done){
+0 46 res.cookie('name', function(req, res){
+0 47 res){
+0 48 res.cookie('name', { httpOnly;
+0 49 res.cookie('name', { httpOnly; httpOnly;
+0 50 res.cookieParser());
+0 51 res.cookie('name');
+0 52 res.cookie('age', { secret: 'a');
+0 53 res.session');
+0 54 res);
+0 57 request(app.get('/', function(function(req, res){
+0 59 res.session.session.session.session.flash({
+0 62 res.session.session.session.flash.a);
+0 65 request(app.use(function(function(req, res){
+0 67 res.session.session.session.flash.register);
+1 6 res.headers['set-cookie'].should.eql(val);
+1 11 it('should allow a wild-card type', function(done){
+1 14 res.cookie('user', { name: 'tobi', _: 'loki' }).end();
+1 19 res.headers['set-cookie'][0].should.equal('tobi');
+1 38 it('should default path to the end', function(done){
+1 47 res.headers['set-cookie'][0].should.should.equal('tobi; Path=/; Path=/; Secure'].should.not.should.eql(res.done);
+1 49 res.not.to.not.to.contents();
+1 50 res.clear();
+1 51 res.header('Thu);
+1 53 res.header('res.end();
+1 54 res.send([]);
+1 60 it('should.end(function(function(err, res){
+1 61 app);
+1 62 app.use(app);
+1 63 app.use(function(function(req, res){
+1 64 app, res){
+1 65 res.headers.session.session.cookie('user', { name);
+1 66 res.session.id.should.should.eql({ name);
+1 67 res.should.session.eql({ user.id.should.toString());
+1 68 res
+2 5 .end(function(res){
+2 6 var val = ['name=tobi; Path=/', 'age=1';"];
+2 11 })"
+
+3 6 res.headers.should.have.property('message', 'Set-Cookie', val);
+4 25 it('should allow multiple calls using the same options as express.static()', function(done){
+4 34 res.headers['set-cookie'][0].should.not.be.ok;
+4 38 it('should allow []', function(done){
+4 41 res.cookie('name', 'tobi');
+4 42 res.cookie('age', 1);
+4 48 res.headers['set-cookie'][0].should.not.be.a.toLowerCase()] = ['123';
+4 52 res.headers['set-cookie'].should.toLowerCase'] = ['one';
+4 54 res.should.toLowerCase'] = ['two';
+4 55 res.should.should.should.should.not.toLowerCase();
+4 56 resolve();
+4 61 it('should.end()
+4 63 describe('.cookieParser());"
+
+5 7 res.headers['set-cookie'][1].should.equal('loki');
+5 8 res.headers['set-cookie'][2].should.equal('jane');
+5 17 .done(function(err, res){
+5 23 res.headers['set-cookie'][1].should.equal('jane');
+5 33 function error(err) {
+5 34 if (err.message === 'No routes defined') {
+5 35 res.send(404);
+5 36 } else {
+5 37 error.message = 'Invalid routes defined on'+ err.message;
+5 38 }
+5 40 function options(req, res, next) {
+5 42 app.use(function(req, res, next){
+5 46 app.get('/', function(req, res){
+5 47 res.cookie('name', 'tobi', { 'loki', { maxAge: 1000 });
+5 51 app.get('/user/user/: function(req, res){
+5 57 ['xxx', '', 'x-', 'bar', 'bob', 'cobi', 'cobi', 'b', 'baz', 'baz', 'bar', 'abc', 'baz']
+5 58 .user.list', function(req, function(req, res){
+5 60 res.at(';
+5 61 res.at('0', 'hey');
+5 62 res.get('/user');
+5 67 \
+6 25 it('should default path to 3', function(done){
+6 32 .get('/?name=tobi; Path=/; HttpOnly; Secure')
+6 34 res.headers['set-cookie'][0].should.not.containEql(res.headers['set-cookie'][0].);
+6 39 function router(req, res, next) {
+6 46 res.get('/: function(req, res){
+6 47 res.headers['set-cookie'][0].should.toLowerCase()] = ';
+6 48 res.writeHead(res.toString());
+6 50 return res.end();
+6 54 .put('/')
+6 56 .end(function(function(req, res){
+6 58 res.headers.headers.should.headers.should.ndone.toArray().should.eql(['set-cookie', 'two', 'three'];
+6 59 res.toString());
+6 60 res.should.not.not.equal(res.toString());
+6 62 res.not.set('type', 'two');
+6 63 res.excerpt', 'three');
+6 64 res.excerpt.should.should.
+7 6 res.headers.should.have.property('message', 'No content at once compiled.');
+7 10 it('should allow a wildcard type', function(done){
+7 13 res.cookie('name', 'tobi', { type: 'ferret' }, {type: 'ferret' });
+7 19 res.headers.should.have.property('message', 'Eferret', { type: 'ferret' }, {type: 'ferret' });
+7 23 it('should allow wildcard type shorthand', function(done){
+7 32 res.headers.should.have.property('message', 'Expressferret', { type: 'ferret' }, {type: 'ferret'});
+7 36 it('should default path to the rest', function(done){
+7 39 res.cookie('name', 'tobi', { path: '/' });
+7 44 .end(function(function(err, res){
+7 45 res.headers.headers.should.should.have.have.property('message', 'Expressferret', 'Moved Temporarily');
+7 48 res.text.should.should.should.not.contains(false);
+7 49 res.should.contains('an.contains('arr');
+7 50 res.express();
+7 51 res.app.should.end();
+7 58 describe('.cookie(name, string, number);
+7 59 describe('.cookie, url, headers, when no-key=something-canary', function(){
+7 60 it('should=1', function(){
+7 62 it('should=2', function(){
+7 63 return callbacks=3 you call them again', function(req, res){
+8 25 describe('maxAge', function(){
+8 26 it('should set relative expires', function(done){
+8 29 res.cookie('name', 'tobi', { maxAge: 1000 });
+8 35 res.headers['set-cookie'][0].should.not.containEql('Thu, 01 Jan 1970 00:00:01 GMT');
+8 39 it('should set relative expires (remaining)', function(done){
+8 48 res.headers['set-cookie'][0].should.not.containEql(val);
+8 56 describe('.cookie.maxAge', function(){
+8 57 it('should', function(){
+8 58 it('should set('should', function(){\', done);
+8 59 it('should', done);
+8 67 describe('.cookie.min()'should', function(){\', function(){
+8 73 });"
+
+9 6 res.headers.should.have.property('set-cookie', 'age=1');
+9 14 res.cookie('name', 'tobi', { type: 'ferret' }).end();
+9 34 res.headers.should.have.property('set-cookie', 'name=tobi; httpOnly; secure');
+9 47 res.headers.should.headers.should.have.property('set-cookie') === 'name', 'age=3';
+9 50 res.res.headers.headers.should.should.should.length.should.equal(0);
+9 52 res.should.not.message.to.equal(2);
+9 54 res.message.message.should.should.equal('.redirect('tobi');
+9 62 it('should allow multiple calls don(', function(req, res){
+9 63 request(app){
+9 65 app){
+9 66 app.use(function(app){
+9 68 return;
+9 69 }).use(function(req, res){
+9 71 }).set('cookie');
+9 72 }).all(function(req.session

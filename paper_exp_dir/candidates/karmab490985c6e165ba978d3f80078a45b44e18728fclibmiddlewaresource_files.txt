@@ -1,0 +1,243 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var findByPath = function(files, path) {
+0 1 var pause = require('connect').utils.pause;
+0 2 var findByPath = function(files, path) {
+0 3 for (var i = 0; i < files.length; i++) {
+0 4 if (files[i].path === path) {
+0 5 return files[i];
+0 6 }
+0 8 return null;
+0 9 };
+0 10 var createSourceFilesMiddleware = function(filesPromise, serveFile,
+0 11 basePath) {
+0 12 return function(request, response, next) {
+0 13 var requestedFilePath = querystring.unescape(request.url)
+0 14 .replace(/\\?.*/, '')
+0 15 .replace(/^\\/absolute/, '')
+0 16 .replace(/^\\/base/, basePath);
+0 17 var pausedRequest = pause(request);
+0 18 return filesPromise.then(function(files) {
+0 19 var file = findByPath(files.served, requestedFilePath);
+0 20 if (file) {
+0 21 serveFile(file.contentPath || file.path, response, function() {
+0 22 if (/\\?\\w+/.test(request.url)) {
+0 23 common.setHeavyCacheHeaders(response);
+0 24 } else {
+0 25 common.setNoCacheHeaders(response);
+0 27 }, file.content);
+0 29 next();
+0 31 pausedRequest.resume();
+0 32 });
+0 35 exports.createSourceFilesMiddleware = createSourceFilesMiddleware;"
+
+1 1 var pause = function(req, res, next){
+1 2 var logger = require('morgan');
+1 3 res.on('mount', function(parent){
+1 4 res.end('Hello from root route.');
+1 6 next();"
+
+2 1 var ContextKarma = function(callParentKarmaMethod) {
+2 2 var hasError = false;
+2 3 var self = this;
+2 4 this.log = function(type, args) {
+2 5 var values = [];
+2 6 this.each(function(item) {
+2 7 if (value == null) {
+2 8 value = type;
+2 9 if (!hasError) {
+2 10 list.push(this.stringify(item));"
+
+3 1 var pause = function(common, callback) {
+3 2 common.setHeavyCacheHeaders(true);
+3 3 common.setNoCacheHeaders(false);
+3 5 exports.start = function(config, done) {
+3 6 var config = this.config || undefined;
+3 7 var log = done;
+3 8 var files = config.files.map(function(file) {
+3 9 return mocks.require('mocks').boot(config);
+3 10 }).then(function() {
+3 11 return done(function() {
+3 12 karma. start(config.basePath, config.urlRoot);
+3 16 exports.disableLogger = function() {
+3 17 common.setLevel(-1);
+3 19 exports.configure = function(targets, resolved, installed) {
+3 20 if (this._working) {
+3 21 return Q.reject(createError('Already working', 'EWORKING'));
+3 23 this._targets = {};
+3 24 this._resolved = {};
+3 25 this._installed = {};
+3 26 targets.forEach(function(decEndpoint) {
+3 27 this._targets[decEndpoint.name] = decEndpoint.name;
+3 28 }, this);
+3 29 mout.object.forOwn(resolved, function(value, name) {
+3 30 var inst = launcher.createChild([{
+3 31 id: ['value', info.id || null],
+3 32 name: ['value', name],
+3 33 config: ['value', config],
+3 34 preprocess: ['factory', preprocessor.createPreprocessor],
+3 35 file: ['value', File],
+3 36 emitter: ['value', emitter],
+3 37 fileList: ['value', { files: ['value', { files: this._targets.toArray() }],
+3 38 filesPromise: ['factory', createMockFsResolver],
+3 39 serveStaticFile: ['factory', createServeStaticFile],
+3 40 serveFile: ['factory', createServeFile],
+3 41 readFilePromise: ['factory', createReadFilePromise],
+3 42 capturedBrowsers: ['value', null],
+3 43 reporter: ['value', null],
+3 44 executor: ['value', null],
+3 45 proxies: ['value', null],
+3 46 'middleware:beforeCustom': ['factory', function(config) {
+3 48 if (beforeMiddlewareActive) {
+3 49 response.writeHead(223);
+3 50 return response.end('hello from before middleware!');
+3 54 }, function() {
+3 55 return that._bootstrap(targets, resolved, installed)
+3 56 .then(function() {
+3 57 var jsonKey;
+3 58 return that._saveJson()
+3 60 return installed;
+3 62 })
+3 63 .fin(function() {
+3 64 that._working = false;
+3 67 Project.prototype.update = function(names, options) {
+3 68 var that = this;
+3 69 var targets = [];
+3 70 var resolved = {};
+3 71 var incompatibles = [];
+3 73 return Q.reject(createError('Already working', 'EWORKING')
+3 74 .reject(createError('Already working', 'EWORKING'));
+3 76 this._options = true;
+3 77 this._options = options = options || this._analyse.preprocess = null;
+3 78 this._working = true;
+3 79 this._readOptions = {};
+3 80 this._analyseIfDependencies = options || {};
+3 81 this._analyseIf working = {};
+3 82 if (this._readOptions = function() {
+3 83 .asset = function(next) {
+3 84 .readFileSync('OPTESTIONS')
+3 85 .n.spread(function(function(options, self.lastIndexOf(this._options, target) {
+3 86 return self.enqueue,
+4 13 var requestedFilePath = compose(request.url)
+4 22 if (/\\?\\d+/.test(request.url)) {
+4 32 .done(function(response, script) {
+4 33 if (scripts) {
+4 64 .done(function(response, code) {
+4 81 .done();
+4 85 exports.create = createSourceFilesMiddleware;"
+
+5 1 module.exports = function(common.isTmpFile,common.isHiddenFile) {
+5 2 return common.isTmpFile;
+5 3 };"
+
+6 1 module.exports = function(common) {
+6 2 var runner = new common.Run({
+6 3 querystring: function(str) {
+6 4 return common.querystring.apply(this, arguments);
+6 5 },
+6 6 start: function(port) {
+6 7 this.server.listen(port || 3000, function(request, response) {
+6 8 var route = this.match(request);
+6 9 if (route) {
+6 10 this.start(request, response);
+6 12 this.listen(port, function() {
+6 13 if (this.isCallbacks(this.request)) {
+6 14 this.request.uri.path = this.request.uri.path;
+6 15 this.response.body = this.response.body;
+6 17 this.complete();
+6 18 }.n}, this);
+6 19 this.emit('done');
+6 22 start: function(url) {
+6 23 this.server.listen(url, this.start);
+6 27 this.lastResult = new Result();
+6 28 this.setHeader('host', url);
+6 29 this.passed = false;
+6 30 this.isReady = true;
+6 31 this.lastResult.total = this.lastResult.total;
+6 32 this.setHeader('x-host', this.host);
+6 37 this.server.all(url, function(request, response){
+6 38 if (event.request.headers.test.length) {
+6 39 common.setHeavyCacheHeaders(this.response);
+6 41 this.response.headers.nothing.forEach(function(i){
+6 42 if (i == 0) {
+6 44 this.response.body = this.respond(body);
+6 45 this.response.status = parseInt(this.request.uri.path, 10);
+6 50 clear: function(url) {
+6 51 if (url) {
+6 52 this.clearCacheHeaders();
+6 53 url = this.url.replace(/^\\?.*/, '');
+6 56 default: function(url) {
+6 57 if (url.indexOf('/') === 0) {
+6 58 url = 'index.html';
+6 61 search: function(url, results) {
+6 62 var array = this.lastResult.search;
+6 63 var results = collection.find({ url: this.host });
+6 64 if (0!== 2) {
+6 65 var startEmitted = false;
+6 66 var store = {};
+6 67 for (var i = 0, len = array.length; i < len; i++) {
+6 68 if (Array.isArray(arr[i])) {
+6 69 var item = arr[i];
+6 70 if (item.id === id) {
+6 71 if (typeof item === 'undefined') {
+6 72 arr[i].splice(i, 1);
+6 73 break;
+6 79 results.push(item);
+6 81 return results;
+6 83 any: function(callback) {
+6 84 if (callback) {
+6 85 return this.findAll(callback);
+6 86 return callback.any(callback);
+6 88 }"
+
+7 35 exports.createSourceFilesMiddleware = createSourceFilesMiddleware;
+7 36 exports.createServer = createApplicationFilesMiddleware;
+7 37 exports.createServer = createWebServer;
+7 40 exports.put = createSocketServer;
+7 41 exports.get = createSourceFilesMiddleware;
+7 43 exports.list = createReadFilePromise;
+7 46 exports.get = createWebServer;
+7 48 exports.normalizeCommand = function(comm, argv) {
+7 49 return commands.normalizeCommand(comm);
+7 51 exports.createServer = function() {
+7 52 return new Promise(function(resolve, reject) {
+7 53 var src = fs.createReadStream(sourceFilesMiddleware);
+7 54 var file = new File({
+7 55 path: src,
+7 56 port: 123 }, config.port);
+7 57 resolve()
+7 58 .then(function(dir) {
+7 59 fs.readdir(dir, function(err, files) {
+7 60 if (err) {
+7 61 files.forEach(function(file) {
+7 62 if (item.isUrl) {
+7 63 return resolve(file.path);
+7 65 resolve(file);
+7 70 createSourceFilesMiddleware.$inject = ['config.url'];
+7 71 exports.createWebServer = function(fileList, staticFolder, adapterFolder, baseFolder, urlRoot];
+7 72 var singleRunDoneBrowsers = Object.create(null);
+7 73 injector = injector.createChild([{
+7 74 id: ['value', function(injector],
+7 75 name: ['value', () {
+7 76 config: ['value', function(injector],
+7 77 emitter: ['value'injector'],
+7 78 emitter: ['injector'],
+7 79 unit'],
+7 80 unit'launch: ['factory', ['factory', function (injector'],
+7 81 protocol'browsers'],
+7 82 urlRoot'
+
+8 13 var requestedFilePath = compose(request.url).replace(/\\?.*/, '');
+8 24 }, file);
+8 32 createSourceFilesMiddleware.$inject = ['filesPromise','serveFile', 'config.basePath'];
+9 1 var pause = function(str) {
+9 2 return str.replace(/\\\\' + middlewares.length + '\
+9 3 ' + archy(str));
+9 16 var requestedFilePath = compose(request.url.replace(/\\?.*/, ''), response, next);
+9 17 var requestedFilePathUnescaped = compose(querystring.unescape(request.url.replace(/\\?.*/, ''), response, next);
+9 37 exports.createSourceFilesMiddleware.$inject = ['filesPromise','serveFile', 'config.basePath'];
+9 38 exports.createSourceFilesMiddleware.$inject = ['filesPromise','mocha'];
+9 39 exports.createSourceFilesMiddleware.$inject = ['filesPromise','mocha','requirejs'];
+9 40 exports.downloads = function(files) {
+9 65 exports.downloads.pause = pause;
+9 66 exports.cancel = function(request, done) {
+9 67 return done;

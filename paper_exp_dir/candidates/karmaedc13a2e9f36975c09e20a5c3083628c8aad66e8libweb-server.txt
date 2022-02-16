@@ -1,0 +1,199 @@
+Min editdistance: 11.00
+Closest candidate: 0 1 var createWebServer = function(injector, emitter, fileList) {
+0 1 var createWebServer = function(injector, emitter, fileList) {
+0 2 var config = injector.config;
+0 3 var serveStaticFile = common.createServeStaticFile(fs, path.normalize(__dirname + '/../static'));
+0 4 var serveFile = common.createServeFile(fs);
+0 5 emitter.on('file_list_modified', function(files) {
+0 6 filesPromise.set(files);"
+
+1 1 var clientConfig = {
+1 2 useConfig: function(req, res, next) {
+1 3 return function(request, response, next) {
+1 4 if (common.isDefined(next.config.basePath) || common.isDefined(basePath)) {
+1 5 return next();
+1 6 }
+1 7 request.set('home', '/');
+1 8 next();
+1 9 });
+1 11 };
+1 12 var injector = injector.createChild([{
+1 13 serveStaticFile: ['value', serveStaticFile],
+1 14 serveStaticFile: ['value', serveStaticFile]
+1 15 }]);
+1 16 var handler = injector.invoke(middleware.createChild([{
+1 17 filesPromise: ['value', serveStaticFile],
+1 19 }]));
+1 20 var middleware = injector.invoke(middleware.createChild([{
+1 24 var filePromise = injector.invoke(promise.createWebServer);
+1 25 return server.listen(middleware);
+1 28 var beforeExit = function() {
+1 29 return calls.length;
+1 31 var middleware.forEach(function(fn) {
+1 32 before(function() {
+1 33 return fn.call(request, response, 'hello middleware', 'world.reset');
+1 35 it('should setup mime', function() {
+1 36 return handler.invoke(mime.createServer())
+1 37 .get('/custom')
+1 38 .set('home', '/custom');
+1 39 return handler.handler('hello middleware', 'world.clear');
+1 41 it('should keep default', function() {
+1 47 it('should set default', function() {
+1 49 .set('/custom', 'http')
+1 50 .end();
+1 52 });"
+
+2 1 var createCustomHandler = function(customFileHandlers,   basePath) {
+2 3 for (var i = 0; i < customFileHandlers.length; i++) {
+2 4 if (customFileHandlers[i].urlRegex.test(request.url)) {
+2 5 return customFileHandlers[i].handler(request, response, 'fake/static', 'fake/adapter',
+2 6 basePath, 'fake/root');
+2 13 var config = injector.createChild([{
+2 14 serveFile: ['value', serveFile],
+2 16 filesPromise: ['value', filesPromise]
+2 18 var proxyMiddlewareInstance = injector.invoke(proxyMiddleware.create);
+2 19 var handler = connect()
+2 20 .use(injector.invoke(runnerMiddleware.create))
+2 21 .use(injector.invoke(karmaMiddleware.create))
+2 22 .use(injector.invoke(sourceFilesMiddleware.create))
+2 23 .use(injector.invoke(proxyMiddleware.create))
+2 24 .use(injector.invoke(createCustomHandler))
+2 25 .use(function(request, response) {
+2 26 common.serve404(response, request.url);
+2 28 var serverClass = injector.model('serverClass');
+2 29 var serverArg = serverClass.frameworks.indexOf(config.middleware.name);
+2 30 if (config.middleware) {
+2 31 config.middleware.forEach(function(middleware) {
+2 32 handler.use(injector.get('middleware:' + middleware));
+2 39 .use(proxyMiddleware.create))
+2 41 .use(function(errorHandler.use(config.middleware))
+2 42 .use(config.middleware.middleware.middleware.forEach(function (middleware, middleware) {
+2 43 config.forEach(function (middleware, app) {
+2 44 if (middleware.middleware.middleware.middleware.middleware = router, handler.middleware.last/) {
+2 45 return handler.handle(injector.use(injector.handle_middleware);
+2 46 })
+2 49 var handler.use(function (injector) {
+2 50 it('should, should.throwErrors, middleware.return handler.apply(injector, arguments);
+2 51 return handler.middleware.apply(injector, arguments);
+3 2 var config = injector.get('config');
+3 4 var serveStaticFile = common.createServeStaticFile(fs);
+3 5 var filesPromise = new common.PromiseContainer();
+4 8 .use(connect.compress(config.middleware))
+4 12 .use(proxyMiddlewareInstance)
+4 14 .use(function(request, response) {"
+
+5 1 var proxy = connect.createProxyHandler({}, true);
+5 2 var handler = connect.createProxyHandler({
+5 3 filesPromise: handler
+5 5 var url = common.get('url');
+5 6 return handler.handler(request, response, 'fake/static', url, true);
+5 11 return handler.create('middleware', url, false, true);
+5 17 var files = getFilesPromise.filter(function(file) {
+5 18 return mm(file, {dot: true});
+5 20 common.forEach(function(file) {
+5 21 if (request.url.indexOf(file)!== 0) {
+5 22 var responseData = replay(request.url, file);
+5 23 if (replay) {
+5 24 response.setHeader('Location', url + '/');
+5 25 response.writeHead(301);
+5 26 return response.end('Redirecting to'+ file.host);
+5 31 exports.create = createWebServer;"
+
+6 3 common.initializeMimeTypes(config);
+6 4 common.settings.injector = emitter;
+7 1 var redirecting_url = function(url) {
+7 2 var value = url.replace(/\\?.*/, '');
+7 3 if (value === undefined) {
+7 4 return false;
+7 6 var redirecting_to_url = function(url) {
+7 7 return common.get('url', redirecting_to_url);
+7 9 var createCustomHandler = function(customFileHandlers,   basePath,   urlRoot) {
+7 14 basePath, urlRoot);
+7 19 .use(connect.compress(compress))
+7 28 var serverClass = http.serverClass;
+7 29 var serverArg = serverClass.join(' ') + '.js';
+7 30 if (config.protocol === 'https:') {
+7 31 serverClass = https;
+7 33 var setPrototypeOf = function(request, response) {
+7 34 return serverClass.setPrototypeOf(request, response);
+7 36 var proto = serverClass.pop();
+7 37 proto.__proto__ = proto;
+7 38 proto.core_dir = path.dirname(__dirname) + '/';
+7 39 proto.lib_dir = __dirname + '/';
+7 40 proto.env = env;
+7 41 proto.version = version;
+7 42 proto.util = env;
+7 43 proto.createServer = null;
+7 44 proto.createServer = require(createServer);
+7 45 proto.proto.resolve = function(config.createServer);
+7 47 proto.getServerOptions = function(config, function(req, res, next) {
+7 48 return resOptions = route, engines = options || {};
+7 49 var server = getTemplates = options || {};
+7 50 serverConfiguration() {
+7 51 serverConfiguration();
+7 55 res.set('production', function() {
+7 56 res.enable('x-powered-dev');
+7 58 serverI = set('x-powered-auto-auto-salt', 'production', 2);
+8 4 filesPromise.set(files);
+8 6 emitter.on('error', function(e) {
+8 7 emitter.emit('error', e);
+8 9 return filesPromise.
+8 10 .use(injector.invoke(createWebServer), config.normalizePath);
+8 11 injector.createChild([{
+8 16 var compressOptions = {
+8 17 filter: function(req, res){
+8 18 return (/json|text|javascript|dart/).test(res.getHeader('Content-Type'));
+8 22 .use(connect.compress(compressOptions))
+8 31 var serverClass = http.createServerClass();
+8 32 serverClass.prepare();
+8 35 return serverClass;
+8 41 return customFileHandlers[i].handler(request, response, response, [], 'fake/', 'fake/static', 'fake/adapter', 'fake/root']);
+8 46 var handlerClass.normalizeConfig = function(config) {
+8 47 return function(config) {
+8 48 return config
+8 49 config.set(basePath, urlRoot, middleware) {
+8 50 var basePath = resolve(config.urlRoot);
+8 51 return handler.normalize([middleware, urlRoot);
+8 53 return handler.urlRoot = middleware;
+8 56 module.createCustomHandler.createServer = function(middleware) {
+8 57 return handlerClass, handler
+8 58 .normalize(handler);
+8 59 return handler
+8 60 };"
+
+9 5 }, emitter.emit.bind(emitter, 'fileList'));
+9 10 var servedStaticFile = common.createServeStaticFile(fs, path.normalize(__dirname + '/../static'));
+9 11 var servedFilesPromise = new common.PromiseContainer();
+9 12 var includedFiles = [
+9 13 {
+9 14 path: '/base/path',
+9 15 url: '/',
+9 16 before: ['value', {},],
+9 17 urlRoot: '/',
+9 18 beforeMiddleware: ['value', {},
+9 21 injector.invoke(createWebServer);
+9 22 .createServer.apply(this, arguments);
+9 23 .createServer.set('home', '/');
+9 24 .createServer.accepts('html').should.be.true;
+9 25 .accepts('json').should.be.true;
+9 26 .accepts('application/json').should.be.true;
+9 27 .accepts('xml').should.be.true;
+9 28 .accepts('png').should.be.false;
+9 29 .accepts('image/*').should.be.false;
+9 31 .accepts('image/png').should.be.false;
+9 33 .accepts('qs')
+9 34 .should.be.be.false;
+9 35 .should.should.be.false;
+9 37 .createServer.createServer.on('errorHandler.use(function(req, res, next) {
+9 38 next);
+9 39 return function() {
+9 40 return next(err, res.end();
+9 41 next.done();
+9 46 server.get('/errorHandler.use(function(app)
+9 47 .get('/error', function(req, res.url, next) {
+9 48 res.get('/next', function(res.url, errorHandler)
+9 49 .url, handler)
+9 50 .removeHeader('error', handler)
+9 53 .removeHeader('config.removeHeader('config.test')
+9 54 .removeHeader('cache')
+9 55 .removeHeader('customHeaders')

@@ -1,0 +1,138 @@
+Min editdistance: 14.00
+Closest candidate: 5 45 var resolver;
+0 1 var cmd = require('../../../lib/util/cmd');
+0 2 var copy = require('../../../lib/util/copy');
+0 3 var GitFsResolver = require('../../../lib/resolve/resolvers/GitFsResolver');
+0 4 describe('GitFsResolver', function () {
+0 5 var tempSource;
+0 6 var testPackage = path.resolve(__dirname, '../../assets/github-test-package');
+0 7 before(function (next) {"
+
+1 1 var Logger = require('bower-logger');
+1 4 var GitFsResolver = require('../../../lib/core/resolvers/GitFsResolver');
+1 5 var defaultConfig = require('../../../lib/config');
+1 9 var logger = new Logger();
+1 10 before(function () {
+1 11 logger.removeAllListeners();
+1 12 });
+1 13 afterEach(function (next) {
+1 14 if (tempSource) {
+1 15 rimraf(tempSource, next);
+1 16 tempSource = null;
+1 17 } else {
+1 18 next();
+1 19 }
+1 21 function clearResolverRuntimeCache() {
+1 22 GitFsResolver.clearRuntimeCache();
+1 24 describe('.constructor', function () {
+1 25 it('should guess the name from the path', function () {
+1 26 var resolver = new GitFsResolver('foo');
+1 27 expect(resolver.getName()).to.equal('foo');
+1 29 it('should remove?part from the path when guessing the name', function () {
+1 34 describe('.hasNew', function () {
+1 35 it('should resolve always to true (for now..)', function (next) {
+1 37 resolver._createTempDir()
+1 38 .then(function (dir) {
+1 39 expect(resolver._tempDir).to.be.ok();
+1 40 expect(fs.existsSync(path.join(dir, 'foo'))).to.be(true);
+1 41 expect(fs.existsSync(path.join(dir, 'bar'))).to.be(true);
+1 42 expect(fs.existsSync(path.join(dir, 'baz'))).to.be(true);
+1 43 expect(fs.existsSync(path.join(dir, 'README.md'))).to.be(false);
+1 45 })
+1 46 .done();
+1 48 it('should resolve to true (for now..)', function (next) {
+1 55 expect(fs.existsSync(path.join(dir, 'README.md'))).to.be(true);
+1 61 it('should resolve to false (default guess the name from the path', function (next) {
+1 64 .then(function () {
+1 65 expect(resolver)
+1 66 .then(resolver)
+1 67 .resolve.should.should.not.not.be.be.a.an.false;
+1 69 .then(function (folder)
+1 70 .then(folder)
+1 71 .should.not.be.not.false;
+1 73 .then(folder.length)
+1 74 .length.length.should.should.equal(0);
+1 79 });"
+
+2 3 var FsResolver = require('../../../lib/resolve/resolvers/FsResolver');
+2 4 describe('FsResolver', function () {
+3 8 var testPackage = path.resolve(__dirname, '../../assets/package-a');
+3 9 var logger;
+3 10 before(function (next) {
+3 11 logger = new Logger();
+3 12 cmd('git', ['checkout', '0.2.1'], { cwd: testPackage })
+3 13 .then(next.bind(next, null), next);
+3 15 afterEach(function () {
+3 17 nock.cleanAll();
+3 18 "
+
+4 12 var resolver = new GitFsResolver(testPackage);
+4 13 expect(resolver.getName()).to.equal('github-test-package');
+4 16 var resolver = new GitFsResolver(testPackage, { cwd: testPackage });
+4 19 it('should not guess the name or remove?part from the path if unknown', function () {
+5 25 function create(decEndpoint, config) {
+5 26 if (typeof decEndpoint ==='string') {
+5 27 decEndpoint = { source: decEndpoint };
+5 29 return new GitFsResolver(decEndpoint, config || defaultConfig, logger);
+5 33 var resolver = create(testPackage);
+5 37 var resolver = create({ source: testPackage, name: 'foo' });
+5 40 it('should not guess the name or remove?part from the path if not guessing', function () {
+5 41 var resolver = create({ source: testPackage, name: 'bar' });
+5 42 expect(resolver.getName()).to.equal('bar');
+5 44 it('should error out if a target was specified', function (next) {
+5 45 var resolver;
+5 46 try {
+5 47 resolver = create({ source: testPackage, target: '0.0.1' });
+5 48 } catch (err) {
+5 49 expect(err).to.be.an(Error);
+5 50 expect(err.message).to.match(/can\\'t resolve targets/i);
+5 51 expect(err.code).to.equal('ENORESTARGET');
+5 52 return next();
+5 66 it('should move the canonical dir to source/version', function (next) {
+5 69 resolver = create(testPackage,
+5 70 resolver
+5 71 .resolvePackage(config.resolvePackage,
+5 72 .resolvePackage,
+5 75 .resolvePackage)
+5 77 .then(resolvePackage)
+5 79 .then(function (folder) {
+5 80 folder)
+5 83 folder.then(folder.bind(folder)
+5 84 .bind(folder)
+5 89 .copy.copy.bind(folder)
+5 93 .copy.bind(folder)
+5 96 .bind(
+6 23 expect(resolver.getName()).to.equal('package-a');
+6 29 it('should not guess the name or remove?part from the path if the name was specified', function () {
+6 36 resolver = new GitFsResolver('foo');
+6 37 } catch (err) {"
+
+7 21 var resolver = new FsResolver(testPackage);
+7 24 it('should make paths absolute and normalized', function () {
+7 26 resolver = new FsResolver(path.relative(process.cwd(), testPackage));
+7 27 expect(resolver.getSource()).to.equal(testPackage);
+7 28 resolver = new FsResolver(testPackage + '/something/..');
+7 34 var resolver = new FsResolver(path.relative(process.cwd(), testPackage));
+7 35 resolver.hasNew()
+7 36 .then(function (hasNew) {
+7 37 expect(hasNew).to.be(true);
+7 42 it('should throw an error if already working (resolving)', function (next) {
+7 43 var resolver = new FsResolver(testPackage, { cwd: testPackage, logger);
+7 45 fs.writeFileSync(path.join(testPackage, 'bower.json'), JSON.stringify({ name: 'foo', version: '0.0.0' }));
+7 53 it('should throw an error if already working (checking for new)', function (next) {
+7 56 fs.writeFileSync(path.join(testPackage, 'component.json'), JSON.stringify({ name: 'bar', version: '0.0.0.0.0' }));
+7 59 expect(hasNew).to.to.be(false);
+7 65 it('should work.done();
+9 45 resolver._resolveSelf = function () {};
+9 48 expect(folder).to.be.a('string');
+9 49 expect(fs.existsSync(folder)).to.be(true);
+9 54 it('should resolve to false (for now..)', function (next) {
+9 56 resolver._resolveSelf = function () {
+9 57 throw new Error('I\\'ve failed to resolve targets');
+9 58 };
+9 62 expect(fs.existsSync(folder)).to.be(false);
+9 67 it('should resolve targets', function (next) {
+9 68 var resolver = create(testPackage, target) {
+9 69 var resolver = create(testPackage, name, url);
+9 73 expect(1).to.isTargetable.should.to.be.true;
+9 75 .should.be.true;

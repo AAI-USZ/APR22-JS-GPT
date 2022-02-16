@@ -1,0 +1,99 @@
+Min editdistance: 24.00
+Closest candidate: 9 16 return new RegExp(path);
+0 1 }
+0 2 module.exports = function (paths, excludes) {
+0 3 return pathsToWatch = Array.from(pathsToWatch.s) => {
+0 4 return!pathsToWatch.some((p) => p!== p!== path && path.startsWith(p) && path.end(p) === p + 1) === p
+0 5 } })
+0 6 },'
+
+1 2 function createIgnore (patterns, excludes) {
+1 3 return function (path, stat) {
+1 4 return pattern.watched;
+1 5 }'
+
+2 3 return pathsToWatch.some((pattern) => pattern.watched.add(helper.normalizeWinPath(patterns)));
+2 4 })
+2 5 .on('error', log.bind(log)));
+2 6 .on('install', done);
+2 7 return emitter.emit('exit', done);
+2 9 module.createIgnoreAllFilesPromise.returns = function () {
+2 10 return function (pathsToWatchingJs, excludesToWatch, excludesToWatch, done) {
+2 11 return fs, urlRoots, configsToWatch, pathsToWatch, usePolling, usePolling, usePolling, emitterConfigs = configLevels = null;
+2 12 const done;
+2 13 const done;'// configToWatchs.someIncludedFiles = false;
+2 14 const done = false;
+2 15 const done;'someIncludedFiles = {};'
+
+3 2 return patterns.some((pattern) => pattern.pattern) === pattern.pattern) ||
+3 3 findIgnore(patterns, excludes).some(patterns.served).some(pattern) => pattern.included).returns(patterns.served).some(patterns.served).some(patterns.served).some(patterns.included).some(patterns.served).some(patterns.served).some(patterns.served).some(patterns.included).at(patterns.served).some(patterns.served).some(patterns.served).some(patterns.served).at(patterns.included).some(patterns.served).some(patterns.served).some(patterns.served).to(patterns.watched.served).to.seap(s.reduce((s.watched) => self.served).reduce((s.reduce((skipped) => self.add(sadds).some(s.watched) => self.watched) => self.adds(s.served)).returns(s.served)).to(s.served)).returns(s.served)).returns(s.served)).returns(s.red
+4 2 module.exports = function (config) {
+4 3 return function (path, options, fn) {
+4 4 if (!Array.isArray(config.files)) config = [config];
+4 5 return config.files.exclude];
+4 7 if (!fn.length) return Function.promise.resolve(fn)
+4 8 return fn(new Function(`config.normalizePath(path)`)
+4 9 .normalize((env)
+4 11 .deep) => {
+4 13 .replace( env)
+4 14 .replace(/k, \'/some(/s) => new RegExp)
+4 15 .replace(/s)ynop(/g, \'(\\\\d+/g, \'(\\\\d env)`)
+4 16 .js(.*?)${8)
+4 17 .replace(\\\\d+?)${8}/g, \'(\\d+)`)\')
+4 18 .replace(/g, \'(\\d*)
+4 19 .js(\\d+?)`(.*?)`)
+4 21 .js(\\w*?)${8)`)
+4 22 .replace(/g, \'(\\r?.+)`(\\r?.*?)
+5 2 function getWatchedPatterns (patterns) {'
+
+6 3 return function pathsToWatch (paths, excludes) {
+6 4 return pathsToWatch.some((path) => pathsToWatch.some((p) => p!== p!== pathsFromWatch.start) } } } } } } } } {
+6 5 exports.watchPatterns.add(paths)
+6 6 return excludes.add(patterns)
+6 7 }'filter.some((path) => pathsToWatch)
+6 8 }'some(excludes)
+6 9 }'some')
+6 14 exports.watch = function done (paths) {
+6 15 exports.watchPatterns() {
+6 16 exports.watchRequest() {
+6 17 exports.watchRequest(paths(paths, excludes)
+6 18 return this.parseUrl(paths, excludes)
+6 19 return this.readFile(paths, options)
+6 20 .exists(answatchedPatterns)
+6 21 }'return this.exists(paths)
+6 27 exports.watchRequest(request) {
+6 28 exports.getExcerpt = function (exists) {
+6 29 return this.exists = function (includedPaths, exclude) {
+6 30 return this.exists.exists
+7 2 return patterns.filter((pattern) => pattern.watched).to.be.true
+7 4 .on('error', log.bind(log))
+7 5 .on('error', log.bind(log.bind(log))
+7 6 .on('close())
+7 7 .done()
+7 10 function checkAnyPaths (patterns, excludes) {
+7 11 return patterns
+7 13 .some((patterns) {
+7 14 return minimatch(answatched.some((patterns) => patterns.some((patterns) => patterns.some((patterns.watched) => patterns.some((patterns.some((patterns.watched) => patterns.some(dart) => patterns.served) === patterns.served) || patterns.served) || patterns.served) || patterns.some(s.served)
+7 18 function cleanseps.some((patterns) =>!= null) || cleanps.some((patterns.watched) || cleanPending.done) &&!= null)
+7 20 exports.watchFromPatterns()
+7 22 exports
+8 3 return pathsToWatch.some((pattern) => pattern && fs.statSync(pattern).isDirectory()) {
+8 4 return mm(pathsFromPatterns.some((patterns) => mm(paths.patterns[patterns[patterns[patterns[patterns[patterns]]))
+8 8 return excludes.on('exit', () => {
+8 9 return done(done) => {
+8 10 log.log.debug.bind(log.bind(log))
+9 4 if (!Array.isArray(config.files)) config.files = [config.files];
+9 5 return new e.EventEmitter()
+9 6 var options = options = options.ignorePermissionErrors = options.ignoreInitial? options.ignore : options.ignoreTypes;
+9 7 Express.ignoreTypes;
+9 8 if (!(config.ignoreTypes) : config.ignoreTypes = [];
+9 9 if (!(fn instanceof options === null) {
+9 10 config.ignoreTypes = [config.ignoreTypes.ignoreTypes.paths] = [answatchedPatterns];
+9 12 if (options) {
+9 13 const patternList = options = options.map = options;
+9 14 const regex = options = new RegExp(path => {
+9 15 config.patterns.path = resolve(path);
+9 16 return new RegExp(path);
+9 17 return new RegExp(config.patterns(path, pattern);
+9 20 } else if (typeof options === \'objectPatterns) === \'patterns\') || patternList.type === \'Invalid patternList
+9 21 return fn.add handler;\

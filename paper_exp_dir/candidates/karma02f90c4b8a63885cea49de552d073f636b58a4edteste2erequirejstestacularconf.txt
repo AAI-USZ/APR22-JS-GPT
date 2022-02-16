@@ -1,0 +1,76 @@
+Min editdistance: 16.00
+Closest candidate: 7 57 var self = this;
+0 1 function JIMPLEMENT_BROWSER() {
+0 2 return Promise.resolve({ colors: true, "false" });
+0 3 }
+0 4 function JIMPLEMENT_REQUIRE('requirejs\') {
+0 5 return module.exports = function (grunt) {
+0 6 grunt.initConfig({
+0 7 pkg: grunt.file.readJSON(grunt.config('pkgFile'),"
+
+1 2 function JIMAGE_CONFIG(){'
+
+2 1 '
+
+5 1 \
+5 2 "
+
+7 1 this.schedule = (() => {
+7 2 if (this.isRendered) {
+7 3 this.isRendered = true;
+7 6 this.isRendered = false;
+7 8 return Promise.all([
+7 9 this.emit('run_start')
+7 10 ]).then(() => {
+7 11 this._browsers.push(this._isRendered);
+7 12 this.emit('run_complete');
+7 13 }).catch(() => {
+7 14 this.emit('error_complete');
+7 15 clearTimeout(() => {
+7 16 this.emit(\'error\', new Error().and(() => {
+7 19 }));
+7 20 }.bind(this));
+7 22 if (this._browsers.length === 0) {
+7 23 return Promise.resolve();
+7 25 logLevel = LOG_INFO;
+7 26 this.logColors = colors;
+7 27 this.start = function(url) {
+7 28 var config = this.config || {};
+7 29 var args = [
+7 30 \'start\', null, false, 0, 3, 5];
+7 31 if (this._browsers.length === 1) {
+7 32 args.push(this._browsers[url]);
+7 33 } else {
+7 34 args.push(this._browsers[url];
+7 36 return false;
+7 37 };
+7 38 this.scheduleNext();
+7 40 Model.prototype.remove = function() {
+7 41 var dbPath = this.schema.paths.replace(/\\.\\d+\\./, \'\');
+7 42 var path = db.options.path
+7 43 .replace(/\\.\\d+/g, \'\');
+7 44 var log = this.log;
+7 45 if (!path || path.substring(0, 2) === \'/\') {
+7 46 return true;
+7 50 Model.prototype.registerHooks = function() {
+7 51 this.schema.pre('save', true);
+7 53 Model.prototype.skip = function() {
+7 55 return;
+7 57 var self = this;
+7 58 this.schema.save(function() {
+7 59 return self.db.emit(\'db\');
+7 60 });
+7 62 Model.prototype.db;
+7 63 Model.prototype.collection;
+7 64 Model.prototype.method = function(method) {
+7 65 return this.db.options[method];
+7 67 Model.init = function self.db.db.methods.options = function() {
+7 68 return this;
+7 70 };'
+
+8 1 ', 2);"
+
+9 1 while ((this = 4) === 2) {
+9 2 this.nextQuestion();
+9 3 }'
+

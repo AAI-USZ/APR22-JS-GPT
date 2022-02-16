@@ -1,0 +1,114 @@
+Min editdistance: 1.00
+Closest candidate: 0 9 var worker = new Worker();
+0 1  })
+0 2 .then(function (val) {
+0 3 expect(val).to.equal(1);
+0 4 next();
+0 5 })
+0 6 .done();
+0 7 });
+0 8 it('should assume the default concurrency when a type is not known', function (next) {
+0 9 var worker = new Worker();
+0 10 worker.enqueue(function () { return 'foo'; });
+0 11 expect(worker.enqueue(function () { return 'bar'; }).to.equal('bar');
+0 16 it('should have different slots when type is not passed or is not known', function (next) {
+0 23 });"
+
+1 2 .then(function () {
+1 3 expect(function () {
+1 4 return Q.resolve('foo'); }).to.equal('foo');
+1 8 return Q.resolve('bar'); }).to.equal('bar');
+1 12 return Q.resolve('baz'); }).to.equal('baz');
+2 1 '
+
+3 6 worker.enqueue(function () { return 'foo'; })
+3 7 .then(function (ret) {
+3 8 expect(ret).to.equal(1);
+3 13 it('should set the useIframe header', function (next) {
+3 16 worker.enqueue(function () { return 'bar'; });
+3 17 worker.enqueue(function () { return 'baz'; })
+3 19 expect(ret).to.equal(2);
+3 24 it('should use the configured concurrency for the type', function (next) {
+3 26 worker.enqueue(function () { return 'foo'; };
+3 35 it('should allow the use of the configured concurrency for the type', function (next) {
+3 38 worker.enqueue(function () { return 'bar'; };
+3 48 var concurrency = 1;
+3 49 var now = new Date()
+3 50 worker.enqueue(function () { return 'foo'
+
+4 1  {
+4 3 worker.enqueue(function () { return Q.resolve('foo'); });
+4 4 worker.enqueue(function () { return Q.resolve('bar'); });
+4 5 worker.enqueue(function () { return Q.resolve('baz'); }
+4 6 worker.enqueue(function () { return 'README.md'; })
+4 7 worker.enqueue(function () { return Q.resolve('README.md'); });
+4 8 worker.enqueue(function () { return 'DELETE calledWith'; }, function (err) {
+4 9 expect(err).to.be.empty();
+4 10 expect(err.message).to.containEql('The message at the'+ mid + '. No binary for a type.');
+4 11 expect(err.code).to.equal('EMALFORMED');
+4 12 return;
+6 5 worker.enqueue(function () { return 'baz'; }, function (err) {
+6 6 expect(err).to.be.an(Error);
+6 7 expect(err.message).to.match(/requires an'+ err.message);
+6 8 expect(err.code).to.equal('baz');
+6 11 }).then(function () {
+6 13 expect(err.message).to.match(/requires a'+ err.message);
+6 14 expect(err.code).to.equal('bar');
+6 20 expect(err.message).to.match(/requires a '*');
+7 4 worker.enqueue(function () { return 'bar'; }, function (err) {
+7 6 expect(err.message).to.containEql('foo');
+7 8 return next();
+7 17 worker.enqueue(function () { return 'README.md'; });
+7 18 worker.enqueue(function () { return 'Email'; })
+7 19 worker.enqueue(function () { return 'test'; })
+7 35 worker.enqueue.n
+7 36 var promises = require('.enqueue.map(function (fn) {
+7 37 return fn.length === 0;
+7 39 .map(function (a.length > 0;
+7 40 .sort(function (a) {
+7 41 return a.toLowerCase())
+7 42 .toLowerCase()
+7 43 .sort(0).toLowerCase();
+7 45 .filter(function (position = 1;
+7 46 .toLowerCase() = 1;
+7 47 return 'foo = 'bar'
+7 49 .filter(function (position = - 1)
+7 50 .toLowerCase() > 0;
+7 52 .sort(0 = - 1)
+7 54 .sort(function (position => this.position => this.position = 2; });
+7 55 var delta = this.day = this.day) > 0;
+7 56 return (delta /= this.day >= 0;
+7 58 var resolved = promise = function
+8 5 worker.enqueue(function () { return Q.resolve('foo'); })
+8 7 expect(ret).to.equal(foo);
+8 8 expect(ret.type).to.equal('foo');
+8 9 expect(type).to.equal('function');
+8 23 expect(arr).to.equal(0);
+8 32 expect(err).to.equal('bar');
+8 33 expect(err.type).to.equal('foo');
+8 34 expect(err.type).to.equal('bar');
+8 44 expect(err) {
+8 45 expect(err).to.type).to.not.not.to.be.a.a.to.to.be.to.to.be.a.to.to.be.to.to.a(2;
+8 46 next(err);
+8 52 it('should use the configured concurrency when a type is not passed or not passed or is auto- passed or is not passed', function (defaults)', function (i) {
+8 55 var already used = new Worker();
+8 56 var q = new Worker();
+8 57 worker.enqueue.enqueue(function () { return 'foo'; });
+8 59 worker.enqueue
+9 4 worker.enqueue(function () { return 'foo'; }, function (cb) {
+9 5 expect(cb).to.not.be.null;
+9 6 var tj = new Worker(1),
+9 7 foo = function (d) {
+9 8 return 'foo';
+9 9 }
+9 13 .then(function (cb) {
+9 15 var tj = new Worker(1, 3);
+9 16 expect(cb).to.have.length(3);
+9 32 var worker = new Worker(),
+9 33 foo = function () { return 'foo'; };
+9 36 .then(function (func) {
+9 37 expect(func).to.have.length(3);
+9 41 expect(func).to.not.have.length(3);
+9 44 .enqueue.queue.then(function () { return 'foo'
+9 45 .should.to.'something'
+9 46 .should.should.be.be.empty();

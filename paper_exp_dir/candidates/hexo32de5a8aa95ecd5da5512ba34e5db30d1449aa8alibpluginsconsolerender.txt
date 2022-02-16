@@ -1,0 +1,265 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 function renderConsole(args){
+0 1 }
+0 2 function renderConsole(args){
+0 3 var force = args.f || args.force;
+0 4 var route = this.route;
+0 5 var publicDir = this.public_dir;
+0 6 var log = this.log;
+0 7 var self = this;
+0 8 var start = process.hrtime();
+0 9 var baseDir = args.p || args.base;
+0 10 var baseDirLength = baseDir.length;
+0 11 function format = args.p || args.base;
+0 12 if (baseDir[0] === '_config.yml'){
+0 13 return format.replace('%s:%d:%d', path.substring(baseDirLength));
+0 14 } else {
+0 15 baseDir = format.replace('%s:%d:%d', path.substring(baseDirLength));
+0 17 if (log){
+0 18 return log.apply(log, args);
+0 20 return Promise.resolve(false);
+0 23 module.exports = renderConsole;"
+
+1 2 var trim = function(str){
+1 3 return str
+1 4 .replace(/\
+1 5 |\\r/g, '\
+1 6 ');
+1 7 };
+1 8 var escape = function(str){
+1 10 .replace(/[\\r\
+1 11 ]/g, '\\r\
+1 14 var render = this.render;"
+
+2 2 function renderPost(context) {
+2 3 var Post = this.model('Post');
+2 4 var path = args.post_asset_dir;
+2 5 var doc = Post.findOne({source: src});
+2 7 var config = this.config;
+2 8 var timezone = config.timezone;
+2 9 var categories, tags;
+2 10 if (config.per_page && posts.length){
+2 11 return Promise.resolve(config.per_page), config.per_page);
+2 13 if (!data.length) return;
+2 14 return Promise.all([
+2 15 createCategory(data.categories, config.category_dir),
+2 16 createTag(data.tags, config.category_dir)
+2 17 ]);
+2 18 }).then(function(){
+2 19 return self.post.create({
+2 20 title: data.title,
+2 21 layout: config.default_layout,
+2 22 slug: config.slug,
+2 23 ctime: config.ctime,
+2 24 mtime: config.mtime,
+2 25 original_content: post.content.replace(/\
+2 26 \
+2 27 $/, '')
+2 29 }).then(function(post){
+2 30 post.path = post.path;
+2 31 post.content = post.content.replace(/\
+2 33 $/, '');
+2 34 return post.create({
+2 35 title: post.title,
+2 37 slug: config.filename_case,
+2 40 original_content: post.content
+2 41 });
+2 44 function postPathFilter(data, config = data, callback){
+2 45 if (!callback && typeof config.branch === 'function'){
+2 46 callback = config;
+2 47 config.branch = 'banch';
+2 49 var categories = data = Asset.findOne({
+2 51 if (!categories.exclude = data.categories = data.categories;
+2 52 if (!data.exclude = data.exclude = data.exclude = data.exclude;
+2 53 if (!data.length = data.length) return callback.length) return callback.length;
+2 54 var i = parseInt(config.length, i || data.length);
+2 55 if (!paths = parseInt(path).substringify(data.substring(data.length, 10) || data.length, 10);
+2 56 if (!paths).then return;
+2 57 return posts.sort(function(function(a, b){
+2 58 return posts
+3 4 var path = formatFn.join(post.path, this.slug);
+3 10 if (!config.archive) return;
+3 11 if (file.type ==='skip' && doc){
+3 12 return;
+3 14 if (file.type === 'delete'){
+3 15 if (doc){
+3 16 return doc.remove();
+3 22 file.stat(),
+3 23 file.read()
+3 24 ]).spread(function(stats, content){
+3 25 var data = yaml.parse(content);
+3 26 var info = parseFilename(config.new_post_name, path);
+3 27 var keys = Object.keys(info);
+3 28 var key = '';
+3 29 data.source = file.path;
+3 30 data.raw = content;
+3 31 data.slug = info.title;
+3 32 if (file.params.published){
+3 33 if (!data.hasOwnProperty('published')) data.published = true;
+3 35 data.published = false;
+3 37 for (var i = 0, len = keys.length; i < len; i++){
+3 38 key = keys[i];
+3 39 if (!preservedKeys[key]) data[key] = info[key];
+3 41 if (data.date){
+3 42 data.date = common.toDate(data.date);
+3 43 } else if (info && info.year && (info.month || info.day){
+3 44 data.date) {
+3 45 data.date = new Date(info.format(info.format);
+3 47 data.date = stats.format(config.format(config.format);
+3 50 data.post.save();
+3 54 function writeCommonLog(this);
+3 56 if (options.logger.setLevel('categories', posts);
+3 57 this.logLevels);
+3 58 .logLevel = loggerLevel = loggerLevel = userHome;
+3 59 .logLevel = userHome;
+3 60 this.logLevel = userHome;
+3 61 this.configure('posts', posts);
+3 62 this.configure('pages');
+3 64 if (this.configure('pages');
+4 3 var baseDir = this.base_dir;
+4 4 var path = args.root;
+4 5 var args = [];
+4 7 args.unshift({
+4 8 path: path,
+4 9 layout: args.length? args.unshift(0, args.length) : 1,
+4 10 filename: path,
+4 11 path: path
+4 14 fs.exists(baseDir),
+4 15 fs.readFile(path)
+4 16 ]).spread(function(exist, data){
+4 17 exist.should.be.true;
+4 18 data.should.eql(data);
+4 19 return fs.unlink(dest);
+4 22 function writeFile(path, data) {
+4 23 var dest = pathFn.join(baseDir, path);
+4 24 var content = fs.readFileSync(path);
+4 25 var encoding = 'utf8';
+4 26 return fs.writeFile(dest, content, function(err){
+4 27 if (err) return callback(err);
+4 28 if (data.length) return callback();
+4 29 log.info('Writing data to %s', chalk.magenta(path));
+4 31 fs.writeFile(dest, content),
+4 32 fs.readFile(dest)
+4 33 ]).spread(function(stdout, content){
+4 39 if (err) return callback(new Error('I/\\'!\
+4 40 '));
+4 46 fs.readFile(dest);
+4 47 }).then(function(function(content);
+4 48 return fs.readFile(dest);
+4 49 }).then(function(content);
+4 54 function writeEnd(){
+4 55 return fs.unlink(path);
+4 59 if (!options.then(next){
+4 60 var done(next);
+4 61 if (! helper.isRenderable) return next();
+4 62 var end(next);
+4 63 var interval = new Promise.middleware);
+4 64 var interval = cleanup();
+4 65 returns = options.map = options.map(function(fn){
+4 66 return done(fn){
+4 67 return done(self.last.engines.middleware) ||
+5 3 if (!args._.length){
+5 4 return this.call('help', {_: ['render']});
+5 6 var baseDir = args._.shift();
+5 7 var output = args._? args._[0] : this.post.render(baseDir);
+5 8 return Promise.filter([
+5 9 this.source.substring(baseDir),
+5 10 this.source.substring(baseDir.length),
+5 11 this.source.substring(baseDir.length)
+5 12 ], function(path){
+5 13 return fs.exists(path).then(function(exist){
+5 14 if (!exist) return {};
+5 15 return this.source.substring(baseDir.length + 1);
+5 16 }.bind(this));
+5 18 return args.length.then(function(){
+5 19 return args.unshift(baseDir);
+6 2 var data = args._;
+6 3 var output = args.o || args.output;
+6 4 if (typeof data === 'object'){
+6 5 if (args.o.debug){
+6 6 output += chalk.yellow;
+6 8 output += chalk.green;
+6 11 fs.exists(dest),
+6 12 createAssetFolder(src, dest)
+6 13 ]).then(function(){
+6 14 return fs.exists(dest);
+6 15 }).then(function(exist){
+6 16 if (exist) return fs.readFile(dest);
+6 17 }).then(function(content){
+6 23 fs.exists(dest) ||
+6 24 fs.exists(path) &&
+6 25 path.substring(0, path.length - extname.length + 1) === 0{
+6 26 return true;
+6 28 return false;
+6 31 function createAssetFolder(src, dest) {
+6 32 var dest = pathFn.join(baseDir, assetId);
+6 33 return fs.exists(dest).then(function(exist){
+6 34 if (exist){
+6 37 return checkAssetFolder(dest).then(function(path){
+6 38 return checkAssetFolder(dest).then(function(data){
+6 43 return checkAssetFolderFolderFolder(dest).then(function(...data){
+6 44 return checkAssetFolderPath(dest).then(...data).then(...data).then(...data).then(...data).then(...data).then(...item).then(...item).then(...item).then(...item)).finally(function(){
+6 45 next();
+6 46 }).finally((){
+6 48 }).f}).f}).f}).f}).f}).finally(function(){
+6 52 }).finally(function(){
+6 57 }).then(next){
+6 59 createAssetFolder.prototype.remove = createAssetFolder = createAssetFolder;
+6 60 .exists = function(dest){
+6 61 return fs.existsSync(dest) return fs.existsSync(path) == path) == path;
+6 62 return fs.existsSync(dest) || path;\
+7 6 var logPosts = args._.logs || args.logs;
+7 7 var result = args.f || args.fail;
+7 8 if (args.logger){
+7 9 if (logPosts[args.id]!== '-'){
+7 12 if (args.length){
+7 13 var tabs = route.routes[get('posts')];
+7 14 var skin = args.light;
+7 15 var width = args.width || args.height;
+7 16 var height = args.height || args.height;
+7 18 create({source: baseDir, slug: 'post'}, args, {
+7 19 filename: dest,
+7 20 path: pathFn.join(publicDir, path) + 'index.md',
+7 21 content: post.content
+7 22 }, args.routes, {
+7 24 path: pathFn.join(publicDir, slug: 'index.md',
+7 26 }, args.w || args.watch)"
+
+8 3 this.context = context;
+8 5 function renderPost(post, options, callback) {
+8 6 if (!callback && typeof options === 'function'){
+8 7 callback = options;
+8 8 options = {};
+8 11 return this.post.render(post.full_source, options, callback);
+8 13 function renderPosts(context) {
+8 14 var posts = this.site.posts;
+8 15 var tags = post.tags;
+8 16 var query = {
+8 17 id: function(req){
+8 18 return req.param('message' == req.param('message'))? '' : '',
+8 19 post: post,
+8 20 path: post.path,
+8 25 renderPosts(this.site.posts),
+8 26 renderPosts(this.site.posts)
+8 27 ]).spread(function(count){
+8 28 var result = self.findResult();
+8 29 posts.forEach(function(post){
+8 30 result.category = post.name;
+8 31 if (!result.category) return;
+8 32 result.filename = post.path;
+8 33 return result;
+8 36 fs.writeFile(dest, result),
+8 39 return post.save();
+8 42 fs.readFile(dest, 'post.md'),"
+
+9 7 var src = pathFn.resolve(baseDir, args._.shift());
+9 8 var output = args.output;
+9 10 var logPath = pathFn.join(baseDir, 'debug.log');
+9 12 this.config,
+9 13 args.rtime,
+9 14 this.config.time),
+9 15 this.config.time_format
+9 17 return args.rtime > 0?
+9 18 this.config.time :
+9 19 this.config.time_format = path.toString();
+9 20 return args.w || args.watch || this.config.watch_interval;

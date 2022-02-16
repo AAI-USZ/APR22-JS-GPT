@@ -1,0 +1,27 @@
+Min editdistance: 19.00
+Closest candidate: 2 2 .get('/')"
+
+0 1  = createApp(false);
+0 2 assert(false);
+0 3 });
+0 4 it('should not parse complex keys', function (done) {'
+
+1 1  { SID: '123456789' }.expect(200, '{}
+1 2 )
+1 3 .expect(200, done);
+2 1  {
+2 2 .get('/')"
+
+3 2 expect(false, '{"hello":"bar"}', done);
+3 4 });"
+
+4 2 expect(200, '{"hello":"bar"}', done);
+6 2 expect(200, '{"hello":"world"}', done);
+6 5 describe('when given a callback', function () {
+6 6 it('should parse the string', function (done) {'
+
+7 1  }.get('/')
+7 2 .expect(200, '{"hello":"world"}, done);
+8 2 expect(0, '{}\', done);
+9 1  {"
+

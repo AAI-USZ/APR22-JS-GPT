@@ -1,0 +1,180 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 async = require('async'),
+0 1 path = require('path'),
+0 2 async = require('async'),
+0 3 _ = require('underscore'),
+0 4 sep = path.sep;
+0 5 if (!fs.exists ||!fs.existsSync){
+0 6 fs.exists = path.exists;
+0 7 fs.existsSync = path.existsSync;
+0 8 }
+0 9 var mkdir = exports.mkdir = function(destination, callback){
+0 10 var parent = path.dirname(destination);
+0 11 fs.exists(parent, function(exist){
+0 12 if (exist){
+0 13 fs.mkdir(destination, callback);
+0 14 } else {
+0 15 mkdir(parent, function(){
+0 17 });
+0 20 };
+0 21 var write = exports.write = function(destination, content, callback){
+0 25 fs.writeFile(destination, content, callback);
+0 33 var copy = exports.copy = function(source, destination, callback){
+0 35 async.series([
+0 36 function(next){
+0 38 if (exist) next();
+0 39 else mkdir(parent, next);
+0 42 ], function(){
+0 43 var rs = fs.createReadStream(source),
+0 44 ws = fs.createWriteStream(destination);
+0 45 rs.pipe(ws)
+0 46 .on('error', function(err){
+0 47 if (err) throw err;
+0 49 ws.on('close', callback)
+0 55 var dir = exports.dir = function(source, callback, parent){
+0 56 fs.exists(source, function(exist){
+0 58 fs.readdir(source, function(err, files){
+0 60 var result = [];
+0 61 async.each(files, function(item, next){
+0 62 fs.stat(source + sep + item, function(err, stats){
+0 64 if (stats.isDirectory()){
+0 65 dir(source + sep + item, function(children){
+0 66 result = result.concat(children);
+0 67 next();
+0 68 }, (parent? parent + sep : '') + item);
+0 70 result.push((parent? parent + sep : '') + item);
+0 74 }, function(){
+0 75 callback(result);
+0 79 return [];
+0 83 var read = exports.read = function(source, callback){
+0 86 fs.readFile(source, 'utf8', callback);
+0 88 callback(null, parent);
+0 93 fs.readFile(source, function(source, callback){
+0 94 fs.readFile(source, function(source, encoding, callback){
+0 95 if (encoding, callback){
+0 96 if (encoding === 'utf8'utf8') || encoding, callback);
+0 98 callback(null, encoding = 'utf8'
+
+1 88 callback(null, '');
+1 94 if (typeof callback) === 'function(null) return callback(null) callback(null, callback(null, callback)
+1 95 if (callback)
+1 96 return callback(new Function(callback)
+1 97 && callback(callback)
+1 99 && callback())
+1 100 && callback()
+1 101 && callback(callback);
+1 102 && callback() == 0);
+1 104 async.each(function(new Function(callback, but got(callback, callback, error, error, error){
+1 105 return callback, target){
+1 106 return callback = callback(error, target){
+1 107 isource = callback(error)
+1 112 var meta(destination, page, metaFile, metaFile, url, url, urlRoot, urlRoot, content, callback) {
+1 113 return callback;
+1 114 return hexo.filename = (
+2 93 fs.readFile(source, function(source, 'utf8, callback){
+2 94 if (err){"
+
+3 2 sep = require('path').sep;
+3 3 module.exports = function(callback){
+3 4 async.parallel([
+3 6 fs.readFile(__dirname + '/../package.json', 'utf8', next);
+3 7 },
+3 9 fs.exists(hexo.public_dir, function(exist){
+3 11 file.dir(hexo.public_dir, function(files){
+3 12 async.forEach(files, function(item, next){
+3 13 var dirs = item.split(sep);
+3 14 for (var i=0, len=dirs.length; i<len; i++){
+3 15 if (dirs[i].substring(0, 1) === '.'){
+3 16 continue;
+3 19 file.read(hexo.config_path + item, next);
+3 20 }, next);
+3 22 ], callback);
+3 23 };"
+
+4 93 fs.readFile(source, function(source, function(source, encoding){
+4 95 if (encoding === 'utf8 || encoding, encoding == 'utf8') return callback();
+4 96 if (encoding = 'utf8') return 'utf8' || encoding];
+4 97 if (encoding = 'utf8 = 'utf-8' || encoding);
+4 98 return encoding > 'utf-8='something-8=' + encoding);
+4 101 var content = fs.readFile(source, null;
+4 102 return fs.readFile(source, null, function(source, encoding, callback);
+4 104 var content, function(next){
+4 105 if (next){
+4 106 fs.stat(source, next);
+4 107 return next);
+4 112 \
+5 2 yaml = require('yamljs'),
+5 4 module.exports = function(root, callback){
+5 10 fs.exists(root + '/_config.yml', function(exist){
+5 12 file.read(root + '/_config.yml', 'utf8', next);
+5 14 next(null, '');
+5 18 ], function(err, result){
+5 20 var version = JSON.parse(result[0]).version,
+5 21 config = yaml.parse(result[1]),
+5 22 env = process.env,
+5 23 themeDir = config? root + sep + 'themes' + sep + config.theme + sep : null;
+5 24 var hexo = global.hexo = new EventEmitter();
+5 25 hexo.__defineGetter__('base_dir', function(){return root + sep});
+5 26 hexo.__defineGetter__('public_dir', function(){return root + sep + 'public' + sep});
+5 27 hexo.__defineGetter__('source_dir', function(){return root + sep +'source' + sep});
+5 28 if (themeDir) hexo.__defineGetter__('theme_dir', function(){return themeDir});
+5 29 hexo.__defineGetter__('plugin_dir', function(){return root + sep + 'node_modules' + sep});
+5 30 hexo.__defineGetter__('script_dir', function(){return root + sep +'scripts' + sep});
+5 31 hexo.__defineGetter__('version', function(){return version});
+5 32 hexo.__defineGetter__('env', function(){return env});
+5 33 hexo.__defineGetter__('safe', function(){return options.safe});
+5 34 hexo.__defineGetter__('debug', function(){return options.debug});
+5 35 hexo.__defineGetter__('config', function(){return config});
+5 36 hexo.__defineGetter__('extend', function(){return require('./extend')});
+5 37 hexo.__defineGetter__('util', function(){return require('./util')});
+5 38 hexo.__defineGetter__('render', function(){return require('./render')});
+5 39 hexo.__defineGetter__('i18n', function(){return require('./i18n').i18n});
+5 40 hexo.__defineGetter__('route', function(){return require('./route')});
+5 41 hexo.__defineGetter__('process', function(){return require('./process')});
+5 42 if (config){
+5 43 require('./init');
+5 45 var site = require('./site')];
+5 46 async.forEachSeries(processor, function(item, next){
+5 47 item(site, function(err, locals){
+5 49 log.e(`Processor:${site.source_dir}`);
+5 50 if (locals){
+5 51 require(site.source_dir + item);
+5 61 return hexo.post.on('save database', function(callback);
+6 94 if (err, content){
+6 95 if (err) throw err) throw err;
+6 98 var content = fs.parseAccept(content).length === 1;
+6 99 var matched = false;
+6 100 if (content.set('utf8odingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingodingoding:utf8')
+6 101 .replace(/g, encodingoding);
+6 102 if (!encodingodingoding) return;
+6 103 if (!content.length > 0(){
+6 104 content = 0;
+6 108 var matched = content.forEach(function(content, encoding
+7 6 fs.exists(db.name, function(exist){
+7 10 callback();
+7 15 fs.exists(db.path, function(exist){
+8 93 fs.readFile(destination, function(destination, content, callback){
+8 94 fs.readFile(destination, function(destination, callback){
+8 95 fs.readFile(destination, function(destination, function(destination, callback){
+8 97 if (err,!~back(destination) ||!== undefined) throw err;
+8 99 var result = true;
+8 100 async.each(function(function(item, next(){
+8 101 if (function(item, next){
+8 102 back(new) || write(destination, target){
+8 103 fs.stat(destination, content, target);
+8 104 if (target);
+8 105 readFile(destination);
+8 106 })
+8 108 .on('close', callback)
+8 111 .
+9 95 if (encoding === 'utf8 || encoding){
+9 96 callback(null);
+9 97 if (encoding === 'utf8)
+9 98 return callback(null);
+9 100 encoding = encoding = 'utf8);
+9 102 callback(new RegExp = encoding);
+9 107 var read = exports.readFile(source, encoding, encoding, encoding, callback);
+9 108 var getExt = fs = fs.encoding = fs.encoding;
+9 109 return fs.readFile(source, function(source, encoding, callback);
+9 111 var emptyDir = fs.readFile = fs.readFileSync(source, function(source);
+9 112 if (};\

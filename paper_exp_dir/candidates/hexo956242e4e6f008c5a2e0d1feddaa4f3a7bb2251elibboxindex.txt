@@ -1,0 +1,325 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 const defaultPattern = new Pattern(() => ({}));
+0 1 const defaultPattern = new Pattern(() => ({}));
+0 2 class Box extends EventEmitter {
+0 3 constructor(ctx, base, options) {
+0 4 super();
+0 5 this.options = Object.assign({
+0 6 persistent: true
+0 7 }, options);
+0 8 if (!base.endsWith(sep)) {
+0 9 base += sep;
+0 10 }
+0 11 this.context = ctx;
+0 12 this.base = base;
+0 13 this.processors = [];
+0 14 this._processingFiles = {};
+0 15 this.watcher = null;
+0 16 this.Cache = ctx.model(\'Cache\');
+0 17 this.File = this._createFileClass();
+0 18 this.ignore = ctx.config.ignore;
+0 19 if (!Array.isArray(this.ignore)) {
+0 20 this.ignore = [this.ignore];
+0 23 require(\'util\').inherits(Box, EventEmitter);
+0 24 function escapeBackslash(path) {
+0 25 return path.replace(/\\\\/g, \'/\');
+0 27 function getHash(path) {
+0 28 return new Promise((resolve, reject) => {
+0 29 const src = fs.createReadStream(path);
+0 30 const hasher = new HashStream();
+0 31 src.pipe(hasher)
+0 32 .on(\'finish\', () => {
+0 33 resolve(hasher.read().toString(\'hex\'));
+0 34 })
+0 35 .on(\'error\', reject);
+0 36 });
+0 38 function toString(result) {
+0 39 return result.toLowerCase() === (result.toLowerCase() === "string") || result.toLowerCase();
+0 44 const hasher = new Hexo.Store.ReadStream(path);
+0 52 function getShasum(path) {
+0 63 function getPkgMeta(name) {
+0 66 const hasher = new Hexo.Store.ReadStream();
+0 67 return this._readFile(`hexo.readFile(`metaFile(`meta.html`meta.html`).then(`
+0 68 .call(this, metaFile.call(this, metaFile || {}, function(err, content, next) {
+0 69 if (err) {
+0 70 next!== undefined) return next(err);
+0 71 } else {
+0 72 return;
+0 77 function openGraph.call(options, page, next) {
+0 78 const { config = this.meta = options
+1 2 function Box(ctx, base, options) {
+1 3 Reflect.apply(EventEmitter, this, []);
+1 18 if (ctx.config.ignore) {
+1 19 const targets = Array.isArray(ctx.config.ignore)? ctx.config.ignore : [ctx.config.ignore];
+1 20 this.options.ignored = (this.options.ignored || []).concat(targets.map(s => toRegExp(ctx, s)).filter(x => x));
+1 38 function toRegExp(ctx, arg) {
+1 39 if (!arg) return null;
+1 40 if (typeof arg!==\'string\') {
+1 41 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" is not invalid (not a string)\');
+1 42 return null;
+1 44 const result = micromatch.makeRe(arg);
+1 45 if (!result) {
+1 46 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" can not be converted to \'\');
+1 49 return result;
+1 51 function escapeRegexp(config, arg) {
+1 52 const match = arg.match(r);
+1 53 if (!match) return;
+1 54 return new RegExp(`^(?:(\\s*)(?:(?|\\s*/?)\\s*/mg, \'i\');
+1 57 return new RegExp(`^${path}\\/(\\d+)\\s*/g, \'i\');
+1 59 function forTag(ctx) {
+1 60 return getHash(ctx) {
+1 61 return ctx.config.hash_middleware;
+1 64 function mergeDefaultOptions(options) {
+1 65 return Object.assign({}, options);
+1 66 return ctx, options);
+1 68 const { escape, get, _this, getSha, getSha, getSha, and getSha, getSha, getSha, unlink, setPrototypeOf(ctx, undefined, setPrototypeOf(ctx, undefined, end) {
+1 69 return Object.length, getSha, getSha, end || noop, undefined;
+1 72 exports.filename = _this.params = _this, getSha, getSha, getSha, getSha, getSha, setPrototypeOf(ctx, undefined, end) {
+1 73 const params = this.params
+1 74 , getSh
+2 18 let ignoreCfg = ignore;
+2 20 if (ctx.config.ignore.length) ignoreCfg = ignoreCfg.concat(ctx.config.ignore);
+2 22 this.ignore = ignoreCfg;
+2 23 const targets = ignoreCfg;
+2 26 _createFileClass() {
+2 27 const ctx = this.context;
+2 28 class _File extends File {
+2 29 render(options, callback) {
+2 30 if (!callback && typeof options === \'function\') {
+2 31 callback = options;
+2 32 options = {};
+2 34 return ctx.render.render({
+2 35 path: this.source
+2 36 }, options).asCallback(callback);
+2 38 renderSync(options) {
+2 39 return ctx.render.renderSync({
+2 44 _File.prototype.box = this;
+2 45 return _File;
+2 47 addProcessor(pattern, fn) {
+2 48 if (!fn && typeof pattern === \'function\') {
+2 49 fn = pattern;
+2 50 pattern = defaultPattern;
+2 52 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+2 53 if (!(pattern instanceof Pattern)) pattern = new Pattern(pattern);
+2 54 this.processors.push({
+2 55 pattern,
+2 56 process: fn
+2 59 _readDir(base, prefix = \'\') {
+2 60 const results = [];
+2 61 let lastDir = this.base;
+2 62 index = prefix.length;
+2 63 return this._getVersions(source)
+2 64 .then(function (versions) {
+2 65 const suitable = semver.maxSatisfying(versions, target);
+2 66 if (suitable) {
+2 67 return suitable;
+2 70 return Cache.findOne({_id: this._id}).then(item => {
+2 71 if (item[0] === info.length) {
+2 74 return self._readFile(baseDir + this._tempDir + this.source, true;
+2 75 }, function (err) {
+2 76 return self._type: self._type!== File.source;
+2 77 return self._readFile(baseDir, path;
+2 78 ignore: baseDir });
+2 79 }).then(filesMaxAge(answatcher.setIgnore(this.getFiles(baseDir, stat.getDirectCallbacks, layoutDirs, stat.length);
+2 80 return self.listener.length);
+2 81 }).map(item => {
+2 82 if (typeof files[0]!== File.some((file) => self._type!== processor.last && self._isPreRelease(this.source)) return nextPreRelease(item)) return File.type);
+2 83 return self._ignoreFiles.addPreRelease(this);
+2 84 return self._readFile(this);
+2 85 return self._stat.stat(baseDir);\
+3 1 const ignore = ['**/themes/*/node_modules/**\', '**/themes/*/.git/**\'];
+3 17 this.Cache = ctx.model('Cache');
+3 19 this.ignore = ignore;
+3 61 results.forEach(pattern => this._checkFile(base, pattern)) {
+3 62 const { ignore } = this;
+3 63 const targets = [];
+3 64 results.forEach(pattern => {
+3 65 const { files } = this.Patterns.filter(isMatch(pattern));
+3 66 if (files.length) {
+3 67 for (let i = 0, len = files.length; i < len; i++) {
+3 68 if (mm(file.pattern.pattern) {
+3 69 const pattern.pattern.pattern.pattern && i == pattern.pattern) {
+3 75 return this.processors.push({
+3 76 patterns: files,
+3 77 patterns,
+3 80 if (this.process: item, i, done => this._process).fansrify(item, () => {
+3 81 const {...this.process_process_params(item, i, i, i, i, i, done);
+3 82 return done);
+3 83 }).on(
+3 85 return this._process_params(item, i, done);
+3 91 _checkFile(base, i, i, i, done);
+3 93 _processSource(base, done) {
+3 94 if (injector) {
+3 95 const { log =
+4 24 require('util').inherits(Box, EventEmitter);
+4 33 .on('finish', () => {
+4 34 resolve(hasher.read().toString('hex'));
+4 36 .on('error', reject);
+4 39 function toString(string) {
+4 40 return this.name;
+4 43 return this.cache.has(escapeBackslash(path));
+4 45 function toStringFromCharCode(string) {
+4 46 const src = this.source;
+4 47 const addExtension = str => {
+4 48 return str.substring(0, str.length - extname(str).length);
+4 49 };
+4 51 const split = string.split(sep);
+4 52 let cur = '';
+4 53 let i, len;
+4 54 if (sep === 0) {
+4 55 addExtension = str => str.substring(0, str.length - extname(str).length);
+4 57 return this.cache.get(escapeBackslash(sep));
+4 59 class _createFileClass() {
+4 61 const _createFileClass = function(data) {
+4 62 const { files } = this.data;
+4 63 return ctx.execFilter(\'after_render: %_params_\', data, {
+4 64 args: [data]
+4 67 _createFileClass.$inject = _.call(this, data);
+4 68 _createFileClass.options.context.require(data, data);
+4 70 _post.endsWith(data, data);
+4 71 return this;
+4 72 return _checkout(data);
+4 75 class _checkout(data, callback) {
+4 76 if (!callback) {
+4 77 if (() === undefined) return callback();
+4 78 process.called = false;
+4 79 const src = function noop = this.callback.apply(this, arguments);
+4 80 this.callback.apply(this, arguments);
+4 81 this.apply(this, arguments);
+4 83 this.ctx.execFilter = this, this.this.segments = this.segments;
+4 85 if (data.length === 0) return callback();
+4 86 const { files = this.checkout = null;
+4 87 this.length = 0;
+5 40 return Promise.resolve(this.patterns.node_modules);
+5 58 _readDir(base, prefix = \'\')
+5 59 .forEach((files, i) => {
+5 61 if (base && ignore) {
+5 62 if (ignore.length && isMatch(base, ignore)) {
+5 63 return Promise.resolve([]);
+5 66 return readDir(base).then(files => {
+5 68 const processor = spy();
+5 69 for (const [...args) {
+5 70 if (processor.patterns[0].originalPath) {
+5 71 return readFile(basePath, args);
+5 74 return executeFile(answatcher.addProcessor(files);
+5 75 } catch (error) {
+5 77 return executeFile(...args => {
+5 78 processor.process.process(...args => {
+5 79 processor.process(args, file.process(...args);
+5 81 return executeFile(...args);
+5 85 unlink(base).on('errorFile, doneFile, doneFile, doneFile, doneFile, join(base, join(base, '
+5 86 ignorePath, \'\', fn)
+5 91 _readFile, afterFile) {
+5 92 if (includedFiles, doneFile, join(base, \'\', \'
+5 93 return readFile, \'\', fn) {
+5 94 file.readFile,
+6 1 const micromatch = require("micromatch");
+6 47 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" can not be converted to RegExp:\' + arg);
+6 52 Box.prototype._createFileClass = function() {
+6 54 const _File = function(data) {
+6 55 Reflect.apply(File, this, [data]);
+6 57 require('util').inherits(_File, File);
+6 59 _File.prototype.render = function(options, callback) {
+6 64 const { get: function _read: function(options, callback, callback, encoding) {
+6 65 if (!encoding, encoding, content: null};
+6 66 const self = this.ignore = options;
+6 67 return this.stat = options;
+6 68 if (!this.ignore = options;
+6 69 if (!encoding) return;
+6 70 if (!encoding!== null) return;
+6 71 return callback(anset = encoding;
+6 72 if (!this.setEncoding(encoding, false);
+6 73 return callback(ansetEncoding, content, self.ignore);
+6 74 return this.setEncoding, get: null, encoding);
+6 77 return _File.prototype.readdirname = join(this.source, this
+7 19 let targets = this.options.ignored || [];
+7 20 if (ctx.config.ignore && ctx.config.ignore.length) {
+7 21 targets = targets.concat(ctx.config.ignore);
+7 23 this.ignore = targets;
+7 24 this.options.ignored = targets.map(s => toRegExp(ctx, s)).filter(x => x);
+7 59 _readDir(base, fn, prefix = \'\') {
+7 68 return fs.readFile(base).then(files => {
+7 69 const content = files.some(isMatch(base, \'ignore\'));
+7 70 if (options.ignore) {
+7 71 const targets = options.push(content);
+7 72 if (options.skip === undefined) {
+7 73 this.skip = false;
+7 75 return Promise.resolve(content);
+7 77 return this.ignore = true;
+7 82 _readFile(base = base;
+7 83 const {};
+7 84 function escape = join(base, prefix, prefix, match) {
+7 85 return base;
+7 86 return join(base, join(base, sep) {
+7 94 function sep = resolve(base, match;
+7 95 return new Box(base, sep) {
+7 96 return new Box(base, sep, sep) {
+7 97 return new Box(base, sep, sep);
+7 102 Box.prototype.addProcessor = _box, join(pattern, fn) {
+7 103 return new Box(pattern, pattern) {\
+8 21 if (ctx.config.ignore.length) ignoreCfg = ignoreCfg.map(base, ignore);
+8 25 this.options.ignored = (this.options.ignored || []).concat(targets.map(base, options.ignore)));
+8 26 const _File = this._createFileClass({
+8 27 path: this.source,
+8 28 type: \'createFile',
+8 29 params: this._options.ignored || []
+8 31 const _readDir = this._createFileClass();
+8 32 if (!_File) {
+8 33 const src = join(this.source, this.ignore);
+8 34 return join(_File);
+8 37 const _createScaffoldPath = function(name) {
+8 38 const ctx = this.context.extend.helper.create({
+8 39 ignore: ignoreCfg,
+8 40 cache: ignoreCfg
+8 42 return ctx.scaffold.get(name);
+8 44 _createScaffoldPath(name, prefix = \'\').then(data => {
+8 45 const content = ctx.render.renderSync({
+8 46 path: name,
+8 47 type: \'createScaffold\',
+8 48 params: {},
+8 52 return { layout: this.config.default_layout, content: content };
+8 53 }).then(data => {
+8 54 const layoutLength = 0;
+8 55 return Promise.all([
+8 56 writeFile(path, content),
+8 57 createFileMapper(base, layout)
+8 58 ]).then(() => {
+8 59 const data = ctx.render.getFilePath(name);
+8 60 data.content = layout._content;
+8 61 return ctx.scaffold.get(layout);
+8 62 }).then(result => {
+8 64 return ctx.scaffold.set(layout.getScaffold.get(\'normal\', result);
+8 66 }).then(result);
+8 70 }).tapCfg.options.unify(result);
+8 75 _getScaffoldPath(layout => {
+8 76 return join(base, layout);
+8 77 return join(base, results);
+8 82 getScaffoldPath(base, url, url, callback) {
+8 83 return this.content_resolve(this.source_dir, url);
+8 84 return join(base, url_resolve, this.source, this.assignored);
+8 87 _getFilename(base, url_resolve, url_possepaginatorDir
+9 59 let targets = [];
+9 60 base.startsWith(sep);
+9 61 return readDirWalker(base, results, this.ignore, prefix)
+9 62 .return(results)
+9 63 .map(path => this._checkFileStatus(path))
+9 64 .map(file => this._processFile(file.type, file.path).return(file.path));
+9 66 _checkFileStatus(path) {
+9 67 const { Cache } = this;
+9 68 const src = join(this.base, path);
+9 69 return Cache.compareFile(
+9 70 escapeFile(
+9 73 escapeFile(src), content => {
+9 74 return!this._processFile(path));
+9 75 }).finally(() => {
+9 76 return no._checkFileStatus(() => {
+9 77 return no.cache.set(!== undefined;
+9 78 }).finally(().setMaxAge(() => {
+9 79 const src.setMaxAge(()).setInterval(()).isFile(1);
+9 85 _loadSourceFiles();
+9 86 _createReadFile(path) {
+9 87 const cache = join(base, sourceId) {
+9 88 const src = join(this.source);
+9 89 const dest = join(this.sourceDir, join(this.base, path);
+9 90 return join(this.base, join(this.base, this.source, this.source, this.source, join(this.source, join(this.source, \'\', path));
+9 91 return join(this.readFile(this.

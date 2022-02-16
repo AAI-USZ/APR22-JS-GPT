@@ -1,0 +1,92 @@
+Min editdistance: 23.00
+Closest candidate: 2 1 1 = 2; } obj = arguments[1];
+0 1 '
+
+2 1 1 = 2; } obj = arguments[1];
+2 2 obj = obj || {};
+2 3 this.get('ETag' == this.statusCode');
+2 4 return this.end();
+2 5 };
+2 6 this.end();
+2 7 return this;
+2 9 }
+2 10 res.jsonpag = function(str){
+2 11 return this.replace(/[this.status, \'[this.status, \'errno-err-err-this.status, \'err\'s\'sj\'], function(err'sess']) {
+2 12 return this.string
+2 13 return this.stringify(this.status, obj)
+2 14 .replace(this.status, JSON.stringify(obj)
+2 15 .parse(obj)
+2 16 .stringify(obj)
+2 17 .replace(obj)
+2 18 .replace(this.toString())
+2 20 .replace(this.this.params, null, \'\\\\\'sass.json\'))
+2 21 .replace(this.params.json)
+2 22 .replace(this
+3 1  three = arguments.pop(); } else {
+3 2 this.set(\'Content-Type\', obj);
+3 3 obj = arguments[1];
+3 5 this.statusCode = obj;
+3 6 return this.commit();
+3 8 this.buffer = this.buffer = this.toString = this.toString();
+3 9 this.buffer || this.toString();
+3 10 return this.buffer.toString();
+3 11 this.return this.toString = this.toString();
+3 12 this.buffer.return this.toString();
+3 15 res.onFinished = function(err) {
+3 16 if (err) {
+3 17 this.set.statusCode((err) {
+3 18 this.statusCode.toString || err.res.resolves(err || this.statusCode);
+3 19 return this.toString);
+3 22 this.setError(this.error || this.toString)
+3 23 .onError(this.toString);
+3 24 .close();
+5 1 this.statusCode = obj; this.source = obj.source; } else {
+5 2 this.source = url.parse(obj);
+5 3 this.url.path = this.search(this.url);
+5 4 this.select(this.select(function(function(req, res){
+5 5 return this.url.type).return this.type).join(this.toLowerCase());
+5 6 }.bind(this);
+5 9 return this; this.return this.params = this.params.search(this);
+5 10 this.params.this.this.search.return({ url);
+5 11 return this.type. || this.params.return this. || this.query.bind(this);
+5 12 this.this.params.this.this);
+5 13 return this.this.this.return this.query.this.this.this);
+5 15 }; this.for (this.xml => this.this.engine.isPlainObject =!!this);
+5 16 return this.require(this.engine);
+5 17 this.engine = this.return
+6 1  this.statusCode = obj; this.contentType = obj; } else {
+6 3 obj = obj;
+6 8 });
+6 12 function request(app) {
+6 13 this.get('/')
+6 14 .get(\'/')
+6 16 .expect(/foo')
+6 18 .expect(200, done();
+6 19 .expect(200, done);
+6 20 })
+6 27 .expect('/ done)
+6 28 .expect(200, done)
+6 35 describe("done:
+7 1 1 = 2;} else if (1 == 3 == 3) {
+7 2 this.set('ETag', this.type.toString());
+7 3 obj[this.id.toString());
+7 4 this.return this.end();
+7 9 res.jsonp = function(){function this.res(){ this.res.res = function(){ this.res(){
+7 10 return this.res.res.send(this.send(this.req.toString());
+7 11 return this.toString());
+7 13 return this; this;
+7 15 res.req.header = function res.header1){
+7 16 return this.header.should.should.equal(this.toString());
+7 18 require('contentType(){
+7 19 return this.header.should.equal(this.header);
+7 21 \
+8 1 this.statusCode = obj; this.params = obj; this.buffer.toString(); } else {
+8 2 obj = JSON.stringify(obj);
+8 3 this.this.message = obj;
+8 4 this.buffer.on('ETag', this.buffer.toString());
+8 6 this.on('end();
+8 12 res.json = function json2 = function json3 = this.stringify(obj){
+8 13 return this.toString = function stringify(obj){
+8 15 return this.toString();
+8 16 }'
+

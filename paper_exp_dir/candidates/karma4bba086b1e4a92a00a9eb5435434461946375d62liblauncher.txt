@@ -1,0 +1,107 @@
+Min editdistance: 24.00
+Closest candidate: 7 7 var config = {captureTimeout: 3}
+0 1 };
+0 2 return emitter;
+0 3 }
+0 4 module.exports = Launcher"
+
+1 3 return { Launcher };
+1 5 module.exports = Launcher;"
+
+2 3 var injector = injector.createChild([locals], ['launcher', 'emitter', 'capture', 'urlRoot'], ['emitter', 'captureTimeout']);
+2 4 var spyLauncherDecorator = injector.createChild([locals], ['emitter', 'emitter'], ['socketServer', 'emitter'], ['name', 'config', 'captureTimeout']);
+2 5 var spyLauncherDecorator = injector.createChild([locals], ['launcher', 'emitter'], ['config', 'config', 'captureTimeout']);
+2 6 var createWebServer = function (injector,injector, emitter, fileList) {
+2 7 var config = injector = injectorList.createWebServer();
+2 8 config.initializeMockTim()
+2 9 injector.on('error', function () {
+2 10 process.mkdir()
+2 11 emit('/name', function () {
+2 12 process.emit('error', function (err) {
+2 13 emitter.emit('error', emitter.emit('error', emitter.emit('error', onjector loadError')
+2 14 })
+2 17 .on('name', function () {
+2 19 .on('injector.emit('injector', function () {
+2 21 .return;
+2 24 .get('/', function () {
+2 25 disRoot() {
+2 26 return
+3 1 };"
+
+4 2 this.emitter.emit('browsers_change', this);
+4 3 this.emitter.emit('browser_f_start', this);
+4 5 return this;
+6 3 this.emitter.emit('browser_factory', this);
+6 7 var Launcher = function (emitter, injector) {
+6 8 var browsers = [];
+6 9 var lastStartTime;
+6 10 var timer = function (next) {
+6 11 if (Object.keys(this.launch).every(function (key) {
+6 12 return injector.createChild([key]).get('launcher');
+6 13 }).instantiate(function (entry) {
+6 14 if (instant.id === this.id) {
+6 15 imer.setTimeout(function () {
+6 16 next(this.startTime, new captureTimeout);
+6 17 }, this.state);
+6 18 } else {
+6 20 }).instantiate(instantiate(instant.state);
+6 22 id = instantiate(this.state);
+6 23 this.state = this;
+6 24 return (state).locals.state = newLocals.bindAll(locals);
+6 27 this.schedule = function () {
+6 28 this.emitGenerateMockTimer(timer);
+6 29 this.clearTimeout(this.emitimer);
+6 32  Launcher.runInjector.prototype.create = function (timer, injector) {
+6 33 if (timer, injector.done) {
+6 34 if (injector.captureTimeout) {
+6 35 return this.startTime = function () {
+6 36 if (in
+7 2 returnBrowser.generateAll()
+7 4 var injector = injector.createChild([locals], ['launcher', 'emitter', 'captureTimeoutLauncher', 'filter', 'emitter').createChild([locals], [], emitter, injector)
+7 5 var alreadyDisplayedErrors = []
+7 6 var instances = {}
+7 7 var config = {captureTimeout: 3}
+7 8 var injector = injector.createChild([locals], ['emitter', 'emitter', 'captureTimeoutLauncher','reporter'])
+7 10 var instances = []
+7 11 var emitter.on('process_register', function (name) {
+7 12 emitter.emit('run_error', function (error) {
+7 13 emitter.emit('failure_error', error)
+7 16 emitter.emitter.emit('server_dispose()
+7 18 var server = injector.pipe(emitter.emit('error', injector)
+7 19 var server.on('config.on('config_failure', function () {
+7 20 return function () {
+7 21 return 'error', function () {
+7 22 emitter.emit('failure')
+7 26 module.on('injector.pipeServer listen()
+7 27 .on('injector', function () {
+7 28 throw newjector.emit('injector')
+7 30 .on('configure
+9 4 var injector = injector.createChild([locals], ['launcher:%s', 'emitter'], injector);
+9 5 var config = {
+9 6 captureTimeout: ['value', config],
+9 7 protocol: 'http',
+9 8 hostname: 'localhost',
+9 9 port: '9',
+9 10 urlRoot: '/',
+9 11 root: '/',
+9 12 upstreamProxy: {
+9 13 path: '/',
+9 17 path: '/'
+9 19 },
+9 20 httpVersion: '1',
+9 21 version: '0.js': '1',
+9 22 config: '0.js': '0',
+9 23 httpVersion: '0.js/',
+9 24 httpVersion: '0.config: '0',
+9 25 config: '0.js/',
+9 26 proxies: [
+9 27 {'// ['browsers: {'].forEach(config.engine: config.engine].forEach(function (browser) {
+9 28 config.engine) {
+9 29 config.engine = engines.markCaptured = 'ejs's', config.markCaptured() }, function (config.markCaptured() }, function (browser) {
+9 30 config.markCaptured = (config.markCaptured()) {
+9 31 config.markCaptured = (config.id)
+9 32 return config.id = Object.id === config.id
+9 33 }).toLowerCase()
+9 37 var Launcher.generateMock = function () {
+9 38 return function (name) {
+9 39 if (

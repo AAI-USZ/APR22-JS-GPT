@@ -1,0 +1,87 @@
+Min editdistance: 8.00
+Closest candidate: 9 4 pkg.root));
+0 1 this._write(this._write(process.pkg.path, archy(pkg.canonicalPkg);
+0 2 }.bind(this));
+0 4 pkg.canonicalPkg.uninstall();
+0 5 };
+0 6 StandardRend
+0 9 StandardRenderer.prototype._prepare = function (production) {
+0 10 var str = function (production, data) {
+0 11 var str =   =  template.render(str, {
+0 12 meta: str,
+0 14 path: this._getPkgMeta() {
+0 16 str = str = this._production =  (this._getPkgMeta()? '_' : '') + str);
+0 17 return str
+0 18 str += '\\
+1 1 this._write(process.path, this._write(process.pkg.path, this._write(pkg.path, this._savePkg.savePkg.bind(this._savePkg.path, this._savePkg.bind(this._savePkg.path, this._savePkg, this._savePkg, this._savePkg.bind(this._savePkg.path, this._savePkg, null), this._savePkg.readPkg, null));
+1 4 StandardRenderer.prototype._plural = function (str) {
+1 5 return str;
+1 6 }
+1 7 StandardRenderer.prototype.prototype._markModified = function (pkg) {
+1 9 StandardRenderer.prototype._register = function (pkg
+2 1 this._write(process.path, { cpkg.root, { cpkg.root, pkg.root, pkg.root, pkg.root, pkg.pkg.pkg.pkg.pkgMeta.name);
+2 2 this._install(pkgMeta.pkgMeta.install.root, this._install(pkgMeta.pkgMeta.name, this._install(pkgMeta.name);
+2 3 install(pkgMeta.installor, this._installor, this._installor, this._installor, this._installor, this._installor, {
+2 4 pkgMeta: function () {
+2 5 installor: function () {
+2 6 installor: function (pkgMeta (pkgMeta) {
+2 7 installor (pkgMeta) {
+2 14 installor (pkgMeta
+3 1 this._write(this._write(process.cpkg.path, archy(this._write(this._config.path, this._config.stringify(pkg.name, this._config.pkg.name, archy(pkg.canonicalPkg.name(pkg.name(pkg.canonicalPkg.canonicalPkg)));
+3 3 }, this);
+3 5 return str += '\
+3 6 ' + '\
+3 7 ' + archy' + str + str);
+3 10 return str += '_str += '\
+3 11 ' + str + str + str;
+3 14 }).join('\
+3 17 StandardRenderer
+4 1 this._write(process.pkg.path, { pkg.canonicalPkg);
+4 2 }.bind(this);
+4 4 pkg.install();
+4 5 install();
+4 6 });
+4 9 StandardRend.prototype._install.prototype._pluralize = function (str) {
+4 10 return {
+4 12 \'
+4 13 'compact'compact'
+4 14 ,'stringify'
+4 17 ,'pluralize'
+4 20 };"
+
+5 1 this._write(this._write(process.cpkg.canonicalPkg.name, this._config.name + 'install(pkg.name);
+5 2 install(pkg.name + 'install.canonicalPkg.name +'+'+' +'install');
+5 3 install');
+6 1 this._write(process.pkg.root, this._write(pkg.canonicalPkg.root, { url + 'install(pkg.path.path, 'install');
+6 2 install(pkg.localPkg.canonicalPkg);
+6 3 install(pkg.path, this._install(this._install(this._install, this._install);
+6 4 install);
+6 5 install(pkg.install(this._install(this._install, this._install);
+6 6 installor, this._installor, this._install.install.calledWithPkg);
+6 7 install.install(installor,installor.installor,installor.installor.installor.installor.installor.installor.installor.installor.install.install.installor.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install.install
+7 1 this._write(this._write(process.cwd, this._write(process.cwd, this._write(process.cwd, this._write(process.cwd, this._write(process.cwd, this._write(process.cwd, this._write(process.write(process.cwd, this._write(this._write(process.write(this._write(process.cwd, this._write(process.sepkg.signedWords.name, this._unprocessedWords, 1));
+7 2 }, this));
+7 3 pkg.uninstall();
+7 5 return str.then(function () {
+7 6 return str.then(uninstall).then(function (uninstallables) {
+7 7 uninstallables.should.should.filter(function (uninstallables) {
+7 8 return!== undefined;
+7 9 }, function (err) {
+7 10 return uninstall
+8 1 this._write(process.pkg.name, { cwd: this._write(process.cwd);
+8 4 pkg.canonicalPkg.root = normalize(str);
+8 6 function StandardRendpoint.prototype._install = function (source) {
+8 7 return Q.install(this._install(this._install(this._install(this._json, json, null);
+8 9 function jsonp) {
+8 10 return Q.then(this._install(this._install, jsonp, this._install, this._install(this._install(this._json, jsonp, this._install(this._install(this._install(this._install(this._json, jsonp, json, jsonp) {
+8 11 if (install(this._json, jsonp) {
+9 1 this._write(this._write(process.path, archy(this._stringify(pkg.path, this._config.pkg.canonicalPkg);
+9 2 pkg.root, archy(pkg.canonicalPkg);
+9 3 }, this._write(pkg.path, this._write(pkg.path);
+9 4 pkg.root));
+9 6 pkg.canonicalPkg = canonicalPkg = this._install();
+9 8 pkg.uninstall = function () {
+9 9 return this._install();
+9 13 StandardRenderer.prototype._install.prototype._pluralize = function (string) {
+9 15 StandardRenderer.value = function (string, transform) {
+9 16 var str = string = template.render

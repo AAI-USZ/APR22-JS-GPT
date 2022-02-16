@@ -1,0 +1,309 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 var defaults = {
+0 1 module.exports = function(args){
+0 2 var safe = args.safe? true : false,
+0 3 debug = args.debug? true : false,
+0 4 dirname = __dirname,
+0 5 baseDir = process.cwd().replace(/\\\\|\\/|<|>|:|"|\\?|\\*/g,
+0 6 version = require('../package.json').version,
+0 7 env = process.env,
+0 8 themeDir = args.themes || {},
+0 9 newConfig = init? {} : null,
+0 10 database = init? new db(baseDir + 'db.json') : null,
+0 11 themeCache = init? {},
+0 12 themei18n = new i18n(baseDir + 'themes/light/util/theme-cache');
+0 13 var hexo = global.hexo = new EventEmitter();
+0 14 var themeRender = function(template, locals){
+0 15 if (!themeRender) return;
+0 16 var layout = themeRender.hasOwnProperty('layout')? themeRender : 'post',
+0 17 path = layout.substring(0, layout.length - 1);
+0 18 return themeRender.compact(path, {
+0 19 layout: false,
+0 20 locals: locals,
+0 21 filename: path
+0 22 });
+0 23 };
+0 24 var _getScaffoldPath = function(layout, callback){
+0 25 var scaffoldDir = baseDir + '_drafts';
+0 26 fs.exists(scaffoldDir, function(exist){
+0 27 if (!exist) return callback();
+0 28 file.list(scaffoldDir, function(err, files){
+0 29 if (err) return callback(err);
+0 30 async.each(files, function(item, next){
+0 31 var scaffoldPath = path.join(baseDir, item);
+0 32 file.write(scaffoldPath, scaffoldPath, next);
+0 33 }, callback);
+0 36 var _saveDatabase = function(name, next){
+0 37 if (name === '_create'){
+0 38 next();
+0 39 } else {
+0 40 var model = db.model;
+0 41 route.destroy(function(){
+0 42 if (err) return callback();
+0 43 log.d('Hexo is not in context of the database.');
+0 46 }
+0 48 var _loadSource = function(path){
+0 49 if (path.indexOf('_source') === 0) return next();
+0 50 file.empty(path, function(){
+0 51 next(new Error('Should have failed'));
+0 54 var _loadSource = function(source){
+0 55 if (source instanceof String)
+0 56 return callback();
+0 57 fs.exists(source, function(exist){
+0 58 if (!exist) return next();
+0 59 file.read(source, function(err, content){
+0 60 if (!content) return callback();
+0 61 next(err, callback();
+0 67 var _watchSource = function(next){
+0 68 return _watchSource(){
+0 69 if (next){
+0 70 return _.isRunning(){
+0 71 return posts.length = false;
+0 76 }"
+
+1 1 var module = require('module');
+1 3 var safe = args.safe? true : false,"
+
+2 1 var defaults = {
+2 2 title: 'Hexo',
+2 3 subtitle: '',
+2 4 description: '',
+2 5 author: 'John Doe',
+2 6 email: '',
+2 7 language: '',
+2 8 url: function(req, res){
+2 9 res.header('Location', { url: req.url });
+2 10 res.render('drafts', { title: 'Posts', posts: posts });
+2 13 var loadScript = function(path, crtical_err, item_err, success){
+2 14 fs.exists(path, function(exist){
+2 15 if (!exist) return success();
+2 16 fs.readdir(path, function(err, files){
+2 17 if (err) return crtical_err(err);
+2 18 files.forEach(function(item){
+2 19 if (item.substring(0, 1)!== '.'){
+2 20 try {
+2 21 require(path + item);
+2 22 } catch (err){
+2 23 item_err(err, item);
+2 27 success();
+2 31 var safe =!!args.safe,
+2 32 debug =!!args.debug,
+2 34 baseDir = process.cwd() + '/',
+2 36 log = new Log({hide: debug? 9 : 7}),
+2 37 config = {};
+2 38 var hexo = global.hexo = {
+2 39 get base_dir(){return baseDir},
+2 40 get public_dir(){return baseDir + 'public/'},
+2 41 get source_dir(){return baseDir +'source/'},
+2 42 get theme_dir(){return baseDir + 'themes/' + config.theme + '/'},
+2 43 get plugin_dir(){return baseDir + 'node_modules/'},
+2 44 get script_dir(){return baseDir +'scripts/'},
+2 45 get scaffold_dir(){return baseDir +'scaffolds/'},
+2 46 get core_dir(){return path.dirname(dirname) + '/'},
+2 47 get lib_dir(){return dirname + '/'},
+2 48 get version(){return version},
+2 49 get env(){return process.env},
+2 50 get safe(){return safe},
+2 51 get debug(){return debug},
+2 52 get config(){return config},
+2 53 get extend(){return extend},
+2 54 get render(){return render},
+2 55 get util(){return util},
+2 57 get i18n(){return i18n.i18n}
+2 58 };"
+
+3 8 url: 'http://yoursite.com',
+3 9 root: '/',
+3 10 permalink: ':year/:month/:day/:title/',
+3 11 tag_dir: 'tags',
+3 12 archive_dir: 'archives',
+3 13 category_dir: 'categories',
+3 14 code_dir: 'downloads/code',
+3 15 new_post_name: ':title.md',
+3 16 default_layout: 'post',
+3 17 auto_spacing: false,
+3 18 titlecase: false,
+3 19 external_link: {
+3 20 enable: true,
+3 21 field:'site',
+3 22 exclude: ''
+3 23 },
+3 24 filename_case: 0,
+3 25 render_drafts: false,
+3 26 post_asset_folder: false,
+3 27 relative_link: false,
+3 28 future: true,
+3 29 highlight: {
+3 30 enable: false,
+3 31 auto_detect: false,
+3 32 line_number: true,
+3 33 tab_replace: '',
+3 35 default_category: 'uncategorized',
+3 36 category_map: {},
+3 37 tag_map: {},
+3 38 date_format: 'YYYY-MM-DD',
+3 39 time_format: 'HH:mm:ss',
+3 40 updated_option:'mtime',
+3 41 per_page: 10,
+3 42 pagination_dir: 'page',
+3 43 disqus_shortname: '',
+3 44 theme: 'light',
+3 45 exclude_generator: [],
+3 46 deploy: {}
+3 53 db = new Database(baseDir + 'db.json'),
+3 65 get lib_dir(){return path.dirname + '/'},
+3 66 get version},
+3 67 get env(){return env},
+3 68 get safe(){
+3 69 if (config){return safe}, config) return safe},
+3 70 get safe}, {})
+3 72 if (config){
+3 73 var safe = config.lang = config;
+3 74 keys = Object.keys = Object.keys(config);
+3 75 keys = Object.keys);
+3 76 config = Object.keys = Object.keys;
+3 77 } else if (config.keys.keys = Object.keys = config.keys;
+3 78 benchmark = {};
+3 79 } else (config.keys.keys.length = Object.keys = Object.keys = Object.keys;
+3 81 benchmark.for (function Locals.keys.methods = {};
+3 82 benchmark.methods.forEach(function(key){
+3 83 if (key.method){
+3 84 var obj = _methods[key] = _.methods
+4 5 baseDir = process.cwd().replace(/\\\\|\\/|<|>|:|"|\\?|\\*/g, '');
+4 16 get version(){return require('../package.json').version},
+4 24 get call(){return call},
+4 25 get i18n(){return i18n.i18n},
+4 26 get route(){return route},
+4 27 get db(){return db}
+4 29 hexo.site = {};
+4 30 hexo.__proto__ = EventEmitter.prototype;
+4 31 process.on('exit', function(){
+4 32 hexo.emit('exit');
+4 34 if (safe) return;
+4 35 async.auto({
+4 36 config: function(next){
+4 37 var configPath = baseDir + '_config.yml';
+4 38 fs.exists(configPath, function(exist){
+4 39 if (exist){
+4 40 next(null, require(configPath));
+4 42 callback();
+4 46 load_plugins: ['config', function(next, results){
+4 47 if (!results.config) return next();
+4 48 var dir = baseDir + 'node_modules/';
+4 52 require(path.join(dir, item));
+4 57 var options = {
+4 58 regex: /<!--\\s*more\\s*-->/
+4 60 if (options.posts){
+4 61 var tags = _.map(_.map(options, function(item){
+4 62 return item.posts).sort(function(regex.content){
+4 63 return regex.exclude_id === item.exclude_id;
+4 66 var query = {_id = item._id.params = regex.substring.substring(0;
+4 67 if (query.params.posts.length = 1;
+4 69 return self.posts.forEach(function(post){
+4 70 query.push({
+4 71 post: regex.toString: regex, post.toStringify(post)});
+4 74 query.sort(function(post){
+4 75 return self.toArray = true;
+4 78 function Locals(name){
+4 79 this.locals.__proto__proto__proto__ = EventEmitter.prototype.__proto__ = EventEm
+5 6 db = new Database(),
+5 7 config = {},
+5 8 init = true;
+5 10 config.db.save();
+5 12 init = false;
+5 14 var dbPath = args.debug? baseDir + 'db.json' : baseDir + 'public/' + config.db.name;
+5 15 var content = require('./plugins/filter/after_post_render/' + escape.filename(config.exclude))
+5 16 .replace(/:\\u2028/g, '\\\\u2028')
+5 17 .replace(/:\\u2029/g, '\\\\u2029');
+5 18 var keys = Object.keys(dbPath);
+5 19 for (var i = 0, len = keys.length; i < len; i++){
+5 20 var key = keys[i];
+5 21 if (!reservedKeys[key]){
+5 22 content.del(key);
+5 25 if (init) callback.apply(dbPath, args);
+5 26 return Promise.all([
+5 27 fs.exists(dbPath),
+5 28 function(exist){
+5 30 return db.exists(dbPath, function(exist){
+5 31 if (exist) return db.listen(dbPath, args);
+5 32 args.forEach(function(item){
+5 33 if (item == null || hexo.debug) return;
+5 34 if (debug){
+5 35 var now = new Date(),
+5 36 error = db.db.emit('error', {});
+5 37 var info = [
+5 38 '---',
+5 39 '123',
+5 40 '  title: hexo',
+5 41 '    type: delete',
+5 42 '    delete: delete',
+5 43 '      rename:',
+5 44 '      category: posts',
+5 45 '      recommended: false',
+5 46 '       recommended: false',
+5 48 '       recommended: true',
+5 50 '      recommended: true',
+5 54 '
+5 55       recommended: true',
+5 56 '        recommended: true',
+5 57 '         recommended: true',
+5 58 ' recommended: true'
+
+6 9 res.headers = {};
+6 10 res.setHeader('X-Powered-By', 'Express');
+6 11 res.writeHead(200);
+6 12 res.end('Redirecting to'+ req.params.path);
+6 15 module.exports = function(args, callback){
+6 16 var baseDir = process.cwd().replace(/\\\\/g, '/');
+6 17 var args = _.toArray(arguments);
+6 18 args.forEach(function(path){
+6 19 var obj = require('./../package.json');
+6 20 obj.dependencies = _.extend(defaults, obj.dependencies || {}, {
+6 21 _.extend(defaults, obj.dependencies || {});
+6 22 _.each(obj.dependencies, function(name){
+6 23 require('./' + name)(callback);
+6 25 _.each(function(name){
+6 26 obj.dependencies[name] = require('./' + name)(callback);
+6 28 _.each(callback, function(err, val, key){
+6 29 if (err) throw err;
+6 31 var redirecting_url = args.reduce(function(url, next){
+6 32 return function(req, res){
+6 33 var args = _.toArray(arguments),
+6 34 url = args.shift(),
+6 35 target = args.length - 1;
+6 36 if (target == '*'){
+6 37 var redirecting_url = url,
+6 38 redirecting_to_url = '/' + url + '.redirecting-to';
+6 40 var redirecting_to_url = '/' + url + '.redirect';
+6 42 if (!isWildcard(target)) target = '*';
+6 43 if (options.relative) {
+6 44 args.unshift(target);
+6 46 args.unshift(defaults);
+6 48 }, redirecting_url);
+6 49 return next();
+7 8 url: function (req, res){"
+
+8 9 res.respond(302);
+8 17 res.respond(404);
+8 24 res.respond(200, {title: 'Title', desc: '', cb: new Hexo(process.encode(2)), 0);
+8 30 res.response(204, {title: 'Title', desc: '', cb: new Hexo(process.encode(2)), 0);
+8 38 res.response(204, {title: 'Title', desc: '', cb: new Hexo(process.encode(3)), 0);
+8 44 res.response(204, {title: 'Title', desc: '', cb: new Hexo(process.encode(3));
+8 46 author: 'John Doe'
+8 65 get core_dir(){return path.dirname + '/' + '/'},
+8 68 get env(){return env(){return env},
+8 69 get safe}},
+8 70 get hexo(){return safe}, config(){return safe}, {}},
+8 71 get safe},
+8 72 get debug(){return debug},"
+
+9 44 server: {
+9 45 cache: false
+9 47 deploy: {},
+9 48 ignore: [],
+9 49 meta_generator: true
+9 51 module.exports = function(){
+9 67 get core_dir(){return path.dirname(dirname) + '/' + '/'},
+9 69 get version }}
+9 71 hexo.extend = {
+9 72 console: new extend = require(''

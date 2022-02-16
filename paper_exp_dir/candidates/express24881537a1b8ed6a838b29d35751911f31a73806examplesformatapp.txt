@@ -1,0 +1,67 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 if (item) {
+0 1 if (item) {
+0 2 switch (format) {
+0 3 case \'json\':
+0 4 res.send(item);
+0 5 break;
+0 6 case \'xml\':
+0 7 var xml = ''
+0 8 + \'<items>\'
+0 9 + \'<item>\' + item.name + \'</item>\'
+0 10 + \'</items>\';
+0 11 res.send(xml);
+0 13 default:
+0 14 next();
+0 15 }
+0 16 } else {
+0 17 next(new Error(\'Item\'+ id +'does not exist\'));
+0 19 });
+0 20 app.get(\'/'\', function(req, res){
+0 21 res.send(\'Visit /item/2');
+0 23 app.get(\'/item/:id.:format?\', function(req, res, next){
+0 24 var id = req.params.id,
+0 25 format = req.params.format;
+0 26 res.send(format);
+0 28 app.listen(3000);
+0 29 console.log(\'app listening on port 3000\');'
+
+1 4 next(new Error("Item must be a valid format for the request passed."));
+1 7 app.get(\'/item/:id\', function(req, res){
+1 10 app.get(\'/item/:id/:op?\', function(req, res, next){
+1 11 var op = req.params.op || \'view\';
+1 12 res.send(op + \'ing\'+ params.id.toString());
+2 4 res.send({
+2 5 name: format.replace(/[\\r\\t]+/g, \'$1\')
+2 12 app.get(\'/item/:id/:format?\', function(req, res){
+2 14 name: format.replace(/\\r\\t+/g, \'$1\')
+2 21 app.post(\'/item/:format?\', function(req, res){
+2 26 app.get(\'/item/:format?\', function(req, res){
+2 37 console.log(\'Express app started on port 3000\');'
+
+3 9 app.get(\'/item/:id([0-9\\-\\-]+):\\?[0-9\\-\\*]+):\\?[0-9\\-\\*]+):\\?(\\{"name":"app"\\")}\\)$/;
+3 10 res.send({ name: format.format(format), content: \'
+3 14 app.post(\'/\', function(req, res){
+3 15 res.send([
+3 16 \'<h1>Forum Thread</h1><p>Visit /item/2</p>\
+3 17 \
+3 18 <p>Visit /item/2.json</p>\
+3 19 <p>\
+3 21 <p>Visit /item/3.json</p>\
+3 24 </p>\
+5 4 next(new Error(\'Item must be a format\''));
+5 7 app.post(\'/item/:id.:format?\', function(req, res){
+6 3 res.send({ message: format, params: { items: [id] }});
+6 6 var items = [];
+6 7 items.push({ name: format, { items: [id] }});
+6 16 app.use(function(err, req, res, next){
+6 17 if (err) return next(err);
+6 18 res.send(404);
+7 4 format(req, res){
+7 9 app.post('/item', function(req, res){
+7 13 console.log('Express app started on port 3000');'
+
+8 5 name: format.replace(/[^\\/]+)/json
+8 14 name: format.replace(/\\/{2,}/g, \'/\')
+9 4 format(req, res, next);
+9 8 res.send(req.params.id);

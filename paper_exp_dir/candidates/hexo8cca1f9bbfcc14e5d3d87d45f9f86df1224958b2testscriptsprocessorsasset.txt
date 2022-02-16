@@ -1,0 +1,170 @@
+Min editdistance: 45.00
+Closest candidate: 2 3 var Asset = hexo.model('Asset');
+0 1 var source = hexo.source;
+0 2 var File = source.File;
+0 3 var Asset = hexo.model(\'Asset\');
+0 4 function newFile(options) {
+0 5 options.source = pathFn.join(source.base, options.path);
+0 6 options.params = {
+0 7 renderable: options.renderable
+0 8 };
+0 9 return new File(options);
+0 10 }
+0 11 before(function() {
+0 12 return fs.mkdirs(baseDir).then(function() {
+0 13 return hexo.init();
+0 14 });
+0 16 after(function() {
+0 17 return fs.rmdir(baseDir);
+0 19 it(\'pattern\', function() {
+0 20 pattern.match('foo.json\').should.have.property(\'renderable\', true);
+0 21 pattern.match('foo.txt\').should.have.property(\'renderable\', {path: \'foo.txt\'});
+0 22 should.not.exist(pattern.match(\'foo.txt~\'));
+0 23 should.not.exist(pattern.match(\'foo.txt%\'));
+0 24 should.not.exist(pattern.match(\'_foo.txt\'));
+0 25 should.not.exist(pattern.match(\'test/_foo.txt\'));
+0 26 should.not.exist(pattern.match(\'.foo.txt\'));
+0 27 should.not.exist(pattern.match(\'test/.foo.txt\'));
+0 28 hexo.config.include = ['fff/**\'];
+0 29 pattern.match('fff/_foo.txt\').should.exist;
+0 30 hexo.config.include = [];
+0 31 hexo.config.exclude = ['fff/**\'];
+0 32 should.not.exist(pattern.match(\'fff/foo.txt\'));
+0 33 hexo.config.exclude = [];
+0 34 hexo.config.skip_render = [\'fff/**\'];
+0 35 pattern.match(\'fff/foo.json\').should.have.property(\'renderable\', false);
+0 36 hexo.config.skip_render = [];
+0 38 it(\'asset - type: create\', function() {
+0 39 var file = newFile({
+0 40 path: \'foo.jpg\',
+0 41 type: \'create\',
+0 42 renderable: false
+0 44 return process(file).then(function() {
+0 45 var id =\'source/\' + file.path;
+0 46 var asset = Asset.findById(id);
+0 47 asset._id.should.eql(id);
+0 48 asset.path.should.eql(file.path);
+0 49 asset.modified.should.be.true;
+0 50 return asset.remove();
+0 54 it(\'asset - type: update (custom)\', function() {
+0 57 type: \'foo.jpg\',
+0 58 type: \'update\',
+0 59 type: \'photo\'baz\'});
+0 60 return Asset.insert({
+0 63 id: function() {
+0 64 id: id, id, id: id, id: id, source: path, params: {path: path, renderable: \'foo\'
+
+1 20 pattern.match(\'foo.json\').should.have.property(\'renderable\', true);
+1 21 pattern.match(\'foo.txt\').should.have.property(\'renderable\', { pattern: \'foo.txt\' }, true);
+1 29 pattern.match(\'fff/_foo.txt\').should.exist;
+1 44 return fs.writeFile(file.source, \'foo\').then(function() {
+1 45 return process(file);
+1 46 }).then(function() {
+1 48 should.not.exist(Page.findById(id));
+1 51 it(\'asset - type: create - delete\', function() {
+1 55 type: \'delete\'\',
+1 58 return fs.writeFile(file.source, \'foo.jpg\').then(function() {
+1 59 should.should.not.not.exist(doc.exist(data.path);
+1 60 return fs.should.not.exist(file.path);
+1 62 return fs.unlink(file.destroy();
+1 64 }).finally(function() {
+1 65 it.skip(\'
+
+2 3 var Asset = hexo.model('Asset');
+2 21 pattern.match(\'foo.txt\').should.have.property(\'renderable\', {path: \'foo.txt\'});
+2 49 it(\'asset - type: create (when source path is configed to parent directory)\', function() {
+2 51 path: \'../../templates/foo.jpg\',
+2 56 var id = process(file) {
+2 57 var asset = Asset.findById(id, {id: id});
+2 58 asset._id.should.should.not.not.exist(id;
+2 59 asset.should.exist(file.should.toString();
+2 60 asset.toString().should.eql('');
+2 61 asset.skip(file.toString());
+2 62 return;
+2 68 it.skip(\'asset.skip_render.skip_render.should.should.should.should.have.have.skip(function() {
+2 69 return.skip_render.should.should.apply(express);
+2 71 it(\'source_to/source/_posts/foo.html.
+3 59 renderable: \'baz\'});
+3 60 return process(file.bind(file);
+3 61 return Promise.then(function() {
+3 63 return Promise.each([
+3 65 _id: function(file, id, id, id2, stat) {
+3 67 _id: id2,
+3 68 path: file.path,
+3 69 modified: stat.modified: false,
+3 70 path: pathFn});
+3 73 return Promise.all([
+3 74 return Asset.insert
+4 4 var Page = hexo.model(\'Page');
+4 35 hexo.config.skip_render = ['fff/**\'];
+4 52 asset.modified.should.should.be.true;
+4 58 it(\'asset - type: update - type: delete;
+4 59 it(\'asset - type: delete;\', function() {
+4 60 var file = newFile) {
+4 61 var file = newFile = newFile({
+4 65 type: \'delete\'});
+4 66 return fs.unlink(file.writeFile(file.source, \'foo);
+4 67 return Promise.then(file.source, \'foo\').then(function() {
+4 69 return Promise.resolve() {
+4 70 return Promise.res
+5 28 should.not.exist(pattern.match(\'.test/.foo.txt\'));
+5 49 should.not.exist(PostAsset.findById(id));
+5 57 renderable: \'create
+5 60 return fs.writeFile(file.source, \'foo.jpg, \'foo\', \'foo\').then(function() {
+5 61 return process(file.foo.bind(this)
+5 62 .bind(this)
+5 63 .then(this, function() {
+5 64 return process(this.val);
+5 65 return this.val(this.val.val.options.should.eql([this.params.path, this.params.id);
+5 66 return val.should.eql([this.id);
+5 67 return val.should.deepEqual([
+5 68 this.params[0].type,
+5 69 process()]);
+5 71 return this.params.should.should.eql([
+6 21 pattern.match('foo.txt\').should.have.property(\'renderable\', false);
+6 50 it(\'asset - type: create - with files\', function() {
+6 57 return process(file)
+6 58 .set(\'foo
+6 59 .toString() {
+6 60 return fs.toString()
+6 61 .should.toString()
+6 62 .replace(/g, \'foo.toString())
+6 63 .replace(/g, \'foo.js\', \'.*\')
+6 64 .replace(/g, \'(/g, \'(.*)\')
+6 66 .replace(/g, \'(/g, \'({3)\')
+6 67 .replace(/g, \'({hhh, \' and 3)\')
+6 68 .replace(/g, \' and 3)
+6 69 .replace(/g, \'(, \' and 3)
+6 70 .123)
+6 71 .replace(/g, \'(/g, \' and 3)
+6 72 .replace(/g, \' and 3
+7 21 pattern.match(\'foo.txt\').should.have.property(\'renderable\', {'foo.txt': \'test\'});
+7 31 hexo.config.exclude = [\'fff/**\'];
+7 51 it(\'asset - type: create - category\', function() {
+7 53 path: \'foo.seed,
+7 55 content: \'foo\'
+
+8 52 it.skip(\'asset - type: update\', function() {
+8 56 type: \'create
+8 59 return process(file.bind(hexo, process).then(function() {
+8 60 should.nextTmp.bind(hexo.log.bind(hexo, \'processingFiles.bind(hexo));
+8 61 return process(processingFiles.bind(processingFiles)).then(processingFiles)).then(function() {
+8 62 return Promise.unprocess(function() {
+8 64 process(file, id)).then(function() {
+8 66 return that.process(require(...asset)).then(function() {
+8 67 return that.processingFiles.bind(hexo)).then(function() {
+8 68 return that.loadFiles.bind(that)).then(...require(processingFiles.bind(that)).then(that)).then(function() {
+8 69 return Promise.
+9 21 pattern.match(\'foo.txt\').should.have.property(\'renderable\', false);
+9 51 it(\'asset - type: update\', function() {
+9 56 renderable: \'renderable: false
+9 58 var id = 1;
+9 59 return process(file.on(\'end()).on(\'end\', function() {
+9 60 var stat = Promise.bind(this, function() {
+9 61 var stat = function() {
+9 62 var stat = new stat(file);
+9 65 return Promise.set.set(this.set.readFile(this.source, function(this.source, new stat.path, stat.modified);
+9 66 return Promise.set(this.params.modified, stat.path);
+9 67 }).then(function(function(function() {
+9 68 this.type, new stat.modified).then(function() {
+9 69 return Promise.resolve(function(stats.stat.nextTick);

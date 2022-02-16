@@ -1,0 +1,294 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 list_number: true,
+0 1 list_number: true,
+0 2 max_depth: 6,
+0 3 class: \'toc\',
+0 6 class: \'child_process\',
+0 8 filename: path
+0 9 }, options);
+0 10 var className = options.class;
+0 11 var listNumber = options.list_number;
+0 12 var result = [
+0 13 \'<ol class="toc">\',
+0 14 \'<li class="getId-1">\',
+0 15 \'<a class="getId-1-1">\',
+0 16 \'<a class="getId-2">\',
+0 17 \'<a class="getId-3">\',
+0 18 \'<a class="getId-4">\',
+0 19 \'<a class="getId-5">\',
+0 20 \'<a class="getId-6">\',
+0 21 \'<a class="getId-7">\',
+0 22 \'<a class="getId-8">\',
+0 23 \'</a>\',
+0 24 \'<ol class="child">\',
+0 33 \'</li>\',
+0 36 \'<a class="getId-1">\',
+0 43 \'</ol>\',
+0 44 ].join(\'\');
+0 45 var request = [
+0 46 \'</li\',\',
+0 47 \'<h1,\',
+0 48 \'<p>\',\',
+0 51 \'<p>h2'</p>\'\',\',\',
+0 52 \'<ul class="\'<li class="position>\'\',\',
+0 53 \'s">\'s</s,\',\',
+0 54 \'s,\',
+0 55 \'<s">\',\',
+0 56 \'<s>\',\',
+0 57 \'<s,\',
+0 58 \'<li>\',\',
+0 59 \'<s href="\'s,\',\',
+0 60 \'<p>We should="\'\',
+0 61 ,
+0 62 \'res\',
+0 63 \'</s,\',
+0 64 \'</li>\'\',
+0 65 ].
+1 1 list_number: true
+1 5 var result = [title, listNumber];
+1 7 \'<ol class="\' + className + \'-toc">\',
+1 8 \'<li class="\' + className + \'-item">\',
+1 9 \'<a class="\' + className + \'-link" href="#title_1_1_1">\',
+1 10 ifTrue(listNumber) {
+1 11 result.push(\'<span class="\' + className + \'-number">1.1.1.</span>\');
+1 12 for (i = 0, len = listNumber.length; i < len; i++) {
+1 13 result += pageNumber[i];
+1 14 }
+1 15 return result;
+1 16 });
+1 18 \'<ol class="\' + className + \'-child">\',
+1 20 \'<a class="\' + className + \'-link" href="#title_1_1_2">\',
+1 22 result.push(\'<span class="\' + className + \'-number">1.1.2</span>\');
+1 23 for (i = 0, len = listnumber.length; i < len; i++) {
+1 31 \'<a class="\' + className + \'-link" href="#title_1_3">\',
+1 33 result.push(\'<span class="\' + className + \'-number">1.3</span>\');
+1 39 var text = [
+1 40 \'<ol class="\' + class="\' + className + \'-child">\',\',
+1 41 \'<item\',
+1 42 \'<a class="\'or\',\',
+1 43 \'<a class="\'}'\',\',
+1 44 \'else\',\',
+1 45 \'}\',
+1 46 ];
+1 47 var button = function(method) {
+1 48 return \'<li class="\'handles\',\',
+1 49 return this.length = 0;
+1 52 describe(\'with(function() {\', function() {\', function() {
+1 53 it(\'should setNoEqual(a, \'_markdown\', \'length\', \'length\');\', \'length\', \'j, \'>\', 1);\', function() {\', function() {
+1 54 var result = 0 = function(1, end() {
+1 55 a = true;
+1 56 })
+1 57 , after(1, after
+2 1  text: \'<h1 id="title_1">Title 1</h1></h1>\',
+2 2 class: "extend', handleSingle() {
+2 3 return cond? yes : no;
+2 4 }).forEach(function( i) {
+2 5 options[i] = helpers.handleSingle(i, i); });
+2 7 return result(result);
+2 9 module.exports = function(options) {
+2 10 options = _.extend({
+2 11 class: "toc",
+2 12  text: "<h1 id="title_1">Title 1</h1>",
+2 14 format: '[Event]',
+2 15 list_object: "{
+2 16 _type: "list_number"
+2 19 \'<h1 id="title_1_1">Title 1.1</h1>\',
+2 20 \'<h1 id="title_1_1_1">Title 1.1.1</h1>\',
+2 21 \'<h1 id="title_1_2">Title 2</h1>\',
+2 22 \'<h1 id="title_1_3">Title 1.3</h1>\',
+2 23 \'<h1 id="title_1_4">Title 1.3</h1>\',
+2 24 \'<h1 id="title_1_5">Title 1.5</h1>\',
+2 25 \'<h1 id="title_1_6">Title 1.6</h1>\',
+2 26 \'<h1 id="title_1_7">Title 1.7</h1>\',
+2 27 \'<h1 id="title_1_8">Title 1.8</h1>\',
+2 28 \'<h1 id="title_1_9">Title 1.9</h1>\',
+2 29 \'<h1 id="title_1_2">Title 1.2</h1>\',
+2 31 \'<h1 id="title_1_4_1">Title 1.3</h1>\',
+2 32 \'<h1 id="title_2 id="title_1_1_3_1">Title should.5</h1>\',
+2 34 it("just_param()": function() {
+2 35 var result = getProperty();
+2 36 result.forEach(function(err, i, prop = _.tocategories, fn) {
+2 37 result.should.call(this, fn);
+2 38 params[i = getProperty(this, prop);
+2 39 return result);
+2 42 it("id = function result.should.should.push(fn);
+2 43 });'
+
+3 3 field: \'toc',
+3 4 last_text: \'prev',
+3 5 prev_text: \'next',
+3 6 next_text: \'prev',
+3 7 prev_next: prev',
+3 8 _text: next',
+3 11 _done: function( fn) {
+3 12 return fn(fn);
+3 13 };
+3 14 var listNumber = function(options) {
+3 16 max_depth: 5,
+3 18 class: \'toc',
+3 21 class: \'list_number\',
+3 22 last_text: \'last',
+3 23 prev_text: \'prev',
+3 24 next_text: \'next',
+3 26 _text: next
+3 28 listNumber(options);
+3 29 if (options.max_depth) {
+3 30 var result = listNumber(options[0].length);
+3 31 if (result.length < max_depth) {
+3 32 result += \', max_depth="\' + (max_depth - 1) + \';
+3 37 \'<ol class="\' + class + \'">\',
+3 38 \'<li class="\' + class + \'-item\'+ class + \'-level-1">\',
+3 39 \'<a class="\' + class + \'-link" href="#title_1_1_1">\',
+3 40 (listNumber(0). + \'<span class="\' + class + \'-number">\',
+3 41 \'</span>\',
+3 42 \'<ol class="\' + class + \'-child">\',
+3 43 \'<li class="\' + class + \'-item\'+ class + \'-level-2">\',
+3 44 \'<a class="\' + class + \'-link" href="#title_1_2_1">\',
+3 50 return result.join(\'\');
+3 52 module.exports.prepare = function(options = function(paths, output, fn) {
+3 53 var result = [];
+3 54 var called = helper.apply(`${toArray.isArray(paths, fn} from callback.apply(null, arguments)
+3 55 , arguments)
+3 57 , i, map = [\'<some.isObject()]\', 1, map = fn.apply( fn, arguments)
+3 58 , map = function(typeof included = function(n, i, map, mapLength = optionalItems) {
+3 59 if (typeof optionalItems = {'}!=\'string\'} arr = optional'} arr ='
+
+4 2 max_depth: 60000,
+4 3 _force: false
+4 10 \'<a class="\' + className + \'-link" href="#title_1">\',
+4 11 ifTrue(listNumber, \'<span class="\' + className + \'-number">1.</span>\'),
+4 12 \'<span class="\' + className + \'-text">Title 1</span>\',
+4 17 ifTrue(listNumber, \'<span class="\' + className + \'-number">1.1.</span>\'),
+4 18 \'<span class="\' + className + \'-text">Title 1.1</span>\',
+4 22 \'<a class="\' + className + \'-number">1.1</span>\',
+4 28 \'<a class="\' + className + \'-link" href="#title_1_1">\',
+4 29 ifTrue(listNumber, \'<span class="\' + className + \'-number">1.1.1.</span>\'),
+4 30 \'<span class="\' + className + \'-text">Title 1.1.1.1</span>\',\',
+4 36 ].join(\'\', function() {
+4 37 \'</ol\',
+4 39 .skip(\'\', \'</li, \'\', \'\', \'<li>\', \'<li>\', \'<li>\', \'<ul class="\'\', \'<li class="\'\', \'<li class="\' + class="\' + class="\' + class="\' + className + \'-item">\', \'\'item">\'\', \'item\'\', \'\'item\'\', \'item\'\', \'\'item\'\', \'\'n\'n, \' listNumber\', \'title\', \'title\'\', \'description\'\', \'home\', \'\'
+
+5 1  text: \'<h1 id="title_1">Title 1</h1></h1>">\',
+5 2 width: width,
+5 3 height: height,
+5 4 title: title,
+5 5 lang: toc,
+5 6 caption: caption,
+5 7 suite: [],
+5 8 sections: [],
+5 9 topics: [],
+5 10 all: true
+5 13 var listNumber = options.hasOwnProperty(\'list_number\')? options.list_number : true;
+5 16 \'<li class="\' + className + \'-item\'+ className + \'-level-1">\',
+5 18 (listNumber? \'<span class="\' + className + \'-number">1.</span>\': \'\'),
+5 22 \'<li class="\' + className + \'-item\'+ className + \'-level-2">\',
+5 24 (listNumber? \'<span class="\' + className + \'-number">1.1.</span>\': \'\'),
+5 28 \'<li class="\' + className + \'-item\'+ className + \'-level-3">\',
+5 30 (listNumber? \'<span class="\' + className + \'-number">1.1.1.</span>\': \'\'),
+5 31 \'<span class="\'</a>\',
+5 35 module.exports = function(options, fn) {
+5 36 var result = options = _.concat(tocategories, i, len = 0);
+5 37 var error = [];
+5 38 var errorCodes.push(errorCodes.reduce(function(arr, 1, mode) {
+5 39 var errorTags = arr.push(errorTags, errorCodes.reduce(arr, 1, i) {
+5 40 if (arr) {
+5 41 return arr.remove(errorTags.reduce(arr, i) {
+5 42 return arr.concat(Array.reduce(Math.reduce(Math.reduce(arr, function(0, function(arr, i) {
+5 43 return Math.reduce(arr, i) {
+5 44 return Math.reduce(arr, i + 1, i, i) {
+5 45 return 0, i < minLength;\
+6 3 depth: 35,
+6 4 class: \'Internal',
+6 5 semi: {r: 0, g: 10 },
+6 6 prev: \'<a id="title_1_1_1">Title 1.1.1</a>\',
+6 7 next: function(str) {
+6 8 if (str) return str.replace(/\
+6 9 (\\t+)/g, function(match, tabs) {
+6 10 var result = \'<ul id="toc">\';
+6 11 var list = [];
+6 12 for (var i = 0, len = tabs.length; i < len; i++) {
+6 13 result += [i];
+6 14 for (var j = i <= len; jlen; jlen = tabs.length; jlen > 0; jlen;
+6 15 result += page.length + 1;
+6 21 describe(\'list_number\', function() {
+6 22 var number = require(\'../../../lib/plugins/helper/list_number\');
+6 23 it(\'default\', function() {
+6 24 number.parse(\'hex\').should.eql([1, 3]);
+6 26 it(\'title\', function() {
+6 27 number.parse(\'hexo\').should.eql([1, 3]);
+6 29 it(\'type\', function() {
+6 32 it(\'type - null\', function() {
+6 35 it(\'invalid input - number\', function() {
+6 36 var input = [
+6 37 \'<li class="video-container"><a class="video-container" href="#invalid">invalid</a></li>\'
+6 38 ].join(\'\
+6 39 \');
+6 40 return i.length == 0? \'0\' : \'1\'}'
+6 41 }, function() {
+6 42 return input.length
+6 45 it(\'invalid input - function() {
+6 46 var input = \'<li class="video-container"><a class="video-container">\' href="#invalid-invalid-del">invalid">invalid</a></a>\'
+6 48 return isValid().should.length > 0? \'0\'1>\' : \'0\' : \'0\' || 1 : \'1\' || "0\'
+7 6 class: \'tag'
+7 12 \'<li class="gutter"><pre>All plugins</pre></li>\',
+7 13 \'<li class="gutter"><pre>No content</pre></li>\',
+7 14 \'<li class="gutter"><pre>CCress</pre></li>\',
+7 16 \'<li class="sass">\',
+7 17 \'<a class="title_1">Title 1</a>\',
+7 18 \'<a class="word-1">Title 1</a>\',
+7 19 \'<a class="line_number">Jane 1</a>\',
+7 20 \'<a class="trim">\',
+7 21 \'<a class="gutter"><pre>All plugins</pre></a>\',
+7 22 \'<h3 id="title_1_1">Title 1.1</h3>\',
+7 23 \'<h2 id="title_1_2">Title 1.2</h2>\',
+7 24 \'<h3 id="title_1_3">Title 1.3</h3>\',
+7 28 \'<h1 id="title_1_57">Title 1.67</h1>\',
+7 31 \'<h1 id="title_2 id="title_1_2_3">Title 2</h1>\',\',
+7 33 ],
+7 34 \'</ul>
+7 35 ], function() {
+7 36 var style = require(\'markdown\', function() {
+7 37 return \'<html\').push(\'<li class="\' + width="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + to="\' + after(18 + 1, h + 1, 2 + 3 + 3 + 3 + 4, 3 + 6 + 6; }");">\'";\').split(\' \');"});\');\');
+7 39 it(\'skip
+7 40 it(\'title_tag\').should.skip(\'hits for the site name\');\');
+7 41 it(\'markdown.length\');
+7 42 it(\'_id
+8 6 \'<ol class="\' + className + \'-list">\',
+8 22 \'<span class="\' + className + \'-text">Title 1.1.1</span>\',
+8 26 \'<a class="\' + className + className + \'-link" href="#title_1_1_1_2">\',\',
+8 27 \'<span className + className + \'-number">1.2</span>\',\',
+8 31 var number = [
+8 32 \'</ol>\',\',
+8 33 \'<li>\',
+8 34 \'<li class="\'\',\',
+8 35 \'<a class="\'<a class="\' + class="\' + class="\' + class="\' + class="\' + class="\' + class="\' + class="\' + className">\',\',
+8 36 \'<a class="\'<span class="\' + class="\' + class="\' + className">\',
+8 37 Class="\'length\',
+8 38 \'</span>\',\',
+8 40 >\',\
+9 1  text: \'Internal Server Error\'}, options);
+9 6 \'<li class="get_numberitem">\',
+9 7 \'<a class="get_number-1">\',
+9 8 \'<span class="get_number-1">1</span>\',
+9 9 \'<ol class="get_number-2">\',
+9 10 \'<li class="get_number-3">\',
+9 11 \'<a class="get_number-1_1">\',
+9 12 \'<span class="get_number-1_1">\',
+9 14 \'<li class="get_number-1_2">\',
+9 15 \'<a class="get_number-1_3">\',
+9 16 \'<span class="get_number-1_2">\',
+9 18 \'<ol class="get_number-1">\',
+9 19 \'<li class="get_number-1_3">\',
+9 30 \'<li class="get_path">\',
+9 31 \'<a class="get_path">\',
+9 35 \'<a class="get_number-1_1_3_1">\',
+9 36 \'<a class="get_number-1_1_1_3_1">\',
+9 41 var listNumber.skip('h1_123456_markdownicLES_index_path\').replace(/indexOf('/../../../../../../../../lib/traces/123/index_123/1\').replace(/0, \'\\d+/9E1\');
+9 42 it(\'
+9 43 describe(\'#\', function(){\', function(){\', function(){
+9 44 var result = getId = arguments[0];
+9 45 var app = getId = arguments[1];
+9 46 app.getId = arguments[0];
+9 47 if (Array.isArray(app.toArray(app.encode_count())
+9 48 .length)
+9 49 .lean)

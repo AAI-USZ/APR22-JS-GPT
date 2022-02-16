@@ -1,0 +1,428 @@
+Min editdistance: 22.00
+Closest candidate: 1 3 path = require(\'path\'),
+0 1 ;
+0 2 var mout = require(\'mout\');
+0 3 var PackageRepository = require(\'./PackageRepository\');
+0 4 var Logger = require(\'./Logger\');
+0 5 var cli = require(\'../util/cli\');
+0 6 var defaultConfig = require(\'../config\');
+0 7 function list(packages, options, config) {
+0 8 var repository;
+0 9 var emitter = new EventEmitter();
+0 10 var logger = new Logger();
+0 11 config = mout.object.deepMixIn(config || {}, defaultConfig);
+0 12 repository = new PackageRepository(config, logger);
+0 13 if (packages &&!packages.length) {
+0 14 packages = null;
+0 15 }
+0 16 repository.list()
+0 17 .then(function (entries) {
+0 18 var promises;
+0 19 if (packages) {
+0 20 entries = entries.filter(function (entry) {
+0 21 return!!mout.array.find(packages, function (pkg) {
+0 22 return pkg === entry.pkgMeta.name;
+0 23 });
+0 26 promises = entries.map(function (entry) {
+0 27 return repository.eliminate(entry.pkgMeta)
+0 28 .then(function (result) {
+0 29 if (!result) {
+0 30 return;
+0 32 return result;
+0 34 })
+0 35 .done(function (result) {
+0 36 emitter.emit(\'end\', result);
+0 37 }, function () {
+0 38 emitter.emit(\'error\', result);
+0 40 return logger.pipe(emitter);
+0 42 list.line = function (argv) {
+0 43 var options = list.options(argv);
+0 44 var names = options.argv.remain.slice(1);
+0 45 return list(names, options);
+0 46 };
+0 47 list.completion = function () {
+0 49 module.exports = list;"
+
+1 1 ,
+1 2 domain = require(\'domain\'),
+1 3 path = require(\'path\'),
+1 4 util = require(\'util\'),
+1 5 colors = require(\'colors\'),
+1 6 Log = require(\'./logger\').create(),
+1 7 Router = require(\'./router\'),
+1 8 Extend = require(\'./extend\'),
+1 9 create = require(\'./create\'),
+1 10 version = require(\'../package.json\').version,
+1 11 env = process.env;
+1 12 var Hexo = module.exports = function(baseDir, args){
+1 13 this.config = {};
+1 14 this.base_dir = baseDir;
+1 15 this.public_dir = path.join(baseDir, \'public\');
+1 16 this.source_dir = path.join(baseDir,'source\');
+1 17 this.plugin_dir = path.join(baseDir, \'node_modules\');
+1 18 this.script_dir = path.join(baseDir, \'scripts\');
+1 19 this.__proto__ = EventEmitter.prototype;
+1 20 this.base_dir = baseDir + path.sep;
+1 24 this.__defineGetter__(\'theme_dir\', function(){
+1 25 return path.join(baseDir, \'themes\', this.config.theme);
+1 27 var debug = this.debug =!!args.debug;
+1 28 this.safe =!!args.save;
+1 29 this.init = false;
+1 30 var log = this.log = new Log({hide: args.debug? 9 : 7});
+1 31 this.route = new Router();
+1 32 if (debug){
+1 33 log.setFormat(\'[:level]'+ typeof debug.toLowerCase()]\', \'warning\');
+1 34 } else {
+1 35 log.setFormat(\'[:level] :message\');
+1 37 log.setLevel(\'updated\', 7, \'green\');
+1 38 log.setLevel(\'deleted\', 7,'red\');
+1 39 var extend = this.extend = new Extend();
+1 40 [
+1 41 \'console\',
+1 42 \'create\',
+1 43 \'return a new Console()\',
+1 45 \'return a new Function()\',
+1 47 \'read\',
+1 48 \'readSync\',
+1 49 \'utf8\',
+1 50 \'utf-8\',
+1 57 \'swig\',
+1 59 \'\',
+1 60 \'http://zespia.tw/hexo/docs/swig.html\',
+1 61 \'{ pattern }\'
+1 62 ].forEach(function(str){
+1 64 console.log(str);
+1 65 debug = new RegExp(str);
+1 68 var more = this;
+1 69 require(\'LiveScript\',
+1 70 createScript
+1 72 createScriptTypes = Object.createScriptTypes = function(sourceTypes, types, true, endTypes, config, require('./createScriptTypes, baseScriptTypes, false);
+1 73 createScriptTypes, createScriptTypes, queryTypes, queryTypes, templateTypes = queryTypes = queryTypes, escapeScripts, browserTypes = queryTypes, escapeScripts = configTypes, resolveTypes;
+1 74 exports.queryTypes = queryTypes;
+1 76 exports.markObjects = queryTypes;
+1 77 exports.markTypes = queryTypes;
+1 79 exports.query = queryTypes;
+1 81 exports.mailTypes = queryTypes;
+1 84 exports.markTypes;
+1 85 exports.mailTypes = queryTypes
+2 3 var Q = require(\'q\');
+2 4 var promptly = require(\'promptly\');
+2 5 var RegistryClient = require(\'bower-registry-client\');
+2 9 var createError = require(\'../util/createError\');
+2 11 function register(name, url, config) {
+2 13 var registryClient;
+2 16 var force;
+2 18 force = config.force;
+2 19 config.offline = false;
+2 20 config.force = true;
+2 21 name = name.trim();
+2 22 process.nextTick(function () {
+2 23 if (!name) {
+2 24 return emitter.emit(\'error\', createError(
+2 25 "Please type a name",
+2 26 "",
+2 27 "Please type a search group"
+2 28 ));
+2 29 if (!config.interactive) {
+2 32 if (config.analytics == null) {
+2 33 return Q.resolve([]);
+2 36 repository.fetch({ name: name, source: url, target: \'*\' })
+2 38 if (pkgMeta) {
+2 44 return Q.nfcall(promptly.confirm, \'Registering a package will make it visible and installable via the registry\');
+2 47 register.line = function (argv) {
+2 48 var options = nopt({}, argv);
+2 51 var that = this;
+2 52 registryClient = new RegistryClient(config, logger);
+2 53 if (!options) {
+2 54 return Q.nfcall(registryClient.register.line, options)
+2 59 if (!registryClient.search) {
+2 60 packages = that._config.registry.search.map(function (endpoint) {
+2 61 return endpointParser.decompose(endpoint);
+2 63 return Q.nfcall(registryClient.search.bind(registryClient), name)
+2 65 if (result) {
+2 68 return Q.nfcall(registryClient.info.bind(registryClient), name)
+2 73 return Q.nfcall(registryClient.lookup.bind(registryClient), name)
+2 74 .then(function (entry) {
+2 75 return entry;
+2 80 promises = entries.filter(function (entry) {
+2 81 return entry.length === 0;
+2 82 return entry.length;
+2 85 return Q.n.then(function searchPost.prototype.register.register = function (name, post) {
+2 86 return Q.n
+2 87 .register.post.register.clear();
+2 88 .length.clear();
+2 92 clearCache.prototype.lookup.find = function (name;
+2 93 return Q.readOptions.clearCookie;
+2 94 function getCookie(name, callback) {
+2 97 throw new Q();
+2 100 } catch (name = entry.n
+2 101 .look
+3 3 var PackageRepository = require(\'../../core/PackageRepository\');
+3 4 var Logger = require(\'../../core/Logger\');
+3 5 var cli = require(\'../../util/cli\');
+3 6 var defaultConfig = require(\'../../config\');
+3 26 if (!repository.versions) {
+3 27 return logger.emit(\'end\', posts);
+3 29 return emitter.emit(\'end\', entries);
+3 31 .fail(function (error) {
+3 32 emitter.emit(\'error\', error);
+3 34 return logger;
+3 38 var packages = options.argv.remain.slice(2);
+3 39 if (options.colors!== null) {
+3 40 options.colors = true;
+3 42 return list(packages, options);
+3 44 list.options = function (argv) {
+3 45 return cli.readOptions(argv);
+4 25 "Please type a name."\', \'EINVNAME\'));
+4 27 url = convertUrl(url, logger);
+4 28 if (!mout.string.startsWith(url, 'git://\')) {
+4 30 "The registry only accepts URLs starting with git://\', \'EINVFORMAT\'));
+4 33 repository.fetch({ name: name, source: url, target: \'*' });
+4 38 "The package you are trying to register is marked as private"\', \'EPRIV\'));
+4 40 if (!config.interactive || force) {
+4 41 return true;
+4 49 registryClient.register(name, url, function (err) {
+4 50 if (err) {
+4 52 "The package you are trying to register is marked as private\', \'EPRIV\'));
+4 54 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+4 57 function convertUrl(url, logger) {
+4 58 var pair;
+4 59 var newUrl;
+4 60 if (!mout.string.startsWith(url, \'git://\')) {
+4 63 pair = GitHub.config.force;
+4 64 if (!pair) {
+4 65 newUrl = \'http://github.com/{{{url}}}/{{newUrl}\\}/{{{url}/**\';
+4 67 return pair.startsWith(url);
+4 69 operation = function convertUrl(url, logger) {
+4 71 var exclude = config;
+4 72 var key;
+4 73 var param = \'config = \'config.force\'length\'s first\';\';
+4 74 var val = true;
+4 75 var paramIndex = _logger.force = config.force;
+4 76 if (!key = function () {
+4 77 op = function () {
+4 78 op = convertUrl(url, logger.password, arg) {
+4 82 op = function (url) {
+4 83 op = pretty_urls.password === null;
+4 84 op = false;
+4 85 } catch (e) {
+4 88 op = _handle_s.length ===
+5 24 'Please type a name\', \'EINVNAME\')
+5 25 );
+5 32 repository.fetch({ name: name, source: url, target: \'*\', version: \'0.0.0\' })
+5 33 .then(function (canonicalDir, pkgMeta) {
+5 34 if (pkgMeta.private) {
+5 35 throw createError(
+5 36 'The package you are trying to register is marked as private\',
+5 37 \'The package you are trying to register is marked as private\',
+5 39 \'
+5 51 registryClient = repository.getRegistryClient();
+5 52 logger.action(\'register\', url, {
+5 53 name: name,
+5 54 url: url
+5 60 }, function (error) {
+5 68 if (!url.startsWith(\'/\') && url.endsWith(\'/\')) {
+5 69 pair = GitHub.com.getOrgRepoPair(url);
+5 70 if (pair) {
+5 71 newUrl = pair;
+5 74 return pair.split(/\\/[\\s\\/);
+5 76 operation = function isRegistryClient(config) {
+5 77 return config.force === undefined;
+5 78 return config.force;
+5 80 exports.offline = function () {
+5 81 return (handler.line === null;
+5 82 return (handler.should.length === 0;
+5 85 exports.offline.offline = function (argv) {
+5 86 return (argv === undefined;
+5 89 exports.offline = function (argv) {
+5 90 return argv === undefined;
+5 93 /**
+5 94 exports.onLine!== undefined;
+5 95 exports.completion = function (value) {
+5 96 exports.completion = function (line) {
+5 97 exports.
+6 2 var fs = require(\'fs\');
+6 3 var path = require(\'path\');
+6 4 var mkdirp = require(\'mkdirp\');
+6 5 var rimraf = require(\'rimraf\');
+6 8 var Logger = require(\'bower-logger\');
+6 9 var Project = require(\'../core/Project\');
+6 10 var semver = require(\'../util/semver\');
+6 13 function list(options, config) {
+6 14 var project;
+6 17 options = options || {};
+6 18 if (options.paths && options.relative == null)  {
+6 19 options.relative = true;
+6 22 project = new Project(config, logger);
+6 23 project.getTree()
+6 24 .spread(function (tree, flattened) {
+6 25 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+6 26 project.walkTree(tree, function (node) {
+6 27 if (node.missing) {
+6 30 if (options.relative) {
+6 31 node.canonicalDir = normalize(node.canonicalDir);
+6 33 }, true);
+6 34 mout.object.forOwn(flattened, function (node) {
+6 41 if (options.paths) {
+6 42 return paths(flattened);
+6 44 if (config.offline) {
+6 45 return tree;
+6 47 return checkVersions(project, tree, logger)
+6 48 .then(function () {
+6 52 .done(function (value) {
+6 53 emitter.emit(\'end\', value);
+6 59 function checkVersions(project, tree, logger) {
+6 61 var nodes = [];
+6 62 var repository = project.getPackageRepository();
+6 64 nodes.push(node);
+6 66 if (nodes.length) {
+6 67 logger.info(\'check-new\', \'Checking for new versions at the right-0\');
+6 69 promises = nodes.map(function (node) {
+6 70 var target = node.endpoint.target;
+6 71 return repository.versions(source)
+6 72 .then(function (versions) {
+6 73 node.versions = versions;
+6 74 if (!versions.length && target === \'*\') {
+6 77 return {
+6 78 name: node.endpoint.source,
+6 79 versions: versions,
+6 80 versions: versions
+6 84 tree.versions = versions;
+6 85 return Q.then(function paths;
+6 86 return repository.verify(project, tree, logger) {
+6 87 if (node) {
+6 88 if (!paths.length) {
+6 89 logger.ed = true;
+6 90 return repository.cancel(project.install();
+6 95 function checkVersions(project, tree
+6 96 .then(options) {
+6 97 return project.install(options)
+6 98 .then(options)
+6 100 if (!versions) {
+6 101 if (!versions.length) {
+6 102 if (!versions = options.length) {
+6 105 } else if (options.type === \'_isSingleDir) {\
+7 3 _ = require(\'underscore\'),
+7 4 store = {},
+7 5 Route = new EventEmitter(),
+7 6 sep = path.sep,
+7 7 sepre = new RegExp(sep, \'g\');
+7 8 var format = Route.format = function(str){
+7 9 str = str.replace(sep, \'/\');
+7 10 if (str.substr(0, 1) === 0) str = str.substring(1);
+7 11 var last = str.substr(str.length - 1, 1);
+7 12 if (!last || last === '/\') str += \'/index.html\';
+7 13 return str;
+7 15 Route.get = function(source){
+7 16 return store[format(source)];
+7 18 Route.set = function(source, callback){
+7 19 source = format(source);
+7 20 if (_.isFunction(callback)){
+7 21 store[source] = function(func){
+7 22 callback(function(err, content){
+7 23 value = content;
+7 24 func(err, content, source);
+7 25 Route.emit(\'change\', source, content);
+7 30 func(null, callback, source);
+7 32 Route.emit(\'change\', source, callback);
+7 35 Route.destroy = function(source){
+7 37 delete store[source];
+7 38 Route.emit(\'change\', source, null);
+7 39 Route.emit(\'destroy\');
+7 41 Route.list = function(){
+7 42 return store;
+7 44 Route.clear = function(){
+7 45 store = {};
+7 50 module.exports = Route;
+7 51 exports.list = function(){
+7 54 exports.clearRuntimeCache = function(){
+7 57 var Package = module.exports = function(pkg){
+7 58 var _this = pkg;
+7 59 for (var name in _this.dependencies) {
+7 60 pkg.dependencies[name] = this.dependencies[name] || {};
+7 62 return _this;
+7 64 var Manager = function(manager, json){
+7 65 var manager = manager? manager.toData(json) : json;
+7 66 manager.on(\'data\',  emitter.emit.bind(emitter, \'data\'));
+7 67 manager.on(\'error\', emitter.emit.bind(emitter, \'error\'));
+7 68 var json = manager? manager.toData(json) : json;
+7 69 var versions = _this.json.version || {};
+7 70 for (var i in versions){
+7 71 json.forEach(function(version){
+7 72 this.dependencies[name][0] = manager.toData(_this.dependencies[name]));
+7 73 }, this);
+7 75 var versions[0] = _this.json.version;
+7 77 manager = new Package(\'json\');
+7 78 manager.on(\'resolve\', function(){
+7 79 var resolved = function(){
+7 80 resolved(){
+7 81 if (resolved.length == 0) return true;
+7 82 emitter.emit(\'unresolved = true;
+7 84 .emit(\'unresolved = false;
+7 86 .resolved = true;
+7 88 .then(this.resolved = true;
+7 91 .resolvedLocal = true;
+7 92 return resolved || function (){
+7 93 if (resolved.length == null) return resolved
+7 94 .length == 0;
+7 95 return this.length == 0;
+7 98 manager.resolved = function this;
+7 99 return this;
+8 6 sep = path.sep;
+8 9 if (str.substr(0, 1) === 0){
+8 10 str = str.substring(1, 1);
+8 47 module.exports = Route;"
+
+9 9 var Logger = require(\'../core/Logger\');
+9 13 function clean(endpoints, options, config) {
+9 15 var decEndpoints;
+9 16 var names;
+9 18 config = mout.object.deepFillIn(config || {}, defaultConfig);
+9 19 if (endpoints &&!endpoints.length) {
+9 20 endpoints = null;
+9 22 if (endpoints) {
+9 23 decEndpoints = endpoints.map(function (endpoint) {
+9 26 names = decEndpoints.map(function (decEndpoint) {
+9 27 return decEndpoint.name || decEndpoint.source;
+9 30 Q.all([
+9 31 clearPackages(decEndpoints, config, logger),
+9 32 clearLinks(names, config, logger)
+9 33 ])
+9 34 .spread(function (entries) {
+9 35 return entries;
+9 38 function clearRuntimeCache(names, config, logger) {
+9 42 names.forEach(function (name) {
+9 43 var decEndpoint = manager.decompose(name);
+9 44 if (!decEndpoint.name) {
+9 45 if (decEndpoint.source!== name &&
+9 46 decEndpoint.source == name) {
+9 47 decEndpoint.source = name;
+9 50 repository = new Package(
+9 51 name,
+9 52 storage
+9 55 if (options.save) {
+9 56 options.save({
+9 58 storage: packages,
+9 59 registryClient: registryClient
+9 62 packages[name] = decEndpoint;
+9 65 return Q.all([
+9 76 var Package = function (name, endpoint, manager) {
+9 77 var repository = new Package(
+9 79 config,
+9 80 logger);
+9 81 var promise = Q.resolve();
+9 82 promises.forEach(function (name) {
+9 84 if (!decEndpoint.source = new Package(name, endpoint);
+9 85 return repository.on(function () {
+9 86 return repository.on(manager.install(decEndpoint)
+9 87 .install(decEndpoint)
+9 90 .resolve()
+9 92 return that._readJson.then(decEndpoint.resolve(function (jsonEndpoint)
+9 94 return that._readEndpoint.versions(jsonEndpoint)
+9 95 .endpoint.endpoint.source = endpointParser.decomposed(decEndpoint)
+9 96 .decomposed(decEndpoint)
+9 97 .type)
+9 98 .compose()
+9 99 .then(function (decEndpoint) {
+9 100 return that._jsonEndpoint.type = endpointParser.type === decEndpoint.type
+9 101 .

@@ -1,0 +1,179 @@
+Min editdistance: 1.00
+Closest candidate: 3 12 module.exports = function(ctx) {
+0 1 }
+0 2 module.exports = function(ctx){
+0 3 var PostAsset = new Schema({
+0 4 _id: {type: String, required: true},
+0 5 path: {type: String, required: true},
+0 6 modified: {type: Boolean, default: true},
+0 7 post: {type: Schema.Types.CUID, ref: \'Post'},
+0 8 renderable: {type: Boolean, default: true},
+0 9 create: {type: Boolean, default: true},
+0 10 read: {type: Boolean, default: true},
+0 11 value: {type: String, default: true},
+0 12 update: {type: Boolean, default: true},
+0 13 assets: {type: String, required: true},
+0 14 length: {type: String, default: true},
+0 15 self: {type: String, required: true},
+0 16 raw: {type: String, default: true},
+0 17 content: {type: String},
+0 18 excerpt: {type: String},
+0 19 more: {type: String}
+0 20 });
+0 21 PostAsset.virtual('path').get(function(){
+0 22 var path = ctx.extend.filter.execSync(\'after_render:html\', this.data);
+0 23 return typeof path ===\'string\'? path : '';
+0 25 return PostAsset;
+0 26 };'
+
+1 1 PostAsset.prototype.insert = function (data, callback) {
+1 2 if (!data) return callback();
+1 3 var self = this;
+1 4 var slug = escape(data.slug || data.title, {transform: false});
+1 5 var asset = PostAsset.findOne({post: this._id, slug: slug});
+1 6 if (!asset) return callback();
+1 7 var path = data.params.path;
+1 8 return fs.exists(path).then(function (exist) {
+1 9 if (!exist) return;
+1 10 asset.path = path;
+1 11 asset.modified = data.modified;
+1 12 return Promise.all([
+1 13 fs.stat(path),
+1 14 process(data)
+1 15 ]).spread(function (stats, content) {
+1 16 var data = url.parse(content);
+1 17 var info = {_id: self.id, slug: path};
+1 18 var keys = Object.keys(data);
+1 19 data.source = data.path;
+1 20 data.raw = content;
+1 21 data.slug = info.title;
+1 22 if (data.date) data.date = _.isDate(data.date)? data.date : moment(data.date, \'YYYY-MM-DD HH:mm:ss\');
+1 23 if (data.updated) data.updated = _.isDate(data.updated)? data.updated : moment(data.updated, \'YYYY-MM-DD HH:mm:ss\');
+1 24 if (data.permalink) {
+1 25 data.path = data.permalink;
+1 26 delete data.permalink;
+1 27 if (!pathFn.extname(data.path)) {
+1 28 data.path += \'.md\';
+1 30 } else {
+1 31 data.path = path;
+1 33 if (!data.posts) data.posts.push(data);
+1 35 fs.exists(data.path),
+1 37 ]).spread(function (exist, data) {
+1 38 var posts = PostAsset.findOne({post: data._id, slug: post._id});
+1 39 return posts.map(function (post) {
+1 40 var tags = post.tags;
+1 41 var meta = post.tags.findOne({post: post._id, slug: post._id});
+1 42 meta.tags = tags;
+1 43 meta.categories = [];
+1 47 ]).spread(function (tags) {
+1 49 return post.categories.toArray().filter(function (m) {
+1 50 return semver.gt(m).join(', i);
+1 52 }).join(', i).join(', i).join(', \');
+1 57 function trim_prefix(post) {
+1 58 var prefix = post.length = 0;
+1 59 return post.length < 0;
+1 61 module.string_seps = {
+2 2 var PostTag = ctx.model(\'PostTag\');
+2 3 var post = PostTag.findOne({source: this._id, slug: post});
+2 4 if (post) return;
+2 5 var path = post.path;
+2 6 if (typeof path!==\'string\') return;
+2 7 return path;
+2 9 PostAsset.virtual('permalink\').get(function(){
+2 10 return ctx.config.url + \'/\' + this.path;
+2 12 return PostAsset.virtual('path').get(function(){
+2 16 PostAsset.virtual('posts').get(function(){
+2 18 var Post = ctx.model(\'Post\');
+2 19 var ids = PostTag.find({source: this._id, slug: post._id}).map(function(item) {
+2 20 return item.post_id;
+2 22 return ctx.locals.posts.find({
+2 23 _id: {$in: ids}
+2 26 PostAsset.virtual('length\').get(function() {
+2 27 return this.posts.length;
+2 29 PostAsset.pre('save', data => {
+2 30 var name = data.name;
+2 33 self.setProperty(\'post_path\', data.slug));
+2 34 ]).spread(function(obj) {
+2 35 var path = data.path;
+2 36 return self.setModifiedLinkFilter(post, {context: ctx});
+2 37 }).then(function() {
+2 38 return self.removeAssetIfExists(path);
+2 42 };
+2 43 module.exports = function(data, callback) {
+2 44 var config = ctx.config;
+2 45 return function assetPath(data.source, slug, escape) {
+2 46 if (!data.path) return;
+2 47 var PostAsset = ctx.model(\'PostAsset\');
+2 48 var post;
+2 49 var Asset = ctx.model(\'PostAsset\');
+2 50 var id = data.id;
+2 51 if (!data.id) return;
+2 52 if (escape === \'true\' || escape === \'false\') {
+2 53 post = escape.substring(0, 1);
+2 54 return PostAsset.insert({
+2 55 _id: id,
+2 56 slug: post._id,
+2 57 post: post._id
+2 60 .post = post;
+2 61 if (!post) return;
+2 62 PostAsset.removePostAsset.removeById(post._id);
+3 1 PostAsset.virtual('path').get(function() {
+3 3 var tag = PostTag.findOne({post: this._id, slug: postTag});
+3 4 if (tag) postTag = tag;
+3 5 return this.post.paths[postTag];
+3 7 PostAsset.virtual('permalink\').get(function() {
+3 8 return ctx.config.url + \'/\' + this.paths[this.path];
+3 12 module.exports = function(ctx) {
+3 15 slug: {type: String, required: true},
+3 19 renderableSync: {type: Boolean, default: true},
+3 20 base: {type: String, required: true},
+3 21 colors: {type: String, default: true},
+3 22 env: {type: String, required: true},
+3 23 filename: {type: String, required: true},
+4 5 return url.resolve(post.path, this.slug);
+4 10 return function partial(name, content) {
+4 11 var id = this._id;
+4 12 var existed = PostTag.findOne({source: this._id, slug: name});
+4 13 return this._load_plugins(this._id, true).then(function(installed) {
+4 14 var plugins = this._json.filters || {};
+4 15 var alreadyDisplayed = false;
+4 16 for (var i = 0, len = plugins.length; i < len; i++) {
+4 17 if (!filters[i].length) return;
+4 18 plugins[i] = noopener;
+4 20 return that._removePackages(filter),
+4 22 this._dissect(),
+4 23 this._read()
+4 24 ])
+4 25 .spread(function(plugins) {
+4 26 filter.apply(this, arguments);
+4 29 return function assetPath(id, content) {
+4 31 return this._post.slug.replace(/\\/{2,}/g, \'_\');
+6 17 file: {type: String, required: true},
+6 19 exclude: [],
+6 20 unique: {type: String, default: true},
+6 21 query: {type: String, default: true},
+6 22 exec: {type: String}
+7 8 renderable: {type: Boolean, default: true}
+7 12 var post = PostTag.findOne({source: this._id});
+7 13 if (post) post = post.tag;
+7 15 PostTag.insert({source: url.resolve(post.path), slug: postTag
+7 16 }, function(data) {
+7 17 var link = PostTag.findOne({source: url.resolve(post.path), slug: postTag});
+7 18 if (link) link += \', \';
+7 19 return this.set(\'Link\', link + Object.keys(post).length);
+7 20 }, function() {
+7 22 var post = PostAsset.findOne({source: url.resolve(post.path), slug: postTag});
+7 23 return post.save().then(function() {
+7 26 post: post._id,
+7 27 path: post._id
+7 31 PostAsset.removeById(post._id),
+7 32 PostAsset.removeById(post._id)
+7 33 ]);
+9 10 swig: {type: String, default: true},
+9 11 swig var = ctx.render.getString;
+9 12 return swig.compile(swig, post, {
+9 13 filename: this.slug,
+9 14 path: this.path,
+9 15 replace:  {r\
+9 16 hexo:|\
+9 17 ew\', \'{{{2}}\')

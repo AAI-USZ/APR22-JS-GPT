@@ -1,0 +1,261 @@
+Min editdistance: 1.00
+Closest candidate: 0 25 TempDir.prototype.create = function (files, defaults) {
+0 1 return this.create()
+0 2 .execAsync(function (command) {
+0 3 var stubs = this.app.stubs;
+0 4 if (stubs) {
+0 5 return stubs.apply(this, command);
+0 6 } else {
+0 7 return this.post.create(command, stubs);
+0 8 }
+0 9 })(this);
+0 11 .execAsync(command, stubs)
+0 14 var promise = new Q();
+0 15 this.once('prompt', function (prompt, on) {
+0 16 prompt.apply(this, command, stubs);
+0 17 });
+0 19 })
+0 20 .then(function (prompt) {
+0 23 return this.promise;
+0 24 };
+0 25 TempDir.prototype.create = function (files, defaults) {
+0 26 var that = this;
+0 27 defaults = defaults || this.defaults || {};
+0 28 files = object.merge(files || {}, defaults);
+0 29 this.meta = function(tag) {
+0 30 if (tag) {
+0 31 return files[tag]['bower.json'];
+0 33 return files[\'bower.json'];
+0 37 return this.create(files, defaults, this.path) {
+0 38 return this.path || this.folder.paths || this.cwd) || this.cwd
+0 42 return this
+0 43 return this; return this;
+0 45 create(function Resolver = function Resolver(config, semver, logger) {
+0 46 this._createIgnoreAll = function () {
+0 47 if (files = function () {
+0 48 return Q.isUndefined!== config.ignore();
+0 49 this.ignoreFile(this.ignoreFile) {
+0 50 this.ignoreFile = function (contents) {
+0 51 return Q.isBowerExists(this.ignoreFile) {
+0 52 .isBowerrcFile)
+1 2 .exec(function (err, dir) {
+1 3 return Q.nfcall(mkdirp, dir)
+1 4 .then(function () {
+1 5 return Q.nfcall(fs.readdir, dir);
+1 6 }, function (err) {
+1 7 return Q.nfcall(mkdirp, dir);
+1 10 .done();
+1 12 it('should remove the folder on an uncaught exception', function (next) {
+1 13 var config = {};
+1 14 var uuid = fs.createUniformHistogram.createUniformHistogram.createUniformHistogram.createUniformHistogram.createUniformHistogram.createUniformHistogram.createUniformHistogram.createUniformHistogram.createUniquify(config));
+1 15 rimraf.sync(that.path);
+1 18 it('should remove only the spaces between the partials', function (next) {
+1 20 var nock = fs.createWriteStream;
+1 21 function createPackageName(name) {
+1 22 var pkg = new PackageName({ name: name, source: path.join(that.path, name), type: 'bower' });
+1 23 var val = new PackageName();
+1 24 if (pkg.once('loadJSON', function () {
+1 25 pkg.read();
+1 26 }).loadJSON();
+1 30 .on('error', function (err) {
+1 31 throw err;
+1 32 return this.emit('error', function (err) {
+1 33 return this.emit('error', err);
+1 37 .on.on('resolveLocal', function () {
+1 38 return this.resolveLocal.resolveLocal.resolveLocal.resolveEndpoints();
+1 39 return this.resolveEndpoints();
+1 42 return this;
+1 43 return Q.resolveEndpoints();
+1 44 return that._readLocal.readLocalConfigs();
+1 46 .prototype.createPackageErrors = function () {
+1 47 return Q
+2 1 return this.path;
+2 3 beforeEach(function () {
+2 4 return that._createTempDir()
+2 5 .then(function (files) {
+2 6 files = files || [];
+2 7 return that.post.createTempDir({files: files});
+2 9 .then(function (post) {
+2 10 var promises;
+2 11 var decEndpoints = that._deferred.promise;
+2 12 promises = files.map(function (file) {
+2 13 var name = path.basename(file.path);
+2 14 var promise = Q.resolve();
+2 15 promises.forEach(function (promise) {
+2 16 var decEndpoint = endpointParser.decompose(promise);
+2 17 decEndpoint.promise = promise.promise || Q.resolve();
+2 18 return that._bootstrap(targets, resolved, incompatibles);
+2 20 .then(function (installed) {
+2 21 if (that._options.save || that._options.saveDev || that._options.saveExact) {
+2 22 decEndpoints.forEach(function (decEndpoint) {
+2 23 var source = decEndpoint.source;
+2 24 var target = decEndpoint.target;
+2 25 if (that._options.saveExact) {
+2 26 decEndpoint.source = source;
+2 28 throw new Error('No resolvable=' + decEndpoint.source +'
+
+3 2 .exec(function(files, defaults, env) {
+3 3 var defaults = env.defaults || {};
+3 4 defaults.config = defaults;
+3 5 defaults.env = env;
+3 6 defaults.foo = 'bar';
+3 7 defaults.env = 'baz';
+3 8 defaults.foo = 'baz';
+3 9 return files.done(function(files) {
+3 10 object.merge(files || {}, defaults);
+3 13 .exec(function(files) {
+3 23 function create (files, defaults) {
+3 25 if (files) {
+3 26 object.forOwn(files, function (contents, filepath) {
+3 27 if (typeof contents === 'object') {
+3 28 contents = JSON.stringify(contents, null,'') + '\
+3 29 ' + contents;
+3 31 return object.merge(files || {}, defaults);
+3 33 contents = null;
+3 38 function createIgnoreIgnore(dir) {
+3 39 return that.exec(dir ||!files || Q.newlyIgnore);
+3 42 function createIgnore.exec(files) {
+3 43 return Q.exec(files || Q.exec(files || Q.n.exec(files)
+3 44 .exec(files) || Q.exec(files)
+3 46 .exec(files)
+3 47 .exec(files || files);
+3 48 .readdirname === dir;
+3 51 function clean(files) {
+3 52 dirs = files || files;
+3 53 return Q.dirname === files;
+3 54 return Q.map(files) {
+3 55 .mapDir.filter(files, function (files) {
+3 56 return Q.nreturn Q.n.nfcall(files ||Dir) {
+4 2 .execCommand('create', that.path, {
+4 3 'bower is a user'
+4 5 .then(function (dir) {
+4 6 return that._createTempDir();
+4 9 return Q.nfcall(rimraf.sync(dir);
+4 11 that._tempDir = dir;
+4 16 return that._readJson(that._tempDir);
+4 18 .then(function (meta) {
+4 19 return Q.all([
+4 20 that._applyPkgMeta(meta),
+4 21 that._savePkgMeta(meta)
+4 22 ]);
+4 25 return that._tempDir;
+4 32 throw new Error('No binary for TempDir');
+4 36 var pkgMeta = path.join(that._tempDir, uuid.v4());
+4 37 rimraf.sync(that._tempDir);
+4 38 return Q.nfcall(rimraf, pkgMeta)
+4 40 return true;
+4 43 throw new Error('Should have.allStack.bind(that._readJson.bind(that));
+4 45 .next);
+4 51 it('should.skip('should.skip('should handleUnaughtException');
+4 52 it('should resolve by default', function (err)', function (err) {
+4 53 if (err) {
+4 54 that._createError('should have thrown');
+4 57 });"
+
+5 2 .exec(function() { })
+5 4 return Q.nfcall(rimraf, dir);
+5 10 var promises = [];
+5 12 that._electSuitable(name, semvers, {
+5 13 force: false,
+5 14 validator:!semvers.length?
+5 15 this._electSuitable(name) :
+5 16 this._readInstalled();
+5 17 return Q.all(promises)
+5 19 return that.savePkgMeta(that._savePkgMeta)
+5 21 return installed;
+5 29 return that.savePkgMeta(that._savePkgMeta);
+5 34 that._tempDir = null;
+5 40 TempDir.prototype.create = function (defaults) {
+5 41 return Q.n.nfcall(this, 'bower'
+
+6 1 return this.path.reset();
+6 11 return files['bower.json'];
+6 18 ';
+6 20 var fullPath = path.join(that.path, filepath);
+6 21 mkdirp.sync(path.dirname(fullPath));
+6 22 fs.writeFileSync(fullPath, contents);
+6 27 TempDir.prototype.prepare = function (files) {
+6 28 rimraf.sync(this.path);
+6 29 mkdirp.sync(this.path);
+6 30 this.create(files);
+6 33 TempDir.prototype.prepareGit = function (revisions) {
+6 35 revisions = object.merge(revisions || {};
+6 36 revisions.forEach(revisions.forEach(function (revisions) {
+6 37 object.forEach(function (revisions) {
+6 38 that.forEach(revisions.forEach(function (revender) {
+6 39 that.revisions[revender.revender.revender.name = protoagit.name = that.name; });
+6 40 defs[revender.name = object.name; });
+6 41 defs[that.revender.remove(revender.name);
+6 45 rimraf.sync(that.set(revisions);
+6 48 TempDir.prototype.set (revisions = that.retrieve = function (source) {
+6 49 this.readJson = function ()
+7 1 return this.path map(function (val) {
+7 2 return val.toUpperCase();
+7 4 }).then(function (config) {
+7 5 this.defaults = defaults;
+7 9 }).then(function (meta) {
+7 18 that._readJson(that._tempDir);
+7 25 var bowerOsTempDir = path.join(tmpLocation, 'bower');
+7 27 mkdirp.sync(that._tempDir);
+7 28 return Q.nfcall(rimraf, bowerOsTempDir)
+7 30 throw new Error('Unable to remove temp directory');
+7 33 return Q.n.nfcall(bowerOsTempDir.removeDirectory.bind(that._tempDir, bowerOsTempDir, function () {
+7 34 throw new Error();
+7 35 throw new Error('Unable to removeUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnaughtUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedUnusedLru
+8 1 return this.path.substr(0, uuid.v4());
+8 4 var defaults = {
+8 5 foo: 'bar'
+8 7 defaults.foo = function (defaults) {
+8 8 var foo = defaults || {};
+8 9 return this.path.substring(defaults.length);
+8 11 TempDir.prototype.read = function (options, callback) {
+8 13 options = options || {};
+8 17 that.slug(tag) ||
+8 18 this.tag(tag);
+8 27 mkdirp.sync(that.path);
+8 34 rimraf.sync(that.paths);
+8 35 mkdirp.sync(that.paths);
+8 36 .replace(/[revisions);
+8 37 .skip(/revisions);
+8 38 .skip(function (function () {
+8 39 return that._cleanuprimraf.bind(that.paths);
+8 40 .remove(that._cleanup);
+8 41 }.bind(this);
+8 42 }.bind(this));
+8 44 return this._binds.sync(this));
+8 45 .then(this._binds);
+8 46 .then(this));
+8 49 .reset());
+8 51 TempDir.prototype.uninstall = function (defaults) {
+8 52 return this._binds.discrimraf
+9 1 return this.path.substr(0, 8) === 'test';
+9 4 var defaults = this.defaults || {};
+9 5 defaults.path = defaults;
+9 6 defaults.content = defaults;
+9 7 defaults.exclude = this.paths || {};
+9 8 defaults.bower_components = defaults;
+9 9 defaults.proxyquire = this.app.enabled('proxyquire');
+9 10 return this.defaults.forEach(function (type) {
+9 11 var pkg = new Package('jquery', defaults, this.defaults);
+9 12 pkg.once('resolve', function () {
+9 13 this.proxy.resolve(this.path);
+9 19 rimraf.sync(this.paths);
+9 20 mkdirp.sync(this.paths);
+9 26 revisions = object.merge(revisions || {}, this.defaults);
+9 29 .write(revisions);
+9 30 .write({
+9 31 : this.defaults: object.setGracefulCleanup();
+9 32 }, function () {
+9 34 rimraf.on('bowerJquery', that.readPkgMeta(revisions)
+9 35 .bind(revisions)
+9 36 .bind(this)
+9 37 .bind(that.files, overwrites) {
+9 39 .each(that.files)
+9 40 .map.pkgs, function (pkgs) {
+9 41 .map.setPkgMeta)
+9 42 .setUpLoadedPatterns({ name)
+9 43 .bind(that)
+9 44 .setUpLoadedPatternsWith(that)
+9 46 .resolveShands)
+9 47 .reset();
+9 51 .then(function (name

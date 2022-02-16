@@ -1,0 +1,356 @@
+Min editdistance: 20.00
+Closest candidate: 0 1 this.get(path + \'/:a..:b.:format?\', function(req, res){
+0 1 this.get(path + \'/:a..:b.:format?\', function(req, res){
+0 2 var a = parseInt(req.params.a, 10),
+0 3 b = parseInt(req.params.b, 10);
+0 4 obj.range(req, res, a, b, format);
+0 5 });
+0 6 this.get(path + \'/:id\', obj.show);
+0 7 this.get(path + \'/:id/edit\', obj.edit);
+0 8 this.get(path + \'/:id/view/edit\', obj.update);
+0 9 this.get(path + \'/:id/edit\', obj.destroy);
+0 10 this.get(path + \'/:id\', obj.update);
+0 11 this.get(path + \'/:id/edit\', obj.update);
+0 12 this.get(\'/\', function(req, res){
+0 13 res.send(\'<h1>edit\');
+0 15 this.get(\'/post/:id/edit\', function(req, res){
+0 18 this.get(\'/posts/:id/edit\', function(req, res){
+0 19 res.send(req.params.id);
+0 21 this.get(\'/files/:id/edit\', function(req, res){
+0 24 this.post.create(function(req, res){
+0 25 res.send(req.body.message);
+0 28 app.put(\'/:id/edit\', function(req, res){
+0 31 assert.response(app,
+0 32 { url: \'/\' },
+0 33 { body: \'<h1>edit\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+0 35 { url: \'/back\', method: \'PUT\' },
+0 36 { body: \'updated user\' });
+0 38 { url: \'/back\', method: \'DELETE\' },
+0 39 { body: \'Destroyed\', status: 500 });
+0 41 { url: \'/root\', method: \'GET\' },
+0 42 { body: \'GET /posts/:id/edit\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+0 44 { url: \'/back\', method: \'GET\' },
+0 45 { body: \'POST /:id/:category/:op?\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+0 47 { url: \'/user/12\', method: \'POST\' },
+0 48 { body: \'Cannot GET /user/ab\' });
+0 50 { url: \'/user/ab\', method: \'DELETE\' },
+0 51 { body: \'DELETE /user:Cannot GET /user/ab' });
+0 52 },
+0 53 assert.response: app,
+0 57 { url: \'/
+0 59 }, url: \'/root
+0 60 }
+0 62 })
+0 63 describe(\'server
+0 64 describe(\'server\', function(){
+0 65 describe(\'.send(){
+0 66 it(\'You should set a server server\', function(){
+0 67 return this.send(){
+0 68 server.send(){
+0 69 return this.server.start()
+0 72 it(\'should.send()
+0 75 it(\'should set the server\', function(){
+0 76 return this.get(\'/client.send()\', function(){
+0 77 return this.server.get(\'/\')
+0 79 it(\'/s(\'/custom\
+1 2 var a = parseInt(req.params.a, 10)
+1 3 , b = parseInt(req.params.b, 10)
+1 4 , format = req.params.format;
+1 8 this.del(path + \'/:id\', obj.destroy);
+1 10 this.listen(this.port, this.server.listenAddress);
+1 11 };
+1 12 module.exports = {
+1 13 \'test #isXMLHttpRequest': function(assert){
+1 14 var app = create();
+1 15 app.get(\'/isxhr', function(req, res, params, next){
+1 16 res.send(req.isXMLHttpRequest());
+1 19 { url: \'/isxhr\' },
+1 20 { body: \'Requested Range Not Satisfiable\', status: 416 });
+1 22 \'test #isXMLHttpRequest\': function(assert){
+1 24 app.get(\'/isxhr/:id\', function(req, res, params, next){
+1 25 assert.equal(true, req.isXMLHttpRequest());
+1 26 next();
+1 28 app.get(\'/isxhr/:id/:format\', function(req, res, params, next){
+1 32 app.get(\'/isxhr/:format\', function(req, res, params, next){
+1 60 app.get(\'/isxhr/:custom\', function(req, res, params, params, next){
+1 61 assert.isXMLHttpRequest().should.should.be.true;
+1 62 res;
+1 63 res.should.be.be.true;
+1 65 res.format.format.should.strictEqual(false;
+1 66 res.should.should.not.toString();
+1 67 res.have.toString());
+1 68 res.toString();
+1 70 res.toUndefined();
+1 71 res.writeFile(res);
+1 74 assert.done();
+1 75 app.get(\'/ignore(\'/ignore = function\', function(req, res){
+1 76 assert.should.should.not.throw new Error(\'shouldne.ignoreFiles([\')
+1 77 ].forEach(function(err, req, res){
+1 78 res.should.
+2 8 this.get(path + \'/:id/update\', obj.update);
+2 9 this.get(path + \'/:id/destroy\', obj.destroy);
+2 10 obj.should.not.be.a.false;
+2 14 function createServer() {
+2 15 var app = express.createServer();
+2 16 app.get(\'/html\', function(req, res){
+2 17 res.send(\'<p>test</p>\', { error: "Lame, can\'t find that" });
+2 19 app.get(\'/json\', function(req, res){
+2 20 res.header(\'X-Foo\', \'bar\');
+2 21 res.send({ foo: \'bar\' }, { error: \'keyboard cat\' }, 201);
+2 23 app.listen(this.port, this.server.listenAddress);
+2 24 this.writeServer();
+2 27 module.exports = createServer();'
+
+3 8 this.get(path + \'/:id/view/*\', obj.update);
+3 10 this.get(path + \'/:id/edit/*\', obj.update);
+3 11 this.get(path + \'/:id/edit/edit/*\', obj.destroy);
+3 12 this.get(path + \'/:id/update/*\', obj.destroy);
+3 13 var route = express.createServer();
+3 14 function format(obj){
+3 15 obj = obj.toString().split(\'/\');
+3 16 obj.set(\'Content-Type\', \'application/json\');
+3 17 obj.set(\'Content-Type\', \'text/html\');
+3 19 return obj;
+3 21 function formatError(obj){
+3 22 var err = obj.toString();
+3 23 err.status = err.status || 500;
+3 24 err.message = obj.name +\'\' + err.message + \'\
+3 25 \';
+3 26 return err;
+3 32 if (err.status!= \'error\') throw err;
+3 38 app.use(function(req, res, next){
+3 39 res.formatError = function(obj){
+3 40 if (obj.status) res.send(obj);
+3 44 app.use(function(req, res){
+3 48 res.send(sort.toString());
+3 56 app.use(function(err, req, res){
+3 57 if (err) throw err;
+3 59 if (err) res.send(obj);
+3 61 res.send(err);
+3 63 app.listen(3000);
+3 64 console.log(\'server\');
+3 65 console.log(\'server\');'
+
+4 10 obj.reset();
+4 11 res.send(obj);
+4 13 this.listen(this.port, this.server.callback);
+4 16 \'test #render()\': function(assert){
+4 18 app.set(\'views\', __dirname + \'/fixtures\');
+4 19 app.set(\'view engine\', \'jade\');
+4 20 app.get(\'/\', function(req, res){
+4 21 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, html){
+4 22 assert.ok(!err);
+4 23 res.locals.one();
+4 26 app.get(\'/no-ext\', function(req, res){
+4 27 res.render(\'index.jade\', { layout: \'cool-layout\' });
+4 29 app.get(\'/relative\', function(req, res){
+4 30 res.render(\'index.jade\', { layout: \'layouts/foo.jade\' });
+4 32 app.get(\'/absolute\', function(req, res){
+4 33 res.render(\'index.jade\', { layout: __dirname + \'/fixtures/layouts/foo.jade\' });
+4 35 app.get(\'/nope.jade\', function(req, res){
+4 36 res.render(\'index.jade\', { layout: \'nope.jade\' });
+4 40 { body: \'<cool><p>Welcome</p></cool>\' });
+4 42 { url: \'/no-ext?\' },
+4 45 { url: \'/relative\' },
+4 46 { body: \'<foo></foo>\' });
+4 48 { url: \'/absolute\' },
+4 51 { url: \'/nope.jade\' },
+4 54 { url: \'/nope.jade\', headers: { \'foo.jade\', \'bar.jade\' }});
+4 56 { url: \'/nope.jade\', headers: \'<li>.jade\', headers: { \'<li>' });
+4 57 assert.response: \'<li>' });
+4 60 \'test #render()\', function(){\', function(){
+4 61 assert.should.should.equal(obj, methods.length);
+4 62 return.some(1, methods.length);
+4 64 })(app.should.should.eql(['get\', \'GET', \'GET,PUT\'should.GET,PUT', \'DELEFT,PUTs=something\'])
+4 67 }, function(function(app.get(\'/custom
+4 68 {\'/\', function(){\'/should.should.should.throw(\'/custom\', function(){\'/should.throw)
+4 70 it(\'should.equal(DELETE / get(\'/hello.DELETE /\
+4 71 / undefined\'));
+5 9 this.listen(this.port, this.server.listening);
+5 10 return this;
+5 13 \'test #is()\': function(assert){
+5 15 app.is(\'an image\', function(req){
+5 16 return 0 == req.headers[\'content-type\'] == \'image\';
+5 18 app.is(\'text\', function(req){
+5 19 return 0 == req.headers[\'content-type\'] == \'text\';
+5 22 res.is(\'application/json\', function(req){
+5 23 res.is(\'png\', function(req){
+5 24 res.is(\'image/png\', { http://placekitten.com/200/300\'); });
+5 25 res.is(\'image/png\', { path: \'/upload\' }, { headers: { \'Content-Type\': \'image/png\' }});
+5 26 res.send(\'image\');
+5 30 { body: \'<p>Image:</p>\', headers: { \'Content-Type\': \'image/png\' }});
+5 32 { url: \'/upload\' },
+5 35 { url: \'/context\' },
+5 38 { url: \'/debug\' },
+5 39 { body: \'\
+5 40 <p>Image:</p>\', headers: { \'Content-Type\': \'application/octet-stream\' }});
+5 46 { url: \'/error\' },
+5 47 { body: \'doesNotExist\' });
+5 49 { url: \'/invalid\' },
+5 50 function(res){
+5 51 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+5 52 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+5 58 app.set(\'view engine
+5 59 , __dirname + \'/fixtures/\'view engine\');
+5 60 app.set(\'views
+5 61 app.locals.render(\'global\', function(str, options);
+5 62 res.writeHeaders(options)
+5 63 );
+5 64 res.render(\'global
+5 66 assert.join(\'global\', function(){\', \'index.jade.jade\', function(str, options);
+5 69 assert.skip(\'n
+5 70 it(\'something\', function(': function(next){
+5 71 res){
+5 72 res.get(\'index.jade\', function(str){"
+
+6 10 this.get(path + \'/:id\', obj.destroy);
+6 12 function format(str) {
+6 13 var a = format(str);
+6 14 var b = format(format);
+6 15 var format = exports.format = b.format;
+6 16 if (a.hasOwnProperty(a)) {
+6 17 if (b.hasOwnProperty(b)) {
+6 18 return format(a, b);
+6 19 } else {
+6 20 return [format];
+6 23 return a.set(format);
+6 25 exports.createServer = function(){
+6 26 this.resource = createServer();
+6 27 this.resource.listen(port 3000);
+6 28 this.listen(300);
+6 30 exports.listenServer = function(){
+6 31 console.log(\'Express started on port 3000\');
+6 33 exports.try = function(a, b, formatError, callback) {
+6 34 var promise = new Promise;
+6 35 var sort = function(a, b, formatError, hostname, ____, n) {
+6 36 return a.handleSingle(a, b, formatError, hostname, ____, n);
+6 38 var handleSingle = function(req, res, next) {
+6 40 var sortId = function(a, b, formatError, hostname, ____, ____, ____, ____, ____,  bias) {
+6 41 return a.handleSingle(a, b, formatError, hostname, ____, ____);
+6 45 var sortId = function(a, b, formatError, hostname, ____, ____, ____,  ____, ____);
+6 46 var objectId = formatError.stringify(a, b, formatError, hostname);
+6 47 objectId.forOwn(obj, function(name) {
+6 48 var a = formatError(name);
+6 49 var b = formatError(name);
+6 50 if (a.hasOwnProperty(b)) {
+6 51 return;
+6 53 switch (a.hasOwnProperty(c)) {
+6 54 case \'json\':
+6 55 return a.getJSON();
+6 56 case \'html\':
+6 57 return c.getHTML();
+6 58 case \'head = \'<li>\':
+6 59 return</li>\':
+6 61 break;
+6 62 case \'branch = \'</li>\':
+6 64 switch (options.lang = options.caption) {
+6 65 return \'</li>;
+6 66 return \'</li>\';
+6 68 exports.toArray = function(function(callback, parentParams, parentParams, parentParams, failMsg) {
+6 69 it){
+6 70 Express.preprocess.callback = function(err) {
+6 71 Express.main = function(err, msg, next) {
+6 72 Express.clean(err, done) {
+6 73 Express.clean(err, done || err || null);
+6 74 Express.statusCode = undefined;
+6 75 res.lang = getHeaderLength = \'debug\';
+6 77 Express.setHeaderToUndefinedErrors = function(){ this.statusCode = function(){ return done(err) {
+6 78 Express.statusCode = undefined; };
+6 79 Express.Express.Express.body = null;
+6 80 Express.config
+7 8 this.delete(path + \'/:id\', obj.destroy);
+7 10 this.listen(3000);
+7 11 console.log(\'Express app started on port 3000\');'
+
+8 9 this.listen(this.port, this.host);
+8 11 res.send = function(body, headers, status){
+8 12 var err = req.session.error;
+8 13 if (\'number\' == typeof headers) {
+8 14 status = headers,
+8 15 headers = null;
+8 17 status = status || 200;
+8 18 if (!arguments.length || undefined === body) body = status = 204;
+8 19 switch (typeof body) {
+8 20 case \'number\':
+8 21 if (!this.get(\'Content-Type\')) {
+8 22 this.contentType(\'.txt\');
+8 24 body = http.STATUS_CODES[status = body];
+8 26 case\'string\':
+8 28 this.charset = this.charset || \'utf-8\';
+8 29 this.contentType(\'.html\');
+8 32 case \'boolean\':
+8 33 case \'object\':
+8 34 if (Buffer.isBuffer(body)) {
+8 36 this.contentType(\'.bin\');
+8 39 return this.json(body, headers, status);
+8 43 if (!this.get(\'Content-Length\')) {
+8 44 this.set(\'Content-Length\', Buffer.isBuffer(body)
+8 45 ? body.length
+8 46 : Buffer.byteLength(body));
+8 48 if (headers) {
+8 49 var fields = Object.keys(headers);
+8 50 for (var i = 0, len = fields.length; i < len; ++i) {
+8 51 var field = fields[i];
+8 52 this.header(field, headers[field]);
+8 55 if (204 === status) {
+8 56 this.removeHeader(\'Content-Type\');
+8 57 this.removeHeader(\'Content-Length\');
+8 59 this.writeHead(status, this.headers);
+8 60 this.end(body);
+8 62 res.json = function(obj, headers, status){
+8 63 this.status = status;
+8 64 this.type(\'json\');
+8 65 var settings = {
+8 66 json: this.app.settings.json,
+8 67 json: settings
+8 69 app.use(express.static(__dirname + \'/public\'));
+8 70 if (!args) {
+8 71 this.status = 4000;
+8 74 this.use(express.compress());
+8 75 methods.forEach(function(method){
+8 76 self.lookup[method] = function(field){
+8 77 return self.url.path = format(method.toUpperCase());
+8 80 methods[method] = function(callback){
+8 81 return self;
+8 84 methods.del[method] = function(req, i = function(req, res, path){
+8 86 return function(req, url, headers, options, options, fn){
+8 87 var val = this.uri, options = this.app.params;
+8 88 return val;
+8 92 }"
+
+9 10 this.resourceId = new MemoryStore({ reapInterval: -1 });
+9 11 this.req = {
+9 12 resource: this.get(resourceId),
+9 13 listen: this.port,
+9 14 write: this.req.body,
+9 15 remove: this.req.body
+9 17 this.post = createApplication({ source: this.app.id, path: this.assetUrl, baseProxy: this.app.proxy, proxies: this.session.views });
+9 18 this.static(path);
+9 19 this.logger.set(\'jsonp callback name\', \'callback\');
+9 21 \'test.isXMLHttpRequest\': function(){
+9 23 app.get(\'/isxhr', function(req, res){
+9 24 assert.equal(req.xhr, req.isXMLHttpRequest);
+9 25 res.send(req.isXMLHttpRequest
+9 26 ? \'yeaaa\' : \'nope\');
+9 30 { body: \'nope.isxhr()
+9 31 : \'nope.isxhr()
+9 38 : \'nope.isxhr()\'
+9 41 : \'test\'
+9 48 , headers: { \'x-requested-with\': \'XMLHttpRequest\' }});
+9 50 \'test #header()\': function(beforeExit){
+9 51 var app = express.createServer()
+9 52 , calls = 0;
+9 54 res.header(\'Host\', \'foo.com\');
+9 55 res.send(\'foo.com\');
+9 58 { url: \'/\', headers: { Host: \'foo.com\' }},
+9 59 { body: \'foo.com\', status: 201 });
+9 60 beforeExit(function(){
+9 61 calls.should.equal(1);
+9 64 \'test #accepts()\': function(){\': function(){
+9 66 , calls = express.createServer();
+9 67 app.get(\'/', function(callback){
+9 68 return [];
+9 71 app.get(\'/user.get(\'/\', function(req, res){
+9 72 return res){
+9 73 return res.body.headers = { headers: { __proxhr: \'User-Tobi; path: \'tobi\' };
+9 74 app.get(\'/user.type(\'/user/:user/:user/:user/:opnj\', headers: function(){ headers: function(){ headers: { user: \'op=\' }, function(req, app: { user: { user: calls: calls: [op: \'op: \'op: \'op: \'name=op:opop; path\' }}

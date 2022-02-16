@@ -1,0 +1,65 @@
+Min editdistance: 2.00
+Closest candidate: 7 22 var baseDir = hexo.base_dir;
+0 1  else {
+0 2 console.log('You should configure deployment settings in %s!', '_config.yml'.bold);
+0 3 return console.log([
+0 4 'Example:',
+0 5 '  deploy:',
+0 6 '    type: openshift',
+0 7 '   remote: <upstraem git remote>',
+0 8 '   branch: <upstraem git branch> (defaults to master)'
+0 9 ].join('\
+0 10 ') + '\
+0 11 ');
+0 12 }
+0 14 });
+0 15 });"
+
+1 2 console.log('You should configure deployment settings in %s.', '_config.yml'.bold);
+1 5 '  deploy: <upstraem git remote>',
+2 2 console.log('
+2 3 You should configure deployment settings in %s.', '_config.yml'.bold);
+4 3 You should configure deployment settings in %s!\
+4 4 ', '_config.yml'.bold);
+4 7 '   type: openshift',
+5 2 console.log('You should configure deployment settings in %s!', '_config.yml'.bold);"
+
+6 3 You should configure deployment settings in %s.', '_config.yml'.bold);"
+
+7 3 You should configure deployment settings in %s!', '_config.yml'.bold);
+7 17 extend.deployer.register('openshift', function(args){
+7 18 if (!args.length){
+7 19 console.log('Deploy completely.');
+7 20 return;
+7 22 var baseDir = hexo.base_dir;
+7 23 var args = [
+7 24 config.deploy_remote,
+7 25 '-config.yml',
+7 26 '-config.yml'
+7 27 ];
+7 28 var run = function(command, args, callback){
+7 29 var config = hexo.config.deploy;
+7 30 if (!config.deploy.remote){
+7 31 console.log('\
+7 32 You should configure deployment settings in %s first!\
+7 44 var blogDir = baseDir + '../diy' + config.root;
+7 45 var deploying = false;
+7 46 async.series([
+7 47 function(next){
+7 48 file.rmdir(blogDir, next);
+7 49 },
+7 51 file.copyDir(publicDir, blogDir, next);
+7 54 var commands = [
+7 55 ['add', '-A', '.'],
+7 56 ['commit', '-m', 'First commit'],
+7 57 ['branch', '-M', 'Site updated:'+ new Date()],
+7 58 ['remote', 'add', 'github', config.branch],
+7 59 ['branch', config.repository]
+7 61 async.eachSeries(commands, function(item, next){
+7 62 run('git', item, function(){
+7 63 next();
+7 65 }, next);
+7 67 ], callback);
+8 3 You should configure deployment settings in %s', '_config.yml'.bold);
+9 2 console.log('You should configure deployment settings in %s.', '_config.yml'.bold);"
+

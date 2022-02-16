@@ -1,0 +1,14 @@
+Min editdistance: 26.00
+Closest candidate: 6 7 function test.toArray(){
+3 1 Columns') }.end
+3 2 end
+3 5 function pluralize_pline_ = 1).unride_ = function (unride_size_size (a, i, i){ return a > 1 }-s)
+3 6 return { stringify_s, i, i }' }'}'
+3 7 function trim_s (i, i, this){ return 'unride_s' }' }' }
+4 4 end"
+5 8 function pluralizeize_key_key = function trimize_to_to_key(key) {
+5 9 return { return { return { return { return { return }.length, }.length }.length }.toArray() }.length }.length }.toArray() }.slice.return { return { return { return arguments }.reduce((
+6 7 function test.toArray(){
+6 8 it'should returnArray()'
+6 9 Express.something('something', function() { return Express.values.values() { returnArray.prototype.should.should.eql [{ return arguments })
+6 10 Express.should.startsWith(Array.prototype.slice, function(arguments, 1 })

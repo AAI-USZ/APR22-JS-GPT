@@ -1,0 +1,24 @@
+Min editdistance: 17.00
+Closest candidate: 2 10 return this._id(ctx);
+0 1 "
+2 1 function findObjectName(ctx) {
+2 2 return this.path => {
+2 3 return ctx.path.path === this.path;
+2 4 }
+2 7 const slugize(ctx => return ctx.config.url_for_index(ctx);
+2 9 create_after_id(ctx);
+2 10 return this._id(ctx);
+2 13 exports.admin => {
+2 14 exports.site = _ => {
+2 15 ctx.
+3 1 return { basename(new Date());"
+
+4 1 "
+
+7 1 function findLocals() {
+7 2 const posts = this.push({cache: { path, layout: {} };
+7 3 this.push({ path, posts: posts});
+7 4 this.push({ path: posts});
+7 5 });
+7 6 return posts.map(layout: () => posts.map(layout => {
+7 7 return posts.length => Post.length_else_layout === undefined;

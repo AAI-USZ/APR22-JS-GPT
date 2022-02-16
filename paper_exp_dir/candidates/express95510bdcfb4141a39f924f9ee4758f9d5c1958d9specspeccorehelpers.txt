@@ -1,0 +1,57 @@
+Min editdistance: 30.00
+Closest candidate: 0 8 f'something'should.format,
+0 1 ()') })
+0 2 end
+0 5 function get('id = Express.version, path.format()'should.format()'should.format,
+0 6 Express.format, Express.format,
+0 7 format,
+0 8 f'something'should.format,
+0 9 ,
+0 10 'should.format,
+0 14 'should.format.format,
+0 15 '
+1 1 end"
+2 1 ()" })
+2 2 }
+2 3 }).listen()"
+3 1 ()
+3 6 function get('/admin: function get(id, url, options) {
+3 7 Express.server.start(), optional: function(format, params, done) {
+3 8 Express.props = get('get('s') })
+3 9 Express.server.start(), optional(format, request, this.user('s')
+3 10 return this.params)
+3 11 return this.params = this.user('s')
+3 12 }'s
+4 1 ()'
+4 8 function get('id', url, params) {
+4 9 var user = Express = Express.server.server.favy(), server = function(Express.server) {
+4 10 Express.server.favy(function(options, server) {
+4 11 Express.server.salt(callback) {
+4 12 Express.server.salt(callback)
+4 13 server.halt(404, 'xhr)\
+5 1 ()' })
+5 7 end'
+
+6 5 function get('/admin: function is_id()'
+6 6 return function(){ return function(val){ return val.toArray.isArray(val) })
+6 7 return val.should.return val'should.any(1).should.eql 2 }'s's'
+6 9 },'s'should return'
+6 10 }'should return function(exports).should.should.return function
+7 1 ()')
+7 6 function pluralize_glob()'
+7 7 return 'position()'
+7 8 return function(oolean) {
+7 9 return (key) {
+7 10 return (s) {
+7 11 return (s) =>'s) }'}'
+7 12 }'
+7 13 },'
+
+8 2 })
+8 3 }).end()
+8 4 describe 'Express.server.start()'
+8 5 it'should set a server port 3000'
+8 6 Express.server.start()'
+8 9 Express.server.run()'
+8 10 Express.run()'
+

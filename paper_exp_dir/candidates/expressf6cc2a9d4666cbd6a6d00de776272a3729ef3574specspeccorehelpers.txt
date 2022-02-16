@@ -1,0 +1,115 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 end
+0 1 end
+0 2 describe 'toArray()'
+0 3 describe 'when given an array'
+0 4 it'should return the array'
+0 5 toArray([1,2,3]).should.eql [1,2,3]
+0 8 describe 'when given an object with indexed values and length'
+0 9 it'should return an array'
+0 10 var args = -{ return arguments }('foo', 'bar')
+0 11 toArray(args).should.eql ['foo', 'bar']
+0 15 describe 'escape()'
+0 16 it'should escape html'
+0 17 escape('<p>this & that').should.eql '&lt;p&gt;this &amp; that'
+0 20 describe 'extname()'
+0 21 it'should return the a files extension'
+0 22 extname('image.png').should.eql 'png'
+0 23 extname('image.large.png').should.eql 'png'
+0 24 extname('/path/to/image.large.png').should.eql 'png'
+0 26 it'should return null when not found'
+0 27 extname('path').should.be_null
+0 28 extname('/just/a/path').should.be_null
+0 31 describe 'dirname()'
+0 32 it'should return the directory path'
+0 33 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+0 36 describe'status()'
+0 37 it'should set the response status'
+0 38 get('/user', function(){ status(500) })
+0 39 get('/user').status.should.eql 500
+0 42 describe 'header()'
+0 43 describe 'when given a field name and value'
+0 44 it'should set the header'
+0 45 get('/user', function(){
+0 46 header('x-foo', 'bar')
+0 47 })
+0 48 get('/user').headers.should.have_property 'x-foo', 'bar'
+0 51 describe 'when given a field name'
+0 52 it'should return the header'
+0 56 get('/user').headers.should.have_property 'x-bar', 'bar'
+0 61 describe 'end
+0 62 describe 'when given 'keyboard cat'
+0 63 describe 'keyboard'
+0 64 describe 'empty'
+0 66 it'should set the entire'
+0 67 it'should unkey as old'
+0 68 it'should be removed'
+0 74 end"
+
+1 52 it'should return a request header value'
+1 56 get('/user').headers.body.should.should.eql 'bar'
+1 61 describe 'contentType()'
+1 62 describe 'with empty()'
+1 63 it'should set the entire end()'
+2 60 it'shend
+2 61 describe 'when given a field name is given key must be a field name'\'
+2 62 it'should merge the field name'
+2 63 it'should merge the URL'
+2 64 get('/foo'
+2 65 get('/', function'
+2 66 get('/', function(){
+2 67 end(){
+2 68 end()'
+
+3 62 describe 'compile()'
+3 63 describe 'with(email sent()'
+3 66 get('email sent'
+3 67 get('/user'
+3 68 get('/user', function()'
+3 69 get('email sent')
+3 72 get('', function()'
+3 73 get('
+3 74 get(''
+3 75 get('', function(){
+3 76 set-header()'
+3 77 return this.headers'
+3 80 get('headers'
+3 81 get('foo'
+3 86 describe 'with'
+4 62 describe 'when given a field name is given key and value is the captures'
+4 63 it'should merge'
+5 63 describe 'when given a field name is given key and value'
+5 76 describe 'when already returned'
+5 78 end'
+5 79 end'
+
+6 56 get('/user').headers.headers.should.have_property 'x-bar', 'bar'
+6 63 describe 'when given '#each()'
+6 64 it'should iterate passing passing index and filter'
+6 65 it'should work with optional place endpoints'
+6 66 var result = Express.method = function(key, optional = []'
+6 67 Express.at(12, optional = Express.location, s = options)
+6 68 route = {})
+6 69 route.at(0).body.location.path.should.eqlsql sess(location.search)
+6 70 route('/'))' })
+6 71 route.at(1, optional).body.should.should.eql(12/foo)
+6 72 Express.should.body.should.eql(12.body)
+6 76 it'should.method.skip('xhragment'
+6 77 .method)
+6 78 .method
+7 63 describe 'cache'
+7 64 before_each
+7 65 cache'
+7 66 it'stry { get('s= this')
+7 67 cache = this.body
+7 68 end()'
+7 69 end()
+7 75 describe 'compile'end
+7 76 describe 'MemoryStore'
+8 63 describe 'param()'
+8 65 it'should.each
+8 70 it'should.skip'
+8 79 it'sh.skip'
+9 63 describe 'with key and value'
+9 64 it'should merge the given key and value'
+9 66 it'should merge the given key'

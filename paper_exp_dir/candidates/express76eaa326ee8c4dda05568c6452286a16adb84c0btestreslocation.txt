@@ -1,0 +1,181 @@
+Min editdistance: 14.00
+Closest candidate: 3 4 it('should set the header', function(done){
+0 1  })
+0 2 })"
+
+2 2 })
+2 3 describe('when relative', function(){
+2 4 it('should construct an absolute url', function(done){
+2 5 var app = express();
+2 6 app.use(function(req, res){
+2 7 res.location('/login').end();
+2 8 });
+2 9 request(app)
+2 10 .get('/')
+2 11 .expect(200, done)
+2 13 it('should construct an absolute url and post', function(done){
+2 16 res.location('/login/:id/:op?', '/')
+2 23 describe('when mounted', function(){
+2 24 it('should respect the mount-point', function(done){
+2 25 var app = express()
+2 26 , blog = express()
+2 27 , admin = express();
+2 29 res.location('login/:id/:op?', '/admin/login');
+2 32 res.location('login/:id/edit', '/admin/login');
+2 35 res.setHeader('Location', __dirname + '/assets/templates');
+2 36 res.end();
+2 38 app.use('/blog', blog);
+2 40 .get('/blog')
+2 41 .expect('Location', 'http://blog.com/admin')
+3 3 describe('.locals', function(){
+3 4 it('should set the header', function(done){
+3 7 res.location('http://google.com').end();
+3 11 .expect('Location', 'http://google.com')
+3 14 it('should return the empty string', function(done){
+3 24 describe('.locals.settings', function(){
+3 25 it('should expose app settings', function(done){
+3 28 res.location('http://google.com/user/:id/:op?', function(req, res){
+3 29 res.headers.should.have.property('location', 'http://google.com/user/:id/:op?');
+3 30 done();
+3 33 it('should expose app defaults', function(done){
+3 41 it('should allow naming', function(done){
+3 44 var naming = req.params. naming;
+3 45 app.get('/repos/:name', function(req, res){
+3 47 app.get('/repos/:name/:op?', function(req, res){
+3 49 var names = done;
+3 54 names.forEach(function(name){
+3 56 var opts = get('/repos/:name/opts') || {};
+3 59 request('/repos/send')
+3 60 .expect('/repos/send')
+3 61 .expect('/repos/opts')
+3 62 .expect('/done')
+3 63 .expect('end')
+3 64 .done();
+3 68 it('should allow naming given a callback', function', function(done) {
+3 69 request(done) {
+3 70 request('_method) {
+3 71 request('/method) {
+3 74 request('/uri.test')
+3 75 .test')
+3 76 .end(function (uri.end(function(function(res) {
+3 77 request = request.url) {
+3 78 request.uri.path.path = get('/')
+3 79 .expect(uri.path = get('/')
+3 80 .expect(uri.path || '')
+3 81 .expect('/n.expect(302')
+3 82 .expect('back = done();
+3 88 it('should be.use()able', function() {
+3 89 Express.end(requested
+4 3 describe('.locals.use(fn)', function(){
+4 4 it('should run in parallel on res.render()', function(done){
+4 6 var router = new express.Router({ color: 'bob', radius: 3 });
+4 8 res.locals.users.firstCall = 1;
+4 9 res.locals.users.lastCall = 0;
+4 10 res.locals.users.push(decoder);
+4 13 res.locals.use(function(req, res){
+4 14 res.locals.firstCall = 0;
+4 15 res.locals.lastCall = 1;
+4 20 res.locals.firstCall = 1;
+4 21 res.locals.lastCall = 0;
+4 27 .expect('Content-Type', 'text/html; charset=utf-8')
+4 28 .expect('Content-Type', 'application/json')
+4 32 it('should override res.render() locals', function(done){
+4 37 res.locals.secondCall = 3;
+4 38 res.locals.species = 'ferret';
+4 42 res.locals.lastCall = 3;
+4 43 res.locals.species.should.equal('ferret');
+4 53 it('should support index.<engine>', function(done){
+4 55 app.set('views', __dirname + '/fixtures');
+4 56 app.set('view engine', 'jade');
+4 58 res.render('index.jade', { layout: false });
+4 62 .expect('/index.jade', { layout: false });
+4 63 .expect('index.jade', done);
+4 66 it('should.expect('should work', function(){
+4 67 request(app);
+5 3 describe('when given a callback', function(){
+5 4 it('should set the session', function(done){
+5 7 res.location('login').end();
+5 11 .expect('Set-Cookie', /^(\\w+)(\\w+)/)
+5 14 it('should redirect to / with no title or body', function(done){
+5 22 .expect(302, done)
+5 25 describe('when given a callback without a config', function(){
+5 26 it('should match', function(done){
+5 48 it('should exclude from parent app', function(done){
+5 51 res.location('login', 'http://google.com').end();
+5 57 it('should exclude from shared app', function(done){
+5 60 res.location('login', 'http://google.com/login');
+5 64 .expect('Location', 'http://google.com/login')
+5 68 describe('when given a category', function(){
+5 72 res.location('posts').end();
+5 77 .exclude('/category')
+5 78 .exclude('bogus')
+5 79 .should.be.last().should.empty()
+5 80 .should.be.empty()
+5 81 .should.should.should.empty()
+5 82 .should.should.message.end.end(end(done);
+5 85 it('should.skip('should.skip('should.all', function())
+5 89 describe('should clear(){
+5 90 it('should clear()'should clear()'should clear()'should clear()'should clear()'should clear()'})
+5 95 describe(function(req, res) {
+5 96 it('should clear()
+5 106 it('should clear();"should clear()'should clear()'
+5 111 it('should clear'
+6 3 function testMethod(method) {
+6 4 return function(path, args, options){
+6 5 returnvar orig = manager? manager.location(method) : method;
+6 6 if (!orig) return done(new Error('Should have failed'));
+6 7 var req = res.header('location') + path;
+6 8 return req.method === method;
+6 9 }
+6 11 function get(url) {
+6 12 return url
+6 13 .replace(/\\/{2,}/g, '/')
+6 14 .replace(/\\?.*$/, '')
+6 15 .replace(/^\\/{2,}/g, '$1');
+6 16 }"
+
+7 4 it('should be empty by default', function(done){
+7 14 describe('.locals.use', function(){
+7 15 it('should set the config', function(done){
+7 18 res.location('http://google.com/users/0-2');
+7 22 .expect('Location', 'http://google.com/users/0-2')
+7 33 res.config.titlecase = 'House of Manny';
+7 34 res.locals.settings.provides = function(val){
+7 35 return val === undefined;
+7 36 };
+7 37 res.locals. don\\'t support this type.');
+7 50 it('should handle index.<engine>', function(done){
+7 61 it('should handle singular minute or second', function(done){
+7 64 res.location('http://google.com/users/1');
+7 67 res.location('http://google.com/users/last');
+7 72 .expect('/')
+7 74 .expect(200, done);
+9 4 return this.url
+9 5 .replace(url, '/')
+9 6 .replace(/\\?.*/, '')
+9 7 .replace(/^\\/user\\/[^\\/user\\/]/g, function(match){
+9 8 return this.header('Location', url)
+9 10 return this.header('Content-Type', 'application/json')
+9 11 .replace(/^\\/user\\/[^\\/user\\/]*$/g, function(match){
+9 15 .replace(/^\\/user\\/\\/]*$/g, function(match){
+9 21 .replace(/^\\/user\\/\\/$/g, function(match){
+9 23 .replace(/^\\/user\\/\\/[^\\/user\\/]*$/g, function(match){
+9 29 .replace(/^\\/user\\/\\/([^\\/user\\/\\/]+)\\/(view|edit)?$/g, function(match){
+9 35 .replace(/^\\/^\\/user\\/user\\/\\/\\/login')
+9 36 .end();
+9 38 .replace(/g, 'admin')
+9 39 .replace(/^\\/express();
+9 42 .
+9 43 it('should.end()
+9 46 describe('.locals()', function(){
+9 47 it('should return the server(){
+9 48 it('should return the app; http(){\', function(){
+9 49 return call(){
+9 50 return call(app);
+9 51 return express();
+9 54 .get('/admin();
+9 55 .get('/admin/foo())
+9 56 .use(function(){ return require('http')
+9 57 .use(function(app)
+9 58 .get('express();)"
+

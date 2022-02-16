@@ -1,0 +1,242 @@
+Min editdistance: 34.00
+Closest candidate: 1 5 var fs = require('hexo-fs');
+0 1 var util = require('hexo-util');
+0 2 var pathFn = require('path');
+0 3 var Permalink = util.permalink;
+0 4 var permalink;
+0 5 var ignoreKeys = {
+0 6 path: true,
+0 7 permalink: true
+0 8 };
+0 9 function postPermalinkFilter(data){
+0 10 var config = this.config;
+0 11 var meta = {
+0 12 id: data.id || data._id,
+0 13 title: data.slug,
+0 14 name: typeof data.slug ==='string'? pathFn.basename(data.slug) : '',"
+
+1 2 var tildify = require('tildify');
+1 3 var Theme = require('../theme');
+1 4 var Source = require('./source');
+1 5 var fs = require('hexo-fs');
+1 6 var chalk = require('chalk');
+1 7 module.exports = function(ctx){
+1 8 if (!ctx.env.init) return;
+1 9 var baseDir = ctx.base_dir;
+1 10 var configPath = ctx.config_path;
+1 11 return fs.exists(configPath).then(function(exist){
+1 12 return exist? configPath : findConfigPath(configPath);
+1 13 }).then(function(path){
+1 14 if (!path) return;
+1 15 configPath = path;
+1 16 return ctx.render.render({path: path});
+1 17 }).then(function(config){
+1 18 if (!config || typeof config!== 'object') return;
+1 19 ctx.log.debug('Config loaded: %s', chalk.magenta(tildify(configPath)));
+1 20 config = _.merge(ctx.config, config);
+1 21 ctx.config_path = configPath;
+1 22 config.root = config.root.replace(/\\/*$/, '/');
+1 23 config.url = config.url.replace(/\\/+$/, '');
+1 24 ctx.public_dir = pathFn.resolve(baseDir, config.public_dir) + pathFn.sep;
+1 25 ctx.source_dir = pathFn.resolve(baseDir, config.source_dir) + pathFn.sep;
+1 26 ctx.source = new Source(ctx);
+1 27 if (!config.theme) return;
+1 28 config.theme = config.theme.toString();
+1 29 ctx.theme_dir = pathFn.join(baseDir, 'themes', config.theme) + pathFn.sep;
+1 30 ctx.theme_script_dir = pathFn.join(ctx.theme_dir,'scripts') + pathFn.sep;
+1 31 ctx.theme = new Theme(ctx);
+1 32 });
+1 34 function findConfigPath(path){
+1 35 var extname = pathFn.extname(path);
+1 36 var dirname = pathFn.dirname(path);
+1 37 var basename = pathFn.basename(path, extname);
+1 38 return fs.readdir(dirname).then(function(files){
+1 39 var item = '';
+1 40 for (var i=0, len=files.length; i<len; i++){
+1 41 item = files[i];
+1 42 if (item.substring(0, 1)!== basename){
+1 43 return pathFn.join(dirname, item);
+1 44 }
+1 47 }"
+
+2 1 module.exports = function(options){
+2 2 options = _.extend({
+2 3 base: this.page.base,
+2 4 format: this.config.pagination_dir + '/%d/',
+2 5 total: this.page.total || 1,
+2 6 current: this.page.current || 0,
+2 7 prev_text: 'Prev',
+2 8 next_text: 'Next',
+2 9 space: '&hellip;',
+2 10 prev_next: true,
+2 11 end_size: 1,
+2 12 mid_size: 2,
+2 13 show_all: false
+2 14 }, options);
+2 15 var current = options.current;
+2 16 var total = options.total;
+2 17 var endSize = options.end_size;
+2 18 var midSize = options.mid_size;
+2 19 var space = options.space;
+2 20 var base = options.base;
+2 21 var format = options.format;
+2 22 var self = this;
+2 23 var front = '';
+2 24 var back = '';
+2 26 var link = self.url_for(this.path);
+2 27 if (prev == null){
+2 28 previousSize = options.pre_size;
+2 29 if (options.only_thread){
+2 30 self.enable('back');
+2 31 } else {
+2 32 _.set(self.url_for(this.path));
+2 35 var posts = this.site.posts.sort('date', -1);
+2 36 if (!posts.length) return;
+2 37 var length = posts.length;
+2 38 posts.forEach(function(post){
+2 39 var link = post.prev_link + '/' + post.id + '/';
+2 40 if (prev == 1){
+2 41 var link = link + '/' + post.id + '/';
+2 42 break;
+2 44 if (options.permalink){
+2 45 var link = this.url_for(this.path);
+2 46 if (link) link += '/' + post.id + '/';
+2 48 if (!pathlength) link += '/index.html';
+2 49 var result = '';
+2 51 var link = this.url_for(post.path);
+2 52 if (link) link += '/index.html';
+2 53 result += html;
+2 55 for (var i = 1; i <= length; i++){
+2 56 result += page.prev_link + '/' + i + '/';
+2 58 result += currentPage;
+2 59 if (prev == total){
+2 60 this.prev = true;
+2 61 this.next = false;
+2 63 this.prev = num - 1;
+2 67 return result;
+2 68 };"
+
+3 10 prev_next: true,"
+
+4 1 var os = require('os');
+4 2 var OS_MAP = {
+4 3 'iPhone OS': 'iOS',
+4 4 'Mac OS X': 'Mac OS X',
+4 5 'Windows X': 'Windows',
+4 6 '8 OS X': 'Windows X',
+4 7 '*Version': '8',
+4 8 'X OS_MAP': {
+4 11 '*version': '8',
+4 13 'iPhone OS': 'Windows',
+4 14 'Mac OS X': 'Windows',
+4 16 'X OS_MAP_V': {
+4 18 'X_MAP_V': {
+4 68 'X_MAP_V': \'
+4 69 'X_OPTIONS': {
+4 72  'X_OPTIONS' : {
+4 73 'OPTIONS': {
+4 75  'Allow',
+4 76 'X-Requested-With': 'XMLHttpRequest'
+4 82 '
+
+5 1 module.exports = function(tags, options){
+5 2 if (!options){
+5 3 options = tags;
+5 4 tags = this.site.tags;
+5 6 if (!tags.length) return '';
+5 7 options = options || {};
+5 8 var min = options.min_font || 10;
+5 9 var max = options.max_font || 20;
+5 10 var orderby = options.orderby || 'name';
+5 11 var order = options.order || 1;
+5 12 var transform = options.transform;
+5 13 var separator = options.hasOwnProperty('separator')? options.separator : ', ';
+5 14 var showCount = options.hasOwnProperty('show_count')? options.show_count : true;
+5 15 var className = options.class || 'tag';
+5 19 var showCurrent = options.show_current || false;
+5 20 var suffix = options.suffix || '';
+5 21 var childrenIndicator = options.hasOwnProperty('children_indicator')? options.children_indicator : false;
+5 24 tags = tags.sort(orderby, order);
+5 25 tags = tags.filter(function(tag){
+5 26 return tag.length;
+5 28 if (options.amount) tags = tags.limit(options.amount);
+5 29 if (style === 'list'){
+5 30 tags = tags.random();
+5 34 tags.each(function(tag){
+5 35 result += self.insert(tag, tag);
+5 37 if (options.separator &&!options.separator.length) return '';
+5 38 var result = {
+5 39 order: + (options.order || -1),
+5 40 show_count: options.show_count || true,
+5 41 class: classes.join(', '),
+5 42 last: posts.length? posts[length - 1] : ''
+6 2 module.exports = function(args, callback){
+6 3 var versions = _.extend({
+6 4 hexo: this,
+6 5 os: os.type() +'' + os.release() +'' + os.platform() +'' + os.arch()
+6 6 }, process.versions);
+6 7 if (args.json){
+6 8 console.log(versions);
+6 10 for (var i in versions){
+6 11 console.log(i + ':'+ versions[i]);
+6 16 os: os.type() +'' + os.release() +'' + os.arch()
+6 18 if (args.txt){
+7 25 var link = self.get(source);
+7 28 if (prevNext && current > 1){
+7 29 front += format.prev_next;
+7 31 front += format.next_text;
+7 33 for (var i = 1; i <= total; i++){
+7 34 back = link(i);
+7 36 if (prevNext && current > total){
+7 37 front += format.next_next;
+7 41 result = result.substring(0, 1);
+8 25 var link = '';
+8 27 var linkArr = function(i){
+8 28 return i == 1? base : base + format.replace('%d', i);
+8 30 this.config = _.clone(default, this.config);
+8 31 this.pages = {};
+8 32 this.config.permalink = config.permalink;
+8 33 this.layout = 'page';
+8 34 this.date = options.date;
+8 35 this.updated = options.updated;
+8 36 this.comments = options.comments;
+8 37 this.layout = 'drafts';
+8 38 this.content = options.content;
+9 15 var current = options.current,
+9 16 total = options.total,
+9 17 endSize = options.end_size,
+9 18 midSize = options.mid_size,
+9 19 space = options.space,
+9 20 base = options.base,
+9 21 format = options.format;
+9 22 var front = '',
+9 23 back = '';
+9 24 var link = function(i){
+9 27 var pageNum = function(i){
+9 28 return \'<a class="page-number" href="\' + link(i) + \'">\' + i + \'</a>\';
+9 30 if (options.prev_next){
+9 31 if (current!== 1) front = \'<a class="extend prev" href="\' + link(current - 1) + \'">\' + options.prev_text + \'</a>\';
+9 32 if (current!== total) back = \'<a class="extend next" href="\' + link(current + 1) + \'">\' + options.next_text + \'</a>\';
+9 34 if (options.show_all){
+9 35 for (var i=1; i<=total; i++){
+9 36 if (i == current){
+9 37 front += \'<span class="page-number current">\' + i + \'</span>\';
+9 39 front += pageNum(i);
+9 42 if (endSize){
+9 43 var endmax = current <= endSize? current - 1 : endSize;
+9 44 for (var i=1; i<=endmax; i++){
+9 47 var endmin = total - current <= endSize? current + 1 : total - endSize + 1;
+9 48 for (var i=total; i>=endmin; i--){
+9 49 back = pageNum(i) + back;
+9 51 if (space){
+9 52 var space_html = \'<span class="space">\' + space + \'</span>\';
+9 53 if (current - endSize - midSize > 1){
+9 54  space_html += space_html + back;
+9 57 if (midSize){
+9 58 var midmin = current - midSize <= endSize? current - midSize + endSize : current - midSize;
+9 59 if (midmin > 1){
+9 60 midmin = current + midSize > endSize? current - midSize - endSize : current - midSize;
+9 64 var space_html = space_html + space + back;
+9 66  space_html += space_html;
+9 70 varprev = link(this);
+9 71 return this;

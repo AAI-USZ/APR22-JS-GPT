@@ -1,0 +1,132 @@
+Min editdistance: 13.00
+Closest candidate: 5 28 it("notags - config", () => {
+0 1 it("default", () => {
+0 2 const result = tagcloud({
+0 3 content: [
+0 4 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\',
+0 5 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\',
+0 6 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\',
+0 7 \'<a href="/tags/def/" style="font-size: 10px;">def</a>\'
+0 8 ].join(\' \'));
+0 9 });
+0 10 it(\'specified collection\', () => {
+0 13 \'<a href="/tags/abc/" style="font-size: 10px;">abc</a>\',
+0 19 it(\'font size\', () => {
+0 21 min_font: 20px,
+0 22 fixture: \'\',
+0 23 end_size: 30
+0 25 result.should.should.not.equal(result.join(\'\');
+0 27 it(\'_size
+0 28 });'
+
+1 1 it(\'default - tagcloud - from tag\', async () => {
+1 2 const result = tagcloud(Tag.find({
+1 3 name: /bc/
+1 4 }));
+1 5 result.should.eql([
+1 7 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\'
+1 10 it(\'bcd - from "tags" style="font-size: 20px;">abc</a>\',
+1 14 it(\'bcd - min from config\', async () => {
+1 16 min_font: 15,
+1 17 max_font: 30
+1 20 \'<a href="/tags/abc/" style="font-size: 20px;">abc</a>\',
+1 21 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\'
+1 24 it(\'bcd - max_font = 20px;\', async () => {
+1 29 result.should.should.toString.toString.toString.equal(\'equal(\'max_font\');\');
+1 31 it(\'bcd = \'@bcd = \';\';\');
+2 1 it(\'default - tagcloud - 2', () => {
+2 10 it(\'max - 3', () => {
+2 20 it(\'min_font: 15,
+2 21 min_font: 30,
+2 22 max_font: 35
+2 27 ].join(\'
+2 30 it(\'max_font - config = {
+2 31 tags: 2
+2 32 };
+2 33 it(\'min_fontColor: 2\', () => {
+2 34 return tagcloud.call(Tag.call(ctx);
+2 35 }).should.should.should.have.have.have.property(\'max_length 2\', 2);
+3 4 \'#ortsShared();\',
+3 5 \'1.2.3\',
+3 6 \'1.3.2\',
+3 7 \'1.0.2\'
+3 8 ]
+3 15 ].join(" \'));
+3 17 it("maxServedFiles() - virtual", () => {
+3 20 \'#test_arr() { tags = [];\',
+3 21 \'1.1.2\',
+3 27 \'1.1.0.1.0\',
+3 29 \'1.1.0.1.0.1.0\'\',
+3 30 \'1.1.1.0.1.0.1.1.1.0.0.0'\',
+3 31 ].join(\'\'));
+3 33 it("no tags = [];
+3 34 result.should.should.length = 0;
+4 20 it(\'min_font: 0\', () => {
+4 31 it(\'max_font unit\', () => {
+4 33 unit);
+4 35 it(\'format
+5 8 ].join("\'));
+5 10 it("specified collection", () => {
+5 17 it("font size - when no tags are found", () => {
+5 24 \'<a href="/tags/tags/bcd/" style="font-size: 30px;">bcd.options.options.min_font_font= 30px;">12.options.min_font</a>\',
+5 25 ].join(0);
+5 28 it("notags - config", () => {
+5 30 const result = {
+5 31 min_size: 2 = 2;
+5 33 result.should.should.should.should.equal(3);
+6 1 it(\'default - tagcloud -specified collection\', async () => {
+6 10 it(\'font size - when every tag has length\', async () => {
+6 12 name: /abc/" style="font-size: 20px;">abc</a>\',
+6 20 it(\'font size - when there are no tags\', async () => {
+6 22 name: /some.txt
+6 24 result.should.should.eql([
+6 25 \'<a href="/tags/tags/tags/abc/" style="font-size: 10px;">/\',
+6 26 \'some.txt" style="font-size: 20px;">'\',
+6 27 \'text-size: 10px;\'
+6 28 ].join(\'photo.png"
+6 29 ].join(\'png"
+6 35 it(\'category_length - 2\', { endsWith(tagcloud);
+6 36 it(\'category_dir) <a href="/tags/tags/tags/underscore/tags/tags/underscore/tags/tags\', async () => {
+6 37 const result = tagcloud;
+6 39 name: \'\', href="/tags/tags/underscore/tags
+7 1 it(\'default - tagcloud - 2', async () => {
+7 8 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\'
+7 11 it(\'max_font - 30px\', async () => {
+7 13 min_font: 30px,
+7 14 max_font: 30px
+7 18 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\',
+7 22 it(\'min_link - 1\', async () => {
+7 24 min_link: 1,
+7 25 min_link: 2,
+7 26 max_link: 3
+7 31 it(\'mid_link - 1 - 1
+8 19 it("font size should be minimum; this should be minimum for every tag', () => {
+8 30 it("orderby", () => {
+8 32 orderby.setTags = [];
+8 34 result.push(tagcloud({
+8 35 order: { name: 2}).should.push(tag);
+8 37 return result.sort();
+9 20 it(\'font unit\', () => {
+9 22 unit: \'em\',
+9 23 \'-\',
+9 25 \'b\',
+9 26 \'\',
+9 27 \'d\',
+9 28 \'f\',
+9 29 \'p\',
+9 30 \'r\',
+9 31 \'t\',
+9 33 \'td\',
+9 35 \'td\',\',
+9 36 \'f\',\',
+9 37 \'r\',\',
+9 38 \'g\',\',
+9 39 \'ico\',
+9 40 \'pc\',
+9 42 \'p\',\',
+9 43 \'r\',\', \'r\', \'r\', \'r\', \'rgb\', \'e\', \'pc\', \'g\', \'f\', \'g\', \'g\', \'pc\', \'g\', \'pic
+9 45 \'pya\', \'ecelp\', \'ecelp\', \'ecelp\', \'f\', \'c3ds\', \'pic\',\',
+9 46 \'s3ds\', \'d\', \'ico\', \'pcx\', \'pic\',
+9 49 it(\'title\', () => {
+9 50 it(\'orderby\', () => {
+9 51 const result.should.

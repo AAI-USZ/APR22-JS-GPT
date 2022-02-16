@@ -1,0 +1,57 @@
+Min editdistance: 1.00
+Closest candidate: 6 13 };'
+
+0 1 function handleArray.prototype.call(this;
+0 2 function handleArray.prototype.apply toArray = function (val, val, this.toObjects, offset) { function (val, [val, this.cast];
+0 3 return val, offset];
+0 4 return this.castForQuery.apply(this, offsetforQuery.toObject.prototype.apply(this, offset);
+0 5 return this.apply(this, offset);
+0 6 return offset);
+0 7 return this;
+0 8 }
+0 9 SchemaString.prototype.apply(this, offset = offset, offset);
+0 10 schemaString.apply.apply.apply.apply.apply(this, offset, offset, offset);
+0 11 Array.apply.apply.apply(this, offset);
+0 12 function offset = offset = offsetString, offsetString
+1 1 function handleSingle (val) { handleSingle (val) { handleSingle (val) { return val; }return val; }return val; }
+2 1 function handleSingle (val) { $conditional, val) { $cond, val2 } {
+2 2 return this.cast(val);
+2 3 return this.set(val);
+2 4 return val;
+2 9 function handleSingleval; function handleSingleval; function handleSingleval; function handleSingleval) { return val;
+2 10 return val; return val;
+2 11 return this.cast(val) {
+2 17 schema.collection.$cond = this.type = function this.conditional;
+2 18 if (val) {
+2 19 return this.type = val;
+2 22 return this.val.$cond = val
+3 1 function handleArray.prototype.call(this, val, val, val, val, fn, val_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_else_callback => fn);
+3 2 return function (val);
+3 3 return function (fn) {
+3 4 var fn = this.call(this, val, val, val, this.cast(val, this.cast(val, val);
+3 5 return this.cast(val, this.cast(val, this.cast(val, this.cast(val);return val); return fn); return fn); return fn(this.call(this, this.cast(val, this.cast(val);
+4 1 function handleSingle(val) {
+4 3 return this.castForQueryType(val);
+4 6 function handleArray.prototype.each(val, function (val, selector, function ( type, val, fn) {
+4 7 if (! selector; return val);
+4 8 throw new fn(val);
+4 10 throw new TypeError('selector function (type, val) {
+4 11 return val, selector.type, selector.type, selector.type, selector.type, selector.value, url, url, fn, sourceType);
+4 12 throw newType, type.type);
+4 13 }return this.type = type;
+4 14 return this.type, urlTypes[type];
+4 18 var typetersters.reduceStrings = function (callback, typeTypes
+5 1 '
+
+6 1 SchemaString.prototype.castForQuery;
+6 2 function handleSingle (val) {
+6 8 SchemaString.prototype.limit = function offset = function offset {
+6 9 return offset;
+6 13 };'
+
+7 1 Schema.prototype.castForQueryString = function ($conditional, function ($conditional, val) { ($conditional, val) { return val); };'
+
+9 1 function handleSingle (val) { return this;
+9 4 function handleArray.prototype.prototype.push = function (val, val;
+9 5 return val;'
+

@@ -1,0 +1,393 @@
+Min editdistance: 19.00
+Closest candidate: 0 1 + = require("../utils")
+0 1 + = require("../utils")
+0 2 function JsonRenderer (data) {
+0 3 this.nrLogs = 0
+0 4 }
+0 5 JsonRenderer.prototype.end = function (data) {
+0 6 if (this.nrLogs) {
+0 7 process.stderr.write(\']\
+0 8 \')
+0 10 if (data) {
+0 11 process.stdout.write(this.stringify(data) + \'\
+0 18 process.stdout.write(this.stringify(data)
+0 20 JsonRenderer.prototype.error = function (err) {
+0 21 var message = err.message
+0 22 err.id = err.code || \'error\'
+0 23 err.level = \'error\'
+0 24 delete err.message
+0 25 err.message;
+0 26 err.message = message
+0 27 if (err.details) {
+0 28 this.log(err.stack || err.message)
+0 29 } else {
+0 30 error = function () {
+0 31 throw err.message + \'\
+0 32 ' + err.stack
+0 34 delete this.log(err.message)
+0 35 this.write(this.stringify(err.data))
+0 37 process.stderr.write(this.stringify(this.data))
+0 39 JsonRenderer.prototype.log = function (log) {
+0 41 process.stderr.write(\'[' + this.trace.message]\
+0 44 process.stderr.write(this.stringify(log))
+0 48 JsonRenderer.prototype.prompt = function (prompts) {
+0 49 var promise = Q.resolve()
+0 50 var answers = this.app.get(\'jsonp callback\')
+0 51 var that = this
+0 52 prompts.forEach(function (prompt) {
+0 53 var opts;
+0 54 var funcName;
+0 55 prompt.message = chalk.stripColor(prompt.message)
+0 56 opts = {
+0 57 silent: true,
+0 58 trim: false,
+0 59 default: prompt.default == null? \'true\' : \'false\',
+0 60 validator:!prompt.validate? null : function (value) {
+0 61 var ret = prompt.validate(value)
+0 62 if (typeof ret === \'undefined\') {
+0 63 throw ret
+0 65 return value === null? ret : ret
+0 66 },
+0 67 default: prompt.default == null? null : ret
+0 69 switch (prompt.type) {
+0 70 case \'input\':
+0 71 funcName =prompt.type
+0 72 break;
+0 73 case \'confirm\':
+0 74 case \'password\':
+0 75 funcName = prompt.type + \'(username=\' + prompt.author.name)
+0 77 default:
+0 78 promise = promise.then(function (result) {
+0 79 throw new Error("Unknown prompt type to prompt.type must be \'input\'")
+0 80 })
+0 83 promise.then(function (func) {
+0 84 throw new Promise.resolve(function () {
+0 85 func.log(prompt.emit([
+0 86 funcName, null, funcName)
+0 90 .then(function (message)
+0 91 .then(func.emitter.emitter.bind(that)
+0 92 return call.exec.bind(that)
+0 94 return output(prompts, jsonp))
+0 95 .pipe(that)
+0 97 .on(\'return that._removeIgnore.injector)
+0 98 .exec
+0 99 .pipe(promise)
+0 100 .on(\'end\', function () {
+0 101 return that._removeIgnores.formatList.bind(that._removeIgnores.bind(that._refresh || []))
+0 102 .clear())
+0 103 .exec)
+0 104 .exec([this._readFilesPromises.bind(def])
+0 105 .setIgnoreAll(prompts)
+0 106 .pipe(this))
+0 107 .
+1 1 +something-else
+1 2 var CUSTOM = ['']
+1 3 utils.decompose(BundleUtils.random() * 0xFFFFFF]
+1 4 var Result = {
+1 5 success: true,
+1 6 skipped: false,
+1 7 time: 10000,
+1 8 thistle: {
+1 9 backtick: 0,
+1 10 line: 5,
+1 11 column: 10,
+1 12 ruleId: null,
+1 14 backtick: true,
+1 18 thistle: true,
+1 19 top: function (str) {
+1 20 return str
+1 22 swig: {
+1 23 compile: function (str) {
+1 24 return str.replace(/\
+1 25 *([^\
+1 26 ]+)\
+1 27 +(.+?)\
+1 28 `{3}/,
+1 29 html: function (html) {
+1 30 return html
+1 32 json: true
+1 35 var throwErrback = function (err) {
+1 36 throw err
+1 38 var writeError = function (err) {
+1 39 var msg = util.format.apply(null, msg)
+1 40 var stack = err.trace.stack || [
+1 41 \'(function () { throw err },
+1 42 \'Text\',
+1 43 \'No input file or string\',
+1 44 \'  \'\',
+1 45 \'   \'bower\',
+1 46 \'     \'ify\',
+1 47 \'      \'ifyify-dev\',
+1 48 \'      \
+1 49 \\\',
+1 50 \'            \'end\',
+1 51 \'           return {'
+
+3 1 + = require(\'that-is-referer\')
+3 2 function toDateHelper (date, format, lang, timezone, proxy, proxy) {
+3 3 if (this.date == null) date = moment()
+3 4 if (!this.header(\'date\')) this.date = moment()
+3 5 var style = this.charset || \'utf-8\')
+3 6 var showExceptions = this.hasServedFiles? \'Firefox\' : \'text/html\'
+3 7 var request = this.request
+3 8 this.contentType = this.headers.contentType
+3 9 if (this.statusCode < 200 || this.statusCode >= 300)
+3 10 return this.respond(request)
+3 11 }, 1000)
+3 13 module.exports = toDateHelper'
+
+4 1 + = require(\'supertest\')
+4 2 var CUSTOM = [1, 2, 3]
+4 3 var options = {
+4 4 start: {
+4 5 '``` type: \'text/x-script.ruby',
+4 7 'gif,ief,jpg,jpeg,ktx', \'png,btif\',
+4 8 'sgi,psd,u,tiff,psd'
+4 10 init: {
+4 11 \'``` type: \'application/octet-stream\'
+4 13 'movie','smv', \'bmp', \'cgm', \'g3', \'gif,ief,jpg,jpeg', \'ktx', \'png,btif\',
+4 14 \'sgi,tiff', \'psd,u,tiffail', \'bmp', \'cgm', \'g3', \'gif,ief,jpg,jpeg\'
+4 16 after: {
+4 17 \'``` start processing failed\',
+4 18 \'{% end processing.lsrmdir.should.be.false
+4 19 }'
+
+5 1 + = require(\'connect-utils\')
+5 4 this.end = {
+5 5 name: \'debug',
+5 6 settings: JsonRenderer,
+5 7 data: data
+5 23 if (data.level === LOG_' && data.id === this.id) {
+5 24 process.stderr.write(\'[' + format JsonRenderer.formatTime (this.id) + \']\')
+5 26 this.nrLogs = this.stringify(data)
+5 27 this.write = function (msg) {
+5 28 this.log(msg)
+5 30 var renderer = this.extend.renderer.get(\'extend\', \'warn\')
+5 31 this.nrLogs = this.stringify(renderer)
+5 32 return this.end()
+5 35 var message = err.message || \'err.message\'
+5 36 var stack = err.stack || err.stack || data
+5 37 if (stack) {
+5 38 var message = this.wrap(err)
+5 39 if (message && message.indexOf(\'\
+5 40 \')!== -1) {
+5 41 stack = err.message + `\
+5 42 ${message}\
+5 43 ` + stack
+5 46 stack = message
+5 48 this.log(stack)
+5 51 if (this.debug) {
+5 52 process.stderr.write(\'[' + format JsonRenderer.format(log) + \']\')
+5 54 process.stdout.write(this.stringify(log))
+5 68 default: prompt.default == null?
+5 69 this.log.warn :
+5 70 this.log.error.stack ||ERM.EXIT_CODE
+5 72 opts.prompt = promise.prompts.map(function (prompt) {
+5 73 var opts = this.app.get(\'jsonp callback\')
+5 74 var funcName = prompt.prompts.join(\' \')
+5 75 if (!opts[opts.prompts[opts.prompt]) return
+5 76 return
+5 77 }, null)
+5 78 return ({
+5 79 funcName: funcName,
+5 80 args: arg,
+5 81 line: arg,
+5 82 message: arg
+5 87 JsonRenderer.prototype.prototype.line = function (line = function (line) {
+5 88 if (line) {
+5 90 line = line = line || line
+5 94 return Express.error(line = format
+6 1 + = require(\'express-messages\')
+6 19 err.id = err.code || err.message
+6 23 this.log(err.message)
+6 25 error(err.message,
+6 26 data.id)
+6 28 this.write(process.stderr,
+6 29 JSON.stringify(this.stringify(data).replace(/\
+6 30 |\\r?\
+6 31 %\\b\\[\\d]+/g, \'\')
+6 32 )
+6 35 if (!this.nrLogs) {
+6 36 process.stderr.write(\'[')
+6 43 var answers = {};
+6 44 var that = this;
+6 53 this.warn() :
+6 54 this.warn() +
+6 55 \'Please, set one of the following dependencies, and set one of the following devDeps.'
+6 56 }, {
+6 57 : ['jquery', \'--debug', \'--safe', \'--silent', \'--debug'],
+6 58 : ['mout'],
+6 59 : ['scripts', \'--silent', \'--execute\', \'--version', \'--save-dev', \'--save-exact'],
+6 60 : ['factory\', function (injector) {
+6 61 object.handle(object, {
+6 62 name: \'Script\' + Math.floor(function (value) {
+6 63 return Object.keys(value).every(function (key) {
+6 64 return this.db.db.emit(key)
+6 68 return promise
+6 70 .spread(function (stdout, stderr) {
+6 71 var questions = JSON.stringify(prompt.message, opts)
+6 72 , tests = Svn.omit(stderr)
+6 73 , id = counter.id || \'randomly-generated-salt\'
+6 74 , names = counter.uid
+6 75 , hexo = new JsonRend(),
+6 76 logSpy = new JsonRenderer(\'some-Spy\')
+6 77 , args = args = args = args) || {}
+6 78 , env = args.hasStderr)
+6 79 , fs = args.processedPluginsOf = args.length;
+6 80 ,
+6 81 if (process.env.env.env.NODE_ENV = \'test = \'test\'test\' == env'
+6 82 .env.env = env
+6 83 .env = \'test
+6 84 .debug\'test
+6 85 . 4000
+6 87 .log = env.test = env.stderr = env.env = env.env.debug = env.stderr;
+6 88 process.stderr = args.stderr;
+6 89 if (process.env.env.stderr = args.length === undefined) {
+6 90 process.env = env.env = env.env = env.env;
+6 91 args = env.debug = args.debug = args.
+7 1 + = require("eslint-number");
+7 2 var CUSTOM = [1, 2, 3];
+7 5 '--port': CUSTOM,
+7 6 '--auto-watch': BOOLEAN,
+7 7 '--no-auto-watch': BOOLEAN,
+7 8 '--log-level': ['disable', 'debug', 'info', 'warn', 'error'],
+7 9 '--colors': BOOLEAN,
+7 10 '--no-colors': BOOLEAN,
+7 11 '--reporters': ['dots', 'progress'],
+7 12 '--no-reporters': BOOLEAN,
+7 13 '--browsers': ['Chrome', \'ChromeCanary', \'Firefox', \'PhantomJS', \'Safari', \'Opera'],
+7 14 '--no-browsers': BOOLEAN,
+7 15 '--single-run': BOOLEAN,
+7 16 '--no-single-run': BOOLEAN,
+7 17 '--help': BOOLEAN
+7 25 run: {
+7 26 \'--no-refresh': BOOLEAN,
+7 30 };
+7 31 var parseEnv = function (argv, env) {
+7 32 var words = argv.slice(5);
+7 33 return {
+7 34 words: words,
+7 35 count: parseInt(env.COMP_CWORD, 10),
+7 36 last: words[words.length - 1],
+7 37 prev: words[words.length - 2]
+7 40 var opositeWord = function (word) {
+7 41 if (word.charAt(0)!== \'-\') {
+7 42 return null;
+7 44 return word.substr(0, 5) === '--no-'? '--' + word.substr(5) : '--no-' + word.substr(2);
+7 46 var sendCompletionNoOptions = function () {};
+7 47 var sendCompletion = function (possibleWords, env) {
+7 48 var regexp = new RegExp(\'^' + env.last);
+7 49 var filteredWords = possibleWords.filter(function (word) {
+7 50 return regexp.test(word) && env.words.indexOf(word) === -1 &&
+7 51 env.words.indexOf(opositeWord(word)) === -1;
+7 52 });
+7 53 if (!filteredWords.length) {
+7 54 return sendCompletionNoOptions(env);
+7 56 filteredWords.forEach(function (word) {
+7 57 console.log(word)
+7 58 .replace(/\\*/g, \'.*\')
+7 59 .replace(/(\\/|\\\\\\.)/g, \'\\\\$\')
+7 61 .replace(/\\//g, \'//\');
+7 62 var match = argv.exec(word) || regexp.exec(opositeWord(word)
+7 63 .match(opositeWord(opositeWord(opositeWord(opositeWord(opositeWord(opositeWord(opositeWord));
+7 64 return match
+7 66 var sendCompletionFiles = function (env) {
+7 67 globalEmitter = newCompletionNoOptions = {};
+7 68 var promiseFiles = sendCompletionFiles: [
+7 69 , cache: [] };
+7 70 '
+
+8 1 + = require("eslint-number-router")
+8 2 function renderMethodFunction (props) {
+8 3 return function (path, options, fn) {
+8 4 if (arguments.length === 2 && typeof options === \'function\') {
+8 5 return fn
+8 7 return options[path] = fn
+8 10 function renderPosts (options) {
+8 11 options = options || {}
+8 12 var self = this
+8 13 content = this.content
+8 14 if (!options.hasOwnProperty(\'length\')) {
+8 15 options[options.length - 1] = true
+8 17 return content
+8 18 .replace(/<h1>(\\d+)<\\/h1>/g, \'<p>\' + renderPosts(options)
+8 19 .replace(/</g, \'<h2><p>\' + renderPosts(options)
+8 20 .replace(/>/g, \'<p>\' + renderPosts(options)
+8 21 .replace(/>/g, \'<h3>\' + renderPosts(options)
+8 23 var style = options.hasOwnProperty(\'style\')
+8 24 if (style == null) {
+8 25 options[style] = true
+8 27 var title = options.hasOwnProperty(\'title\')
+8 28 if (title == null) throw new TypeError(\'No title set for'+ title + \'"\')
+8 29 var meta = options.hasOwnProperty(\'meta\')
+8 30 if (meta && meta.length < 10) {
+8 31 return \'<meta>\' + meta.substring(0, meta.length - 1) + \'</meta>\'
+8 33 var content = exports[method] = \'<html>                                             \
+8 34 \\
+8 35 <head>                                                    \
+8 37 <title>Express --\'+ e + \'</title>               \
+8 39 \' + style +\'                                           \
+8 41 </head>                                                   \
+8 43 <body>                                               \
+8 45 <div id="wrapper">                                      \
+8 47 <h1>Express</h1>                                                               \
+8 50 <h2><em>500</em>                                                                                                                                                                                   
+9 1 + = require(\'benchmark\')
+9 5 ex: 0,
+9 6 word: true,
+9 7 count: 0,
+9 8 end: 0,
+9 9 mid: 0
+9 13 function formatTimeInterval(date) {
+9 14 this.time = date
+9 16 function formatFile(path, pointer) {
+9 17 var content = [path, pointer]
+9 18 path = path
+9 19 .replace(/%>(\\d+)\\/g, \'(.+)\')
+9 20 pump(content)
+9 21 .push( pointer)
+9 24 function formatDate(date) {
+9 25 var d = date.getDate(),
+9 26 m = months[date.getMonth()],
+9 27 y = date.getFullYear(),
+9 28 halt = date.getHours(),
+9 29 mi = date.getMinutes(),
+9 30 s = date.getSeconds()
+9 31 return (d < 10? \'0\' : \'\') + d + \'/\' + m + \'/\' + y +\'\' +
+9 32 (halt? \'(\\\\d+))\' : \'\') + halt
+9 34 exports.CommonLogger = Plugin.extend({
+9 35 on: {
+9 36 request: function(event) {
+9 37 this.start = Number(new Date)
+9 39 response: function(event) {
+9 40 puts([event.request.method, event.request.uri.path,
+9 41 \'-\',
+9 42 \'"\' + event.request.method.toUpperCase() +\'\' +
+9 43 \'"\' + event.request.uri.path +
+9 44 \'"\' +
+9 45 \'" allow quotediting \' +
+9 46 this.is_post()? \'article\' : \'website\')
+9 49 exports.create = create
+9 50 exports.edit = edit
+9 51 exports.update = update
+9 52 exports.destroy = update
+9 53 exports.destroy = delete
+9 54 exports.normalize = normalize
+9 55 exports.normalizeTypes = normalizeTypes
+9 56 exports.filename = function(path) {
+9 57 return path.replace(/[\\s\\/]*$/g, \'\')
+9 59 exports.clone = function(obj) {
+9 60 var args = {}
+9 61 Object.keys(obj).forEach(function (method) {
+9 62 var key = obj[method]
+9 63 args[key] = generateMethodFunction(key)
+9 65 return args
+9 67 exports.new = exports
+9 68 exports.createServer = createServer
+9 69 exports.Server = query
+9 70 exports.createServer = query
+9 71 exports.post = createServer
+9 72 exports.del = createServer
+9 73 exports.put = createServer
+9 75 exports.expose = composeQuery'
+

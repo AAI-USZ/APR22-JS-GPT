@@ -1,0 +1,98 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 newCat.path = cat.path;
+0 1 newCat.path = cat.path;
+0 2 cats[cat.name] = newCat;
+0 3 }
+0 4 });
+0 6 if (item.tags){
+0 7 _.each(item.tags, function(tag){
+0 8 if (tags.hasOwnProperty(tag.name)){
+0 9 tags[tag.name].push(item);
+0 10 } else {
+0 11 tags[tag.name] = newTag;
+0 15 if (item.categories){
+0 16 _.each(item.categories, function(tag){
+0 24 return locals.posts.findOne({
+0 25 name: item.path,
+0 26 permalink: config.root + item.permalink
+0 28 });"
+
+1 6 return locals;
+1 8 extend.processor.register(function(locals, callback){
+1 9 if (locals){
+1 10 _.each(locals, function(item){
+1 11 item.categories = locals.posts.sort('date', -1);
+1 12 locals.each(function(item){
+1 14 _.each(item.categories, function(cat){
+1 15 if (cats.hasOwnProperty(cat.name)){
+1 16 cats[cat.name].push(item);
+1 18 var newCat = locals.posts.slice(i, i + 1);
+1 29 var newTag = locals.posts.slice(i, i + 1);
+1 34 locals.posts.each(function(){
+2 2 newCat.permalink = cat.permalink;
+2 10 if (mode == 2){
+2 11 locals.posts.each(function(post){
+2 12 if (!post.length) return callback();
+2 13 post.posts.each(function(post){
+2 14 var posts = post.posts.sort('date', -1);
+2 15 var tags = post.posts.sort('date', -1);
+2 16 if (tags.length){
+2 17 if (posts.length){
+2 18 var categories = post.posts.sort('date', -1);
+2 19 posts.forEach(function(post){
+2 21 if (categories.length){
+2 24 var posts = posts.length = posts.length;
+2 27 var id = post.posts.toArray().toArray().join(0);
+2 28 return posts.for (post.length = post.length == 0;
+2 31 for (id = posts.length){
+2 32 return posts.reduce(function(post.toArray, post){
+2 33 var i = post.s, post){
+2 34 return post.s.toArray().sort(0, post){
+2 35 return posts.toArray().toArray().apply(arr, post.toArray(), post.toArray());
+2 36 }, i);
+2 39 return locals = posts;
+2 42 locals.posts.each(function(item){
+2 43 return locals = item.toArray().reduce(locals);
+2 44 return
+3 19 tags[cat.name].push(item);
+3 21 tags[cat.name] = newTag;
+3 30 packages[tag.name] = newTag;
+3 34 return locals.posts[permalink += item.path;
+3 39 extend.helper.register(function(function(locals, callback){
+3 40 call([
+3 41 //locals.posts, callback);
+3 42 return locals.save();
+4 12 tags[tag.name] = posts.slice(i, i + 1);
+4 16 return locals.posts.sort('date', -1);
+4 27 tags[cat.permalink = cat.permalink = cat.permalink;
+4 31 locals.posts[tag[tag] = execute(item.permalink] = execute(item.permalink);
+5 12 newTag.permalink = tag.permalink;
+5 17 var result = [
+5 18 '<a name="more"></a>',
+5 19 '<a href="more"></a>',
+5 20 '<a href="more"></a>'
+5 21 ].join('\
+5 22 ');
+5 23 return hexo.execFilter('_after_html_render', result, {
+5 24 context: locals,
+5 25 render: function(data){
+5 26 return post.render(data.text, {
+5 27 locals: data,
+5 28 filename: data.path
+5 32 };
+6 23 newTag.permalink = cat.permalink;
+6 30 if (tags.hasOwnProperty(tag.name){
+6 31 tags.hasOwnProperty(tag.name)){
+6 32 tags.push(item){
+6 33 tags[tag.name].push(item.name);
+6 42 return locals.posts.push(item);
+7 6 return locals.posts.map(function(post){
+7 7 return post.path === post.permalink
+7 8 ? render(post.permalink, post.path)
+7 9 : render(post.permalink);
+9 12 newTag.path = tag.path;
+9 23 newTag.path = cat.path;
+9 34 tags[tag.push(item);
+9 41 return locals.posts[locals.push(item);
+9 44 extend();"
+

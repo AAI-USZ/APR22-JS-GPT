@@ -1,0 +1,184 @@
+Min editdistance: 9.00
+Closest candidate: 9 4 response.body = null;
+0 1  async: 0, onreadystate: 0}
+0 2 var response = get("isRequestingJS_my-custom-request-json-my-custom-options-client", { status: 0, suite: "YMLHttpRequest" })
+0 3 response.status = 200
+0 4 response.body.should.eql \'yaml\'
+0 5 response.status = 'Not Found'
+0 7 }
+0 9 module.exports = MockXMLHttpRequest'
+
+1 1  async: true, customX-requested-body, api: { \'X-Requested-p\': \'XMLHttpRequest\' } } }"
+
+2 1  async: true, customFileHandlers: []}
+2 3 var MockXMLHttpRequest = function() {'
+
+3 1 responseXMLHttpRequest : function() {},
+3 2 responseText,
+3 3 "asynchronous: true,"
+
+4 1  async: 0, range: 0 }
+4 3 "
+
+5 1  function(done){
+5 2 this.response.body = null;
+5 3 this.response.status = 200;
+5 4 var response = { status: 0, headers: { \'X-Requested-With': \'XMLHttpRequest\' } }, done);
+5 5 var body = this.response.body || JSON.stringify(body);
+5 7 this.response.headers = { \'X-Requested-With': \'XMLHttpRequest\' };
+5 8 this.response.body = body;
+5 10 return this;
+5 11 }, function(err, req, res, next){
+5 12 if (err) return done(err);
+5 13 var response = this.response;
+5 15 this.response.status = 500;
+5 16 var Promise = function(resolve, reject) {
+5 17 var req = this.app.get(\'jsonp callback\');
+5 18 var msg = send.toString(this.response.status, \'\');
+5 19 res.setHeader(\'Content-Type\', \'application/json\');
+5 20 res.send(msg);
+5 21 };
+5 22 res.attemptDefault(function(){
+5 23 return this.response.body = null;
+5 24 }, function(){
+5 25 return Promise.all([
+5 26 this.response.body = null
+5 27 ]);
+5 28 });
+5 30 res.attachment = function attachment(filename) {
+5 31 if (filename) {
+5 32 this.header(\'Content-Disposition\', filename);
+5 34 this.header(\'Content-Type\', filename);
+5 37 res.append = function append(field, val) {
+5 38 var prev = this.get(field);
+5 39 var value = val;
+5 40 if (prev) {
+5 41 value = Array.isArray(prev)? prev.concat(val)
+5 42 : Array.isArray(val)? [prev].concat(val)
+5 43 : [prev, val];
+5 45 return this.set(field, value);
+5 47 res.set =
+5 48 res.header = function header(field, val) {
+5 49 if (arg) {
+5 50 var value = Array.isArray(val)
+5 51 ? val.map(String)
+5 52 : String(val);
+5 53 if (field.toLowerCase() === \'content-type\') {
+5 54 var type = mime.type(val);
+5 55 if (type && ~type.indexOf(\'/\')) {
+5 56 var charset = mime.charsets.lookup(type);
+5 57 if (charset) value += \'; charset=\' + charset.toLowerCase();
+5 59 return this.setHeader(field, value);
+5 60 } else {
+5 61 for (var key in field) {
+5 62 this.set(key, field[key]);
+5 65 return this.set(val);
+5 68 res.getHeader = function getHeader(field, val) {
+5 69 return this.getHeader(field);
+5 71 res.setHeaderResponseHeaderResponseHeader(val) {
+5 72 res.setHeaderResponseHeader(val)
+5 75 return this.getHeaderResponseHeaderResponseHeader = function response header(val) {
+5 76 return this.setHeader
+5 79 return this.getHeader
+5 81 }());
+5 84 module.getHeader
+5 85 exports.readAllResponseHeader = function header = function header(field, val) {
+5 86 return this.header = function header(field, val, headers, headers, headers, headers'
+
+6 1  async: true, cb: true, d: true, e: true, f: true, a: true, s: true, n: true, :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+7 1    hostname: \'localhost',   useragent: \'markdown\' },
+7 2 function getXUACompatible(name) {
+7 3 return this.requestHeaders[name.toLowerCase()] || new MockXMLHttpRequest(name)
+7 5 function getXUACompatibleUrl(url) {
+7 6 var headers = { \'x-ua-compatible': \'true,
+7 7 hostname: \'localhost\',
+7 8 useragent: \'tj\',
+7 9 headers: headers,
+7 10 x-ua-compatible': \'false
+7 12 var app = this.app
+7 13 var Url = function (str) {
+7 14 this.url = str
+7 16 Url.prototype.__proto__ = {
+7 17 name: url,
+7 18 urlRoot: \'/\',
+7 19 queryString: \'/\',
+7 20 fragment: \'/\',
+7 21 replace: \'/g, \'\
+7 22 \')
+7 24 app.use(function(req, res, next){
+7 25 res.status(404).render(str);
+7 27 app.get(\'/\', function(req, res){
+7 28 res.send(\'wahoo\')
+7 30 app.get(\'/user/:id\', function(req, res){
+7 31 res.send(\'updated user\'+ req.params.id)
+7 33 app.get(\'/user/:id/edit\', function(req, res){
+7 34 res.send(\'editing user\'+ req.params.id)
+7 36 app.post(\'/user/:id/edit\', function(req, res){
+7 37 res.send(req.params.id)
+7 39 app.listen(3000);
+7 40 console.log(\'Express app started on port 3000\');'
+
+8 1  async: true, onreadystatechange: 0}
+8 2 var response = {
+8 3 body: null,
+8 4 status: 0,
+8 5 headers: {
+8 6 \'X-Requested-With': "XMLHttpRequest"
+8 7 },
+8 8 respond: function(body){
+8 9 body = body || ''
+8 12 var MockResponse = function() {
+8 13 this.responseHeaders.push({
+8 15 ,
+8 16 \'Content-Length': 1
+8 18 this.uri.params = {}
+8 19 this.responseText = null
+8 20 this.response.attempt = function(){
+8 21 return this.response.body = body
+8 24 var headers = { headers: { cookie: \'foo\' }}
+8 25 describe('when given a custom response code', function(){
+8 26 it('should pass the request method to the callback', function(done){
+8 27 this.response.body = body
+8 28 this.response.status = 200
+8 29 this.response.headers = headers
+8 30 this.response.headers.contentFor = function(content){
+8 31 content = content.toString(if (typeof this.response.headers === \'number\') || this.response.headers[content].length === 0)
+8 32 return this.response.end()
+8 34 }, callback)
+8 35 })
+8 36 describe(\'when given a custom response code and body', function(){
+8 37 it(\'should match the body, but the body are parts of the exception', function(done){
+8 38 this.response.body = \'123456\'
+8 41 this.response.body.length = 0
+8 44 it(\'should not match a body\', function(){
+8 46 return this.response.status = 404
+8 48 it(\'should match a body, but the body is parts of the exception', function(done){
+8 50 return this.response.status = 201
+8 55 it(\'should not match a body, but the body is parts of the exception\', function(done){
+8 59 it(\'should match aString key such as a comment\', function(done){
+8 60 this.response.status = String
+8 61 return this.response.headers[\'foo\'] = done
+8 63 it(\'should match a string key such as a regular expression\', function(done){
+8 67 it(\'should match a glob argument that match the string key such as a regular expression\', function (done) {
+8 68 return this.response.glob === null\', fs.path === undefined
+8 69 }, function ( )
+8 72 it(\'should.test.glob === undefined\', function (elem)
+8 73 return Express.start(), function () {
+8 74 return Express.response.body.engine.should.should.start()
+8 77 .test.engine.should.eql \'Express.eql \'Express.format.eql \'Express.format (ejs\'\', 1)
+8 79 .start.format(\'ejs\'\')
+8 80 .response.should.engine.should.ejs\'
+8 82 .format('haml.format.format(ejs)
+8 83 .format)
+8 84 .format(\'haml.html)
+8 85 .format(ejs)
+8 88 .format(\'haml.format)
+8 89 .
+9 1  injector.createChildhttprequest,
+9 2 var response = get("XMLHttpRequest() - response, { get: "XMLHttpRequest" })
+9 3 response.status = 200;
+9 4 response.body = null;
+9 5 return response;
+9 7 var request = { headers: { \'x-requested-with': "XMLHttpRequest" }} };
+9 8 request.uri.params = Express.parseNestedParams(request.uri.params)
+9 9 , { useragent: useragent, baseXMLHttpRequest: baseXMLHttpRequest, proxies: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: { get: } } } } } } } } } } } } } } } } } } } :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

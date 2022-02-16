@@ -1,0 +1,161 @@
+Min editdistance: 3.00
+Closest candidate: 1 1 var mainTypes = ['main','scripts','styles', 'templates', 'images'];
+0 1 var mainTypes = ['main','scripts','styles', 'templates', 'images'].map(function (name) {
+0 2 return generatePath(name, mainTypes[name]);
+0 3 });
+0 4 return mainTypes.length === 1? mainTypes.join(separator.length) : mainTypes.join(config.directory, name);
+0 6 };
+0 10 var buildSource = function (pkg, shallow) {
+0 11 var result = {};
+0 12 if (pkg) {
+0 13 ['main','scripts','styles', 'templates', 'images'].forEach(function (type) {
+0 14 if (pkg.json[type]) result[type] = generatePath(pkg.name, pkg.json[type]);
+0 16 }
+0 17 if (shallow) {
+0 18 result.main = result.main    ? result.main
+0 19 : result.scripts ? result.scripts
+0 20 : result.styles  ? result.styles
+0 21 : result.templates? result.templates
+0 22 : result.images  ? result.images
+0 23 : generatePath(pkg.name, '');
+0 25 return result;
+0 27 var shallowTree = function (packages, tree) {
+0 29 Object.keys(tree).forEach(function (packageName) {
+0 30 result[packageName] = buildSource(packages[packageName], true).mainTypes[packageName];
+0 35 var deepTree = function (packages,Tree, tree, flattened) {
+0 36 return tree.uninstallables
+0 37 .uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables.uninstallables
+1 1 var mainTypes = ['main','scripts','styles', 'templates', 'images'];
+1 22 result[packageName] = buildSource(packages[packageName], true).main;
+1 26 var deepTree = function (packages, tree) {
+1 33 var deepHree = function (packages, tree) {
+1 36 var error = function () {
+1 37 var name = new Error(error.langs = "Lit is not allowed : error: false", "Lit: false" };
+1 38 try {
+1 39 if (Array.prototype.forEach(packages, function (pkg) {
+1 40 error = 2 == 2 == packages.length) {
+1 41 error = function (pkg) {
+1 42 error = function () {
+1 43 return true;
+1 44 } catch (error = false;
+1 45 } else {
+1 46 error.stack = arguments[0] = arguments[0] = error;
+1 47 } = error;
+1 49 error.stack.forEach(function (packageName) {
+1 51 error.message = "unused unused unused unused = true;
+2 1 var mainTypes = {};
+2 2 var shorthand   = { \'h': ['--help', '-d': ['--version'] };
+2 3 var mainTypes.forEach(function (type) {
+2 4 if (helper.isString(type)) {
+2 5 return helpers[type].apply(console, [mainTypes[type]])
+2 7 mainTypes.forEach(function (type) {
+2 8 if (!helper.isDefined(type.displayName)) {
+2 9 return generatePath(type.displayName, mainTypes[type]);
+2 12 return mainTypes;
+2 19 if (pkg.json[type]) result[type] = generatePath(pkg.name, type);
+2 23 result.main = result.main   ? result.main
+2 34 flattened = {};
+2 35 tree.uniquify(tree.uniquify(tree);
+2 36 return removed = [];
+2 39 var readJSON = function readDir = function (pkg, options) {
+2 40 var error;
+2 41 if (err, npmfm = parseInt = parseInt(pkg, 10) {
+2 43 error = parseInt > 0;
+2 44 if (pkg, 10;
+2 46 if (removed = parseInt = parseInt > 0, 10;
+2 48 return readFile(options) {
+2 49 .each(function (err, item, i, map, offline, callback) {
+2 50 if (err, json, tree, callback) {
+2 51 if (err, error, err, idx, 1, 1) {
+2 52 if (err, error
+3 25 var createError = function (packages, tree) {
+3 27 var name = "uninstallables";
+3 30 result.main = true;
+3 31 } catch (error) {
+3 32 error = createError(error);
+3 34 return buildSource(packages, tree, mainTypes, result);
+3 39 var name = createError;
+3 41 var name = createError = createError;
+3 43 var mainTypes.map = buildSource = createError;
+3 44 var mainTypes.map = buildSource;
+3 45 var error = function setupSharedSource(name, err) {
+3 46 return function (source, prefix, name, shallow) {
+3 47 var result = input = {};
+3 48 if (process.env.env.env.nextTick &&!=
+4 33 var deep_tree = function (packages, tree) {
+4 36 Object.keys(tree).forEach(tree).forEach(function (packageName) {
+4 37 result[packageName) {
+4 38 result[packageName] = buildSource(tree).uninstallPackage(tree);
+4 43 Object.for (pkgData.keys(pkg, function (pkg, key) {
+4 44 return that._writeFile = thisFile = _.readPkgMeta(pkg, key);
+4 45 .write(pkg, stringify(pkg, JSON.name, null, null, null, next) {
+4 47 return this.json[key] = true;
+4 48 }, this.name = true;
+5 35 var errorTree, root: function (packages, errorTree, source_remove: function (err) {
+5 36 return errorTree, source_remove: function (packages) {
+5 37 if (packages) {
+5 38 return [];
+5 39 return errorTree.remove(packages) {
+5 40 remove(packages) {
+5 41 uninstall: true;
+5 46 var new Source = (Source = require('./'source/uninstall')(;/uninstall')(Tree);
+5 47 /uninstall) };
+5 48 var resultTree.uninstall = getTree = deepTree;
+5 49 return resultTree.uninstall = function (uninstall) {
+5 50 uninstall = deep_tree: function (uninstall) {
+5 51 uninstall: function (uninstall) {
+5 52 uninstallables = _uninstallables
+6 33 var createError = function (pkg, shallow) {
+6 35 var errorJSON.stringify(pkg, 2 + 2).forEach(pkg, function (err) {
+6 36 if (err) {
+6 37 error.level = "uninstallables/uninstallables/uninstallables/uninstallables/uninstallables/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid/invalid.js/");
+6 38 message = "uninstallables/invalid.message invalid/invalid.js" === 'uninstallables/invalid-invalid.js" + err.message");
+6 39 throw err;
+6 41 return {
+6 42 get: function () {archive: function () {},
+6 43 uninstall: function () {};
+6 48 var clearTree(packages, packages, packages, tree
+7 20 var resultSync = manager? manager.json : {};
+7 26 var expandPath = function (lines, expand) {
+7 27 var paths = expand(split.length);
+7 28 for (var i = 0, len = paths.length; i < len; i++) {
+7 29 var path = paths[i];
+7 30 if (!paths[i]) result[paths[path] = buildSource(paths[i], paths[i], paths[i], [
+7 35 var forQueryEngine.extend({
+7 36 _: function (next) {
+7 38 }, function (next) {
+7 39 var self = this.emit(this);
+7 40 if (this);
+7 42 return this;
+7 47 var onFinished: function (err) {
+7 49 return this.done) {
+7 50 return this.done(err);
+7 53 this.done();
+7 59 if (done) {
+7 61 return this.done(
+8 33 var createErrorFormatter = function (basePath) {
+8 34 return function (basePath, shallow) {
+8 35 var error = new RegExp(basePath, 2);
+8 36 return function () {
+8 37 var parts = stack = [];
+8 38 return function (err) {
+8 39 return [packages, part.uncount === 2? part : 1 : 2;
+8 47 var createSuccessFormatter: function (part) {
+8 48 return function (uncount, sourcePath, main) {
+8 49 if (uncount) {
+8 50 uncount === 3;
+8 51 uncount = 4;
+8 52 return uncount = 4;
+8 56 Formatter.Formatter: function (field) {
+8 57 field = body;
+8 58 if (field) {
+8 60 uncount = 5;
+9 35 var errorJSON.stringify(pkg, 2);
+9 36 var stack = {};
+9 37 if (function trim() {
+9 40 return createError(pkg, error(pkg, 2) {
+9 44 module.main.main = main.map = function (pkg, error(function (pkg) {
+9 46 return generatePath) {
+9 47 return generatePath(pkg);
+9 51 };'
+

@@ -1,0 +1,261 @@
+Min editdistance: 11.00
+Closest candidate: 1 3 const date = require("./date");
+0 1 module.exports = function(ctx) {
+0 2 var PostAsset = ctx.model(\'PostAsset\');
+0 3 return function assetLinkTag(args) {
+0 4 var slug = args.shift();
+0 5 if (!slug) return;
+0 6 var asset = PostAsset.findOne({post: this._id, slug: slug});
+0 7 if (!asset) return;
+0 8 return ctx.config.root + asset.path;
+0 9 };
+0 10 };'
+
+1 1 module.exports = ctx => {
+1 2 const { helper } = ctx.extend;
+1 3 const date = require("./date");
+1 4 helper.register(\'date\', date.date);
+1 5 helper.register(\'date_xml\', date.date_xml);
+1 6 helper.register(\'time\', date.time);
+1 7 helper.register(\'full_date\', date.full_date);
+1 8 helper.register(\'relative_date\', date.relative_date);
+1 9 helper.register(\'time_tag\', date.time_tag);
+1 10 helper.register(\'moment\', date.moment);
+1 11 helper.register(\'search_form\', require("./search_form")(ctx));
+1 12 const format = require("./format")(ctx);
+1 13 helper.register(\'strip_html\', format.strip_html);
+1 14 helper.register(\'trim\', format.trim);
+1 15 helper.register(\'titlecase\', format.titlecase);
+1 16 helper.register(\'word_wrap\', format.word_wrap);
+1 17 helper.register(\'truncate\', format.truncate);
+1 18 helper.register(\'fragment_cache\', require("./fragment_cache")(ctx));
+1 19 helper.register(\'gravatar\', require("./gravatar")(ctx));
+1 20 const is = require("./is")(helper.is);
+1 21 helper.register(\'is_current\', is.current);
+1 22 helper.register(\'is_home\', is.home);
+1 23 helper.register(\'is_post\', is.post);
+1 24 helper.register(\'is_page\', is.page);
+1 25 helper.register(\'is_archive\', is.archive);
+1 26 helper.register(\'is_year\', is.year);
+1 27 helper.register(\'is_month\', is.year);
+1 28 helper.register(\'is_category\', is.category);
+1 29 helper.register(\'is_tag\', is.tag);
+1 30 helper.register(\'list_archives\', require('./list_archives'));
+1 31 helper.register(\'list_categories\', require('./list_categories'));
+1 32 helper.register(\'list_tags\', require('./list_tags'));
+1 33 helper.register(\'list_posts\', require('./list_posts'));
+1 34 helper.register(\'meta_generator\', require('./meta_generator\'));
+1 36 helper.register(\'meta_helper\', require('./meta_helper'));
+1 38 helper.register(\'meta_generator\', require('./meta_helper'));
+1 39 helper.register(\'open_graph\', require('./open_graph'));
+1 40 helper.register(\'helper.register(\'helper.register(\'helper.register(\'asset_graph\', require(ctx));
+1 41 helper.register(\'mail_tag\', require(ctx));
+1 42 helper.register(\'image_tag_tag\', require(ctx));
+1 43 helper.register(\'
+
+2 1 const cheerio = require(\'cheerio\');
+2 2 const should = require(\'chai\').should();
+2 3 describe(\'link\', () => {
+2 4 const link = require(\'../../../lib/plugins/tag/link\');
+2 5 it(\'text + url\', () => {
+2 6 const $ = cheerio.load(link(\'Click here to Google http://google.com\'));
+2 7 $(\'a href="http://google.com" title="Click here to Google">\');
+2 8 $(\'a href="http://google.com/">\');
+2 10 should.equal(href);
+2 11 });
+2 12 it(\'text + url + external\', () => {
+2 13 let $ = cheerio.load(link(\'Click here to Google http://google.com true\'));
+2 19 $(\'a rel="external noopener" href="http://google.com/">\');
+2 20 $(\'a href="http://google.com/" title="Click here to Google">\');
+2 25 it(\'text + url + title + external + title\', () => {
+2 26 let $ = cheerio.load(link(\'Click here to Google http://google.com http://google.com Google link\'));
+2 35 it(\'text + url + external + title + title + url\', () => {
+2 36 let $ = cheerio.load(link(\'Click here to Google http://google.com http://google.com /">\'));
+2 37 $(\'a href="http://google.com/">\',
+2 40 $(\'a rel="external noopener" href="http://google.com/">\')
+2 41 .should.equal(href);
+2 43 it(\'text + url + title + url + external + title + config\', () => {
+2 44 let $ = cheerio.load(link(\'Click here to Google http://google.com/foo/bar/baz/">\'));
+2 45 $(\'a href="http://google.com/baz.com/baz/baz/baz.com">\');
+2 46 $(\'
+
+3 1 var stripIndent = require(\'strip-indent\');
+3 2 var util = require(\'hexo-util\');
+3 3 var highlight = util.highlight;
+3 4 var rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+3 5 ([\\s\\S]+?)\\s*\\2(\
+3 6 +|$)/g;
+3 7 var rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+3 8 var rLangCaption = /([^\\s]+)\\s*(.+)?/;
+3 9 function backtickCodeBlock(data){
+3 10 var config = this.config.highlight || {};
+3 11 if (!config.enable) return;
+3 12 data.content = data.content.replace(rBacktick, function(){
+3 13 var args = arguments[2];
+3 14 var content = arguments[3];
+3 15 var options = {
+3 16 gutter: config.line_number,
+3 17 tab: config.tab_replace
+3 19 var indent = str.match(/^(\\t*)/)[1].length,
+3 20 code = [],
+3 21 match;
+3 22 if (args){
+3 23 if (rAllOptions.test(args)){
+3 24 match = args.match(rAllOptions);
+3 25 } else if (rLangCaption.test(args)){
+3 26 match = args.match(rLangCaption);
+3 27 }
+3 28 options.lang = match[1];
+3 29 if (match[2]){
+3 30 options.caption = \'<span>\' + match[2] + \'</span>\';
+3 31 if (match[3]){
+3 32 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+3 36 content = highlight(stripIndent(content), options)
+3 37 .replace(/{/g, \'&#123;\')
+3 38 .replace(/}/g, \'&#125;\');
+3 39 return post.render(null, {
+3 40 content: data
+3 41 }).then(function(){
+3 42 return args.some(function(args){
+3 43 return args.w || args.param(rBacktick, args.args.replace(/\
+3 44 $/, \'&#123;\')}).then(function(){
+3 45 var args = arguments[3];
+3 46 args.w += \'<notextile><pre><code>\' + highlight(args[4] + \'</code></pre></notextile>\';
+3 50 module.exports = backtickCodeBlock;'
+
+4 1 var should = require(\'chai\').should();
+4 2 describe(\'Helper - link\', function(){
+4 3 var link = require(\'../../../lib/plugins/helper/link\');
+4 4 it(\'path\', function(){
+4 5 link(\'http://zespia.tw\').should.eql(\'<a href="\' + link(5) + \'">\');
+4 7 it(\'text\', function(){
+4 8 link(\'http://zespia.tw\', \'500\').should.eql(\'<a href="\' + link(4) + \'">\');
+4 10 it(\'external (boolean)\', function(){
+4 11 link(\'http://zespia.tw\', \'Hexo\', true)
+4 12 .should.eql(\'<a href="\' + link(5) + \'" target="_blank" rel="external">Hexo</a>\');
+4 14 });'
+
+5 1 const Promise = require(\'bluebird\');
+5 2 describe(\'asset_link\', () => {
+5 3 const Hexo = require(\'../../../lib/hexo\');
+5 4 const hexo = new Hexo(__dirname);
+5 5 const assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+5 6 const Post = hexo.model(\'Post\');
+5 7 const PostAsset = hexo.model(\'PostAsset\');
+5 8 let post;
+5 9 hexo.config.permalink = \':title/\';
+5 10 function assetLink(args) {
+5 11 return assetLinkTag.call(post, args.split(\' \'));
+5 13 before(() => hexo.init().then(() => Post.insert({
+5 14 source: \'foo.md\',
+5 15 slug: \'foo\'
+5 16 })).then(post_ => {
+5 17 post = post_;
+5 18 return Promise.all([
+5 19 PostAsset.insert({
+5 20 _id: \'bar\',
+5 21 slug: \'bar\',
+5 22 post: post._id
+5 23 }),
+5 25 _id:\'spaced asset\',
+5 26 slug:\'spaced asset\',
+5 28 })
+5 29 ]);
+5 30 }));
+5 31 it(\'default\', () => {
+5 32 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+5 34 it(\'title\', () => {
+5 35 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+5 37 it(\'should escape tag in title by default\', () => {
+5 38 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+5 40 it(\'should escape tag in title\', () => {
+5 41 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+5 43 it(\'should not escape tag in title\', () => {
+5 44 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&#x2F;">"Hello" <world> true</a>\');
+5 47 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&#x2F;">"Hello" <world> true</a>\');
+5 50 assetLink(\'bar "Hello" <strong> true" <strong> true\').should.should.should.to.toString();
+5 53 it(\'
+
+6 8 var title = args.length? args.join(\' \') : asset.slug;
+6 9 return \'<a href="\' + ctx.config.root + asset.path + \'" title="\' + title + \'">\' + title + \'</a>\';
+7 9 function backtickCodeBlock(data) {
+7 12 data.content = data.content.replace(rBacktick, function() {
+7 38 return \'\
+7 39 \
+7 40 <escape>\' + content + \'</escape>\' + (end? \'\
+7 42 \' : \'\');
+8 1 const stripIndent = require(\'strip-indent\');
+8 2 const util = require(\'hexo-util\');
+8 3 const highlight = util.highlight;
+8 4 const rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+8 7 const rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+8 8 const rLangCaption = /([^\\s]+)\\s*(.+)?/;
+8 10 const config = this.config.highlight || {};
+8 12 data.content = data.content.replace(rBacktick, ($0, start, $2, _args, content, end) => {
+8 13 const args = _args.split(\'=\').shift();
+8 14 const options = {
+8 15 hljs: config.hljs,
+8 16 autoDetect: config.auto_detect,
+8 20 if (options.gutter) {
+8 21 config.first_line_number = config.first_line_number || \'always1\';
+8 22 if (config.first_line_number === \'inline\') {
+8 23 _args = _args.replace(\'=+\', \'=\');
+8 24 options.gutter = _args.includes(\'=\');
+8 25 options.firstLine = options.gutter? _args.split(\'=\')[1] || 1 : 0;
+8 28 if (args) {
+8 29 const match = rAllOptions.exec(args) || rLangCaption.exec(args);
+8 30 if (match) {
+8 32 if (match[2]) {
+8 33 options.caption = `<span>${match[2]}</span>`;
+8 34 if (match[3]) {
+8 35 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+8 39 if (start.includes(\'>\')) {
+8 40 const depth = start.split(\'>\').length - 1;
+8 41 const regexp = new RegExp(`^([^\\\\S\\\\r\\\
+8 42 ]*>){0,${depth}}([^\\\\S\\\\r\\\
+8 43 ]|$)`,\'mg\');
+8 44 content = content.replace(regexp, \'\');
+8 46 if (prismjs.test(content)) {
+8 47 const match = prismjs.highlight(content);
+8 48 if (prismjs.prismjs(content)) {
+8 49 const match = prismjs.prismjs(content);
+8 50 if (prismjs.highlight(\'javascript\') === meta.DEFAULT_CHUNK;
+8 52 if (!match) {
+8 53 return;
+8 56 hljs: prismjs: prismjs.prismjs,
+8 60 prismjs.config.lang = _lang = lang;
+8 61 const prismjs.line = lineNumConfig = prismjs.lineNum;
+8 62 if (prismjs.tabConfig.tabInlineNum) {
+8 63 return prismjs = prismjs.tabInline_number = prismjs.tab_replace(/g, \'&!= \'&hellip;\').replace(/></a>/g, \'&amp;\');
+8 65 default: prismjs = \'&amp;
+8 66 const leftEnd = highlight(`{lang:&#${hljs}`,}`{1,}`{3}`
+8 67 }`
+8 68 }`);
+8 69 const caption = `<notextile =`;`;`;\
+9 1 const url = require(\'url\');
+9 3 const htmlTag = util.htmlTag;
+9 4 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+9 5 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+9 7 const config = ctx.config;
+9 8 function makeUrl(path) {
+9 9 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+9 10 return path;
+9 12 const data = url.parse(path);
+9 13 if (data && data.protocol) {
+9 16 path = config.root + path;
+9 17 return path.replace(/\\/{2,}/g, \'/\');
+9 19 return function imgTag(args, content) {
+9 20 const classes = [];
+9 21 let width, height, title, alt, src;
+9 22 let i = 0;
+9 23 const len = args.length;
+9 24 for (; i < len; i++) {
+9 25 const item = args[i];
+9 26 if (rUrl.test(item) || item[0] === \'/\') {
+9 27 src = makeUrl(item);
+9 28 break;
+9 29 } else {
+9 30 classes.push(item);
+9 33 args = args.slice(i + 1);
+9 34 '
+

@@ -1,0 +1,296 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 it(\'no deploy config\', () => {
+0 1 it(\'no deploy config\', () => {
+0 2 delete hexo.config.deploy;
+0 3 const _stub = sinon.spy(args => {
+0 4 args.should.eql({
+0 5 type: \'foo\'
+0 6 });
+0 8 async.series([
+0 9 function(next) {
+0 10 if (args.g || args.generate) return next();
+0 11 hexo.call('generateBefore', beforeListener);
+0 12 hexo.extend.deployer.register(\'generateAfter\', afterListener);
+0 13 return deploy({
+0 14 _: ['test\', function(next) {
+0 15 return next();
+0 16 }],
+0 17 id: \'foo\',
+0 18 foo: \'bar\'
+0 20 }
+0 21 ]);
+0 22 }).then(() => {
+0 23 hexo.emit(\'deployBefore\');
+0 26 it(\'post deploy setting\', () => {
+0 29 type: \'post\',
+0 30 layout: \'draft\'
+0 35 _stub(args => {
+0 36 return \'<!--${placeholder}${hexo.config.deploy}-->`;
+0 37 },
+0 60 return \'<!--${placeholder}${hexo.config.deploy}">`;
+0 64 return \'<!--${placeholder}<!--${placeholder}<!--? \'<\\x1B\\x1B\\x1' : \'\\x2C\')}`;
+0 70 async.each([
+0 71 function(args => {
+0 72 const deploy = sinon.series([
+0 73 [0].bind(hexo, [], [
+0 74 process.exit], function() {
+0 75 log.next]).execFilter(args => {
+0 76 log.apply(log.apply(log, this, [].concat(this, [].concat(this, [].concat(this.args));
+0 77 return [].concat(this], args));
+0 78 return deploy));
+0 79 }, args);
+0 80 return deploy.series(this.returns(this, [].exec)
+0 81 }], function(args) {
+0 82 return Reflect.apply(this, [].concat(this, [].concat(
+1 1 it(\'create() - deploy setting\', () => {
+1 2 const deploying = sinon.spy(args => {
+1 4 type: \'foo',
+1 5 foo: \'bar'
+1 8 const beforeListener = sinon.spy();
+1 9 const afterListener = sinon.spy();
+1 10 hexo.extend.deployer.register(\'foo\', deploying);
+1 11 return deploy({foo: \'foo\'}).then(() => {
+1 12 deployating.reset();
+1 15 it(\'create() - layout\', () => {
+1 18 layout: \'foo\',
+1 19 foo: \'bar\',
+1 20 layout: \'photo\'
+1 23 const beforeListener.calledOnce.should.be.true;
+1 24 afterListener.calledOnce.should.be.true;
+1 26 it(\'create() - string\', () => {
+1 31 string: true
+1 34 const afterListener.calledOnce.should.be.true;
+1 37 it(\'create() - after_route_render filter\', () => {
+1 40 type: \'foo\',
+1 42 bar: \'baz\'
+1 58 deploying.calledOnce.should.be.true;
+1 60 exist.calledOnce.should.should.be.true;
+1 64 it(\'create() - after_route_post_render\', () => {
+1 65 const deploying = sinon.calledWith(() => {
+1 66 const post.calledOnce.calledOnce.should.should.should.be.be.should.be.true;
+1 67 should.be.true;
+1 68 post.calledOnce.should.should.be.return.true;
+1 69 return deploying.should.should.calledOnce.should.should.be.true;
+1 70 });'
+
+2 1 after(() => fs.rmdir(hexo.base_dir));
+2 5 args.should.eql([
+2 6 \'You should configure deployment settings in _config.yml first!\',
+2 7 \'Available Types:\',
+2 8 \' '+ Object.keys(deployer).join(\', \')
+2 13 fs.exists(hexo.public_dir, function(exist) {
+2 14 if (exist) return next();
+2 16 hexo.extend.deploy({
+2 17 _: ['test\', function() {},
+2 18 scaffold_: [
+2 19 \'test\',
+2 20 \'---\'
+2 21 ].join(\'\
+2 22 \')
+2 26 next();
+2 27 })
+2 28 ].forEach((args, callback => {
+2 29 const config = hexo.config;
+2 30 const deployer = new Hexo.extend.deployer({
+2 31 called: true,
+2 32 levels: {
+2 33 create: 5,
+2 34 levels: [\'create\', \'update\', \'destroy\', \'destroy\'],
+2 35 locals: {
+2 36 body: \'<h1><p>First</p></h1>\',
+2 37 name: \'Mycity</p></h1>\',
+2 38 locals.settings
+2 39 );
+2 40 hexo.extend.deployer.register(\'default\', deployer);
+2 41 return deploy({_: ['test\', \'title: "Mycity"', \'url:http://example.com\', \'foo.html\'}]).then(() => {
+2 43 deployer.calledOnce.should.be.true;
+2 44 hexo.emit(\'deployAfter\');
+2 47 it(\'title - page\', () => {
+2 49 const t = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\');
+2 50 return fs.writeFile(config, \'{title: \'Hello World\'}\
+2 51 .then(() =>
+2 53 fs.readFile(config)).then(content.should.content.toString([\'foo
+2 54 ].should.should.eql([\'foo\'bar\'])
+2 55 ].slice(-1, \'Hello World\'))).should.eql([\'baz\'))
+2 56 ].join(\'baz\'))).should.se);
+2 57 }).finally(() => fs.unlink(() => fs.unlink(config.exists(config.foo));
+2 60 it(\'source - main._dir = sinon.should.should.equal(\'source/path\');
+2 61 return fs.exists(hexo.substring/foo.html\'))
+2 64 it(\'layout =\'layout =\'drafts\')(callback
+2 66 it(\'_content\' = content
+2 68 it(\'skip processingFiles\');
+2 69 it(\'
+3 1 it(\'no deploy config on generate\', () => {
+3 3 args.should.eql(1);
+3 5 const deployer = sinon.spy(args => {
+3 13 hexo.extend.deployer.register(\'foo\', deployer);
+3 14 return deploy({_: ['foo'], foo: \'foo\'}).then(() => {
+3 16 beforeListener.calledOnce.should.be.true;
+3 20 it(\'single deploy setting\', () => {
+3 24 const deployer1 = sinon.spy(args => {
+3 30 const deployer2 = sinon.spy(args => {
+3 32 type: \'bar\',
+3 33 bar: \'boo'
+3 36 hexo.extend.deployer.register(\'foo\', deployer1);
+3 37 hexo.extend.deployer.register(\'bar\', deployer2);
+3 38 return deploy({_: ['foo', \'bar\'], foo: \'foo\'}).then(() => {
+3 39 deployer1.calledOnce.should.be.true;
+3 40 deployer2.calledOnce.should.be.true;
+3 43 it(\'multiple deploy setting for multiple\', () => {
+3 55 return deployer1.calledOnce.should.be.true;
+3 58 it(\'multiple deploy setting 2 for 3 non-empty\', () => {
+3 59 hexo.extend.deployer.register(\'foo\', deployer2);
+3 60 return deployer1.extend.register(\'bar\', deployer2);
+3 61 });'baz
+4 1 it(\'default\', () => {
+4 11 return deploy({_: args}).then(() => {
+4 17 it(\'custom\', () => {
+4 33 it(\'file\', () => {
+4 36 type: \'create\',
+4 37 path: \'foo.bar.patch\'
+4 52 describe(\'2.3\', () => {
+4 55 type: \'2\',
+4 56 path: \'foo.bar.3\'
+4 59 it(\'2.5\', () => {
+4 60 const deployer2.calledOnce.should.should.be.true;
+4 63 it(\'3.2.5.3.bar.custom.custom.should.should.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.eql.e
+5 3 const config = sinon.spy(args => {
+5 7 \' Array\',
+5 8 \' Object\',
+5 9 \'  deploy: foo\',
+5 10 \'   type: foo\',
+5 11 \'   host: <host>\',
+5 12 \'   user: <user>\',
+5 13 \'   root: <root>\',
+5 14 \'   port: [port] # Default is 22\',
+5 15 \'   delete: [true|false] # Default is true\',
+5 16 \'  ignore_errors: [true|false] # Default is false\',
+5 17 \'   verbose: [true|false] # Default is true\',
+5 18 \'   ignore_errors: [true|false] # Default is false\',
+5 19 \'    verbose: [true|false] # Default is true\',
+5 20 \'     ignore_errors: [true|false] # Default is false\',
+5 21 \'      ignore_errors: [true|false] # Default is true\',
+5 23 \'\',
+5 24 \'More info: http://zespia.tw/hexo/docs/deploy.html\',
+5 25 ];
+5 26 return deploy({_: []}).then(() => {
+5 27 return fs.exists(hexo.public_dir);
+5 28 }).then(exist => {
+5 29 exist.should.be.true;
+5 30 return undefined;
+5 33 it(\'deploy() - promisify config\', () => {
+5 35 return args.pop();
+5 37 return post.create({
+5 38 title: \'Hello World\',
+5 40 }).then(data =>
+5 41 data.should.eql([
+5 42 {
+5 43 content: [
+5 44 \'<h1>Hello World</h1><p>Hello World</p>\'
+5 47 .replace(/\
+5 48 /g, \'\
+5 50 .replace(/\\r/g, \'\\r\')
+5 51 .replace(/\\u0080/g, \'&gt;\');
+5 52 return r91[0].should.replace(/g, \'&quot;\')
+5 53 ].join(\'
+5 54 ].join(\'\')
+5 58 ].join(\'\'));
+5 62 it(\'LiveScripts\', () => {
+5 63 const config = sinon.execPreprocess = sinon.exec;
+5 64 return post = sinon.exec;
+5 65 }).exec(data => 123 => {
+5 66 const { done(data => {
+5 67 done.exec(data => {
+5 68 post.should.process.should.should.eql(data);
+5 69 return fs.exec(data);
+5 70 }).should.process.should.eql(data.exec(data);
+5 71 }).should.eql(data);
+5 72 }).should.process.eql(data =>
+6 2 const _stub = sinon.spy(() => {
+6 3 log.error({
+6 4 path: \'foo',
+6 5 args: [
+6 6 "bower.json",
+6 7 'foo.txt\',
+6 8 "bar.json"
+6 9 ]
+6 10 }, \'foo\');
+6 11 _stub.calledWith(hexo.locals).should.eql([
+6 13 path: \'foo.txt\',
+6 16 "foo.txt"
+6 18 \'));
+6 20 _stub.calledWith(hexo.locals.args).should.eql([
+6 29 it(\'ignore deploy config on generate\', () => {
+6 48 it(\'ignore basicdeploy config\', () => {
+6 51 path: \'../../../lib/plugins/console/eslint/deploy.mustache\',
+6 58 let beforeListener = sinon.spy();
+6 60 const beforeHook = sinon.spy();
+6 62 path: \'../../../lib/plugins/console/eslint/preview.js\',
+6 68 before_each(() => {
+6 69 _stub.reset();
+6 72 afterListener.restore();
+6 73 it(\'autoWatch config based on end\');
+6 74 it(\'autoWatch config setting\', () => {
+6 75 const { join } = sinon.stub.calledWith(\'ejs\', fs.watchAllCaptured(() => fs.unwatch()).should.should.resolve({watch() }).should.bind(true);
+6 76 const { use(this.log.called).should.should.be.true;
+6 77 this.should.strictSslag(\'ejs\');
+6 78 log.watch().should.restore();
+6 80 it(\'deepStrictSockets = true;
+6 81 function testWatch(dir => {
+6 82 log.calledWith(() => {
+6 84 path) >= 0;
+6 85 this.calledWith(\'ejs.should.
+7 2 it(\'create()', () => {
+7 9 it(\'create() - promisify', () => {
+7 17 return deploy({_: ['foo\', \'bar'],
+7 18 _: [\'baz\']
+7 20 return deploy({_: ['foo\', \'bar\', \'baz']});
+7 25 return Promise.all([
+7 26 fs.rmdir(hexo.public_dir),
+7 27 fs.writeFile(hexo.config_path, \'foo: 1\')
+7 34 exist.should.be.false;
+7 37 it(\'create() - copy path to deploy settings\', () => {
+7 41 path: \'foo.yml\'
+7 43 return deploy({_: [\'foo\', \'bar\', \'baz\']
+7 45 return deploy({_: [\'foo\', \'bar\', \'baz\']});
+7 47 hexo.config.deploy = {type: \'foo\', foo: \'foo.yml\'};
+7 51 return deploy({_: [\'bar\', \'baz\']});
+7 53 hexo.config.config.deploy.calledOnce.should.should.be.true;
+7 57 it(\'create() - post => {
+7 58 const deployer1 = sinon.call({post.call({post: \'foo/: 1}).should.should.eql(post.bind(post);
+7 59 return deploy({post: 2).should.post.bind(post).should.bind(post).should.bind(post) => post.post.post.length == 1}).should.length == 2).should.length == 2;
+7 61 return deployer1.call({post.call({post: 3).should.call({post: 2).should.apply(post.bind(post, post.post).should.length == 3).should.length == 3).should.length == 3).should.length;
+8 3 const _stub = sinon.stub(console, "log").andReturn({
+8 4 log: () => {
+8 5 return console.log,
+8 8 _stub.calledWith(hexo.end_post_render());
+8 11 hexo.config.deploy = {
+8 13 foo: () => {},
+8 14 bar: () => {}
+8 15 };
+8 24 hexo.once(\'deploy\', beforeListener);
+8 26 return deploy({_: ['foo\'], foo: \'foo\', bar: \'bar\'}).then(() => {
+8 32 it(\'multiple deploy setting\', () => {
+8 35 foo: \'foo\'
+8 40 foo: \'foo\',
+8 41 test: true
+8 48 it(\'deep deploy setting\', () => {
+8 62 return deployer.calledOnce.should.then(() => {
+8 63 deployer.calledOnce.calledOnce.should.should.be.should.true;
+8 64 }).should.be.true;
+9 32 it(\'layout\', () => {
+9 39 const beforeHook = sinon.spy(args => {
+9 42 bar: \'bar\'
+9 51 it(\'invalid input - number\', () => {
+9 52 const logStub = sinon.spy(args => {
+9 53 logStub.calledWith(\'Invalid input: %s\', 123);
+9 55 return deploy({_: []).then(() => {
+9 56 logStub.calledWith(\'invalid input: %s\', 1);
+9 57 }).catch(() => logStub.calledWith(\'invalid input.calledWith(\'invalid input: %s\', 2);
+9 62 it(\'invalidate()
+9 63 it(\'invalidate()\', () => {
+9 64 process.nextTick(() => {
+9 67 process.exitCallback.calledWith(\'invalidate()\'));
+9 68 process.calledWith(\'invalidate()
+9 69 process.calledWith(123 => {
+9 70 process.calledWith(\'invalidate()\'));

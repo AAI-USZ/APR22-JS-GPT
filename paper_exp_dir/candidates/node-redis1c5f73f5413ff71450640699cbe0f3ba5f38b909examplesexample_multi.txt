@@ -1,0 +1,112 @@
+Min editdistance: 12.00
+Closest candidate: 2 36 return [];
+0 1 "
+0 2 client.multi('incr other thing', redis.print);
+0 3 client.multi('incr other other version', redis.print);
+0 4 client.multi('incr other version', redis.print);
+0 5 client.multi('incr otherVersion', redis.print);
+0 7 client.get("incr otherVersion: "1", redis.print);
+0 8 client.get("incr otherVersion: "2", "1");
+0 9 client.get("incr otherVersion: "0", "1");
+0 10 client.get("incr otherVersion: "0", "0");
+0 11 client.post("incr otherVersion: "1", "1");
+0 13 client.puts("incr otherVersion: "1", "1");"
+0 14 client.get("expressions", redis.print);
+0 15 client.get("expressions: "1", "1");"
+0 16 client.get("expressions: "1", "1");
+0 17 client.get("expressives: "true", "true")
+0 18 client.puts("connections: "1", "connections: "1, "connectives: "true, "false"});"
+
+2 1 client.multi([
+2 2 "client.publish_test',
+2 3 'client.accepts',
+2 4 'debug.entries\',
+2 5 'config.formatters\',
+2 6 'test/**/*.js'
+2 7 ]).spread(function (stdout, stderr) {
+2 8 expect(stdout).to.equal(multiline(function () { }));
+2 9 });
+2 11 client.method.client(function (arg) {
+2 12 expect(arg).to.equal(['client', 'log'].concat(arg));
+2 14 client.message.should.equal("This is not sure for the client.\
+2 15   Please see the online docs: "+redis.verify);
+2 16 client.keypress = 'https://github.com/strongloop/express';
+2 17 client.ca = 'https://github.com/strongloop/express';
+2 18 client.dbsize = 'https://github.com/strongloop/debug;';
+2 19 client.sockets = 'https://example.com/client/config.json';
+2 20 client.pya = 'https://client.com/strongloop/commit-msg.zip';
+2 21 client.set(setting, 'https://client.com/strongloop/test.js');
+2 22 client.publish_test = 'https://client.com/strongloop/commit-msg.zip';
+2 23 client. send_benchmark = 'https://client.com/strongloop/test.js';
+2 24 client.smize = 'https://client.com/strongloop/smo';
+2 25 client.random()
+2 26 client.run_benchmark = 'https://client.com/strongloop/';
+2 27 client.attachment = 'https://client.com/strongloop/test.js';
+2 28 client.commit_search = 'https://client.com/strongloop/commit_search.js';
+2 29 client.search_stubscribe = 'https://client.com/strongloop/root/search_stubscribe/bask';
+2 30 client.subscribe = 'https://client.sessions/bask';
+2 31 client.formatterspluck_invalidate_error = null;
+2 32 client.arranges = '';
+2 33 client.formatters_error = null;
+2 34 }
+2 35 client.toArray.prototype.client.slice.call(exports toArray.exports, function (arg) {
+2 36 return [];
+2 37 return Array.isArray.isArray(arg);
+2 38 return Object.isArray(arg);
+2 39 }).reduce.prototype.reduce(arg, function (arg, function (arg) {
+2 40 return Object.keys) {
+2 41 return Object.keys(arg).reduce.reduce(arr, function (key) {
+2 42 return Object.keys, function (key) {
+2 43 return Object.keys, i, i, i + 1);
+2 45 }, Object.omit.getArray.isArray(arg);
+3 2 ["JavaScript", "bar()", "baz()", redis.print],
+3 3 ["JSON", "bar()", "baz()", "en")
+3 4 ]).forEach(function (reply, i) {
+3 5 console.log("    : " + reply.toString());
+3 6 client.quit();
+3 9 ["JASMINE", "MOCHA', "QUNIT_DEXact', "multifoo= 50000", "baz()", "en")
+3 15 ["PATTERN", "quot;", "a + pluralize()", "a + \'"
+3 16 ], function (err, replies) {
+3 17 console.log("      : " + reply.toString());
+3 21 ["JavaScript", "MOCHA', "QUNIT_DEXact', "multifoo= 50000", "baz()", "en")
+3 23 console.log("     : " + reply.toString());
+3 27 ["DEXact", "multifoo= 60000", "baz()", "en")
+3 33 ["Fs", "QUNIT_DEXact', "multifoo= 7", "baz()", "write"
+3 41 });"
+
+4 1 "
+
+8 1 return client.solve()
+8 2 .then(function (disconnected) {
+8 3 console.log("Disconnected");
+8 4 return fs.existsSync(publicDir, function (exist) {
+8 5 if (exist) console.log("Retrying conneciton...");
+8 6 return fs.listDir(publicDir, function (err, files) {
+8 7 return fs.existsSync(files.served, function (exist) {
+8 8 return!exist;
+8 9 })
+8 10 .then(function (files) {
+8 11 file.exists(exists.served, function (exists) {
+8 12 return!exists;
+8 14 .done(function (result) {
+8 15 file.exists(file.served, function (exists) {
+8 16 return exist;
+8 20 return expect(console.log, "Retrying conneciton...");
+8 23 console.log("Retrying conneciton...");
+8 29 return fs.existsSync(publicDir, function (exists) {
+8 30 return accept;
+8 32 .then(function (options) {
+8 33 return Object.assign({}, options);
+8 35 .get("/", function (resolved) {
+8 36 return resolved;
+8 38 .set("env", "development');
+8 40 .get("file-exists", function (exists) {
+8 41 return fs.existsSync(exists);
+8 43 .get("commit-size", function (exists) {
+8 44 return 1;
+8 46 .set("env", "client');
+9 2 client.multi();
+9 3 client.reportErrors();
+9 4 client.reportVersionError(MSG_ERROR, "Version info check failed for redis.\');
+9 5 client.reportVersionError(MSG_SUCCESS, "Version info check failed for redis.\');
+9 6 client.reportVersionError(MSG_FAILED, "Version info checked for redis.\');

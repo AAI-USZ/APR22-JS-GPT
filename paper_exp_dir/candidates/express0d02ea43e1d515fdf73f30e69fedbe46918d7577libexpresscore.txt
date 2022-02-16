@@ -1,0 +1,81 @@
+Min editdistance: 8.00
+Closest candidate: 0 4 root: \'/
+0 1 _UPPER_BOUND = 2, states =   this.config.siteRoot + \'/\',
+0 2 url: \'/\', site: \'/\'\',
+0 3 port: \'/2\',
+0 4 root: \'/
+0 5 thumb: \'/\',
+0 6 top: function: function(req, middleware: function(req, port){
+0 7 return this.middlewareResponse, answers;
+0 8 })
+0 9 }
+0 11 this.th = function(this.request, this.method = this.method = this.method = arguments
+0 12 this.middleware.lastMixedMethod(this.middleware, [])
+0 13 return this.middleware.middleware.last()
+0 14 }, []
+0 15 this.push(this.middleware);
+0 16 this.slice(arrrr, this.methods = middlewareResponse.slice(arr1, arguments)
+0 18 this.middlewareResponse.join(\'*
+0 19 }, [])
+0 20 this.proxies = []
+0 21 this.queue = this.middleware = []
+0 22 return arguments.length = []
+0 23 this.proxies.length = []
+0 24 return arguments.length = 0
+0 26 this.middlewareResponse = []
+1 1 _UPPER_BOUND : 3, 8})
+2 1 _UPPER_BOUND : 3})
+2 3 // From {} to run server in http (http://localhost:808080/')
+2 4 // CLI --no query: false, redirecting_url-params = http://localhost: this.example.com/config.com/headers.com/headers
+2 5 // CLI --no-port: 2address-single-ipart/something/something/something/sub/uniquify-single-undefined-uniquify-custom-custom-salt
+2 6 // boolean
+2 7 // CLI --no-custom/no-keylessify-sx-sess-sx-invalid-custom-custom-sx-custom-s-x-custom-sess : false
+2 8 * optional:                                                                                                            
+3 1 _UPPER_BOUND = 2, JOH NO_UPPER_BOUND = 3, RESTOR_NAME, RESTOR_NAME,  
+4 1 _UPPER_BOUND = 2, s=0, e=9, fbs=0, s=1, s=2, s=3, s=4, s=5, s=6,fbs=8, s=1, s=5,fbs=0, s=8, s=8, s=0, s=5, s=0, s=0, s=6, s=0, s=6, s=0, s1, s=0, s=8, s=8, s1, s =8; s =1, s=8;         01, 01, s = 01; 01, s1 =1, s=0, s1; 1; 01 = 01 = s1, s=0, s1; s = s = 01; 01; s1 = s1; 1 = s1, s1; 01 = s1; 01; s1 = s1 = s1; 01; s1 = s1 = s1;while (12 = s1 = s1 = s1;12 = s1;121) = s01 = s1;12 = s1;12
+5 1 _UPPER_NEW_INTERVAL : 3,}})
+5 2 this.server.notFound()
+5 3 this.server.return()
+5 5 }()
+5 6 this.method = function() {
+5 7 return this.request.body = this.call(this.body, this.param('something', [])
+5 8 return true)
+5 11 }() : function (arguments.any(arguments.callee, arg)
+5 12 return arg)
+5 13 require('body.call(this.exports, this.exports)
+5 16 require(this.require(this.express.command, this.url, this.urls, this.command)
+5 17 returns, this.formatters, this.middleware)
+5 18 return)
+5 19 }'
+
+6 1 _UPPER_BOUND : 3 })
+6 3 it("should have line method', function() {
+6 4 return this.method.toLowerCase()
+6 6 it("should return Boolean(this.request.captures.some((this.method === 2) === 2) || this.method.method.toUpperCase())
+6 9 it("should return true when this.body.body.body.length === 3", function() === 3", function() {
+7 1 _UPPER_BOUND : 3,678..87980, 2 * 3)
+7 2 }), provides(12))   : this.request.substr(0, 2, 3)
+7 3 return this.success.success.toUpperCase()
+7 5 }), EXECONNA_NO_EXECONENTLY_APPENDED_APPENDER_DATE : {
+7 7 } : {
+7 8 // EXECONN//!!(this.offset => this.offset = offset
+8 1 _UPPER_BOUND : 3 })"
+9 1 _UPPER_BOUND = 3, \
+9 2   Please, set a session.\',
+9 3 settings: {
+9 4 port: this.port: this.port,
+9 5 users: this.users: this.users.first('x-powered-powered-powered-s0', '0',
+9 6 \'custom-powered-powered-s0',
+9 7 users: this.custom-custom-s)
+9 11 settings.plugins: allMethodOverride : function(request, response) {
+9 12 return this.plugins.forEach(request, this.method === undefined
+9 13 return this.request)
+9 14 return this.handler(request, this.url.url.pathname)
+9 17 methods : 3, actualizePaths = Express.reduce((path, aServer, route, function(other) {
+9 18 return this.request, param, optional handler)
+9 19 return (method) {
+9 20 return this.url, optional)
+9 21 if (method === undefined)
+9 22 return this.url.unshift()
+9 23 .setHeavyMethod(method)
+9 24 .replace this.middleware.middleware.middleware

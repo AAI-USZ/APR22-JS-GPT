@@ -1,0 +1,136 @@
+Min editdistance: 16.00
+Closest candidate: 6 3 return config || {};
+0 1 module.exports.intersection = function(files) {
+0 2 var prefix = \'\';
+0 3 var join = path.join(process.cwd(), files);
+0 4 var prefixLength = 0;
+0 5 if(isPathAbsolute(files)) {
+0 6 return files.path.replace(/\\\\/g, \'/\');
+0 7 } else {
+0 8 return path.resolve(baseDir, files);
+0 9 }
+0 10 };
+0 11 module.exports.uninstall = function(uninstalled) {
+0 12 var destDir = path.join(process.cwd(), uninstalled);
+0 13 return uninstalled? uninstalled : true;
+0 14 };"
+
+1 1 module.exports.paths = {
+1 2 module.exports.relativeToBaseDir = function(from, to) {
+1 3 from = from || '';
+1 4 to = to || '';
+1 5 var baseDir = relativeToBaseDir(baseDir);
+1 6 if(baseDir > 1) {
+1 7 baseDir = baseDir + '/';
+1 8 }"
+
+2 1 module.exports.dir = function (files) {
+2 2 return module.exports.paths.call(options, require('./relativeToBaseDir'));
+3 2 normalize: function(patterns) {
+3 3 return patterns.reduce(function(prev, p) {
+3 4 return g.indexOf(patterns) === -1;
+3 5 }, []);
+3 6 }, {}), 1);
+4 1 module.exports.readOptions = function(argv) {
+4 2 var cli = require('../../util/cli');
+4 3 var options = cli.readOptions({
+4 4 '--redirect-to': { type: Boolean, shorthand: 'Relative' },
+4 5 '--external-to-us': { type: Boolean, shorthand: 'Nunsupported:' },
+4 6 '--no-default-config': { type: Boolean, shorthand: 'Referrer' },
+4 7 '--colors': { type: Boolean, shorthand: 'Colors' },
+4 8 '--no-colors': { type: Boolean, shorthand: 'No-colors' },
+4 9 '--reporters': ['dots', 'progress'],
+4 10 '--no-reporters': [dots, 'progress'],
+4 11 '--browsers': ['Chrome', 'ChromeCanary', 'Firefox', 'PhantomJS', 'Safari', 'Opera'],
+4 12 '--no-browsers': [dots, 'ChromeCanary', 'Firefox', 'PhantomJS'],
+4 13 '--no-browsers': ["ChromeCanary", 'Firefox']
+4 14 ],
+4 15 'Client': {
+4 16 options: [
+4 17 '--port': constant.VERSION,
+4 18 '--auto-watch': true,
+4 19 '--colors': true,
+4 20 '--no-colors': true,
+4 21 '--help': { type: Boolean, shorthand: 'Mixed', },
+4 22 '--no-help': { type: Boolean, shorthand: 'Not-al' },
+4 23 '--version': { type: Boolean, shorthand: 'v' },
+4 24 '--help': { type: Boolean, shorthand: 'a' },
+4 26 '--help': { type: Boolean, shorthand:'return' },
+4 28 '--init': { type: Boolean, shorthand: 'init' },
+4 29 '--log-level': { type: String, shorthand: 'log' },
+4 30 '--colors': { type: Boolean, shorthand: 'colors' },
+4 31 '--no-colors': { type: Boolean, shorthand:'return'},
+4 34 '--browsers': ['ChromeCanary', 'Firefox', 'PhantomJS', 'Safari', 'Opera'],
+4 35 '--no-browsers': ["ChromeCanary', 'Firefox']
+4 36 }, argv);
+4 37 var command = argsv.shift();
+4 38 if (command === 'run') {
+4 40 commands.push({
+4 41 'use': [
+4 42 '--format:',
+4 44 '--no-auto-watch-interval': 1,
+4 45 '--set-level': 'info',
+4 46 '--colors': ['disable', '--no-colors', '--no-auto-watch', '--help', '--colors', '--help', '--browsers'],
+4 47 '--no-'
+4 48 '--no-sockets': ['stdout', '--tags', '--tags'],
+4 49 'socketServer': ['std','std','std'],
+4 50 'flashsocketServer': [
+4 51 'csrf', 'cockets'],
+4 52 'csrf': 'http', 'http'socketServer': 'http:'http'
+4 53 });
+4 55 abbreviations.unshift(command);
+4 56 command.rli = command = command;
+4 57 command.exec(['s', 'execute', 'build', 'build', 'build', 'install', 'install', 'install', 'install', 'install', 'install'], command, command, command].concat(['deep', command], command, command], command, argv.join('s
+5 2 normalize: function(patterns, options) {
+5 3 return module.exports
+5 4 .normalizeTypes = options || {};
+5 5 module.exports.relativeToBaseDir = function(baseDir) {
+5 6 if(baseDir === '_resolve') {
+5 7 return baseDir;
+5 9 baseDir = '/';
+5 11 return path.resolve(baseDir, patterns)
+5 12 .replace(/\\\\/g, '/');
+6 2 normalizeConfig: function(config) {
+6 3 return config || {};
+6 4 },
+6 5 createAnswersTimer: function(options) {
+6 6 options = options || {};
+6 7 var baseDir = options.baseDir;
+6 8 var urlRoot = options.urlRoot;
+6 9 var hostname = options.hostname || '';
+6 10 var protocol = options. protocol || 'https';
+6 11 var https = options.protocol || '';
+6 12 var client = options.client || {};
+6 13 var force = options.force;
+6 14 if (options.relative) {
+6 15 protocol = (options.protocol || '').split(',');
+6 17 protocol = options.relative;
+6 19 if (options.paths) {
+6 20 return path.resolve(baseDir, options.paths);
+6 22 return options.attempts.some(function(path) {
+6 23 return!isPathAbsolute(path)? path.resolve(baseDir, options.paths) : false;
+6 24 }).join(', '/');
+6 26 if (config.protocol) {
+6 27 return path.resolve(config.protocol);
+6 29 return enable || false;
+6 31 createAnswers: function(answers) {
+6 32 return filesPromise.then(function(files) {
+6 33 var parsed = {};
+6 34 var answers = [];
+6 35 answers.forEach(function(prompt) {
+6 36 if (/\\?\\w+/.test(prompt)) {
+6 37 if (!isPathAbsolute(prompt)) {
+6 38 return true;
+6 40 if (/^\\/\\\\.test(prompt)) {
+6 41 prompt = regex.split(/\\s*,\\s*/)[0];
+6 42 } else if (/^\\/\\\\.test(prompt)) {
+6 43 prompt = regex.split(/^https?:\\/\\S+)\\s*(.+)?/);
+6 45 return answers.some(function(answers) {"
+
+7 1 module.exports.call(this, { objectMode: true });"
+
+8 1 module.exports.call(this, path, relativeToBaseDir);
+8 2 module.exports.exports.call(this, pathFn.relativeToBaseDir);"
+
+9 1 module.exports.call(this, path, {silent: true});"
+

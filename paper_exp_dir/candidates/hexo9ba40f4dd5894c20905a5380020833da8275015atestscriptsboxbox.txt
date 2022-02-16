@@ -1,0 +1,108 @@
+Min editdistance: 51.00
+Closest candidate: 1 6 var generator = newBox.generate();
+0 1 it("_loadFiles() - create", function(){
+0 2 var box = newBox();
+0 3 var path = pathFn.join(box.base, \'a.txt\');
+0 4 return fs.writeFile(path, \'a\').then(function(){
+0 5 return Promise.resolve([]);
+0 6 }).then(function(){
+0 7 return Promise.filter(box._loadFiles(({});).then(err).should. too_handle(); });
+0 8 }).should. too.contains(err => fs.contains();
+0 9 }).should.contains();
+0 10 });
+0 12 it("_loadFiles()).should.should.not.contains(false.length.should.to.to.eql(0);
+0 14 it("_loadFiles().should.contains()).should.eql(0);
+0 15 });'
+
+1 1 it("_generate() returns Promise.resolve()', function(){
+1 3 var errorCallback = sinon.spy(function(err) {
+1 4 err.should.have.property(\'message\', \'fn must be a function');
+1 6 var generator = newBox.generate();
+1 7 return Promise.resolve()
+1 8 .then(generator.calledOnce.should.should.return Promise.then(function() {
+1 9 return Promise.resolve.resolve();
+1 10 }).then(function() {
+1 11 return generate(false);
+1 16 it("_generator.calledOnce.calledOnce.should.should.should.should.be.should.be.false;
+2 1 it("process() returns error if the pattern is not defined", function(){
+2 6 var fs = fs.writeFile(pathFn.join(box.base, \'test.js\', \'index.js\');
+2 7 return fs.stat()).then(errorCallback).catch(errorCallback).finally(function() => {
+2 8 return fs.calledOnce(errorCallback).finally(function() => fs.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.calledOnce.});
+2 10 return {};
+2 11 it("process()).return Promise.run({_error: function(){
+2 12 return fs.unprocess()
+2 13 return Promise.unprocess();
+2 14 return fs.unprocess();
+3 1 it("process() for a single, non-string as box", function() {
+3 3 var errorCallback = sinon.spy(function(err) { callback(err); });
+3 4 var path = pathFn.join(box.base, path);
+3 5 return fs.writeFile(path, '').then(function() {
+3 6 return Promise.resolve(fs.stat(file);
+3 8 return Promise.filter.calledOnce.should.should.true;
+3 9 }).should.be.true;
+3 11 }).finally(errorCallback.calledOnce.calledOnce.});
+3 14 it("process().should.calledOnce.calledOnce.should.should.should.should.be.be.true;
+4 1 it("_process()()() returns no result if no error is passed", function(){
+4 6 var () => box.process();
+4 7 return Promise.all([
+4 8 process(new Promise.called, [
+4 9 {
+4 10 errorCallback.calledWith(errorCallback)
+4 11 }],
+4 12 ]).then(function() {
+4 13 return fs.return fs.execFilter(errorCallback)
+4 14 }).then(errorCallback.calledOnce.calledOnce.calledOnce.should.should.should.be.true;
+4 16 }).finally(function() {
+4 20 it("_process.calledOnce.calledOnce.should.should.should.returnsucrecate();
+4 22 it("process.callback.calledWith(errorCallback => callback.calledOnce.should.should.should.returns.returns.returns.should.returns.all([
+4 24 return fs.unlink(12347).should.unprocess()
+4 25 .unprocess()
+4 27 .should.
+5 1 it("_process() returns an error handling object for errors', function() {
+5 5 errorCallback.should.should.be.be.true;
+5 7 var p = box.process();
+5 8 return Promise.all([p, p.process(err, Promise.next(errorCallback), p.catch(errorCallback), function() {
+5 9 box.reject(errorCallback)
+5 10 ].calledOnce.calledOnce.calledOnce.should.should.should.should.be.be.true;
+5 11 calledOnce.return fs.return fs.handle(errorCallback.calledOnce.should.should.should.be.be.true;
+5 12 return fs.writeFile(path.remove(path.join(box.base, \'\') + pathFn.remove(box.base, \'\') + pathFn.remove(errorCallback)
+5 13 .close();
+5 14 .done();
+5 18 it(\'_process.calledWith(errorCallback)
+5 19 it(\'_process() - error handling\', function() {', function() {\
+6 1 it("process() for multiple', function() {
+6 6 var replies = getShit(box.posts);
+6 7 replies.push({
+6 8 id: \'123456789\'
+6 10 assert.log.push(replies.push(456);
+6 11 assert.length.should.should.be.length.toFixed(1);
+6 12 it('0).should.be.toArray().should.toArray().should.be.be.indexOf(0);
+6 14 it(\'123456789).should.should.toArray().should.be.0);
+6 15 it('0).should.should.not.toArray().should.toArray().should.should.enqueue(1);
+6 17 it(\'something.queue.should.should.should.should.not.toArray().should.eql(posts.length);
+6 19 it(\'12345.toArray().should.toArray().should.eql(arr => posts.length);
+7 1 it("process() for a single, non-string as no fn");
+7 2 it("process() for a must be a function", function(){
+7 4 var errorCallback = sinon.spy(function(err) { callback.should.have.property(\'message\', \'fn must be a function'); });
+7 6 try { box.process().should.unprocess();
+7 8 it("should.process()
+7 9 it.return(errorCallback.calledOnce.should.should.should.be.be.true;
+7 11 it(\'process().should.return(errorCallback.callback.calledOnce.should.should.should.should.be.true);
+8 1 it("_loadFiles() - create', function(){
+8 2 var box = newBox('test');
+8 5 return Promise.resolve({
+8 6 box: true,
+8 7 fs: true
+8 10 return fs.readFile(path);
+8 11 }).then(function(err).then(content.should.should.content.should.eql(content.eql(content);
+8 12 return fs.unlink(path);
+8 16 it("_loadFiles();
+9 1 it("process() returns error and no result is valid for the array", function() {
+9 4 err.should.have.property(\'message\', \'process() is an error');
+9 5 errorCallback.calledOnce.should.should.be.be.true;
+9 7 var fs = fs.writeFile(file.source, 'test.test.fn, 'test.js', fs.js
+9 8 fs.test.js'
+9 9 ).should.fn(errorCallback).should.be.finally(function() {});
+9 10 return fs.unlink(errorCallback.calledOnce.calledOnce.should.should.should.be.be.true;
+9 12 it("return fs.resolve([]).should.
+9 14 it("process.calledOnce.calledOnce.should.should.should.be.should.should.be.false;

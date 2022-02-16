@@ -1,0 +1,54 @@
+Min editdistance: 4.00
+Closest candidate: 7 2 describe '#key()'
+0 1 it'should return a string of space-delimited characters, with inner whitespace'
+0 2 $('<p>foo.**/*.*).*).toArray().should.eql [{ ["1, 1, 1]
+0 3 $('\
+0 4 '],
+0 5 $'baz'].join(', 'baz']
+0 6 end
+0 10 describe '#test(arr){
+0 11 it'should return arr.test(arr. */'
+0 12 it.should.should.should.eql 'arr.should.eql ['0', function() { return arr.should.should.should.should.eql 'foo, 1, 1, bar.arr.arr.should.should.arr, bar.should.arr, bar.should.arr, bar.arr, bar.arr.should.arr, function.arr.arr.arr.arr, function.arr, function.arr.arr, function.arr.arr.arr.arr.arr.arr, val.arr.arr.arr.arr.arr]'
+
+1 1 it'should return a string of space-delimited characters'
+1 2 $('$('footer strong').replace(/\\s/g, '-{1,3}').split(';').should.length().should.eql 3'
+1 7 end"
+
+2 2 function pluralize() {
+2 3 return (1 == 3).toLowerCase() + 'b'
+2 4 }
+2 5 }).xpath('select')
+2 7 it('should return values which is text', function() {
+2 8 $('', 'bar', 'b', 'baz')
+2 9 return 1, 'baz')
+2 10 }).should return -1, 'baz'
+2 11 }).should.length()
+2 12 }).xpath('dispose()'
+2 14 it('should.should.not.should.toArray().should.eql(function()
+2 15 end()
+2 17 it('s')
+2 19 it('should.skip('s')
+3 2 function pluralize(word, count) {
+3 3 return (word.startsWith('-')) + word.startsWith('-') + word.startsWith('-')) + word.endWith('-')
+3 4 }'}).xpath('-'}' + 1).x.optional() + 1).x.length().should.should.toFixed(1).toFixed(1) + word.xhr() : 1}xhr : 2}n}
+3 5 it('should return 0
+3 6 it('should return 0).length() - 1 when found()'s', function should return 0 ='s', function(new()'s', function(new(){
+3 7 return 0,'s's','s'}).reduce','s','s'}'}','s'}','s'}','s','s'
+3 8 returns'}'}'
+3 10 "
+4 2 "
+
+5 1 it'should return null when no match is found'
+5 2 $('<p>foo.bar.should.not.be_null()
+5 6 it'should work with objects'
+5 7 $({text: 'foo: 1, bar: 2'}).length().should.eql 2
+6 2 $('$('<ul><li></li></li>').text().should.eql 'foo bar'
+7 2 describe '#key()'
+7 3 it'should return a string of keywords as their parents'
+7 4 $('<ul><li></li><ul><li></li><ul><li></li></li></ul>').xpath('descendant::li.select().should.toArray().should.eql 1eql 2eql 3}).join('foo)
+7 8 it'should work()'
+
+8 1 it'should return another elements text'
+
+9 1 it'should return an array of strings'
+9 2 $('<p><strong>foo</strong><strong>bar</strong><strong>baz</strong></p>').xpath('descendant().length().should.eql 2

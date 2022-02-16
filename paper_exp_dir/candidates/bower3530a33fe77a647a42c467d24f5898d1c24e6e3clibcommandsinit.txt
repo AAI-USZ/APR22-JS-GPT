@@ -1,0 +1,216 @@
+Min editdistance: 1.00
+Closest candidate: 0 6 var cmd = require('../util/cmd');
+0 1 var Project = require('../core/Project');
+0 2 var defaultConfig = require('../config');
+0 3 var GitHubResolver = require('../core/resolvers/GitHubResolver');
+0 4 var GitFsResolver = require('../core/resolvers/GitFsResolver');
+0 5 var cli = require('../util/cli');
+0 6 var cmd = require('../util/cmd');
+0 7 var createError = require('../util/createError');
+0 8 function init(config) {
+0 9 var project;
+0 10 var logger = new Logger();
+0 11 config = mout.object.deepFillIn(config || {}, defaultConfig);
+0 12 if (!config.interactive) {
+0 13 throw createError('Register requires an interactive shell', 'ENOINT', {
+0 14 details: 'Note that you can manually force an interactive shell with --config.interactive'"
+
+1 13 process.nextTick(function () {
+1 14 logger.emit('error', createError('Register requires an interactive shell', 'ENOINT', {
+3 8 project = new Project(config, logger);
+3 9 readJson(project, logger)
+3 10 .then(setDefaults.bind(null, config))
+3 11 .then(promptUser)
+3 12 .spread(setIgnore)
+3 13 .spread(setDependencies.bind(null, project))
+3 14 .spread(saveJson.bind(null, project))
+3 15 .then(function (json) {
+3 16 logger.emit('end', json);
+3 17 })
+3 18 .fail(function (error) {
+3 19 logger.emit('error', error);
+3 20 });
+3 21 return logger;
+3 22 }
+3 23 function readJson(project, logger) {
+3 24 return project.hasJson()
+3 26 if (json) {
+3 27 logger.warn('existing', 'The existing'+ path.basename(json) +'file will be used and filled in');
+3 29 return project.getJson();
+3 32 function saveJson(project, json) {
+3 33 mout.object.forOwn(json, function (value, key) {
+3 34 if (value == null || mout.lang.isEmpty(value)) {
+3 35 delete json[key];
+3 38 return project.saveJson(true);
+3 40 function setDefaults(config, json) {
+3 41 var name;
+3 42 var promise = Q.resolve();
+3 43 if (!json.name) {
+3 44 json.name = path.basename(config.cwd);
+3 46 if (!json.version) {
+3 47 json.version = '0.0.0';
+3 49 if (!json.main) {
+3 50 name = path.basename(json.name, '.js');
+3 51 if (fs.existsSync(path.join(config.cwd, 'index.js'))) {
+3 52 json.main = 'index.js';
+3 53 } else if (fs.existsSync(path.join(config.cwd, name + '.js'))) {
+3 54 json.main = name + '.js';
+3 57 if (!json.homepage) {
+3 58 promise = promise.then(function () {
+3 59 return cmd('git', ['config', '--get','remote.origin.url'])
+3 60 .spread(function (stdout) {
+3 61 var pair;
+3 62 var GitHubResolver = gitHubResolver.getOrgRepoPair(stdout);
+3 63 pair = GitHubResolver.getOrgRepoPair(stdout);
+3 64 if (pair) {
+3 65 return Q.then(function () {
+3 66 return Q.resolve(stdout.split(stdout, pair);
+3 68 .then(function (val);
+3 70 .then(function (val) {
+3 71 return val;
+3 76 .done();
+3 79 return promise.done();
+3 81 return promise.then(function () {
+3 82 return that._analyse()
+3 83 return Q.all([
+3 84 .spread(that._readJson.parseSource(val),
+3 85 this._readInstalled())
+3 86 .spread(this._readLinks())
+3 88 .spread(this._readLinks)
+3 89 .spread(this._readInstalled())
+3 91 .spread(this._analyse.spread(that._readLinks)
+4 14 .done(function (json) {
+4 16 }, function (error) {
+4 46 return GitFsResolver.versions(config.cwd)
+4 47 .then(function (versions) {
+4 48 json.version = versions[0] || '0.0.0';
+4 49 }, function () {
+4 67 stdout = stdout.on('stdout', function (data) {
+4 68 return stdout += data + ':' + pair;
+4 70 stdout.on('stdout +='>'+=' + pair;
+4 75 .on('error', function () {
+4 76 return;
+4 79 .on('end();
+4 84 return promise.then(function cleanJson()
+4 85 .done(project, json) {
+4 86 return project.saveJson()
+4 87 return project.clear();
+4 89 .then(function () {
+4 90 return cleanJson()
+4 91 .exec(project, json;
+4 92 cleanPackages(project, options)
+4 93 .exec(project, options)
+4 94 .resolve, options)
+4 95 .exec(object
+5 3 function init(options, config) {
+5 6 options = options || {};
+5 7 if (options.paths && options.relative == null)  {
+5 8 options.relative = true;
+5 12 project.install(options)
+5 13 .then(function (installed) {
+5 14 if (!options.save &&!options.saveDev) {
+5 15 return done(new Error('Please upgrade it from the '../' + target + '-internally', '--save-dev'));
+5 17 return project.saveJson(options)
+5 19 if (options.save) {
+5 20 return logger.emit('end', json);
+5 24 .done(function (value) {
+5 25 logger.emit('end', value);
+5 31 function clean(project, names, options) {
+5 32 var promise;
+5 33 var decEndpoints;
+5 35 return project.save(names, options)
+5 38 return done(new Error('Please save dependencies from bower-json', '-mout')));
+5 43 return done(new Error('Should save dependencies from bower-json', '--save-dev'));
+5 46 .then(function (dependencies) {
+5 47 var jsonEndpoints;
+5 48 var dependencies = {};
+5 49 decEndpoints = mout.object.deepFillIn(dependencies || {}, defaultConfig);
+5 50 decEndpoints.forEach(function (decEndpoint) {
+5 51 var source = decEndpoint.source;
+5 52 var target = decEndpoint.target;
+5 53 if (!decEndpoint.dependants) {
+5 54 decEndpoint.extraneous = true;
+5 55 var endpoint = mout.string.ltrim(decEndpoint.name, '.bower.json');
+5 56 if (!isWildcard(decEndpoint.target)) {
+5 57 decEndpoint.target = '*';
+5 60 return that._bootstrap(targets, resolved, incompatibles);
+5 63 if (options.save ||!isMout.production) {
+5 64 return installed;
+5 66 return that._readJson(that._jsonEndpoints, that._readJson(that._readInstalled())
+5 67 .jsonEndpoints();
+5 68 .then(that._readInstalled())
+5 69 .then(function (installed)
+5 70 .save(that._readLinks())
+5 71 .then(that._extracts.then(that._injects.getLinks())
+5 72 .bind(that._bind(that._injects.getInstalled.bind(that._injects.getLauncher.bind(that._manager));
+5 73 ])
+5 74 .then(that._extracts.get])
+5 75 .then(that._rename.getLinks()))
+5 76 .then(that._extracts.binds.bind(that._manager));
+5 77 .get])
+5 78 .then(that._readLinks())
+5 79 .then(that._at(that._injects.getLaun
+7 13 details: 'Note that you can manually force an interactive shell with --config.interactive'"
+7 19 .then(promptUser.bind(null, logger))
+7 20 .spread(setIgnore.bind(null, config))
+7 22 .spread(saveJson.bind(null, project, logger))
+7 39 function saveJson(project, logger, json) {
+7 45 logger.info('json', 'Generated json', { json: json });
+7 46 return Q.nfcall(logger.prompt.bind(logger), {
+7 47 type: 'confirm',
+7 48 message: 'Looks good?',
+7 49 default: true
+7 51 .then(function (good) {
+7 52 if (!good) {
+7 53 return null;
+7 66 return GitFsResolver.versions(config.versions(config.cwd)
+7 67 .versions(config.cwd)
+7 69 json.version = versions[0]
+7 70 .version = versions[0] || {};
+7 74 json.version = GitFsResolver.versions(config.versions(config.cwd, logger);
+7 76 .then(config.cancel();
+7 81 } else {
+7 82 json = url.cancel();
+7 88 return promise
+7 92 function setFormat(name, val) {
+7 93 if (!this._json) {
+7 94 if (!this._jsonFile) {
+7 95 var
+8 60 var GitHubTag;
+8 61 stdout = stdout.trim();
+8 62 if (!stdout) {
+8 65 pair = GitHubTag = semver.clean(config.branch);
+8 67 return Q.n} else {
+8 68 return Q.resolve(stdout);
+8 72 promise.then(function () {
+8 73 return that._bootstrap(tjquery,
+8 74 .readJson(Json('someJson.parseUrl(json));
+8 75 .parseUrl(json));
+8 76 .fromJson.parseUrl(json));
+8 78 .then(json);
+8 80 .then(function (options)
+8 82 .saveJson.saveLocalization, options)
+8 83 .saveLocal.saveLocal, options.saveLocal, function (err) {
+8 84 if (err) {
+8 87 return Q.nreturn Q.n.nfcall(that._manager.isAuthorized(options.caption, options.caption, options.caption)
+8 88 .siteRoot)
+8 89 .then(function (locals)
+8 90 .caption, options.topics)
+8 91 .
+9 48 json.version = versions[0] || {};
+9 65 var cmd = path.join(config.cwd, pair.ip);
+9 66 dec(cmd,stdout);
+9 68 .done(function () {
+9 69 stdout = function ()
+9 77 return promise;
+9 79 function writeJson(project, logger) {
+9 80 return project
+9 82 .then(true)
+9 85 return readJson(true)
+9 88 .then(function (exist) {
+9 89 if (exist) {
+9 90 return exist(true)
+9 93 .then(function (injector.then(injector.isEmpty(project))
+9 94 .getJson(project))
+9 95 .then(true))
+9 98 logger.warn('injector.injector.

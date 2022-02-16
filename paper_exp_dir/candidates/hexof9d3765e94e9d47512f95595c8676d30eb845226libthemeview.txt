@@ -1,0 +1,324 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 _ = require('lodash'),
+0 1 _ = require('lodash'),
+0 2 util = require('../util'),
+0 3 file = util.file2;
+0 4 module.exports = function(data, callback){
+0 5 if (!callback){
+0 6 if (typeof data === 'function'){
+0 7 callback = data;
+0 8 } else {
+0 9 callback = function(){};
+0 10 }
+0 12 var extend = hexo.extend,
+0 13 processors = extend.processor.list(),
+0 14 sourceDir = hexo.source_dir;
+0 15 if (data.categories){
+0 16 var categories = category.split(pathFn.sep);
+0 17 for (var i=0, len=categories.length; i<len; i++){
+0 18 var item = categories[i];
+0 19 if (category.length){
+0 20 var newCat = category.slice(0, i - 1);
+0 21 newCat.path = cat.permalink + '/' + item + '/';
+0 22 for (var i=0, len=newCat.length; i<len; i++){
+0 30 if (item.categories){
+0 31 var cats = _.compact(item.categories);
+0 32 _.each(categories, function(name){
+0 33 if (cats.hasOwnProperty(name)){
+0 34 cats[name] = cats[name];
+0 36 cats[name] = {};
+0 38 });
+0 40 if (data.tags){
+0 41 data.tags.categories = _.compact(data.tags);
+0 44 var tags = data.categories.toString();
+0 45 if (data.categories.length){
+0 49 for (var i=0, len=tags.length; i<len; i++){
+0 50 var item = tags[i];
+0 52 var categories = _.compact(data.categories);
+0 54 if (categories.hasOwnProperty(name)){
+0 55 categories[name].push(item);
+0 59 data.categories = null;
+0 61 async.waterfall([
+0 62 function(next){
+0 63 if (data._id){
+0 64 next(null, data._id);
+0 66 data.categories = {};
+0 68 },
+0 69 function(data, next){
+0 70 var sub = data.categories.shift();
+0 77 data.tags.tags = data._id;
+0 78 data.tags = tags;
+0 80 data.tags = {};
+0 82 var keys = [];
+0 83 async.each(function next(newPost.posts.publish, function(data, next){
+0 84 var tags = function(next){
+0 85 var newPost.path = data, layout = data, layout = 'post', __dirname, layout = data = 'post', url];
+0 86 var id = post.link = format(data, target = linkExtname, __dirname, layout = post.layout];
+0 87 if (!layout = layout === 'post', urlExtname;
+0 88 if (layout = 'page layout === 'draft'? '_layout' : 'page') + extname;
+0 89 if (!layout || layout + extname.substring!== '_dir'){
+0 90 _link(layout.substring/next) link += 'index' + layout + '_id'
+1 2 fs = require('graceful-fs'),
+1 5 module.exports = function(args, callback){
+1 6 if (!args._.length){
+1 7 hexo.call('help', {_: ['new']}, callback);
+1 8 return;
+1 10 var scaffoldDir = hexo.scaffold_dir;
+1 11 file.read(scaffoldDir, callback);
+1 12 };"
+
+2 2 Box = require('../box'),
+2 4 file = util.file2,
+2 5 HexoError = require('../error');
+2 6 var rTmpFile = /[~%]$/;
+2 7 var Source = module.exports = function Source(){
+2 8 var base = hexo.source_dir;
+2 9 Box.call(this, base);
+2 10 };
+2 11 Source.prototype.__proto__ = Box.prototype;
+2 12 Source.prototype.load = Source.prototype.process = function(){
+2 13 this.processors = hexo.extend.processor.list();
+2 14 return this;
+2 16 Source.prototype.model = function(name, schema){
+2 17 return this.Cache.find({_: this._source});
+2 19 Source.prototype._register = function(path){
+2 20 var publicDir = hexo.public_dir;
+2 21 return this.Cache.find({_: this._source}).then(function(exist){
+2 22 if (exist){
+2 23 file.list(publicDir, require(path) + '.' + item));
+2 25 var content = this.content;
+2 26 if (path.substring(0, 1) === '_posts'){
+2 27 var result = route.format(path);
+2 28 if (!result) return;
+2 29 file.empty(publicDir, result);
+2 33 return result;
+2 36 Source.prototype.publish = function(path, callback){
+2 37 var self = this;
+2 38 if (this._hasExpired(path)){
+2 39 return Promise.resolve(function(res){
+2 40 self.source.publish({
+2 41 source: path,
+2 42 type: 'create'
+2 47 type: 'update'
+2 52 Source.prototype.try = function(fn){
+2 53 fn.call(this, arguments);
+2 55 Source.prototype.update = function(path){
+2 56 this._source.forEach(function(source){
+2 57 this._selectors[source] = [];
+2 58 this._sort(function(a, b){
+2 59 return a - b;
+2 62 Source.prototype.unregister = function(path){
+2 64 this._selectors[source] = this._selectors[source];
+2 65 }, this);
+2 66 this._nrFetching = Infinity;
+2 67 this.store.reap(this._source);
+2 69 Source.prototype.get = function(source){
+2 70 return this._source;
+3 4 module.exports = function(ctx){
+3 5 var Asset = ctx.model('Asset'),
+3 6 path = ctx.base_dir + path;
+3 7 file.list(path, function(err, files){
+3 8 if (err) return callback(err);
+3 9 var Asset = ctx.model('Asset');
+3 10 files.forEach(function(item){
+3 11 if (item.substring(0, 1)!== '.css') return;
+3 12 var path = item.substring(0, item.length - pathFn.extname(item).length),
+3 13 doc = Asset.findOne({
+3 14 _id: {$n_id: item._id, $npath: path},
+3 15 path: path
+3 17 if (data.length){
+3 18 doc.path = path;
+3 19 doc.modified = data.mtime;
+3 20 if (data.arr.$n&&!data.doesNotAdd(data.data)){
+3 21 file.write(pathFn.join(ctx.base_dir, item.substring(i), 'index.css');
+3 22 return callback();
+3 25 if (!pathFn.extname(data.path)){
+3 26 data.path = path;
+3 30 });"
+
+4 1 moment = require('moment'),
+4 2 fs = require('fs'),
+4 3 util = require('../../util'),
+4 4 yfm = util.yfm,
+4 6 escape = util.escape;
+4 7 var rBasename = /((.*)\\/)?([^\\/]+)\\.(\\w+)$/,
+4 8 rHiddenFile = /^_|\\/_|[~%]$/;
+4 9 var getInfoFromFilename = function(path){
+4 10 var newPostName = hexo.config.new_post_name,
+4 11 params = [];
+4 12 path = path.substring(0, path.length - pathFn.extname(path).length);
+4 13 var pattern = newPostName.substring(0, newPostName.length - pathFn.extname(newPostName).length)
+4 14 .replace(/(\\/|\\.)/g, '\\\\$&')
+4 15 .replace(/:(\\d+)/g, function(match, name){
+4 16 switch (name){
+4 17 case 'year':
+4 18 params.push(name);
+4 19 return '(\\\\d{4})';
+4 20 case 'i_month':
+4 21 case 'i_day':
+4 23 return '(\\\\d{1,2})';
+4 24 case'month':
+4 25 case 'day':
+4 27 return '(\\\\d{2})';
+4 28 case 'title':
+4 30 return '(.*)';
+4 31 default:
+4 32 return '';
+4 35 var regex = new RegExp('^' + pattern + '$');
+4 36 if (!regex.test(path)) return;
+4 37 var match = path.match(regex),
+4 38 result = {};
+4 39 for (var i = 1, len = match.length; i <= len; i++){
+4 40 if (match[i]) result[params[i - 1]] = match[i];
+4 45 var path = data.params.path;
+4 46 if (!path ||!data.posts.hasOwnProperty(name)) return callback();
+4 47 if (!data.length) return callback();
+4 48 if (data.path[data.path.length - 1]!== '/'){
+4 51 if (data.permalink){
+4 52 var link = data.permalink;
+4 53 if (!config.canonical_url) return callback();
+4 54 if (data.path[data.path.length - 1] === '/'){
+4 57 if (config.canonical_url + 1]!== '/'){
+5 5 yfm = util.yfm;
+5 7 var Page = hexo.model('Page'),
+5 8 path = data.path,
+5 9 doc = Page.findOne({source: path}),
+5 10 getOutput = hexo.render.getOutput;
+5 11 if (data.type ==='skip' && doc){
+5 14 if (data.type === 'delete'){
+5 15 if (doc){
+5 16 hexo.route.remove(doc.path);
+5 17 doc.remove();
+5 21 Page.insert({source: path, path: path}, function(){
+5 28 Page.save({
+5 29 stat: function(next){
+5 30 doc.replace(/([\\/]+)/g, function(){
+5 31 return next();
+5 33 }, callback);
+6 2 join = pathFn.join,
+6 3 EOL = require('os').EOL,
+6 4 EOLre = new RegExp(EOL, 'g');
+6 5 module.exports = function(locals, render, callback){
+6 6 var baseDir = hexo.base_dir;
+6 7 if (args.length){
+6 8 var target = hexo.base_dir.substring(baseDir.length);
+6 9 if (args[0]) target = pathFn.join(baseDir, '_config.yml');
+6 10 render.render({path: target}, function(err, result){
+6 12 if (result.readable){
+6 13 file.copy(result.path, target + '_config.yml', next);
+6 15 file.write(target, result, next);
+7 16 doc.remove();"
+
+8 2 colors = require('colors'),
+8 3 domain = require('domain'),
+8 5 i18n = require('../core/i18n'),
+8 7 var Theme = module.exports = function Theme(){
+8 8 Box.call(this, hexo.theme_dir);
+8 9 this.config = {};
+8 10 this.i18n = new i18n({
+8 11 code: hexo.config.language
+8 13 this.views = {};
+8 14 this.processors = [
+8 15 require('./processors/config'),
+8 16 require('./processors/i18n'),
+8 17 require('./processors/view'),
+8 18 require('./processors/source')
+8 19 ];
+8 21 Theme.prototype.__proto__ = Box.prototype;
+8 22 Theme.prototype.load = Box.prototype.process;
+8 23 Theme.prototype.generate = function(options, callback){
+8 25 if (typeof options === 'function'){
+8 26 callback = options;
+8 27 options = {};
+8 32 var model = hexo.model,
+8 33 config = hexo.config,
+8 34 route = hexo.route,
+8 35 siteLocals = hexo.locals._generate(),
+8 36 themeLocals = _.extend({}, config, this.config),
+8 37 env = hexo.env,
+8 38 i18n = this.i18n,
+8 39 layoutDir = pathFn.join(this.base, 'layout') + pathFn.sep,
+8 40 self = this;
+8 41 hexo._themeConfig = themeLocals;
+8 42 var Locals = function(path, locals){
+8 43 this.page = _.extend({path: path}, locals);
+8 44 this.path = path;
+8 45 this.url = config.url + config.root + path;
+8 46 this.site = siteLocals;
+8 47 this.config = config;
+8 48 this.theme = themeLocals;
+8 49 this._ = _;
+8 50 this.__ = i18n.get(config.language);
+8 51 this._p = i18n.plural(config.language);
+8 52 this.layout = 'layout';
+8 53 this.cache =!options.watch;
+8 54 this.env = hexo.env;
+8 55 this.view_dir = layoutDir;
+8 57 async.each(hexo.extend.generator.list(), function(generator, next){
+8 58 generator(siteLocals, function(path, layouts, locals){
+8 59 if (!Array.isArray(layouts)) layouts = [layouts];
+8 60 layouts = _.uniq(layouts);
+8 61 var newLocals = new Locals(path, locals);
+8 62 route.set(path, function(fn){
+8 63 var view;
+8 64 for (var i = 0, len = layouts.length; i < len; i++){
+8 65 view = self.getView(layouts[i]);
+8 66 if (view) break;
+8 69 if (view){
+8 70 view.path = layoutDir + path;
+8 74 if (fn(next);
+8 77 if (next);
+8 82 }'
+
+9 3 util = require('./util'),
+9 6 var cache = {};
+9 7 var getExtname = function(str){
+9 8 return str[0] === '.'? pathFn.extname(str) : str;
+9 10 var isRenderable = exports.isRenderable = function(path){
+9 11 return hexo.extend.renderer.isRenderable(path);
+9 13 var isRenderableSync = exports.isRenderableSync = function(path){
+9 14 return hexo.extend.renderer.isRenderableSync(path);
+9 16 var getOutput = exports.getOutput = function(path){
+9 17 return hexo.extend.renderer.getOutput(path);
+9 19 var render = exports.render = function(data, options, callback){
+9 30 if (data.text) return next(null, data.text);
+9 31 if (!data.path) return next(new Error('No input file or string'));
+9 32 file.readFile(data.path, next);
+9 34 function(text, next){
+9 35 var ext = data.engine || getExtname(data.path);
+9 36 if (ext && renderer.hasOwnProperty(ext)){
+9 37 renderer[ext]({
+9 38 path: data.path,
+9 39 text: text
+9 40 }, options, next);
+9 42 next(null, text);
+9 45 ], callback);
+9 47 exports.renderSync = function(data, options){
+9 48 var text = '';
+9 49 if (data.text){
+9 50 text = data.text;
+9 51 } else if (data.path){
+9 52 text = file.readFileSync(data.path);
+9 53 if (!text) return;
+9 58 if (ext && rendererSync.hasOwnProperty(ext)){
+9 59 return rendererSync[ext]({path: data.path, text: text}, options);
+9 61 return text;
+9 64 var renderFile = exports.renderFile = function(source, options, callback){
+9 65 if (!callback) callback = function(){};
+9 74 if (options.cache && cache.hasOwnProperty(source)){
+9 75 next(null, cache[source]);
+9 77 file.readFile(source, function(err, content){
+9 78 if (err) return callback(err, content);
+9 79 if (options.cache[source]!== content) return content;
+9 80 next(null, callback);
+9 85 function(content, next){
+9 87 ], function(next){
+9 88 var layout = cache = cache[source] = options.toLowerCase() + '/', layout === 'layout', url;
+9 89 layout = layout === 'layout = layout === 'layout/;
+9 90 layout = layout === 'layout/;
+9 91 var layoutLength = layout.length = layout.length;
+9 92 var content = layout.toLowercase()!== 0? 'layout/;
+9 93 layout = layout.length - 1 : layout.length;
+9 94 layout = layout.toLowerCase();
+9 95 if (layout disabled = layout.toLowerCase()!== '_ null? 'layout' : '';
+9 96 layout = layout.toLower

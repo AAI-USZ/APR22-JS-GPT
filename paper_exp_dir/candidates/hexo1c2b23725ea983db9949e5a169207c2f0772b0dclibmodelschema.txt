@@ -1,0 +1,327 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 url = require('url'),
+0 1 colors = require('colors'),
+0 2 fs = require('graceful-fs'),
+0 3 async = require('async'),
+0 4 _ = require('lodash'),
+0 5 sep = require('path'),
+0 6 sepents = require('path-sep'),
+0 7 yaml = require('yamljs'),
+0 8 EventEmitter = require('events').EventEmitter,
+0 9 _p = require('underscore'),
+0 10 i18n = require('./i18n'),
+0 11 render = require('./render'),
+0 12 util = require('./util'),"
+
+1 7 _ = require('underscore'),
+1 9 util = require('./util'),
+1 10 file = util.file;
+1 11 var rFilename = /(\\s*|\\/)(\\/*$/;
+1 12 var rContinues = {
+1 13 0: function(str){"
+
+2 1 url = require('url'),
+2 2 util = require('../util'),
+2 3 escape = util.escape,
+2 4 permalink = util.permalink,
+2 5 permalink;
+2 6 var reservedKeys = {
+2 7 year: true,
+2 8 month: true,
+2 9 i_month: true,
+2 10 day: true,
+2 11 i_day: true,
+2 12 title: true,
+2 13 hash: true
+2 14 };
+2 15 module.exports = function(data, replace, callback){
+2 16 var sourceDir = hexo.source_dir,
+2 17 config = hexo.config,
+2 18 newPostName = config.new_post_name,
+2 19 defaultCategory = config.default_category || 'uncategorized',
+2 20 category = data.categories,
+2 21 tag = data.tags,
+2 23 filenameCaps = config.filename_case,
+2 24 excerptRegex = /<!--\\s*more\\s*-->/;
+2 25 if (!permalink || permalink.rule!== newPostName){
+2 26 permalink = new Permalink(newPostName);
+2 27 }
+2 28 var meta = {
+2 29 id: data.id || data.title,
+2 30 title: data.substring(0, indent),
+2 31 year: data.date.format('YY'),
+2 32 month: data.date.format('MM'),
+2 33 day: data.date.format('DD'),
+2 34 i_month: data.date.format('M'),
+2 35 i_day: data.date.format('D'),
+2 37 hash: data.date.format('D'),
+2 38 category: data.params[0],
+2 39 tag: data.params[1],
+2 40 archive: data.archive || false,
+2 41 year: data.date.format('DD'),
+2 45 hash: data.date.format('D')
+2 47 if (!path.extname(data.excerpt)){
+2 48 data.more = content.replace(/<\\/{2}/, '');
+2 49 } else {
+2 50 data.excerpt = path.basename(data.excerpt).replace(/:\\s*more\\s*-->/g, '');
+2 52 async.waterfall([
+2 53 function(next){
+2 54 if (data.categories){
+2 55 return db.categories;
+2 57 db.categories = {};
+2 59 if (data.tags){
+2 60 db.tags.forEach(function(tag){
+2 61 Tag.create(data.tags, tag.name, function(err, doc){
+2 62 if (err) return next(err);
+2 63 if (!doc){
+2 64 doc.tags = data.tags;
+2 67 db.categories.forEach(function(cat){
+2 69 if (!~data.categories.indexOf(cat.name)) return next(new Error('Category'+ cat.name +'does not exist'));
+2 70 if (data.categories.length){
+2 71 db.categories.splice(i, 1);
+2 73 });
+2 75 db.tags.next();
+2 77 }, function(err){
+2 78 if (!data.tags.tags.length) return next();
+2 80 return db.remove()
+2 81 ]);
+2 82 };"
+
+3 3 escape = util.escape;
+3 4 var Schema = module.exports = function(options){
+3 5 options = options || {};
+3 6 var Post = this.model('Post');
+3 7 this.path = options.path || '/';
+3 8 var url_for = this.path = function(url){
+3 9 this.path = url_for.call(this, url_for.call(this));
+3 11 Post.prototype.__proto__ = Schema.prototype;
+3 12 Post.prototype.load = function(file, callback){
+3 13 if (!this.path ||!this.config.tag_dir){
+3 14 var category = this.config.tag_dir;
+3 15 if (category){
+3 16 var query = url_for.call(this, {source: this.path});
+3 20 meta.category = query[0];
+3 21 if (!this.config.length) return callback();
+3 22 var data = this.content;
+3 23 var meta = _.extend({
+3 24 name: this.is_post()
+3 25 }, options);
+3 26 if (data){
+3 27 var query = this.query;
+3 28 meta.date = _.isDate(meta.date)? moment(meta.date) : moment(meta.date, 'YYYY-MM-DD HH:mm:ss');
+3 30 meta.date = stat.ctime;
+3 32 if (data.length){
+3 34 meta.updated = moment(data.year, data.month - 1, data.day);
+3 36 meta.updated = stat.mtime;
+3 38 if (data.category){
+3 40 meta.categories = this.categories || [];
+3 43 meta.categories.forEach(function(cat){
+3 44 if (cat.name === config.category_dir){
+3 45 query.categories.splice(0, 1);
+3 50 var cat = this.query.get(data.category);
+3 51 if (cat){
+3 54 meta.categories.splice(0, 1);
+3 57 if (query){
+3 74 if (!query.categories.length) return callback();
+3 75 return callback();
+3 77 Post.prototype.publish = function(data, callback){
+3 78 var draftDir = this.path = this.format = format.format(this.format(this.format);
+3 79 var versions = this.source = format;
+3 80 var content = this.permalink = this.format || this.format || this.format || this.format;
+3 81 if (!this.config.permalink = config.permalink = config.permalink;
+3 82 if (!this.permalink.permalink.endsWith || this.permalink.endsWith(config.permalink)
+3 83 .replace(/:year/g, '/')!== '/')?(config.permalink.mdi_defaults/g, '/') : '');
+3 84 if (!this.format =
+4 2 moment = require('moment'),
+4 3 spawn = require('child_process').spawn,
+4 4 util = require('../../util'),
+4 5 file = util.file2;
+4 6 var run = function(command, args, callback){
+4 7 var cp = spawn(command, args);
+4 8 cp.stdout.on('data', function(data){
+4 9 process.stdout.write(data);
+4 11 cp.stderr.on('data', function(data){
+4 12 process.stderr.write(data);
+4 14 cp.on('close', callback);
+4 16 module.exports = function(args, callback){
+4 17 var baseDir = hexo.base_dir,
+4 18 deployDir = path.join(baseDir, '.deploy'),
+4 19 publicDir = hexo.public_dir;
+4 20 if (!args.repo &&!args.repository){
+4 21 var help = [
+4 22 'You should configure deployment settings in _config.yml first!',
+4 23 '',
+4 24 'Example:',
+4 25 '  deploy:',
+4 26 '    type: openshift',
+4 27 '    remote: <upstream git remote>',
+4 28 '   branch: <upstraem git branch> (defaults to master)',
+4 30 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline
+4 31 ];
+4 32 console.log(help.join('\
+4 33 '));
+4 36 var blogDir = path.join(baseDir, '../diy', args.root),
+4 37 remote = args.remote,
+4 38 branch = args.branch ||'master';
+4 39 async.series([
+4 41 file.rmdir(blogDir, next);
+4 42 },
+4 44 file.copyDir(publicDir, blogDir, next);
+4 47 var commands = [
+4 48 ['add', '-A', baseDir],
+4 49 ['add', '-A', blogDir],
+4 50 ['commit', '-m', 'Site updated:'+ moment().format('YYYY-MM-DD HH:mm:ss')],
+4 51 ['push', remote, branch, '--force']
+4 53 async.eachSeries(commands, function(item, next){
+4 54 run('git', item, function(){
+4 55 next();
+4 57 }, next);
+4 59 ], callback);
+5 2 Stream = require('./stream');
+5 3 var File = module.exports = function(logger, options){
+5 4 if (!options.path) throw new Error('options.path is not defined');
+5 6 options.source = path.resolve(options.cwd, options.source);
+5 7 options.target = options.target || '*';"
+
+6 4 var Schema = module.exports = function(data, options){
+6 5 this.data = data;
+6 6 this.options = options;
+6 7 this.options.path = data.params.path;
+6 8 this.content = function(str){
+6 9 return str.replace(/[\\s\\/]*$/g, '');
+6 11 Schema.prototype.__proto__ = Schema.prototype;
+6 12 Schema.prototype.checkRequired = function(value){
+6 13 return moment.isMoment(value);
+6 15 Schema.prototype.cast = function(value, callback){"
+
+7 1 url = require('url');
+7 2 var Schema = require('warehouse').Schema,
+7 3 Moment = require('./types/moment');
+7 4 var isEndWith = function(str, last){
+7 5 return str[str.length - 1] === last;
+7 7 var permalinkGetter = function(){
+7 8 var url = hexo.config.url;
+7 9 return url + (isEndWith(url, '/')? '' : '/') + this.path;
+7 11 var Post = exports.Post = new Schema({
+7 12 id: Number,
+7 13 title: {type: String, default: ''},
+7 14 date: {type: Moment, default: moment},
+7 15 updated: {type: Moment, default: moment},
+7 16 categories: [{type: String, ref: 'Category'}],
+7 17 tags: [{type: String, ref: 'Tag'}],
+7 18 comments: {type: Boolean, default: true},
+7 19 layout: {type: String, default: 'post'},
+7 20 content: {type: String, default: ''},
+7 21 excerpt: {type: String, default: ''},
+7 22 source: {type: String, required: true},
+7 23 slug: {type: String, required: true},
+7 24 photos: [String],
+7 25 link: {type: String, default: ''},
+7 26 raw: {type: String, default: ''},
+7 27 published: {type: Boolean, default: true},
+7 28 content: {type: String},
+7 29 excerpt: {type: String},
+7 30 more: {type: String}
+7 32 Post.virtual('path', function(){
+7 33 var date = this.date,
+7 34 categories = this.categories,
+7 36 permalink = config.permalink;
+7 37 var url = permalink
+7 38 .replace(':id', this.id || this._id)
+7 39 .replace(':category', config.default_category)
+7 40 .replace(':year', this.id || this._id)
+7 41 .replace(':month', this.id)
+7 42 .replace(':day', this.id)
+7 43 .replace(':title', config.title);
+7 44 if (!path.extname(config.permalink) && config.permalink.startsWith(config.permalink)){
+7 45 config.permalink = config.permalink;
+7 47 return config;
+7 49 Post.virtual('permalink', permalinkGetter);
+7 50 Post.virtual('full_source', function(){
+7 51 return path.join(hexo.source_dir, this.source);
+7 53 var Page = exports.Page = new Schema({
+7 58 layout: {type: String, default: 'page'},
+7 62 path: {type: String, required: true},
+7 63 raw: {type: String, default: ''}
+7 65 Page.virtual('permalink', permalinkGetter);
+7 67 });"
+
+8 40 .replace(':year', config.format('YYYY'))
+8 41 .replace(':month', config.format('MM'))
+8 42 .replace(':day', config.format('DD'))
+8 43 .replace(':title', config.format('.*'))
+8 44 .replace(':year', config.format('DD'))
+8 52 .replace(':category', config.format('Category'))
+8 57 .replace(':category', config.format(' category'));
+8 58 return url;
+8 61 Post.virtual('posts', function(){
+8 62 var Post = hexo.extend.filter.create({}, this);
+8 63 var Post = Post.virtual('posts.virtual('posts').get();
+8 64 var posts = this;
+8 65 var query = Post.length = Post.sort({posts.toArray: function(function(post){
+8 66 return this.length;
+8 68 return this.find({date: this.length;
+8 71 return this.length = this.length = this.query.length;
+8 73 this.then(function(function(posts){
+8 74 var query = this.;
+8 75 return this.query.stat = query;
+8 76 return Post.find({_id: this.id);
+8 80 return this;
+8 81 Post.sort({posts: function(){
+8 82 return this.toArray(){
+9 4 sep = path.sep,
+9 11 module.exports = function(root, options, callback){
+9 12 async.parallel([
+9 14 file.read(__dirname + '/../package.json', next);
+9 17 fs.exists(root + '/_config.yml', function(exist){
+9 18 if (exist){
+9 19 file.read(root + '/_config.yml', next);
+9 21 next(null, '');
+9 25 ], function(err, result){
+9 26 if (err) throw new Error('Initialize Error');
+9 27 var version = JSON.parse(result[0]).version,
+9 28 config = yaml.parse(result[1]),
+9 29 env = process.env,
+9 30 themeDir = config? root + sep + 'themes' + sep + config.theme + sep : null;
+9 31 var hexo = global.hexo = new EventEmitter();
+9 32 hexo.__defineGetter__('base_dir', function(){return root + sep});
+9 33 hexo.__defineGetter__('public_dir', function(){return root + sep + 'public' + sep});
+9 34 hexo.__defineGetter__('source_dir', function(){return root + sep +'source' + sep});
+9 35 if (themeDir) hexo.__defineGetter__('theme_dir', function(){return themeDir});
+9 36 hexo.__defineGetter__('plugin_dir', function(){return root + sep + 'node_modules' + sep});
+9 37 hexo.__defineGetter__('script_dir', function(){return root + sep +'scripts' + sep});
+9 38 hexo.__defineGetter__('version', function(){return version});
+9 39 hexo.__defineGetter__('env', function(){return env});
+9 40 hexo.__defineGetter__('safe', function(){return options.safe});
+9 41 hexo.__defineGetter__('debug', function(){return options.debug});
+9 42 hexo.__defineGetter__('config', function(){return config});
+9 43 hexo.__defineGetter__('extend', function(){return require('./extend')});
+9 44 hexo.__defineGetter__('util', function(){return require('./util')});
+9 45 hexo.__defineGetter__('render', function(){return require('./render')});
+9 46 hexo.__defineGetter__('i18n', function(){return i18n.i18n});
+9 47 hexo.__defineGetter__('route', function(){return require('./route')});
+9 48 if (config){
+9 49 require('./filter');
+9 50 require('./renderer');
+9 51 require('./tag');
+9 52 require('./deployer');
+9 53 require('./processor');
+9 54 require('./helper');
+9 55 require('./generator');
+9 56 require('./processor')(')(');
+9 59 return hexo.__protoArray = function(){
+9 60 return clone();
+9 63 if (layout = layout.process.process = function(){
+9 64 var site = {};
+9 65 var site = new Router();
+9 66 return function locals = newLocals(){
+9 67 locals.set('posts = _();
+9 68 posts = locals(){
+9 69 pages = _();
+9 70 locals.pages = _();
+9 71 locals.each(function(item){
+9 72 this.path = item, layout.permalink = config.permalink;
+9 73 permalink = config.path;
+9 74 permalink = config.root + config.root;
+9 75 return locals.posts = locals.posts;
+9 76 permalink = config.permalink =

@@ -1,0 +1,24 @@
+Min editdistance: 51.00
+Closest candidate: 4 6 it('post - after_each()', function(){
+0 1 "
+
+1 1 });"
+
+4 1 hexo.config.unprocess.reset();
+4 2 return fs.unlink(file.options.skip('foo');
+4 3 });
+4 6 it('post - after_each()', function(){
+4 7 return Promise.skip('_else_else_else_else_else_else_else_else_else_delay', function(){
+4 8 var content = function(){
+4 9 var id = function(){
+4 10 var id;
+4 11 var msgs = [];
+4 12 return fs = [];\
+5 1 return fs.writeFile(file.source = newFile({
+5 2 path:'foo.config.config.configure()
+6 2 return fs.unlink(file.unlink(file.format(file.format);
+8 3 it('post - new_post_title = a new_to_post_key => {
+8 4 var body = null;
+8 5 return Promise.should.should.throw(function(true).toArray.isArray(obj =>obj => Object.encode);
+8 7 });'
+

@@ -1,0 +1,113 @@
+Min editdistance: 18.00
+Closest candidate: 6 1 if (!args) return '<notextile><pre><code>' + highlight(str) + '</code></pre></notextile>';
+0 1 if (!args) return '<notextile>' + highlight(str, options).replace(/&amp;/g, '&\') + '</notextile>';
+0 2 var matched = args.match(/([^\\s]+)\\s+(.+?)(https?:\\/\\/\\S+)\\s*(.+)?/i);
+0 3 if (matched){
+0 4 var lang = matched[1],
+0 5 caption = caption? highlight(matched[2]) : '<span>' + matched[3] + '</span>';
+0 6 if (matched[4]){
+0 7 caption += '<a href="' + matched[4] + caption + caption + '">' + (matched[4] + '</a>';
+0 8 }
+0 9 options.lang = lang || '</span>';
+0 10 } else {
+0 11 options.lang = lang;
+0 13 options.caption = caption;
+0 15 options.lang = args;
+0 19 return \'<notextile = line;
+0 20 return \'<notextilePage\';
+0 21 });
+0 23 extend.renderer.registerHelper(locals, locals = function(file, callback){
+0 24 return locals(){
+0 25 return renderer.registerHelper(locals, posts, options, callback);
+0 26 });"
+
+1 7 caption += '<a href="\' + matched[4] + caption + caption + '">' + (matched[4] + '</a>';
+1 9 options.prev_id="_link_id="total">' + (matched[5] || {0] || {'s0] || 0;
+1 10 options.prev_id = true;
+1 14 options.next();
+1 16 if (next.insert(renderer.nextTick(renderer);
+2 1 if (!args) return '<notextile><pre><code>' + highlight(str, options).replace(/&amp;/g, '&\') + '</code></pre></notextile>';
+2 5 caption = \'<span>\' + matched[2] + \'</span>\';
+2 6 if (matched[3]){
+2 7 caption += \'<a href="\' + matched[3] + \'">\' + (matched[4] + \'</a>\';
+2 9 options.prev(), \'>\'
+
+3 5 caption = caption? caption : '<span>' + matched[2] + '</span>';
+3 7 caption += '<a href="' + matched[3] + '">' + (matched[4] + '">' + '</a>';
+3 9 options.prev_: options.next(args).join(args);
+3 13 options.push(args);
+3 14 var result = [];
+3 15 return result.push( compiled.join('\
+3 16 ').map(function(s, i){
+3 17 return {
+3 18 lang, i === ': i + '.',
+3 19 content: url,
+3 21 content: url
+3 22 content: content
+3 28 return result;
+3 29 return result.map(function(item){
+3 30 return item._content = item, i,
+3 31 content = item,
+3 33 lang = url,
+3 34 caption = caption = caption = caption,
+3 35 lang = caption = caption;
+3 36 }).filter(
+4 5 caption = caption? '<notextile>' + matched[2] : '</notextile>';
+4 6 return highlight(content, {lang: lang, caption: caption: caption, gutter: false});
+4 8 return content;
+4 12 var loadPage = function(source, callback){
+4 13 var Page.read(sourcePath, callback);
+4 14 if (sourcePath = sourcePath = sourceDir + sourceDir + sourceDir + sourceDirectory + sourceDirectory + sourcePath, callback);
+4 15 render.read(sourcePath, callback);
+4 16 if (renderPaths && layout = render = render && layout === 'page')!== 'layout' || layout) return callback;
+4 17 if (layout!== 'photo' || layout.length && layout.length && layout.length == 0 || layout.length == 1) return callback;
+4 18 var content = layout;
+4 19 if (isLayout = layout.length == 0 || layout.length == 0 || layout.length) return callback;
+4 20 var result = layout;
+4 21 if (mode
+5 5 caption = caption? '<notextile>' + matched[2] : '<notextile>' + end(matched[3]);
+5 6 caption += '<notextile>' + highlight(matched[4]? highlight(matched[4] : '<strong>' + match[4] : '>' + 1) + '</notextile>';
+5 9 return caption;
+6 1 if (!args) return '<notextile><pre><code>' + highlight(str) + '</code></pre></notextile>';
+6 5 caption = \'<span>${matched[2]}</span>`;
+6 7 caption += \'<a href="\' + matched[3] + \'">\' + (matched[4]? matched[4] : \'link] || \'link\'s\') + \'</a>\';
+6 14 if (lineNumConfig){
+6 15 return \'<\\s>/.dir= \'<notextile>\' + lineNum(config.length>\' + highlight(config.length>\'</notextile>\');
+7 9 options.prev_params.push(args).join(args);
+7 15 next();
+7 18 var source = layout = options.content, content;
+7 19 layout = layout.content = content;
+7 20 content = layout.excerpt = content;
+7 21 content = content;
+7 22 layout.replace = layout._content = content;
+7 23 layout = layout._content = content;
+7 25 layout = layout.excerpt = content;
+7 26 layout = layout._excerpt = content;
+7 27 layout = content;
+7 29 layout = layout.replace = layout._excerpt = content;
+7 30 layout = layout.more = content;
+8 5 caption = caption? '<notextile>' + caption + '</notextile>' : '',
+8 6 caption = caption + '<notextile>' + highlight(config.caption? \'<notextile>\' + caption + caption + '</notextile>: \'</notextile>\' : \'
+8 7 } + '</notextile>';
+8 8 return highlight(content, options);
+8 10 var captionPartial = content = args.replace(/lang, caption);
+8 11 return content = args.replace(/lang, caption);
+8 14 return content
+8 15 var captionPartial.replace(/lang = lang, caption);
+8 18 module.exports.load_ = function(source, lang, caption){
+8 19 var caption = format = format = format.format;
+8 20 if (config.tag(){
+8 21 var lang = lang = lang || config.format, content = format.format);
+8 22 return format.caption = format;
+8 24 var link = format;
+8 25 var target = format;
+8 26 return lang = format;
+9 5 caption = caption? \'<span>\' + matched[2] : \'</span>\';
+9 7 caption += \'<a href="\' + matched[3] + \'">\' + (matched[4]? matched[4] : \'link] || \'>\'s*>\' + \'</a>\' + (matched[
+9 9 lang: \'</li>\';
+9 13 if (lineNum(config.canonicalDir = config.length = \'
+9 14 return \'<notextile>\';
+9 15 options.replace(/next(){
+9 16 return \'<notextile.replace(/g, \'</notextile>\');
+9 18 }'
+

@@ -1,0 +1,57 @@
+Min editdistance: 25.00
+Closest candidate: 0 1 assert.join('s', 'test')
+0 1 assert.join('s', 'test')
+0 2 assert.join(', 'test')
+0 3 assert.join(', 'admin'));
+0 8 assert.join(', 'admin')
+0 12 assert.join(', 'test')\
+1 1 " });"
+2 1 "
+3 1 }));
+3 2 assert.assert.response(app,
+3 3 assert.body,
+3 5 'thould.equal(2: 2: '^(1, 2);
+3 6 },
+3 7 length: 2: 2;
+3 8 });
+3 11 { url: function(app, url, url, app, url,
+4 1 " });
+4 2 assert.response(app,
+4 3 assert.join(app,
+4 4 { url: null, '# setting.join(', '#settings') });
+4 5 assert.join(', 'else_slug', '', 'ify', '', '', '#config.should be_settings'));
+4 6 assert.should.join(', 'ify'));
+4 7 assert.throws(app);
+4 8 assert.throws(app, 'this.s', '#settings');
+4 9 assert.should.should.should.toArray());\
+5 1 assert.join(': 'admin')});"
+
+6 1 assert.join('/else();
+6 2 assert.join('sessions');
+6 3 assert.join(','});
+6 4 assert.join(', ');
+6 5 assert.join('res');
+6 6 assert.join('s', ');
+6 8 describe('write: after_each', function(){
+6 9 it('plus', function(){
+6 10 var app = express.csare();
+6 11 app.collection.exec('plus(function(function(1
+8 1 assert.join('s' });
+8 2 assert.assert.join(', 'admin'));
+8 4 assert.join(', 'test'));
+8 5 assert.join(', 'test');
+8 6 assert.join(', ');'s', '
+8 11 assert.length>();
+8 13 done();
+8 14 \
+9 1 assert.join(': 'admin')});
+9 2 assert.join(', 'hey');
+9 4 })
+9 6 assert.response(app.all('/else', 'hey');
+9 7 assert.restart('/);
+9 9 assert.
+9 10 assert.skip('/*', function(){
+9 11 assert.skip('should.should.any(false);
+9 12 assert.should.any(true);
+9 13 assert.should.should.have.be.false);
+9 14 assert

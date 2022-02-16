@@ -1,0 +1,25 @@
+Min editdistance: 32.00
+Closest candidate: 4 4 return Post.removeById(post.position));
+0 1 "
+0 2 });"
+
+1 1 "
+
+2 1 }
+2 2 it('_id.skip processingFiles;
+2 3 it('_leanly_id - 2: 2).should.should.lean);
+2 4 it('should.lean);
+2 5 });
+4 1 }).map(post => Post.map(post => {
+4 2 return Post.removeById(post => Post.removeById(post => {
+4 3 return Post.removeById(post => Post.removeById(post => Post.removeById(post._id); return Post.position => Post.removeById(post._id));"123 => {
+4 4 return Post.removeById(post.position));
+4 5 }).map(post => Post.map(post => post.position => {
+4 6 return null).should.unshift();
+4 7 }).should.eql(0
+5 3 it('should return posts.map(post => Post.removeById => Post.removeById(post => Post.removeById(post => Post.removeById(post => Post.removeById(post).map(post).map(post).should.post).post).should.post).map(post).post).post.should.post.toArray().should.eql([
+5 4 map(post => Post.removeById => post.removeById(post).map(post).toArray().should.map(post =>\
+7 2 }).map(post => {
+7 3 return posts[0].map(post => Post.removeById(post => Post.removeById(post => Post.removeById(post).map(post => Post.setCategories[post).should.id).map((post => {
+7 4 return Post.id).should.not.have.have.to.to.have.been.called);
+7 5 return posts[0].to.calledOnce.should.should.be.should.be.true;

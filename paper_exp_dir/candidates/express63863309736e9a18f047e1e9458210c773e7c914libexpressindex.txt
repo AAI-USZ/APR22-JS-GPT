@@ -1,0 +1,401 @@
+Min editdistance: 19.00
+Closest candidate: 3 1 exports.server = require('./server');
+0 1 function File(data){
+0 2 this.source = data.source;
+0 3 this.path = data.path;
+0 4 this.type = data.type;
+0 5 this.params = data.params;
+0 6 this.content = data.content;
+0 7 }
+0 8 function wrapReadOptions(options){
+0 9 options = options || {};
+0 10 if (typeof options ===\'string\') options = {encoding: options};
+0 11 if (!options.hasOwnProperty(\'encoding\')) options.encoding = \'utf8\';
+0 12 if (!options.hasOwnProperty(\'cache\')) options.cache = true;
+0 13 return options;
+0 15 File.prototype.read = function(options, callback){
+0 16 if (!callback && typeof options === \'function\'){
+0 17 callback = options;
+0 18 options = {};
+0 21 var self = this;
+0 22 var content = this.content;
+0 23 options.encoding = options.encoding || \'utf8\';
+0 24 return new Buffer(options);
+0 25 return new content;
+0 26 };
+0 27 File.prototype.readSync = function(options){
+0 32 var keys = Object.keys(options);
+0 33 var params = [];
+0 35 for (var i = 0, len = keys.length; i < len; i++){
+0 36 var key = keys[i];
+0 37 options[key] = options[key];
+0 38 if (options.hasOwnProperty(key)){
+0 39 params[key] = options[key];
+0 40 } else {
+0 41 params.push(key);
+0 44 return new Promise(function(resolve, reject){
+0 45 if (this.asset_folder) {
+0 46 var dest = this.source;
+0 47 var promise = new Q();
+0 48 return this.reader.on(\'data\', function(chunk){
+0 49 data.content = chunk;
+0 50 }).on(\'end\', function(){
+0 51 var results = self.merge(options);
+0 52 var target = mout.array.find(ReadOptions, function(item){
+0 53 return self.reader.get(data, target);
+0 54 });
+0 55 if (result) {
+0 56 return promise.then(resolve, reject);
+0 58 return this.reader.reject(new Error(\'No input file or string\'));
+0 60 File.prototype.stat = function(source, callback){
+0 62 return fs.stat(source).then(function(){
+0 63 return self.stat();
+0 64 }).asCallback(callback);
+0 66 File.prototype.statSync = function(source){
+0 67 return fs.statSync(source).asCallback(callback);
+0 69 File.TYPE_CREATE = \'create\';
+0 70 File.TYPE_UPDATE = \'update\';
+0 71 File.TYPE_SKIP_DELETE = \'delete\';
+0 72 function File(data, replace, callback){
+0 73 if (!callback && typeof replace === \'function\'){
+0 74 callback = replace;
+0 75 replace = replace;
+0 76 replace = false;
+0 78 callback = function(){};
+0 80 return this.reader.set(data, data, replace, stat, function(){
+0 81 return this.save();
+0 83 .on(\'
+
+1 1 exports.server = {
+1 2 port: 9876,
+1 3 runnerPort: 9100,
+1 4 loggerLevel: LOG_INFO,
+1 5 server: process.env.NODE_ENV || 'test\',
+1 6 version: pkg.version,
+1 7 headers: {
+1 8 \'Content-Type\': \'application/x-www-form-urlencoded\'
+1 9 },
+1 10 loggerFormat = args => { return args.join(\' \'); };
+1 11 exports.server.on(\'error\', (err) => {
+1 12 console.error(err.stack);
+1 14 exports.runner = {
+1 18 server: process.env.NODE_ENV || \'test\',
+1 21 \'Content-Type\': \'application/octet-stream\'
+1 23 loggerMethodOverride = args => { return args.join(\' \'); };
+1 25 console.error(err);
+1 27 exports.server.on(\'connect\', (socket) => {
+1 28 var server = new Server(socket, { useIframe: true, root: __dirname + \'/public\' });
+1 29 logger.debug(\'Testacular server started at http://localhost:\' + server.port);
+1 30 return server.set(\'env\', \'development\');
+1 37 logger.debug(\'Testacular server started at http://localhost:\' + socket.port);
+1 38 var instanceOf = require(\'./util\').instanceOf;
+1 57 var server = new Server(socket, { useIframe: true, basePath: \'/base\' });
+1 58 logger.debug.debug(\'Testacular server started at http://localhost: http://localhost: http://localhost: http://localhost: http://localhost: http://localhost: http://local: http://bower.com: http://bower.com/basePath/testacular.com/testacular.js/testacular.js\');
+1 59 var instanceOf = server
+1 60 loggerMethodOverride();
+1 62 exports.ucFirst = function(argv) {
+1 63 return function(argv) {
+1 64 return Object.getOwnProperty = argv.call(argv);
+1 65 return {
+1 66 name === \'Server#\'trust proxy\' in app/\' + port
+1 68 };'
+
+2 1 function File(data) {
+2 8 function wrapReadOptions(options) {
+2 15 File.prototype.read = function(options, callback) {
+2 16 if (!callback && typeof options === \'function\') {
+2 22 options = wrapReadOptions(options);
+2 23 content.read(options, callback);
+2 24 return this.read().then(function(content) {
+2 25 if (!content) return;
+2 26 var encoding = options.encoding;
+2 27 if (!encoding) return content;
+2 28 self.contentType(content);
+2 29 return self.encoding.apply(self, encoding);
+2 32 File.prototype.readSync = function(options) {
+2 35 content.toString = function(str) {
+2 36 return str.replace(/\
+2 37 (\\t+)/g, function(match, tabs) {
+2 38 var result = \'\
+2 39 \';
+2 40 for (var i = 0, len = tabs.length; i < len; i++) {
+2 41 result += options.tab;
+2 43 return result;
+2 46 File.prototype.stat = function(options, callback) {
+2 51 var stats = this.stats;
+2 52 var cache = options.hasOwnProperty(\'cache\')? options.cache : true;
+2 54 return new File(data.source, options);
+2 56 function escapeContent(str) {
+2 57 return str.replace(/<escape(?:[^>]*>[^\\]]*>/g, escapeContent);
+2 60 return str.replace(/<escape>(.*?)<\\/escape>/g, escapeContent);
+2 62 File.prototype.toString = function() {
+2 63 return this.toString();
+2 65 module.exports = File;"
+
+3 1 exports.server = require('./server');
+3 2 exports.runner = require('./runner');
+3 3 exports.VERSION = '0.14.1';
+3 4 exports.server.onRun = function() {
+3 5 this._browsers = [];
+3 6 this._isRendered = false;
+3 8 exports.server.onBrowserStart = function(browser) {
+3 9 this._browsers.push(browser);
+3 13 this.emit('start', browser);
+3 16 if (this._isRendered) {
+3 17 this.writeConfigFile()
+3 18 .terminal( true);
+3 21 exports.server.onBrowserComplete = function(browser, result) {
+3 24 .terminal(!result.success);
+3 27 .terminal(result.failed);
+3 33 .set(\'Running\'+ this._isRun.indexOf(this._config.id) + \'.js\');
+3 36 exports.server.onSpecComplete = function(browser, result) {
+3 37 var spec = suites[this.id].first(2);
+3 38 var env = process.env;
+3 39 var args = [
+3 40 \'start\', null, \'--single-run\', \'--no-auto-watch\', \'--reporters=dots\', \'--browsers=\' + args.join(\' \'));
+3 41 var next = function(err, result, code) {
+3 42 if (process.env.TRAVIS) {
+3 43 result.success = code;
+3 45 last(err);
+3 48 if (args) {
+3 49 var slicedArgs = args.slice(1);
+3 50 try {
+3 52 return;
+3 55 .set(this._config.id, args);
+3 57 next(function() {
+3 58 this.showAll();
+3 62 exports.server = function() {
+3 69 this.last(err);
+3 72 var spec = suites[this.id].last(3);
+3 73 var msg = result.suite.join(\' \');
+3 74 if (prev === 0) {
+3 75 msg += \'\
+3 76 \' + result.suite.join(\' \');
+3 78 result.setHeader(\'Content-Type\', result.suite.value, result.suite);
+3 81 exports.server.onSpecComplete = function() {
+4 1 it(\'should be properly formatted for a single configuration', function(done) {
+4 2 var config = rc.parseConfig(questions, config);
+4 3 expect(config.formatError).to.be.equal(\'[\\u4e00-\\u9fa5\\u3040-\\u30FF]\');
+4 4 done();
+4 6 it(\'should format progress when a custom helper is given.\', function(done) {
+4 11 it(\'should format path packages for bower.json\', function(done) {
+4 16 it(\'should format search for bower.json\', function(done) {
+4 21 it(\'should format BROWSERS\', function(done) {
+4 23 expect(config.formatSuccess).to.be.equal(\'[\\u4e00-\\u9fa5\\u3040-\\u30FF]\');
+4 26 it(\'should format AUTO_WATCH\', function(done) {
+4 28 expect(config.autoWatch).to.be.equal(\'true\');
+4 30 it(\'should format only until after bower.json\', function(done) {
+4 32 expect(config.autoWatch).to.be.equal(\'false\');
+4 34 it(\'should format PREPROCESSORS\', function(done) {
+4 36 expect(config.prePROCESSORS).to.be.equal(\'prePROCESSORS\');
+4 40 expect(config.prePROCESSORS).to.be.equal(\'false\');
+4 42 it(\'should format PREPROCESSORS for no folder\', function(done) {
+4 44 expect(config.prePROCESSORS).to.equal(\'false\');
+4 46 it(\'should format PREPROCESSORS for a single folder\', function(done) {
+4 48 expect(config.prePROCESSORS).to.equal(\'\
+4 49 \
+4 51 '\
+4 53 'writeFile\');
+4 54 expect(config.writeFile
+4 55 expect(config.encendWithFile)
+4 56 expect(config.encendWith(\'{\
+4 57 path\
+4 59 ' + \'.json\') + \'.contents\')).toString
+4 60 ).toString());
+4 61 expect(config.done();
+4 63 it(\'should setEncoding enabled = config.encoding(\'utf8\', config.should.should.should.equal(\'eql(config.string\');
+4 66 it(\'shouldEncodingPrismatchClressConfigs\');'
+
+5 4 logger: false,
+5 5 serverStack: {
+5 6 username: \'voyta.yoursite.com\',
+5 7 accessKey: \'http://localhost:9876\'
+5 9 config: {
+5 10 urlRoot: \'/\',
+5 11 hostname: \'localhost:9876\',
+5 12 port: 9100,
+5 13 urlRoot: \'/root\',
+5 14 upstreamProxy: {
+5 15 path: \'/\',
+5 19 path: \'/pya-middleware/proxy\',
+5 44 hostname: \'localhost: 9100\',
+5 63 path: \'/__proto__/__proto__/\',
+5 67 path: \'/__proto__/__proto__/\'
+5 70 urlRoot: \'/__proto__/__karma__/\',
+5 71 hostname: \'proxy/__karma__/',
+5 74 path: \'/__proxy__/__karma__/',
+5 75 hostname: \'proxy/__karma__/\',
+5 78 path: \'/__proxy__/__karma__/\'
+5 81 urlRoot: \'/__proxy__proxy__/__karma__/__karma__/bar__/\',
+5 82  port: 3)
+6 4 colors: true,
+6 5 logLevel: LOG_INFO,
+6 6 autoWatch: false,
+6 7 reporter: \'progress\',
+6 8 singleRun: false,
+6 9 browsers: [],
+6 10 proxies: {},
+6 12 reportSlowerThan: 0
+6 14 exports.server.prototype.__proto__ = EventEmitter.prototype;
+6 15 exports.server.start = function(configFilePath, cliOptions) {
+6 16 var config = {
+6 17 port: config.port,
+6 18 runnerPort: constant.DEFAULT_RUNNER_PORT,
+6 19 basePath: \'/\',
+6 20 files: [],
+6 21 exclude: [],
+6 22 logLevel: constant.LOG_INFO,
+6 23 colors: false,
+6 31 var ADAPTER_DIR = __dirname + \'/../adapter\';
+6 32 var configEnv = {
+6 33 LOG_DISABLE: constant.LOG_DISABLE,
+6 34 LOG_ERROR:   constant.LOG_ERROR,
+6 35 LOG_WARN:    constant.LOG_WARN,
+6 36 LOG_INFO:   constant.LOG_INFO,
+6 37 LOG_DEBUG:   constant.LOG_DEBUG,
+6 38 JASMINE: __dirname + \'/../adapter\',
+6 39 JASMINE_ADAPTER: ADAPTER_DIR + \'/lib/jasmine.js\',
+6 40 MOCHA_ADAPTER: ADAPTER_DIR + \'/lib/angular-scenario.js\',
+6 42 ANGULAR_SCENARIO_ADAPTER: ADAPTER_DIR + \'/lib/angular-scenario.js\',
+6 44 var module = Object.create(null);
+6 45 [\'launcher\', \'preprocessor\',\'reporter\'].forEach(function (type) {
+6 46 var definitions = config[\'custom\' + helper.ucFirst(type) +\'s\'] || {};
+6 47 Object.keys(definitions).forEach(function (name) {
+6 48 var definition = definitions[name];
+6 49 if (!helper.isObject(definition)) {
+6 50 return log.warn(\'Can not define %s %s. Definition has to be an object.\', type, name);
+6 52 if (!helper.isString(definition.base)) {
+6 53 return log.warn(\'Can not define %s %s. Missing base %s.\', type, name, type);
+6 55 var token = type + \':\' + definition.base;
+6 56 var locals = {
+6 57 args: [\'value\', definition]
+6 59 module[type + \':\' + name] = [\'factory\', function (injector) {
+6 60 var plugin = injector.createChild([locals], [token]).get(token);
+6 61 if (token) {
+6 62 if (type === [token) {
+6 63 config[type]) return plugin;
+6 64 return plugin;
+6 66 return injector.apply(module, root +\'(module, [type, config, injector];
+6 72 config.createPreprocessor.injector = function (config, injector, config, injector) {
+6 73 Object.apply(config, injector, injector);
+6 74 var already = this;
+6 75 return injector.series([ansinjector.createChild([answers], function (injector) {
+6 76 return injector.get(injector, injector) {
+6 77 processor.prejector.get(injector, injector);
+6 78 return injector.get(injector);
+7 3 hostname: \'localhost,
+7 5 beforeMiddleware: [],
+7 6 middlewareResponse: \'hello middleware!\',
+7 7 middleware: []
+7 10 version: \'0.2.0rc1\',
+7 11 hostname: \'localhost',
+7 23 beforeMiddleware: exports.server.callback
+7 25 exports.runner_ = {
+7 27 hostname: \'localhost\',
+7 30 beforeMiddleware: {
+7 31 served: false,
+7 32 process: \'file\',
+7 33 stdout: \'\',
+7 34 stderr: \'\',
+7 35 write: function (str) {
+7 36 stderr.setEncoding(\'utf8\');
+7 38 default: \'application/octet-stream\'
+7 40 content: \'binary\',
+7 41 exec: function (str) {
+7 42 return str.replace(/\\u2028/g, \'\\\\u2028\')
+7 43 .replace(/\\u2029/g, \'\\\\u2029\');
+7 55 exports.proxies = {
+7 56 url: \'https://bower.io\',
+7 57 root: \'/\',
+7 58 beforeMiddleware: {},
+7 59 middleware: [],
+7 60 request: function (req, res) {
+7 61 var req = req.query.split(\'#\');
+7 62 req.params = req.params || {};
+7 63 res.headers = { \'X-Powered-By\': \'Express\', \'GitHub\': \'8080,
+7 64 headers: req.params || {},
+7 65 statuses: req.params,
+7 66 queryString: \'en-us-this\',
+7 67 charset: \'UTF-8\',
+7 68 X-Powered-By: \'Express\',
+7 69 abortIfDirty: true,
+7 70 tag: \'atag\',
+7 71 env: \'development\',
+7 72 version: \'test\'
+7 74 exports.non = {
+7 75 \'test\': \'Hexo is awesome!\'
+7 77 exports.exclude = function (source) {
+7 78 if (source.indexOf(\'://\')!= -1) return true;
+7 79 return false;
+7 81 exports.jquery = {
+7 82 url: \'/jquery.js\',
+7 83 parts: source,
+7 84 query: function (req, res) {
+7 85 return res.headers[\'jquery\'] || {};
+7 91 hostname: hostname,
+7 92 port: port,
+7 93 urlRoot: \'/
+7 97 exports.customHandler: handler: handler
+8 1 it(\'should be properly formatted.replace(/\\uFEFF/, \'\\uFEFF\').should.equal("\\uFEFFlet foo = 7;");
+8 2 assert.equal("\\uFEFFlet foo = 8;");
+8 3 assert.equal("\\uFEFFlet baz = 3;");
+8 4 assert.equal("\\uFEFFlet());
+8 6 it(\'should be encoded\', function() {
+8 7 var buf = [
+8 8 "abc",
+8 9 "baz"
+8 10 ].join("\\uFEFFlet foo = 7;");
+8 11  buf.should.eql("abc");
+8 13 it(\'should be unstring\', function() {
+8 18 buf.should.eql("unstring");
+8 20 it(\'should not be a string\', function() {
+8 25 buf.should.eql("baz");
+8 27 it(\'should work with objects\', function() {
+8 29 "foo",
+8 32 buf.should.eql("abc");
+8 34 it(\'should pass when a valid URL\', function() {
+8 35 var valid = \'http://valid.com\';
+8 36 var result = u.validate(buf);
+8 37 assert.equal(valid, result.location);
+8 38 assert.equal(result.source, \'http://valid.com\');
+8 40 it(\'should return false for a key\', function() {
+8 41 var valid = \'http://valid.com/foo\';
+8 44 assert.equal(result.ource, \'http://valid.com/foo\');
+8 49 assert.equal(valid, result.source, \'http://valid.com/foo\');
+8 51 it(\'should move an invalid route\', function() {
+8 52 var app = express();
+8 53 app.get(\'/user/:id/:op?\', function(req, res, next){
+8 54 res.send(\'got an error\');
+8 56 app.get(\'/user/:id/edit\', function(req, res){
+8 57 res.send(\'got an edit form\');
+8 59 app.get(\'/user/:id/:op?\', function(req, res){
+8 60 res.send(\'got an op?\');
+8 66 res.send(\'got an optional post_render\');
+8 68 app.get(\'/user/:id/:id/:user/:user/:op?\', function(req, res){
+8 69 res.send(\'
+
+9 1 it(\'should be properly formatted for a filename\', function () {
+9 2 exports.filename = \'test.txt\';
+9 3 exports.should.have.property(\'path\', \'test.txt\');
+9 4 exports.should.have.property(\'content\', \'test.txt\');
+9 5 exports.should.have.property(\'exclude\', \'test.txt\');
+9 7 exports.should.have.property(\'type\', \'text/javascript\');
+9 8 exports.should.have.property(\'url\', \'http://example.com/test.txt\');
+9 9 exports.should.have.property(\'image\', \'image/png\');
+9 12 exports.should.have.property(\'type\', \'text/plain\');
+9 13 exports.should.have.property(\'type\', \'application/json\');
+9 36 exports.should.have.property(\'value\', \'text/plain\');
+9 37 exports.should.not.exist;
+9 38 exports.should.should.have.property(\'ca.register.test\');
+9 39 exports.should.should.have.exclude = function (content) {
+9 40 content.exclude = [\'http://example.com\', \'http://example.com\', \'http://example.com\', \'http://bower.com
+9 41 \'bower.io\', \'3.io
+9 42 \'3.io\']
+9 43 , \'bower.json\';
+9 44 , \'function content.sasset.directs
+9 45 , status: 3 == 3(email_embedded_link: false\', \'email\', \'email_method: false\', \'jquery
+9 46 , redirects: http://google.com\', \'jquery.com
+9 47 , headers: http://google.com
+9 48 , headers: http://user.com\', \'flodbower.com
+9 49 , cookie_method: \'n, redirects: \'Email\', \'jquery.com
+9 50 , headers: http://

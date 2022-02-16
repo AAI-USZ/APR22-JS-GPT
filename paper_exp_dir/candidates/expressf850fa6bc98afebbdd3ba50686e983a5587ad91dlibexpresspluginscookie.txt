@@ -1,0 +1,11 @@
+Min editdistance: 23.00
+Closest candidate: 2 1  return true; }
+0 1 '
+
+2 1  return true; }
+2 2 } : function(event) { return true; }
+2 4 } : function(event) {
+2 5 return true; }
+2 6 }
+2 8 })'
+

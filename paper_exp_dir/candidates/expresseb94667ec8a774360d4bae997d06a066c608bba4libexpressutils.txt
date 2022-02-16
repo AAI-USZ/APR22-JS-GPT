@@ -1,0 +1,210 @@
+Min editdistance: 42.00
+Closest candidate: 9 21 } else if (queryString.hasOwnProperty(key)) {
+0 1  return orig;
+0 2 return function(err, doc) {
+0 3 if (err) return callback(err);
+0 4 return val instanceof Date,
+0 5 new Date(i, 10) / 1000 });
+0 6 return function(req, res, next){
+0 7 if (!(req instanceof Date)) return next();
+0 8 var err = new Error("The quick brown fox jumps over lazy dog");
+0 9 err.details = content;
+0 10 err.code = "altered";
+0 11 callback(err);
+0 12 return;
+0 13 }
+0 14 return result;
+0 15 };'
+
+1 3 return uid(db);
+1 5 return function(err, req, res, next) {
+1 6 if (!err) return next(err);
+1 7 var keys = Object.keys(req.params),
+1 8 array = [],
+1 9 keys.length = 0;
+1 10 for (var i = 0, len = keys.length; i < len; ++i) {
+1 11 if (keys[i].charAt(0) === 0) {
+1 12 return next();
+1 15 req.params[key] = array;
+1 17 return function(req, res, next) {
+1 18 if (req.body.password) {
+1 19 var tildify = req.body.password;
+1 20 try {
+1 21 fixture.push(tildify(req.body.password));
+1 22 } catch (e) {
+1 23 next(new Error("Lame, failed to reload"));
+1 27 if (!res.session) throw new Error(\'session required to clear session");
+1 28 var msg = eslint.verify(req.session.csrf, function(err,session) {
+1 29 if (err) return next(err);
+1 30 msg.replace(/:\\/g, \'%21\')
+1 31 .replace(/:(\\w+)/g, function(match, name) {
+1 32 return [name];
+1 33 });
+1 35 if (!msg.length) {
+1 38 req.flash();
+1 40 };
+1 41 }'
+
+2 3 if (err) return callback.apply(orig, null, context.args);
+2 4 return [false, null];
+2 7 return function(key) {
+2 8 return util.format(hexo.config.uid, {
+2 9 value: key,
+2 10 locals: other.params[key]
+2 13 return function(singular, plural, number) {
+2 14 var args = arguments.length > 0? [0].apply(this, arguments);
+2 15 var type = args.shift(),
+2 16 name = args.pop(),
+2 17 url = args.shift(),
+2 18 context = args[0],
+2 19 default = args[1]? this.params[type] : default;
+2 20 if (!helper.isString(href="#')) {
+2 21 var url = this.url,
+2 22 rel = this.config.canonical_url,
+2 23 headers = this.params[url];
+2 24 if (!external_link) {
+2 25 if (only_link === this.config.url) {
+2 27 rel = this.config.external_link + url + '.' + rel + '.json';
+2 29 if (rel.includes(\'noopenner\')) {
+2 30 var data = url.parse(href).substring(1);
+2 31 if (data && data.protocol) {
+2 32 return this.set(\'home\', rel);
+2 34 return this.send(data);
+2 37 exports.contentType = function(type) {
+2 38 return this.set(\'Content-Type\', type);
+2 39 return this.set(\'Content-Type\', contentType);
+3 1  return orig.apply(this, arguments)
+3 2 return function(val, key) {
+3 3 return key.toLowerCase() + ':'+ val + '\
+3 4 ' + params
+3 7 return function(arr, key) {
+3 8 return array.find(function(obj) {
+3 9 return obj.charAt(0) === '-' + obj.indexOf('.') > -1 &&
+3 10 obj.charAt(0) === '-') + obj.indexOf('.') > -1
+3 11 }).join(" ')
+3 13 return function(string, key) {
+3 14 return string.replace(/\\'|\\*/g, '-')
+3 15 .replace(/\\\\/g, '-')
+3 16 .replace(/\\?.*$/, \'\')
+3 17 .replace(/^\\/absolute/, \'\')
+3 18 .replace(/^\\/base/, base)
+3 20 }"
+
+4 1  return orig
+4 2 var key = keys[0], val = params[key]
+4 3 if (!key) return fn(new Error('The key must be a string or the regular expression must be a regular expression.')
+4 4 if (!key.startsWith('*')) {
+4 5 return '(.*?)'
+4 7 var val = key.toLowerCase()
+4 8 return val === undefined? [val] : val
+4 9 } : arg
+4 11 var captures = [], params = {}
+4 12 Express.server.on(connect.onError({
+4 13 request: function(req, res) {
+4 14 params = arguments
+4 15 if (captures.length === 1) {
+4 16 var id = captures[1],
+4 17 msg = captures[2],
+4 18 fn = regex.parse(String(val), { escape: _escape(params[0]), content: captures[1] })
+4 19 if (key in params)
+4 20 params[id] = captures[2]
+4 21 return Express.server.run(specs.shift())
+4 22 } else {
+4 23 Express.server.listen(params)
+4 24 puts('Express started at http://localhost:' + port)
+4 26 })
+4 28 })"
+
+5 1  {
+5 2 if (Array.isArray(value)) {
+5 3 return function(val) {
+5 4 var keys = key.split(/\\[\\]/);
+5 5 var ret = new RegExp(key + ') { return val.toUpperCase() + '.' + ret.replace(/\\*.*/, \'\') + \'$1\';
+5 7 var v = eval("with(Express){\' + string + \'}\');
+5 8 if (vals.length) {
+5 9 array.addChild(new v);
+5 14 return v;
+5 16 exports.getExisting = function(path) {
+5 17 return array.find(function(val, key){
+5 18 if (!key) return false;
+5 19 var getter;
+5 20 if (typeof val ===\'string\') {
+5 21 return val;
+5 23 return this.schema? [this.slug] : [val];
+5 25 exports.load = function(path, callback) {
+5 26 return find(function(val, key){
+5 27 if (this.has(path)) return callback;
+5 28 var regexp = this.normalize(path);
+5 29 var filteredkeys = this.formatters[filter];
+5 30 if (!registry.has(path)) return callback;
+5 31 if (typeof val === \'object\' &&
+5 32 (!this.get(path)) return callback();
+5 33 var pct = this.compress();
+5 34 this.each(function(val, key){
+5 35 if (!this.isPlainObject(val) || val)
+5 36 && this.get(key).endsWith(key);
+5 37 }.bind(this));
+5 38 if (if (!~this.isPlainObject(val) return val);
+5 39 //tmp);
+5 40 if (this.set(this.getter) return val;
+5 42 }.bind(this.set(this));
+5 44 };"
+
+6 1  return orig.apply(null, args);
+6 2 return fixture.substring(0, 2) === 2? floor.exports.defaultOptions : orig.options.defaults;
+6 4 return function(arr, session) {
+6 5 return Array.prototype.slice.call(arr, session)
+6 6 .call(session.request.captures.shift(), function(){
+6 7 return [].concat(specs.reduce(function(arr, pair){
+6 8 return pair.split(/\\r*,\
+6 9 /);
+6 10 }, {}));
+7 4 return arr.length;
+7 6 return function(arr, id, fn) {
+7 7 if (!err) return callback(new Error("Exports.reduceParams must have a callback.");
+7 8 return /(.*?([^\\[\\]+)\\.(\\w+)$/g;
+7 11 exports.compile = function(source) {
+7 12 return source
+7 13 .replace(/[\\]/g, "\\\\")
+7 14 .replace(/\\+/g, "\\\
+7 15 )"
+7 16 .replace(/^\\/g, "\\\\r")
+7 17 .replace(/\\//g, "//"
+7 18 ).replace(/\\//g, "//"
+7 20 exports.dirname = function(path, callback) {
+7 22 .replace(/\\/g, "\\\\"
+7 23 .replace(/\\/+/g, "\\\\f")
+7 24 .replace(/^\\/absolute/, "\\\\d+")
+7 26 .replace(/^\\/absolute/, '')
+7 28 .replace(/^\\/base/, base + '-')
+7 30 exports.extname = function(path) {
+7 31 if (path.lastIndexOf(\'.\') < 0) return
+7 32 return path.slice(path.lastIndexOf(\'.\') + 1)
+8 2 var key = keys[0], val = params[key],
+8 3 rec = [key]
+8 4 if (fn instanceof RegExp) {
+8 5 params[key.toLowerCase()] = [params[key.toLowerCase()]
+8 6 } else
+8 7 params[key.toLowerCase()] = val
+8 9 return orig
+9 2 var query = new RegExp("^" + key + ")");
+9 3 if (operator === undefined) {
+9 4 query = new RegExp("^" + val);
+9 6 query = new RegExp("^" + regex.toString());
+9 8 if (!(key in params)) {
+9 9 var queryString = this.params[key] = decodeURIComponent(params[key]);
+9 10 if (query!== undefined) {
+9 11 params[key] = this.params[key] || {};
+9 14 if (typeof queryString === "string") {
+9 15 return params[key];
+9 17 if (typeof queryString.hasOwnProperty(key)) {
+9 18 if (params[key].hasOwnProperty(key)) {
+9 21 } else if (queryString.hasOwnProperty(key)) {
+9 22 return this.params[key];
+9 24 return new queryString({
+9 25 content: queryString.content,
+9 26 query: queryString.query,
+9 27 hash: queryString.hash,
+9 28 queryString: queryString.query
+9 31 "
+

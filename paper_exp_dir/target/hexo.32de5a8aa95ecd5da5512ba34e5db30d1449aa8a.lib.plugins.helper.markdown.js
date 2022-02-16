@@ -1,0 +1,2 @@
+function markdownHelper(text, options){
+}

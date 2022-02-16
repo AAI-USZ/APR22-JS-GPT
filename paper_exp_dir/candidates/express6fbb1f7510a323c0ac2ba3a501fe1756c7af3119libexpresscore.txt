@@ -1,0 +1,73 @@
+Min editdistance: 48.00
+Closest candidate: 2 7 Express.response.response = Express.response.response =
+0 1  } : 'Express.return 'Express.response.body.body.body.should.should.to.eql 'categories.' }'
+0 2 })
+0 4 response : function()
+0 5 return callback()
+0 6 response.call(Express = callback = callback
+0 7 return Express.response.body)
+0 8 return Express.test = callback
+0 10 }
+0 13 function test : function validatePatterns (patterns (patterns, app) {
+0 14 return patterns = []
+1 1  }} 'Express.return 'express.body.something', function(express() }' : 'Express.return 'Express.halt() 'hey' }' } : 'hey' } })
+1 2 return 'categories/categories/categories/' })
+1 3 return 'comments' }/express = 'Express.something' }'
+1 4 Express.response.response.body.send : 'categories = 'categories'
+1 5 return 'categories'
+1 8 Express.response.response.body : 'categories'
+2 1  } : '
+2 2 return 'Express.response.body.body.body.should.should.should.not.have_id.should.have_id.should.have_id.should.toString as '123'
+2 3 return '123'
+2 6 Express.test = function()
+2 7 Express.response.response = Express.response.response =
+2 8 response.body.writeHeader()
+2 9 Express.return : null
+2 10 return Express.response.end()
+3 1  'express.post('bar' })
+3 2 return 'bar' }' }' })
+3 3 return 'bar' })
+3 4 response : 'bar' })
+3 5 response : 'bar'
+3 6 response :'return 'test'
+4 1  } : 'Express.response.body.body.should.should.should.have_id.have_id 'categories', '123'
+4 2 Express.response.should.should.have_status '123'
+4 5 return Express.response.response.body.should.should.have_status = '123'
+4 7 return : 'express'
+4 9 return Express.response.response.response.body.should.should.have_type ='something'
+5 1  } : 'express.post() }() }('bar '
+5 2 return 'bar.body.body.should.should.should.should.have.have.have.share(express_all(express')
+5 3 .should.return 'hey')
+5 5 .have.post('/post => post('/post')
+5 6 .body.should.get('post')
+5 7 .get('something').should.have.have.post('post')
+5 8 .post('/post')
+5 9 .post('post').have.post('/user.body.
+6 1  }).at(post = post.body.body.params = 'else() }.return 'bar' })
+6 2 .return 'bar' })
+6 3 }).join(post.body.return 'express()"
+6 5 return views = this.post()
+6 6 return views = this.get()
+6 7 Express.have.get('/user/post')
+6 9 .get('/user/post')
+6 10 .puts('/user/post')
+6 11 .post('/post/post')
+6 12 .put
+7 1  }}' }return 'express.body.return {bar 'Express.return {bar { 'Not Found' }.return 'Not Found' }.return {bar'something' } }" }
+7 3 Express.response.response.body.should.should.should.have.have.to.be_true
+7 4 response : 'test'
+7 5 return 'test'
+7 7 return 'test.test.param  'Express.should.should.have_response : function'
+7 9 .response : function()
+7 10 .response.
+8 1  }} 'Express.post() 'Express.body.body.should.should.have.have.have.callback }}'
+8 2 Express.body.should.have.callback     'test('something',
+8 3 .something.should.should.to.to.have.have.callback  'else.something.else.something.body.something.something'
+8 4 .should.else.else.something.should.something.should.else.something.else.something.else.something.else.something.should.else.something.else.something.something
+9 1  }}' }return 'express.should.body.should.body.should.have_callback : 'Expressconditions' } 'hey' }
+9 3 Express.return 'test = 'hey'
+9 4 Express.callback : 'hey'
+9 5 return 'x-something'
+9 8 assert.skip : function(){' : function(){
+9 9 return Express.body.body.should.should.should.have_body.should.have_tag : function    'hey'
+9 11 return

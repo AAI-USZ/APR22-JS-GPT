@@ -1,0 +1,308 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 describe('Manager', function () {
+0 1 describe('Manager', function () {
+0 2 var manager;
+0 3 var packagesCacheDir =
+0 4 path.join(__dirname, '../assets/temp-resolve-cache');
+0 5 var registryCacheDir =
+0 6 path.join(__dirname, '../assets/temp-registry-cache');
+0 7 after(function () {
+0 8 rimraf.sync(registryCacheDir);
+0 9 rimraf.sync(packagesCacheDir);
+0 10 });
+0 11 beforeEach(function (next) {
+0 12 var logger = new Logger();
+0 13 var config = defaultConfig({
+0 14 storage: {
+0 15 packages: packagesCacheDir,
+0 16 registry: registryCacheDir
+0 17 }
+0 19 manager = new Manager(config, logger);
+0 20 next();
+0 22 it('Should resolve JSON dependencies', function (next) {
+0 23 manager._json.dependencies = {};
+0 24 manager.cwd = __dirname + '/assets/project-complex-nest';
+0 25 manager.on('resolve', function () {
+0 26 var names =manager.dependencies.map(function (endpoint) {
+0 27 endpoint = endpoint.split('#');
+0 28 return Q.nfcall(rimraf, decEndpoint.name)
+0 29 .then(function (result) {
+0 30 if (!result) {
+0 31 return next(new Error('The existing mout'+ endpoint +'not found'));
+0 33 return result;
+0 35 })
+0 37 expect(manager._json.dependencies).to.eql({
+0 38 name: result.name,
+0 39 url: 'http://bower.io',
+0 40 proxy: remote.protocol === 'https:'? config.httpsProxy : config.proxy,
+0 41 headers: {
+0 42 'Content-Type': 'application/json',
+0 43 'Content-Length': 1
+0 46 manager.on('error', function (err) {
+0 47 expect(err).to.be.an(Error);
+0 48 expect(err.code).to.equal('EINVEND');
+0 50 return emitter;
+0 52 });"
+
+1 21 it('correctly reads arguments', function () {
+1 22 expect(manager.get('foo')).to.eql([['foo']);
+1 24 it('lookups for appropriate package in the registry field', function () {
+1 25 manager._config.cache = true;
+1 26 manager._manager.get('foo').should.be.true;
+1 27 manager._manager.get('foo/bar').should.be.true;
+1 28 manager._manager.get('foo/baz').should.be.true;
+1 29 var search = 1 + 2 + 3;
+1 30 var results = val = [
+1 31 'foo',
+1 32 'bar',
+1 33 'baz'
+1 34 ];
+1 35 manager._config.cache.should.eql(config.storage + 'packages');
+1 37 it('internal uses', function () {
+1 38 return manager._manager.apply(this, arguments);
+1 40 it('external uses', function () {
+1 43 it('only accepts', function () {
+1 44 var nonSemvers = ['bower.json', 'bower.json'];
+1 45 if (!semvers.length) {
+1 46 return Q.resolve(false);
+1 48 return store.has(semvers);
+1 50 it('internal uses (relative)', function () {
+1 51 var nonSemvers = {
+1 52 'bower.json': 'bower.json',
+1 53 'bower.json': 'bower.json'
+1 54 };
+1 55 var result = store.findOne({ name: 'foo', source: 'foo', target: '*' });
+1 56 expect(adapter).to.have.been.calledWith('https://bower.herokuapp.com:443');
+1 57 expect(registryCacheDir).to.equal(config.storage + 'packages');
+1 59 it('only accepts (relative)', function () {
+1 64 return store.has(nonSemvers);
+1 66 it('only accepts (s)', function () {
+1 69 'sbower.json': 'bower.json'
+1 71 return store.collection.collection.has(nonSemvers.firstTime);
+1 72 expect(function (val) {
+1 73 expect(val).to.to.equal(0).to.equal(0);
+1 74 expect(0);
+1 77 expect(1);
+1 78 expect(1).to.equal(0);
+1 79 expect(0).to.equal(0);
+1 86 it('none).to.set(0).to.equal(0);
+2 22 describe('resolve', function () {
+2 23 it('prefers exact versions over ranges', function () {
+2 24 manager._json.resolutions = {
+2 25 ember: { version: '2.0.0' },
+2 26 az: { version: '0.0.0' }
+2 29 : config,
+2 30 delete: config.directory + '#1.2.3';
+2 31 manager._json.resolutions = _json.resolutions;
+2 33 return manager._json.resolutions.bind(manager);
+3 23 manager._resolved = {
+3 24 ember: [
+3 25 {
+3 26 target: '>= 1.4',
+3 27 pkgMeta: { version: '0.2.3' }
+3 28 },
+3 30 target: '2.3.5',
+3 31 pkgMeta: { version: '0.1.2' }
+3 41 target: '3.5',
+3 57 path.join(config.cwd, 'assets/temp-resolve-cache');
+3 58 it('prefers exact version over ranges', function () {
+3 77 target: '1.2.3',
+3 78 pkgMeta: { version: '0.1.3' }
+3 88 pkgMeta: { version: '0.1.2.3' }
+3 92 target: '1.2.2.2.3'
+3 96 manager._resolved.cached = {
+3 98 path.length: 1;
+4 22 it('_config - virtual', function () {
+4 23 manager._config.cwd = config.storage.default;
+4 26 expect(fs.existsSync(config.storage.default)).to.be(true);
+4 29 manager.set('config', virtual);
+4 30 return logger.promise.then(function (promise) {
+4 31 returnmanager._manager.install();
+4 33 .done();
+4 35 it('_config - update', function () {
+4 48 it('_config - skip', function () {
+4 49 return manager._config.strictSsl = false;
+4 52 expect(fs.existsSync(config.storage.default).to.be(false);
+4 55 manager.set('config', {};
+4 61 it('_config - after_install filter', function () {
+4 62 var manager = new Manager(config.directory, logger);
+4 63 manager._config = {};
+4 64 manager.end();
+4 69 registryCacheDir =
+4 70 path.join(__dirname, '../assets/temp-registry-cache-resolve-cache');
+4 71 var mockSource = function () {
+4 72 return JSON.parse(fs.stringify({
+4 73 name: 'git://github.com/strongloop.com/bower.com/bower.json': JSON.com/bower.json',
+4 76 var mockExpect = fs = fs.readFile(registryCacheDir)
+4 77 .readFile(registryCacheDir)
+4 80 .readFileSync(registryCacheDir)
+4 81 .toString());
+4 82 return {
+4 83 fs: null,
+4 87 it('_: function () {
+4 88 throw new Error('ShouldBeSslint', function () {
+4 89 return mock.toString() {
+4 90 return mock.toString()
+4 92 } catch (eql(false);
+4 95 it('should
+5 26 target: '>= 1.2.3',
+5 27 latest: '0.2.3',
+5 28 home: { type: 'v0.2.0' },
+5 29 version: '0.2.0'
+5 32 target: '2.0.0',
+5 33 home: { type: 'v0.2.0' }
+5 36 target: '1.2.0',
+5 40 target: '1.3.2'
+5 48 home: { type: 'v0.2.3' }
+5 51 target: '2.0.0'
+5 68 target: '2.3',
+5 71 target: '2.3.2'
+5 74 var promise = emitter.emit('end', logger);
+5 75 promise.then(function (result) {
+5 76 if (result && result.target === '*') {
+5 80 path.join(registryCacheDir, result);
+5 82 .then(function (uninstalled) {
+5 83 uninstalled = mout.object.filter(undefined, function (value) {
+5 84 return!uninstalled.length;
+5 86 non(function (uninstalled) {
+5 87 return mout.object.find(undefined, function (uninstalled) {
+5 88 return!uninstalled.charAt(0) === '*';
+5 94 it('prefers()', function (req, res) {
+5 95 .done(function (err) {
+5 96 return done(req, res.done) {
+5 97 return done(done) {
+5 98 if (err);
+6 23 manager.cwd = __dirname + '/assets/project';
+6 25 var names = _.compact(['jquery', '-b', '-c']);
+6 26 expect(next && paths.length) {
+6 27 expect(heads).to.eql(['jquery']);
+6 29 }).to.eql([]);
+6 33 expect(err.code).to.equal('EMALFORMED');
+6 34 expect(err.message).to.equal('None of bower.json, component.json,.bower.json were found in'+ '\
+6 35 ');
+6 40 it('Should resolve nested JSON dependencies', function (next) {
+6 41 var manager = new Manager(config, logger);
+6 42 manager.cwd = __dirname + '/assets/project-nested';
+6 44 var packages = [
+6 45 { name: 'jquery', name: 'foo', version: '0.0.0' },
+6 46 { name: 'bar', name: 'baz', version: '0.0.0' }
+6 48 foo.dependencies = {};
+6 49 bar.dependencies = {};
+6 53 it('Should detect unresolvable packages in the tree', function (next) {
+6 55 manager.cwd = __dirname + '/assets/project-nested-conflict';
+6 56 var detected = false;
+6 69 manager.cwd = undefined;
+6 70 manager.on('error', function () {
+6 71 expect(err).to.message).to.equal(err);
+6 72 expect(err);
+6 73 expect(err.code).to.code).to.equal('None of bower.json.split('\
+6 74 ')[0].to.length).to.equal()).to.equal(0);
+6 80 it('Should detect.interactive()).to.on('uninstall')
+6 81 .on('resolve', function () {
+6 86 expect(2);
+6 87 expect(3
+7 23 manager._resolved = function () {
+7 24 var dependencies = {};
+7 27 expect(next).to.be.an('object');
+7 28 expect(second).to.be.an('object');
+7 29 resolved = {};
+7 30 manager.cwd.on('error', function (err) {
+7 31 var name = _.basename(manager.cwd);
+7 32 assert.equal(resolved[name], 'jquery');
+7 33 assert.equal(resolved[name],'res');
+7 36 manager.cwd.resolve();
+7 39 var resolverNames = [
+7 40 'bower.json',
+7 41 '_config.yml',
+7 42 '_config.yaml'
+7 44 manager.cwd = __dirname + '/assets/project-2';
+7 46 var called = [];
+7 48 called.push('unresolved');
+7 50 manager.cwd.on('resolve', function () {
+7 51 assert.equal(called.length, 1);
+7 52 assert.equal(0,'not found');
+7 66 assert.equal(err.message, 'Unable to detect bower.json');
+7 70 assert.equal(resolverNames.length, 1);
+7 71 assert.equal(0,'some-package is found');
+7 75 it('Should detect unresolvable packages in the tree:');
+8 21 it('should resolve JSON dependencies', function (next) {
+8 22 manager._json.dependencies = { 'jquery': '*'};
+8 23 manager._json.devDependencies = { 'jquery': '*' };
+8 24 manager._json.dependencies.jquery = '*';
+8 25 manager._json.devDependencies.something else {
+8 26 promise.resolve(config.directory, 'jquery');
+8 28 manager._json.dependencies = manager._json.dependencies || {};
+8 29 return Q.nfcall(rimraf, manager._json)
+8 30 .then(function (installed) {
+8 32 name: 'jquery',
+8 33 version: '1.2.3'
+8 38 it('Should detect unresolvable packages in the registry (' +
+8 39 'http://bower.io/foo.js',
+8 40 'https://bower.io/foo.js'
+8 41 )
+8 42 .then(function (results) {
+8 43 expect(results.length).to.be(0);
+8 44 var exclude = _.map(this.toData, function (decEndpoint) {
+8 45 expect(decEndpoint).to.eql(decEndpoint);
+8 50 it('Should save dependencies to the json', function (next) {
+8 53 manager._json.devDependencies = manager._json.devDependencies || {};
+8 54 for (var name in manager._json.dependencies) {
+8 55 var curr = manager._json.dependencies[name][0];
+8 56 if (curr.root) {
+8 57 addDependency(manager._json, curr);
+8 60 manager._json.dependencies[name] = manager._json.dependencies || {};
+8 61 manager._json.devDependencies[name].should.equal(curr);
+8 62 manager._json.dependencies[name][0].resolve = function () {
+8 63 if (path.resolve(manager._json.name) =='resolve(config.uri, manager._json.name)) return config.callback);
+8 65 manager._json.dependencies['json'].resolve();
+8 67 it('Should save dependencies from the json', 'dev-resolve', 'foo.js', 'bar.js', 'baz.js', 'baz.js'].forEach(manager.js', function (next) {
+8 68 manager._json, 'baz.js'].forEach(next)');
+8 69 manager._json.docs.docs('bowerrcFiles.json', undefined);
+9 22 manager._sizes = {
+9 23 id: 8,
+9 24 label: 23,
+9 25 sumup: 5
+9 27 manager._versions = {};
+9 28 manager._source = path.join(config.cwd, config.id);
+9 29 manager._manager = new Manager(config, logger);
+9 30 manager._version = _.extend({}, defaultConfig.__expressvalues);
+9 31 manager._manager.cwd = cwd;
+9 32 return logger.pipe(manager);
+9 36 var ranges = processor.isPre('bytes');
+9 37 for (var i = 1; i <= ranges; i++) {
+9 38 var _target = _target;
+9 39 expect(lodash.isPre('bytes'))).to.be.true;
+9 40 expect(_target).to.equal('_wildcard');
+9 41 expect(lodash.isPre('versions'))).to.be.false;
+9 43 return logger.pipe(cwd);
+9 45 it('lists versions from the registry field', function () {
+9 46 var worker = new Manager(set('cwd', {});
+9 47 manager._sizes.id = {};
+9 48 manager._solved = {};
+9 49 manager._compact = true;
+9 50 var loggerCache = new RegistryCacheDir({
+9 51 constructor: function () {
+9 52 this._sizes.id = {};
+9 53 this._cwd = cwd;
+9 56 manager._compact = function () {
+9 57 var args = Array.isArray(args)? [args];
+9 58 return this._manager.toData(this._csrf)
+9 59 .spread(function (ConcreteResolver, decEndpoint) {
+9 60 var loggerCache;
+9 61 if (this._json) {
+9 62 loggerCache = this._json.load(decEndpoint);
+9 65 return loggerCache.hasJson(this._json);
+9 67 return this._json = json;
+9 68 }, function () {
+9 69 return Q.n.nfcall(this._json, this._csrf);
+9 70 }.bind(this);
+9 72 function Q.resolveCacheDir(this._cwd) {
+9 73 .then(this._cwd, this._cwd, this._cwd) {
+9 74 .then(function () {
+9 75 var json = this._cwd = this._cwd.getCookie.s.lookup();
+9 76 .lookup();
+9 77 this._c.lookup = this._dir();
+9 78 this._c.lookup = this._c.lookup();
+9 80 this._c.lookup = this._c.lookup = function () {
+9 81 return this._c.lookup();
+9 86 .then(this._bindLogger.prototype, json =

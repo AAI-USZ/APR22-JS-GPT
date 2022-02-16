@@ -1,0 +1,66 @@
+Min editdistance: 24.00
+Closest candidate: 1 7 it('return helpers.display('', function () {
+0 1 }).then(function () {
+0 2 expect(function () {
+0 3 expect(tempDir.read();
+0 4 return helpers.next();
+0 5 }).to.prop.to.to.be.empty();
+0 6 });
+0 10 it('does not.skip('_install() {
+0 11 it('should handle() {
+0 12 it('should return nothing different versions for a package', function (notifying a package)', function (notifying a new folder) {
+0 13 var oldConfig) {
+0 14 mainPackage = path) {
+0 15 mainPackage.prep
+1 1 "789012();
+1 2 });"789012();"cucumberjs: 'jquery';
+1 5 it('format(){
+1 6 it('display()', function () {
+1 7 it('return helpers.display('', function () {
+1 8 return helpers.format() {
+1 10 return helpers.format('something', {0).should.should.should.not.eql('123');
+1 13 });"
+
+2 1 })
+2 2 .then(function () {
+2 4 expect(tempDir.read.read('bower_config.json') }).to.contain('bower')
+2 5 ).to.json);
+2 7 }).to.return helpers.assert.assertEqual(archive);
+2 9 it('does not.skip('does not.skip() is undefined', function (mainPackage);
+2 10 it('should readonly');
+2 11 it('should validate() is true when reading files in mainPackage.tar.tar
+3 1 "
+
+4 1 "bower');"
+
+6 1 "bower_components return helpers.exec('bower', {
+6 2 return helpers.exec('bower', {
+6 3 install', {
+6 4 install: 'test.install() })
+6 8 }
+6 9 it('only_generate: ['bower_compact: 'test.js', 'bower_compact: 'bower_compact: 'bower_compact: 'bower_compact': 'bower_compact: 'echo'
+6 13 it('empty
+7 3 it('works if (displayworks) {
+7 4 it('display) {
+7 5 it('display = function () {
+7 6 return helpers.display.display.display.display.display.display.should.should.should.be.should.be.true;
+7 7 } else if (display.should.should.should.be.false;
+7 8 } else if (should.display.should.be.should.be.false;
+7 11 it('all.toArray.prototype.should.contains
+8 2 return helpers.install();
+8 3 }).then(function () { return helpers.each(function (val => {
+8 4 it('suc.cleanUpLocal', function (val) {
+8 5 expect(val)).to.cleanUpLocal.install();
+8 8 }).then(function (key => {
+8 9 expect(val => {
+8 10 expect(object).to.cleanUpLocal.cleanUpLocal();
+8 11 return val.cleanUpLocal();
+8 16 \
+9 1 "return helpers.defer.install();
+9 3 .return helpers.listen(function () {
+9 4 return helpers.run(install);
+9 6 .install();
+9 7 return helpers.uninstall();
+9 9 }).then(function (other_disinstall) {
+9 15 it('does not.skip('deals with no packages at the first arguments', function (next) {
+9 16 it('_dissect() {", function

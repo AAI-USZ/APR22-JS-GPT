@@ -1,0 +1,296 @@
+Min editdistance: 13.00
+Closest candidate: 2 15 this.keys = []
+0 1 this.fn = fn
+0 2 }, __expressconcat([
+0 3 {
+0 4 path: normalizePath(path),
+0 5 function normalizePath(path) {
+0 6 return path
+0 7 .replace(/[\\s\\/]*$/g, \'\')
+0 8 .replace(/[\\s\\/]*\\(\\+|$)/g, \'\')
+0 9 .replace(/[\\s\\/]*\\)\\?/g, \'\')
+0 10 }
+0 11 })
+0 12 function formatPath(path) {
+0 13 return (path.replace(/\\/{2}/g, \'/\')
+0 14 .replace(/:(\\d+)/g, function(_, key){
+0 15 return key == \'\\\\\'
+0 17 .replace(/:\\d+/g, \'\\\
+0 18 \')
+0 19 .replace(/:\\r?\
+0 20 /g, \'\\\\r\')
+0 23 function formatFiles(files, options) {
+0 24 var id = this.id
+0 25 var file = files.findFileSync(\'done\')
+0 26 if (!file) return
+0 27 file.readFile(id, options)
+0 28 file.writeFile(file.options.path, data.length)
+0 29 return file;
+0 30 }'
+
+1 2 },"
+
+2 2 }, {})
+2 3 this.path = path
+2 4 return fn
+2 7 Route.prototype.run = function(){
+2 8 return this.fn()
+2 9 },
+2 10 start: function(port, callback) {
+2 11 this.server.run()
+2 13 normalize: function(path) {
+2 14 var self = this
+2 15 this.keys = []
+2 16 if (path instanceof RegExp) return path
+2 17 return new RegExp(\'^' + escapeRegexp(normalizePath(path), '.')
+2 18 .replace(/\\*/g, '(.+)')
+2 19 .replace(/(\\/|\\\\\\.):(\\w+)\\?/g, function(_, c, key){
+2 20 self.keys.push(key)
+2 21 return '(?:' + c + '([^\\/]+))?'
+2 23 .replace(/:(\\w+)/g, function(_, key){
+2 25 return '([^\\/]+)'
+2 26 }) + '$', 'i')
+2 29 Router = Class({
+2 30 params: {},
+2 31 captures: [],
+2 32 route: function(request){
+2 33 this.request = request
+2 34 return this.matchingRoute().run()
+2 36 matchingRoute: function(){
+2 37 for (var i = 0, len = Express.routes.length; i < len; ++i)
+2 38 if (this.match(Express.routes[i]))
+2 39 return Express.routes[i]
+2 41 match: function(route) {
+2 42 if (this.request.method.toLowerCase() == route.method)
+2 43 if (this.captures = this.request.uri.path.match(route.path)) {
+2 44 this.mapParams(route)
+2 45 return true
+2 48 mapParams: function(route) {
+2 49 for (var i = 0, len = route.keys.length; i < len; ++i)
+2 50 this.params[route.keys[i]] = this.captures[i+1]
+2 53 Server = Class({
+2 54 port: 3000,
+2 55 host: \'localhost\',
+2 56 router: new Router,
+2 57 run: function(host, port){
+2 59 if (host) this.host = host
+2 60 if (port) this.port = port
+2 61 require(\'http\')
+2 62 .createServer(function(request, response){
+2 63 request.addListener(\'body\', function(chunk){ request.body += chunk })
+2 64 request.addListener(\'complete\', function(){ self.route(request, response) })
+2 67 .listen(this.port = this.host
+2 68 puts()
+2 69 puts(\'Express started at http://' + this.host\')
+2 72 route: function(this.port)
+2 77 Server.createServer = function(callback) {
+2 78 Server.call(this, server, server, self, port, this.port, this.port, this.host, this.port, this.port, this.port)
+2 79 config, this.callback)
+2 80 if (this.httpServer)
+2 81 if (config) this.if (config.router) return server)
+2 82 puts(\'http\', function(){
+2 83 if (config.createServer)
+2 84 puts = mock = route = mock.createServer(this.request, this.request, this.request.request.uri.path)
+2 85 .callback)
+2 86 .add handler(this.request, this.request)
+2 88 .
+3 3 this.path.endsWith(normalizePath(path))
+3 6 Route.prototype.__proto__ = EventEmitter.prototype
+3 10 .replace(/[\\s\\/]*\\(\\?|\\*)(\\?[\\s\\/]*)/g, \'\')
+3 14 .replace(/((\\s|\\/)*|(\\s|\\/)*$/g, \'\')
+3 15 .replace(/((\\s|\\/)*$/g, \'\')
+3 16 .replace(/\\/g, \'\\\\$&\')
+3 17 .replace(/\\*/g, \'.*\')
+3 18 .replace(/\\?.*$/, \'\')
+3 19 .replace(/\\[([^\\]]+)\\]\\(([^)]+)\\)/g, function(_, c, key){
+3 20 return \'([^\\/]+))\', \'i\')
+3 21 .replace(/\\>/g, \'>=\')
+3 22 .replace(/\\>/g, \'>=1\')
+3 23 .replace(/\\>/g, \'>=2\')
+3 24 .replace(/\\>/g, \'>=3}')
+3 27 .replace(/\\>/g, \'>=0\')
+3 34 function formatMessage(message) {
+3 35 var type = (message.replace(/[^\\]]*)\\/(\\w+)/g, function(match, args, str){
+3 36 return message.replace(/([^\\s]+)\\s+(.+?)(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/g, function(match, args, str){
+3 37 var id = args[0] || \'\';
+3 38 var $ = args.length? \'=\' + args.join(\' \') : \'\';
+3 39 return \'<li>\' + type + \'</li>\';
+3 40 }).join(\'\');
+3 42 function formatDate(message) {
+3 43 var type = (message.format || \'Jan\' },
+3 44 var msg = formatMessage = formatMessage(msg);
+3 45 return msg.format || \'Feb\';
+3 47 exports.dirname = formatMessage = formatMessageHandler = formatHandler;
+3 48 exports.format = formatHandler = formatHandler;
+3 49 exports.format = formatHandler;'
+
+4 3 this.path.should.eqlnormalize regexp(normalizePath(path))
+4 4 this.fn.should.eql(false)
+4 6 run: function(){
+4 13 return new RegExp('^' + escapeRegexp(normalizePath(path), '.')
+4 25 if (key) {
+4 26 return this.fn(this.fn)
+4 34 route: function(request) {
+4 38 matchingRoute: function() {
+4 66 request.addListener(\'complete\', function(){ self.route(){
+4 67 if (key) })
+4 70 .listen(this.on(\'progress
+4 71 this.lastMovedFiles([
+4 72 printHeader(this.request.removeListener.removeListener.bind(this)
+4 74 this.removeListener.promise.bind(this)
+4 75 .removeListener(\'body)
+4 76 .on('reject\')
+4 77 .on(\'progress
+4 78 .wait()
+4 80 .on('done
+4 81 .onLineEnd()
+4 82 .onLine()
+4 83 .on))
+4 84 .on()
+4 88 .exec()
+4 90 .exec(this.end())
+4 97 .execLine()
+4 98 .onLine()\
+5 12 return path.replace(/[\\s\\/]*$/g, \'\')
+5 14 function formatPath(path, props) {
+5 15 var split = path.split(\'/\')
+5 16 var regexp = new RegExp(\'^\' + escape.regexp(normalizePath(path), \'\'))
+5 17 if (!regexp.exec(path)) return
+5 18 if (regexp.exec(path)) return formatPath(path, props)
+5 19 if (split.length === 1) return -1
+5 22 Route.prototype.path = function(){
+5 23 var cat = this.fn()
+5 24 if (cat) return cat.name
+5 25 if (this.regexp.fast_slash.test(cat)) return cat.name
+5 26 if (this.regexp.fast_star.test(cat)) return cat.version
+5 38 throw new NotFoundError(this.request)
+5 68 puts(\'Express.port = this.port = this.host
+5 70 puts(\'https\')
+5 71 puts(\'root\')
+5 76 exports.createServer = function(callback) {
+5 77 createServer(){
+5 78 Express.callHandler.apply(this, this, arguments)
+5 79 if (body)
+5 80 if (this.body)
+5 82 return this.body)
+5 83 puts(\'body)
+5 84 puts(\'get\', this.body)
+5 85 .each(function(function(fn) {
+5 86 if (fn) return fn.call(this.call(this, this.request, this.request.uri.path, this.request.uri.path, headers, headers, this.response.port)
+6 3 this.path.should.eql(normalizePath(this.path))
+6 7 Route.prototype.read = function(path, fn){
+6 8 this.method = method
+6 9 this.originalPath = path
+6 10 return this.path.toRegexp(normalizePath(path))
+6 15 .replace(/[\\s\\/]*\\(\\?|\\.):(\\w+)\\?/g, function(_, c, key){
+6 17 return '(?:\\/(.*?))?'
+6 21 return \'([^\\/]+)'
+6 22 }) + \'$\', \'i\')
+6 25 function formatPath(path, keys, sensitive) {
+6 27 path = path
+6 28 .concat(\'|\\/?)\', \'g\')
+6 35 function formatMessage(message, parentParams, location) {
+6 37 this.message = message
+6 38 this.locals = locals
+6 39 this.params = {}
+6 40 this.locals.settings = {}
+6 41 this.set(\'view_dir\', formatPath(this.resolve(\'view/\')) + \'/\'
+6 42 this.set(\'views\', path)
+6 43 this.set(\'jsonp callback name\', \'callback\')
+6 44 if (this.body && this.body.name!== \'this.body.title\') {
+6 45 this.body.title = formatPath(this.resolve(\'body.html\') + \'/client/\' + this.param(\'id\')
+6 47 if (this.params.path) {
+6 48 var args = []
+6 49 , format = this.params.path
+6 50 , self = this
+6 51 , argsLength = args.length
+6 52 , i = args.length
+6 53 , formatFailedStep = formatters.isPreprocess)
+6 54 , defaultEngine = args.some(function (i) {
+6 55 return i
+6 57 if (args[0] === \'__testacular__.conf.js\') {
+6 58 var customContextFile = format.createFilesPromise.call(this.config)
+6 59 , args = args
+6 60 , path = args.pop()
+6 61 , callback = getLogger(this.prompt(), url)
+6 62 , config = config = config)
+6 63 , extname = q || config = q || getLogger(this.format)
+6 64 , domainFile, domainFile = q = config = q.createServer(this.app)
+6 65 , sourceFile, port = qs = qsFromConfig? qs.createServer(this.config, url.createServer(this.port, config = config, config)
+6 66 , qs = qsFromConfig = config.createServer(config.port, config.proxhr, config.port)
+6 67 , sourceDir = qsFrom_dir, config.proxies = config.s, config.dots = config.createServer(config.port, config.proxies)
+6 68 , config.rootPaths = config.proxiesList = config.middleware) || config.middleware;
+6 69 return config =
+7 4 return process.compile(\'with(Express.helpers){ (\' + this.fn + \')() }\', this.method + \'(\' + jsonEncode(this.originalPath) + \')\')
+7 7 Route.prototype.__proto__ = EventEmitter.prototype;
+7 11 .replace(/[\\s\\/]*\\(\\?|\\.):(\\w+)\\?/g, \'(+)\')
+7 12 .replace(/(\\/|\\\\\\.):(\\w+)/g, \'(\\\\)\')
+7 18 Route.prototype._options = {
+7 19 normalize: [],
+7 20 run: _,
+7 21 normalize: normalizePaths,
+7 22 queryString: true,
+7 23 fragment: true,
+7 24 path: path,
+7 25 ctime: \'HH:mm:ss\',
+7 26 original_content: \'yaml\',
+7 27 content: \'more\'
+7 30 return path.replace(/\\/{2}/g, \'/\')
+7 31 .replace(/:\\?.*/, \'\')
+7 32 .replace(/^\\/]+/g, \'\
+7 34 .replace(/:\\)/g, \'\
+7 37 function formatMessage(message, parentParams, options) {
+7 38 var msg = send(message)
+7 39 , crc = \'\'
+7 40 , format = options.format,
+7 41 hljs = options.hljs? options.hljs: options.hljs
+7 42 , lineNumber = options.line_number,
+7 43 tab = options.tab_replace
+7 44 , pointer = options.per_file;
+7 45 if (!helper.isDefined(options.auto_spacing)) {
+7 46 options.auto_spacing = false
+7 48 if (helper.isDefined(options.logLevel)) {
+7 49 options.logLevel = logLevel;
+7 54 if (helper.isDefined(options.singleRun)) {
+7 55 options.singleRun = options.singleRun === \'true\'
+7 57 if (helper.isDefined(options.browsers)) {
+7 58 options.browsers = options.browsers.split(\',\')
+7 60 if (options.singleRun === 1) {
+7 61 options.singleRun = options.singleRun = options.singleRun === 0
+7 63 if (helper.isSingleRun = options.singleRun === 1) {
+7 65 if (helper.isSingleRun = singleRun = singleRun === 0) {
+7 66 helper.isSingle = singleRun === 1
+7 68 helper.isSingle = singleRun = singleRun === 0
+7 70 helper.isSingle = singleRun === 0
+7 71 helper.isBrowser = singleRun === 0
+7 72 helper.isSingle = singleRun = singleRun === undefined
+7 74 helper.formatAnswers = singleRun = singleRun? {};
+7 75 var validatePatterns = PATTERN_PATH = formatPath = function(path) {
+7 76 var config
+7 77 return this.
+8 3 this.path = pathToRegexp(normalizePath(path))
+8 4 this.regexp = normalizePath(this.path)
+8 5 return this.fn
+9 10 normalizePath = function(path) {
+9 13 .replace(/(\\/|\\\\\\.):(\\w+)/g, \'(<strong>$2</strong>\')
+9 14 .replace(/(_/g, \'(<em>500</em>\')
+9 15 .replace(/\\[([^\\]]+)\\]\\(([^)]+)\\)/g, \'<a href="$2">$1</a>\')
+9 16 .replace(/\\[([^\\]]+)\\)/g, \'<img src="http://icons3.iconfinder.netdna-cdn.com/data/icons/ledicons/emoticon_smile.png">\'))
+9 32 this.mapParams()
+9 54 .listen(this.port, this.host)
+9 55 puts(\'Express started at http://\' + this.host + \':\' + this.port)
+9 57 route: function(request, response) {
+9 58 this.body = this.request, this.name = this.request, this.response = response
+9 59 this.requestHeader = response = response
+9 60 this.body = this.name
+9 61 this.request = this.response = response
+9 62 this.passed = this.passed = this.passed = this.passed
+9 63 this.route()
+9 64 this.route = this.route = this.route()
+9 65 this.enable()
+9 66 this.route = this.start()
+9 67 if (typeof (this.request.headers.passed === \'https.request.passed === \'route.completion')
+9 68 if (typeof (this.request.passed === \'all\')
+9 69 this.request.callHandler.callHandler.call(this.captures.strictIframe === \'allback === this.request.run)
+9 70 this.requestHeader)
+9 71 this.call(this.captures = this.captures = this.request.body)

@@ -1,0 +1,106 @@
+Min editdistance: 24.00
+Closest candidate: 7 2 res.cookie('remember', 1, { maxAge: minute });
+0 1 console.log(':remember', 1);
+0 2 res.send(msys');
+0 3 });
+0 4 app.listen(3000);
+0 5 console.log('<p>Check to <label>\')([a, '-f1\', \'%s\', \'APPENDER></p>\
+0 6 ');
+0 7 console.log('[Memory used in Redirecting.');
+0 8 return [
+0 9 { url: \'/\', method: \'GET\' },
+0 10 { body: \'<p>Welcome <label> when no <strong> type="text/fff">\
+0 11 </strong> times.</p>\
+0 12 ];
+0 14 app.listen(3001);
+0 15 console.log('<p>Welcome <strong> when tj is found for the detailed information of the site.');
+0 17 { url: \'/2\', method: \'GET\' },
+0 18 { body: \'<p>Welcome <strong> when tj is not found for the detailed information of the site.' });
+0 21 console.log('<p>Welcome <strong> when tj is not found for the detailed information of the site.');
+0 23 { url: \'/3\', method: \'GET\' },
+0 24 { body: \'<p>Welcome <strong> when tj is not found for the detailed information of the site.'' });
+0 27 console.log('<p>Welcome <strong> when tj is not found for the detailed information of the site.'' });
+0 29 { url: \'/4\', method: \'GET' },
+0 33 console.log('<h1>Forum Thread</h1><p>:(</p>\
+0 34 <p>Hello World</p>\
+0 35 <p>This is a question</p>\
+0 36 </h1>\
+0 37 </form>');
+0 38 }
+0 41 console.log('<h1>\
+0 42 Question: E2 of questions</h1>\
+0 43 \
+0 44 ' + (;    j1 = 3 + 2) + 3;    = 3;    = 3 + ) + ) + 2;    =  =  = 2;   = 2;    = 2;    = 3 +   = 3;     = 3;   =  =  ) +   =    =      ;      ;        =         =               =                                                                                            
+1 1 return res.setHeader(\'X-Powered-By', \'Express\');
+1 2 res.end(function(err, res){
+1 3 res.statusCode.should.equal(500);
+1 4 res.headers.should.have.property(\'location\', \'http://example.com/post/1/comments?123313 : { path: \'/admin/12' },
+1 5 '
+
+2 1 console.log('[User not found]. Use other filename instead.');
+2 2 res.redirect('/users/0-3');
+2 5 console.log(\'\
+2 6 <p>This is an email</p>\
+2 7 \');
+2 9 console.log(\'[Folder] <folder>\');
+2 10 console.log(\'   options = {
+2 11 height: 20,
+2 12 locals: {
+2 13 body: \'<p>This is an email</p>\',
+2 14 name: \'tj</p>\',
+2 15 email: \'tj@vision-media.ca\',
+2 16 language: \'en',
+2 17 message: \'Folder \'<a href="/forget">forget</a>\'
+2 19 };
+2 20 app.listen(3000);'
+
+3 1 console.log(\'this is a very important message for you');
+3 2 res.send(': <p>This is a very important download file</p>\');
+3 6 console.log(\'Express started on port 3000\');'
+
+4 1 return res.send(ysaml());
+4 4 console.log("This is an email"));
+4 5 console.log('   listening on socket 3000");'
+
+5 1 return res.end(function(err, res){
+5 2 res.headers.should.have.property(\'message', \'Check to <label> remember me</label> \'\');
+5 3 done();
+5 5 })
+5 7 function checkForRequiredParameters(str){
+5 8 return str.charAt(0).toUpperCase() + str.substr(1);
+5 10 function makeRe(req, res, next){
+5 11 if (process.env.NODE_ENV!== \'test\' && req.body.remember) {
+5 12 next();
+5 13 } else {
+5 14 checkForRequiredParameters(req, res);
+5 18 if (req.body.remember) {
+5 24 function mergeToBaseDir(base, args) {
+5 25 return Object.assign({}, args);
+5 27 app.use(function(err, req, res, next){
+5 28 res.status(err.status || 500).render(\'page.html.haml\', {
+5 30 error: err
+5 33 app.use(function(req, res){
+5 34 res.status(404).render(\'page.haml\', {
+5 39 if (!args) {
+5 40 return next();
+5 42 var redirecting_url = \'/\';
+5 43 var redirecting_to_url = \'/blog\';
+5 44 var res = express.createServer();
+5 45 res.status = function(code){
+5 46 return res.setHeader(\'Location\', redirecting_to_url + \'/\');
+5 55 console.log(\'app\');
+5 56 console.log(\'app listening on port 3000\');'
+
+6 1 return res.send(new Error(\'Please, cannot found two <span>*.\'));
+6 4 console.log('Express started on port 3000');'
+
+7 2 res.cookie('remember', 1, { maxAge: minute });
+7 4 res.redirect('back');
+8 1 return res.send( minute);
+9 1 return res.end()
+9 2 .replace(/\
+9 3 2028/g, \'\\\
+9 4 2028\')
+9 5 .replace(/\\foos\
+9 6 2029/g, \'\\\
+9 7 2029\');

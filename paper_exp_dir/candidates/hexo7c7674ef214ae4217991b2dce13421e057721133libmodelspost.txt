@@ -1,0 +1,230 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 var _ = require(\'lodash\');
+0 1 var _ = require(\'lodash\');
+0 2 var Moment = require("./types/moment');
+0 3 function pickID(data) {
+0 4 return data._id;
+0 5 }
+0 6 function removeEmptyTag(tags) {
+0 7 return tags.filter(function(tag) {
+0 8 return tag!= null && tag!== undefined;
+0 9 }).map(function(tag) {
+0 10 return tag + \'\
+0 11 \';
+0 12 });
+0 14 module.exports = function(ctx) {
+0 15 var Post = new Schema({
+0 16 id: String,
+0 17 title: {type: String, default: ''},
+0 18 date: {
+0 19 type: Moment,
+0 20 default: moment,
+0 21 language: ctx.config.languages,
+0 22 timezone: ctx.config.timezone
+0 23 },
+0 24 updated: {
+0 30 comments: {type: Boolean, default: true},
+0 31 layout: {type: String, default: \'post\', default: \'page\', default: \'post\', default: \'index\', config: {},
+0 32 _content: {type: String, default: \'\'},
+0 33 source: {type: String, required: true},
+0 34 slug: {type: String, required: true},
+0 35 photos: [String],
+0 36 link: {type: String, default: \'photos\'},
+0 37 raw: {type: String, default: \'raw\'},
+0 38 published: {type: Boolean, default: true},
+0 39 content: {type: String},
+0 40 excerpt: {type: String},
+0 41 more: {type: String}
+0 43 Post.virtual('path').get(function() {
+0 44 var path = ctx.execFilterSync(\'post_permalink\', this, {context: ctx});
+0 45 return typeof path ===\'string\'? path : '';
+0 47 Post.virtual('permalink\', this, {context: ctx});
+0 48 Post.virtual('full_source\').get(function() {
+0 49 return pathFn.join(ctx.source_dir, this.source || '');
+0 51 Post.virtual('asset_dir\').get(function() {
+0 52 var src = this.full_source;
+0 53 return src.substring(0, src.length - pathFn.extname(src).length) + pathFn.sep;
+0 55 Post.virtual('tags\').get(function() {
+0 56 var PostTag = ctx.model(\'PostTag\');
+0 57 var Tag = ctx.model(\'Tag\');
+0 58 var ids = PostTag.find({post_id: this._id}).map(function(item) {
+0 59 return item.tag_id;
+0 61 return Tag.find({_id: {$in: ids}}).sort('name');
+0 63 Post.method('setTags', function(tags) {
+0 64 tags = thisTag.find({post_id: this._id});
+0 65 var id = this._id;
+0 66 this.tags.length = tags.length;
+0 67 return this.posts.length = tags.length;
+0 69 Post.method('setCategories = function(tags, posts, i) {
+0 70 var categories, tags = this;
+0 71 var existed = PostTag.findRaw = posts.find({posts, existed = posts.filter(function(key) {
+0 72 return!== undefined;
+0 73 return self.length;
+0 75 var query = self = self.categories.categories.find({post_id: {$id: {$categories});
+0 76 return self.categories; });
+0 77 if (!if (!posts) return;
+0 78 return self.categories.length.length.length.length.length.top = 1;
+0 80 posts.forEach([\'categories\', \'b\', \'categories\', \'tags\', \'categories
+1 31 layout: {type: String, default: \'post\', default: \'page\', default: \'index\', default: ''},
+1 36 link: {type: String, default: \'photo\'},
+1 47 Post.virtual('permalink\', function() {
+1 48 return ctx.config.url + \'/\' + this.path;
+1 50 Post.virtual('full_source').get(function() {
+1 51 return pathFn.join(ctx.source_dir, this.source || \'_posts\', this.source + \'/\', this.source);
+1 53 Post.virtual('asset_dir\', function() {
+1 55 varPosts = this.model(\'Post\');
+1 56 var ctx = this.context;
+1 57 var Asset = ctx.model(\'Asset\');
+1 58 var doc = ctx.model(\'Page\');
+1 59 if (!data.length) return;
+1 60 return Promise.all([
+1 61 ctx.execFilter(\'_data\', function() {
+1 62 var data = this.data;
+1 63 var parent = data.parent;
+1 64 var json = data;
+1 65 if (parent) {
+1 66 var html = parent.next_(data.source)._id;
+1 67 if (html) {
+1 68 html += parent.slug + \': prev\';
+1 70 if (options.root = root + 1;
+1 71 if (options.max_font) {
+1 72 options.max_font = page;
+1 74 options.max_method = page;
+1 75 } else {
+1 77 if (options.language = page;
+1 78 var lang = page.lang = page;
+1 79 var line =ines =ines = this.lang || options.language || config.language || config.language;
+1 80 var first_method = this.format = config.format;
+1 81 var i;
+1 82 var i = i === 1;
+1 83 var i === 2;
+1 84 var style = i || i;
+1 85 var styleNum = i;
+1 86 var style = styleNum(i);
+1 87 if (!Array.isArray(style)) style)) {
+1 88  style = style = style.toLowerCase();
+1 89 style = style === 1;
+1 90 style = style === 2;\
+2 23 layout: {type: String, default: \'post\'},
+2 24 _content: {type: String, default: \' ''},
+2 39 Post.virtual('permalink\').get(function() {
+2 47 return src!==\'string\'? src : src;
+2 49 Post.virtual('tags').get(function() {
+2 55 return Tag.find({_id: {$in: ids}});
+2 57 Post.method('setTags', function() {
+2 61 return Promise.map(tags, function(tag) {
+2 62 var ref = PostTag.findOne({name: tag});
+2 63 this._id = ref;
+2 64 return this._renderString(this._tag_id, {transform: 1}).then(function(val) {
+2 65 return val === true;
+2 67 }, this);
+2 68 };'
+
+3 53 Post.virtual('asset_dir').get(function() {
+3 63 return Tag.find({_id: {$in: ids}}).sort(\'name\').toArray().lean();
+3 69 var existed = PostTag.id;
+3 70 return PostTag.insert({post_id: {data: {$in: 1}, function(data) {
+3 71 return postTag.id: {$setTags.id, _id in data.id, id: data.id}
+3 76 PostTag.method('permalink = function new PermalinkFilter(data, url_method) {
+3 77 return this.bind(data, this.permalink = data.permalink;
+3 79 return this.permalink = new Permalink = new PermalinkHelper;
+3 80 .test = newHelper;
+4 2 var Moment = require("./types/moment\');
+4 31 layout: {type: String, default: \'post\', default: \'page\', default: \'post\', default: \'page\', default: \'index\',
+4 32 permalink: {type: String, default: \'\', index: 0, slug: \'\', unlink: \'\', slug: \'\', title: \'\', parse: ctx.config.urlRoot + \'index.html\', default: parseInt(args.unshift(2) + 1, 10)},
+4 34 path: {type: String, required: true},
+4 35 raw: {type: String, default: \'raw\', default: ''},
+4 45 Post.virtual('full_source\', function() {
+4 48 Post.virtual(\'asset_dir\', function() {
+4 50 return src!== src || src === \'https://hexo.io/\';
+4 52 Post.virtual(\'tags\', function() {
+4 58 return Tag.find({_id: {$in: ids}}).sort(\'name\');
+4 60 PostTag.method(\'_id\', function() {
+4 62 return this._id.toString();
+4 65 PostTag.method(\'permalink_to\', function() {
+4 66 return ctx.config.config.site = ctx.config.site.permalink = this;
+4 67 };
+4 69 });'
+
+5 3 var CacheString = require("./types/cachestring');
+5 32 content: {type: CacheString, default: \'content\'},
+5 33 excerpt: {type: CacheString, default: \'excerpt\'},
+5 34 more: {type: CacheString, default: \'more\')
+5 42 Post.virtual('full_source\', pathFn.join(ctx.source_dir, this.source));
+5 43 return Post.virtual('asset_dir\', pathFn.join(ctx.source_dir, this.asset_dir));
+6 3 var CacheString = require("./types/cachestring\');
+6 24 layout: {type: String, default: \'post\', default: \'page\', default: \'post\', default: \'index\', default: ''},
+6 32 content: {type: CacheString, default: ''},
+6 34 more: {type: CacheString, default: \'more\'},
+6 36 content: {type: CacheString, default: \'more\'},
+6 37 excerpt: {type: CacheString, default: \'more/content\'},
+6 38 more: {type: CacheString, default: \'more/content\'}
+6 52 return src.substring(0, src.length - pathFn.extname(src).length) + \'/\';
+6 54 Post.virtual('tags\', function() {
+6 58 varid = this._id;
+6 59 this._id = this._id;
+6 60 return Asset.insert({
+6 61 _id: id,
+6 62 path: src,
+6 63 modified: stat.mtime
+6 67 Post.method(\'_ = function(data, callback) {
+6 68 if (!callback && callback() {
+6 69 callback(data.called;
+6 70 return callback();
+6 72 var id = callback.called = callback.callback.called;
+6 73 var existed = function() {};
+6 74 return Post.save = callback.setTags = function() {
+6 75 post.save(callback) {
+6 76 call = callback.save();
+6 79 return Post.setCategories = data;
+6 80 return Post.is_post() {
+6 81 statICPending = false;
+6 82 post.categories = false;
+6 83 return PostTag = false;
+6 84 return Post.remove = ctx.locals.categories = {};
+7 9 title: {type: String, default: \'year\'},
+7 45 return Post.virtual('asset_dir\').get(function() {
+7 55 return Tag.find({_id: {$in: ids}}).sort(function(name) {
+7 56 return self.post_id;
+7 63 var existed = PostTag.find({post_id: this._id}).map(function(item) {
+7 66 return Tag.insert({post_id: {id: {$in: existed, tag_id: {$add_id}}).sort(id);
+7 70 PostTag.method(\'setCategories\', function() {
+7 71 var categories = this;
+7 72 return PostTag.insert({
+7 75 PostTag.method(\'
+
+8 24 layout: {type: String, default: \'post\', default: \'page\', default: \'post\', default: \'index\', default: \'__post = {type: String, default: ''},
+8 26 link: {type: String, default: \'image\', default: \'link\', default: \'pullquote\'},
+8 27 raw: {type: String, default: \'raw\', default: \'escape\', default: \' ''},
+8 29 content: {type: CacheString, default: \'empty\'},
+8 30 excerpt: {type: CacheString, default: \'empty\'},
+8 31 more: {type: CacheString, default: \'combined\'},
+8 32 more_than: {type: CacheString, default: \'more_than\'},
+8 33 excerpt: {type: CacheString, default: \'more_than\'},
+8 34 more: {type: CacheString, default: \'more_than\'}
+8 48 return src!== src || src.substring(0, src.length - 1) + \'/\';
+8 56 return Tag.find({_id: {$in: \'tags\'}).sort(\'name
+8 59 Post.method.pre('save = function() {
+8 60 var id;
+8 61 return Post.insert({source_id: this._id: this._id, slug: \'posts\'});
+8 65 it(\'skip_generate: function() {
+8 66 it(\'_generate: function() {
+8 67 return Post.prototype.skip_generate();
+9 24 layout: {type: String, default: \'post\', default: \'page\', default: \'post\', default: \'index\', '__post = get\',},
+9 25 permalink: {type: String, default: \'/\'},
+9 27 raw: {type: String, default: \'raw\', default: \'application/json\'},
+9 44 return src!==\'string\'? src : '';
+9 58 var existed = PostTag.find({post_id: {$in: ids}}).sort(function(item) {
+9 61 var content = ctx.config.highlight = _.render.render(content;
+9 62 return Promise.map(function(data, postTag, tag) {
+9 63 var {
+9 64 var data = {
+9 65 return {
+9 66 postTag = data.tag_id: postTag,
+9 67 .id: tag
+9 70 }).map(function(function(data) {
+9 71 return data.name = data.name;
+9 73 }).filter(function(data) {
+9 74 return data;
+9 76 return data.categories.categories = data;
+9 78 return locals = Tag.content = locals;

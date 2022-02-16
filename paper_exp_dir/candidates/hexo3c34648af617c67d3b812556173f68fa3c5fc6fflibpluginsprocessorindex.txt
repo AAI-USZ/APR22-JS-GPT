@@ -1,0 +1,127 @@
+Min editdistance: 17.00
+Closest candidate: 4 35 var config = hexo.config,
+0 1 catDir = (config.category_dir || 'categories') + '/',
+0 2 tagDir = (config.tag_dir || 'tags') + '/',
+0 3 siteUrl = config.url + '/',
+0 4 configLink = config.permalink,
+0 5 highlightConfig = config.highlight,
+0 6 highlightEnable = highlightConfig? highlightConfig.enable : true,
+0 7 backtickConfig = highlightConfig? highlightConfig.backtick_code_block : true,
+0 8 lineNumConfig = highlightConfig? highlightConfig.line_number : true,
+0 9 tabConfig = highlightConfig? highlightConfig.tab_replace : '',
+0 10 autoSpacingConfig = config.auto_spacing,
+0 11 titlecaseConfig = config.titlecase,
+0 12 newPostConfig = config.new_post_name,
+0 13 defaultCategory = config.default_category || 'uncategorized',
+0 14 categoryMap = config.category_map || {},
+0 15 tagMap = config.tag_map || {},
+0 16 excerptRegex = /<!--\\s*more\\s*-->/;
+0 17 swig.init({tags: tagExt});
+0 18 if (newPostConfig){
+0 19 var filenameRE = pathFn.basename(newPostConfig, pathFn.extname(newPostConfig))
+0 20 .replace(/:year/g, '(\\\\d{4})')
+0 21 .replace(/:(month|day)/g, '(\\\\d{2})')
+0 22 .replace(/:title/g, '(.*)');
+0 23 filenameRE = new RegExp(filenameRE);
+0 24 var filenameArr = _.map(newPostConfig.match(/:[a-z]+/g), function(item){
+0 25 return item.substring(1);
+0 26 });
+0 27 }
+0 28 var getInfoFromFilename = function(str){
+0 29 if (!filenameRE.test(str)) return;
+0 30 var meta = str.match(filenameRE).slice(1),
+0 31 result = {};
+0 32 for (var i=0, len=filenameArr.length; i<len; i++){
+0 33 result[filenameArr[i]] = meta[i];
+0 35 return result;
+0 36 };
+0 37 var escape = function(str){
+0 38 return str
+0 39 .replace(/\\s/g, '-')
+0 40 .replace(/!/g, '%21')
+0 41 .replace(/#/g, '%23')
+0 42 .replace(/g, '%24')
+0 43 .replace(/g, '%26')
+0 44 .replace(/'/'/, '%27')
+0 45 .replace(/g, '%27')
+0 46 .replace(/g, '%28')
+0 47 .replace(/g, '%29')
+0 48 .replace(/\\d};"
+
+1 30 var meta = str.match(filenameRE).slice(1),"
+
+2 44 .replace(/'/, '%27')
+2 48 .replace(/\\s/g, '%2')
+2 49 .replace(/g, '% 3)
+2 50 .replace(/h, '%2', '% 3)
+2 51 .replace(/h')
+2 52 .replace(/h]).split('/', '% 3)
+2 53 .split(/}).join('/).join('/');
+2 54 };"
+
+3 37 module.exports = function(data, locals){
+3 38 var newPostConfig = config.new_post_name,
+3 41 tagMap = config.tag_map || {};
+3 42 if (!config.archive) return;
+3 43 date = data.date = newPostConfig;
+3 44 async.each(data.date, function(data, function(data, next){
+3 45 var target = nextLink = getInfoFromFilename(data, target){
+3 46 var query;
+3 47 query = getPosts = getPostsFromFilename(data, _.permalink, query);
+3 48 if (query = getPosts(data, function(data, meta);
+3 49 if (!data){
+3 50 date = conditions = conditions[target) return nextInfoFromFilename(data, _conditions; });
+3 51 if (!query = conditions[target) return nextInfoFromFilename(data, meta);
+3 52 if (!if (!if (!results[target]) return;
+3 53 return;
+3 54 if (!results[target]) return nextLink || conditions[target] = nextInfo;
+3 55 if (results[target];\
+4 33 module.exports = function(data, locals, callback){
+4 34 if (!callback) callback = function(){};
+4 35 var config = hexo.config,
+4 36 filenameCaps = config.filename_case,
+4 37 max = config.max_open_file;
+4 40 highlightEnable = highlightConfig? highlightConfig.enable : true;
+4 43 .replace(/\\\\/g, '\
+4 44 ' + escape)
+4 45 .replace(/g, '\
+4 47 .replace(/g, '\\r/g, '\\d').replace(r', '\\d').replace(/g, function(){\')
+4 48 .replace(/g, function(){
+4 49 return '\\d};')
+4 52 if (multi = now = moment);
+4 53 return swig.init();
+4 54 return swig.init({tags = newPostConfig;
+4 55 filenameCats = swig.s = newPostConfig({tags = config, filenameArr, permalink: config.permalink_replace});
+4 56 var more = args = args;
+4 57 var rTags = _ = str = strs;
+4 58 if (\'{\'<newPostConfig\'}'!= format || content'}'\
+8 34 .replace(/\\$/g, '%24')
+8 35 .replace(/&/g, '%26')
+8 37 .replace(/\\(/g, '%28')
+8 38 .replace(/\\)/g, '%29')
+8 39 .replace('/, '%2A')
+8 40 .replace(/\\*/g, '(.+)');
+8 42 var load = function(source, callback){
+8 43 var sourcePath = sourceDir + source;
+8 44 async.parallel([
+8 45 function(next){
+8 46 file.series([
+8 48 file.read(sourcePath, next);
+8 49 },
+8 53 ], function(next){
+8 60 fs.readFile(sourcePath, next){
+8 61 fs.stat(sourcePath, next);
+8 63 if (next){
+8 65 if (next && next(next) next);
+8 69 async.stat(next){
+8 75 load(next){
+8 81 next) || next(next);
+8 83 ], function(next);
+8 84 })\
+9 39 .replace(/\\*/g, '%2A')
+9 40 .replace(/\\*/g, '%2B')
+9 41 .replace(/\\//g, '%2C')
+9 42 .replace(/g, '%3A')
+9 43 .replace(/g, '%3B')
+9 44 .replace(/g, '%3D');"
+

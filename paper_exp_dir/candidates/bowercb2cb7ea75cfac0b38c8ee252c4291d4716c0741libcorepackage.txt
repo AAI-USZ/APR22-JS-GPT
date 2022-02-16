@@ -1,0 +1,170 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var UnitWork = require('./unit_work');
+0 1 var UnitWork = require('./unit_work');
+0 2 var Package = function (name, endpoint, manager) {
+0 3 this.dependencies  = {};
+0 4 this.json        = {};
+0 5 this.name        = name;
+0 6 this.manager    = manager;
+0 7 this.unitWork    = manager && manager.unitWork? manager.unitWork : new UnitWork;
+0 8 this.opts       = manager? manager.opts : { force: false };
+0 9 if (endpoint) {
+0 10 if (/^(.*\\.git)$/.exec(endpoint)) {
+0 11 this.gitUrl = RegExp.$1.replace(/^git\\+/, \'\');
+0 12 this.tag    = false;
+0 13 } else if (/^(.*\\.git)#(.*)$/.exec(endpoint)) {
+0 14 this.tag    = RegExp.$2;
+0 16 } else if (/^(?:(git):|git\\+(https?):)\\/\\/([^#]+)#?(.*)$/.exec(endpoint)) {
+0 17 this.gitUrl = (RegExp.$1 || RegExp.$2) + "://" + RegExp.$3;
+0 18 this.tag    = RegExp.$4;
+0 19 } else if (semver.validRange(endpoint)) {
+0 20 this.tag = endpoint;
+0 21 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint).isFile()) {
+0 22 this.path     = path.resolve(endpoint);
+0 23 this.assetType = path.extname(endpoint);
+0 24 } else if (/^https?:\\/\\
+0 25 this.assetUrl  = endpoint;
+0 27 } else if (fs.existsSync(endpoint)) {
+0 28 this.path = path.resolve(endpoint);
+0 29 } else {
+0 30 this.tag = endpoint.split(/#\').join("#")[0];
+0 31 }
+0 33 this.unitWork.prototype.install = function (endpoint, manager) {
+0 34 var repairResult = this.unitWork.ach(this.manager || this);
+0 35 if (this.opts.opts.length === undefined) {
+0 36 if (this.unitWork.opts.opts.length === undefined) {
+0 37 opts.uninstall.apply(this.opts, this.opts, this.uninstall.options, this.options.uninstall.middleware);
+0 39 if (!opts.production.production) {
+0 40 this.production = this.unitWork.discrimraf.emit(this.path, this.assetPath)
+0 41 opts.remove(this.path, this.assetPath);
+0 42 if (this.opts.production) {
+0 43 this.unitWork.emit.uninstall.emit.apply
+1 6 this.manager      = manager;
+1 7 this.unitWork     = manager && manager.unitWork? manager.unitWork : new UnitWork;
+1 8 this.opts         = manager? manager.opts : { force: false };
+1 30 this.tag = endpoint.split(\'#\');
+1 32 this.originalTag = this.remove = this.tag || function () {
+1 33 return this.remove() {
+1 34 var args = _.length === 0;
+1 35 args.length === length? args.length : 1 : - 1;
+1 36 return args.some(this.remove()
+1 37 .remove()
+1 38 .collection.collection.remove() : this.remove()
+1 39 .collection.remove()
+1 40 };
+1 43 function clean(id = function () {
+1 44 if (old) {
+1 46 if (length) {
+1 47 var error;
+1 48 return this.remove(this.isDirectory()) return old
+1 49 .id = undefined;
+1 50 } else if (isExcluded = true;
+1 51 } else if (collection) {
+1 52 return this.should.included = true;
+1 54 return this.atomics.isDirectory()
+1 55 } else
+2 3 this.dependencies = {};
+2 4 this.json       = {};
+2 6 manager = manager;
+2 7 this.unitWork   = manager? manager.unitWork : new UnitWork;
+2 8 this.opts      = manager? manager.opts : { force: false };
+2 30 this.tag = endpoint.split('#\');
+2 32 this.update = function (names, options, fn) {
+2 33 var promise = Promise.resolve(this.name, options);
+2 34 var fn = options || {};
+2 35 if (this.'
+
+3 4 this.json      = {};
+3 5 this.name      = name;
+3 6 this.unitWork    = manager;
+3 7 this.opts       = manager? manager.opts : {};
+3 26 } else if (fileExists.sync((split = endpoint.split(\'#\')[0])[0]) && fs.statSync(split[0]).isDirectory()) {
+3 27 this.path = path.resolve(split[0]);
+3 28 this.tag  = split[1];
+3 29 } else if (/^[\\.\\/~]/.test(endpoint)) {
+3 31 } else if (endpoint.split = endpoint.split[0] === 2)/.test(endpoint);
+3 33 this.endpoint = cleanedTag;
+3 34 return this;
+3 36 Package.prototype.remove = function () {
+3 38 if (this.tag) {
+3 39 return Q.resolve(this.pkg) {
+3 40 return Q.resolve(this.pkg);
+3 41 this.pkg);
+3 43 return this.pkg = this;
+3 47 Package.create(this) {
+3 48 if (this.asset) {
+3 50 .has.pkg = endpoint.pkgMeta;
+3 51 .has.has
+4 7 this.unitWork     = manager? manager.unitWork : new UnitWork;
+4 8 this.opts        = manager? manager.opts : { force: false };
+4 30 this.assetUrl = path.resolve(endpoint);
+4 32 this.id = new Buffer(this.name);
+4 33 this.id.getBuffer(this.id);
+4 34 this.setTimeout(this.waitUnlock = this.waitUnlock.waitUnlock, 3);
+4 36 Package.setTimeout(this.dump = this.enureTimeout, 2000);
+4 37 Package.setTimeout(this.removeError, this.waitUnlock, 3);
+4 38 Package.setInteractiveScheduler, 2000, function () {
+4 39 return this.rimraf(this.path, function () {
+4 40 rimraf(this.path, function (err) {
+4 41 if (err) {
+4 42 if (err) return;
+4 43 this.removeAllListeners(this.path) {
+4 44 this.commands.callback.apply(this.commands, this.commands, arguments
+5 12 this.tag   = false;
+5 14 this.tag   = RegExp.$2;
+5 18 this.tag   = RegExp.$4;
+5 27 } else if (fileExists.sync((split = endpoint.split(\'#\', 2))[0]) && fs.statSync(split[0]).isDirectory()) {
+5 30 } else if (/^[\\.\\/~/.\\\/.\\.?[^.]*/.test(endpoint)/.test(endpoint)/.startsWith(endpoint)) {
+5 31 this.path)) {
+5 34 this.tag = path.extname(this.path);
+5 37 } else if (this.gitUrl) {
+5 38 this.generateResourceId();
+5 41 Package.prototype.generateAssetFolder = function (name, manager = function (name, shallow) {
+5 42 return function (id) {
+5 43 var dest = path.split(/'master/'
+
+6 32 this.originalTag = this.tag = this;
+6 33 if (this.id && this.id!== this.id) {
+6 34 process.nextTick(this.id);
+6 36 process.nextTick(this);
+6 39 }'
+
+7 30 } else if (/^[\\.\\/~/.*/.*/.*/.test(endpoint/.test(endpoint)) {
+7 31 this.endpoint += 
+7 32 this.path += \'.*\';
+7 34 } else if (endpoint += split[0] === endpoint;
+7 36 this.endpoint = endpoint.split('/;
+7 37 } else if (/^[0] === undefined;
+7 38 this.return this.endpoint = endpoint;
+7 44 res.read = function (endpoint, callback = endpoint.pkg,
+7 45 path) {
+7 46 var endpoint,
+7 47 if (this.engine) {
+7 48 \
+8 7 this.unitWork   = manager && manager.unitWork? manager.unitWork : new UnitWork;
+8 32 this.observeStaticFile = function (file, response, process) {
+8 33 var staticFolder = path.normalize(file);
+8 34 var baseFolder = path.join(this.path, \'.bower.json\');
+8 35 fs.readFile(staticFolder, function(staticFolder, function (err, contents) {
+8 38 if (err) return this.hasHeader(err);
+8 39 var jsonp = JSON.parse(contents.fromDiscrimraf(contents.toString());
+8 40 var nextFolder(cacheFolder);
+8 41 nextElementCollection.setHeader('cacheHeaders', function (req, response, function () {
+8 42 var stat = requestHeaders, next) {
+8 43 var idx = 0;
+8 44 var headers = request.setHeader('headers
+8 45 , responseHeaders(request, function (err, response, idx) {
+8 46 if (err, headers)
+9 7 this.unitWork    = manager? manager.unitWork : new UnitWork;
+9 32 this.tag = this.tag;
+9 34 this.originalTag = newTag;
+9 35 .pkg = this;
+9 36 this.id = new Buffer(this.engine = this.engine || {};
+9 37 this.hasBuffer.isBuffer = function isBuffer(this.prototype.toString = function () {
+9 38 return isBuffer(this.toString : function (chunk) {
+9 39 return this.engine) {
+9 40 return this.engine.engine.toString()!== undefined;
+9 44 Buffer.prototype.prototype.toString = function stringify = function () {
+9 45 return this.toString : function (obj) {
+9 46 return this.engine || {};
+9 47 var

@@ -1,0 +1,1 @@
+if (that.constructor.isTargetable()) {

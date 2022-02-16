@@ -1,0 +1,31 @@
+Min editdistance: 9.00
+Closest candidate: 0 14 const { name } = data;
+0 1 return `${ctx.config.url}/${this.path}`;
+0 2 });
+0 3 Tag.virtual('posts').get(function() {
+0 4 const PostTag = ctx.model('PostTag');
+0 5 const ids = PostTag.find({tag_id: this._id}).map(item => item.post_id);
+0 6 return ctx.locals.get('posts').find({
+0 7 _id: {$in: ids}
+0 10 Tag.virtual('length').get(function() {
+0 11 return this.posts.length;
+0 13 Tag.pre('save', data => {
+0 14 const { name } = data;
+0 15 if (!name) return;
+0 16 const Tag = ctx.model(\'Tag\');
+0 17 const tag = Tag.findOne({name}, {lean: true});
+0 18 if (tag) {
+0 19 throw new Error(`Tag \\`${name}\\` has already existed!`);
+0 20 }
+0 22 Tag.pre('remove', data => {
+0 23 const PostTag = ctx.model(\'PostTag\');
+0 24 return PostTag.remove({tag_id: data._id});
+0 26 return Tag;
+0 27 };'
+
+1 1  return `${ctx.config.url}/${this.path}`; });
+1 7 return ctx.locals.posts.find({
+3 3 return tagDir + this.path;
+5 3 return tagDir + this.slug}/`;
+6 1 '
+

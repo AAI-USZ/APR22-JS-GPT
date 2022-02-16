@@ -1,0 +1,141 @@
+Min editdistance: 12.00
+Closest candidate: 1 7 describe 'cookie()'"
+
+0 1  }})
+0 2 get('foo', { request:  foo })
+0 3 get('bar', { request:  foo })
+0 4 get('baz', { request:  baz })
+0 5 return response(Express.server.request, { request:   \'-p1\', response: \'-S1\
+0 6 0\') })
+0 7 response.body.should.eql \'p1,bar'
+0 8 end
+0 10 describe 'onResponse'
+0 11 it'should set the Set-Cookie header'
+0 12 get('/style.css', function(){
+0 13 this.header('x-powered-by', \'Hexo')
+0 14 })
+0 15 get('/style.css\').headers['x-powered-by'] = \'Hexo'
+0 19 end"
+
+1 2 get('foo').headers['set-cookie'].should.eql 200
+1 3 get('foo', { headers: { cookie:'foo=bar' }}).headers.should.eql 'bar'
+1 6 describe 'utilities'
+1 7 describe 'cookie()'"
+
+2 1 '
+
+4 1 bar'
+
+5 1  + 200
+5 2 Express.response.body.should.eql'something'
+5 6 describe 'cookie()'
+5 7 it'should return a cookie string'
+5 8 get('/user', function(){
+5 9 return Express.server.cookie('foo', { return 'bar' })
+5 11 get('/user\').headers['set-cookie'].should.eql 'bar'
+5 14 describe 'cookie() - - - fields'
+5 15 it'should set a session cookie'
+5 22 describe 'when existing sid cookie is present'
+5 23 it'should return the first session'
+5 24 get('/login', function(){
+5 25 return Express.server.cookie('', { headers : { cookie:'sid=123' }})
+5 27 get('/login\').headers['set-cookie'].should.eql 'email sent, email sent'
+5 38 describe 'when unknown sid cookie is present'
+5 39 it'should throw a Invalid session'
+5 43 -{ get('/login') }.should.throw_error(/Invalid credentials required')
+5 47 describe '#toString()'
+5 48 it'should return [Memory Store]'
+5 49 memory = new Insight({
+5 50 strictSsl: false,
+5 51 timeout: 1000,
+5 52 headers: { 'Memory': '123' }
+5 54 memory.toString().should.eql '[Memory Store]'
+5 57 describe '#fetch()'
+5 58 it'should return a new Session'
+5 64 memory.fetch().should.have_property 'name', 'Memory'
+5 67 describe '#clear()'
+5 68 it'should remove all sessions'
+5 69 memory.commit({ _id: '123' })
+5 70 memory.commit({ _id: '1' })
+5 71 memory.clear()
+5 72 memory.should.not.have_property'session'
+5 76 describe '#destroy()'
+5 77 it'should fail the session'
+5 78 it'shouldneach()'
+5 79 it'shouldneach('memory'
+5 80 it'shouldneach('admin/s/s/sessions')
+5 81 each('s')
+5 82 each('eACCESLit')
+5 83 each('1')
+5 87 each('s/s/s/sessions')
+5 89 end()'))
+6 1 bar
+6 2 response.body.should.eql 200
+6 3 Express.response.status.should.eql 200
+6 4 Express.response.headers['content-type'].should.eql 200
+6 8 it'should set the response status'
+6 10 this.status(500)
+6 11 return this.response.headers['content-type'].should.eql \'application/x-www-form-urlencoded\'
+6 12 },
+6 13 post('/user', function(){
+6 14 this.header('x-www-form-urlencoded')
+6 15 this.contentType(\'html\')
+6 16 return this.response.body.toString()
+6 18 createSuccessResult()'
+6 19 set.cookie.maxAge.should.be_a Number
+6 22 get('/user/:no-options', function(){
+6 23 this.response.status = 200
+6 24 return this.response.headers['content-type'].toString()
+6 26 post('/user/:walt', function(){
+6 27 this.header('x-success\'))
+6 29 return this.response.status.toString()
+6 31 createSuccessResult()'
+
+7 2 post('/foo', { headers : { 'Range': 'GET', 'GET', 'POST', 'DELETE' }})
+7 3 post('/foo', headers)
+7 5 post('/bar', headers)
+7 8 post('/category', headers)
+7 16 it'should set the Set-point value'
+7 18 this.header('x-powered-by')
+7 19 this.contentType('css')
+7 20 return 'body { background: white; }'
+7 22 get('/style.css')
+7 23 post('/style.css')
+7 26 it'should be case insensitive'
+8 4 Express.response.headers['content-type'].should.eql 'application/x-www-form-urlencoded'
+8 10 this.header('x-custom-height', 123)
+8 19 before_each
+8 20 Express.response.cookie = Express.parseCookie('foo')
+8 22 it'should return cookie value when key passed'
+8 24 return 'body { background: #000; }'
+8 26 get('/style.css').headers['content-type'].should.eql 'text/css'
+8 28 it'should return null when value is required'
+8 36 describe 'cookie() - allow multiple arguments'
+8 37 it'should return true if any mime type is present'
+8 39 return this.header('Host')
+8 40 .cookie('foo', 'bar', { useragent: 'tj' })
+8 41 get('/style.css').headers['content-type'].should.eql 'application/x-www-form-urlencoded'
+8 43 it'should return false when targeting'
+8 51 describe 'cookie() - allow arbitrary uses'
+8 59 describe 'cookie() - allow unencoded uses'
+8 64 get('/style.css').headers['content-type'].should.mime.toString()'].should.eql 'application/octet-{ return 'text/unescape()' }'
+8 70 describe 'key = set'key must be a string to space'
+8 71 it'should.toArray of space between a segment'
+8 72 describe 'when a segment'
+8 73 it'shouldql [['
+8 74 it'sh()'
+8 75 it'should match'
+8 76 get('space'
+8 77 it'should split'
+8 78 get('s', function()'
+8 79 unset()'
+8 80 unset(val) return 'foo'
+8 81 unset(string)
+8 82 unset(new Date)
+8 83 set(new Date)
+8 84 end)
+8 85 get('foo)
+8 86 get('foo')
+8 87 get('bar')
+8 88 get('baz'
+8 93 end\

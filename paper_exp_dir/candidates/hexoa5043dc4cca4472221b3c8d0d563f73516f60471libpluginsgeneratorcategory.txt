@@ -1,0 +1,37 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 locals.tags.each(function(tag){
+0 1 locals.tags.each(function(tag){
+0 2 if (!tag.length) return;
+0 3 var posts = tag.posts.sort('date', -1),"
+
+1 3 render(tag.posts, tag.path, {posts: posts});"
+
+3 3 var posts = tag.posts.sort('date', -1),
+3 4 arr = posts.toArray(),
+3 5 latest = true;
+3 6 for (var i=0, len=arr.length; i<len; i++){
+3 7 if (!arr[i]._latest){
+3 8 latest = false;
+3 9 break;
+3 10 }
+3 12 if (!latest || hexo.cache.rebuild){
+3 13 var path = tag.path;
+3 14 posts.tag = tag.name;
+3 15 if (config == 2){
+3 16 paginator(path, posts, 'tag', render);
+3 17 } else {
+3 18 route.set(path, function(fn){
+3 19 var result = render('tag', posts);
+3 20 if (!result) result = render('archive', posts);
+3 21 if (!result) result = render('index', posts);
+3 22 fn(null, result);
+3 23 });
+3 27 });"
+
+4 3 render(tag.path, tag.permalink, tag.target, {filename: tag.path});
+4 5 callback();
+5 1 "
+
+9 3 render(tag.posts, [tag.name], function(err, posts){
+9 4 if (err) throw err;"
+

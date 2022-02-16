@@ -1,0 +1,293 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 this.set('home', '/');
+0 1 this._locals = {};
+0 2 this._dynamicLocals = {};
+0 3 this.set('home', '/');
+0 4 this.set(\'env', process.env.NODE_ENV || \'development\');
+0 5 this.use(function(req, res, next){
+0 6 req.query = req.query || {};
+0 7 res.headers = { \'X-Powered-By': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+0 8 req.app = res.app = self;
+0 9 this.locals({
+0 10 settings: this.settings
+0 11 , url: this.url
+0 12 , host: this.config.title
+0 13 });
+0 14 this.locals.settings = this.settings;
+0 15 this.configure(\'production\', function(){
+0 16 this.enable(\'view cache\');
+0 18 };
+0 19 app.use = function(route, middleware){
+0 20 if (typeof route!==\'string\') {
+0 21 middleware = route, route = '/';
+0 22 }
+0 23 connect.HTTPServer.call(this, route, middleware);
+0 26 , url: this.config.root + \'/public\'
+0 27 , headers: this.settings
+0 28 , app: this
+0 30 this.use(middleware);
+0 31 this.routes = new Router(this);
+0 32 this.__defineGetter__(\'router\', function(){
+0 33 this.__usedRouter = true;
+0 34 this.__usedSetbacks = this.settings.router
+0 35 , route: this.formatters.__proto__
+0 42 app.remove = function(url){
+0 43 return this.routes.splice(0, 2);
+0 45 app.lookup = function(url){
+0 46 return this.routes.lookup(\'all\', url);
+0 49 var app, home, handle;
+0 50 if (process.parent.processor.use(app);
+0 51 handler.on(\'error
+0 52 );
+0 53 handler.all = function(req, blog, done) {
+0 54 return done(err, req, res, blog);
+0 56 if (!handler.handle(req, res, blog, done) {
+0 57 if (!handler(req, res, blog, headers, headers, error);
+0 58 if (!handler(req, res, posts, headers, headers, blog);
+0 59 if (!handler(err) return done) return;
+0 60 if (!handler(req, res, headers, headers, done) return;
+1 7 res.headers = {};
+1 9 req.res = res;
+1 10 res.req = req;
+1 11 req.next = next;
+1 12 if (req.url.indexOf(\'?\')!== 0) {
+1 13 var query = url.parse(req.url).query;
+1 14 req.query = qs.parse(query);
+1 16 next();
+1 18 if (middleware) {
+1 19 middleware.forEach(function(fn){
+1 20 self.use(fn);
+1 26 this.caseSensitive = this.enabled(\'case sensitive routing\');
+1 27 this.strict = this.enabled(\'strict routing\');
+1 28 return this;
+1 34 this.configure(\'development\', function(){
+1 35 this.enable(\'hints\');
+1 42 app.use = function(route, fn){
+1 44 if (\'string\'!= typeof route) fn = route, route = '/\';
+1 45 if (fn.handle && fn.set) app = fn;
+1 46 if (app) {
+1 47 app.route = route;
+1 48 fn = function(req, res, next) {
+1 49 var orig = req.app;
+1 50 app.handle(req, res, function(err){
+1 51 req.query = err;
+1 52 req.__proto__ = orig.request;
+1 53 res.__proto__proto__ = orig.response;
+1 54 next = orig.locals.val;
+1 55 next = function(err);
+1 56 return next();
+1 60 app.use(app.router = new Router(this);
+1 61 app);
+1 62 app.use();
+1 63 app.use(function(function(err, req, res, next){
+1 64 res.status(err, req, res, next){
+1 65 res.status(404, req.render, function(404, err){
+1 66 res.render(res);
+1 67 res;
+1 71 if (!404;
+1 72 app.get(\'/\')
+1 73 if (function get(\'/\')
+1 74 res.remove = function(url){
+1 75 res.removeAll = function(url){
+1 76 res.removeAll = function(url
+2 1 this.viewHelpers = {};
+2 2 this.dynamicViewHelpers = {};
+2 3 this.errorHandlers = [];
+2 4 this.set(\'home\', '/\');
+2 5 this.set(\'env\', process.env.NODE_ENV || \'development\');
+2 8 res.headers = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+2 10 this.settings = this.settings;
+2 11 if (process.env.NODE_ENV) {
+2 12 process.env.NODE_ENV = \'test\';
+2 13 console.log(\'\
+2 14 uploaded %s to %s (%s) to %s, with overriden app.\', this.name, this.settings[0]);
+2 15 this.locals = function(obj){
+2 16 for (var key in obj) {
+2 17 this.locals[key] = obj[key];
+2 21 var charset;
+2 22 res.setHeader(\'X-Powered-By\', \'Express\');
+2 27 res.locals.__proto__ = url.IncomingMessage.prototype;
+2 28 if (charset = self.set(\'charset\')) res.charset = charset;
+2 29 res.locals = function(obj){
+2 31 res.locals[key] = obj[key];
+2 36 this._locals.settings = this.settings;
+2 41 res.render = function(obj, options, fn){
+2 42 options = options || {};
+2 43 if (\'function\'length\' in options) {
+2 44 options = options;
+2 45 fn = options;
+2 46 options = {};
+2 48 var self = this.store = this;
+2 49 this.methods.lookup = function(proto = function(url){
+2 50 return self.app) {
+2 51 return self.lookup(url, options, options, fn);
+2 54 this.settings = this.redirects = this;
+2 55 this.isCallbacks = this;
+2 57 methods.forQuery = function(fn){
+2 58 this.omit = function(index){
+2 60 return self.use(this.redirects, this.options, this.settings);
+2 62 if (options.charset;
+2 63 .search = this.settings.length &&
+3 12 if (req.url.indexOf(\'?\') > 0) {
+3 23 var fn = router(function(app){ self.routes = app; });
+3 24 this.__defineGetter__('router', function(){
+3 26 return fn;
+3 29 this.enable(\'cache views\');
+3 32 app.use = function(router, app){
+3 33 var self = this;
+3 34 this.cache = {};
+3 35 this.settings = {};
+3 36 this.redirects = {};
+3 37 this.isCallbacks = {};
+3 40 this._jsonp = function(name, defaultEngine) {
+3 41 return this.headers[name.toLowerCase()] || defaultEngine;
+3 43 this.set(\'home\', \'/\');
+3 53 var val = obj;
+3 54 req.for (var key in obj) {
+3 55 res.__props.__proto__proto__ = key;
+3 56 res = val;
+3 57 obj = val;
+3 58 req.__proto__proto__ = fn.__ = val;
+3 59 res.__proto__proto__ = val;
+3 64 if (middleware.__proto__proto__.__proto__.__.__proto__ = parent.app.locals = parent.locals;
+3 65 return obj;
+3 67 this.locals.locals.settings.settings = this.settings.settings.settings.forEach(function(fn){
+3 68 if (use(function(req, res, i){
+3 69 this.settings.
+4 11 , url: this.uri.path
+4 12 , router: this
+4 18 this.configure.development = function(){
+4 20 this.set(\'home\', \'/');
+4 24 res.locals = {
+4 25 String: String,
+4 26 Number: Number,
+4 40 Object: Object,
+4 41 Mixed: function Mixed(){},
+4 42 Reference: function Reference(collection){
+4 43 this.collection = collection;
+4 46 this.configure.virtualServer = function(env, fn){
+4 47 if (this.env.words.indexOf(env) === -1) {
+4 48 return new VirtualServer(env, fn);
+4 50 if (this.settings.test(env)) {
+4 53 this.set(\'env\', env);
+4 55 var charset = self.set(\'charset\');
+4 56 res.locals.collection.firstInCollection = \'first\';
+4 57 res.locals.indexInCollection = \'at the same;
+4 58 res.collection.last = \'holowaychuk';
+4 59 res.locals.object = val;
+4 61 if (\'object\');
+4 62 if (typeof\'object\' == typeof\' == typeof' == typeof' == typeof' == typeof' == typeof' == typeof object.toString
+4 63 ) {
+4 64 var charset
+4 66 this.locals.should.sort();
+4 67 } else {
+4 68 var obj = type;
+4 69 obj = {};
+4 73 object = set;
+4 74 res.invalidate();
+4 81 \
+5 23 app.__proto__ = connect.HTTPServer.prototype;
+5 24 app.locals({
+5 41 req.app = res.app = orig;
+5 43 res.__proto__ = orig.response;
+5 44 next(err);
+5 48 connect.HTTPServer.prototype.__proto__proto__ = this;
+5 50 app.use.listen = function(this, callback){
+5 51 this.remove = callback;
+5 54 function errorHandler.dump = function clearNoCallbacks(err) {
+5 55 if (err) {
+5 56 this.removeAll(function(err) {
+5 57 if (fn) {
+5 58 clearAllbacks = true;
+5 59 this.removeAllListeners();
+5 60 this.length = true;
+5 61 fn.handleErrors = true;
+5 62 this.setHeader(\'errorHandlers = arguments');
+5 63 removeAllListeners();
+5 66 this.on(\'error\', function(err) {
+5 68 process.removeAllListeners.some(err, callback.apply(this, arguments);
+5 69 this.handle
+6 27 this.set(\'home\', this.set(\'env\'), this.set(\'stream\'));
+6 39 this.on(\'listening\', this.registerErrorHandlers.bind(this));
+6 41 app.on(\'error\', function(err){
+6 43 this.set(\'home\', this.set(\'env\'), this.get(\'home\'));
+6 44 this.show(\'info\');
+6 45 } else
+6 46 this.remove(\'errors\');
+6 49 this.remove(\'/custom\');
+6 50 this.get(\'/
+6 51 })
+6 52 .exclude = function(url){
+6 53 return url.parse(url).query;
+6 54 , this.parse(url).query;
+6 55 , true;
+6 59 app.test.error()
+6 60 .isCallbacks = function(function(req, res, next){
+6 61 if (\'shouldAllowedIndex = true;
+6 62 res.strictQuery = route(\'Server.test\')!== undefined) {
+6 63 res.set(\'Server.lookup = function(req, app) {
+6 64 next) {
+6 70 function get(url, fn){
+6 71 if (fn.test) {
+6 72 fn.call(this, url, url, this.
+7 4 this.set(\'home\', '/');
+7 8 res.headers = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'text/html; charset=utf-8\', \'X-Powered-By\') };
+7 25 this.__usedRouter = false;
+7 42 if (\'string\'!= typeof route) fn = route, route = \'/\';
+7 47 var orig = req.app = res;
+7 48 app.handle(req, app.handle(req, res, function(req, res, function(err, buf){
+7 49 req, buf, err, fn){
+7 50 req.app.__proxhralt = orig.__prox = orig.filename = orig.filename(req.filename);
+7 51 res.__props.app = fn.props.app = orig.keys[0];
+7 52 res.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__props.__.__props.__.__s.__props.__ = orig.__;
+7 53 res.__props.__props.__.__ = orig.__props.__.__props.__
+8 1 this.settings.external = {};
+8 2 this.redirects.should.eql(this.settings.redirects);
+8 3 this.settings.external.should.eql(this.settings.external);
+8 22 if (middleware) middleware.forEach(self.use.bind(self));
+8 27 return self.routes.middleware;
+8 36 methods.forEach(function(method){
+8 37 self.lookup[method] = function(path){
+8 38 return self.routes.lookup(method, path);
+8 40 self.match[method] = function(path){
+8 41 return self.routes.match(method, path);
+8 43 self.remove[method] = function(path){
+8 44 return self.routes.lookup(method, path).remove();
+8 47 methods.forEach(function(self){
+8 48 self.lookup.use(function(function(user){
+8 49 return self.use(pass, param, val){
+8 50 self.pass, user.params = val);
+8 54 methods.for (function trimArr = function(user){
+8 55 return self.match.length == null;
+8 58 methods.for (var i = 0;
+8 59 return self.middleware.length = 0;
+8 60 methods.middleware.forOwnProperty = function i === 0;
+8 61 function trimArr(user){
+8 62 methods.middleware = getter;
+8 63 var len = users = getter;
+8 64 methods.middleware.forEach(function(fn){
+8 65 return function
+9 8 res.headers = { \'X-Powered-By\': \'Express\', \' Router\', req.url);
+9 27 this.__usedSetter = true;
+9 28 this.set(\'home\', this.set(\'env\') + \'/\');
+9 29 this.use(connect.HTTPServer.prototype);
+9 38 for (var key in obj) res.locals[key] = obj[key];
+9 39 return res;
+9 49 this.remove = function(url){
+9 50 var path = this.format(url);
+9 51 this.cache.del = this.settings.exclude;
+9 52 this.settings.pass = url;
+9 53 this.redirects = url.parse(this.url).paths;
+9 54 this.query = this.query;
+9 55 this.root = undefined;
+9 59 methods.for (function pass(i){
+9 60 this.get = function(url){
+9 61 return self.format(url);
+9 62 return self.url, this.middleware;
+9 64 var route = this;
+9 65 if (this.method){
+9 66 methods = route = route.middleware;
+9 68 self.locals.settings = this.app = this;
+9 69 .routes.push(this);
+9 70 this);
+9 72 if (!this.app.routes.length

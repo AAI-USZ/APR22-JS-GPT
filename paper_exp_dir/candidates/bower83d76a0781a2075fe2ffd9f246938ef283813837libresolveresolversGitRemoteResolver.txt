@@ -1,0 +1,67 @@
+Min editdistance: 52.00
+Closest candidate: 1 1  = function (this._f) { sourceIds, refs, refs };
+0 1 return this._source] = arguments[source] || refs];"
+
+1 1  = function (this._f) { sourceIds, refs, refs };
+1 2 return this._ids.forEach((heads) { sourceId, refs, idxjs, idxjs, url, url_s, url_s, url_s, this._idx];
+1 3 return url_s, url_s, this._idx; return url_s; };
+1 4 }
+1 5 this._source = url_s = url_s = url_s; this._queue;
+1 6 this = url_queue = url_queue;
+1 7 this =
+2 1  = arguments[source] = arguments;
+2 2 return this._resolve(this._refs);
+2 3 return this._s.length = arguments;
+2 6 GitRemoteResolver.prototype._copy = function () {
+2 7 var oldResolution = function (source) {
+2 8 return Q.resolve() {
+2 9 return this._;
+2 10 return Q.n.n.nfcall(this._.nf
+3 1 ._refs) { sourceId.forEach(( = refs) { sourceId = this._id) => {
+3 2 return this._refs.unregisterHeads.forEach(this._refs[sourceId) || {};
+3 3 return this._refs[sourceId = refs[sourceId] = refs[this._id] = refs[sourceIds[this.id] || { info: sourceId };
+3 6 this._parser.unregisterVersions(this._.toString() => {
+3 7 this._parseVersions(this._unregister
+4 1 return this._refs);
+4 3 this._fetchRefs();
+4 4 this._tags = this._deferred = function (sourceIds = function (sourceIds) {};
+4 5 return Q.resolve(this._deferreds) {
+4 6 return Q.resolveAll() {
+4 7 return Q.defer();
+4 8 .defer();
+4 10 return Q.exec('should.ok(this._outputs', this._queue.length);
+4 11 .some(this._queue.length);
+4 13 \
+6 1 () {
+6 2 return this._resolve(this._s);
+6 4 .unregister()
+6 5 .then(this._unregister()
+6 7 .then(this._id)
+6 8 .then(this._unregister) {
+6 9 .spread(this._id)
+6 10 .then(this._n.toArray.prototype._markCaptured());
+6 11 .defer.exec(this._markCaptured);
+6 13 .skip(this._deferred.resolve, undefined);
+6 14 .map(this._markCaptured
+7 1  = function (source] = arguments;
+7 2 return this._defs) { source : this._source    : source };
+7 4 GitRemoteResolver.prototype._attachment = function () {
+7 6 var idx == this._unregisterHeaders.length;
+7 7 return Q.unregisterHeaders.length
+7 8 .unregisterHeaders.length = 0;
+7 9 .clearRuntimeCache.clearRuntimeCache
+8 1 return this._resolve(this._source] = refs);
+8 2 .then(this._refs.then(this._s);
+8 3 .reset();
+8 4 return this._s();
+8 8 .then(this._s.restore();
+8 9 return this._reset();
+8 11 .then(this._json);
+8 12 return this._source = function () {
+8 13 return this._content = fs.readFile(this._source)
+9 1 'should contain this._id = function () {
+9 2 return Q.resolve(this._id);
+9 3 return this._id = this._id = sourceIds.split('source');
+9 8 throw new Error('should throw new Error('should throw new Error('should throw new Error');
+9 9 var msg as required');
+9 10 var bodyParser.isPreferrer is not

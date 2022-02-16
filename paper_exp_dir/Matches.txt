@@ -1,0 +1,200 @@
+1 1
+exact match: 126
+match_without_white_space 133
+under_5_ed 167
+under_10_ed 181
+1 5
+exact match: 201
+match_without_white_space 209
+under_5_ed 253
+under_10_ed 276
+1 10
+exact match: 214
+match_without_white_space 222
+under_5_ed 270
+under_10_ed 300
+1 1000
+exact match: 226
+match_without_white_space 237
+under_5_ed 289
+under_10_ed 332
+2 1
+exact match: 140
+match_without_white_space 147
+under_5_ed 181
+under_10_ed 195
+2 5
+exact match: 222
+match_without_white_space 231
+under_5_ed 277
+under_10_ed 301
+2 10
+exact match: 237
+match_without_white_space 246
+under_5_ed 297
+under_10_ed 330
+2 1000
+exact match: 251
+match_without_white_space 263
+under_5_ed 319
+under_10_ed 369
+3 1
+exact match: 151
+match_without_white_space 158
+under_5_ed 194
+under_10_ed 211
+3 5
+exact match: 236
+match_without_white_space 245
+under_5_ed 295
+under_10_ed 324
+3 10
+exact match: 255
+match_without_white_space 264
+under_5_ed 320
+under_10_ed 361
+3 1000
+exact match: 272
+match_without_white_space 286
+under_5_ed 347
+under_10_ed 406
+4 1
+exact match: 153
+match_without_white_space 160
+under_5_ed 197
+under_10_ed 214
+4 5
+exact match: 243
+match_without_white_space 252
+under_5_ed 304
+under_10_ed 335
+4 10
+exact match: 263
+match_without_white_space 272
+under_5_ed 332
+under_10_ed 376
+4 1000
+exact match: 284
+match_without_white_space 298
+under_5_ed 365
+under_10_ed 432
+5 1
+exact match: 155
+match_without_white_space 163
+under_5_ed 204
+under_10_ed 221
+5 5
+exact match: 248
+match_without_white_space 260
+under_5_ed 318
+under_10_ed 350
+5 10
+exact match: 269
+match_without_white_space 281
+under_5_ed 350
+under_10_ed 398
+5 1000
+exact match: 291
+match_without_white_space 308
+under_5_ed 385
+under_10_ed 460
+6 1
+exact match: 160
+match_without_white_space 168
+under_5_ed 211
+under_10_ed 229
+6 5
+exact match: 257
+match_without_white_space 269
+under_5_ed 330
+under_10_ed 364
+6 10
+exact match: 278
+match_without_white_space 290
+under_5_ed 362
+under_10_ed 412
+6 1000
+exact match: 301
+match_without_white_space 318
+under_5_ed 398
+under_10_ed 476
+7 1
+exact match: 163
+match_without_white_space 171
+under_5_ed 214
+under_10_ed 233
+7 5
+exact match: 261
+match_without_white_space 273
+under_5_ed 335
+under_10_ed 371
+7 10
+exact match: 282
+match_without_white_space 294
+under_5_ed 368
+under_10_ed 422
+7 1000
+exact match: 306
+match_without_white_space 323
+under_5_ed 410
+under_10_ed 497
+8 1
+exact match: 165
+match_without_white_space 173
+under_5_ed 216
+under_10_ed 236
+8 5
+exact match: 263
+match_without_white_space 277
+under_5_ed 339
+under_10_ed 378
+8 10
+exact match: 285
+match_without_white_space 299
+under_5_ed 373
+under_10_ed 430
+8 1000
+exact match: 309
+match_without_white_space 328
+under_5_ed 415
+under_10_ed 506
+9 1
+exact match: 169
+match_without_white_space 177
+under_5_ed 221
+under_10_ed 243
+9 5
+exact match: 268
+match_without_white_space 282
+under_5_ed 345
+under_10_ed 388
+9 10
+exact match: 290
+match_without_white_space 304
+under_5_ed 380
+under_10_ed 441
+9 1000
+exact match: 314
+match_without_white_space 333
+under_5_ed 423
+under_10_ed 518
+10 1
+exact match: 169
+match_without_white_space 177
+under_5_ed 221
+under_10_ed 243
+10 5
+exact match: 268
+match_without_white_space 282
+under_5_ed 345
+under_10_ed 388
+10 10
+exact match: 290
+match_without_white_space 304
+under_5_ed 380
+under_10_ed 441
+10 1000
+exact match: 314
+match_without_white_space 333
+under_5_ed 423
+under_10_ed 518

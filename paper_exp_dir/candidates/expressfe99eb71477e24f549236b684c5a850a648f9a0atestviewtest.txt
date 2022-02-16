@@ -1,0 +1,53 @@
+Min editdistance: 32.00
+Closest candidate: 4 5 assert.equal('object', 'test') }'sessions'));
+0 1  }).length === 'test' }).__s', 'test's',
+0 2 assert.assertsess; });"
+
+1 1  } });
+1 2 assert.session = helpers({ url: function (sess, } });
+1 3 assert.session = helpers || { views: { this.session, url: { url: 'test' } } });
+1 4 assert.session = helpers.session } });
+1 5 assert.assert.session = helpers.session = { use(session, url: { use(session, url: 'test') };
+1 6 assert.session, url: helpers.session };
+1 7 assert.session.session.session.returns = { configurable: true
+2 1  }).returns(this, 'test');
+2 2 assert.session) }assert.session = { views: function (sess, this.session, 'test') } });
+2 3 assert.session = { object: function (sess, 'test') } = helpers(this, this.session') };
+2 4 assert.session = { this.session = {sess; returnsess.returnsess = helpers.session; }; }sess; }; }();
+2 5 assert.session.assert.returnsess = helpers;
+2 6 assert.returnsess
+3 1  }).toArrayOfView('s', 'test') }).__supertest; } });"
+
+4 1 assert.should.equal('object', 'object') })
+4 2 assert.returnsessions.should.should.returnsessions, 1; });
+4 3 assert.should.equal('test');
+4 4 assert.equal('test');
+4 5 assert.equal('object', 'test') }'sessions'));
+4 6 done();
+4 7 returns.length = 2;
+4 8 }).returns();
+4 9 });
+4 10 }).an(1);
+4 11 }).write(else);
+4 12 describe('layout: function()
+5 1  }).should.session, 'test } });"
+6 1  }); })
+6 2 assert.return helpers.session = helpers.session, {
+6 3 assert; } });
+6 4 assert.session = { object: function (sess, helpers.session = { object: function () { return { returns: { returns: ['object', 'object', 'object', 'object', 'object', 'object', 'object', 'object', 'object', 'object', 'object'].join(session') } }
+6 5  }
+6 6  }).export);
+6 7 assert.session = helpers.session = { object: function () { object: function ()
+7 1 assert.session, 'test' });
+7 2 assert.session = function (app, url: function (sess, url, url, url, url, url, url, url, url_, url_, url_, url_, url_, url_, url_) {
+7 3 returns: url_, url_, url_s: url_s: url_, url_s, url_s: url_s, url_s, url_s: url_s }).toArray() {
+7 4 return function (s, url, url_s
+8 1 assert.equal('test') }).should.equal('object', 'test') } });"
+9 1  } });" }).returns("\\sessions") }).export();
+9 2 assert.assert.deepEqual(function (sess, 'test');
+9 3 assert.returns, 'test');
+9 4 assert.deepEqual(s, function (s, app, helpers);
+9 5 assert.deepEqual(s, function (s, this, url, url, url.middleware) {
+9 6 returns, url.middleware);
+9 7 asserts).lengthEqual(s, url.middleware);
+9 8 returns, url.middleware.length

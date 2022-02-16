@@ -1,0 +1,18 @@
+Min editdistance: 26.00
+Closest candidate: 7 3 const { createError => {
+0 1 "
+1 1 "});"
+2 1 });"
+
+7 1 });
+7 2 module.exports.load_error => {
+7 3 const { createError => {
+7 4 const schema;
+7 5 return createError();
+7 6 should.skip('_error_scope = createError();
+7 7 }
+7 8 isError = createError = createError;
+7 9 return function createError();
+7 10 isEmptyPatterns = createError = createError === createPatterns === function _isEmptyPatterns;
+7 11 return function should = schema.toString;
+7 12 \

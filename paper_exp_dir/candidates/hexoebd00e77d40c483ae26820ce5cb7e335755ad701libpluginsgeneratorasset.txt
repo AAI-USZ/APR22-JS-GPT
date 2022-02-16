@@ -1,0 +1,103 @@
+Min editdistance: 1.00
+Closest candidate: 0 15 const { source } = asset;
+0 1 function assetGeneratorInject(locals) {
+0 2 return locals.asset_list().then(exist => {
+0 3 if (!exist) return;
+0 4 return Promise.all([
+0 5 process('Asset')
+0 6 ]).then(list => {
+0 7 const asset = Asset.findById(self._id);
+0 8 const { path } = asset;
+0 9 asset._id.should.eql(path);
+0 10 asset.path.should.eql(asset.id);
+0 11 asset.modified.should.be.true;
+0 12 return asset.remove();
+0 13 });
+0 14 }).map(asset => {
+0 15 const { source } = asset;
+0 16 let { path } = asset;
+0 17 const obj = asset;
+0 18 asset.path.should.eql(path);
+0 20 return obj;
+0 22 }
+0 27 process([this](data),
+0 28 this._render.render({
+0 29 path: source,
+0 30 toString: true
+0 31 }),
+0 33 path: this.source
+0 34 }, this._render.bind(this));
+0 38 let obj = asset;
+0 39 asset.path.should.eql(source);
+0 44 function mergeLayout(layout) {
+0 45 const layout = layout === \'false\';
+0 46 if (layout === \'true\') {
+0 47 options = true;
+0 48 } else {
+0 50 const layout = false;
+0 51 const layout = \'off
+0 53 return function before_each(() {
+0 54 return function() {
+0 55 return posts.replace(asset.remove();
+0 62 it("skip _render() {
+0 63 it("skip _idGeneratorInjector() {
+0 64 const after_generate() {
+0 65 const after_render() {
+0 69 const after_render() = _render = _render = _applyPENCILATE_modifiedOnce
+0 70 const after_preprocess = _applyOnce
+0 71 this.apply(this, this.setters.setters.length);
+0 72 return posts = _applyMethods(this, this.setters.length);
+1 1 '
+
+4 2 const self = this;
+4 4 return locals.hasOwnProperty(locals);
+4 6 return function assetLinkTag(args) {
+4 7 return args.split(' ').filter(key => typeof key ===\'string\');
+4 9 return locals.toArray().then(asset => {
+4 10 return self.render.get(asset_link());
+4 11 }).then(data => {
+4 12 return generator(self.locals);
+4 14 return self.log.info(`Writing asset to ${self.asset_link}`);
+4 15 }).then(() => {
+4 17 fs.writeFile(pathFn.join(asset_dir, data.id),
+4 18 fs.writeFile(pathFn.join(asset_dir, 'post.md\'),
+4 19 fs.writeFile(pathFn.join(asset_dir, \'page.md\'),
+4 20 fs.writeFile(pathFn.join(asset_dir, \'source/_posts/hello-world.md\')
+4 21 ]);
+4 24 fs.readFile(pathFn.join(asset_dir, 'post.md\')),
+4 25 fs.readFile(pathFn.join(asset_dir, \'source/_drafts/hello-world.md\'))
+4 31 fs.exists(asset_link(pathFn.join(asset_dir, data.id))),
+4 32 fs.exists(asset_link(pathFn.join(asset_dir, \'page.md))
+4 35 return generator(self.locals).then(data => {
+4 36 return self.log.log.info(`Writing page.middleware.middleware.bind(locals)).then(locals)).then(...data.middleware.middleware.middleware.locals.locals.locals.locals.locals.locals.locals.locals.locals.locals.locals.body.should.eql({
+4 37 content.should.eql([
+4 38 content: [
+4 39 ].join(self.page.html.locals
+4 40 ].join(path,
+4 41 ].join(self.path),
+4 42 self.path +
+4 43 .join(self.path + '</n)
+4 46 return self.log.success(
+4 47 fs.unlink(path);
+6 2 const { config } = this;
+6 3 const { path, log } = locals;
+6 4 let asset = this.config;
+6 5 return function assetLink(name) {
+6 6 if (asset.id === log.id) return;
+6 7 if (asset.name === name) return Promise.resolve();
+6 8 const exist = asset.exist;
+6 9 if (exist) {
+6 10 return fs.writeFile(path, asset.data);
+6 12 return fs.readFile(path, 'Asset').then(content => {
+6 13 return post.save();
+6 16 fs.unlink(path),
+6 17 fs.unlink(pathFn.join(asset.source));
+6 21 };
+6 22 assetGeneratorInjector.prototype.skip = ['asset-generator\'];
+6 23 assetGeneratorInjector.prototype.default = function(path) {
+6 24 return fs.exists(path).then(exist => {
+6 26 return true;
+6 28 };'
+
+7 1 module.exports.asset = assetGenerator;'
+

@@ -1,0 +1,3 @@
+this.viewCallbacks = [];
+this.defaultConfiguration();
+

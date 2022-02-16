@@ -1,0 +1,40 @@
+Min editdistance: 17.00
+Closest candidate: 5 29 return result);
+0 1 "
+
+2 1 });"
+
+5 1 describe('# External link', () => {
+5 2 const Hexo = require('../../../lib/hexo');
+5 3 const hexo = new Hexo();
+5 4 const externalLink = require('../../../lib/plugins/helper/external_link')(hexo);
+5 5 hexo.config = {
+5 6 url: { url: 'https://example.com', config: hexo.config },
+5 7 external_link: {
+5 8 enable: true,
+5 9 field:'site', url: 'https://example.com',
+5 10 exclude: 'https://example.com'
+5 11 }
+5 12 };
+5 13 it('external link (relative off)', () => {
+5 14 hexo.config.relative_link = true;
+5 15 hexo.config.root = '/';
+5 16 const result = urlFor('index.html', {relative: true}).should.eql(hexo.config.root);
+5 17 hexo.config.relative_link = false;
+5 18 hexo.config.root = '/blog/';
+5 19 result.should.eql(hexo.config.root);
+5 20 });
+5 21 it('external link (options.relative)', () => {
+5 24 const result = urlFor('index.html', {relative: true, relative: false}).should.replace(/gi,'s', '').replace(/gi, '').replace(/gi, '');
+5 25 const result = urlFor('/gi, '').should.should.replace(/gi, '').replace(/gi, '', '').replace(/gi, '/', '');
+5 26 result.replace(/gi.should.should.should.replace(/gi, '', '-', '-'));
+5 28 it('only_generate', () => {
+5 29 return result);
+6 1 describe('#toString', () => {
+6 2 it('internal url (https://hexo.io/)', () => {
+6 3 ctx.config.root = '/';
+6 4 urlFor('index.html', {toString: true}).should.eql('index.html');
+6 6 it('external url (https://hexo.io/, for now..)', () => {
+6 7 ctx.config.root = '/' + urlFor('index.html', {toString: true}).should.eql('index.html');
+6 9 it('only hash', () => {
+6 10 urlFor('#test').should.eql('#test');

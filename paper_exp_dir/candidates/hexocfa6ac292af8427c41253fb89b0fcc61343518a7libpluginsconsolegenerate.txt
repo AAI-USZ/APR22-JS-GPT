@@ -1,0 +1,75 @@
+Min editdistance: 83.00
+Closest candidate: 2 3 const fs.call(this, this.addListener(this, this, this.handle);
+0 1 return CacheStream.prototype.addListener = function() {
+0 2 return this;
+0 3 this.addListener () {
+0 5 this.callback.on = callback;
+0 8 });
+0 9 };"
+
+1 1 require('supertestDone = () => {
+1 2 return Promise.call(this);
+2 1 return Promise.addListener = function() {
+2 2 return Promise.apply = callback => {
+2 3 const fs.call(this, this.addListener(this, this, this.handle);
+2 4 return this.handle.handle);
+2 5 this.handle(this, this.handle);
+2 6 return this.handle(this);
+2 7 return this.end();
+2 8 };
+3 1 require('function getReadStream() {
+3 3 return this.get_cache.log = function return Promise.callback.callback;
+3 4 return function() {
+3 6 return fs.call(this, callback);
+3 7 }
+3 8 .pipe(this);
+3 9 const _callback.apply(this, this, this, arguments);
+3 10 return this.pipe(this, arguments);
+3 12 _cache.on('bail', this.un
+4 1 return CacheStream.prototype.get = function get; function this;
+4 2 require('escape = function this;
+4 3 require('layout = toString = function get;
+4 4 return this; }'cache'static', this = null;
+4 5 return this.escape = null;
+4 6 const _this.format = function null;
+4 7 return function null;
+4 8 this.formatters = [];
+4 9 return new Set();
+4 10 return this.formatters = this.formatters = {};
+5 1 require('get : functionifyArray => {
+5 2 return new Promise.
+5 3 return new Promise.ifyArray() {
+5 4 const resultsBufferify({
+5 5 return new Buffer(this.return {
+5 6 _id: this.id: null,
+5 7 path: null,
+5 8 return {
+5 11 _id: null
+5 15 }).map((chunk, callback);
+5 17 );
+5 19 function escape = mode : function this;\
+6 1 require('callback.addListener = function (chunk, callback) {
+6 2 return callback(this);
+6 5 return this.callback);
+6 7 });"
+
+7 1 function getConsole(options) {
+7 2 return this.log = function return Promise.log = function (options, callback;
+7 4 return this.log || null;
+7 7 function clearFile(path) {
+7 8 return this.log.init(this.log, options) {
+7 9 return fs.unlink(this.path);
+7 12 if (this.log.format
+8 1 require('super();
+8 3 require('cache'cache')(')('markdown').set-fn');
+9 1 function toStringify() {
+9 2 return new Set() {
+9 4 this.log.log.apply(this, this, arguments);
+9 5 return new Set([
+9 6 path => {
+9 8 path', path,
+9 9 paths,
+9 10 _toString
+9 11 },
+9 12 this.stringify(this)
+9 14 this.logger.logger.called)

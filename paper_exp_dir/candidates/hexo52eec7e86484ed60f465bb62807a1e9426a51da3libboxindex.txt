@@ -1,0 +1,402 @@
+Min editdistance: 20.00
+Closest candidate: 3 1 const _ = require(\'lodash\');
+0 1 const fixture = require('../../fixtures/post_render/partial_render\');
+0 2 const escapeBackslash = (cache, str) => {
+0 3 return str.replace(/\\\\/g, \'/\');
+0 4 };
+0 5 const escapeEOL = (cache, str) => {
+0 6 if (cache === true) return str.replace(rEOL, \'\\\\u\');
+0 7 return str;
+0 9 const _escapeContent = (cache, str) => {
+0 10 const placeholder = \'\\uFFFC\';
+0 11 return `<!--${placeholder}${cache.push(str) - 1}-->`;
+0 13 function PostRenderCache(context) {
+0 14 this.context = context;
+0 15 }
+0 16 PostRenderCache.prototype.escapeContent = function(str) {
+0 17 return this.cache.toString();
+0 19 function prepareFrontMatter(data) {
+0 20 const { content } = data;
+0 21 if (typeof data.front === \'undefined\') {
+0 22 return;
+0 24 const host = data.hostname;
+0 25 const user = data.user || { name: this.is_post() };
+0 26 const self = this;
+0 27 if (str) {
+0 28 if (self.config.post_asset_folder) {
+0 29 const link = escape.filename(config.post_asset_folder)
+0 30 .replace(/:year/g, \'\\\\d{4})\')
+0 31 .replace(/:(month|day)/g, \'\\\\d{2})\')
+0 32 .replace(/:title/g, \'(.*)\');
+0 33 const map = {
+0 34 config: config,
+0 35 post: post_asset_folder
+0 37 if (!path.extname(config.archive_dir)) {
+0 38 const link = mkdirs(config.archive_dir);
+0 39 if (link!== undefined) {
+0 40 let postDir = this.config.archive_dir;
+0 41 if (postDir === undefined) postDir = config.archive_dir + \'/\';
+0 42 return link;
+0 44 if (options.relative) {
+0 45 const { style = \'list\', transform, separator = \', suffix = \'atom\';
+0 46 const frontMatter = prepareFrontMatter(_.clone(data));
+0 47 const content = this.cache.get(source);
+0 48 if (typeof style === \'string\') {
+0 49 content = style.replace(/([\\s\\S]*?)\\s*(.+?)\\s*(.+)?/g, \'\');
+0 51 if (options.class && Array.isArray(options.class)) {
+0 52 const { class } = options;
+0 53 const [key, value];
+0 54 if (typeof options === \'object\' && Array.isArray(options.class)) {
+0 55 const { source } = options;
+0 56 let result = \'\';
+0 57 if (options.length) {
+0 58 for (let i = 0, len = options.length; i < len; i++) {
+0 59 const item[key] = options[i];
+0 60 if (typeof options[i] == options[i] == null) result += \'.*
+0 63 return result;
+0 64 } else {
+0 67 Post.prototype.content = this;
+0 68 return this.markCaptured = data.mode = this.format = this.format || config.format;
+0 70 Post.prototype.stat = function() {
+0 71 return this.statuses[this.format || config.format];
+0 72 };'
+
+1 1 const micromatch = require(\'micromatch\');
+1 2 const defaultPattern = new Pattern(() => ({}));
+1 3 function Box(ctx, base, options) {
+1 4 Reflect.apply(EventEmitter, this, []);
+1 5 this.options = Object.assign({
+1 6 persistent: true
+1 7 }, options);
+1 8 if (!base.endsWith(sep)) {
+1 9 base += sep;
+1 11 this.context = ctx;
+1 12 this.base = base;
+1 13 this.processors = [];
+1 14 this._processingFiles = {};
+1 15 this.watcher = null;
+1 16 this.Cache = ctx.model(\'Cache\');
+1 17 this.File = this._createFileClass();
+1 19 require(\'util\').inherits(Box, EventEmitter);
+1 20 function escapeBackslash(path) {
+1 21 return path.replace(/\\\\/g, \'/\');
+1 23 function getHash(path) {
+1 24 return new Promise((resolve, reject) => {
+1 25 const src = fs.createReadStream(path);
+1 26 const hasher = new util.HashStream();
+1 27 src.pipe(hasher)
+1 28 .on(\'finish\', () => {
+1 29 resolve(hasher.read().toString(\'hex\'));
+1 30 })
+1 31 .on(\'error\', reject);
+1 32 });
+1 34 function toString() {
+1 35 return this.name;
+1 44 const hash = util.hashToString(hash);
+1 70 function escapeAllSwigTags(str) {
+1 71 return str.replace(/{/g, \'/\');
+1 73 function _createFile(path, required, replace, fn) {
+1 74 if (!path.endsWith(\'..\')) return Promise.resolve(req, reject);
+1 75 const src = fs.readFile.readFile(path, fn);
+1 76 const content = fs.replacePath(path, replace;
+1 77 if (!content = Promise.isAbsolute(content);
+1 78 const ctx.unlink = fs.stat(src) ||!== undefined;
+1 79 return Promise.isBinary;
+1 80 return Promise.isBinary = Promise.isBinary;
+1 82 function getExtname(path) {
+1 83 return new File(path, required, type) {
+1 84 return!== \'function\'string\';
+1 87 addFile(path, required, required, stat, extname, type) {
+1 88 if (isBinary) {
+1 89 if (typeof unlink!== \'create\') return Promise.isBinary) throw new Type(path);
+2 2 const Pattern = util.Pattern;
+2 3 const helper = require(\'./helper\');
+2 4 const log = require(\'./logger\').create();
+2 21 this.ignore = ctx.config.ignore;
+2 22 if (!Array.isArray(this.ignore)) {
+2 23 this.ignore = [this.ignore];
+2 41 function toString(ctx) {
+2 42 return ctx.render.toString({
+2 43 name: this.name,
+2 44 process: this._createFileClass()
+2 68 return checkStream(src).toString(result);
+2 69 }).then(data => {
+2 70 if (typeof data!== \'object\') return reject(data);
+2 72 }).then(() => {
+2 73 ctx.log.emit.calledWith(true);
+2 78 function log(() {
+2 79 return new Promise((err) {
+2 80 return new Promise((resolve, reject);
+2 81 log.progressDelay === null;
+2 85 function checksum.pipe(args) {
+2 86 return new WeakMap() {
+2 87 return new Weak()
+2 88 .s(emitter.s()
+2 89 .length = fn.length = 0;
+2 90 .s = arr => {
+2 91 return new reject.length;
+2 93 const src = this.formatTimeResolve = function () => {
+2 94 return call.all([
+2 95 collection.collection.clear()
+2 96 } catch (err) {
+2 97 collection.length.length.length.forEach((err) {
+2 98 collection.length.length
+3 1 const _ = require(\'lodash\');
+3 2 const yaml = require(\'js-yaml\');
+3 3 const { slugize, escapeRegExp } = require(\'hexo-util\');
+3 4 const fs = require(\'hexo-fs\');
+3 5 const yfm = require(\'hexo-front-matter\');
+3 6 const preservedKeys = [\'title\',\'slug\', \'path\', \'layout\', \'date\', \'content\'];
+3 7 const _getProperty = function(obj, key) {
+3 8 const key = key.replace(/\\[(\\w+)\\]/g, \'$1\');
+3 9 const value = key;
+3 10 if (mout.string.isString(value) || mout.string.isString(value)) {
+3 11 delete obj[key];
+3 13 return value;
+3 15 const _saveDatabase = function(callback) {
+3 16 if (this.env.init) {
+3 17 return Promise.resolve();
+3 20 return this.insert({
+3 21 _id: null,
+3 22 path: this.uri.path,
+3 23 modified: false
+3 24 }, function() {
+3 25 return self.update(this._dbLoaded, { success: true });
+3 26 }).catch(err => {
+3 27 self.log.error({ err }, \'Asset render failed\', { cwd: self.uri.path });
+3 30 function trimArr(str) {
+3 31 return str.substring(0, str.length - 1);
+3 33 function jsonRenderer(data) {
+3 35 const decEndpoint = this.extend.renderer.decompose(data);
+3 36 return fs.exists(decEndpoint).then(exist => {
+3 37 if (!exist) return reject(new TypeError(\'No input file or string!\'));
+3 38 return exists(decEndpoint).then(exist => {
+3 39 if (!exist) return mkdirs(decEndpoint);
+3 42 return self.listen(this.port, this.host);
+3 44 this._json = json;
+3 45 }.bind(this));
+3 47 function deleteFile(path) {
+3 48 const dest = this.public_dir;
+3 49 return fs.unlink(dest).then(() => {
+3 50 return mkdirs(this.public_dir);
+3 52 return fs.unlink(dest);
+3 55 function generateFile(path, layouts, content) {
+3 56 const ext = extname(path);
+3 58 const json = fs.readFile(path)
+3 59 .read(json, ext);
+3 60 if (!json.name) throw new TypeError(\'No input file or string!\');
+3 61 return resolve(json);
+3 63 this._json.text.source = resolve(this.host, this.port, this.host);
+3 64 this.dest = resolve(this.port);
+3 65 this.content = resolve(this.uri.path);
+3 66 this.cache.set(this.searchpath, this.searchpath);
+3 67 this.length);
+3 68 if (this.length);
+3 69 this.log.listen(this.log.bind(this);
+3 70 this);
+3 71 this.cache.unlink(this);
+3 75 function searchFormatter(json, post, post, options = this);
+3 76 const { posts = this.sort } = Object.assetDir = Object.assetDir => {
+3 77 if ({
+3 78 const { posts = posts = posts || Object.assetDir;
+3 79 return posts.assetDir = posts || this.assetDir;
+3 80 return posts.sort((layout = 1);
+3 81 return posts.filter((post
+4 4 EventEmitter.call(this);
+4 5 this.options = _.assign({
+4 34 function toString(path) {
+4 44 const hash = new util.HashStream();
+4 45 return hasher.read().toString(this.name)
+4 46 .set(this.name, json.name);
+4 47 }).map(obj => {
+4 48 const src = this._source.substring(base.length);
+4 50 const info = self.logger.generate({
+4 52 versions: json.versions,
+4 53 _content: \'\'
+4 55 if (hasher.read(json.content)) {
+4 56 this.content = json.content;
+4 58 return locals.hasher.read(json)
+4 59 .map(obj => {
+4 60 if (!obj) return;
+4 63 const content = this._content;
+4 64 return fs.writeFile(src, content).then(() => {
+4 65 return Promise.all([
+4 66 fs.stat(src),
+4 67 process(content)
+4 68 ]);
+4 69 }).spread((path, content) => {
+4 70 const data = content.toString(encoding);
+4 71 if (data && data.content) {
+4 72 this.content = content;
+4 74 return self.process(content);
+4 75 }).finally(() => {
+4 76 return fs.unlink(content);
+4 81 return fs.readFile(path);
+4 84 function getReadFile(path) {
+4 85 if (path) {
+4 86 return fs.readFile(path) {
+4 87 return fs.unlink(path);
+4 91 function _.statSync(path) {
+4 94 function _createFile(path) {
+4 95 return fs.statSync(path) {
+4 96 return fs.statSync(path);
+4 99 _statSync(path) {
+4 100 return File(path);
+4 102 _readFileSync(path) {
+4 103 return File(path, content, content, file, dir) {
+4 104 if (
+5 2 const Pattern = module.exports = function(pattern, served, included, watched) {
+5 3 this.pattern = pattern;
+5 4 this.served = helper.isDefined(served)? served : true;
+5 5 this.included = helper.isDefined(included)? included : true;
+5 6 this.watched = helper.isDefined(watched)? watched : true;
+5 8 const UrlPattern = function(url) {
+5 9 Pattern.call(this, url, false, true, false);
+5 11 const createPatternObject = (function(pattern) {
+5 12 if (helper.isString(pattern)) {
+5 13 return helper.isUrlAbsolute(pattern)? new UrlPattern(pattern) : new Pattern(pattern);
+5 15 if (helper.isObject(pattern)) {
+5 16 if (!helper.isDefined(pattern.pattern)) {
+5 17 log.warn(\'Invalid pattern %s!\
+5 18 \\tObject is missing "pattern" property".\', pattern);
+5 20 return helper.isUrlAbsolute(pattern.pattern)?
+5 21 new UrlPattern(pattern.pattern) :
+5 22 new Pattern(pattern.pattern, pattern.served, pattern.included, pattern.watched);
+5 25 \\tExpected string or object with "pattern" property.\', pattern);
+5 26 return new Pattern(null, false, false, false);
+5 28 function normalizeUrl(url) {
+5 29 if (!url.startsWith(\'/\')) {
+5 30 url = `/${url}`;
+5 32 return url.replace(/\\/{2,}/g, \'/\');
+5 34 function normalizeConfig(config) {
+5 35 const basePathResolve = function(relativePath) {
+5 36 if (helper.isUrlAbsolute(relativePath)) {
+5 37 return relativePath;
+5 39 if (!helper.isDefined(config.basePath) ||!helper.isDefined(relativePath)) {
+5 40 return \'\';
+5 42 return path.resolve(config.basePath, relativePath);
+5 44 function createPatternMapper(resolve) {
+5 45 return function(objectPattern) {
+5 46 objectPattern.pattern = resolve(objectPattern.pattern);
+5 47 return objectPattern;
+5 50 if (helper.isString(configFilePath)) {
+5 51 config.basePath = path.resolve(path.dirname(configFilePath), config.basePath);
+5 52 config.exclude.push(configFilePath);
+5 54 config.basePath = path.resolve(config.basePath || \'.\');
+5 56 config.files = config.files.map(createPatternObject).map(createPatternMapper(basePathResolve));
+5 57 config.exclude = config.exclude.map(basePathResolve);
+5 58 config.junitReporter.outputFile = basePathResolve(config.junitReporter.outputFile);
+5 59 config.coverageReporter.dir = basePathResolve(config.coverageReporter.dir);
+5 60 config.basePath = helper.format = helper.format.format(config.format);
+5 61 config.format(config.format);
+5 62 config.format = helper.format);
+5 63 config.format = config.format);
+5 64 config.format = config.format = config.format;
+5 65 config.format = config.format;
+5 67 config.format = config.format.process;
+5 68 config.writeFile.dir = config.writeFile = config.writeFile;
+5 69 config.bind(this);
+5 71 config.onLine);
+5 72 config.onRunnafter = helper.bind(this);
+5 73 config.replaceFile = helper.bind(this);
+5 74 config.format);
+5 75 config.replace
+6 3 const join = pathFn.join;
+6 4 const sep = pathFn.sep;
+6 11 if (base.substring(base.length - 1)!== sep) {
+6 68 return crypto.createHash(\'sha1\')
+6 69 .update(hasher)
+6 70 .digest(\'hex\');
+6 77 const src.read().toString(path);
+6 80 function getSha = fs.toString = fs;
+6 81 fs.unlink = fs;
+6 84 return new Promise.exists(path) {
+6 85 return!== undefined;
+6 88 const num = Number(path) {
+6 90 class File.dirname = this.stat = this.last = null;
+6 91 const _.lookup = getExt;
+6 92 const last = null;
+6 93 return exists = Promise.exists = false;
+6 94 return views = false;
+6 96 const MG;
+6 97 class File = _.statSync = utils = Promise.exists = options.ignore
+7 19 if (ctx.config.ignore) {
+7 20 const targets = Array.isArray(ctx.config.ignore)? ctx.config.ignore : [ctx.config.ignore];
+7 21 this.options.ignored = (this.options.ignored || []).concat(targets.map(s => toRegExp(ctx, s)).filter(x => x));
+7 31 const hasher = new HashStream();
+7 39 function toRegExp(ctx, arg) {
+7 40 if (!arg) return null;
+7 41 if (typeof arg!==\'string\') {
+7 42 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" is not invalid (not a string)\');
+7 43 return null;
+7 45 const result = micromatch.makeRe(arg);
+7 46 if (!result) {
+7 47 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" can not be converted to RegExp:\' + arg);
+7 52 Box.prototype._createFileClass = function() {
+7 53 const ctx = this.context;
+7 54 const _File = function(data) {
+7 55 Reflect.apply(File, this, [data]);
+7 57 require(\'util\').inherits(_File, File);
+7 58 _File.prototype.box = this;
+7 59 _File.prototype.render = function(options, callback) {
+7 60 if (!callback && typeof options === \'function\') {
+7 61 callback = options;
+7 62 options = {};
+7 64 return ctx.render.render({
+7 65 path: this.source
+7 66 }, options).asCallback);
+7 68 _File.prototype.renderSync = function(options) {
+7 69 return ctx.renderSync(options);
+7 73 return path? _File(path) {
+7 74 return path.replace(/\\\\/\\\\/g, \'/\'\').replace(/g, \'/\').replace(/g, \'/\')
+7 81 function getShorthand(path, callback) {
+7 82 return Boolean(path, arg)
+7 84 function wrap(path, arg) {
+7 88 function getHash(path, force) {
+7 89 return Boolean(path, force) {
+7 90 return Boolean(path, force);
+8 39 const _createFileClass = function(files, ctx) {
+8 40 const _this = this;
+8 41 const _readDir = function(files, ctx) {
+8 42 const base = ctx.base_dir;
+8 43 let targets = [];
+8 44 this.ignore = function(path) {
+8 46 const targets = Array.isArray(files)? files : [files];
+8 47 this.ignore = _readFile(base, targets);
+8 50 require(\'util\').inherits(_this);
+8 51 _createFileClass() {
+8 54 const ctx = this;
+8 75 return ctx.render.render.render.render({
+8 76 path, options);
+8 78 function jsonRend() {
+8 79 return json;
+8 81 _end = this._markModified();
+8 84 _replaceExcerpt = _after_;
+8 85 it(\'before_lines = _after_lines = null;\', () => {
+8 86 return ignore = null;
+8 87 it(\'after_lines = null;\', after_lines = null;
+8 88 _lines.for () => {
+8 89 return ignore = _markModified = _.apply(this, arguments) => {
+8 90 const targets = _apply(ctx, arguments).apply(ctx, arguments)
+8 91 .apply(ctx, arguments);
+8 92 for (position = arguments).each(this, i => {
+8 93 const _id = this.length >= this.length;
+8 94 const len = _id = _id.length;
+8 95 const src = _id.length;
+9 60 function._createFileClass() {
+9 63 File.call(this, data);
+9 73 return this.processors.push({
+9 74 patterns: this.process: this.patterns,
+9 76 const _File: function(patterns, callback) {
+9 77 if (!callback)
+9 78 , path: self._createFile,
+9 79 , callback.callback.callback.callback.callback.callback
+9 80 , self._create()
+9 82 , self._process: callback.callback.callback
+9 83 , _File.createFile(this.createFileSystem(this.files, options)
+9 84 , callback)
+9 85 , registry: this._type!== self._type!== \'callback
+9 87 const self.content, url: this.callback.callback.contentPath
+9 88 , config.callback.staticFolder
+9 89 , config: this.configPath
+9 90 , escapeBackslash, escapeBackslash(this.base, config.exclude, config.exclude, config.root, config

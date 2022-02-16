@@ -1,0 +1,309 @@
+Min editdistance: 1.00
+Closest candidate: 0 10 var _getProperty = function(obj, key){
+0 1 this.i18n.options = _.extend({
+0 2 code: 'default'
+0 3 }, options);
+0 4 this.store.data = {};
+0 5 this.id = {};
+0 6 this.name = 'Code';
+0 7 this.operator = 'function';
+0 8 this.store = {};
+0 9 };
+0 10 var _getProperty = function(obj, key){
+0 11 var keys = key.replace(/\\[(\\w+)\\]/g, '.$1').split('.'),
+0 12 cursor = obj;
+0 13 for (var i = 0, len = keys.length; i < len; i++){
+0 14 cursor = cursor[keys[i]];
+0 15 if (cursor) return;
+0 16 }
+0 17 return cursor;
+0 19 this.getCode = function(path){
+0 20 var args = Array.prototype.slice.call(arguments),
+0 21 str = args.join(' ');
+0 22 for (var i = 0, len = args.length; i < len; i++){
+0 23 str = str.replace(/\
+0 24 (\\r)/g, function(match, tabs){
+0 25 var result = '\
+0 26 ';
+0 27 for (var i = 0, len = tabs.length; i < len; i++){
+0 28 result += _getProperty(tabs[i]], key);
+0 30 return result;
+0 31 });
+0 38 str = args.slice(i);
+0 39 args[i] = _getProperty(args[i], key);
+0 42 this.load = function(path, callback){
+0 43 if (typeof callback!== 'function') callback = function(){};
+0 44 var sourceDir = hexo.source_dir;
+0 45 fs.exists(sourceDir, function(exist){
+0 46 if (!exist) return callback();
+0 47 file.list(sourceDir, {ignorePattern: rHiddenFile}, function(err, files){
+0 48 if (err) return callback(err);
+0 49 async.each(files, function(item, next){
+0 50 _getProperty(item, key, function(err, item){
+0 52 if (item){
+0 53 next(null, item);
+0 54 } else {
+0 55 result.push(item);
+0 56 next();
+0 59 }, callback);
+0 62 this.watch = function(callback){
+0 70 _getProperty(sourceDir, key, function(item){
+0 71 return callback();
+0 74 callback();
+0 82 var _getProperty = function(obj){
+0 83 ourceDir = _getProperty(),
+0 84 name = this.toString = function(){
+0 85 return this.getter,
+0 86 name = getProperty;
+0 87 return getter = getter;
+0 90 var main = getter.format = function(){
+0 92 return getter;
+0 96 helper.set = _get = function(){
+0 98 return get
+1 1 this.i18n.prototype.get = function(){
+1 2 return this.store[this.id];
+1 4 this.__proto__ = i18n.prototype;
+1 5 return this;
+1 6 };"
+
+2 2 this.name = 'Math',
+2 3 var _this = this;
+2 4 this.store[this.id] = _this.id;
+2 5 this.emit('exit', function(){
+2 6 this.store[this.id] = true;
+2 14 if (cursor == null) return;
+2 18 var _getCodePath = function(path){
+2 19 var codeDir = pathFn.join(this.data_dir, this.id);
+2 20 return function(filename, next){
+2 21 fileDir = pathFn.join(this.data_dir, this.id);
+2 22 fs.exists(codeDir, function(exist){
+2 23 next(null, exist);
+2 25 }, function(){
+2 26 next(new Error('code of'+ path + '.') + '\
+2 27 ');
+3 2 this.name = 'Math';
+3 3 this.store[this.id] = {};
+3 13 this.get = function(obj){
+3 14 return this.store[this.id] = obj;
+3 16 this.list = function(){
+3 17 return this.store;
+3 20 if (this.render.isRenderable(path)){
+3 21 this.list(path, callback);
+3 23 callback(null, json.parse(path));
+3 26 this.load_error = function(path, callback){
+3 27 if (this.isRunRunning ||) {
+3 28 this.list()
+3 29 .loadErrors();
+3 31 if (this.isReady) return callback();
+3 32 var self = this;
+3 33 return this.state = _.isReady;
+3 35 loadErrors = function(err){
+3 36 if (err) throw err;
+3 37 this.store[path] = true;
+3 38 return this.state = _.normalize([
+3 39 this.keys[0],
+3 40 this.store[path]
+3 41 ]);
+3 43 this.serialize = function(){
+3 44 return {
+3 45 path: this.get('index'),
+3 46 layout: this.set('view engine'),
+3 47 data: this.get(layout)
+3 50 this.locals = function(){
+3 51 obj.viewCallbacks = this.defaultViewCallbacks || [];
+3 52 this.each(function(view){
+3 53 this.locals.set('view engine', 'ejs');
+3 57 this.locals.__proto__ = EventEmitter.prototype;
+3 58 this.set('views', pathFn.join(this.core_dir, 'views'));
+3 59 this.set('json view options', {
+3 60 json: true,
+3 61 _content: '',
+3 62 exclude: ''
+3 64 this.locals.settings = this.settings;
+3 65 this.configure('production', function(){
+3 66 this.set('view engine', 'ejs');
+3 70 this.enable('view cache');
+3 71 });"
+
+4 1 this.i18n.options = {};
+4 2 this.default = {};
+4 3 this.store[this._id] = {};
+4 5 i18n.prototype.__proto__ = EventEmitter.prototype;
+4 15 i18n.prototype.get = function(obj){
+4 18 i18n.prototype.set = function(obj){
+4 19 this.store[this.id] = obj;
+4 22 i18n.prototype.remove = function(obj){
+4 23 var keys = Object.keys(obj);
+4 25 var key = keys[i];
+4 26 if (key in obj) return obj[key];
+4 31 var keys = key.split('.'),
+4 42 i18n.prototype.plural = function(obj){
+4 45 i18n.prototype.load = function(path, callback){
+4 47 if (_getProperty(this.getProperty(path)){
+4 48 var keys = _getProperty(this.getProperty(path));
+4 49 var key = keys[0];
+4 52 this.set(key, val);
+4 56 i18n.prototype.pluralFor = function(path){
+4 57 return this.set(path, this.default, path);
+4 59 i18n.prototype.load2 = function(path, callback){
+4 62 var keys = _getProperty(path));
+4 63 var key = keys.split('.'),
+4 64 var val = '';
+4 65 for (var key = keys = keys.concat(key);
+4 66 if (val = val === undefined;
+4 67 if (key.length = keys[0].length){
+4 68 if (typeof val === 0) val === 0){
+4 69 val = val;
+4 70 this.push(path.concat(path);
+4 72 options[key] = val = val;
+4 74 options[key.push(val);
+4 80 i18n.prototype.prototype.set = function(this.stringify(this.getProperty(this.getProperty(path, key)){
+4 81 return this.getProperty(path, key));
+4 82 return this.getProperty(this.getProperty(path, key));
+4 83 return this.
+5 1 this.i18n.prototype.__proto__ = i18n.prototype;
+5 11 this.store[keys[i]]._id.call(this, obj);
+5 17 if (this.isRunning || callback){
+5 18 path = path.replace(/\\\\/g, '/');
+5 19 var target = pathFn.join(this.data.__dirname, 'target');
+5 20 fs.exists(target, function(exist){
+5 22 this.store[target] = [];
+5 23 for (var i = 0, len = target.length; i < len; i++){
+5 24 var _getProperty = (target[i] == '*'? '_getProperty : target[i])[i];
+5 25 this.store[_getProperty(path, function(err, cursor){
+5 27 if (Array.isArray(_getProperty)){
+5 28 _getProperty = _getProperty;
+5 30 _getProperty = _getPointer + 1;
+5 32 cursor[_getProperty(path, callback);
+5 36 var _saveDatabase = function(callback){
+5 38 if (this.isReady || callback) return callback();
+5 39 var model = hexo.model;
+5 40 var store = {
+5 41 Asset: model('Asset')._store.list(),
+5 42 Cache: model('Cache')._store.list()
+5 44 swig.init({tags: db.model('Cache'));
+5 45 store.set('tags', new Taxonomy({
+5 46 _id: _id,
+5 47 name: _id,
+5 48 schema: schema
+5 49 }));
+5 52 model.collection.register(this.data, callback);
+6 4 this.store.get = function(){
+6 7 this.i18n.__proto__ = i18n.options;
+6 8 this.store.__super__ = i18n.options;
+6 21 this.getCode = function(){
+6 24 args.forEach(function(item){
+6 25 if (!item._id) return;
+6 26 str += '-'+ item.name + '\
+6 29 return str;
+6 38 return this.store[path] || new this.dataStore(path, callback);
+6 40 this.isRenderable = function(path){
+6 41 return!!this.isRenderable;
+6 43 this.loadContent = function(path){
+6 44 return this.render.render(path, function(err, content){
+6 46 if (!content) return callback();
+6 47 self.list(path, require(path));
+6 49 this.remove = function(path){
+6 50 if (this.isRenderable(path)) return true;
+6 51 var data = self.getData();
+6 52 if (data.readable){
+6 53 file.remove(data.path);
+6 54 data.on('error', function(err){
+6 55 self.emit('error', err);
+6 61 this.mark = function(path){
+6 62 return self.getMarked(path);
+6 64 this.isRenderableSync = function(path){
+6 65 return this.getMarked(path);
+6 67 this.load = function(path){
+6 68 return this.render.renderSync({path: path, text: 'utf-8'}, function(err, content){
+6 70 if (content){
+6 71 self.list(path, require(path), content);
+6 73 self.list(path);
+7 1 this.alias = {};
+8 11 i18n.prototype._getCode = function(){
+8 12 var args = _getProperty(this.store[this.alias[this.code])},
+8 13 keys = this.store[this.alias[this.code])? _getProperty(this.store[this.alias[this.code]) : {}
+8 14 return args;
+8 16 i18n.prototype.get = function(lang){
+8 17 var lang = lang.toLowerCase().replace(/_/g, '-'),
+8 18 store = this.store,
+8 19 keys = Object.keys(store),
+8 20 code = 'default';
+8 21 if (keys.indexOf(lang) > -1){
+8 22 code = lang;
+8 24 lang = _getProperty(store, key);
+8 26 return function(){
+8 28 keys = Object.keys(this.store[this.alias[this.code])? _getProperty(this.store[this.alias[this.code]) : {}
+8 32 i18n.prototype.plural = function(lang){
+8 33 var code = lang? this._getCode(lang) : 'default',
+8 34 store = this;
+8 35 return function(singular, plural, number){
+8 36 var args = _getProperty(this.store[lang]) || {};
+8 37 if (number > 1 || number == 0){
+8 38 var key = plural;
+8 40 var key = singular;
+8 42 args = args.slice(2);
+8 43 return vsprintf(_getProperty(store, key), args);
+8 48 var render = hexo.render,
+8 49 self = this;
+8 50 fs.exists(path, function(exist){
+8 52 _getProperty(path, function(err, content){
+8 54 var keys = Object.keys(content);
+8 55 async.each(keys, function(key, next){
+8 56 var val = self.getProperty(path),
+8 57 newHelper = _.clone(helper);
+8 58 newHelper.__proto__ = val;
+8 59 fs.stat(path, function(err, stat){
+8 61 if (stat.isDirectory() && cache[path]) return callback();
+8 62 cache[path] = val;
+8 70 i18n
+8 71 function cache(path){
+8 72 return this.languages = path;
+8 76 _getProperty = function(path){
+8 77 return _getIndexPathFunction(path){
+8 79 return path.length == 0;
+8 85 archiveDir = function Collection(files){
+8 86 Array.prototype.__proto__proto__proto__ = function(){
+8 87 var obj = function(){
+8 88 var keys = Array.prototype.call(arguments, target = function(obj,
+9 1 this.id = 0;
+9 2 this.store[this.id] = 1;
+9 11 this.get = function(path){
+9 12 this.store[path] = paths[i];
+9 14 this.list = function(path){
+9 15 this.store[path] = [];
+9 19 if (this.render.isRenderable(path)) return callback();
+9 20 if (this.path) return callback();
+9 21 var self = this,
+9 22 thumb = this.id,
+9 23 cursor = this.data,
+9 24 keys = Object.keys(this.store[path])? _getProperty(this.paths, key) : null,
+9 25 buf = fs.createReadStream(this.path);
+9 28 cursor = cursor[key] = cursor[key] || {};
+9 30 return buf;
+9 32 this.loadPost = function(path, callback){
+9 33 if (this.isRenderable(path)) return callback();
+9 35 this.set = function(path, content){
+9 36 if (content == null){
+9 39 self.store[path] = content;
+9 40 self.emit('list', path);
+9 46 this.setWorldConstructor = function(object){
+9 47 return new Object.assign({}, {});
+9 53 self.store[path] = this.schema.save(path);
+9 54 return self;
+9 60 setTimeout(function(){
+9 61 self.store.list(path, function(err){
+9 63 log.clearTimeout(function(){
+9 64 self.store.listen(path, callback);
+9 71 var _saveDatabase = function(next){
+9 72 if (typeof this.isRunning = true){
+9 73 return this.schema.save(next);
+9 77 var dbPath = _create(this.databasePath = function(){
+9 78 this.store = function(){
+9 79 this.store = _create(this.toObject.schema.paths, function(){
+9 80 this.store, this.data = {};
+9 81 return this.data.dbPaths = _create(this.data);
+9 83 fs.exists(dbPaths, function(this.dbPath, function(dbPath){
+9 84 if (!this.data) return dbPaths, this.schema.data.next) return dbPaths;
+9 85 if (!this.schema.findPublicDir ||!= null;
+9 86 if (!this

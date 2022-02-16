@@ -1,0 +1,242 @@
+Min editdistance: 2.00
+Closest candidate: 3 22 module.exports = function (config) {
+0 1 autoWatch = true;
+0 2 coverageReporter: {
+0 3 type : 'html',
+0 4 dir : 'coverage/'
+0 5 },
+0 6 plugins: [
+0 7 'karma-coverage',
+0 8 'karma-chrome-launcher',
+0 9 'karma-firefox-launcher'
+0 10 ],
+0 11 });
+0 12 };"
+
+1 1 reporters.forEach(function (reporter) {
+1 2 executor.schedule();
+1 5 assert.response(app,
+1 6 { url: '/' },
+1 7 { body: '<h1>Forum Thread</h1><p>:(</p>\
+1 8 <p>Hello World</p>' });
+1 10 'test #isSingleRun': function(){
+1 11 return false;
+1 13 'test #isMongoose': function(){
+1 14 return true;
+1 19 'test #loadFiles': function(){
+1 20 var baseDir = 'test.js';
+1 21 var loadFile = function(path, callback) {
+1 22 return fs.readFile(path).then(function(content) {
+1 23 content.should.be.empty;
+1 24 return fs.unlink(path);
+1 25 }, function() {
+1 26 log.warn('Config file does not exist', baseDir);
+1 28 return loadFile;
+1 30 'test #isLoad': function(){
+1 31 var config = {
+1 32 port: 9876,
+1 33 runnerPort: 9100,
+1 34 basePath: '',
+1 35 files: [
+1 36 '*.js'
+1 38 logLevel: config.LOG_INFO,
+1 39 logColors: true,
+1 40 autoWatch: false,
+1 41 reporter: 'progress',
+1 42 singleRun: false,
+1 43 browsers: [process.env.TRAVIS? 'Firefox' : 'Chrome'],
+1 44 proxies: {
+1 45 'http://localhost: 9876.io': 'http://localhost: 9100',
+1 46 '//willain.org/docs/project': 'http://localhost: 9100%',
+1 47 '// list of files to load in the browser'
+1 49 'http://localhost: config.port': function(){
+1 50 var port = 9876;
+1 52 var content = fs.readFileSync(path)
+1 53 , args = Array.prototype.slice.call(arguments),
+1 54 url = args.shift(),
+1 55 callback = args.pop(),
+1 56 context = args.pop(),
+1 57 self = this;
+1 58 return exists(url).then(function(exist) {
+1 59 if (exist) {
+1 60 return self.emit('end', url);
+1 61 }
+1 62 loadFile(path, callback);
+1 63 }).then(function() {
+1 64 return self.execFilter('after_each', callback);
+1 65 }).asCallback(callback);
+1 66 };
+1 67 '
+
+3 3 var lastServedFiles = [
+3 4 'client/*.js',
+3 5 'context.js'
+3 6 ];
+3 7 function getCookie(res) {
+3 8 return res.headers['set-cookie'][0].split(/\\s*;\\s*/)[0];
+3 11 return res.headers['set-cookie'][0].split(/\\s*;\\s*/)[1];
+3 22 module.exports = function (config) {
+3 23 config.set({
+3 24 basePath: '../..',
+3 25 frameworks: ['jasmine'],
+3 30 'test/client/*.js'
+3 32 exclude: [
+3 33 'karma-conf.js'
+3 35 preprocessors: {
+3 36 '**/*.coffee': 'coffee'
+3 38 reporters: ['progress', 'coverage'],
+3 39 junitReporter: {
+3 40 outputFile: 'test-results.xml'
+3 43 colors: true,
+3 45 autoWatch: true,
+3 54 reporters: ['progress', 'junit'],
+3 55 junit'
+3 59 frameworks: [
+3 60 '*.js': [
+3 65 '*.coffee'
+3 66 ]
+3 67 },'s'
+3 70 ]"
+
+5 6 'karma-jasmine',
+5 7 'karma-firefox-launcher',
+5 9 'karma-chrome-launcher'
+6 2 emitter.bind(reporter);
+6 4 plugins.forEach(function (reporter) {
+6 7 return modules.create(['jasmine', 'cucumber', 'fbs', 'baseUrl', 'template', 'context', '__karma__',
+6 8 'karma__/debug.html', 'karma__/absolute.js',
+6 9 'karma_/mp4.js', 'karma_/mp4.js'],
+6 12 this.start = function (config, launcher, preprocess, fileList, webServer,
+6 13 capturedBrowsers, socketServer, executor, done) {
+6 14 config.frameworks.forEach(function (framework) {
+6 15 injector.get('framework:' + framework);
+6 17 var filesPromise = fileList.refresh();
+6 18 if (config.autoWatch) {
+6 19 filesPromise.then(function () {
+6 20 injector.invoke(watcher.watch);
+6 23 webServer.on('error', function (e) {
+6 24 if (e.code === 'EADDRINUSE') {
+6 25 log.warn('Port %d in use', config.port);
+6 26 config.port++;
+6 27 webServer.listen(config.port);
+6 28 } else {
+6 29 throw e;
+6 32 var singleRunDoneBrowsers = Object.create(null);
+6 33 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+6 34 var singleRunBrowserNotCaptured = false;
+6 35 webServer.listen(config.port, function () {
+6 36 log.info('Karma v%s server started at http://%s:%s%s', constant.VERSION, config.hostname,
+6 37 config.port, config.urlRoot);
+6 38 if (config.browsers && config.browsers.length) {
+6 39 injector.invoke(launcher.launch, launcher).forEach(function (browserLauncher) {
+6 40 singleRunDoneBrowsers[browserLauncher.id] = false;
+6 44 globalEmitter.on('browsers_change', function () {
+6 45 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+6 47 globalEmitter.on('browser_register', function (browser) {
+6 48 launcher.markCaptured(browser.id);
+6 49 if (config.autoWatch && launcher.areAllCaptured()) {
+6 53 socketServer.sockets.on('connection', function (socket) {
+6 54 log.debug('A browser has connected on socket'+ socket.id);
+6 55 var replySocketEvents = events.bufferEvents(socket, EVENTS_TO_REPLY;
+6 56 socket.on('complete', function (info => {
+6 57 socket.on('complete')
+6 59 socket.on('complete', function (data, ack) {
+6 60 ack()
+6 63 socket.on('result.on('complete', function () {
+6 64 ack() {
+6 69 socket.on('result.on('end', function (config.onBrowser notDone) {
+6 70 launcher.emit('browsers_change', function () {
+6 71 launcher.emit('browsers_change', function (browser_register')
+6 72 if (config.browsers_changeAllIsReady = true) {
+6 73 launcher.emit('injector notReady')
+6 74 .executor.schedule();
+6 78 var afterPreprocess
+7 1 reporters: ['dots'], {"
+
+8 2 frameworks = ['qunit'];
+8 3 files = [
+8 6 exclude = [
+8 7 'testacular.conf.js'
+8 10 browsers = ['Chrome'];
+8 11 reporters = ['dots'];
+8 12 plugins.forEach(function (config) {
+8 13 config.client.use(require(config.client));
+8 16 globalEmitter.bind(reporter);
+8 18 return function (request, response) {
+8 19 var promises = [];
+8 20 var url = config.reporters.shift()
+8 21 , args = server.start(),
+8 22 loggerFormat = args.l || args.logger || {};
+8 23 if (debug &&!args.length) {
+8 24 var console = getConsole(request);
+8 25 console.log(formatError(error'No provider for'+ ':' + url + '.'));
+8 26 return response.end();
+8 28 if (capturedBrowsers.areAllReady(args)) {
+8 29 logger.emit('browsers_ready', capturedBrowsers.args);
+8 31 reporter.emit('browser_register', this);
+8 33 this.launch.$inject = ['config.browsers_change', 'config.hostname', 'config.port', 'config.urlRoot'];
+8 34 this.kill = function(callback) {
+8 35 var exitCallback = callback || function() {};
+8 36 if (this.isCaptured()) {
+8 37 this.kill();
+8 39 process.nextTick(exitCallback);
+8 42 async.series([
+8 43 function(next) {
+8 44 var files = ['app.js', 'Procfile'];
+8 45 async.each(files, function (item, next) {
+8 46 var src = path.join(__dirname, item),
+8 47 dest = path.join(baseDir, item);
+8 48 fs.exists(dest, function (exists) {
+8 50 next();
+8 52 for (var i = 0, len = exclude.length; i < len; i++) {
+8 53 if (exists){
+8 56 log.d('Config file'+ item +'not found, using default.');
+8 59 }, next);
+8 62 var localFile = path.join(this.baseDir, item);
+8 63 fs.exists(localFile, function (exists) {
+8 64 if (!exists) {
+8 65 var _target = this.get('Content-Type');
+8 66 if (typeof _target === '*') || _target === '*') || _target === 'latest') return next();
+8 67 var regexp = new RegExp('_urlencodedUrl).parseUrl(url);
+8 68 localFile = regexp.replace(config.replace(/\\/+$/, '*');
+8 69 localFile, baseDir + 'indexOf('/', url + '#');
+8 70 local/root');
+8 71 return function (next) {
+8 72 return regexp.replace(/: regexp);
+8 76 }, next());
+8 83 async.boot = function(next) {
+8 84 fs.readFile(next, function(next, function (err, results) {
+8 85 if (err) {
+8 87 if (err) return next(err);
+8 88 if (err);
+8 89 if (res.code === '
+9 5 reporters = ['progress', 'coverage'];
+9 6 junitReporter = {
+9 9 port = 9876;
+9 10 runnerPort = 9100;
+9 11 colors = true;
+9 12 logLevel = LOG_INFO;
+9 14 browsers = [__dirname + '/fake-browser.sh'];
+9 15 captureTimeout = 1000;
+9 16 singleRun = false;
+9 17 plugins.forEach(function (plugin) {
+9 18 if (\'init\' in plugin.klass)
+9 19 plugin.klass.init(plugin.options)
+9 20 .load(require.resolve('hexo-renderer-marked')))
+9 21 .then(function () {
+9 22 return loadScripts(require.resolve('hexo-renderer-marked')));
+9 23 })
+9 24 .then(function (file) {
+9 25 var dir = file.split('/');
+9 26 var args = [
+9 27 'start\', null, '--log-level', 'info', '--colors', '--no-auto-watch', '--reporters=dots'
+9 29 var ele = require("../lib/events").EventEmitter;
+9 30 le.on('error', function (e) {
+9 31 console.error(e);
+9 36 die.on('close', function () {
+9 38 return callback = setup('browsers', {
+9 39 cache: true,
+9 40 logLevel: 3,
+9 41 colors: false,
+9 42 '     ',"
+

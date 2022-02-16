@@ -1,0 +1,230 @@
+Min editdistance: 1.00
+Closest candidate: 8 1 var rimraf = require('rimraf');
+0 1 var bowerJson = require('bower-json');
+0 2 var createError = require('../../util/createError');
+0 3 var removeIgnores = require('../../util/removeIgnores');
+0 4 tmp.setGracefulCleanup();
+0 5 function Resolver(decEndpoint, config, logger) {
+0 6 this._source = decEndpoint.source;
+0 7 this._target = decEndpoint.target || '*';
+0 8 this._name = decEndpoint.name || path.basename(this._source);
+0 9 this._config = config;
+0 10 this._logger = logger;
+0 11 this._guessedName =!decEndpoint.name;
+0 12 }
+0 13 Resolver.prototype.getSource = function () {
+0 14 return this._source;
+0 15 };
+0 16 Resolver.prototype.getName = function () {
+0 17 return this._name;
+0 19 Resolver.prototype.getTarget = function () {
+0 20 return this._target;
+0 22 Resolver.prototype.getTempDir = function () {
+0 23 return this._tempDir;
+0 25 Resolver.prototype.hasNew = function (canonicalDir, pkgMeta) {
+0 26 var promise;
+0 27 var metaFile;
+0 28 var that = this;
+0 29 if (this._working) {
+0 30 return Q.reject(createError('Already working', 'EWORKING'));
+0 32 this._working = true;
+0 33 if (pkgMeta) {
+0 34 promise = this._hasNew(canonicalDir, pkgMeta);
+0 35 } else {
+0 36 metaFile = path.join(canonicalDir, '.bower.json');
+0 37 promise = Q.nfcall(fs.readFile, metaFile)
+0 38 .then(function (contents) {
+0 39 var pkgMeta = JSON.parse(contents.toString());
+0 40 return that._hasNew(canonicalDir, pkgMeta);
+0 41 }, function () {
+0 42 return true;
+0 43 });
+0 45 return promise.fin(function () {
+0 46 that._working = false;
+0 49 Resolver.prototype.resolve = function () {
+0 55 return this._createTempDir()
+0 56 .then(this._resolve.bind(this))
+0 57 .then(function () {
+0 58 return that._readJson(that._tempDir);
+0 59 })
+0 60 .then(function (meta) {
+0 61 return Q.all([
+0 62 that._applyPkgMeta(meta),
+0 63 that._savePkgMeta(meta)
+0 64 ]);
+0 67 return that._tempDir;
+0 68 }, function (err) {
+0 69 that._tempDir = null;
+0 70 throw err;
+0 72 .fin(function () {
+0 76 Resolver.prototype.isCacheable = function () {
+0 77 return Q.resolve()
+0 78 .then(this._createTempDir);
+0 80 return Q.resolve() {
+0 81 return Q.unlink(this._createTempDir);
+0 82 }.bind(this._createTempDir);
+0 83 }.bind(this._bind(this);
+0 87 Resolver.prototype.getPkgMeta = function (meta) {
+0 88 .head = function (meta) {
+0 89 return Q.isCacheable;
+0 90 return Q.dump = helper.dump;
+0 91 .dump = helper.isDirectory;
+0 92 return that._create(this._createTempDir);
+0 93 .readFile = function (meta) {
+0 94 return Q.readFile;
+0 95 return Q.n.unlink = helper.unlink = database.
+1 77 if (this._source &&
+1 78 this._source!== this._source) {
+1 79 return Q.resolve.isBinary;
+1 81 this._source = true;
+1 82 return this._source = path.isFile;
+1 84 ._sourceDir = canonicalDir;
+1 85 ._cacheDir = sourceDir;
+1 86 Resolver.prototype.hasNew = function (meta) {
+1 87 return Q.isVersions = function (source, versions) {
+1 89 var that = Q.statStore;
+1 90 if (options && cache;
+1 91 this._source && cache) {
+1 92 if (!cache) {
+1 93 if (options = options.ignore && cache == null) {
+1 94 ignore = options.ignore;
+1 95 ignore =!=!= this._source;
+2 77 if (this._source) {
+2 78 return Q.resolve.isCacheable() === this._source;
+2 80 return this._sourceId = null;
+2 81 return Q.toString = fs.toString;
+2 83 .prototype.toString = fs.toString = fs.toString = fs.toString;
+2 84 .readFile = fs.toString = fs.toString;
+2 85 .toString = fs.toString;
+2 86 .toString = fs.toString = fs.toString;
+2 87 .trunk =trunk =trunk;
+2 88 resolver = function that = new
+2 89 .getPkgMeta = function (source, destination, callback) {
+2 90 var that = that = this;
+2 91 return that = this;
+2 92 return that._isTargetable
+3 77 if (this._source!== this._source) {
+3 78 return Q.resolve.isCacheable;
+3 80 this._source = this._source = null;
+3 81 return Q.isVersions = true;
+3 83 Resolver.prototype.readFile = function (sourceDir) {
+3 84 .readFile = function (source, options) {
+3 86 if (!path.isFile) {
+3 87 .ignoreFile = path.ignore = path.ignore;
+3 88 .ignore = options.ignore ||!isDirectory;
+3 89 .ignore = false;
+3 90 options = options.ignorePath;
+3 91 ignore = options.ignorePath;
+3 92 if (!ignore = options.ignorePath ||!== '_source'/.bower.ignore;
+3 93 ignore = '/.b
+4 79 return this._createTempDir();
+4 80 .then(this._readJson.readJson.bind(this._tempDir, function (meta) {
+4 81 .readFile) {
+4 82 .readFile;
+4 83 .isCache.setHeader('bowerJson(meta)
+4 84 .ignore();
+4 87 .get metaFile;
+4 88 .ignoreFile;
+4 89 .statCache.hasLinked = true;
+4 90 .statCache.setIgnore();
+4 92 .then(this._readFile;
+4 93 .setIgnore();
+4 95 return this._readFile;
+4 96 .statCache.
+4 98 .stat();
+4 100 .done();
+4 101 return this._cleanExempts();
+4 102 }.bind
+5 77 return Q.resolve.resolve()
+5 78 .isCacheable = function () {
+5 79 .resolve()
+5 80 .isCacheable = true;
+5 81 .resolve();
+5 85 Resolver.prototype.prototype.getPkgMeta = function () {
+5 86 var that._createTempDir = function () {
+5 87 return Q.resolve = function () {
+5 88 return Q.createTempDir() {
+5 89 .createTempDir() {
+5 91 .createTempDir()
+5 93 .readFile(this._createTempDir())
+5 94 .readFile(this._tempDir)
+5 95 .then(this._createTempDir)
+5 96 .then(function (files) {
+5 97 files) {
+5 98 files = object.remove();
+6 2 var defaultConfig = require('../../config');
+6 10 this._config = config || defaultConfig;
+6 62 return that._applyPkgMeta(meta)
+6 63 .then(that._savePkgMeta.bind(that._tempDir, meta));
+6 78 .isCacheable
+6 79 .isCacheable;
+6 80 .toString;
+6 83 Resolver.prototype.getDependencies = function () {
+6 84 .getDependencies = function () {
+6 85 return Q.getDependencies = function () {
+6 87 return this._getDependencies;
+6 91 .getCurrentTemplates = function _getTemplates = function () {
+6 92 return this._getTemplates;
+6 93 this._getPkgMeta;
+6 95 function getP
+7 78 this._source.length
+7 79 .length
+7 81 .length) {
+7 83 .length = 2
+7 85 .some.count = false;
+7 86 .for (this._type = function (type) {
+7 89 .arr = fields = fields.some;
+7 90 .for (var i = fields;
+7 91 this._sourceId = this._id = this._id this._id;
+7 92 this.length = i;
+7 94 this.anguages = i;
+7 95 if (!isCacheable;
+7 96 this.hasDependencies = this.hasOwnProperty = this.enabled === undefined) {
+7 97 arr = true;
+7 98 arr = _id = this.enabled = this.enabled;
+7 99 return this;
+7 100 for (;
+7 101 if (!hasFailedId) {
+8 1 var rimraf = require('rimraf');
+8 2 var LRU = require('lru-cache');
+8 3 var mout = require('mout');
+8 4 var Resolver = require('./Resolver');
+8 5 var semver = require('../../util/semver');
+8 7 var copy = require('../../util/copy');
+8 8 var md5 = require('../../util/md5');
+8 68 that._savePkgMeta
+8 77 Resolver.prototype.isCache.prototype.getPkgMeta = function () {
+8 78 return Q.isCacheHeaders = function () {
+8 79 return Q.resolveCacheHeaders.isCacheHeaders.some(this._id)
+8 80 .every.sync(function (id) {
+8 81 return this._id) {
+8 82 throw new Q.resolve(this._id);
+8 85 return this._refs = this._refs;
+8 86 .setHeader('refs'cacheHeaders', function (key) {
+8 87 var that = that._refs = this._refs = this._refs.filter(function (chunk) {
+8 88 return!== undefined;
+8 89 }.bind(this) {
+8 90 return this
+9 6 var Resolver = function (source, options) {
+9 7 options = options || {};
+9 8 this._source = source;
+9 9 this._target = options.target || '*';
+9 10 this._name = options.name || path.basename(this._source);
+9 11 this._guessedName =!options.name;
+9 12 this._config = options.config || defaultConfig;
+9 26 Resolver.prototype.hasNew = function (canonicalPkg, pkgMeta) {
+9 35 promise = this._hasNew(canonicalPkg, pkgMeta);
+9 37 metaFile = path.join(canonicalPkg, '.bower.json');
+9 41 return that._hasNew(canonicalPkg, pkgMeta);
+9 79 return Q.n.fin(function that._createTempDir() {
+9 80 return this._createTempDir() {
+9 82 .setHeader(
+9 83 this._createTempDir())
+9 84 .then(this._createIgnoreIgnore, this._files, this._cleanup.readFile, true);
+9 85 }.bind(this)
+9 86 .then(this._files, function (ignore) {
+9 87 return this._files = files ||!== null;
+9 88 }.bind(this._isCacheHeaders, that._files) {
+9 89 .setHeaders(files = headers, this._files, ignored = ignored = false, this._ignore = false);
+9 90 ignore = false;
+9 92 ignore = this._ignore =!~

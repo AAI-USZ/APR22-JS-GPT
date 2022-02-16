@@ -1,0 +1,74 @@
+Min editdistance: 20.00
+Closest candidate: 7 12 content.should
+0 1 });
+0 3 const before_each([
+0 4 it('_generate: sinon-n => {
+0 5 const hook.called => {
+0 6 const { return sinon.called => { return sinon.calledOnce(() => {
+0 7 return sinon.calledOnce(() => {
+0 13 return sin
+1 3 it('_generate() => {
+1 5 const before_generate()
+1 6 it('_generate()\', () => {
+1 8 const _generate()
+1 9 const g = () => {
+1 10 const after_generate()
+1 12 const glob_generate = sinon = sinon.spy. sinon.spy.bind(() => {
+1 13 return g.unlink(hexo.extend.
+2 5 const content = [
+2 6 const result = [
+2 7 '123456',
+2 8 'should return {
+2 9 'should return [
+2 15 '123',
+2 16 '}\',
+2 19 '123'].
+3 3 const result = sinon.lang = sinon.should.should.be.addListener('fo', () => {
+3 5 return fs.writeFile(pathFn.join(hexo.theme_dir, '\
+3 6 fôo:\
+3 7 \').should.enable_glob).should.eql(pathFn.join(1);
+3 8 return fs.unlink(hexo.config_dir);
+4 3 it('_generate()');
+4 4 it('_generate()', () => {
+4 5 it('_generate() - layout', () => {
+4 7 const {...args => {
+4 8 const { return Promise.all([
+4 9 fs.exists(pathFnpathFn.exists(pathFn.exists(pathFn.join(hexo.config.theme_dir) || pathFn.config.theme_dir) posts.layout) posts = true).
+5 3 it('_generateConfig file', () => {
+5 4 const { config = _generateConfig = sinon.test.call(() => {
+5 5 return config.test.call(() => {
+5 6 return config.setView.setView('test', 'test').then(path => {
+5 7 path.test.123456).should.should.eql('test.swig', path);
+5 8 }).then(() => fs.install();
+5 9 }).then(() => {
+5 10 pathFn
+6 7 it('_generate() - oldConfig => {
+6 8 it('_generate()
+6 10 it('writeFile()
+6 11 it('_generate() - promisify()\', () => {
+6 12 it('_generate()).should.skip('_
+7 3 }
+7 4 module.done(); => {
+7 5 it('_ => {
+7 6 const config = () => {
+7 7 const content = sinon.should. => {
+7 8 const result.should.should.not.not.toString = sinon => fs.call(fs.exists(path => fs.readFile(path);
+7 9 return config.should.unlink(config.path);
+7 11 return config.should.process.not.nextTick(() => {
+7 12 content.should
+8 3 const before_generate() => {
+8 4 const after_generate() => {
+8 6 const middleGenerate();
+8 7 const after_generate();
+8 12 const space = sinon.const space_def => {
+8 15 const space
+9 2 it('generateConfigo.extend.skip('generate()', () => {
+9 3 it('_generate() optional_generator()');
+9 4 it('_generator()');
+9 5 it('_generator()', () => {
+9 6 it('_generator() - layout', () => {
+9 7 const { () => {
+9 8 const { getHighlight: () => { return getHighlight: '
+9 9 } '<pre> : '<notextile: ignore',
+9 10 return {
+9 11 return

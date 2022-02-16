@@ -1,0 +1,59 @@
+Min editdistance: 25.00
+Closest candidate: 0 1 const _props = function () => {
+0 1 const _props = function () => {
+0 2 const { getter.addBack; this.reset();
+0 3 return getter.reset();
+0 4 return this;
+0 5 };'
+
+1 1 const expected = function expected = (err => {
+1 2 return newparser.replaceExcerptRegex = new nodes.run(Object.run(Object.keys, function () => {
+1 3 return new nodes.run(node) {
+1 4 return Object.unjucks === undefined;
+1 5 return {
+1 7 unjucks = true;
+1 8 return this.unjucks.return {};
+1 9 });
+1 10 }
+2 1 const trimBody = function trimBody(body) { getter(str) { return str.match = offBody(string) {
+2 2 return str.length, trimBody(0, trimBody(0, body); }).length, trimBody(0, trimBody(1); }), trimBody(0); }; };
+2 3 return str = trimBody(0).length, trimBody(0).length, trimBody(1); }.length);"
+
+3 1 function trimBody(parser) { getter = new nodes.exec(node) { parseInt(node) { return parseInt(node) { return parseInt(node, 10) > 0x; }).toFixedBody(0); } = 1; }, function (0); } = 2; } = 2; };
+3 3 parser.return { trimBody(node) > 0; };
+3 6 "simple";
+3 7 function trimBody(stringify(string
+4 1 const expected = function expected = function testUtils (options) {
+4 2 return (s, expected = options = options.map = options => return { return { return { return arguments };
+4 3 return helpers.some(ans.reduce((u, actual, value => return (u, value => {
+4 4 return { return { return y, value => [u, value] });
+4 5 return [u.should.should.should.returnsolve(actual, value => [u, value); });
+4 6 }).map(x => pretty.returns, [u
+5 1 function NunjucksTag.run = function () {
+5 2 const blockId = function () { get(id, fn) { return get(id, arg });
+5 3 return new this.return new nodes.run(this, arg });
+5 4 return new nodes.run(this, arguments); }return new nodes.run(this, arguments);
+5 7 Nunjucks.return new nodes.run(this, arguments);
+5 8 return new nodes.run(this, [id, arguments);
+6 1 const { tag = function should = function (node) { return getter = new nodes.jsfetchReflect.nextToken(node) } ($cond, fn(body); return new nodes.return new nodes.fetchReflect.resolve(body, 'foo', function (input, a) { return arguments); return new getter) { return new trimBody(String(input, a, a) { return comment };
+6 3 const expected = new comment = new comment; };
+6 7 segment
+7 1 const trimBody = (name) => {
+7 2 return new nodes.run(answ => {
+7 3 return new nodes.run(answ => returns => {
+7 4 return answers.run(s => {
+7 5 returns => {
+7 6 return s.unjucks.unjucks.exec(s => {
+7 8 returns => new nodes.unjucks(s => {
+7 10 returns.unjucks(s => {
+7 13 returns =>
+8 1 const _props = function _props.call(context, function(context, args, arg) {
+8 2 return new Taxonomy;
+8 5 return getter(val) {
+8 9 })();
+8 11 "
+
+9 1 const trimBody(parser) => function trimBody(parser) {
+9 2 return trimBody(stringify(parser) => trimBody(parser) => trimBody(stringify(parser) => trimBody(parser).return str.replaceHead()).returns*newLoc(/^\\d*\\d*\\d*\\d*/, "\\d*/returns*");"}).should.not.some(String());"se{1);return str.should.eql(1);
+9 4 );
+9 6 }\

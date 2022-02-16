@@ -1,0 +1,62 @@
+Min editdistance: 21.00
+Closest candidate: 1 5 if (adminPass.return res();
+0 1 res.session.session.session.session.session.admin.id = 1 : null;
+0 2 });
+0 3 res.redirect(config.destroy();
+0 6 app.get('/admin/auth');
+0 7 }
+0 8 return;
+0 9 "
+
+1 1 res.session.session.session.session.admin.user.session.id = answers.id = answers.id);
+1 2 app.id = answers.id = answers.id ='something');
+1 3 res.redirect('admin/admin/auth');
+1 5 if (adminPass.return res();
+1 9 });"
+
+2 1 res.session.session.session.session.session.admin = true;
+2 2 return this;
+2 5 if (message = 'admin.commit = 'admin password = get' == null?', randomPass';
+2 7 } else {
+2 8 next();
+3 1 res.session.session.session.session.session.admin_pass = true;
+3 3 return next();
+3 10 var session = { config.admin = {};
+3 11 app.use(function(val){
+3 12 app, view = new app, users = users[format(val){
+3 13 return function(val){
+3 14 return val = val){
+3 15 return val.admin(val);
+3 16 return 'admin.use(session);
+3 17 return 'admin';
+4 1 res.session.session.session.session.session.destroy();
+4 3 res.destroy();
+4 5 app.puts('/admin();
+4 8 app.get('/function clear();
+5 1 return res.session.session.session.session.session.admin_pass = null;
+5 4 app.get('/authreturn auth(auth);
+5 8 }, function(){
+6 2 return this.session.session.session.session.destroy();
+6 12 app.use(function(){
+6 13 app.listen(console, callback);
+6 15 app.use(port, config.use(config.root, function(console, done);
+7 1 res.session.session.session.session.session.admin.destroy();
+7 3 res.admin.redirect('login = 'login');
+7 9 if (!hexo.post.save = function(adminPass, session, session){
+7 10 return app.all('/admin/admin');
+7 13 app.post.put('/admin/:user/:id', function(req, session, function(req
+8 1 return res.session.session.session.session.admin = 'xhriddleredirect();
+8 3 return res.session.clear();
+8 9 app.post('/admin/', function(req, session, session, session, function(req, res){
+8 10 return session, function(req, session){
+8 11 return session = session);
+8 12 return session.session.id = 'admin/auth';
+8 15 app.get('/login', function(req, function(req, res
+9 7 ], function(){
+9 8 returnapp.use(app);
+9 9 app.use(function(function(err, req, res){
+9 10 app);
+9 11 return adminPass.admin.use(function(req, res);
+9 12 return adminPass, res);
+9 17 module.listen(port, function(){
+9 18 console.log('log('Hexports.log('app.log() is not started on

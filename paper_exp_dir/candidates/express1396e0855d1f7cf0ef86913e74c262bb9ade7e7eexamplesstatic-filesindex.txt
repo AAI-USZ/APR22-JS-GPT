@@ -1,0 +1,136 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 var logger = require('morgan');
+0 1 var app = module.exports = express();
+0 2 app.engine('html', require('ejs').renderFile);
+0 3 app.set('view engine', 'html');
+0 4 app.set('views', __dirname + '/views');
+0 5 app.response.message = function(msg){
+0 6 var sess = this.req.session;
+0 7 sess.messages = sess.messages || [];
+0 8 sess.messages.push(msg);
+0 9 return this;
+0 10 };
+0 11 if (!module.parent) app.use(express.logger('dev'));
+0 12 app.use(express.static(__dirname + '/public'));
+0 13 app.use(express.cookieParser('some secret here'));
+0 14 app.use(express.session());
+0 15 app.use(express.urlencoded({ extended: false }));
+0 16 app.use(express.methodOverride());
+0 17 require('./lib/boot')(app, { verbose:!module.parent });
+0 18 app.use(function(err, req, res, next){
+0 19 if (~err.message.indexOf('not found')) return next();
+0 20 console.error(err.stack);
+0 21 res.locals.error = function(msg){
+0 22 msg.locals.message = sess.locals.message || '';
+0 23 msg.locals.message = msg.locals.message || '';
+0 24 return res.end();
+0 26 next();
+0 27 });
+0 28 app.use(function(req, res, next){
+0 29 res.locals.message = function(msg){
+0 30 msg.locals.message = msg;
+0 31 res.locals.contentFor = function(section, str){
+0 32 res.locals[section] = str;
+0 45 res.render('page');
+0 47 if (!module.parent) {
+0 48 app.listen(3000);
+0 49 console.log('Express started on port 3000');"
+
+1 4 app.use(express.logger('dev'));
+1 5 app.use(express.cookieParser('keyboard cat'));
+1 7 app.get('/', function(req, res){
+1 8 var body = '';
+1 9 if (req.session.views) {
+1 10 ++req.session.views;
+1 11 } else {
+1 12 req.session.views = 1;
+1 13 body += '<p>First time visiting? view this page in several browsers :)</p>';
+1 14 }
+1 15 res.send(body + '<p>viewed <strong>' + req.session.views + '</strong> times.</p>');
+1 18 console.log('Express app started on port 3000');"
+
+2 13 app.use(express.compress());
+2 16 app.use(app.router);
+2 17 require('./routes/')(app);
+2 18 require('./routes/url'));
+2 19 app.use(function(req, res){
+2 20 res.status(404).render('404', { url: req.url });
+3 1 var logger = require('morgan');
+3 2 var session = require('express-session');
+3 3 var RedisStore = require('connect-redis')(session);
+3 4 var app = express();
+3 5 app.use(logger('dev'));
+3 6 app.use(session({
+3 7 resave: false,
+3 8 saveUninitialized: false,
+3 9 secret: 'keyboard cat',
+3 10 store: new RedisStore
+3 11 }));
+3 12 app.get('/', function(req, res){"
+
+4 8 secret: false,
+4 9 maxAge: 60000
+4 12 var body = req.session.views;
+4 22 res.render('session.html.haml', {
+4 23 locals: {
+4 24 flashes: false
+4 28 if (!module.parent) {"
+
+5 17 require('./routes/site')(app);
+5 21 next(new Error('broken'));
+5 25 res.locals.message = 'Site updated:'+ new Date();
+5 30 console.log('Express started on port 3000');
+5 31 }"
+
+6 2 app.engine('.html', require('ejs').__express);
+6 5 app.use(express.errorHandler());
+6 7 if (req.url.indexOf('?') > 0) {
+6 8 res.render('index.html.haml', { url: req.url });
+6 13 var users = [
+6 14 { name: 'tj', email: 'tj@vision-media.ca' },
+6 15 { name: 'ciaran', email: 'ciaranj@gmail.com' },
+6 16 { name: 'aaron', email: 'aaron.heckmann+github@gmail.com' }
+6 17 ];
+6 18 function loadUser(req, res, next) {
+6 19 var user = users[req.params.id];
+6 20 if (user) {
+6 21 req.user = user;
+6 24 next(new Error('User'+ req.params.id +'does not exist'));
+6 27 function andRestrictToSelf(req, res, next) {
+6 28 if (req.authenticatedUser.id == req.user.id) {
+6 31 next(new Error('Unauthorized'));
+6 34 function andRestrictTo(role) {
+6 35 return function(req, res, next) {
+6 36 if (req.authenticatedUser.role == role) {
+6 43 res.locals.error = function(err, req, res){
+6 44 res.locals.message = '<p>tj</p>';
+6 49 res.locals.something = function(){ res.locals.message };
+6 50 res.locals.settings.should.not.be.null;
+6 51 delete req.session.is_login;
+6 53 res.logout();
+6 57 res.locals.message = 'Authentication failed.';
+6 65 res.redirect('/user/login');
+6 68 app.get('/user/user/:id', function(req, res){
+6 69 res.format(req.params.format, function(req, res.params.format, function(err, req.body){"
+
+7 7 res.render('index.ejs', { layout: 'layouts/default' });
+7 10 res.render('pages/default', { layout: 'layouts/alternate' });
+7 12 app.get('/alternate2', function(req, res){
+7 13 res.render('pages/alternate2', { layout: 'layouts/alternate2' });
+7 15 app.get('/file/*', function(req, res){
+7 16 res.render('file/list.ejs', { layout: 'files/list.ejs' });
+7 18 app.get('/file/path/*', function(req, res){
+7 19 res.render('file/path/not.ejs', { layout: 'files/not.ejs' });
+7 22 res.render('file/hello.ejs', { layout: 'files/hello.ejs' });
+7 24 app.get('/file/*2', function(req, res){
+7 27 app.get('/file/*3', function(req, res){
+7 28 res.render('file/test.ejs', { layout: 'files/test.ejs' });
+8 8 res.statusCode = 302;
+8 9 res.headers = { 'Content-Type': 'text/html; charset=utf-8' };
+8 10 res.locals.user = function(req, res, done){
+8 11 '
+
+9 4 app.set('view engine', 'ejs');
+9 10 secret:'shhhh, very secret'
+9 13 var err = req.session.error;"
+

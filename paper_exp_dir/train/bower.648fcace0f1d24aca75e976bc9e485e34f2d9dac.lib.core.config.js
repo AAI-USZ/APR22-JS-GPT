@@ -1,0 +1,29 @@
+var path       = require('path');
+var fs         = require('fs');
+var _          = require('lodash');
+var fileExists = require('../util/file-exists').sync;
+
+var temp = process.env.TMPDIR
+|| process.env.TMP
+|| process.env.TEMP
+|| process.platform === 'win32' ? 'c:\\windows\\temp' : '/tmp';
+
+var home = (process.platform === 'win32'
+? process.env.USERPROFILE
+: process.env.HOME) || temp;
+
+var roaming =  process.platform === 'win32'
+? path.resolve(process.env.APPDATA || home || temp, 'bower')
+: path.resolve(home || temp, '.bower');
+
+
+var config = require('rc') ('bower', {
+cache      :  path.join(roaming, 'cache'),
+links      :  path.join(roaming, 'links'),
+json       : 'component.json',
+endpoint   : 'https://bower.herokuapp.com',
+directory  : 'components'
+});
+
+
+var localFile = path.join(this.cwd, '.bowerrc');

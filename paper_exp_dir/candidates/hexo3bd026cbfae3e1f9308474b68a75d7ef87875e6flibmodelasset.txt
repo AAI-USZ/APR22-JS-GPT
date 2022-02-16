@@ -1,0 +1,196 @@
+Min editdistance: 18.00
+Closest candidate: 5 12 module.exports = function(data, callback){
+0 1 mtime = stats.mtime;
+0 2 if (data.mtime){
+0 3 return callback(null, data.mtime);
+0 4 } else {
+0 5 return callback(new Error('The quick brown fox jumps over'+ source));
+0 6 }
+0 7 self.insert({
+0 8 path: src,
+0 9 type: 'create',
+0 10 commit: (data.mtime || data.mtime)
+0 11 }, function(){
+0 12 return self.saveDatabase(this.base_dir, data.mtime);
+0 13 })
+0 14 .fin(function(){
+0 15 self.working = false;
+0 16 });
+0 18 it('create() - callback', function(callback){
+0 19 var file = newFile({
+0 21 content: new Buffer(body)
+0 23 return Promise.all([
+0 24 fs.writeFile(file.source, body),
+0 25 fs.writeFile(file.source, content)
+0 26 ]).spread(function(stdout, stderr){
+0 27 var title = 'Today is a good day';
+0 28 var date = moment(data.date.format('YYYY-MM-DD HH:mm:ss'), data.date.format('YYYY-MM-DD HH:mm:ss'), true);
+0 29 return [
+0 30 fs.writeFile(file.source, title, function(err){
+0 31 if (err) return callback(err);
+0 32 post.create({
+0 33 title: title,
+0 37 }).then(function(){
+0 38 post.save();
+0 40 .done();
+0 43 it('create() - category is an alias for categories', function(callback){
+0 44 var body = [
+0 45 'name::',
+0 46 'category: create',
+0 48 'tag: create',
+0 49 'archive: create',
+0 72 '---'
+0 73 ].join('\
+0 74 ');
+0 79 return fs.writeFile(file.source, body).then(function(){
+0 80 return process(file);
+0 82 var post = Post.findOne({source: src});
+0 83 post.categories.push(file.categories.shift());
+0 84 post.tags.categories.push(file.tags.push(file.tags.map(function(function(function(item){
+0 85 return item.name){
+0 86 return item.name === item.name;
+0 88 }).length;
+0 90 next();
+0 91 }).writeFile.writeFile(file.writeFile(file.unlink(file.params.writeFile(file.source, post.path, path.basename(post.path, this.path + 'tags'));
+0 97 it('post.skip()
+0 98 it('post.skip()')
+0 99 it('post.skip()');
+0 100 it('skip.skip()');
+0 105 it('skip.skip
+1 1 mtime = stats.mtime,
+1 2 modified = true;
+1 3 if (data){
+1 4 if (data.mtime === mtime){
+1 5 modified = false;
+1 8 self.update(data._id, {mtime: mtime});
+1 12 content: function(next){
+1 13 file.readFile(source, next);
+1 14 },
+1 15 stat: function(next){
+1 16 if (data._id){
+1 17 next(null, data._id);
+1 19 fs.stat(source, function(err, stats){
+1 21 next(null, stats.mtime);
+1 26 if (!self.destroy()){
+1 27 self.emit('change');
+1 30 return callback(null, data);
+1 31 };"
+
+2 2 modified = true,
+2 3 paths = path.join(baseDir, sourceId);
+2 8 return callback(new Error('File "static not" for'+ sourceId));
+2 11 return callback(null, function(){
+2 12 return fs.rmdir(baseDir);
+2 16 return this.read().then(function(){
+2 17 return fs.readFile(source, function(err, content){
+2 19 var meta = yfm(content);
+2 20 meta.source = path.join(source.substring(baseDir.length + 1));
+2 21 meta.original_content = content;
+2 22 meta.mtime = mtime;
+2 23 meta.ctime = stat.ctime;
+2 24 if (meta.date &&!_.isDate(meta.date)) meta.date = moment(meta.date, 'YYYY-MM-DD HH:mm:ss').toDate();
+2 25 if (meta.updated){
+2 26 if (!_.isDate(meta.updated)) meta.updated = moment(meta.updated, 'YYYY-MM-DD HH:mm:ss').toDate();
+2 28 meta.updated = stats.mtime;
+2 31 fs.stat(source),
+2 32 process(data)
+2 33 ]).spread(function(stats){
+2 34 var data = self.findOne({source: src});
+2 35 data.mtime = mtime;
+2 40 return callback(new Error('File "mtime" not found for'+ sourceId));
+2 46 };
+2 47 function parse(content, file){
+2 48 var error;
+2 49 if (!content.trim().length){"
+
+3 8 content: function(fn){
+3 9 fn(null, fs.readFileSync(source),
+3 10 mtime, content.toString());
+3 13 .then(function(){
+3 14 self.stat(source, function(err, stats){
+3 20 .done(function(err){
+3 28 callback();
+3 29 });"
+
+4 3 if (data && data.mtime === mtime) return callback(null, data);
+4 4 return callback(new Error('The mtime type is not defined'));
+4 8 function findOne({source: src, path: src} function(obj){
+4 9 var file = path.join(baseDir, obj.name);
+4 10 if (file){
+4 11 return path.join(baseDir, path.dirname(obj.name));
+4 13 var file = path.join(baseDir, 'find_original_content');
+4 14 return file.date.toDate();
+4 17 module.exports = function(files, callback){
+4 18 if (!Array.isArray(files)) files = [files];
+4 19 hexo.emit('processBefore');
+4 20 async.forEach(files, function(item, next){
+4 21 var src = path.join(baseDir, item);
+4 22 fs.exists(src, function(exist){
+4 23 if (exist){
+4 24 file.copyFile(src, dest, next);
+4 26 next(null, {
+4 27 path.join(baseDir, item);
+4 30 }, callback);
+5 2 content = fs.readFileSync(source)
+5 3 .toString(content)
+5 4 .replace(/---\\s*([\\s\\S]+?)\\s*/g, function(match, actual){
+5 5 return [var] || '';
+5 7 .length(0, {mtime: mtime});
+5 8 var jr = new JrStream(content);
+5 9 return new JrStream(data, content);
+5 12 module.exports = function(data, callback){
+5 13 if (!callback) callback = function(){};
+5 14 var stats = this.stats;
+5 15 delete data.mtime;
+5 16 if (data.mtime &&!data.isDirectory()){
+5 17 _id = data.mtime;
+5 18 if (data.doesNotAdd(function(err){
+5 23 self.stat(data._id, {mtime: mtime});
+5 25 .catch(function(err){
+5 26 self.emit('new', callback);
+5 29 if (data.nrDependants){
+5 30 return data.dependants.reduce(function(arr, path){
+5 31 return arr.concat(path);
+5 32 }, null);
+6 2 time = stats.time;
+6 4 return callback(new Error('Return callback for'+ source));
+6 9 return callback(new Error('Source required'));
+7 12 self.save(function(err, result){
+7 14 next(null, result);
+7 26 next(null, done);
+7 31 return callback(null, function(err){
+7 33 fs.exists(baseDir + path.sep, function(exist){
+7 34 if (!exist) return callback(null, null);
+7 35 file.list(baseDir + path.sep, function(err, files){
+7 36 if (err) return callback(null, files);
+7 37 async.each(files, function(item, next){
+7 38 var extname = path.extname(item),
+7 39 name = path.basename(item, extname),
+7 40 dirs = item.split(path.sep);
+7 41 for (var i=0, len=dirs.length; i<len; i++){
+7 42 var front = dirs[i].substring(0, 1);
+7 43 if (front === '_' || front === '.'){
+7 44 return next(null);
+7 47 if (!files.length) return next();
+7 48 var source = path.join(baseDir, item);
+7 49 return source.substring(baseDir.length, 1);
+7 51 var dest = path.join(baseDir, item);
+7 52 return destination(dest);
+7 56 module.exports = function(statics){
+7 57 var stats = function(stats){
+7 58 var meta = {
+7 59 id: function(key, args, callback){
+7 60 if (!callback){
+7 61 if (typeof args === 'function'){
+7 62 callback = args;
+7 63 args = {};
+7 65 callback = function(){};
+7 68 var sourceDir = hexo.source_dir;
+7 69 return sourceDir + (replace(/\\\\/g, '/') + 'index.html');
+8 5 self.insert({source: src, mtime: mtime});
+8 7 callback(data);
+8 11 return this;
+9 9 fn(null, callback);
+9 11 stat: function(chunk){
+9 12 if (chunk === undefined) return callback();"
+

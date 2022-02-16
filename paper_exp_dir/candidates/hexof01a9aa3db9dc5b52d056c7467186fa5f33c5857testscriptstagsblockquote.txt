@@ -1,0 +1,183 @@
+Min editdistance: 17.00
+Closest candidate: 0 9 it(\'default\', function() {
+0 1 before(function() {
+0 2 return hexo.init().then(function() {
+0 3 return hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'));
+0 4 });
+0 6 var bq = function(args, content) {
+0 7 return blockquote(args.split(\' \'), content || \'\');
+0 8 };
+0 9 it(\'default\', function() {
+0 10 var result = bq(\'\', \'123456 **bold** and *italic*\');
+0 11 result.should.eql(\'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+0 12 </p>\
+0 13 </head>\');
+0 14 });'
+
+1 1 before(function(){
+1 2 return hexo.init().then(function(){
+1 6 var bq = function(args, content){
+1 7 return args.split(\' \').slice(0, -1).map(function(item){
+1 8 return item.substring(0, item.length - bq.length);
+1 11 it(\'default\', function(){
+1 13 result.should.eql(\'<blockquote><p>123456 <strong>bold</strong> and <em>italic</em></p>\
+1 14 </blockquote>\');
+1 16 it(\'author\', function(){
+1 17 var result = bq(\'John Doe\', \'\');
+1 18 result.should.eql(\'<blockquote><footer><strong>John Doe</strong></footer></blockquote>\');
+1 20 it(\'source\', function(){
+1 21 var result = bq(\'Jane Austen, Pride and Prejudice\');
+1 22 result.should.eql(\'<blockquote><footer><strong>Jane Austen</strong><cite>Pride and Prejudice</cite></footer></blockquote>\');
+1 24 it(\'link\', function(){
+1 25 var result = bq(\'John Doe http://hexo.io/\');
+1 26 result.should.eql(\'<blockquote><footer><strong>John Doe</strong><cite><a href="http://hexo.io/">hexo.io</a></cite></footer></blockquote>\');
+1 28 it(\'link title\', function(){
+1 29 var result = bq(\'John Doe http://hexo.io/ Hexo\');
+1 30 result.should.eql(\'<blockquote><footer><strong>John Doe</strong><cite><a href="http://hexo.io/">Hexo</a></cite></footer></blockquote>\');
+1 32 it(\'titlecase\', function(){
+1 33 hexo.config.titlecase = true;
+1 34 var result = bq(\'Jane Austen, pride and prejudice\');
+1 36 it(\'external (boolean)\', function(){
+1 37 hexo.config.external_link = true;
+1 40 it(\'external (object)\', function(){
+1 41 hexo.config.config.external_link = false;
+1 42 var result = {external: true};
+1 44 result.should.should.should.eql(\'
+
+2 7 var result = b.highlight(\'\', fixture);
+2 8 result.should.eql(fixture.expected);
+2 10 it(\'title\', function() {
+2 14 it(\'external (boolean)\', function() {
+2 18 it(\'external (object)\', function() {
+2 19 var result = b.highlight(\'article.json\', {external: true});
+2 22 it(\'class (string)\', function() {
+2 23 var result = b.highlight(\'article.json\', {class: \'foo\'});
+2 26 it(\'class (array)\', function() {
+2 27 var result = b.highlight(\'article.json\', {class: [\'foo\', \'bar\']});
+2 30 it(\'id\', function() {
+2 31 var result = b.highlight(\'John Doe\', {id: \'abc\'});
+2 34 it(\'id (string)\', function() {
+2 35 var result = b.highlight(\'John Doe, {id: \'abc\'});
+2 38 it(\'id (array)\', function() {
+2 43 var result = b.highlight(\'John Doe, {id: \'foo\'});
+2 46 it(\'alt\', function() {
+2 47 var result = b.highlight(\'John Doe, {alt:alt});
+3 14 it(\'author\', function() {
+3 16 result.should.eql(body);
+3 18 it(\'source\', function() {
+3 22 it(\'link\', function() {
+3 26 it(\'link title\', function() {
+3 28 result.should.eql(content);
+3 30 it(\'titlecase\', function() {
+3 34 hexo.config.titlecase = false;
+3 36 it(\'file not found\', function() {
+3 39 return Promise.all([
+3 40 fs.writeFile(file.source, \'\'),
+3 41 process(file)
+3 42 ]).then(function() {
+3 43 var str = [
+3 44 \'<meta http://hexo.io/">\',
+3 45 \'<a href="http://hexo.io/" title="hexo.io">\',
+3 46 \'<a href="http://hexo.io/" title="title">\',
+3 47 \'</a>\',
+3 48 \'<a rel="external noopener" href="http://hexo.io/">\',
+3 49 \'<a href="http://hexo.io/" rel="external noopener">\',
+3 50 \'<a rel="noopenner" href="http://hexo.io/">\',
+3 51 \'<a href="http://hexo.io/" rel="noopenner">\',
+3 53 \'</li>\',
+3 54 \'<li>\',
+3 55 \'<div class="title">Title</div>\',
+3 57 \'</ul>\',
+3 58 ].join(\'\');
+3 59 it(\'skip processing > \'</li>\', function() {
+3 60 process(file.nextTick(function() {
+3 61 var idxhr.should.exists(1) {
+3 62 halt()
+3 63 return \'<bq.exists(idx =>!== 0; });
+3 64 }).should.exists(idx =>!== undefined;
+3 65 }).should.exists(path.length);
+3 66 }).should.skip(1) : 1;
+3 67 return inquirer.skip(new RegExp.skip => idx.length);
+3 68 .should.should.not.startsWith(1);
+3 69 .should.skip(\'processing.length > 0xhrag = 2;
+3 70 .should.return().should.startsWith(3));
+3 71 }).then(2));
+3 72 return Promise.method(\'unprocess = unprocess.execute());
+3 73 }).then(quest.each(def => {
+4 24 result.should.eql(\'<blockquote><footer><strong>John Doe</strong><cite>Pride and Prejudice</cite></footer></blockquote>\');
+4 35 it(\'file name\', function(){
+4 36 hexo.config.file = \'http://hexo.io/\';
+4 37 var result = bq(\'Jane Austen\', \'67.0\');
+4 39 it(\'skip processing "**" to avoid conflicts\');
+4 40 hexo.config.skip processing = true;
+4 41 var result = bq(\'Jane Austen\', \'1\');
+4 42 result.should.toLowerCase() =\'mg\';
+4 43 it(\'skip processing = 2\');
+4 44 it(\'with E.skip processing > 1\');
+4 45 it(\'with(function(){
+4 46 return should.skip processing
+4 47 .skip processing = require(123 => {
+4 48 return 1;
+4 49 return \'*;
+4 50 })
+4 52 it(\'processingFiles[1]
+4 53 it(\'processingFiles=1] = true
+4 54 it(\'processingFiles= true\');
+4 56 it(\'processingFiles= true
+4 57 it(\'processingFiles= null\');
+4 61 returnsof areAllPreprocessingFiles= null;
+4 62 \
+5 27 var result = bq(\'John Doe http://hexo.io/ Hexo\');'
+
+6 1 before(() => hexo.init().then(() => hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'))));
+6 2 function mockRule(context) {
+6 3 return {
+6 4 "Program": function(node) {
+6 5 context = context || this;
+6 6 }
+6 9 beforeEach(() => {
+6 10 var plugins = [
+6 11 { name: \'asset\', content: \'foo\' },
+6 12 { name: \'bar\', content: \'baz\' },
+6 13 { name: \'keywords\', content: \'caz\' },
+6 14 { name: \'package\', content: hexo.version }
+6 15 ];
+6 16 plugins.forEach(function(item) {
+6 17 if (\'string\' === typeof item) {
+6 18 if (!/^hexo-|^@[^/]+\\/hexo-/.test(item)) return;
+6 19 result[item[0]] = hexo.version;
+6 22 return result;
+6 24 module.exports = mockRule;"
+
+7 2 beforeEach(() => { hexo.config = []; });
+7 3 it(\'default\', () => {
+7 4 var result = SourceCodeOfTitle;
+7 5 result.should.eql(\'<h1 id="source-code-test">Title</h1>\');
+7 7 it(\'title\', () => {
+7 11 it(\'external (boolean)\', () => {
+7 12 var result = SourceCodeOfHexo;
+7 13 result.should.eql(\'<h1 id="source-code-test" title="Hexo" target="_blank">Hexo</h1>\');
+7 15 it(\'external (object)\', () => {
+7 17 result.should.eql(\'<h1 id="source-code-test" name="Hexo" target="_blank" rel="external">Hexo</h1>\');
+7 19 it(\'class (string)\', () => {
+7 21 result.should.eql(\'<h1 id="source-code-test" title="Hexo" class="">Hexo</h1>\');
+7 23 it(\'class (array)\', () => {
+7 27 it(\'id\', () => {
+7 29 result.should.eql(\'<h1 id="source-code-test" title="Hexo" id="">Hexo</h1>\');
+7 31 it(\'id (string)\', () => {
+7 35 it(\'dir\', () => {
+7 37 result.should.eql(\'<h1 id="source-code-test" title="Hexo" dir="_blank">Hexo</h1>\');
+7 39 it(\'titlecase\', () => {
+7 41 const result = SourceCodeOfTitle;
+7 42 result.should.eql(\'<h1 id="source-code-test" title="Title" class="title">Title</h1>\');
+7 44 it(\'url\', () => {
+7 46 const url = hexo.config.url;
+7 47 const data = {title: \'http://hexo.config.com/}'
+
+8 12 </p>\');
+9 7 return args.reduce(function(arr, result, source){
+9 8 return result + \'\
+9 9 \';
+9 10 }, 100);
+9 14 };'
+

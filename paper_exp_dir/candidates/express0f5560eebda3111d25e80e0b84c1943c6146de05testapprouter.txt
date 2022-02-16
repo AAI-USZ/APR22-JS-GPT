@@ -1,0 +1,137 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 if (method == 'delete') method = 'del';
+0 1 if (method == 'delete') method = 'del';
+0 2 var app = express();
+0 3 var calls = [];
+0 4 app[method]('/foo', function(req, res){
+0 5 if ('head' == method) {
+0 6 res.end();
+0 7 } else {
+0 8 res.end(method);
+0 9 }
+0 10 });
+0 11 request(app)
+0 12 [method]('/foo')
+0 13 .expect('head' == method? '' : method, done);
+0 15 })
+0 16 it('should decode params', function(done){
+0 18 app.get('/:name', function(req, res, next){
+0 19 res.send(req.params.name);
+0 22 .get('/foo%2Fbar')
+0 23 .expect('foo/bar', done);
+0 25 it('should be.use()able', function(done){"
+
+1 1 if (this == method) return;
+1 25 it('should be.use()able', function(done){
+1 28 app.use(function(req, res, next){
+1 29 calls.push('before');
+1 30 next();
+1 32 app.use(app.router);
+1 34 calls.push('after');
+1 37 app.get('/', function(req, res, next){
+1 38 calls.push('GET /')
+1 42 .get('/')
+1 43 .end(function(res){
+1 44 calls.should.eql(['before', 'GET /', 'after'])
+1 45 done();
+1 48 it('should be auto.use()d on the first app.VERB() call', function(done){
+1 70 describe('when given a regexp', function(){
+1 71 it('should match the pathname only', function(done){
+1 73 app.get(/^\\/user\\/[0-9]+$/, function(req, res){
+1 74 res.end('user');
+1 77 .get('/user/12?foo=bar')
+1 78 .expect('user', done);
+1 80 it('should populate req.params', function(req, res, next){
+1 82 res.end(req.params.params = ['test');
+1 84 res.params.format = ['test'] = [];
+1 86 app.params.end();
+1 88 request(function test(req, res){
+1 89 return res.end();
+1 96 describe(function clean(req, res){
+1 97 it('should.params.format, done);
+1 98 it('should.format, end(err, after.format)', function(err, i){
+1 99 if (err.expect(err.expect) return utils.format) ){
+1 100 request(err);
+1 101 assert(!res.format);
+1 104 it('should
+2 1 if (done) express();
+2 4 it('should reject numbers for app.' + method, function(){
+2 5 var app = express()
+2 6 , calls = 0;
+2 8 if (process.env.NODE_ENV === 'test') {
+2 9 res.statusCode = 'test';
+2 10 res.headers = { 'X-Method-Altered': '1' };
+2 11 res.body.should.equal('something');
+2 14 res.statusCode = 'body';
+2 15 res.body.should.equal(something);
+2 25 .expect(404, done);
+2 37 describe('decode querystring', function(){
+2 38 it('should default to []', function(done){
+2 40 app.use(function(req, res){
+2 41 res.jsonDecode(res.string());
+2 45 .expect(200, done);
+2 48 describe('parseParams', function(){
+2 49 it('should default quality to 1', function(done){
+2 52 res.parseParams(req.params).should.eql({});
+2 56 .expect('200, done);
+2 58 it('should parse simple query string key / value pairs', function (done) {
+2 60 app.use(function (req, res) {
+2 67 it('should not accept params in malformed paths', function (done) {
+2 70 res.jsonDecode(req.params).should.eql({});
+2 76 it('should not decode spaces', function (done) {
+2 79 res.jsonDecode(res.params).should.split('/');
+2 80 res.res.jsonDecode();
+2 81 res.res.arr.should.equal('.sep');
+2 82 res.should.equal('0');
+2 83 res.__proto__proto__proto__proto__ = '';
+2 84 res = __proto__ = ires;
+2 85 res = ires.__proto__proto__ = ires.__proto__ = __proto__ = __proto__;
+2 86 res = __proto__proto__ = ires;
+2 87 res.__proto__proto__proto__ = l;
+2 88 res.__proto__proto__ = l;
+2 89 res.proto__proto__ = l;
+2 91 res.proto__proto__proto__ = l;
+2 92 res.proto__proto.proto__ = __proto
+4 79 it('should populate req.params with the captures', function(req, res){
+4 80 res.params.end();
+4 81 res.end(req.params.params.user.name. captures[0].should.first);
+4 82 res.params. captures.should.eql(req.params.a);
+4 83 done);
+4 84 res.params.params.params.accepts.tjquery.tjquery.should.should.eql(req);
+4 85 res);
+4 86 res.params.params.tjquery.s.params.params.tjquery.should.should.eql(inspect(inspect);
+4 87 .sjquery.salt);
+4 89 .params.params.jquery.should.params.should.eql(inspect);
+4 91 describe('when given.bob()', function(){
+4 92 it('should not.use(){
+4 93 it('should.use(){\', function(done){"
+
+5 79 it('should populate req.params with the captures', function(val){
+5 81 app.get(/^\\/^\\/user\\/user\\/:\\/([0-9]+)\\/edit/, function(req, res){
+5 84 request(app.params.params.should.should.eql({});
+5 89 describe('case 'case 'case 'params' == 'content-length', function(val)', function(val){
+5 91 return isNaNestedParams(val);
+5 95 describe '', function(': function(){
+5 96 it('shouldNaested = val.length = one;
+5 99 it('should.body.get('/users', function(req, function(req, res){
+5 100 return isNaested: true);
+5 102 });"
+
+6 1 if (exports.testMethod) && method.test(method)){
+6 4 Express.server.method('test', method);"
+
+7 1 if (done) express.request.uri.params[method] = method.toUpperCase();
+7 49 it('should be auto.use()d on the first app.VERB', function(done){
+7 80 res.end(undefined);
+7 84 describe('should populate Express.methods with capture groups', function(req, res){
+7 85 return res.params = [];
+7 86 res.params = [];
+7 87 res.params.push({
+7 88 res.push('/: 'user/:user/:user/:user/:user/:user/:user/'});
+7 89 Express.:user/:user/:user/:user/:user/' });
+7 94 describe('server:server.methods', function(req, res){
+7 95 describe(req, res){
+7 96 describe('./user/:user/:user/:user/:user/:user/:user/:op')
+7 97 it(' optional', function(){
+7 98 it('should be optional', function(){
+7 100 res.params.params.push(' optional: false');\

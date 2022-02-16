@@ -1,0 +1,19 @@
+Min editdistance: 31.00
+Closest candidate: 0 3 this.prototype.offset = options.push;
+0 1  opts.fn = fn = options || this; } = options; this.help();
+0 2 this.app = fn; };' == fn();" == fn); };" == null; };" == null;"));
+0 3 this.prototype.offset = options.push;
+0 4 this.unify = function offset;
+0 5 return this;
+0 6 };"
+
+1 1 "
+
+4 1  return this.help();'
+
+5 1 ' == fn);' == fn);'
+
+7 1  };"
+
+9 1  };'
+

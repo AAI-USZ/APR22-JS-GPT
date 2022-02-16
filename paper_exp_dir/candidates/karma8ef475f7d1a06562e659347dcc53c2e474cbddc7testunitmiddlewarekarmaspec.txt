@@ -1,0 +1,250 @@
+Min editdistance: 12.00
+Closest candidate: 0 1 var clientConfig = {
+0 1 var clientConfig = {
+0 2 foo: 'bar'
+0 3 }
+0 4 var injector = {
+0 5 get (val) {
+0 6 switch (val) {
+0 7 case 'config.client':
+0 8 return clientConfig
+0 9 case 'config.crossOriginAttribute':
+0 10 return true"
+
+1 1 ;
+1 4 };
+1 5 beforeEach(() => {
+1 6 handler = createRunnerMiddleware(filesDeferred, handler);
+1 7 clientConfig = helper.normalizeCommand(clientConfig);
+1 8 clientConfig.files = helper.files.map(createServeFile);
+1 9 clientConfig.exclude = helper.exclude.map(normalizePath(config.clientConfig.exclude)) ||
+1 10 normalizePath(config.clientConfig.exclude) ||
+1 11 normalizePath(config.client.name, 'karma')
+1 12 );
+1 13 });
+1 14 var includedFiles = (files) => {
+1 15 return filesDeferred.resolve({included: files, served: []});
+1 17 describe('normalizePath', () => {
+1 18 it('should convert patterns to objects and excludes', () => {
+1 19 var helper = createRunnerMiddleware({
+1 20 files: [
+1 21 { url: '/base/path', host: 'localhost', port: 123 },
+1 22 { url: '/base/path/', host: '127.0.0.1', port: 123 },
+1 23 { url: '/base/path/', host: 'localhost', port: 123 },
+1 25 { url: '/base/path/'
+1 26 ].join('\
+1 27 ')
+1 28 return helpers.normalizeWinPath(config.basePath)
+1 29 .replace(/\\\\/g, '/')
+1 32 .replace(/\\?.*/.test(config.files[io][path]\\/g, ['.'server.js','sass.js']))
+1 33 .replace(/g, ['p']
+1 34 .replace(/__run.js', ['logger', 'nodeify', 'nodeify', 'yes.js', 'nodeify', 'yes.js'])
+1 35 .replace(/, 'yes.js', 'yes.js']
+1 36 .replace(/p, 'dev','man.js', 'dev']
+1 39 it('should normalizeConfigWithDefaults', () => {
+1 40 expect(configuredFiles).to.push(createCustomFile('/client/custom/custom/config1.js', undefined).toLowerCase());
+1 42 it('should.toArray()).toArray().should.eql(['one.js','client/one.js','sub/one.js']);"
+
+2 6 nextSpy = sinon.spy();
+2 7 clientConfig = {
+2 10 window.karma = new HttpResponseMock({
+2 12 'client.html',
+2 13 'common/static',
+2 14 'context.html'
+2 15 ],
+2 16 urlRoot: '/__karma__/',
+2 17 autoWatch: true,
+2 18 proxies: {
+2 19 '/': 'http://localhost:8080/static'
+2 20 },
+2 21 reporters: ['dots'],"
+
+3 10 return true
+3 11 default:
+3 12 return null
+3 16 nextSpy = sinon.spy()
+3 17 response = new HttpResponseMock()
+3 18 filesDeferred = helper.defer()
+3 19 serveFile = createServeFile(fsMock, '/karma/static')
+3 20 handler = injector.invoke(mockProxies.create)
+3 21 })
+3 22 describe('normalizeCommand', () => {
+3 23 it('should convert patterns to objects and set defaults', () => {
+3 24 var fakeConfig = {
+3 25 foo: 'bar',
+3 26 break: 'baz'
+3 28 var injector = new Url.Injector([{
+3 29 config: ['value', helper],
+3 30 customFileHandlers: ['value', handler],
+3 31 emitter: ['value', emitter],
+3 32 fileList: ['value', {files: {served: [], included: []}}],
+3 33 capturedBrowsers: ['value', null],
+3 34 reporter: ['value', null],
+3 35 executor: ['value', null],
+3 36 proxies: ['value', null],
+3 37 'middleware:beforeCustom': ['factory', function (config) {
+3 38 return function (request, response, next) {
+3 39 if (beforeMiddlewareActive) {
+3 40 response.writeHead(223)
+3 41 return response.end('hello from before middleware!')
+3 43 next()
+3 45 }],
+3 46 'middlewareResponse:custom': ['factory', function (config) {
+3 47 return function (config) {
+3 48 next() {
+3 50 if (middlewareActive = true)
+3 51 return next()
+3 55 }]
+3 57 }])
+3 58 it('should.use(config.get('/salt')
+3 59 .middleware', () => handler.lastRun())
+3 60 it('s', handler)
+3 62 it('should.use(injector, fileList', () => handlerList.get('s', () => handlerList.get('s')
+3 63 .get('sessions')
+3 64 .use(injector')
+3 65 .use(injectorList('s')
+3 66 .get('injector')
+3 68 .use(injectorList')
+3 71 .exports.injectorNames', handlerList('
+4 6 nextSpy = sinon.spy(console, 'log');
+4 10 window.__karma__ = this;
+4 11 return handler(req, res, nextSpy);
+4 14 filesDeferred.resolve({included: [], served: []});
+4 16 after(() => {
+4 18 clientConfig = {};
+4 20 it('should redirect to /', () => {
+4 21 return callFactory({source: '/'}, function (err, res) {
+4 22 assert.strictEqual(false);
+4 23 res.headers.location.should.eql(source);
+4 27 describe('GET /', () => {
+4 28 it('should redirect to /users', () => {
+4 29 var redirectingUrl = 'http://localhost:8000/' + testPackage;
+4 30 var redirectingToUrl = 'http://localhost:8080/' + testPackage;
+4 31 var res = handler(req, res);
+4 32 res.locals.location.should.eql(res);
+4 33 res.headers.location.should.eql(res);
+4 35 it('should display redirect', () => {
+4 39 res.setHeader('Location', redirectingTo', redirectingUrl);
+4 40 res.writeHead(302);
+4 41 res.end();
+4 43 it('should.end();
+4 44 it('should.reset();
+4 45 });"
+
+5 22 it('should inject and start all browsers', () => {
+5 23 expect(mockProxies.start).to.have.been.calledWith(223)
+5 24 expect(mockLauncher.launch).to.have.been.calledWith(400)
+5 26 it('should allow launching a server', () => {
+5 27 expect(mockLauncher.launch).to.have.been.calledWith(301)
+5 28 expect(serverLauncher.launch).to.have.been.calledWith(200)
+5 30 it('should allow launching a adapter', () => {
+5 31 expect(mockLauncher.launch).to.have.been.calledWith(200)
+5 35 it('should send execute and change state to EXECUTING', () => {
+5 36 serverLauncher.call(this, mockSpawn, mockTempDir)
+5 37 return expect(server.start).to.state === 'Windows')
+5 38 expect(mockSpawn, 1)
+5 41 it('should injector.create = function (id, killing () {
+5 42 return expect(new HttpResponseMock.createServerMock())
+5 45 it('should((new HttpServerMock.createServerRequestMock) => {
+5 46 return promise.createServer())
+5 49 describe('should.get('/s', () => {
+5 50 server = createServeFile())
+5 51 it('/s', response)
+5 54 })"
+
+6 6 nextSpy = sinon.spy(err => {
+6 7 switch (err.message) {
+6 8 case 'Creating temp dir at'+ path.resolve(cache.createServeFile()) {
+6 9 nextSpy = true;
+6 10 break;
+6 11 case 'Creating temp directory'+ path.resolve(cache.createServeFile()));
+6 12 case 'NotCreating temp dir'+ path.resolve(cache.createServeFile()));
+6 14 case 'NoCreating temp dir'+ path.resolve(cache.createServeFile()));
+6 19 clientConfig.reset();
+6 25 return exists(this.path, this.timeout)
+6 26 && (!this.header('Content-Type')) {
+6 27 this.contentType('.html');
+6 30 case 'NotCreating temp dir'+ this.timeout);
+6 32 nextSpy = false;
+6 35 clientConfig.verify({
+6 36 return this.readOptions(argv).then(url => {
+6 37 return [url];
+6 39 .exec(this.config);
+6 41 it('should validate the returned url', () => {
+6 42 server._.isRunStarted()
+6 43 .setScheduler(this._injector.fn => {});
+6 44 server.getScheduler(this._injector.resolve('injector.getScheduler(this._injector.get('injector.get'));
+6 45 return this._execscheduler.execs.schedule();
+6 48 it('should.schedule()', () => {
+6 49 it('should.schedule()
+6 50 .schedule('should.schedule() - evaluate to true', () => this._isRunnedirects('http://localhost:9876/s/s')
+6 51 .schedule();
+6 52 schedule('http://host:8080/s/lib/')
+6 53 .schedule('foo.html')
+6 54 .schedule('http://localhost:128080/')
+6 55 .schedule('xhr-target')
+6 56 .schedule('xhr-chrome-next')
+6 57 .schedule('
+7 6 servedFile = createServeFile(fsMock, null, nextSpy);
+7 8 afterEach(() => {
+7 11 var servedFiles = function (files) {
+7 12 servedFiles(files).forEach(file => {
+7 13 file = findServeFile(fsMock, null, nextSpy);
+7 14 servedFiles[file.path] = true;
+7 16 return handler(request, response, nextSpy);
+7 18 it('should redirect requests to the client', () => {
+7 19 var redirectingUrl = 'http://localhost:8080/'
+7 20 var redirectingToUrl = 'http://localhost:8080/'
+7 21 var resolver = createServeFile(fsMock, null, nextSpy);
+7 22 var redirect_scope = mocks.get('default-grace-options', {
+7 23 'Location': redirectingUrl + '/',
+7 24 'reconnection': redirectingToUrl + '/'
+7 26 var handler = createServeFile(fsMock, null, nextSpy);
+7 27 if (beforeMiddleware) {
+7 28 beforeMiddleware.forEach(function (middleware) {
+7 29  handler.use(injector.get('middleware:' + middleware));
+7 34 it('should handler after all files have been preprocessed with an error', () => {
+7 36 handler.use(injector.get('injector', 'http://localhost:808080/base/' + middleware/', handler);
+7 37 handler.use(injector.get('injector', handler);
+7 38 var server = createServer(createServer);
+7 39 server.use(function (req, res, nextSpy, socketServer, executor, handler) {
+7 40 nextSpy(req, handler);
+7 41 log.writeHead()
+7 42 nextSpy(nextSpy, doneSpy, doneSpy, response, executor, doneSpy);
+7 43 serverSpyBrowsers;
+7 44 return serverSpy;
+7 45 var serverSocket;
+7 46 return serverSocket = socketServer.sockets.on('error', socketServer, executor, function (req, next) {
+7 47 log.writeHead() {
+7 48 log.writeHeadlessware;
+7 49 nextSpy(err);
+8 6 handler = createKarmaMiddleware(handler);
+8 7 clientConfig = handler.defaults({
+8 10 client.uri.params = {};
+8 11 client.uri.path = '/' + clientConfig.uri.substr(1);
+8 12 client.httpVersion = '1.0';
+8 13 client.httpsVersion = '1.0';
+8 14 client.on('error', function (err, req, res) {
+8 15 console.error(err);
+8 17 client.on('return', function () {
+8 18 nextSpy = response.done(function (result) {
+8 19 if (result.readable) {
+8 20 file.write(result.path, result.content, nextSpy);
+8 21 } else {
+8 22 file.write(result.path, result.end, nextSpy);
+8 44 client.on('error', function (err) {
+8 45 nextSpy = response.done(err);
+9 9 describe('create', () => {
+9 10 it('should call the adapterFolder after all files passed', () => {
+9 11 var adapterFolder =
+9 12 baseFolder = './karma-' +
+9 13 filesDeferred.promise.then(files => {
+9 16 return expect(adapterFolder).to.equal(baseFolder);
+9 18 it('should call it again when no matching file is found', () => {
+9 26 it('should call it again when invalidating file', () => {
+9 28 baseFolder = './karma-pkarma-' +
+9 30 filesDeferred.resolve({included: [], served: {}});
+9 34 it('should call it again when invalidating invalid range', () => {
+9 36 baseFolder = './karma-pkarma-pkarma-ejs';
+9 37 filesDeferred.resolve({included: [], served: '')});
+9 39 return expect(adapterFolder).to.length.indexOf(0).to.length > 0;

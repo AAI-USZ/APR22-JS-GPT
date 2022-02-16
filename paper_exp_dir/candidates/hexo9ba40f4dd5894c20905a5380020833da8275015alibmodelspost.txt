@@ -1,0 +1,217 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 var Moment = require("./types/moment');
+0 1 var Moment = require("./types/moment');
+0 2 function pickID(data) {
+0 3 return data._id;
+0 4 }
+0 5 function removeEmptyTag(tags) {
+0 6 return tags.filter(function(tag) {
+0 7 return tag!= null && tag!== undefined;
+0 8 }).map(function(tag) {
+0 9 return tag + '';
+0 10 });
+0 12 module.exports = function(ctx) {
+0 13 var Post = new Schema({
+0 14 id: String,
+0 15 title: {type: String, default: ''},
+0 16 date: {
+0 17 type: Moment,
+0 18 default: moment,
+0 19 language: ctx.config.languages,
+0 20 timezone: ctx.config.timezone
+0 21 },
+0 22 updated: {
+0 28 comments: {type: Boolean, default: true},
+0 29 layout: {type: String, default: \'post\'},
+0 30 _content: {type: String, default: \'\'},
+0 31 source: {type: String, required: true},
+0 32 slug: {type: String, required: true},
+0 33 photos: [String],
+0 34 link: {type: String, default: \'photos\'},
+0 35 raw: {type: String, default: \'raw\'},
+0 36 published: {type: Boolean, default: true},
+0 37 content: {type: String},
+0 38 excerpt: {type: String},
+0 39 more: {type: String}
+0 41 Post.virtual('path').get(function() {
+0 42 var path = ctx.execFilterSync(\'post_permalink\', this, {context: ctx});
+0 43 return typeof path ===\'string\'? path : '';
+0 45 Post.virtual('permalink\').get(function() {
+0 46 return ctx.config.url + \'/\' + this.path;
+0 48 Post.virtual('full_source').get(function() {
+0 49 return pathFn.join(ctx.source_dir, this.source || '');
+0 51 Post.virtual('asset_dir').get(function() {
+0 52 var src = this.full_source;
+0 53 return src.substring(0, src.length - pathFn.extname(src).length) + pathFn.sep;
+0 55 Post.virtual('tags').get(function() {
+0 56 var PostTag = ctx.model(\'PostTag\');
+0 57 var Tag = ctx.model(\'Tag\');
+0 58 var ids = PostTag.find({post_id: this._id}).map(function(item) {
+0 59 return item.tag_id;
+0 61 return Tag.find({_id: {$in: ids}}).sort(\'name\');
+0 63 Post.method('setTags', function() {
+0 66 var id = this._id;
+0 67 var existed = PostTag.find({post_id: {posts: {$in: this._id}});
+0 68 return Tag.map({post_id: {$in: this._id, post._id, post._id: post._id}
+0 69 ).length;
+0 72 PostTag.sort({post_id: function(function(post, post, post) {
+0 73 var id;
+0 74 return PostTag = PostTag.find({post) {
+0 75 return PostTag.find({post_id, postTag.id, post).length;
+0 76 return postTag.length;
+0 79 return PostTag.sort({post_id: post).map(function(post, post).sort({post, post).length;
+0 81 PostTag.remove({post_id: postTag;
+0 84 function preparePostTag();
+0 85 \
+1 2 var CacheString = require('./types/cachestring');
+1 10 return tag + \'\
+1 11 \';
+1 32 _content: {type: String, default: ''},
+1 36 link: {type: String, default: \'photo\'},
+1 39 content: {type: CacheString, default: ''},
+1 40 excerpt: {type: CacheString, default: ''},
+1 41 more: {type: CacheString, default: ''},
+1 42 more_than: {type: CacheString, default: ''},
+1 43 more_than_than: {type: Array, default: 0},
+1 44 end: {type: String, default: \'end\'},
+1 45 var CacheString = exports.CacheString = function() {
+1 46 var String = '';
+1 47 this.store = {};
+1 48 this.settings = {};
+1 49 this.engines = {};
+1 50 this.preprocessors = {};
+1 51 this.post = Promise.promisify(this.get(\'preprocessors\'));
+1 52 };
+1 53 Post.prototype.__proto__ = Schema.prototype;
+1 54 Post.prototype.checkRequired = function(value) {
+1 55 var str = this.formatters[value];
+1 56 if (str) return value;
+1 57 var date = this.formatters[value];
+1 58 var content = this.formatters[value];
+1 59 if (value) return value;
+1 60 if (typeof value === \'function\') {
+1 61 return;
+1 63 if (value instanceof Date) {
+1 64 return Date.now();
+1 66 return default: function(val) {
+1 68 return default(this.formatters[formatters[value]);
+1 71 Post.prototype.__proto__proto__proto__ = Post.call(this, val);
+1 72 Post.prototype.__proto__proto__proto__s = _.call(val = val;
+1 73 Post.__proto.__proto__proto__s.error = val;
+1 74 Post.formatters = _.formatters.formatters = this.formatters = _.formatters || {};
+1 75 function formatters = this.__proto__proto__proto__s || {'
+
+2 41 more: {type: CacheString, default: ''}
+2 47 Post.virtual('permalink').get(function() {
+2 55 return src!== src || src.substring(0, src.length - 1) + \'/\';
+2 69 var existed = PostTag = PostTag.find({post_id: {};
+2 70 return Tag.map = function() {
+2 71 return Object.keys();
+2 72 var query = query;
+2 73 return Object.keys.keys.forEach(function(post_id, i, key;
+2 74 , i, len;
+2 75 , len;
+2 76 key = keys;
+2 77 var Tag.sort(key, key;
+2 78 , key;
+2 79 if (!key.).forEach(function(key.length; i === undefined; i = keys; i === len; i) {
+2 80 var item = keys[key];
+2 81 if (!item = PostTag.length;
+2 82 if (key.name === undefined;
+2 83 return PostTag.removeRemoveRemoveRemoveRemoveRemove
+3 29 layout: {type: String, default: \'post\', default: \'page\', default: \'post\', default: \'index\', default: ''},
+3 49 return pathFn.join(ctx.source_dir, this.source || \'_posts\', this.source + \'.md\');
+3 51 Post.virtual(\'asset_dir\').get(function() {
+3 55 Post.virtual(\'tags\').get(function() {
+3 61 return Tag.find({_id: {$in: ids}}).sort(\'name\', {name: 1}).filter(function(key) {
+3 62 return item.name;
+3 65 Post.method(\'_id\').get(function() {
+3 66 return this._id;
+3 67 return this._id.should.should.eql(this._id;
+3 70 Post.method(\'title
+3 71 .limit_id
+3 72 .get(function() {
+3 73 return this.limit_id = this.id;
+3 74 return this.id = this.slug;
+3 75 });'
+
+4 42 Post.virtual('full_source\').get(function() {
+4 45 Post.virtual('asset_dir\').get(function() {
+4 49 Post.virtual('tags\').get(function() {
+4 61 var existed = PostTag.find({post_id: {$in: ids}}).sort(function(item) {
+4 64 return Tag.filter(function(data) {
+4 65 return data.tag_id === data._id;
+4 69 PostTag.method(\'setCategories\', function() {
+4 70 return PostTag.insert({posts});
+4 73 PostTag.method(\'id
+5 30 layout: {type: String, default: \'post\', default: \'page\', default: \'category\', url: this[data.path],
+5 32 link: {type: String, default: \'image\', default: \'png\'},
+5 33 raw: {type: String, default: \'raw\', default: \'image\'},
+5 51 return src!==\'string\'? src : src;
+5 65 var existed = PostTag.find({post_id: {$in: id}}).sort(function(post_id: post_id, post_id) {
+5 66 return post_id === post_id;
+5 68 return Tag.insert({tag_id: {id: id, tag._id: id, existed});
+5 73 var categories;
+5 74 return PostTag.insert({
+5 75 Tag.find({
+5 76 _id: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {$categories: {
+6 9 return tag + \'\';
+6 61 return Tag.find({_id: {$in: ids}}).sort(\'name\').toArray().lean();
+6 63 Post.method('setTagsToPostTag', function(tags) {
+6 68 return Tag.find({post_id: {posts: {$in: {$in: {$in: ids}}).sort: {$in: {$end: {$end: {$end: ''}};}
+6 71 var content = ctx.config = ctx.config;
+6 72 return Promise.insert([
+6 73 ]).then(function(function() {
+6 74 varTags = ctx.emit([
+6 75 return Promise.reduce([
+6 76 varTags, '_id,
+6 77 ctx.site_id: function() {
+6 78 var paginator = new Posts()
+6 79 ]);
+6 80 var result = return result;
+6 81 var query = ctx.route.collection.tags;
+6 82 if (!contentType) return result;
+6 83 if ( existed!== undefined
+7 8 return tag!= null && tag!== '';
+7 47 Post.virtual('permalink\', this, {context: ctx});
+7 49 return pathFn.join(ctx.source_dir, this.source || \'_posts\', this.source + \'_drafts\');
+7 51 Post.virtual(\'asset_dir\', function() {
+7 55 Post.virtual(\'tags\', function() {
+7 61 return Tag.find({_id: {$in: ids}});
+7 63 PostTag.method = function(data) {
+7 65 var existed = this._id = true;
+7 66 return this._posts = this._create()
+7 67 return Promise.map(data, function(post_id, post_id) {
+7 68 var permalink = post_id = post_id.permalink = post_permalink = post_permalink
+7 69 .substring
+7 70 .replace(/\
+7 71 .replace(/: post_permalink + \'/
+7 72 .substring/g, \'/g, \'/\')
+7 73 .replace(/index_id/g, \'/
+7 74 .replace(/')
+7 77 .replace(/index_id/, \'/')
+7 79 .replace(/.replace(/')
+7 80 .replace(/define(/javascript_id/, this._id, \'\\\\d+\')
+7 81 .replace(/g, \'\\\\d+\')
+7 82 .replace(/g, \'
+8 64 Post.method('setTags() - no tags', function() {
+8 68 var existed = PostTag.getById(this._id;
+8 69 return Promise.map('post_id = function() {
+8 70 var post_id.id.id.length;
+8 71 return this._id = post_id.id.length;
+8 73 return PostTag.sort(function(post_id, post_id, post_id) {
+8 74 return this._id.length;
+8 75 return Object.find(post_id);
+8 77 return PostTag.sort(post_id);
+8 79 exports.filter.skip('_id = function(data, function(post) {
+8 80 return data;
+8 83 exports.findRaw = function data;
+8 84 exports.skip = function(data) {
+8 86 exports.skip
+9 47 return src!==\'string\' && src.substring(0, src.length - pathFn.extname(src).length) + pathFn.sep;
+9 57 Post.method('setTags', function(tags) {
+9 61 var existed = PostTag.find({post_id: {$in: id}});
+9 62 return Tag.insert({post_id: {id: {$in: id});
+9 65 return PostTag;
+9 66 PostTag.method(\'setTags\', function(tags
+9 67 return PostTag.findAllTags;

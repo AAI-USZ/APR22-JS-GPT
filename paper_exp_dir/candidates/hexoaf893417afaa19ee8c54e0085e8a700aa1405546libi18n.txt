@@ -1,0 +1,247 @@
+Min editdistance: 8.00
+Closest candidate: 4 22 cache = {};
+0 1 str = args.shift(),
+0 2 split = str.split('.'),
+0 3 cursor = cursor;
+0 4 if (args.length){
+0 5 if (!/\\D+/.test(args[0])){
+0 6 var lang = args[0],
+0 7 plit = args[1],
+0 9 } else {
+0 10 var lang = args[0];
+0 11 }
+0 13 if (lang){
+0 14 var lang = lang.split('-')[0],
+0 15 plit = split.split('.'),
+0 18 var lang = args[1],
+0 19 title = args[2];
+0 21 if (cursor[lang]){
+0 22 var args = _.toArray(arguments).slice(1),
+0 24 lang = args[3],
+0 25 layout = args[4],
+0 26 self = this;
+0 27 if (layout === 'page'){
+0 28 if (i18n.__mounted) require('./format/i18n');
+0 30 var i18n = new I18n(format(args[0]), arg);
+0 32 if (!lang) args = _.toArray(arguments);
+0 34 var format = function(obj){
+0 35 var content = obj.toString(),"
+
+1 4 for (var i=0, len=split.length; i<len; i++){
+1 5 var item = split[i];
+1 6 cursor = cursor[item];
+1 8 if (Array.isArray(cursor)){
+1 9 return format.apply(null, args);
+1 11 return [cursor];
+1 14 };
+1 15 var _getProperty = function(obj, key){
+1 16 var split = key.split('.'),
+1 17 cursor = obj;
+1 18 for (var i=0, len=split.length - 1; i<len; i++){
+1 19 var key = split[i];
+1 20 cursor = cursor[key] = cursor[key] || {};
+1 22 cursor[split[i]] = cursor[split[i]] || {};
+1 24 var _getCodeToken = function(obj, key){
+1 25 var code = {}.split('-'),
+1 26 indent = split.shift(),
+1 27 code = split.length - 1;
+1 28 if (indent){
+1 29 code = indent + '\
+1 30 ' + indent;
+1 32 code = arr.slice(0, indent - 1);
+1 34 return code;
+1 36 this.set = function(str, args){
+1 37 var split = str.split('.'),
+1 38 cursor = format.apply(null, args);
+1 43 cursor[split[i]] = function(item){
+1 44 if (item) return item;
+1 45 if (isSingleNested(item)){
+1 46 return;
+1 48 return obj;
+1 51 this.list = function(obj){
+1 52 if (obj) return this.get(obj);
+1 54 this.load = function(path, callback){
+1 55 if (this.is_post()){
+1 56 var layout = this.is_post()? this.is_post() : true;
+1 57 var view = this.view_dir || this.settings.post_name;
+1 58 this.filename = path;
+1 59 this.method = format.normalize(path);
+1 60 this.url = format.normalize(path);
+1 61 this.site = site[layout];
+1 62 this.config = config;
+1 63 this.theme = theme;
+1 64 this._ = _;
+1 65 this.post = new Post(this._source, this._dest, this._content, this);
+1 66 if (this.newPostConfig){
+1 67 var layout = this.post_name;
+1 68 layout.filename = layout.filename.replace(/\
+1 69 .*/, '');
+1 70 layout.path = layout.path.replace(/\
+1 71 .*$/, '');
+1 72 this.replace(/:(\\d+)/g, function(.*?(\\d+)/g, function(\\d+)/g, function(var){
+1 73 var keys = Object.keys.push(this.length){
+1 74 return keys.concat(this.length;
+1 75 return _.filter(function(key) {
+1 76 return i){
+1 77 return {
+1 78 return 0, i, len = keys[key] == 0;
+1 79 , i, len = keys.length;
+1 80 });
+1 82 this.unshift();
+1 83 }, this.push(key);
+1 85 }, this);
+1 86 layout.replace(/: function(){
+1 88 }, callback);
+1 92 this.create(this.edit = function(this.current, next){
+1 93 if (layout = newPostConfig) return next);
+1 95 if (!layout = newPost.length){
+1 96 var target = _.filename) return next();
+1 97 \
+2 3 cursor = store;
+2 9 var number = args.shift();
+2 10 if (cursor.length === 3){
+2 11 if (number > 1) cursor = cursor[2];
+2 12 else if (number === 0) cursor = cursor[0];
+2 13 else cursor = cursor[1];
+2 15 if (number > 1) cursor = cursor[1];
+2 16 else cursor = cursor[0];
+2 18 if (/%[ds]/.test(cursor)) args.unshift(number);
+2 20 args.unshift(cursor);
+2 23 this.set = function(str, val){
+2 28 cursor = cursor[item] = cursor[item] || {};
+2 30 cursor[split[i]] = val;
+2 33 if (obj) store = obj;
+2 34 else return store;
+2 37 if (hexo.config && hexo.config.language) lang = hexo.config.language;
+2 38 var target = path + '/' + lang + '.yml';
+2 39 fs.exists(target, function(exist){
+2 40 if (!exist) target = path + '/default.yml';
+2 41 compile(target, function(err, result){
+2 42 if (result) store = result;
+2 43 callback(err, result? true : false);
+2 47 exports.i18n = i18n;
+2 48 exports.moment = function(){
+2 49 var moment = require('moment');
+2 50 moment.lang(hexo.config.language.toLowercase());
+2 51 return moment;
+2 52 };"
+
+3 23 var _getter = function(){
+3 24 var args = _.toArray(arguments),
+3 26 split = args.split('.'),
+3 32 cursor[split[i]] = format.apply(null, args);
+3 35 module.exports = i18n;"
+
+4 3 cursor = cursor[str];
+4 4 if (cursor == null){
+4 6 str = '\
+4 7 ' + format.compile(cursor);
+4 9 var args = args.slice(0, -1);
+4 10 if (cursor.length === 0) color = false;
+4 11 if (args[0] === '_content') args.unshift(args);
+4 15 this.set = function(str, callback){
+4 16 var content = format.apply(null, args),
+4 17 dest = content.toString(),
+4 18 newest = moment().format('YYYY-MM-DD HH:mm:ss'),
+4 19 oldest = new Date().format('YYYY-MM-DD HH:mm:ss'),
+4 20 target = target.split('/').shift(),
+4 21 start = new Date(),
+4 22 cache = {};
+4 24 for (var i=0, len=args.length; i<len; i++){
+4 25 target += args[i];
+4 31 split = args.length? _.toArray(args.shift()) : 1,
+4 32 newest = new Date().format('YYYY-MM-DD HH:mm:ss'),
+4 34 latest = args.join(' ');
+4 42 split = args.join(' ');
+4 43 if (mout.array.isArray(args.length)){
+4 45 str = '';
+4 47 var args = Object.keys(args);
+4 49 args.unshift(data);
+4 52 if (this.load) callback = function(err, target){
+4 53 if (err) throw err;
+4 54 this.if (this.is_post()){
+4 55 this.content = format.compile(target);
+4 57 this.content = format.compile(source);
+4 60 var args = _.toArray(arguments);
+4 61 args.unshift(args);
+4 64 content = this.content.replace(/\
+4 65 $/, '');
+4 66 if (this.target === '*'){
+4 69 dest = new Date().format('YYYY-MM-DD HH:mm:ss'),
+4 70 newest = new Date().format('YYYY-MM-DD HH:ss');
+4 71 if (args.unshift(dest);
+4 73 this.target = dest;
+4 75 this.write(dest);
+4 77 this.onInsert(new function(new function(new, args, callback){
+4 78 if (err){"
+
+5 6 str = ',"
+
+6 6 caption = args[1],
+6 7 lang = args[2],
+6 8 caption = \'<span>\' + format.format(LINK_SITE_CONFIG.indexOf(lang) + \'</span>\');
+6 10 var lang = lang.toLowerCase();
+6 11 if (config.language){
+6 12 var lang = config.language;
+6 17 if (_.isArray(caption)){
+6 18 return format.apply(null, args.unshift(caption));
+6 20 var caption = args[0];
+6 39 if (compile) return callback(null, target!== '*'? false : true);
+6 40 var target = path + \'/\' + lang + \'.yml\';
+6 42 if (!exist) target = path + \'/default.yml';
+6 52 var moment = require(\'moment\');
+8 23 var last = args.length? split[0] : last;
+8 24 var i18n = new i18n({
+8 25 code: args.l || args.config,
+8 26 lang: args.lang,
+8 27 line_number: args.line_number,
+8 28 time_number: args.time_number
+8 30 _.each(args, function(item){
+8 31 if (item == null) item = item.replace(/\\u2028/g, '\\\\u2028');
+8 32 if (words.indexOf(item) > -1){
+8 35 var message = item.split('.');
+8 36 for (var i=0, len=words.length; i<len; i++){
+8 37 message += '\\u2028\\u2029 woot';
+8 40 return message;
+8 51 i18n.prototype.__proto__ = format.apply(null, args);
+8 52 var format = function(str){
+8 53 if (str[0] === format) str = str.replace(/%(\\d+)\\/g, '');
+8 54 if (str[1] === format) str += format.apply(null, args);
+8 55 return format;
+8 57 i18n.prototype._getCode = function(){
+8 59 str = format.apply(str);
+8 60 if (!str || typeof format === 'function'){
+8 61 var breadcr = format.apply(str);
+8 62 delete format.apply(str);
+8 64 var item = format;
+9 25 cursor = cursor[split[0]];
+9 29 if (number > 1) cursor = cursor[0];
+9 33 if (number > 0) cursor = cursor[0];
+9 39 this.set.$inject = ['options'] || {};
+9 40 var oldList = [
+9 41 '---',
+9 42 'layout: post',
+9 43 'title: {{ title }}',
+9 44 'date: {{ date }}',
+9 45 'tags:',
+9 46 '---'
+9 47 ].join('\
+9 48 ') + '\
+9 49 ';
+9 50 var newPost = function(str){
+9 51 return this.set([format(newPostName)], [process.cwd(), 'index'], {silent: true});
+9 53 var after = split.pop(),
+9 63 var before_lines = split.pop(),
+9 73 var after_lines = split.pop(),
+9 82 '
+9 84 ');
+9 85 var after_toArray = function(callback){
+9 86 async.parallel([], function(callback){
+9 87 var array.forEach(callback, callback, function(callback){
+9 88 var _callback, callback, callback, callback, function(callback){
+9 89  callback, callback.length, callback.length, callback){
+9 90 return callback++;
+9 94 parallel.forEach(callback.length = callback.unshift(callback);
+9 95 return callback.apply(callback, callback);
+9 96 return callback.apply(callback, callback).apply(callback, callback).apply(callback, callback);
+9 101 exports.i18nfunction i18nRend = i18n; i18n.prototype.prototype.__proto__proto__proto__proto__ = function(format){\

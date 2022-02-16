@@ -1,0 +1,201 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 this.header('Content-Type', 'text/javascript');
+0 1  else {
+0 2 this.header('Content-Type', 'text/javascript');
+0 3 body = this.req.query.callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+0 4 }
+0 6 break;
+0 8 if (!this.headers['Content-Length']) {
+0 9 this.header(\'Content-Length\', body instanceof Buffer
+0 10 ? body.length
+0 11 : Buffer.byteLength(body));
+0 13 if (headers) {
+0 14 var fields = Object.keys(headers);
+0 15 for (var i = 0, len = fields.length; i < len; ++i) {
+0 16 var field = fields[i];
+0 17 this.header(field, headers[field]);
+0 20 if (204 === status) {
+0 21 delete this.headers['Content-Type'];
+0 22 delete this.headers['Content-Length'];
+0 24 this.writeHead(status, this.headers);
+0 25 this.end(body);
+0 26 };
+0 27 http.ServerResponse.prototype.sendfile = function(path, fn){
+0 28 var self = this
+0 29 , streamThreshold = this.app.set(\'stream threshold\') || 32 * 1024
+0 30 , ranges = self.req.headers.range;
+0 31 if (~path.indexOf(\'..\')) this.send(403);
+0 32 function error(err) {
+0 33 delete self.headers['Content-Disposition'];
+0 34 if (fn) {
+0 35 fn(err, path);
+0 36 } else {
+0 37 self.req.next(err);
+0 40 fs.stat(path, function(err, stat){
+0 41 if (err) return error(err);
+0 42 if (stat.size >= streamThreshold) {
+0 43 var stream = fs.createReadStream(path);
+0 44 self.contentType(path);
+0 45 self.header('Accept-Ranges\', \'bytes\', ranges);
+0 47 if (set(path) {
+0 48 fs.writeHead(path, stream);
+0 50 fs.writeFile(path, stream);
+0 52 });
+0 56 http.ServerResponse.prototype.contentType = function stream
+0 57 , stream;
+0 58 return function(middlewareResponse.on('contentType, headers, callback) {
+0 59 if (chunked = true;
+0 60 if (chunked) {
+0 62 return this.headers.headers.setHeader('Accept-Encoding
+0 63 ? undefined : undefined;
+0 64 len = undefined;
+0 65 headers.setHeader('content-type
+0 66 , contentType
+0 67 , headers = undefined;
+0 68 contentType, headers = undefined;
+0 70 \
+1 2 this.header('Content-Type', \'text/javascript');
+1 27 res.sendfile = function(path, fn){
+1 29 , req = self.req
+1 30 , next = this.req.next
+1 31 , options = options || {}
+1 32 , done;
+1 33 if (\'function\' == typeof options) {
+1 34 fn = options;
+1 35 options = {};
+1 37 req.socket.on(\'error\', error);
+1 39 if (done) return;
+1 40 done = true;
+1 41 cleanup();
+1 42 if (!self.headersSent) self.removeHeader(\'Content-Disposition\');
+1 43 if (fn) return fn(err);
+1 44 if (self.headersSent) return;
+1 45 if (204 == status) return;
+1 46 return this;
+1 48 res.contentType = function stream(new Buffer(options) {
+1 49 if (options) {
+1 50 options = options || {};
+1 51 if (done) return this.setHeader(\'content-type\', \'json\', fs;
+1 53 if (path) {
+1 54 if (callback && fs.readFile(this.readFile(this.path, options, options)
+1 55 , function(err, fn) {
+1 56 fn) {
+1 57 fn && fn(options)
+1 58 .on(\'end
+1 59 , options);
+1 62 })
+1 64 options.on(\'end\', options.on(\'end\', function(chunkedEncoding\', function(chunkedEncoding, headers, headers, headers, body) {
+1 65 var buf, headers, headers
+2 25 this.end('HEAD\' == this.req.method? undefined : body);
+2 29 , ranges = self.req.headers.range
+2 30 , head = 'HEAD' == self.req.method;
+2 31 if (~path.indexOf(\'..\')) return this.send(403);
+2 44 function stream(stream) {
+2 45 if (route.isModified(path)) return false;
+2 46 if (route.next(fn) return true;
+2 48 function cleanup() {
+2 49 if (options && fs.unlink(this.headers) || this.headers.contentType) return false;
+2 51 options.on('cache.set-Control
+2 52 , function() {
+2 53 , stream.on('error', error);
+2 56 .on('finish', function() {
+2 57  cleanup();
+2 61 function stream.on('directory', stream.on('error', onFinish(err) {
+2 62 if (err) {
+2 64 if (err) return;
+2 65 if (options.directory) this.header(\'Location\') == err;
+2 66 this.removeHeader(\'Location\
+3 21 delete this.headers[\'Content-Type\'];
+3 22 delete this.headers[\'Content-Length\'];
+3 33 delete self.headers['Content-Disposition\'];
+3 40 if (process.enqueue(this)) return this;
+3 42 if (req.stream.isify(stream)) return this;
+3 43 if (req.is.on('error', fn)) return;
+3 44 var onExitCode = Number(fn);
+3 45 if (onExitCode!== stream.onExitCode) {
+3 46 var results = onExitCode;
+3 47 clearTimeout = setTimeout(function() {
+3 48 if (fn.onExitCode in theTimeout);
+3 49 fn.removeAll();
+3 50 clearTimeout(fn.onKillTimeout(fn);
+3 52 } else if (on_on_Code!== on_on_Code);
+3 53 _on_time = _.on_exit(this.end_delay);
+3 55 _on_time = setTimeout = setTimeout(fn);
+3 57 if (on_} else if (on_done) {
+3 58 _done();
+3 60 } else
+3 63 res.on_delay = function error(err) {
+3 65 if (err.err.cause && err
+4 40 if (204 == status) {
+4 41 this.removeHeader(\'Content-Type\');
+4 42 this.removeHeader(\'Content-Length\');
+4 43 body = \'\';
+4 46 if (on) {
+4 47 fs.createReadStream(true);
+4 48 return this.on(true);
+4 54 var headers = this.end(fn);
+4 56 if (err.on.on('error', error);
+4 57 .on('finish', stream);
+4 59 .on('finish', cleanup);
+4 60 .on('error', cleanup);
+4 64 options.on.on('error', function(err) {
+4 66 if (err) return fn.on('error', err);
+4 67 throw err;
+4 68 .on('error', this.removeHeadered', error);
+4 70 .on('error', this
+5 2 this.header('Content-Type', this.header('Content-Type');
+5 28 var self = this;
+5 29 fs.readFile(path, function(err, buf){
+5 38 self.send(buf);
+5 39 fn && fn(null, path);
+5 43 http.ServerResponse.prototype.contentType = function(type){
+5 44 return this.header(\'Content-Type\', mime.type(type));
+5 46 http.ServerResponse.prototype.attachment = function(filename){
+5 47 this.header(\'Content-Disposition\', filename
+5 48 ? \'attachment; filename="\' + path.basename(filename) + \'"\' : path.extname(path.resolve(this.header.header.app.location.name) + \'" to \'"\' + filename);
+5 49 : \'\'));
+5 52 http.ServerResponse.ServerResponse.prototype.download = function(method, stream, headers, stream, fn){
+5 53 contentType, headers, headers, headers, data, fn){
+5 54 if (req, this.write, this.req, this.req.nify, this.session) return;
+5 55 if (this.session) return;
+5 56 if (typeof headers === 'function\') return;
+5 58 headers = headers, headers, this.contentType) return fn();
+5 60 if (headers.
+6 25 this.end();
+6 46 if (no.headersSent) return;
+6 48 if (route.on(\'end\', stream.on) stream.on(\'end\', stream.on(\'end\'));
+6 49 );
+6 53 options.onFinished = options || function(err) {
+6 59 if (fn) return;
+6 62 if (fn.onFinished) return;
+6 65 .onFinished = function stream.on(\'error\', cleanup);
+6 67 .onFinished = function stream
+6 68 .on
+7 42 if (function(exists) {
+7 43 return self.end(stream);
+7 46 fn(null, stream);
+7 52 var req.on('finish', function(err);
+7 54 if (done) {
+7 58 req.on('error', function error(err) {
+7 64 if (fn.on.remove();
+7 67 if (self.onFinish(done) return;
+7 68 clearTimeout(fn) return;
+7 69 })();
+7 72 function stream.on('error', onFinish, stream.on('error', onFinish);
+8 44 if (err.code === \'ECONNREFUSEDENT\') return;
+8 47 var headers = self.req.headers;
+8 50 fn(err);
+8 55 if (!headers.set-Cookie(self.headers, headers);
+8 56 return error(err);
+8 57 return fs.readFile(path, headers);
+8 58 .writeFile(path, function(path, fn);
+8 59 return fn);
+8 60 }'
+
+9 51 if (typeof stream!== \'function\') {
+9 52 fn = stream;
+9 55 var headers = {};
+9 56 if (path.on('error', function(err) {
+9 58 fn.on('end', function(err);
+9 61 next(err);
+9 62 } else;

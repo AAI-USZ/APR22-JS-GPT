@@ -1,0 +1,177 @@
+Min editdistance: 11.00
+Closest candidate: 2 1 res.send('Oh noes!");
+0 1 res.send('Oh noes!', 404);
+0 2 });
+0 3 app.get('/error', function(req, res){
+0 4 res.send(\'Oh shit!\', 500);
+0 6 app.get('/buffer', function(req, res){
+0 7 res.send(new Buffer(res.headers)));
+0 9 app.get('/noargs', function(req, res, next){
+0 10 res.send();
+0 12 app.get('/undefined', function(req, res, next){
+0 13 res.send(undefined);
+0 15 app.get('/bool', function(req, res, next){
+0 16 res.send(false);
+0 18 app.get('/bool/', function(req, res, next){
+0 19 res.send(true);
+0 21 app.get('/bool/error', function(req, res, next){
+0 24 app.get('/hello/:no-world', function(req, res, next){
+0 25 res.send(200).format(res.status, 0);
+0 27 app.get('/foo/:bar:bar:bar', function(req, res, function(req, res){
+0 28 res){
+0 29 res.send(200).format(0);
+0 32 app.get('/foo: 'foo:bar:bar:ntest/:ntest:time', function(){ res.formatters= null;
+0 35 app.get('/test.format(function(function(req, res){
+0 36 return require(res){
+0 37 return require(res.format, res){
+0 38 res.format, function(res){
+0 39 res.should.should.format,
+0 40 res.should.format,
+0 41 .should.format,
+0 42 .format;
+0 43 res.should.format;
+0 44 res;
+0 45 res.format.should.format.should.should.be.an.an.toString;
+0 47 res.format.format.should.should.
+1 7 res.send(new Buffer(\'wahoo!\'));
+1 18 app.get('/bool/test', function(req, res, next){
+1 21 app.get('/public/*', function(req, res, next){
+1 22 res.send(200);
+1 24 app.get('/relative/:file', function(req, res, next){
+1 27 app.get('/file/:file:file:spec/test/test.js/test.js.js.js.js.js', function(req, function(req, res, res, next){
+1 30 assert.end();
+1 32 assert.response(app.get('/test.get('/test.jss', function(){
+1 33 assert.js: function(){
+1 34 assert.should.equal(app.toString()),
+1 35 assert.equal(app.toString(),
+1 36 process.toString())
+1 37 .equal(app.toString())
+1 38 .toArray.length);
+1 39 assert.equal(app.errorHandler)
+1 40 .should.not.equal(app.enqueue.js)
+1 41 .length);
+1 42 })
+1 44 describe("assert.response(app, res){
+1 45 assert.should.equal(app.get("express:static:express.js")
+1 46 .file formatters
+2 1 res.send('Oh noes!");
+2 3 app.get('/status/text/comments', function(req, res){
+2 15 app.get('/status/text/*', function(req, res){
+2 16 res.sendfile(__dirname + \'/fixtures/test.html\');
+2 18 app.get('/error/view', function(req, res){
+2 21 app.get(\'/absolute/path', function(req, res){
+2 22 res.sendfile(__dirname + \'/fixtures/path/test.html\');
+2 24 assert.response(app,
+2 27 { url: \'/javascripts/test.js/test.js\', method: \'test.js\', url: \'test.js test.js\') },
+2 28 assert.response(app)
+2 29 assert.response(app, url: \'test.js
+2 31 assert.response(app, url: url: url, url, url.test.test.js)
+2 32 .middleware, url.middleware: url.middleware
+2 33 assert.middleware: url.middleware
+2 34 },
+2 35 assert.response: url
+2 36 assert.middleware: url
+2 37 }),
+2 38 \'test.middleware.middleware.middleware.middleware.middleware.middleware.middleware\',
+2 39 \'test.middleware.files = middleware.stubscribe = middleware.
+3 4 res.send(\'Oh shit!\', { \'Content-Type': \'text/plain\' }, 500);
+3 12 app.get('/undefined', function(req, res){
+3 16 { url: '/bool\' },
+3 17 { body: 'true"
+3 18 , headers: { 'Content-Type': \'application/json' }});
+3 20 { url: '/bool-async\' },
+3 21 { body: 'undefined'
+3 24 { url: '/true\' },
+3 25 { body: 'true'
+3 26 , headers: { 'content-type': \'text/plain' }});
+3 30 { url: null, url: '/bool-async': function(){
+3 31 assert.send(true, headers: { 'utf-8'});
+3 32 assert.send(undefined, headers: { 'utf-8'});
+3 33 assert.send(undefined: 'unefined')});
+3 34 assert.send(app.send(app, 'unefined')});
+3 35 assert.send('unefined'));
+3 39 'test #send()': function(){
+3 40 it.sendfile(function(app){
+3 41 var app){
+3 42 var app = express.get('/json');
+3 43 var app.get('/json');
+3 44 app.get(\'/json');
+3 45 app.get(\'/
+4 1 res.send('Oh noes!', 404);'
+
+5 1 res.send('Oh noes!\', 404);
+5 4 res.send('Oh shit!\', 500);
+5 15 app.get('/bool', function(req, res){
+5 18 app.get('/bool/', function(req, res){
+5 21 app.get('/bool/empty', function(req, res){
+5 24 app.get('/bool/excluded', function(req, res){
+5 27 app.get('/bool/excluded/included/some-as their test', function(req, res){
+5 28 return res.send(true);
+5 30 app.get('/false/true.get('/test').sends.sends.sends.length.length.length.toFixed(1);
+5 32 app.get('/test.send.send.send(200);
+5 34 app.puts('/test.get('/bool/exclude).send.send.length.toFixed(1);
+5 35 app.send.send.units('units.send);
+5 37 it('send.put.put.send.put.units.bind(app, function(){ throw new unices'); });
+5 38 });'
+
+6 4 res.send('Oh shit!', 500);
+6 15 app.get('/bool", function(req, res, next){
+6 20 { body: 'true"
+
+7 4 res.send('Oh shit!', { 'Content-Type': json }, function(){
+7 5 assert.ok(!error);
+7 9 { url: '/error\' },
+7 10 { body: "Oh shit!', status: 500 });
+7 12 { url: '/string' },
+7 13 { body: "string"', status: 500 });
+7 15 { url: '/error/test' },
+7 18 { url: '/text\' },
+7 19 { body: "wahoo"
+7 20 , status: 200 });
+7 22 { url: '/user/12' },
+7 23 { body: "updated user 12"
+7 26 { url: '/user/ab' },
+7 27 { body: \'updated user: \'abc\', status: 1,'
+
+8 4 res.send('Oh shit!', { \'Content-Type': \'text/plain\' }, 500);
+8 18 app.get('/true/:object', function(req, res){
+8 21 app.get('/status', function(req, res){
+8 22 res.send(404);
+8 24 app.get('/status/text/:object')[0].should.equal('en-String');
+8 25 res.send('wahoo');
+8 28 { url: '/bool/assert.should.response(app,
+8 29 { url: '/bool.response(app, url: app, url: url, url: url, true/type: 'http://: true/a/bobservable/bobservable/function (http://') }, true/3.length) { 2.0.0.0.0.0.1.1.1.1}), response: function (res, headers: function (res) {
+8 30 assert.should.equal(false, headers: function (res.should.should.equal(res.equal(undefined, headers) {
+8 31 assert.equal(undefined, headers.length, 3);
+8 32 assert.equal(undefined, headers: 2);
+8 33 assert.equal(undefined, headers.length, 2);
+8 34 res.should.equal(undefined, 3);
+8 35 next();
+8 37 .toString();
+8 39 .ex
+9 5 { url: '/status/text/comments">/comments</p>
+9 6 , { body: 'Oh noes!', status: 404 });
+9 8 { url: '/error' },
+9 9 { body: \'Oh shit!', status: 500 });
+9 11 { url: '/buffer' },
+9 12 { body: \'wahoo!', headers: { 'Content-Type': 8 * 0x25; }});
+9 14 { url: '/noopenner' },
+9 15 { body: \'Cannot GET /json/app.json\', status: 404 });
+9 18 { body: \'Not Found, status: 404 });
+9 20 { url: '/large.json' },
+9 21 { headers: { 'Accept-Ranges': \'bytes\' }});
+9 23 { url: '/bytes: 3, headers: 3, status: 3});
+9 24 assert.response(app.response(app,
+9 25 assert.request,
+9 26 { url: '*;
+9 27 { url: '/large.json: not: 2', headers: 2, url: 3, headers: \'bytes'});
+9 28 assert.response: 3, url: 'bazcasc' });
+9 29 assert.response: app.response: app,
+9 30 assert.response: app,
+9 31 { url: app,
+9 32 { url: app: app: app: { url: url: url: url, url, url: url: url}
+9 33 }
+9 36 function convertToObjectNameToObjectNameToPathServer(){
+9 37 return function(){
+9 38 return function(value, path){
+9 39 return when

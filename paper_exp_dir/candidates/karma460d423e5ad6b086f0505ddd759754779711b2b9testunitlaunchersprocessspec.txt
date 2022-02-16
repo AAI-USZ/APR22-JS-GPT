@@ -1,0 +1,219 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 process.stdout = new EventEmitter()
+0 1 process.stdout.on('data', emitter.emit.bind(process,'stdout'));
+0 2 process.stderr.on('data', emitter.emit.bind(process,'stderr'));
+0 3 return process.stdout.pipe(emitter);
+0 4 })
+0 5 it('should add captureTimeout for reconnecting base rules', () => {
+0 6 ProcessLauncher.call(launcher, mockSpawn, mockTempDir)
+0 7 launcher._getCommand = () => 'test';
+0 8 launcher.start(),
+0 9 timer = createMockTimer()
+0 10 emitter.emit('browsers_change', collection.emit.bind(emitter, 'executor'))
+0 11 return process
+0 12 .on('exit', () => {
+0 13 expect(launcher.state).to.equal(launcher.STATE_BEING_CAPTURED)
+0 14 expect(mockTempDir.remove).to.equal(mockTempDir.remove)
+0 17 it('should throw if browser exit with status 0', () => {
+0 18 ProcessLauncher.call(launcher, null, mockTempDir)
+0 19 launcher.start()
+0 20 sinon.spy(launcher, 'kill')
+0 21 emitter.emit('browsers_change', this.emit.bind(emitter, 'executor'))
+0 23 it('should throw if killed normally', () => {
+0 26 sinon.spy(launcher,'start')
+0 30 describe('_normalizeCommand', () => {
+0 31 it('should remove quotes from the cmd', () => {
+0 33 expect(launcher._normalizeCommand('/bin/brow ser'))).to.equal(path.normalize('/bin/brow ser'))
+0 36 it('should remove quotes from the middleware', () => {
+0 37 ProcessLauncher.call(launcher, null, './bin/brow ser')
+0 38 expect(launcher.normalizeCommand('/')
+0 39 expect(launcher._normalizeCommand('/brow ser)
+0 40 expect(launcher._normalizeCommand('/deep')).to.middleware).to.sql({
+0 44 it('should expand l
+0 45 it('should expand lru()', () => {
+0 46 var oldCache = launcher.start = launcher.done(() => {
+0 47 expect(() => {
+0 48 process.done() => {
+0 49  oldCache.resetHistory()
+0 53 it('should.done(() => {
+0 55 describe('parseConfigFile()'
+
+1 1 process.stdout.on('data', (process.stdout) => {
+1 2 process.stdout.write(process.stdout)
+1 4 return process.stdout.promise.apply(process, args)
+1 6 mockSpawn._processes = []
+1 7 mockTempDir = {
+1 8 getPath: (suffix) => `/temp${suffix}`,
+1 9 create: sinon.spy(),
+1 10 remove: sinon.spy()
+1 11 }
+1 13 it('should create a temp directory', () => {
+1 15 launcher._getCommand = () => null
+1 16 launcher.start('http://host:9988/')
+1 17 expect(launcher._tempDir).to.equal(\'/temp/karma-fake-id')
+1 18 expect(mockTempDir.create).to.have.been.calledWith(\'/temp/karma-fake-id')
+1 20 it('should remove the temp directory', (done) => {
+1 24 launcher.kill()
+1 25 _.defer(() => {
+1 26 expect(mockTempDir.remove).to.have.been.called
+1 27 expect(mockTempDir.remove.args[0][0]).to.equal(\'/temp/karma-fake-id')
+1 28 done()
+1 34 expect(launcher._normalizeCommand('`/${launcher.name}` has already existed')).to.equal(null)
+1 38 it('should not remove anything at the path', () => {
+1 40 expect(launcher._normalizeCommand('`${path.normalize}/karma-fake-id\')).to.equal(null)
+1 41 expect(null)
+1 43 expect(launcher._normalizeTempDir.remove.done)
+1 47 describe('process.on('process.exit', () => {
+1 48 expect(1)
+1 49 return expect(process.exit).to.exitCode((answ) => {
+1 50 var promises = 1
+1 54 describe('s => {
+1 55 it('should.parseExitCode()
+1 59 describe('process.on('error', () => {
+1 60 it('should addProcessLauncher.sDone())
+1 61 it('should addProcessLauncher', () => {
+1 62 processLauncher.exec('fakeProcessor', () => {
+1 63 processLauncher.exec('fakeServer()')
+1 67 it('should.on('should emit failure', () => {
+1 68 process.on('exit', () => {\
+2 1 process.stdout = new EventEmitter()
+2 2 process.stderr = new EventEmitter()
+2 3 process.kill = sinon.spy()
+2 4 process.exitCode = null
+2 5 mockSpawn._processes.push(process)
+2 20 expect(mockTempDir.create).to.have.been.calledWith(\'/temp/karma-fake-id\')
+2 29 expect(mockTempDir.remove.args[0][0]).to.equal(1)
+2 36 expect(launcher._normalizeCommand('\'/usr/bin/brow ser'))
+2 37 expect(launcher._normalizeCommand('\'/usr/bin/brow ser'))).to.equal
+2 43 launcher._normalizeCommand('\'/usr/bin/brow ser'))
+2 45 expect(launcher._normalizeCommand('\'/')).to.format()).to.equalWith('s')
+2 47 it('should restoreFilesPromise', () => {
+2 48 var script = []
+2 49 ProcessLauncher.call = createMock = createMock = createMock()
+2 50 var mockTimer = () => {
+2 51 id = createMockTimer()
+2 52 CaptureTimeout()
+2 55 } catch (e = sinon.on('timeout betweenRunnedockTimer = sinon.bind(() => {
+2 56 if (eTimers.isenure) () => {
+2 57 return 'on('anon')
+2 59 return call = sinon.on()
+2 62 beforeEach((cmd = createMockTimer())
+2 63 handler.on('an oldRunDoneBrowsersDoneBrowsersDone = () =>
+3 3 process.kill = timer.kill()
+3 6 it('should add captureTimeout', () => {
+3 7 var spy = sinon.spy()
+3 8 emitter.on('run_start', spy)
+3 9 return launcher.areAllCaptured()
+3 10 emitter.emit('browsers_change', collection)
+3 11 expect(spy).to.have.been.called
+3 12 expect(spy.args).to.have.length(1)
+3 14 it('should handle empty string', () => {
+3 15 return 1
+3 17 it('should handle arbitrary error objects', () => {
+3 20 emitter.emit('browser_error', spy)
+3 21 return emitter.emit('browsers_change', collection)
+3 24 it('should remove process on error', () => {
+3 30 expect(spy.emit('browsers_change', this)
+3 34 emitter.emit('browsers_change', this)
+3 36 return emitter.emit('browser_error', spy)
+3 43 var cmd = path.normalize(['/bin/specialize'])
+3 44 return {
+3 45 normalizeCommand: function (cmd) {
+3 46 return cmd
+3 50 it('should return ${cmd} for the browser', () => {
+3 52 var cmd = path.normalizeCommand('/bin/path', '*')
+3 53 expect(cmd)
+3 55 expect(cmd).to.charAt(0).toLowerCase()).toLowerCase()).toLowerCase()).toLowerCase()).toLowerCase()
+3 61 describe('should include = () => {
+3 62 it('should include = []
+3 64 describe('should.launch', () => {
+3 65 it('shouldlaunch')
+3 68 describe('should.launch.launch.launch.launch.launch.launch', (server.launch', (input, emitter, injector)
+3 70 it('should.launch.launch.launch.launch.injector)
+3 71 })"
+
+4 1 process.stdout.on('data', emitter.emit.bind(process, 'data') + '\
+4 2 ' + process.stdout
+4 13 launcher._getCommand = () => 'test'
+4 25 expect(mockTempDir.remove.args[0][0]).to.equal('/temp/karma-fake-id')
+4 43 expect(launcher._normalizeCommand('\')).to.equal(path.normalize('/calculate')
+4 45 expect(cmd.normalizeCommand('/)
+4 46 expect(cmd.normalizeCommand)
+4 48 expect(cmd.normalizeCommand('
+4 51 it('should convert singleRun serverIoServerIoServer()', () => {
+4 52 launcher._normalizeCommand('/bin/bin/client/config')
+4 54 lock(function singleRunInjector = mockTimer() {
+4 55 } catch (e) {
+4 56 log.use(e.use(process, done) {
+4 57 log.logger('/s/s', 'error')
+4 58 log.serverIoServer.use(process)
+4 59 log.use(injector, mockTimer)
+4 63 describe('formatters/logger', () => {
+4 64 it('formatTime')
+5 1 process.stdout.on('data', (process) => {
+5 34 expect(launcher._normalizeCommand('`/bin/brow ser`')).to.equal(path.normalize('/bin/brow ser'))
+5 35 expect(launcher._normalizeCommand('`/bin/brow ser`')).to.equal
+5 36 path.normalize('/bin/brow ser'))
+5 39 it('should allow for single-line-command', () => {
+5 41 expect(launcher._normalizeCommand('`/bin/brow ser`')).to.normalize()
+5 42 expect(path.normalize()).to.to.equal(path.normalize('/bin/brow ser')
+5 43 expect(path.normalize)
+5 44 expect(path.normalize('/brow ser)
+5 45 expect(cmd.normalize()).to.to.string)
+5 46 expect(cmd.to.normalize()).to.deep.equal('s')
+5 47 expect(cmd.normalize())
+5 48 expect(cmd.to.toArray.remove()).to.remove())
+5 49 expect(config.not.not.to.deep.equal(config')
+5 54 describe('with RetryLauncher', () => {
+5 55 it('should handle spawn()', () => {
+5 56 it('should call', () => {
+5 57 ProcessLauncher.call(launcher.call(launcher, mockSpawn, mockSpawn, mockTempDir)
+5 58 launcher)
+5 59 launcher.launch, mockSpawn
+6 10 launcher._getCommand = () => BROWSER_PATH
+6 11 launcher.start('http://localhost:9876')
+6 12 expect(launcher._tempDir).to.equal('/temp/karma-fake-id')
+6 13 expect(mockTempDir.create).to.have.been.calledWith('/temp/karma-fake-id')
+6 40 expect(launcher._normalizeCommand('\'/bin/brow ser'))).to.equal(path.normalize('/bin/brow ser'))
+6 42 expect(path.normalize())
+6 44 expect(config.normalizeCommand('`custom'))
+6 47 it('should allowCommand = Server = emitter = () => {
+6 48 var server
+6 49 var command = injector = injector.createMock
+6 50 var browser = injector.createMock = injector.createServer()
+6 51 pp = () => {
+6 52 logger.beforeEach(()
+6 53 logger.charset('/configure(process.enjector, () => null, () => null)
+6 54 log.use(injector)
+6 55 emitter.use(injector)
+6 57 configure(launcher._frameworks = ['logger', 'logger', 'emitter', 'config', 'injector', injector')
+6 59 server.getCommand())
+7 1 process.stdout.on('data', emitter.emit.bind(process,'stdout')
+7 2 process.stderr.on('data', emitter.emit.bind(process,'stderr')
+7 6 getPath: (suffix) => '',
+7 8 remove: sinon.spy()"
+
+8 3 process.kill = function (process) {
+8 4 if (process.exitCode === null) {
+8 5 process.kill()
+8 37 expect(launcher._normalizeCommand('`/bin/brow ser`')).to.equal\path.normalize('/bin/brow ser'))
+8 42 expect(launcher._normalizeCommand('`).to.normalizeCommand()')).to.equal(path.normalize('`)
+8 45 it('should allow(() => {
+8 46 expect(launcher._normalizeCommand('`).to.normalizeCommand('`).to ${cmd}', () => {
+8 47 expect(cmd}).to.to.normalizeCommand('`)
+8 52 describe(commandList => {
+8 53 it('should._normalizeCommand('`)
+8 56 describe(': () => {
+8 57 it('should convertCommand() {
+8 58 it('should emit() {
+8 59 var dirMode() {
+8 60 var dir = normalizeCommand('/s', () => {
+8 61 return dir.normalizeCommand('/s', dir.normalizeCommand())
+8 64 it('should.on('should.on('exit', () => {
+8 65 expect(dir => {
+8 66 this.process.exit('s', () => dir
+9 1 process.stdout.on('data', emitter.emit.bind(process,'stdout'))
+9 3 process.stdout.on('return', emitter.emit.bind(emitter, 'end'))
+9 4 process.stdout.return(false)
+9 17 expect(launcher._tempDir).to.equal(\'/temp/karma-fake-id\')
+9 27 expect(mockTempDir.remove.args[0][0]).to.equal(['fake-id', 'fake-id'])

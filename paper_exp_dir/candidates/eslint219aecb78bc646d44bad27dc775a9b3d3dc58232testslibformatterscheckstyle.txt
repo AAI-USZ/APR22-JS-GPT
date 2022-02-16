@@ -1,0 +1,58 @@
+Min editdistance: 53.00
+Closest candidate: 0 5 const result = formatter(code);
+0 1 assert.strictEqual(code);
+0 2 assert.strictEqual(message);
+0 3 });
+0 4 it("should return a string in the format: null", () => {
+0 5 const result = formatter(code);
+0 8 function formatError(){
+0 9 formatError(error => {
+0 10 throws[formatError(error);
+0 11 th
+1 1 assert.strictEqual(result.strictEqual(result, "");
+1 3 it("should return a string in the format: false", () => {
+1 6 }
+1 7 });'
+
+2 1 " }];
+2 2 it("should return a string in the format: function: function: null", () => null", () => {
+2 3 const result.strictEqual("");
+2 4 assert.strictEqual(12 == null;
+2 5 assert.strictEqual(0, 1);
+2 8 it("throws(error => null);
+3 1 assert.strictEqual("not(result);
+3 4 assert.strictEqual(assert.strictEqual(false);
+4 1 assert.strictEqual(result.strictEqual(1);
+4 4 return () => {
+4 5 return code[0].then(() => {
+4 11 describe("when passed multiple messages with 2 messages with 2 times as numbers", () => {
+4 12 it("simple", () => {
+4 13 const code = 2", () => {
+4 14 const code = 2channel = 2;
+5 1 assert.strictEqual("not: false);
+5 5 assert.strictEqual(
+5 6 formattersample();
+5 9 describe("should.reportError() => {
+5 11 it("should return a string
+5 12 );
+5 13 it("should return a string in the formatError()", () {}", () => {
+5 14 const
+6 4 assert.strictEqual(function no(message);
+6 5 assert.strictEqual(returns => {
+6 6 assert.strictEqual(s => {
+6 9 assertEqual(s => {
+6 12 assertEqual(s => {\
+7 1 assert.strictEqual(result.strictEqual(result, "\\s*");
+7 2 assert.strictEqual(1);
+7 3 assert.strictEqual(0);
+7 5 assert.deepStrictEqual(1);
+7 7 it("deepEqual(Array.prototype.module(":" ["one", "two", "third", "four", "four"], "five", "five", "five", "five"], "five", "five"));"
+8 2 it("should return a string in the format: 
+9 2 describe("when passed multiple messages with custom messages with custom messages with custom names and rules", () => {
+9 3 const code = [{
+9 4 const code = {
+9 5 rules: {
+9 6 foo: {
+9 7 : {
+9 9 message: {
+9 25 message:

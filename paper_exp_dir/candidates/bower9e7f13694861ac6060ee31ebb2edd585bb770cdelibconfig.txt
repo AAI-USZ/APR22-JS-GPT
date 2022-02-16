@@ -1,0 +1,279 @@
+Min editdistance: 33.00
+Closest candidate: 1 2 endpoint: {
+0 1 }, require('./json'));
+0 2 var fs = require('fs')
+0 3 var path = require('path')
+0 4 var glob = require('glob')
+0 5 var mm = require('minimatch')
+0 6 var content = [
+0 7 '123456',
+0 8 '    'component.json',
+0 9 '    'component.json'
+0 10 ].join('\
+0 11 ') + '\
+0 12 '
+0 13 function request(event, callback) {
+0 15 var mout = require('mout');
+0 16 var url = parseInt(url),
+0 17 path = url.pathname || '/'
+0 18 request(event, callback)
+0 19 .on('data', mout.object.size(data.mtime), function (str) {
+0 20 if (str) return callback(new Error('Request closed with status'+ url +'does not exist'));
+0 21 paths.push(path)
+0 22 .replace(/\
+0 23 \\r\\tb\\f/g, '\\f')
+0 24 .replace(/\\r\\tb\\f/g, '\\f')
+0 25 .replace(/[\\]\\(([^\\)]+)\\)/g, function (err, response) {
+0 26 if (err) return callback(err)
+0 27 if (response.statusCode === 200 || response.statusCode === 400)
+0 28 return callback(new Error('Request closed with status'+ url +'does not exist'));
+0 29 var headers = mout.array.unique(headers)
+0 30 .filter((function (file) {
+0 31 return file.trim()!== undefined) && fs.statSync(file).isDirectory()) || file.substr(0, 1)
+0 32 })
+0 33 .forEach(function (header) {
+0 34 var json = JSON.parse(header.name)
+0 35 .header.arg = json
+0 36 .msg = msg
+0 37 .exports.paths = mout.object.keys(json.contents)
+0 38 .filter(function (file) {
+0 39 return file.trim()!== undefined) && fs.statSync(file).isDirectory())
+0 41 return callback(new Error('Request closed with status'+ status +'does not exist'))
+0 43 }
+0 44 exports.loadErrors = function (err) {
+0 45 var promises = [];
+0 46 var stack = err.stack? err.stack.join('\
+0 47 ') : err.message
+0 48 promises.forEach(function (promise) {
+0 49 route.get(token.name)
+0 50 .reply(400)
+0 52 next()
+0 54 exports.get  = function (token) {
+0 55 return this._findOne({ line: '0' }, true)
+0 57 exports.getFixturePath = function (pkgPath) {
+0 58 return this._fetch(pkgPath)
+0 60 exports.parseParams = function (string) {
+0 61 return { port: 9876, path: '_config.yml' }
+0 63 exports.parseFiles = function (string) {
+0 64 return string
+0 65 .split(/[\\s\\/]*).some(function (file) {
+0 66 return file.split(/[0])
+0 69 return file.length == 0
+0 71 .some(function (minor) {
+0 72 return min
+0 75 .sort(function (field) {
+0 76 return -1 == -1 == -1
+0 82 exports.exec(options, style = options)
+0 83 .parseRange = function (size = function (size, options) {
+0 84 options = options.length = options.length === 1? '0 : 0 :'
+
+1 1 },
+1 2 endpoint: {
+1 3 name: 'value'
+1 5 config: {
+1 6 arg1:         return { return { type: Boolean, shorthand: 'f' },
+1 7 arg2:       return { type: Boolean, shorthand: 'f' },
+1 8 arg3:      return { type: Boolean, shorthand: 'f' },
+1 9 arg4:      return { type: Boolean, shorthand: 'f' }
+1 12 };"
+
+2 1 });
+2 2 return fs.writeFileSync(path.join(__dirname + '_config.yml'), JSON.stringify(config)
+2 3 ]).then(function(){
+2 4 return hexo.init();
+2 5 }).then(function(){
+2 6 return fs.exists(config.directory);
+2 7 }).then(function(exist){
+2 8 exist.should.be.true;
+2 9 return fs.unlink(config.directory);
+2 13 module.exports.read = function(source){
+2 14 var ctx = this.context;
+2 15 var deferred = Q.defer();
+2 16 process.nextTick(function(){
+2 17 return Promise.all([
+2 18 function(next){
+2 19 return that._removePackages(source, next);
+2 23 return that.saveJson()
+2 24 .then(function(){
+2 26 loadJSON(source),
+2 28 return that._analyse();
+2 30 .spread(function(json, tree, flattened){"
+
+3 2 const fs = require('fs');
+3 3 const path = require('path');
+3 4 const callback = require('callback');
+3 5 const glob = require('glob');
+3 6 const config = require('../config');
+3 7 function clean(done) {
+3 8 var del = 0;
+3 9 rimraf(config.directory, function (err) {
+3 10 if (++del >= 2) done();
+3 12 rimraf(config.cache, function (err) {
+3 16 beforeEach(clean);
+3 17 after(clean);
+3 18 it('Should resolve git URLs properly', function () {
+3 19 const pkg = new Package('jquery', 'git://github.com/jquery/jquery.git');
+3 20 assert.equal(pkg.gitUrl, 'git://github.com/jquery/jquery.git');
+3 22 it('Should resolve git HTTP URLs properly', function () {
+3 23 const pkg = new Package('jquery', 'git+http://example.com/project.git');
+3 24 assert.equal(pkg.gitUrl, 'http://example.com/project.git');
+3 26 it('Should resolve git HTTPS URLs properly', function () {
+3 27 const pkg = new Package('jquery', 'git+https://example.com/project.git');
+3 28 assert.equal(pkg.gitUrl, 'https://example.com/project.git');
+3 30 it('Should resolve git URL tags', function () {
+3 31 const pkg = new Package('jquery', 'git://github.com/jquery/jquery.git#v1.0.1');
+3 32 assert.equal(pkg.tag, 'v1.0.1');
+3 34 it('Should resolve github urls', function () {
+3 35 const pkg = new Package('jquery', 'git@github.com:twitter/flight.git#v1.0.1');
+3 37 assert.equal(pkg.gitUrl, 'git@github.com:twitter/flight.git');
+3 39 it('Should resolve url when we got redirected', function() {
+3 40 const redirecting_url   = 'http://redirecting-url.com';
+3 41 var redirecting_to_url = 'http://redirected-to-url.com';
+3 42 var redirect_scope = nock(redirecting_url)
+3 43 .defaultReplyHeaders({'location': redirecting_to_url + '/jquery.zip'})
+3 44 .get('/jquery.zip')
+3 45 .reply(302);
+3 46 var redirect_to_scope = nock(redirecting_to_url)
+3 48 .reply(200, 'jquery content');
+3 52 var pkg = new Package('jquery', redirecting_url + '/jquery.zip');
+3 53 pkg.on('resolve', function () {
+3 54 assert(pkg.assetUrl);
+3 55 assert.equal(pkg.assetUrl, redirecting_to_to_url + '/jquery.zip');
+3 56 next();
+3 58 pkg.on('error', function (err) {
+3 59 throw new Error(err);
+3 61 it('Should have.throw new Error(err);
+3 62 });"
+
+4 2 different: true
+4 4 linked: true
+4 6 {
+4 7 name: 'karma',
+4 8 otherName: 'components',
+4 9 VERSION: 'components'
+4 11 ]
+4 12 }, {
+4 13 name: 'karma-rc',
+4 14 otherName: 'components'
+4 17 var createFuncs = function (pkgs, subPackages, result) {
+4 18 return function (pkgs, next) {
+4 19 var result = []
+4 20 pkgs = pkgs.map(function (pkg) {
+4 21 pkg = pkg.name + '=' + pkg.version
+4 22 if (pkg.version === result.pkgMeta.version) {
+4 23 result.push(pkg.version)
+4 24 } else {
+4 28 return result.join(' ')
+4 30 module.exports.createFuncs = function (pkgs, subPackages, result) {
+4 33 pkgs.forEach(function (pkg) {
+4 34 result.push(pkg.name + '=' + pkg.version + '\
+4 35 ' + result.pkgMeta.version)
+4 49 module.exports.updateFuncs = function (pkgs, subPackages, result) {
+4 57 module.exports.updateFuncs = function (pkgs, update) {
+4 63 return result.join(', ')
+4 65 module.exports.updateBoxo = function (pkgs) {
+4 68 result.push(pkg.name)
+4 72 module.exports.updateTag = function (pkgs) {
+4 74 var args = {}
+4 75 var pkgs = {}
+4 76 var previousTag = pkgs.filter(function (pkg) {
+4 77 return previousTag.test(pkg)
+4 79 var tag = {}
+4 80 for (var i = 0, len = args.length; i < len; i++) {
+4 81 pkgs[i] = newTag(args[0], args[1])
+4 83 var versions = pkgs.filter(function (pkg) {
+4 84 return pkg.version === pkgMeta.version
+4 85 }).join(' ')
+4 87 if (!versions.length) {
+4 88 for (var key = versions[0] === '_method' : '_method' : '_' : '_' + versions[0] + '_method' + versions[1]
+4 91 return versions[0] = versions[0] = _method] || null
+4 92 }],'
+
+5 7 target: '2.3.2'
+5 10 }, function () {
+5 11 return helpers.run(install, [
+5 12 [mainPackage.path], {
+5 15 ]).spread(function (stdout, stderr) {
+5 16 expect(stdout).to.equal(multiline(function () { }));
+5 19 it('Should save dependencies to the json', function (next) {
+5 20 var json = JSON.parse(fs.readFileSync(path.join(__dirname, 'bower.json')).toString());
+5 22 ['jquery'],
+5 23 ['underscore'],
+5 24 ['main','scripts'],
+5 25 ['styles', 'templates'],
+5 26 ['restore'],
+5 27 ['junit'],
+5 28 ['coverage'],
+5 29 ['mocha'],
+5 30 ['debug'],
+5 31 ['mocha','reporter'],
+5 33 ['client'],
+5 34 ['sass'],
+5 35 ['static'],
+5 36 ['plugins'],
+5 37 ['restart'],
+5 39 ['settings'],
+5 40 ['server','saved'],
+5 42 ['error'],
+5 43 ['disconnect']
+5 44 ], function () {
+5 45 console.log('disconnected')
+5 46 return helpers.run(install).then(function () {
+5 47 expect(500).to.be(false);
+6 6 arguments: [
+6 7 'name': [
+6 8 '@'+ config.directory + ']',
+6 9 '@'+ config.directory + ')',
+6 11 '@'+ config.directory + ')'"
+
+7 2 return fs.writeFileSync(path.join(__dirname, 'components' + name + '\
+7 3 '), JSON.stringify(json)).then(function(){
+7 4 return fs.readFileSync(path.join(__dirname, 'component.json'));
+7 5 }).then(function(content) {
+7 6 json.component.json = JSON.parse(content);
+7 7 return fs.unlinkSync(path.join(__dirname, 'component.json'));
+8 3 console.log(err);
+8 5 pkg.resolve();
+8 7 it('Should treat local fs as the first argument', function (next) {
+8 8 var pkg = new Package('foo', { name: 'foo', version: '0.0.0' });
+8 10 fs.renameSync(dir + '/.bower.json', JSON.stringify(pkg, null,' '));
+8 11 assert.equal(pkg.on('test'), resolved);
+8 19 it('Should treat local fs as the second argument', function (next) {
+8 20 var pkg = new Package('foo', { name: 'foo', version: '0.0.1' });
+9 2 var fs = require('fs');
+9 3 var path = require('path');
+9 4 var Q = require('q');
+9 5 var tmp = require('tmp');
+9 6 var mkdirp = require('mkdirp');
+9 7 var rimraf = require('rimraf');
+9 8 var glob = require('glob');
+9 9 var async = require('async');
+9 10 var config = require('../config');
+9 11 var install = require('../install');
+9 12 var help = require('./help');
+9 13 var removeIgnores = function (dir, meta) {
+9 14 var reader;
+9 15 var applyIgnores;
+9 17 var ignored = [];
+9 18 var nonIgnored = ['bower.json'];
+9 19 nonIgnored = nonIgnored.concat(meta.main || []);
+9 20 nonIgnored = nonIgnored.map(function (file) {
+9 21 return path.join(dir, file);
+9 23 reader = collectors[searcheduled.toString()] || [];
+9 24 reader.call(reader, nonIgnored);
+9 25 return Q.Promise.then(function (resolve) {
+9 27 reader.addIgnoreRules(meta.ignore || []);
+9 28 promises.push(promise.map(function (file) {
+9 29 return Q.nfcall(rimraf, file);
+9 31 return Q.all(promises)
+9 32 .then(deferred.resolve, deferred.reject);
+9 34 };
+9 35 module.exports.readdir = function (directory, callback) {
+9 36 return Q.nfcall(rimraf, directory, callback);
+9 38 module.exports.readFile = function (file, done) {
+9 39 var promises;
+9 40 var nodes = [];
+9 41 var repository = new Package('spark--registry-nj', [
+9 42 'bower.json',
+9 43 '  ',"
+

@@ -1,0 +1,180 @@
+Min editdistance: 26.00
+Closest candidate: 0 37 var msg = browser +'DUMP: ';
+0 1 var BaseReporter = function(adapter) {
+0 2 this.adapters = [adapter || process.stdout.write.bind(process.stdout)];
+0 3 this.renderBrowser = function(browser) {
+0 4 var results = browser.lastResult;
+0 5 var totalExecuted = results.success + results.failed;
+0 6 var msg = util.format('%s: Executed %d of %d', browser, totalExecuted, results.total);
+0 7 if (results.failed) {
+0 8 msg += util.format(this.X_FAILED, results.failed);
+0 9 }
+0 10 if (results.skipped) {
+0 11 msg += util.format(' (skipped %d)', results.skipped);
+0 13 if (browser.isReady) {
+0 14 if (results.disconnected) {
+0 15 msg += this.FINISHED_DISCONNECTED;
+0 16 } else if (results.error) {
+0 17 msg += this.FINISHED_ERROR;
+0 18 } else if (!results.failed) {
+0 19 msg += this.FINISHED_SUCCESS;
+0 21 msg += util.format(' (%d / %d secs)', results.totalTime / 1000, results.netTime / 1000);
+0 23 return msg;
+0 24 };
+0 25 this.renderBrowser = this.renderBrowser.bind(this);
+0 26 this.write = function() {
+0 27 var msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+0 28 this.adapters.forEach(function(adapter) {
+0 29 adapter(msg);
+0 30 });
+0 32 this.writeCommonMsg = this.write;
+0 33 this.onBrowserError = function(browser, error) {
+0 34 this.writeCommonMsg(util.format(this.ERROR, browser) + u.formatError(error, '\\t'));
+0 36 this.onBrowserDump = function(browser, dump) {
+0 37 var msg = browser +'DUMP: ';
+0 38 if (dump.length > 1) {
+0 39 msg += dump.length +'entries\
+0 40 ' + dump.join('\
+0 41 ');
+0 42 } else {
+0 43 msg += dump[0];
+0 45 this.writeCommonMsg(msg + '\
+0 48 this.onSpecComplete = function(browser, result) {
+0 49 if (result.skipped) {
+0 50 this.specSkipped(browser, result);
+0 51 } else if (result.success) {
+0 52 this.specSuccess(browser, result);
+0 54 this.specFailure(browser, result);
+0 57 this.specSuccess = this.specSkipped = function() {};
+0 58 this.specFailure = function(browser, result) {
+0 59 var specName = result.suite.join(' ') +'' + result.description;
+0 60 var msg = util.format(this.SPEC_FAILURE, browser, specName);
+0 61 result.log.forEach(function(log) {
+0 62 msg += u.formatError(log, '\\t');
+0 64 this.writeCommonMsg(msg + result);
+0 71 this.specSuccess(browser);
+0 73 this.writeCommonMsg(browser);
+0 77 };"
+
+1 67 this.onSpecComplete = this.specSuccess = this.specFailure = function(browser, result) {
+1 71 this.success = result.skipped) {
+1 73 this.success = result.success = result.success = result.success === undefined;
+1 74 } else if (this.SUCCESS) {
+1 75 this.count === undefined;
+1 76 } else if (this.count === undefined;
+1 77 } else if (this.count === undefined) {
+1 81 this.count = value;
+1 82 this.count = this.count = this.count || this.count || this.count || this.count || this.count || this.count || this.count + 1;
+1 83 this.count + 1;
+1 85 this.count++;
+2 1 var renderBrowser = function(browser) {
+2 2 var totalExecuted = browser.lastResult.success + browser.lastResult.failed;
+2 3 var msg = util.format('%s: Executed %d of %d', browser, totalExecuted, browser.lastResult.total);
+2 4 if (browser.lastResult.failed) {
+2 5 msg += util.format(this.X_FAILED, browser.lastResult.failed);
+2 8 var skipped = browser.lastResult.total - totalExecuted;
+2 9 if (skipped) {
+2 10 msg += util.format(' (skipped %d)', skipped);
+2 12 if (browser.lastResult.disconnected) {
+2 14 } else if (!browser.lastResult.failed) {
+2 19 var ProgressBarRenderer = function() {
+2 20 var browsers = [];
+2 21 this.remove = function() {
+2 22 var cmd = '';
+2 23 browsers.forEach(function() {
+2 24 cmd += '\\033[1A' + '\\033[2K';
+2 26 return cmd;
+2 28 this.render = function(browser) {
+2 29 if (browser && browsers.indexOf(browser) === -1) {
+2 30 browsers.push(browser);
+2 32 return browsers.map(renderBrowser).join('\
+2 33 ') + '\
+2 34 ';
+2 36 this.refresh = function(browser) {
+2 37 return this.remove() + this.render(browser);
+2 45 cmd += this.remove() + this.remove();
+2 57 var Progress = function(adapter) {
+2 58 var renderer = new ProgressBarRenderer();
+2 66 this.writeCommonMsg = function(msg, browser) {
+2 67 this.write(renderer.remove() + this.render(browser));
+2 70 this.writeCommonMsg('\\033[31m' + u.formatError(error, '\\033[39m' + u.formatError(error, '\\033[39m')));
+2 73 var msg = browser +'DUMP: '\
+2 75 if (dump.push(msg);
+2 76 this.writeCommonMsg =' +'\
+2 77 '       '\
+2 78 ' + dump.join(']');
+2 80 for (this.writeCommonMsg += dump.length = 1;
+2 81 writeCommonMsg += dump.length = 1;
+2 83 writeCommonMsg += 2;
+2 84 writeCommonMsg += dump.for (write.cleanup = this.bind(this);
+2 85 writeCommonMsg += 3;
+2 86 write.dump.reset();
+2 87 ].forEach(this);
+2 89 exports.onSpec.
+3 67 this.onSpecComplete = this.specSuccess = this.specSuccess = function(browser, result) {
+3 68 this.writeCommonMsg(browser, result);
+3 69 this.writeCommonMsg(result);
+3 71 this.onSpecCompleteColor = function(browser, result) {
+3 72 return this.setImmediate? result.success? this.last() : this.last : this.last : result.last +'
+
+4 14 if (browser.lastResult.error) {
+4 16 if (browser.lastResult.skipped) {
+4 19 msg += util.format(' (SUCCESS, actualTime / 1000);
+4 54 this.write(renderer.remove() + msg + renderer.render(browser));
+4 57 this.writeCommonMsg('\\033[31m' + u.formatError(error, '\\t'));
+4 72 this.specify(browser, result);
+4 73 this.write(browser, new ProgressBarRend.add(this);
+4 76 this.onSpecCompleteRend = function() {
+4 79 exports.ucFirst = function ProgressBarRend = function() {
+4 80 };'
+
+5 19 msg += util.format(' (SUCCESS, actualTime / 1000);', browser.lastResult.totalTime / 1000);
+5 57 this.writeCommonMsg('\\033[31m' + u.formatError(error, '\\033[39m')));
+5 72 this.writeCommonMsg(this.format(result);
+5 73 this.format(browser, result);
+5 77 var index = function clearNoActivityTimeout = function() {
+5 78 return this.clearNoActivityTimeout() {
+5 79 return this.formatError(this.formatError(this.formatError, arguments);
+5 80 clearNoActivityTimeout);
+5 83 exports.dump = function noActivityTimeout = noActivityTimeout === noActivityTimeout || this.formatError;
+5 84 exports.dump = function() {
+5 85 this.formatError = arguments;
+5 86 this.colors = arguments;
+5 87 this.clearNoActivityTimeout = arguments;
+6 64 this.writeCommonMsg(msg + result.log, result.success);
+6 66 this.onSpecComplete = this.write = this.write;
+6 68 this.onSpecComplete2 = function(browser, result) {
+6 69 if (result.totalExecuted < 20) {
+6 70 return result.totalExecuted > 20;
+6 72 this.writeCommonMsg += 1;
+6 73 this.writeCommonMsg = this.writeCommonMsg += this.writeCommonMsg = this.format(this.formatTimeEnd() + this.format(this.formatTime);
+6 75 this.writeCommonMsg += this.setFormatters = this.formatTimeOnly = this.formatters = this.formatters = this.formatters;
+6 76 this.reportSlowerThaces = this.formatters = [this.formatters];
+6 78 exports.toDate = function() {
+6 79 puts(this.formatTime, browser, time)
+7 19 msg += util.format(' (%d / %d secs)', browser.lastResult.totalTime / 1000, browser.lastResult.netTime / 1000);
+7 73 this.formatComplete(browser, result);
+7 76 this.onSpecCompleteColor = function(spec) {
+7 77 if (browser, result = spec.lastColor === undefined) {
+7 78 return this.format(this.formatError)
+8 67 this.onSpecComplete = this.specSuccess = this.specSuccess = this.write;
+8 70 var specName = this.lastResult = browser;
+8 71 this.lastResult = result;
+8 72 this.lastResult = null;
+8 73 this.suite = null;
+8 75 this.suiteLength = null;
+8 77 this.error = null;
+8 79 this.attempts = null;
+8 81 this.dispose();
+8 82 this.isReady = false;
+8 83 this.pending = false;
+8 84 this.lastResult.isReady = function();
+8 85 this.clearColor = function() {
+8 86 return this.pending = true;
+8 88 this.setHeader('length
+9 70 this.onSpecFailure = function(browser, result) {
+9 71 var specName = result;
+9 72 this.writeCommonMsg = this.writeCommonMsg(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError(this.formatError))))));
+9 74 this.onSpecSuccess.redirectComplete = function(browser, result) {
+9 75 this.formatSuccess(browser, result);
+9 78 \

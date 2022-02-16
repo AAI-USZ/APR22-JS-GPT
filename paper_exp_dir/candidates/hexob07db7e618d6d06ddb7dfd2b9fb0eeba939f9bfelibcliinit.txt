@@ -1,0 +1,202 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 file = util.file,
+0 1 log = util.log,
+0 2 file = util.file,
+0 3 spawn = util.spawn;
+0 4 module.exports = function(args, callback){
+0 5 var target = process.cwd();
+0 6 if (args[0]) target = path.resolve(target, args[0]);
+0 7 async.parallel([
+0 8 function(next){
+0 9 file.mkdir(target + '/plugins', next);
+0 10 },
+0 12 file.mkdir(target + '/themes', function(){
+0 13 spawn('git', ['clone', 'git://github.com/tommy351/hexo-theme-light.git', target + '/themes/light'], {},
+0 14 function(data){
+0 15 log.info(data);
+0 18 log.error(data);
+0 20 function(code){
+0 21 if (code == 0) next();
+0 22 else log.error(code);
+0 23 }
+0 24 );
+0 25 });
+0 26 }, function(){
+0 38 log.info('Installing theme.');
+0 39 file.dir(target + '/themes', function(){
+0 42 file.mkdir(target + '/themes', next);
+0 45 file.mkdir(target + '/source/_posts', next);
+0 48 file.mkdir(target + '/source/_stash', next);
+0 50 ], next);
+0 53 var config = hexo.config;
+0 56 file.mkdir(target + '/_posts', next);
+0 61 ], function(){
+0 62 log.success('Hexo is initalize.');
+0 64 };"
+
+1 2 fs = require('fs');
+1 3 function Paginator(base, posts, num, total){
+1 5 this.per_page = config.per_page;
+1 6 this.total = total;
+1 7 this.current = num;
+1 8 this.current_url = num === 1? base : base + config.pagination_dir + '/' + num + '/';
+1 9 this.posts = posts.slice(config.per_page * (num - 1), config.per_page * num);
+1 10 if (num === 1){
+1 11 this.prev = '';
+1 12 } else if (num === 2){
+1 13 this.prev = base;
+1 14 } else {
+1 15 this.prev = base + config.pagination_dir + '/' + (num - 1);
+1 17 if (num === total){
+1 18 this.next = '';
+1 20 this.next = base + config.pagination_dir + '/' + (num + 1);
+1 22 };
+1 23 module.exports = function(base, posts, layout, render, callback){
+1 24 var config = hexo.config,
+1 25 publicDir = hexo.public_dir,
+1 26 total = Math.ceil(posts.length / config.per_page),
+1 27 i = 1;
+1 28 async.whilst(
+1 29 function(){
+1 30 return i <= total;
+1 33 var paginator = new Paginator(base, posts, i, total);
+1 34 render(layout, paginator, function(err, result){
+1 35 if (err) throw err;
+1 36 i++;
+1 37 file.write(publicDir + paginator.current_url + 'index.html', result, next);
+1 40 callback
+2 2 file = util.file;
+2 4 if (!args._.length){
+2 5 hexo.call('help', {_: ['new']}, callback);
+2 6 return;
+2 8 var data = [];
+2 9 log.forEach(function(log){
+2 10 file.write(log.toString(process.cwd(), data));
+2 11 }, callback);
+3 2 fs = require('graceful-fs'),
+3 3 _ = require('underscore'),
+3 4 sep = new RegExp('\\\\' + path.sep, 'g'),
+3 5 EOL = require('os').EOL,
+3 6 EOLre = new RegExp(EOL, 'g');
+3 7 var defaults = exports.defaults = {
+3 8 normal: [
+3 9 'layout: {{ layout }}',
+3 10 'title: {{ title }}',
+3 11 'date: {{ date }}',
+3 12 'tags:',
+3 13 '---'
+3 14 ].join('\
+3 15 ') + '\
+3 16 ',
+3 17 post: [
+3 24 '
+3 26 exports.layout = function(layout, render, callback){
+3 27 if (!callback){
+3 28 if (typeof render!== 'function'){
+3 29 callback = process.argv[2];
+3 31 callback = function(){};
+3 34 var scaffoldDir = hexo.scaffold_dir;
+3 35 async.waterfall([
+3 37 file.dir(scaffoldDir, next);
+3 39 function(files, next){
+3 40 var scaffoldPath = path.join(hexo.scaffold_dir, layout + '.md');
+3 41 file.writeFile(scaffoldPath, scaffoldPath, next);
+3 44 fs.exists(targetPath, function(exist){
+3 45 if (!exist) return next();
+3 46 file.list(targetPath, function(err, files){
+3 47 if (err) return next(err);
+3 48 var scaffoldPath = path.join(targetPath, layout + '.md');
+3 49 for (var i=0, len=files.length; i<len; i++){
+3 50 var item = files[i];
+3 51 if (path.basename(item, path.extname(item)) === layout){
+3 52 file.writeFile(targetPath + item, scaffoldPath, next);
+3 58 ], callback);
+3 60 exports.layout = function(layout, content, callback){
+3 61 if (!callback) callback = function(){};
+3 63 file.dir(scaffoldDir, callback);
+3 64 file.writeFile(scaffoldPath, scaffoldPath, callback);
+3 66 exports.source = function(source){
+3 67 return source.replace(/\\\\/g, '/');
+3 69 exports.theme = function(theme){
+3 70 return theme.setView('layout.swig', source);
+3 72 exports.post = function(source){
+3 73 return source.replace(/\\/+$/, '');
+3 75 exports.archive = function(source){
+3 78 exports.year = function(source){
+3 79 return source.replace(/= new Date(){
+3 80 return source.format('YYYYYY'),
+3 83 exports.month = new Date(){
+3 84 return source.format('MM');
+3 85 return new Date(){
+3 89 return new Date()
+3 96 exports.categories = function(){
+3 97 return new Promise.Array.Array().isArray(){
+3 98 exports.isArray()
+3 99 exports = function(source-s);
+3 100 exports.length = function(source.length){
+3 101 exports.length = 0;
+3 102 return require(source.length = 0;
+4 4 module.exports = function(args){
+4 6 if (args[0]) target = path.resolve(target, args[0]);"
+
+5 3 module.exports = function(callback){
+5 4 if (!hexo.init) return callback();
+5 5 var log = hexo.log,
+5 6 config = hexo.config;
+5 7 app.use(logger({"
+
+7 28 file.mkdir(target + '/source', function(){
+7 40 var config = [
+7 41 '# Basic',
+7 42 'title: Hexo',
+7 43 'subtitle: Fastest blogging framework',
+7 44 'description:',
+7 45 'url: http://yoursite.com',
+7 46 'author: John Doe',
+7 47 'email:',
+7 48 '',
+7 49 '# Permalink',
+7 50 'root: /',
+7 51 'permalink: :year/:month/:day/:title',
+7 52 'tag_dir: tags',
+7 53 'archive_dir: archives',
+7 54 'category: posts',
+7 56 '# Server',
+7 57 'port: 4000',
+7 59 '# Date / Time format',
+7 60 '# Hexo uses Moment.js to parse and display date',
+7 61 '# Reference: http://momentjs.com/docs/#/displaying/format/',
+7 62 'date_format: MMM D, YYYY',
+7 63 'time_format: H:mm:ss',
+7 65 '# Pagination',
+7 66 'per_page: 10',
+7 67 'pagination_dir: page',
+7 69 '# Disqus',
+7 70 'disqus_shortname:',
+7 72 '# Extensions',
+7 73 'theme: light'
+7 74 ];
+7 75 file.write(target + '/_config.yml', config.join('\
+7 76 '), next);
+8 5 log.call(hexo.log, args);
+8 11 file.read(scaffoldDir, next);
+8 14 file.read(normalize(next);
+8 26 var scaffoldPath = path.join(scaffoldDir, 'post', 'index' + path.extname(new Date) + '.' + path.sep);
+8 27 fs.exists(scaffoldPath, function(exist){
+8 28 if (exist){
+8 29 file.read(scaffoldPath, callback);
+8 31 callback(null, scaffoldPath);
+9 4 if (!Array.isArray(callback)) callback = [callback];
+9 6 async.series([
+9 8 file.read(file.path, next);
+9 77 file.copy(wrapper.md, dest, next);
+9 80 var scaffoldDir = path.join(hexo.core_dir, 'assets','scaffolds');
+9 88 fs.each(function(item, function(item, next){
+9 89 fs.each(function(item, next){
+9 90 fs.each(function(function(item, next){
+9 91 fs.remove(remove(remove(remove('./'**/*', item), next);
+9 92 nextremove('./remove(item, next);
+9 93 next);
+9 95 }, next);
+9 96 }, function(next){
+9 97 fs.unlink(path.copy(item, next);

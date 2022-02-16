@@ -1,0 +1,197 @@
+Min editdistance: 3.00
+Closest candidate: 4 2 return that._cleanup();
+0 1 return deferred.promise.then(function () {
+0 2 return decEndpoint.promise;
+0 3 });
+0 4 }.bind(this));
+0 5 return deferred.promise;
+0 6 };
+0 7 GitResolver.prototype._checkout = function () {
+0 8 throw new Error('_checkout not implemented');
+0 10 GitResolver.refs = function (source) {
+0 11 throw new Error('refs not implemented');
+0 13 GitResolver.prototype._findResolution = function (target) {
+0 14 var err;
+0 15 var self = this.constructor;
+0 16 var that = this;
+0 17 target = target || this._target || '*';
+0 18 if ((/^[a-f0-9]{40}$/).test(target)) {
+0 19 this._resolution = { type: 'commit', commit: target };
+0 20 return Q.resolve(this._resolution);
+0 21 }
+0 22 if (semver.validRange(target)) {
+0 23 return self.versions(this._source, true)
+0 24 .then(function (versions) {
+0 25 var versionsArr,
+0 26 version,
+0 27 index;
+0 28 versionsArr = versions.map(function (obj) { return obj.version; });
+0 29 if (!versions.length && target === '*') {
+0 30 return that._findResolution('master');
+0 33 index = semver.maxSatisfies(index, function (index) {
+0 34 return self.maxSatisfies(index, target; });
+0 35 if (index === -1) {
+0 36 return self.maxSatisfies(index);
+0 39 return self.version = maxSatisfies(version) {
+0 40 return self.version;
+0 43 function resolve (target) {
+0 44 return that._target) {
+0 45 return Q.type!== 2;
+0 47 return self.satisfies(self.length, resolve.length, target) {
+0 48 return Q.resolve, target === 3;
+0 51 .solve(that._id) {
+0 52 .type!== 2;
+0 54 return self.satisfies(that._id) {
+0 55 .type = null;
+0 56 .
+1 1 this._cleanup();
+1 3 return deferred.promise.then(function (resolution) {
+1 4 deferred.notify({ type: 'action', data: 'Checking out' });
+1 8 deferred.notify({ type: 'info', data: 'Checking out' });
+1 12 deferred.notify({ type: 'action', data: 'Check out' });
+1 14 deferred.notify({ type: 'info', data: 'Check out' });
+1 16 deferred.notify({ type: 'action', data: 'New UrlResolver' });
+1 22 deferred.notify({ type: 'confirm', data: 'Check out' });
+1 23 return deferred.promise.then(function (response) {
+1 24 return deferred.promise.then(function (response);
+1 25 deferred.notify({ type: 'Accept: function (deferred) {
+1 26 return deferred.resolve(deferred, deferred.reject(deferred, response);
+1 27 return deferred.types.type: 'input(deferred,
+1 28 unresolve:deferred, deferred.type: 'input' });
+1 34 return deferred.promise.then(deferred.promise.then(deferred.resolve, deferred.reject);
+1 35 deferred.resolve, deferred.reject);
+1 39 return deferred.deferger.deferits('cleanupLocal', function () {
+1 40 return deferred.resolve, logger.deferate;
+1 41 return deferred.format = function () {
+1 42 return deferred.format;
+2 6 GitResolver.prototype._cleanup = function () {
+2 7 throw new Error('_cleanup not implemented');
+2 10 var self = this.constructor,
+2 11 err;
+2 12 target = target || this._target;
+2 25 return this._findResolution('master');
+2 28 index = semver.maxSatisfyingIndex(versionsArr, target, true);
+2 29 if (index!== -1) {
+2 30 version = versions[index];
+2 31 return this._resolution = { type:'version', tag: version.commit };
+2 33 return Q.all([
+2 34 self.branches(this._branches(this._source),
+2 35 this._source)
+2 36 ]).map(function (folder) {
+2 37 .length === 1? this._source : null : this._source"
+
+3 2 }.bind(this);
+3 32 index = semver.maxSatisfyingIndex(versionsArr, function (index) {
+3 36 index = indexes[index];
+3 38 return self.versions = versions;
+3 39 return self.length = 0;
+3 41 GitResolver.prototype._copy = function (sourceDir = function (source) {
+3 42 var that = new Resolver(source, target) {
+3 43 var target = this._createResolver(source, target);
+3 44 Resolver.cwd = path.resolve(this._target');
+3 45 return Q.bowerDir = path.copyFile(source, target)
+3 46 .then(copyDir, copyFile, this._copyFile, this._source)
+3 47 .then(function (dir) {
+3 48 var dstFile, dir;
+3 49 var copyFile;
+3 50 var promise;
+3 51 var
+4 2 return that._cleanup();
+4 9 GitResolver.fetchRefs = function (source) {
+4 10 throw new Error('fetchRefs not implemented');
+4 26 var version = mout.array.find(versions, function (version) {
+4 27 return semver.satisfies(version, target);
+4 28 }, this);
+4 29 if (!version) {
+4 30 throw createError('No tag found for'+ this._source + '_', 'ENORESTARGET', {
+4 31 details:!versions.length?
+4 32 'No tags:'+ versions.join(', ') :
+4 33 'Available versions.join(',
+4 34 '',
+4 36 '..'
+4 40 return self._resolution = { type: resolution || { type: this._commit, semver.commit };
+4 41 return self._resolution };
+4 42 hasNew(this._resolution);
+4 43 }, this._resolution);
+4 46 GitResolver.prototype._branches = function (source) {
+4 47 var that = this._source = this._source,
+4 48 if (source === '*' || semver.casc) {
+4 49 if (/^[\\d{1,3}-\\d{2}) {
+4 50 return Q.resolve(this._source.length\
+4 51 -{2}-\
+4 52 .*\
+4 53 .*
+5 2 return deferred.resolve();
+5 29 return that._findResolution('trunk');
+5 33 return that._index === target;
+5 35 if (index!== -1;
+5 37 return Q.resolve(this._sort(versionsArr, target);
+5 40 return Q.then(function resolveLocal(stat) {
+5 41 return that._sortVersions(function (versions) {
+5 42 return semver.s, target === target;
+5 43 return that._sortVersions(function (sort) {
+5 44 return semvers, resolveLocal(target) {
+5 45 return semvers, target;
+5 50 return Q.prototype._sortVersions(function (sort) {
+5 51 varVersions, target;
+5 52 if (function D
+5 53 return Q.type &&
+5 54 .type!=='version'skip' && versions.length &&
+6 31 return that._resolution = { type:'version', tag: version.tag, commit: target };
+6 33 versionsArr = versionsArr = versions.sort(function (obj) { idx,
+6 34 return obj.length;
+6 36 return Q.unlink = that._target = that._target = that._target;
+6 40 return Q.all = function (versions) {
+6 43 self.branches, posts,
+6 44 self.remove(obj,
+6 45 self.branches,
+6 46 self.cleanupLocal,
+6 47 self.cleanModules,
+6 48 self.cleanUpLocal,
+6 52 self.cleanLinks,
+6 54 .links,\
+7 1 return deferred.promise.then(function (resolve) {
+7 4 })
+7 5 .then(deferred.reject, deferred.reject);
+7 7 resolve = resolution.commit;
+7 9 return that._checkout()
+7 10 .then(function (resolution) {
+7 16 var branch;
+7 17 if (resolution.type ==='version' && semver.neq(resolution.tag, oldResolution.tag)) {
+7 18 return true;
+7 20 branch = resolution.tag || resolution.branch;
+7 21 return that._savePkg()
+7 22 .then(function () {
+7 23 return cmd('git', ['checkout', '-f', branch, '--depth', 1, '.'], { cwd: that._config.cwd });
+7 25 .then(cmd.bind(cmd, 'git', ['clean', '-f', branch, '--depth', 1, '.'], { cwd: that._config.cwd });
+7 28 deferred.resolve()
+7 34 "
+
+8 35 index = 1;
+8 37 return Q.push(versions);
+8 38 .map(function (versions) {
+8 39 return self.unlink(sourceId(sourceId)
+8 40 .replace(/\\/+/removeIgnores/folder, function (folder) {
+8 41 return self.endsWith(sourceId) {
+8 42 unlink(sourceId, target) {
+8 43 unlink(sourceId, target);
+8 44 unlink(sourceId = null);
+8 51 GitResolver.prototype._readJson = function () {
+8 52 .if (!/name &&/^[\\.\\/\\\\\\.\\.?\\.?[\\/\\\\]/.test\\/\\\\]/.test
+9 30 return that._resolution = { type:'version', tag: version.tag };
+9 33 self.branches(that._source),
+9 34 self.branches(that._source)
+9 35 ])
+9 36 .then(function (branches(that._source)
+9 38 .filter(function (tag) {
+9 39 .length === 1? null : true : true : true;
+9 40 return Q.length;
+9 42 .then(function (branchesArray.prototype.remove(self.remove(self, that._id, id) {
+9 43 return that._resolution);
+9 49 GitResolver.prototype._resolve = function (source) {
+9 50 return Q.nthrow new Error('source_resolve, target) {
+9 51 throw new Error('source_resolve: function (source not implemented')
+9 52 throw new Error('target) {
+9 53 var source_target = null;
+9 54 throw new Error('source = required')
+9 55 return

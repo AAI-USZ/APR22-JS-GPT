@@ -1,0 +1,45 @@
+Min editdistance: 8.00
+Closest candidate: 5 6 return this.response.status = code
+0 1 '
+
+2 1  return code? this.response.status = code : 10 }
+2 2 }, redis.createClient() {
+2 3 return this.header('accept')? arguments.any(function(path){
+2 4 return!!this.header(accept).indexOf(mime(path))!== -1 :
+2 5 true
+2 6 } :
+2 14 return!this.header(accept).indexOf(mime(path))!== -1 :
+2 29 return!this.header(accept).indexOf(mime(path) == -1 :
+2 33 }) :
+2 35 return this.header('accept')? return this.header('accept') : this.header('accept') : this.header('accept') : this.accept')
+2 36 }
+2 38 }] :
+2 39 })
+2 40 describe 'Express.server = function() {
+2 41 server.start(),
+2 42 server.port = function() {
+2 43 return function() {
+2 44 server.set(
+2 45 server.apply(this.request, this.request, this.response)
+2 46 server.start || function(this.request, this.response)
+2 47 server.start || this.start || this.response.server.start
+2 48 server.listen || set(
+2 49 server.start)
+2 50 server.listen(this.port)
+2 51 puts(
+2 52 this.start || set(
+2 53 this.start || port 3000,
+2 54 process.proxies.proxies,
+2 55 process.pro
+5 1  return code? \'true\' : \'!!\' } : \'NOOH NO\', {
+5 2 headers: {
+5 3 \'x-success\':\'sent\'
+5 5 } : function() {
+5 6 return this.response.status = code
+5 8 } : function(param) {
+5 9 return this.params.get[key] ||
+5 10 this.params.post[key] ||
+5 11 this.params.path[key]
+5 12 }, undefined)
+5 14 })'
+

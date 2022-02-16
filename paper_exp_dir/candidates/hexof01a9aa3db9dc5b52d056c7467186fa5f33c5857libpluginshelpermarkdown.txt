@@ -1,0 +1,229 @@
+Min editdistance: 12.00
+Closest candidate: 3 2 function tocHelper(str, options) {
+0 1 var should = require(\'chai\').should();
+0 2 var Promise = require(\'bluebird\');
+0 3 describe(\'asset_link\', function() {
+0 4 var Hexo = require(\'../../../lib/hexo\');
+0 5 var hexo = new Hexo(__dirname);
+0 6 var assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+0 7 var Post = hexo.model(\'Post\');
+0 8 var PostAsset = hexo.model(\'PostAsset\');
+0 9 var post;
+0 10 hexo.config.permalink = \':title/\';
+0 11 function assetLink(args) {
+0 12 return assetLinkTag.call(post, args.split(\' \'));
+0 13 }
+0 14 before(function() {
+0 15 return hexo.init().then(function() {
+0 16 return Post.insert({
+0 17 source: \'foo.md\',
+0 18 slug: \'foo\'
+0 19 });
+0 20 }).then(function(post_) {
+0 21 post = post_;
+0 22 return Promise.all([
+0 23 PostAsset.insert({
+0 24 _id: \'bar\',
+0 25 slug: \'bar\',
+0 26 post: post._id
+0 27 }, function() {
+0 28 return post.remove();
+0 31 it(\'default\', function() {
+0 32 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+0 34 it(\'title\', function() {
+0 35 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+0 37 it(\'with space\', function() {
+0 38 assetLinkTag.call(post, [\'spaced asset\',\'spaced title\'])
+0 39 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced title">spaced title</a>\');
+0 41 it(\'no slug\', function() {
+0 42 should.not.exist(assetLink(\'\'));
+0 44 it(\'asset not found\', function() {
+0 45 should.not.exist(assetLink(\'boo\'));
+0 47 });'
+
+1 1 var stripIndent = require(\'strip-indent\');
+1 2 var util = require(\'hexo-util\');
+1 3 var highlight = util.highlight;
+1 4 var rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+1 5 ([\\s\\S]+?)\\s*\\2(\
+1 6 +|$)/g;
+1 7 var rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+1 8 var rLangCaption = /([^\\s]+)\\s*(.+)?/;
+1 9 function backtickCodeBlock(data) {
+1 10 var config = this.config.highlight || {};
+1 11 if (!config.enable) return;
+1 12 data.content = data.content.replace(rBacktick, function() {
+1 13 var args = arguments[1];
+1 14 var content = arguments[2];
+1 15 var options = {
+1 16 gutter: config.line_number,
+1 17 tab: config.tab_replace
+1 18 };
+1 19 var indent = data.length;
+1 20 if (args){
+1 21 var match;
+1 22 if (rAllOptions.test(args)){
+1 23 match = args.match(rAllOptions);
+1 24 } else if (rLangCaption.test(args)){
+1 25 match = args.match(rLangCaption);
+1 27 if (match) {
+1 28 options.caption = \'<span>\' + match[1] + \'</span>\';
+1 29 if (match[2]){
+1 30 options.caption += \'<a href="\' + match[2] + \'">\' + (match[3]? match[3] : \'link\') + \'</a>\';
+1 33 content = highlight(stripIndent(content), options)
+1 34 .replace(/{2,}/g, \'&#123;\')
+1 35 .replace(/}/g, \'&#125;\');
+1 36 return \'<escape>\' + highlight(content, options).replace(/{2,}/g, \'&#39;\') + \'</escape>\
+1 37 \
+1 38 \';
+1 41 module.exports = backtickCodeBlock;'
+
+2 1 const url = require(\'url\');
+2 2 const util = require(\'hexo-util\');
+2 3 const htmlTag = util.htmlTag;
+2 4 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+2 5 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+2 6 module.exports = ctx => {
+2 7 const config = ctx.config;
+2 8 function makeUrl(path) {
+2 9 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+2 10 return path;
+2 12 const data = url.parse(path);
+2 13 if (data && data.protocol) {
+2 16 path = config.root + path;
+2 17 return path.replace(/\\/{2,}/g, \'/\');
+2 19 return function imgTag(args, content) {
+2 20 const classes = [];
+2 21 let width, height, title, alt, src;
+2 22 let i = 0;
+2 23 while (i > 0) {
+2 24 const item = args.shift();
+2 25 if (rUrl.test(item) || item[0] === \'/\') {
+2 26 src = makeUrl(item);
+2 27 break;
+2 28 } else {
+2 29 classes.push(item);
+2 32 args = args.slice(i + 1);
+2 33 '
+
+3 1 var cheerio;
+3 2 function tocHelper(str, options) {
+3 3 options = options || {};
+3 4 if (!cheerio) cheerio = require(\'cheerio\');
+3 5 var $ = cheerio.load(str);
+3 6 var headingsMaxDepth = options.hasOwnProperty(\'max_depth\')? options.max_depth : 6;
+3 7 var headingsSelector = [\'h1\', \'h2\', \'h3\', \'h4\', \'h5\', \'h6\'].slice(0, headingsMaxDepth).join(\',\');
+3 8 var headings = $(headingsSelector);
+3 9 if (!headings.length) return \'\';
+3 10 var className = options.class || \'toc\';
+3 11 var listNumber = options.hasOwnProperty(\'list_number\')? options.list_number : true;
+3 12 var result = \'<ol class="\' + className + \'">\';
+3 13 var lastNumber = [0, 0, 0, 0];
+3 14 var firstLevel = 0;
+3 15 var lastLevel = 0;
+3 16 var i = 0;
+3 17 headings.each(function() {
+3 18 var level = +this.name[1];
+3 19 var id = $(this).attr(\'id\');
+3 20 var text = $(this).html();
+3 21 lastNumber[level - 1]++;
+3 22 for (i = level; i <= 5; i++) {
+3 23 result += \'</li></ol>\';
+3 25 if (firstLevel) {
+3 26 for (i = level; i < lastLevel; i++) {
+3 29 if (level > lastLevel) {
+3 30 result += \'<ol class="\' + className + \'-child">\';
+3 32 result += \'</li>\';
+3 35 firstLevel = level;
+3 37 result += \'<li class="\' + className + \'-item\'+ className + \'-level-\' + level + \'">\';
+3 38 result += \'<a class="\' + className + \'-link" href="#\' + id + \'">\';
+3 39 if (listNumber) {
+3 40 result += \'<span class="\' + className + \'-number">\';
+3 41 for (i = firstLevel - 1; i < level; i++) {
+3 42 result += lastNumber[i] + \'.\';
+3 44 result += \'</span> \';
+3 46 result += \'<span class="\' + className + \'-text">\' + text + \'</span></a>\';
+3 47 lastLevel = level;
+3 50 for (i = firstLevel - 1; i < lastLevel; i++) {
+3 53 return result;
+3 55 module.exports = tocHelper;'
+
+4 1 module.exports = function(ctx) {
+4 2 var PostAsset = ctx.model(\'PostAsset\');
+4 3 return function assetLinkTag(args) {
+4 4 var slug = args.shift();
+4 5 if (!slug) return;
+4 6 var asset = PostAsset.findOne({post: this._id, slug: slug});
+4 7 if (!asset) return;
+4 8 var title = args.length? args.join(\' \') : asset.slug;
+4 9 return \'<a href="\' + ctx.config.root + asset.path + \'" title="\' + title + \'">\';
+4 11 };'
+
+5 13 var args = arguments[2];
+5 14 var content = arguments[3];
+5 16 auto_detect: config.auto_detect,
+5 28 options.lang = match[1];
+5 30 options.caption = \'<span>\' + match[2] + \'</span>\';
+5 31 if (match[3]){
+5 32 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+5 39 return start + \'<escape>\' + content + \'</escape>\' + (end? \'\
+5 41 \' : \'\');
+6 23 for (const len = args.length; i < len; i++) {
+6 24 const item = args[i];
+7 1 const { htmlTag } = require(\'hexo-util\');
+7 2 function jsfiddleTag(args) {
+7 3 const id = args[0];
+7 4 const tabs = args[1] && args[1]!== \'default\'? args[1] : \'js,resources,html,css,result\';
+7 5 const skin = args[2] && args[2]!== \'default\'? args[2] : \'light\';
+7 6 const width = args[3] && args[3]!== \'default\'? args[3] : \'100%\';
+7 7 const height = args[4] && args[4]!== \'default\'? args[4] : \'300\';
+7 8 return `<iframe scrolling="no" width="${width}" height="${height}" src="https://jsfiddle.net/${id}/embedded/${tabs}/${skin}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+7 10 module.exports = jsfiddleTag;'
+
+8 1 const { join } = require(\'path\');
+8 2 const { mkdirs, rmdir, unlink, writeFile } = require(\'hexo-fs\');
+8 3 describe(\'Load database\', () => {
+8 4 const Hexo = require(\'../../../lib/hexo\');
+8 5 const hexo = new Hexo(join(__dirname, \'db_test\'), {silent: true});
+8 6 const loadDatabase = require(\'../../../lib/hexo/load_database\');
+8 7 const dbPath = hexo.database.options.path;
+8 8 const fixture = {
+8 9 meta: {
+8 10 version: 1,
+8 11 warehouse: require(\'warehouse\').version
+8 12 },
+8 13 models: {
+8 14 Test: [
+8 15 {_id: "A"},
+8 16 {_id: "B"},
+8 17 {_id: "C"}
+8 18 ]
+8 21 before(() => mkdir(hexo.base_dir));
+8 22 beforeEach(() => {
+8 23 hexo._dbLoaded = false;
+8 25 after(() => rmdir(hexo.base_dir));
+8 26 it(\'database does not exist\', async () => {
+8 27 await writeFile(dbPath, JSON.stringify(fixture));
+8 28 await loadDatabase(hexo);
+8 29 hexo._dbLoaded.should.be.false;
+8 31 it(\'don\\\'t load database if loaded\', async () => {
+8 32 hexo._dbLoaded = true;
+8 35 hexo.model(\'Test\').length.should.eql(0);
+8 36 await unlink(dbPath);
+8 38 it(\'database load success\', async () => {
+8 39 const exist = await writeFile(dbPath, JSON.stringify(fixture));
+8 40 exist.should.be.true;
+8 42 exist.should.be.false;
+8 44 it(\'don\\\'t load database ifdon\\\'t load\', async () => {
+8 48 const exist = await exists(dbPath);
+8 51 it(\'don\\\'t load database if there is no exist\', async () => {
+8 56 it(\'don\\\'t load database if database is empty\', async () => {
+8 61 it(\'should load database if the exist\', async () => {
+8 66 it(\'should.to.skip(\'should.skip(\'all\');\');
+9 3 describe(\'gist\', function() {
+9 4 var gist = require(\'../../../lib/plugins/tag/gist\');
+9 5 it(\'id\', function() {
+9 6 var $ = cheerio.load(gist(2));
+9 7 $(\'script\').attr(\'src\').should.eql(\'https://gist.github.com/\' + $(\'script.sha());
+9 9 it(\'file\', function() {
+9 10 var $ = cheerio.load(gist(3, \'456456456\'));

@@ -1,0 +1,193 @@
+Min editdistance: 5.00
+Closest candidate: 7 13 var rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+0 1 var rSwigComment = /{#[\\s\\S]+?#\\}/g;
+0 2 var rSwigBlock = /{%[\\s\\S]+?%\\}/g;
+0 3 var rSwigFullBlock = /{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+0 4 var placeholder = '\\uFFFC\';
+0 5 var rPlaceholder = /(?:<p>)?\\uFFFC(\\d+)(?:<\\/p>)?/g;
+0 6 var preservedKeys = {
+0 7 title: true,
+0 8 slug: true,
+0 9 path: true,
+0 10 layout: true,
+0 11 date: true,
+0 12 content: true
+0 13 };
+0 14 swig.setDefaults({
+0 15 autoescape: false
+0 16 });
+0 17 function Post(context) {
+0 18 this.context = context;
+0 19 }
+0 20 Post.prototype.create = function(data, replace, callback) {
+0 21 if (!callback && typeof replace === \'function\') {
+0 22 callback = replace;
+0 23 replace = false;
+0 25 var ctx = this.context;
+0 26 var config = ctx.config;
+0 27 data.slug = slugize((data.slug || data.title).toString(), {transform: config.filename_case});
+0 28 data.layout = (data.layout || config.default_layout).toLowerCase();
+0 29 data.date = data.date? moment(data.date) : moment();
+0 30 return Promise.all([
+0 31 ctx.execFilter(\'new_post_path\', data, {
+0 32 args: [replace],
+0 33 context: ctx
+0 34 }),
+0 35 this._getScaffold(data.layout)
+0 36 ]).spread(function(path, scaffold) {
+0 37 data.title = \'"\' + data.title + \'"\';
+0 38 data.date = data.date.format(\'YYYY-MM-DD HH:mm:ss\');
+0 39 var split = yfm.split(scaffold);
+0 40 var content = swig.compile(split.data)(data) + \'\
+0 41 \';
+0 42 var compiled = yaml.load(content);
+0 43 var keys = Object.keys(data);
+0 44 var key = \'\';
+0 45 var obj = compiled;
+0 46 for (var i = 0, len = keys.length; i < len; i++) {
+0 47 key = keys[i];
+0 48 if (!preservedKeys[key] && obj[key] == null) {
+0 49 obj[key] = data[key] = obj[key];
+0 53 return Promise.stringify(obj, {
+0 54 content: content,
+0 55 context: ctx.execFilter(\'new_post_path\', this._createScaffold_folder\', this._content\', this._content_target
+0 56 },
+0 58 ]).then(function() {
+0 59 return {
+0 61 return ctx: this._parseScaffold(content,
+0 62 }, this._parseScaffold(content,
+0 64 }, function(content, next)
+0 65 }, function() {
+0 66 .bind(content, layout: \'
+0 67 .spread(obj, path) {
+0 68 return yfm(content)
+0 69 .parseScaffold(content,
+0 70 .stringify(obj, path)
+0 71 .stringify(obj, null, \'---\')
+1 1 var rSwigComment = /{#[\\s\\S]+?[}#\\}/g;
+1 45 var obj = compiled.toString({
+1 46 name: key,
+1 47 layout: key,
+1 48 content: content
+1 50 if (options.omission) {
+1 51 if (content.length) {
+1 52 content = content.split(/^(\\r\\r\\d{2}/*.*)/);
+1 54 content = content.unshift(obj);
+1 55 return content;
+1 56 } else {
+1 57 content = content;
+1 59 return Promise.save
+1 62 };'
+
+2 49 obj[key] = data[key].set(key, data[key]);
+2 52 if (!content) {
+2 53 content += separator[key] = content;
+2 54 content += yaml.stringify(content;
+2 55 content += yaml.dump(content);
+2 58 return Promise.replace(/([\
+2 60 context: function(){
+2 61 return ctx.execFilter(\'new_post_path\', this._content_markdown},
+2 62 _markdown,
+2 63 return \'validate: [\', content)
+2 65 function(data, target) {
+2 67 return Object.asset_markdown && \'validate(target)
+2 69 if (!data) {
+2 71 \
+3 17 function Post(context){
+3 20 Post.prototype.create = function(data, replace, callback){
+3 21 if (!callback && typeof replace === \'function\'){
+3 31 ctx.extend.filter.exec(\'new_post_path\', data, {
+3 36 ]).spread(function(path, scaffold){
+3 46 for (var i = 0, len = keys.length; i < len; i++){
+3 48 if (!preservedKeys[key] = obj[key] ||!== undefined) obj[key];
+3 50 content += separator + \';
+3 51 content += yaml.replace(/{/g, content;
+3 52 content += split.replace(/{/g, \'\
+3 53 \\r\\r\\r\\r\\r\\r\
+3 54 \', \'\\r\
+3 55 \'}\\r\\r\
+3 56 \\r\\r\
+3 57 \' + content;\\r\
+3 58 \', \'\\r\\r\\r\
+3 59 \');
+3 63 return Promise.replace(/([\\r\\u\\u]).then(function(){
+3 65 return Promise.resolve, content);
+4 3 var rSwigFullBlock = /{% *(.*?) *.*?%\\}[\\s\\S]+?{% *end\\1 *%\\}/g;
+4 4 var rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?{% *endraw *%\\}/g;
+4 5 var rSwigTagInsideInlineCode = /{% *raw *%\\}[\\s\\S]+?\\{.*}.*?\\}.*?\\}.*?\\}\\}/g;
+4 6 var rSwigFullBlock = /{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+4 7 var rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+4 8 var rSwigTagInsideInlineCode = /{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+4 17 var rSwigVar = /\\{\\{#[\\s\\S]+?\\{% *.*?\\}/g}/g;
+4 18 var rSwigCommentType = /\\{#\\{#[\\s}/g}/*[\\{\\s}/g;
+4 19 }(.skip('markdowncase*markdowncase()}"
+
+5 1 var rSwigComment = /{#[\\s\\S]+?[}#\\s{#[\\s\\S]+?[}/g;
+5 2 var rSwigBlock = /{%[\\s\\S]+?%\\s{% *end\\1 *%\\}/g;
+5 4 var placeholder = '\\uFFFC";
+5 43 compiled.replace(/<notextile>(.*?)<\\/notextile>/g, function(match, str) {
+5 44 var num = str.substring(1);
+5 45 return cache[num];
+5 47 content = content
+5 48 .replace(/</g, \'<notextile>/g, \'<notextile>/g, \'<\
+5 50 return content
+5 52 Post.prototype.createAllScaffold = function() {
+5 53 return function() {
+5 54 return Promise.scaffold.getAllScaffoldPath();
+6 43 content.replace(/<notextile>(.*?)<\\/notextile>/g, function(match, str) {
+6 44 if (!compiled.length) return;
+6 45 var result = {
+6 46 path: split[0],
+6 50 path: split[1]
+6 54 return Promise.then(function() {
+6 57 return ctx.execFilter(\'new_post_path\', data,
+6 58 ,
+6 62 swig.execFilter(\'after_filter\', data,
+6 63 ,'separator', data,
+6 64 data'separator\', data);
+6 65 return ctx.execFilter(\'new_post_link\', data,
+6 67 .join(data, optional)
+6 68 );
+6 70 ]).then(function(data) {
+6 71 return data = data;
+6 72 return data
+6 73 .separator.separator(data, data);
+7 5 var rSwigTagInsideInlineCode = /{.*}.*?%\\}.*/g;
+7 7 var rSwigBlock = /{%[\\s\\S]+?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+7 12 var rSwigVar = /\\{\\{[\\s\\S]*?\\}\\}/g;
+7 13 var rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+7 14 var rSwigBlock = /\\{%[\\s\\S]+?%\\}/g;
+7 15 var rSwigFullBlock = /\\{% *(.*?) *.*?%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+7 16 var rSwigRawFullBlock = /\\{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+7 18 var rSwigComment = /\\{#[\\s\\S]+?\\{#[\\s\\S]+?\\{#\\}/g}/g;
+7 19 var rSwigVar = /\\{\\{\\{/g}/g;
+7 20 var rComment = /g;
+7 21 return /\\{#replace(/g, \'\\{/g, \'\\{#, \'\\{#[\\s\\s\\S\\S}\\}\\}'}\\}'}'}'}')([\
+8 43 content.replace(/<notextile>(.*?)<\\/notextile>/g, function(match, args) {
+8 44 varnotextile = args.match(/\\d{1,3}/g),
+8 45 compiled = args.length === 1? args.length : 0;
+8 47 lang: caption: caption,
+8 48 caption: caption,
+8 50 line_number: caption,
+8 51 title: caption,
+8 55 line_number: line_number: line_number,
+8 57 return Promise.map(function(s, i) {
+8 58 return this.next_number: function(s, next_number, i, i);
+8 59 }, __check: function(s, next_number, args, next_number, args, i, i + 1);
+8 60 }, __check_number: function(s, next_number, i + 1);
+8 62 }, __check_number: function(s, next_number, next_number, next_number) {
+8 63 var l = __check_number;
+9 45 var obj = {};
+9 48 if (!preservedKeys[key]) data[key] = info[key]];
+9 50 if (content) {
+9 51 content += yaml.compile(content(content);
+9 53 content += split.replace(/---;
+9 54 content += split.replace(/\
+9 55 content, content);
+9 61 function prepareFrontMail(data) {
+9 62 var result = function(data, content, after_content, after_layout) {
+9 63 var after_layout = data, after_layout = null;
+9 64 var after_each = null;
+9 65 var after_each = data, after_each = \'_end_read_each = split.length = after_each;
+9 66 var after_each = after_each = after_each;
+9 68 var after_

@@ -1,0 +1,53 @@
+Min editdistance: 21.00
+Closest candidate: 8 12 return function render(){
+0 1 }
+0 3 })(layout: function(){
+0 4 call(locals);
+0 5 return locals);
+0 6 });
+0 11 };"
+
+1 4 call(locals.push({top: item, url, url, url, url, render);
+1 5 callback();
+3 4 })(d)).lazy();
+4 5 }).each(function callback(next){
+4 6 compiled.compiled = compile(),"
+
+5 5 loadPage.locals.setAllToLocals();
+5 6 return fs.call(locals);
+5 9 return Promise.locals.locals.locals.post = locals;
+5 10 return locals;
+5 12 module.fn.create();
+5 13 .instanceOf = function(){
+5 14 return Promise.promise;"
+
+6 4 })(.push({top: '_render: function(layout: 'layout: '', url, content: config.title_replace', content: config.title, __locals.locals.markdown);
+6 5 returnLocals);
+7 5 var _.each(function (key => locals => {
+7 6 return locals.each(function(item, i){
+7 7 return locals => locals.each(function(item, i, i, i, i, i){
+7 8 return item, item);
+7 9 locals.each(function (item, i, item, item);
+7 10 locals.each(function (item){
+7 11 locals.setTags(item, item, item);
+7 12 locals.setCategories.push(item, i
+8 4 }).each(function(){
+8 5 return callback(request, locals);
+8 6 return fs.unlink(source);
+8 11 function writeHelper(next){
+8 12 return function render(){
+8 13 return function(next){
+8 14 return renderer.apply(compiled, arguments);
+8 15 return renderer.set('layout, arguments);
+8 22 module.set('date.date = _.format = function
+9 4 if (false);
+9 5 return;
+9 7 };
+9 8 ext()
+9 9 .get('/', function(){
+9 10 return swig.compile([
+9 11 content, url, meta);
+9 14 })(layoutDir(), locals){
+9 16 , options)
+9 17 , options);
+9 18 .compile('index', __dirname, http_layoutDir(indexDirs,

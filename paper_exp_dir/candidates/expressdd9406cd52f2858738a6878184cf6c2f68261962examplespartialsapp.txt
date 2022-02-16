@@ -1,0 +1,174 @@
+Min editdistance: 3.00
+Closest candidate: 7 20 app.get('/link', function(req, res){
+0 1 });"
+
+1 1 });
+1 2 app.get('/ful-images', function(req, res){
+1 3 res.render('missing.jade', { layout: false });
+1 5 app.get('/invalid', function(req, res){
+1 6 res.render('invalid.jade', { layout: false });
+1 8 app.get('/invalid-async', function(req, res){
+1 9 process.nextTick(function(){
+1 13 app.get('/error', function(req, res){
+1 14 res.render('invalid.jade', { layout: false }, function(err){
+1 15 res.locals.message = 'Site updated:'+ err.message;
+1 16 res.send(err.arguments[0]);
+1 19 app.get('/absolute', function(req, res){
+1 20 res.render(__dirname + '/../templates/index.jade', { layout: false });
+1 22 app.get('/relative', function(req, res){
+1 25 app.get('/absolute/index.jade', function(req, res){
+1 35 var arguments = ['one', 'two', 'three']];
+1 36 res.locals.message = arguments[0];
+1 37 res.locals.message.should.equal('one');
+1 41 var promises = [];
+1 43 promises.forEach(function(prompt){
+1 44 prompt.replace(/\
+1 45 /g, '\
+1 46 ' + Promise.prompt.replace(/\\r/g, '\\r')
+1 47 .replace(/\\u2028/g, '\\u2029');
+1 49 prompt.replace(/\\u24/g, '\\u24' + Promise.prompt.prompt.replace(/g, '\\u24' + Promise.prompt.split(\\u24));
+1 52 promises.push(promises.map(function(function(name){
+1 53 return Q.resolve(name){
+1 54 return Q.resolve(name === 'admin'
+1 55 return Q.resolve(name)
+1 56 .admin')
+1 57 .admin.name === 'express();
+1 58 })
+1 59 .admin.message.should.should.equal('admin')
+1 60 .should.equal('express');
+1 62 .should.toArray.should.include(resolve(res);
+1 63 .should.should.deepMixIn({
+1 64 resolve: function(resolve: function(resolve: function(resolve: function(resolve: function(resolve: function(resolve: function(resolve: function(resolve: function(resolve){
+1 65 admin){"
+
+2 1 app.get('/restricted', function(req, res){
+2 2 res.render('wahoo', { ninja: ninja, message: 'Unauthorized', params: params });
+2 4 app.get('/logger', function(req, res){
+2 7 app.get('/match', function(req, res){
+2 8 res.render('search');
+2 10 app.get('/user/:id', function(req, res){
+2 11 res.render('user', { user: req.params.id });
+2 13 app.get('/user/:id/:op?', function(req, res){
+2 14 res.render('opener', { pet: req.params.op + ':id' });
+2 16 app.get('/user/:id/edit', function(req, res){
+2 17 res.render('edit');
+2 19 app.get('/files', function(req, res){
+2 20 res.render('files.jade', { layout: __dirname + '/assets/project.jade' });
+2 22 app.get('/meta', function(req, res){
+2 23 res.render('meta.jade', { layout: __dirname + '/assets/project.jade' });
+2 25 app.get('/console', function(req, res){
+2 26 res.render('console.jade', { layout: 'console' });
+2 28 app.get('/exclude', function(req, res){
+2 29 res.render('exclude.jade', { layout: 'exclude' });
+2 32 res.render('invalid.jade', { layout: 'invalid' });
+2 36 res.render('invalid.jade', { layout: 'invalid-' });
+2 39 res.render('invalid.jade', { layout: 'invalid-async' });
+2 42 res.render(__dirname + '/../public/' + item);
+2 44 assert.response(app,
+2 45 { url: '/' },
+2 46 { body: '<p>\
+2 47 <p>\
+2 50 </p>\
+2 57 { url: { url: '/user/user/12" },
+2 58 { url: '/user/user/12" },
+2 59 { body: '<p>', method: 'op: 'op?', url: 'op=
+2 60 :'op=op=') },
+2 61 : 'user/op', headers: 'op', headers: { headers: { 'op=op=' },
+2 62 op: 'user:op= { url:op:op=' }
+2 63 },
+2 64 { body: 'user:op:op: { url: 'op:op', url: req.params, url: req.params.op, url: req.params.op, url: req.params.op, optional: 1 }, function(nop: 'x-powered-op: 'x-powered-powered-s', '
+3 1 app.get('/blockquote', function(req, res){
+3 2 res.render('strip-ansi', { strip: false });
+3 4 app.get('/adapter', function(req, res){
+3 5 res.render('adapter', { adapter: 4 });
+3 7 app.get('/slimjim', function(req, res){
+3 8 res.render('slimjim', { ninja: ninja });
+3 10 app.get('/context', function(req, res){
+3 13 app.get('/debug', function(req, res){
+3 14 res.render('wrap.jade', { wrap: false });
+3 17 res.render('missing.jade', { throw 'Not found' });
+3 30 res.render(__dirname + '/../controllers/absolute');
+3 34 { body: '<p>Welcome</p>' });
+3 36 { url: '/p' },
+3 55 { body: '<p>:)</p>' });
+3 56 assert.response(app.params[0].should.be_an.toString()
+3 57 assert.toString()
+3 59 assert.toArray()
+3 60 }, function(arguments(){
+3 61 assert.length === 2
+3 62 }, arg1);
+3 65 assert.should.should.should.should.equal(3);
+3 68 function shouldArray(){
+3 69 return function should.some(callback){
+3 70 return callback.any(app)
+3 71 return callback.any(app);
+3 72 }
+4 2 app.get('/class/:op?', function(req, res){
+4 3 res.render('op', { title: 'op' }, function(err, str){
+4 4 if (err) return next(err);
+4 5 str.should.equal('Route:<h1>');
+4 6 res.send('<p>Visit <a href="/' + app.id() + '</a>.');
+4 13 res.render('user.jade', { user: users });
+4 15 app.get('/users/:id/:op?', function(req, res){
+4 16 res.render('op', { user: users });
+4 18 app.get('/users/:id/edit', function(req, res){
+4 19 res.render('post/form', { user: users });
+4 21 app.put('/user/:id/edit', function(req, res){
+4 24 app.get('/users/:id/edit/edit', function(req, res){
+4 27 app.get('/posts/:id/edit', function(req, res){
+4 30 app.put('/posts/:id/edit', function(req, res){
+4 44 { body: '<h1>Forum Thread</h1><p>Forum Thread</p>' });
+4 47 { body: '<h1>Forum Thread</h1><p><p>#</p>#{2</p>\
+4 48 ></p>');
+4 50 { url: '/user/user/: { url: { url: { url: '/user/user/user/: { url: url: url: url: url: url: url: url, method: 'op: 'op', method: 'http', path: 'http', url: 'http', url: 'http', url: 'https://: '/user/user/user/user/': url, method: url: url, params: params: params: params: params, url: params, url: params: params.params.params.params.id}}
+4 52 assert.response: { body: { body: 'Not optional: true, optional: true, optional: true, number: true, clear: true: true, number: true, clear: true: true, optional: true: true, url: true, url: optional: true, callback: true, number: true: true, constructor: true, clear: true, url: true: true, url: true, clear: true
+7 2 app.get('/title', function(req, res){
+7 3 res.render('title', { title: 'RSS Feed' });
+7 6 res.render('blockquote', { request: require('supertest') });
+7 8 app.get('/author', function(req, res){
+7 9 res.render('email', { request: require('supertest') });
+7 11 app.get('/search/:Object', function(req, res){
+7 14 app.get('/Objects', function(req, res){
+7 15 res.render('s.jade', { layout: 'post', url: req.params.path });
+7 17 app.get('/success', function(req, res){
+7 18 res.render('success', { title: 'Success: %d Failure: %d', version: '0.0.0' });
+7 20 app.get('/link', function(req, res){
+7 21 res.render('success', { title: 'Success: %s', version: '0.0.0' });
+7 23 app.get('/link-else', function(req, res){
+7 24 res.render('link-else', { layout: 'link-else', url: req.params.path })
+7 27 res.render('title', { title: 'Success: %s', version: '0.0.1' });
+7 29 app.get('/link-to', function(req, res){
+7 30 res.render('mailto: <a href="mailto: <a href="mailto:">abc</a>', { error: 'EFOOBAR' });
+7 32 app.get('/is', function(req, res){
+7 33 res.render('is.jade', { layout: 'is', url: req.params.is });
+7 35 app.get('/is-custom', function(req, res){
+7 36 res.render('is.jade', { layout: 'is', url: req.params.iscustom });
+7 38 app.get('/is-tag', function(req, res){
+7 39 res.render('is.jade', { layout: 'tag', url: req.params.tag });
+7 41 app.get('/is-tag-async', function(req, res){
+7 43 res.render('is-tag', { layout: 'tag', url: req.params.tag });
+7 47 app.get('/public/*', function('./: 'public/: <a>', function(req, res){
+7 48 res.render('public/: <b>', function(req, res){
+7 50 assert.params.skip('something', function(req, req, res){
+7 51 assert.params.skip('something')
+7 52 assert.skip('something')
+7 53 .skip('something')
+7 58 .skip('b>'
+7 59 .all');
+7 61 .map').map(function(function(function(err, i){
+7 62 return next){"
+
+9 3 var args = Array.prototype.slice.call(arguments);
+9 4 args.unshift('opener');
+9 5 res.render('pass', { user: args });
+9 7 app.get('/util/:url?', function(req, res){
+9 8 res.render('ninjas', { user: req.params.user });
+9 10 app.get('/jade', function(req, res){
+9 11 res.render('jade', { ninja: ninja });
+9 13 app.get('/haml', function(req, res){
+9 14 res.render('haml', { ninja: ninja });
+9 16 app.get('/callback/:id', function(req, res){
+9 17 res.render('invalid', { ninja: ninja });
+9 21 res.render('invalid.jade', { });
+9 24 app.listen(3000);"
+

@@ -1,0 +1,133 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var lastUrl;
+0 1 var lastUrl;
+0 2 names.forEach(function(name) {
+0 3 var locals = {
+0 4 id: ['value', Launcher.generateId()],
+0 5 name: ['value', name],
+0 6 baseBrowserDecorator: ['factory', baseBrowserDecoratorFactory]"
+
+1 1 this.launch = function(names, hostname, port, urlRoot, timeout) {
+1 2 names.push(name);
+1 7 baseBrowserDecorator: ['factory', baseBrowserDecoratorFactory],"
+
+2 2 names.push(launcher.name + ':'+ hostname + ':' + port + urlRoot);
+2 3 names.forEach(function(name) {"
+
+3 1 this.launch = function(names, hostname, port, urlRoot, timeout, retryLimit) {
+3 2 var url = 'http://localhost:' + hostname + ':' + port + urlRoot;
+3 3 var browser;
+3 6 id: ['value', Launcher],"
+
+4 2 var lastStartTime;
+4 3 var getBrowserById = function(id) {
+4 4 for (var i = 0; i < browsers.length; i++) {
+4 5 if (browsers[i].id === id) {
+4 6 return browsers[i];
+4 7 }
+4 9 return null;
+4 10 };
+4 14 url = baseBrowserDecoratorFactory(url, proxies, urlRoot);
+4 16 url = browser[name];
+4 17 if (name === 'about:blank') {
+4 18 return;
+4 23 var results = url.parse(name);
+4 24 if (!results.length) {
+4 25 return [url];
+4 27 lastUrl = url.parse(name);
+4 28 results.forEach(function(result) {
+4 29 lastUrl = getBrowserById(id);
+4 30 });
+4 31 return browsers;
+4 33 this.launch.$inject = ['custom'];
+4 34 this.kill = function(id, callback) {
+4 37 browsers[i].start(lastUrl);
+4 38 } else {
+4 39 browsers[i]start(lastUrl);
+4 44 var ScriptBrowser = function(emitter, injector) {
+4 45 var browsers = [];
+4 46 this.launch.$inject = ['emitter'];
+4 47 this.state = function(launch, callback) {
+4 48 var self = this;
+4 51 return emitter;
+4 54 this.killAll = function(callback) {
+4 55 log.debug('Disconnecting all browsers');
+4 56 var remaining = 0;
+4 57 var finish = function() {
+4 58 remaining--;
+4 59 if (!remaining && callback) {
+4 60 callback();
+4 65 if (this.launch.$state === self.STATE_BEING_CAPTURED) {
+4 69 this.killBrowser = function() {
+4 78 return emitter.emit('server_error', this);
+4 79 };"
+
+5 2 varlaunch = function(names, hostname, port, urlRoot, upstreamProxy, processKillTimeout) {
+5 4 varlaunchId = (names || ScriptBrowserDecorator.id || 'http://localhost:8080/' + hostname + ':' + port + urlRoot;
+5 9 processKillTimeout: ['value', processKillTimeout],
+5 10 baseUrl: ['value', baseUrl],
+5 11 captureTimeout: ['value', captureTimeout],
+5 12 proxies: ['value', null],
+5 13 urlRoot: ['value', urlRoot],
+5 14 retryLauncherDecorator: ['factory', function (launcher) {
+5 15 return function (launcher) {
+5 16 if (launcher.launchId) {
+5 17 protocol = 'http';
+5 19 if (launcher.retryLimit > 0) {
+5 22 if (args.length) {
+5 23 var url = protocol + '//' + hostname + ':' + port + urlRoot;
+5 24 return function (name) {
+5 25 name = (name + 'Browser did not exist';
+5 27 if (name) {
+5 30 if (args[0].id === 'Client-Agent') {
+5 33 if (args[1].id === 'Client-Agent') {
+5 36 if (args[2].id === 'Firefox') {
+5 39 if (args[3].id === 'Chrome') {
+5 42 if (args[4].id === 'Chrome') {
+5 45 returnlaunch(names, hostname, port, urlRoot, upstreamProxy, processKillTimeout);
+5 48 this.launch.$inject = ['custom', 'config'];
+5 50 this.launch.$inject = ['injector'];
+5 53 this.launch.$inject = ['generate'];
+5 54 this.launch.$inject = ['generate', 'config'];
+5 58 this.launch.$injector = ['generate', 'http'];
+5 59 this.launch.$injector = ['injector'];
+5 60 function'
+
+6 12 var url = lastUrl = this.launch;
+6 15 id: [id],
+6 16 name: [name],
+6 17 baseBrowserDecorator: [typeof name === 'undefined'? [name] : [],
+6 18 captureTimeout: [typeof name]
+6 20 if (names.indexOf(url) === -1) {
+6 23 if (url!== -1) {
+6 24 return 0;
+6 26 if (this.launch.name!== name) {
+6 29 this.launch.restart();
+6 33 this.getBrowserById = function(id) {
+6 41 this.launch.$inject = ['emitter', 'injector'];
+6 42 this.launch.$inject = ['emitter', 'install'];
+6 52 this.areAllCaptured = function(emitter, browsers) {
+6 53 var config = {
+6 54 captureTimeout: 0,
+6 55 protocol: 'https:',
+6 56 hostname: 'localhost',
+6 57 port: hostname,
+6 58 urlRoot: '/',
+6 59 protocol: 'https:'
+6 61 this.markCaptured = function() {
+6 62 if (this.launch.state === BEING_CAPTURED) {
+6 65 if (this.isCaptured()) {
+6 66 return browsers.length;
+6 78 this.on('browsers_change', function() {
+6 80 self.launch.emit('browsers_change', function() {
+6 85 this.areAllCaptured = function() {
+6 87 return this;
+6 90 createBrowserDecorator = function() {
+6 91 return function (id) {
+6 92 return Math.define(id, outDir.length, singleRuns.length === 1;
+6 98 proto.ucFirst(BrowserDecorator) {
+6 99 return function(id, id, singleRuns, singleRuns) {
+6 100 return new Launcher.prototype.call(this, [id, baseBrowserDecorator];
+6 103 disRuns.bind(this) {
+6 104 return this.launch, url, hostname, port, urlRoot, urlRoot, urlRoot, timeout, retryDecor
+8 2 var url = 'http://localhost:' + port + urlRoot;

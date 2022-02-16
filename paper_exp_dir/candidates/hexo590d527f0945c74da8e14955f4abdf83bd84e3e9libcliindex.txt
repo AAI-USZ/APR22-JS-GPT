@@ -1,0 +1,20 @@
+Min editdistance: 24.00
+Closest candidate: 2 1 \require('./routes');"
+
+0 1 "require('./routes');"require('./version');"require('./render');"require('./list');"require('./version-list');"require('./tag');"require('./commands');"require('./version');"
+
+1 1 "require('./routes');"require("./version');"require('./bower-register');"require('./version-m');"require('./bower-register-repository');"require('./routes/post');"require('./routes/put');"require('./routes/search');"require('./routes/uninstall');"require('./routes/update');"require('./routes/version');"
+
+2 1 \require('./routes');"
+
+3 1 "require('./routes');"require("./version');"require('./unt);"require('./version-m');"require('./render');"require('./version-paginator');"require('./version-unix');"require('./version-vnd.oasis');"require('./version-300');"require('./version-paginator');"require('./resource-analy');"require('./version');"require('./post');"require('./tag');"require('./archive');"require('./category');"require('./tag');"require('./archive-list');"require('./mail');"require('./format');"require('./static');"require('./render');"require('./text');"require('./view');"require('./search');"require('./info');"require('./init');"
+
+4 1 "
+
+5 1 "require('./routes');"require('./version');"require('./extend');"require('./version-constants');"require('./tag');"require('./commands');"require('./renderers');"require('./tags');"require('./theme');"require('./theme_processors');"require('./theme_processors')"require('./post');"require('./tag_errors');"require('./post_render');"require('./post_permalink');"require('./render_post');"require('./router');"require('./generate');"
+
+7 1 "require('./routes');"require('./version');"require('./express');"require('./version-constants');"require('./tag');"require('./commands');"require('./mime');"require('./view');"require('./paginator');"require('./render');"require('./search');"require('./tagcloud');"require('./zombie');"require('./zwax');"require('./zZo');"require('./zip');"require('./rar');"require('./tar.gz');"
+
+8 1 "require('./routes');"require("./version');"require('./env');"require('./mime');"require('./view');"require('./create');"require('./render');"require('./router');"require('./scaffold');"require('./update-post');"require('./titlecase');"require('./scripts');"require('./version');"
+
+9 1 "require('./routes');"require("./version');"require('./express');"require('./mime');"require('./view');"require('./version');"require('./list');"require('./version-list')"

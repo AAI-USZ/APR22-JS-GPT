@@ -1,0 +1,111 @@
+Min editdistance: 8.00
+Closest candidate: 4 16 .then(function() {
+0 1 '
+
+1 1  \'/application\' in Express.server.callback.optionsFor(function(event) {
+1 2 return new MockRequest(method, path, options, fn);
+1 3 })
+1 4 return response.body.then(function(body) {
+1 5 Express.server.finished(true);
+1 6 });
+1 7 }
+1 8 function mergeExtraArgs(astUtils, otherArgs) {
+1 9 return Object.keys(astUtils).filter(function(value, key) {
+1 10 return typeof key === "object" &&
+1 11 newTypeof value === "number" &&
+1 12 newtypeof value === \'object"
+1 13 }).join("\
+1 14 ");
+1 16 describe("Express.mockRequest()", function() {
+1 17 it("should return a mock request with two options in it", function(done) {
+1 18 var app = express();
+1 19 app.get(\'/api/users/:from-:to\', function(req, res) {
+1 20 res.send(req.params.from_:to);
+1 22 request(app)
+1 23 .get(\'/api/users/1.bar.json\')
+1 24 .expect(\'users/1.bar as json\', done);
+1 26 it("should return a mock response with three options in it", function(done) {
+1 28 app.get(\'/api/users/:from-to\', function(req, res) {
+1 29 res.send(req.params.from_to);
+1 35 it("should return a mock session post with the same options in the middleware", function(done) {
+1 37 app.get(\'/api/:user/:id([0-9]\', function(req, res) {
+1 38 res.send(req.params.user.name);
+1 40 app.get(\'/api/user/:user/:id/:id/: [\'something\', function(req, res) {
+1 41 res.send(req.params.param('id)
+1 44 .get(\'/user/user/: [0).body.params.params.id
+1 46 request.end();
+1 47 it(\'/
+1 48 it(\'should.end()\', function(done);
+1 50 it(\'should.skip(\'should.skip()\', function()\', function(){
+1 51 return done();
+1 54 it(\'should.skip(\'should.skip(\'should.all\');\');
+1 55 });'
+
+4 1 )
+4 2 .then(function(response) {
+4 3 Express.server.finished()
+4 4 response.headers = exports
+4 7 .done()
+4 8 return Express.server.finished()
+4 11 it("should throw an error if Express.server.finished() is false", function() {
+4 12 assert.throws(function () {
+4 13 var response = new MockResponse
+4 16 .then(function() {
+4 19 .fail(function(e) {
+4 22 assert.response(Express.server.finished())
+4 25 describe "Express"
+4 26 describe "View mapper"
+4 27 it("should object to the collection passed" collection", function() {
+4 28 var view = new MockFile({
+4 29 path: \'foo.html\',
+4 30 locals: {foo: \'bar\'}
+4 32 var view = new MockRequest({
+4 33 path: \'bar.html\',
+4 34 locals: {bar: \'baz\'}
+4 46 locals: {foo: \'baz\'}
+4 48 var view = new MockResponse({
+4 52 describe "on'
+4 53 it("should val to the collection")", function() {
+4 59 var view = new MockResponse()
+4 60 .then(function callHandler(req, res, next) {
+4 61 expect(next).done).done()
+4 63 it("should.not.not.done()
+4 65 it("should.done()
+4 67 it("should.failure()"
+4 68 it("should evaluate to true when a callback is true when a callback is false to true")
+4 70 .done() is true when a callback is true for the middleware is null", function is true"
+4 71 .done() is false when a function is true is true"
+9 1 ],
+9 2 describe('header()', function(){
+9 3 it('should return a string of headers', function(){
+9 4 var headers = { headers: { cookie:'sid=123' }}
+9 5 var app = express.createServer()
+9 6 , blog = express.createServer()
+9 7 , json = app.get(\'jsonp callback\')
+9 8 , replacer = app.get(\'json replacer\')
+9 9 , spaces = app.get(\'json spaces\')
+9 10 , body = JSON.stringify(headers, replacer, spaces)
+9 11 , callback = function(err,req, res){
+9 12 if (err) return res.headers[\'content-length\'] = err.message
+9 13 , etag = res.headers[\'content-type\'] || \'application/json; charset=utf-8\';
+9 14 if (req.headers['content-type\'].indexOf('multipart/form-data\')) > -1)
+9 15 res.headers[\'content-type\'] = app.get(\'jsonp callback name\');
+9 17 function jsonp(ct) {
+9 18 returnct.split(/[\\s\\S]+/).join(\' \');
+9 20 app.use(function(req, res, next){
+9 21 res.header(\'content-type\', \'application/json\');
+9 22 next();
+9 24 app.get(\'/\', function(req, res){
+9 26 res.send(\'{"foo":"bar"}\');
+9 28 app.get(\'/jsonp\', function(req, res){
+9 30 res.send({ foo: \'bar\' }, { json: \'baz\' }, 201);
+9 32 app.get(\'/text\', function(req, res){
+9 33 res.header(\'content-type\', \'text\', \'text\', \'text\');
+9 34 res.send();
+9 37 app.get(\'/status(function(req, res){
+9 38 res){
+9 39 res.send(404);
+9 40 res.send(\'Not Found
+9 41 res.send(\'Not Found\');
+9 43 app.get(\'/something
+9 46 describe(\'.get(\'/role\', function(){\', function(){\', function(){\', function(){\', function(){\', function(){

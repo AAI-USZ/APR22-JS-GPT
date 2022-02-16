@@ -1,0 +1,63 @@
+Min editdistance: 15.00
+Closest candidate: 7 9 describe('when given a regexp', function(){
+0 1 res.redirect('http://google.com');
+0 2 });"
+
+1 2 });
+1 3 request(app)
+1 4 .get('/')
+1 5 .end(function(err, res){
+1 6 res.statusCode.should.equal(302);
+1 7 res.headers.should.have.property('location', 'http://google.com');
+1 8 done();
+1 9 })
+1 11 })"
+
+4 3 app.use(function(req, res){
+7 4 res.statusCode.should.equal(303);
+7 9 describe('when given a regexp', function(){
+7 10 it('should match the pathname only', function(done){
+7 11 var app = express();
+7 13 res.redirect('/login');
+7 17 .set('Host', 'example.com')
+7 19 res.headers.should.have.property('location', 'http://example.com/login');
+7 24 describe('when given a regexp with the application prototype', function(){
+7 25 it('should match', function(done){
+7 28 res.redirect('http://google.com/user/:op?', function(req, res){
+7 29 var op = req.params.op || \'view\';
+7 30 res.res.set(\'Access-Control\', \'public\');
+7 31 res.end(op + \'ing user\'+ req.params.user);
+7 34 .get(\'/user/12?foo=bar\')
+7 36 res.headers.should.have.property(\'location\', \'http://google.com/user/12/blog/app/12/app-12.html\');
+7 40 it('should populate the capture group', function(done){
+7 43 res.redirect(\'/user/:user/:op?\', function(req, res){
+7 45 res.set(\'Content-Type\', \'application/x-www-form-urlencoded\');
+7 49 .get(\'/user/10/edit\')
+7 51 res.headers.should.have.property(\'location\', \'http://google.com/user/10/edit\');
+7 57 describe(\'case sensitivity', function(){
+7 58 it('should be disabled by default setting ENOqual() and the first capture group(done)', function(done)', function(done){
+7 61 app.use(function(req = express();
+7 63 res.redirect(\'http://3).set(\'http://tobi/user/:sub/:sub/:sub/:app\');
+7 64 res.com/op = match
+7 67 res.redirect(\'http://user:sub/user:sub/:op?\', function(req, res){
+7 68 res){
+7 69 res.headers.end(\'http://user:sub/op=\');
+7 70 res.end();
+8 3 request(app) {
+9 9 describe('when no cookies is sent', function(){
+9 10 it('should set a session cookie', function(done){
+9 13 res.redirect('login');
+9 20 describe('when cookie is sent, but got a back-code', function(){
+9 21 it('should set the session cookie', function(done){
+9 55 describe('when cookie is sent, but get a back-code', function(){
+9 68 describe('when no cookies are sent', function(){
+9 70 var app = express(){
+9 71 it('should, done){
+9 77 app.use(app.use(function(app);
+9 80 res.headers.headers.session.session.session.redirect('login');
+9 81 res.set('content-cookie');
+9 85 app.use(req.session.session.session.session.session.end();
+9 89 describe('#ndescribe('#toString', function()', function(){
+9 90 it('should not.toString', function(){
+9 91 it('should contain strings as no strings', function(){
+9 93 app.use

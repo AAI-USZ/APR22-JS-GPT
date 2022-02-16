@@ -1,0 +1,243 @@
+Min editdistance: 20.00
+Closest candidate: 2 3 const Promise = require(\'bluebird\');
+0 1 const url = require(\'url\');
+0 2 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+0 3 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+0 4 module.exports = ctx => {
+0 5 const config = ctx.config;
+0 6 function makeUrl(path) {
+0 7 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+0 8 return path;
+0 9 }
+0 10 const data = url.parse(path);
+0 11 if (data && data.protocol) {
+0 14 path = config.root + path;
+0 15 return path.replace(/\\/{2,}/g, \'/\');
+0 17 return function imgTag(args, content) {
+0 18 const classes = [];
+0 19 let src, width, height, title, alt;
+0 20 while (args.length > 0) {
+0 21 const item = args.shift();
+0 22 if (rUrl.test(item) || item[0] === \'/\') {
+0 23 src = makeUrl(item);
+0 24 break;
+0 25 } else {
+0 26 classes.push(item);
+0 29 args = args.slice(args.length - 1);
+0 30 '
+
+1 3 const PostAsset = ctx.model(\'PostAsset\');
+1 4 return function assetLinkTag(args) {
+1 5 const slug = args.shift();
+1 6 if (!slug) return;
+1 7 const asset = PostAsset.findOne({post: this._id, slug});
+1 8 if (!asset) return;
+1 9 let escape = args[0];
+1 10 if (escape === \'true\' || escape === \'false\') {
+1 11 args.shift();
+1 13 escape = \'false\';
+1 15 let title = args.length? args.join(\' \') : asset.slug;
+1 16 const attrTitle = escapeHTML(title);
+1 17 if (escape === \'true\') title = attrTitle;
+1 18 const link = encodeURL(res.url(ctx.config.root, asset.path));
+1 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+1 20 };
+1 21 };'
+
+2 1 const fs = require(\'hexo-fs\');
+2 2 const { join } = require(\'path\');
+2 3 const Promise = require(\'bluebird\');
+2 4 const prettyHrtime = require(\'pretty-hrtime\');
+2 5 const chalk = require(\'chalk\');
+2 6 const tildify = require(\'tildify\');
+2 7 const { Transform, PassThrough } = require(\'stream\');
+2 8 const { HashStream } = require(\'hexo-util\');
+2 9 function generateConsole(args = {}) {
+2 10 const force = args.f || args.force;
+2 11 const bail = args.b || args.bail;
+2 12 const concurrency = args.c || args.concurrency;
+2 13 const { route, log } = this;
+2 14 const publicDir = this.public_dir;
+2 15 let start = process.hrtime();
+2 16 const Cache = this.model(\'Cache\');
+2 17 const generatingFiles = {};
+2 18 function generateFile(path) {
+2 19 if (generatingFiles[path]) return Promise.resolve();
+2 20 generatingFiles[path] = true;
+2 21 const dest = join(publicDir, path);
+2 22 return fs.exists(dest).then(exist => {
+2 23 if (force ||!exist) return writeFile(path, true);
+2 24 if (route.isModified(path)) return writeFile(path);
+2 25 }).finally(() => {
+2 26 generatingFiles[path] = false;
+2 27 });
+2 29 function writeFile(path, force) {
+2 31 const cacheId = `public/${path}`;
+2 32 const dataStream = wrapDataStream(route.get(path), bail);
+2 33 const cacheStream = new CacheStream();
+2 34 const hashStream = new HashStream();
+2 35 return pipeStream(dataStream, cacheStream, hashStream).then(() => {
+2 36 const cache = Cache.findById(cacheId);
+2 37 const hash = hashStream.read().toString('hex\');
+2 38 if (!force && cache && cache.hash === hash) {
+2 39 return;
+2 41 return Cache.save({
+2 42 _id: cacheId,
+2 43 hash
+2 44 }).then(() =>
+2 45 fs.writeFile(dest, cacheStream.getCache())).then(() => {
+2 46 log.info(\'Generated: %s\', chalk.magenta(path));
+2 47 return true;
+2 50 cacheStream.destroy();
+2 53 function deleteFile(path) {
+2 55 return fs.unlink(dest).then(() => {
+2 56 log.info(\'Deleted: %s\', chalk.magenta(path));
+2 57 }, err => {
+2 58 if (err.cause && err.cause.code === \'ENOENT\') return;
+2 59 throw err;
+2 62 function wrapDataStream(dataStream, bail) {
+2 63 if (bail) {
+2 64 return dataStream.get(config.middlewareResponse);
+2 66 dataStream.on(\'error\', err => {
+2 67 log.error(err);
+2 69 return dataStream.pipe(new PassThrough());
+2 72 function emitRun(name) {
+2 73 return inquirer.series(() => {
+2 74 handle.some(item => Reflect.apply(item, this, () => Reflect.apply(this, this, arguments);
+2 75 }).on(\'end(this, arguments);
+2 79 install.on.on(\'end\', main => {
+2 80 return main.removeListener.removeListener.on(\'end\', main.removeListener.on(\'error\', on.end)
+2 81 );
+2 84 .on(\'unify\', on.on_unify\', on_each
+2 85 })
+2 87 .onbefore_each
+2 88 .on
+2 90 .on.onbefore_each
+2 91 .
+3 2 const { join, dirname } = require(\'path\');
+3 4 describe(\'Load plugins\', () => {
+3 5 const Hexo = require(\'../../../lib/hexo\');
+3 6 const hexo = new Hexo(join(__dirname, \'plugin_test\'), {silent: true});
+3 7 const loadPlugins = require(\'../../../lib/hexo/load_plugins\');
+3 8 const script = [
+3 9 \'hexo._script_test = {',
+3 10 \'  filename: __filename,',
+3 11 \'  dirname: __dirname,',
+3 12 \'  module: module,',
+3 13 \'  require: require,\',
+3 14 \'}\'
+3 15 ].join(\'\
+3 16 \');
+3 17 function validate(path) {
+3 18 const result = hexo._script_test;
+3 19 result.filename.should.eql(path);
+3 20 result.dirname.should.eql(dirname(path));
+3 21 result.module.id.should.eql(path);
+3 22 result.module.filename.should.eql(path);
+3 23 delete hexo._script_test;
+3 25 function createPackageFile(...args) {
+3 26 const pkg = {"
+
+4 1 var fs = require(\'hexo-fs\');
+4 2 var pathFn = require(\'path\');
+4 3 var Promise = require(\'bluebird\');
+4 4 var prettyHrtime = require(\'pretty-hrtime\');
+4 5 var chalk = require(\'chalk\');
+4 6 var _ = require(\'lodash\');
+4 7 function generateConsole(args) {
+4 8 var force = args.f || args.force;
+4 9 var route = this.route;
+4 10 var publicDir = this.public_dir;
+4 11 var log = this.log;
+4 12 var self = this;
+4 13 var start = process.hrtime();
+4 14 var Cache = this.model(\'Cache\');
+4 15 var generatingFiles = {};
+4 19 var dest = pathFn.join(publicDir, path);
+4 20 return fs.exists(dest).then(function(exist) {
+4 23 }).finally(function() {
+4 29 var cacheId = `public/${path}`;
+4 30 var dataStream = wrapDataStream(route.get(path), {bail});
+4 31 var cacheStream = new CacheStream();
+4 32 var hashStream = new HashStream();
+4 33 return pipeStream(dataStream, cacheStream, hashStream).then(function() {
+4 34 return pipeStream(dataStream, cacheStream, hashStream.on(\'finish\', function() {
+4 35 return passThrough(function() {
+4 36 return passThrough(true, bail);
+4 37 }).then(function() {
+4 38 return reject(new Error("Generated Errror: ${message.replace(\'} Error:\'))}`);
+4 40 return fs.unlink(dest);
+4 45 return fs.unlink(dest).then(function() {
+4 47 }, function() {
+4 51 function wrapDataStream(dataStream, options) {
+4 52 var bail;
+4 53 var options = options || {};
+4 54 if (bail === true) {
+4 55 return dataStream;
+4 57 dataStream.on(\'error\', error);
+4 60 functionon('finish\', function() {
+4 61 return this.state === READY;
+4 63 functiononModifiedPath(file) {
+4 64 var dest = file.path;
+4 65 var force = options.force;
+4 66 var bail = options.bail;
+4 67 if (bail.modified) {
+4 68 force = true;
+4 69 } else if (stats.isBinary) {
+4 70 dest.modified = true;
+4 72 deleteFile(dest.path = path;
+4 78 function writeFile(dest, force.finish.on(\'finish.\', function() {
+4 79 .done(done);
+4 82 function cleanup() {
+4 83 return this.on(\'error
+4 84 .log.done(done(done);
+4 86 if (setState, force);
+4 87 if (verbose &&!isBinary) {
+4 88 if (force ||!isBinary) {
+4 89 done();
+4 92 } else if (verbose &&!isBinary) {
+4 94 } else
+5 1 var should = require(\'chai\').should();
+5 2 describe(\'js\', function() {
+5 3 var Hexo = require(\'../../../lib/hexo\');
+5 4 var hexo = new Hexo(__dirname);
+5 5 var ctx = {
+5 6 config: hexo.config
+5 8 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+5 9 var js = require(\'../../../lib/plugins/helper/js\').bind(ctx);
+5 10 function assertResult(result) {
+5 11 var $ = cheerio.load(result);
+5 12 if (!Array.isArray(result)) {
+5 13 result = [result];
+5 16 $(\'script\').eq(function() {
+5 25 if $(\'script\').eq(function() {
+5 37 should.not.exist(result.script);
+5 40 it(\'a string\', function() {
+5 41 assertResult(js(\'script\'), \'/script.js\');
+5 42 assertResult(js(\'script.js\'), \'/script.js\');
+5 43 assertResult(js(\'http://hexo.io/script.js\'), \'http://hexo.io/script.js\');
+5 44 assertResult(js(\'//hexo.io/script.js\'), \'//hexo.io/script.js\');
+5 46 it(\'an array\', function() {
+5 47 assertResult(js([\'foo\', \'bar\', \'baz\']), \'/foo.js\', \'/bar.js\', \'/baz.js\');
+5 49 it(\'multiple strings\', function() {
+5 50 assertResult(js(\'foo\', \'bar\', \'baz\'), \'/foo.js\', \'/bar.js\', \'/baz.js\');
+5 52 it(\'multiple arrays\', function() {
+5 53 assertResult(js([\'foo\', \'bar\'], [\'baz\']), \'/foo.js\', \'/bar.js\', \'/baz.js\');
+5 55 it(\'mixed\', function() {
+5 56 assertResult(js([\'foo\', \'bar\'], \'baz\'), \'/foo.js\', \'/bar.js\', \'/baz.js\');
+5 58 });'
+
+6 1 const { htmlTag } = require(\'hexo-util\');
+6 2 function iframeTag(args) {
+6 3 const url = args[0];
+6 4 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+6 5 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+6 8 function imgTag(args, content) {
+6 15 break;'
+
+7 5 return `<iframe src="${url}" width="${width}" height="${height}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+7 7 module.exports = iframeTag;'
+
+8 9 const path = encodeURL(url.resolve(ctx.config.root, asset.path));
+9 8 module.exports = imgTag;'
+

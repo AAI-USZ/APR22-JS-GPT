@@ -1,0 +1,4 @@
+
+describe('Processor', () => {
+
+it('register()', () => {

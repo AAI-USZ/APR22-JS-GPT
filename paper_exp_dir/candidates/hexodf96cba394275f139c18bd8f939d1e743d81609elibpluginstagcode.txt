@@ -1,0 +1,194 @@
+Min editdistance: 5.00
+Closest candidate: 2 56 var config = ck.config.highlight || {};
+0 1 var rlc = {
+0 2 code: function(args, content){
+0 3 return args.join(' '),
+0 4 locals: {},
+0 5 message: function(str){
+0 6 return str.replace(rlc, function(match, tabs){
+0 7 var result = '\
+0 8 ';
+0 9 for (var i=0, len=args.length; i<len; i++){
+0 10 result += args[i];
+0 11 }"
+
+1 1 describe('sprintf', function(){
+1 2 it('default', function(){
+1 3 var r = require('../../../lib/plugins/helper/sprintf-js').bind(this);
+1 4 return post.create({
+1 5 title: 'Hello World',
+1 6 slug: 'foo'
+1 7 }).then(function(post){
+1 8 return post.publish({
+1 9 slug: 'bar'
+1 10 });
+1 12 post.publish({
+1 13 slug: 'baz'
+1 16 describe('sprintf - promisify', function(){
+1 17 it('promides a message to stderr', function(){
+1 24 slug: 'foo',
+1 25 prompt: post.prompt
+1 36 it('promides a promise for a type', function(){
+1 41 }, function(){
+1 43 slug: 'bar',
+1 83 });"
+
+2 1 var rba = {
+2 2 object: function (val) {
+2 3 val.should.equal(rba);
+2 4 done();
+2 5 }
+2 6 };
+2 7 describe('is', function(){
+2 8 it('should return false when a script attempted to reload the browser after setup', function(done){
+2 9 var config = {
+2 10 alert: function(topic) {
+2 11 return function(){
+2 12 process.nextTick(function(){
+2 13 var args = Array.prototype.slice.call(arguments);
+2 14 args.unshift('default');
+2 15 var content = util.format.apply(null, args);
+2 16 content.should.equal(false);
+2 21 it('should stop execution', function(){
+2 23 clear: function() {
+2 24 if (config. clear) return;
+2 27 var spy = sinon.spy();
+2 28 var spy.done = function(commands, endpoints, callback) {
+2 29 logger.emit('data', endpoints);
+2 31 var log = console.log;
+2 32 var spy.start = function(args, endpoints, callback) {
+2 35 return 'bower install'
+2 38 var spy.error = function(err) {
+2 39 if (err) {
+2 40 return callback(err);
+2 42 var spy.wait(function(){
+2 43 if (args) {
+2 44 return done(err);
+2 45 } else {
+2 46 log.info('Start processing');
+2 47 file.empty();
+2 49 return Promise.all([
+2 50 spy.compact()
+2 51 ]);
+2 54 async function runInThisContext(context) {
+2 55 return function(config, args, callback) {
+2 56 var config = ck.config.highlight || {};
+2 57 return config.init.call(ctx);
+2 59 var start = function(injector, config, launcher, globalEmitter, preprocess, fileList, webServer,
+2 60 capturedBrowsers, socketServer, executor, done) {
+2 61 var filesPromise = fileList.refresh();
+2 62 if (config.autoWatch) {
+2 63 filesPromise.then(function(){
+2 64 injector.invoke(watcher.watch);
+2 67 var singleRunDoneBrowsers = Object.create(null);
+2 68 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+2 69 var singleRunBrowserNotCaptured = false;
+2 70 webServer.on('error', function(e) {
+2 71 if (e.code === 'EADDRINUSE') {
+2 72 log.warn('Port %d in use', config.port);
+2 73 config.port++;
+2 74 webServer.listen(config.port);
+2 76 throw e;
+2 79 var afterPreprocess = function() {
+2 83 injector.stopWatcher = true;
+2 84 fileList.clear();
+2 87 var afterPreprocess.on('error', function() {
+2 88 var parsedPatterns = config.preprocess = config.preprocessors = config.preprocessors.shift();
+2 89 var lines = [\'progress\';
+2 90 ];
+2 91 var pointer = preprocessors.forEach(answatcher = helper.nextPreprocessors = [preprocessors];
+2 92 lines.forEach(function(item, i) {
+2 93 var line, nextPreprocessor, nextPreprocessor, handler) {
+2 94 injector.remove(injector, handlerPrejector, handler).on('error', nextPrejector, handler).onEach(instantiatePreprocessor);
+2 95 nextPreprocessor.done(function(injector, preprocess, nextPrejector, nextPrejector, function(fileList, nextPreject,
+3 1 module.exports = function(data, options){
+3 2 options = options || {};
+3 3 var i18n = this.data.sprintf;
+3 4 var _sprintf = sprintf.bind(this);
+3 5 options.filename = data.path;
+3 6 this.set(data.on('error', function(err){
+3 7 if (err) return err;
+3 8 set(data.on('warn', function(err){
+3 10 set(data.on('error', function(err){
+3 12 set(data.on('close', function(){
+3 14 return!err.code;
+3 18 };"
+
+4 1 var rl = function (data, options){
+4 2 return data.toString('', data.text);
+4 5 return (data.default || data.defaults || options.defaults.length > 0? 'default' : 'info');"
+
+5 2 var r = require('../../../lib/plugins/helper/sprintf-js');
+5 3 describe('default', function(){
+5 5 var message = 'Hello World!';
+5 7 title: 'Hello World'
+5 9 message.should.eql(post.path);
+5 10 }).finally(function(){
+5 11 return post.remove();
+5 14 it('prompt', function(){
+5 18 prompt.should.eql(post.path);
+5 21 it('prompts for other data', function(){
+5 22 var message = 'Hello World!! Hello World!';
+5 25 msg: 'Hello World!! Hello World'
+6 1 describe('data', () => {
+6 2 var rl = require('../../../lib/plugins/tag/data')();
+6 3 describe('parse', () => {
+6 4 var data = {
+6 5 content: [
+6 6 '``` js Hello world!',"
+
+7 1 module.exports = function(locals, options){
+7 3 var i18n = this.data.locals;
+7 4 var highlighted = options.highlight || {};
+7 5 var s = highlighted(options.highlight);
+7 6 var keys = Object.keys(options);
+7 7 var key = '';
+7 8 for (var i = 0, len = keys.length; i < len; i++){
+7 9 key = keys[i];
+7 10 locals[key] = options[key];
+7 12 if (servedKeys){
+7 13 return locals.saveSave(function(){
+7 14 return!isGenerating(savedKeys[i])? true : false;
+7 16 return this.database.save({
+7 17 path: key,
+7 18 data: page.source
+8 3 var i = require('../../util/sprintf-js');
+8 4 return i.set(function(){
+8 5 return aprintf({
+8 6 level: 'info',
+8 7 tail: 'Hello World',
+8 8 data: {
+8 9 String: 'Hello World'
+8 11 }).spread(function(stdout, stderr){
+8 12 stdout.set(stringify(data) + '\
+8 14 stdout.get(function(err, str){
+8 16 str = str.replace(/\
+8 17 $/g, '');
+8 18 if (data.ERROR){
+8 19 str += '\
+8 20 ' + err.message + '\
+8 24 ' + json.message + '\
+8 33 String: 'Hello World',
+8 34 data: data
+8 58 str += str;
+9 1 var rba = function(a, b, temp){
+9 2 return a.toString = function() {
+9 3 return b;
+9 6 var _getProperty = function(obj, key){
+9 7 var keys = key.replace(/\\[(\\w+)\\]/g, '.$1').split('.'),
+9 8 cursor = obj;
+9 10 cursor = cursor[keys[i]];
+9 11 if (cursor == null) return;
+9 13 return cursor;
+9 16 var split = data.split('.'),
+9 17 cursor = data;
+9 18 options = _getProperty(data, key);
+9 19 if (options.omit(options.omit(options.author)){
+9 20 return data;
+9 22 if (options.escape) return escape;
+9 23 var result = '';
+9 24 if (data.length){
+9 25 result += split[0];
+9 26 } else if (data.length){
+9 27 result += split[1];
+9 29 return result;

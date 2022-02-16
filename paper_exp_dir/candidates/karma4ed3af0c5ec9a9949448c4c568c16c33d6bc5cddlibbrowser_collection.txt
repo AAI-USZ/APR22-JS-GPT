@@ -1,0 +1,32 @@
+Min editdistance: 46.00
+Closest candidate: 2 4 module.exports = BrowserCollection;"
+
+0 1 ).join("\
+0 2 ") + "\
+0 3 "
+1 1 )"
+
+2 2 ");
+2 3 }
+2 4 module.exports = BrowserCollection;"
+
+4 4 class ScriptBrowser {
+4 5 constructor (id, name, baseBrowserDecorator) {
+4 6 this.id = id
+4 7 this.name = name
+4 8 baseBrowserDecorator(this)
+4 9 FakeBrowser._instances.push(this)
+4 10 sinon.stub(this,'start\', () => {
+4 11 this.state = this.STATE_BEING_CAPTURED
+4 12 return this.state
+4 13 })
+4 14 stubPromise(this, "state")
+4 15 sinon.stub(this,'restart')
+4 18 module.exports = BrowserCollection;'
+
+5 5 constructor (emitter, browsers = []) {
+5 6 this.browsers.push(browser) || {}
+5 7 this.emitter.emit("browsers_change", this)
+5 8 return this.browsers.some((browser) => browser.serialize())
+5 10 add (browser) {'
+

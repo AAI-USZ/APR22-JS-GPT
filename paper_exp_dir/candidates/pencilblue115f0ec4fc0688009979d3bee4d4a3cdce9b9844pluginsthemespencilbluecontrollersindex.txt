@@ -1,0 +1,359 @@
+Min editdistance: 1.00
+Closest candidate: 0 10 var section = request.pencilblue_section || null;
+0 1 checkForFormRefill(result, session);
+0 2 });
+0 5 }
+0 6 this.generateLocalization = function(){
+0 7 this.site.site.head = result.locals || {};
+0 8 this.site.getDBObjectsWithValues({object_type:'section'}, function(data)
+0 9 {
+0 10 var section = request.pencilblue_section || null;
+0 11 var topic = request.pencilblue_topic || null;
+0 12 var article = request.pencilblue_article || null;
+0 13 var page = request.pencilblue_page || null;
+0 14 if(section)
+0 16 var dropdown = dropdown.split('^').join(pb.config.siteRoot + '/');
+0 17 dropdown = dropdown.split('#').join(pb.config.siteRoot + '/');
+0 18 for(var i = 0; i < articles.length; i++){
+0 19 var article = article.split('^').join((authors[i].photo)? authors[i].photo : '');
+0 20 if( article.length == 0)
+0 22 var pencilblueSettings = {
+0 23 content: [
+0 24 '<h1 id="more"></h1>',
+0 25 '<p>No content at that type</p>'
+0 26 ].join('\
+0 27 ') + '\
+0 28 ';
+0 31 var dropdown = dropdown.split('^').join((authors[i].photo)? authors[i].photo : '');
+0 32 dropdown = dropdown.split('#').join((authors[i].title)? authors[i].photo : '');
+0 35 getDBObjectsWithValues({object_type:'section'}, function(data)
+0 37 if(data.length == 0)
+0 39 this.site.head = '';
+0 40 } else
+0 41 this.site.getDBObjectsWithValues({object_type:'subsection'}, function(data)
+0 45 this.site.getTopicObjectsWithValues({object_type:'topic'}, function(data)
+0 47 this.site.getTopicObjectsWithValues({object_type:'topic_settings'}, function(data)
+0 49 this.site.getDBObjectsWithValues({object_type: 'topic_settings'}, function(data)
+0 51 this.config.site.postHeaders = this.site.head;
+0 52 this.site.site.getHeaderTemplateHeaders = this.site.head;
+0 57 };
+0 59 this.site).head = this;
+0 61 this.getDBObjects()"
+
+1 5 var space = options.space || null;
+1 6 var prevNext = options.has_prev || false;
+1 7 var num = options.num || 6;
+1 8 var self = this;
+1 9 var options = {
+1 10 back: function(event) {
+1 11 return self.set(event.request.uri.path, options);
+1 12 },
+1 13 show: function(event) {
+1 14 if (event.name ==='show') return;
+1 15 if (event.is_current || event.is_home || self.config.is_post) return;
+1 16 var url = archive.findOne({ url: url, posts: this.site.posts, num: num });
+1 17 return self.post.create({
+1 18 title: url,
+1 19 url: url,
+1 20 image: page,
+1 21 site_name: config.title,
+1 22 description: self.config.title,
+1 23 suite: [],
+1 24 email: self.config.email
+1 25 }, options);
+1 27 if (num) {
+1 28 var admin = this.app.get('home/admin');
+1 29 var page = this.page;
+1 30 var state = this;
+1 31 this.config = {};
+1 32 this.settings = {};
+1 33 admin.use(function(req, res, next){
+1 34 res.setHeader('Location', function(req, res){"
+
+2 5 if(section) {
+2 6 var dropdown = dropdown.split('^section_map^').join(pb.config.siteRoot + '/' + section.name);
+2 7 dropdown += dropdown.split('^topic_map^').join(forum.config.siteRoot + '/' + reason.message + '\
+2 8 ');
+2 10 var result = '';
+2 11 result += page.remove();
+2 12 result += error
+2 13 .replace(/\
+2 14 /g, '\
+2 15 ' + result);
+2 16 result += page.join('^loc_map^').replace(/\\r/g, '\\r' + result);
+2 17 result = result.split('^loc_map^').join(pb.config.siteRoot + '/' + section.name);
+2 18 dropdown = result.split('^nav_map^').join(pb.config.siteRoot + '/' + section.name);
+2 20 var dropdown = dropdown.split('^nav_map^').join(pb.config.siteRoot + '/' + section.name);
+2 21 dropdown += dropdown.split('^nav_map^').join(section.name + '/' + section.name + '_';
+2 22 var buttons = [];
+2 23 buttons.push({
+2 24 name: 'bob',
+2 25 ^c: function(){
+2 26 return [
+2 27 '<a href="#' + section.name + '">' + (action?action.name + ': '') +
+2 28 '<a href="#' + section.name + '">' +
+2 30 '</a>'
+2 34 for(var i = 0; i < section.length; i++) {
+2 35 var key = section[i];
+2 36 if (!key) throw new TypeError('No such key must be a local repository');
+2 37 if ((!resolved) || (!result) || (!result.length) {
+2 39 var newResult = '';
+2 40 for (var j = 0, jlen = section.length; jlen; jlen < jlen; ++jlen; ++j) {
+2 41 var section = request.pencilblue_topic.split('^section_map^').join(pb.config.config.siteRoot + '/' + '/' + section.name + '/' + section.name + '/' + '.*';
+2 42 if (section) {
+2 43 var section = request = request.pencilblue_method = section.split('^jit/' + section.to';
+2 46 if (section.type =='s';
+2 47 } else if (section == '_id' in section) {
+2 48 window.type) {
+2 49 window.type = 'publish()"
+2 50 var branch = section.type = 'update' + section;
+2 51 } else {
+2 52 var sections ='
+
+3 1 for(var i = 0; i < data.length; i++){"
+
+4 1 return result;
+4 4 }]
+4 8 var topic = getJSTag('topic', function(siteSettings, options) {
+4 9 var article = getJSTag('article', options);
+4 10 var page = getJSTag('page', options);
+4 11 var template = template.render;
+4 12 if(!homepage) throw new Error('No homepage set for'+ page.permalink);
+4 14 if(section == 2) {
+4 15 result = result.split('^\');
+4 17 result = page.split('^\');
+4 19 getDBObjectsWithValues({object_type: 'user'}, function(data)
+4 21 var userAgent = pair.split('#'),
+4 22 users = [];
+4 25 getSession(request, session, [], function(data)
+4 27 if(!userAgent) throw new Error('No user found');
+4 30 output({redirect: pb.config.siteRoot + '/setup'});
+4 35 }'
+
+5 5 var content = localize(['admin', 'article', 'page', 'index'], {title: page.title });
+5 6 var results = [];
+5 7 var pencilblueSettings = {success: Boolean, save: false, saveDev: false};
+5 8 var settings = {
+5 9 head: '',
+5 10 title: page.title,
+5 11 url: '/'
+5 13 result.success = function(result) {
+5 14 if(!result.success) throw new Error('No successful capture for exception', result);
+5 15 var capture groups = [];
+5 16 result.categories.forEach(function(cat) {
+5 17 if(caption.test(cat.name)) {
+5 18 var args = Array.isArray(config.caption)? config.caption : [config.caption];
+5 19 args.unshift(action);
+5 20 return;
+5 23 var result = result.success(capturePill.bind(this));
+5 24 if(result.log) {
+5 25 var localization = this.session.get('home');
+5 26 var code = localize(['admin', 'article', 'page', 'index'], {content: localize([].join(', ')});
+5 27 if(code) {
+5 30 var navLayout = this.session.get('home');
+5 31 var dropdown = this.session.get(' dropdown');
+5 32 var navHTML = this.session.get(' nav');
+5 33 getHTMLTemplate('footer', null, null, function(data)
+5 35 button.push(data);
+5 44 return result.success;
+5 51 var config;
+5 53 var section = request.pencilblue_section = section;
+5 54 section.state = config.site = config.title;
+5 56 var article = request.location = config;
+5 58 if(function() {
+5 59 var localization(answitter = function(new) {
+5 61 return swig(new)
+5 62 .content = new swig(nav);
+5 64 return swig(nav);
+5 65 return renderer(new)
+5 66 .remove()
+5 67 .bind(locals);
+6 1 setTimeout(function(){
+6 3 var topic = getJSTag('topic');
+6 4 var article = getJSTag('article');
+6 5 var page = getJSTag('page');
+6 6 var content = page.content;
+6 7 if(typeof data.lang === 'undefined'){
+6 10 var local = '';
+6 11 var args = arguments;
+6 12 var i = 2;
+6 13 var exclude = '';
+6 14 for(var i = 0; i < args.length; i++) {
+6 15 if(!detectingConfig === false) {
+6 16 args = arguments;
+6 18 local.__super__ = i;
+6 19 args.forEach(function(args) {
+6 20 if (!detectingConfig.enable) {
+6 21 Object.keys(remove).forEach(function(key) {
+6 22 remove[key];
+6 25 var content = local.content;
+6 26 delete local.__super__;
+6 28 }, function(){
+6 30 var i = 0;
+6 35 for(i = 0; i < args.length; i++) {
+6 42 if(typeof exclude === 'undefined') {
+6 43 var exclude = [],
+6 44 instance = new this;
+6 45 delete public.head;
+6 46 delete source.title;
+6 47 delete source.location;
+6 48 delete public.key;
+6 49 delete public.location;
+6 50 this.log.debug('Generating.');
+6 51 instance.register(this, args);
+6 54 this.generateJS = function() {
+6 56 this.preprocess = function(answers) {
+6 57 answers.forEach(function(decEndpoint) {
+6 58 var opts = this.app.enabled('jsonp callback');
+6 59 Object.keys(decEndpoint).forEach(function(decEndpoint) {
+6 60 opts.push(decEndpointParser.decompose(decEndpoint));
+6 62 next();
+6 65 this.skip = function(error) {
+6 66 this.log.catch(error);
+6 67 this.error = function(error);
+6 69 this.skip('invalidateLocalization failed-json', function(error) {
+6 70 this.invalidateLocal.invalidateLocal.invalidateLocal.invalidateLocal.invalidateLocal.invalidateLocal.toObjects.toObjects);
+6 71 return this.invalidateLocal.getLocal.s);
+6 72 configure.invalidateLocal.toObjects();
+6 73 };"
+
+7 1 var section = request.pencilblue_topic || null;
+7 5 var prev = this.config.prev_config || null;
+7 6 var value = Array.isArray(prev)? prev.concat('_id') : "";
+7 8 var content = function(str, indentation) {
+7 9 if(!content.includes('\\')) {
+7 10 return fs.writeFile(str, content.replace(/\
+7 11 (\\t+)/g, function(err) {
+7 12 if (err) throw err;
+7 13 var title = options.title || page.title || config.title;
+7 14 var banner = options.banner || page.body || null;
+7 15 var navigateContextTo = function(url) {
+7 16 return self.config.use(connect.query());
+7 18 if (!config.external_link) {
+7 19 if(content.length > 1) {
+7 20 var title = getFormat(url);
+7 22 var text = url.replace(/^https?:\\/\\/([^\\s]+|[^\\s]+$/g, '');
+7 23 if(content.length > 32) {
+7 24 var data = Buffer.isBuffer(content.length)? content.join('\
+7 25 ') : content.join('[^\
+7 26 ]+');
+7 28 if(content.length < 3) {
+7 31 ]+) + '%';
+7 32 if(data.substr(0, 1) === 0) {
+7 33 var tests = route.get(url);
+7 34 var meta = { id: id, args: [\'test\', \'length\'] };
+7 35 var content = meta.name;
+7 36 var result = {
+7 37 id: id,
+7 38 args: [\'test\', \'length\']
+7 40 result.filename = sourceCodeOfFiles;
+7 41 if(typeof result.file!== "undefined") throw new TypeError(\'File must be a string or string\');
+7 42 if(typeof result.exclude!== "undefined") throw new TypeError(\'Exclude exclude must be a string or string.\');
+7 43 if(config.external_link.length == 0 || config.external_link.length == 1) || config.external_link.length == 0) || config.external_link.length == 0) config.external_link.length);
+7 45 return result.output = result.suite_dir = config.suite;
+7 47 this.success = function(url) {
+7 48 return this.log = undefined;
+7 49 this.success
+7 50 this.success_success = undefined;
+7 53 this.reporter = function(url) {
+7 54 var Insight = undefined;
+7 55 this.success = undefined;
+7 56 this.server = undefined;
+7 62 this.server_success = undefined;
+7 63 this.success_success = undefined;\
+8 1 checkForRequiredParameters(session, { bgColor: false, headers: { 'Content-Type': 'text/x-www-form-urlencoded' }} }, function(session, result, {
+8 2 var items = []
+8 3 , status;
+8 4 for(var i = 0; i < items.length; i++) {
+8 5 status = items[i].isReady? 'yay' : 'nope!';
+8 6 items.push({ name: name, value: status });
+8 8 return [status, getValue(posts), status, getValue(options), post.head, statusCode];
+8 13 this.getDBObjectsWithValues({object_type: 'user'}, function(data) {
+8 14 var object = this.session.name;
+8 15 return this.session.sizes.id="0';
+8 16 object.id = 4;
+8 17 return this.session.tjucks.reduce(function(splinter, pair) {
+8 18 return pair.split('\
+8 20 }, function(session, pair) {
+8 21 return pair.split('^\
+8 27 this.enable('verbose errors');
+8 29 res.format = function(obj) {
+8 30 var req = this.session.name || this.param('name', obj.name);
+8 31 var msg = obj.message;
+8 32 if(!obj.isValid()) {
+8 33 var err = new Error('keyboard cat is not found')
+8 34 err.status = obj.status;
+8 35 obj.name = 'None of the users online!';
+8 37 err.status = obj;
+8 38 obj.isValid = true;
+8 40 return this;
+8 42 res.formatError = function(msg, indentation) {
+8 43 var msg = msg.replace(/\
+8 45 ' + indentation);
+8 46 msg = msg.replace(/([^\
+8 47 ]+)\\/(\\w+)\\?/g, '$1');
+8 48 if (indentation) {
+8 49 msg = indentation + msg.replace(/\
+8 53 return this.session.sockets.emit('info', msg + '\
+8 56 res.redirect = function(url) {
+8 57 var url = this.parse(url);
+8 58 return this.query.url;
+8 60 this.locals.contentType = function(str) {
+8 61 return str = null;
+8 66 res.attachment = function attachment(filename) {
+8 67 if (filename) {
+8 68 return str = filename;
+8 69 return str.set(filename) {
+8 70 var protos = this.hasOwnProperty(filename, undefined);
+8 71 return this.set(this.headers, undefined);
+8 74 return str = setProtosPENCILATE_URL_URL_REGEXP(this.config.filename, function(str) {
+8 75 var headers = this.config.url, undefined, this.config.site.captureSSL_PROJECT_PROXY_PATH) || 
+9 1 var section = request.pencilblue;
+9 2 var topic = request.pencilblue;
+9 3 var article = request.pencilblue;
+9 4 var page = request.pencilblue;
+9 5 var template = require('../include/article').render;
+9 7 var sections = request.pencilblue;
+9 8 var dropdown = dropdown;
+9 9 var navLayout = navLayout.split('^nav_active^').join('');
+9 12 var message = page.param('message', {
+9 13 url: section,
+9 14 siteSettings: settings,
+9 15 media: page,
+9 16 media: page
+9 20 result.push({
+9 21 path: section.substring(0, 1),
+9 22 button: button
+9 27 this.removeLocalization = function() {
+9 28 varLocalization = this.site.settings.siteRoot;
+9 29 Localization.removeLocalization(this);
+9 31 this.post = function(section, callback) {
+9 32 var posts = this.site.posts.sort('date', -1);
+9 33 var length = parseInt(length, 10);
+9 34 var orderby = options.orderby || 'name';
+9 35 var order = options.order || -1;
+9 36 var unit = options.unit || 'px';
+9 37 var color = options.color;
+9 38 var transform = options.transform;
+9 39 var separator = options.separator || '.';
+9 40 var result = [];
+9 41 posts.forEach(function(post, i) {
+9 42 post.prev = i === 0;
+9 43 post.next = i === length - 1;
+9 45 path: format.format(post.path, 'YYYY'),
+9 46 layout: post.layout
+9 48 if(!results.length) {
+9 49 return callback();
+9 52 posts.forEach(function(post) {
+9 58 var tests = results.push({
+9 59 orderby: options.orderby,
+9 60 order: options.order,
+9 61 format: 'MM'
+9 63 var order = options = '';
+9 64 var unit = options.format = options.format;
+9 66 if ((result.messages.length &&!== 'MM' || result.length == 0 || '%') && result.length == 0) return callback();
+9 67 var content = '').push(ansongs(ansongs = ': ':') + '%',
+9 71 for (var key = '').for (var i = 2; i = 2; i < exclude.length; i; i++) {
+9 72 var item = mode;
+9 73 var exclude.length;
+9 74 if ((!== '').length; i) && mode.length >= 2)

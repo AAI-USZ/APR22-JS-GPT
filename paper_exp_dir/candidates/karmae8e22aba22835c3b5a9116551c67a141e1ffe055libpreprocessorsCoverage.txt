@@ -1,0 +1,251 @@
+Min editdistance: 29.00
+Closest candidate: 1 13 log.debug('Processing "%s".', file.originalPath);
+0 1 module.exports.paginator = function(content, capturedBrowsers, emitter) {
+0 2 var config = {
+0 3 basePath: config.basePath,
+0 4 format: config.format || '%b %T: %m',
+0 5 _content: content,
+0 6 _excerpt: content,
+0 7 source: config.urlRoot + 'posts',
+0 8 path: config.root + config.permalink,
+0 9 type: 'create',
+0 11 exec: content
+0 12 };
+0 13 var posts = [],
+0 14 categories = {};
+0 15 posts.forEach(function(post) {
+0 16 emitter.emit('run_post_path', post.content);
+0 17 });
+0 18 var linkArr = function(post) {
+0 19 return post.id || post._id;
+0 21 posts.forEach(function(post, i) {
+0 22 emitter.emit('browsers_change', post.content);
+0 24 var Coverage = function(content, file, basePath, done) {
+0 26 permalink: config.permalink,
+0 27 urlRoot: config.root + config.permalink
+0 29 var result = {
+0 30 path: config.root + 'posts',
+0 31 content: content,
+0 32 permalink: config.permalink + config.urlRoot + 'public/' + post.path
+0 34 var modules = {
+0 35 coverage: ['coverage'],
+0 36 preprocess: ['preprocess'],
+0 37 post: ['post', post.createPreprocess],
+0 38 folder: ['folder'],
+0 39 xhr: ['xhr-polling', 'xhr-polling']
+0 40 };"
+
+1 1 module.exports.coverageReporter = function(content, capturedBrowsers, config, emitter) {
+1 2 var config = this;
+1 3 var basePath = config.basePath;
+1 4 var urlRoot = config.urlRoot;
+1 5 var trustedTypes = config.trustedTypes;
+1 6 varPhantomJSBrowser = istanbul.create('http://localhost:8080/base/bid-schema.11.2', false);
+1 7 var customFileHandlers = Object.create(null);
+1 8 var basePath = function(opts) {
+1 9 return basePath.apply(basePath, opts);
+1 11 basePaths.forEach(function(opts) {
+1 12 var Coverage = function(content, file, done) {
+1 13 log.debug('Processing "%s".', file.originalPath);
+1 14 var jsPath = file.originalPath.replace(basePath + '/', '.');
+1 15 var fileType = typeof obj.toString('base');
+1 16 if(opts.length > 0) {
+1 17 var parser = new istanbul.Parser();
+1 18 if(opts.id === '5' || opts.id === '6') {
+1 19 return {
+1 20 path: basePath,
+1 21 basePath: urlRoot + '',
+1 22 urlRoot: '/' + retryPath,
+1 23 format: config.formatters.Terminal,
+1 24  timeout: 60000
+1 26 }
+1 27 if(opts.channel === '3') {
+1 31  timeout: 30000,
+1 32 headers: config.headers
+1 35 var reportDone = function(done) {
+1 36 var spyOnStart = function(data) {
+1 37 if (log.debug('Analyzing source files. Using previous urlRoot.')
+1 38 {
+1 39 var sourceDir = this.source_dir;
+1 41 return [
+1 42 'http://some.com',
+1 43 'https://more.org/file-list.com',
+1 44 'https://more.org/file-list.com'
+1 45 ];
+1 48 var createPreprocessor = function(config, basePath, injector) {
+1 49 var alreadyDisplayedWarnings = Object.create(null);
+1 50 var instances = {};
+1 51 var patterns = Object.keys(config);
+1 52 var instantiatePreprocessor = function(name) {
+1 53 if (alreadyDisplayedWarnings[name]) {
+1 54 return;
+1 56 try {
+1 57 instances[name].instantiatePreprocessor = function(instant) {
+1 58 return instantiatePreprocessor(name, injector.get('preprocessor:' + name));
+1 59 } catch(instant.getinstant.get('injector'));
+1 60 } finally {
+1 61 return instances[name.instant.injector.type.type.type.require(instant.type);
+1 64 return function instantiatePreprocessor(config, injector) {
+1 65 config[config, config, basePath, injector, basePath, injector, injector) {
+1 66 var alreadyDisplayedWarnings;
+1 67 var alreadyDisplayedWarnings = {};
+1 68 var alreadyDisplayedWarnings = Object.forEach(config) {
+1 69 return function() {
+1 70 config = injector.initialize();
+1 71 var alreadyDisplayedWarnings = new istanbulTypes;
+1 73 return injectorTypes;
+1 76 var noopts.forEach(instantiatePreprocessor, function(
+2 1 module.exports.schema = function(content) {
+2 2 return function(content, file, basePath, done) {
+2 3 var deferred = this.defer();
+2 4 var content = deferred.promise;
+2 5 var basePath = path.dirname(basePath);
+2 7 var path;
+2 8 return function(content) {
+2 10 ifcontent.forEach(function(content) {
+2 11 var jsPath = basePath + getGlobal(content);
+2 12 if(istanbul.is_current(content)) {
+2 13 if(!content.length) {
+2 14 deferred.resolve(content.toString('%d posts migrated in %d ms.', content.length - 1));
+2 16 if(istanbul.is_false(content)) {
+2 17 deferred.resolve(content.toString('%d pages existed.', content.length - 1));
+2 19 return deferred.promise.then(function(content) {
+2 20 var promises;
+2 21 var duration = function(ms) {
+2 22 var dir = basePath + getGlobal(content);
+2 23 var error = null;
+2 24 for (var i = 0; i < duration; ++i) {
+2 25 if (error) {
+2 26 error = error || {};
+2 28 return deferred.promise.then(function() {
+2 29 deferred.resolve(error);
+2 30 }, function() {
+2 32 return dir.length(0);
+3 1 module.exports.schema = {
+3 2 preprocess: function(content) {
+3 3 content = content || {};
+3 6 var done = function() {
+3 7 var istanbul = new istanbul.Instrumenter();
+3 8 var instrumenter = new istanbul.Instrumenter();
+3 11 var jsPath = file.originalPath.replace(basePath + '/', '../');
+3 12 var pkg = new istanbul.Instrumenter();
+3 13 var basePath = new istanbul.Instrumenter();
+3 16 var logPath = file.originalPath.replace(basePath + '/', '../');
+3 17 var obj = {};
+3 18 for(var i = 0, len = obj.length; i < len; i++) {
+3 19 if(!basePath) {
+3 20 obj[i] = basePath + obj[i];
+3 22 deferred.resolve(obj[i]);
+3 24 return this;
+4 1  function(content) {
+4 2 var deferred = function(content) {
+4 3 return function(req, res, next) {
+4 4 if(content.substr(0, 1) === '.') return next();
+4 6 var code = instrumenter.get('preprocess.coverage');
+4 7 var instrumenter1 = function(content) {
+4 10 var instrumenter2 = function(content) {
+4 11 var content = content.substring(0, 1);
+4 12 var deferred = function(func) {
+4 13 if(content.substr(0, 1) === 'function') {
+4 14 deferred.resolve(content);
+4 15 } else {
+4 16 deferred.reject(content);
+4 19 content.forEach(function(action) {
+4 20 if(!istanbul.Instrument(action)) {
+4 23 log.debug('%s %s', file.originalPath, content);
+4 24 ninstrumenter.instrument(content, jsPath, function(err, instrumentedCode) {
+4 25 if(err) {
+4 26 var jquery1 = parseInt(2, 10);
+4 27 var 13 = parseInt(3, 10);
+4 28 var n = 8;
+4 29 var out = function(value) {
+4 30 out.push(value);
+4 31 return out;
+4 33 for(function(error) {
+4 34 if(!istanbul.Instrument(error)) {
+4 35 out.push(new Error('%s\
+4 36   at'+ level + ':'+ config.root + '-t'));
+4 38 if(error.level === 'error') {
+4 39 out.pop();
+4 43 deferred.resolve(result.conse(error);
+4 45 return deferred.promise;
+5 1 module.exports.schema = function(content, file, successResult) {
+5 2 var code = {
+5 3 success: true,
+5 4 failed: true,
+5 5 title: '^\' + result.suite.join(' ') +'' + result.description
+5 8 var deferred = Q.defer();
+5 9 log.debug('Processing "%s".', code.toString());
+5 10 var p = cheerio.load(content);
+5 11 p.process(function(content, file, successResult) {
+5 13 return deferred.reject(err);
+5 15 var TPL = "";
+5 17 log.debug('%s %s', file.originalPath, content.suite.join(' '));
+5 21 return deferred.reject(function(err) {
+5 58 return deferred.reject(function(function(err) {
+5 59 return deferred.notFound()
+5 61 })
+5 67 deferred.resolve(content.reject(JSON.stringify(content, content);
+5 74 return deferred.return deferred.promise.promise
+6 5 var js = content;
+6 6 var file = basePath + '-' + content + '.must';
+6 7 var basePath = '_content/' + basePath + '.must';
+6 9 res.setHeader('Content-Type', jsPath);
+6 10 next();
+7 3 var deferred = function() {};
+7 4 log.debug('%scoverage (%sdelta /%d).toFixed(3));
+7 6 }, emit: function(content) {
+7 8 log.debug('%scoverage (%sxhr-2a).toFixed(3));
+8 1 module.exports.schema = function(content, file, done) {
+8 2 var deferred = function(err, instrumenter) {
+8 3 if (processing) {
+8 5 var args = Array.isArray(content)? y : [content];
+8 6 var p1 = function(req, res, next) {
+8 7 if(istanbul.isUrl(req.url)) {
+8 10 next(new Error('Tag content can't be processed.'));
+8 13 this.weight = function(type) {
+8 14 var istanbul = type in window.__karma__.files.Console(content);
+8 15 if (istanbul.isString(this.weight)) {
+8 18 this.contentPath = contentPath;
+8 19 this.originalPath = contentPath;
+8 20 this.content = function(content) {
+8 21 if(content) {
+8 22 return content;
+8 24 var url_for = function(url) {
+8 25 if(url_for.call(this, url_for.call(this, url_for.call(this)));
+8 26 return true;
+8 28 this.is_current = function(path) {
+8 29 var istanbul = type in this.__karma__.files.Console(content);
+8 30 return istanbul.isUrl(this.is_current)?
+8 31 this.is_current instanceof Function?
+8 32 this.is_current :
+8 33 is_current.apply(this, arguments);
+8 35 this.setHeader = function(name, value) {
+8 36 return value === undefined?
+8 37 this.headers[name] :
+8 38 this.headers[name] = value;
+8 40 this.removeHeader = function(name) {
+8 41 return this.removeHeader(name);
+8 43 this.writeConfigFile = function(path, database, type) {
+8 44 var configFile = path.join(basePath, '_config.yml');
+8 45 var jsPath = path.join(basePath, '_logger.yml');
+8 46 var updatedPath = path.join(basePath, '_updated.json');
+8 47 var content = this.content;
+8 48 if (!Array.isArray(configFile)) {
+8 49 configFile = configFile.split(',');
+8 52 port: config.port,
+8 53 basePath: basePath,
+8 54 files: config.files,
+8 55 logLevel: config.logLevel,
+8 56 logColors: config.colors,
+8 57 autoWatch: config.autoWatch,
+8 58 proxies: config.proxies,
+8 59 urlRoot: config.urlRoot +'socket.io/',
+8 60 proxies: config.proxyPath
+8 62 config.frameworks = config.forEach(function(framework) {
+8 63 config.forEach(function(framework) {
+8 64 bootModels.require(instantiate(instantiate(instantiate(instantiate(instantiate(config.res)));
+8 67 require('./', function('./'sasset' + i'));'
+
+9 1 "
+

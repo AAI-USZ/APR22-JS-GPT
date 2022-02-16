@@ -1,0 +1,226 @@
+Min editdistance: 30.00
+Closest candidate: 0 3 var cli = require('../../util/cli');
+0 1 var PackageRepository = require('../../core/PackageRepository');
+0 2 var Logger = require('../../core/Logger');
+0 3 var cli = require('../../util/cli');
+0 4 var defaultConfig = require('../../config');
+0 5 function clean(packages, options, config) {
+0 6 var promise;
+0 7 var emitter = new EventEmitter();
+0 8 var logger = new Logger();
+0 9 options = options || {};
+0 10 if (packages &&!packages.length) {
+0 11 packages = null;
+0 12 } else {
+0 13 packages = packages.map(function (pkg) {
+0 14 var split = pkg.split('#');
+0 15 return {
+0 16 name: split[0],
+0 17 version: split[1]
+0 18 };
+0 19 });
+0 20 }
+0 21 if (!options.completion) {
+0 22 promise = cleanPackages(config, logger, packages);
+0 24 promise = Q.all([
+0 25 packages? cleanPackages(config, logger, packages) : null,
+0 26 cleanCompletion(config, logger)
+0 27 ]);
+0 29 promise
+0 30 .then(function (entries) {
+0 31 emitter.emit('end', entries);
+0 32 }, function (error) {
+0 33 emitter.emit('error', error);
+0 35 return logger.pipe(emitter);
+0 37 function cleanPackages(config, logger, packages) {
+0 38 var repository = new PackageRepository(config, logger);
+0 39 return repository.list()
+0 41 var promises;
+0 42 if (packages) {
+0 43 entries = entries.filter(function (pkgMeta) {
+0 44 return!!mout.array.find(packages, function (pkg) {
+0 45 if  (pkg.name!== pkgMeta.name) {
+0 46 return false;
+0 48 if (pkg.version) {
+0 49 return pkg.version === pkgMeta.version ||
+0 50 pkg.version === pkgMeta.target;
+0 52 return true;
+0 56 promises = entries.map(function (entry) {
+0 57 return repository.eliminate(entry.pkgMeta);
+0 59 return Q.all(promises)
+0 60 .then(function () {
+0 61 return entries;
+0 65 function clearRuntimeCache() {
+0 66 var PackageRepository = function (config, logger) {
+0 68 return repository.clear()
+0 70 return Q.all([
+0 71 clearPackageRepository(config),
+0 72 clearLinks(names, config),
+0 73 !names? clearCompletion(config) : null
+0 74 ])
+0 75 .spread(function (entries) {
+0 78 return repository.eliminate(entry.pkgMeta)
+0 83 promises.forEach(function (name) {
+0 84 var promise = Q.all([
+0 85 clearPackageRepository.clearPackageRepository(config),
+0 86 clearLinks(name),
+0 87 clearLinks(name)
+0 90 return repository.then(function () {
+0 91 return repository.clearLinks(name)
+0 93 return repository.eliminate()
+0 94 .eliminate()
+0 105 function clearRuntimeCache.prototype.then(name) {
+0 107 function clearLinks() {
+0 108 return Q.then(name, repository.resolve()
+0 109 .then(function (unclearLinks) {
+0 110 .then(false)
+0 111 .then(unlinks) {
+0 112 .then(unlinks.length)
+0 113 .length > 0)
+0 114 .done(function
+1 8 var names;
+1 10 config = mout.object.deepMixIn(config || {}, defaultConfig);
+1 12 packages = names = null;
+1 21 names = packages.map(function (pkg) {
+1 22 return pkg.name;
+1 25 Q.all([
+1 26 clearPackages(packages, config, logger),
+1 27 clearLinks(names, config, logger)
+1 28 ]).spread(function (entries) {
+1 30 })
+1 31 .fail(function (error) {
+1 36 function clearPackages(packages, config, logger) {
+1 50 }"
+
+2 41 entries = entries.filter(function (entry) {
+2 43 if  (pkg.name!== entry.name) {
+2 46 return entry;
+2 66 return repository.eliminate(entry.name)
+2 72 promises.forEach(function (entry) {
+2 74 var decEndpoint = entry.pkgMeta.name;
+2 75 promises.forEach(function (decEndpoint) {
+2 83 promises.forEach(function (pkg) {
+2 84 promises.sort(function (name1, name1, name2) {
+2 85 return name1[0] === name1];
+2 91 promises.forEach(function clearLinks(names) {
+2 92 return repository.then(function (folder) {
+2 93 return Q.clearLinks(folder)
+2 94 .then(function (folder) {
+2 95 return Q.n.n.then(function () {
+2 96 return Q.n.n.n.nfcall(rimraf.n.nfcall(rimraf, canonicalDir, canonicalDir, dir)
+2 97 .then(self.bind(self, dir);
+2 101 .then(this.then(this.clearLinks.bind(this));
+2 104 .then(this));
+2 105 .then(this.then(this.clean, this.completion.completion, this.completion);
+2 107 .then(this.
+3 25 packages? cleanPackages(config, logger) : null,
+3 43 entries = entries.filter(function (pkg) {
+3 45 if  (pkg.name!== pkg.name) {
+3 49 return pkg.version === pkg.version ||
+3 50 pkg.version === pkg.target;
+3 65 function clearRuntimeCache(names, config) {
+3 66 var registryClient;
+3 68 if (names &&!names.length) {
+3 69 names = null;
+3 71 promises = names.map(function (name) {
+3 72 return Q.nfcall(registryClient.clearCache.bind(registryClient), name)
+3 74 return Q.nfcall(registryClient.clearCache.bind(registryClient), name);
+3 78 promises
+3 79 .map(function (name) {
+3 83 var entry;
+3 84 var entry = {
+3 85 name: name,
+3 86 url: entry.split('/')[0]
+3 88 if (key = entry[key] = entry.split('/')[0]
+3 89 ];
+3 90 if (!mout.array.remove(key) {
+3 91 promise = entry[key] = entry;
+3 93 promise = promise.sort(function (a, b, i) {
+3 94 if (!a, b, i) {
+3 95 if (!a) {
+3 96 if (!a) return -1] === 2ndec(key, i === 2
+3 97 , b[key]
+3 98 , i -1]
+3 99 , len = options[0]
+3 100 , len = keys
+3 101 , len;
+3 105 } else if (!a) {
+3 106 return promise;
+3 107 promises.for
+4 67 var registryClient = new PackageRepository(config, logger);
+4 69 var registryOptions;
+4 70 registryOptions = mout.object.deepMixIn({}, config);
+4 71 registryOptions.cache = config.storage.registry;
+4 72 registryClient.clearCache();
+4 73 return Q.resolve([]);
+4 79 registryOptions.cache = config.cache.registry;
+4 80 registryClient.clearCache = config.clearCache = config.cache;
+4 81 registryClient.lookup = config.lookup.lookup.lookup.lookup.lookup;
+4 82 .configure = config.lookup.lookup.lookup.configure.lookup;
+4 83 .configure = config.lookup;
+4 84 .lookup.lookup.lookup.lookup.configure = config.lookup.lookup;
+4 85 .lookup.lookup;
+4 86 .lookup = config.lookup.lookup;
+4 87 .lookup = config.lookup;
+4 88 registry.registry.registry.search = config.registry.search.lookup = config.lookup;
+4 90 .registry.registry.lookup = config.lookup;
+5 27 clearLinks(names, config, logger),
+5 28 !names? clearCompletion(config, logger) : null
+5 66 function clearLinks(names, config, logger) {
+5 70 return Q.nfcall(rimraf, entry);
+5 77 this._config = config;
+5 78 this._logger = logger;
+5 79 this._resolutions = clearModules(this._config);
+5 80 return this._manager = new PackageRepository(this._manager);
+5 82 Manager.prototype.resolve = function () {
+5 83 return this._readJson();
+5 84 .then(this._readInstalled();
+5 85 .then(function (this._readJson.bind(this._readJson.bind(this._readInstalled.bind(this))
+5 86 .bind(this._readJson.bind(this))
+5 88 .bind(this._readInstalled.bind(this._readJson.bind(this))
+5 89 .bind(this._readJson.bind(this));
+5 91 .readJson.bind(this));
+5 93 Manager.prototype._readJson = function readJson(this, metaFile, metaFile, json) {
+5 94 var that = metaFile = path.join
+7 26 cleanCompletion(config)
+7 72 if (!config.registry) {
+7 73 registryClient = new PackageRepository(config, logger);
+7 74 promises = registryOptions.reduce(function (previous, new) {
+7 75 previous.url = 'https://bower.herokuapp.com';
+7 76 return promise.then(function (result) {
+7 77 return Q.nfcall(registryClient.clearCache.bind(registryClient), result);
+7 78 }, function () {
+7 84 .then(function (clearRuntimeCache)
+7 86 clearRuntimeCache.bind(registryClient)
+7 87 .clear();
+7 92 function clearRuntimeCache.prototype.retrieve = function (name) {
+7 94 .then(function (name) {
+7 97 clearRuntimeCache.store.store.clear()
+7 98 .store.length(name)
+7 99 .then(cache) {
+7 100 .then(clear) {
+7 101 clear.then(clear)
+7 103 clear.then(clear) {
+7 104 clear.done(cache.store.length)
+7 105 .length = null;
+7 107 .done(function (name)
+7 108 .done(clear) {
+7 109 .then(function
+8 41 function clearPackages(config, logger, packages) {
+8 64 clearPackages(config, logger, packages),
+8 65 clearLinks(config, logger)
+8 74 prune = promise.then(function () {
+8 75 var promises = repository.eliminate(entry.pkgMeta)
+8 79 promises.forEach(function (post) {
+8 80 var decEndpoint = entry.pkgMeta.decompose(post);
+8 81 decEndpoint.promise = function () {
+8 83 clearLinks(post,
+8 84 clearLinks(post)
+8 89 return Q.then(function () {
+8 99 .exec('bower.object.entries(names,
+8 100 .entries,
+8 101 .exec(function () {
+8 102 .exec([]);
+8 103 .exec(['bower', 'bower','bower.json', 'bower.json', 'bower.json', null, 'bower.json']);
+8 104 })"
+

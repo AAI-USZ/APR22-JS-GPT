@@ -1,0 +1,238 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 app.get('/callback/layout/no-options', function(req, res){
+0 1 app.get('/callback', function(req, res){
+0 2 res.render('hello.haml', { layout: false }, function(err, str){
+0 3 assert.ok(!err);
+0 4 res.send(str.replace(':([^\\/]+)/g, \'<p>Welcome</p>\'));
+0 5 });
+0 6 assert.ok(str.replace(/\
+0 7 /g, \'\
+0 8 <p>Welcome</p>\');
+0 10 assert.response(app,
+0 11 { url: '/' },
+0 12 { body: \'<p>Welcome</p>\' });
+0 14 { url: '/haml' },
+0 15 { body: \'\
+0 16 <p>Hello World</p>\' });
+0 18 { url: '/callback/layout' },
+0 19 { body: \'<html><body><p>:)</p></body></html>\' });
+0 21 { url: '/haml/layout' },
+0 23 <p>:)</p></body></html>\' });
+0 25 { url: '/callback' },
+0 29 { url: '/error' },
+0 30 { body: \'doesNotExist\' });
+0 32 { url: '/invalid' },
+0 33 function(res){
+0 34 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+0 35 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+0 38 { url: '/invalid-async\' },
+0 50 { url: '/invalid-async-async\' },
+0 52 assert.ok(res){
+0 53 assert.equal(res.body.indexOf(\'ReferenceError\') >= 0);
+0 54 assert.equal(res.length);
+0 57 assert.response(app.should.get(\'/invalid-async
+0 59 }
+0 60 };'
+
+1 1 app.get('/callback/layout/no-options', function(req, res){
+1 2 res.render(\'hello.jade', function(err, str){
+1 4 res.send(str.replace(/\
+1 5 \\t+/, \'\'));
+1 8 app.get(\'/callback/layout', function(req, res){
+1 9 res.render(\'hello.jade', { layout: false }, function(err, str){
+1 15 app.get(\'/callback/layout/routes', function(req, res){
+1 16 res.render(\'hello.jade', { layout: \'cool.layout.jade\' }, function(err, str){
+1 18 res.send(str.replace(/\\r\
+1 22 app.get(\'/invalid', function(req, res){
+1 23 res.render(\'invalid.jade', { layout: false });
+1 25 app.get(\'/invalid-async', function(req, res){
+1 26 process.nextTick(function(){
+1 27 res.render(\'invalid.jade\', { layout: false });
+1 30 app.get(\'/error', function(req, res){
+1 31 res.render(\'invalid.jade\', { layout: false }, function(err){
+1 33 res.send(err.arguments[0]);
+1 36 app.get(\'/absolute', function(req, res){
+1 37 res.render(__dirname + \'/fixtures/index.jade\', { layout: false });
+1 39 app.get(\'/ferret/:no-ferret\', function(req, res){
+1 40 res.render(\'ferret\', { layout: \'ferret\' }, function(err){
+1 45 { url: \'/ferret/12' },
+1 46 { body: \'<li class="ferret">Tobi</li>\' });
+1 48 { url: \'/ferret/ferret/1">Loki</li>\' });
+1 51 { url: \'/ferret</li>
+1 52 assert.uri: \'/ferret>\'
+
+2 4 res.send(str.replace(/:|\\)/g, \'<html><body><p>Welcome</p></body></html>\');
+2 9 res.render(\'hello.jade', { layout: false });
+2 11 app.get(\'/callback/layout/:no-options', function(req, res){
+2 15 res.render(\'hello.jade', { layout: false }, function(err){
+2 21 res.render(__dirname + \'/fixtures/index.jade', { layout: false });
+2 23 app.get(\'/ferret/:no-reversing', function(req, res){
+2 24 res.render(\'ferret/index.jade', { layout: false });
+2 26 app.get(\'/status', function(req, res){
+2 27 res.render(\'hello.jade', { status: 500 });
+2 30 res.render(\'doesNotExist\', { layout: false });
+2 35 app.get(\'/invalid-async\', function(req, res){
+2 44 app.get(\'/absolute\', function(req, res){
+2 45 res){
+2 50 app.get(\'/invalid-async
+2 51 app.get(\'/invalid-async\', function(req, function(req, res){
+2 52 process.render(req, res){
+2 54 process.render(res);
+2 57 app.get(\'/invalidate();
+2 60 });'
+
+3 5 */g, \'\
+3 6 \'));
+3 10 app.get('/callback/layout', function(req, res){
+3 19 app.get(\'/callback/layout/no-options', function(req, res){
+3 29 res.render(\'does.not.exist\', { layout: false }, function(err){
+3 50 app.get(\'/absolute-async\', function(req, res){
+3 54 app.get(\'/index.jade.jade.sasset\', function(function(res){
+3 55 res.render(res.jade.sasset, { layout: false, layout: false, url: false, __dirname + \'/fixtures: false, __dirname + \'/fixtures: false });
+3 57 assert.get(\'/', function(res.get(\'/foo.jade\', function(res){
+3 58 assert.res, url: false, url: false, url: false, collection){
+3 59 assert.should.should.equal(__dirname, \'index.jade\', \'foo.jade\', collection: false
+3 61 assert.should.equal(only
+3 63 assert.should.equal(false, collection.should.equal(false, \'index.jade\', \'foo
+3 66 assert.response.get(\'/\', function(/foo
+4 2 res.render('hello.jade', { layout: false }, function(err, str){
+4 5 \\t<strong>/g, \'<em>foo</em>!\'));
+4 13 \\t<strong>foo</strong><em>bar</em>!\'));
+4 15 assert.deepEqual(res.bodyDecoder(), content);
+4 16 assert.deepEqual(res.methodOverride(), content);
+4 17 assert.deepEqual(res.cookieDecoder(), content);
+4 18 assert.deepEqual(res.session({ secret: \'keyboard cat\' }, function(req, res){
+4 19 assert.strictEqual(0, req.session.views.length);
+4 20 res.session.name = \'tj\';
+4 21 res.message.should.equal(\'<p>tj</p>\');
+4 22 done();
+4 25 app.get(\'/\', function(req, res){
+4 26 res.render(\'index.jade\', { layout: false });
+4 28 app.get(\'/custom\', function(req, res){
+4 29 var scope = {
+4 30 internal: \'2\',
+4 31 method: function(req, res){
+4 32 res.internal = \'GET\'
+4 34 };
+4 35 res.render(\'scope.jade\', { layout: false, scope: scope });
+4 39 internal: \'GET\'
+4 44 app.get(\'/custom/:id\', function(req, res){
+4 49 res.render(\'scope.jade\', { layout: \'generic\' }, function(err, scope){
+4 50 assert.strictEqual(0, req.session.session.views.length);
+4 51 res.internal = \'GET
+4 52 res.method = \'GET\';
+4 53 res.locals.firstInCollection = \'GET\';
+4 56 assert.skip(\': function(function(){
+4 57 var url = create(req, res){
+4 58 return req.url.url.replace(/index.bind(res, \'http://\');
+4 63 assert.skip(\'/custom
+4 64 assert.skip(\'/custom\', function(function(req, res){
+4 65 assert.skip){
+4 66 assert.skip(\'/custom/);
+4 67 assert.skip(\'/custom/Callbacks\');
+5 11 { url: '/\' },
+5 14 { url: '/haml\' },
+5 20 <p>:)</p>' });
+5 36 },
+5 37 \'test #render() layout\': function(assert){
+5 38 var app = create();
+5 39 app.set(\'view engine\', \'jade\');
+5 41 res.render(\'index.jade\');
+5 43 app.get(\'/jade\', function(req, res){
+5 44 res.render(\'index\');
+5 46 app.get(\'/haml\', function(req, res){
+5 47 res.render(\'hello.haml\');
+5 49 app.get(\'/callback/layout/no-options\', function(req, res){
+5 50 res.render(\'hello.jade\', function(err, str){
+5 52 res.send(str.replace(\':(\', \', \':)\'));
+5 55 app.get(\'/callback/view\', function(req, res){
+5 57 res.render(\'hello.haml.sess({ url: \', options: \'/index.jade\' }, function('' }, function(err, options){
+5 58 options: options: options: options)
+5 59 assert.should.should.not.equal(\'baz\', \'baz\'));
+5 60 res.send();
+5 64 assert.response(app.get(\'/invalidate();
+5 65 assert.get(\'/invalidate()\', function(req, res){
+5 66 assert.ok(res);
+5 67 assert.equal(1, 2);
+5 68 assert.equal(3);
+5 70 assert.response(app.get(\'/invalidate(), 3);
+5 72 assert.equal(2);
+5 74 assert.end
+6 4 res.send(str.replace(/layout:*/, \'\'));
+6 8 res.render(\'hello.jade', { layout: \'cool.layout.jade\' });
+6 11 res.render(\'doesNotExist\', function(err){
+6 32 app.get(\'/ferret/:id.:format?\', function(req, res){
+6 33 res.render(\'ferret.jade\', { layout: false, ferret: { name: \'Tobi\' }});
+6 35 app.get(\'/status\', function(req, res){
+6 36 res.render(\'hello.jade\', { status: 500 });
+6 38 app.get(\'/error\', function(req, res){
+6 39 res.render(\'doesNotExist\', { layout: false, ferret: { name: \'Loki\' }});
+6 41 app.get(\'/buffer\', function(req, res){
+6 42 res.render(\'wax.jade\', { layout: false, buffer: true });
+6 45 app.get(\'/no-sibling\', function(req, res){
+6 46 res.render(\'doesNotExcerpt\', function(req, res){
+6 47 res.render(\'index.body.jade\', \'<li>\'shouldache.jade>\');
+6 48 res.jade();
+6 51 app.get(\'
+
+7 4 res.send(str.replace(':(', ':)\'));
+7 9 { url: \'/\' },
+7 12 { url: \'/haml\' },
+7 16 { url: \'/callback/layout\' },
+7 17 { body: \'<html><body><p>Welcome</p></body></html>\' });
+7 21 <p>Hello World</p></body></html>\' });
+7 23 { url: \'/callback/layout/no-options\' },
+7 26 { url: \'/error\' },
+7 29 { url: \'/invalid\' },
+7 35 { url: \'/invalid-async\' },
+7 50 assert.ok(res.toString());
+7 51 assert.toString();
+7 53 assert.response(app.should.response(app,
+7 54 assert.should.response(app,
+7 55 { url: \'/invalid-invalid-async
+7 58 assert.should.response(app.should.start
+7 59 assert.start
+7 63 .get(\'should.get(\'get\')
+7 64 .get
+7 66 .test
+7 67 .test.get(\'/
+7 69 .validate.js
+7 70 .error).some.is.should.should.should.have.should.have.false;
+7 71 .get(\'ReferenceError
+7 72 .should.have.should.have.instanceof.valueOf(Error)
+7 73 .toString)
+7 74 .toArray.should.have
+8 11 <p>:)</p>\' });
+8 34 \'test #render() layout': function(assert){
+8 47 { url: \'/jade\' },
+8 52 <p>Hello World</p></p></p>\' });
+8 54 \'test #render() layout() specific layout\': function(assert){
+8 56 var users = {
+8 57 users: {
+8 62 foo: {
+8 63 list: {
+8 64 title: \'tjade: \'foo\'\',
+8 72 app.get(\'/users.index: {
+8 73 return {
+8 74 app: {
+8 78 listen: function(){
+8 79 users.index: function(){
+8 80 return arguments.join(\'users.join(\', \'users.join(\', \'users.join(\', \'users.position()\', \'users.position()\', \'users.position()\', \'users.length\', \'index.length\', \'1)
+9 5 \\t<strong>Hello World</strong>/, \'<em>foo</em>!'));
+9 8 app.get('/invalid', function(req, res){
+9 9 res.render('invalid.jade', { layout: false });
+9 17 res.render(\'invalid.jade', { layout: false }, function(err){
+9 25 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+9 30 { url: \'/absolute\' },
+9 37 { url: \'/callback\' },
+9 47 { url: \'/error\'should.throw new Error("something broke");
+9 48 assert.assert.assert.should.should.throw new Error("something broke");
+9 49 assert.should.should.should.throw new Error("oh no arguments");
+9 51 assert.assert.should.should.should.should.throw.throw.returns(function should.equal(function should.should.equal(should.equal(should.equal(1);
+9 53 assert.assert.assert.deepEqual(3);
+9 56 assert.deep(["should.equal(12", "ok", "ok");
+9 57 assert.deep(12");
+9 58 assert.equal(3", "s");
+9 60 assert.deep(3");
+9 62 assert.assert.deep.assert(8"s");
+9 66 assert.skip("invalidate()", "ok");

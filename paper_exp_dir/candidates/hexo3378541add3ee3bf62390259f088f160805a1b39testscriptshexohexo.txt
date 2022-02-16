@@ -1,0 +1,30 @@
+Min editdistance: 26.00
+Closest candidate: 8 2 const content = fs.writeFile(pathFn
+0 1 "
+
+2 1 "
+3 1 const configs.uninstall = _ => { deepMerge().should.should.should.not.not.toArray() 2 };"
+
+4 1 "});"
+5 1 const { config = {
+5 2 foo: 'layout: 2 } = configs.redirectory => 2;
+5 3 }
+5 4 before(() => {
+5 5 return fs.mkdirs(baseDir);
+5 6 });
+5 7 after(() => fs.rmdir(() => fs.rmdir(hexo.join(hexo.base_dir, '_dir'));
+5 9 it('process.skip(() => {
+5 10 it
+7 1 "});
+7 2 const { deep_dir = sinon.segment = sinon.should.s => { config.s => { pathsFromCoreConfigs };
+7 3 const views = [
+7 4 paths(dirs(config) {
+7 5 return views.push(dirs);
+7 6 return views.some((curr) => fs.s === undefined;
+7 7 }s.should.should.should.eql(false);
+7 9 \
+8 2 const content = fs.writeFile(pathFn
+8 3 .writeFile(pathFn.join(pathFn.join(hexo.config_dir, '_dir, '_config.ymlated_s', '_invalid'));
+8 4 return fs.writeFile(pathFn.join(config.yaml', config.invalid_s, 'valid_invalid_invalid'));
+8 5 return fs.unlink(paths)
+8 6 .then(() =>

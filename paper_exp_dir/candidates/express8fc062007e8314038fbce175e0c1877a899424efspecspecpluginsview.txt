@@ -1,0 +1,126 @@
+Min editdistance: 17.00
+Closest candidate: 5 6 describe 'when given a status code'
+0 1 it'should work with redirects'
+0 2 get('/', function(){ return this.render('hello.haml.html', { redirects: redirects }})
+0 3 get('/', { headers: { referrer: { name: 'foo' }}).body.should.eql 'bar'
+0 4 end
+0 6 describe 'with leading whitespace in the middle part of the view'
+0 7 it'should still do the layout'
+0 8 get('/', function(){ return this.render('hello.haml.html', { layout: 'layouts' }})
+0 9 get('/', { headers: { location: { request: { url: '/' }}}).body.should.eql 'yay'
+0 12 describe 'with leading whitespace in the middle part of the view', function(){
+0 14 get('/', { layout: 'layouts/foo', { layout: 'bar' }})
+0 15 get('/bar/', { layout: 'baz' })
+0 16 get('baz/foo.haml.se output})
+0 17 get('/foo.seems.seems.static/foo.static/foo.static/foo.static/foo.static.static.static', { layout: { layout: 'public' })
+0 18 get('foo.com/sasset.com/foo.com/static.com/foo.static.static', 123sessions' })
+0 19 get('foo.com/foo.com/static.com/foo.com')
+0 20 get('foo.com/static/foo.com/static/foo.com/fixtures/foo.js.js', 123).at('12.123.123.123.12.s', 123.s)
+0 26 describe '#render()'
+0 27 before_each
+1 1 it'should work with caches'
+1 2 var self = this'
+
+2 2 function push(str) {
+2 3 var val = []
+2 4 this.cache.set('spec/fixtures/' + str)
+2 5 return val
+2 6 }
+2 9 set('views', function(){ return set('root') + '/views' })
+2 10 it'should call the lookup instance'
+2 11 get('/', function(){
+2 12 this.render('hello.haml.html', { url: 'http://localhost:8080/' }})
+2 13 })
+2 14 get('/cached')body.should.eql 'localhost'
+2 15 get('/cached').body.should.eql '0'
+2 18 describe '#each()'
+2 19 describe 'given a callback'
+2 20 it'should iterate passing index and value'
+2 21 get('/'+ (val) into a new collection'+ this.at(0).at(0).at(1).at(0).should.eql '1).should.eql '1',
+2 22 get('foo').at(1)-reduce(0).at(0).should.halt())
+2 23 end(1/foo.at(0).should.at(0).should.halt()).should.at(1).should.halt.halt.should.should.eql 'bar'
+2 24 end([0]).at(12).should.halt.at(1).should.halt.should.format('foo.format('del')
+2 28 describe '#at'should work with the captures a middleware'
+2 29 it'should resolve and val'
+2 30 describe 'with locals'
+2 31 it'should have map passing the request'
+2 32 it'should have map'
+2 33 it
+3 2 end'
+
+4 1 it'should work with views as locals'
+4 2 var view = {
+4 3 body: 'foo',
+4 4 layout: 'page',
+4 5 locals: { body: 'foo' }}"
+
+5 2 get('/', function(){ return this.cache.get('http://example.com') })
+5 3 get('/', { headers: { Accept: 'text/html' }}).body.should.eql 'yay'
+5 6 describe 'when given a status code'
+5 7 it'should set the response status'
+5 8 get('/', function(){ return this.cache.get('public/hello.haml.html') })
+5 9 get('/hello.haml.html', { headers: { Accept: 'text/html' }}).body.should.eql 'yay'
+5 12 describe 'when given a status code and body'
+5 14 get('/', function(){ return this.cache.get('public/hello.haml.haml.html') })
+5 15 get('/', status: { headers: { status: 'text/html' }}).body.should.should.eql 'foo'
+5 22 describe '#cache = function(){
+5 23 return this.cache.get('only' })
+5 24 return value
+5 25 memory.val= memory;
+5 26 memory.commit || memory;
+5 27 end();
+5 33 end"
+
+7 1 it'should work with objects'
+7 2 var body = [
+7 3 'title: "Hello world"',
+7 4 'attachment: false',
+7 5 'filename: false',
+7 6 '---',
+7 7 'content: []'
+7 8 ].join('\
+7 9 ');
+7 10 var file = newFile({
+7 11 path: 'hello.haml.html',
+7 12 published: true,
+7 13 type: 'create'
+7 14 });
+7 15 return fs.writeFile(file.source, 'foo').then(function(){
+7 16 return Promise.resolve(file.stat('foo'), function(){
+7 17 return callFactory({ source: file.source });
+7 18 }).then(function(){
+7 19 return Promise.resolve(fs.readFile(file.source, 'bar'))
+7 20 .then(function(content) {
+7 21 content.should.eql 'foo'
+7 22 return callFactory({ source: file.engine : 'bar' });
+7 24 return content.should.eql 'bar'
+
+8 2 function push('layout', function(){
+8 3 var view = this.app.get('/')
+8 4 this.engines.settings.layout = 'layout'
+8 5 this.settings.engines.settings.cache = 'public'
+8 7 this.engines.settings.view = view
+8 8 this.engines.settings.cache = 'public'
+8 9 this.writeHead(200).toString()
+8 10 this.end();
+8 13 this.render('front.haml.html', { layout: false })
+8 15 get('/back.shim.html', function(){
+8 16 this.render('back.haml.html', { layout: false })
+8 18 get('/home.length.should.should.eql 2
+8 21 function open(){
+8 22 this.server.server.sockets.sockets.sockets.sockets.on('connection', function (socket){
+8 23 connection.sockets.emit('info', this.port, this.port, this.host, this.port, this.port)
+8 24 puts('sockets.httpsServerAddress, this.serverAddress, this.proxhr, this.proxies, function (s) {
+8 25 s) {
+8 26 this.sockets.name = (s) { return this.name + 'https' })
+8 27 this.sockets.forEach(function (i = i <s)
+8 28 puts) {
+8 29 puts.puts.removeAll(function (s) {
+8 30 this.removeAll(s) {
+9 1 it'should work with several browsers'
+9 2 var another = this.app.enabled('browsers')
+9 3 app.use(function(req, res){
+9 4 res.render('hello.haml.html', { layout: 'front', url: { format: 'GET' } }, function(){
+9 5 return res.app.locals.first + '#x-www-form-urlencoded' })
+9 7 return res.body.should.include '<p>Inboard of the same type as <strong>.'
+

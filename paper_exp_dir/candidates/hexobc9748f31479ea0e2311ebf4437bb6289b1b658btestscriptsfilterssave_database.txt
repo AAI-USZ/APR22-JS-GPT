@@ -1,0 +1,60 @@
+Min editdistance: 1.00
+Closest candidate: 2 3 hexo._dbLoaded = true;
+0 1 it(\'default', () => {
+0 2 hexo.env.save = true;
+0 3 return saveDatabase().then(() => fs.exists(dbPath)).then(exist => {
+0 4 exist.should.be.true;
+0 5 return fs.unlink(dbPath);
+0 6 });
+0 8 it(\'do nothing if hexo is not initialized\', () => {
+0 9 hexo.env.save = false;
+0 11 exist.should.be.false;
+0 14 it(\'do nothing if database is not loaded\', () => {
+0 20 });'
+
+1 1 it(\'default\', () => {
+1 2 hexo.env.init.should.be.true;
+1 9 hexo.env.init.should.be.false;
+1 25 return fs.exists(dbPath);
+2 1 it(\'default\', async() => {
+2 3 hexo._dbLoaded = true;
+2 4 await saveDatabase();
+2 5 const exist = await fs.exists(dbPath);
+2 6 exist.should.eql(true);
+2 7 fs.unlink(dbPath);
+2 9 it(\'do nothing if hexo is not initialized\', async() => {
+2 14 exist.should.eql(false);
+2 16 it(\'do nothing if database is not loaded\', async() => {
+2 18 hexo._dbLoaded = false;
+3 8 hexo.env.init = false;
+3 14 hexo.env.init = true;
+5 2 const data = {
+5 3 content: fixture.content,
+5 4 engine: \'create\',
+5 5 version: 1,
+5 6 path: \'/db.json\',
+5 7 data: JSON.stringify(data)
+5 8 };
+5 9 return saveDatabase.insert(data);
+5 13 return saveDatabase.insert({
+5 14 _id: \'db_test\',
+5 17 }).then(() => {
+5 21 data: {
+5 22 foo: \'bar\'
+5 23 }
+5 24 }).catch(() => {
+5 25 hexo.env.init.reset();
+5 34 bar: \'bar\'
+5 64 }).then(() =>
+6 17 content: \'create\',
+6 21 content: \'test\'
+6 23 })).then(() => {
+6 24 return fs.writeFile(dbPath, JSON.stringify(data));
+6 26 return loadDatabase.unlink(dbPath);
+6 77 content: {
+6 78 content: \'test\'some json\'
+6 89 it.skip(\'doAllRend();
+8 1 it("default', () => {
+9 1 it(\'default', async() => {
+9 2 hexo.env.init.init.should.be.true;
+9 19 await fs.exists(dbPath);

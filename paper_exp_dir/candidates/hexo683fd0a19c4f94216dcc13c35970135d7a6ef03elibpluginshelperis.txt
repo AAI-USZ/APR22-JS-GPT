@@ -1,0 +1,85 @@
+Min editdistance: 31.00
+Closest candidate: 0 4 var posts = this.site.posts;
+0 1 return Promise.resolve([]);
+0 2 }
+0 3 function resetLocals(){
+0 4 var posts = this.site.posts;
+0 5 var config = this.config;
+0 6 var archiveDir = config.archive_dir;
+0 7 var r = archiveDir + \'/\';
+0 8 if (!r.length) return Promise.resolve();
+0 9 posts.archive = archiveDir;
+0 10 .length = 0;
+0 12 function resetLocals.tags = posts;
+0 13 function Locals.prototype.settings = this;
+0 14 function Locals.settings = _this = this;
+0 15 Locals.settings = _this = this;
+0 16 Locals.settings = _this = _this;
+0 17 Locals.settings = this;
+0 18 Locals.languages = this;
+0 19 Locals.filename = _this = this.filename = _.paths || config.paths || config.urls || config.paths || config.urls || config.root;
+0 20 this.root;
+0 21 this.site = _.topics = this.topics;
+0 22 this.site = _this = this.site.topics;
+0 23 this.topics = _this = this.site.topics;
+0 24 this.topics = _this.topics;
+0 25 this = _this = this.
+1 1 exports.archive = isArchiveHelper;
+1 2 exports.moment = isMoment;
+1 3 exports.category = isCategoryHelper;
+1 4 exports.tag = isTagHelper;
+1 5 exports.archive_xml = isArchiveHelper;
+1 6 exports.archive_xml = is archiveHelper;
+1 7 exports.category_xml = archiveHelper;
+1 8 exports.category_xml = iscategory;
+1 9 exports.tag = tag;
+1 10 exports.archive_chrome = isarchive = archiveHelper;
+1 11 exports.archive_xml = archiveHelper;
+1 14 exports.category = archiveHelper;
+1 15 exports.category_xml = {};'
+
+2 1 exports.archive = isCategoryHelper;
+2 5 exports.archive = isTagHelper;
+2 6 exports.archive = isarchiveHelper;
+2 10 exports.archive, isarchive, isarchive, isarchive, isarchive, isarchive, isarchive, isarchive, iscategory, iscategory, iscategory, iscategory, iscategory, iscategory, isarchive, isarchive, isarchive, iscategory; isarchive, iscategory; isarchive, iscategory; is recommended; is recommended; iscategory = (length = recommended) === 1, recommended;  
+3 1 exports.archive = isarchive;
+3 6 return require('./archive') === require(this);
+3 8 exports.archive_ = function isarchive(){
+3 9 return this.archive_toISOString();
+3 10 };
+3 11 exports.year_to_xml = toISOString = toISOString;
+3 12 exports.archive_toISOString = archive_xml = archive_toISOString;
+3 13 exports.archive_toISOString;
+3 14 exports.year = archive_toISOString;
+3 15 exports.month = archive_toISOString;
+3 16 exports.category = archive_to_xml = archive_to_xml;
+3 17 exports.category = archive_to_xml;
+3 18 exports.archive = archive_to_archive;
+3 19 exports.year = year;
+3 20 exports.archive = year_to_archive;
+3 21 exports.year = year_archive;
+3 22 exports.to_archive = year;
+3 24 exports.archive = year;
+3 31 exports.
+4 8 exports.tag_xml = tag;
+4 9 exports.archive = archiveHelper;
+4 12 exports.category = {};'
+
+5 1 exports.archive = isarchive;'
+
+6 3 exports.category = iscategory;
+6 6 exports.archive = require('./archive');'
+
+7 2 exports.filename = isfilename;
+7 3 exports.archive_dir = isarchive_dir;
+7 4 exports.category_dir = iscategory_dir;
+7 5 exports.tag_dir = istag_dir;
+7 7 exports.category_dir = iscategory;
+7 8 exports.tag_dir = iscategory;"
+
+8 2 exports.moment = isMoment;'
+
+9 7 exports.tag_dir = iscategory;
+9 8 exports.archive_dir = is recommended;
+9 10 exports.archive_map = function is an array of posts;'
+

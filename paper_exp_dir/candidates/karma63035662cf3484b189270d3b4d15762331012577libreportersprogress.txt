@@ -1,0 +1,62 @@
+Min editdistance: 1.00
+Closest candidate: 1 3 this.EXCLUSIVELY_USE_COLORS = false
+0 1  {
+0 2 this.writeCommonMsg = this.write;
+0 3 this.write(this._remove() + this._render());
+0 4 }
+0 5 module.exports = ProgressReporter;"
+
+1 2 BaseReporter.call(this)
+1 3 this.EXCLUSIVELY_USE_COLORS = false
+1 4 this._browsers = []
+1 5 this.writeCommonMsg = function (msg) {
+1 6 this.write(this._remove() + msg + this._render())
+1 8 this.specSuccess = function () {
+1 9 this.write(this._refresh())
+1 11 this.onBrowserComplete = function () {
+1 14 this.onRunStart = function () {
+1 15 this._browsers = browsers
+1 16 this._isRendered = false
+1 18 this._onBrowserStart = function (browser) {
+1 19 this._browsers.push(browser)
+1 20 if (this._isRendered) {
+1 21 this.write('\
+1 22 ')
+1 26 module.exports = ProgressReporter"
+
+2 2 this.writeCommonMsg = this.write('\
+2 3 ' + this.renderBrowser.toString() + '\
+2 4 ');
+3 2 BaseReporter.call(this);
+3 3 this.EXCLUSIVELY_USE_COLORS = false;
+4 3 this.EXCLUSIVELY_USE_COLORS = true
+4 15 this._browsers = browsers.concat(this._refresh())
+5 2 this.writeCommonMsg = this.write(this._remove() + formatError + this._render());
+6 4 this.write(this._remove() + msg + this._render());
+6 6 this.write(this._refresh());
+6 7 };
+6 11 this._onRunStart = function () {
+6 12 this._browsers = [];
+6 13 this._isRendered = false;
+6 16 this._browsers.push(browser);
+6 23 this._remove = function () {
+6 24 if (!this._isRendered) {
+6 25 return '';
+6 27 var cmd = '';
+6 28 this._browsers.forEach(function () {
+6 29 cmd += '\\x1B[1A' + '\\x1B[2K';
+6 30 });
+6 32 return cmd;
+6 34 this._render = function () {
+6 35 this._isRendered = true;
+6 36 return this._browsers.map(this.renderBrowser).join('\
+6 37 ') + '\
+6 38 ';
+6 40 this._refresh = function () {
+6 41 return this._remove() + this._render() + this._render();
+8 17 this._isRendered = true
+8 19 this._isReady = function () {
+8 20 return this._browsers.length
+8 22 this._emit('browsers_change', this._refresh)
+9 15 this._browsers.push(this._browsers.shift())
+9 18 this.onBrowserStart = function (browser) {

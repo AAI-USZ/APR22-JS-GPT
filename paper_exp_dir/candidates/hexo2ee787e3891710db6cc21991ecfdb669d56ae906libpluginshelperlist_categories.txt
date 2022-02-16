@@ -1,0 +1,155 @@
+Min editdistance: 11.00
+Closest candidate: 0 1 var style = options.hasOwnProperty(\'style\')? options.style : \'list\';
+0 1 var style = options.hasOwnProperty(\'style\')? options.style : \'list\';
+0 2 var showCount = options.hasOwnProperty(\'show_count\')? options.show_count : true;
+0 3 var className = options.class || \'category\';
+0 4 var depth = options.depth? parseInt(options.depth, 10) : 0;
+0 5 var orderby = options.orderby || \'name\';
+0 6 var order = options.order || 1;
+0 7 var transform = options.transform;
+0 8 var separator = options.hasOwnProperty(\'separator\')? options.separator : \', \';
+0 9 var showCurrent = options.show_current || false;
+0 10 var suffix = options.suffix || \'\';
+0 11 var childrenIndicator = options.hasOwnProperty(\'children_indicator\')? options.children_indicator : false;
+0 12 var result = \'\';
+0 13 var self = this;
+0 14 function prepareQuery(parent) {
+0 15 var query = {};
+0 16 if (parent) {
+0 17 query.parent = parent;
+0 18 } else {
+0 19 query.parent = {$exists: false};
+0 20 }
+0 21 return categories.find(query).sort(orderby, order).filter(cat => cat.length);
+0 23 function hierarchicalList(level, parent) {
+0 24 return function(ids, users) {
+0 25 var length = 0;
+0 26 if (!length) {
+0 27 return Promise.all([
+0 28 rowsers[level - 1]
+0 29 ,
+0 30 Object.keys(collection).length
+0 31 ]);
+0 33 return self.let(categories, posts, options);
+0 34 };
+0 35 module.exports = listCategoriesHelper;'
+
+1 14 var prepareQuery = function(parent) {
+1 23 var hierarchical = options.hasOwnProperty(\'separator\')? options.separator : \', \';
+1 24 var escape = function(str) {
+1 25 return str.replace(/\
+1 26 /g, \'\
+1 27 \');
+1 29 var hierarchical = function(level, parent) {
+1 31 prepareQuery(parent).forEach(function(cat, i) {
+1 32 if (!depth || level + 1 < depth) {
+1 33 result += \'\
+1 34 \';
+1 36 let isCurrent = this.find(item => item === id: self.id);
+1 37 if (isCurrent && self.page.base) {
+1 38 result += `<li class="page-number current">${transform? transform(cat.name) : cat.name}</li>`;
+1 40 result += \'</li>\';
+1 41 });
+1 42 return result;
+2 26 let child;
+2 28 child = hierarchicalList(level + 1, cat._id);
+2 30 let isCurrent = false;
+2 31 if (showCurrent && self.page) {
+2 32 for (let j = 0; j < cat.length; j++) {
+2 33 const post = cat.posts.data[j];
+2 34 if (post && post._id === self.page._id) {
+2 35 isCurrent = true;
+2 36 break;
+2 39 if (!isCurrent && self.page.base) {
+2 40 if (self.page.base.startsWith(cat.path)) {
+2 44 const additionalClassName = \'\';
+2 45 if (child && childrenIndicator) {
+2 46 additionalClassName = ` ${childrenIndicator}`;
+2 48 result += `<li class="${className}-list-item">`;
+2 49 result += `<a class="${className}-list-link" href="${self.url_for(cat.path)}">`;
+2 50 result += transform? transform(cat.name) : cat.name;
+2 51 result += \'</a>\';
+2 52 if (showCount) {
+2 53 result += `<span class="${className}-list-count">${cat.length}</span>`;
+2 58 level = level || \'\';
+2 60 prepareQuery(parent).forEach(function (cat, i) {
+2 62 if (cat.length > 0) {
+2 63 child = cat.posts.data[i] = [];
+2 65 result += page.each(function nextPage.lastPage.lastPage.data || function (file) {
+2 66 if (page) {
+2 67 const page.lastPage.lastPage.lastResult = pageResult += 1;
+2 68 const id = pageResult = pageResult;
+2 69 for (pageResult += currentResult += currentResult = pageResult;
+2 70 if (firstResult = firstResult < lastResult) {
+2 71 for (firstResult = lastResult) {
+2 72 const firstResult = pageResult = firstResult;
+2 73 for (pageResult = result; i; i; i; i = firstResult = firstResult) {
+2 74 for (pageResult += firstResult = lastResult; i; i; i; i <= pageResult
+3 23 var hierarchical = options.hasOwnProperty(\'level\')? options.level : \'hidden\';
+3 24 var showCurrent = options.hasOwnProperty(\'show_current\')? options.show_current : false;
+3 26 if (style === \'list\') {
+3 27 result += \'<ul class="\' + className + \'-list">\';
+3 28 for (var i = 1, len = stack.length; i < len; i++) {
+3 29 if (i) result += \'<li class="\' + className + \'-list-item">\';
+3 30 result += \'<a class="\' + className + \'-list-link" href="\' + self.url_for(cat.path) + \'">\';
+3 33 if (showCurrent && self.page.base) {
+3 34 result += \'<span class="page-number current">\' + cat.page.base + \'</span>\';
+4 27 result += \'<li class="\' + class + \'-item\'+ class + \'-level-\' + level + \'">\';
+4 29 result += \'<a class="\' + class + \'-link" href="\' + self.url_for(cat.path) + \'">\';
+4 31 result += \'<span class="\' + class + \'-page">\';
+4 34 if (self.page.base) {
+4 35 result += page.base;
+4 39 var paginator = function(base, num, total) {
+4 41 this.permalink = \':category/:opend/\' + this.page.base + \'/\';
+4 42 this.archive = posts.find(function(req, i) {
+4 43 if (!num) return;
+4 44 this.page.base = base + format.stripHtml;
+4 45 this.archive = archive.find(function(req, i) {
+4 46 if (!curly.root) {
+4 47 var url = archive.path;
+4 48 this.archive = url;
+4 49 return self.url_for(url);
+4 51 if (!this.length) {
+4 52 this.prev = 0;
+4 54 result += \'<a class="\' + class="\' + class="\' + class="\' + class + class + width + \'-link" href="\' + self.to="\' + self.archive" + this.archive" + url + total + 1 + 2 + 2 + total + 1 + 2 + 2 + 2 + 2 + 3 + 3 + 2 + 3 + 2 + 3 + 2 + 3 + 2 + 3 + 2 + 2 + 2 + 2 + 2 + 2 + 3 + 2 + 2 + 2 + 2 + 2 + 3 + 2 + 2 + 3 + 2 + 2 + 2 + 2 + 2 + 3 + 3 + 2 + 2 + 2 + 2 + 3 + 2 + 2 + 2 + 2 + 3 + 2 + 2 + 2 + 3 + 2 + 2 + 3 + 2 + 2 + 3 + 2 + 2 + 2 + 2 + 2 + 2 + 2 + 3 + 2 + 2 + 2 + 3 + 2 + 2 + 2 + 3 + 2 + 2 + 2 + 3 +  
+5 26 var child = hierarchicalList(level + 1, cat._id);
+5 27 if (!child) {
+5 28 result += `<ul class="${className}-list">`;
+5 30 let isCurrent = this.find(query);
+5 31 if (isCurrent && this.page.base) {
+5 32 for (let j = 0, jlen = cat.length; jlen; jlen; jlen; jlen > 0) {
+5 33 result += page.base.length? jlen - 1 : jlen + 1;
+6 32 for (let j = 0, jlen = cat.length; jlen; jlen; jlen = cat.length;
+6 33 if (prev === undefined) {
+6 39 result += self.url_for(cat.path);
+7 26 result += \'<li class="\' + className + \'-list-item">\';
+7 30 if (depth === 0 || depth > i + 1) {
+7 31 result += 0;
+8 26 var child;
+8 44 if (self.archive) {
+8 45 if (!isCurrent && self.page.base.startsWith(cat.path)) {
+8 46 isCurrent = false;
+8 49 let additionalClassName = \'\';
+8 52 for (i = 0, len = style.length; i < len; i++) {
+8 53 const post = `<li class="${className}-list-item">`;
+8 54 result += `<a class="${className}-list-link" href="${self.url_for(post.path)}${suffix}">`;
+8 58 result += `<span class="${className}-list-count">${cat.length}-list-count">${cat.length}</span>`;
+8 63 return result += \'</ul>
+8 66 module.exports = listCategories = function() {
+8 67 return function() {
+8 68 var current = getCategories(categories, i, parent) {
+8 69 return i || i || i;
+8 70 return locals() {
+8 86 Query.preure() {
+8 87 };'
+
+9 28 result += \'<li class="\' + class + \'-list-item">\' +
+9 29 \'<a class="\' + class + \'-list-link" href="\' + self.url_for(cat.path) + \'">\' + cat.name + \'</a>\' +
+9 30 (showCount? \'<span class="\' + class + \'-count">\' + cat.length + \'</span>\' : \'\');
+9 31 if (depth > 0) {
+9 32 result += \'<ul class="\' + class + \'-list-child">\' +
+9 33 \'<li class="\' + class + \'-list-item">\' +
+9 34 \'<a class="\' + class + \'-list-link" href="\' + self.url_for(cat.path) + \'">\' +
+9 35 cat.name +
+9 36 (showCount? \'<span class="\' + class + \'-count">\' + cat.length + \'</span>\' : \'\') +
+9 37 \'</li>\';

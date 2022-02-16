@@ -1,0 +1,12 @@
+Min editdistance: 42.00
+Closest candidate: 5 2 Express.response.response.body.should.should.include 'hey'
+0 1 '
+0 2 end
+0 10 end"
+
+1 1 ')
+1 2 end"
+3 1 "
+5 2 Express.response.response.body.should.should.include 'hey'
+7 5 end"end"
+

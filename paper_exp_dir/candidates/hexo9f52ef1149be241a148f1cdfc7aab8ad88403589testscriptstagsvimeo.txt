@@ -1,0 +1,172 @@
+Min editdistance: 5.00
+Closest candidate: 1 2 describe(\'img\', () => {
+0 1 describe(\'gist\', () => {
+0 2 const gist = require(\'../../../lib/plugins/tag/gist\');
+0 3 it(\'id\', () => {
+0 4 const $ = cheerio.load(gist(['foo\']));
+0 5 $(\'script\').attr(\'src\').should.eql(\'https://gist.github.com/foo.js\');
+0 6 });
+0 7 it(\'file - src\', () => {
+0 8 const $ = cheerio.load(gist(\'foo\'));
+0 9 $(\'script\').attr(\'src\').should.eql(\'https://gist.github.com/foo.js?file=\' + $(\'script.src\'));
+0 11 it(\'file - width\', () => {
+0 12 let $ = cheerio.load(gist(\'foo\'));
+0 13 $(\'iframe\').attr(\'src\').should.eql(\'https://gist.github.com/foo.js?file=\' + $(\'iframe\') + \'\');
+0 14 $ = cheerio.load(gist(\'foo\'));
+0 15 $(\'img\').attr(\'src\').should.eql(\'https://gist.github.com/foo.js?image=\' + $(\'img\') + \'\');
+0 17 it(\'file - height\', () => {
+0 23 it(\'file - title\', () => {
+0 27 it(\'file - link\', () => {
+0 33 it(\'file - link + title\', () => {
+0 35 $(\'img\').attr(\'src\').should.eql(\'https://gist.github.com/foo.js?image=\' + $(\'img\') + $(\'image\') + \': \'\');
+0 37 it(\'file - link + link + \', () => {
+0 38 const $ = cheerio.load(\'
+
+1 1 const path = require(\'path\');
+1 2 describe(\'img\', () => {
+1 3 const Hexo = require(\'../../../lib/hexo\');
+1 4 const hexo = new Hexo(path.join(__dirname, \'img_test\'));
+1 5 const img = require(\'../../../lib/plugins/tag/img\')(hexo);
+1 6 before(() => hexo.init());
+1 7 it(\'src\', () => {
+1 8 const $ = cheerio.load(img([\'http://placekitten.com/200/300\']));
+1 9 $(\'img\').attr(\'src\').should.eql(\'http://placekitten.com/200/300\');
+1 11 it(\'internal src\', () => {
+1 12 hexo.config.root = \'/\';
+1 13 let $ = cheerio.load(img([\'/images/test.jpg\']));
+1 14 $(\'img\').attr(\'src\').should.eql(\'/images/test.jpg\');
+1 15 hexo.config.url = \'http://yoursite.com/root\';
+1 16 hexo.config.root = \'/root/\';
+1 17 $ = cheerio.load(img([\'/images/test.jpg\']));
+1 18 $(\'img\').attr(\'src\').should.eql(\'/root/images/test.jpg\');
+1 20 it(\'class + src\', () => {
+1 21 const $ = cheerio.load(img(\'left http://placekitten.com/200/300\'.split(\' \')));
+1 23 $(\'img\').attr(\'class\').should.eql(\'left\');
+1 25 it(\'multiple classes + src\', () => {
+1 26 const $ = cheerio.load(img(\'left top http://placekitten.com/200/300\'.split(\' \')));
+1 30 it(\'class + src + width\', () => {
+1 31 const $ = cheerio.load(img(\'left http://placekitten.com/200/300 200\'.split(\' \')));
+1 35 it(\'class + src + width + height\', () => {
+1 37 const $ = cheerio.load(img(\'left http://placekitten.com/200/300 200 300\'.split(\' \')));
+1 38 $(\'img\').attr(\'src\').should.eql(\'/placekitten.com/200/300\');
+1 41 it(\'alt\', () => {
+1 42 hexo.config.config.config.root = \'/\';
+1 43 return = \'/\';
+1 45 });'
+
+2 1 describe('iframe', () => {
+2 2 const iframe = require(\'../../../lib/plugins/tag/iframe\');
+2 3 it(\'url\', () => {
+2 4 const $ = cheerio.load(iframe([\'http://zespia.tw\']));
+2 5 $(\'iframe\').attr(\'href\').should.eql(\'http://zespia.tw\');
+2 6 $(\'iframe\').attr(\'width\').should.eql(\'100%\');
+2 7 $(\'iframe\').attr(\'height\').should.eql(\'300\');
+2 8 $(\'iframe\').attr(\'frameborder\').should.eql(\'0\');
+2 9 $(\'iframe\').attr(\'allowfullscreen\').should.eql('');
+2 11 it(\'width\', () => {
+2 12 const $ = cheerio.load(iframe([\'http://zespia.tw\', \'500\'));
+2 13 $(\'iframe\').attr(\'src\').should.eql(\'http://zespia.tw\');
+2 14 $(\'iframe\').attr(\'width\').should.eql(\'500\');
+2 19 it(\'height\', () => {
+2 20 const $ = cheerio.load(iframe([\'http://zespia.tw\', \'500\', \'600\']);
+2 23 $(\'iframe\').attr(\'height\').should.eql(\'600\');
+3 1 describe(\'link\', () => {
+3 2 const link = require(\'../../../lib/plugins/tag/link\');
+3 3 it(\'text + url\', () => {
+3 4 const $ = cheerio.load(link(\'Click here to Google http://google.com\'));
+3 5 $(\'a href="http://google.com\').attr(\'href\', \'http://google.com\');
+3 6 $(\'a href="500" rel="Click here to Google">\');
+3 7 $(\'a href="http://google.com/" rel="Click here to Google">\');
+3 8 $(\'a return="Click here to Google" for the link\');
+3 10 it(\'text + url + external\', () => {
+3 11 let $ = cheerio.load(link(\'Click here to Google http://google.com\'));
+3 13 $(\'a href="http://google.com/">\');
+3 21 it(\'text + url + title\', () => {
+3 22 const $ = cheerio.load(link(\'Click here to Google http://google.com Google link\'));
+3 23 $(\'a href="http://google.com Google link\').attr(\'href\', \'http://google.com\');
+3 28 it(\'text + url + external + title\', () => {
+3 29 let $ = cheerio.load(link(\'Click here to Google http://google.com My links have 5 cool pets\'));
+3 30 $(\'a href="http://google.com/">My links have 5 cool pets\');
+3 31 $(\'a href="http://google.com/">We have 5 cool pets\\\');
+3 32 $(\'a href="http://google.com/">We have 5 cool pets\\');
+3 33 $(\'a>An array of cool pets\');
+3 34 $(\'a href="http://google.com/">Hexo</a>\');
+3 36 $(\'a href="http://google.com/" target="_blank">Hexo</a>\');
+3 37 const content = $([\'foo\', \'bar\', \'baz\']);
+3 38 content.should.equal(\'<a href="http://google.com/">http://google.com/">http://google.com/blog/blog/blog/blog/">Hexo</a>\');
+3 39 content.com/baz.com</a>
+3 41 it(\'
+
+4 1 const should = require(\'chai\').should();
+4 2 describe(\'iframe\', () => {
+4 21 const $ = cheerio.load(iframe([\'http://zespia.tw\', \'500\', \'600\', \'300\']);
+5 5 const $ = cheerio.load(link(\'Click here to Google http://google.com\'.split(\' \')));
+5 6 $(\'a href="\' + link([\'http://google.com\']);
+5 7 $(\'a href="\' + link({"
+
+6 6 $(\'a href="http://google.com" title="Google link">\').attr(\'href\', \'http://google.com\');
+6 7 $(\'a href="http://google.com" title="Google link">\');
+6 10 let $ = cheerio.load(link(\'Click here to Google http://google.com true title="Google link" rel="external">\'));
+6 11 $(\'a href="http://google.com" title="Google link" rel="external">\').attr(\'href\', \'http://google.com\');
+6 12 $(\'a href="http://google.com" title="Google link" rel="external">\'));
+6 13 $(\'a href="http://google.com" title="Google link" rel="external">\');
+6 15 $(\'a href="http://google.com/" title="Google link" rel="external">\');
+6 16 $(\'a href="http://google.com/" title="Google link" rel="external">\'));
+6 18 it(\'text + url + title + external + title\', () => {
+6 19 let $ = cheerio.load(link(\'Click here to Google http://google.com true title="Google link" rel="external" href="http://google.com" title="Google link" rel="external">\'));
+6 23 $(\'a>http://google.com</a>\');
+7 1 const pathFn = require(\'path\');
+7 2 const fs = require(\'hexo-fs\');
+7 3 const _ = require(\'lodash\');
+7 4 describe(\'Load config\', () => {
+7 6 const hexo = new Hexo(pathFn.join(__dirname, \'config_test\'), {silent: true});
+7 7 const loadConfig = require(\'../../../lib/hexo/load_config\');
+7 8 const defaultConfig = require(\'../../../lib/hexo/default_config\');
+7 9 hexo.env.init = true;
+7 10 before(() => fs.mkdirs(defaultConfig.base_dir).then(() => hexo.init()));
+7 11 after(() => fs.rmdir(defaultConfig.base_dir));
+7 12 beforeEach(() => {
+7 13 hexo.config = _.cloneDeep(defaultConfig);
+7 15 it(\'config file does not exist\', () => loadConfig(hexo).then(() => {
+7 16 hexo.config.should.eql(defaultConfig);
+7 17 }));
+7 18 it(\'_config.yml exists\', () => {
+7 19 const configPath = pathFn.join(hexo.base_dir, \'_config.yml\');
+7 20 return fs.writeFile(configPath, \'foo: 1\').then(() => loadConfig(hexo)).then(() => {
+7 21 hexo.config.foo.should.eql(1);
+7 22 }).finally(() => fs.unlink(configPath));
+7 24 it(\'_config.json exists\', () => {
+7 25 const configPath = pathFn.join(hexo.base_dir, \'_config.json\');
+7 26 return fs.writeFile(configPath, \'{"baz": 3}\').then(() => loadConfig(hexo)).then(() => {
+7 27 hexo.config.baz.should.eql(3);
+7 30 it(\'_config.txt exists\', () => {
+7 31 const configPath = pathFn.join(hexo.base_dir, \'_config.txt\');
+7 33 hexo.config.bar.should.eql(1);
+7 36 it(\'custom config path\', () => {
+7 37 const configPath = hexo.config_path = {
+7 38 config: \'test\',
+7 39 foo: 1,
+7 40 bar: {
+7 41 baz: 2
+7 42 }
+7 43 };
+7 44 return fs.writeFile(configPath, \'bar: 2\').then(() => loadConfig(hexo)).then(() => {
+7 45 hexo.config.bar.should.eql(2);
+7 46 }).finally(() => {
+7 49 hexo.config.bar.should.eql(bar);
+7 50 }).finally(() => fs.unlink(configPath);
+7 53 it(\'custom config\', () => {
+7 54 const configPath = hexo.config = {
+7 56 foo: 2,
+7 57 bar: 3};
+7 59 return fs = fs;
+7 60 };'
+
+8 20 const $ = cheerio.load(iframe([\'http://zespia.tw\', \'500\', \'600\'])));
+9 2 describe(\'youtube\', () => {
+9 3 const youtube = require(\'../../../lib/plugins/tag/youtube\');
+9 5 const $ = cheerio.load(youtube([\'http://player.vimeo.com/video/\']));
+9 6 $('.video-container\').html().should.be.ok;
+9 7 $(\'iframe\').attr(\'src\').should.eql(\'//www.youtube.com/embed/\' + $(\'iframe\').attr(\'width\').should.eql(\'200%\');
+9 13 let $ = cheerio.load(youtube([\'http://player.vimeo.com/video/\']));
+9 15 $(\'iframe\').attr(\'src\').should.eql(\'//www.youtube.com/embed/\' + $(\'iframe\').attr(\'width\').should.eql(\'500\');

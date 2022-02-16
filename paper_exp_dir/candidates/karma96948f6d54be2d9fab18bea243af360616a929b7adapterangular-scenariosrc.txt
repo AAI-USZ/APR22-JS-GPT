@@ -1,0 +1,41 @@
+Min editdistance: 16.00
+Closest candidate: 4 35 var spec.name = spec.name;
+0 1 "
+
+4 1 model.on('SpecEnd', function() {});
+4 2 model.on('RunnerEnd', function(str) {
+4 3 return str;
+4 4 });
+4 5 model.on('Result', function(result) {
+4 6 totalTests = angular.scenario.Describe.specId;
+4 7 result.log = createFailedSpecLog(result);
+4 9 model.on('RunnerEnd', function() {
+4 12 model.on('FailedStep', function(str) {
+4 15 model.on('SpecEnd', function(str) {
+4 16 var finish = new Date(),
+4 17 error = null;
+4 19 complete.log = createFailedSpec(result);
+4 22 var skippedTests = totalTests - testsCompleted;
+4 23 model.on('SpecEnd', function() {
+4 26 result.log = createFailedSpec(result);
+4 30 var skippedTestests = total testsCompleted;
+4 32 var suiteToDescribe = function(spec) {
+4 33 var spec = spec.id;
+4 34 if (suiteToDescribe) {
+4 35 var spec.name = spec.name;
+4 36 }
+4 37 if (undefined!== spec.name) {
+4 38 return;
+4 41 var testsCompleted = new SimpleReporter.adapters.length = 0;
+4 42 model.each(function handle(spec, tc, failedId = function() {
+4 43 return function(error, error, doc) {
+4 44 return function(error, doc) {
+4 45 return function(err, doc) {
+4 46 return deferred = null;
+4 47 if (error) {
+4 49 deferred.reset();
+4 50 if (error = function() {});
+4 51 if (error = function() {};
+4 55 };
+4 57 model.model.on('TestacularStartEnd', function() {
+4 58 model.scheduleTestStartFn.apply(this, arguments);

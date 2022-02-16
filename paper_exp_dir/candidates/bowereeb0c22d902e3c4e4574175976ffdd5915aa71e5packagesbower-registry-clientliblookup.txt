@@ -1,0 +1,183 @@
+Min editdistance: 29.00
+Closest candidate: 8 13 store.find(function (err, entry) {
+0 1 ]
+1 1 )();"
+
+2 1  : function (source, url, headers, data) {
+2 2 return that._handle_error(err, source, url, headers, data);
+2 3 }
+2 4 lookupCache.set(name, entry, getMaxAge(entry), next);
+2 6 ], function (err, results) {
+2 7 var results = results;
+2 8 var registry = this._config.registry.search;
+2 9 var total = registry.length;
+2 10 var index = 0;
+2 11 for (var i = 0; i < total; i++) {
+2 12 index += this._indexOf(data[i]);
+2 13 if (index!== -1) {
+2 14 return next();
+2 17 results.forEach(function (result) {
+2 19 }, function () {
+2 20 index += total;
+2 21 });
+2 22 index += current;
+2 29 var index = total;
+2 30 var stream = this._createSourceCode(source);
+2 31 if (index!== total) {
+2 32 return;
+2 34 var getter = function (source) {
+2 35 return this._getter();
+2 36 };
+2 37 return function (source, url, content) {
+2 38 var uri = this._source || source;
+2 39 return uri
+2 40 .replace(/\\/+$/, '')
+2 41 .replace(/\
+2 42 .replace(/g, '-')
+2 43 .replace(/\\h\
+2 45 .replace(/\\)/g, '-')
+2 46 .replace(/\\h.replace(/g, '-')
+2 47 .replace(/\\)/g, '.'')
+2 48 .replace(/g, '.'')
+2 49 .replace(/g, ');
+2 52 module.exports.exports = function (source, url, url, fullName, url, i, url, meta) {
+2 53 var prefix = 'https://'
+2 54 };"
+
+3 1 ), function (err) {
+3 2 return callback(err);
+3 4 function search(name, callback) {
+3 5 var search = 1 + naming = this._.extend.search || this._config.registry.search;
+3 8 var promise;
+3 9 var that = this;
+3 10 if (!total) {
+3 11 return callback();
+3 13 if (this._nrFetching <= 0) {
+3 14 return promise.then(function (err, entry) {
+3 15 if (err) {
+3 16 return that._handle_error(err, entry);
+3 18 return true;
+3 21 return that._remove()
+3 22 .then(function () {
+3 23 return that._analyse();
+3 26 search.readOptions = function (argv) {
+3 27 var cli = this._analyse.stdout,
+3 28 options = cli.options || {};
+3 29 options.maxAge = this._options.maxAge || 1;
+3 30 return this._analyse()
+3 31 .spread(function (json, tree, flattened) {
+3 32 var maxAge = this._options.maxAge || 6;
+3 33 var options = {
+3 34 maxAge: maxAge,
+3 35 ignorePermissionErrors: true,
+3 36 registry: registry
+3 38 var range = function (minAge, maxAge) {
+3 39 var range = this._options.maxAge || this._options.maxAge;
+3 40 if (range) {
+3 41 this._minRange(range);
+3 42 } else {
+3 43 this._options.set(maxRange(range);
+3 45 return range;
+3 46 }, function (err) {
+3 47 this._each(function (callback) {
+3 48 return callback(err, i, session, session) {
+3 49 return callback(session, session, session);
+3 54 Cache.clearCache.findById(onlyCache.find({ entry: function (err) {
+3 55 return callback(session) {
+3 57 seo, session;
+3 63 function cleanCache: function readExternalCache(name, callback) {
+3 64 return function (id, session) {
+3 65 return this._initCache(this._id, session) {
+3 66 initCache(this._id, session)
+3 67 .init(this.set
+4 1 '
+
+7 1 )();
+7 3 var url = createError('search');
+7 4 var search = search.toString();
+7 5 if (!results ||!results.length) {
+7 8 return this.find(function (err, results) {
+7 12 search.add(function (err, entry) {
+7 13 return that._remove(err);
+7 17 function isExternalLink(name, config) {
+7 18 var config = this._config;
+7 19 var exclude = config.external_link.exclude;
+7 20 var data = this._search(name, config);
+7 21 if (!data ||!siteconfig.external_link) {
+7 22 return false;
+7 24 if (exclude && exclude.length) {
+7 26 if (exclude.length) {
+7 29 if (!data ||!siteconfig.external_link.exclude) {
+7 32 return Q.nfcall(registry.lookup.bind(registry), name)
+7 33 .then(function (entry) {
+7 34 return!entry? null : {
+7 35 name: name,
+7 36 url: entry,
+7 37 content:!entry.length?
+7 38 'https://github.com/' + config.url + '/' :
+7 39 'You must pass a config of the site.');
+7 45 return search.close();
+7 49 function search.readOptions(name) {
+7 50 .describe('.compose = this.search
+7 51 .search.compose.compose.compose.exec(this._options)
+7 52 .compose.exec(this._search.compose.compose)
+7 53 .exec(_.compose.exec)
+7 54 .exec)
+7 55 .exec(this._search.compose.compose.exec)
+7 56 .exec(this._search.compose.compose.compose.options)
+7 57 .exec(this._search.compose.compose.options)
+7 59 .compose.exec(this._select());
+7 60 .exec.compose.compose.compose.compose.compose.compose.compose.find(query)
+7 61 .compose.compose.
+8 3 var search = 1 + callback.length - 1;
+8 7 var promise = new Promise(function (resolve, reject) {
+8 8 var search = search.trim()
+8 9 .split(/\\s*,\\s*/);
+8 10 if (options.search) {
+8 11 ensure('one', options.search);
+8 13 store.find(function (err, entry) {
+8 15 error(err);
+8 16 return next(err);
+8 20 packages[name] = entry;
+8 22 return function (err, entry) {
+8 24 return promise.resolve(err);
+8 26 return search(name, callback);
+8 29 function doRequest(name, index, callback) {
+8 30 var requestUrl = this._config.registry.search[index] + '/packages/search/' + encodeURIComponent(name);
+8 31 var remote = url.parse(requestUrl);
+8 32 var headers = {};
+8 34 if (this._config.userAgent) {
+8 35 headers['User-Agent'] = this._config.userAgent;
+8 37 request.get(requestUrl, {
+8 38 headers: headers,
+8 39 ca: this._config.ca.search[index],
+8 40 strictSSL: this._config.strictSsl,
+8 41 timeout: this._config.timeout,
+8 42 json: true
+8 43 }, function (err, response, body) {
+8 45 return callback(createError('Request to'
+
+9 1  : function (source, data, options) {
+9 2 return this._options(options, options);
+9 5 var requestUrl = this._config.url.replace(/\\/+$/, '');
+9 8 var registryClient = this._config.registry.search;
+9 9 if (!this._config.interactive) {
+9 12 return search(name, index, callback);
+9 16 var url = this._config.url.replace(/\\/+$/, '');
+9 22 return promise.then(function (result) {
+9 23 var search = this._config.search,
+9 24 results = [];
+9 26 search.push(results.shift());
+9 32 if (typeof result === 'object') {
+9 33 results.push(result);
+9 38 return result;
+9 40 function search(name, index, callback) {
+9 46 results.push(function (err, results) {
+9 48 return that._options.search(name, results);
+9 50 results.push(callback);
+9 54 search.length = 0;
+9 56 function composeQuery(name, index, session) {
+9 57 return search, session = merge = this._config.options.search, secret = this._config.key;
+9 60 function search: function mergeDefaultOptions(name, sourceId = null;
+9 61 search: function (name, url, mode) {
+9 62 return!== undefined;

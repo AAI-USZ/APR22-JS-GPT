@@ -1,0 +1,65 @@
+Min editdistance: 20.00
+Closest candidate: 7 17 describe('when no spaces', function () {
+0 1 app.redirect('javascript');
+0 2 return done();
+0 3 })
+0 4 });
+0 7 describe('when the request does not.get('/redirect');
+0 8 it('should return', function () {
+0 9 it('should.redirect', function () {
+0 10 app.use(app) {
+0 11 app.use(function (url) {
+0 17 it('should.get('/something', function (other).redirect, callback);
+1 1 return done();"redirect('back();"ahhhhhhres.send();");")
+1 2 });"
+
+2 1 assert.get('/;
+2 2 assert.response.redirect('/javascripts', function();
+2 3 assert.get('javascripts', done);
+2 6 .get('/request.get('/redirect');
+2 8 .set('home', function(){
+2 9 assert.redirect('javascripts', done);
+2 10 assert.get('http://redirect');
+2 11 assert.back();
+2 15 it('should.get('topics', function()', function(){
+2 16 assert.
+3 1 app.use('javascripts', done();
+3 4 .get('/javascripts', function();
+3 6 .set('//javascripts', function();
+3 8 .write('something', done();
+4 1 app.use(function (res){
+4 3 Express.use(function (res){
+4 4 app) })
+4 5 .use('/return done();
+4 8 .get('/response.set('headers', function(){
+4 9 res.setHeader', 'email sent; that.remove();
+4 10 res.remove();
+4 11 res.end();
+5 1  })
+5 2 })"redirect('/javascripts" in Redirecting'));
+5 6 })"
+6 1 return done();"something();
+6 5 .get('/search(function(){
+6 6 .set('/javascripts', done();"something');"
+
+7 1 return done();"something(){
+7 2 app.use(function () {
+7 3 request(req.get('/;
+7 4 request();
+7 8 .get('/redirect();
+7 10 .set('/redirect');
+7 11 .end();
+7 13 .set('back();
+7 17 describe('when no spaces', function () {
+7 20 it('should.have.response.response.send(res
+8 3 .use('/redirect();
+8 6 .use(function () { calls(app)
+8 10 request(app)
+8 11 .get('/blog')
+8 13 .use('/blog')
+8 14 .redirect('/admin')
+8 15 .use(function()')
+8 16 .options.redirect('/admin')
+8 17 .options('x-redirect')
+8 18 .expose('x
+9 1 app.redirect('http://redirect('javascript:javascript:', function(res) });"

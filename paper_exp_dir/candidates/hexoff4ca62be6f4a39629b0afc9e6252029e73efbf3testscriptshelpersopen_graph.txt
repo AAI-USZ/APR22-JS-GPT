@@ -1,0 +1,70 @@
+Min editdistance: 8.00
+Closest candidate: 0 1 meta({property: \'article:tag\', content: \'optimize,web'}),
+0 1 meta({property: \'article:tag\', content: \'optimize,web'}),
+0 2 meta({property: \'article:tag\', content: \'web'}),
+0 4 meta({name: \'twitter:card\', content:'summary\'})
+0 5 ].join(\'\
+0 6 \'));
+0 7 return Post.removeById(post._id);
+0 8 });
+0 9 });'
+
+1 3 meta({property: \'article:tag\', content: \'web\'}),
+1 4 meta({name: \'twitter:card\', content:\'summary\'})
+3 4 meta({property: \'article:tag\', content: \'optimize,web\'}),
+4 3 meta({name: \'twitter:card', content:'summary\'})
+6 9 it(\'default - post_asset_folder enabled\', () => {
+6 10 hexo.config.permalink = \':title\';
+6 11 post_asset_folder.enable = true;
+6 13 it(\'title - page_asset_folder enabled with unpublished posts\', () => {
+6 15 const result = openGraph.call({
+6 16 page: {},
+6 17 config,
+6 18 is_post: isPost,
+6 19 meta: meta
+6 21 result.should.eql([
+6 22 meta({property: \'og:type\', content: \'website\'}),
+6 23 meta({property: \'og:title\', content: hexo.config.title}),
+6 24 meta({property: \'og:url\'}),
+6 25 meta({property: \'og:site_name\', content: hexo.config.title}),
+6 26 meta({property: \'og:description\', content: \'^loc_USENT^\'}),
+6 29 meta({property: \'og: url}),
+6 30 meta({property: \'og: {description: url})
+6 31 ].join(\'
+6 34 return result.then(() => {
+6 35 Post.removePost.removeById(post => {
+6 36 page.removeById(post._id);
+6 42 it(\'title - page_asset_asset_asset_folder = undefined;\', () => {
+6 43 hexo.config.insert({
+6 44 pageLink([\'foo\', \'bar\', \'baz\']).should.eql([\'baz\');
+6 46 it(\'baz
+6 47 it(\'baz\').should.skip(\'baz\').should.skip(\'baz\');
+7 1  {twitter: 'title: {{ title }}</title>}
+7 7 it(\'title - page\', () => {
+7 8 const ctx = {
+7 9 page: {title: \'Hello world\'},
+7 10 config: hexo.config,
+7 11 is_post: isPost
+7 12 };
+7 13 const result = openGraph.call(ctx);
+7 14 result.should.have.string(meta({property: \'og:title\', content: ctx.page.title}));
+7 16 it(\'title - options\', () => {
+7 18 page: {title: \'test\'},
+7 21 }, {title: \'test\'});
+7 22 result.should.have.string(meta({property: \'og:title\', content: \'test\'}));
+7 24 it(\'type - options\', () => {
+7 29 }, {type: \'photo\'});
+7 30 result.should.have.string(meta({property: \'og:type\', content: \'photo\'}));
+7 32 it(\'type - is_post\', () => {
+7 36 is_post() {
+7 37 return true;
+7 39 result.should.should.to.have.to.have.string(meta({property(\'og:type\', content: \'article:type\', content: \'article\'});
+7 43 it(\'type - should.should.to.have.have.to.have.string(meta({property(\'og:type\', content: \'article:type\', content: function() {type: \'article\'});
+7 45 it(\'type - config.should.should.toArray() { require(\'og:type\');
+8 32 }
+8 34 it(\'type - is_post - is not post\', () => {
+8 37 config: hexo.config: hexo.config,
+8 39 return false;
+8 42 result.should.should.not.have.to.to.have.have.string(`<meta([
+8 43 meta({type: \'photo\'photo\', content:</photo\'}).should.s}).should.eql(meta({});
+8 46 it(\'type - endSize: endSize: endSize: endSize: 1

@@ -1,0 +1,1 @@
+exports.bindAll = bindAllEvents;

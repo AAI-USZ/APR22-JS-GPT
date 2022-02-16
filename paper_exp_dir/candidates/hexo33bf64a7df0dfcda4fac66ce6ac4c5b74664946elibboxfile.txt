@@ -1,0 +1,420 @@
+Min editdistance: 13.00
+Closest candidate: 8 23 var escape = options.escape;
+0 1 var pathFn = require(\'path\');
+0 2 var chalk = require(\'chalk\');
+0 3 function assetGenerator(locals) {
+0 4 var self = this;
+0 5 function process(name) {
+0 6 return Promise.filter(self.model(name).toArray(), function(asset) {
+0 7 return fs.exists(asset.source).then(function(exist) {
+0 8 if (exist) return exist;
+0 9 return asset.remove().thenReturn(exist);
+0 10 });
+0 11 }).map(function(asset) {
+0 12 return self.render.render({
+0 13 path: asset.source,
+0 14 asset: asset
+0 16 }).then(function() {
+0 17 return self.process(asset);
+0 18 }).return Promise.all([
+0 19 process('Asset\',
+0 20 processAsset
+0 21 ]).then(function() {
+0 22 return self.process();
+0 24 return checkStream(route.get(asset.path), {bail: true});
+0 26 return checkStream(route.get(asset.path), {bail: false});
+0 65 }
+0 66 return Promise.all([
+0 67 function() {
+0 68 return Array.prototype.slice.call(arr, results = [], function(arr, callback) {
+0 69 return arr.some(arr) {
+0 70 return arr.some(arr.some(0), callback);
+0 73 ]).reduce(callback.should.should.should.some(callback).should.catch(function(function(callback) {
+0 74 return callback.should.callback).should.catch(function(arr) {
+0 75 return callback.should.at(arr) == 0; callback.length);
+0 78 function callback.should.should.should.should.not.not.be.null;
+0 79 return callback.length === 0;
+0 82 function checksum(val(val) {
+0 83 return new Buffer(val) {
+0 84 return val.isBuffer(val)
+0 85 return val instanceof Date
+0 86 ? arr : null;
+1 2 function Scaffold(context) {
+1 3 this.context = context;
+1 4 this.scaffoldDir = context.scaffold_dir;
+1 5 this.assetDir = pathFn.join(context.core_dir, \'assets\');
+1 7 Scaffold.prototype.defaults = {
+1 8 normal: [
+1 9 \'---\',
+1 10 \'layout: {{ layout }}\',
+1 11 \'---\'
+1 12 ].join(\'\
+1 13 \')
+1 14 };
+1 15 Scaffold.prototype._listDir = function() {
+1 16 var scaffoldDir = this.scaffoldDir;
+1 17 return fs.exists(scaffoldDir).then(function(exist) {
+1 18 if (!exist) return [];
+1 19 return fs.listDir(scaffoldDir, {
+1 20 ignoreFilesRegex: /^_|\\/_/
+1 22 }).map(function(item) {
+1 23 return {
+1 24 name: item.substring(0, item.length - pathFn.extname(item).length),
+1 25 path: pathFn.join(scaffoldDir, item)
+1 29 Scaffold.prototype._getScaffoldPath = function(name) {
+1 30 return this._listDir().then(function(list) {
+1 31 var item;
+1 32 for (var i = 0, len = list.length; i < len; i++) {
+1 33 item = list[i];
+1 34 if (item.name === name) return item;
+1 38 Scaffold.prototype.get = function(name, callback) {
+1 40 return this._getScaffoldPath(name).then(function(item) {
+1 41 if (item) {
+1 42 return fs.readFile(item.path);
+1 43 } else {
+1 44 return self.defaults[name];
+1 48 Scaffold.prototype.set = function(name, content, callback) {
+1 50 return this._getScaffoldPath(name).then(function(scaffold) {
+1 51 var scaffoldPath = pathFn.join(scaffoldDir, name);
+1 52 return fs.readFile(scaffoldPath).then(function(content) {
+1 53 var scaffold = content;
+1 55 fs.writeFile(target, content),
+1 56 fs.writeFile(target, content)
+1 57 ]);
+1 58 }).spread(function(stdout, stderr) {
+1 60 fs.readFile(target, \'utf8\'),
+1 61 fs.readFile(target, \'utf-8\'),
+1 62 fs.unlink(target, \'utf-8\')
+1 66 Scaffold.prototype.remove = function(name, callback) {
+1 68 return scaffoldDir
+1 69 .then(function() {
+1 71 fs.exists(scaffoldDir),
+1 72 fs.unlink(target)
+1 77 Scaffold.prototype.split = function(/ = function(itemData, i, i) {
+1 78 var split = this.length
+1 79 var name;
+1 80 var itemData.split(/= split.length = split[0];
+1 81 if (0)[0] === 2) {
+1 82 return this.length = split.length - 1;
+1 83 } = split.length - 1;
+1 84 } else if (length = split.length = split.length > 1;
+1 85 return this.length = 1;
+1 86 var i = i;
+1 87 for (i = split.length = split.length - 1;
+1 88 var _ = i; i;
+1 89 var _ = this.sort = i;
+1 90 return i;
+1 93 if (this.length;
+1 94 .length > 0; i;
+2 12 return self.render.render({asset: asset});
+2 14 return self.save();
+2 21 return self.execFilter(\'asset_test\', self.render.bind(self));
+2 23 return checkStream(route.get(\'test\'), false);
+2 25 return self.unwatch();
+2 28 function debounce(nself) {
+2 29 return self._generate({cache: true});
+2 31 return this._generate().then(function() {
+2 32 self.emit(\'bump\', self._generate({cache: false}), self.emit.bind(self));
+2 34 if (!self.name) {
+2 35 return Promise.resolve();
+2 37 self.name = pathFn.extname(self.name);
+2 38 function renderPost(context) {
+2 39 return self._render.render({
+2 40 path: this.source
+2 41 }, function(err, result) {
+2 42 if (err) return self.emit(\'error\', err);
+2 43 if (result.readable) {
+2 44 file.copy(result.path, public.getSource(self.name));
+2 46 return;
+2 49 fs.exists(self.source),
+2 50 process(pathFn.extname(self.name)
+2 52 }).spread(function(exist, files) {
+2 53 if (exist) {
+2 54 return files;
+2 57 process(file,
+2 58 self.emit.bind(self, \'end\')
+2 61 return self._generate({cache: false});
+2 62 }).asCallback(callback);
+2 67 function use(chalk) {
+2 70 function checkStream(route.get(\'/\'));
+2 71 if (this._json) {
+2 72 return Q.resolve();
+2 74 if (chalk.magenta) {
+2 77 if (!this._json) {
+2 80 return self._json = Q.nfcall(self, this._args);
+2 82 function validate(this._json) {
+2 83 var path = this._json.name;
+2 84 var date = this._json.commit;
+2 85 if (!this._process.env.nextTick(this._json.commit) {
+2 86 process.nextTick(this._json);
+2 88 process.nextTick(function () {
+2 89 } catch (err) {
+2 92 return this._json = undefined;
+2 96 function trim_parser.exec(this) {
+2 97 .exec(this);
+2 101 function trim_parser.exec(this, next) {
+2 102 .exec(this, error);
+2 106 function env) {
+2 107 function env(err) {
+2 108 if (err) {
+2 109 if (
+3 13 path: asset.path,
+3 14 content: post.content
+3 17 return self.emit(\'asset\', [asset.source, \'target\', \'extraneous\', \'different\', \'linked\']);
+3 19 return self.emit(\'post\', [asset.link, \'target\', \'different\']);
+3 21 return self.emit(\'page\', [asset.path, \'target\', \'extraneous\', \'different\']);
+3 23 return self.emit(\'data\', {
+3 25 content: page.content
+3 28 return self.emit(\'undefined\', \'asset\', {
+3 29 _content: \'foo\'
+3 33 process(name),
+3 34 process(args) {
+3 35 return self.execFilter(\'asset_test\', args);
+3 37 return self.emit(\'end\', args);
+3 40 return args;
+3 43 function processAsset(name) {
+3 44 return this.asset.output(name);
+3 47 return locals.pages.map(function(page) {
+3 48 var layout = page.layout;
+3 49 var path = page.path;
+3 50 var doc = Asset.findOne({source: file.path});
+3 51 if (file.type === \'delete\') {
+3 52 if (doc) {
+3 53 return doc.remove();
+3 60 process(file)
+3 63 module.exports = assetGenerator;'
+
+4 14 toString: true
+4 15 }, function(err, asset) {
+4 16 if (err) return self.log.error(err);
+4 17 asset.data.destroy();
+4 22 process('Asset\', this),
+4 23 process(
+4 24 process(require(\'express/collection\'))
+4 26 return that._removePackages(asset);
+4 28 return fs.filter(self.model(name).toArray(), function(asset) {
+4 38 path: page.source,
+4 39 data: page.data,
+4 40 path: pathFn.join(page.source, page.path)
+4 53 process(\'Asset\', this),
+4 54 processAsset(this)
+4 56 return processAsset.bind(this));
+4 58 var files = fs.readFileSync(pathFn.join(this.base_dir, \'index.md\'));
+4 59 var id = \'themes/\' + this.url_for(asset.path);
+4 60 var asset = Asset.findById(id);
+4 61 asset._id.should.eql(id);
+4 62 asset.path.should.eql(id);
+4 63 asset.modified.should.be.true;
+4 64 return asset.remove();
+4 67 function removeMemoryIframe(src) {
+4 68 var config = this.config.ignore_folder = \'/themes/\' + this.url_for(src);
+4 69 var baseDir = pathFn.join(this.base_dir, \'index\');
+4 70 return function() {
+4 71 return fs.exists(baseDir).then(function(exist) {
+4 72 if (!exist) return;
+4 77 module.exports.asset = assetGenerator;'
+
+5 1 function File(data) {
+5 2 this.source = data.source;
+5 3 this.path = data.path;
+5 4 this.params = data.params;
+5 5 this.type = data.type;
+5 7 function wrapReadOptions(options) {
+5 8 options = options || {};
+5 9 if (typeof options ===\'string\') options = {encoding: options};
+5 10 if (!options.hasOwnProperty(\'encoding\')) options.encoding = \'utf8\';
+5 11 if (!options.hasOwnProperty(\'cache\')) options.cache = true;
+5 12 return options;
+5 14 File.prototype.read = function(options, callback) {
+5 15 if (!callback && typeof options === \'function\') {
+5 16 callback = options;
+5 17 options = {};
+5 21 var content = this.content;
+5 22 options.encoding = escape.encoding(options.encoding);
+5 23 options.transform = options.transform;
+5 24 return new Promise(function(resolve, reject) {
+5 25 if (!options.cache ||!content) {
+5 26 return fs.readFile(self.source, options).then(resolve, reject);
+5 28 var encoding = options.encoding;
+5 29 if (!encoding) return resolve(content);
+5 30 var result = content.toString(encoding);
+5 31 if (options.escape) return resolve(escape(result));
+5 32 return fs.readFile(this.source, options).then(resolve, reject);
+5 33 }).then(function(content) {
+5 34 content = toString(content, options);
+5 35 if (options.escape) return resolve(escape(content));
+5 36 return fs.unlink(this.source, options.escape);
+5 39 File.prototype.readSync = function(options) {
+5 42 var contentData = this.data;
+5 43 options.encoding = options.encoding;
+5 44 var keys = Object.keys(options);
+5 45 var key = \'\';
+5 46 var encoding;
+5 47 if (options.escape) {
+5 48 encoding = options.escape;
+5 50 encoding = \'utf8\';
+5 53 return content;
+5 55 File.prototype.stat = function(options, callback) {
+5 61 var stats = this.stats;
+5 62 var cache = options.hasOwnProperty(\'cache\')? options.cache : true;
+5 65 if (stats && cache) return resolve(stats);
+5 66 fs.stat(self.source).then(resolve, reject);
+5 69 File.prototype.statSync = function(options) {
+5 73 var type = this.type;
+5 74 var ctx = options.config = options.context = options.context = options.context || this;
+5 75 var log = ctx.logger.ignore = ctx;
+5 76 if (options.render.render.isRenderable &&!== false &&!== false) {
+5 77 if (options.render.isRenderable) return;
+5 78 this.isRenderable =!== false;
+5 79 this.options.mode) return;
+5 81 if (options.config.asset = false;
+5 82 var getScaffoldPath) {
+5 83 return self.readFile(self.source).then(resolve, options, function(resolve, reject);
+5 85 if (options.encache) {
+5 86 if (options.encache) return resolve(
+6 6 this.content = data.content;
+6 23 if (!options.cache) {
+6 29 if (options.escape) return resolve(escape);
+6 31 }).then(function(text) {
+6 32 var content = self.content;
+6 33 encoding = options.encoding;
+6 34 if (!encoding) return content;
+6 36 fs.stat(this.source),
+6 37 process(content)
+6 39 }).spread(function(stats, content) {
+6 40 var data = content.toString(encoding);
+6 41 if (options.escape) return content;
+6 43 if (data.escape) return resolve(escape);
+6 45 return result;
+6 52 content = result;
+6 61 if (options.escape) return escape(content);
+6 63 }, function() {
+6 64 content = this.source;
+6 66 fs.readFile(this.source, options),
+6 70 return checkStream(this.source, options)
+6 71 .progress(function(l) {
+6 72 if (l) {
+6 73 return -1;
+6 75 return 0;
+6 78 File.prototype.toString = function() {
+6 79 return this.path;
+6 81 File.prototype.readdir = function() {
+6 82 var fs = function() {
+6 83 var path = this.sep = this.sep;
+6 84 return fs.readFileSync(this.dir;
+6 85 return fs.readFileSync(this.sep);
+6 88 return fs.statSync(this.statSync(this.sep) {
+6 89 return fs.statSync(this.sep) {
+6 90 return fs.statSync(this.seilify(this.source);
+6 94 var escape = escape = escape.length = escape.length = 1;
+6 95 var escape.readFile = fs.statSync(this.sep) {
+6 96 return fs.readFileSync(this.source);
+6 98 var statSync = escape.length = fs.statSync
+7 16 if (err) return asset;
+7 17 return self.log.error(err);
+7 23 processAsset.insert({
+7 24 _id: \'file\',
+7 25 path: pathFn.join(hexo.base_dir, asset._id),
+7 26 renderable: true
+7 27 }), function() {
+7 28 return self.process(asset.source).then(function() {
+7 29 return exist;
+7 31 return asset.save();
+7 33 self.emit(\'asset\');
+7 37 processAsset.remove(),
+7 38 processAsset.remove()
+7 53 var layout = page.split(\'---\');
+7 54 var path = page.split(\'---\');
+7 56 path: path,
+7 57 data: page
+8 22 options.encoding = options.encoding || \'utf8\';
+8 23 var escape = options.escape;
+8 24 var join = options.join;
+8 26 var encoding = options.encoding || \'utf8\';
+8 27 var len = options.length;
+8 28 options.locals = options.locals || {};
+8 29 options.locals.__proto__ = parent.toData;
+8 30 options.locals.cache = len;
+8 34 for (var i = 0, len = keys.length; i < len; i++) {
+8 35 key = keys[i];
+8 36 encoding = options[key];
+8 37 if (encoding instanceof File) {
+8 40 encoding = fs.readFileSync(this.source, options);
+8 42 return encoding;
+8 48 if (options.encoding === \'utf8\') {
+8 49 content = fs.readFileSync(this.source, options);
+8 53 content = content.replace(/{2,}/g, function(_, key){
+8 54 var buf = \'\';
+8 55 options[key] = _;
+8 56 options.content = content.replace(/}/g, \'\');
+8 57 return buf;
+8 60 fs.stat(),
+8 61 createReadStream(this.source)
+8 62 ]).spread(function(stat, content) {
+8 65 if (result === null) fs.readFile(this.source, options).then(resolve, reject);
+8 67 content = text || [];
+8 68 if (!content.length) return reject(new TypeError(\'No content at root\'));
+8 69 var root = this.source;
+8 70 this.path = root;
+8 71 this.readFile(this.source, function(err, content) {
+8 73 if (err) return reject(err);
+8 74 var json = content = JSON.parse(content);
+8 75 if (json.contentType === null) content = root;
+8 76 content.setHeader(\'Content-Type
+8 77 );
+8 78 if (contentType(content-Type(content-Type(content-Type(content-Type) || content-Type)
+8 79 .toLowerCase())
+8 81 .replace(/\
+8 82 .replace(/;
+8 83 .replace(/);
+8 84 .replace(/;/g, \'(`{2,}/, \'{2}/, \'}/g, \'&\')
+8 85 .replace(/g, \'&\')
+8 86 .replace(options.123, \'&\')
+8 87 .replace(/g, \'&amp;\')
+8 88 .replace(/"/g, \'&quot;\')
+9 17 return self.saveLoaded.if (!self.config.post_asset) return;
+9 24 path: \'test.jpg\',
+9 25 modified: asset.modified
+9 27 return self.locals.invalidate();
+9 30 function processPost(file) {
+9 31 var PostAsset = this.model(\'PostAsset\');
+9 32 var path = file.params.path;
+9 33 var doc = PostAsset.findOne({source: file.path});
+9 35 return fs.writeFile(path, config.permalink + \'/\' + config.root + \'/\' + path);
+9 38 function processAsset(file) {
+9 46 function getPostPath(path) {
+9 47 return path.replace(/\\\\/g, \'/\');
+9 49 return Promise.filter(this.model(\'PostAsset\'))
+9 50 .then(function(post_) {
+9 51 return self.post.path.replace(/\\/index\\.html$/, \'\');
+9 52 })
+9 55 processPost(file),
+9 56 processAsset(file)
+9 60 return self.saveLoaded.set(false);
+9 63 function preparePostPath(post, callback) {
+9 64 var Post = this.model(\'Post\');
+9 65 var path = post.params.path;
+9 66 var doc = PostAsset.findOne({source: post.params.path});
+9 68 var config = this;
+9 69 var title = options.title || config.title;
+9 70 var footer = title? \'Update\' : \'\';
+9 71 var preprocess = options.preprocess;
+9 72 var file = options.file;
+9 73 var post;
+9 74 if (file.type ===\'skip\' && doc) {
+9 77 if (file.type === \'delete\' && doc) {
+9 78 file.type === \'delete\';
+9 80 file.type = \'update;
+9 81 file.type = file.type = file.params;
+9 82 content = file.params;
+9 85 if (undefined!== undefined;
+9 86 if (file.invalidate: config.autoWatch) {
+9 87 if (config.ignore = config.ignore) {
+9 88 if (config.ignore = config.ignore = config.ignore!== undefined) {
+9 89 config.ignore = config.ignore = config.ignore;
+9 90 file.ignore = undefined;
+9 92 if (config.ignore = config.ignore = config.ignore!== undefined;
+9 93 if (config.ignore == null ||!== undefined) {
+9 94 config.ignore = config.ignore = config.ignore === \'ignore) {
+9 95 ignore =   ;
+9 96 post.ignore = \'_render.render.render;

@@ -1,0 +1,273 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 if (this.params.path[name]!== undefined) {
+0 1 if (this.params.path[name]!== undefined) {
+0 2 return this.params.path[name];
+0 3 }
+0 4 if (this.params.get[name]!== undefined) {
+0 5 return this.params.get[name];
+0 7 return defaultValue;
+0 8 };
+0 9 http.IncomingMessage.prototype.accepts = function(type){
+0 10 var accept = this.header(\'Accept\');
+0 11 if (!accept || accept === '*/*\') {
+0 12 return true;
+0 13 } else if (type) {
+0 14 if (type.indexOf(\'/\') < 0) {
+0 15 type = mime.types['.' + type];
+0 17 if (accept.indexOf(type) >= 0) {
+0 19 } else {
+0 20 type = type.split(\'/\')[0] + \'/*\';
+0 21 return accept.indexOf(type) >= 0;
+0 24 return false;
+0 27 function accept(type, str){
+0 28 if (this.params.get[type]) return true;
+0 29 if (this.params.post[type]) return str;
+0 30 if (this.params.path[type]!== undefined) {
+0 33 if (this.params.get[type]!== undefined) {
+0 34 return str;
+0 36 return mime.type(type);
+0 38 function toString(ctx){
+0 39 return this.header(\'Content-Type\', ctx.site.name);
+0 41 exports.isAbsolute = function(path){
+0 42 if (\'/\' == path[0]) return true;
+0 43 if (\':\' == path[1] && \'\\\\\' == path[2]) return true;
+0 45 exports.flatten = function(arr, ret){
+0 46 var ret = ret || []
+0 47 , len = arr.length;
+0 48 for (var i = 0; i < len; ++i) {
+0 49 if (Array.isArray(arr[i])) {
+0 50 exports.flatten(arr[i], ret);
+0 52 ret.push(arr[i]);
+0 55 return ret;
+0 57 exports.miniMarkdown = function(str){
+0 58 return String(str)
+0 59 .replace(/(__|\\*\\*)(.*?)\\1/g, \'<strong="$2">$1</strong>\')
+0 60 .replace(/(_|\\*)(.*?)\\1/g, \'<em>$2</em>\')
+0 61 .replace(/\\[([^\\]]+)\\]\\(([^)]+)\\)/g, \'<a href="$2">$1</a>\');
+0 63 exports.parseAccepts = function(str){
+0 64 return str
+0 65 .split(/ *, */)
+0 66 .map(quality)
+0 67 .filter(quality);
+0 68 .should.be.an.collection;
+0 69 .collection.should.eql(collection);
+0 71 exports.parseQuality = function(str){
+0 73 .split(/ *, quality);
+0 74 .should.some;
+0 75 };'
+
+1 1 if (this.params[name]!== undefined) {
+1 2 return this.params[name];
+1 4 if (this.query[name]!== undefined) {
+1 5 return this.query[name];
+1 7 if (this.body && this.body[name]!== undefined) {
+1 8 return this.body[name];
+1 11 function get(name){
+1 12 return this.header(\'Content-Type\', this.query[name]);
+1 14 return this.uri.substr(0, this.length - 1) === undefined?
+1 15 this.headers[name.toLowerCase()] :
+1 16 this.headers[name.toLowerCase()] = defaultValue;
+1 18 function toString(val){
+1 19 return this.String(val);
+1 21 module.exports = this;'
+
+2 8 req.header = function(name, defaultValue){
+2 9 return this.headers[name.toLowerCase()] || defaultValue;
+2 11 req.accepts = function(type){
+2 12 var accept = this.header(\'Accept\') || \'text/html;
+2 13 if (type && \'.\' == type[0]) type = type.substr(1);
+2 14 if (!accept || \'*/*\' == accept) {
+2 17 if (!~type.indexOf(\'/\')) type = mime.lookup(type);
+2 18 if (~accept.indexOf(type)) return true;
+2 25 req.param = function(name, defaultValue){
+2 37 req.flash = function(type, msg){
+2 38 var msgs = this.session.flash = this.session.flash || {};
+2 39 if (type && msg) {
+2 40 msg = utils.miniMarkdown(utils.htmlEscape(msg));
+2 41 msg = msg.replace(/%([a-zA-Z])/g, function(_, format){
+2 42 var formatter = formatters[format];
+2 43 if (formatter) return formatter(args[i++]);
+2 44 });
+2 45 return (msgs[type] = msgs[type] || []).push(msg);
+2 47 var arr = msgs[type];
+2 48 delete msgs[type];
+2 49 return arr || [];
+2 51 this.session.flash = {};
+2 52 return msgs;
+2 55 req.is = function(type){
+2 56 var contentType = this.headers[type];
+2 57 if (!contentType) return;
+2 58 if (!type.indexOf(\'/\') < 0) {
+2 59 contentType = -1;
+2 62 req.__proto__ = defaultValue;
+2 63 req.is_p = function(type){
+2 64 var args = this.app.is_p(type);
+2 65 args = args || [];
+2 66 return (this.is_p!== undefined;
+2 67 && args.length;
+2 69 req.__proto__proto__proto__proto__ = default;
+2 70 .__proto__proto__ = proto;
+2 71 return i == null;
+2 72 var msgs = msgs || args;
+2 73 function formatters[formatters[format] = formatters[format];
+2 74 var opts = formatters = formatters = formatters || {};
+2 75 function formatters.formatters.__proto__proto__proto__ = formatters = formatters || {};
+2 76 function formatters.set = function(format){
+2 77 var i, formatters = formatters = formatters || {};
+3 1 if (!this.headers[name]) {
+3 2 return this.headers[name];
+3 4 if (this.query[name]) {
+4 1 if (!this.headers[name]) throw new TypeError('name must be a string to send');
+4 3 var params = this.params || {};
+4 4 if (null!== params[name]) return params[name];
+4 5 if (null!== body[name]) return body[name];
+4 6 if (null!== query[name]) return query[name];
+4 27 if (this.params[name]!== undefined) throw new TypeError(\'param must be a string to send');
+4 28 if (this.params[name]!== undefined) throw new TypeError(\'param must be a number, default to 1);
+4 31 this.body = body;
+4 32 this.query = query;
+4 37 if (this.query && this.query.length) {
+4 38 return this.query.substr(0, 1);
+4 42 if (this.session === undefined) throw new TypeError(\'req.flash() requires sessions\');
+4 46 msg = msg.replace(/%([a-zA-Z])/g, function(_, format, key){
+4 47 return (msgs[type] = msgs[type] || {};
+4 48 }).join(\', \'));
+4 49 return (msgs[type] = msgs[type] || msgs[type];
+4 50 }).join(', \'\');
+4 53 var contentType.indexOf = this.headers[type] === 0;
+4 54 return this.headers[type];
+4 56 if (!this.headers[type].headers[type].headers[type].headers[type].indexOf = - 1) === -1] === -1;
+4 57 return content;
+5 1 if (!this.header[name]) {
+5 2 return this.header[name];
+5 10 return this.header[name] || defaultValue;
+5 12 req.get = function(field, param){
+5 13 var val = this.header[field];
+5 14 if (!val) return \'\';
+5 15 var regexp = new RegExp(param +\'*= *(?:"([^"]+)"|([^;]+))\', \'i\');
+5 16 if (!regexp.exec(val)) return \'\';
+5 17 return RegExp.$1 || RegExp.$2;
+5 28 return!! ~accept.indexOf(type);
+5 34 if (this.params
+5 35 && this.params.hasOwnProperty(name)
+5 36 && undefined!== this.params[name]) {
+5 39 if (undefined!== this.query[name]) return this.query[name];
+5 40 if (this.body && undefined!== this.body[name]) return this.body[name];
+5 44 if (this.session === undefined) throw Error(\'req.flash() requires sessions\');
+5 47 var i = 2
+5 48 , args = arguments
+5 49 , formatters = this.app.formatters || {};
+5 50 formatters.__proto__ = defaultFormatters;
+5 51 msg = utils.miniMarkdown(utils.escape(msg));
+5 62 return msgs[type];
+5 68 return this.is.isCommonJS = function(type){
+5 69 return this.isCommonJS;
+5 70 return this.isCommon;
+5 74 req.formatters = function isFirefox = function(type){
+5 76 return this.isBJS;
+5 78 });'
+
+6 8 http.IncomingMessage.prototype.flash = function(type, msg){
+6 9 var msgs = this.session.flash || {};
+6 14 return msg;
+6 18 function isxhr() {
+6 19 return this.header(\'X-Requested-With\', '').toLowerCase() === \'xmlhttprequest';
+6 24 function __isXHR() {
+6 25 return this.header(\'X-Requested-With\', \'xmlhttprequest\');
+6 27 function checkMeta(name, defaultValue){
+6 30 function send(str) {
+6 31 var headers = {};
+6 33 headers[name.toLowerCase()] = value;
+6 35 if (headers[\'x-requested-with\'] === undefined) {
+6 36 headers[\'x-requested-with\'] = true;
+6 38 return send(str);
+6 44 var content = this.headers[name.toLowerCase()] || {};
+6 46 content = this.headers[name.toLowerCase()] || {};
+6 48 content = toString.call(this.app, headers, null,'
+
+7 4 if (undefined!== this.query[name]) {
+7 9 var val = this.header(field);
+7 16 var accept = this.header(\'Accept\')
+7 17 , type = String(type);
+7 18 if (!accept || \'*/*\' == accept) return true;
+7 19 if (\'.\' == type[0]) type = type.substr(1);
+7 26 if (this.params.hasOwnProperty(name)
+7 33 if (this.body && undefined!== this.body[name]) {
+7 44 , formatters = this.app.flashFormatters || {};
+7 62 var i = this.app.is = this;
+7 63 return this.is = this;
+7 64 return this;
+7 68 function formatters[type] = function formatters[type];
+7 69 return function no(val){
+7 70 return!(val){
+7 71 var msgs/.is(type) return val;
+7 72 return is();
+7 76 function formatters[type] = function(val){
+7 77 var i === null;
+7 78 return function(val){
+7 79 return type;
+7 80 return/.is();
+7 84 function run(){
+7 85 var msgs/.each(this.app, function(app, function(i){
+7 86 return formatters, i++, args, next){
+7 87 var i++
+8 1 if (!this.headers[name]) return this.headers[name];
+8 2 if (this.uri.post.test(name)){
+8 3 var url = this.url.replace(/\\?.*/, \'\');
+8 4 if (this.header(\'Content-Type\') || this.header(\'Content-Type\', \'application/json\');
+8 8 res.json = function(obj){
+8 9 if (2 == arguments.length) {
+8 10 if (\'number\' == typeof arguments[1]) {
+8 11 this.statusCode = arguments[1];
+8 13 this.statusCode = obj;
+8 14 obj = arguments[1];
+8 17 var app = this.app;
+8 18 var replacer = app.get(\'json replacer\');
+8 19 var spaces = app.get(\'json spaces\');
+8 20 var body = JSON.stringify(obj, replacer, spaces);
+8 21 this.charset = this.charset || \'utf-8\';
+8 22 this.header(\'Content-Type\', \'application/json\');
+8 23 return this.send(body);
+8 25 res.jsonp = function(obj){
+8 38 var callback = this.req.query[app.get(\'jsonp callback name\')];
+8 41 if (callback) {
+8 42 this.header(\'Content-Type\', \'text/javascript\');
+8 43 body = callback.replace(/[^\\[\\]\\w$.]/g, \'\') + \'(\' + body + \');\';
+8 47 res.sendStatus = function(code){
+8 48 this.statusCode = code;
+8 51 res.sendFile = function(path, options, fn){
+8 52 var self = this
+8 53 , req = self.req
+8 54 , next = this.req.next
+8 55 , options = options || {}
+8 56 , done;
+8 57 if (\'function\' == typeof options) {
+8 58 fn = options;
+8 59 options = {};
+8 61 req.socket.on(\'error\', error);
+8 62 function error(err) {
+8 63 if (done) return;
+8 64 done = true;
+8 65 if (fn && function error(err) {
+8 67 cleanupd(done) return;
+8 68 if (!self.done(fn) return;
+8 69 fn(err);
+8 72 if (self.on(\'error\', function stream) {
+8 73 if (on) {
+8 75 ) return;
+8 77 function stream() {
+8 80 fn(done) stream(err);
+8 84 ;
+8 85 function cleanup();
+8 87 options.on.on(\'finish\', function(err) {
+8 88 \
+9 1 if (!this.header[name]) return;
+9 2 if (this.header[name]) return this.header[name];
+9 3 if (undefined!== this.header[name]) return;
+9 4 var body = this.body;
+9 8 return this.name
+9 9 .toLowerCase()
+9 10 .replace(/\\s/g, \'-\')
+9 11 .replace(/\\\\|\\?|%|\\*|:|\\||"|<|>|\\.|#/g, \'\');
+9 13 module.exports = exports = HTTPServer;'
+

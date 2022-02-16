@@ -1,0 +1,8 @@
+Min editdistance: 67.00
+Closest candidate: 0 1  : function : function () { "}) } function
+0 1  : function : function () { "}) } function
+1 1 "
+2 1 "));
+2 2 return this;
+2 3 };"
+9 1 "));"

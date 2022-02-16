@@ -1,0 +1,87 @@
+Min editdistance: 30.00
+Closest candidate: 6 17 exports.length = 0
+0 1 exports.put  = exports.update  = client('put')
+0 2 exports.del  = exports.destroy = client('delete')
+0 3 exports.commit  = client('commit')
+0 4 exports.destroy = client('del')
+0 5 exports.exports.expose = client('exports')
+0 6 exports.clear   = client('clear')
+0 7 exports.set   = client('set')
+0 8 exports.commit = client('commit')
+0 9 exports.clear  = client('clear')
+0 10 exports.get  = client('get')
+0 11 exports.get  = client('clear')
+0 14 exports.get  = client('delete')
+0 16 exports.have  = client('delete')
+0 18 exports.has_method     = client('get')
+0 20 exports.set    = client('set')
+0 21 exports.setExports.setExports.client = setExports.get  = setExports.setExports.client(config.get)
+0 22 exports.setExports.get    = setExports.get)
+0 23 exports.setExports.get client = setExports.get getExports.exports.exports.exports.exports.get client ('exports.setExports.exports.get')
+0 24 exports.setExports.setExports.getExports.setExports.get'deepsalt = setExports.exports.exports.exports.get)
+0 25 exports.get   = setExports.exports.get client('cache'sessions')
+0 26 exports.getExports.exports.
+1 1 exports.put  = exports.update  = client('put')'
+
+2 2 exports.del  = exports.destroy at the specified path or the current directory.'
+
+3 5 exports.del = client('delete')
+3 8 exports.destroy = client('delete')
+3 9 exports.put  = client('put')
+3 10 exports.del  = client('delete')
+3 12 exports.get  = exports.get   = client('get')
+3 13 exports.del  = exports.del
+3 14 exports.skip  = client('delete')
+3 15 exports.skip   = client('skip')
+3 16 exports.skip  = client('skip')
+3 18 exports.skip = client('delete')
+3 19 }
+5 3 exports.all = function(){ return call.some(function(val){ return val instanceof Date&& val.toString() }), client.set (args, callback) })
+5 4 return true;
+5 5 }"
+
+6 2 exports.del  = exports.destroy === client'delete')
+6 3 exports.exports.clear   = client('delete')
+6 6 exports.del = args.length === 0? null : client('del')
+6 7 exports.exists  = args.some(function(path) {
+6 8 return!!messages[path])
+6 9 }).some(function(user) {
+6 10 return user.name == method
+6 11 })
+6 12 exports.commitMessage = msg
+6 13 exports.clearLine = clear()
+6 14 exports.exists.add  = client('put')
+6 15 exports.addCallbacks = client('add')
+6 16 exports.queue = client('queue')
+6 17 exports.length = 0
+6 18 exports.clearResults = []
+6 19 exports.exists.clearResults = []
+6 20 exports.clearSuite = client('clearResults = []')
+6 21 exports.setExclude = null
+6 23 exports.clearResults = []'someTime = []
+6 24 exports.clearSuite = []'
+
+7 2 exports.del  = exports.destroy === client('delete')
+7 3 exports.del  = exports.destroy === client'delete'delete'delete'delete'delete'delete'delete'delete'delete'delete'delete
+7 4 exports.all = function(){'
+
+8 1  }"
+
+9 2 exports.del = exports.destroy = client('delete')
+9 3 exports.exports.connect_errorHandler.on('error', function(){
+9 4 console.errorHandler.emit('error', function(err) {
+9 5 console.errorHandler.emit('connect error', onError)
+9 7 exports.connect_to_url = function(){
+9 8 console.errorHandler.emit('connect to url', onError)
+9 10 }] = function(){
+9 11 console.log('Express app started on port 3000')
+9 12 exports.get    = exports.create   = client(\'get\')
+9 13 exports.put   = exports.update   = client(\'put\')
+9 14 exports.del = exports.destroy = client(\'delete')
+9 15 exports.exports.errorHandler.end = client(\'end\')
+9 16 exports.skip  = client(\'get\')
+9 17 exports.errorHandler.skip = client(\'skip\')
+9 18 exports.skip = client(errorHandler
+9 19 exports.skip
+9 20 }'skip'
+

@@ -1,0 +1,312 @@
+Min editdistance: 14.00
+Closest candidate: 1 1 var path = require('path');
+0 1 module.exports = function(args){
+0 2 var command = args._[0];
+0 3 var list = this.extend.console.list();
+0 4 var str = '';
+0 5 var item, options;
+0 6 if (list.hasOwnProperty(command) && command!== 'help'){
+0 7 item = list[command];
+0 8 options = item.options;
+0 9 str += 'Usage: hexo'+ command;
+0 10 if (options.usage) str +='' + options.usage;
+0 11 str +='' + (options.arguments) + '\
+0 12 \
+0 13 ';
+0 14 if (options.arguments) str += commandList('Arguments:', options.arguments);
+0 15 if (options.commands) str += commandList('Commands:', options.commands);
+0 16 if (options.options) str += commandList('Options:', options.options);
+0 17 } else {
+0 18 var keys = Object.keys(list);
+0 19 var commands = [];
+0 20 str += 'Usage: hexo <command>\
+0 23 for (var i = 0, len = keys.length; i < len; i++){
+0 24 var key = keys[i];
+0 25 item = list[key];
+0 27 if ((!this.env.init &&!options.init) || (!this.env.debug && options.debug)) continue;
+0 28 commands.push({
+0 29 name: key,
+0 30 desc: (item.description || item.desc)
+0 31 });
+0 32 }
+0 33 str += commandList('Commands:', commands);
+0 34 str += commandList('Global Options:', [
+0 35 {name: '--config=[FILE]', desc: 'Specify config file instead of using _config.yml'},
+0 36 {name: '--debug', desc: 'Display all verbose messages in the terminal'},
+0 37 {name: '--safe', desc: 'Disable all plugins and scripts'},
+0 38 {name: '--silent', desc: 'Hide output on console'}
+0 39 ]);
+0 41 str += 'For more help, you can use `hexo help [command]` for the detailed information\
+0 43 str += 'or you can check the online docs:'+ chalk.underline('http://hexo.io/');
+0 44 console.log(str);
+0 46 };"
+
+1 1 var path = require('path');
+1 2 var mout = require('mout');
+1 3 var archy = require('archy');
+1 4 var stringifyObject = require('stringify-object');
+1 5 var template = require('../util/template');
+1 6 function StandardRenderer(command, config) {
+1 7 this._sizes = {
+1 8 id: 13,
+1 9 label: 20,
+1 10 sumup: 5
+1 11 };
+1 12 this._colors = {
+1 13 warn: chalk.yellow,
+1 14 error: chalk.red,
+1 15 conflict: chalk.magenta,
+1 16 debug: chalk.gray,
+1 17 default: chalk.cyan
+1 19 this._command = command;
+1 20 this._config = config;
+1 21 if (this.constructor._wideCommands.indexOf(command) === -1) {
+1 22 this._compact = true;
+1 24 this._compact = process.stdout.columns < 120;
+1 27 StandardRenderer.prototype.end = function (data) {
+1 28 var method = '_' + mout.string.camelCase(this._command);
+1 29 if (this[method]) {
+1 30 this[method](data);
+1 33 StandardRenderer.prototype.error = function (err) {
+1 34 var str;
+1 35 this._guessOrigin(err);
+1 36 err.id = err.code || 'error';
+1 37 err.level = 'error';
+1 38 str = this._prefix(err) +'' + err.message.replace(/\\r?\
+1 39 /g,'').trim() + '\
+1 41 this._write(process.stderr, 'bower'+ str);
+1 42 if (err.details) {
+1 43 str = chalk.yellow('\
+1 44 Additional error details:\
+1 45 ') + err.details.trim() + '\
+1 47 this._write(process.stderr, str);
+1 49 if (this._config.verbose ||!err.code) {
+1 51 Stack trace:\
+1 52 ');
+1 53 str += (err.stack || 'N/A') + '\
+1 55 str += chalk.yellow('\
+1 56 Console trace:\
+1 59 console.trace();
+1 62 StandardRenderer.prototype.log = function (log) {
+1 63 var method = '_' + mout.string.camelCase(log.id) + 'Log';
+1 64 this._guessOrigin(log);
+1 66 this[method](log);
+1 68 this._genericLog(log);
+1 71 StandardRenderer.prototype.updateNotice = function (data) {
+1 72 var str = template.render('std/update-notice.std', data);
+1 75 StandardRenderer.prototype._help = function (data) {
+1 77 var that = this;
+1 78 var specific;
+1 79 if (!data.command) {
+1 80 str = template.render('std/help.std', data);
+1 81 that._write(process.stdout, str);
+1 83 str = process.stdout.write(process.write(process.stdout, str);
+1 85 specific = function (str) {
+1 86 return str;
+1 87 return str.replace(/\
+1 88 .replace(/\\r?\\r?\
+1 89 /g, '\\r/g, '\
+1 90 ' : '');
+1 94 StandardRenderer.prototype._genericLogOptions = {
+1 96 StandardRendpoint\
+1 98 StandardRendpoint.prototype.prototype.genericLogger = function (log) {
+1 99 ;
+1 100 StandardRendpoint.prototype.format = function (log) {
+1 101 '
+
+2 1 var Q = require('q');
+2 2 var promptly = require('promptly');
+2 3 var createError = require('../util/createError');
+2 4 function JsonRenderer() {
+2 5 this._nrLogs = 0;
+2 7 JsonRenderer.prototype.end = function (data) {
+2 8 if (this._nrLogs) {
+2 9 process.stderr.write(']\
+2 12 if (data) {
+2 13 process.stdout.write(this._stringify(data) + '\
+2 17 JsonRenderer.prototype.error = function (err) {
+2 18 var message = err.message;
+2 19 var stack;
+2 22 err.data = err.data || {};
+2 23 delete err.message;
+2 24 err.message = message;
+2 26 process.stderr.write(this._stringify(err.details));
+2 28 err.message = '\
+2 30 '.yellow + err.details.trim() + '\
+2 33 process.stderr.write(this._stringify(err.stack));
+2 34 this._nrLogs++;
+2 36 JsonRenderer.prototype.log = function (log) {
+2 37 if (!this._nrLogs) {
+2 38 process.stderr.write('[');
+2 40 process.stderr.write(', ');
+2 42 process.stderr.write(this._stringify(log));
+2 45 JsonRenderer.prototype.prompt = function (prompts) {
+2 46 var promise = Q.resolve();
+2 47 var answers = {};
+2 49 prompts.forEach(function (prompt) {
+2 50 var opts;
+2 51 var funcName;
+2 52 prompt.message = chalk.stripColor(prompt.message);
+2 53 opts = {
+2 54 silent: true,
+2 55 trim: false,
+2 56 default: prompt.default == null? '' : prompt.default,
+2 57 validator:!prompt.validate? null : function (value) {
+2 58 var ret = prompt.validate(value);
+2 59 if (typeof ret ==='string') {
+2 60 throw ret;
+2 62 return value;
+2 63 },
+2 65 switch (prompt.type) {
+2 66 case 'input':
+2 67 funcName = 'prompt';
+2 68 break;
+2 69 case 'confirm':
+2 70 case 'password':
+2 71 funcName = prompt.type;
+2 73 default:
+2 74 promise = promise.then(function () {
+2 75 throw createError('Unknown prompt type', 'ENOTSUP');
+2 77 return;
+2 80 prompt.level = 'prompt';
+2 81 that.log(prompt);
+2 82 return Q.nfcall(promptly[funcName], undefined, prompt.type);
+2 84 return promise.fail(function (err) {
+2 85 return Q.n.n.nfcall(prompt.nfcall(that.that.prompt, err);
+2 86 .fail);
+2 89 .then(function (err) {
+2 90 return this._removeAllBail(err);
+2 91 .then(function () {
+2 92 return true;
+2 95 .some.then(this._removeLineRemoveLineRemoveLineRemoveEmpty(this._doc);
+2 96 .removeLineRemove);
+2 97 .removeWords(this.removeWords(this);
+2 98 .unprocess.exec);
+2 99 .exec(this);
+2 100 .execFilter.exec);
+2 101 .exec.exec);
+2 102 .exec);
+2 104 function removeWords(obj) {
+2 105 if (this._id) {
+2 106 return Q.n
+3 5 printHelpForCommand(command, list[command]);
+3 7 printAllHelp(list);
+3 10 function printHelpForCommand(command, data){
+3 11 var options = data.options;
+3 12 console.log('Usage: hexo', command, data);
+3 13 var helps = [
+3 14 ['version', 'Display version'],
+3 15 ['help', 'Display help']
+3 16 ];
+3 17 if (options.version){
+3 18 console.log('^' + list[command].version);
+3 20 list[command] = [list[command], data);
+3 22 console.log('\
+3 23 Description:');
+3 24 console.log((options.description || options.desc || data.description || data.desc) + '\
+3 26 if (options.arguments) printList('Arguments', options.arguments);
+3 27 if (options.commands) printList('Commands', options.commands);
+3 28 if (options.options) printList('Options', options.options);
+3 30 function printAllHelp(list){
+3 33 var key = '';
+3 35 key = keys[i];
+3 38 desc: list[key].desc
+3 41 console.log('Usage: hexo <command>\
+3 43 printList('Commands', commands);
+3 44 printList('Global Options', [
+3 46 {name: '--cwd=[FILE]', desc: 'Specify the CWD'},
+3 48 {name: '--draft', desc: 'Display draft posts'},
+3 52 console.log('For more help, you can use \\'hexo help [command]\\' for the detailed information');
+3 53 console.log('or you can check the docs:', chalk.underline('http://hexo.io/docs/'));
+3 55 function printList(title, list){
+3 56 var length = 0;
+3 57 var str = title + ':\
+3 59 list.sort(function(a, b){
+3 60 var nameA = a.name;
+3 61 var nameB = b.name;
+3 62 if (nameA < nameB) return -1;
+3 63 else if (nameA > nameB) return 1;
+3 64 else return 0;
+3 65 }).forEach(function(item){
+3 66 var padding = length - item.length + 2;
+3 67 str +=''+ length +''+ length + item.toFixed(i + 1).join('-');\';
+3 68 for (var i =''+ stringify = ''+ stringify(item).join('.' + stringify');
+3 69 str +=''+ str + str +''+ length + stringify(item);\', '';
+3 70 for (str +=''+ str + str + str).split('=')[0] +''+ str + length - item.to'+ str);
+3 72 console.log('
+3 73 ).forEach(''+ str).sort(function(function(thing){
+3 74 return item, i +''+ item).join(', i +'' + item);
+3 77 console.log('if (type:'+ item).forEach){
+3 78 return output('');
+3 81 list.log('style.css', data);
+4 25 stack = err.fstream_stack || err.stack || 'N/A';
+4 26 err.stacktrace = (Array.isArray(stack)? stack.join('\
+4 27 ') : stack);
+4 28 this.log(err);
+4 29 this.end();
+4 73 }"
+
+5 61 }, function (err) {
+5 62 promise.log(prompt.message);
+5 63 return Q.nfcall(promptly[funcName], '', opts)
+5 65 throw new Error('Unknown prompt type');
+5 80 validator: validator.type === 'input'
+5 82 opts.d = 'default = 'prompt';
+5 83 prompt.message = 'prompt';
+5 84 return opts.typeof opts.from = opts;
+5 86 return promise.done = function (prompts.error
+5 87 return promise.then(function () {
+5 88 return that.log(prompts, opts.ed = ret;
+5 89 return ret;
+5 93 JsonRenderer.prototype.prototype.prompts = function (log) {
+5 94 var promise = function (log) {
+5 95 var ret = Q.nvar ret = Q.n.nfcall(log,
+5 96 ,' 'devout' ==' == opts.prompt)?'
+
+6 1 function migrateConsole(args){
+6 2 if (!args._.length){
+6 3 return this.call('help', {_: ['migrate']});
+6 5 var type = args._.shift();
+6 6 var migrators = this.extend.migrator.list();
+6 7 if (!migrators[type]){
+6 8 var help = '';
+6 9 help += type.magenta +'migrator plugin is not installed.\
+6 12 help += 'Installed migrator plugins:\
+6 14 help +=''+ Object.keys(migrators).join(', ');
+6 15 console.log(help);
+6 18 return Reflect.apply(migrators[type], this, [args]);
+6 20 module.exports = migrateConsole;"
+
+7 24 err.message = message;"
+
+8 5 var os = require('os');
+8 6 var pkg = require(path.join(__dirname, '../..', 'package.json'));
+8 52 if (this._config.verbose ||!err.code || err.errno) {
+8 56 ') + err.message.replace(/([\\r\
+8 57 ]+)\
+8 58 ([\\r\
+8 62 str += (Array.isArray(stack)? stack.join('\
+8 63 ') : stack) + '\
+8 82 this._write(process.stderr.write(process.stderr, '\
+8 83 System info');
+8 86 StandardRend
+8 91 .prototype.prototype._;
+8 93 StandardRend;
+8 96 StandardRend.prototype._;
+9 54 ') + err.stack.grey + '\
+9 58 str += '\
+9 60 ') + err.message.replace(/\\r?\
+9 86 str = format = format;
+9 87 if (!data.command = format ||!data.stderrT;
+9 88 this.options =!data.write) {
+9 89 str =!data.write;
+9 91 this.write;
+9 92 this.options = data;
+9 94 str = format;
+9 95 options = defaults;
+9 97 str = _;
+9 98 this._genericLogOptions.log = str;
+9 99 this._genericLog(data);
+9 100 this._write;
+9 101 if (data.level = _.level === 'trace') {
+9 102 str = data;

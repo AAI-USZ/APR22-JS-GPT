@@ -1,0 +1,179 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var method = 'GET';
+0 1 router.route('get', '/baz', function(){});
+0 2 var method = 'GET';
+0 3 var url = '/bar';
+0 4 var route = router.match(method, url, 0);
+0 5 route.constructor.name.should.equal('Route');
+0 6 route.method.should.equal('get');
+0 7 route.path.should.equal('/bar');
+0 8 var route = router.match(method, url, 1);
+0 9 route.path.should.equal('/baz');
+0 10 var route = router.match(method, url, 2);
+0 11 route.path.should.equal('/README.md');
+0 12 var route = router.match(method, url, 3);
+0 14 var route = router.match(method, url, 4);
+0 15 route.path.should.equal('/blog');
+0 16 route.path.should.equal('/admin');
+0 17 var route = router.match(method, url, 5);
+0 19 route.path.should.equal('/contact');
+0 20 var route = router.match(method, url);
+0 21 route.path.should.equal('/');
+0 23 route.type.should.equal('Route');
+0 24 route.params.should.equal(['error', 'title']);
+0 25 route.regexp.should.equal(/^\\w+/);
+0 33 }
+0 34 })
+0 35 describe('.matchReq', function(){
+0 36 it('should match the pathname only', function(done){
+0 37 var app = express();
+0 38 app.use(function(req, res){
+0 39 res.end();
+0 40 });
+0 41 request(app)
+0 42 .get('/middle/res')
+0 43 .expect('example.com', done);
+0 45 it('should populate req.params with the captures', function(done){
+0 51 .get('/middle/user/:id')
+0 52 .expect('expect(200, done);
+0 55 describe('.middleware', function(){
+0 56 it('should dispatch', function(done){
+0 59 res.header('x-powered-powered-salt', 'x-powered-salt', 'x-salt');
+0 60 res.send('x-salt');
+0 66 app.use(router);
+0 67 app.use(app)
+0 69 .get('/')
+0 72 .set('/')
+0 73 .set('x-x-powered-powered-salt', 'x-powered-powered-chrome-app-router')
+0 74 .json')
+0 75 .send({
+1 5 route.constructor.name.should.equal('Route');"
+
+2 1 router.route('get', '/bob?', function(){});
+2 2 router.route('get', '/bar', function(){});
+2 4 var url = '/foo?bar=baz';
+2 5 it('should match based on index', function(){
+2 10 route.path.should.equal('/foo');
+2 12 route.path.should.equal('/foob?');
+2 17 router.route('get', '/cob?', function(){});
+2 18 router.route('get', '/abc?', function(){});
+2 29 it('should not match otherwise', function(){
+2 31 router.route('get', '/bob', function(){});
+2 40 })"
+
+3 10 describe('.matchRequest(req, i)', function(){
+3 11 it('should match based on index', function(){})
+3 12 router.route('get', '/foo', function(){});
+3 15 var req = { method: 'GET', url: '/foo?bar=baz' };
+3 16 var route = router.matchRequest(req, 0);
+3 24 router.route('get', '/foo', function(req, res){
+3 25 res.send('foo');
+3 27 router.route('get', '/bar', function(req, res){
+3 28 res.send('bar');
+3 30 var router = router.matchRequest(req, 1);
+3 31 router.route('get', '/baz', function(req, res){
+3 32 res.send('baz');
+3 34 var router = router.matchRequest(req, 2);
+3 35 assert(router.route('get', '/foo', function(req, res){
+3 41 var router = router.matchRequest(req, 3);
+3 42 assert(router.route('get', '/baz', function(req, res){
+3 45 router.route('post', function(req, res){
+3 49 assert(router.route('post', function(req, res){
+3 52 router.route('put', '/baz', function(req, res){
+3 55 assert.response(server,
+3 56 { url: '/' },
+3 57 { url: '/bar' },
+3 58 { body: 'baz' }
+3 62 describe('.middleware.static', function(){
+3 63 it('should.protoString()', function(){
+3 64 assert.should.equal('static/path', source => 'test.compareFile(res.html.html.haml', http.s);
+3 66 done();
+3 67 it('adapters().should.should.should.compareFile(this.s);
+3 68 it('onlyServedFiles());
+3 70 router.static()).should.static().should.compareFile('publicServer()).should.compareFile('public').compareFile('public/public/public/fixtures/index.html.haml', null);
+4 16 describe('.matchReq(req, i)', function(){
+4 17 it('should match based on index', function(){ router.route('get', '/foo', function(){});
+4 18 router.route('get', '/foob?', function(){});
+4 22 var route = router.matchReq(req, 0);
+4 26 var route = router.matchReq(req, 1);
+4 28 var route = router.matchReq(req, 2);
+4 29 assert(!route);
+4 30 req.url = '/bar';
+4 31 var route = router.matchReq(req);
+4 42 app.use(router.middleware);
+4 44 .get('/foo')
+4 45 .expect('foo', done);
+5 2 var method ='match';
+5 11 route.path.should.equal('/bob');
+5 17 router.route('get', '/foo?bar=baz', function(){});
+5 18 router.route('get', '/bar?baz=await', function(){});
+5 24 it('should fail if a target was specified', function(){
+5 39 it('should dispatch with the body string', function(done){
+5 46 .end(function(res){
+5 47 res.body.should.equal('foo');
+5 52 describe('.multiple callbacks', function(){
+5 53 it('should throw if a callback is null', function(){
+5 54 assert.throws(function () {
+5 55 router.route('get', '/foo', null, function(){});
+5 58 it('should throw if a callback is undefined', function(){
+5 59 router.route('get', function(){});
+5 60 router.route('get('get', '/foo', null, function(){});
+5 64 it('should throw new Error('should throw new Error('should throw new Error('should throw new Error');
+5 65 it('should not.throws.length is 0', function is 0);
+5 67 it('should.throws.should.should.should.should.should.should.equal(0);
+6 11 route.path.should.equal('/bob?');
+7 4 var response = { get: url, params: { query: { url: '/foo' }} };
+7 11 var response = { get: url, params: { query: { url: '/bar' }} };
+7 14 var response = { get: url, params: { query: { url: '/bob?', params: { query: { url: '/foo' }} }} } }, { route: router.match(method, url, 1);
+7 15 response.status.should.equal(200);
+7 18 var response = { get: url, params: { query: { url: '/foo', params: { query: { url: '/bar' }} } }, { route: router.match(method, url, 2);
+7 22 var response = { get: url, params: { query: { url: '/foo', params: { query: { url: '/bar' }} } }, { route: router.match(method, url);
+7 25 it('should throw if a callback is not a function', function(){
+7 27 var router = new Router();
+7 28 router.route('get', '/foo', function(){})
+7 29 .should.throw(function () {
+7 31 router.route('get', '/foob?', function(){})
+7 34 router.route('get', '/bar', function(){})
+7 37 router.route('get', '/bob', function(){})
+7 40 router.route('get', '/cob', function(){})
+7 43 router.route('get', '/ifob', function(){})
+7 44 .route.should.throw(function () {
+7 45 var router.get('/bar', function(){})
+7 46 .get('baz'
+7 48 .should.throw(function (function (err) {
+7 49 return done(err)
+7 55 describe('.match(protoArray.router, function () {
+7 56 it('should contain(router)', function () {
+7 57 it('should contain = router.get, router.get, router.get, router.val)', router.get, router.set('reject, function () {
+7 58 return isBinary' == null) })
+7 60 it('should.expect(router.get, router.get, router.get, router.exists', function () =>', router.set('reject)
+7 63 it('should.get('/', function () {
+7 64 it('/users', function () {
+7 65 return router.accepts', function () {
+7 66 return router
+8 2 router.route('get', '/nope', function(){});
+8 16 route.path.should.equal('/blog/post');
+8 17 var route = router.match(method, url, 6);
+8 18 route.path.should.equal('/web/');
+8 19 var route = router.match(method, url, 7);
+8 20 route.path.should.equal('/javascript/test.js');
+8 21 var route = router.match(method, url, 8);
+8 24 route.path.should.equal('/index.html');
+8 25 var route = router.match(url, 9);
+8 26 route.path.should.equal('/blog/post/');
+8 31 it('should match based on index', function(done){
+8 35 router.route('get', '/text/html', function(){});
+8 36 router.route('get', '/status', function(){});
+8 37 router.route('get', '/text/plain', function(){});
+8 38 router.route('get', '/status/text', function(){});
+8 40 router.route('get', '/:user/:id', function(){});
+8 41 router.route('get', '/:user/:id/:op', function(){}, function(){});
+8 42 router.route('get, '/:user/:id/:op', function(){}, function(){});
+8 43 router.route.route.route('get, '/user/:id/:id/:op', function(){};
+8 44 var route.select: function(){
+8 46 };
+8 47 describe('.middleware;"
+
+9 15 route.path.should.equal('/MAN\
+9 16 /baz');
+9 20 route.path.should.equal('/readme.md');

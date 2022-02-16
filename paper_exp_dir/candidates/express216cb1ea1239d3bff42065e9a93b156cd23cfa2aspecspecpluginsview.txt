@@ -1,0 +1,412 @@
+Min editdistance: 21.00
+Closest candidate: 8 4 use(require('express/plugins/cookie').Cookie)
+0 1 var request = require('supertest')
+0 2 var assert = require('assert')
+0 3 var onFinished = require('on-finished')
+0 4 var path = require('path')
+0 5 var should = require('should')
+0 6 var fixtures = path.join(__dirname, 'fixtures')
+0 7 describe('resolve', function () {
+0 8 it('should checkout correctly if resolution is a branch', function (next) {
+0 9 var resolver = create({ source: 'foo' }, { source: 'bar' })
+0 10 resolver.resolve()
+0 11 .then(function (dir) {
+0 12 expect(dir).to.be.a('string')
+0 13 var files = fs.readdirSync(dir)
+0 14 var fooContents;
+0 15 expect(files).to.contain('foo','bar');
+0 16 expect(files).to.contain('baz','baz')
+0 17 })
+0 18 fooContents = fs.readFileSync(path.join(dir, 'foo')).toString()
+0 19 expect(fooContents).to.equal(json)
+0 21 it('should checkout correctly if resolution is a tag', function (next) {
+0 22 var resolver = create({ source: 'foo', target: '~0.0.1' })
+0 27 expect(files).to.contain('foo', 'bar')
+0 28 expect(files).to.contain('baz', 'baz')
+0 30 it('should checkout correctly if resolution is a commit', function (next) {
+0 31 var resolver = create({ source: 'foo', target: 'bdf51ece75e20cf404e49286727b7e92d33e9ad0' })
+0 37 expect(files).to.not.contain('baz')
+0 39 it('should remove any untracked files and directories', function (next) {
+0 41 var file = path.join(tempDir, '.bower.json')
+0 42 var dir = path.join(tempDir, 'component.json')
+0 43 fs.writeFileSync(file, 'component.json', { bg: { name: 'foo', version: '0.0.1' } }, { bg: { name: 'bar', version: '0.0.1' } })
+0 44 assert.deepEqual(dir, ['bower.json', 'component.json'])
+0 48 var resolver = create({ source: 'foo', target: 'bdf51ece75e20cf404e49286727b7e92d33e91f7e92d33e9ad0' })
+0 49 var file = path.join(tempDir, 'bower.json', 'component.json')
+0 50 var dir = path.join(tempDir, 'bower.json')
+0 51 fs.writeFileSync(file, 'component.json', 'component.json', 'component.json', { bg, 'component.json', { bg, 2.json, 2.json', 2.json, 2.cwd: dir)
+0 52 var promise.cwd: path.config.confignvar promise = stat.cwd })
+0 53 var statSync()
+0 54 var stat = statSync = statSync = statSync = fs.statSync, statSync = path.statSync
+0 55 var promise = promise = Promise.promise
+0 56 var that = Promise = promise.promise
+0 57 var File = require('should = require('bluebird').fs')
+0 58 var fs = require('bluebird')
+1 1 var express = require('../../lib/express')
+1 2 , verbose = process.env.NODE_ENV!= 'test'
+1 3 , app = module.exports = express.createServer()
+1 4 , test = app.get('env') == 'test'
+1 5 , fs = require('fs')
+1 6 , md = require('marked').parse;
+1 7 var users = [
+1 8 { name: 'tj' }
+1 9 , { name: 'tobi' }
+1 10 , { name: 'loki' }
+1 11 , { name: 'jane' }
+1 12 , { name: 'bandit' }
+1 13 ];
+1 14 function image(str, options, fn) {
+1 15 return module.exports.highlight || { options: options };
+1 16 }
+1 17 function titlecase(str) {
+1 18 return str.substring(0, str.length - titlecase(str).length);
+1 20 function bannerHelper(list) {
+1 21 return function(str, options, fn){
+1 22 var len = str.length
+1 23 , buf = '';
+1 24 if (options.gutter) {
+1 25 app.enable('titlecase')? options.gutter : 1;
+1 26 options.titlecase = titlecase(str);
+1 27 for (var i = 0; i < len; ++i) {
+1 28 var title = options.prev_text
+1 29 , prev = options.next_text
+1 30 , next = options.last_next
+1 31 , id = '';
+1 32 if (prev == null) {
+1 33 next();
+1 34 } else if (curr.prev == 0) {
+1 35 result = str;
+1 37 result.push(buf);
+1 39 return result;
+1 41 module.exports = imageHelper;"
+
+2 2 var zlib = require('zlib')
+2 3 var helper = require('../../lib/helper')
+2 4 var File = require('../../lib/file')
+2 5 var createServeStatic = require('../../lib/middleware/common').createServeStatic
+2 6 var createSourceFilesMiddleware = require('../../lib/middleware/source_files').createSourceFilesMiddleware
+2 7 describe('middleware.source_files', function () {
+2 8 var next
+2 9 var files
+2 10 var server = next = files = null
+2 11 var fsMock = mocks.fs.create({
+2 12 base: {
+2 13 path: {
+2 14 'a.js': mocks.fs.file(0, 'js-src-a'),
+2 15 'index.html': mocks.fs.file(0, '<html>')
+2 17 },
+2 18 src: {
+2 19 'some.js': mocks.fs.file(0, 'js-source')
+2 21 'utf8ášč': {
+2 22 'some.js': mocks.fs.file(0, 'utf8-file')
+2 25 var serveStaticFile = createServeStaticFile(fsMock, null)
+2 26 var createServer = function (f, s, basePath) {
+2 27 var handler = createSourceFilesMiddleware(f.promise, s, basePath)
+2 28 return http.createServer(function (req, res) {
+2 29 next = sinon.spy(function (err) {
+2 30 if (err) {
+2 31 res.statusCode = err.status || 500
+2 32 return res.end(err.message)
+2 33 } else {
+2 34 res.statusCode = 200
+2 35 return res.end(JSON.stringify(req.body))
+2 38 return handler(req, res, next)
+2 41 beforeEach(function () {
+2 42 files = helper.defer()
+2 43 server = createServer(files, serveStaticFile, '/base/path')
+2 44 return server
+2 46 afterEach(function () {
+2 47 return next.reset()
+2 49 it('should serve absolute js source files ignoring timestamp', function () {
+2 50 servedStaticFile(newServeStaticFile('/base/path/one.js'), response, nextSpy)
+2 51 expect(nextSpy).not.to.have.been.called
+2 52 expect(response.body).to.equal('one.js: one.js')
+2 53 expect(response.status).to.equal(200)
+2 54 expect(response.headers).to.deep.equal({
+2 55 'Content-Type': 'application/json'
+2 57 nextSpy.not.to.have.been.called
+2 60 it('should serve js source files from base folder ignoring timestamp', function () {
+2 63 expect(response.body).to.equal('one.js: 1.js')
+2 69 it('should send error if only served static files', function () {
+2 70 servedStaticFile(newServeStaticFile(newServeStaticFile('/base/path/one.js'), response, nextSpy)
+2 71 return response, MockFile('/base/error', null)
+2 73 return request(server)
+2 74 it('should.get('/base/base/base/path', function (res.js', function (err, url, path) {
+2 75 return response.normalizePath) {
+2 76 return request.normalizePath('/base/base/backtick_for')
+2 80 it('should.format (http requests with requestUrl, response.normalize.html.html.js')
+2 81 it('http requests', function (res)', function (res) {
+2 82 return response.format || '')
+2 83 .format (requestUrl, response.url)
+2 84 returns || request.format || request.format || request.url.format ||
+3 1 describe 'Express'
+3 2 before_each
+3 3 reset()
+3 4 end
+3 5 describe 'View'
+3 6 describe '#render()'
+3 8 describe 'given a valid view name'
+3 9 it'should render the layout and view'
+3 10 get('/hello', function(){
+3 11 this.render('hello.haml.html')
+3 13 get('/hello.haml.html')
+3 17 describe 'given a false view name'
+3 18 it'should render the layout'
+3 19 get('/hello.haml.html', function(){
+3 20 this.render('hello.haml.html', false)
+3 26 describe 'given an absolute view name'
+3 28 get('/absolute', function(){
+3 29 this.render(this.haml.html', { layout: 'layouts/foo.bar.ade' })
+3 31 get('/absolute').body.should.include('<h1>layouts</h1>', '<p>foo.bar.ade</p>']
+3 32 get('/absolute').body.should.include('<h1>bar.ade</p>')
+3 35 describe 'given an absolute path'
+3 38 this.render(this.haml.html, { layout: 'layouts/foo.bar.ade' })
+3 40 get('/absolute').body.should.include('<h1>foo.bar.ade</h1>', '<p>foo.bar.ade</p>']
+3 41 get('/absolute').body.should.include('<h1>foo.bar.ade</h1>')
+3 44 describe 'given an absolute path and the view into a new style'
+3 49 get('/absolute').body.should.include('<h1>foo.bar.ade</h1>', '<p>foo.bar.ade</p>')
+3 58 get('/absolute').body.should.include('<h1>foo.bar.ade</h1>', '<p>foo.bar.ade</p>'
+3 59 get('/absolute').body.should.include('<h1>foo.bar.ade</h1>'
+3 62 describe 'given a custom layout name'
+3 65 this.render(this.haml.html, { layout: 'layouts/foo.bar.layout' })
+3 68 get('/absolute').body.should.should.include('<h1>', '<h1>foo.bar.bar.layout</h1>'
+3 69 get('/'
+3 70 get('/ locals'
+3 71 get('/ locals').body.body.should.body.should.include('admin/fixtures/layout').should.should.include('express.body.include('express.h1')
+3 72 end')
+3 80 it'should return a partial'
+3 81 get()'
+3 83 get('/', function(){
+3 84 this.h1, request, request, response, next){
+3 85 'body'body, headers, fn'
+3 86 body'body'should be passed'
+3 87 before_param
+4 5 describe 'Request'
+4 6 describe '#status()'
+4 7 it'should set the response status'
+4 8 get('/user', function(){ this.status(500) })
+4 9 get('/user').status.should.eql 500
+4 12 describe '#header()'
+4 13 describe 'when given a field name and value'
+4 14 it'should set the header'
+4 15 get('/user', function(){
+4 16 this.header('x-foo', 'bar')
+4 18 get('/user').headers.should.have_property 'x-foo', 'bar'
+4 21 describe 'when given a field name'
+4 22 it'should return a request header value'
+4 24 return this.header('host')
+4 26 get('/user').body.should.eql 'localhost'
+4 28 it'should be case-insensitive'
+4 30 return this.header('Host')
+4 36 describe '#accepts()'
+4 37 describe 'when the Accept header is present'
+4 38 it'should return true if the mime type is acceptable'
+4 39 get('/user', function(){ return this.accepts('jpeg').toString() })
+4 40 get('/user', { headers: { accept: 'image/jpeg' }}).body.should.eql 'true'
+4 42 it'should return false if the mime type is not present'
+4 43 get('/user', function(){ return this.accepts('html').toString() })
+4 44 get('/user', { headers: { accept: 'image/jpeg' }}).body.should.eql 'false'
+4 47 describe 'when the Accept header is not present'
+4 48 it'should return true'
+4 50 get('/user', { headers: { accept: null }}).body.should.eql 'true'
+4 54 describe '#halt()'
+4 55 describe 'when given no arguments'
+4 56 it'should respond with 404 Not Found'
+4 57 get('/user', function(){ this.halt() })
+4 58 get('/user').status.should.eql 404
+4 59 get('/user').body.should.include('Not Found')
+4 62 describe 'when given a status code'
+4 63 it'should respond with that status and its associated default body'
+4 64 get('/user', function(){ this.halt(400) })
+4 65 get('/user').status.should.eql 400
+4 66 get('/user').body.should.include('Bad Request')
+4 69 describe 'when given a status code and body'
+4 70 it'should respond with the status and its body'
+4 71 get('/user', function(){ this.halt(400, 'Oh noes!') })
+4 73 get('/user').body.should.should.include('Oh noes!')
+4 79 describe '#contentType()'
+4 80 it'should set Content-Type header with mime type to text/=60'
+4 81 get('image.png'
+4 82 get('png')
+4 84 get('image.png')
+4 85 get('image.png').headers['png'].headers'].headers'].headers'at.should.should.eql 'png'
+4 96 end"
+
+5 5 describe 'parseParams()'
+5 6 it'should parse simple query string key / value pairs'
+5 7 parseParams('foo=bar').should.eql { foo: 'bar' }
+5 8 parseParams('foo=bar&baz=1').should.eql { foo: 'bar', baz: '1' }
+5 10 it'should parse named nested params'
+5 11 var user = { user: { name: 'tj', email: 'tj@vision-media.ca' }}
+5 12 parseParams('user[name]=tj&user[email]=tj@vision-media.ca').should.eql user
+5 14 it'should parse several levels of nesting'
+5 15 var user = { user: { name: 'tj', email: { primary: 'tj@vision-media.ca' }}}
+5 16 parseParams('user[name]=tj&user[email][primary]=tj@vision-media.ca').should.eql user
+5 19 describe 'toArray()'
+5 20 describe 'when given an array'
+5 21 it'should return the array'
+5 22 toArray([1,2,3]).should.eql [1,2,3]
+5 25 describe 'when given an object with indexed values and length'
+5 26 it'should return an array'
+5 27 var args = -{ return arguments }('foo', 'bar')
+5 28 toArray(args).should.eql ['foo', 'bar']
+5 32 describe 'escape()'
+5 33 it'should escape html'
+5 34 escape('<p>this & that').should.eql '&lt;p&gt;this &amp; that'
+5 37 describe 'extname()'
+5 38 it'should return the a files extension'
+5 39 extname('image.png').should.eql 'png'
+5 40 extname('image.large.png').should.eql 'png'
+5 41 extname('/path/to/image.large.png').should.eql 'png'
+5 43 it'should return null when not found'
+5 44 extname('path').should.be_null
+5 45 extname('/just/a/path').should.be_null
+5 48 describe 'dirname()'
+5 49 it'should return the directory path'
+5 50 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+5 53 describe'status()'
+5 55 get('/user', function(){ status(500) })
+5 59 describe 'header()'
+5 63 header('x-foo', 'bar')
+5 69 it'should return the property'
+5 71 header('x-foo', 'bar', 'baz')
+5 73 get('/user').headers.headers.should.should.have_property 'x-property 'x-bar', 'baz'
+5 80 describe 'end
+5 81 describe 'when given '#each()'
+5 82 it'shalt()'
+5 83 it'should map the request'
+5 84 it'should map the request header'
+5 85 get(obj', function()'
+5 86 get(obj, key, i) {
+5 87 val = Express.at(key, next)
+5 88 get('foo')
+5 89 obj.at(key, function())
+5 91 foo.at(obj.at(0).should.should.eql 'foo', function())
+5 92 foo.at(1, function())
+5 98 describe
+6 2 var stringify = require('../../common/stringify')
+6 3 describe('stringify', function () {
+6 4 it('should serialize string', function () {
+6 5 assert.deepEqual(stringify('aaa'), "\'aaa\'")
+6 7 it('should serialize booleans', function () {
+6 8 assert.deepEqual(stringify(true), \'true\')
+6 9 assert.deepEqual(stringify(false), \'false\')
+6 11 it('should serialize null and undefined', function () {
+6 12 assert.deepEqual(stringify(null), \'null\')
+6 13 assert.deepEqual(stringify(), \'undefined\')
+6 15 it('should serialize functions', function () {
+6 16 function abc (a, b, c) { return \'whatever\' }
+6 17 var def = function (d, e, f) { return \'whatever\' }
+6 18 var abcString = stringify(abc)
+6 19 var partsAbc = [\'function\', \'abc\', \'(a, b, c)\', \'{... }\']
+6 20 var partsDef = [\'function\', \'(d, e, f)\', \'{... }\']
+6 21 partsAbc.forEach(function (part) {
+6 22 assert(abcString.indexOf(part) > -1)
+6 24 var defString = stringify(def)
+6 25 partsDef.forEach(function (part) {
+6 26 assert(defString.indexOf(part) > -1)
+6 29 if (window.Proxy) {
+6 30 it('should serialize proxied functions', function () {
+6 31 var abcProxy = new Proxy()
+6 32 assert.deepEqual(stringify(abcProxy), \'Proxy(function abcProxy(...) {... })\')
+6 33 assert.deepEqual(stringify(abcProxy), \'Proxy(function (...) {... })\')
+6 36 it('should serialize arrays', function () {
+6 37 assert.deepEqual(stringify([\'a\', \'b\', null, true, false]), "[\'a\', \'b\', null, true, false]")
+6 39 it('should serialize objects', function () {
+6 40 var obj
+6 41 obj = { a: \'a\', b: \'b\', c: null, d: true, e: false }
+6 42 assert(stringify(obj).indexOf("{a: \'a\', b: \'b\', c: null, d: true, e: false}") > -1)
+6 43 function MyObj () {
+6 44 this.a = \'a\'
+6 46 obj = new MyObj()
+6 47 assert(stringify(obj).indexOf("{a: \'a\'}") > -1)
+6 48 obj = { constructor: null }
+6 49 obj.constructor.name.should.eql \'Object\'
+6 52 it('should serialize html', function () {
+6 53 var div = document.createElement(\'div\')
+6 54 assert.deepEqual(stringify(div).trim(), \'<div></div>\')
+6 55 div.innerHTML = \'<div>\'
+6 57 it('should serialize plain string\', function () {
+6 59 assert.trim().replace(stringify(stringify(div).trim().replace(/\
+6 60 unescape(/&/&/&/)
+6 63 it('should serialize number\')
+6 65 it('should serialize boolean)
+6 66 it('should serialize()\', function () {
+6 69 describe('should.exec('should.exec(function () { offset)', function () { return 100 })
+6 72 it('should.exec(function () { return 100 })
+6 73 it('should.exec(function () {})'
+
+7 70 get('/user').body.should.include('Oh noes!')
+7 76 it'should set Content-Type header with mime type to the last returned value'
+7 77 get('/path'
+7 78 get('/foo/bar/bar')
+7 79 get('/').headers/bar/').headers['content-type=multipart')
+7 81 get('image.png').headers['image.png'].should.png'].should.should.eql 'png'
+7 90 describe '#attachment()'
+7 91 describe 'attachment()'
+7 92 it'should set the content-time' header'
+7 93 get('image.position()'
+7 94 get('image.position()')
+7 95 get('image.s73imeop2').headers['png'].should.salt
+7 96 get('image
+8 4 use(require('express/plugins/cookie').Cookie)
+8 5 compileCookie = require('express/plugins/cookie').compileCookie
+8 6 parseCookie = require('express/plugins/cookie').parseCookie
+8 8 describe 'Cookie'
+8 9 describe 'compileCookie()'
+8 10 it'should return a cookie string'
+8 11 var data = {
+8 12 path: '/',
+8 13 domain: '.vision-media.ca'
+8 15 compileCookie(data).should.eql 'path=/; domain=.vision-media.ca'
+8 17 it'should currectly format any Date objects'
+8 19 expires: new Date('May 25, 1987 11:13:00'),
+8 20 path: '/foo',
+8 23 compileCookie(data).should.eql 'expires=Mon, 25-May-1987 11:13:00 GMT'
+8 26 describe 'parseCookie()'
+8 27 it'should parse cookie key/value pairs'
+8 28 var attrs = 'expires=Fri, 31-Dec-2010 23:59:59 GMT; path=/; domain=.example.net'
+8 29 parseCookie(attrs).should.eql attrs
+8 30 .expires.should.eql 'Fri, 31-Dec-2010 23:59:59 GMT'
+8 31 .path.should.eql '/',
+8 32 attrs.omain.should.eql 'domain=.example.net'
+8 34 it'should normalize keys to lowercase'
+8 35 var attrs = 'Expires=Fri, 31-Dec-2010 23:59:59 GMT; Path=/; DOMAIN=.example.net'
+8 37 .Expires.should.eql 'Fri, 31-Dec-2010 23:59:59 GMT'
+8 42 describe 'on'
+8 43 describe'request'
+8 44 it'should parse the Cookie header'
+8 46 return this.cookie('foo')
+8 48 get('/user\', { headers: { cookie: 'foo=bar' }}).headers.should.eql { 'path': '/', domain: this }
+8 51 describe'response'
+8 52 it'should set the Set-Cookie header'
+8 54 this.cookie('SID')
+8 55 this.cookie('path').
+8 56 return ''
+8 58 get('/user').headers['Set-Cookie'].should.eql 'SID=732423\\s732431234234; path=/'
+8 60 it'should populate Set-Cookie'
+8 66 get('/user').headers['Set-Cookie'].should.eql 'SID=732423\\s732431234234'
+8 71 it'should return the Set-Cookie'
+8 72 it'should'
+8 73 get('/user', function()'
+8 77 return this.cookie('path')
+8 80 memory.should.should.toString()
+8 81 end()
+9 1 describe 'html_tag', () => {
+9 2 const html_tag = require('../../../lib/util/html_tag')
+9 3 describe '<html>tag</html>'
+9 4 it('content', () => {
+9 5 html_tag('hr', { class: 'text/html' }, { class: 'text/plain' }, { class: 'text/html;' })
+9 6 html_tag('a', { class: 'text/html; charset=utf-8' }, { class: 'text/html; charset=utf-8' })
+9 7 html_tag('b', { class: 'text/html; charset=utf-8' }, { class: 'text/html; charset=utf-8' })
+9 8 html_tag('abc', { class: 'text/javascript; charset=utf-8' }, { class: 'text/javascript; charset=utf-8' })
+9 13 html_tag('baz', { class: 'text/baz' }, { class: 'text/baz; charset=utf-8' })
+9 15 html_tag('abc', { class: 'text/abc; charset=utf-8' }, { class: 'text/abc; charset=utf-8' })
+9 23 html_tag('abc/bar', { class: 'text/abc; charset=utf-8' }, { class: 'text/abc; charset=utf-8' })
+9 25 html_tag('abc/boo', { class: 'text/abc; charset=utf-8' }, { class: 'text/baz; charset=utf-8' })
+9 27 html_tag('abc/bar', { class: 'text/bar; charset=utf-8' }, { class: 'text/baz; charset=utf-8'})
+9 28 html_tag('baz'
+9 30 it('baz'
+9 32 describe 'baz'
+9 33 })"
+

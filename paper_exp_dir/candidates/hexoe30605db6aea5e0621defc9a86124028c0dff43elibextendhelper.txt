@@ -1,0 +1,242 @@
+Min editdistance: 1.00
+Closest candidate: 4 3 list() {
+0 1  = new Helper({
+0 2 name: {type: String, required: true},
+0 3 shim: {type: String, default: true},
+0 4 modified: {type: Boolean, default: true},
+0 5 emitAsync: {type: Boolean, default: true},
+0 7 emit() {
+0 8 this.store[this.name] = this.store[this.name] || {};
+0 9 return this;
+0 10 },
+0 11 register() {type: function(name, fn, store){
+0 12 if (!name) throw new TypeError(\'name is required\');
+0 13 if (typeof store === \'undefined\') store = {};
+0 14 if (fn.length > 1) fn = Promise.promisify(fn);
+0 15 this.store[this.name] = fn;
+0 16 }
+0 17 var _ = this;
+0 18 this.store[this.name] = store;
+0 19 this.emit('update\', this.store[this.name], fn);
+0 20 };
+0 21 module.exports = Helper;'
+
+1 1  = require(\'../../../lib/plugins/helper/helper/list_object\');
+1 2 const list = helpers.command(\'help\').bind(this);
+1 3 const object = require(\'mout/object\');
+1 4 describe(\'list\', () => {
+1 5 let emitter
+1 6 .on(\'a\', () => {
+1 7 emitter = new Helper({
+1 8 list: function(type) {
+1 9 return this.store[type];
+1 11 list
+1 12 })
+1 13 .on(\'a\', emitter.emit.bind(emitter, \'a\'));
+1 14 emitter.emit(\'b\');
+1 15 emitter.emit(\'c\');
+1 16 return emitter;
+1 18 });
+1 19 it(\'a list of the type does not exist\', () => {
+1 20 list = new Helper({
+1 28 return list.refresh();
+1 30 });'
+
+2 1  <a>Helper</a>().should.eql(this.store);
+2 4 Helper.prototype.list = function() {
+2 5 return this.store;
+2 7 Helper.prototype.register = function(name, fn) {
+2 9 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+2 11 this.store[name] = Promise.method(fn);
+2 13 Helper.prototype.register('list_categories\', require(\'../../templates/list_categories\'));
+2 14 this.list_categories = this.list_categories;
+2 16 };'
+
+3 1 <!--{{lead}}more{{tail}}-->`;
+3 2 this.__super__ =!!this.name.toLowerCase();
+3 3 this.__super__.apply(this, [this.store, this.alias]).then(result => {
+3 4 this.store[this.alias[type] = result;
+3 5 this.alias[type].push(result);
+3 6 }).catch(err => {
+3 7 this.emit("no-alias", this.store.alias);
+3 8 this.return;
+3 11 this.list = function() {
+3 14 this.register = function(name, fn, ends) {
+3 15 if (!name) throw new TypeError('name is required');
+3 16 if (typeof fn!== 'function\') throw new TypeError(\'fn must be a function\');
+3 17 if (options.sep === this.hidden || options.strict) || this.store.no-segment!== this.internal || this.internal.exitCode) return fn;
+3 18 this.store[name] = this.store[name] || [];
+3 19 this.store[name].push(fn);
+3 21 this.list.splice(this.indexOf('_posts")!== -1) {
+3 22 const _id = this.id;
+3 23 this.store[this.id] = this.store[_id] || [];
+3 24 this.store[this.id].push(fn);
+3 25 this.emit('update\');
+3 28 this.registerSet = function(name, fn) {
+3 29 if (!name) throw new TypeError(\'name is required');
+3 31 if (options.sep === this.hide || this.default.ignore) {
+3 32 this.list.splice(this.hide, 1);
+3 34 if (typeof options === \'object\') {
+3 35 if (fn instanceof Function) {
+3 36 fn = options;
+3 37 } else {
+3 38 options = {};
+3 40 let c = this.store[name];
+3 41 if (c && c instanceof Helper) {
+3 42 this.list = [];
+3 43 this.each(function(item, i) {
+3 44 if (i) {
+3 46 this.store[name].push(item);
+3 49 this.list.push(c);
+3 58 this.list.splice(this.hide, 0);
+3 61 this.registerSet.prototype.push = function(name, fn) {
+3 62 this.store[name] = this;
+3 63 this.store[name] = fn;
+3 65 this.list.get = function() {
+3 66 return this.set() {
+3 67 return this.list.set() {
+3 68 return this.list.length
+3 69 .length
+3 71 .join(this.join(this.sep, this.sep, this.length);
+4 3 list() {
+4 6 get() {
+4 9 registerHelper(locals, render, callback) {
+4 10 if (!callback && typeof error === \'function\') {
+4 11 callback = error;
+4 12 error = null;
+4 14 if (error) {
+4 15 render.render(this.store, callback);
+4 17 callback = function(){};
+4 28 var list = this.list()
+4 29 , this.store;
+4 30 this.registerHelper(locals, render, callback)
+4 31 .catch(function(err) {
+4 32 if (err) {
+4 33 return callback(error);
+4 35 this.store[this.first()._id] = {};
+4 36 list.forEach(function(iterator) {
+4 37 var self = this;
+4 38 this.store[this.last()._id] = self.store[this.last()._id];
+4 39 this.last()._id = null;
+4 41 this.list()
+4 42 .then(function() {
+4 43 return this.list()
+4 44 .then(function(list) {
+4 45 var results = self.find({cache: true}, callback);
+4 46 if (!results.length) return callback();
+4 47 results.forEach(function(result) {
+4 48 var obj = result;
+4 49 self.store[this.last()._id] = obj;
+4 51 list.sort(function(a, b) {
+4 52 return a.name > b.name;
+4 54 if (!a.length) return;
+4 58 if (!results.length) return;
+4 59 var i = 1;
+4 60 var len =results.length;
+4 61 for (; i < len; i++) {
+4 62 result[i] = self.findIndex(item, function() {
+4 63 return self.store[this.last()._id];
+4 66 return result;
+4 67 }, callback);
+5 1 '
+
+6 1  require("../../../lib/plugins/helper/gist");
+6 2 const genericListener = function(event, listener) {
+6 3 this.listeners = {};
+6 4 this.listeners.sort = { -1: 1 };
+6 5 this.listeners.unshift(filter);
+6 6 this.listeners.commit = listener;
+6 8 Hexo.prototype.__proto__ = EventEmitter.prototype;
+6 9 Hexo.prototype.call(this, event, listener);
+6 10 Hexo.prototype.return;'
+
+7 1  = require(\'../../../lib/plugins/helper/formatters/helpers/helpers/help\');
+7 2 require(\'../../lib/plugins/helper/formatters/helpers/help\');
+7 3 describe(\'helpers\', () => {
+7 4 it(\'Should formatAnswers\', () => {
+7 5 const { config } = this;
+7 6 const formatAnswers = function(ans) {
+7 7 ans = ans || {};
+7 8 ans.frameworks = ans.frameworks || [\'jasmine\',\'commonjs\'];
+7 9 ans.files = ans.files || [];
+7 10 ans.onlyServedFiles = ans.onlyServedFiles || [];
+7 11 ans.exclude = ans.exclude || [];
+7 12 ans.browsers = formatAnswers(ans);
+7 13 return formatAnswers(ans);
+7 15 it(\'should format FRAMEWORKS\', () => {
+7 16 const replacements = formAnswers({frameworks: [\'jasmine\',\'commonjs\'], exclude: [\'--format:\' + replacements[\'--format:\']});
+7 17 return helpers.expectEvent(replacements, \'end\');
+7 19 it(\'should format FILES\', () => {
+7 20 let replacements = formAnswers({files: [\'*.js\', \'other/file.js\']});
+7 23 it(\'should format BROWSERS\', () => {
+7 24 let replacements = formAnswers({browsers: [\'Chrome\', \'Firefox\']});
+7 27 it(\'should format AUTO_WATCH\', () => {
+7 28 let replacements = formAnswers({autoWatch: true});
+7 29 return helpers.expectEvent(replacements, \'AUTO_WATCH\');
+7 31 it(\'should format onlyServedFiles\', () => {
+7 32 const replacements = formAnswers({onlyServedFiles: [\'test-main.js\'], exclude: [\'test-main.js\']});
+7 35 it(\'should format PREPROCESSORS\', () => {
+7 36 const replacements = formAnswers({preprocessors: {\'*.coffee\': [\'coffee\']}});
+7 37 return helpers.expectEvent(replacements, \'preprocessors\');
+7 39 it(\'should format PREPROCESSORS with ', () => {
+7 49 return helpers.expectEvent(replacements.formatAnswers(replacements, \'express\', {
+7 50 id: [\'test-main.js\', \'test.js\', \'test.js\']
+8 1  = require(\'../../../lib/plugins/helper/list_posts\');
+8 2 const listPosts = require(\'../../../lib/plugins/helper/list_posts\').bind(this);
+8 3 let stub;
+8 4 before(() => { stub = sinon.stub(console, "log"); });
+8 5 after(() => { stub.reset(); });
+8 6 it(\'no post to match a single segment with no title\', () => {
+8 7 listPosts();
+8 8 sinon.stub(console, "log");
+8 9 return listPosts.insert({
+8 10 source: \'foo\',
+8 11 slug: \'foo\',
+8 12 _content: [
+8 13 \'---\'
+8 14 ].join(\'\
+8 15 \')
+8 16 }).then(() => {
+8 18 sinon.stub(console, "log").callsFake((err => {
+8 19 if (err) return stub.fail(console, "log").remove();
+8 21 }).done();
+8 23 it(\'post', () => {
+8 24 const posts = [
+8 25 {source: \'foo\', slug: \'foo: 1\', title: \'Its\'},
+8 26 {source: \'bar\', slug: \'bar: 2\', title: \'Math\'},
+8 27 {source: \'baz\', slug: \'baz\'},
+8 28 {source: \'boo\', slug: \'boo: 3\', title: \'Dude\'}
+8 29 ];
+8 30 return hexo.init()
+8 31 .then(() => Post.insert(posts)).then(posts => Promise.each([
+8 32 ['foo\'],
+8 33 [\'baz\'],
+8 34 [\'baz\']
+8 35 ], (tags, i) => posts[i].setTags(tags))).then(() => {
+8 36 hexo.locals.invalidate();
+8 38 .then(() => {
+8 41 if (err) return stub.fail(console, "log").callsFake((err => {
+8 42 if (err) return stub.fail(console, "log").message;
+8 43 return posts[i].setTags(tags);
+8 44 }));
+8 52 if (err) return stub.fail(console, "log").val;
+8 66 it(\'skip processing if post processing is post-processing\', () => {
+8 68 \'**\',
+8 69 \'processingFiles\',
+8 72 return Post.listPosts.create({cache: true}).then(() => {
+8 73 return Promise.then(() => {
+8 74 return Promise.resolve([
+8 75 fs.each([
+8 76 posts[0].forEach([\'processingFiles\'source\'source\'],\',\', \'source\'source\'source\'],\',
+8 77 fs.exclude\'requirejs\'],
+8 78 ], function(file.exclude\'sasset\'s3.cache\'],
+8 79 ], function(file.exclude\'s3.exclude\'], function(folder\'s3.exclude\'], function(file.exclude\'s3.exclude\'], function(folder\'s3.exclude\'], function(item
+8 80 return-processingFiles\'s3.exclude\'], function(file.exclude\'s3.exclude\'], [\'cache\'s3.more/**\'], {cache\'
+9 1  require(\'../../../lib/plugins/helper/asset_list\');
+9 2 const list = require(\'../../../lib/plugins/helper/list\').bind(this);
+9 3 this.register = function(name, fn) {
+9 6 if (fn.length > 1) {
+9 7 list.splice(1, 1);
+9 8 this.emit(\'list\');
+9 11 list.prototype.register = function(name, fn) {
+9 14 if (list.length > 1) {

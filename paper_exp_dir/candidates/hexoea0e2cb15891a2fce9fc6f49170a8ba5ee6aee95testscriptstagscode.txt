@@ -1,0 +1,165 @@
+Min editdistance: 2.00
+Closest candidate: 5 8 it(\'non standard indent', function() {
+0 1 }
+0 2 describe("when given a regexp{
+0 3 it(\'default\', function(){
+0 4 var result = code(\'foo /bar\', {}, fixture);
+0 5 result.should.eql(highlight(fixture));
+0 6 });
+0 7 it(\'title\', function(){
+0 8 var result = code(\'foo: 1\', {title: \'Its\'})
+0 9 .result.should.eql(highlight(fixture, {caption: \'<span>1</span>\', content: fixture.content}));
+0 11 it(\'lang\', function(){
+0 12 var result = code(\'lang:js\', {lang: \'js\'})
+0 13 .result.should.eql(highlight(fixture, {lang: \'js\'}));
+0 15 it(\'line_number\', function(){
+0 16 var result = code(\'line_number:false\', {line_number: true})
+0 17 .result.should.eql(highlight(fixture, {line_number: false}));
+0 19 it(\'highlight disable\', function(){
+0 20 var result = code(\'highlight:false\', {highlight: false})
+0 21 .result.should.eql(\'<pre><code>\' + fixture + \'</code></pre>\');
+0 24 var result = code(\'Hello world\', {title: \'world\'})
+0 25 .result.should.eql(highlight(fixture, {caption: \'<span>Hello world</span><a href="http://hexo.io/">link</a>\'}));
+0 26 });'
+
+1 2 describe('default', function(){
+1 3 it('default', function(){
+1 4 var result = code('', fixture);
+1 5 result.should.eql(highlight(fixture, {
+1 6 lang: 'en',
+1 7 caption: \'<span>test.title</span><a href="/downloads/code/test.js">view raw</a>\'
+1 8 }));
+2 5 lang: 'en'
+2 8 it(\'non standard indent', function(){
+2 9 var nonStandardIndent = [
+2 10 \'  \',
+2 11 \'  return x;\',
+2 12 \'}\',
+2 13 \'\',
+2 14 fixture,
+2 15 \'  \'
+2 16 ].join(\'/n\');
+2 17 var result = code(\'\', nonStandardIndent);
+2 18 result.should.eql(highlight(nonStandardIndent));
+2 21 var result = code(\'lang:js\', fixture);
+2 23 lang: \'js\'
+2 27 var result = code(\'line_number:false\', fixture);
+2 29 gutter: false
+2 31 result = code(\'line_number:true\', fixture);
+2 33 gutter: true
+2 37 var result = code(\'highlight:false\', fixture);
+2 38 result.should.eql(\'<pre><code>\' + fixture + \'</code></pre>\');
+2 41 var result = code(\'Hello world\', fixture);
+2 43 caption: \'<span>Hello world</span>\'
+3 3 var result = code(\'\', fixture);
+3 8 it(\'non standard indent\', function(){
+3 46 it(\'link\', function(){
+3 47 var result = code(\'Hello world https://hexo.io/\', fixture);
+3 48 var expected = highlight(fixture, {
+3 49 caption: \'<span>Hello world</span><a href="https://hexo.io/">link</a>\'
+3 51 result.should.eql(expected);
+3 53 it(\'link text\', function(){
+3 54 var result = code(\'Hello world https://hexo.io/ Hexo\', fixture);
+3 56 caption: \'<span>Hello world</span><a href="https://hexo.io/">Hexports=https://hexo.io</a>\'
+3 57 } expected</span>\'
+3 59 result.should.should.eql(expected = expected;
+3 61 it(\'link_to\', function(){
+3 62 var link_to_url = require(\'http://hexo.io.io.io/\', fixture);
+3 63 var path = fixture);
+3 64 return fixture.should.should.eql(fôo.html());
+4 6 caption: \'<span>test</span><a href="/downloads/code/test.js">view raw</a>`
+4 9 it("returns the code and data as locals', function(){
+4 10 var result = code("', fixture);
+4 12 lang: \'en',
+4 16 it("returns the code and data as locals with default', function(){
+5 2 it('default', function() {
+5 8 it(\'non standard indent', function() {
+5 20 it(\'lang\', function() {
+5 26 it(\'line_number\', function() {
+5 36 it(\'highlight disable\', function() {
+5 40 it(\'title\', function() {
+5 46 it(\'link\', function() {
+5 53 it(\'link text\', function() {
+5 56 caption: \'<span>Hello world</span><a href="https://hexo.io/">Hexports/</a>\'
+5 57 } finally</span>\'
+5 59 result.should.should.eql(expected.should.eql(expected);
+5 61 it(\'title
+5 62 it(\'indent\', function() {
+5 63 var result = code = code(\'Hello world > 20;\', fixture);
+5 64 result.should.should.should.not.not.equal(fixture.length);
+5 66 it(\'somewhere\', function() {
+5 67 var expected = 2;
+5 68 result.should.equal(3);
+6 6 it('non standard indent', function(){
+6 18 it(\'lang', function(){
+6 24 it(\'line_number false', function(){
+6 26 result.should.eql(fixture, {
+6 54 caption: \'<span>Hello world</span><a href="https://hexo.io/">Hexo</a>\'
+6 56 result.should.should.eql(expected.should.be.eql(expected);
+6 58 it(\'link + \'</code>\', function(){
+7 2 describe("default-options", function(){
+7 3 it(\'default', function(){
+7 4 var result = code(\'', fixture);
+7 6 lang: \'js\',
+7 7 caption: \'<span>test</span><a href="/downloads/code/test.js">view raw</a>\'
+7 10 it(\'title - required\', function(){
+7 17 it(\'type - virtual', function(){
+7 18 return codeTag(args.split(\' \'), content);
+7 19 })
+7 20 .replace(/{2,}/g, \'&#123;\')
+7 21 .replace(/}/g, \'&#125;\');
+7 23 describe("then(){
+7 31 it(\'type - virtual - when permalink is.html\', function(){
+7 38 it(\'type - virtual - when permalink is.htm\', function(){
+7 45 describe("when evaluating.skip("w", function(){
+7 46 it(\'should report success result if the code is a function", function(){
+7 47 var result = code = code(\'foo\', fixture);
+7 48 result.should.should.eql(highlight("foo());\");
+7 51 it(\'should.skip("should report.skip("should report failed function", function", function(){
+7 52 it("should report.skip", function(){
+7 53 it("should reportfailure(){
+7 54 it("should report failed");
+7 60 describe("invalidate(){
+7 62 it("should report.skip(){
+7 64 it("should report failed;"));
+7 65 it("should report.skip()");
+7 66 it("should report.skip() is required by default"));
+7 67 it("should report.skip() is required by defaulting"));
+7 68 it("not" is required by defaulting"));
+7 69 it("invalid()");
+7 71 it
+8 2 describe(\'non-string as code\', function(){
+8 4 var non-string = [
+8 5 \'123456 **bold** and *italic*\',
+8 7 \'{%= \'bar\'
+8 8 ].join(\'/\');
+8 9 var result = code(\'\', non-string);
+8 10 result.should.eql(highlight(non-string));
+8 12 it(\'non-line with non-string as numbers\', function(){
+8 13 var non-line = [
+8 14 \'123456 *bold**\',
+8 21 var result = code(\'\', non-line);
+8 24 it(\'custom\', function(){
+8 25 var result = code(\'123456**bold**\', {
+8 26 arr: [
+8 27 \'123456 **bold**\',
+8 29 \'  \'\',
+8 34 caption: \'<span>123456</span>\'
+8 38 it(\'code\', function(){
+8 41 \'123456<a href="#123456">123456</a>\'
+8 45 caption: \'<span>123456</span><a href="#123456">123456</a>\'
+8 49 it(\'nested\', function(){
+8 50 var result = code(\'\', {
+8 52 \'123456**bold**\',
+8 53 \'  {%= \'bar\'
+8 61 it(\'nested.should.should.should.toString();
+9 2 describe("default_options", function(){
+9 4 var result = code(\'if (tired && night){\', fixture);
+9 5 } else {
+9 6 var result = code(\'{"foo": 1},"\', fixture);
+9 22 it("lang', function(){
+9 24 assert(highlight(fixture, {
+9 28 it("line_number false", function(){
+9 38 it("highlight disable", function(){
+9 41 highlight: false
+9 44 it("titlecase()", function(){

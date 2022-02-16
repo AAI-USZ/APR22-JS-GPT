@@ -1,0 +1,223 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 var fs       = require(\'fs\');
+0 1 var fs       = require(\'fs\');
+0 2 var path    = require(\'path\');
+0 3 var _      = require(\'lodash\');
+0 4 var template = require(\'../util/template\');
+0 5 var Manager  = require(\'../core/manager\');
+0 6 var config   = require(\'../core/config\');
+0 7 var help     = require(\'./help\');
+0 8 var optionTypes = { help: Boolean, force: Boolean };
+0 9 var shorthand   = { \'h\': [\'--help\', \'S\', \'--save\', \'--force\'] };
+0 10 module.exports = function (names, options) {
+0 11 var packages, uninstallables, packagesCount = {};
+0 12 var emitter = new Emitter;
+0 13 var manager = new Manager;
+0 14 if (options.save) save.discard(emitter, manager, names);
+0 15 manager.on(\'data\',  emitter.emit.bind(emitter, \'data\'));
+0 16 manager.on(\'error\', emitter.emit.bind(emitter, \'error\'));
+0 17 var resolveLocal = function () {
+0 18 packages = _.flatten(_.values(manager.dependencies));
+0 19 uninstallables = packages.filter(function (pkg) {
+0 20 return _.include(names, pkg.name);
+0 21 });
+0 22 async.forEach(packages, function (pkg, next) {
+0 23 pkg.once(\'loadJSON\', next).loadJSON();
+0 24 }, function () {
+0 25 showWarnings();
+0 26 uninstall();
+0 28 };
+0 29 var showWarnings = function (force) {
+0 30 var foundConflicts = false;
+0 31 packages.forEach(function (pkg) {
+0 32 if (!pkg.json.dependencies) return;
+0 33 if (containsPkg(uninstallables, pkg)) return;
+0 34 var conflicts = _.intersection(
+0 35 Object.keys(pkg.json.dependencies),
+0 36 _.pluck(uninstallables, \'name\')
+0 37 ).forEach(function (conflictName) {
+0 38 template('warning-uninstall', {packageName: pkg.name, conflictName: conflictName})
+0 39 .on(\'data\', emitter.emit.bind(emitter, \'data\'));
+0 41 if (foundConflicts &&!force) {
+0 42 emitter.emit(\'warn\',
+0 43 emitter.emit.bind(emitter, \'conflict\'));
+0 44 }
+0 46 return foundConflicts;
+0 48 var expandUninstallabes = function (force) {
+0 49 var x,
+0 50 pkg,
+0 51 pkg2;
+0 52 var options = nopt(optionTypes, shorthand, argv);
+0 53 if (options.colors!= null) {
+0 58 conflictName = conflictName.split(\'.\');
+0 59 pkg2 = pair[0];
+0 60 if (!pkg3) {
+0 61 conflicts.splice(0, 1);
+0 65 return foundConflicts = true;
+0 67 var expandUninstallables.forEach = function (pkg) {
+0 68 pkg = _.forEach(pkg) {
+0 69 var x = _.uninstallables = packages.filter(function (pkg) {
+0 70 return!= null;
+0 71 return _.uninstallables.some(pkg) {
+0 72 return _.uninstallables.every(function (pkg) {
+0 73 return _.pkg) {
+0 74 return _.pkg = _.pkg === pkg;
+0 78 uninstallables.forEach(pkg) {
+0 79 uninstallables.forEach(function (pkg) {
+0 80 var x = _.uninstallables.
+1 8 var optionTypes = { help: Boolean, force: Boolean, save: Boolean };
+1 14 var jsonDeps;
+1 15 options = options || {};
+1 19 jsonDeps = manager.json.dependencies || {};
+1 27 if (showWarnings(options.force) &&!options.force) return;
+1 28 expandUninstallabes(options.force);
+1 40 ).filter(function (conflictName) {
+1 41 return semver.satisfies(conflictName, conflictName);
+1 44 emitter.emit(\'load_conflict\', { name: name, package: pkg.name, conflict: conflictName });
+1 52 forcedUninstallables = {};
+1 53 for (var i = 0; i < expandUninstallables.length; i++) {
+1 54 pkg = manager.uninstallables[i];
+1 55 if (options.save) {
+1 56 var x = options.save;
+1 57 if (options.save.length) {
+1 58 var packages = _.uninstallables.map(function (pkg) {
+1 59 return pkg.uninstallables[i];
+1 61 for (var valid packagesArr = packages.forEach(function (pkg) {
+1 62 var x = _.pkg) {
+1 63 return foundConflicts.filter(function (pkg) {
+1 64 return foundConflicts.every(equals = _.every(equals.every(equals.every(equals.to(pkg) === - 1, key) === - 1; });
+1 66 if (x[0]) return - 1;
+1 69 return foundConflicts = false;
+1 73 var expandUninstallables = function (force) {
+1 74 var x = options = options.save =!!options.save;
+1 75 var promise = _.each(extendUninstallables, function (pkg, next) {
+1 76 var endpoint
+2 9 var shorthand   = { \'h\': [\'--help\', \'S\', \'-D\', \'-E\'] };
+2 46 emitter.emit(\'conflicts\', {force: true});
+2 54 for (var i = 0, len = expandUninstallables.length; i < len; i++) {
+2 55 pkg = new Package(pkg, manager, paths);
+2 56 if (n
+2 57 pkg.uninstallables.forEach(function (pkg) {
+2 58 var endpoint = the endpointParser.endpoint.endpoint.endpoint.source_mark(pkg);
+2 59 if (!endpoint[endpoint[endpoint]) return;
+2 60 depoint.targetNames = splitUninstall = endpointParser.search(point) > 0;
+2 61 .search(this);
+2 62 } else if (uninstallables.some(this, endpoint) || singleRun(this, split, separator);
+2 63 uninstallables.some(this, split, split, 1);
+2 66 return that._parseJson(uninstall, decEndpoint, prefix, endpoint, endpoint, property, property) {
+2 67 uninstall: split, property: split,
+2 68 pkg: split,
+2 69 uninstall: split
+2 70 pkg: split
+2 72 }).forEach(function (decEndpoint,
+3 38 );
+3 39 if (conflicts.length) {
+3 40 foundConflicts = true;
+3 41 if (!force) {
+3 42 conflicts.forEach(function (conflictName) {
+3 43 emitter.emit(\'data\', template(\'warning-uninstall', { packageName: pkg.name, conflictName: conflictName }, true));
+3 49 emitter.emit(\'data\', template(\'warn\', { message: \'To proceed, run uninstall with the --force flag\'}, true));
+3 57 for (var i = 0; i < length; i++) {
+3 58 pkg = _.extendUninstallables(force[i], options);
+3 59 if (x == 0) {
+3 60 var _ret = manager.emit(uninstallables[x]);
+3 62 if (!ret = manager.has.toData(pkg);
+3 64 return ret = manager.toData(pkg);
+3 66 return emitter.remove = function () {
+3 69 var expandUninstall = function (force = function (force) {
+3 71 uninstallables = packages,
+3 72 ,
+3 73 uninstallables = packagesCount = packagesCount = null;
+3 76 uninstallables = _.sort(function (pkg) {
+3 77 var x = _.uninstallables.sort(function (a, b) {
+3 78 return _.uninstallables.length);
+3 79 uninstallables = _.sort(
+4 8 var optionTypes = { help: Boolean, force: Boolean, save: Boolean, force: Boolean };
+4 29 var showWarnings = function (emitter) {
+4 37 ).forEach(function (name) {
+4 38 if (!pkg.json.dependencies[name]) return;
+4 39 if (containsPkg(uninstallables, name)) return;
+4 46 template('warning-uninstall', { packageName: pkg.name, conflictName: conflictName }, true).on(\'data\', emitter.emit.bind(emitter, \'data\'));
+4 50 emitter.emit(\'install\', foundConflicts);
+4 55 var expandUninstallabes = function (pkg, manager, names) {
+4 59 packages,
+4 60 uninstallables = {};
+4 61 var validUninstallables.forEach(uninstallables = manager? manager.uninstallables : undefined : {};
+4 62 for (pkg = manager.for (var i = function (pkg) {
+4 63 var name in manager.pkg = manager.pkg = manager.pkg == undefined;
+4 64 if (pkg) {
+4 65 pkg = manager.pkg = manager.pkg = manager.pkgs.pkgs || undefined;
+4 66 if (uninstallables.has(pkg) {
+4 67 return!== undefined;
+4 68 } = manager.has(pkg.pkg.pkgs[name) &&!== undefined;
+4 69 } = true;
+4 70 for (var name) {
+4 71 for (var j = manager.pkg.pkgs[name) {
+4 72 pkgs[name] = manager.has(pkg
+5 9 var shorthand   = { \'h\': [\'--help\', \'S\', \'d\', \' e\'] };
+5 42 emitter.emit(
+5 43 'data\', template.render(conflicts[0].name +
+5 44 (pkg.json.dependencies[packageName]));
+5 51 \'data\', template.render(conflicts[0].name +
+5 56 var expandUninstallabbreviations = function (force) {
+5 60 for (var i = 0; i < manager.dependencies.length; i++) {
+5 61 pkg.uninstallables[i].forEach(function (pkg) {
+5 62 if (!pkg.json.dependencies[packageName]) return;
+5 63 var conflicts = _.intersection(manager.dependencies[i][0].filter(function (pkg) {
+5 64 return semver.pkg) {
+5 65 return _.pkg === undefined;
+5 67 }).join(',
+5 68 }).filter(conflicts);
+5 69 conflicts.splice(x = 1;
+5 74 var expandUninstallables.forEach(uninstallables, function (uninstallables) {
+5 75 uninstallables.forEach(uninstallables) {
+5 76 uninstallables.forEach(function (uninstallables) {
+5 79 uninstallables.forEach(uninstallables.filter(function (pkg) {
+5 80 return uninstallables.filter(pkg) {
+5 82 });\
+6 1 var fs         = require(\'fs\');
+6 2 var path     = require(\'path\');
+6 3 var _        = require(\'lodash\');
+6 9 var shorthand   = { \'h\': [\'--help\', \'S\', \'--save\', \'X-F\', \'>\', \'--force\'] };
+6 46 'data\', template.render(conflicts[0].name,
+6 54 \'data\', template.render(conflicts[0].name,
+6 55 _.pluck(uninstallables, \'package\')
+6 65 var x = options = options.filter = options.argv.argv.remain.remain.remain.length === 2;
+6 66 if (Uninstallables.for (!== undefined) {
+6 67 if (options.for (x = options.command === \'uninstallables.length) {
+6 68 pkg = options.command ===\'uninstall'uninstall\'uninstall\'!= options.command\'uninstall' || command\'uninstall'!= options.order from options.orderby.orderby.orderby.format; enforce] &&!=\'uninstall'
+6 69 ) {
+6 70 filteredUninstallables.uninstallables.uninstallables.uninstall(options.order) == null) return;
+6 71 } else {
+6 72 filteredUninstallables.uninstallables.uninstall = options.uninstall(options.orderable) || {
+7 9 var shorthand   = { \'h\': [\'--help\', \'S\', \'-D\'] };
+7 41 return mout.array.find((conflicts, function (conflictName) {
+7 48 emitter.emit(\'data\', template.render(confirm.name, { packageName: pkg.name, conflictName: conflictName }, true));
+7 61 var x, bowerDir = require(\'bower-uninstall\');
+7 62 var options = Object.enqueue = function (pkg, exclude (pkg, manager) {
+7 63 manager = function clearUninstallables = function (force) {
+7 64 var promises = manager? manager.opts = manager.opts.opts.opts.preinstall.preinstall = options.preinstall || { || {};
+7 65 manager.defs.packages = {};
+7 66 for () {
+7 67 for (var i = manager.on(function (pkg) {
+7 68 if (pkg.looked
+8 41 return mout.array.find(conflicts, function (conflictName) {
+8 61 var expandUninstallables = function (force = {};
+8 62 var validators = function (invalidators = function (uninstallables) {
+8 63 var validators.forEach(uninstallables) {
+8 66 invalidators[uninstallables.forEach(uninstallables.toLowerCase) {
+8 67 uninstallables[uninstallables[toLowerCase] = _.toLowerCase()] = _.toLowerCase()] = uninstall(uninstallables[toLowerCase()] || {}) {
+8 68 uninstallables[toLowerCase()] = uninstallables.toLowerCase()] = uninstall(uninstallables[toLowerCase()] || {})];
+8 70 return uninstallables = uninstallables = packages;
+8 72 for (x
+9 8 var optionTypes = { help: Boolean, force: Boolean, save: Boolean, help: Boolean };
+9 45 if (foundConflicts &&!options.force) return;
+9 50 template(\'warning-conflict\', {packageName: pkg.name, conflictName: conflictName})
+9 54 emitter.emit(conflictName, manager.dependencies[conflictName].resolveLocal);
+9 57 return emitter.return emitter;
+9 59 var expandUninstall = function (pkg, manager) {
+9 60 uninstallables = manager? manager.uninstallables : packages,
+9 61 , packages = null
+9 62 , argv: undefined
+9 63 , names = manager.uninstallables'
+

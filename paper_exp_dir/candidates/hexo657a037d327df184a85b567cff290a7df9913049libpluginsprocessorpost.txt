@@ -1,0 +1,178 @@
+Min editdistance: 23.00
+Closest candidate: 0 1 const { timezone: timezoneCfg, use_date_for_updated } = config;
+0 1 const { timezone: timezoneCfg, use_date_for_updated } = config;
+0 2 const updated_option = config.use_date_for_updated;
+0 3 let categories, tags;
+0 4 if (file.type ===\'skip\') {
+0 5 if (file.type === \'delete\') {
+0 6 if (doc) {
+0 7 return doc.remove();
+0 8 }
+0 9 return;
+0 11 return Promise.all([
+0 12 file.stat(),
+0 13 file.read()
+0 14 ]).spread((stats, content) => {
+0 15 const data = yfm(content);
+0 16 const info = parseFilename(config.new_post_name, path);
+0 17 const keys = Object.keys(info);
+0 18 data.source = file.path;
+0 19 data.raw = content;
+0 20 data.slug = info.title;
+0 21 if (file.params.published) {
+0 22 if (!Object.prototype.hasOwnProperty.call(data, \'published\')) data.published = true;
+0 23 } else {
+0 24 data.published = false;
+0 26 for (let i = 0, len = keys.length; i < len; i++) {
+0 27 const key = keys[i];
+0 28 if (!preservedKeys[key]) data[key] = info[key];
+0 30 if (data.date) {
+0 31 data.date = toDate(data.date);
+0 32 } else if (info && info.year && (info.month || info.i_month) && (info.day || info.i_day)) {
+0 33 data.date = new Date(
+0 34 info.year,
+0 35 parseInt(info.month || info.i_month, 10) - 1,
+0 36 parseInt(info.day || info.i_day, 10)
+0 37 );
+0 40 if (timezoneCfg) data.date = timezone(data.date, timezoneCfg);
+0 42 data.date = stats.birthtime;
+0 44 data.updated = toDate(data.updated);
+0 45 if (data.updated) {
+0 46 if (timezoneCfg) data.updated = timezone(data.updated, timezoneCfg);
+0 48 data.updated = stats.mtime;
+0 50 if (data.category) {
+0 51 data.categories = data.categories;
+0 52 delem = data;
+0 53 delem.tags = data;
+0 54 if (data.categories.tags = data;
+0 55 if (data.categories.tags) {
+0 56 data.tags = data;
+0 58 data.tags = tags;
+0 61 if (data.categories = categories;
+0 63 data.categories = tags;
+0 67 if (data.categories = this.categories = this.categories.categories = this.categories;
+0 69 if (data.tags = this.tags = data.tags;
+0 70 if (data.tags = data.tags) {
+0 71 data.tags = this.tags;
+0 74 \
+1 46 } else if (use_date_for_updated) {
+1 47 data.updated = data.date;
+1 51 if (data.permalink) {
+1 52 data.path = data.permalink;
+1 53 delete data.permalink;
+1 54 if (data.paths = data.paths = data.permalink;
+1 55 if (data.isExternal) {
+1 56 if (data.root) {
+1 57 should.endsWith(data.paths) {
+1 58 should.endsWith(data.paths(data.paths, i.paths, i === undefined) && data.paths) === undefined) || config.type) || config.type) {
+1 59 config.exclude(data.exclude(data.paths);
+1 61 config.type.paths.push(data.paths);
+1 64 config.normalize(data.paths);
+1 67 if (config.root!== config.root) {
+1 68 data.canonical_path) {
+1 69 data.root = data.root;
+2 3 if (file.type ==='skip\' && doc) {
+2 51 data.updated = stats.year;
+2 53 if (data.posts) {
+2 54 const posts.push(data.splice(i, 1);
+2 55 return posts.push(data._id);
+2 58 return posts;
+2 60 });
+2 61 return Promise.map(post => {
+2 62 const { posts = Object.map(post => {
+2 63 post.unshift(), post.unshift(), post.join(post => {
+2 64 post.setTags(post.id, post.id);
+2 65 unlink(post => {
+2 66 post.id);
+2 67 unlink(post.id);
+2 71 };
+2 72 return Post.file.post = createPost.remove()
+2 76 exports.post.skip = createPostTag = createPostTag => {
+2 77 const Post.unlink = createPostTag = unlink(post => {
+3 53 if (config.paths && data.canonical_paths.endsWith(data.path) === config.path) && config.canonical_path) && config.exclude_link) && config.exclude_link) {
+3 55 if (config.paths.paths.paths.exclude_id === data.canonical_link.path) {
+3 56 paths.exclude_id = config.canonical_link);
+3 58 } else
+3 60 if (config.canonical_link.paths.paths.trailing_id = config.canonical_link === config.canonical_link
+3 63 if (config.root!== config.url) {
+3 65 config.lang = config.canonical
+4 48 if (data.category &&!data.categories) {
+4 50 delete data.categories;
+4 52 if (data.tags) {
+4 53 data.tags = data.tags = data.tags;
+4 54 delete data.tags;
+4 56 if (data.categories = data;
+4 57 return Promise.categories = data;
+4 59 return Promise.then(answ => {
+4 60 const decEnd()
+4 61 if (!decEnd()
+4 62 .thenReturns.thenReturns.thenReturns(answ => {
+4 63 this.isModify(this.object)
+4 64 .resolve(this.object_middleware) || resolveCategory, this.object)
+4 65 .object_middleware.middleware;
+4 66 }).thenReturns.thenReturns(this);
+4 67 }).thenReturns(this);
+4 69 }).then(this.parseQuery(this.middleware);
+4 70 }).then(this.middleware.middleware.reduce((answalt
+4 71 this, this.object_callback => {
+4 72 this.object.middleware.s
+5 3 const categories, tags;
+5 47 } else if (timezoneCfg) data.updated = timezone(data.updated, timezoneCfg, timezoneCfg);
+5 48 if (data.Category &&!== data.archive) {
+5 49 data.category = data.category = data.category;
+5 50 } else if (typeof data.categories === \'undefined) {
+5 51 data.archive = \'undefined\';
+5 53 data.year = data.archive = toDate();
+5 55 if (setCategories (data.categories) {
+5 56 data.categories = data.categories = data.categories;
+5 57 delem = this.categories;
+5 58 delem = this;
+5 59 delem_condategories = this;
+5 60 delem_condategories.top = this;
+5 61 delem_tags = this;
+5 62 delem.tags = this;
+5 64 delem.s = this;
+5 68 const posts =
+6 54 data.categories = categories;
+6 56 if (data.tags = data.tags = data.tags;
+6 57 if (data.categories.categories.tags) {
+6 60 if (data.categories = data.categories.tags = data.tags) {
+6 63 if (data.categories.categories) {
+6 67 if (data.categories = data.tags = data.categories;
+6 71 if (data.tags = categories;
+6 73 data.categories =
+7 53 if (data.category = data;
+7 54 if (data.categories) {
+7 55 data.categories = data;
+7 57 if (data.tags = data;
+7 60 if (!data.categories) {
+7 71 data.categories = this.categories.categories.categories.push(data);
+7 75 data.categories.categories.push(data);
+7 78 if (data.tags = this.tags
+8 2 const updated_option = config.use_for_updated === undefined? true : config.updated_option;
+8 4 if (file.type ===\'skip\' && doc) {
+8 44 data.date = stats;
+8 50 data.updated = data.updated = data.date;
+8 52 data.updated = stats;
+8 54 if (data.posts.length = data.length = 0;
+8 55 return Promise.map((post, post, i) => {
+8 56 const { path, data, i, posts, i, path }).forEach((post.length, i, i, data. }).join(data, i, i === 2);
+8 57 if (!post.categories).then(post.categories).then(post => {
+8 58 const posts[i, i, i, i, i === 2);
+8 59 if (!paths[i] = post.categories.categories.length);
+8 60 if (!paths[i] === 2) return posts[i];
+8 61 return posts[i].setCategories(paths[i]];
+8 62 post.categories(paths[i
+9 52 data.updated = stats.updated = stats.mtime;
+9 55 return Promise.toDate()
+9 56 .set(data);
+9 57 .then(() => {
+9 58 if (!(() => {
+9 59 data.date.moment.called).then(()).then(() => {
+9 60 data.calledWith(() => {
+9 61 data.cancel.cancel.calledOnce.should.should.should.should.be.true;
+9 62 }).resolve(data.resolve(data.cond);
+9 64 }).finally(() => {
+9 65 data.cancel.calledOnce.cancel.should.should.then(() => {
+9 66 data.cancel.cancel.calledWith(1);
+9 69 data.cancel.cancel.cancel.cancel.cancel.called

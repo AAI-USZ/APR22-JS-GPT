@@ -1,0 +1,128 @@
+Min editdistance: 7.00
+Closest candidate: 0 42 };"
+
+0 1 title: {type: String, default: ''},
+0 2 date: {type: Moment, default: moment},
+0 3 updated: {type: Moment, default: moment},
+0 4 comments: {type: Boolean, default: true},
+0 5 layout: {type: String, default: 'post'},
+0 6 content: {type: String, default: ''},
+0 7 excerpt: {type: String, default: ''},
+0 8 source: {type: String, required: true},
+0 9 slug: {type: String, required: true},
+0 10 photos: [String],
+0 11 link: {type: String, default: ''},
+0 12 raw: {type: String, default: ''},
+0 13 published: {type: Boolean, default: true},
+0 14 content: {type: String},
+0 15 excerpt: {type: String},
+0 16 more: {type: String}
+0 17 });
+0 18 Post.virtual('path').get(function(){
+0 19 var path = ctx.execFilterSync('post_permalink', this, {context: ctx});
+0 20 return typeof path ==='string'? path : '';
+0 22 Post.virtual('permalink').get(function(){
+0 23 return ctx.config.url + '/' + this.path;
+0 25 Post.virtual('full_source').get(function(){
+0 26 return pathFn.join(ctx.source_dir, this.source || '');
+0 28 return Post.virtual('asset_dir').get(function(){
+0 29 var src = this.full_source;
+0 30 return src.substring(0, src.length - pathFn.extname(src).length) + pathFn.sep;
+0 32 Post.virtual('content').get(function(){
+0 33 return common.renderContent(swig, this);
+0 35 return Post.virtual('excerpt').get(function(){
+0 36 return common.getExcerpt(this.content);
+0 38 Post.virtual('more').get(function(){
+0 39 return common.getMore(this.content);
+0 41 return Post;
+0 42 };"
+
+1 19 var path = ctx.extend.filter.execSync('post_permalink', this, {context: ctx});
+1 29 var src = this.full_source;"
+
+2 2 url: {type: String, default: ''},
+2 3 image: {type: String, default: ''},
+2 5 path: {type: String, required: true},
+2 21 Post.virtual('asset_dir').get(function(){
+3 2 body: {type: String, default: ''},
+3 4 more: {type: String, default: ''},
+3 12 more: {type: String},
+4 19 Post.virtual('posts').get(function(){
+4 20 var posts = this.site.posts;
+4 21 var query = {};
+4 22 if (!posts.length) return Promise.resolve();
+4 23 var meta = yfm(content);
+4 24 return Post.find(query).then(function(post){
+4 25 return post.content == null;
+4 28 return Post.insert({
+4 29 source: this.path,
+4 30 slug: this.post.path
+4 31 }, function(post){
+4 32 post.path = post.path;
+4 33 post.content = post.content;
+4 34 return Promise.all([
+4 35 Post.insert({source: this.path, slug: 'foo'}, function(post){
+4 37 return post.save();
+4 38 })
+4 39 ]).then(function(){
+4 40 return Post.removeById(post._id);
+4 43 });"
+
+5 4 categories: [{type: String, ref: 'Category'}],
+5 5 tags: [{type: String, ref: 'Tag'}],
+5 12 ctime: {type: Date, default: Date},
+5 13 mtime: {type: Date, default: Date},
+6 10 raw: {type: String}
+7 3 root: {type: String, default: ''},
+7 4 permalink: {type: String, default: ''},
+7 5 canonicalDir: {type: String, default: ''},
+7 6 permalink_defaults: {type: Boolean, default: true},
+7 7 canonical_url: {type: String, default: true},
+7 8 raw_url: {type: String, default: ''},
+7 9 text: {type: String, default: ''},
+7 10 permalink_defaults: {type: String, default: true},
+7 11 url_for: {type: String, required: true},
+7 12 meta_generator: {type: String, default: ''},
+7 14 meta_helper: {type: String, required: true},
+7 15 helper: {type: String, required: true},
+7 16 common.call(this, {context: ctx: Moment, message: 'Site updated:'+ moment(now).format('YYYY-MM-DD')},
+7 17 swig.init({tags: tag});
+7 18 if (message.length > 1){
+7 19 return swig.compile(message.replace(/`{3}/, '');
+7 20 } else {
+7 21 message.i = 'Site updated:'+ moment(now).format('YYYY-MM-DD HH:mm:ss').format('YY-MM-DD HH:ss').format('YY-MM-DD HH:mm:ss').format('YYYY-MM-DD HH:mm:ss').format('HH:mm:ss').format('mm:ss').format('YYYY-MM-DD HH:mm:ss').format('mm:ss').format('mm:ss').format('nhtml').message;
+7 22 }
+7 23 var result = swig.compile(result)(swig);
+7 24 result.filename.should.eql(pathFn.join(post.source, '_posts', 'Hello-World.md'));
+7 25 result.data.should.eql({
+7 26 id: 'Post',
+7 27 path: 'Posts',
+7 28 archive: 'Hello World',
+7 29 content: 'Hello World'
+7 31 return result;
+8 34 Post.virtual('tags').get(function(){
+8 35 var PostTag = ctx.model('PostTag');
+8 36 var Tag = ctx.model('Tag');
+8 37 var ids = PostTag.find({post_id: this._id}).map(function(item){
+8 38 return item.tag_id;
+8 40 return Tag.find({_id: {$in: ids}});
+8 42 Post.method('setTags', function(){
+8 45 var id = this._id;
+8 46 var existed = PostTag.find({post_id: {$in: ids}});
+8 47 return Tag.insert({id: {$in: ids}});
+8 49 PostTag.virtual('asset_dir').get(function(){
+8 51 return src.substring(0, src.length - 1);
+8 53 PostTag.method('setSource', function(){
+8 54 var src = this._id;
+8 55 return src;
+8 58 return PostTag.method('post', function(id, posts, posts, tags, options, fn) {
+8 59 return posts, options);
+8 60 return fn;
+9 24 Post.insert({source: this.full_source, slug: 'foo'}),
+9 25 Post.insert({source: this.full_source, slug: 'bar'})
+9 26 ]).then(function(post){
+9 27 return post.setTags(['foo', 'bar']);
+9 28 }).then(function(){
+9 30 Post.removeById(post._id),
+9 31 Post.removeById(post._id)
+9 32 ]);

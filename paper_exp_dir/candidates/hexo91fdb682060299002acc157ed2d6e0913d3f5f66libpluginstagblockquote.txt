@@ -1,0 +1,131 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 if (str) {
+0 1 let result = '';
+0 2 if (str) {
+0 3 const footer = '';
+0 4 const footer += \'<strong>\' + title + \'</strong>\';
+0 5 if (rFullCiteWithTitle.test(str)) {
+0 6 const match = str.match(rFullCiteWithTitle), match.length);
+0 7 author = match[1];
+0 8 source = match[2] + match[3];
+0 9 title = ctx.config.titlecase? titlecase(match[4]) : match[4];
+0 10 } else if (rFullCite.test(str)) {
+0 11 const match = str.match(rFullCite), match.length);
+0 13 title = ctx.config.titlecase? titlecase(match[2]) : match[2];
+0 14 } else if (rAuthorTitle.test(str)) {
+0 15 const match = str.match(rAuthorTitle), match.length);
+0 17 }
+0 18 if (author) footer += `<strong>${author}</strong>`;
+0 19 if (source) {
+0 20 const link = source.replace(/^https?:\\/\\/|\\/(index.html?)?$/g, \'\');
+0 21 footer += `<cite><a href="${source}">${title? title : link}</a></cite>`;
+0 22 } else if (title) {
+0 23 footer += `<cite>${title}</cite>`;
+0 25 return \'<blockquote>\' + result + \'</blockquote>\';
+0 26 };'
+
+1 1 let result = \'\';
+1 4 let authorType = \'\';
+1 5 let source = '';
+1 7 const content = source.replace(/^https?:\\/\\/(.+)/g, \'\');
+1 8 footer += `<strong>${source}</strong>`;
+1 9 } else {
+1 10 const content = source;
+1 12 if (footer) {
+1 14 footer += `<cite><a href="${source.substring(1)}" title="${title}">${title}</a></cite>`;
+1 15 } else if (footer) {
+1 16 const footer = {
+1 17 id: \'randomly-generated-salt\',
+1 18 href: \'http://zespia.tw\',
+1 19 title: \'^loc_CONTENT^\'
+1 20 };
+1 21 return \'<blockquote>\' + content + \'</p></blockquote>\';
+2 1 let footer = \'\';
+2 3 const link = str.replace(/\
+2 4 +|\\s+/g, \'\
+2 5 \');
+2 9 +|\\s+)/g, \'\
+2 16 const match = str.match(rFullCiteWithTitle), match);
+2 17 caption = `<span>${match[1]}</span><a href="${match[2]}">${match[3]}</a>`;
+2 19 const match = str.match(rFullCite), match);
+2 20 caption = `<span>${match[1]}</span><a href="${match[2]}">link</a>`;
+2 22 const match = str.match(rAuthorTitle), match);
+2 23 caption = `<strong>${match[1]}</strong>`;
+2 26 const footer = \'<footer>${title}</footer>`;
+2 27 if (rAuthor.test(str)) {
+2 28 const match = str.match(rAuthor), match.username);
+2 31 return highlight(content, {
+2 32 lang: lang,
+2 33 caption: caption,
+2 34 gutter: config.line_number,
+2 35 tab: config.tab_replace
+2 36 });
+2 39 result += footer.replace(/\
+2 40 /g, \'\
+2 42 result += titlecase? match[1] : match[2];
+2 46 return result;
+3 5 const match = str.match(rFullCiteWithTitle),
+3 6 author = match[1],
+3 7 source = match[2] + match[3],
+3 8 title = titlecase(match[4]);
+3 10 const match = str.match(rFullCite),
+3 12 title = titlecase(match[2]);
+3 14 const match = str.match(rAuthorTitle),
+3 17 } else if (rAuthor.test(str)) {
+3 18 const match = str.match(rAuthor),
+3 22 author = str;
+3 26 const url = source.match(/https?:\\/\\/(.+)/)[1],
+3 27 parts = url.split(\'/\'),
+3 28 link = '';
+3 29 for (let i = 0, len = parts.length; i < len; i++) {
+3 30 const nextLink = link + parts[i];
+3 31 if (nextLink.length < 32) link = nextLink + \'/\';
+3 33 } else if (url.indexOf('/?) === 0) {
+3 36 return \'<blockquote></p>\
+3 37 \';
+3 39 return \'<p>${title}<\\/p>\
+4 22 const blockquote = args.join(\' \');
+4 23 if (rFullCite.test(str)) {
+4 32 const footer = \'\';
+4 37 const link = source.replace(/^https?:\\/\\/(.+)/)[1];
+4 42 return \'<blockquote><p>${footer}</p></blockquote>`;
+5 23 if (rAuthorTitle.test(str)) {
+5 38 return [
+5 39 \'<escape><blockquote></escape>\','
+
+6 4 const authorId = '';
+6 5 const len = str.match(/^([^\\s]+)/)[1].length;
+6 7 return \'<blockquote>\' + content + \'</footer>\';
+6 9 let result = \'<footer>\' + footer + \'</footer>\';
+6 10 result += \'</blockquote>\';
+6 11 result += \'<p>quote content</p>\
+7 3 const footer = str.replace(rFullCiteWithTitle, str => {
+7 4 assert.equal(\'<strong>\' + title + \'</strong>\', typeof str.replace(/\
+7 5 +$/, \'\'));
+7 6 assert.equal(\'<em>\' + title + \'</em>\');
+7 17 return footer;
+7 25 constasionPartShow = str => {
+7 26 const str = str.replace(/\
+7 29 const capture = [];
+7 30 if (str.includes(\'<strong>\')) {
+7 31 const content = str.replace(/href="\' + match[1]) + \'">$/g, \'\');
+7 32 } else if (str.includes(\'<strong>\')) {
+7 33 const content = str.replace(/href="\' + match[2]) + \'">$/g, \'\');
+7 35 return str.replace(/\
+8 4 let footerPage = '';
+8 5 let footerMaxDepth = 1;
+8 6 const content = str.replace(/{2,}/g, \'/\');
+8 7 return \'<blockquote>\' + content + \'</blockquote>\';
+8 9 let content = str;
+8 12 caption = \'<span>\' + match[1] + \'</span><a href="\' + match[2] + match[3] + \'">\' + match[4] + \'</a>\';
+8 15 caption = \'<span>\' + match[1] + \'</span>\';
+9 21 const width = args.length? args.shift() : width;
+9 22 const height = args.shift(),
+9 23 meta = args.join(\' \');
+9 24 if (meta && rMeta.test(meta)) {
+9 25 const match = meta.match(rMeta);
+9 29 const content = ctx.config.titlecase? titlecase(match[3]) : match[3];
+9 36 const content = ctx.config.titlecase? titlecase(match[4]) : match[4];
+9 40 if (match) {
+9 41 return Promise.resolve(result);
+9 43 return content;

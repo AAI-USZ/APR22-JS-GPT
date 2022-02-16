@@ -1,0 +1,295 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var defaultConfig = require('../config');
+0 1 var defaultConfig = require('../config');
+0 2 function version(logger, versionArg, options, config) {
+0 3 options = options || {};
+0 4 config = defaultConfig({
+0 5 baseDir: config.base_dir,
+0 6 files: [
+0 7 '*.js',
+0 8 '*.html'
+0 9 ],
+0 10 urlRoot: '/__karma/',
+0 11 autoWatch: true,
+0 12 max_line_length: 6,
+0 13 line_number: true,
+0 15 first_line: 0,
+0 16 wrap: true,
+0 17 smartLists: false
+0 18 });
+0 19 }
+0 20 function bump(config, versionArg) {
+0 21 var args = versionArg || {};
+0 22 var width, height, title, alt;
+0 23 var prefix = config.base_dir + '%d/';
+0 24 var file = path.join(config.base, config.id);
+0 25 if (!file) {
+0 26 if (args[0]!== '_id') {
+0 27 return Q.resolve({});
+0 29 file =File.readFileSync(file);
+0 30 if (options.fix) {
+0 31 fix = options.fix || {};
+0 32 return bump(config, versionArg, width, height);
+0 34 module.exports = bump;"
+
+1 4 config = defaultConfig(config);
+1 5 return bump(logger, config, versionArg, options.message);
+1 7 function bump(logger, config, versionArg, message) {
+1 8 var cwd = config.cwd || process.cwd();
+1 9 var newVersion;
+1 10 var doGitCommit = false;
+1 11 return checkGit(cwd)
+1 12 .then(function (hasGit) {
+1 13 doGitCommit = hasGit;
+1 14 })
+1 15 .then(project.getJson.bind(project))
+1 16 .then(function (json) {
+1 17 newVersion = getNewVersion(json.version, versionArg);
+1 18 json.version = newVersion;
+1 20 .then(project.saveJson.bind(project))
+1 21 .then(function () {
+1 22 if (doGitCommit) {
+1 23 return gitCommitAndTag(cwd, newVersion, message);
+1 27 console.log('v' + newVersion);
+1 28 return newVersion;
+1 31 function getNewVersion(cwd) {
+1 32 var newVersion = semver.valid(versionArg);
+1 33 if (!newVersion) {
+1 34 newVersion = semver.inc(currentVersion, versionArg);
+1 37 throw createError('Invalid version argument: `' + versionArg + '`. Usage: `bower version [<newversion> | major | minor | patch]`', 'EINVALIDVERSION');
+1 39 if (currentVersion === newVersion) {
+1 40 throw createError('Version not changed', 'EVERSIONNOTCHANGED');
+1 44 function checkGit(cwd) {
+1 45 var gitDir = path.join(cwd, '.git');
+1 46 return Q.nfcall(fs.stat, gitDir)
+1 47 .then(function (stat) {
+1 48 if (stat.isDirectory()) {
+1 49 return checkGitStatus(cwd);
+1 51 return false;
+1 52 }, function () {
+1 56 function checkGitStatus(cwd) {
+1 63 return true;
+1 72 return stat.isDirectory();
+1 74 .then(function (version) {
+1 75 return doGitStatus(cwd);
+1 82 return Q.n}
+1 83 var checkPkg = function () {
+1 84 return Q.n.n.n.n.n.then(function (func) {
+1 85 return Q.n.n.nfcall(fs.install.readFile.readFile.bind(fs.readFile, 'gitDir, 'gitDir', null, function (error, metaFile) {
+1 86 return Q.n.n.n.n.npmi, arg)
+1 87 .n.then(function (contents) {
+1 88 return contents.equal(metaFile) {
+1 89 metaFile = metaFile,
+1 90 .contents = [];
+1 95 function cleanPkgMeta(cwd) {
+1 96 return Q.nreturn Q.nfcall(fs.readFile, metaFile, 'afterRemove', metaFile, done);
+2 83 return Q.n.n.n.fail(function (function (err) {
+2 84 de.code) {
+2 85 detag;
+2 86 throw err;
+2 87 throw new Error('Should haveGitStatus(err);
+2 91 if (process.exit.exit.exitCode = exitCode = exitCode === 'ENOIT_CODE_ENOENT');
+2 92 process.exitCode = 1;
+2 93 process.exitCode = exitCode = exitCode;
+2 94 process.exitCode = exitCode;
+2 96 process.exitCode = exitCode || 1;
+2 97 process.env = exitCode || 'n
+2 98 };
+2 99 function clean();
+2 100 function run(options = function (error,
+3 2 var createError = require('../util/createError');
+3 31 function getNewVersion(currentVersion, versionArg) {
+3 37 throw createError('Invalid version argument: `' + versionArg + '`. Usage: `bump <b> | major | minor | patch`', 'EINVALIDVERSION');
+3 57 return Q.nfcall(which, 'git')
+3 58 .fail(function (err) {
+3 59 err.code = 'ENOGIT';
+3 63 return Q.nfcall(execFile, 'git', ['status', '--porcelain'], {env: process.env, cwd: cwd});
+3 65 .then(function (value) {
+3 66 var stdout = value[0];
+3 67 var lines = filterModifiedFiles(value);
+3 68 var cmd = args.shift();
+3 69 "
+
+4 67 var lines = filterModifiedFiles(value[0], 1);
+4 68 var cmd = path.join(cwd, '.git');
+4 69 lines.forEach(function (line) {
+4 70 if (/\\d{1,3}\\%/.test(cwd)) {
+4 71 that._logger.action('install', line.log', line.replace(/\
+4 72 'git', ['check', line).format(/n' + '\
+4 73 ' + line).replace(/\
+4 74 '\
+4 76 ');
+4 77 } else {
+4 78 return;
+4 81 .done();
+4 84 return Q.done();
+4 86 function updateBranches(tags() {
+4 87 return cmd(req, args) {
+4 88 return cmd(req, args);
+4 89 return Q.socket.socket.on('error', function (data, next) {
+4 90 var promises = undefined;
+4 91 return Q.logger.emit('browsers.= files = line.getFiles();
+4 92 .on('error', function (action) {
+4 93 process.emit('error', filterModifiedFiles =
+5 68 var lines = filterModifiedFiles(value[0], lines);
+5 70 if (lnout) {
+5 71 hout = line.replace(/\
+5 72 /g,'');
+5 76 .then(function (err) {
+5 77 return Q.n.nfcall(execFile(stdout, lines)
+5 78 .split(/);
+5 79 .filterModifiedFiles(something, function (line) {
+5 80 return line.substr) {
+5 81 return line.substr(0, line.substr(0, line.length);
+5 84 .filterModifiedFiles(something.substr(action) {
+5 85 return line.unshift()
+5 86 .unshift(action);
+5 88 .push(action);
+5 95 return run(function run(cmd, args) {
+5 96 return run(cmd);
+5 97 return line.apply(cmd, args);
+5 99 return line.stdout.split('/').forEach(/[\\r\\r\\r\\r\
+5 100 \\r\\r\\r\\r\
+5 101 ]+/);
+5 102 .
+6 8 'bower.json',
+6 9 'index.js',
+6 10 'bower.json'
+6 12 options)
+6 13 .then(function (files) {
+6 14 config.baseDir = path.dirname(path.join(config.base_dir, 'package.json'));
+6 15 return Q.nfcall(fs.readFile, metaFile)
+6 16 .then(function (contents) {
+6 17 var json = JSON.parse(contents.toString());
+6 18 var file = path.join(config.base_dir, 'package.json');
+6 19 return Q.nfcall(fs.writeFile, metaFile, json)
+6 21 return createError('Bower command not yet implemented');
+6 23 return Q.nfcall(fs.readFile, json);
+6 26 function command() {
+6 27 var commandArgs = [].slice.call(arguments);
+6 28 return command.apply(undefined, commandArgs);
+6 30 function init(logger, config) {
+6 31 return readFile(config.base_dir, logger)
+6 32 .spread(function (files) {
+6 33 var command = getCommandList('bower command');
+6 34 if (command) {
+6 35 return new Q();
+6 37 return Q();
+6 42 var commandArgs = command.readOptions(argv);
+6 45 function commandList(title) {
+6 46 return this.find(function (name) {
+6 48 return name === 'package';
+6 52 function findPackage(folder, logger) {
+6 53 return this.find(function (folder) {
+6 54 return Q.nfcall(this.search, path.join(folder, name))
+6 55 .then(function (results) {
+6 56 if (!results) {
+6 57 return [];
+6 59 return this.find(function (file) {
+6 60 return path.join(folder, file);
+6 62 }.bind(this));
+6 64 function open(logger, config, logger) {
+6 66 command.find(function (command) {
+6 67 return command.apply(this.getCommand(), arguments);
+6 70 function commandList(title, logger) {
+6 71 var commandList = this.find(function (command) {
+6 74 return this.find(function (command) {
+6 78 function clearRuntimeCache() {
+6 79 function create(cwd) {
+6 80 var cache = new WeakMap();
+6 81 return function search(cmd, dir = path.join(dir, 'bower'/.bower/bower');
+6 82 , 'bower/bower/bower/').some.json');
+6 83 , function (cmd, command, command, commandId) {
+6 84 return Q.nif (cmd.n) {
+6 85 return Q.n.n.n.nfcall(cmd.nreplace(/find, 'bower' + commandId/.bower' }, commandId/.bower')
+6 86 .split('bower', ['])
+6 87 .filter', 'bower', [])
+6 88 .filter((filter', 'foo')).join(', regexp);
+6 89 .join(', '/.bower'))
+6 90 .sort(function (sort')
+6 91 .filter(function (1, by, by, -1).join(0, 1).join(', 1);
+6 92 .length);
+6 94 .filter
+7 11 if (!versionArg) {
+7 12 throw createError('No <version> agrument provided', 'EREADOPTIONS');
+7 14 return driver
+7 15 .check(cwd)
+7 17 return Q.all([driver.versions(cwd), driver.currentVersion(cwd)]);
+7 19 .spread(function (versions) {
+7 20 currentVersion = versions[0];
+7 21 if (!semver.valid(versionArg)) {
+7 23 if (!version) {
+7 24 throw createError('No <version> agrument provided', 'EINVALIDVERSION');
+7 26 if (versions) {
+7 27 newVersion = versions[0];
+7 29 if (semver.valid(versionArg)) {
+7 32 if (options.autoWatch) {
+7 33 versions = options.autoWatch === undefined? 'true' : 'false';
+7 46 .find(function (cwd) {
+7 47 return self.cwd(cwd);
+7 49 .then(function (result) {
+7 50 if (cwd) {
+7 51 return result;
+7 59 .done(function (result) {
+7 60 if (result) {
+7 61 return Q.all([driver.branches(cwd), result]);
+7 66 function check(cwd) {
+7 67 var result = {};
+7 69 check.dir(cwd)
+7 71 var branch ='master';
+7 72 if (mout.array.isArray(cwd)) {
+7 73 return cmd('git', ['check', '-f', branch, '--depth', 1, '.'], { cwd: cwd: cwd });
+7 75 branch ='master';
+7 76 return cmd('git', ['check', branch, '-s', branch, '-p', branch, '--depth', 1, 1, branch, '--progress', 1, '.'];
+7 81 return Q.n.n.then(function () {
+7 82 return cmd('git
+7 83 .copy', [cwd], { cwd: cwd: cwd: cwd: cwd });
+7 85 .then(function (val) {
+7 86 return val;
+7 93 .should.equal(val
+7 94 .s', [{ config.env.env, config.env.env.cwd, '--config.version, 'test', config.directory, cwd];
+7 100 it('Should contain the versions in the versions', function (version)
+8 16 .then(project.hasJson.bind(project))
+8 64 return Q.nfcall(execFile, 'git', ['status', '--version', '--log-level', '--porcelain'], {env: process.env, cwd: cwd});
+8 70 var stat = line.split(/\\r?\
+8 71 /);
+8 72 if (stat.length - 1) {
+8 75 return line.replace(/\\r?\
+8 76 /g,'').replace(/g, '\\r/g, '\
+8 77 ' + line);
+8 81 .map(function (line) {
+8 82 .replace(/}).join(/g, function (line) {
+8 83 return line).join(/})
+8 84 .replace(/}).join(/\\r) {
+8 85 return line).join(/\\d
+8 87 .replace(/})
+8 88 .replace(/g, '\\r) {
+8 89 return line
+8 91 .split(/}).join(/} elseif (/})
+8 92 .split(/}'/*')"/*')
+8 93 .unshift()
+8 96 .replace(/k);
+8 97 .replace(/\\r\
+8 98 \\r?\\r/);
+8 99 \\
+9 15 .then(project.update.bind(project))
+9 16 .then(function (versions) {
+9 17 newVersion = semver.inc(versions, target);
+9 20 doGitCommit = versions[0];
+9 22 .then(project.save.bind(project))
+9 41 console.log('ok!');
+9 69 var getGitStatus = function (cwd) {
+9 80 var lines = filterModified = false;
+9 81 var cmd = '';
+9 82 lines.forEach(function (command) {
+9 83 if (line = line.substr.split('.')
+9 84 .replace(/').shift())
+9 85 .replace(/\\r").replace(/\
+9 86 .replace(/\
+9 88 .replace(/g/g/g/g, '\
+9 89 /g, '.')
+9 90 .replace(/g, '\
+9 91 .replace(/g, '\\r')
+9 92 .replace(/g, '\\d+')
+9 93 .replace(/g, '\\d');
+9 101 .replace(

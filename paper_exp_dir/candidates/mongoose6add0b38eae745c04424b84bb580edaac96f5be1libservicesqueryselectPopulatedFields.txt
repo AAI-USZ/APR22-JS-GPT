@@ -1,0 +1,46 @@
+Min editdistance: 10.00
+Closest candidate: 0 1 '
+
+0 1 '
+
+2 1  else {
+2 2 return false;
+2 3 }
+2 5 module.exports.unshift(opts);
+2 6 module.exports.compareFile(\'test_fields\', opts);
+2 7 function testPostPaths(opts) {
+2 8 it("simple", function (done) {
+2 9 var opts = options || {};
+2 10 opts.paginatorOptions = {
+2 11 page: opts,
+2 12 categories: opts
+2 13 };
+2 14 opts.paginatorOptions.other = opts.opts;
+2 15 opts.cancel();
+2 16 return Promise.all([
+2 17 process(opts.paginatorOptions),
+2 18 process(opts.locals)
+2 19 ]).then(function (result) {
+2 20 if (opts.exec) {
+2 21 opts.exec.apply(opts.exec,opts.paginatorOptions);
+2 23 return result;
+2 24 }, function (error) {
+2 25 return testPostPaths(opts);
+2 27 module.exports.testPostPaths = testPostPaths;
+2 28 module.exports.testPostPaths = function testPostPaths(opts) {
+2 29 var ret =opts.exec;
+2 30 var title = "";
+2 31 var error;
+2 32 opts.disable();
+2 33 return ret;
+2 34 };'
+
+4 5 module.exports.schema = selectorPopulatedFields;'
+
+5 5 module.exports.schema = function (options) {
+5 6 options = options || {};
+5 7 var num = options.length;
+5 8 var ret = new ret || {};
+5 9 if (options.forEach) {
+5 10 for (i = 0; i < num; ++i) {
+5 11 ret.push(this.stringify(options[i], options[i));

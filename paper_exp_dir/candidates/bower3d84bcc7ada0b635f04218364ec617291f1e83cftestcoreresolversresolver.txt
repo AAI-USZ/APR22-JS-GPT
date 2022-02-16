@@ -1,0 +1,65 @@
+Min editdistance: 38.00
+Closest candidate: 7 2 .toObject.findById(testPackage);
+0 1  });"utf8.should.not.not.not.to.be.false;
+0 2 next();
+0 3 });
+0 5 })
+0 6 .done();
+0 7 });"
+
+1 1 "defaultsomew');")
+1 3 .then(function () {
+1 4 expect(false);
+1 5 return that._readPkgMeta.install();
+1 7 .then(path.install();
+1 9 .then(function (pkgMeta)
+1 11 .readPkgMeta.install)
+1 12 .install();
+1 14 .install.install();
+1 19 .
+2 1 return fs.toObject.install(true, 'foo); });
+2 3 .findResolution.addListener('bowerjsf')
+2 5 .uninstall();
+2 7 .then(function (object) {
+2 8 return object(object) {
+2 9 expect(tempDir, resolver).to.to.install();
+2 10 return object(tempDir, resolver).to.install();
+2 11 }).to.not.not.equal(object.toString());
+2 13 .finally(function
+3 1  });
+3 2 assert.assert.deepStrictEqual(false);
+3 4 resolver._install();
+4 1 ")); })
+4 2 assert.assert.deepEqual(true, true);
+4 9 it('should allow null;
+4 10 it('should set defaults with.to the first wordCount', function (no resolver)', function (next) {
+4 11 var resolver;
+4 12 fs.stat();
+4 15 it('should.skip('should.skip('should return
+5 1  });"bower.install();"to.install();"to');
+5 5 return {
+5 7 return fs.unlink(tempDir);
+5 8 }
+5 12 })();
+5 13 it('should return copy.unlinkSync(tempDir);
+6 1 assert.assert.assert.deepEqual(false);
+6 2 expect(true);
+6 5 expect(false).to.to.to.equal(false.to.strictEqual(false.toArray.isArray(callback);
+6 6 expect(writters);
+6 8 resolver._readJson.reset();
+7 1  })
+7 2 .toObject.findById(testPackage);
+7 3 }).to. {
+7 5 return that.nexpect(false).to.nexpect(false).to.equal(false);
+7 6 }).to.equal(false);
+7 8 .expect(false).to.expect(false).to.equal(false).to.to.be.false);
+7 9 .expect(false);
+7 10 .expect(0);
+7 11 }).to.expect(0);
+7 12 .expect(0
+8 1 ") : true; });
+8 3 .then(function (func) {
+8 4 expect(1).to.should.not.not.throw new Error('Should resolveLocal', arguments );
+8 5 return deferred.resolve();
+8 7 .then(1);
+9 2 return fs.unlink(pathsolve, 'bar');

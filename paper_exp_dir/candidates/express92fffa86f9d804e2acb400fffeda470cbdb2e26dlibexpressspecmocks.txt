@@ -1,0 +1,490 @@
+Min editdistance: 13.00
+Closest candidate: 6 4 headers   : {},
+0 1 _BROWSER: \'foo\',
+0 2 foo: \'bar\'
+0 3 })
+0 4 var response = {
+0 5 body: null,
+0 6 status: 200,
+0 7 headers: {
+0 8 \'Content-Type\': \'application/json\'
+0 9 },
+0 10 \'X-Foo\': \'baz\'
+0 11 }
+0 12 response.status = function(code){
+0 13 this.statusCode = code
+0 14 return this
+0 16 function sendStatus(statusCode) {
+0 17 var body = statusCodes[statusCode] || this.statusCode
+0 18 this.header(\'Content-Type\', \'application/json\')
+0 19 this.charset = this.charset || \'utf-8\'
+0 20 this.contentType(\'.html\')
+0 22 function sendFile(path, options, callback) {
+0 23 var done = callback || function() {
+0 24 return donePromise
+0 26 var req = this.req
+0 27 var res = this
+0 28 var next = req.next
+0 29 var opts = options || {}
+0 30 if (!path) {
+0 31 throw new TypeError(\'path argument is required to res.send\')
+0 33 if (!opts.length &&!isAbsolute(path)) {
+0 34 throw new TypeError(\'path must be a string to res.send()\')
+0 36 var app = this
+0 37 var replacer = app.get(\'json replacer\')
+0 38 var spaces = app.get(\'json spaces\')
+0 39 var body = JSON.stringify(req.body, spaces)
+0 40 if (!this.get(\'Content-Type\')) {
+0 41 this.set(\'X-Content-Type-Options\', \'nosniff\')
+0 42 this.set(\'Content-Type\', \'application/json\')
+0 44 if (callback) {
+0 45 this.set(\'Content-Type\', \'text/javascript\')
+0 46 body = callback.replace(/[^\\w$.]/g, \'\')
+0 48 if (contentType && this.set(\'Content-Type\')) {
+0 51 body = getHeaderTemplate({
+0 52 url: this.get(\'Url\')
+0 56 res.sendfile = function(path, options, callback) {
+0 71 if (!opts.length &&!isAbsolute(opts.length)) {
+0 74 var route = send(req, path, opts, done)
+0 75 if (!route) {
+0 76 throw new TypeError(\'route\')
+0 78 var route.on(\'next\', function(){
+0 79 var body
+0 80 .remove(){
+0 81 if (done) return done(body)
+0 82 return done(body)
+0 85 var options = options.excerpt = body
+0 86 var callback = getHeaderTemplate({ headers
+0 87 .end
+0 89 var layer = layer.handle_err
+0 91 if (key: function next(err) {
+0 92 if (err) {
+0 94 return done(err)
+0 99 self.handle(err, function next) {
+0 100 if (layer) {
+0 101 return layer.handle_err
+0 105 self.handle_handle.on(\'error
+0 107 \
+1 1 _plus : function(object) {
+1 2 return this._injector.get(\'object\', { url: \'/\' }, {})
+1 4 header : function(name, value) {
+1 5 return value? this._injector.get(\'object\', value) :
+1 6 this.response.headers[name] = value
+1 8 param : function(key, defaultValue) {
+1 9 return this.request.uri.params[key] || defaultValue
+1 11 cookie : function(key, value) {
+1 12 return value? this._injector.get(\'object\', key)
+1 13 : value
+1 15 parseNestedParams : function(params) {
+1 16 for (var key in params)
+1 17 if (params.hasOwnProperty(key))
+1 18 if (parts = key.split(\'[\'))
+1 19 if (parts.length > 1)
+1 20 for (i = 0, prop = params, len = parts.length; i < len; ++i) {
+1 21 if (i == len - 1) {
+1 22 var name = parts[i].replace(\']\', \'\')
+1 23 prop[name] = params[key]
+1 24 prop = params, delete params[key]
+1 26 else {
+1 28 prop = prop[name] = prop[name] || {}
+1 31 return params
+1 33 parseCookie : function(cookie) {
+1 34 var hash = {}
+1 35 if (!cookie) return hash
+1 36 var attrs = cookie.split(/\\s*;\\s*/)
+1 37 for (i = 0; i < attrs.length; ++i)
+1 38 hash[attrs[i].split(\'=\')[0]] = unescape(attrs[i].split(\'=\')[1])
+1 39 return hash
+1 41 normalizePath : function(path) {
+1 42 if (typeof path!=\'string\') return path
+1 43 return path.replace(/^(\\s|\\/)*|(\\s|\\/)*$/g, \'\')
+1 45 pathToRegexp : function(path) {
+1 46 Express.regexpKeys = []
+1 47 if (path.constructor == RegExp) return path
+1 48 path = path.replace(/:(\\w+)/g, function(_, key){
+1 49 Express.regexpKeys.push(key)
+1 50 return \'(.*?)\'
+1 52 return new RegExp(\'^\' + this.escapeRegexp(path, \'/ [ ]\') + \'$\', \'i\')
+1 54 escapeRegexp : function(string, chars) {
+1 55 var specials = (chars || \'/. * +? | ( ) [ ] { } \\\\\').split(\' \').join(\'|\\\\\')
+1 56 return string.replace(new RegExp(\'(\\\\\' + specials + \')\', \'g\'), \'\\\\$1\')
+1 58 contentsOf : function(body) {
+1 59 return body.toString().match(/^[^\\{]*{((.*\
+1 60 *)*)}/m)[1]
+1 62 eval : function() {
+1 63 return eval(\'with (html)
+1 66 }]
+1 68 })'
+
+2 1 _AT: \'text/x-fortran\' }, {
+2 2 host: \'gstatic.com\',
+2 3 port: 12345
+2 5 var MockResponse = Class({
+2 6 sendHeader: function(headers, data) {
+2 7 this.headers = headers
+2 9 sendBody: function(body) {
+2 10 this.body = body
+2 12 finish: function() {
+2 13 this.finished = true
+2 16 function request(method, path, options, fn) {
+2 17 var response = new MockRequest({
+2 18 url: \'/__proto__/whatever\'
+2 19 }, options)
+2 20 Express.server.route(mockProxies, response)
+2 21 return response
+2 23 function createServer() {
+2 24 var self = this
+2 25 , blog = http.createServer()
+2 26 , path = __dirname + \'/public\'
+2 27 , connect = require(\'connect\')
+2 28 , utils = connect.utils
+2 29 , sign = \'\''
+
+3 1 _plus: \'https://www.youtube.com/embed/\' },
+3 2 { body: \'<p>This is a movie</p>\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }}});
+3 3 var req = { method: \'GET\', url: \'/videos\' };
+3 4 var content = [
+3 5 \'{% *(.+?)(?: *| +.*)%}\',
+3 6 \'{{header %s Hello World %s!\',
+3 7 \'<h1>Hello World<\\/h1>/,
+3 8 \'<p>This is a movie</p>\',
+3 9 \'<p>Welcome World</p>\',
+3 10 \'<h2><p>Welcome World<\\/h2>/,
+3 11 \'<p>Pride<\\/p>Tim Burton</p>\'
+3 12 ].join(\'\
+3 13 \');
+3 14 return req;
+3 16 module.exports = MockRequest;'
+
+4 1 _id: \'foo\', params: {}, original_url: \'/something/else\' }}, {
+4 2 params : {},
+4 3 bodyDecoder : {
+4 4 onRequest : {
+4 5 \'set back to referrer\' : function() {
+4 6 return this.uri.params[this.uri.params[this.uri.params[this.uri.params[this.uri.params[this.uri.params[this.uri.params[]]] ||
+4 7 this.uri.params[this.uri.params[this.uri.params[this.uri.params[this.uri.]]
+4 11 var createNock = function(f) {
+4 12 return (f && new MockRequest()).then(function(orig, req, res) {
+4 13 orig.url = orig.url.substr(1);
+4 14 return that._electSuite(req, res, next);
+4 17 reset = function() {
+4 18 this.engines.settings = {};
+4 19 this.settings.notify = {};
+4 20 return this;
+4 21 };
+4 22 function createNock(f) {
+4 23 var promise = new Promise(function(resolve, reject) {
+4 24 var req = new MockRequest();
+4 25 if (this.settings.hasOwnProperty(f)) {
+4 26 promise.then(resolve, reject);
+4 27 } else {
+4 28 reject(new Error(\'cannot create a mock request\'));
+4 31 .then(function() {
+4 32 return that._electSuite.bind(that);
+4 35 return that._removeListener(req, res, next);
+4 36 });
+4 39 var self = this;
+4 40 this.on(\'error\', function(err) {
+4 42 that._isNot Implemented(err);
+4 44 err.message = \'failed to removeask that type from the exception stack traces\';
+4 45 err.stack = true;
+4 46 return that._emit("error\', err);
+4 48 this.emit(\'end\');
+4 49 return Q.all([
+4 50 self.getFilesByPattern(pattern) &&
+4 51 pattern.match(/^\\/user\\/(\\d+)\\/(\\w+)/),
+4 52 self.getFilesByPattern(pattern.match(/^\\/user\\/(.*?)\\/(.*?)\\/(view|edit)?$/g,
+4 53 self.getCookie(pattern.match(/^\\/user\\/(\\w+)/),
+4 54 self.cookie(pattern.match(/^\\/user\\/([^\\/user\\/(\\w+)\\/(.*?)\\/(view|edit)?$/g,
+4 55 self.accepts('html\')
+4 56 .setHeader(\'Location\', "
+4 57 http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js\');
+4 58 self.accepts('json\')
+4 59 .accepts(pb)
+4 60 .get)
+4 61 .accepts(cmd)
+4 62 .accepts(\'html\')
+4 63 .accepts(\'json\')
+4 64 .accepts(\'png
+4 65 .accepts
+4 66 .accepts(\'image-s\')
+4 67 .accepts(\'image-s
+4 69 .accepts)
+4 80 .accepts(\'s\')
+4 89 .accepts(\'png\')
+4 94 .fail
+5 1 _than : 3,
+5 2 success : {
+5 3 success : 2,
+5 4 failed : 3,
+5 5 title : \'\',
+5 6 homepage: \'\',
+5 7 docache : {},
+5 8 success : 3,
+5 9 failed : 4,
+5 10 skipped : 5,
+5 11 disconnected : false,
+5 12 error : function(event) {
+5 13 var spy = sinon.spy()
+5 14 if (event == null) {
+5 15 policy.spy(function () {
+5 16 an_instance_of SchemaError = new SchemaError
+5 19 function isxhr() {
+5 20 return (this.headers[\'x-requested-with\'] || \'\') || this.headers[\'x-requested-with\'] || \'\')
+5 22 function sendEnvRegexp(env) {
+5 23 var base = this.app.settings.exclude_generator
+5 24 base.filename = env.filename
+5 25 this.header(\'Location\', uri + \'/\')
+5 26 this.halt(400)
+5 29 sendHeader : function(code, headers) {
+5 30 this.status = code
+5 33 sendBody : function(body) {
+5 36 finish : function() {
+5 41 var response = new MockResponse
+5 42 var request = new MockRequest({
+5 47 contentType : function(body) {
+5 50 url : function(path) {
+5 51 this.url = path
+5 52 return this.url.pathname || path
+5 54 modified : function() {
+5 55 if (this.req.url.indexOf(\'http://\') > 0) {
+5 56 this.contentType(\'html\')
+5 59 writeHeader : function(code, headers) {
+5 60 this.status(code = code || 404)
+5 63 write: function(body) {
+5 66 end : function() {
+5 69 this.body.should.equal(\'<p>yay</p>\')
+5 73 var headers = this.app.settings.headers
+5 74 delete headers
+5 75 this.headers.should.not.be.null
+5 77 this.response.headers = headers
+5 78 this.response.body.should.equal(\'<p>yay</p>\')
+5 84 this.pendingDisconnect = function() {
+5 85 Express.status(\'Not Found\')
+5 86 return \'Not Found\'
+5 89 start : function(port) {
+5 90 this.server.listen(port || 3000)
+5 91 puts(\'localhost)
+5 96 function errorHandler.test : function getEnv (urlServer() {
+5 97 this.getFilesByPatterns = function (path) {
+5 98 Express.getFilesByPath = function (file) {
+5 99 Express.path = exports.normalizePath(path)
+5 100 if (port)
+5 101 return Express.normalizePath(path)
+5 105 function get headers = get headers)
+5 106 .normalizePathToFiles (name) {
+5 107 Express.readFile (path) {
+5 108 Express.normalizePath = null
+5 110 return get headers, promise : function (err, headers, host) {
+5 111 if (headers) {
+5 112 if (\'set
+6 1 _AT : \'text/x-fortran', params : {},
+6 2 path    : \'bar\',
+6 3 status   : 200,
+6 4 headers   : {},
+6 5 query   : \'text/x-query',
+6 6 language   : \'en',
+6 7 csrf    : \'http://maccman.com\',
+6 8 resetHistory    : false,
+6 9 proxies    : {},
+6 10 url       : \'http://maccman.com\',
+6 11 root      : \'/\',
+6 12 permalink    : \':year/:month/:day/:title/\',
+6 13 tag     : \'tags\',
+6 14 archive     : \'archives\',
+6 15 category      : \'categories\',
+6 16 code     : \'downloads/code\',
+6 17 attachment     : \'filename/unlock.png\',
+6 18 filename      : \'attachment\',
+6 19 fs       : {
+6 20 close: true,
+6 21 close: false,
+6 22 name: \'attachment\',
+6 23 path       : \'path\',
+6 24 search : \'text/plain\',
+6 25 permalink     : \':opendocument.mime\',
+6 27 root       : \'/\',
+6 28 upstreamProxy   : {
+6 29 path : \'/\',
+6 30 permalink     : \':\' + this.path,
+6 31 search       : [],
+6 32 headers    : {},
+6 33 mergeDeep     : {
+6 34 search : \'after_post_render\',
+6 35 post     : \'after_post_render\'
+6 37 segments     : {
+6 38 path      : \'sep\',
+6 39 doc    : {},
+6 40 segments    : {
+6 41 line     : \'line_number\',
+6 42 tab     : \'tab_replace\'
+6 44 defaultRoute : {
+6 45 callback : function() {
+6 51 this.server.listen(port || 3000, function(request, response){
+6 52 Express.request = request
+6 53 Express.request.uri.path = Express.normalizePath(Express.request.uri.path)
+6 54 Express.response.body = Express.callRouteFor(request)
+6 55 response.sendHeader(Express.response.status, Express.hashToArray(Express.response.headers))
+6 56 response.sendBody(Express.response.body || \'\')
+6 57 response.finish()
+6 60 server : {
+6 61 listen : function(port, callback) {
+6 62 new node.http.Server(callback).listen(port)
+6 63 puts(\'Express listening to http://localhost:\' + port)
+6 66 hashToArray : function(hash) {
+6 67 var array = []
+6 68 for (key in hash)
+6 69 if (hash.hasOwnProperty(key))
+6 70 array.push([key, hash[key]])
+6 71 return array
+6 74 arrayToHash : function request : function(callback) {
+6 75 var array.sortByPatterns = function(a, callback, callback, i, only = callback, onlyOnce = callback.length = callback.length, onlyOnce, custom = callback.length, customLists = callback.length, urlPaths = []
+6 76 return callback.length = offset = offset = []
+6 77 return callback.length < offset = callback.length, callback.length, callbackPaths.length, urlPaths.length, urlPaths = []
+6 78 for (callbackPath) {
+6 79 path = this.path = this.urlPaths.paths.length;
+6 80 return callbackPath = this.paths.length;
+6 81 /s = callbackPaths < only, path.paths.length;
+6 82 for (callbackPath = callbackPath = this.lastPath = this
+7 1 init: function(request, response) {
+7 2 this.merge(request)
+7 3 response.headers = {}
+7 4 this.response = response
+7 5 this.uri.path = exports.normalizePath(this.uri.path)
+7 6 this.uri.params = parseNestedParams(this.uri.params)
+7 7 this.plugins = Express.plugins.map(function(plugin){
+7 8 return new plugin.klass(plugin.options)
+7 11 header: function(key, val) {
+7 12 return val === undefined?
+7 13 this.headers[key.toLowerCase()] :
+7 14 this.response.headers[key.toLowerCase()] = val
+7 16 param: function(key) {
+7 17 return this.params[key] ||
+7 18 this.uri.post[key] ||
+7 19 this.uri.params[key]
+7 21 accepts: function() {
+7 22 var accept = this.header(\'accept\')
+7 23 return accept
+7 24 ? arguments.any(function(path){
+7 25 var type = mime.type(path)
+7 26 return accept.indexOf(type)!== -1 ||
+7 27 accept.indexOf(type.split(\'/\')[0]+\'/*\')!== -1
+7 29 : true
+7 31 get isXHR() {
+7 32 return (this.header(\'x-requested-with\') || \'\').lowercase === \'xmlhttprequest\'
+7 34 status: function(code) {
+7 35 this.response.status = code
+7 38 halt: function(code, body, encoding, callback) {
+7 39 if (body!== null)
+7 40 body = body || statusBodies[code]
+7 41 return this.respond(body, encoding, callback)
+7 43 respond: function(body, encoding, callback) {
+7 45 this.response.body = body
+7 46 this.trigger(\'response\', function(e) {
+7 47 if (e)
+7 48 if (callback!== undefined) callback(e)
+7 49 else throw e
+7 50 self.response.writeHeader(self.response.status, self.response.headers)
+7 51 self.response.write(self.response.body, encoding)
+7 52 self.response.close()
+7 55 pass: function () {
+7 56 this.passed = true
+7 59 contentType: function(path) {
+7 60 this.header(\'content-type\', path)
+7 61 this.contentType(path)
+7 64 format: function(obj) {
+7 65 var req = this.app.get(obj)
+7 66 if (obj) return obj
+7 68 return function(val){
+7 69 if (options.halt) val += \', \')
+7 70 else val += \', \')
+7 71 return self.header(\'content-type\', obj.contentType)
+7 74 if (process.version === \'0.0.1\') return this
+7 75 request.method = function(method) {
+7 76 var response = this.app.get(\' response\')
+7 80 contentType: function(path, encoding, callback) {
+7 81 this.set(\'content-type\', contentType(path)
+7 82 if (encoding)
+7 83 if (encoding instanceof exports.language)
+7 84 return callback.has.length)
+7 85 this.call(this.length)
+7 86 this.contentType(this.format)
+7 87 if (callback.length)
+7 88 return this.format)
+7 90 this.format = callback.contentType(callback)
+7 93 status: function getXUoolean: function() {
+7 94 return (path) {
+7 95 var uri = this.parse()
+7 99 }'
+
+8 1 _method: \'GET', params: {}, last: {}, npm: {}, npm: {}, npm: {}, npm: {}, npm: {} }
+8 3 describe(\'middleware\', () => {
+8 4 it(\'should dispatch\', (done) => {
+8 5 var app = createApp();
+8 6 request(app)
+8 7 .get(\'/\')
+8 8 .expect(200, \'tobi\', done);
+8 10 it(\'should support multiple capture groups\', () => {
+8 14 .expect(200, \'20%\', done);
+8 16 it(\'should support nested proxies\', () => {
+8 22 it(\'should support nested proxies with params\', () => {
+8 28 it(\'should pass-though middleware\', () => {
+8 30 app.use(function (req, res, next) {
+8 31 res.charset = \'utf-8\';
+8 32 res.cookie(\'name\', \'tobi\');
+8 33 next();
+8 35 app.use(function (req, res) {
+8 37 res.cookie(\'age\', 1);
+8 38 res.end();
+8 42 .expect(\'Set-Cookie\', /remember=Tobi/, done);
+8 44 it(\'should set-Cookie\', (done) => {
+8 64 .expect(\'Set-Cookie\', /remember=tobi/, done);
+8 66 it(\'should default path to "root"\', () => {
+8 68 app.set(\'root\', \'/admin\');
+8 76 .expect(\'/admin\')
+8 77 .expect(200, done);
+8 79 it(\'should default path to root\', () => {
+8 81 var user = createApp();
+8 82 app.set(\'/admin.set(\'/admin.lookup.json\', \'/user/user.json\', user.json\', user.name
+8 83 , function (req.password, function (req, res) {
+8 84 res) {
+8 89 app.end();
+8 90 app.middleware = get(\'
+
+9 1 _method : \'GET\' },
+9 2 { body : \'Unauthorized\', status : 401 });
+9 3 var redirecting_url = DOCUMENT_URL_ROOT + \'/public/dag/\';
+9 4 exports.createServer = function(options, req, res) {
+9 5 options = options || {};
+9 6 var promise;
+9 7 var type;
+9 8 var removed = '';
+9 9 var redirecting_url = redirecting_url.replace(/\\
+9 10 if (typeof options === \'function\') {
+9 11 promise = options;
+9 12 options = {};
+9 14 promise = function(req, res, next) {
+9 15 if (req.url.indexOf(\'?\') === 0) {
+9 18 res.statusCode = 200;
+9 19 res.setHeader(\'Location\', redirecting_url + \'/\');
+9 24 if (req.url.indexOf(\'?\')!== 0) {
+9 27 res.statusCode = 300;
+9 32 var createServer = function(options, next) {
+9 33 var app = createServer()
+9 34 , blog = express()
+9 35 , admin = express();
+9 36 admin.use(function(req, res, next){
+9 37 res.headers = { \'Location\': \'admin.html\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+9 38 res.send(blog);
+9 39 }, function(){
+9 43 app.use(\'/blog\', blog);
+9 44 app.use(\'/admin\', admin);
+9 45 app.get(\'/posts\', function(req, res){
+9 46 res.send([
+9 47 \'title: "Hello World"\',
+9 48 \'date: 2006-01-02 15:04:05\',
+9 49 \'---\'
+9 51 \'));
+9 53 app.listen(3000);
+9 54 console.log(\'Express app started on port 3000\');'
+

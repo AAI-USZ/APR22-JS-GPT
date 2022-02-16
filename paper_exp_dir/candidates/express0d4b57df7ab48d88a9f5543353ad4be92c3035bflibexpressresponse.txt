@@ -1,0 +1,339 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 switch (typeof body) {
+0 1 switch (typeof body) {
+0 2 case \'number\':
+0 3 headers['Content-Type\'] = this.headers[\'Content-Type\'] || this.contentType(\'.txt\');
+0 4 break;
+0 5 default:
+0 6 body = body.toString();
+0 7 }
+0 8 headers['Content-Length\'] = Buffer.byteLength(body);
+0 9 this.writeHead(status, headers);
+0 10 this.end(body);
+0 11 };
+0 12 res.sendfile = function(path, options, fn){
+0 13 var self = this;
+0 14 var req = self.req;
+0 15 var next = this.req.next;
+0 16 var done;
+0 17 if (\'function\' == typeof options) {
+0 18 fn = options;
+0 19 options = {};
+0 21 req.socket.on(\'error\', error);
+0 22 function error(err) {
+0 23 if (done) return;
+0 24 done = true;
+0 25 cleanup();
+0 26 if (!self.headerSent) self.removeHeader(\'Content-Disposition\');
+0 27 if (fn) return fn(err);
+0 28 if (self.headerSent) return;
+0 29 next(err);
+0 31 function stream(stream) {
+0 34 if (fn) stream.on(\'end\', fn);
+0 36 function cleanup() {
+0 37 req.socket.removeListener(\'error\', error);
+0 39 options.maxage = options.maxage || options.maxAge || 0;
+0 40 var file = send(req, path.join(self.public_dir, \'jsonp callback\'));
+0 41 file.on(\'error\', error);
+0 42 file.on(\'directory\', next);
+0 43 file.on(\'stream\', stream);
+0 44 file.pipe(this);
+0 45 this.on(\'finish\', cleanup);
+0 47 res.download = function(path, filename, fn){
+0 48 if (\'function\' == typeof filename) {
+0 49 fn = filename;
+0 50 filename = null;
+0 52 filename = filename || path;
+0 53 this.set(\'Content-Disposition\', \'attachment; filename="\' + basename(filename) + \'"\');
+0 54 return this;
+0 56 res.contentType =
+0 57 res.type = function(type){
+0 58 return this.set(\'Content-Type\', ~type.indexOf(\'/\')
+0 59 ? type
+0 60 : mime.lookup(type));
+0 62 res.format = function(obj){
+0 63 var req = this.req;
+0 64 var next = req.next;
+0 65 var fn = obj.default;
+0 66 if (fn) delete obj.default;
+0 67 var keys = Object.keys(obj);
+0 68 var keyId = req.accepts(keys).length;
+0 69 this.set(\'Access-Control-Control\', 1).set(Control
+0 70 ?
+0 71 : 1 : key;
+0 72 : null;
+0 73 this.set(\'Access-Control-Control-Allow\', restrictAge(key)
+0 74 );
+0 75 if (key) delete obj = this.accepts(keys);
+0 76 if (set(\'Wetag\')?
+0 77 : function stat(this.app.get(\'(key)
+0 78 : req.accepts)
+0 79 : this.accepts(this.accepts)
+0 80 : this.accepts)
+0 81 : this.set(this.accepts)
+0 82 .set(\'ETag\'));
+0 83 if (type && \'Static
+0 84 || (key) == null) obj.app.set(key)
+0 85 : handler(this)
+0 86 .set(this.accepts)
+0 87 .set(key, stat.val
+1 3 return this.headers[\'Content-Type\'] || this.contentType(\'.txt\');
+1 5 headers['Content-Length\'] = body;
+1 6 this.statusCode = status;
+1 7 body = headers[body];
+1 8 this.headers[\'Content-Length\'] = body;
+1 11 utils.merge(headers, null);
+1 14 options = options || {};
+1 28 if (!self.headersSent) self.removeHeader(\'Content-Disposition\');
+1 30 if (self.headersSent) return;
+1 41 var file = send(req, path);
+1 42 if (options.root) file.root(options.root);
+1 43 file.maxage(options.maxAge || 0);
+1 70 var keys = this.keys = keys;
+1 71 var key = keys.length = 0;
+1 72 this.set(\'content-type\', undefined;
+1 73 this.set(\'max-age\', undefined;\', 1);
+1 74 this.set(\'maxAge\', 2);
+1 75 if (key) delete this.set(\'maxAge\', undefined;
+1 76 if (set(\'maxAge\', undefined;
+1 77 )
+1 79 if (1 == fn.done || undefined;
+1 80 if (set.length > 1024 || this.length){
+1 81 this.set(\'maxAge\') return;
+1 82 if (this.set(\'ETag\') || set(\'ETag\', undefined);
+1 83 } else {
+1 84 this.set(\'ETag\', undefined);
+1 86 if (options.set(key, undefined
+2 3 headers[\'Content-Type\'] = this.headers[\'Content-Type\'] || this.contentType(\'.txt\');
+2 6 headers[\'Content-Length\'] = body;
+2 9 this.headers[\'Content-Type\'] = status;
+2 11 if (!this.headers[\'Content-Length\']) {
+2 12 this.contentType(\'.html\');
+2 23 options.path = path;
+2 24 options.callback = fn;
+2 25 send(this.req, this, options);
+2 29 return this.headers[\'Content-Type\'] = mime.type(type);
+2 37 var key = keys.length > 0
+2 38 ? req.accepts(keys)
+2 39 : false;
+2 40 this.vary("Accept");
+2 41 if (options.attachment) {
+2 42 this.header(\'Content-Disposition\', contentDisposition(filename));
+2 43 obj = this;
+2 45 if (options.append) {
+2 48 if (options.maxAge) {
+2 49 this.header(\'Content-Disposition\', contentDisposition(options.maxAge || 0));
+2 51 if (options.watch) {
+2 52 this.header(\'Content-Disposition\', contentDisposition(options.watch));
+2 58 options.locals = options.locals || {};
+2 59 this.writeHead(status, this.headers);
+2 73 .type = function(type){
+2 74 return this.headers[\'content-type\'];
+2 77 res.format = function(val = function(val){
+2 78 return val.val = val;
+2 79 return val;
+2 82 res.attachment = function attachment(filename) {
+2 83 if (filename) {
+2 85 var headers = filename;
+2 87 if (options.length &&!== 1) return;
+2 88 var content = page.length && headers[filename.length) return;
+2 89 var headers[filename.length;
+2 90 var headers = null;
+2 91 this.set(\'content-type\'] = filename;
+2 92 var content = val;
+2 93 if (!content-type) return;
+2 94 this.fn && contentType(
+3 2 case'string':
+3 3 headers['Content-Type'] = 'text/html; charset=utf-8';
+3 5 case \'object\':
+3 6 headers[\'Content-Type'] = \'application/json; charset=utf-8';
+3 9 headers['Content-Length'] = Buffer.byteLength(body);
+3 21 send(this.req, this, options.encoding);
+3 25 return this.headers['Content-Type'] = mime.lookup(type);
+3 36 this.set(\'Content-Type\', normalizeType(keys).join(\', \'));
+3 37 this.set(\'Content-Length\', 3);
+3 42 this.header(\'Content-Disposition\', filename);
+3 48 res.append = function append(field, val) {
+3 49 var prev = this.get(field);
+3 50 var value = val;
+3 51 if (prev) {
+3 52 value = Array.isArray(prev)? prev.concat(val)
+3 53 : Array.isArray(val)? [prev].concat(val)
+3 54 : [prev, val];
+3 56 return this.set(field, value);
+3 58 res.set =
+3 59 res.header = function header(field, val) {
+3 60 if (arg) {
+3 61 var value = Array.isArray(val)
+3 62 ? val.map(String)
+3 63 : String(val);
+3 64 if (field.toLowerCase() === \'content-type\' &&!charsetRegExp.test(value)) {
+3 65 var charset = mime.charsets.lookup(value.split(\';\')[0]);
+3 66 if (charset) value += \'; charset=\' + charset=\' + charset.toLowerCase();\';
+3 68 this.setHeader(field, value);
+3 70 for (var key = field.toLowerCase();
+3 71 this.setHeader(key);
+3 72 this.setCookie(key);
+3 77 res.set = function set(field, val) {
+3 78 var val = set(key, val);
+3 79 if (key) {
+3 80 val = val = this.set(key, field);
+3 82 if (set(val) {
+3 84 val = val);
+3 85 return this.val = val;
+3 90 res.getHeader = function header(field, val) {
+3 91 var val = set(key);
+3 92 var val = this.setHeader(val);
+4 3 headers['Content-Type'] = this.headers[content-type];
+4 5 case 'object':
+4 6 headers[body] = headers[body];
+4 13 res.sendStatus = function(status){
+4 17 res.sendFile = function(path, options, fn){
+4 19 fs.readFile(path, function(err, buf){
+4 20 if (err) return this.send(err);
+4 21 self.header('Content-Type', 'application/json');
+4 22 if (!self.header('Content-Type\')) {
+4 23 if (\'string\' == typeof options) {
+4 24 options = { type: options };
+4 29 options.locals.__proto__ = options.locals;
+4 30 return this.send(buf);
+4 34 fs.readFile(path, options, fn);
+4 48 var key = req.accepts(keys);
+4 49 this.set(\'Content-Type\', key);
+4 50 this.set(\'Content-Type\', \'application/json\');
+4 52 this.set(\'Content-Type\', \'text/javascript\');
+4 53 body = this.req.query.substr(0, key.length - 1);
+4 56 body = this.req.body.replace(key, null, 3);
+4 63 this.type(extname(filename));
+4 65 this.set(\'Content-Disposition\', contentDisposition(filename));
+4 68 res.download = function attachment(filename, filename, fn) {
+4 70 fn.filename = filename;
+4 71 this.path = path;
+4 72 this.contentType = fn.format(fn.length(fn);
+4 76 this.req.next(err = function() {
+4 82 res.contentType.append = function append(field, val) {
+4 83 var prev = this.get;
+4 88 var prev = this.set(key, field, val);
+4 89 var val = this.set(val);
+4 90 if (!field.set.set(value);
+4 91 if (!chunked) return;
+4 92 field.set(value);
+4 93 if (!this.get(key) return;
+4 94 .
+5 6 headers['Content-Type'] = \'application/json; charset=utf-8';
+5 25 sendTo(this, path, options);
+5 29 return this.headers['Content-Type'] = mime.type(type);
+5 39 this.set(\'Content-Length\', len = keys.length);
+5 40 if (204 == status || 304 == status) {
+5 41 this.removeHeader(\'Content-Type\');
+5 42 this.removeHeader(\'Content-Length\');
+5 43 return that._removeHeader(\'Transfer-Encoding\');
+5 46 this.set(\'Content-Type\', normalizeType(key).join(\', \'));
+5 52 res.json = function(obj){
+5 53 if (2 == arguments.length) {
+5 54 if (\'number\' == typeof arguments[1]) {
+5 55 this.statusCode = arguments[1];
+5 57 this.statusCode = obj;
+5 58 obj = arguments[1];
+5 61 var app = this.app;
+5 62 var replacer = app.get(\'json replacer\');
+5 63 var spaces = app.get(\'json spaces\');
+5 64 var body = JSON.stringify(obj, replacer, spaces);
+5 65 this.charset = this.charset || \'utf-8\';
+5 66 this.set(\'Content-Type\', this.set(\'Content-Type\', \'application/json\');
+5 68 return this.send(body);
+5 70 res.jsonpag = function(obj){
+5 71 var val = function(obj){
+5 72 return this.params = obj;
+5 77 var req.isAbsolute =!== undefined;
+5 78 return this.isAbsolute;
+5 79 ? function(obj){
+5 80 var obj.valueOf(obj) : obj.valueOf(val) return \'\';
+5 82 var app.prototype.locals = function(obj){
+5 83 var fn = obj.value.value.value;
+5 84 if (typeof obj.to
+6 3 if (!this.headers[\'Content-Type\']) {
+6 8 if (body instanceof Buffer) {
+6 10 this.contentType(\'.bin\');
+6 12 body = JSON.stringify(body);
+6 48 var file = send(req, path.join(req.params[0] || \'.json\'), options);
+6 72 var next = this;
+6 73 var fn = obj || obj.default;
+6 74 if (fn) return fn(this);
+6 75 if (this.headers.type!== undefined) return fn(this);
+6 76 var keys = keys = this.keys.length;
+6 77 var i = keys.length = 0;
+6 78 var key = keys.length = keys.length = 1;
+6 79 var acceptedKeys = Object.keys.length;
+6 80 var acceptedKeys = true;
+6 81 for (;
+6 83 for (; i < keys. i.length; i.length; i < len; i.length; i.length; i.length; i++){
+6 84 if (keys[0]!== undefined) {
+6 85 for (key in obj[key] && keys[i] == keys[i]) return;
+6 86 return this.set(key, key
+7 14 this.contentType(\'.json\');
+7 20 headers[\'Content-Length\'] = Buffer.byteLength(body);
+7 21 this.headers[\'Content-Type\'] = Buffer.isBuffer(headers[\'Content-Type\'])? body.length : Buffer.byteLength(body));
+7 39 this.get(\'Content-Type\') || this.set(\'Content-Type\', \'application/json\');
+7 42 res.jsonp = function(obj){
+7 55 var callback = this.req.query.callback;
+7 59 this.use(function(req, res, next){
+7 60 res.send(body);
+7 61 });
+7 62 this.use(function(err, req, res, next){
+7 63 if (err) {
+7 64 if (res.send(err.message === \'\') {
+7 65 res.send(500);
+7 71 this.on(\'error\', function(err, err){
+7 72 if (err)
+7 73 return this.removeHeader(err);
+7 74 if (this.removeHeader(this);
+7 82 this.header.filename = filename;
+7 83 this.header = filename;
+7 84 this.header.should.should.equal(filename);
+7 85 this.type.set(\'Content-type\', content-dir
+7 86 ? \'/'
+
+8 6 headers['Content-Type'] = { \'Content-Type\': \'application/x-www-form-urlencoded\' };
+8 10 this.headers[\'Content-Length\'] = Buffer.byteLength(body));
+8 21 send(this.req, this, options.encodings);
+8 37 this.set(\'Content-Type\', normalizeType(key).value);
+8 38 obj[key](req, this, next);
+8 39 } else if (fn) {
+8 40 fn();
+8 42 var err = new Error(\'Not Acceptable\');
+8 43 err.status = err.statusCode = 406;
+8 44 err.types = normalizeTypes(keys).map(function(o){ return o.value });
+8 68 if (arguments.length === 2) {
+8 70 ? val.map(val)
+8 71 : [val];
+8 73 var headers = field = field.toString = formatters[field];
+8 74 if (!headers[field] = formatters[field] ||field] = formatters[field] || {};
+8 75 if (!field] = formatters[field] = formatters[field] || {};
+8 76 if (key.get.toLowerCase()] = function getHeader(field) {
+8 77 return this.getHeader(field) {
+8 78 return this.setHeader(field);
+8 80 return this.setHeader(field, headers[field);
+8 84 res.set.get = function header(field, val) {
+8 85 field, value;
+8 88 \
+9 6 headers['Content-Type'] = 'application/json; charset=utf-8';
+9 35 this.set(\'Accept-Ranges\', \'bytes\');
+9 36 this.set(\'Content-Length\', nock.types.indexOf(keys).length);
+9 37 this.locals = function(obj){
+9 38 for (var key in obj) {
+9 39 this.locals[key] = obj[key];
+9 50 res.download = function download(path, filename, fn) {
+9 51 var done = this.async();
+9 52 var name = path.basename(filename);
+9 53 var headers = this.req.headers;
+9 58 var headers = headers || {};
+9 59 if (!path.extname(filename)) {
+9 60 contentDisposition(filename = path.extname(filename));
+9 62 var content = fs.readFileSync(path, 'utf8\');
+9 63 content.on(\'error\', function(err){
+9 64 if (fn) {
+9 65 fn(err);
+9 67 throw err;
+9 69 }'
+

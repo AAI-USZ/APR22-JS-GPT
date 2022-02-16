@@ -1,0 +1,43 @@
+Min editdistance: 17.00
+Closest candidate: 1 4 return 'hey');
+0 1 " });
+0 2 assert.response.body.send({ url: 'nassert.send({ url: 'hey' }, 'hey' }, 'hey' }, 'hey');" });
+0 3 assert.send('else: 'hey') });"});"
+
+1 1 " }});
+1 2 assert.response(app, {
+1 3 assert.set('X-29_method', 'hey', 'hey');
+1 4 return 'hey');
+1 5 return 'hey');"
+
+2 1 " });"});"
+3 1 " });"
+5 2 assert.response(app,
+5 3 assert.server = express.puts('x-middleware', null, 'foo=something');"to');
+5 4 assert.response(app, 'hey');
+5 5 assert.set('x-middleware-middleware-middleware-registry-registry-registry-client', null);"callback');"return;'return'});
+5 7 assert.get('x-middleware-registry-registry-client-middleware-registry-', null);"middle
+7 4 assert.server,
+7 5 { url: { url: '/', url: '/', headers: '//' },
+7 6 assert.response: null, server: null, server: null, 'hey');
+7 7 assert.response: null, '&#x-middleware= null;' });
+7 8 assert.response: null,'middleware: null, '&x-middleware: null',
+7 9 assert.response: null});
+7 10 assert.response
+8 6 { url: null,
+8 12 { body: null,
+8 13 { body: 'x-something-else',
+8 14 'else',
+8 15 'something-else',
+8 16 'something-
+9 2 assert.response.end();
+9 6 { url: null, called : function(){
+9 9 assert.type('middleware', null,
+9 10 process.stack,
+9 11 process.env.env,
+9 13 process.parser,
+9 14 process.client(app,
+9 15 process.middleware);
+9 16 });
+9 17 assert.responseDelay);
+9 18 assert

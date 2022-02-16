@@ -1,0 +1,40 @@
+Min editdistance: 1.00
+Closest candidate: 6 3 .end(function(err, res){
+0 1 ).json.should.be.json;
+0 2 })
+0 3 .expect(404, done);
+0 5 })"
+
+1 1 );
+2 3 .expect(200, done);
+2 6 describe('when existing users are sent', function(){'
+
+3 6 describe('when existing users is sent', function(){'
+
+4 1 ,"
+
+5 6 describe('when existing users' in the middleware', function(){
+5 7 it('should be removed from the previous users', function(done){
+5 8 var app = express();
+5 9 app.get('/users', function(req, res){
+5 10 res.end('tj');
+5 11 });
+5 12 app.get('/users/list', function(req, res){
+5 13 res.end('tjList');
+5 15 app.get('/users/:from-:to', function(req, res){
+5 16 res.end('ashedule');
+5 18 request(app)
+5 19 .get('/users/show')
+5 23 describe('when existing users'in the middleware', function(){
+5 26 app.get('/users/:from-to', function(req, res){
+5 27 res.end('tj from-to');
+5 29 app.get('/users/:to-list', function(req, res){
+5 33 .get('/users/0')
+6 3 .end(function(err, res){
+6 4 res.body.should.equal('Error:annot find user');
+6 5 done();
+7 4 res.body.should.equal('Error: invalid/jquery');
+8 6 describe('when existing is null', function(){'
+
+9 2 });"
+

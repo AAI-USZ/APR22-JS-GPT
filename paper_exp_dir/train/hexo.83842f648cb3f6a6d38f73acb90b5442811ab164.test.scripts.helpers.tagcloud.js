@@ -1,0 +1,87 @@
+'use strict';
+
+var should = require('chai').should();
+var Promise = require('bluebird');
+
+describe('tagcloud', function(){
+var Hexo = require('../../../lib/hexo');
+var hexo = new Hexo(__dirname);
+var Post = hexo.model('Post');
+var Tag = hexo.model('Tag');
+
+var ctx = {
+config: hexo.config
+};
+
+ctx.url_for = require('../../../lib/plugins/helper/url_for').bind(ctx);
+
+var tagcloud = require('../../../lib/plugins/helper/tagcloud').bind(ctx);
+
+before(function(){
+return Post.insert([
+{source: 'foo', slug: 'foo'},
+{source: 'bar', slug: 'bar'},
+{source: 'baz', slug: 'baz'},
+{source: 'boo', slug: 'boo'}
+]).then(function(posts){
+
+return Promise.each([
+['bcd'],
+['bcd', 'cde'],
+['bcd', 'cde', 'abc'],
+['bcd', 'cde', 'abc', 'def']
+], function(tags, i){
+return posts[i].setTags(tags);
+});
+}).then(function(){
+hexo.locals.invalidate();
+ctx.site = hexo.locals.toObject();
+});
+});
+
+it('default', function(){
+var result = tagcloud();
+
+result.should.eql([
+'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>',
+'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>',
+'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>',
+'<a href="/tags/def/" style="font-size: 10px;">def</a>'
+].join(''));
+});
+
+it('specified collection', function(){
+var result = tagcloud(Tag.find({
+name: /bc/
+}));
+
+result.should.eql([
+'<a href="/tags/abc/" style="font-size: 10px;">abc</a>',
+'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>'
+].join(''));
+});
+
+it('font size', function(){
+var result = tagcloud({
+min_font: 15,
+max_font: 30
+});
+
+result.should.eql([
+'<a href="/tags/abc/" style="font-size: 20px;">abc</a>',
+'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>',
+'<a href="/tags/cde/" style="font-size: 25px;">cde</a>',
+'<a href="/tags/def/" style="font-size: 15px;">def</a>'
+].join(''));
+});
+
+it('font size - when every tag has the same number of posts, font-size should be minimum.', function() {
+var result = tagcloud(Tag.find({
+name: /abc/
+}), {
+min_font: 15,
+max_font: 30
+});
+
+result.should.eql([
+'<a href="/tags/abc/" style="font-size: 15px;">abc</a>'

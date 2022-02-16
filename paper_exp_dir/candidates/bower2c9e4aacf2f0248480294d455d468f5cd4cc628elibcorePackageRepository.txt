@@ -1,0 +1,253 @@
+Min editdistance: 3.00
+Closest candidate: 5 4 var info = {
+0 1  return this._resolveCache[decEndpoint]; }
+0 2 this._resolveCache.fetch
+0 3 .spread(function (canonicalPkg, pkgMeta) {
+0 4 var source;
+0 5 var fetchBranch;
+0 6 var dir;
+0 7 var promise;
+0 8 var that = this;
+0 9 if (this._working) {
+0 10 return Q.reject(createError('Already working', 'EWORKING'));
+0 11 }
+0 12 if (pkgMeta) {
+0 13 promise = this._hasNew(canonicalPkg, pkgMeta);
+0 14 } else {
+0 15 promise = Q.reject(createError('Already working', 'EWORKING'));
+0 17 promise
+0 18 .fail(function (err) {
+0 19 that._logger.emit('error', err, {
+0 20 name: name,
+0 21 url: url
+0 22 });
+0 23 return;
+0 25 return promise.fail(function (err) {
+0 26 if (err.code === 'ENOENT') {
+0 27 return Q.nfcall(registryClient.lookup.bind(registryClient), that._config.force);
+0 29 return promise.then(function (entry) {
+0 30 return that._register.then(function (resolver) {
+0 31 .register(function (info) {
+0 32 .setHeader('Content-Type', 'application/json');
+0 33 .setAttribute('mout', {
+0 37 .config.force = true;
+0 41 .prototype.register = function (name, url, callback) {
+0 43 var registryClient;
+0 45 registryClient = new RegistryClient(registryClient);
+0 46 this._config = new Config(config);
+0 47 .use(queryCache());
+0 48 .use(registryClient());
+0 49 .use(compressCache());
+0 50 .set('home', 'http://bower.herokuapp.com');
+0 51 .config.root = '/packages';
+0 52 .lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup
+1 1  return this._registryClient.fetch(decEndpoint)
+1 3 var name;
+1 4 var resolved;
+1 5 var index;
+1 6 var initialName = decEndpoint.name;
+1 7 index = this._indexOf(decEndpoint.name)!== -1;
+1 8 if (index!== -1) {
+1 9 resolved = this._resolved[index];
+1 10 if (!initialName) {
+1 11 return true;
+1 13 if (this._config.force) {
+1 14 this._registry.lookup(decEndpoint.name, function (err, entry) {
+1 15 if (err) {
+1 18 this._resolved = this._resolved[index] = this._resolved[index] || [];
+1 19 this._resolved.push(decEndpoint);
+1 20 delete this._resolved.length;
+1 21 }.bind(this));
+1 22 this._conflicted = mout.array.find({
+1 24 url: this._config.url
+1 26 this._targets = this._uniquify({
+1 30 this._resolutions = setup.resolutions || {};
+1 31 this._targets.forEach(function (decEndpoint) {
+1 32 if (!decEndpoint.name) {
+1 33 decEndpoint.name = decEndpoint.name = decEndpoint.name;
+1 34 decEndpoint.source = this._config.url;
+1 35 decEndpoint.target = '*';
+1 36 this._resolutions[decEndpoint.name] = this._resolutions[decEndpoint.name] || {};
+1 38 }, this);
+1 40 this._resolutions[decEndpoint.name] = this._resolutions[decEndpoint.name] || [];
+1 41 this._resolutions[decEndpoint.name].push(decEndpoint);
+1 44 return this;
+1 45 };
+1 46 packageRepository.prototype.fetch = function (decEndpoint) {
+1 47 var name = decEndpoint.name;
+1 51 var args = 0;
+1 52 this._resolved = this._resolved = this._resolved = this._resolved || {};
+1 53 this._resolved.length = this._length = 0;
+1 54 this._failed = this._error = this._dissected = false;
+1 55 this._failresolutions = setup.deferred = function () {
+1 56 if (this._injector.deferred) {
+1 57 clearTimeout(this._injector.defer())
+1 58 .defer()
+1 59 .catch(this._dispose())
+1 60 .then(function () {
+1 61 clearTimeout(() {
+1 62 return that._clearTimeout(this._dissect.clearTimeout, this._failureTimeout, this._fail
+2 1 '
+
+3 1  (source) {
+3 2 var res;
+3 3 var deferred = Q.defer();
+3 5 resolverFactory(decEndpoint, this._registryClient, this._config)
+3 6 .then(function (resolver) {
+3 7 res = resolver;
+3 8 decEndpoint.resolverName = resolver.getName();
+3 9 if (that._options.force) {
+3 10 deferred.notify({
+3 11 level: 'action',
+3 12 tag:'resolve',
+3 13 default: 'bower'
+3 15 return that._resolve(resolver);
+3 17 return that._resolveCache.retrieve(source, resolver.getSource(), resolver.getTarget())
+3 19 if (!canonicalPkg) {
+3 20 if (that._options.offline) {
+3 21 throw createError('No cached version for'+ source + ':'+ resolver.getSource() + '#' + version, 'ENOCACHE', {
+3 22 resolver: resolver
+3 26 level: 'info',
+3 27 tag: 'uncached',
+3 31 return [canonicalPkg, pkgMeta];
+3 36 resolver: resolver,
+3 37 url: 'http://bower.io'
+3 39 return that._resolveCache.retrieve(source, resolver.getSource())
+3 44 return that._resolveCache.retrieve(source, resolver.getTarget())
+3 51 return that._options.offline;
+3 52 }, function (err) {
+3 53 that._options.cache.delap(function (err) {
+3 54 throw err;
+3 59 return this._resolveCache.retrieve(source, resolver.getSource())
+3 60 .spread(function (source, target) {
+3 61 .then(function (result) {
+3 62 return Q.clearRuntimePkgMeta.store.store.store.store.versions;
+3 63 .versions;
+3 64 })
+3 65 .then(function (versions) {
+3 66 .clearRuntimePkgMeta.store.versions;
+3 67 .store.versions.versions = function (sourceIds) {
+3 68 .store = function (versions) {
+3 69 .store = function (sourceIds) {
+3 71 .storeIds.unshift();
+3 72 return Q.n.n.n.then(function (versions) {
+3 73 \
+5 1  (decEndpoint) {
+5 2 var logger;
+5 4 var info = {
+5 5 decEndpoint: decEndpoint
+5 7 logger = this._logger.geminate();
+5 8 logger.intercept(function (log) {
+5 9 that._extendLog(log, info);
+5 11 return Q.nfcall(function () {
+5 12 return that._resolveCache.fetch({
+5 13 name: '',
+5 14 url: that._source,
+5 15 target: decEndpoint.target === '*'
+5 18 .spread(function (canonicalDir, pkgMeta) {
+5 19 if (!canonicalDir) {
+5 20 if (that._config.offline) {
+5 21 throw createError('No cached version for'+ resolverFactory + '.');
+5 23 that._logger.conflict('uncached', 'No cached version for'+ resolverFactory + '.');
+5 24 return Q.nfcall(promptly.confirm, 'Resolved', {
+5 25 name: name
+5 29 if (!result) {
+5 30 return [];
+5 32 that._config.offline = true;
+5 33 return result;
+5 36 PackageRepository.prototype._resolveCache = function () {
+5 37 return this._readJson()
+5 38 .spread(function (json, canonicalDir, pkgMeta) {
+5 39 var sourceId = md5(pkgMeta._source);
+5 40 var release = decEndpoint.pkgMeta._release;
+5 42 return [canonicalDir, pkgMeta];
+5 44 return that._analyse()
+5 45 .spread(function (json, tree, flattened) {
+5 51 return that._bootstrap(targets, resolved, flattened)
+5 52 .then(function (installed) {
+5 53 var jsonKey;
+5 54 if (!that._jsonFile) {
+5 57 if (that._jsonFile.name!== md5) {
+5 58 that._jsonFile = md5(that._jsonFile);
+5 60 release = that._json = that._jsonFile.version;
+5 65 function cleanCache(decEndpointCache) {
+5 66 return that._readJson(decEndpoint, endpoint, jsonEndpoint, jsonEndpoint, property) {
+5 68 var promise = jsonEndpoint = decEndpoint? jsonEndpoint.source : endpointParser.options.options.options.paths;
+5 69 var endpoint;
+5 70 var that = that = that;
+5 71 if (this._jsonEndpoint) {
+5 72 that._options = that._options = that;
+5 73 .paths = that._options = that._options || {};
+5 74 this._target = that._options
+6 1  return this._registryClient.fetch(decEndpoint, this._options)
+6 3 var name = (pkgMeta._release? pkgMeta._release : '') || '';
+6 4 var dir = this._config.roaming.cache;
+6 5 var pkgLock = this._config.shorthand_resolver_cache.get(name);
+6 7 pkgLock.unlockSync(pkgLock);
+6 8 this._config.force = true;
+6 10 this._registryClient.fetch({ name: name, source: url, target: '*' })
+6 12 if (!pkgMeta.version) {
+6 13 throw createError('No tag found', 'ENOCACHE', {
+6 18 defaultConfig.force = this._config.force;
+6 19 this._resolveCache.set(this._config.roaming.cache, pkgLock, {
+6 20 storage: {
+6 21 packages: pkgMeta
+6 32 this._config.offline = true;
+6 35 if (!this._config.offline) {
+6 38 if (pkgMeta._target === '*') {
+6 39 return Q.nfcall(registryClient.fetch.bind(registryClient), decEndpoint.source).then(function (result) {
+6 40 result.should.eql(pkgMeta._target);
+6 41 decEndpoint.source = result.pkgMeta._source;
+6 45 this._registryClient.fetch({ name: name, source: url, target: 'commit' })
+6 46 .spread(function (canonicalPkg, pkg, pkgMeta) {
+6 47 if (pkgMeta._target === undefined) {
+6 50 this._cache.fetch({ name: this._config.force: this._config.force, function () {
+6 51 return Q.force};
+6 54 this._registry.readPkgMeta(registryClient.prototype._registryClient.clearCache.prototype.execute(registry.name, function () {
+6 55 .then(registryClient.lookup.lookup.lookup.bind(registryClient)
+6 56 .lookup.bind(registryClient)
+6 57 .error.lookup.bind(registryClient)
+6 58 .lookup.clearCache.bind(registryClient)
+6 59 .clearCache.lookupCache.bind(registryClient)
+6 60 .lookupCache.searchClient)
+6 61 .clearCache.bind(registry)
+6 62 .store
+8 1  return this._manager.fetch(decEndpoint)
+8 6 decEndpoint.canonicalPkg = canonicalPkg;
+8 7 deferred.notify(that._config);
+8 8 res = this._resolveCache.retrieve(resolverFactory(decEndpoint, pkgMeta));
+8 9 return that._resolveCache.retrieve(resolverFactory)
+8 14 that._logger.action('resolve', (
+8 15 'Accept-RULE',
+8 16 'bower-registry-client'
+8 17 ) +
+8 18 'lookup',
+8 19 'You are about to remove?',
+8 20 'http://bower.herokuapp.com/packages/' +
+8 21 'git://github.com/{{{ endpoint }}}.git'
+8 22 );
+8 23 resolverFactory = that._resolveCache.fetch({
+8 24 name: 'bower',
+8 25 url: 'git://github.com/{{{ endpoint }}}.git',
+8 26 proxy: {
+8 28 web: function (req, res) {
+8 29 res.on('error', function (err) {
+8 30 that._logger.debug('error', err);
+8 31 res.on('end', function () {
+8 32 that._extendNotification(resolverFactory);
+8 36 return that._resolveCache.retrieve(resolverFactory);
+8 52 return that._sortVersions(versions);
+8 55 var version;
+8 56 var canonicalPkgMeta = versions;
+8 57 var suitable;
+8 58 if (semicalPkg = semver.version = semver.validRange(version);
+8 59 .satisfies(canonicalPkg.version, semver.target === '*');
+8 60 .satisfies(canonicalPkg.version);
+8 61 .s(suitable;
+8 62 .length = suitable;
+8 63 if (semver.maxRelease.length &&
+8 64 .length &&
+8 66 semver.maxRelease.length === 1) {
+8 67 return suitable;
+8 68 } else if (semver.length === 2) {
+8 71 if (semver.suitable = m

@@ -1,0 +1,2 @@
+register('data');
+register('post');

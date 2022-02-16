@@ -1,0 +1,77 @@
+Min editdistance: 27.00
+Closest candidate: 3 79 throw new Error();
+0 1 app.get('/pokes', function(req, res){
+0 2 res.render('pokes.jade', {
+0 3 locals: {
+0 4 pets: {
+0 5 title: "Pitch all options in the middleware chain."
+0 6 }
+0 8 });
+0 10 app.listen(3000);
+0 11 console.log(\'Express app started on port 3000\');'
+
+2 1 app.error(function(err, req, res){
+2 2 res.render(\'doesNotExist\', { \'error: err.message });
+3 2 res.render('500.jade', {
+3 4 error: err
+3 8 app.get(\'/logout', function(req, res){
+3 9 console.log(req.env.NODE_ENV)
+3 11 app.get(\'/production\', function(req, res){
+3 12 console.log(req.env.production)
+3 14 app.get(\'/error\', function(req, res){
+3 15 console.log(req.env.error)
+3 17 app.get(\'/headers\', function(req, res){
+3 18 res.render(req.env.headers)
+3 20 app.get(\'/middleware\', function(req, res){
+3 21 res.render(req.env.middleware);
+3 23 assert.response(app,
+3 24 { url: \'/\' },
+3 25 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+3 27 { url: \'/jade\' },
+3 28 { body: \'<p>Welcome</p>\' });
+3 30 { url: \'/haml\' },
+3 31 { body: \'\
+3 32 <p>Hello World</p>\' });
+3 34 { url: \'/callback\' },
+3 36 <p>:)</p>\' });
+3 38 { url: \'/error\' },
+3 39 { body: \'doesNotExist\' });
+3 41 { url: \'/invalid\' },
+3 42 function(res){
+3 43 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+3 44 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+3 47 { url: \'/invalid-async\' },
+3 65 assert.response(app.end();
+3 67 function error(function error(err) {
+3 68 if (err) {
+3 69 return done(err);
+3 71 if (process.env, error);
+3 72 process.env.env.removeAllBrowsers.removeAllListeners.some(Error);
+3 73 process.removeAllListeners('error);
+3 74 })
+3 75 .on(\'errorHandlers.on(\'uncaughtException\', function on your;\')
+3 76 .on(\'invalidExist
+3 77 .on(\'invalidExist\', function(){
+3 78 done();
+3 79 throw new Error();
+3 81 .exports.exports.exports.removeAllListen
+4 1 app.get(\'/post/:id.:format?\', function(req, res){
+4 2 res.render(\'hello.jade\', {
+4 4 lastName: \'2006\'
+4 11 lastName: \'2013\'
+4 15 app.get(\'/error', function(req, res){
+4 16 res.render(\'missing.jade\', {
+4 18 message: \'Site updated: 2014-12-13 01:02:03\'
+4 25 message: \'Site layout: \'test\'
+4 29 app.get(\'/\', function(req, res){
+4 38 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'bar\' }});
+4 72 assert.response(app.get(\'/invalid-async
+4 73 assert.split(\'/\', \'/\', \'/
+4 74 \'#render()\', function(app){
+4 75 return app){
+4 76 return app.set(\'views\', __dirname= __dirname + \'/fixtures/fixtures/fixtures/fixtures/index.jade.jade\', __dirname + \'/fixtures/index.jade\', __dirname + \'/fixtures/index.jade\', function( __dirname + \'/fixtures/index.jade.jade\', layout: false, layout: false, collection });
+4 77 app.get(\'/jade\', function(layout: false, users
+4 78 , parentView: { layout, usersRep){
+4 79 res.collection: { users: { users: { name: { name: \'
+7 8 app.get('/300", function(req, res){
+7 9 res.render(\'300.jade', {

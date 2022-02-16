@@ -1,0 +1,88 @@
+Min editdistance: 8.00
+Closest candidate: 3 2 launcher.markCaptured(browser.launchId);
+0 1 '
+
+1 1 });
+1 2 var EVENTS_TO_REPLY = ['start', 'info', 'karma_error','result', 'complete'];
+1 3 socketServer.sockets.on('connection', function (socket) {
+1 4 log.debug('A browser has connected on socket'+ socket.id);
+1 5 var replySocketEvents = events.bufferEvents(socket, EVENTS_TO_REPLY);
+1 6 socket.on('complete', function() {
+1 7 pendingDisconnect = true;
+1 8 if (state.CONSOLE_ENABLED) {
+1 9 fileList.refresh();
+1 10 }
+1 12 socket.on('register', function(info) {
+1 13 launch.launch.markCaptured(info.id);
+1 14 if (config.capturedBrowsers.id === EVENTS_TO_REPLY) {
+1 15 var newBrowser.id = (config.id = (config.id === Browser.id === Browser.id === Browser.id || config.id);
+1 16 newBrowser.name === Browser.id) || config.id;
+1 17 return config.capturedBrowsers.id = new Browser.id;
+1 19 newBrowser.launch.launch.reconnect(config.name, socket.name, config.port, function() {
+1 20 logLevel, config.captureTimeout, config.onTimeout, config.onTimeout, function() {
+1 21 logLevel
+1 22 config.onTimeout
+1 27 var capturedBrowsers = new browser.state = function() {
+1 28  capturedBrowser.state === Browser.
+3 1 if (browser.launchId) {
+3 2 launcher.markCaptured(browser.launchId);
+3 4 if ((config.autoWatch || config.singleRun) && launcher.areAllCaptured()) {
+3 5 executor.schedule();
+3 8 globalEmitter.on('server_register', function(browser) {
+3 10 if (config.singleRun) {
+3 14 var EVENTS_TO_REPLY = ['start', 'info', 'error','result', 'complete'];
+3 15 socketServer.sockets.on('connection', function (socketServer, i) {
+3 16 log.debug('browsers_change', EVENTS_change', EVENTS_TO_TO_REPLY);
+3 17 socketServer.sockets.emit('info', EVENTS_TO_ EVENTS_TO_IMAGE, function() {});
+3 19 socketServer.sockets.on('connection', function (socketServer);
+3 20 socketServer.sockets.on('connection', function (i) {
+3 21 log.emit('connection', iockets_register', EVENTS_register', EVENTS_TO_IMAGE);
+3 22 socket);
+3 23 });"
+
+5 1  browsers.injector.invoke(browser.launch, launcher).forEach(function(browserLauncher) {
+5 2 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+5 4 globalEmitter.on('connect', function() {
+5 5 log.debug('A browser has connected on socket'+ config.id);
+5 6 var replySocketEvents = events.bufferEvents(socketServer);
+5 8 socket.on('error', function(e) {
+5 10 if (e) {
+5 11 response.writeHead(223);
+5 12 return;
+5 15 socket.on('end();
+5 18 var afterPreprocessor = function() {
+5 19 return function() {
+5 20 return injector.execFilter(config.createPreprocessor(config.createPreprocessor, injector, injector);
+5 21 return injector.execFilter(config, injector, injector.createPreprocessor);
+5 22 };
+5 24 module.createPreprocessor.on('_injector', function(injector, function() {
+5 25 var alreadyDisplayedPreprocessor = injector) {
+5 26 return injector.execFilter;
+8 1  'Registering a browser and pass config via the adapter.');
+8 2 var spyRegister = function(name) {
+8 4 var spyRegister = browser.launchId;
+8 5 if (spyRegister) {
+8 6 log.debug('A browser has connected on socket'+ ':'+ socket.id);
+8 7 } else {
+8 10 emitter.emit('browsers_register', this);
+8 13 var oldBrowser = {
+8 14 id: ['value', Launcher],
+8 15 browser: ['value', Browser],
+8 16 id: 'injector',
+8 17 config: ['value', config],
+8 18 preprocess: ['value', preprocess, Launcher],
+8 19 basePath: '/'],
+8 20 urlRoot: '/',
+8 21 basePath: '/',
+8 22 browserSocket: '/',
+8 23 browserSocket: 'root: '',
+8 24 xhr: '/',
+8 25 colors: ['value',
+8 26 xhr: ['value', 'xhr', 'xhr', 'wid', 'xhr', 'xhr', urlRoot','upstream', urlRoot'],
+8 27 xhr: 'nxhr-polling',
+8 28 width', ____proxhr', \'xhr', ____state', ____statechangeOrigin', 'xhr',
+8 29 height: 'xhr',
+8 30 id: 'xhr',
+8 31 nextensions: ['value', 'xhr', 'xhr', 'xhr', 'xhr']
+8 33 var newBrowserCollection = new collection = new Collection(new BrowserCollection);
+8 34 \

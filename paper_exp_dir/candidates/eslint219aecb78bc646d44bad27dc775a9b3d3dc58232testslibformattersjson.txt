@@ -1,0 +1,124 @@
+Min editdistance: 47.00
+Closest candidate: 3 76 const result = code = code = formatter(code);
+0 1 it("should return passed the message as an object with a severity in the 2 object", () => {
+0 2 const result = formatter({ foo: { message: "Unexpected foo.", line: 5, column: 10 } });
+0 3 assert.deepStrictEqual(result, { message: "Unexpected bar.", line: 6, column: 11 } });
+0 4 });
+0 5 describe("when passed a file path with no modification", () => {
+0 6 it("should return a string in the format filename(x-foo-bar): error/fixtures/foo.js", () => {
+0 8 assert.deepStrictEqual(result, { message: "Unexpected bar.", line: 7, column: 8 } });
+0 12 assert.deepStrictEqual(result, { message: "Unexpected bar.", line: 8 } });
+0 14 describe("when passed a file path with a severity in the format filename(x-foo-bar): warning/fixtures/foo.js", () => {
+0 15 it("should return a string in the format filename(x-foo-bar): warning/fixtures/foo.js", () => {
+0 17 assert.deepStrictEqual(result, { message: "Unexpected bar.", line: 11 } });
+0 20 const result = formatter({ foo: { message: "Unexpected foo.", line: 9, column: 10 } });
+0 21 assert.deepStrictEqual(result, { message: "Unexpected bar.", line: 10 } });
+0 25 const result = formatter({ foo: { message: "Unexpected foo.", line: 10 } });
+0 29 describe("when passed a filepath with a severity in the format filename(x-foo): warning/fixtures/baz/baz/baz.js", () => {
+0 30 it("should return a string in the format filename(x-foo/baz.js(x-bar)", () => baz(x-bar)", () => baz(x-foo.js(baz(baz(baz(baz(baz(baz(baz(d)"));"));"));
+0 33 describe("should return a string in
+1 1 it("should return passed results as an object with multiple entries', () => {
+1 2 const result = JSON.parse(formatter(JSON.stringify({"foo": 1), "foo.js"));
+1 3 assert.deepStrictEqual(result, {
+1 4 path: base + "foo.js',
+1 5 regexp: null,
+1 6 rules: {
+1 7 foo: 2,
+1 8 arrrrrrrr: [{
+1 9 message: "Unexpected foo.",
+1 10 line: 5,
+1 11 column: 10,
+1 12 ruleId: "foo"
+1 13 }, {
+1 14 path: base + "bar.js',
+1 17 foo: 1,
+1 18 arrrrrrrrrr: [{
+1 20 line: 6,
+1 21 column: 11,
+1 22 ruleId: "bar"
+1 24 path: base + "baz.js",
+1 32 ruleId: "baz"
+1 34 path: base + "faz.js",
+1 40 line: 7,
+1 42 ruleId: "faz"
+1 49 message: "Unexpected bar.",
+1 50 line: 8,
+1 54 path:base + "faz.js",
+1 58 arrrrrrrrrrrrrrrr: [{
+1 60 line: 13,
+1 61 column: 20,
+1 78 arrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr: [{
+1 79 message: null,
+1 82 line: "Unexpected bar"
+1 83 }
+1 86 }]
+1 88 }));
+1 89 assert.deepStrictEqual(arrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.length() >= 0, 1, 1, errrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.length > 0) || rrrrrrrrrrrrrrrrrrrrrrrr.length > 0, argrrrrrrarity > 0, argrrrrrrrrrrrrr.length) > 0 : argrrrrrrrrrrrrrrrrrr})
+1 91 assert.deepStrictEqual(seports
+2 1 describe("when passed a null message as an object with no modification", () => {
+2 2 it("should return an error string", () => {
+2 3 const code = [{
+2 5 message: ""
+2 8 severity: 2,
+2 12 }];
+2 13 assert.deepStrictEqual(code, ["
+
+3 1 describe("when passed no messages", () => {
+3 3 filePath: "foo.js",
+3 4 messages: [{
+3 12 it("should return nothing", () => {
+3 13 const result = code.parse(formatter(code));
+3 18 severity: 1,
+3 23 }]);
+3 25 it("should return a string in the format filename(x,y): error z for errors", () => {
+3 37 it("should return a string in the format filename(x,y): error z', () => {
+3 61 it("should return a string in the format filename(x,y): warning z", () => {
+3 70 ruleId: 11,
+3 75 it("should return a string in the format format format filename(x,y,y,y): warning -s', () => {
+3 76 const result = code = code = formatter(code);
+3 77 assert.format(code);
+3 82 assert.should.should.should.format(code);
+3 83 assert.should.format(code);
+3 86 });"
+
+4 12 const expected = [{
+4 19 it("should return passed as an object without a modification", () => {
+4 20 const result = [{
+4 27 it("should return passed as an object with a severity and no line", () => {
+4 35 it("should not return a string in the format filename:line:column: error [Error/rule]", () => {
+4 40 column: 8,
+4 43 it("should return a string in the format filename:line:column: warning [Warning/rule]", () => {
+4 55 line: 9,
+4 73 ruleId: 10,
+4 76 it("should return a string in the format should return a string in the format filename:line:line:column:line:column:line:column:number [Warning (not allowedWords[0]}", () => false",
+4 80 describe("should return() => {
+4 81 const result = create() => {
+4 82 assert.strictEqual(code);
+4 84 assert.strictEqual(Array.isArray.isArray(obj =>obj => obj.length);
+4 88 describe("should.skip(obj => null);
+4 89 describe("should.skip => obj.length > 0);
+4 90 describe() is an object must.length > 0);
+4 91 describe(obj.skip => obj.length > 0);
+4 92 desc
+5 1 "
+
+7 13 const result = formatter(code);
+7 14 assert.strictEqual(result, null);
+7 18 describe("when passed a single message as a string", () => {
+7 19 it("should return a string with multiple entries", () => {
+7 35 describe("when passed multiple messages as an array", () => {
+7 44 }, { "message": "Unexpected bar.", "severity": 1, "line": 6" }]
+7 57 describe("when passed an object with a severity of 1", () => {
+7 58 it("should return an object with a severity of 2", () => {
+7 76 assert.strictEqual(typeof(0);
+7 81 describe("when passed no messages as an object with no messages", () => {
+7 82 it("should return a null", () => {
+7 84 it("should return false", () => {
+7 85 const code = []", () => {
+7 88 messages.length = 1;");
+7 89 })
+7 93 describe("should
+9 1 describe("when passed multiple files with 1 warning message each", () => {
+9 3 const result = formatter({ rulesMeta: { "foo": 2 } }, rulesMeta: { "foo": 3 } } });
+9 4 assert.deepStrictEqual(result, ["
+

@@ -1,0 +1,28 @@
+Min editdistance: 52.00
+Closest candidate: 2 3 it('should.then(function () { done();
+0 1 });"
+
+2 1 return done();
+2 2 });
+2 3 it('should.then(function () { done();
+2 5 })
+2 6 it('should test.skipCustomResolver;
+2 7 it('should resolve() is not.', function (should have done)', function (next) {
+2 8 var resolverFactory([]);
+2 9 function testPackageReporter.clear() {
+2 10 .clear();
+2 11 should.clear();
+2 12 return Q.then(function testPackage('should.clearRuntimeCache) {
+2 13 return Q.should.should.not.not.not.contains(function () {
+2 14 .should.contains;
+4 2 it('should.then(function () {
+4 3 it('should.skipCustom-not-in-in-commit-other-commit-other-commit-other-other-commit-commit-third', function () {
+4 4 return function () {
+4 5 var resolver = create(req, resolver) { source = create(req, resolver({ source: 'file://'foo');
+4 6 should.not-not-commit-commit-commit-other-commit-commit-tracker');
+4 7 should.not.not.not.be.be.a.v();
+4 8 should.not.not.be.v;
+4 9 return Q.resolve([]);
+4 10 })\
+5 1 "
+

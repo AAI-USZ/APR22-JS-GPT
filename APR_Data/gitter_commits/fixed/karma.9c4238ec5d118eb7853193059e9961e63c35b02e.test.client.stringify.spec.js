@@ -1,0 +1,86 @@
+/* global __karma__ */
+var chai = require('chai')
+var expect = chai.expect
+
+var stringify = require('../../client/stringify')
+
+describe('stringify', function () {
+  it('should serialize string', function () {
+    expect(stringify('aaa')).to.be.eql("'aaa'")
+  })
+
+  it('should serialize booleans', function () {
+    expect(stringify(true)).to.be.eql('true')
+    expect(stringify(false)).to.be.eql('false')
+  })
+
+  it('should serialize null and undefined', function () {
+    expect(stringify(null)).to.be.eql('null')
+    expect(stringify()).to.be.eql('undefined')
+  })
+
+  it('should serialize functions', function () {
+    function abc (a, b, c) { return 'whatever' }
+    var def = function (d, e, f) { return 'whatever' }
+
+    var abcString = stringify(abc)
+    var partsAbc = ['function', 'abc', '(a, b, c)', '{ ... }']
+    var partsDef = ['function', '(d, e, f)', '{ ... }']
+
+    partsAbc.forEach(function (part) {
+      expect(abcString).to.contain(part)
+    })
+
+    var defString = stringify(def)
+    partsDef.forEach(function (part) {
+      expect(defString).to.contain(part)
+    })
+  })
+
+  it('should serialize arrays', function () {
+    expect(stringify(['a', 'b', null, true, false])).to.be.eql("['a', 'b', null, true, false]")
+  })
+
+  it('should serialize objects', function () {
+    var obj
+
+    obj = {a: 'a', b: 'b', c: null, d: true, e: false}
+    expect(stringify(obj)).to.contain("{a: 'a', b: 'b', c: null, d: true, e: false}")
+
+    function MyObj () {
+      this.a = 'a'
+    }
+
+    obj = new MyObj()
+    expect(stringify(obj)).to.contain("{a: 'a'}")
+
+    obj = {constructor: null}
+    expect(stringify(obj)).to.contain('{constructor: null}')
+
+    obj = Object.create(null)
+    obj.a = 'a'
+    expect(stringify(obj)).to.contain("{a: 'a'}")
+  })
+
+  it('should serialize html', function () {
+    var div = document.createElement('div')
+
+    expect(stringify(div)).to.be.eql('<div></div>')
+
+    div.innerHTML = 'some <span>text</span>'
+    expect(stringify(div)).to.be.eql('<div>some <span>text</span></div>')
+  })
+
+  it('should serialize DOMParser objects', function () {
+    var parser = new DOMParser()
+    var doc = parser.parseFromString('<test></test>', 'application/xml')
+    expect(stringify(doc)).to.be.eql('<test></test>')
+  })
+
+  it('should serialize across iframes', function () {
+    var div = document.createElement('div')
+    expect(__karma__.stringify(div)).to.be.eql('<div></div>')
+
+    expect(__karma__.stringify([1, 2])).to.be.eql('[1, 2]')
+  })
+})

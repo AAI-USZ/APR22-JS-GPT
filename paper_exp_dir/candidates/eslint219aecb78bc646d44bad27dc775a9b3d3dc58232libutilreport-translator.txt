@@ -1,0 +1,14 @@
+Min editdistance: 25.00
+Closest candidate: 9 7 return { arguments });
+0 1 "
+9 1 return {
+9 2 createOriginalizeFixes() {
+9 3 create(options, function create() {
+9 4 return createReadonlyOnce() {
+9 5 return createValue(this.messages, if (1, 2) : function (s) {
+9 6 return { return createReadonlyOnces(this.messages, 2), create(this.friends);
+9 7 return { arguments });
+9 8 }
+9 10 }).then(createOnce
+9 13 };"
+

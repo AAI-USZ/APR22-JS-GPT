@@ -1,0 +1,179 @@
+Min editdistance: 29.00
+Closest candidate: 5 64 list.forEach(function(item){
+0 1 module.exports = function(){
+0 2 var baseDir = this.base_dir;
+0 3 var args = Array.prototype.slice.call(arguments);
+0 4 args.forEach(function(path){
+0 5 file.copyFile(baseDir + path, args.cwd + '/' + path + '.md');
+0 6 });
+0 7 return args;
+0 8 };"
+
+1 1 module.exports = function(args, callback){
+1 2 var baseDir = args.deploy_dir || this.deploy_dir;
+1 3 var format = args.l || args.log || this.logger_format;
+1 4 return function(){
+1 5 var target = args.l || args.log || this.config.deploy_dir;
+1 6 if (baseDir){
+1 7 this.log.info('Deploying.');
+1 8 var help = [
+1 9 'Example:'+ format,
+1 10 '  deploy:',
+1 11 '    type: github',
+1 12 '    repository: <repository>',
+1 13 '    branch: <branch>',
+1 14 '',
+1 15 'More info: http://zespia.tw/hexo/docs/deploy.html'
+1 16 ].join('\
+1 17 ');
+1 18 console.log(help.join('\
+1 19 '));
+1 20 return callback();
+1 21 }
+2 2 if (args._[0]!== 'bower'){
+2 3 hexo.log.writeln(['Hello World']);
+2 6 hexo.extend.console.register('test', args._[0], function(args){
+2 7 return args._[0];
+3 5 if (path.substring(baseDir.length + 1)!== '.md'){
+3 6 var date = moment(path.substring(baseDir.length + 1, 3));
+3 7 args.unshift(date);
+4 2 if (!args._.length){
+4 3 hexo.call('help', {_: ['new']}, callback);
+4 4 return;
+4 6 hexo.post.create({
+4 7 title: args._.pop(),
+4 8 layout: args._.length? args._[0] : hexo.config.default_layout,
+4 9 slug: args.s || args.slug,
+4 10 path: args.p || args.path
+4 11 }, args.r || args.replace, function(err, target){
+4 12 if (err) return callback(err);
+4 13 hexo.log.i('File created at'+ target);
+4 14 callback();
+4 15 });"
+
+5 2 var command = args._[0];
+5 3 var list = this.extend.console.list();
+5 4 if (list.hasOwnProperty(command) && command!== 'help'){
+5 5 printHelpForCommand(command, list[command]);
+5 6 } else {
+5 7 printAllHelp(list);
+5 9 };
+5 10 function printHelpForCommand(command, data){
+5 11 var options = data.options;
+5 12 console.log('Usage: hexo', command, data);
+5 13 console.log('\
+5 14 Description:');
+5 15 console.log((options.description || options.desc || data.description || data.desc) + '\
+5 17 if (options.arguments) printList('Arguments', options.arguments);
+5 18 if (options.commands) printList('Commands', options.commands);
+5 19 if (options.options) printList('Options', options.options);
+5 21 function printAllHelp(list){
+5 22 var keys = Object.keys(list);
+5 23 var commands = [];
+5 24 var key = '';
+5 25 for (var i = 0, len = keys.length; i < len; i++){
+5 26 key = keys[i];
+5 27 commands.push({
+5 28 name: key,
+5 29 desc: list[key].desc
+5 32 console.log('Usage: hexo <command>\
+5 34 printList('Commands', commands);
+5 35 printList('Global Options', [
+5 36 {name: '--config=[FILE] [<options>] Start the server / do single run.'},
+5 37 {name: '--port=[port] [<options>] Start the server / do single run.'},
+5 38 {name: '--log-level>', desc: 'Specify all verbose messages.'}
+5 39 ]);
+5 40 console.log('For more help, you can use \\'hexo help [command]\\' for the detailed information');
+5 41 console.log('or you can check the docs:',http://hexo.io/docs/'));
+5 43 function printList(title, list){
+5 44 var length = 0;
+5 45 var str = title + ':\
+5 46 ';
+5 47 list.sort(function(a, b){
+5 48 var nameA = a.name;
+5 49 var nameB = b.name;
+5 50 if (nameA < nameB) return -1;
+5 51 else if (nameA > nameB) return 1;
+5 52 else return 0;
+5 53 }).forEach(function(item){
+5 54 length = Math.max(length, item.name.length);
+5 59 if (nameA > nameB) return -1;
+5 64 list.forEach(function(item){
+5 65 var padding = length - item.name.length + 2;
+5 66 for (var i = 0; i < length; i++){
+5 67 key = item[i];
+5 68 str +='';
+5 70 str +=''+ item[i] + ':\
+5 73 console.log('style:\
+5 74 ', padding +'' + length);
+5 77 function pluralize(lineDataStream(data){
+5 78 return data.line.line +'' +'' + data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(data.pluralize(
+6 3 var args = Array.isArray(args)? args : ['value', defaults.normalize];
+6 4 return initCache[baseDir];
+7 5 if (!args.some(function(path){
+7 6 return require(path);
+7 7 })){
+7 8 return require('./' + path);
+7 11 args.forEach(function(item){
+7 12 if (item.substr(baseDir.length + item.length - 3, 3)!== '.md'){
+7 13 baseDir += item;
+7 16 return args.join('\
+8 2 var baseDir = args.deploy_dir || this.public_dir;
+8 3 var format = args.l || args.log || this.render_drafts || {};
+8 4 return format || function(){
+8 6 args.unshift('..');
+8 7 return format;
+9 1 var Q = require('q');
+9 2 var Logger = require('bower-logger');
+9 3 var userHome = require('user-home');
+9 4 var bower = require('../');
+9 5 var version = require('../version');
+9 6 var cli = require('../util/cli');
+9 7 var rootCheck = require('../util/rootCheck');
+9 8 var options;
+9 9 var renderer;
+9 10 var loglevel;
+9 11 var command;
+9 12 var commandFunc;
+9 13 var logger;
+9 14 var levels = Logger.LEVELS;
+9 15 options = cli.readOptions({
+9 16 version: { type: Boolean, shorthand: 'v' },
+9 17 help: { type: Boolean, shorthand: 'h' },
+9 18 'allow-root': { type: Boolean }
+9 20 if (options.version) {
+9 21 process.stdout.write(version + '\
+9 26 rootCheck(options, bower.config);
+9 27 if (bower.config.silent) {
+9 28 loglevel = levels.error;
+9 30 loglevel = levels[bower.config.loglevel] || levels.warning;
+9 32 while (options.argv.remain.length) {
+9 33 command = options.argv.remain.join(' ');
+9 34 if (bower.abbreviations[command]) {
+9 35 command = bower.abbreviations[command].replace(/\\s/g, '.');
+9 36 break;
+9 38 command = command.replace(/\\s/g, '.');
+9 39 if (mout.object.has(bower.commands, command)) {
+9 42 options[command] = bower.commands.command.replace(/\\./g,'');
+9 44 if (options.singleRun) {
+9 45 options.autoWatch = options.autoWatch === 'true';
+9 47 if (bower.abbreviations.silent) {
+9 48 loglevel = levels.silent;
+9 49 } else if (bower.commands.json) {
+9 50 loglevel = levels.json;
+9 52 loglevel = levels[bower.commands.loglevel] || levels.warn;
+9 54 if (options.skip) {
+9 55 options.skip = options.skip;
+9 57 if (options.limit) {
+9 58 options.limit = options.limit;
+9 60 options.maxage = (options.maxAge / 5).toFixed(2) * 5;
+9 61 var consoleStream = new Logger.stream.Console(options);
+9 62 if (consoleStream) {
+9 63 consoleStream.on('error', function (err) {
+9 64 if (err) {
+9 65 return consoleStream.dump(err);
+9 69 var additionalArgs = {
+9 70 command: command,
+9 71 argv: version,
+9 72 string: fs.readFileSync(bower.config.cwd + '-' + version + '-', '.' + process.env.log.bower.json'),"
+

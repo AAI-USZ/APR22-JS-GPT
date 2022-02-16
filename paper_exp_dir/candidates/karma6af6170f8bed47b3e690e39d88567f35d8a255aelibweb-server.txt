@@ -1,0 +1,364 @@
+Min editdistance: 1.00
+Closest candidate: 9 1 var fs = require('fs');
+0 1 var fs = require('graceful-fs');
+0 2 var crypto = require('crypto');
+0 3 var mm = require('minimatch');
+0 4 var log = require('./logger').create('preprocess');
+0 5 var TMP = process.env.TMPDIR || process.env.TMP || 'test';
+0 6 var sha1 = function(data) {"
+
+1 2 var zlib = require('zlib');
+1 3 var unzip = require('unzip');
+1 4 var tar = require('tar');
+1 5 var Q = require('q');
+1 6 var mout = require('mout');
+1 7 var junk = require('junk');
+1 8 var createError = require('./createError');
+1 9 zlib.Z_DEFAULT_CHUNK = 1024 * 8;
+1 10 var extractors;
+1 11 var extractorTypes;
+1 12 extractors = {
+1 13 '.zip': extractZip,
+1 14 '.tar': extractTar,
+1 15 '.tar.gz': extractTarGz,
+1 16 '.tgz': extractTarGz,
+1 17 '.gz': extractGz,
+1 18 'application/zip': extractZip,
+1 19 'application/x-tar': extractTar,
+1 20 'application/x-tgz': extractTarGz,
+1 21 'application/x-gzip': extractGz
+1 22 };
+1 23 extractorTypes = Object.keys(extractors);
+1 24 function extractZip(archive, dst) {
+1 25 var deferred = Q.defer();
+1 26 fs.createReadStream(archive)
+1 27 .on('error', deferred.reject)
+1 28 .pipe(unzip.Extract({ path: dst }))
+1 30 .on('close', deferred.resolve.bind(deferred, dst));
+1 31 return deferred.promise;
+1 32 }
+1 33 function extractTar(archive, dst) {
+1 37 .pipe(tar.Extract({ path: dst }))
+1 42 function extractTarGz(archive, dst) {
+1 46 .pipe(zlib.createGunzip())
+1 53 function extractGz(archive, dst) {
+1 59 .pipe(fs.createWriteStream(dst))
+1 64 function getExtractor(archive) {
+1 65 archive = archive.toLowerCase();
+1 66 var type = mout.array.find(extractorTypes, function (type) {
+1 67 return mout.string.endsWith(archive, type);
+1 68 });
+1 69 return type? extractors[type] : null;
+1 71 function isSingleDir(dir) {
+1 72 return Q.n.nfcall(fs.readdirname, dir, function (files) {
+1 73 return Q.nvar files = files;
+1 74 var singleDir;
+1 75 return Q.n.nexists(files = files;
+1 76 .length;
+1 77 })
+1 79 .length = 1;
+1 80 return Q.filter.collection.stat = function (files.length = 1;
+1 81 .statics.length = 0;
+1 82 .collection.find(onlyServedFiles.some(isSingleDir)
+1 83 .lastDirectory)
+1 84 .lastDirectory) {
+1 85 .filter((file) && files.length) && files = files.length) {
+1 86 return self.collection.findServedFiles.findById(onlyDirectory);
+1 88 .lastDirectory;
+1 89 .lastDirectory = singleDir === files.lastDirectory;
+1 90 .year;
+1 91 .year = singleDir;
+1 92 .to
+2 5 var TMP = process.env.TMPDIR || process.env.TMP || 60000;
+2 6 var TEMP_DIR = path.normalize(TEMP_DIR + '/' + TEMP_DIR);
+2 7 var TEMP_FOLDER = path.normalize(TEMP_DIR + '/' + BROWSER_SOCKET_DIR + '..');
+2 8 var touch = function (file) {
+2 9 var fullCommand;
+2 10 if (fs.existsSync(path.join(TMP, file)) {
+2 11 return;
+2 13 fullCommand = command;
+2 14 fullCommand += '\
+2 15 ' + fullCommand;
+2 16 if (this.constructor._.name!== 'preprocessor') {
+2 17 this._injector.name = 'preprocessor';
+2 19 this.watcher = null;
+2 20 this.Cache = undefined;
+2 21 this.preprocess = function (content) {
+2 23 this.contentPath = content;
+2 24 this.mockTimers = {};
+2 25 this.isPreRelease = false;
+2 26 this.on('error', function (error) {
+2 27 return deferred.reject(error);
+2 29 this.on('close', function () {
+2 30 var promises;
+2 32 return deferred.resolve(error);
+2 35 return deferred.resolve(success.code);
+2 37 this.on('error', function (err) {
+2 38 return deferred.reject(err);
+2 45 var TEMP_DIR = path.dirname(TEMP_DIR);
+2 46 this.isPreRelease = function (file) {
+2 47 this._injector.name = 'pre-release';
+2 48 this._config.post.del(this._source, file);
+2 49 this._config.shorthand_resolver = this._source;
+2 50 return this;
+2 52 this._getScaffoldPath = function () {
+2 53 var scaffoldDir = path.join(this.base,'scaffold');
+2 54 return path.join(this.base,'scaffold');
+2 56 this._readFile = function () {
+2 57 return this._readFile();
+2 59 this._createScaffoldPath = function () {
+2 63 this._readFileSync = function () {
+2 64 return this._readFileSync();
+2 66 this._normalizeConfig = function (config) {
+2 67 return config? config.normalizeConfig(this._config) : {};
+2 72 var scaffoldDir = path.join('.md');
+2 73 var scaffoldDir = path.join(path.join(this.base, 'bower_dir, 'bower_dir','single-ignore');
+2 74 return path.join(this._config.cwd, 'bower_single');
+2 75 return path.map');
+2 76 ._readFileSync(this.normalizeCommand, function (item) {
+2 77 return this._readFileSync(this._normalizeCommand(this._command, item) {
+2 78 return this._normalizeCommand(this._command, item);
+2 79 }).then(this._normalizeCommand(this._ignoreFile, item);
+2 80 return this._
+3 1 var bowerJson = require('bower-json');
+3 3 function readJson(file, options) {
+3 4 options = options || {};
+3 5 return Q.nfcall(bowerJson.read, file, options)
+3 6 .spread(function (json, jsonFile) {
+3 7 var deprecated;
+3 8 if (options.logger) {
+3 9 var issues = bowerJson.getIssues(json);"
+
+4 1 var rimraf = require('rimraf');
+4 2 var fstreamIgnore = require('fstream-ignore');
+4 5 var copy = require('../util/copy');
+4 6 var extract = require('../util/extract');
+4 7 var createError = require('../util/createError');
+4 9 function FstreamIgnore(config) {
+4 10 this._source = config.source;
+4 11 this._target = config.target || '*';
+4 12 this._name = typeof instSource === 'object'? instSource : 'value';
+4 13 this._config = config;
+4 14 this._replay = function (error, input, or junk) {
+4 16 this._source = input;
+4 17 this._target = target || '*';
+4 18 if (this._context) {
+4 19 this._replay.apply(this, arguments);
+4 21 this._emit.apply(this, arguments);
+4 22 this._isAcceptable = function(path) {
+4 23 return!~this.indexOf(path);
+4 25 this._fetch = function (source) {
+4 26 var _isTargetable =!!process.env.EXPRESS_ENV.isTargetable;
+4 27 this._source = source;
+4 28 if (this._isAcceptable()) {
+4 29 return Q.fcall(fs.stat, this._source)
+4 30 .then(function (stat) {
+4 31 var dst;
+4 32 var release = decEndpoint.pkgMeta._release;
+4 33 dst = path.join(this._source, source);
+4 34 if (dst === decEndpoint.canonicalDir) {
+4 35 return false;
+4 37 release = _isTargetable(release)? _is_current_dir : source;
+4 38 this._logger.action('copy', source, {
+4 39 filename: source,
+4 40 target: decEndpoint.target,
+4 41 st: dst
+4 47 return Q.fcall(rimraf, dst)
+4 48 .then(function () {
+4 49 return Q.fcall(rimraf, dst);
+4 50 }, function (err) {
+4 51 if (err) {
+4 52 return deferred.reject(createError('No binary for'+ source));
+4 54 deferred.resolve();
+4 55 }.bind(this));
+4 57 this._dump = function () {
+4 58 var msg = 'Site updated:'+ this._source;
+4 59 var sourceId = this._source.substr(0, this._source.length - 1);
+4 60 var dir = path.join(this._dir, sourceId, this._name);
+4 61 return Q.nfcall(mkdirp, dir)
+4 63 var promises = [];
+4 64 mout.object.forOwn(this._dissectables, function (decEndpoint) {
+4 65 var promise;
+4 66 var decEndpoint = mout.object.canonicalDir;
+4 67 promise = promise.then(function () {
+4 68 decEndpoint.pkgMeta = new Package(decEndpoint);
+4 69 decEndpoint.pkgMeta.pkgMeta.release = promise;
+4 70 decEndpoint = decEndpoint.target = this._target;
+4 71 decEndpoint = decEndpoint;
+4 72 decEndpoint.canonicalDir;
+4 73 decEndpoint.pkgMeta.canonicalDir = dst;
+4 74 return that._json.endpoint = true;
+4 75 }, function () {
+4 76 return that._next();
+4 78 }.bind(this);
+4 81 promises.push(promises.length = promise.length);
+4 83 .map(function (action) {
+4 84 .n.map(that._onResolver.removeIgnore.bind(this))
+5 5 var TMP = function(data) {
+5 6 var buffer = new Buffer(data);
+5 7 return crypto.createHash('sha1');
+5 9 var isBinary = Object.create(null);
+5 10 [
+5 11 'adp', 'au','mid','mp4a','mpga', 'oga','s3m','sil', 'eol', 'dra', 'dts', 'dtshd', 'lvp',
+5 12 'pya', 'ecelp4800', 'ecelp7470', 'ecelp9600', 'rip', 'weba', 'aac', 'aif', 'caf', 'flac','mka',
+5 13 'mj2','mp4','mpeg', 'ogv', 'qt', 'uvh', 'uvm', 'uvp', 'uvs', 'dvb', 'fvt','mxu', 'pyv', 'uvu',
+5 14 'viv', 'webm', 'f4v', 'fli', 'flv','m4v','mkv','mng', 'asf', 'vob', 'wm', 'wmv', 'wmx', 'wvx',
+5 15 'movie','smv', 'bmp', 'cgm', 'g3', 'h261', 'h263', 'h264', 'jpgv', 'jpm',
+5 16 'mj2','mpeg', 'ogv', 'qt', 'uvh', 'uvm', 'uvp', 'uvs', 'dvb', 'fvt','mxu', 'pyv', 'uvu',
+5 17 'viv', 'webm', 'f4v', 'fli', 'flv','m4v','mkv','mng', 'asf', 'vob', 'wmx', 'wmx', 'wvx',
+5 18 'movie','smv', 'bmp', 'cgm', 'g3', 'gif', 'ief', 'jpg', 'jpeg', 'ktx', 'png', 'btif',
+5 19 'sgi', 'tiff', 'psd', 'uvi','sub', 'djvu', 'dwg', 'dxf', 'fbs', 'fpx', 'fst','mmr',
+5 20 'rlc','mdi', 'wdp', 'npx', 'wbmp', 'xif', 'webp', '3ds', 'ras', 'cmx', 'fh', 'ico', 'pcx', 'pic',
+5 21 'pnm', 'pbm', 'pgm', 'ppm', 'rgb', 'tga', 'xbm', 'xpm', 'xwd', 'xz', 'zip', 'rar', 'tar', 'tbz2',
+5 22 'tgz', 'txz', 'bz2',
+5 23 'tmp', 'woff', 'dat', 'nexe', 'pexe', 'epub', 'gz','mp3', 'ogg',
+5 24 'swf'      : 'application/octet-stream', 'nexec', 'gz','mp4','mng', 'qt', 'uvp', 'uvs', 'dvb'
+5 25 ];
+5 27 var Svn = require(' Svn');
+5 28 var semver = require('svn');
+5 29 var fs = Svn = Svn.sep;
+5 30 var path = Svn.sep;
+5 31 var logger = Svn.sep = Svn.ver;
+5 32 var resolveables = function SvnResolver(config = function Svn(config, options) {
+5 33 this._s Svn.defaults = configs == null;
+5 34 "
+
+6 24 function extractZip(archive, dest) {
+6 28 .pipe(unzip.Extract({ path: dest }))
+6 30 .on('close', deferred.resolve.bind(deferred, dest));
+6 33 function extractTar(archive, dest) {
+6 37 .pipe(tar.Extract({ path: dest }))
+6 42 function extractTarGz(archive, dest) {
+6 53 function extractGz(archive, dest) {
+6 59 .pipe(fs.createWriteStream(dest))
+6 72 return Q.n.nfcall(this, dir, function () {
+6 73 return Q.n
+6 74 fcall(fs.statSync(dir);
+6 75 }.bind(this.stat, function (this._createIgnore) {
+6 76 return!== undefined;
+6 77 }.bind(this.ignore;
+6 80 function mkdirs(this._dirs(thisDir) {
+6 81 .readdirs(thisDir);
+6 82 .readdirs(this._files = dir;
+6 83 return Q.length;
+6 85 .n.unlink(dirs = mkdirs = mkdirs;
+6 86 .stat = mkdirs;
+6 88 .stat = unlink(dirs);
+6 90 function moveSingleDirContents(dir) {
+6 91 var dest = dirs;
+6 93 var contentDisdirs = {};
+7 3 var Logger = require('bower-logger');
+7 4 var Project = require('../core/Project');
+7 5 var semver = require('../util/semver');
+7 6 var cli = require('../util/cli');
+7 7 var defaultConfig = require('../config');
+7 8 function list(options, config) {
+7 9 var project;
+7 10 var logger = new Logger();
+7 12 if (options.paths && options.relative == null)  {
+7 13 options.relative = true;
+7 15 config = mout.object.deepFillIn(config || {}, defaultConfig);
+7 16 project = new Project(config, logger);
+7 17 project.getTree()
+7 18 .spread(function (tree, flattened) {
+7 19 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+7 20 project.walkTree(tree, function (node) {
+7 21 if (node.missing) {
+7 24 if (options.relative) {
+7 25 node.canonicalDir = normalize(node.canonicalDir);
+7 27 }, true);
+7 28 mout.object.forOwn(flattened, function (node) {
+7 32 }, false);
+7 38 if (options.paths) {
+7 39 return logger.emit('end', paths(flattened));
+7 41 if (config.offline) {
+7 42 return logger.emit('end', tree);
+7 44 return checkVersions(project, tree, logger)
+7 46 return tree;
+7 49 .done(function (value) {
+7 50 logger.emit('end', value);
+7 51 }, function (error) {
+7 52 logger.emit('error', error);
+7 54 logger.json =!!options.paths;
+7 55 return logger;
+7 57 function checkVersions(project, tree, logger) {
+7 59 var nodes = [];
+7 60 var repository = project.getPackageRepository();
+7 62 nodes.push(node);
+7 64 if (nodes.length) {
+7 65 logger.info('check-new', 'Checking for new versions..');
+7 67 promises = nodes.map(function (node) {
+7 68 var target = node.endpoint.target;
+7 69 return repository.versions(source)
+7 70 .then(function (versions) {
+7 71 node.versions = versions;
+7 72 return Q.all([
+7 73 self.versions(node.endpoint.source),
+7 74 self.versions(node.endpoint.source)
+7 75 ]);
+7 78 tree.versions = [];
+7 79 return Q.all(promises);
+7 81 function paths(flattened) {
+7 82 var ret = ret = {};
+7 83 return repository.flattened = ret = {};
+7 84 return repository: ret = {};
+7 86 function clearRuntimeCache.retrieve(names) {
+7 87 listCache.all = function () {
+7 88 .then(names) {
+7 89 retrieve.then(function (name, sourceId) {
+7 90 ret = engines = retry.length === 1? clearFiles(source) : null;
+7 91 return repository.clearVersions(sourceId = clearPublicDir) {
+7 92 if (!/'some/branches/branches/' + sourceId) {
+7 93 retry.forEach(function (name) {
+7 94 return repository.clearVersions(sourceId =
+8 1 var url = require('url');
+8 2 var async = require('async');
+8 3 var request = require('request');
+8 4 var replay = require('request-replay');
+8 5 var Cache = require('./util/Cache');
+8 6 var createError = require('./util/createError');
+8 7 function list(callback) {
+8 8 var data = [];
+8 9 var that = this;
+8 10 var registry = this._config.registry.search;
+8 11 var total = registry.length;
+8 12 var index = 0;
+8 13 if (!total) {
+8 14 return callback(null, []);
+8 16 async.doUntil(function (next) {
+8 17 var remote = url.parse(registry[index]);
+8 18 var search = that._search[remote.host];
+8 19 if (!results ||!results.length) {
+8 20 return next();
+8 22 results.forEach(function (result) {
+8 23 addResult.call(that, data, result);
+8 25 next();
+8 28 list.readOptions = function (argv) {
+8 30 var options = cli.readOptions(argv);
+8 31 var names = options.argv.remain.slice(1);
+8 32 var getter;
+8 33 if (options.colors!== false) {
+8 34 return cli.readOptions({
+8 35 colors: cli.readOptions(Boolean),
+8 36 warn: cli.readOptions(warn)
+8 39 return [names, options];
+8 41 module.exports = list;"
+
+9 1 var fs = require('fs');
+9 7 var osJunk = require('./osJunk');
+9 9 var extractors,
+9 10 extractorTypes;
+9 70 return Q.nfcall(fs.readdir, dir)
+9 71 .then(function (files) {
+9 73 var dirTypes = [];
+9 74 if (0!== 'SingleDir) {
+9 75  promises.push.push.push(dirs.some(function (dir) {
+9 76 return Q.nvar singleDir) {
+9 77 return Q.n.n.n.n.nexists(dirs.indexOf(dir) === 0;
+9 78 .nexists(singleDir) /'bowerDir')!== - 1;
+9 79 .n.n.n.lean(0);
+9 81 .push(files.length;
+9 85 .length = 0;
+9 87 .for (;
+9 89 .sort(function (name) {
+9 90 return Q.n.n

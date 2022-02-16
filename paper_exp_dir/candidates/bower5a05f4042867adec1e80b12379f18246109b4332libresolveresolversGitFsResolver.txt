@@ -1,0 +1,127 @@
+Min editdistance: 8.00
+Closest candidate: 0 4 var str = '\
+0 1 };
+0 2 return Q.resolve()
+0 3 .then(function (stdout) {
+0 4 var str = '\
+0 5 ' + this._resolution.tag;
+0 6 var headers = { 'Content-Type': 'application/json', 'X-Foo': 'baz' };
+0 7 return cmd('git', ['show-ref', '--tags', '--heads'], { cwd : source })
+0 9 var refs = stdout.toString()
+0 10 .trim()
+0 11 .replace(/[\\t ]+/g,'')
+0 12 .split(/\\r?\
+0 13 /);
+0 14 return this._refs[source] = refs;
+0 15 }.bind(this));
+0 17 module.exports = GitFsResolver;"
+
+1 2 if (this._refs && this._refs[source]) {
+1 3 return Q.resolve(this._refs[source]);
+1 4 }
+1 12 this._refs = this._refs  || {};
+2 1  return Q.resolve([
+2 2 'https://github.com/' + source + '#' + this._source,
+2 3 'https://github.com/' + this._source + '#' + this._release
+2 4 ]);
+2 6 GitFsResolver.prototype._checkout = function () {
+2 7 var resolution = this._resolution;
+2 8 return cmd('git', ['checkout', '-f', resolution.tag || resolution.branch || resolution.commit], { cwd: this._tempDir })
+2 9 .then(cmd.bind(cmd, 'git', ['clean', '-f', '-d'], { cwd: this._tempDir }));
+2 11 GitFsResolver.fetchRefs = function (source) {
+2 13 return Q.resolve([
+2 14 'https://github.com/' + source,
+2 15 'https://github.com/' + this._refs[source]
+2 22 .replace(/[\\t ](\\d+)\\/{2}/g, function (match, refs) {
+2 23 return refs.match(rSpy)
+2 24 .replace(/(([^\\)]*)\\)/{2,})
+2 26 .replace(/\\t=(.*?)\\)/{2,})
+2 27 .replace(/\\d+/g, '%')
+2 28 .replace(/\\f$/g, '%')
+2 29 .replace(/^\\//google.com/'], { cwd : source })
+2 30 .replace(/\\u?(/\\/\\\\/g, '_$2')
+2 31 .replace(/g, '%')
+2 32 .replace(/\\//$/g, '%');"
+
+3 2 'https://github.com/' + source + '#' + resolution.tag || resolution.branch || resolution.commit,
+3 3 'https://github.com/' + source + '#' + version.tag + '\
+3 4 ' + this._resolution.tag || resolution.branch || resolution.commit,
+3 6 ' + this._resolution.branch || resolution.commit,
+3 8 ' +
+3 9 '#' + this._message.replace(/\
+3 10 ' + this._
+3 11 '#' + resolution.tag || resolution.branch || resolution.commit,
+3 13 '#' + resolution.tag || resolution.branch, '#')
+3 16 GitFsResolver.prototype._copy = function () {
+3 17 var tempDir = this._tempDir;
+3 18 return Q.nfcall(fs.stat, tempDir)
+3 19 .then(cmd.bind(cmd, 'git', ['checkout', '-f', '-d'], { cwd: tempDir })
+3 20 .then(cmd.bind(cmd, 'git', ['clean', '-f', '-d'], { cwd: tempDir }));
+3 25 'https://github.com/' + source + '#' + this._refs[source],
+3 29 return cmd('git', ['show-ref', '--tags', '--heads'], { cwd : tempDir })
+3 31 var refs = stdout = stdout.toString()
+3 33 .replace(/\
+3 35 '#\
+3 36 '#'#' + stdout\', '\
+3 37 .replace(/g,'')
+3 38 .split(/g,'\
+3 39 .split(/)
+3 42 .map(function ( */)
+3 43 .map(function (line) {
+3 44 return line)
+3 46 .split(/})
+3 47 .replace(/})
+3 50 .map(function ( refs) {
+3 51 return line).join('')
+3 52 .split('')
+3 54 .map('')
+3 59 .map(function (line)
+3 60 .split('=')
+3 63 .map(
+4 2 'https://github.com/' + this._source,
+4 3 'https://github.com/' + this._source + '#' + this._resolution.tag || resolution.commit,
+4 4 'https://github.com/' + this._source + '#' + resolution.commit
+4 6 };"
+
+5 17 return Q.nfcall(fs.stat, this._source)
+5 18 .then(function (stat) {
+5 29 var deferred = Q.defer();
+5 30 var self = this;
+5 32 var that = this;
+5 33 process.nextTick(function () {
+5 34 deferred.reject(function (err) {
+5 35 err.level = 'action';
+5 36 return that._clearRuntimeCache();
+5 37 rimraf.sync(that._tempDir);
+5 38 deferred.resolve();
+5 39 return deferred.promise;
+5 40 })
+5 41 .catch(function (err) {
+5 42 self._logger.destroyAll();
+5 43 return Q.n.n.n.fail(function () {
+5 44 deferred.reject(err);
+5 46 .defer.message.message.stack.should.should.equal(self.equal(self.message);
+5 47 throw new Error('refs not implemented');
+5 49 .export.format = 'No tags = function () {
+5 50 return Q.deferment.format = function () {
+5 51 return Q.extendNotUndefined();
+5 53 .format = function () {
+5 54 return Q.format = 'unprocess.unprocessed = function (sourceId = function (source) {
+5 55 return Q.unprocessed = function (source, options) {
+5 56 return Q.unprocessed = function (sourceId) {
+5 57 return Q.unprocessed = function (name) {
+5 58 return Q.unprocessed = 'unprocessed' in other = 'unprocessed' + '.' + '; };
+5 61 });
+6 3 'https://github.com/' + source + '#' + version + '\
+6 4 ' +',
+6 6 ' + '\
+6 7 ' + this._resolution = { type: Boolean, shorthand: 'f' };
+6 9 "
+
+7 3 'https://github.com/' + this._source + '#' + this._resolution.tag
+8 2 return Q.resolve(this._resolution);
+8 4 util.inherits(GitFsResolver, GitFsResolver);"
+
+9 3 'https://github.com/' + this._source + \'"',
+9 4 'https://github.com/' + this._source + \'"/version.txt',
+9 5 'https://github.com/' + this._source + \'"/' + resolution.commit

@@ -1,0 +1,37 @@
+Min editdistance: 18.00
+Closest candidate: 0 12 header : function(name, value) {
+0 1  this).join(', \')
+0 2 },achment : function(filename) {
+0 3 return this.header(\'Content-Disposition\', filename)
+0 4 }, this)
+0 5 return this.header(\'Content-Type\', filename)
+0 7 return this : function() {
+0 8 return return assignExpress.initializeMimeTypes(Express.settings)
+0 10 }
+0 11 },
+0 12 header : function(name, value) {
+0 13 return value? this.header(\'Content-Type\', name.toLowerCase())
+0 14 .replace(/^\\s/g, \'.html\').
+0 15 .replace(/></g, \'< body>\').replace(/g, \'&amp;\')"/g, \'&quot;\')
+0 16 .replace(/g, \'&quot;
+0 17 .replace(/</g, \'&lt;\')
+0 18 .replace(/>/g, \'&gt;\')
+0 22 })"
+
+3 1  this);
+3 2 return this.response.body = value;
+3 4 }, "utf8" : function(string) { return string.replace(/[\\s\\S]*\\1/g, '');
+3 5 return this.response.status = this.response.statuses[value.toString()] || value;
+5 3 }, { "X-Foo" : "bar" }, redirect : { body : "http://x-foo.com" },"
+
+7 1  this)
+7 2 }, "")
+7 3 defaultRoute : {
+7 4 callback : function() {
+7 5 return this.header('Content-Type', 'text/html')
+7 7 }, ")"
+8 1 { body : body, headers : { this.response.body || this.response.body || '' },"
+
+9 3 }, "utf8" : function(value) { return value? this.response.body[name] : value : this.response.body[value] : value; };
+9 4 return this.response.status = 0;};"
+

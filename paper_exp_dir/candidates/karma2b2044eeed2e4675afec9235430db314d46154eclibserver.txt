@@ -1,0 +1,38 @@
+Min editdistance: 70.00
+Closest candidate: 3 1 var server = express = function() {
+0 1 "
+
+2 1 module.createServer = function () {
+2 2 config.createServer();
+2 3 log.apply(insonStart, arguments);
+2 4 log.apply(ins, arguments);
+2 5 });
+2 6 return logger.apply(ins, arguments);
+2 7 }
+2 8 module.createServer.listen(ins, arguments);
+2 9 module.reset();
+2 11 function start () {
+2 12 return new start() {
+2 13 return new();
+2 17 }'
+
+3 1 var server = express = function() {
+3 2 config.start();
+3 3 return config.init();
+3 4 logger.server = injector.pipe(server);
+3 5 return injector.listen(config);
+3 6 return server;
+3 8 };'
+
+4 1 return injector);
+4 2 function createPreprocessorList(config, preprocess, posts = Object.createPreprocessorList, injector) {
+4 3 return injector.createPreprocessor = injector.createPreprocessor(config, posts);
+4 4 return injectorList = injectorList['factoryList['injector', this.config', this.configSchema, injectorList];
+5 1 it('should injector.invoke(() => {
+5 2 it('should injector.apply()', () => createWebServer.apply()), () =>', injector.apply());
+5 5 it('should.apply()', injector.apply() => createPreprocessor('injector', injector.apply());
+5 6 });"
+
+6 1 return injectorInjector);return injector.invoke(mockRequire, ['injector);return injector.createInjectorInjector.invoke);returnInjector);return injector.invoke(mockInjector.invoke, injector);return injector.invoke);
+7 1 '
+

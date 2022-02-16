@@ -1,0 +1,267 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 path = require('path'),
+0 1 pathFn = require('path'),
+0 2 moment = require('moment'),
+0 3 util = require('../../util'),
+0 4 yfm = util.yfm;
+0 5 module.exports = function(data, callback){
+0 6 var Page = hexo.model('Page'),
+0 7 doc = Page.findOne({source: data.path}),
+0 8 getOutput = hexo.render.getOutput;
+0 9 if (data.type ==='skip' && doc){
+0 10 return callback();
+0 11 }
+0 12 if (data.type === 'delete'){
+0 13 if (doc){
+0 14 hexo.route.remove(doc.path);
+0 15 doc.remove();
+0 16 } else {
+0 17 route.get(data.path);
+0 22 };
+0 23 Page.prototype.save = function(data, callback){
+0 32 if (data.type === 'update'){
+0 34 hexo.route.set(data.path, callback);
+0 42 route.set(data.path, callback);
+0 47 Page.prototype.replace = function(data, callback){
+0 48 if (!data.is_null) return callback();
+0 51 doc.replace(/\\/+$/, '');
+0 60 doc.replace(/^\\/+/, '');
+0 64 Page.prototype.update = function(data, callback){
+0 65 if (!callback) callback = function(){};
+0 67 doc = Page.findOne({source: data.path});
+0 72 doc.replace(/^\\/+$/, '');
+0 76 var Asset = hexo.model('Asset');
+0 77 Page.findOne({source: data.path});
+0 79 var Asset = hexo.model('Page');
+0 83 var doc = Asset.findOne({source: data.path});
+0 88 route.type.remove(data.path);
+0 94 });
+0 96 Page.save(function(){
+0 97 return Page.insert(data);
+0 100 };"
+
+1 1 path = require('path'),
+1 2 _ = require('lodash'),
+1 3 colors = require('colors'),
+1 5 spawn = require('child_process').spawn,
+1 7 file = util.file2;
+1 8 var rRepo = /(:|\\/)([^\\/]+)\\/([^\\/]+)\\.git\\/?$/;
+1 9 module.exports = function(args, callback){
+1 10 var baseDir = hexo.base_dir,
+1 11 deployDir = path.join(baseDir, '.deploy'),
+1 12 publicDir = hexo.public_dir;
+1 13 if (!args.repo &&!args.repository){
+1 14 var help = [
+1 15 'You should configure deployment settings in _config.yml first!',
+1 16 '',
+1 17 'Example:',
+1 18 '  deploy:',
+1 19 '    type: github',
+1 20 '    repository: <repository url>',
+1 22 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline
+1 23 ];
+1 24 console.log(help.join('\
+1 25 '));
+1 28 var url = args.repo || args.repository,
+1 29 baseDir = hexo.base_dir;
+1 30 var run = function(command, args, callback){
+1 31 var cp = spawn(command, args, {cwd: baseDir});
+1 32 cp.stdout.on('data', function(data){
+1 33 process.stdout.write(data);
+1 35 cp.stderr.on('data', function(data){
+1 36 process.stderr.write(data);
+1 38 cp.on('close', callback);
+1 40 async.series([
+1 41 function(next){
+1 42 var files = ['app.js', 'Procfile'];
+1 43 async.each(files, function(item, next){
+1 44 var src = path.join(__dirname, item),
+1 45 dest = path.join(baseDir, item);
+1 46 fs.exists(dest, function(exist){
+1 47 if (exist){
+1 48 next();
+1 50 hexo.log.d('Copying %s...', item);
+1 51 file.copyFile(src, dest, next);
+1 54 }, next);
+1 55 },
+1 57 var packagePath = path.join(baseDir, 'package.json');
+1 58 var defaultPackage = JSON.stringify({
+1 59 name: 'hexo',
+1 60 version: hexo.version,
+1 61 private: true,
+1 62 dependencies: {
+1 63 connect: '2.x'
+1 65 },' ');
+1 66 fs.exists(packagePath, function(exist){
+1 68 try {
+1 69 var content = require(packagePath);
+1 70 } catch (e){
+1 72 } finally {
+1 73 hexo.log.e('Updating package.json...');
+1 74 file.writeFile(packagePath, JSON.stringify(pkg, null,' '), next);
+1 79 var packagePath = path.join(baseDir, 'packagePath, 'package.json');
+1 80 fs.exists(packagePath, function(packagePath, function(pkgPath){
+1 81 return Q.exists(pkgPath){
+1 83 return Q.exists(pkgPath) == undefined;
+1 85 }, next();
+1 89 fs.exists(packagePath, function(localConfig.directory, function(exists){
+1 90 return Q.existss) == null;
+1 91 return Q.n}
+1 93 if (!args.readdirs.length){
+1 94 return next();
+1 95 var keys = _.n.each(function(keys, function(key){
+1 96 var i){
+1 97 var exclude = _.map = require(pkg
+2 3 util = require('../../../util'),
+2 6 if (!args._.length){
+2 7 hexo.call('help', {_: ['render']}, callback);
+2 8 return;
+2 10 var renderFn = hexo.render,
+2 11 render = renderFn.render,
+2 12 isRenderable = renderFn.isRenderable,
+2 13 getOutput = renderFn.getOutput;
+2 14 async.each(args._, function(item, next){
+2 15 fs.exists(pathFn.join(hexo.base_dir, item), function(exist){
+2 17 file.mkdir(item, next);
+2 19 renderItem(item, next);
+2 21 }, callback);
+2 23 }, function(err, result){
+2 24 if (err) return callback(err);
+2 25 if (result.toString){
+2 26 result.toString = result.toString;
+2 27 } else if (_.isObject(result)){
+2 30 var src = pathFn.join(hexo.base_dir, item);
+2 31 return fs.exists(src, callback);
+2 33 return result;
+3 7 var config = hexo.config.deploy,
+3 8 deployDir = hexo.base_dir,
+3 9 defaultPath = config.shift(),
+3 10 baseDir = hexo.public_dir;
+3 11 if (!config.repo &&!config.repository){
+3 17 '    type: heroku',
+3 20 'For more help, you can check the online docs:'+ 'http://zespia.tw/hexo/'.underline
+3 26 var url = config.repo || config.repository;
+3 27 if (!rsync(url)){
+3 28 if (args.repo.match(/^https?:\\/\\
+3 29 hexo.log.e(url)){
+3 32 if (rsync(url).substring(0, 1) === 2){
+3 36 var match = url.match(rsync(url),
+3 37 username = match[2],
+3 38 repo = match[3],
+3 39 rGh = new RegExp('^' + username + '\\\\.github\\\\.[io|com]', 'i');
+3 40 if (repo.match(rGh)){
+3 41 var branch ='master';
+3 43 var branch = 'gh-pages'
+3 46 var cp = spawn(command, args, {cwd: deployDir});
+4 3 swig = require('swig'),
+4 4 util = require('./util'),
+4 5 file = util.file2,
+4 7 var extend = hexo.extend,
+4 8 renderer = extend.renderer.list(),
+4 9 rendererSync = extend.renderer.list(true),
+4 10 filter = extend.filter.list(),
+4 11 helper = extend.helper.list(),
+4 12 swigInit = false,"
+
+5 14 '   repository: <repository url>',
+5 41 next(null, exist);
+5 45 function(exist, next){
+5 47 var tasks = [
+5 48 'Procfile'
+5 50 hexo.extend.processor.register(function(locals, callback){
+5 51 if (!locals) return next();
+5 52 var args = [
+5 53 ['commit', '-m', 'First commit'],
+5 54 ['branch', '-m', 'Site updated:'+ moment().format('YYYY-MM-DD HH:mm:ss')],
+5 55 ['remote', 'add', 'heroku', url]
+5 57 async.each(tasks, function(task, next){
+5 58 var item = new helpers.TempDir({
+5 59 source: url,
+5 60 path: item,
+5 61 commit: task.commit
+5 63 file.writeFile(dest, args.rmdir, next);
+5 66 ], callback);
+6 6 var config = hexo.config,
+6 7 log = hexo.log;
+6 8 if (!config.re){
+6 12 'Available Types:',
+6 13 ' '+ Object.keys(deployer).join(', '),
+6 20 callback();
+6 22 if (!Array.isArray(config)) config = [config];
+6 23 var generate = function(callback){
+6 24 if (args.g || args.generate){
+6 25 hexo.call('generate', callback);
+6 27 fs.exists(hexo.public_dir, function(exist){
+6 28 if (exist) return callback();
+6 33 async.eachSeries(config, function(item, next){
+6 34 var type = item.type;
+6 35 fs.exists(type, function(exist){
+6 36 if (!exist) return next(null, false);
+6 37 log.d('Start deploying:'+ type);
+6 38 var args = _.toArray(arguments),
+6 39 path = item.path,
+6 40 result = {
+6 41 path: type,
+6 42 content: content
+6 45 result.path = path;
+6 47 log.d('Generating.'+ type);
+7 2 extend = require('./extend'),
+7 3 processor = extend.processor.list(),
+7 4 processorLength = processor.length,
+7 5 sourceDir = hexo.source_dir;
+7 6 module.exports = function(files, callback){
+7 7 if (!Array.isArray(files)) files = [files];
+7 8 if (regex.hiddenFile){"
+
+9 3 util = require('../util'),
+9 6 var cache = {};
+9 7 var getExtname = function(str){
+9 8 return pathFn.extname(str).substring(1);
+9 10 exports.isRenderable = function(path){
+9 11 return hexo.extend.renderer.isRenderable(path);
+9 13 exports.isRenderableSync = function(path){
+9 14 return hexo.extend.renderer.isRenderableSync(path);
+9 16 exports.getOutput = function(path){
+9 17 return hexo.extend.renderer.getOutput(path);
+9 19 var render = exports.render = function(data, options, callback){
+9 20 if (!callback){
+9 21 if (typeof options === 'function'){
+9 22 callback = options;
+9 23 options = {};
+9 25 callback = function(){};
+9 28 async.waterfall([
+9 30 if (data.text!= null) return next(null, data.text);
+9 31 if (!data.path) return next(new Error('No input file or string'));
+9 32 file.readFile(data.path, next);
+9 34 function(text, next){
+9 35 var ext = data.engine || getExtname(data.path);
+9 36 if (ext && renderer.hasOwnProperty(ext)){
+9 37 renderer[ext]({
+9 38 path: data.path,
+9 39 text: text
+9 40 }, options, next);
+9 42 next(null, text);
+9 47 exports.renderSync = function(data, options){
+9 48 var text = '';
+9 49 if (data.text){
+9 50 var text = data.text;
+9 51 } else if (data.path){
+9 52 var text = file.readFileSync(data.path);
+9 53 if (!text) return;
+9 58 if (ext && rendererSync.hasOwnProperty(ext)){
+9 59 return rendererSync[ext]({path: data.path, text: text}, options);
+9 61 return text;
+9 68 if (data.text!= null){
+9 83 exports.render = function(data, options, callback){
+9 84 if (!callback) callback = callback ||!= callback;
+9 85 if (err);
+9 86 if (typeof options === 'function isHiddenFile(data.path){
+9 87 return callback = false;
+9 88 var path = data.source = data.substring = fs.substring(0, path.length - ext.length - ext.length - ext.length + 1);
+9 89 path = pathFn.substring(0, path.length - ext.length - ext.length + 1);
+9 90 var out = pathFn.length = 0;
+9 91 var dest = pathFn.dirname(data.length);
+9 92 path = path.substring = layoutDir;
+9 96 path,
+9 97 pathFn.stat(data, next){
+9 98 .stat(data

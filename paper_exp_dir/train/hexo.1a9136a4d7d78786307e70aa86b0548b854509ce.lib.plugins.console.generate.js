@@ -1,0 +1,19 @@
+var async = require('async'),
+colors = require('colors'),
+fs = require('graceful-fs'),
+path = require('path'),
+_ = require('underscore'),
+extend = require('../../extend'),
+route = require('../../route'),
+util = require('../../util'),
+file = util.file,
+spawn = util.spawn,
+stdout = hexo.process.stdout,
+publicDir = hexo.public_dir,
+sourceDir = hexo.source_dir,
+config = hexo.config,
+maxOpenFile = config && config.max_open_file ? config.max_open_file : 100,
+cache = {};
+
+var process = function(callback){
+var list = route.list(),

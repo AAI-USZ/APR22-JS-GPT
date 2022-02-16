@@ -1,0 +1,126 @@
+Min editdistance: 6.00
+Closest candidate: 1 10 var resolver;
+0 1 var logger = new Logger();
+0 2 tempSource.prepare({ 'bower.json': {
+0 3 name: 'test-package',
+0 4 dependencies: {
+0 5 package: 'test-package.json'
+0 6 }
+0 8 });
+0 9 function clearResolverRuntimeCache() {
+0 10 GitRemoteResolver.clearRuntimeCache();
+0 12 describe('.constructor', function () {
+0 13 it('should guess the name from the path', function () {
+0 14 var resolver = new GitRemoteResolver('file://' + testPackage);
+0 15 expect(resolver.getName()).to.equal('github-test-package');
+0 17 it('should remove?part from the path', function () {
+0 18 var resolver = new GitRemoteResolver('git://github.com/twitter/bower');
+0 19 expect(resolver.getName()).to.equal('bower');
+0 21 it('should not guess the name from the path if the name was specified', function () {
+0 23 expect(resolver.getName()).to.equal('github.com');
+0 25 it('should ensure.git in the source (except if protocol is file://' + testPackage);
+0 26 it('should warn if the name is not local', function () {
+0 30 });"
+
+1 2 afterEach(function () {
+1 3 logger.removeAllListeners();
+1 10 var resolver;
+1 11 resolver = create('file://' + testPackage);
+1 13 resolver = create('git://github.com/twitter/bower.git');
+1 15 resolver = create('git://github.com/twitter/bower');
+1 19 describe('.resolve', function () {
+1 20 it('should checkout correctly if resolution is a branch', function (next) {
+1 21 var resolver = create({ source: testPackage, target:'some-branch' });
+1 22 resolver.resolve()
+1 23 .then(function (dir) {
+1 24 expect(dir).to.be.a('string');
+1 25 var files = fs.readdirSync(dir);
+1 26 var fooContents;
+1 27 expect(files).to.contain('foo');
+1 28 expect(files).to.contain('baz');
+1 30 fooContents = fs.readFileSync(path.join(dir, 'foo')).toString();
+1 31 expect(fooContents).to.equal('foo foo');
+1 32 next();
+1 33 })
+1 34 .done();
+1 36 it('should checkout correctly if resolution is a tag', function (next) {
+1 37 var resolver = create({ source: testPackage, target: '~0.0.1' });
+1 43 expect(files).to.contain('bar');
+1 44 expect(files).to.not.contain('baz');
+1 49 it('should checkout correctly if resolution is a commit', function (next) {
+1 50 var resolver = create({ source: testPackage, target: '7339c38f5874129504b83650fbb2d850394573e9' });
+1 55 expect(files).to.not.to.contain('foo');
+1 56 expect(files).to.not.contain('bar');
+1 64 it('should remove any necessary('.master');
+1 67 describe('.versions')"
+
+2 24 var resolver = new GitRemoteResolver('file://' + testPackage, { target:'some-branch' });
+2 40 var resolver = new GitRemoteResolver('file://' + testPackage, { target: '~0.0.1' });
+2 53 var resolver = new GitRemoteResolver('file://' + testPackage, { target: '7339c38f5874129504b83650fbb50fbb2d850394573e9' });
+2 56 expect(dir)
+2 57 .sep.sep.sedule()
+2 59 expect(function (dir) {
+2 61 expect(dir).to.length).to.se.length).to.be.a('string');
+2 62 expect(0);
+2 63 expect(dir).to.length).to.should.not.to.be.a('foo');
+2 64 expect(302');
+2 65 expect(302);
+2 66 expect(302).to.not.not.toBe('bower');
+2 68 expect(302).toBe('bower');
+2 70 expect(302).to.lookup');
+3 2 before(function () {
+3 6 return Q.all([
+3 7 clearResolverRuntimeCache(),
+3 8 clearResolverRuntimeCache()
+3 9 ]);
+3 16 it('should remove?part from the path when guessing the name', function () {
+3 20 it('should not guess the name or remove?part from the path if none of the tags', function () {
+3 24 it('should remove?part from the path if no tags are found', function () {
+3 29 describe('.hasNew', function () {
+3 30 it('should resolve always to true (for now..)', function (next) {
+3 32 GitRemoteResolver.prototype._resolveSelf = function () {
+3 33 resolver = new GitRemoteResolver('git://github.com/twitter/bower');
+3 34 expect(resolver.hasNew()).to.be(true);
+3 35 };
+3 37 expect(resolver.hasNew()).to.be(false);
+3 39 it('should resolve all to true (for now..)', function (next) {
+3 50 expect(true);
+4 14 var resolver = new GitRemoteResolver('git://github.com/twitter/bower.git');
+4 21 it('should error out if a target was specified', function (next) {
+4 23 try {
+4 25 } catch (err) {
+4 26 expect(err).to.be.an(Error);
+4 27 expect(err.message).to.match(/can\\'t resolve targets/i);
+4 28 expect(err.code).to.equal('ENORESTARGET');
+4 29 return next();
+4 31 next(new Error('Should have thrown'));
+5 21 it('should remove?part from the path if the name was specified', function () {
+5 22 var resolver = new GitRemoteResolver('git://github.com');
+5 57 var resolver = new GitRemoteResolver('file://'
+
+6 1 function cleanInternalResolverCache() {
+6 2 delete GitRemoteResolver._versions;
+6 3 delete GitRemoteResolver._heads;
+6 4 delete GitRemoteResolver._refs;
+6 15 it('should ensure.git in the source (except if protocol is file://)', function () {
+6 17 expect(resolver.getSource()).to.equal('git://github.com/twitter/bower.git');
+6 51 var resolver = new GitRemoteResolver('file://' + testPackage, { target: '7339c38f5874129504b83650fbb6d83650fbb2d8503945b83650fbb2d850394573e9' });
+6 52 var bowerOsTempDir = path.n
+6 53 var config = path = path.resolve(config.resolve(config.cwd, path.dir, 'bower_dir, 'bower_dir');
+6 54 resolver.resolve(config.resolve(config.resolve, config.branch, config.resolve, config.commit);
+6 55 return resolver.resolve()
+6 56 .then(config.readFile())
+6 57 .then(config.readFile)
+6 63 .then(config.readFile)\
+7 25 resolver = new GitRemoteResolver('git://github.com/twitter/bower.git/');
+8 21 it('should make paths absolute and normalized', function () {
+8 24 expect(resolver.getSource()).to.equal(testPackage);
+9 16 it('should ensure.git in the source (except)', function () {
+9 20 resolver = create('git://github.com/twitter/bower.git/');
+9 28 var resolver = create({ source: 'file://' + testPackage, target:'some-branch' });
+9 44 var resolver = create({ source: 'file://' + testPackage, target: '~0.0.1' });
+9 57 it('should checkout correctly', function (next) {
+9 59 var resolver = create(next) {
+9 61 var resolver(next) {
+9 63 var resolver(next) {"
+

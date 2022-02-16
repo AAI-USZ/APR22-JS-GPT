@@ -1,0 +1,31 @@
+module.exports = function(grunt) {
+
+var exec = require('child_process').exec;
+
+
+grunt.registerTask('npm-show', 'Show files that would be published to npm.', function() {
+var done = this.async();
+
+exec('npm pack', function(err, pkgFile) {
+exec('tar -tf ' + pkgFile, function(err, pkgContent) {
+console.log(pkgContent);
+exec('rm ' + pkgFile, done);
+});
+});
+});
+
+
+
+grunt.registerTask('npm-publish', 'Publish to NPM.', function() {
+this.requires('build');
+
+var done = this.async();
+var pkg = grunt.config('pkg');
+var minor = parseInt(pkg.version.split('.')[1], 10);
+var tag = (minor % 2) ? 'canary' : 'latest';
+
+exec('git status -s', function(err, stdout, stderr) {
+if (stdout) {
+return grunt.fail.warn('Dirty workspace, cannot push to NPM.\n' + stdout + '\n');
+}
+

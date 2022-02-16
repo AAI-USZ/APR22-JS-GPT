@@ -1,0 +1,71 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 function meta(options) {
+0 1 function meta(options) {
+0 2 return tag(\'meta\', options);
+0 3 }
+0 4 before(() => {
+0 5 hexo.config.permalink = \':title\';
+0 6 return hexo.init();
+0 7 });
+0 8 it(\'default\', () => {
+0 9 Post.insert({
+0 10 source: \'foo.md\',
+0 11 slug: \'bar\'
+0 12 }).then(post => post.setTags([\'optimize\', \'web\'])
+0 13 .thenReturn(Post.findById(post._id))).then(post => {
+0 14 openGraph.call({
+0 15 page: post,
+0 16 config: hexo.config,
+0 17 is_post: isPost
+0 18 }).should.eql([
+0 19 meta({name: \'keywords\', content: \'optimize,web\'}),
+0 20 meta({property: \'og:type\', content: \'website\'}),
+0 21 meta({property: \'og:title\', content: hexo.config.title}),
+0 22 meta({property: \'og:url\'}),
+0 23 meta({property: \'og:site_name\', content: hexo.config.title}),
+0 24 meta({property: \'og:locale\', content: \'en'}),
+0 25 meta({property: \'og:updated_time\', content: post.updated.toISOString()}),
+0 26 meta({name: \'twitter:card\', content:\'summary\'})
+0 27 ].join(\'\
+0 28 \'));
+0 29 return Post.removeById(post._id);
+0 31 });'
+
+1 24 meta({property: \'og:locale\', content: \'en\'}),
+1 25 meta({property: \'article:published_time\', content: post.date.toISOString()}),
+1 26 meta({property: \'article:modified_time\', content: post.updated.toISOString()}),
+1 27 meta({property: \'article:author\', content: hexo.config.author}),
+1 32 meta({property: \'og:description\', content: hexo.config.description})
+2 12 }, options).then(post => post.setTags([\'optimize\', \'web\'])
+3 30 meta({property: \'og:description\', content: \'description\'}),
+3 31 meta({name: \'twitter:card\', content:'summary\'})
+4 27 meta({property: \'article:tag\', content: \'optimize,web\'}),
+4 28 meta({property: \'article:tag\', content: \'web\'}),
+5 12 }, function(post) {
+5 13 post.title.should.eql([
+5 18 meta({property: \'og:description\', content: post.description}),
+5 19 meta({name: \'twitter:card\', content:\'summary\'}),
+5 20 meta({name: \'twitter:title\', content: hexo.config.title}),
+5 21 meta({name: \'twitter:description\', content: \'photo\'})
+6 27 meta({property: \'article:tag\', content: \'optimize,web'}),
+7 26 meta({property: \'og:comments\', content: true}),
+7 27 meta({property: \'og:X-Foo\', content: \'bar\'}),
+7 29 meta({property: \'og:layout\', content: \'photo\'}),
+7 33 meta({property: \'og:description\'}),
+8 32 it(\'title - page\', () => {
+8 33 const ctx = {
+8 34 page: {title: \'Hello world\'},
+8 37 };
+8 38 const result = openGraph.call(ctx);
+8 39 result.should.eql([
+8 40 meta({name: \'description\'}),
+8 42 meta({property: \'og:title\', content: ctx.page.title}),
+8 45 meta({property: \'og:description\'})
+8 50 it(\'type - options\', () => {
+8 51 const result = openGraph.call({
+8 52 page: {},
+8 55 }, {type: \'photo\'});
+8 58 meta({property: \'og:type\', content: \'photo\'}),
+8 59 meta({property: \'og:type
+8 61 ].join(\'
+

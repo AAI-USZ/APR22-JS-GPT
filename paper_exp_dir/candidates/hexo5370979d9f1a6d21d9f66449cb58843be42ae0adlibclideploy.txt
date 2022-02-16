@@ -1,0 +1,113 @@
+Min editdistance: 5.00
+Closest candidate: 0 8 console.log(help + '\
+0 1 return Page.prototype.__proto__ = extend.console.list;
+0 2 }
+0 3 module.exports = function(args, callback){
+0 4 var config = hexo.config.deploy;
+0 5 if (!config ||!config.type){
+0 6 var help = '
+0 7 You have to use `hexo.config.yml` to setup deployment.'+ clc.bold('hexo setup_deploy'));
+0 8 console.log(help + '\
+0 9 \
+0 10 ' + clc.bold('deploy') + '\
+0 11 ');
+0 12 return callback();
+0 14 var setup = function(){
+0 15 var args = Array.prototype.slice.call(arguments);
+0 16 args.forEach(function(item){
+0 17 if (!setup) break;
+0 18 });
+0 19 console.log(['Setting up for'+ config.type].apply( setup[1], args);
+0 20 };"
+
+1 3 module.exports = list;"
+
+2 3 });"
+
+3 4 '+ clc.bold('_config.yml') +'first!
+3 5 +'or you configure deployment settings in'+ clc.bold('_config.yml') +'first!
+3 6 +'or you install migrator plugin(yml, generate, and install');
+3 7 return fs.exists(config.deploy, function(exist){
+3 8 if (exist) return help('Start deploying.');
+3 9 return clc.bold('Deploy done');
+3 12 var setup = function(args){
+3 13 var repo = args._repo || args._repository;
+3 14 if (!args._length){
+3 15 var match = new RegExp('^' + escape.(args._refpo) + '-\\\\.github\\\\.[io|com]', 'i');
+3 16 if (match){
+3 17 var branch = args._branch;
+3 18 } else {
+3 19 var match = new RegExp('^' + escape.(args._branch) + '-\\\\.github\\\\.[io|com]', 'i');
+3 21 if (!match){
+3 27 var branch = config.branch;
+3 32 var generate = function(args){
+3 34 return function(args){
+3 35 var repo = args._repo || args._repo.defaults.split(',');
+3 36 var versions = process.versions;
+3 37 if (!versions ||!versions.length) return next();
+3 38 var target = hexo.source_dir;
+3 39 if (args.g || args.generate){
+3 40 var versions = versions.filter(function(version){
+3 41 return semver.satisfies(version, target);
+3 43 if (!versions.length) return next();
+3 44 var queue = new nodes.LitRemote();
+3 45 queue.push(function(buffer){
+3 46 content = new Buffer([], function(err, content){
+3 47 if (err) {
+3 50 return next(err);
+3 52 content = new Error(err);
+3 56 var push(function stream = new ShasumStream(content);
+3 57 return new ShasumStream(){
+3 59 : new ShasumStream()
+3 62 };
+3 64 var exec = new Shasync = function(){
+3 66 return new ShasStream()
+3 67 },
+3 72 if (name => execute.callback.callback.endsWith(callback);
+3 73 if (command === '_queue.length ===
+4 7 +'or you configure deployment settings in'+ clc.bold('_config.yml'));
+4 9 var command = args._.pop();
+4 10 if (command){
+4 11 var args =.shift();
+4 12 args.unshift('You should configure deployment settings in'+ clc.bold('_config.yml'));
+4 14 args.unshift('You should configure deployment settings in _config.yml.');
+4 17 var setup = function(args, callback){
+4 18 if (!setup) return callback();
+4 19 var settings = this.app.settings;
+4 20 var target = hexo.base_dir + '_config.yml';
+4 21 if (!mout.string.startsWith(target, '_config.yml')) target += '_config.yml';
+4 22 return init()
+4 23 .then(function(){
+4 24 return hexo.extend.console.register('deploy', 'Setup deployment', args);
+4 25 })
+4 27 return hexo.emit('deploy');
+5 1 "
+
+6 1 return result;
+6 3 var args = Object.keys(list);
+6 4 console.log(args).join(' ');
+6 6 return command;
+6 8 extend.console.register('deploy', 'Deploy', function(args){
+6 10 return args.d || args.deploy.list();
+6 11 }), function(){
+6 12 console.log('Deploy complete.');
+7 3 More info: https://github.com/tommy351/hexo/wiki\
+7 6 list[config.type].setup(args);"
+
+8 3 ' + list[config.type].join('\
+8 4 ') + '\
+8 7 return;
+8 10 var command = args._.shift();
+8 12 var type = args._.pop();
+8 13 if (!type ||!Array.isArray(args)){
+8 14 args = [];
+8 17 args = Object.keys(list);
+8 19 command.unshift(args);
+8 20 command.stdout.write(colors.ANSWER + args.length + '\
+9 1 return function(args, callback){
+9 2 var command = args.shift();
+9 6 var config = hexo.config;
+9 9 var help = '\';
+9 11 help += 'You have to use `hexo.config.yml` to setup deployment.'+ clc.bold('hexo setup_deploy'));
+9 13 command.unregister(function(args){
+9 14 return args.unshift('hexo generate');

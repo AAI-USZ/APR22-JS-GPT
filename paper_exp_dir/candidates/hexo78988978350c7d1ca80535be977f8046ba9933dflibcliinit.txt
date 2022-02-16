@@ -1,0 +1,246 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 extend = require('../extend'),
+0 1 clc = require('cli-color'),
+0 2 moment = require('moment'),
+0 3 extend = require('../extend'),
+0 4 util = require('../util'),
+0 5 file = util.file,
+0 6 spawn = util.spawn;
+0 7 extend.console.register('init', 'Initialize', function(args){
+0 8 var target = process.cwd();
+0 9 if (args[0]) target = path.resolve(target, args[0]);"
+
+1 1 _ = require('lodash'),
+1 2 join = path.join,
+1 3 EOL = require('os').EOL,
+1 4 EOLre = new RegExp(EOL, 'g');
+1 5 if (!fs.exists ||!fs.existsSync){
+1 6 fs.exists = path.exists;
+1 7 fs.existsSync = path.existsSync;
+1 8 }
+1 9 var sep = exports.sep = path.sep;
+1 10 var delimiter = exports.delimiter = path.delimiter;
+1 11 var mkdirp = exports.mkdirp = function(destination, callback){
+1 12 var parent = path.dirname(destination);
+1 13 fs.exists(parent, function(exist){
+1 14 if (exist){
+1 15 fs.mkdir(destination, callback);
+1 16 } else {
+1 17 mkdirp(parent, function(){
+1 19 });
+1 22 };
+1 23 var write = exports.write = function(destination, content, callback){
+1 27 fs.writeFile(destination, content, callback);
+1 35 var copy = exports.copy = function(source, destination, callback){
+1 37 async.series([
+1 38 function(next){
+1 40 if (exist) next();
+1 41 else mkdir(parent, next);
+1 44 ], function(){
+1 45 var rs = fs.createReadStream(source),
+1 46 ws = fs.createWriteStream(destination);
+1 47 rs.pipe(ws)
+1 48 .on('error', function(err){
+1 49 if (err) throw err;
+1 51 ws.on('close', callback)
+1 57 var dir = exports.dir = function(source, callback, parent){
+1 58 fs.exists(source, function(exist){
+1 60 fs.readdir(source, function(err, files){
+1 62 var result = [];
+1 63 async.each(files, function(item, next){
+1 64 fs.stat(source + sep + item, function(err, stats){
+1 66 if (stats.isDirectory()){
+1 67 dir(source + sep + item, function(children){
+1 68 result = result.concat(children);
+1 69 next();
+1 70 }, (parent? parent + sep : '') + item);
+1 72 result.push((parent? parent + sep : '') + item);
+1 76 }, function(){
+1 77 callback(result);
+1 81 return [];
+1 85 var textProcess = function(obj){
+1 86 var array = obj.toString = function(){
+1 87 for (item.forEach(function(item){
+1 88 return item.toString = obj.toString())
+1 89 return [item]
+1 90 },'
+
+2 1 _ = require('underscore'),
+2 2 extend = require('./extend'),
+2 3 processor = extend.processor.list(),
+2 4 util = require('./util'),
+2 6 sourceDir = hexo.source_dir;
+2 7 module.exports = function(files, callback){
+2 8 if (!_.isArray(files)) files = [files];
+2 9 if (process.versions.indexOf(files) === -1) return callback();"
+
+3 1 colors = require('colors'),
+3 3 util = require('../../util'),
+3 5 yfm = util.yfm;
+3 6 module.exports = function(args, callback){
+3 7 var target = hexo.base_dir,
+3 8 coreDir = hexo.core_dir,
+3 9 log = hexo.log;
+3 10 if (!args._.length){
+3 11 var help = [
+3 12 'You should configure deployment settings in _config.yml first!',
+3 13 '',
+3 14 'Example:',
+3 15 '  deploy:',
+3 16 '   type: rsync',
+3 17 '   host: <host>',
+3 18 '    user: <user>',
+3 19 '   root: <root>',
+3 20 '   port: [port] # Default is 22',
+3 21 '   delete: [true|false] # Default is true',
+3 22 '   verbose: [true|false] # Default is true',
+3 23 '   ignore_errors: [false|false] # Default is true',
+3 25 '   ignore_errors: [true|false] # Default is false',
+3 27 '   ignore_errors: [true|false] # Default is true',
+3 28 '    verbose:      '',
+3 30 '    ignore_errors: [true|false] # Default is true',
+3 31 '    verbose:    '',
+3 32 '       'for more help',
+3 33 '      'http://zespia.tw/hexo/docs/deploy.html',
+3 34 '        'http://zespia.tw/hexo/docs/deploy.html',
+3 35 '        'http://zespia.tw/hexo/docs/deploy.html'
+3 36 ].join('\
+3 37 ') + '\
+3 38 ');
+3 40 var deployDir = hexo.base_dir + '.deploy/',
+3 41 publicDir = hexo.public_dir;
+3 42 if (!config.hasOwnProperty('delete')) config.delete = true;
+3 43 if (!config.port) config.port = 22;
+3 44 var args = [
+3 45 'name:',
+3 46 '     host: <host>',
+3 48 '    root: <root>',
+3 49 '    port: [port] # Default is 22',
+3 50 '    delete: [true|false] # Default is true',
+3 51 '    verbose:     '',
+3 52 '     ignore_errors: [false] # Default is true',
+3 53 '      verbose:     ',
+3 54 '         'for more help',
+3 55 '         'http://zespia.tw/hexo/hexo/docs/deploy.html'.underline\',
+3 56 '                   'http://zespia.tw/hexo.tw/hexo/docs/proxhr.js': 3,'
+
+4 9 if (args[0]) target = path.resolve(target, args[0]);
+4 10 async.auto({
+4 11 theme: function(next){
+4 12 file.mkdir(target + '/themes', function(){
+4 13 spawn({
+4 14 command: 'git',
+4 15 args: ['clone', 'git://github.com/tommy351/hexo-theme-light.git', target + '/themes/light'],
+4 16 exit: function(code){
+4 17 if (code === 0) next();
+4 22 console.log('Hexo is setup at %s', clc.bold(target));
+4 23 });"
+
+5 3 coreDir = hexo.core_dir;
+5 4 module.exports = function(callback){
+5 5 if (!Array.isArray(callback)) callback = [callback];
+5 6 hexo.call(function(req, res, next){
+5 7 res.headers = {};
+5 8 if (err) return next(err);
+5 9 process.nextTick(function(){
+5 10 next(new Error('cannot find appropriate module:'+ path.basename(req.url)));
+5 13 file.(coreDir, callback);
+5 14 };"
+
+6 4 processorLength = processor.length,
+6 6 var getProcessor = function(path){
+6 7 var tasks = [];
+6 8 processor.forEach(function(item){
+6 9 var rule = item.rule,
+6 10 match = false,
+6 11 params;
+6 12 if (_.isRegExp(rule)){
+6 13 if (rule.test(item)){
+6 14 params = _.stringify(_.string(item), rule);
+6 15 match = true;
+6 18 if (rule === ''){
+6 21 var arr = rule.match(/:([^\\/]+)/g),
+6 22 regex = new RegExp(rule);
+6 23 if (regex.test(item)){
+6 24 var exec = item.match(regex);
+6 25 if (exec) arr.push(regex);
+6 28 return tasks;
+6 31 if (!Array.isArray(files)) files = [files];
+6 32 hexo.emit('processBefore');
+6 33 async.forEach(files, function(item, next){
+6 34 if (_.isObject(item)){
+6 35 var path = item.path,
+6 36 type = item.type;
+6 38 var path = item,
+6 39 type = 'update';
+6 41 var tasks = getProcessor(path);
+6 42 if (!tasks.length) return next();
+6 43 var source = sourceDir + path;
+6 44 var obj = {
+6 45 source: source,
+6 46 path: path,
+6 47 params: task.params,
+6 48 type: type,
+6 49 read: function(options, callback){
+6 50 if (_.isFunction(options)){
+6 51 callback = options;
+6 52 options = {};
+6 56 var sourceDir = sourceDir + path;
+6 67 tasks.push({
+6 68 fn: item,
+6 69 rule: item.rule,
+6 71 type: type
+6 78 }, callback);
+7 6 module.exports = function(data, callback){
+7 7 var Page = hexo.model('Page'),
+7 8 doc = Page.findOne({source: data.path}),
+7 9 getOutput = hexo.render.getOutput;
+7 10 if (data.type ==='skip' && doc){
+7 11 return callback();
+7 13 doc.path = data.path;
+7 14 doc.source = path;
+7 15 doc.raw = output;
+7 16 if (data.type === 'delete'){
+7 17 if (doc){
+7 18 hexo.route.remove(doc.path);
+7 19 doc.remove();
+7 23 var src = path.join(hexo.source_dir, data.path);
+7 24 return getOutput(data.path);
+7 27 Page.prototype.__proto__ = hexo.extend.console.check;
+7 28 Page.prototype.check = function(data, callback){
+7 29 if (!data.date) throw new Error('date is required');
+7 30 var result = [
+7 31 '---',
+7 32 'layout: check',
+7 34 '123'
+7 35 ];
+7 38  Page.insert({source: data.path, target: '_blank'}, next);
+7 39 },
+7 41 var page = Page.findOne({source: data.path});
+7 42 if (!page.length) return next();
+7 43 page.date.shift(data.date.format('YYYY-MM-DD') + '-YYYY');
+7 44 file.write(page.source, result, next);
+7 47 var data = yfm(data.source),
+7 48 path = data.dest.substring(0, path.length - extname(path).length),
+7 49 doc = Page.findOne({source: data.path});
+7 50 if (data.length){
+7 51 doc.data.next(function(data){
+7 52 doc.data = data.data.data;
+7 53 delete data.data;
+7 57 var result;
+7 59 Page.insert({source: data.path, target: '_blank'}, function(){
+7 66 page.source = data.source;
+7 69 doc.data = data.data;
+7 80 ], callback);
+8 2 file = util.file;
+8 4 if (!hexo.init) return callback();
+8 5 var log = hexo.log;
+8 6 async.parallel([
+8 8 var cachePath = hexo.base_dir + 'db.json';
+8 9 fs.exists(cachePath, function(exist){
+8 10 if (!exist) return next();"
+
+9 9 if (args._[0]) target = path.resolve(target, args._[0]);
+9 10 console.log('Initializing.');
+9 11 async.auto({"
+

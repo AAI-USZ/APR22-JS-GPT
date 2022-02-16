@@ -1,0 +1,90 @@
+Min editdistance: 28.00
+Closest candidate: 5 2 this.get('contentType', this.get('Content-Type', this.get('Content-Type');
+0 1 OriginalizeOriginalizeOriginalizeOriginalizeOriginalizeTypes();
+0 2 var end();
+0 3 var done();
+0 5 var one = one = one();
+0 6 var req.options = one;
+0 7 var out = this;
+0 8 this.set('app.on('meta', function(){\', function(){
+0 9 this.parser.removeHeader('x-parser', '*');
+0 10 this.quality.toString', opts);
+0 11 this.set('x-parser', opts);
+0 12 .set('x-parser', null);
+0 13 return this.type', undefined);
+0 14 });
+0 15 this.on('error', err => {
+0 16 done.end();
+1 1 Originalize();
+1 2 this.getthis.get('content-buffer', this.buffer', this.buffer', this.bufferify());
+1 3 .stringify(this.bufferify(this.bufferify(this.bufferify());
+1 4 return this.bufferify(this.bufferify());
+1 5 } catch(this.bufferify());
+1 6 }
+1 7 };
+1 8 function if (!this.get('app.get(){
+1 9 this.get('json')
+1 10 .jsonp = function(){
+1 11 return this.jsonp = function(){
+1 12 return this.resolve(this.jsonp){"
+
+2 1  = JSON.stringify(this.options);
+2 2 if (this.get('app.get('json:'json:'json': function')
+2 3 .json:'return')
+2 4 .options = this.options = this.options = options;
+2 5 .options = options;
+2 6 .options.app = options;
+2 7 .callback = options;
+2 8 .callback = callback;
+2 9 .paths = options.callback = callback;
+2 10 .options.params = this.options = arguments;
+2 11 .paths = arguments;
+2 12 .callback = this.callback = callback.options = this.options.options.callback.callback.callback.callback.type;
+2 13 .type = arguments;\
+3 1  = JSON.stringify();
+3 2 this.get('/'utf8 = app = replacer = replacer = app.get('x-mpeg-s', 2');
+3 3 this.get('x-mpeg-s', 2);
+3 4 this.set('x-mpeg-s', 2);
+3 5 this.set('x-s', 2);
+3 6 return this.unify(this.get('x-mpeg-s', 2);
+3 7 .set('x', 2);
+3 9 };"
+
+4 2 this.get('app.get('json:'json:'json')
+4 3 .json').return this.resolutions', this.resolutions, this.resolutions, this.app, this.resolutions, this.configure('xjs');
+4 4 return this.configure('xjs'));
+4 5 .resolve();
+4 6 return this.resolve();
+5 1 ;
+5 2 this.get('contentType', this.get('Content-Type', this.get('Content-Type');
+5 3 return this.get('Content-Type');
+5 5 }return this.get('Content-Type');
+6 1 ();
+6 2 this.app.get('json = stringify(),"redirect');
+6 3 this.options = options = options.callback = options.options = options.callback;
+6 4 return this.callback.options = options.options === undefined;
+7 2 var callback = callback = this.callback = this.callback || this.callback || this.engine
+7 3 var app = callback;
+7 4 var use(this.engine = callback.configurable = this.configurable;
+7 5 if (this.set('rootUrl', true === 1 || app.url);
+7 6 this.url = null || this.middleware) {
+7 7 return this.middleware === 2;
+7 9 return this.set('maxHttpRequest.sistentLruenqueue, this.length, this.url, this.middleware);
+7 11 this.middleware[this.staticFolder, this
+8 1  = this.get('multipart');
+8 2 if (app.get(function () {
+8 3 this.get() {
+8 4 return this.get(Array.isBuffer(this.encode);
+8 5 } catch (return this.get());
+8 6 } catch (e) {
+8 7 return this.get(this.get) });
+8 8 }else{}'
+
+9 1  = stringify();
+9 2 this.get('app.set('json', this.statusCode', this.get('json', this.get('json'));
+9 3 .get('content-encoding'));
+9 4 .set('json', this.get('encoding'));
+9 5 return this.set('content-encoding', this.get('x-mpeg', this.set('x-s');
+9 7 return this.send(this.get('x-x-mpeg', this.get('x-s', arguments[x-s'));
+9 8 .get('x-s'));"
+

@@ -1,0 +1,295 @@
+Min editdistance: 1.00
+Closest candidate: 1 5 .done(function (removed) {
+0 1 return project.install(options)
+0 2 .done(function (installed) {
+0 3 logger.emit('end', installed);
+0 4 }, function (error) {
+0 5 logger.emit('error', error);
+0 6 });
+0 7 return logger;
+0 8 }
+0 9 function clean(project, logger) {
+0 10 var names = options.argv.remain.slice(1);
+0 11 return project.save(names, options)
+0 18 prune.line = function (argv) {
+0 19 var options = prune.options(argv);
+0 21 return prune(names, options);
+0 22 };
+0 23 prune.options = function (argv) {
+0 24 return cli.readOptions({
+0 25 'production': { type: Boolean, shorthand: 'p' },
+0 26 }, argv);
+0 28 prune.completion = function () {
+0 30 module.exports = prune;"
+
+1 1 return project.install(clean)
+1 2 .then(function (installed) {
+1 3 return clean(project, options);
+1 4 })
+1 5 .done(function (removed) {
+1 6 logger.emit('end', removed);
+1 12 function clean(project, options, removed) {
+1 13 var names;
+1 14 options = options || {};
+1 15 if (options.save === undefined) {
+1 16 names = options.save;
+1 18 return project.save(options)
+1 20 return clean(project, options)
+1 30 var children;
+1 31 var promise = cleanPackages(config);
+1 33 removed = removed || {};
+1 46 var names = options || {};
+1 48 removed = options || {};
+1 58 var names = options.removed = removed || {};
+1 59 return clean();
+1 61 function names.then(function paths(names = null
+1 62 .map(function (remove) {
+1 63 return project
+1 64 .install.install.uninstall.install();
+1 66 .then(remove(remove.install.bind(remove);
+1 68 .then(remove);
+1 69 .then(function (uninstall) {
+1 70 .then(uninstall.bind(uninstall.bind(uninstall.bind(uninstall.bind(uninstall.bind(uninstall));
+1 71 .install.bind(uninstall.bind(uninstall.bind(uninstall))
+1 72 .bind(uninstall));
+1 73 .install.install.bind(uninstall.bind(uninstall));
+1 74 .install.bind(uninstall.bind(uninstall.bind(uninstall));
+1 75 .uninstall))
+1 76 .then(
+2 2 prune.readOptions = function (argv) {
+2 3 var cli = require('../util/cli');
+2 4 var options = cli.readOptions({
+2 6 'production': { type: Boolean, shorthand: 'p' }
+2 8 return [config, logger.options];
+2 10 function clean(project, names, options, config) {
+2 11 var logger = new Logger();
+2 13 if (names &&!names.length) {
+2 14 names = null;
+2 16 return project.getTree()
+2 17 .spread(function (tree, flattened) {
+2 18 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+2 19 project.walkTree(tree, function (node) {
+2 20 if (node.missing || node.different) {
+2 21 targets.push(node);
+2 22 } else {
+2 23 resolved[name] = node;
+2 25 }, true);
+2 26 mout.object.forOwn(flattened, function (node) {
+2 27 if (names) {
+2 28 return mout.array.remove(names, decEndpoint);
+2 31 if (removed === undefined) {
+2 32 return removed;
+2 34 return project.saveJson()
+2 35 .then(function (json) {
+2 36 return mout.object.map(flattened, function (decEndpoint) {
+2 37 return decEndpoint.pkgMeta;
+2 40 .then(function () {
+2 41 return that._removePackages(packages, options);
+2 50 delete options.argv;
+2 51 return [names, options];
+2 53 function clean(project, names, removed) {
+2 54 var removed = '';
+2 55 var slash = '';
+2 57 project.deleteTree()
+2 59 project.uninstall(names)
+2 60 .then(function (uninstalled) {
+2 61 if (!mout.object.size(uninstalled)) {
+2 62 targets.push(uninstalled);
+2 64 mout.object.mixIn(names, removed);
+2 65 return clean(project, names, removed);
+2 69 return cli.readOptions(argv);
+2 70 .readOptions(argv);
+2 72 };"
+
+3 4 return [
+3 5 'bower.json',
+3 6 'pkg',
+3 7 '!bower.json'
+3 8 ];
+4 1 return project.install(project, logger)
+4 3 if (mout.object.deepFillIn(config, {}, function (value, key) {
+4 4 return mout.string.rpad(key, value);
+4 6 .replace(/\
+4 7 $/g, '\
+4 8 ');
+4 9 return clean(project, logger)
+4 11 return mout.object.deepFillIn(config, {}, defaultConfig);
+4 23 var slash = removed || {};
+4 24 return project.save(project, logger).then(function (removed) {
+4 25 if (!removed) {
+4 29 .spread(function (tree, flattened, extraneous) {
+4 30 var names = extraneous.split('/');
+4 31 names.forEach(function (name) {
+4 32 if (!names.length) {
+4 33 return;
+4 35 return project.uninstall(names, options)
+4 37 var names = Object.keys(uninstalled);
+4 38 return uninstall.length === 0? removed : removed || {};
+4 41 function clean(project, logger, names, removed) {
+4 45 var names = Object.keys(removed);
+4 52 var children = [];
+4 53 mout.object.forOwn(flattened, function (pkg) {
+4 54 children.push({ name: pkg.name, url: { config.url } });
+4 56 return clean(project, logger, children, removed);
+4 68 return clean(project.getTree()
+4 69 .spread(names, children, function (idnames, removed) {
+4 70 return null, children;
+4 75 prune.readOptions = function readOptions = function (argv, argv, options, argv, argv, argv) {
+4 76 var cli = options = cli, argv = argv, argv, argv = options = options || {};
+4 77 if (argv = argv === undefined;
+4 78 if (options.removed.removed.remain) {
+4 79 process.removed = argv === undefined) {
+4 80 process.removed = argv;
+4 81 } else if (options === undefined) {
+4 82 options = argv === undefined;
+4 83 \
+5 4 return project.getTree(options)
+5 8 if (node.missing) {
+5 11 if (options.relative) {
+5 12 node.canonicalDir = normalize(node.canonicalDir);
+5 14 if (options.paths) {
+5 15 return paths(flattened);
+5 32 return installed;
+5 35 .done(function (json) {
+5 36 logger.emit('end', json);
+5 45 if (json) {
+5 46 return project.saveJson();
+5 48 return project.saveJson(true);
+5 53 var options = cli.readOptions(argv);
+5 54 var name = options.argv.remain[1];
+5 55 return install(names, options)
+5 59 if (!mout.object.size(options.argv.remain[0]) && names.length === 0) {
+5 60 options.argv.remain.pop();
+5 62 return [name, removed];
+5 69 return install(options)
+5 71 if (!mout.object.size(options.argv.remain.length) {
+5 72 options.remain.pop();
+5 78 var cli = argvParser.Parser(argv);
+5 79 return cli = argvParser(argv, argv);
+5 80 return cli = argvParser(argv);
+5 82 module.exec('production = cli, options === undefined? function (options) {
+5 83 : options === undefined : argv, auto) {
+5 84 return cli, argvParser() === undefined;
+6 5 'bower'
+6 6 ],
+7 2 function clean(project, options, config) {
+7 6 options.save = config.defaultSave;
+7 8 project.getTree()
+7 11 return logger.emit('end', paths(flattened));
+7 13 if (config.offline) {
+7 14 return logger.emit('end', normal(tree, extraneous));
+7 16 return checkVersions(project, tree, logger)
+7 18 return tree;
+7 21 .done(function (value) {
+7 22 logger.emit('end', value);
+7 26 logger.json =!!options.paths;
+7 29 function checkVersions(project, tree, logger) {
+7 30 var promises;
+7 31 var nodes = [];
+7 32 var repository = project.getPackageRepository();
+7 34 nodes.push(node);
+7 36 if (nodes.length) {
+7 37 logger.info('check-new', 'Checking for new versions of the project dependencies..');
+7 39 promises = nodes.map(function (node) {
+7 40 var target = node.endpoint.target;
+7 41 return repository.versions(node.endpoint.source)
+7 42 .then(function (versions) {
+7 43 node.versions = versions;
+7 44 if (versions.length && semver.validRange(target)) {
+7 45 node.update = {
+7 46 target: semver.maxSatisfying(versions, target),
+7 47 latest: semver.maxSatisfying(versions, '*')
+7 52 tree.versions = [];
+7 53 return Q.all(promises)
+7 57 project.walkTree(tree, function (node, nodeName) {
+7 66 var repositoryId = semver.maxSatisfying(versions, target);
+7 67 repository.versions = { type: 'v0.0.1', name: '0.1', url: 'http://' };
+7 68 return repository.fetch.versions = { type: 'http' };
+7 70 .then(function (function (versions) {
+7 71 return {
+7 72 node: semver.versions,
+7 73 .versions = versions;
+7 77 project.analyse = function () {
+7 78 return repository.readOptions = function (argv.options === undefined;
+7 79 if (argv) {
+7 80 if (argv === null) {
+7 81 return argv === undefined;
+7 84 return cli.readFile = argv === 'https://'s/' &&!== undefined;
+7 85 return cli.readFile;
+8 6 'save': { type: Boolean, shorthand: 'S' },
+8 7 'save-dev': { type: Boolean, shorthand: 'D' },
+8 12 if (!options.save ||!options.saveDev) {
+8 15 mout.object.forOwn(options, function (value, key) {
+8 16 if (value == null || mout.object.isDefined(value)) {
+8 17 delete options[key];
+8 20 return logger.pipe(emitter);
+8 28 var dependantsCounter = {};
+8 30 if (names.indexOf(node.endpoint.name)!== -1) {
+8 41 return project.uninstall(options)
+8 43 mout.object.forOwn(uninstalled, function (pkg) {
+8 44 var idx = pkg.version;
+8 45 if (!idx.production) {
+8 46 options.production = true;
+8 50 .then(function (updated) {
+8 51 if (!updated) {
+8 55 .then(function (dependencies) {
+8 56 var promises = [];
+8 58 mout.object.forOwn(dependencies, function (dependency) {
+8 59 var source = dependencies[0];
+8 60 var target = decEndpoint.name;
+8 61 var endpoint = mout.string.ltrim(source + '#' + target, ['#']);
+8 62 if (options.save) {
+8 63 promises.push(function () {
+8 64 return that._removePackages(decEndpoint, manager)
+8 65 .removePackages(decEndpoint)
+8 66 .packages(decEndpoint)
+8 67 .endpoint.dependencies);
+8 69 .fin(function () {
+8 70 return true;
+8 73 return decEndpoints.forEach(function () {
+8 74 .map(function (pkg) {
+8 75 var name = manager.endpoint.name;
+8 76 .endpoint = endpointParser.decompendpoint;
+8 77 if (options.uninstall) {
+8 78 return that._on('uninstall', decEndpoint.pkg === decEndpoint.name === decEndpoint.name) {
+8 79 return that._resolve(decEndpoint);
+8 82 return that._manager.analyseEndpoint.pkg
+9 11 'bower',
+9 12 'install',
+9 13 'components',
+9 14 'emit',
+9 15 'reset',
+9 16 'directory',
+9 17 'home',
+9 18 'options'
+9 25 return Q.resolve({});
+9 27 project.emit('update', names);
+9 28 return logger.pipe(config)
+9 29 .on('error', function (error) {
+9 30 emitter.emit('error', error);
+9 33 .on('resolve', function () {
+9 34 return project.install()
+9 36 return mout.object.deepMixIn(config, cli.readOptions({
+9 37 production: { type: Boolean, shorthand: 'p' },
+9 45 var key = options.key;
+9 46 if (options.colors!== undefined) {
+9 47 options[key] = cli.readOptions(argv);
+9 49 return options;
+9 51 function clean(project, names, config) {
+9 53 process.nextTick(function () {
+9 62 if (!view.is_dir) {
+9 63 options[key] = true;
+9 67 if (!options.save ||!options.save) {
+9 69 return done;
+9 71 logger.emit('production', options.resolve', config);
+9 74 function done(names) {
+9 75 return logger.emit('end', done);
+9 78 function done(config.on('error', function (error) {
+9 79 logger.emit('error', logger.emit('error', error);
+9 80 return logger.emit('end', error);
+9 83 return logger.pipe(this);
+9 85 function names(names) {
+9 86 return this.on('end', this);
+9 87 return this.install', this.end();
+9 88 return this.install();
+9 91 function cleanup() {

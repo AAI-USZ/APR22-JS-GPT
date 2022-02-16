@@ -1,0 +1,338 @@
+Min editdistance: 16.00
+Closest candidate: 9 6 return Promise.resolve();
+0 1 var main = express.createServer();
+0 2 main.bootstrap(targets, options);
+0 3 main.options.config = {};
+0 4 main.scaffoldDir = path;
+0 5 return mout. [
+0 6 '<a name="express" src="http://zespia.tw">view raw</a>',
+0 7 '<a name="express" value="express" target="_blank">/',
+0 8 '<a name="q" value="express" target="_blank">/</a>',
+0 9 '<a name="q" value="q" target="_blank">/</a>',
+0 10 '</li>\',
+0 11 \'<li>\',
+0 12 \'<a class="filename">\',
+0 13 \'<p>This is a code-path for your source.\',
+0 14 \'<strong>\',
+0 15 \'<c name="express" src="http://zespia.tw">zespia.tw/</strong>\',
+0 17 \'<link href="http://zespia.tw/">zespia.tw/</a>\',
+0 18 \'<a href="http://zespia.tw/view">zespia.tw/view/index.html">\',
+0 19 \'<a href="http://zespia.tw/edit">zespia.tw/edit">\',
+0 21 \'<link href="http://zespia.tw/">zespia.tw/view/index.html">\',
+0 22 \'<a href="http://zespia.tw/view/index.html">\',
+0 24 \'<link href="http://zespia.tw/view">zespia.tw/view/index.html">\',
+0 26 \'</a>\',
+0 27 \'</li>\',
+0 30 \'<a href="http://zespia.tw">zespia.tw/view/index.html">\',
+0 31 \'<a href="http://zespia.tw/view">zespia.tw/view/index.html</a>\',
+0 32 \'<a>\',
+0 36 \'</ul>\',
+0 39 \'<a class="header">\',
+0 40 \'<a href="archives" href="http://zespia.tw/">\',
+0 41 ,
+0 42 \'bazespia.tw/</a>\',
+0 43 , \'elem/</li,\',
+0 44 \'bufid="more/3</li>\',\',
+0 45 \'bcd\'b,\',
+0 46 \'mp3e,\',
+0 47 \'mkdynamic-zesp\',
+0 49 \'bob\',\',
+0 50 \'bmp4','mp4','mp4','mpga\',\',
+0 51 highlight
+0 53 \'bmp4','mpga\',\',
+0 54 mp4','s3,\',
+0 55 mp4','mp4','mp4','mp4','mp4','mp4','mp4','mp4','mpga\',\',
+0 56 mp4','mp4','mpga\',
+0 57 mpga,\',
+0 58 mp4','s3',
+0 59 mp4','mp4','mp4','mp
+1 1 var main = module.exports = function (source, moduleName, main) {'
+
+2 1 if (read.showWarnings) {
+2 2 template('warn', { name: name.replace(/#/, '#'), shizzle: shizzle })
+2 3 .on('data', obj.emit.bind(obj, 'data'));
+2 4 }'
+
+3 1 if (process.env.init) {
+3 2 readJSON(path, { cwd: process.env.XHR }, function (err, json) {
+3 3 if (err) return err;
+3 5 if (err) return don(err);
+3 8 readJson(path, { cwd: process.env.XHR }, function (err, json) {
+3 12 readJson(path, { cwd: process.env.XHR }, function (err) {
+3 15 if (err) return reject(err);
+3 22 readJson(path, { cwd: path.resolve(process.env.XHR)}, function (err) {
+3 36 readJson(path, { cwd: path.resolve(process.env.env.XHR, '.'read.bind(process.env.cwd)}"
+
+4 2 return obj.emit('warn', { name: name.replace(/@/, '#'),shizzle: argv.replace(/\\"$/, \'#')})
+4 4 }
+4 5 return obj;
+4 6 };
+4 7 var main = express();
+4 8 main.get(\'/\', function (req, res) {
+4 9 res.sendmain(req.params.name);
+4 10 });
+4 11 main.get(\'/404\', function (req, res) {
+4 12 res.send(404);
+4 14 main.get(\'/500\', function (req, res) {
+4 15 res.send(500);
+4 17 var redirecting_url = function (url) {
+4 18 var redirecting_to_url = url;
+4 19 if (process.env.HTTP_PROXY) {
+4 20 redirecting_url = this.isTargetable(url)? redirecting_to_url : url;
+4 22 var noop = function () {
+4 23 return this.error("There is no appropriate host for exception: "http noopener"");
+4 25 var redirecting_to_url = function (url) {
+4 26 var redirecting_to_url = this.isTargetable(url)? redirecting_to_url : '';
+4 27 var redirecting_to_url = noop === "true";
+4 29 return this.error("No such url or directory "%s" were specified.");
+4 31 var redirecting_to_url = noop === "false";
+4 34 return this.error("No such url or directory "%s" were not allowed.");
+4 37 var redirecting_to_scope = function (url) {
+4 38 var glob = require("glob");
+4 39 var redirecting_to_url = glob.split(\':\');
+4 40 if (!noop || noop.length === 0) {
+4 41 noop = noop.substr(1);
+4 43 var buf = "";
+4 46 if (noop === 2) {
+4 47 return redirecting_to_url(url);
+4 48 } else {
+4 49 return redirecting_to_scope(url);
+4 52 var noop = function (err) {
+4 53 if (err === 2) {
+4 54 return err;
+4 56 var redirecting_to_to_scope.call(this, url);
+4 57 if (!noop = false;
+4 59 var redirecting_to_to_scope.$invalidateErrors = function (err) {
+4 60 var error = function (err) {
+4 61 var initializeError = err === 1 : function (error) {
+4 62 error = null;
+4 65 throws = false;
+4 66 dirs = arguments.forEach(function (url) {
+4 67 error = arguments[0] = 2;
+4 68 length = 2;
+4 69 handleErrors = false;
+4 70 ignore = false;
+4 71 clearTimeout = false;
+4 72 clearTimeout = function (err) {
+4 73 initError = arguments[1] = true;
+4 74 apply(this, arguments);
+4 75 apply(this,
+5 1 var json = readJSON(path, { cwd: path });
+5 4 function pluralize(word, count) {
+5 5 return (word.split(', \').join(', \'));
+5 7 function render(obj, depth) {
+5 8 if (depth === 0) return;
+5 9 var key = "";
+5 10 var val = obj[key];
+5 11 if (obj > depth) {
+5 12 return getBinaryExpression(key, {});
+5 14 return null;
+5 16 return {
+5 17 words: words,
+5 18 count: parseInt(...args.length),
+5 19 error: function (err) {
+5 21 return findBinaryExpression(key, {});
+5 25 function renderError(err) {
+5 27 if (process.env.NODE_ENV === \'test\') {
+5 28 return module.exports.test;
+5 30 var module = module.exports.test.split(\'/\');
+5 31 module.exports.test.splice(0, 1);
+5 32 return [
+5 33 "module.exports = function (test) {}",
+5 34 "
+5 35 ].join("\
+5 36 ") + "\
+5 37 " +
+5 38 "     at module.exports.test.join("\
+5 41 "     at module.exports.test.join("") + "\
+5 43 "    at module.exports.test.join("") + "\
+5 53 "    at module.exports.test.join("") + '\
+5 55 "    at module.exports.test.join("") +
+5 61 "       at module.exports.test.help.join("") +
+5 62 "         at module.exports.test.helps.js.join("") +
+5 63 )" +
+5 64 "             at module.exports.helps.server.helps.helps.help.help.helps.help.help.helps.help.help.help.helps.help.help.help.help.help.s.help.help.help.s.help.help.help.s.help.help.help.s.help.help.s.help.help.s.help.help.s.help.help.s.help.s.help.help.s.help.s.help.help.s.help.s.help.s.help.s.help.s.help.help.s.help.s.s.help.s.s.help.help.s.help.s.s.help.s.s.help.s.help.s.
+6 1 var jsonFile = readJSON(path, { bgColor: "bg-2", "bg-2", "f-0", "on" });
+6 2 var jsonComment = json.render(jsonFile, {
+6 3 content: json.content,
+6 4 engine:\'markdown\'
+6 9 return (count === 1? word : word.toLowerCase() + word.toUpperCase();
+6 11 function command() {
+6 12 var commandArgs = module.exports.shift();
+6 13 if (commandArgs && commandArgs.length === 1) {
+6 14 return command.apply(this, commandArgs);
+6 16 return this.readLocalConfig(commandArgs)
+6 17 .spread(function (config) {
+6 18 return config.unshift(key);
+6 21 function commandWithEmpty(name) {
+6 23 .then(function (config) {
+6 27 function clearRuntimeCache() {
+6 28 var exclude = [
+6 29 \'--user-data-dir=\' + this.data.directory + \'"\',
+6 30 \'--no-default-browser-check\',
+6 31 \'--no-first-run\',
+6 32 \'--disable-default-apps\',
+6 33 url
+6 34 ];
+6 36 function readOptions(argv) {
+6 37 var cli = require("../util/cli"),
+6 38 prompt = cli.readOptions(argv);
+6 41 \'--no-default-apps\',
+6 45 function opositeWord(name) {
+6 46 if (this.opositeWord(name)!== name) {
+6 47 return true;
+6 49 if (this.on)
+6 50 {
+6 51 return word.substr(0, 5) === '--no-'? '--' + this.substr(5) : '--no-' + this.substr(2);
+6 53 return Boolean(this.opositeWord(name));
+6 55 module.exports.readOptions = function (argv) {
+6 56 var options = this.options;
+6 57 var cmd = this.commands[opositeWord(name)];
+6 58 var args = this.args || {};
+6 59 var key = \'\';
+6 60 if (!keys.length) {
+6 61 var null;
+6 62 if (this.env.NODE_ENV === \'test\') return;
+6 63 object.forOwn(this.commands, function (commands) {
+6 64 var key = commands[opositeWord(name)];
+6 65 if (!key.substr += \'"\' \')
+6 67 return;
+6 69 return this.stringify(commands[key] = function (s, key, val);
+6 71 return this.replace(/\
+6 73 return new Function(cmd, args, val) {
+6 74 return new Function(cmd, val, args, val, this.replace(/\
+6 75 this.options, args, this.options, this.options.callback)
+6 76 , fn, options, options)
+6 77 , map(this.callback)
+6 78 , map(this.options, fn)
+6 79 , map(this.options, map)
+6 81 , map(function (fn, i === \'function\', optional);
+6 82 , offline = this)
+6 83 , optional).length;
+6 84 };'
+
+7 1 var mainPackage = new helpers.TempDir({
+7 2 \'bower.json': {
+7 3 name: \'package\'
+7 5 }).prepare();
+7 6 var updateLogger = function (packages, options, config) {
+7 7 config = object.merge(config || {}, {
+7 8 cwd: tempDir.path
+7 10 return commands.save(updateLogger, config);
+7 12 var install = function (packages, options, config) {
+7 13 var logger = updateLogger(packages, options, config);
+7 14 return helpers.expectEvent(logger, 'end');
+7 16 it("should update multiple streams", function () {
+7 17 mainPackage.prepare();
+7 18 tempDir.prepare({
+7 20 name: \'test\',
+7 21 shizzle: \'test\'
+7 22 },
+7 23 \'.bowerrc\': {
+7 24 scripts: {
+7 25 preinstall: \'node -e \\\'process.stdout.write("foobar")\\\'}
+7 28 return install(mainPackage.path, mainPackage.path + \'\
+7 29 \');
+7 31 it("should install ignored dependencies", function () {
+7 46 it("should install ignored dependencies from bower.json", function () {
+7 61 it("should install ignored dependencies from bower.json', function () {
+7 70 postinstall: \'node -e \\\'process.stdout.write("foobar")\\\'}
+7 73 return install(mainPackage.path + \'\
+7 74 \', mainPackage.path + \'#a.txt\');
+7 77 it("should install ignored dependencies from bower.json files");
+7 78 it("should install ignored dependencies from bower.json = { ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored: ignored:
+8 1 var jsonKey = function (key, value) {
+8 2 return readJSON(key), { cb: key }, {}.message.replace(/\\u2028/g, \'#u2028\'));
+8 4 res.jsonp = function (obj, indent) {
+8 5 var jsonp = {
+8 6 name: jsonp,
+8 7 version: pkg.version,
+8 8 homepage: page.homepage,
+8 9 private: true,
+8 10 dependencies: jsonp.dependencies || {},
+8 11 json: json,
+8 12 endpoint: endpointpoint
+8 14 res.jsonpNum = function (num, tabs) {
+8 15 var jsonpNum = {
+8 16 min_font: 8,
+8 17 max_font: 20,
+8 18 unit: 'px',
+8 19 amount: 40,
+8 20 orderby: \'name\',
+8 21 order: 1,
+8 22 exclude: [],
+8 23 query: function (name) {
+8 24 return find(if (self.config.tag) || {};
+8 38 res.header = function (name, val) {
+8 39 return val === undefined?
+8 40 this.headers[name.toLowerCase()] :
+8 41 this.headers[name.toLowerCase()] = val;
+8 43 res.sendStatus = function sendStatus(statusCode) {
+8 44 var body = statusCodes[statusCode] || String(statusCode);
+8 45 var body = body || new RegExp(param? status.replace(/\
+8 46 $/, param) : statusCodes[statusCode];
+8 47 return body;
+8 49 res.sendFile = function sendFile(path, options, callback) {
+8 50 var done = callback && typeof options === \'function\'? \'object\' :
+8 51 \'object\'
+8 52 + options;
+8 53 var req = this.req;
+8 54 var res = this;
+8 55 var next = req.next;
+8 56 var opts = options || {};
+8 57 if (!path) throw new TypeError(\'path argument is required to res.sendFile\');
+8 58 if (!opts) options = {};
+8 59 var contentType = typeof options === \'function\'?
+8 60 \'string\' :
+8 61 : options,
+8 63 + null;
+8 64 return res.format(res.formatError(req, res.formatError, options, null, function (err, req, res) {
+8 65 if (err) {
+8 66 if (done) return done(err);
+8 67 done = true;
+8 68 opts.remove();
+8 70 req.on(\'error\');
+8 73 })
+8 74 .on(\'req.on(\'res\', function (err\', function (err)
+8 75 .onLine) {
+8 76 return done();
+8 78 .on(\'
+
+9 1 var main = parseInt(process.argv[2], 10);
+9 2 var expected = {};
+9 3 var runBin = function (cmd, args, failMsg) {
+9 4 var self = this;
+9 5 if (cmd.substr(0, 1) === 0) {
+9 6 return Promise.resolve();
+9 8 if (args[0] === undefined) {
+9 9 return Q.reject(createError(\'No binary for'+ path + '\
+9 10   \'" not found\', 'ENOENT\'));
+9 12 Object.keys(this.dependencies).forEach(function (name) {
+9 13 if (!/^this.dependencies[name]) {
+9 16 var pkg = this.dependencies[name][0];
+9 17 var isBin = false;
+9 18 var reqHeaders = {};
+9 19 var that = this;
+9 20 if (isBin) {
+9 21 reqHeaders[name] = this.dependencies[name] || {};
+9 23 if (property.name!== \'_\' &&!property.isDefined(that.dependencies[name]) {
+9 24 return this.dependencies[name][0];
+9 26 return Q.nfcall(runBin, args).then(function () {
+9 27 return that._bootstrap(targets, resolved, incompatibles);
+9 29 .then(function (installed) {
+9 30 if (that._options.save || that._options.saveDev) {
+9 31 mout.object.forOwn(targets, function (decEndpoint) {
+9 32 var source = that._decEndpoint.registry? '' : decEndpoint.source;
+9 33 var target = decEndpoint.target;
+9 34 var endpoint = mout.string.ltrim(source + \'#\' + target, ['#']);
+9 35 if (that._options.save) {
+9 36 that._json.dependencies = that._json.dependencies || {};
+9 37 that._json.dependencies[decEndpoint.name] = endpoint;
+9 39 if (that._options.saveDev) {
+9 40 that._json.devDependencies = that._json.devDependencies || {};
+9 41 that._json.devDependencies[decEndpoint.name] = endpoint;
+9 45 return that.saveJson()
+9 46 .then(function () {
+9 47 return installed;
+9 50 .fin(function () {
+9 51 that._working = false;

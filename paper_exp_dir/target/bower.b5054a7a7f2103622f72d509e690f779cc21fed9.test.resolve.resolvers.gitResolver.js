@@ -1,0 +1,3 @@
+function clearResolverRuntimeCache() {
+GitResolver.clearRuntimeCache();
+}

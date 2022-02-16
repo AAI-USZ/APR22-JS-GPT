@@ -1,0 +1,18 @@
+Min editdistance: 17.00
+Closest candidate: 7 2 return {};'
+
+0 1 "
+
+1 1 return fs.s => {
+1 2 return Promise.resolve()"
+
+2 1 });
+2 2 return callback();
+2 3 }
+2 5 });'
+
+4 2 return hexo.theme_generate();
+6 1 return {_ = function callback(answ){ return callback(newConfig);
+7 2 return {};'
+
+8 1 "

@@ -1,0 +1,338 @@
+Min editdistance: 9.00
+Closest candidate: 0 30 } else {
+0 1 const pathFn = require(\'path\');
+0 2 const fs = require(\'hexo-fs\');
+0 3 const Promise = require(\'bluebird\');
+0 4 const defaultConfig = require(\'../../../lib/hexo/default_config\');
+0 5 const dateFormat = 'YYYY-MM-DD HH:mm:ss';
+0 6 const newPostName = defaultConfig.new_post_name;
+0 7 describe(\'post_permalink\', () => {
+0 8 const Hexo = require(\'../../../lib/hexo\');
+0 9 const baseDir = pathFn.join(__dirname, \'post_permalink\');
+0 10 const hexo = new Hexo(baseDir);
+0 11 const postPermalink = require(\'../../../lib/plugins/filter/post_permalink\').bind(hexo);
+0 12 const process = Promise.method(post_permalink).bind(hexo);
+0 13 const sourceDir = hexo.source_dir;
+0 14 const draftDir = pathFn.join(sourceDir, \'drafts\');
+0 15 const postDir = pathFn.join(sourceDir, \'_posts\');
+0 16 const config = defaultConfig();
+0 17 function processPost(file) {
+0 18 const Post = hexo.model(\'Post\');
+0 19 const path = file.params.path;
+0 20 const doc = Post.findOne({source: file.path});
+0 21 const config = config.external_link;
+0 22 const timezone = config.timezone;
+0 23 const link = (data) => {
+0 24 return this.set(\'Link\', data.replace(/\
+0 25 $/, \'\'));
+0 26 };
+0 27 function linkTo(post, path) {
+0 28 if (path) {
+0 29 return linkTo(post, path);
+0 30 } else {
+0 31 return this.insert({
+0 32 _id: path,
+0 33 path: path
+0 34 });
+0 35 }
+0 36 function checkExternalLink(file.path) {
+0 37 const url_for = require(\'../../../lib/plugins/helper/url_for\').bind(hexo);
+0 38 return processPost.call(this, url_for);
+0 40 function checkExternalLink(file.path, post_permalink, path) {
+0 42 return url_for.call(this, url_for);
+0 44 function checkExternalLink(file.path, post_permalink, transform_filename) {
+0 46 const config = this.config;
+0 48 const content_url = `${link.to(url_for.call(this, path)}`;
+0 49 return config.external_link.call(this, url_for.call(this, config.external_link.exclude))
+0 50 .then(success => {
+0 51 if (data_url) {
+0 52 return;
+0 54 return Promise.all([
+0 55 checkExternalLink(this),
+0 56 statIC_url,
+0 57 \'site_name\',
+0 58 \'description\',
+0 59 \'urlRoot\',
+0 60 \'permalink\',
+0 61 \'root\',
+0 63 \'x-root\',
+0 64 \'permalink\',\',
+0 65 \'archive_urlRoot\',
+0 66 \'category\',
+0 67 \'category_dir\',\',
+0 68 \'tag_topics\',\',
+0 69 \'archive\',
+0 70 \'category_dir\',
+0 71 \'posts\',
+0 73 \'categories\',
+0 74 \'tags\',
+0 75 \'posts\',\',
+0 77 \'posts.tags\',
+0 78 \'posts.tag_id\',\',
+0 79 \'posts_id\',\',
+0 80 \'posts.limit\',
+0 81 \'length\',\',
+0 82 \'limit\',
+0 85 \'auto_search_root\',
+0 88 \'], {
+0 89 \'path\',
+0 90 \'n\'x- posts\',
+0 91 \'max_length: 1\',
+0 92 });\
+1 1 function iframeTag(args, content) {
+1 2 const url = args[0];
+1 3 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+1 4 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+1 5 return `<iframe src="${url}" width="${width}" height="${height}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+1 7 module.exports = iframeTag;'
+
+2 1 const { isExternalLink } = require(\'hexo-util\');
+2 2 function externalLinkFilter(data) {
+2 3 const { config } = this;
+2 4 if (typeof config.external_link === \'undefined\' || typeof config.external_link === \'object\'
+2 5 || config.external_link === true) {
+2 6 config.external_link = Object.assign({
+2 7 enable: true,
+2 8 field:\'site\',
+2 9 exclude: \'\'
+2 10 }, config.external_link);
+2 12 if (config.external_link === false || config.external_link.enable === false
+2 13 || config.external_link.field!== \'post\') return;
+2 14 data = data.replace(/<a([\\s]+|[\\s]+[^<>]*>/gi, (str, href) => {
+2 15 if (/target=/gi.test(str) ||!isExternalLink(href, config.url, config.external_link.exclude)) return str;
+2 16 if (/rel=/gi.test(str)) {
+2 17 str = str.replace(/rel="(.*?)"/gi, (relStr, rel) => {
+2 18 if (!rel.includes(\'noopenner\')) relStr = relStr.replace(rel, `${rel} noopener`);
+2 19 return relStr;
+2 21 return str.replace(hrefStr, `${hrefStr} target="_blank"`);
+2 23 return str.replace(hrefStr, `${hrefStr} target="_blank" rel="noopener"`);
+2 26 module.exports = externalLinkFilter;'
+
+3 2 const moment = require(\'moment\');
+3 5 const util = require(\'hexo-util\');
+3 6 const escape = util.escape;
+3 7 const Permalink = util.permalink;
+3 8 let permalink;
+3 9 const reservedKeys = {
+3 10 \'year: 1\',
+3 11 \'month: 2\',
+3 12 \'day: 5\',
+3 13 \'title: {{ title }}\',
+3 14 \'date: {{ date }}\',
+3 15 \'tags:\',
+3 16 \'---\'
+3 17 ].join(\'\
+3 18 \');
+3 19 function newPostPathFilter(data = {}, replace) {
+3 20 const sourceDir = this.source_dir;
+3 21 const draftDir = pathFn.join(sourceDir, \'_drafts\');
+3 24 const newPostName = config.new_post_name;
+3 25 const permalinkDefaults = config.permalink_defaults;
+3 26 const path = data.path;
+3 27 const layout = data.layout;
+3 28 const slug = data.slug;
+3 29 if (!permalink || permalink.rule!== newPostName) {
+3 30 permalink = new Permalink(newPostName);
+3 32 let target = '';
+3 34 switch (layout) {
+3 35 case \'page\':"
+
+4 1 var pathFn = require(\'path\');
+4 2 var moment = require(\'moment\');
+4 3 var Promise = require(\'bluebird\');
+4 4 var fs = require(\'hexo-fs\');
+4 5 var util = require(\'hexo-util\');
+4 6 var fixture = require(\'../../fixtures/post_render\');
+4 7 describe(\'Post\', function() {
+4 8 var Hexo = require(\'../../../lib/hexo\');
+4 9 var hexo = new Hexo(pathFn.join(__dirname, \'post_test\'));
+4 10 var post = hexo.post;
+4 11 before(function() {
+4 12 return fs.mkdirs(hexo.base_dir, function() {
+4 13 return hexo.init();
+4 14 }).then(function() {
+4 15 return hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'));
+4 18 after(function() {
+4 19 return fs.rmdir(hexo.base_dir);
+4 21 it(\'create()\', function() {
+4 22 var emitted = false;
+4 23 var path = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\');
+4 24 var date = moment();
+4 25 var content = [
+4 26 \'title: "Hello World"\',
+4 27 \'date:\'+ date.format(\'YYYY-MM-DD HH:mm:ss\'),
+4 31 \') + \'\
+4 32 \';
+4 33 var data = yaml.parse(content);
+4 34 data.content.trim().should.eql(fixture.expected);
+4 37 it(\'create() - slug\', function() {
+4 38 var path = pathFn.join(hexo.source_dir, \'_posts\', \'foo.md\');
+4 52 it(\'create() - filename_case\', function() {
+4 53 hexo.config.filename_case = 1;
+4 54 var path = pathFn.join(hexo.source_dir, \'_posts\', \'hello-world.md\');
+4 69 fs.stat(),
+4 70 ]).spread(data)
+4 71 ]).then(function(stats, function(stats, posts, posts) {
+4 72 return posts.should.should.should.eql(create(new Promise.each([\'foo\', \'bar\', \'baz\', \'baz\']);
+4 73 }).should.should.each([\'baz\', \'baz\']);
+4 74 ]).then(function(arr => posts.addToSet(posts)).should.set(posts)).should.set(posts)).should(posts)).should(posts)).should.publish).then(posts)).then(function(data => {
+4 75 returns => {
+4 76 return posts[\'foo\'baz\').should.removeById(posts)).thenReturn(posts)).thenReturn(posts)).then(posts)).then(data
+5 4 function Scaffold(context) {
+5 5 this.context = context;
+5 6 this.scaffoldDir = context.scaffold_dir;
+5 7 this.assetDir = pathFn.join(context.core_dir, \'assets\');
+5 9 Scaffold.prototype.defaults = {
+5 10 normal: [
+5 11 \'layout: {{ layout }}\',
+5 14 \')
+5 16 Scaffold.prototype._listDir = function() {
+5 17 var scaffoldDir = this.scaffoldDir;
+5 18 return fs.exists(scaffoldDir).then(function(exist) {
+5 19 if (!exist) return [];
+5 20 return fs.listDir(scaffoldDir, {
+5 21 ignoreFilesRegex: /^_|\\/_/
+5 23 }).map(function(item) {
+5 24 return {
+5 25 name: item.substring(0, item.length - pathFn.extname(item).length),
+5 26 path: pathFn.join(scaffoldDir, item)
+5 30 Scaffold.prototype._getScaffoldPath = function(name) {
+5 31 return this._listDir().then(function(list) {
+5 32 var item;
+5 33 for (var i = 0, len = list.length; i < len; i++) {
+5 34 item = list[i];
+5 35 if (item.name === name) return item;
+5 39 Scaffold.prototype.get = function(name, callback) {
+5 42 fs.exists(scaffoldDir),
+5 43 fs.readFile(pub)
+5 44 ]).spread(function(exist, data) {
+5 46 if (exist) {
+5 47 return fs.readFile(scaffoldDir, {
+5 51 item = file;
+5 53 return hexo.defaults[name] || Promise.method(item.name);
+5 56 Scaffold.prototype.set = function(name, content, callback) {
+5 62 var scaffoldPath = pathFn.join(scaffoldDir, name);
+5 63 return hexo.defaults[name] = {
+5 64 path: name,
+5 65 content: data
+5 69 Scaffold.prototype.remove = function(name) {
+5 70 return this._getScaffoldPath();
+5 72 Scaffold.prototype.update = function(data) {
+5 73 this._renderScaffoldPath = this._getScaffoldPath();
+5 76 Scaffold.prototype.replace = function(data) {
+5 80 module.exports. Scaffold = Scaffold;'
+
+6 1 const url = require(\'url\');
+6 2 module.exports = ctx => {
+6 3 const PostAsset = ctx.model(\'PostAsset\');
+6 4 return function assetLinkTag(args) {
+6 5 const slug = args.shift();
+6 6 if (!slug) return;
+6 7 const asset = PostAsset.findOne({post: this._id, slug});
+6 8 if (!asset) return;
+6 9 const title = args.length? args.join(\' \') : asset.slug;
+6 10 return `<a href="${url.resolve(ctx.config.root, asset.path)}" title="${title}">${title}</a>`;
+6 12 };'
+
+7 1 const stripIndent = require(\'strip-indent\');
+7 3 const highlight = util.highlight;
+7 4 const rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+7 5 ([\\s\\S]+?)\\s*\\2(\
+7 6 +|$)/g;
+7 7 const rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+7 8 const rLangCaption = /([^\\s]+)\\s*(.+)?/;
+7 9 function backtickCodeBlock(data) {
+7 10 const config = this.config.highlight || {};
+7 11 if (!config.enable) return;
+7 12 data.content = data.content.replace(rBacktick, ($0, start, $2, _args, content, end) => {
+7 13 const args = _args.split(\'=\').shift();
+7 14 const options = {
+7 15 hljs: config.hljs,
+7 16 autoDetect: config.auto_detect,
+7 17 gutter: config.line_number,
+7 18 tab: config.tab_replace
+7 20 if (options.gutter) {
+7 21 config.first_line_number = config.first_line_number || \'always1\';
+7 22 if (config.first_line_number === \'inline\') {
+7 23 _args = _args.replace(\'=+\', \'=\');
+7 24 options.gutter = _args.includes(\'=\');
+7 25 options.firstLine = options.gutter? _args.split(\'=\')[1] || 1 : 0;
+7 28 if (args) {
+7 29 const match = rAllOptions.exec(args) || rLangCaption.exec(args);
+7 30 if (match) {
+7 31 options.lang = match[1];
+7 32 if (match[2]) {
+7 33 options.caption = `<span>${match[2]}</span>`;
+7 34 if (match[3]) {
+7 35 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+7 39 if (start.includes(\'>\')) {
+7 40 const depth = start.split(\'>\').length - 1;
+7 41 const regexp = new RegExp(`^([^\\\\S\\\\r\\\
+7 42 ]*>){0,${depth}}([^\\\\S\\\\r\\\
+7 43 ]|$)`,\'mg\');
+7 44 content = content.replace(regexp, \'\');
+7 46 if (prismjs.test(content)) {
+7 47 const match = prismjs.highlight(content);
+7 48 if (prismjs.prismjs(content)) {
+7 49 const match = prismjs.prismjs(content);
+7 56 return highlight(content, options).replace(/{/{/g, \'&#123;\')
+7 59 module.exports.filename = backtickCodeBlock;'
+
+8 2 let EXTERNAL_LINK_POST_ENABLED = true;
+8 3 const rATag = /<a(?:\\s+?|\\s+?[^<>]+\\s+?)?href=["\']([^<>"\']+)["\'][^<>]*>/gi;
+8 4 const rTargetAttr = /target=/i;
+8 5 const rRelAttr = /rel=/i;
+8 6 const rRelStrAttr = /rel=["\']([^<>"\']*)["\']/i;
+8 8 if (!EXTERNAL_LINK_POST_ENABLED) return;
+8 9 const { external_link, url } = this.config;'
+
+9 1 const { highlight } = require(\'hexo-util\');
+9 2 const code = [
+9 3 \'if tired && night:\',
+9 4 \'  sleep()\'
+9 7 exports.content = [
+9 8 \'# Title\',
+9 9 \'``` python\',
+9 10 code,
+9 11 \'```\',
+9 12 \'some content\',
+9 13 \'## Another title\',
+9 14 \'{% blockquote %}\',
+9 15 \'quote content\',
+9 16 \'{% endblockquote %}\'
+9 19 exports.expected = [
+9 20 \'<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1>\',
+9 21 highlight(code, {lang: \'python\'}),
+9 22 \'\
+9 23 <p>some content</p>\
+9 24 \',
+9 25 \'<h2 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h2>\',
+9 26 \'<blockquote>\',
+9 27 \'<p>quote content</p>\
+9 29 \'</blockquote>\
+9 30 \
+9 32 \'<blockquote><p>quote content</p>\
+9 34 \'<footer><strong>Hello World</strong></footer></blockquote>\'
+9 35 ].join(\'\');
+9 36 exports.expected_disable_nunjucks = [
+9 43 \'<p>{% blockquote %}<br>\',
+9 44 \'quote content<br>\',
+9 45 \'{% endblockquote %}</p>\
+9 47 \'<p>{% quote Hello World %}<br>\',
+9 49 \'{% endquote %}</p>\'
+9 51 exports.content_for_issue_3346 = [
+9 54 \'{% test1 %}\',
+9 55 \'{{ test2 }}\',
+9 64 exports.expected_for_issue_3346 = [
+9 66 highlight(\'{% test1 %}<h1 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h1>\',
+9 67 \'<p>{% test1 %}<h1>% expectJSpec.js <=\\d{.parse(content).toString()}</h1>\'}</p>\'
+9 70 exports.expected_for_for_error = [
+9 71 \'<h1>\'<h1 id="Lit"><a href="#" class="Title" class="headerlink" class="headerlink" title="headerlink" title="\' + \'">\', \' toString/it\' + toString/fixtures/fixtures/fixtures/h1/h1">\
+9 73 \' +\',
+9 74 \'</h1>\',
+9 75 .replace(\'{{ test1">\', \'<h1>\' }}</h1>\'\',
+9 76 .replace(\'{{ test1">\', \'{{ test2 }}</h1>\'\',
+9 77 .split(\'\
+9 78 \').join(\'\
+9 82 \');'
+9 83 \', \'\');

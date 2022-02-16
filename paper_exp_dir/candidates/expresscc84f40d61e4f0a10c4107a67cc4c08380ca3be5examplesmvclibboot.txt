@@ -1,0 +1,157 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 fs.readdirSync(__dirname + '/../controllers').forEach(function(name){
+0 1 fs.readdirSync(__dirname + '/../controllers').forEach(function(name){
+0 2 verbose && console.log('   %s:', name);
+0 3 var obj = require('./../controllers/' + name)
+0 4 , name = obj.name || name
+0 5 , prefix = obj.prefix || ''
+0 6 , app = express()
+0 7 , method
+0 8 , path;
+0 9 if (obj.engine) app.set('view engine', obj.engine);
+0 10 app.set('views', __dirname + '/../controllers/' + name + '/views');
+0 11 for (var key in obj) {
+0 12 if (~['name', 'prefix', 'engine', 'before'].indexOf(key)) continue;
+0 13 switch (key) {
+0 14 case'show':
+0 15 method = 'get';
+0 16 path = '/' + name + '/:' + name + '_id';
+0 17 break;
+0 18 case 'add':
+0 20 path = '/' + name + '/:' + name + '_id/add';
+0 22 case 'create':
+0 23 method = 'post';
+0 26 case 'edit':
+0 28 path = '/' + name + '/:' + name + '_id/edit';
+0 30 case 'update':
+0 31 method = 'put';
+0 34 case 'create_post':
+0 35 method = 'create';
+0 42 case 'create_draft':
+0 44 path = '/' + name + '/:draft/';
+0 46 case 'create_page':
+0 48 path = '/' + name + '/:page/';
+0 50 case 'delete':
+0 51 method = 'delete';
+0 52 path = '/' + name + '/:data/';
+0 54 default:
+0 55 message = 'Route.routes is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.root).format(hexo.config.pagination_dir + 'public'));
+0 56 if (verbose) console.log('\
+0 57    %s %s', name, route.host);
+0 58 app.listen(port, host);
+0 60 }
+0 62 app.use(app);
+0 63 app.use(root, express.static(__dirname + '/public'));
+0 64 app.use(express.compress());
+0 65 app.use(express.errorHandler());
+0 66 if (!module.parent) {
+0 68 console.log('Express started on port 3000');
+0 69 }"
+
+1 1 verbose && console.log();
+1 13 path = prefix + key + '.' + name + '-';
+1 14 if (~path.indexOf(key)) continue;
+1 16 case 'json':
+1 17 if (obj.app) {
+1 18 app[key] = obj.app;
+1 19 } else if (obj.app) {
+1 23 case 'plain':
+1 24 if (obj.engine) app.set('views', __dirname + '/../controllers/' + name + '/views/' + name + '/views/' + name + '/' + name + '-text');
+1 25 app[key].forEach(function(fn){
+1 26 if (~path.indexOf(fn)) continue;
+1 29 app[key] = fn(obj[key]) || obj[key];
+1 34 } else if (fn) {
+1 35 app[key] = fn(obj[key]);
+1 39 app[key].$app.__proto__ = parent.engine;
+1 40 app[key].$path = fn;
+1 41 return app;
+1 42 };"
+
+2 4 var obj = require('./../controllers/' + name);
+2 5 var name = obj.name || name;
+2 6 var prefix = obj.prefix || '';
+2 7 var app = express()
+2 8 , method"
+
+6 8 , blog = express()
+6 9 , admin = express();
+6 10 app.use(express())
+6 11 , blogAdmin = express();
+6 12 app.use(express.bodyParser());
+6 13 app.use(express.methodOverride());
+6 14 app.use(express.cookieParser());
+6 15 app.use(express.session({ secret: 'keyboard cat' }));
+6 16 app.use(app.router);
+6 17 app.use(express.static(__dirname + '/public'));
+6 18 app.use(function(req, res, next){
+6 19 res.header('x-powered-by', 'Hexo');
+6 20 next();
+6 21 });
+6 22 app.get('/', function(req, res){
+6 23 res.render('index.jade', {
+6 24 locals: {
+6 25 users: users.filter(Boolean)
+6 29 app.get('/middleware', function(req, res){
+6 30 res.render('hello.jade', {
+6 36 app.get('/invalid', function(req, res){
+6 37 res.render('invalid.jade', {
+6 43 if (!module.parent) {"
+
+8 11 for (var key in obj) app.use(Express.server.callback(obj[key]));
+8 12 app.use(app.router.middleware({
+8 13 request: function(req, res){
+8 14 res.status(500).render('page');
+8 15 },
+8 16 'test app.param('name', obj.name)
+8 17 if (obj.engine) app.get('views', __dirname + '/../controllers/' + name + '/views');
+8 18 for (var i = 0, len = users.length; i < len; ++i) {
+8 19 if (users[i].id === req.params[0].id) {
+8 20 return true;
+8 23 if (obj.before) {
+8 25 app.all(path, obj.before + 1);
+8 26 verbose && console.log('     ALL %s -> before -> %s', path);
+8 30 path = '/' + name + '/:' + name + '_id/';
+8 32 verbose && console.log('    ALL %s -> %s', path, obj.before + 1);
+8 35 functionverbose(obj, key, argv) {
+8 36 if (argv == null) console.log('      ALL %s -> 10', key.toLowerCase());
+8 37 return;
+8 39 if (fn.length > 0) {
+8 40 return fn(new Error('invalid input input for'+ key + ':'+ fn));
+8 47 app.listen(3000);
+8 48 console.log('    ALLOW %s -> /', blog.toLowerCase());
+8 50 app.use(express.request());
+8 51 app.use(express.response());
+8 52 app.use(express.server());
+8 54 app.use(express.helpers());
+8 56 res.status(404).render('404 Not Found');
+8 58 app.use(app.use(express.app.router.middleware({
+8 59 message: 'ToUndefined404',
+8 60 message: function(res.toString(){
+8 61 res.toLowerCase() + 'Not Found'
+8 62 }));
+8 64 app.use(app.use(function(app, options);
+8 65 if (req..next();
+8 66 app.use(function(req.fail);
+8 67 return res.on('error', next());
+8 68 });"
+
+9 6 var app = express();
+9 7 var handler;
+9 8 var method;
+9 9 var path;
+9 13 path = '/' + name + '/:' + name + '_id*';
+9 14 app.all(path, obj.before);
+9 24 case 'list':
+9 26 path = '/' + name +'s';
+9 52 case 'destroy':
+9 57 options.destroy = true;
+9 68 method = 'list';
+9 73 path = '/' + name + '/:' + name + '/:' + name + '_id';
+9 78 for (parent) {
+9 79 return obj;
+9 81 if ( ('body'!=' == method) {
+9 82 return handler) {
+9 83 throw new Error('should handler);
+9 85 } else {
+9 86 }'
+

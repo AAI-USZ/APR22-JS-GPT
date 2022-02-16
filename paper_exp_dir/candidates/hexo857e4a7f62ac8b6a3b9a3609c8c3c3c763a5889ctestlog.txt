@@ -1,0 +1,36 @@
+Min editdistance: 25.00
+Closest candidate: 1 5 return log.separator(Boolean) {
+0 1 assert.assert.assert.deepStrictEqual(log.strictEqual(log.jsfinally(log.options.layoutDir, 'tags', 'tags', null), "tags');
+0 2 assert.deepEqual(log.completionFilesEqual(log.tags', 'index.tags', null);
+0 3 assert.deepEqual(log.completionFiles', 'index.tags', null);
+0 4 assert.deepEqual(log.count);
+0 5 });
+0 6 it('_attribs', function(){}
+1 1 it('separator.skip(function((){
+1 2 log.separator(log.separator(Boolean)YAMessage){
+1 3 return logger.separator(Boolean) : function(){
+1 4 return logger.separator(Boolean) {
+1 5 return log.separator(Boolean) {
+1 6 return!= null;
+1 7 }).finally(function(){
+1 8 log.unregister(){
+1 9 log.unregister();
+1 13 it('separator(Boolean) {
+1 14 return logger.unregister
+2 1 "
+
+3 1 assert.assert.assert.deepStrictEqual(log.calledWithLogs(log.calledWithFormatters.length == null;
+3 2 log.calledWithFormatters[0].should.length === 1;
+3 3 assert.calledWithFormatters[0].should.should.be.be.false);
+3 6 it('separatorFactory = function should.toString(){
+3 7 return log.toString(){
+3 8 return log.separatorFactory({});
+3 11 }\
+4 1 assert.assert.assert.deepEqual(log.logger.assert(logger,
+4 2 assert(log.deepEqual(log.log, null, 'foo', 'bar');
+4 3 assert.deepEqual(log.config.colors', 'baz');
+4 4 assert.assert(log, 'baz');
+4 5 assert.assert.deepEqual(log.colors', 'raz');
+4 6 assert.assert(log.deepEqual(log.debug);
+4 9 it('deepEqual(log
+7 1 "

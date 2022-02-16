@@ -1,0 +1,32 @@
+Min editdistance: 99.00
+Closest candidate: 1 8 } else if (prefix === 'absolute') {
+0 1 "
+
+1 1 var createErrorFormatter = function(basePath, urlRoot) {
+1 2 var URL_REGEXP = new RegExp('http:\\\\/\\\\/[^\\\\/]*' + urlRoot.replace(/\\
+1 3 '(base|absolute)([^\\\\?\\\\s]*)(\\\\?[0-9]*)?', 'g');
+1 4 return function(msg, indentation) {
+1 5 msg = msg.replace(URL_REGEXP, function(full, prefix, path) {
+1 6 if (prefix === 'base') {
+1 7 return basePath + path;
+1 8 } else if (prefix === 'absolute') {
+1 9 return path;
+1 10 }
+1 11 });
+1 12 if (indentation) {
+1 13 msg = indentation + msg.replace(/\
+1 14 /g, '\
+1 15 ' + indentation);
+1 17 return msg + '\
+1 18 ';
+1 19 };
+1 20 };"
+
+3 1 var createAdapter = function(adapter) {
+3 2 return function(reporters) {};
+7 1 module.exports.inject = function(args, callback) {"
+
+8 1 this.createAdapter = function(adapter) {
+8 2 return function() {
+8 3 var args = Array.prototype.slice.call(arguments, 0);
+8 4 return new MultiReporter(args, this.adapters, this.reporters);

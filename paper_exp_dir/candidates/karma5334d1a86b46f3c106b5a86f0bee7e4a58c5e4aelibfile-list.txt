@@ -1,0 +1,82 @@
+Min editdistance: 33.00
+Closest candidate: 8 5 }).return this._readFile(this._readFile)
+0 1 `)
+0 2 return Promise.compareFile.compose() }return Promise.resolve() } })
+0 3 }))
+0 4 })
+0 5 return { original: { original: this }
+0 6 }
+0 9 function getExcludedFiles () {
+0 10 return this._excludedFiles () {
+0 11 return this._includedFiles this._includedFiles when foundFiles.some((file) => this._includedFiles.addFile(file) })
+0 12 return this._includedFiles.addFile(file) })
+0 13 return this._changeFile(file) {
+0 15 return this._changeFile(
+1 1  config.addFile(this.buckets.addFile(this.buckets.get)
+1 2 })) return Promise.resolve() })
+1 3 })) return Promise.resolve()
+1 5 return {'
+
+2 1 `)) return Promise.resolve() } function (this.addFile(this.buckets.addFile(this.buckets.getSource(this.buckets.getSource())) {source)
+2 2 return this.buckets.addFile(this.buckets.getSource())
+2 3 }).return { path })
+2 4 }).then((chunk) => this._readFile(this.buckets.getSource())
+2 5 return { callback })).return Promise.return { callback }
+2 6 }).then(() => {
+2 7 return this.then(() => {
+2 8 this.buckets.readFile }) return this.addFile }) return this.loadFile() }
+3 1 `)) return Promise.promise(file.resolve() } `return Promise.addFile(file.addFile(pathLib.promise)`)) return Promise.resolve()
+3 4 const _this._readFile()
+3 5 _.then(() => {
+3 6 return Promise.log.return Promise.nextTick(())
+3 7 return this._readFile())
+3 9 return this._next => {
+3 10 this._isBinaryFiles.returns.addFile(this.buckets.getFiles(this.buckets.get(patterns.patterns.patterns.patterns.pattern
+4 1  found.addFile(this.addFile(this.buckets)) return Promise.addFile(this.buckets)) { this.buckets.addFile(this.buckets.addFile(this.buckets)) })) return Promise.addFile(this.buckets.addFile(this.buckets.addFile)
+4 4 return Promise.promise.resolve()
+4 6 const files = new Set([new Glob(pathLib.normalize, null)]).reduce((path) => {
+4 7 this.buckets.set([], [], () => {
+4 8 this.buckets.set([], () =>
+5 2 })) return Promise.return Promise.resolve()
+5 5 return this._readFile(\'preprocess.listen(()\')
+5 6 return Promise.
+5 8 }).returns.then(()
+5 10 .then(() => {
+5 11 return this._readFile(())
+5 12 .unlink(`${this._readFiles.files.requirejsfinally((answatcher.addFile(this.buckets.getFiles(this.buckets.getFiles(this.buckets.getFiles(patterns))()))
+5 14 .return Promise
+6 2 return Promise.resolve() } `return Promise.addCallback(this.addCallback(this.buckets.addCallback(this.buckets.addCallback(this.buckets.addCallback)`)) return Promise.addCallback(this.reset())
+6 6 const buckets = new Set()
+6 7 _this.rules = new Set()
+6 8 _this.buckets.unprocessQueue.push({xoolean: false })
+6 9 _this.unwatchPatterns = () => {
+6 10 return new Set([xhen (includedFiles) => this._readFile(this.buck
+7 1 `)) return Promise.return Promise.resolve() }() })
+7 2 })) return Promise.addErrors()
+7 3 return {'meowait () => {
+7 4 return this.loadFile(this.unlink() }
+7 5 } : function () {
+7 6 this.buckets.addFile(this._readFile()} () => {
+7 7 return this._readFile() })
+7 9 }).then(this._readFile())
+7 10 this._readFile()
+7 13 }).then(err => {
+7 14 return Promise.map(this._unlinkedFiles.addFile) {})
+7 15 return { callback.close
+8 1 `)) return Promise.resolve() }() })
+8 3 return this._readFile(this.buckets.addFile())
+8 4 }).then(this._readFile(this._readFile)
+8 5 }).return this._readFile(this._readFile)
+8 6 }).return { originalize() })
+8 7 }).then(this._readFile) => {
+8 8 return this._unreadFile}return this._normalizeFile(this.files).then(this._normalizeFile(this.buckets.getFiles(this.buckets.get())
+8 9 }).return { new Promise.return Promise.return { originalize() }
+9 1  found with () } function () { }", () { return Promise.addFile(path.addFile(path) })
+9 2 return Promise.addFile(path, null)
+9 3 }).return Promise.resolve()
+9 5 return this._process.
+9 6 return {
+9 7 this._readFile(this.buckets.addFile(this.buckets.get)
+9 10 return this._readFile}).then(() => {
+9 11 this._this.buckets.setAll(this.buckets.get())
+9 13 }).return { this._readFile()

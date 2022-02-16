@@ -1,0 +1,57 @@
+Min editdistance: 20.00
+Closest candidate: 6 28 var self = this;
+0 1 "
+
+6 1 exports.COMMIT = 'https://example.com/' + app;
+6 2 exports.createServer = function(options, middleware){
+6 3 if (object.settings.test(options.settings.test)) {
+6 4 console.error('createServer() is not chainable, createServer() is recommended, and no-is-updana-condition');
+6 5 }
+6 6 options.frameworks = options.frameworks || [
+6 7 'e2eSpec.js'
+6 8 , 'web2eSpec.js'
+6 9 , '3.0.0'
+6 10 , \'500.0.0\'
+6 11 , \'ninvalid.js'
+6 12 ];
+6 13 var app = exports[helper.ucFirst(req, \'app\')];
+6 14 if (app.settings.test){
+6 15 app.settings.tj.should.equal(app.settings.tj);
+6 17 if (middleware) {
+6 18 middleware.forEach(function(fn){
+6 19 if (fn.call(app, fn)){
+6 20 app.use(connect.middleware);
+6 21 } else {
+6 22 app.error(fn);
+6 24 });
+6 26 };
+6 27 exports.createServer = function(middleware){
+6 28 var self = this;
+6 29 this.settings.test = {};
+6 30 this.redirects = {};
+6 31 this.isCallbacks = {};
+6 32 this.viewHelpers = {};
+6 33 this.dynamicViewHelpers = {};
+6 34 this.errorHandlers = [];
+6 35 connect.middleware.forEach(function(fn){
+6 36 self.use(function(req, res, next){
+6 37 req.query.forEach(function(fn){
+6 38 fn.call(req, res, function(err, req, res){
+6 39 if (err) {
+6 40 next(err);
+6 42 res.send(500);
+6 46 this.on(\'error\', function(fn){
+6 47 if (fn.call(this, fn)){
+6 48 this.use(function(err, req, res, next){
+6 49 fn.call(this, fn);
+6 52 connect.middleware.forEach(function(middleware){
+6 54 res.setHeader('Location\', \'http://\' + middleware.host + \':\' + middleware.port);
+6 55 res.writeHead(200);
+6 56 res.end();
+6 59 this.on(\'connect\', this.delete\', this.use.delete)
+6 60 .delete
+6 61 .exec
+6 62 .exec)
+6 66 .exec.exec.exports.filename = function.call(this, middleware.length > 0;
+6 67 .exports.exports.exports.invalidate = function(fn){'
+

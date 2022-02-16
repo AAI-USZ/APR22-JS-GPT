@@ -1,0 +1,15 @@
+var util = require('./util');
+var events = require('./events');
+var logger = require('./logger');
+
+var Result = function() {
+var startTime = Date.now();
+
+this.total = this.skipped = this.failed = this.success = 0;
+this.disconnected = this.error = false;
+this.totalTime = this.netTime = NaN;
+
+this.totalTimeEnd = function() {
+this.totalTime = Date.now() - startTime;
+};
+};

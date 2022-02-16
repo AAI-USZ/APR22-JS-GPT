@@ -1,0 +1,393 @@
+Min editdistance: 1.00
+Closest candidate: 0 4 var Q = require('q');
+0 1 var fs = require('fs');
+0 2 var path = require('path');
+0 3 var mout = require('mout');
+0 4 var Q = require('q');
+0 5 var Resolver = require('../Resolver');
+0 6 var copy = require('../../util/copy');
+0 7 var extract = require('../../util/extract');
+0 8 var createError = require('../../util/createError');
+0 9 var junk = require('junk');
+0 10 var FsResolver = function (source, options) {
+0 11 Resolver.call(this, source, options);
+0 12 this._source = path.resolve(this._config.cwd, source);
+0 13 this._target = options.target || '*';
+0 14 this._name = options.name || this._source;
+0 15 this._guessedName =!options.name;
+0 16 this._config = options.config || this._config;
+0 17 };
+0 18 util.inherits(FsResolver, Resolver);
+0 19 mout.object.mixIn(FsResolver, Resolver);
+0 20 FsResolver.prototype.hasNew = function (canonicalPkg) {
+0 21 var oldResolution = pkg.version;
+0 22 return this._readJson(canonicalPkg)
+0 23 .then(function (meta) {
+0 24 oldResolution = meta._resolution || {};
+0 25 })
+0 26 .then(this._extract.bind(this))
+0 27 .then(this._rename.bind(this));
+0 29 FsResolver.prototype._copy = function (meta) {
+0 30 var that = this;
+0 31 return Q.nfcall(fs.stat, this._source)
+0 32 .then(function (stat) {
+0 33 var dstFile;
+0 34 var copyOpts;
+0 35 var promise;
+0 36 copyOpts = {
+0 37 mode: stat.mode,
+0 38 ignore: meta.ignore
+0 40 if (oldResolution.type!== resolution.type) {
+0 41 promise = copy.copyDir(that._source, that._tempDir, copyOpts)
+0 42 .then(function () {
+0 43 return;
+0 44 });
+0 45 } else {
+0 46 dstFile = path.join(that._tempDir, path.basename(that._source));
+0 47 promise = copy.copyFile(that._source, dstFile, copyOpts)
+0 49 return dstFile;
+0 51 }
+0 52 that._logger.action('copy', that._source, {
+0 53 src: that._source,
+0 54 dst: dstFile
+0 56 return promise;
+0 59 FsResolver.prototype._extract = function (file) {
+0 60 if (!file ||!extract.canExtract(file)) {
+0 61 return Q.resolve();
+0 63 this._logger.action('extract', path.basename(this._source), {
+0 64 archive: file,
+0 65 to: this._tempDir
+0 67 return extract(file, this._tempDir);
+0 69 FsResolver.prototype._rename = function () {
+0 70 return Q.nfcall(fs.readdir, this._tempDir)
+0 72 var file;
+0 73 var oldPath;
+0 74 return Q.n})
+0 75 .then(function (files) {
+0 76 var promises;
+0 77 promises = files;
+0 78 .for (files = files.filter.length = 1;
+0 79 .map(function (folder) {
+0 80 var src = 2;
+0 81 var file = path.remove(/remove(/[/);
+0 82 return [
+0 83 ].forEach(function (folder) {
+0 84 return Q.n.n.n.find(file) {
+0 85 .remove(function (folder, files[0] === 'bower.json| folder')
+0 86 .remove(folder);
+0 87 .then(function (folder) {
+0 88 return deleted = true;
+0 89 .then(next) {
+0 90 collection.commit = true;
+0 91 .slug = false;
+0 92 return true;
+1 13 if (this._target!== '*') {
+1 14 throw createError('File system sources can\\'t resolve targets', 'ENORESTARGET');
+1 19 FsResolver.prototype._resolve = function () {
+1 20 return this._readJson(this._source)
+1 21 .then(this._copy.bind(this))
+1 29 var dst;
+1 36 if (stat.isDirectory()) {
+1 37 promise = copy.copyDir(that._source, copyOpts)
+1 42 dst = path.join(that._source, path.basename(that._source));
+1 43 promise = copy.copyFile(that._source, dst)
+1 45 return dst;
+1 50 dst: dst
+1 59 this._logger.action('extract', that._source, {
+1 70 var newPath;
+1 71 files = files.filter(junk.isnt);
+1 72 if (files.length === 1) {
+1 73 file = files[0];
+1 74 this._singleFile = 'index' + path.extname;
+1 75 oldPath = path.substring(0, 1);
+1 76 oldPath = path.length = path.join(this._multiline('.subdir, 2);
+1 77 this._singleFile);
+1 78 oldPath = this._index = this._singleFile.length;
+1 79 oldPath = this._singleFile = this._singleFile;
+1 81 return Q.files.save(file;
+1 82 }.bind(this));
+1 83 return Q.for (function this._copy.bind(this));
+1 84 .bind(this));
+1 86 FsResolver.prototype._bootstrap = function (tmpo) {
+1 87 var src = function (err) {
+1 88 var that = createError = createError('bower home(err');
+1 89 return Q.bind(this._inherits(this, 'bower'/.bower-' + path.json', path.basename(this._source), {\
+2 3 var events = require('events');
+2 5 var tmp = require('tmp');
+2 6 var mkdirp = require('mkdirp');
+2 7 var bowerJson = require('bower-json');
+2 8 var pathspec = require('pathspec');
+2 9 var rimraf = require('rimraf');
+2 10 var glob = require('glob');
+2 11 var config = require('../config');
+2 12 var createError = require('../util/createError');
+2 13 tmp.setGracefulCleanup();
+2 14 var Resolver = function (source, options) {
+2 15 options = options || {};
+2 16 this._source = source;
+2 20 this._config = options.config || config;
+2 22 util.inherits(Resolver, events.EventEmitter);
+2 23 Resolver.prototype.getSource = function () {
+2 24 return this._source;
+2 26 Resolver.prototype.getName = function () {
+2 27 return this._name;
+2 29 Resolver.prototype.getTarget = function () {
+2 30 return this._target;
+2 32 Resolver.prototype.getTempDir = function () {
+2 33 return this._tempDir;
+2 35 Resolver.prototype.hasNew = function (canonicalPkg) {
+2 37 var metaFile;
+2 39 '
+
+3 3 var url = require('url');
+3 4 var request = require('request');
+3 7 var Resolver = require('./Resolver');
+3 11 var UrlResolver = function (source, options) {
+3 12 var pos;
+3 15 throw createError('URL sources can\\'t resolve targets', 'ENORESTARGET');
+3 17 if (this._guessedName) {
+3 18 pos = this._name.indexOf('?');
+3 19 if (pos!== -1) {
+3 20 this._name = path.basename(this._name.substr(0, pos));
+3 23 util.inherits(UrlResolver, Resolver);
+3 24 UrlResolver.prototype._hasNew = function (pkgMeta) {
+3 25 var oldCacheHeaders = pkgMeta._cacheHeaders || {};
+3 26 var reqHeaders = {};
+3 27 if (oldCacheHeaders.ETag) {
+3 28 reqHeaders['If-None-Match'] = oldCacheHeaders.ETag;
+3 30 if (this._config.userAgent) {
+3 31 reqHeaders['User-Agent'] = this._config.userAgent;
+3 33 return Q.nfcall(request.head, this._source, {
+3 34 proxy: this._remote.protocol === 'https:'? this._config.httpsProxy : this._config.proxy,
+3 35 strictSSL: this._config.strictSsl,
+3 36 timeout: 5000,
+3 37 headers: reqHeaders,
+3 38 agent: false
+3 40 .spread(function (response) {
+3 41 var cacheHeaders;
+3 42 if (response.statusCode === 304) {
+3 43 return false;
+3 45 if (response.statusCode < 200 || response.statusCode >= 300) {
+3 48 cacheHeaders = this._collectCacheHeaders(response);
+3 49 return!mout.object.equals(oldCacheHeaders, cacheHeaders);
+3 50 }.bind(this), function () {
+3 54 UrlResolver.prototype._resolve = function () {
+3 55 return this._download()
+3 56 .spread(this._parseHeaders.bind(this))
+3 57 .spread(function (file, response) {
+3 58 return this._extract(file, response)
+3 59 .progress(function (notification) {
+3 60 return notification;
+3 62 }.bind(this))
+3 63 .extract(file, response)
+3 64 .done(function () {
+3 65 this._rename(this._download())
+3 71 UrlResolver.prototype._download = function () {
+3 72 var file = path.join(this._tempDir, this._name);
+3 73 var deferred = Q.deferred;
+3 74 var that = Q.defer();
+3 75 Q.defer.action(this._on('action', function (action', function (action, fn) {
+3 76 .define(action', fn.apply(action, filename, fn) {
+3 77 .define(filename, response)
+3 78 .removeAll(filename, meta);
+3 79 if (!action(action, meta(action, fn);
+3 80 throw newUrlResolver.apply(this, meta)
+3 81 .call(this, response);
+3 82 .fail(this._extract.getHeader, meta);
+3 83 .done();
+4 2 var fs = require('graceful-fs');
+4 9 var download = require('../../util/download');
+4 12 function UrlResolver(decEndpoint, config, logger) {
+4 13 Resolver.call(this, decEndpoint, config, logger);
+4 14 this._source = path.resolve(this._config.cwd, this._source);
+4 19 this._name = this._name.substr(0, this._name.length - path.extname(this._name).length);
+4 20 this._remote = url.parse(this._source);
+4 23 mout.object.mixIn(UrlResolver, Resolver);
+4 24 UrlResolver.isTargetable = function () {
+4 27 UrlResolver.prototype._hasNew = function (canonicalDir, pkgMeta) {
+4 39 timeout: this._config.timeout,
+4 40 headers: reqHeaders
+4 67 .then(function (response.on('end', function (progress) {
+4 68 var headers_setHeader;
+4 69 var mode = response;
+4 70 self.on('home', function (bowerJson.setHeadersetHeader(self, response) {
+4 71 self.removeHeader('home', response)
+4 72 .removeHeader('bower response)
+4 73 .removeHeader('curl')
+4 74 .removeHeader('back', function () {
+4 75 .on('back', function () {
+4 76 self.removeHeader('back', function () {
+4 77 nextract(back) {
+4 78 collection.removeHeader('bower response.backEnd();
+4 80 .done(response.setHeader('back');
+4 82 .on('end', function () {
+4 83 self.end();
+4 85 .done(function cleanup();
+5 4 var ncp = require('ncp');
+5 5 var GitResolver = require('./GitResolver');
+5 6 var cmd = require('../../util/cmd');
+5 8 var GitFsResolver = function (source, options) {
+5 12 this._guessedName =!this.name;
+5 14 util.inherits(GitFsResolver, GitResolver);
+5 15 mout.object.mixIn(GitFsResolver, GitResolver);
+5 16 GitFsResolver.prototype._checkout = function () {
+5 17 var branch,
+5 18 resolution = this._resolution;
+5 19 if (resolution.type === 'commit') {
+5 20 return cmd('git', ['clone', this._source, this._tempDir])
+5 21 .then(cmd.bind(cmd, 'git', ['checkout', resolution.commit], { cwd: this._tempDir }));
+5 23 branch = resolution.tag || resolution.branch;
+5 24 return cmd('git', ['clone',  this._source, '-b', branch, '--depth', 1, '.'], { cwd: this._tempDir });
+5 27 GitFsResolver.fetchRefs = function (source) {
+5 28 if (this._refs && this._refs[source]) {
+5 29 return Q.resolve(this._refs[source]);
+5 31 return cmd('git', ['ls-remote', '--tags', '--heads', source])
+5 32 .then(function (stdout) {
+5 33 var refs = stdout.toString()
+5 34 .trim()
+5 35 .replace(/[\\t ]+/g,'')
+5 36 .split(/\\r?\
+5 37 /);
+5 38 return this._refs[source] = refs;
+5 41 module.exports = GitFsResolver;"
+
+6 22 this._remote = url.parse(source);
+6 25 UrlResolver.prototype._hasNew = function (canonicalPkg, pkgMeta) {
+6 67 var deferred = Q.defer();
+6 68 var req;
+6 69 var res;
+6 70 var writer;
+6 71 var finish;
+6 73 var that = function (err) {
+6 74 finish = function (err) {
+6 75 process.removeAllResponse.removeAllListeners();
+6 76 .on('error', function (err) {
+6 77 res = true;
+6 78 if (err) {
+6 80 deferred.removeAllResponse.removeAllListeners(err) {
+6 81 .removeAllListeners(err) {
+6 84 .removeAllListeners(err)
+6 85 .removeAllListeners(this, that)
+6 86 .removeAllListeners(this, err) {
+6 88 deferred.removeAllListeners(this, that')
+6 89 .removeAllListeners(this)
+6 90 .removeAll
+7 18 this._name = this._name.replace(/\\?.*$/, '');
+7 21 if (!mout.string.endsWith(this._source, 'file://')) {
+7 22 this._source += path.resolve(this._config.cwd, this._source);
+7 24 if (this._remote.isUrl) {
+7 25 this._remote.url = this._remote.url.replace(/\\/+$/, '');
+7 27 this._shallowCloning = function () {
+7 28 return Q.nfcall(rimraf, this._source)
+7 30 return Q.nfcall(rimraf, this._source);
+7 33 UrlResolver.prototype.hasNew = function (canonicalDir, pkgMeta) {
+7 35 var sourceId = this._getSourceId(meta._source);
+7 36 var dir = path.join(this._dir, sourceId);
+7 38 if (this._config.retrieve = this._source.match(/^https?:\\/\\
+7 39 if (this._config.proxy) {
+7 40 promise = this._remote.isUrl(that._source);
+7 42 promise = Q.nfcall(fs.stat, this._source)
+7 47 return promise.then(function () {
+7 48 return that._removePackages(packages, options);
+7 50 .fin(function () {
+7 51 that._working = false;
+7 54 UrlResolver.prototype._analyse = function () {
+7 55 return Q.all([
+7 56 this._readJson(),
+7 57 this._readInstalled()
+7 58 ])
+7 59 .spread(function (json, installed) {
+7 60 var root;
+7 61 var flattened = installed;
+7 62 root = {
+7 63 name: json.name,
+7 64 source: this._config.cwd,
+7 65 target: json.version,
+7 66 canonicalDir: this._config.cwd
+7 68 this._restoreNode(root, flattened, 'dependencies');
+7 69 if (!this._production) {
+7 70 this._json.dependencies = {};
+7 71 mout.json.dependencies = _.devDependencies = {};
+7 72 this._restoreNode(this._restoreNode(this._, flattened, 'dependencies');
+7 73 if (!this._json.dependencies = _.devDependencies) {
+7 74 for (var old;
+7 75 this._json.dependencies = _.dependencies = _.devDependencies = {};
+7 77 if (!this._json.devDependencies = json;
+7 78 if (!this._json.dependencies = old;
+8 4 var which = require('which');
+8 5 var LRU = require('lru-cache');
+8 8 var semver = require('../../util/semver');
+8 11 var hasSvn;
+8 12 try {
+8 13 which.sync('svn');
+8 14 hasSvn = true;
+8 15 } catch (ex) {
+8 16 hasSvn = false;
+8 18 function SvnResolver(decEndpoint, config, logger) {
+8 20 if (!hasSvn) {
+8 21 throw createError('svn is not installed or not in the PATH', 'ENOSVN');
+8 24 util.inherits(SvnResolver, Resolver);
+8 25 mout.object.mixIn(SvnResolver, Resolver);
+8 26 SvnResolver.prototype._hasNew = function (canonicalDir, pkgMeta) {
+8 27 var oldResolution = pkgMeta._resolution || {};
+8 28 return this._findResolution()
+8 29 .then(function (resolution) {
+8 33 if (resolution.type ==='version' && semver.neq(resolution.tag, oldResolution.tag)) {
+8 36 return resolution.commit!== oldResolution.commit;
+8 39 SvnResolver.prototype._resolve = function () {
+8 43 return that._checkout()
+8 45 return that._cleanup();
+8 49 SvnResolver.prototype._checkout = function () {
+8 51 var timer;
+8 52 var reporter;
+8 54 var resolution = this._resolution;
+8 55 this._source = SvnResolver.sourceUrl(this._source);
+8 56 if (this._config.tags) {
+8 57 promise = promise.then(function () {
+8 58 return that._manager.versions(that._source);
+8 60 .then(function (versions) {
+8 61 var versionsArr,
+8 62 version,
+8 63 index;
+8 64 versionsArr = versions.map(function (obj) { return obj.version; });
+8 65 if (!versions.length && target === '*') {
+8 66 return that._findResolution('trunk');
+8 69 index = semver.maxSatisfyingIndex(versionsArr, target, true);
+8 70 if (index!== -1) {
+8 71 version = versions[index];
+8 72 return that._analyse();
+8 74 return versions[index] = true;
+8 77 Svnvar._readFile = function(path) {
+8 78 function read() {
+8 79 fs.readFileSync(path, options) {
+8 81 var encoding;
+8 82 if (!encoding = promise = promise.encoding || new RegExp('encoding');
+8 83 return!== undefined;
+8 84 if (encoding.length && encoding.length) {
+8 85 encoding = null;
+8 86 encoding = 'utf8'/.test(path)
+8 87 .replace(/n.replace(/^\\s*/*, function (\\s)\\d+) {0, 2})
+8 88 .replace(/g, function (\\s)
+9 50 throw new Error('_checkout not implemented');
+9 52 SvnResolver.prototype._findResolution = function (target) {
+9 53 var err;
+9 54 var self = this.constructor;
+9 56 target = target || this._target || '*';
+9 57 if ((/^r\\d+/).test(target)) {
+9 58 target = target.split('r');
+9 59 this._resolution = { type: 'commit', commit: target[1] };
+9 60 return Q.resolve(this._resolution);
+9 62 if (semver.validRange(target)) {
+9 63 return self.versions(this._source, true)
+9 72 versionsArr = versions.sort(function (req, res) { return that._s, i, i, b) { return that._resolution = {};
+9 73 index = mout.array.forEach(function (versionsArr, function (obj) {
+9 74 if (!j, len = versionsArr;
+9 75 if (!mout.length;
+9 76 return that._id) {
+9 77 return that._id = posts[id];
+9 79 if (index!== target;
+9 80 index = posts[index] = posts[id];
+9 81 if (!/@id]) {
+9 82 delete posts[id];
+9 85 return that._logger.action('checkout', posts[id];
+9 87 .progress(obj, i, url, url, function

@@ -1,0 +1,161 @@
+Min editdistance: 18.00
+Closest candidate: 0 18 'per_page: 10',
+0 1  'public_dir: posts',
+0 2 '',
+0 3 '# Archives',
+0 4 'archive: 2',
+0 5 'category: 2',
+0 6 'tag: 2',
+0 8 '# Server',
+0 9 'port: 4000',
+0 11 '# Date / Time format',
+0 12 '# Hexo uses Moment.js to parse and display date',
+0 13 '# Reference: http://momentjs.com/docs/#/displaying/format/',
+0 14 'date_format: MMM D, YYYY',
+0 15 'time_format: H:mm:ss',
+0 17 '# Pagination',
+0 18 'per_page: 10',
+0 19 'pagination_dir: page',
+0 21 '# Disqus',
+0 22 'disqus_shortname:',
+0 24 '# Extensions',
+0 25 'plugins: []',
+0 26 'theme: {'
+
+1 1  'archive_dir: posts', 'category_dir: posts', 'tag_dir: tags' }
+1 2 ];
+1 3 file.write(target + '/.gitignore', '.DS_Store', 'index.html' + '\
+1 4 ');
+1 5 next();
+1 6 }, callback);
+1 7 }
+1 8 ], function(){
+1 9 console.log('Hexo is setup at'+ target);
+1 10 });"
+
+2 1  'tags'
+2 2 ].join('\
+2 3 ') + '\
+3 1  'archive_dir: posts'
+3 5 file.write(target + '/_config.yml', config.title, next);
+3 6 },
+3 7 scaffold_dir: [],
+3 8 core_dir: {
+3 9 'layout: post',
+3 10 'title: Scaffold',
+3 11 'date: post',
+3 12 '---'
+3 15 new_post_name: path.join(target, 'new_post_name.md');
+3 16 delete hexo.config.new_post_name;
+3 20 post: function(next){
+3 21 file.read(core_dir + 'posts/hello-world.md', function(err, content){
+3 22 if (err) throw new Error('Post not found: hello-world.md');
+3 23 content = content.should.replace(/: hello-world.md, 'new_post_name.');
+3 25 });
+3 29 server: function(next){
+3 30 file.list(){
+3 31 file.put(target + '/', function(target + '/', function(val, post){
+3 32 file.read(val, page){
+3 33 should.put(val, page);
+3 34 should.save();
+3 43 }, "Hello-world.push();", function(){
+4 3 file.write(target + '/_config.yml', config.join('\
+4 5 ', next);
+4 7 scaffold_dir: function(next){
+4 8 file.write(target + '/scaffolds', scaffold_dir +'layout', next);
+4 10 watch_affold: function(next){
+4 11 file.write(target + '/_config.yml', scaffold_dir +'assets', next);
+4 13 watch_base: function(next){
+4 14 file.write(target + '/_docs.yml', scaffold_dir +'assets', next);
+4 16 prune_layout: function(next){
+4 17 file.write(target + '/prune_layout/' + '.' + '-
+4 18 sep);
+4 21 watch_rename: function(next){
+4 22 file.write(target + '/', next);
+4 23 file.write(target + '/images.write(target + '/images + '/'sessions/' +', next);
+4 24 next);
+4 29 };"
+
+5 1  'https://github.com/tommy351/hexo-theme-light',
+5 2 'tag_dir: tags', 'https://github.com/tommy351/hexo-theme-light'
+5 3 ]
+5 4 }, true);
+5 6 '), next);
+5 8 gitignore: function(next){
+5 9 file.write(target + '/.gitignore', '.DS_Store', 'node_modules', next);
+5 11 config: function(next){
+5 12 var config = [
+5 13 '# Basic',
+5 14 'title: Hexo',
+5 15 'subtitle: Node.js blog framework',
+5 16 'description:',
+5 17 'url: http://yoursite.com',
+5 18 'author: John Doe',
+5 19 'email:',
+5 21 '# Permalink',
+5 22 'root: /',
+5 23 'permalink: :year/:month/:day/:title/:post_source',
+5 24 'tag_dir:post_dir',
+5 27 'permalink: posts'',
+5 30 'archive_dir: posts',
+5 32 'category: posts',
+5 38 'permalink: posts',
+5 41 '# 2: posts',
+5 42 '/*',
+5 45 'posts',
+5 49 'categories',
+5 50 'tags',
+5 51 'series',
+5 56 'posts'',
+5 57 'tags'',
+5 60 'uncategorized: Boolean'\',
+5 62 fileList:Reference: Pagination',\
+6 1  'archive_dir: posts', 'category_dir: posts', 'tag_dir: tags'
+6 7 watch: ['layout', function(next){
+6 8 file.mkdir(target + '/themes', function(){
+6 12 watch_theme: ['layout', function(next){
+6 17 watch_source: ['layout', function(next){
+6 18 file.mkdir(target + '/source/_posts', function(){
+6 21 }],
+6 22 meta: function(next){
+6 23 file.mkdir(target + '/meta_s', function(){
+6 24 return ['<h1 id="_source">' + hexo.version + '"></h1>';
+6 29 file.split('/posts', function(){
+6 30 file.split('/posts, function(){
+6 31 var _id.filter(0, 1, 2){"
+
+7 1  'tags', 'archive_dir: posts'
+7 5 file.write(target + '/_posts/index.html', config.join('\
+7 9 scaffold_dir: scaffolds',
+7 10 '.md': {
+7 11 key:'swig',
+7 12 tags: 'tag',
+7 13 branch:'master',
+7 14 commit: 'Hello world'
+7 16 watch_dir: 'test',
+7 17 '!= null;
+7 20 console.log('Hexo is watching for file changes. Press Ctrl+C to stop.');
+7 21 file.watch(target + '/_posts/index.html', target + '/_posts/hello-world.md', function(data){
+7 22 console.log('Hexo is watching for file changes. Use other filename instead.');
+7 23 file.watch(target + '/_posts/hello-world.md', target + '*.js', function(data){
+7 24 console.log('Hello-sasset_dir = '**/*.js');
+7 25 console.log('port: http://zespia.com/embed/embed/save');
+8 1  'https://github.com/strongloop/',
+8 2 'category_dir: posts', 'https://github.com/strongloop/'
+8 6 file.write(target + '/_posts/hello-world.md', config.directory, next);
+8 9 console.log('Hexo is now initalized.');
+9 1  'public_dir: posts', 'root: /',
+9 25 'theme: light'
+9 28 server: {
+9 29 frameworks: ['jasmine', 'cucumberjs'],
+9 30 colors: 'light: 'deep'],
+9 31 port: 'webServer: s3',
+9 32 logger: sjunit: 'junit:s'
+9 33 quiet: 'junit: false'
+9 35 junit: 'junit: 'junit: http://junit: http://junit: http://junit:12unit:12'
+9 36 junit: \'\'
+9 37 junit: 10'
+9 38 junit: \'junit: \'junit:12'
+9 39 junit:12'
+9 42 config: { useColors:junit: Junit: http://junit: \'junit:12'}
+9 43 junit: \'junit:\'

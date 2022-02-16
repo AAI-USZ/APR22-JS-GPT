@@ -1,0 +1,20 @@
+var express = require('express'),
+path = require('path'),
+colors = require('colors'),
+fs = require('graceful-fs'),
+async = require('async'),
+_ = require('lodash'),
+stylus = require('stylus'),
+nib = require('nib'),
+Controller = require('./controllers');
+
+module.exports = function(args, callback){
+var config = hexo.config,
+log = hexo.log,
+model = hexo.model,
+route = hexo.route,
+renderFn = hexo.render,
+render = renderFn.render,
+renderFile = renderFn.renderFile,
+publicDir = hexo.public_dir,
+processor = hexo.extend.processor;

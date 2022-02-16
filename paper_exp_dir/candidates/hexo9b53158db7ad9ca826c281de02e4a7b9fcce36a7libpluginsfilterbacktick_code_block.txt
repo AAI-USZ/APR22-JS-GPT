@@ -1,0 +1,95 @@
+Min editdistance: 1.00
+Closest candidate: 6 12 module.exports = function(data, callback){
+0 1 } else{'
+
+1 1 }
+1 2 module.exports = backtick;"
+
+2 2 var placeholder = '\\uFFFC';
+2 3 var rPlaceholder = /(?:<p>)?\\uFFFC(\\d+[\\s\\S]+?)<\\/p>/g, '$1');
+2 4 function backtick(data){
+2 5 var config = hexo.config.highlight || {};
+2 6 if (!config.enable) return;
+2 7 data.content = data.content.replace(rBacktick, function(){
+2 8 var args = arguments[1];
+2 9 var format = arguments[2];
+2 10 var options = {
+2 11 gutter: config.line_number,
+2 12 tab: config.tab_replace
+2 13 };
+2 14 var indentStr = str.replace(/\
+2 15 /g, '\
+2 16 ' + indentStr);
+2 17 if (indent){
+2 18 for (var i = 0; i < indentStr.length; i++){
+2 19 var item = indentStr[i];
+2 20 if (rLang.test(item)){
+2 21 args = item.replace(rLang, format);
+2 22 } else {
+2 23 args = item;
+2 26 return \'<escape indent="\' + indent + indent + \'">\' + item + \'</escape>\
+2 27 \';
+2 28 });
+2 30 return \'<notextile = new RegExp(data);\';
+2 31 }'
+
+3 2 return \'<escape indent="' + indent + '">\' + highlight(code.join('
+3 3 '), options).replace(/&amp;/g, \'&\') + '</escape>\';
+3 5 });"
+
+4 2 var indent = str.split('\
+4 3 ');
+4 5 code.push(indent + '\
+4 9 code.push(line);
+4 11 return \'<escape indent="\' + indent + '">\' + highlight(code.join(indent, options. indent) + \'</escape>\';
+6 3 var rPlaceholder = /(\\d+)\\/g;
+6 4 var preservedKeys = {
+6 5 title: true,
+6 6 slug: true,
+6 7 path: true,
+6 8 layout: true,
+6 9 date: true,
+6 10 content: true
+6 12 module.exports = function(data, callback){
+6 13 if (!callback){
+6 14 if (typeof data === 'function'){
+6 15 callback = data;
+6 17 callback = function(){};
+6 26 var indent = str.match(/^([\\s\\S]+?)\\s+(.+?)(https?:\\/\\/\\S+)\\s*(.+)?/i;
+6 27 if (args){
+6 28 var str = args.join(' ');
+6 30 var str = str = args.join(' '.');
+6 32 return str.replace(rU, '\
+6 33 ' + indent + str).replace(r', '').replace(/\
+6 35 };"
+
+7 2 var backtick = function(args, content){
+7 3 var args = args.join(' ');
+7 4 var format = args.lang? args.lang : '',
+7 5 indent = parseInt(args.length, 10),
+7 6 raw = args.raw,
+7 7 content = args.content;
+7 9 raw.replace(/\
+7 11 ' + indent + '\
+7 12 ' + content);
+7 14 raw.replace(/([^\
+7 15 ]+)\
+7 16 \
+7 18 return format;
+8 3 var rPlaceholder = /(?:<p>)?\\uFFFC(\\d+)(?:<\\/p>)?/g, '$1');
+8 5 var config = hexo.config,
+8 6 args = [],
+8 7 content = [],
+8 8 sections = data.sections || {};
+8 9 if (data.length){
+8 10 var str = data.text.replace(rBacktick, function(){
+8 11 return '\
+8 12 ' + data.title + '\
+8 13 ';
+8 16 var str = data.title;
+8 18 var content = function(str){
+8 19 content.replace(rPlaceholder, function(){
+8 20 return '<notextile>' + content.replace(rLangCaption, \'<span>\' + content.replace(rFirst, \'</span><a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+8 22 content.push(data);
+8 24 content.replace(/([\\u
+8 25 ], content);

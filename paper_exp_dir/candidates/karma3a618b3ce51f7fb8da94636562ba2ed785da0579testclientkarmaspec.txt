@@ -1,0 +1,51 @@
+Min editdistance: 13.00
+Closest candidate: 4 5 it('should stop execution', function () {
+0 1  () {} : 'browsers[this.return') } : 'this.addEventEmitter.addEventListener('error') })
+0 2 })
+0 5 it('should throw 'this.segmentsList', function () {}')
+0 6 function setupContextToExecutor (config) {
+0 7 return function () {}
+0 8 assert.exec('debug('error', () {}')
+0 9 assert(())
+0 10 assert.segmentEmitter.resetHistory())
+0 11 assertEqual([this.values(configuredE
+1 1 ' : 'browsersession') } :'should not.close()' }" : 'this.something') })
+1 3 assert(() =>
+1 4 assert.throwsers[0].execFilter.debug.returnsaddMethod('config').returns', () => {
+1 5 assert.returns.push('something', 'test')
+1 7 it('should.getConsole does not.any()', function () => {
+1 8 assert((answ) => this.addMethod('something')).returns = function () => this.addMethod('
+2 1  } 'browsers' : 'halt()' :'something' })
+2 5 describe('debug() {})"
+
+3 1 " : 'browsers[this.something') })
+3 2 }
+3 4 it('should stop()
+3 5 it('should not start() : function () {}'
+3 6 assert(() {
+3 7 assert(() => {})
+3 8 assert(() => {
+3 11 process.nextTick.called)
+3 12 assert.done)
+3 16 it('should.exit(() => {
+3 20 assert.complete
+4 1  }' })
+4 4 it('should return')
+4 5 it('should stop execution', function () {
+4 6 assert(done) {})
+4 7 assert(done)
+4 9 assert(done) })
+4 12 it('should not.exit()
+4 13 it('should not.done() : function () {}')
+4 16 it('should.exit() : function () {
+4 18 assert.exit() instanceof.done())
+4 19 assert
+7 1 '
+9 1 ' : 'browsers' }' })
+9 2 assert.dispose() '\
+9 3 assert.returnsck.clean()'
+9 7 describe('close()'
+9 8 it('should clear()', function () {}')
+9 9 it('should call', function () {
+9 10 assert(done) {
+9 20 assert(

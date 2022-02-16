@@ -1,0 +1,153 @@
+Min editdistance: 26.00
+Closest candidate: 1 10 require: function(name) {
+0 1  {
+0 2 console: console,"
+
+1 1  context);
+1 2 return context;
+1 3 };
+1 4 var resolveModule = function(module) {
+1 5 if (module.charAt(0)!== '.') return module;
+1 6 return path.resolve(module.substring(0, 1), module);
+1 8 var exports = {};
+1 9 var context = {
+1 10 require: function(name) {
+1 11 return mocks[name] || require(resolveModule(name));
+1 12 },
+1 13 console: console,
+1 14 exports: exports,
+1 15 module: {
+1 16 exports: exports
+1 17 }
+1 41 var vimeo = require('vimeo');
+1 43 url: 'http://player.vimeo.com',
+1 44 root: '/',
+1 45 port: parseInt(process.env.PORT, 10) || 4000,
+1 46 headers: {
+1 47 'Content-Type': 'application/json'
+1 54 "
+
+2 4 function resolveModule(p) {
+2 5 return m.readFile(p, 'config.yml');
+2 7 function parseConfig(configFilePath, cliOptions) {
+2 8 var config = {
+2 9 port: constant.DEFAULT_PORT,
+2 10 runnerPort: constant.DEFAULT_RUNNER_PORT,
+2 11 basePath: '',
+2 12 files: [],
+2 13 exclude: [],
+2 14 logLevel: constant.LOG_INFO,
+2 15 colors: false,
+2 16 autoWatch: false,
+2 17 reporter: 'progress',
+2 18 singleRun: false,
+2 19 browsers: [],
+2 20 proxies: {},
+2 21 urlRoot: '/'
+2 23 var ADAPTER_DIR = __dirname + '/../adapter';
+2 24 var configEnv = {
+2 25 LOG_DISABLE: constant.LOG_DISABLE,
+2 26 LOG_ERROR:   constant.LOG_ERROR,
+2 27 LOG_WARN:    constant.LOG_WARN,
+2 28 LOG_INFO:   constant.LOG_INFO,
+2 29 LOG_DEBUG:   constant.LOG_DEBUG,
+2 30 JASMINE: __dirname + '/../adapter/lib/jasmine.js',
+2 31 JASMINE_ADAPTER: __dirname + '/../adapter/jasmine.js',
+2 32 function parseEnv(env) {
+2 33 var env = process.env;
+2 34 var args = env.args || {};
+2 35 if (process.env.NODE_ENV === 'test') {
+2 36 env = 'test';
+2 37 } else {
+2 40 return m.parseEnv(env);
+2 42 function parseModule(env) {
+2 43 var module = new Module(env);
+2 44 module.filename = __dirname + '/../adapter/lib/filters/' + escape.filename(env.EXIT_DIR) + '-' + escape.module(env.EXIT_DIR) + '\\\\' +
+2 45 (env.init &&
+2 46 env.safe) ||
+2 47 env.init.call(this, module);
+2 48 return module.exports;
+2 50 function escapeModule(env) {
+2 52 module.filename = env.normalize(env.EXIT_DIR);
+2 53 module.paths = config.exclude.map(function(exclude) {
+2 55 });
+2 58 function __dirname + '/../adapter/lib/resolve/lib/filters/' + escape.js'
+2 59 || (fs.fs.readdirname === './'
+2 60 ) + fs.paths) + '/'
+2 61 || (fs.exclude.exclude.dirname === './'
+2 62 || (fs.exclude.paths.name === './'
+2 63 )
+2 64 || (fs.exclude.subensions)
+2 65 || (fs.lintlintlintlink
+2 66 || (fs.dirname === '.'subensions')
+2 67 ) || (fs.exclude.exclude.name === '.'subensions') ||
+2 68 ) + '/'subensions')
+2 69 || (fs.readdirname === '.'subensions') ||'
+2 70 || (fs.readdirname === '.'subensions')
+2 72 || (fs.readdirname === '.'subensions' || '.'? '.' + fs.readdirname : ''
+3 2 return mocks;
+5 1 console = mocks[name] || {};"
+
+6 2 return mocks[name] = fs.readFileSync(filePath, context);
+7 1 console = {
+7 7 vm.runInNewContext(fs.readFileSync(filePath), context);
+7 10 function cleanModules(config) {
+7 11 var pkgs = Object.create(null);
+7 12 var used = false;
+7 13 function clean(config) {
+7 15 for (var i = 0, len = pkgs.length; i < len; i++) {
+7 16 var key = pkgs[i];
+7 17 if (!key) {
+7 18 return;
+7 20 return Q.nfcall(rimraf, unload(config.directory + 'package.json'));
+7 22 function removeModules(config) {
+7 23 var pkgs = Object.keys(config);
+7 24 var removed = false;
+7 25 return function cleanModules(removed, config) {
+7 27 return Promise.all([
+7 28 removed,
+7 29 changedPackages(removed),
+7 30 changedFiles(removed)
+7 31 ]);
+7 33 function clearPkgs(config) {
+7 35 return function clearPkgs(config) {
+7 37 return pkgs.filter(function(pkg) {
+7 38 return!pkg.pkgMeta.version;
+7 41 exports.create = function(context) {
+7 42 return function(options, next) {
+7 43 var name = options.argv.remain[0];
+7 44 return function(req, res, next) {
+7 45 if (!res.length) {
+7 46 res.length = 0;
+7 48 options[name] = options;
+7 49 next();
+7 52 exports.readFile = function(filePath, options) {
+7 53 var content = fs.readFileSync(filePath, options);
+7 54 content.toString = options.toString;
+7 55 return fs.writeFile(filePath, content, options);
+7 57 exports.createReadFile = function(filePath, options) {
+7 59 var keys = Object.keys(options);
+7 60 var key = '';
+7 61 var null;
+7 62 var encoding;
+7 63 if (options.encoding === 'utf8') {
+7 64 encoding = 'utf-8';
+7 65 content = 'utf-8';
+7 67 for (key = options;
+7 68 content = filter(function(err, content, content, options) {
+7 69 return content += '*'stringify(content, options);
+7 70 options);
+7 71 options.filename = filename.unlink(content, options);
+7 73 return content;
+7 75 exports.on('error', function(err) {
+7 76 if (err) {
+7 77 return callback(err);
+7 81 });"
+
+9 3 error: error,
+9 4 conflict: conflict,
+9 5 debug: debug,
+9 6 dir: new (process.env.NODE_ENV || 'test'),
+9 7 install: context
+9 8 };"
+

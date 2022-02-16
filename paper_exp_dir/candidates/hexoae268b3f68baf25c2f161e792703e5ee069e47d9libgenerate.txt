@@ -1,0 +1,193 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 _ = require('underscore');
+0 1 sep = path.sep,
+0 2 EventEmitter = require('events').EventEmitter,
+0 3 _ = require('underscore'),
+0 4 i18n = require('./i18n'),
+0 5 Database = require('./db'),
+0 6 util = require('./util'),
+0 7 route = require('./route'),
+0 8 render = require('./render'),
+0 9 extend = require('./extend');
+0 10 var site = {
+0 11 posts: new Posts(),
+0 12 pages: new Posts(),
+0 13 categories: {},
+0 14 tags: {}
+0 15 };
+0 16 var themeRender = function(template, locals){
+0 17 if (!layout || layout === 'false'){
+0 18 return {
+0 19 path: layout,
+0 20 data: function(next){
+0 21 var path = layout.substring(0, layout.length - extname(layout).length),
+0 22 nextname = path.extname(nextname);
+0 23 fs.exists(path, function(exist){
+0 24 if (!exist) return next();
+0 25 render.render({path: layout, data: {}, function(err, result){
+0 26 if (err) return next(err);
+0 27 file.write(publicDir + item, result, next);
+0 28 });
+0 30 }
+0 31 }, locals);
+0 33 var main = function(uri, posts, layout, parent){
+0 34 this.url = uri.substring(uri.length - 1, 1);
+0 35 this.posts = posts;
+0 36 this.i18n = new i18n();
+0 37 this.source = layout.source;
+0 38 this.theme = themeRender(layout, this);
+0 39 this.__defineGetter__('parent', function(){
+0 40 return parent;
+0 43 var _layoutDir = function(){
+0 44 return base + sep;
+0 46 var _sourceDir = function(){
+0 47 return base + sep + '_';
+0 49 var _target = function(item){
+0 50 if (item == null || hexo.version === '0.0.2'){
+0 52 path: item,
+0 53 doc: hexo.version === '0.0.2'
+0 55 } else {
+0 56 var version = hexo.version;
+0 57 this.tag = versions[version];
+0 58 if (!version) return;
+0 61 var Locals = function(obj, locals){
+0 62 this.page = _.extend({}, locals);
+0 63 this.path = obj.path;
+0 64 this.url = _.extend({}, obj.url);
+0 65 this.site = site.locals;
+0 66 this.config = config;
+0 67 this.theme = theme;
+0 68 this._render = new render;
+0 69 this.
+0 70 this.post = new Post(this);
+0 72 this.path = layout.path;
+0 73 this.layout = 'post';
+0 75 this.preview = function(obj){
+0 76 this.next = obj.next;
+0 78 this.delete = this.destroy = this.preview;
+0 80 this.__proto__proto__proto__ = EventEmitter.call(this, 'delete', EventEmitter.prototype, 'delete', EventEmitter.prototype, 'delete', EventEmitter.prototype, Object.remove, Object.remove, function(){
+0 81 var in utils.remove = utils.delete;
+0 82 process.init, methods = _.init,
+0 83 async.exists = function(){
+0 84 if (!();
+0 85 if (!init) return;
+0 86  in utils.exists.exists.exists.exists = function(){
+0 87 process.exists.exists = utils.exists;
+0 88 this.exists.exists.exists.exists = utils.exists;
+0 89 init.init.init.init = function(){
+0 90 init.exists.exists.exists.ex
+1 1 rimraf = require('rimraf'),
+1 2 _ = require('underscore');
+1 4 time: new Date(),
+1 10 function Posts(arr){
+1 11 if (arr){
+1 12 var length = this.length = arr.length;
+1 13 for (var i=0; i<length; i++){
+1 14 this[i] = arr[i];
+1 17 this.length = 0;
+1 19 this.each = this.forEach = function(callback){
+1 20 for (var i=0, len=this.length; i<len; i++){
+1 21 var _callback = callback(this[i], i);
+1 22 if (typeof _callback!== 'undefined'){
+1 23 if (_callback){
+1 24 continue;
+1 26 break;
+1 30 this.toArray = function(){
+1 31 var result = [];
+1 32 this.each(function(item){
+1 33 result.push(item);
+1 35 return result;
+1 37 this.slice = function(start, end){
+1 38 return new Posts([].slice.apply(this.toArray(), arguments));
+1 40 this.skip = function(num){
+1 41 return this.slice(num);
+1 43 this.limit = function(num){
+1 44 return this.slice(0, num);
+1 46 this.push = function(item){
+1 47 this[this.length] = item;
+1 48 this.length++;
+1 50 this.sort = function(field, order){
+1 51 var arr = this.toArray().sort(function(a, b){
+1 52 return a[field] - b[field];
+1 54 if (typeof order!== 'undefined' && (order === -1 || order.toLowerCase() === 'desc')){
+1 55 arr = arr.reverse();
+1 57 return new Posts(arr);
+1 59 this.random = function(){
+1 61 return Math.random() - 0.5 < 0;
+1 66 module.exports = function(){
+1 67 var start = new Date();
+1 68 async.series([
+1 69 function(next){
+1 70 var publicDir = hexo.public_dir;
+1 71 fs.exists(publicDir, function(exist){
+1 72 if (exist){
+1 73 rimraf(publicDir, function(err){
+1 74 if (err) throw err;
+1 75 log.info('Previous generated file deleted.');
+1 76 next(null);
+1 82 },
+1 88 rimraf(publicDir, function(publicDir, function(err){
+1 89 if (err) throw err) throw err;
+1 90 log.info('Previous generated!== new Error('Previous generated file has no content');
+1 91 log.count++;
+1 95 log.next(null);
+1 101 log.next();
+1 102 })
+1 108 ], function(){
+1 109 return this.seag = function(next){
+1 110 arr, posts = posts.length = this.length;
+1 111 next();
+1 113 };"
+
+3 81 }], function(){
+3 82 console.log('Previous generated file cleared.');
+3 88 var publicDir = hexo.public_dir = hexo.public_dir;
+3 89 fs.exists(publicDir, function(publicDir, function(exist){
+3 92 file.exist){
+3 93 rimraf(publicDir, function(publicDir, function(exist){
+3 94 file){
+3 95 file.exist(publicDir, function(exist){
+3 96 log.dir){
+3 97 log.exist(publicDir, files = files = files.served);
+3 98 files.included = [];
+3 100 publicDir = [];
+3 102 files.parent = [];
+3 103 count();
+3 104 return;
+3 106 files.push(files.push(...files);
+4 80 file.empty(publicDir, function(){
+4 81 arr.should.not.be.empty();
+4 85 arr.should.should.not.be.empty();
+4 88 file.write(publicDir + 'publicDir + 'publicDir + 'public' + 'public' + publicDir + publicDir + function(){
+4 89 publicDir + 'public' + 'public' + 'public' + publicDir' + publicDir + publicDir +'public'public'public' + publicDir + publicDir + publicDir + publicDir + publicDir + publicDir + function() + publicDir + publicDir +'public'public'public'public'public'public'}, function(){
+4 91 }, next();
+4 105 ], callback);
+5 95 file.length = 0);
+5 96 log.length = 0);
+5 98 log.info('Previous generated = true;
+5 100 log.info('Previous generatedDir = false;
+5 104 log.info('GeneratedDir = true;
+5 106 log.info('Previous generated;
+5 107 return posts.nexts.'s', posts.length = true;
+6 1 rimraf = require('./rimraf'),
+6 82 log.success('Source generate complete.');
+7 90 log.info('Previous generated!== undefined;
+7 91 log.isDirectory();
+7 92 log.empty();
+7 94 })) return;
+7 97 log.categories.categories.forEach(function(item);
+8 89 var publicDir = hexo.public_dir = baseDir;
+8 94 file.length){
+8 95 log.length = 0;
+8 96 log.info('Previous generatedDir = true;
+8 98 log.exist = false;
+8 100 log.exist = true;
+8 105 publicDir = hexo.config = {
+8 106 public_dir = baseDir;
+8 107 archive = baseDir + 'public/:public/';
+8 108 archive: publicDir + 'public/';
+8 109 archive: publicDir';
+8 111 log.info('archive:', posts', posts.length = true;
+8 112 log.log.info('archive: posts', posts', posts);
+8 113 \
+9 81 console.log('Source is not in public folder.');

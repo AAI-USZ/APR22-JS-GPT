@@ -1,0 +1,12 @@
+Min editdistance: 33.00
+Closest candidate: 0 2 route.set(item.path, function(fn){
+0 1 var layout = item.layout;
+0 2 route.set(item.path, function(fn){
+0 3 render([layout, 'post', 'index'], item, fn);
+0 4 });
+0 6 callback();"
+
+1 4 });"
+
+3 6 callback();
+5 2 render([layout, 'post', 'index'], item, callback);

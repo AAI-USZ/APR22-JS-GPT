@@ -1,0 +1,110 @@
+Min editdistance: 24.00
+Closest candidate: 1 14 it('lookups package by name', function () {
+0 1  url: '/__bower-registry-/' } }"
+
+1 1  url: { url: response } } }
+1 2 .spread(function (result) {
+1 3 expect(result.id).to.be('bower-registry-client');
+1 4 expect(result.name).to.be('bower-registry-client');
+1 5 expect(result.url).to.be('http://bower.io');
+1 6 expect(result.type).to.be('lookup');
+1 7 expect(result.time).to.be('300');
+1 8 });
+1 10 it('correctly reads arguments', function () {
+1 11 expect(lookup.readOptions(['jquery']))
+1 12 .to.eql(['jquery']);
+1 14 it('lookups package by name', function () {
+1 15 var lookup = lookupWithResult({ jquery: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url: { url.path: { url: { url: { url: url: url: { url.path: url: url.root: url.root: url: url; url: url: url; url: url; url: url; url: { url: url.replace( url:'', url: url: url: { url: url:'/', url: url: url: url.replace( url: url: url: url: url.replace( url: url: url.replace(/', url: url: url: url: url: url); url: url.replace(/', url: url); url: url: url; url: url; url.replace(url = url; url = url: url; url = url; url = url; url.replace(url = url; url = url = url; url.replace(url = url; url; url.replace(url = url = url; url; url = url.replace(url = url);
+2 1  url: '/' + response.hostname + ':' + response.port || '443' };
+2 2 };
+2 8 var lookup = lookupWithResult({ jquery: { url: '/jquery.org' } });
+2 9 return helpers.run(lookup, ['jquery']).spread(function (result) {
+2 10 expect(result).to.eql(['jquery']);
+2 13 it('returns null if no package is found', function () {
+2 15 return helpers.run(lookup, []).spread(function (result) {
+2 16 expect(result).to.eql(null);
+2 19 it('returns true for the variable', function () {
+2 21 return helpers.run(lookup, [null].concat(result))
+2 23 expect(result).to.eql(true);
+2 26 });"
+
+3 1  url: '/' + response.hostname + ':' } }; };
+3 8 var lookup = lookupWithResult({ jquery: { url: '/' } });
+3 10 expect(result).to.eql({ jquery: { url: '/' } });
+3 19 it('returns null if called without argument', function () {
+3 25 it('setters cache', function () {
+3 31 it('setters object', function () {
+4 1  url: { config: config } } } }
+4 3 expect(result.id).to.eql(mocklookup(result.id));
+4 4 expect(result.code).to.be('EINV');
+4 12 var lookup = lookupWithResult = function (response) {
+4 13 return helpers.command('lookup', {
+4 14 'jquery': [
+4 15 'jquery']
+4 16 }, {
+4 17 'jquery-2': [
+4 18 'jquery',
+4 19 'jquery-3': [
+4 21 'jquery-4': [
+4 23 'jquery-5': [
+4 25 'jquery-6': [
+4 27 'jquery-7': [
+4 29 'jquery-8': [
+4 31 'jquery-9': [
+4 33 'jquery-10': [
+4 35 'jquery-20': [
+4 37 'jquery-30': [
+4 39 'jquery-36': [
+4 41 'jquery-37': [
+4 43 'jquery-40': [
+4 45 'jquery'
+4 46 '
+4 47 '
+
+5 1  url: '/__bower-registry-bower-json/bower.json' } }
+5 3 expect(result.url).to.eql(resolve(result.url));
+5 4 expect(result.type).to.eql('lookup');
+5 5 expect(result.locale).to.eql('.e');
+5 13 var lookup = lookupWithResult({ jquery: { url: '/__bower-registry-bower-json' } });
+5 23 expect(result.url).to.eql(null);
+5 24 expect(result.type).to.eql('null');
+5 36 it('returns null if no value is found', function () {
+5 41 expect(result.locals).to.eql('.e');
+5 49 expect(result.locals).to.eql({});
+6 1  url: '/__bower-registry-bower.io' } }); };
+6 3 var lookupWithResult = function (response) {
+6 5 'bower-registry-bower-json': {
+6 6 name: 'bower lookup',
+6 7 url: '/__bower-registry-bower.json'
+6 8 },
+6 9 ');
+6 16 var lookup = lookupWithResult({ jquery: { url: '/__bower-registry-bower.io' } });
+6 18 expect(result).to.eql({
+6 19 name: 'jquery',
+6 23 it('returns null if no result is found', function () {
+6 35 it('returns true if all registry is ready', function () {
+6 39 it('should return false if no component.json / bower.json is found', function () {
+7 1  url: '/' + response.host + ':' + response.port +'}'}' };"
+
+8 1  url: { url: { url: '/large.com' } }, response, pair: [ 'bower-registry-client' ], { client: { useIframe: true } } } });
+8 8 var lookup = lookupWithResult({ jquery: { url: { url: { 'http://jquery.org' } } });
+8 14 var lookup = lookupWithResult({ jquery: { url: { url: { '/large.com' } } });
+8 20 var lookup = lookupWithResult({ jquery: { url: { url: 'http://jquery.org' } } });
+9 1  url: { url: '/' } } } };
+9 8 var lookup = lookupWithResult = function (response) {};
+9 9 var getter = function () {
+9 10 return helpers.command('get', {
+9 14 'jquery-xml': [
+9 16 'jquery-sass': [
+9 18 'jquery-paginator': [
+9 20 'jquery-movie',
+9 21 'jquery-video-container': [
+9 23 'jquery.jade': { name: 'Tim Burton' }
+9 25 'jquery.jade': { name: 'James Cameron' }
+9 27 var register = function (name, url, callback) {
+9 28 var result = await helpers.run(register, ['jquery', 'jquery']);
+9 29 result.should.eql(['jquery', 'jquery']);
+9 31 it('register() - no result', function () {
+9 32 return helpers.run(register).spread(function (results) {
+9 33 expect(results).to.be.an(Object);
+9 34 expect(results.length).to.eql(0);

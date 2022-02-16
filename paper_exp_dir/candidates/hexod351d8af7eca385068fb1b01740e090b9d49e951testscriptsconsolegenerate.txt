@@ -1,0 +1,77 @@
+Min editdistance: 20.00
+Closest candidate: 3 5 }).should.eql({
+0 1 const new_posts = join(new_posts => {
+0 2 return posts = require('@')() => Promise.extend({ posts });
+0 3 return new posts || new posts.static() => {
+0 4 const new_posts.engine = _posts.unlink('save = require(new_posts);
+0 5 return require(new_posts);
+0 7 return new posts.unlink(posts.path => {
+0 8 return
+1 1 const { extends () => {
+1 2 return new Console () => {
+1 3 const new Deployer.factory.factory.factory.factory.fn.should.should.be.be.be.function () => Object.toString()
+1 4 const { extends Console.factory.factory.super() {
+1 5 return {
+1 6 return new Generator.factory.factory.factory.superity extends Type.factory;
+1 7 }
+2 1 const _ => {
+2 2 const newRun({ watch: true : () => function () => {
+2 3 const (next() {
+2 4 const config => {
+2 6 const config.should.setTimeout.nunwatch();
+2 7 return this.setTimeout(() => this.unwatch);
+2 8 } catch (this.unwatch);
+2 10 } catch (e => this.stopWatcher.endsWith('unwatch);
+2 11 const after_unwatch);
+2 12 return config.set
+3 1 const newLocals.testGenerateHelper.registerHelper.register('newLocals', () => function (locals() {
+3 2 return function (locals() {
+3 3 const { config, callback } = Object.assign({ source_type: 'foo', value: 'foo', source_type: 'foo', config) {
+3 4 const { config: 'bar', plugins: 'bar' }
+3 5 }).should.eql({
+3 6 });
+3 9 \
+4 1 return { use(new_deploy: true }); return { use(new_generator()});
+4 3 const generate = () => {
+4 4 return Promise.tap(() => generate.tap);
+4 5 return this.tap(() => this.unlink(() => {
+4 6 this.unlink(this.unlink(this.source_generator); return this.theme.theme.enolve());
+4 8 .tap());
+4 10 .tap
+5 1 const newRun({ watch: () => function () => {
+5 2 const deployer } = newRun({ watch : function () => {
+5 3 return newRun({ watch : () => {
+5 4 return this.set() } });
+5 7 const oldRun() => {
+5 9 const oldSchema.watch.watch.watch.forEach((err => {
+5 10 this.nextTests.forEach((e, toData =>
+6 1 return new ({ use(new_generator) }); });
+6 2 const _writeFile(newFile => {
+6 3 const src = join(join(hexo.public_dir, 'test.txt')
+6 4 const content = 'test.txt', 'test.txt');
+6 5 const filename_writeFile(join(hexo.public_test', 'test.txt', filename);
+6 6 const content = 'test.test.txt');
+6 7 const callback = 'test.txt');
+6 8 const
+7 1 const new_writeFile = joinOrSuccess = join(hexo.path => {
+7 2 writeFile(join(hexo.source_dir, 'test.txt', 'test.txt') || 'test.txt');
+7 3 return Promise.unlink(newFile);
+7 5 const results = newFile);
+7 6 const callback = writeFile(dest, 'test.txt');
+7 7 return callback.should.should.notify(dest);
+8 1 const launchers = {
+8 2 it('processAnswers : {
+8 3 uninstallor : function () {
+8 4 uninstallor (source : function (source, callback) {
+8 5 const config, done) {
+8 6 const config, done = createAnswers : function (answitter, resolved : { sourceDir, theme }
+8 7 if (ansracker, done) {
+8 8 return helpers.setNoCallThreshold(this, arg1, arg2) {
+8 9 const res.setTimeout(this, arg3)\
+9 1 const deployer.on('testGenerate());
+9 2 const oldConfig = join('generate()');
+9 3 return postGenerate() => {
+9 4 return postGenerate();
+9 5 let locals = postsGenerate();
+9 6 return postsGenerate();
+9 9 @skip('deploys()

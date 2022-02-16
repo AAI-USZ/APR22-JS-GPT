@@ -1,0 +1,108 @@
+Min editdistance: 22.00
+Closest candidate: 0 1 var Testacular = function(socket, context) {
+0 1 var Testacular = function(socket, context) {
+0 2 var config;
+0 3 var hasError = false;
+0 4 var store = {};
+0 5 this.error = function(msg, url, line) {
+0 6 hasError = true;
+0 7 socket.emit('error', msg + '\
+0 8 at'+ url + ':' + line);
+0 9 this.complete();
+0 10 return true;
+0 11 };
+0 12 this.result = function(result) {
+0 13 socket.emit('result', result);
+0 15 this.complete = function() {
+0 16 socket.emit('complete');
+0 17 context.src = 'about:blank';
+0 19 this.info = function(info) {
+0 20 socket.emit('info', info);
+0 22 this.loaded = function() {
+0 23 if (!hasError) this.start(config);
+0 24 this.start = null;
+0 26 this.store = function(key, value) {
+0 27 if (typeof value === 'undefined') {
+0 28 return store[key];
+0 29 }
+0 30 if (Object.prototype.toString.apply(value) === '[object Array]') {
+0 31 var s = store[key] = [];
+0 32 for (var i = 0, len = s.length; i < len; i++) {
+0 33 s.push(this.name +'store');
+0 35 } else {
+0 36 store[key] = value;
+0 39 this.start = this.complete;
+0 40 socket.emit('execute', this.complete);
+0 42 this.store = function() {
+0 43 return this;
+0 45 };"
+
+1 1 "
+
+2 42 this.store.clear = function() {
+2 43 return this.start;
+2 47 function clearContext() {
+2 48 return this.init() {
+2 51 clearRuntimeCache.store.clearRuntimeCache.set(this.settings.set(this.settings);
+2 53 clearAll.dumpinit() {
+2 54 init() {
+2 56 this.pages = clearContext()
+2 57 this.settings = this.settings = this.settings = this.settings || {};
+2 59 Request.all = function clearRuntimeCache() {
+2 60 clear()
+2 61 if (this.exclude = clearContext) {
+2 62 this.settings.settings = this.settings.settings. clearContext = this.settings || {};
+2 64 this.set('clearRuntimeCache = clearRuntime
+4 35 s.push(value[i]);
+4 41 this.start = this.complete = function(config, id) {
+4 42 if (id) {
+4 43 process.nextTick(done);
+4 47 this.loaded = this.start = this;
+4 48 this.start = this;
+4 50 };'
+
+6 17 context.src = 'http://browsers.last-' + idx + '.js';
+6 39 this.start = this.complete = function() {
+6 40 context.src.push(this);
+6 42 this.loaded = this.start = this.start = this.loaded = this.start || function() {
+6 43 return this.start > 0;
+6 46 this.start = this.store = this.start = this.total = this.total;
+6 47 this.displayed = this.displayed = this.total = this.displayed = this.total;
+6 48 this.refresh = this.refresh = this.refresh = this.refresh = this.refresh || this.refresh || this.refresh === undefined? this.isVersions(this.refresh) : this.start) : this.stopWatcher.clearRuntimeCache? this.refresh
+6 50 async.parallel([
+6 51 function(next){
+6 52 this.browsers.db.sockets. setChrome
+7 32 for (var i = 0; i < value.length; i++) {
+7 42 this.store = function(key, val) {
+7 43 if (typeof key === 'undefined') this.start = null;
+7 46 var index = this.start = this.getIndexOf();
+7 47 this.setAllToExecuting(val);
+7 48 this.executing(val = function() {
+7 49 index : function() {
+7 50 val = this.executing();
+7 51 return this.executing();
+7 54 this.setAllIsReadyToExecutingToExecuting(this.setAllExecutingToExecuting(this.scheduleNextExecuting, this.schedule, this.setAllExecuting, function() {
+7 55 if (executing) {
+7 56 index === null;
+7 57 index = this.schedule.scheduleNextExecutingToExecuting();
+7 60 this.schedule = function() {
+7 61 if (executionDelayingDisExecuting)
+8 14 context.src = result.replace(/\
+8 15 /g, '\
+8 16 ' + item);
+8 34 s.push(this.stringify(value[0], 3));
+8 37 store[this.id] = value;
+8 41 context.complete.apply(context, arguments);
+8 43 this.loaded = this.start = this.loaded = this.start || function() {
+8 44 if (!hasError = true;
+8 45 this.start || this.start || this.total > 0;
+8 46 this.start > 0;
+8 47 this.dispose();
+8 49 this.setState(this.totalErrors = false;
+8 50 this.start || this.dispose();
+8 51 if (!this.start || this.start || this.totalErrors = false;
+8 54 if (!this.start || this.start) this.start || this.totalErrors = undefined;
+8 55 if (!hasDone;
+8 56 this.start) {
+8 57 this.start = this.totalErrors = true;
+8 58 this

@@ -1,0 +1,184 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 describe '.escapeRegexp()'
+0 1 end
+0 2 describe '.escapeRegexp()'
+0 3 it'should escape regexp special characters'
+0 4 Express.escapeRegexp('/users/(name)\').should.eql '\\\\/users\\\\/\\\\(name\\\\)\'
+0 6 it'should accept a string of space-delimited characters'
+0 7 Express.escapeRegexp('/foo/#bar?user[name]=tj', \'/ [ ] { })
+0 8 Express.escapeRegexp('/foo\\\\/#bar?user\\\\[name\\\\]=tj')
+0 11 describe '.contentsOf()'
+0 12 it'should return the body of a function as a string'
+0 13 Express.contentsOf(function(){ return 'foo' }).should.include'return', 'foo'
+0 16 describe '.header()'
+0 17 it'should set / get headers'
+0 18 Express.header('Content-Type', 'text/html')
+0 19 Express.header('Content-Type').should.eql 'text/html'
+0 22 describe '.status()'
+0 23 after_each
+0 24 Express.response.status = 200
+0 26 it'should set response status code by number'
+0 27 Express.status(404)
+0 28 Express.response.status.should.eql 404
+0 30 it'should parse complex key / value pairs'
+0 31 Express.param('user', function(){
+0 32 Express.server.finished()
+0 33 })
+0 36 it'should not return an empty string'
+0 44 it'should setheader()'
+0 50 it'should set the Set-Cookie header'
+0 51 Express.header('Set-Cookie', 'cookie-a-12345')
+0 52 Express.header('Set-Cookie').should.eql 'foo=bar'
+0 55 describe '.cookie()'
+0 56 it'should return a cookie string'
+0 57 Express.cookie('path').should.eql '/'
+0 58 Express.cookie('q')
+0 59 Express.cookie('name').should.eql 'tj'
+0 63 Express.cookie('foo'
+0 64 Express.should.should.be_an_an_an_instance_of Express.client\'
+0 71 end"
+
+1 16 Express.response.status = 300
+1 21 Express.response.status.should.eql 403
+1 23 it'should set using the status string map'
+1 24 Express.status('Not Found')
+1 31 Express.header('Content-Type', 'application/json')
+1 32 Express.header('Content-Type').should.eql 'application/json'
+1 35 describe '.status(code, body)'"
+
+2 21 describe '.hashToArray()'
+2 22 it'should map hash key / value pairs to an array'
+2 23 headers = { 'Content-Type': 'application/x-www-form-urlencoded' }
+2 24 headers.hash.should.eql [['foo', 'bar']
+2 29 Express.escapeRegexp(' /users/(name)\').should.eql '\\\\/users\\\\/\\\\(name\\\\)\'
+2 31 it'should populate Express.hash with space-delimited characters'
+2 32 Express.escapeRegexp(' /foo/#bar?user[name]=tj', space-delimited + '\\\\/foo\\\\/#bar?user\\\\[name\\\\]=tj'
+2 42 Express.header('Set-Cookie', '732423sdfs73243')
+2 49 Express.cookie('path').should.eql '/path'
+2 51 Express.cookie('something-Else')
+2 52 Express.cookie('test')
+2 58 Express.cookie('foo/bar/bar/baz/baz/foo')
+3 32 describe '.header() - allow an offset'
+3 33 it'should return an array of arguments'
+3 35 Express.header('Content-Type').should.eql ['application/json']
+3 39 it'should return an object with indexed values and length'
+3 44 describe '.header() - set when given a field name and value'
+3 45 it'should set the header'
+3 46 get('/user/:id', function(){
+3 47 this.header('Set-Cookie', this.header('Set-Cookie'));
+3 49 get('/user/12').headers.should.not.have_property 'x-foo'
+3 52 describe '.header() - when given a field name'
+3 53 it'should return a string'
+3 54 get('/user/:id/:op', function(){
+3 55 this.header('Set-Cookie', this.header('op'));
+3 57 get('/user/12/edit').headers.should.have_property 'x-foo'
+3 64 it'should set when given a field name is given a field name'
+3 65 it'should return the string'
+3 66 it'should return the header'
+3 67 get('/val'
+3 68 get('/user/:id/:op', function()'
+3 69 get('foo')
+3 71 get('bar')
+3 72 get('baz', function()'
+3 73 get('admin/val')
+3 75 get('baz('admin/bar')
+3 76 get('admin/bar')
+3 77 get('baz.image.image.image.png')
+3 85 it'should header'
+3 86 describe'
+3 88 it'should header', function header()'\
+4 32 describe '.jsonp(object)'
+4 33 it'should respond with jsonp special characters in string'
+4 34 Express.header('Content-Type', 'application/jsonp)'"
+
+5 20 it'should be case insensitive'
+5 21 Express.status('forbidden')
+5 27 Express.hash('foo', 'bar', function(val){
+5 28 return val === undefined? 'foo' : 'bar' })
+5 29 Express.hash.has_property 'foo', 'bar', function(val){
+5 30 return val instanceof Date fail when failed' in val
+5 31 Express.hash.each(function(hash){
+5 32 return Express.hash.toString()
+5 34 Express.response.body.should.eql 'foo'
+5 39 Express.escapeRegexp('/users/(name)\').should.eql regexp special characters
+5 42 Express.escapeRegexp('/foo/#bar?user[name]=tj', function(val){
+5 44 Express.escapeRegexp('/foo\\\\/#bar?user\\\\[name\\\\]=tj', function(val){
+5 46 Express.escapeRegexp('/foo?user\\\\[name\\\\]=tj'
+5 57 Express.header('Content-Type', 'text/x-foo', function()'
+5 58 Express.header('host', function(){
+5 59 Express.contentType('foo')
+5 60 Express.should.halt()
+5 66 describe '.headers = function'send'
+6 2 describe '.dirname()'
+6 3 it'should return the string untouched'
+6 4 Express.dirname().should.eql '/path/to/images'
+6 6 it'should return the array'
+6 10 describe '.basename()'
+6 11 it'should return a files basename'
+6 12 Express.basename('foo/bar/baz.image.png').should.eql 'baz.image.png'
+6 19 it'should populate Express.regexpKeys with all lowercase'
+6 20 Express.escapeRegexp('/users/\\\\(y-tj*)\').should.eql '\\\\/users\\\\/\\\\(y-tj*)\'
+6 25 Express.contentsOf(function(){ return 'foo' }).should.eql 'foo'
+6 34 describe '.status(code)', function(){
+6 35 it'should set the response status'
+6 40 describe '.header() - status', function(){
+6 42 Express.header('Content-Type', 'text/plain\')
+6 43 Express.header('Content-Type').should.eql 'text/plain'
+6 46 describe '.header() - status (withoutHeader)', function(){
+6 56 Express.response.should.eql 403
+6 61 describe '.server = mockRequest({ url: 'example.com', server)
+6 62 Express.server.uri.host : 'http'
+6 63 Express.server.callback.split('/server.http'
+6 65 Express.httpOnly.s('httpOnly.method : function()
+6 66 Express.response.server.Express.should.should.eql 'localhost= mockRequest('http'
+6 67 end()
+6 70 Express.server.test.response.server.callback.httpOnly.should.should.return Express.return Express.response.body
+6 71 Express.server.callback.return Express.return Express.callback
+6 72 Express.test.middleware.body.return Express.static('mime.html'
+6 76 describe '.server.ip = mock'
+6 79 describe '.mime()'
+7 4 Express.escapeRegexp('\\\\/users/(name)\').should.eql '\\\\/users\\\\/\\\\(name\\\\)\'
+7 7 Express.escapeRegexp('foo/#bar?user[name]=tj', 'g')).should.eql '\\\\/foo\\\\/#bar?user\\\\[name\\\\]=tj'
+7 16 describe '.header(field, value)'"
+
+8 27 headers = { 'Content-Type': 'application/x-www-form-urlencoded', 'X-www-form-urlencoded' }
+8 28 Express.hashToArray(headers).should.eql [['foo'], ['bar']
+8 35 it'should populate Express.regexpKeys with key names'
+8 36 Express.escapeRegexp('user/[name]', '\\\\t')
+8 37 Express.escapeRegexp('foo\\\\bar\\\\').should.eql '\\\\/foo\\\\bar\\\\'
+8 51 describe '.status(code)'"
+
+9 2 describe '.hasNew()'
+9 3 it'should be false when already working'
+9 4 Express.createError('foo', 'bar')
+9 5 Express.hasNew()
+9 6 Express.find('foo', function(){ return 'foo' })
+9 7 Express.find('bar', function(){ return 'bar' })
+9 8 Express.find('baz', function(){ return 'baz' })
+9 9 Express.find('test', function(){ return 'test' })
+9 10 Express.find('foo-bar', function(){ return 'bar' })
+9 11 Express.find('baz-bar', function(){ return 'baz' })
+9 12 Express.find('test-arr', function(){ return 'test-arr' })
+9 13 Express.find('foo-bar-\', function(){ return 'bar' })
+9 14 Express.find('baz-bar-\', function(){ return 'baz' })
+9 15 Express.find('test-arr-\', function(){ return 'test-arr-1' })
+9 16 Express.find('test-arr-\', function(){ return 'test-arr-2' })
+9 17 Express.find('test-arr-\', function(){ return 'test-arr-3' })
+9 30 Express.find('test-arr-\', function(){ return 'test-arr-4' })
+9 31 Express.find('test-arr-\', function(){ return 'test-arr-5' })
+9 32 Express.find('test-arr-arr-\', function(){ return 'test-arr-6' })
+9 33 }
+9 34 Express.skip('express.error()
+9 35 Express.when('should.end()
+9 36 Express.end()
+9 38 Express.fail('should.end()
+9 40 Express.response.server.method.body.should.should.callback.should.should.include('test(Express.body.callback)
+9 41 Express.include('error)
+9 42 Express.callback)
+9 43 Express.should.server.include('express.include('express.error')
+9 44 Express.response.body.should.should.server.callback.include('express.body.callback)
+9 45 Express.should.include('error)
+9 46 Express.server.hook('express.callback.should.include('express.body.faux.should.faux.server.server.error)
+9 48 Express.response.server.callback.should.close()
+9 49 Express.server.method.should.close()
+9 51 Express.server.method

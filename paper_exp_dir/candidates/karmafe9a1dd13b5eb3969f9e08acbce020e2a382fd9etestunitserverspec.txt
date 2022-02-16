@@ -1,0 +1,73 @@
+Min editdistance: 62.00
+Closest candidate: 7 4 it('should set default to null if no port', () => {
+0 1 With(9876))
+0 2 })
+0 4 it('should handle(() => {
+0 5 server.start() => {
+0 6 server.start()
+0 7 expect(server.start).returns('localhost).listen(9876).returns('http://localhost:'http://localhost:988080')
+0 12 it('should handle() => {
+0 13 server.start() : () => {
+0 14 expect(1).then(() => {
+0 15 expect(1).toBe.get('/some/s
+1 1 With(9876).returns(9876))})
+1 4 it('should search for available.expect(() => {
+1 5 expect(() => {
+1 6 expect(server.start).to.port).to.to.address.address).to.address.address.should.eql(mock(port)
+1 7 expect(9876)
+1 8 expect(0).to.address).to.address.address.address.address.address).to.address.address.address).to.address.address.address.address).to.address.address
+1 9 ex
+2 1 WithArgs(9876).exit => {
+2 2 expect(0)
+2 6 it('should set default to ', server.port', () => {
+2 7 server.start().returnsFromConfig.port.addressFromPattern.addressFromPattern.addressFromPattern.should.eql(mockConfig.addressFromPattern)
+2 8 expect(mockBoundServer.address)
+2 9 expect(server.addressFromPattern.address)
+2 10 expect(server.address).to.addressFromPattern).to.addressFromPattern.addressFromPattern.addressFrom('http://localhost:
+3 1 With(0.addressFrom(0.addressFrom(0.0.0.0.1, 'http://localhost')})
+3 4 it('should set default to ', () => {
+3 5 expect(server.start).port).to.port).to.addressFrom('client/', () => {
+3 6 expect(9877).to.addressFrom('http://localhost')
+3 7 expect(9876).to.addressFrom('http://localhost:'http://localhost:' + 'https://localhost:' + '0.0.0.1.1.2.2
+4 1 With(9876))})
+4 4 it('should search for available return', () => {
+4 5 server.start().then(() => {
+4 6 expect(server.start).then(() => {
+4 7 expect(0).to.get('/some.get('/s')).to.get('/s')).reply()
+4 12 it('should set the server response', () => {
+4 13 expect(server)
+4 14 returns => {
+4 16 returnserver.start).listen
+5 1 With(9876).returns()).then(0)
+5 4 it('should compileWebServerOnError', () => {
+5 5 expect(server.start).listen(9876).returnsFromConfig.bind(9876).returnsFromConfig)
+5 8 it('should set defaultReply server.port', () => {
+5 9 expect(server.start).to => {
+5 10 expect(9876).to.on('http://localhost:' + 'xhr-engine' == null')
+5 11 expect(server.port).to.address
+6 1 WithArgs(9876).returns((err).exit).exit)
+6 5 expect(server.start).port.calledWithArgs('client/main.js', done).to.call(launcher.launch, server)
+6 6 }).to.address().returnsFrom('http://localhost:' + 'localhost:' + port)
+6 7 }).returns', () => {
+6 8 expect(server.start).listen(9876).returns('http://localhost:' + 'https://localhost:' + port)
+6 10 }
+7 1 With(9876, 'http://localhost')})
+7 4 it('should set default to null if no port', () => {
+7 5 expect(server.port).to.port).to.equal(9876, 'http:// server.com/client.com/')
+7 8 it('should set is bound with protocol', () => {
+7 9 expect(server.port).to.address).to.address().returns('localhost', 'http://localhost:8877' })
+7 10 expect(server.address()'})
+8 1 WithArgs('http://localhost')})
+8 4 it('should compile static resources', () => {
+8 5 expect(server.start).listen(9876 => {
+8 6 expect(9876).to.address.address).returnsFrom('http://localhost')
+8 7 expect(9876).to.returnsour.port).toString()).to.address().returns('http://localhost'
+8 8 expect(0.0.js'))
+8 9 expect(0.resolve()).to.deepStrictSslug).to.to.not.
+9 1 WithArgs('http://localhost', done)
+9 4 it('should compile static resources from other server port', () => {
+9 8 describe('start', () => {
+9 9 it('should compile static resources from other server', () => {
+9 10 expect(newSockets).returnsFromBoundServer(newSockets, server)
+9 13 it('should merge linterval(config.port, sourceCodeList', {
+9 16 it('should merges', (layoutDir

@@ -1,0 +1,85 @@
+Min editdistance: 5.00
+Closest candidate: 7 21 it(\'fs\', () => {
+0 1 it(\'default\', () => {
+0 2 numberFormat(1234.567).should.eql(\'1,234.6');
+0 3 });'
+
+1 1 it(\'default', () => {
+1 2 numberFormat(1234.567).should.eql(\'1,234.567');
+1 3 });
+1 4 it(\'precision', () => {
+1 5 numberFormat(1234.567, {precision: false}).should.eql(\'1,234.6');
+1 6 numberFormat(1234.567, {precision: 0}).should.eql(\'1,234\');
+1 7 numberFormat(1234.567, {precision: 1}).should.eql(\'1,234.5670\');
+1 9 it(\'delimiter', () => {
+1 10 numberFormat(1234.567, {delimiter:''}).should.eql(\'1 234.567\');
+1 12 it(\'separator', () => {
+1 13 numberFormat(1234.567, {separator: \', \', \', \', \', \', \', \', \', \'\')).should.eql(\'1,234*567\');
+1 15 it(\'separator + format\', () => {
+1 16 numberFormat(1234.567, {separator: \', \', \', \', \', \', \', \', \', \', \', \', \', \', \', \', \'\')).should.eql(\'1,234*567\');
+1 18 it(\'unformat \', () => {
+1 19 numberFormat(1234.567, {unformat: \'unformat\'}).should.eql(\'1,234*567\');
+1 21 it(\'undefined\', () => {
+1 24 it(\'format = JSON\', () => {
+1 25 const format = JSON.parse(JSON.stringify(Object.assign({}, format));
+1 26 const expected = [
+1 27 \'{% format %}\',
+1 28 \'123456\',
+1 30 \'  {% endformat %}\'
+1 31 ].join(\'\
+1 32 \');
+1 33 return format;
+1 35 it(\'separator - format should be a string\', () => {
+1 39 \'<a name="123456" style="font-size: 13.33px;">123456</a>\',
+1 40 \'<a name="123456" style="font-size: 20px;">123456</a>\',
+1 41 \'</li>\',
+1 42 \'<a href="123456" style="font-size: 20px;">123456</a>\'
+1 45 return expect;
+1 46 })
+1 47 it(\'separator + format should be a string with indexed string\', () => {
+1 48 const format = JSON.parse(JSON.stringify(JSON.stringify(JSON.stringify(Object.stringify(Object.assign({}, format));
+1 49 const expected));
+1 51 const actual = [
+1 52 \'123456\',\',
+1 53 \'baz\',
+1 54 \'baz\'baz\'baz\'baz\'\',
+1 55 ].join(generic
+1 57 ].join(generic)
+1 58 ].join(generic);
+1 61 it(\'bower:publish()\',
+1 62 it(\'pkg format);
+1 63 it(\'cleanupd.json\', () => writeFile(path => writeFile(path, json) => clean(path)
+1 64 .logger.json(path, json)
+1 65 .log.log, json.log, next())
+1 66 .bind(null, next)
+1 67 .done)
+1 68 .done(null, unlink(null, unlink(null
+2 1 '
+
+5 2 numberFormat(1234.567).should.eql(\'1,234.6\');
+5 4 it(\'precision\', () => {
+5 5 numberFormat(1234.567, {precision: false}).should.eql(\'1,234.567\');
+5 6 numberFormat(1234.567, {precision: 0}).should.eql(\'0,234.6\');
+5 7 numberFormat(1234.567, {precision: 1}).should.eql(\'1,234.57\');
+5 8 numberFormat(1234.567, {precision: 2}).should.eql(\'1,234.5670\');
+5 9 numberFormat(1234.567, {precision: 3}).should.eql(\'1,234.6\');
+5 10 numberFormat(1234.567, {precision: 4}).should.eql(\'1,234.5670\');
+5 12 it(\'delimiter\', () => {
+5 13 numberFormat(1234.567, {delimiter: [\'foo\', \'bar\'] }}).should.eql(\'1 234.567\');
+5 15 it(\'separator\', () => {
+5 16 numberFormat(1234.567, {separator: \'*\'}).should.eql(\'1,234*567\');
+5 19 numberFormat(1234.567, {unused: true}).should.eql(\'1,234*567\');
+6 2 numberFormat(1234.567).should.eql(\'1,234.567\');
+7 5 numberFormat(1234.567, {precision: false}).should.eql(\'1,234.567');
+7 7 numberFormat(1234.567, {precision: 1}).should.eql(\'1,234.6\');
+7 8 numberFormat(1234.567, {precision: 2}).should.eql(\'1,234.57\');
+7 9 numberFormat(1234.567, {precision: 3}).should.eql(\'1,234.567\');
+7 18 it(\'separator string\', () => {
+7 21 it(\'fs\', () => {
+7 22 numberFormat(1234.567, {fs: true}).should.eql(\'1,234*567\');
+7 24 it(\'formatTimeInterval\', () => {
+7 25 numberFormat(1234.567, {format: \'YYYY\'}).should.eql(\'1,234*567\');
+7 27 it(\'time format\', () => {
+7 28 numberFormat(1234.567, {format: \'LLL\'}).should.eql(\'1,234*567\');
+7 43 numberFormat(1234.567, {format: \'LLL\'}).should.format(1234.format(1234.567,1234.format(1234.format(1234.format(1234.format,1234.format(1234.format(1234.format(1234.format(1234.format)));1234)));12.format(12.format(12.format(1234.format(1234])>s => 123).should.format(12.format(1234);12.format(1234.format(1234.format(1234,1234)));12.format(1234])end();12.format(123412.format(1234);12.format(12141234)]12.format(12.format(1234));12Z =12Z =12Z =1234z => {
+7 44 return1234;12.format(1234);12.format(12Zo.

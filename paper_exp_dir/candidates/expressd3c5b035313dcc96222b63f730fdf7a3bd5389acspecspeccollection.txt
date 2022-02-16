@@ -1,0 +1,180 @@
+Min editdistance: 26.00
+Closest candidate: 1 3 it'should be considered a return expression'
+0 1 end
+0 2 describe 'with a trailing slash in request path'
+0 3 it'should be optional by default'
+0 4 $(['foo', 'bar']).any(function(val){ return val.charAt(0) == 'b' }).should.be_true
+0 7 describe 'with a trailing slash in route path'
+0 12 describe 'with regular expression'"
+
+1 2 describe 'with over 5 chars'
+1 3 it'should be considered a return expression'
+1 4 $(5..1).sort('a - b).toArray().should.eql 5..1).reduce(0, 'a + b').toArray().should.eql 5
+1 7 describe 'with over whitespace'
+1 9 $(['foo', 'bar']).sort('a - b).toArray().should.eql [5, 10]
+1 17 describe 'with all options'
+1 18 it'should iterate passing the basic commands'
+1 19 var self = $([
+1 20 init: function(next){
+1 21 return function(req, res, next){
+1 22 if (init && self.init) return next()
+1 23 }
+1 24 },
+1 25 show: function(next){
+1 27 var body = $(self.body)
+1 28 this.session.store.length(++ish| 7)
+1 29 body.should.eql { 'name': self.name,'message': 'Unexpected assignment of a key to rebuild after a new event' }
+1 31 })
+1 32 JSpec.exec('moves the cursor', function(){
+1 33 var spy = sinon.spy()
+1 34 hooks.exec(() => {})
+1 35 collection.add({})
+1 39 "
+
+2 4 $(['foo', 'bar']).at(0).should.eql 'foo'
+2 5 $(['foo', 'bar']).at(1).should.eql 'bar'
+2 6 $(['foo', 'bar']).at(2).should.be_null
+2 9 describe 'with no arguments'
+2 10 it'should throw an error'
+2 14 it'should work with objects'
+2 15 $({ foo: 'bar', baz: 'raz' }).at(0).should.eql 'bar'
+2 16 $({ foo: 'bar', baz: 'raz' }).at(1).should.eql 'raz'
+2 17 $({ foo: 'bar', baz: 'raz' }).at(2).should.be_null
+2 20 describe '#each()'
+2 21 it'should iterate passing index and value'
+2 22 var result = []
+2 23 $(['foo', 'bar']).each(function(val, i){
+2 24 result.push(i, val)
+2 26 result.should.eql [0, 'foo', 1, 'bar']
+2 30 $({ foo: 'bar', baz: 'raz' }).each(function(val, key){
+2 31 result.push(key, val)
+2 33 result.should.eql ['foo', 'bar', 'baz', 'raz']
+2 35 it'should return the collection'
+2 36 $([]).each(function(){}).should.be_an_instance_of Collection
+2 39 describe '#reduce()'
+2 40 it'should iterate with memo object'
+2 41 var sum = $([1,2,3]).reduce(0, function(0, function(0, function(sum, n){ return sum + n })
+2 42 return sum + n })
+2 44 sum.should.should.should.eql 6
+2 49 describe '#map(email = function sum + function(){ return sum }' },'s= function sum },'s'
+2 50 it'should return }'
+2 51 dat (s'
+2 52 describe'salt'
+2 53 it'should contain Set[0] return sum'
+2 54 describe 'email'
+2 55 describe 'foo'
+2 56 describe 'f'
+2 57 it'should contain function }}'
+2 59 describe 'bar'
+2 60 describe 'b'
+2 61 it'should return sum'
+2 63 describe 'user'
+2 64 describe'strong'
+2 66 describe 'a'
+2 67 it'should
+3 2 describe 'with over 3 chars'
+3 4 $(5..1).sort('a - b).toArray().should.eql 1..5.reduce(0, 'a + b').toArray().should.eql 15
+3 7 describe 'with an object as value'
+3 8 it'should return a Collection'
+3 9 $({ foo: 'bar' }).each(function(val, key){
+3 10 result.should.be_an_instance_of Collection
+3 13 describe 'with an object with indexed values and length'
+3 14 it'should return an array'
+3 16 result.should.eql ['foo', 'bar']
+3 21 it'should return an object'
+3 23 result.should.eql ['foo', 'bar', 'baz']
+3 27 describe 'with an object indexed values'
+3 34 describe 'with an object indexed values and length'
+3 42 $({ foo: 'bar', baz: 'raz' }). indexed values.length.should.eql 2
+3 47 it'should return an empty string'
+3 49 $({ foo: 'bar'
+3 50 }).toArray().should.toArray().should.eql 'empty()'
+3 57 describe 'with an object.toArray().should.should.should.have_each(function(){ return this.values Express.end() }).should.end
+3 65 describe '#create()'
+3 66 describe '#keys()'
+3 67 it'should iterate passing the a set of arguments'
+3 68 memory.toArray()'
+3 69 memory.values'
+3 70 memory.toArray().should.toArray().should.eql [[{ return arguments }
+4 4 $(5..1).sort('a - b').toArray().should.eql 1..5"
+
+5 4 $(5..1).sort('a - b).toArray().should.eql 1..5.
+
+6 4 $(5..1).sort('a - b).toArray().should.eql 1..5.toString()).toArray().should.eql [1, 4, 5]
+6 9 $(5..1).sort('a - b).toArray().should.eql [1, 5]
+6 18 it'should return a slice of values'
+6 19 var collection = $({ foo: 'bar', baz: 'raz' }).collection.should.eql [[{ foo: 'bar', baz: 'raz' }]
+6 22 describe '#at()'
+6 23 it'should return the value at the given index'
+6 37 $([1,2,3]).each(function(val, i){
+6 40 result.should.eql [1, val]
+6 47 describe '#map(fn)'
+6 48 it'should have_each()'
+6 64 it's
+7 4 $(5..1).sort('a - b').toArray().should.eql 1..5.0).toArray().should.eql 15
+7 7 describe 'with an exception thrown'
+7 8 it'should provide display an optional capture group'
+7 9 $(['foo', 'bar']).any(function(val){ return val.length === 2 }).should.throw(false)
+7 11 it'should return the capture group'
+7 12 $(['foo', 'bar']).any(function(val){ return val.length === 2 }).should.throw(true)
+7 14 it'should return the highest capture group'
+7 18 describe 'with an invalid capture group'
+7 19 it'should throw an Invalid configuration'
+7 20 $(['foo', 'bar']).any(function(val){ return val.charAt(0) == 'f' }).should.throw(false)
+7 23 describe 'with an invalid range'
+7 24 it'should throw an Invalid range'
+7 33 describe 'with an unmatchable range'
+7 34 it'should throw an invalid range'
+7 35 $(['foo', 'bar']).any(function(val){ return val.charAt(0) == 'b' }).should.throw(false)
+7 39 it'should throw an unmatchable range'
+7 41 $([]).some(function(val){ return val.charAt(0) == 'b'
+
+8 4 $(5..1).sort('a - b).toArray().should.eql 3..5.0).should.eql 4
+8 9 $(5..1).sort('a - b).toArray().should.eql 5
+8 12 describe 'with 5 chars'
+8 13 it'should be considered a length'
+8 14 $(5).sort('1).toArray().should.eql 1})
+8 15 $(5).sort('1).toArray().should.eql 2
+8 18 describe 'with 6'
+8 20 $(4).length.should.eql 2
+8 23 describe 'with 7 chars'
+8 25 $(5).length.should.eql 3
+8 28 describe 'with 8 chars'
+8 29 it'should be considered an array'
+8 30 $(4).length.should.eql 4
+8 34 it'should be an object'
+8 35 $({ foo: 'bar' }).length.should.eql 2
+8 38 describe 'with an object and indexed buffer'
+8 39 it'should be an array'
+8 40 $({ foo: 'bar', baz: 'raz' }).length.should.eql 3
+8 43 describe 'with an unmatchable index'
+8 44 it'should throw an unmatchable index'
+8 45 $(4).unmatch(0).should.throw_error
+8 48 describe 'with an invalid method'
+8 49 it'should throw an unmatchable method'
+8 50 $(5).unmatch(1).should.throw_error
+8 54 describe 'with (0).should.be_an_false()'
+8 59 describe 'with undefined undefined undefined undefined undefined undefined undefined undefined undefined undefined
+8 61 end"
+
+9 2 describe 'with over 4 chars'
+9 4 $(5..1).sort('a - b').toArray().should.eql 1..5.reduce(0, 'a + b').toArray().should.eql 5
+9 9 $(5..1).sort('a - b').toArray().should.eql ['foo', 'bar']
+9 13 it'should provide display a list of caches'
+9 14 $(['foo', 'bar']).all(function(val){ return val.length === 0 })
+9 15 $(['foo', 'bar']).should.eql 2
+9 18 describe 'with valid array-like'
+9 20 $([\'foo', 'bar']).all(function(val){ return val.length === 0 })
+9 21 $([\'foo', 'bar']).should.eql [\'foo', \'bar']
+9 24 describe 'with no object'
+9 26 if (this.env.words) {
+9 27 var order = $([\'foo\', \'bar\']).all(function(val){ return val.length === 0 })
+9 28 arr[0].should.eql [\'foo\', \'bar\']
+9 31 describe 'with wildcards'
+9 33 $([\'foo\', \'bar\']).all(function(val){ return val.length === 0 })
+9 34 $([\'foo\', \'bar\']).should.eql [\'bar\']
+9 37 describe 'with unknown package'
+9 39 $([\'foo\', \'bar']).all(function(val){ return val.length === 0 })
+9 40 arr[0].should.should.be_null
+9 45 describe 'with undefined undefined undefined undefined package'
+9 54 describe 'var byeWords=

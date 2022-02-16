@@ -1,0 +1,67 @@
+Min editdistance: 14.00
+Closest candidate: 3 25 model.register('Post', model);
+0 1 model.register('PostAsset', schema.PostAsset, require('../model/post_asset'));"
+
+1 1 model.register('PostAsset', schema.PostAsset, require('../model/post_asset'));
+1 2 model.register('PostCategory', schema.PostCategory, require('../model/post_category'));
+1 3 model.register('PostTag', schema.PostTag, require('../model/post_tag'));
+1 4 model.register('Tags', schema.Tag, require('../model/tags'));
+1 5 model.register('NoSchema', schema. noSchema.options.path);
+1 6 var query = require('../query');
+1 7 model.register('Querystring', query.parse);
+1 8 model.register('selectPopulatedFields', query.compact);
+1 9 model.register('Test Results Reporter', model.create({
+1 10 name: 'test result',
+1 11 suite: 'test',
+1 12 segments: {
+1 13 post: { slug: 'test'},
+1 14 page: { slug: 'test'},
+1 15 archive: { type: 'test'},
+1 16 category: {type: 'test'},
+1 17 tag: {type: 'test'},
+1 18 date: {type: 'test'},
+1 19 format: function(obj){
+1 20 var keys = Object.keys(db);
+1 21 for (var i = 0, len = keys.length; i < len; i++){
+1 22 var key = keys[i];
+1 23 if (!reservedKeys[key]) return;
+1 24 }
+1 25 return db.model('Post').find(keys);
+1 26 });
+1 27 };"
+
+2 1 "
+
+3 2 model.register('Cache', schema.Cache, require('../model/cache'));
+3 3 model.register('Asset', schema.Asset, require('../model/asset'));
+3 4 model.register('Cache-Control', schema.CacheControl, require('../model/cache'));
+3 5 model.register('Test', schema.test, require('../model/test'));
+3 6 model.register('PostCategory', schema.postCategory, require('../model/post_category'));
+3 7 model.register('PostTag', schema.postTag, require('../model/post_tag'));
+3 8 model.register('Token');
+3 9 model.register('Token.js', schema.Token, require('../model/token'));
+3 10 model.register('Deployer', model.Deployer, {
+3 11 options: {
+3 12 max: 5,
+3 13 min: 20
+3 14 },
+3 15 semi: {r: 240, g: 230, b: 220, a: 1},
+3 16 raw: {r: 0, g: 255, b: 240, a: 1},
+3 17 published: true,
+3 18 type: 'delete'
+3 20 _id: {type: String, required: true},
+3 21 database: {type: String, required: true},
+3 22 exclude: [{type: String, ref: 'db'}]
+3 23 }, db);
+3 24 var model = db.model;
+3 25 model.register('Post', model);
+3 26 model.register('Page', model);
+3 27 model.register('PostAsset', model);
+3 28 model.register('PostCategory', model);
+3 29 model.register('PostTag', model);
+3 34 model.register('Tag', model);"
+
+4 4 model.register('Tag', schema.Tag, require('../model/tag'));
+4 6 model.register('NoSchema', require('../model/types/no_schema'));
+4 7 model.register('undefined', require('../model/undefined'));"
+

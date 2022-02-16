@@ -1,0 +1,19 @@
+Min editdistance: 38.00
+Closest candidate: 3 1 optimist = function (name) {
+1 1 '
+2 1 "
+3 1 optimist = function (name) {
+3 2 return install() {
+3 3 optimist.optimist.config = function (options) {
+3 5 return install(this);
+3 6 return install(this); } (this);
+3 7 }
+3 10 };"
+
+6 1 }"
+7 1 return emitter.unlink(email, function (option) {
+7 2 return installLinks, argv, function (callback) {
+7 3 return installLinks(email) {
+7 4 return installLinks(email, argvimeo, siteLinks, this); } : function (callback); };
+7 8 });
+7 9 };

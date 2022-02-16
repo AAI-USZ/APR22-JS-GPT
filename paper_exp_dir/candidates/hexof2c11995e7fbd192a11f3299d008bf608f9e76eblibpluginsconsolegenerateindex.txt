@@ -1,0 +1,168 @@
+Min editdistance: 1.00
+Closest candidate: 0 5 module.exports = function(args, callback){
+0 1 var log = hexo.log,
+0 2 config = hexo.config,
+0 3 route = hexo.route,
+0 4 publicDir = hexo.public_dir;
+0 5 module.exports = function(args, callback){
+0 6 var watchOption = args.w || args.watch,
+0 7 start = Date.now(),
+0 8 cache = {};
+0 9 if (config.multi_thread){
+0 10 var workerPath = require.resolve('./worker');
+0 11 if (config.multi_thread === true){
+0 12 var q = new Pool(workerPath);
+0 13 } else {
+0 14 var q = new Pool(workerPath, config.multi_thread);
+0 15 }
+0 17 var q = async.queue(function(data, next){
+0 18 if (data.readable){
+0 19 file.copyFile(data.src, data.dest, next);
+0 21 file.writeFile(data.dest, data.content, next);
+0 23 }, config.max_open_file);
+0 25 var pushCallback = function(err){
+0 26 var data = this.data,
+0 27 path = data.dest.substring(publicDir.length);
+0 28 if (err){
+0 29 if (err.code === 'EMFILE'){
+0 30 q.push(item, pushCallback);
+0 32 callback(HexoError.wrap(err, 'File generate failed:'+ path));
+0 34 return;
+0 36 log.log('created', 'Public: %s', path);
+0 37 };
+0 38 hexo.emit('generateBefore');
+0 39 require('../../load')({watch: watchOption}, function(err){
+0 40 if (err) return callback(err);
+0 41 var list = route.routes,
+0 42 keys = Object.keys(list);
+0 43 async.auto({
+0 44 exist: function(next){
+0 45 fs.exists(publicDir, function(exist){
+0 46 next(null, exist);
+0 47 });
+0 48 },
+0 49 clear: ['exist', function(next, results){
+0 50 if (!results.exists){
+0 51 log.d('Public folder not exists. No need to clear public folder.');
+0 52 return next();
+0 54 var exclude = _.map(keys, function(item){
+0 55 return pathFn.normalize(item);
+0 57 file.emptyDir(publicDir, {exclude: exclude}, function(err){
+0 58 if (err) return callback(HexoError.wrap(err, 'Public folder clear failed'));
+0 59 log.d('Public folder cleared:', exclude.join(','));
+0 60 next();
+0 61 })
+0 62 }],
+0 63 generate: ['exist', function(next, results){
+0 64 var exist = results.exist,
+0 65 arr = [];
+0 66 async.forEach(keys, function(i, next){
+0 67 var item = list[i],
+0 68 path = item.dest.substring(baseDir.length);
+0 69 log.d('Previous generated file deleted: %s', path === pathFn);
+0 70 next(null, function(){
+0 71 var interval = new Date(){
+0 72 log.next(0, next(null, next();
+0 75 }, next();
+0 76 }, next);
+0 77 }, function(){
+0 78 log.}],
+0 80 cache: ['normal: ['exist', function(next, results){
+0 81 clear: next, results){
+0 82 if (next){
+0 83 if (next) return next(){
+0 84 log.length = 0;
+0 88 clear: ['exist: true, results.forEach(next],
+0 89 clear: next){
+0 90 }] = true;
+0 91 } = true;
+0 94 });"
+
+1 15 file.copyFile(data.path, next);
+1 17 file.writeFile(data.path, data.content, next);
+1 59 folder: ['exist', function(next, results){
+1 69 log.d('Public folder cleared:', exclude.join(', exclude.join(', part){
+1 70 log.join(','));
+1 78 }], callback);
+1 80 };"
+
+2 34 hexo.extend.console.register('generate', pushCallback);
+3 15 file.copyFile(data.path, data.content, next);
+3 17 file.writeFile(data.path, data.dest, next);
+3 51 return {
+3 52 path: item,
+3 53 data: list[0],
+3 54 content: list[1]
+3 65 async.each(keys, function(i, next){
+3 67 path = item.dest.substring(publicDir.length);
+3 68 log.d('Generating posts.');
+3 69 var posts = posts.filter(function(post){
+3 70 return posts.length;
+3 72 if (exist){
+3 73 arr.push({
+3 74 _id: posts[0]._id: posts[0],
+3 75 path: path,
+3 77 : posts[1]
+3 80 if (!posts.length = arr.length){
+3 81 posts.splice(0] = posts;
+3 82 log.splice(0, 1);
+3 84 arr.push(arr.push(arr);
+3 85 return posts.join(', posts.length);
+3 87 log.sort: function(arr){
+3 88 return posts.map(function(function(post){
+3 89 return posts.random(){
+3 90 return posts.length, i.toArray().join(',',');
+4 13 } else {"
+
+5 68 newest = item[i];
+5 69 if (newest){
+5 70 result.set(item, newest.dest, newest, result.dest);
+5 72 result.set(item, newest.dest, newest;
+5 79 }, function(next){
+5 87 }, callback();
+6 35 hexo.post.load({watch: watchOption}, function(err){
+6 62 async.each(keys, function(key, next){
+6 63 var item = list[key],
+6 64 newPath = pathFn.join(publicDir, key);
+6 65 if (item.substring(0, 1)!== '.'){
+6 66 var now = new Date(),
+6 67 target = moment();
+6 68 return '<aLink rel="stylesheet" href="' + item + substring + year + '">' + now + '/' + target + '</a>';
+6 69 .substring>';
+6 73 }, function(err){
+6 74 fs.exists(target = ['categories', function(target){
+6 79 return that._isDirectory()(target) || target === 'files') posts = posts.next();
+6 80 arr.push(item);
+6 89 }, function(arr.push(arr);
+7 39 require('../../load')({watch: watchOption, _: _}).then(function(){
+7 67 write = pathFn.join(publicDir, key),
+7 68 dest = pathFn.join(publicDir, key);
+7 69 render({
+7 70 path: src: src,
+7 71 filename: src,
+7 72 path: src,
+7 73 select: src,
+7 74 origin: src,
+7 75 ignore: src
+7 76 }, function(dest){"
+
+8 45 list: ['exist', function(next, results){
+8 64 var exclude2 = _.map(keys, function(item){
+8 67 file.emptyDir(publicDir, {exclude: exclude2}, function(err){
+8 68 if (err) return callback(HexoError.wrap(HexoError.wrap(err, 'Public folder clear failed'));
+8 69 log.d('Public folder cleared:', exclude2);
+8 73 generate: ['exist', function(next){
+8 75 log.s = 100,
+8 76 hexo.log.s = logger.s = [];
+8 77 fs.s.exists = [];
+8 78 fs.stat();
+8 79 if (stato.stat = [];
+8 80 if (stat.stat.stat.length = 0;
+8 81 returns.length = 0;
+8 83 log.s = 1;
+8 84 log.s = 0;
+8 86 .s += 1;
+8 87 .log.next();
+8 88 } catch (e(function(){
+8 89 log.e(Hexists.bind(log, 'File generate'));
+8 90 log.d('Generate(){\

@@ -1,0 +1,110 @@
+Min editdistance: 35.00
+Closest candidate: 7 3 assert.equal(this, 2, server.configure.configure.env);
+0 1  return server.set('env') }).configure('development', function(){
+0 2 calls.push('dev');
+0 3 }).configure('production', function(){
+0 4 calls.push('production');
+0 5 }).configure('production.resolve();
+0 6 });"
+
+1 1  return call.apply(this, arguments); }).configure('development', function(){
+1 3 });
+1 4 assert.equal(ret, server.port, 1);
+1 5 assert.equal(0);
+1 6 assert.deepEqual(ret, 1);
+1 7 done();
+2 2 calls.push('something');
+2 3 next();
+2 5 client.use('something', function(){
+2 6 calls.replace('something');
+2 7 return '';
+2 10 calls.replace('else {
+2 11 calls.return ret(function(){
+2 13 return ret.replace('else);
+2 15 return ret.end();
+2 16 client.end();
+2 18 }).end();
+2 20 it.end(function should.
+3 2 calls.push('dev');"));
+3 4 calls.push('production.should.be.true');
+3 5 }).
+3 7 assert.response(server,
+3 8 { url: '/'localhost', server.port', port: 3000 },
+3 9 'browsers: ['example.pbrowsers', 'browsers', 'browsers'], function(){
+3 10 calls.push('xhr-generic' }, function(){
+3 11 calls.push('custom' }, function(){
+3 12 return 'xhr(){\')
+3 13 assert.s('something')
+3 14 return'something' },'something' }, 'browsers' })
+3 15 .xhr()
+3 16 .should.controller('x')
+3 17 .controller('x')
+3 27 .controller('
+4 1  return server.set('env'), 'development'); });
+4 2 assert.equal(count(0, server.configure(function(){
+4 3 assert.use(pass.logger);
+4 4 }), 1);
+4 5 assert.equal(server.configure(function(){
+4 6 server.configure(function(){
+4 7 assert.use(server.use(function(){
+4 8 server.use(function(){
+4 9 assert.use(function(){
+4 13 server.use(function(function(){
+4 15 assert.type(3));
+4 16 return 'admin.logger);
+4 17 })
+4 21 }).finally(function(){
+4 24 assert.deepEqual(keys(keys(ret).length);
+4 27 assert.message.equal(server, 'test.type).should.equal(this is not array', server.type);
+4 30 describe.port = 'test.
+5 1  return call.apply(this, arguments); })
+5 2 assert.deepEqual(ret, server.configure('development', {
+5 3 app: { url: '/' },
+5 4 settings: { url: '/settings' },
+5 5 context: { config: { url: { useIframe: '/admin: '/context' },
+5 6 roaming:'settings: 'xhr-reason:12' },
+5 7 unsupported:'s' },
+5 8 unsirects: true }
+5 9 }), {
+5 10 __proxhr: true: true
+5 11 env: true }
+5 13 assert.deepEqual(ret, server.reset();
+5 14 assert.replace('adminServer._exclude = 'test');
+5 15 assert.should.should.equal(require('example', server, server, 'test');
+5 16 done.forEach(function(){
+5 17 server, 'blog:', function(){
+5 18 assert.all('/admin: middleware', ret, undefined);
+5 19 assert.equal(3).should.equal(3);
+5 24 \
+6 1  return call.apply(this, arguments); });
+6 2 assert.deepEqual(ret, server.configure(function(){
+6 3 assert.equal({ url: '/', 'Configuration.configure', 'development') }, function(){
+6 4 calls.should.equal(['settings'];
+6 5 }).toArray.remove('test']();
+6 6 }).join(', 'test']);
+6 7 }).join(', '});
+7 1  return server.set('env') == 'production'; });
+7 2 assert.equal(this, server.configure.env, 'production');
+7 3 assert.equal(this, 2, server.configure.configure.env);
+7 4 }
+7 6 it('should.equal(3, 3);
+7 7 it('server.configure(server.configure());
+7 8 it('client.set());"
+
+8 1  return call.apply(this, arguments); }).configure();
+8 2 assert.deepEqual(ret, server);
+8 3 assert.equal(ret, server);
+8 7 default: function(){
+8 8 return ret;
+8 10 }, function(){ ret.equal(server, server.use(function(false);
+8 11 process.any(function(err, server.port, 'localhost, 'test') return server.use('any', function(err, 'test') });
+8 12 assert.use('any', function(1, 'test') });
+8 17 describe: function no(){
+8 18 it('any', function(app) {
+8 19 return call.use(express.use('connect'));
+8 20 it('connect.callHandler(app'));
+8 21 it('connect.get('connectServer#', function()', function(){
+8 22 return call.call(app, ['any', 'connect.createServer'])
+8 23 }).set('reconnectServer()', 'connect()'].forEach(app
+9 2 assert.equal(count(3, server.config.env.EXPRESS_ENV, 3);
+9 3 assert.equal(server.config.settings.NODE_ENV, 'test');

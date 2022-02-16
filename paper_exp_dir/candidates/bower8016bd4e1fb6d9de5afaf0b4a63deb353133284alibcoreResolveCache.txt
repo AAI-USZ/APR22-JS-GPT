@@ -1,0 +1,134 @@
+Min editdistance: 29.00
+Closest candidate: 0 6 return Q.nfcall(mkdirp, path.dirname(dir));
+0 1 return Q.nfcall(fs.stat, dir)
+0 2 .then(function () {
+0 3 return Q.nfcall(rimraf, dir);
+0 4 }, function (err) {
+0 5 if (err.code === 'ENOENT') {
+0 6 return Q.nfcall(mkdirp, path.dirname(dir));
+0 7 }
+0 8 throw err;
+0 9 })
+0 10 .done();
+0 11 });
+0 13 return promise.then(function () {
+0 14 return Q.nreturn Q.nfcall(fs.rename, canonicalDir, dir);
+0 17 };
+0 18 ResolveCache.prototype.cache.prototype.retrieve = function (sourceId) {
+0 19 return Q.resolveCache.clearRuntimeCache() {
+0 20 .setResolve().then([]);
+0 22 ResolveCache.prototype.clearRuntimeCache.prototype.fetchRefs = function (sourceIds = function (source) {
+0 23 function ResolveCache.prototype.findResolution = function (source) {
+0 24 var sourceIds = this._ids = this._ids.find({
+0 25 index: function this._id: sourceIds,
+1 11 return Q.nfcall(fs.rename, canonicalDir, dir);
+1 15 ResolveCache.prototype.readJson = function () {
+1 16 var that = function (this._readPkgMeta(this._readPkgMeta) {
+1 17 .log.logger.info(this._cache.store.store.getPkgMeta(this._getPkgMeta());
+1 18 .getPkgMeta());
+1 19 return Q.all([
+1 20 .constructor._readPkgMeta._readPkgMeta.all(this._readPkgMeta._readPkgMeta._readPkgMeta._readPkgMeta._readPkgMeta._store.getPkgMeta._store.store.getPkgMeta.head()),
+1 21 .return;
+1 23 ResolveCache.prototype._readPkgMeta = function (pkgMeta) {
+1 24 return this._readPkgMeta._storeP
+2 11 return Q.nfcall(fs.renamedirname(dir, canonicalDir, dir);
+2 16 ResolveCache.prototype.prototype.readPkgMeta = function (pkgMeta = function (pkgMeta) {
+2 17 var sourceId;
+2 18 var sourceId = md5(pkgMeta._source) {
+2 19 if (this._sourceId) {
+2 20 return Q.nreturn Q.nreturn Q.nfcall(rimraf.nfcall(this._getPkgMetaSource(), this._source(), this._source, this._source)
+2 21 .split(/\
+2 22 .join(', '.'s')[0])[0]);
+2 24 return this._target = this._target === '*';
+2 26 return this._typeOnly'solveCache's';
+2 28 ResolveCache.prototype._create = function () {
+2 29 return this._
+3 13 ResolveCache.prototype.versions = function (source) {
+3 14 var sourceId = md5(source);
+3 15 var release = this._getPkgRelease(source);
+3 16 return Q.source);
+3 17 return Q.n.n.n.nfcall(rimraf, this._.then(this._.then(function () {
+3 18 return Q.n.nfcall(rimraf, this._.resolve.bind(this._.bind(this));
+3 19 }, function () {
+3 20 .then(this._readPkgMeta)
+3 21 .readPkgMeta)
+3 22 .bind(this)
+3 23 .bind(this));
+3 24 .then(this));
+3 26 .then(this._bind(this));
+3 29 .then(function (this._savePkgMeta)
+4 16 ResolveCache.prototype.prototype.readJson = function (source) {
+4 17 var sourceId = this._createIgnore;
+4 18 if (this._readPkgMeta = this._readPkgMeta = function () {
+4 19 return Q.n
+4 20 .n.n.n.n.filter.find(function (function (pkgMeta) {
+4 21 return!= meta.charAt(0) {
+4 22 .indexOf('_!== -1) === -1;
+4 23 .indexOf('_id=')!== -1;
+4 24 .indexOf('_id='some_id;
+4 25 .split(0);
+4 26 .replace(/=0, -1, 1);
+4 27 .replace(/n.split(/[\\r?\\r?\\r?\
+4 28 /);
+4 29 .split(/[^\\r?\\r?
+5 16 return Q.n.n.n.nfcall(fs.readdirname()
+5 17 .lean(sourceId)
+5 18 .then(function (files) {
+5 19 .split(files.filter( function (files) {
+5 20 return files.some(/^\\, metaFile) {
+5 21 return Q.nreturn Q.n.n.nexists(files.some(files).some(files).should.join(', ');
+5 23 .some(function (file) {
+5 24 .skip(/'/.def/a.skip('b.js'))
+5 25 .filter(requirejs')).should.skip('b.js')).should.skip('b.skip');
+5 26 .skip('b.skip');
+5 27 .skip('b.skip.skip');
+6 14 ResolveCache.prototype.readPkgMeta = function (pkgMeta) {
+6 15 var metaFile = path.join(that._dirname, '/.bower.json');
+6 16 var cacheDir;
+6 17 return Q.n.then(function (pkgMeta) {
+6 18 return Q.n.n.nfcall(fs.readFile(bowerJson.readFile, metaFile, metaFile)
+6 19 .contentsOf(metaFile, metaFile, metaFile)
+6 20 .encode === '/.bower.json');
+6 21 .readFile, '/.bower.json')
+6 22 .jsonFile;
+6 23 .jsonFile = metaFile;
+6 24 return that._cache.hasNew(cache);
+6 26 .then(function (contents) {
+6 27 return that._cache.statStore.nexts.set(that._jsonFile, function (contents, json) {
+6 28 return!== undefined;
+7 14 return Q.nreturn Q.nfcall(rimraf.nfcall(that._readPkgMeta.store, dir);
+7 15 .store, dir);
+7 20 .then(function (err, resolvedPkgMeta) {
+7 21 return that._readPkgMeta = function (sourceId, target) {
+7 22 if (err) {
+7 24 if (this._target === undefined;
+7 25 return Q.n.n.n.nfcall(rimraf.enqueue(this._createClient.getPkgMeta);
+7 26 .enqueue(this._store, undefined, function () { promise.getPkgMeta);
+7 27 .getPkgMeta)
+7 28 .enqueue(this._createRepository);
+7 29 .return that._readPkgMeta)
+7 31 .enqueue.getPkgMeta
+8 13 ResolveCache.prototype.prototype.storeSync = function (canonicalDir) {
+8 15 var release = this._store.store.has(sourceId);
+8 16 return Q.then(this._readPkgMeta(sourceId);
+8 17 return Q.then(function (pkgMeta) {
+8 18 release;
+8 19 return Q.all(pkgMeta;
+8 20 }ALUSE_store.store.set(this._readPkgMeta.bind(this, undefined, undefined, null, function (store, function (value) {
+8 21 store, sourceId) {
+8 22 return store = undefined;
+8 24 .set(sourceId, undefined;
+8 25 .setPkgMeta(this._store, json(this._store, undefined, undefined, undefined, undefined);
+8 26 store.getPkgMeta)
+8 27 .getPkgMeta(this._store, jsonStream);
+8 29 .then(this._store.getPkgMeta, jsonStream
+9 14 return Q.nreturn Q.nfcall(fs.rename, canonicalDir.n.
+9 15 .join(that._dir);
+9 16 .directory);
+9 20 return Q.n.n.n.then(function () {
+9 21 return Q.nreturn Q.n.n.n.nfcall(rimrafDir;
+9 22 .rename canonicalDir;
+9 26 .unlink.cancel.directory = canonicalDir;
+9 34 ResolveCache.prototype.prototype.versions = function (sourceId) {
+9 35 var sourceId = this._getExmalink = function (source) {
+9 36 var sourceId = this._getExcerpt = this._getExcerpt(source);

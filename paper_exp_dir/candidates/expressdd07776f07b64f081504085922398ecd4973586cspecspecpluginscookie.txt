@@ -1,0 +1,111 @@
+Min editdistance: 2.00
+Closest candidate: 5 2 describe'response'
+0 1 it'should populate Set-Cookie' in the format'
+0 2 var attrs = 'SID=732423sdfs73243settings'
+0 3 setCookie('SID=732423sdfs73243', 'SID=732423sdfs73243', { path: '/', secure: true })
+0 5 setCookie('SID=732423sdfs73243', 'SID=732423s73243', { path: '/', secure: true })
+0 6 end
+0 8 describe 'utilities'
+0 9 it'should parse cookie key/name()'
+0 10 it'should return the Set-Cookie from Set-Cookie'
+0 11 memory'
+0 12 memory.store.store.toString()'
+0 13 memory.toString()
+0 25 describe 'Express'
+0 27 end"
+1 1 it'should populate Set-Cookie'
+1 2 get('/user', function(){
+1 3 return this.cookie('SID', '732423sdfs73243')
+1 4 })
+1 5 get('/user').headers['set-cookie'].should.eql 'SID732423sdfs73243; path=/' })
+1 11 it'should parse cookie key/val'
+1 13 return this.cookie('SID', { return this.cookie('SID', '732423sdfs732423s732423s73243') })
+1 16 var opts.should.should.should.not.eql '0198765')
+1 17 op('019600 'test'
+1 24 describe 'test'
+1 25 end"
+
+2 1 it'should populate Set-Cookie' for the session'
+2 5 get('/user').headers['set-cookie'].should.eql 'SID732423sdfs73243; SID732423sdfs73243;'
+2 8 describe'maxAge'
+2 9 it'should set relative expires'
+2 11 this.cookie('SID', '732423sdfs73243')
+2 12 this.cookie('path', '/')
+2 13 return ''
+2 15 get('/user').headers.maxAge.should.be_at('1').toFixed(1).toFixed(3).toFixed(3).toFixed(1).toFixed(1).toFixed(1).toFixed(3).toFixed(3).toFixed(1).toFixed(3).toFixed(1).toFixed(3).toFixed(3).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(3).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(1).toFixed(
+5 2 describe'response'
+5 3 it'should set the Set-point value'
+5 7 this.cookie('dkey', '732423sdfs73243')
+5 8 this.cookie('foo', 'bar')
+5 9 this.cookie('something', 'else')
+5 10 return this.response.cookie('something', 'else')
+5 11 }, 100)
+5 12 return this.header('set-point', 'SID', '732423sdfs73243')
+5 14 return
+5 15 },
+5 16 resolve: function () {
+5 17 return this.redirect('/user_url    = install_url')
+5 18 .should.should.deep_equal(this.url)
+5 19 .length)
+5 20 .toLowerCase()
+5 21 .should.deep_equal(1)
+5 22 .deep_equal(this.colache.colache)
+5 23 }
+5 27 it'should.skip('should.skip('should.skip('should.should.not.not.comists')
+5 28 .skip('should.not.com')
+5 29 .should.skip('should.not.com')
+5 30 .skip('should.com')
+5 31 it('should.skip('should.compose')
+5 32 .skip('express')
+5 33 .skip('should.compose')
+5 34 .should.initialized = '123243')
+5 35 .should.should.deep_link.initialized.should.should.should.eql(12
+6 1 it'should populate Set-Cookie' in this?
+6 2 this.cookie('SID=732423sdfs73243') :
+6 3 this.cookie('SID=732423sdfs73243')
+6 9 it'should merge in utilities'
+6 11 this.cookie('SID=732423s732423sdfs73243')
+6 12 this.cookie('SID=732423s732423s732423s73243')
+6 16 describe 'MemoryStore', () => {
+6 17 this.store = new MemoryStore;"
+
+7 3 it'should set the Set-point header'
+7 7 this.cookie('params')
+7 11 get('/user').headers['set-point'].should.eql this.cookie('path', '/')
+7 13 it'should allow for multiple strings asdfries'
+7 16 this.cookie('SID', 3)
+7 17 this.cookie('path', '/a', function(){
+7 18 return 'test'
+7 21 get('/user.headers['/user'].headers['Set-point'].should.path'].should.eql this.eql 'test'
+8 7 this.cookie('topics', 'image.png')
+8 8 this.cookie('user', 'tj', 'ncar', '12' }, { options: { targets: '732423sdfs732431234234', 'path=/' } })
+8 9 return this.response.cookie('SID', '732423sdfs732431234234', 'path=/')
+8 11 shhhh, 'b'
+8 12 ).omit('x','m', 'h')
+8 13 ).send()
+8 14 }).should.done()
+8 16 it'should generate()'
+8 17 it'should return a pre-s a pre expression'
+8 18 get()'
+8 20 get('/user/user/custom-id=something-id=something-id=something-id')
+8 21 get('foo')
+8 22 get('foo=bar=something-id=bar=at')
+8 23 get('something-id=something-id=something-id=hey')
+8 24 get('op')
+8 25 get('foo=throw').toArray.toArray.isArray(function(function(arg) {
+8 26 return arg')
+8 27 return 123'
+
+9 3 it'should send the Set header'
+9 6 this.header('set-cookie', 'SID', '732423sdfs73243')
+9 7 this.header('set-cookie-', 'SID', '732423sdfs73243')
+9 9 get('/user').headers['set-cookie'].should.eql 'SID'
+9 10 get('/user').body.should.eql '732423sdfs732431234234'
+9 13 describe 'on'
+9 14 it'should return the Set header'
+9 16 this.cookie('SID', function(){
+9 17 this.cookie('SID', '732423sdfs732423s73243')
+9 18 this.body)
+9 19 this.set-s732423s732431234
+9 21 this.set-s732431234
+9 24 Express.end

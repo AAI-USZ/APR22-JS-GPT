@@ -1,0 +1,196 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 const root = global || window || this
+0 1 const root = global || window || this
+0 2 const cfg = require('./config')
+0 3 const logger = require('./logger')
+0 4 const constant = require('./constants\')
+0 5 const watcher = require('./watcher')
+0 6 const plugin = require('./plugin')
+0 7 const createServeFile = require('./web-server').createServeFile
+0 8 const createServeStaticFile = require('./web-server').createServeStaticFile
+0 9 const createFilesPromise = require('./web-server').createFilesPromise
+0 10 const createWebServer = require('./web-server').createWebServer
+0 11 const preprocessor = require('./preprocessor')
+0 12 const Launcher = require('./launcher').Launcher
+0 13 const FileList = require('./file-list')
+0 14 const reporter = require('./reporter')
+0 15 const helper = require('./helper')
+0 16 const events = require('./events')
+0 17 const KarmaEventEmitter = events.EventEmitter
+0 18 const EventEmitter = require('events').EventEmitter
+0 19 const Executor = require('./executor')
+0 20 const Browser = require('./browser')
+0 21 const BrowserCollection = require('./browser_collection')
+0 22 const EmitterWrapper = require('./emitter_wrapper')
+0 23 const processWrapper = new EmitterWrapper(process)
+0 24 function createSocketIoServer (webServer, executor, config) {
+0 25 const server = new SocketIO(webServer, {
+0 26 destroyUpgrade: false,
+0 27 path: config.urlRoot +'socket.io/',
+0 28 transports: config.transports,
+0 29 forceJSONP: config.forceJSONP
+0 30 })
+0 31 executor.socketIoSockets = server.sockets
+0 32 return server
+0 33 }
+0 34 class Server extends KarmaEventEmitter {
+0 35 constructor (cliOptions, done) {
+0 36 super()
+0 37 logger.setupFromConfig(cliOptions)
+0 38 this.log = logger.create('karma-server')
+0 39 this.loadErrors = []
+0 40 const config = cfg.parseConfig(cliOptions.configFile, cliOptions)
+0 41 this.log.debug("Final config")
+0 42 let modules = [{
+0 43 helper: ['value', helper],
+0 44 logger: ['value', logger],
+0 45 done: ['value', done || process.exit],
+0 46 emitter: ['value', this],
+0 47 server: ['value', this],
+0 48 watcher: ['value', watcher],
+0 49 launcher: ['factory\', Launcher.factory],
+0 50 config: ['value', config],
+0 51 preprocess: ['factory\', preprocessor.createPreprocessor],
+0 52 fileList: ['factory\', FileList.factory],
+0 53 webServer: ['factory\', ws.createWebServer],
+0 54 serveFile: ['factory
+0 55 }]
+0 56 const preprocessFilesPromise = []
+0 57 const webServer = (config, blogServer, path.split(0, 1, 2, 3) => {
+0 58 next.each((filePath, filePath, 2, 3)
+0 59 const webServer.unsupportedServer.on('error, nextPreprocess)
+0 60 , nextPreprocessor.on('error', nextPreprocessor)
+0 61 , filePath === 0)
+0 62 , webServer.injector.bind(filePath, preprocess)
+0 64 , socketServer.onEach((filePath, nextPreprocessor, done) => handlerPath = nextPreprocessor)
+0 65 , process.injector.executor.bind(preprocessor)
+0 66 , preprocess)
+0 68 webServer.on('error', socketServer, executor, executor, executor, preprocessor, executor, preprocessor, executor, done) => {
+0 69 const server.run()
+0 70 const server = injector.launchSingle = inject
+1 4 const constant = require('./constants')
+1 12 const Launcher = require('./launcher\').Launcher
+1 43 helper: ['value\', helper],
+1 46 emitter: ['value\', this],
+1 47 server: ['value\', this],
+1 48 watcher: ['value\', watcher],
+1 50 config: ['value\', config],
+1 53 webServer: ['factory\', ws.create],
+1 54 socketServer: ['factory
+1 56 modules.forEach((moduleName) => {
+1 57 config.push(module)
+1 59 this.logger.add(config)
+1 61 this.executor.executor.socketServer(callback)
+1 62 }'
+
+2 3 const logger = require('./logger\')
+2 5 const watcher = require('./watcher\')
+2 16 const events = require('./events\')
+2 18 const EventEmitter = require(\'./events\').EventEmitter
+2 19 const Executor = require('./executor\')
+2 20 const Browser = require('./browser\')
+2 21 const BrowserCollection = require('./browser_collection\')
+2 22 const EmitterWrapper = require('./emitter_wrapper\')
+2 38 this.log = logger.create()
+2 41 this.log.debug(`Final config ${config.urlRoot}`)
+2 44 logger: ['value\', logger],
+2 45 done: ['value\', done || process.exit],
+2 53 webServer: ['factory\', wsHandler]
+2 55 function setupFromConfig (config, basePath, injector) {
+2 56 config.set(config, injector.get)
+2 57 config = injector.get('config')
+2 59 const Config(config, helper = injector)
+2 60 const Configstore = injector.get(\'config.configinjector.get)
+2 61 injector.config = injector.get(\'config\')
+2 62 }'config
+2 63 die.ndieOnError()
+2 64 .log.log.injector = injector.injector.injector.get(\'injector.get\')
+2 65 .get('injector.injector)
+2 66 .injector.injector.injector.get(\'injector.get\')
+2 67 .config = injector.getFromConfig(config)
+2 68 .config)
+2 69 dieOn()
+3 57 this.on('error', (done) => {
+3 58 this.removeFilePromise.applyErrors.apply(this, this, arguments)
+3 60 const nextPreprocessFilesPromise.resolve = () => {
+3 61 this.removeFilePromace = this.rimrafbin()
+3 62 this.on('error', done)
+3 66 const emitRunCompleteIfNeeded = () => {
+3 67 this.for (this.removeFilePromace = () => {
+3 68 this.removePathsPromace = (this.removePathsFromPattern) => this.removePaths = (this.dirname) => this.removePaths.lastPaths.every((a, filepath) => this.lastPaths.lastPath === a file path.resolve(filepath))
+3 69 this.lastPath
+4 56 const preprocess = preprocessor.createPreprocessor(config)
+4 57 constfileList.readFilePromise.then(() => {
+4 58 if (config.files = []).forEach((filepath) => {
+4 59 if (filepath.indexOf(path.startsWith(config.path) === 0) || path.startsWith(config.path) === 0) || path.substring(config.substring(config.port, 1)) return config.port, 2)
+4 61 return config
+4 63 return preprocessor.addPreprocessor(config.lastRun)
+4 65 const Launcher.launchServer(server)
+4 66 const singleRunDoneBrowsers = singleRunBrowsers = []
+4 68 const singleRunBrowserBrowsers = new BrowserCollection(LauncherLauncher)
+4 69 let singleRunBrowserNot
+5 41 this.log.debug(`Final config ${config}`)
+5 56 this.then(() => {
+5 57 this.use(() => Promise.forEach((a, b) => a.use.use(B.createPreprocessor.bind(B))
+5 61 const nextPreprocessor.done(() => {
+5 62 await this.use(() => {
+5 63 fileList.executor.executor.lastRun())
+5 67 const preprocessor.executor.on(\'fileList
+5 68 .executor.executor.executor.add(this)
+5 69 .executor.lastRunDone())
+5 70 .executor.on(\'onRunStart\', (runDone) => {
+5 71 this.lastRunDone())
+5 72 const server.executor.lastRun.lastRun.lastRun.lastRun.lastRun.last
+6 41 this.log.debug(`Final config ${config.urlRoot}"`)
+6 53 webServer: ['factory
+6 55 const createServeStaticFile = (config.createServeFile = (config.createServeStaticFile, config.createServeStaticFile, config.createWebServer)
+6 56 let preprocess)
+6 57 const createServeStaticFile = (config.createServeStaticFile, config.createServeFile, config.createServeFile, config.createServeStaticFile, config.createServeStaticFile, config.createServeStaticFile, config.createServeStaticFile)
+6 58 const createFilesPromiseContainer = (config.createContainer, createWebServer, config.createContainer, config.createPreprocessor)
+6 59 const createWebServer = function preprocessPromiseContainer (config, preprocess, injector, basePath, injector) {
+6 60 return injector = injector.createPreprocessor
+6 61 const servedFilesPromise = injector.createPreprocessor
+6 63 const servedFiles
+7 2 const cfg = require("../config-env')
+7 3 const logger = require("../logger")
+7 4 const constant = require("./constants')
+7 5 const watcher = require("./watcher')
+7 6 const plugin = require("./plugin')
+7 56 modules = modules.forEach((framework) => {
+7 57 config.forEach((framework) => handler.use(config.lastPreprocessor)
+7 58 return handler(config.use(config.lastRun)
+7 61 const webServer.use(Launcher.use(Launcher)
+7 63 class Server extends KarmaEventEmitter
+7 64 class Server extends ReadFileList {
+7 65 constructor (name, FileList {
+7 66 constructor (name, servedFiles, servedFiles, includedFiles, includedFiles, reporter) {
+7 67 this.launch: ['includedFilesPromise, executor, root, type) {
+7 68 this.launch: reporter, executor, hostname: provider, hostname: ['port', hostname],
+7 69 config: ['port: port, urlRoot],
+7 70 helper: ['port: webServer],
+7 72 server],
+7 73 config
+8 41 this.log.debug(`Final config ${this.configFile}`)
+8 57 this.emitter.emit('fileList.bind(this)
+8 60 this.on(\'file_error
+8 61 const emitRunDone = () => {
+8 62 this.executor.executor.executor.run()
+8 63 emitter.emit(\'file_list_list.bind(this)
+8 64 this)
+8 65 if (config.executor.executor.executor.executor.bind(this)
+8 67 this.executor.executor.bind(this)
+8 69 const NetUtils.bindAvailablePort = (config, this)
+8 70 this.onRunInjector.executor.executor.executor.executor.executor.executor.bind(this)
+8 72 class BrowserCollection =
+9 57 const webServer = server
+9 58 const socketServerServer = server
+9 59 let socketServer = createSocketsServerSocketIoServer = injector.createServer()
+9 60 const singleRunBrowsers = []
+9 61 const singleRunBrowsersPromise = server
+9 62 const singleRunBrowsers = server
+9 63 const singleRunBrowsersPromise = singleRunBrowsers = singleRunBrowsers = singleRunBrowsers = singleRunBrowsers = singleRunBrowsers
+9 64 webServer.on('error\', singleRunBrowserNotCaptured = singleRunBrowserNotCaptured = false
+9 65 webServer.on(\'error\', function (injector, singleRunBrowser) {
+9 66 if (injector.isCallHandler) {
+9 67 this.bindAllTo(injector.name)
+9 68 injector.

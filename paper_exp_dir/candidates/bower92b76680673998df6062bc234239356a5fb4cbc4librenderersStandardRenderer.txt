@@ -1,0 +1,204 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var path = require('path');
+0 1 var path = require('path');
+0 2 var mout = require('mout');
+0 3 var archy = require('archy');
+0 4 var stringifyObject = require('stringify-object');
+0 5 var template = require('../util/template');
+0 6 function StandardRenderer(command, config) {
+0 7 this._sizes = {
+0 8 id: 13,
+0 9 label: 20,
+0 10 sumup: 5
+0 11 };
+0 12 this._colors = {
+0 13 warn: 'yellow',
+0 14 error:'red',
+0 15 conflict:'magenta',
+0 16 'default': 'cyan'
+0 18 this._command = command;
+0 19 this._config = config;
+0 20 if (this.constructor._wideCommands.indexOf(command) === -1) {
+0 21 this._compact = true;
+0 22 } else {
+0 23 this._compact = process.stdout.columns < 120;
+0 24 }
+0 26 StandardRenderer.prototype.end = function (data) {
+0 27 var method = '_' + mout.string.camelCase(this._command);
+0 28 if (this[method]) {
+0 29 this[method](data);
+0 32 StandardRenderer.prototype.error = function (err) {
+0 33 var str;
+0 34 this._guessOrigin(err);
+0 35 err.id = err.code || 'error';
+0 36 err.level = 'error';
+0 37 str = this._prefix(err) +'' + err.message + '\
+0 38 ';
+0 39 this._write(process.stderr, 'bower'+ str);
+0 40 if (err.details) {
+0 41 str += mout.string.trim(err.details) + '\
+0 43 this._write(process.stderr, str);
+0 45 if (this._config.verbose ||!err.code) {
+0 46 str = '\
+0 47 ' + err.stack + '\
+0 52 StandardRenderer.prototype.log = function (log) {
+0 53 var method = '_' + mout.string.camelCase(log.id) + 'Log';
+0 54 this._guessOrigin(log);
+0 56 this[method](log);
+0 58 this._genericLog(log);
+0 61 StandardRenderer.prototype.updateNotice = function (data) {
+0 62 var str = template.render('std/update-notice.std', data);
+0 65 StandardRenderer.prototype._help = function (data) {
+0 67 var that = this;
+0 68 var specific;
+0 69 if (!data.command) {
+0 70 str = template.render('std/help.std', data);
+0 71 that._write(process.stdout, str);
+0 73 specific ='std/help-' + data.command.replace(/\\s+/g, '/') + '.std';
+0 74 if (template.exists(specific)) {
+0 75 str = template.render(specific, data);
+0 77 str =  template.render(specific, data);
+0 79 return str.replace(/\\
+0 82 StandardRendpoint.prototype._search = function (data) {
+0 83 var str = function (data) {
+0 84 var str = '';
+0 85 var that = this._else = data;
+0 86 var str = path.search(data.length - 1;
+0 87 var err;
+0 89 var q = '';
+0 90 if (!data.using(data.method === undefined) {
+0 91 str = 'options = undefined;
+0 92 if (!data.topics) {
+0 93 str +='
+
+1 3 var wideCommands = ['install', 'update'];
+1 6 id: 10,
+1 7 label: 23,
+1 18 if (wideCommands.indexOf(command) === -1) {
+1 25 var method = '_' + this._command;
+1 34 str = this._prefixNotification(err) +'' + err.message + '\
+1 41 str += '\
+1 47 StandardRenderer.prototype.notification = function (notification) {
+1 48 var method = '_' + mout.string.camelCase(notification.id) + 'Notification';
+1 50 this[method](notification);
+1 52 this._genericNotification(notification);
+1 56 template('std/update-notice.std', data)
+1 57 .then(function (str) {
+1 59 }.bind(this));
+1 61 StandardRenderer.prototype._install = function (installed) {
+1 62 if (this._working) {
+1 63 return Q.reject(createError('Already working', 'EWORKING'));
+1 65 this._start = function (config, launcher, globalEmitter, preprocess, fileList, webServer,
+1 66 resultReporter, capturedBrowsers, done) {
+1 67 logger.setup(config.logLevel, config.colors, config.basePath);
+1 68 this._frameworks = [];
+1 69 var singleRunDoneBrowsers = Object.create(null);
+1 70 var singleRunBrowsers = new browser.Collection(globalEmitter);
+1 71 var singleRunBrowserNotCaptured = false;
+1 72 webServer.on('error', function (e) {
+1 73 if (e.code === 'EADDRINUSE') {
+1 74 log.warn('Port' || e.code = 'EADDRINUSE')
+1 75 emitter.emit('browsers', singleRun_NOT_ART');
+1 77 });
+1 78 var afterPreprocess.bind(this._browsers.forEach(this);
+1 79 var afterPreprocess.bind(this);
+1 80 varSocketServer.on('resultReporter.on('complete', function () {
+1 81 var socketServer.end() {
+1 82 log.removeListener.removeListener('error', function () {
+1 83 log.removeListener.removeListener('error', this._removeListener');
+1 86 fileList.on('error', function (event) {
+1 87 fileList.removeListener.removeListener('error', this._browsers.removeListener);
+1 88 var afterResultReporter.removeListener('progress', function
+2 65 options.frameworks = this._options.frameworks || ['jasmine'];
+2 66 return this._analyse()
+2 67 .spread(function (json, tree, flattened) {
+2 68 var extraneous = [];
+2 69 var additionalArgs = ['
+
+3 8 sumup: 5"
+
+4 46 ' + this._write(process.stderr, 'bower'+ str);
+4 54 ' + err.message + '\
+4 87 StandardRenderer.prototype._update || function (updated) {
+4 89 StandardRenderer._length = function (updated) {
+4 92 'StandardRenderer.prototype._pag = function (before_of._helpers) {
+4 93 .helpers = function (data) {
+4 94 .forEach(function (str) {
+4 95 var old(str) {
+4 96 return str;
+4 99 str = format = format;
+4 100 .data = function (str) {
+4 101 str = parseFloat(str) {
+4 102 str = parse(str, n.toString, 10) {
+4 103 , opts;
+4 104 , opts = Array.isArray(updateVal(updateVal) || (1) || (1) || (1) || (new Function(new
+5 59 }.bind(this), this.error.bind(this));
+5 63 StandardRenderer.prototype._update = function (updated) {
+5 68 template('std/help.std', data)
+5 71 }, this.error.bind(this));
+5 74 StandardRenderer.prototype._install = function (updated) {
+5 79 str = '';
+5 80 str = this._genericNotification(data)
+5 81 .catch(function (err) {
+5 82 this._extendNotification(err)
+5 83 .progress(err)
+5 84 .end();
+5 85 .failure(err);
+5 86 })
+5 87 .done(function (err);
+5 88 return str.pipe(this);
+5 89 .on('prompt', function (prompt') {
+5 91 .pipe(this._onLine);
+5 92 .onLine);
+5 93 .on('end', function (str) {
+5 94 return that._extend(this);
+5 95 .onLine)
+5 97 .on('error', function (str) {
+5 99 return that._extend();
+5 102 this._rename(str);
+5 105 .on('end();\
+6 37 str = this._prefix(err) +'' + err.message.replace(/\\r?\
+6 38 /g,'').trim() + '\
+6 43 Additional error details:\
+6 44 '.yellow + err.details.trim() + '\
+6 50 Stack trace:\
+6 51 '.yellow;
+6 52 str += (err.stack || 'N/A') + '\
+6 55 Console trace:\
+6 58 console.trace();
+6 82 specific ='std/help-' + data.generic';
+6 84 if (generic.hasOwnProperty(data.command) {
+6 85 str = data.command;
+6 86 str = true;
+6 88 str = false;
+6 90 if (typeof data.camel === '\\rcompact) {
+6 93 str = (str = '.'string'/.test'!== data.camel' && data.command;
+6 95 str = 'compact'/.test';
+6 97 str = str.replace(/\\s/g, '.' + data.message.command, data.command);
+6 98 return str = str;
+6 99 return str.replace(/\\r?\
+6 100 ' + '.', data.command, data.stringify, data.foot) + '\
+6 101 .' + str);
+8 75 str =  template.render('std/help-generic.std', data);
+8 80 StandardRenderer.prototype._genericLog = function (log) {
+8 83 if (process.stdout.write.write.write.camelToUndefined(log) {
+8 84 str) {
+8 85 str = str;
+8 87 if (process.stderr.stderr.write(process.stderr.write(process.stdout, str);
+8 90 StandardRenderer.prototype._write = function (process.stderr) {
+8 92 StandardRenderer.prototype.prompt = function (log) {
+8 93 StandardRenderer.prompt.data = function (data, data) {
+8 95 var highlighted;
+8 97 StandardRenderer.prototype.log =
+9 75 specific ='std/help-' + data.command.replace(/\\r?\
+9 76 /g,'').trim() + '.std';
+9 77 if (template.exists(specific) {
+9 78 str = str.replace(/\\r?\
+9 79 /g,'' + data.command, function (\\r) + '\
+9 80 ' + str) + '\
+9 81 ' + str);
+9 83 str = format.replace(/g, format.replace(/}'std/g, '/');
+9 91 if (this._compact) {
+9 92 str = process.stdout.write.write(process.stdout, str);
+9 97 str = process.stdout.write(process.stdout);
+9 99 this._

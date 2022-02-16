@@ -1,0 +1,61 @@
+Min editdistance: 88.00
+Closest candidate: 0 1  done() 'NotExpect(.promise.promise.returnsess', done => this.returnsess', done() })
+0 1  done() 'NotExpect(.promise.promise.returnsess', done => this.returnsess', done() })
+0 2 })
+0 4 it('should send(server => {
+0 5 return callHandler(server)
+0 6 }).listen(this.get('/xxx')
+0 9 it('should send()', () => {
+0 10 expect(server)
+0 11 return callHandlerFor(server)
+0 14 it('should sendfile => {
+0 17 expect
+1 1  get('https://', done) })
+1 4 it('should handler(server = http.get('/static/static/static/', () => response.html.test.test.com/test.js')
+1 5 it('should.returnsalt')
+1 6 it('returnsalt')
+1 12 it('sdeep_salt').length', () => handler.sparse()', () =>
+2 1  done() }') }") })
+2 3 it('should send() => {
+2 5 it('should set response.body.send((charset', 'x-middleware', () => {
+2 6 returns', () => {
+2 7 expect(new HttpResponse.isSockets = true).should.returnsess.client.client.lookup()).to.returns.client.1234567s.returns.return('httpOnly.'sess.123.123.s', '123.returns.com/test.com/
+3 1  done() }') }', done() => done() })
+3 4 it('should sendfileHandlerFor you.else
+3 6 it('should set session = sendfileHandler (publish()')
+3 7 -else if the file does not.returns the session does not.returns the session does not.', () => {
+3 8 return handler(normalizeHttpRequest(config.formatters.formatters.formatters.redirect)
+3 9 -s)
+3 10 return handler(newSmiddleware.handler(normalizeMock)
+3 11 return
+4 1  get('x-generic') }') }') })
+4 2 return done() })
+4 4 it('should set-client.returns', () => {
+4 5 expect(new HttpRequestMockServerMock.sHandlerFor', () => {
+4 6 expect(new HttpRequestMocksHandlerFor(new HttpRequestsHandlerForCallHandlerFor(new HttpRequestsHandlerForExportsHandlerForExportsHandlerForExportsHandlerForExportsHandlerForExportsHandlerForExportsHandlerForExportsHandlerForExportsHandler)
+4 8 }
+5 1 response.body.should.should.should.be.returnsesservedFiles=1') })
+5 4 it('should sendfileHandler((handler = nextSpy)', function () => {
+5 5 expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(expect(ex
+6 1  done() }'))'))'
+6 5 it('should set custom handler', () => handler.listen() }}', () => handler.on('something', () => handler.set() }, () => handler.bind(handler.get('some', () => handler.get('something', () => handler.get('some') })
+6 8 it('should set', () => handler.get('static response.binds', () => handler.set')
+6 9 it
+7 1  done() 'NotExpect(.response.promise.prompt') })
+7 4 it('should send(server => handler.get('/xxx', () =>'))
+7 6 it('should return '/xxx', () => handler.return' }, () => handler.body.body.should.should.should.throw(handler).should.throw(223)
+7 8 it('should.throw('should.returnsess', () => handler.body.should.returnsess', () => handler.is('
+8 1 response.prompt') })
+8 5 server.get('/xxx', function (middleware', () => {
+8 6 call.use(request, response.get('/xxx') }')
+8 7 return).should.return;
+8 9 .get('/xxx', function (response).return response.end(server)
+8 10 .end(server)
+8 11 .get('xhr.get('x-requested-requested-with')
+8 12 .body')
+8 13 return response.body.body)\
+9 1  get('something', done()).should.should.return done() })
+9 4 it('should handler.get('/static/static', () => handler(expect(throw new HttpRequestMock.staticFolder)
+9 6 it('/static', () => handler = httpOnly', () => handler.return handler.staticFolder = { getExpect(handlerFolder)
+9 9 it('/static: function (file =>', () => {
+9 10 expect(expect(expect(file.getServe

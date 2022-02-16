@@ -1,0 +1,64 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 var config = hexo.config.stylus || {};
+0 1 var config = hexo.config,
+0 2 log = hexo.log,
+0 3 configPath = hexo.config_path;
+0 4 return function(options, callback){
+0 5 var config = getProperty(configPath, getProperty(hexo._themeConfig));
+0 6 if (data.log){
+0 7 var issues = data.box.log,
+0 8 config = hexo.config,
+0 9 filename = config.filename;"
+
+1 2 file = getProperty(hexo._theme_config),
+1 3 root = config.root,
+1 4 out = [],
+1 5 child = [];
+1 6 if (!data.length) return callback();
+1 7 file.read(out, function(err, content){
+1 8 if (err) throw err;
+1 9 for (var i = 0, len = data.length; i < len; i++){
+1 10 key = data[i];
+1 11 if (ter.name === '_content'){
+1 12 out.push(key);
+1 13 }
+1 15 callback(result);
+1 16 });
+1 17 };"
+
+2 1 var config = hexo.config.stylus || {};
+2 2 stylus(data.text)
+2 3 .use(nib())
+2 4 .use(defineConfig)
+2 5 .set('filename', data.path)
+2 6 .render(callback);
+3 6 .render(callback);"
+
+5 2 filename = data.substring(0, data.length - extname(data).length);
+5 3 if (!config.stylus.enable){
+5 4 return callback();
+5 6 var content = getProperty(data.substring(0, data.length - extname(data).length),
+5 7 result = result.substring(0, data.length - extname(data).length)
+5 8 .replace(/\\.\\w+$/g, '$1')
+5 9 .replace(/^\\./g, '-')
+5 10 .replace(/\\*/g, '-')
+5 11 .replace(/\\*.*$/g, '$1');
+5 12 return result;
+6 2 filename = getPropertyFromFilename(data.toString(), "default"),"
+
+7 6 .set('compress', config.compress)
+7 7 .renderWithColors(config)
+7 9 .set('nope.styl', data.nope.stdout)
+7 10 .getOutput('noop')
+7 11 .render('sass.txt', data.path)
+7 12 .render('page.html.haml', config.permalink)
+7 13 .render('index.html.haml', config.permalink);
+9 2 baseDir = hexo.base_dir;
+9 3 return function(err, target){
+9 4 if (err) return callback(err);
+9 5 if (target){
+9 6 target = target.split('-').shift();
+9 7 return callback(new TypeError('No such file or directory'+ target + '-e8'));
+9 8 } else {
+9 9 target = target.split('-')[0];"
+

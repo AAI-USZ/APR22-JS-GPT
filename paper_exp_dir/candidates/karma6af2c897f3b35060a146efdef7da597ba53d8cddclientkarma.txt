@@ -1,0 +1,216 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var queryParams = util.parseQueryParams(location.search);
+0 1 var queryParams = util.parseQueryParams(location.search);
+0 2 var browserId = queryParams.id || util.generateId('manual-');
+0 3 var returnUrl = queryParams.return_url || null;
+0 4 var currentTransport;
+0 5 var resultsBufferLimit = 1;
+0 6 var resultsBuffer = [];
+0 7 this.VERSION = constant.VERSION;
+0 8 this.config = {};
+0 9 this.socket = socket;
+0 10 var getConsole = function(currentWindow) {
+0 11 return currentWindow.console || {
+0 12 log: function() {},
+0 13 info: function() {},
+0 14 warn: function() {},
+0 15 error: function() {},
+0 16 debug: function() {}
+0 17 };
+0 19 this.setupContext = function(contextWindow) {
+0 20 if (hasError) {
+0 21 return;
+0 22 }
+0 31 contextWindow.__karma__ = this;
+0 32 contextWindow.onerror = function() {
+0 33 return contextWindow.__karma__.error.apply(contextWindow.__karma__, arguments);
+0 35 contextWindow.onbeforeunload = function(e, b) {
+0 36 if (context.src!== 'about:blank') {
+0 37 contextWindow.__karma__.error('Some of your tests did a full page reload!');
+0 40 if (self.config.captureConsole) {
+0 41 var localConsole = contextWindow.console = getConsole(contextWindow);
+0 42 var browserConsoleLog = localConsole.log;
+0 43 var logMethods = ['log', 'info', 'warn', 'error', 'debug'];
+0 44 var patchConsoleMethod = function(method) {
+0 45 var orig = localConsole[method];
+0 46 if (!orig) {
+0 49 localConsole[method] = function() {
+0 50 self.log(method, arguments);
+0 51 return Function.prototype.apply.call(orig, localConsole, arguments);
+0 54 for (var i = 0; i < logMethods.length; i++) {
+0 55 patchConsoleMethod(logMethods[i]);
+0 58 contextWindow.dump = function() {
+0 59 self.log('dump', arguments);
+0 61 contextWindow.alert = function(msg) {
+0 62 self.log('alert', [msg]);
+0 65 this.log = function(type, args) {
+0 66 var values = [];
+0 67 for (var i = 0; i < args.length; i++) {
+0 68 values.push(this.stringify(args[i], 3));
+0 70 this.info({log: values.join(', '), type: type});
+0 72 this.stringify = stringify;
+0 73 this.error = function() {
+0 76 module.exports.createServer = function(options, middleware) {
+0 77 , query = function(middleware, calls = {};
+0 78 function one(middleware.errorHandlers.forEach(function(fn, app) {
+0 79 if (fn.get('one) {
+0 80 fn.use(fn)
+0 81 return fn.use(fn)
+0 82 })"
+
+1 71 var args = arguments;
+1 73 args.forEach(function.apply(this, arguments);
+1 77 var format = function formatError = function(error, msg, urlPath) {
+1 78 formatError = formatError(errorPath, urlPath, portPath, urlPath, urlRoot, errorLoaded, urlRoot, urlRoot) {
+1 79 if (errorPath = formatError(errorPath) {
+1 80 if (errorPath = formatError(errorPath) || config.bind(this)) return errorPath) || config.error(errorPath, urlPath = formatError(this));
+1 81 if (this.config.urlRoot = formatError(errorPath, portPath, urlRoot);
+1 82 this.error = port = portPath = formatError(this);
+1 84 this.port = port = port = port || 80808080;
+1 86 this.log
+2 28 context.src = 'about:blank';
+2 30 if (context.onerror!== false) {
+2 31 return
+2 33 contextWindow.__karma__.error.apply(contextWindow.__karma__, arguments);
+2 39 var ProgressBarRenderer = function() {
+2 40 var browsers = [];
+2 41 this.config.title = 'Users';
+2 42 this.config.root = '/';
+2 43 this.adapters = [];
+2 44 this.write = function() {
+2 45 var args = Array.prototype.slice.call(arguments);
+2 46 if (args.length === 1) {
+2 47 var slicedArgs = Array.prototype.slice.call(arguments);
+2 48 return slicedArgs.some(function(line) {
+2 49 return line.substr(0, 1);
+2 50 });
+2 52 this.writeCommonMsg = function(msg, browser) {
+2 53 this.write(renderer.createChild([], [msg));
+2 55 this.onbeforeunload = function(e, b) {
+2 56 if (this.safeLoaded) {
+2 57 this.specSkipped(browser, this.generate({
+2 58 id: 'about:blank',
+2 59 description: 'Connected on socket'+ this.id
+2 60 }));
+2 62 this.error = function(msg, url, line, ____, column) {
+2 63 if (this.debugLoaded) {
+2 64 url = this.generate({url: url});
+2 66 process.nextTick(function() {
+2 67 if (!hasError) {
+2 70 var getConsole = function(args) {
+2 71 var browserConsole = getConsole(args, formatError = function(args) {
+2 72 args, browserConsoleLog = args = getConsole(args, formatError || {log: formatError };
+2 73 Console.log.error = getConsole(args, log;
+2 74 Console.log = getConsole(args, browserLogOptions = getConsoleLogOptions, browserLogOptions = getConsoleLogOptions(formatError);
+2 75 var options = getConsole(formatError = getConsoleOptions, browserConsoleOptions, browserConsoleLogOptions, options);
+2 76 if (formatError = formatError = formatError > 1? '\\x1': '\\x1') : getConsole(options.dump')
+2 77 : getConsole(options.dump);
+2 78 if (options.dump = formatError = formatError ||
+3 4 var resultsBufferLimit = 50;
+3 8 var childWindow = null;
+3 9 var navigateContextTo = function(url) {
+3 10 if (self.config.useIframe === false) {
+3 11 if (childWindow === null || childWindow.closed === true) {
+3 12 childWindow = opener('about:blank');
+3 14 childWindow.location = url;
+3 15 } else {
+3 16 iframe.src = url;
+3 37 if (!reloadingContext) {
+3 73 this.stringify = stringify = stringify;
+3 77 isDefined = function(value) {
+3 78 return!isDefined();
+3 79 return typeof value!== undefined;
+3 83 isDefined = function clearContextToUndefined(invalidator(config) {
+3 84 return function isDefiningCharacter(environment) {
+3 85 return typeof environment === 'object' == null;
+3 88 isDefiningCharacter = function clearContext(environment) {
+3 89 return function clearContext(environment) {
+3 90 return typeof environment!== undefined;
+3 94 isDefiningCharacter = _.prototype.apply(this, arguments) {
+3 95 return!== undefined;
+3 98 var instanceOfInit = function clearRuntimeCache = function isDefiningCharacter;
+3 99 return belongsDefiningCharacter
+4 70 this.error = function(msg, url, line, parser, out) {
+4 71 if (this.stringify.message === 'broken') {
+4 74 var err = this.stringify(url) + 'invalidate'
+
+5 33 if (!reloadingCache) {
+5 70 this.error = function(msg, url, line) {
+5 71 hasError = true;
+5 72 var store = {};
+5 73 this.stringify.error(error = function(msg, url, line);
+5 74 hasError = false;
+5 75 if (page.hasError) {
+5 76 stack = line = line.forEach(function(function(fn) {
+5 77 fn) {
+5 78 fn(msg);
+5 79 store[msg);
+5 80 return fn(msg);
+5 84 fn(msg.apply(contextWindow.__karma__karma__, arguments);
+5 88 if (this.dump.dump.length > 0) {
+5 89 process.drain = true;
+5 92 this.dump.log = function(this, arguments;
+5 93 };"
+
+6 38 if (!reloadingCache[b]) {
+6 76 var clearContext = function(contextWindow) {
+6 78 return this.log = function(args) {
+6 79 var activeConsole, logMethods = args = this.logors = this.args || [];
+6 80 var activeConsoleTypes.log;
+6 81 var activeConsoleTypes.log = args.log;
+6 82 var activeConsoleTypes.logTypes = this.logTypes.split('browsers = this.collection.collection.logs.length;
+6 83 this.setConsoleMethod('log', clearConsoleMethod(logMethods);
+6 85 for (var i = 0, i = 0; i < clearContext.length; i < contextWindow.length; i++) {
+6 86 var localConsole = getConsole;
+6 87 this
+7 69 var err = function() {
+7 70 return store[this.error];
+7 72 this.stringify(err, this.error,'stringify'));
+7 74 this.log.setTransportTo = function(func) {
+7 75 this.log = function(func, port) {
+7 76 this.logger.bind(this);
+8 19 context.karma = this;
+8 20 context.onerror = function() {
+8 21 return context.error.apply(context.toObject(), arguments);
+8 23 context.on('error', function(err) {
+8 25 if (fn.length > 0) {
+8 28 if (self.config.verbose || hasError) {
+8 40 this.config.progress = [];
+8 41 this.on('browsers_change', function() {
+8 42 browsers.push('change');
+8 44 this.on('isReady', function() {
+8 45 browsers.push('unready');
+8 47 this.emit('connect');
+8 49 this.onError = function(error) {
+8 52 this.onInfo = function(info) {
+8 53 if (util.isDefined(info.dump)) {
+8 54 emitter.emit('dump', this.name + '\
+8 55 ' + this.message);
+8 57 if (util.isDefined(info.log)) {
+8 58 emitter.emit('log', this.name + '\
+8 61 if (util.isDefined(info.total)) {
+8 62 this.emitter.emit('total', this.name + '\
+8 65 return this;
+8 67 this.onComplete = function(result) {
+8 68 if (this.isReady()) {
+8 71 this.state = {};
+8 72 this.lastResult.totalTimeEnd();
+8 73 if (!this.lastResult.success) {
+8 74 this.lastResult.error = true;
+8 76 emitter.emit('browsers_change', collection);
+8 77 emitter.emit('emitter_reconnect', this);
+8 79 this.onDisconnect = function() {
+8 80 process.nextTick(this);
+8 83 this.onResult = function(error) {
+8 84 if (error)
+8 85 return this.isReady = true;
+9 77 this.error = function clearRuntimeCache[this.id = function() {
+9 78 this.setHeader('clearRuntimeCacheHeaders(this.headers')
+9 79 .setNoCacheHeaders(this.headers)
+9 82 .setNoCacheHeaders(this.settings)
+9 83 .setRequest(this.settings)
+9 84 .exclude({
+9 85 .setNoCacheHeaders(this.settings.settings.settings)
+9 86 )
+9 88 .setNoCacheHeaders)
+9 90 .exclude))\

@@ -1,0 +1,5 @@
+
+files = [
+'jasmine.js',
+'*.js'
+];

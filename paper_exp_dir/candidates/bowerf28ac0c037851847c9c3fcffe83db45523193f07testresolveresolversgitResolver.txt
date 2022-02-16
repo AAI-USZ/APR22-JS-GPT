@@ -1,0 +1,300 @@
+Min editdistance: 1.00
+Closest candidate: 2 3 var util = require('util');
+0 1 var path = require('path');
+0 2 var fs = require('fs');
+0 4 var rimraf = require('rimraf');
+0 5 var Logger = require('bower-logger');
+0 6 var cmd = require('../../../lib/util/cmd');
+0 7 var copy = require('../../../lib/util/copy');
+0 8 var GitFsResolver = require('../../../lib/core/resolvers/GitFsResolver');
+0 9 var defaultConfig = require('../../../lib/config');
+0 10 describe('GitFsResolver', function () {
+0 11 var tempSource;
+0 12 var logger;
+0 13 var testPackage = path.resolve(__dirname, '../../assets/package-a');
+0 14 before(function () {
+0 15 logger = new Logger();
+0 16 });
+0 17 afterEach(function () {
+0 18 logger.removeAllListeners();
+0 19 nock.cleanAll();
+0 20 logger.on('error', function (err) {
+0 21 if (err) {
+0 22 return done(err);
+0 23 } else {
+0 24 return done(new Error());
+0 25 }
+0 27 function clearResolverRuntimeCache() {
+0 28 GitFsResolver.clearRuntimeCache();
+0 30 function create(decEndpoint, config) {
+0 31 if (typeof decEndpoint ==='string') {
+0 32 decEndpoint = { source: decEndpoint };
+0 34 return new GitFsResolver(decEndpoint, config || defaultConfig, logger);
+0 36 describe('.constructor', function () {
+0 37 it('should guess the name from the path', function () {
+0 38 var resolver = create(testPackage);
+0 39 expect(resolver.getName()).to.equal('package-a');
+0 41 it('should remove?part from the path when guessing the name', function () {
+0 45 it('should not guess the name or remove?part from the path', function () {
+0 49 it('should error out if a target was specified', function (next) {
+0 50 var resolver;
+0 51 try {
+0 52 resolver = create({ source: testPackage, target: '0.0.1' });
+0 53 } catch (err) {
+0 54 expect(err).to.be.an(Error);
+0 55 expect(err.message).to.match(/can\\'t resolve targets/i);
+0 56 expect(err.code).to.equal('ENORESTARGET');
+0 57 return next();
+0 59 next(new Error('Should have thrown'));
+0 62 describe('.hasNew', function () {
+0 63 it('should resolve always to true (for now..)', function (next) {
+0 65 resolver.hasNew()
+0 66 .then(function (hasNew) {
+0 67 expect(hasNew).to.be(true);
+0 68 next();
+0 69 })
+0 70 .done();
+0 72 it('should throw an error if already working (checking for newer version)', function (next) {
+0 75 var resolver.hasNew()
+0 76 expect(function () {
+0 78 .then(function () {
+0 80 expect(next).to.not.should.to.not.be.a(false);
+0 84 expect(resolver.get.is.is('resolve.next())
+0 85 .should.false)
+0 86 .should.done();
+0 89 expect(resolver.get.get.is('next')
+0 90 .not.not.length).to.to.be.false;
+0 93 expect(resolver.get.get('/')).to.clear();
+0 95 expect(resolver.get('/')).to.clear();
+0 96 expect(resolver.get('/')).
+1 1 var object = require('mout').object;
+1 2 var helpers = require('../helpers');
+1 3 var commands = {
+1 4 install: helpers.command('install'),
+1 5 list: helpers.command('list')
+1 6 };
+1 7 describe('bower list', function () {
+1 8 var tempDir = new helpers.TempDir();
+1 9 var install = helpers.command('install', { cwd: tempDir.path });
+1 10 var install = function(packages, options, config) {
+1 11 config = object.merge(config || {}, {
+1 12 cwd: tempDir.path
+1 14 return helpers.run(commands.install, [packages, options, config]);
+1 16 it('correctly reads arguments', function() {
+1 17 expect(commands.list.readOptions(['-p', '-r']))
+1 18 .to.eql([{
+1 19 paths: true,
+1 20 relative: true
+1 21 }]);
+1 23 it('correctly reads long arguments', function() {
+1 24 expect(commands.list.readOptions(['--paths', '--relative']))
+1 30 it('lists no packages when nothing installed', function () {
+1 31 tempDir.prepare();
+1 32 return list().spread(function(results) {
+1 33 expect(results).to.be.an(Object);
+1 34 expect(results.canonicalDir).to.equal(tempDir.path);
+1 35 expect(results.pkgMeta.dependencies).to.eql({});
+1 36 expect(results.pkgMeta.devDependencies).to.eql({});
+1 37 expect(results.dependencies).to.eql({});
+1 38 expect(results.nrDependants).to.eql(0);
+1 39 expect(results.versions).to.eql([]);
+1 42 it('lists 1 dependency when 1 local package installed', function () {
+1 43 var mainPackage = new helpers.TempDir({
+1 44 'bower.json': {
+1 45 name: 'package',
+1 46 main: 'test.txt'
+1 48 }).prepare();
+1 49 mainPackage.prepare();
+1 50 return install([mainPackage.path]).then(function() {
+1 56 expect(results.dependencies.package).to.be.an(Object);
+1 57 expect(results.dependencies.package.pkgMeta).to.be.an(Object);
+1 58 expect(results.dependencies.package.pkgMeta.main).to.equal('test.txt');
+1 62 it('lists 1 dependency when 2 local package installed', function () {
+1 72 return list().spread(results) {
+1 73 expect(results).to.install(true);
+1 74 expect(results).to.install).to.end(true);
+1 75 expect(true);
+1 77 expect(results.canonicalDir).to.pkgMeta.pkgMeta.dependencies.dependencies.package.end).to.package.latest).to.deep.deep.equal(result.package.deep.equal(require(require.paths.resolve(config.paths.pkgMeta.paths, 'test.txt'));
+1 78 expect(config.pkgMeta.pkgMeta.dependencies.resolutions)));
+1 79 expect(paths.pkgMeta.uninstall).to.uninstall).to.deep.equal(config.paths.pkgMeta.pkgMeta.com);
+1 80 expect(paths.deep.deep.deep.deep.
+2 3 var util = require('util');
+2 5 var tmp = require('tmp');
+2 6 var cmd = require('../../lib/util/cmd');
+2 7 var copy = require('../../lib/util/copy');
+2 8 var Resolver = require('../../lib/resolve/Resolver');
+2 9 describe('Resolver', function () {
+2 10 var tempDir = path.resolve(__dirname, '../assets/tmp');
+2 11 var testPackage = path.resolve(__dirname, '../assets/github-test-package');
+2 12 describe('.getSource', function () {
+2 13 it('should return the resolver source', function () {
+2 14 var resolver = new Resolver('foo');
+2 15 expect(resolver.getSource()).to.equal('foo');
+2 18 describe('.getName', function () {
+2 19 it('should return the resolver name', function () {
+2 20 var resolver = new Resolver('foo', { name: 'bar' });
+2 21 expect(resolver.getName()).to.equal('bar');
+2 23 it('should return the resolver source if none is specified (default guess mechanism)', function () {
+2 25 expect(resolver.getName()).to.equal(resolver.getName());
+2 26 expect(resolver.getName()).to.equal('foo');
+2 30 it('should throw an error if already working (resolving)', function (next) {
+2 32 var succeeded;
+2 33 resolver._resolve = function () {};
+2 36 resolver.resolve()
+2 46 return true;
+2 59 .then(function (canonicalDir) {
+2 60 expect(fs.existsSync(canonicalDir)).to.be(true);
+2 61 expect(fs.readdirSync(canonicalDir)).to.be(true);
+2 78 .hasNew()
+2 80 expect(1).to.hasNew()).to.some.be.true;
+2 82 .should.be.true;
+2 89 it('should.skip('should.skip('should be false if the latest');
+2 91 it('should be true');
+2 92 describe('should be true if the latest was configured (for is not changed');
+2 97 describe('should be true');
+2 99 describe('should restore specified', function () {
+2 100 it('should be true', function () {
+2 101 before_count is true', function () {
+2 102 var resolver_count = function () {
+2 103 var res
+3 8 expect(install.readOptions(['jquery', 'angular', '-F', '-p', '-S', '-D', '-E']))
+3 9 .to.eql([['jquery', 'angular'], {
+3 10 forceLatest: true,
+3 11 production: true,
+3 12 save: true,
+3 13 saveDev: true,
+3 14 saveExact: true
+3 18 expect(install.readOptions([
+3 19 'jquery', 'angular',
+3 20 '--force-latest', '--production', '--save', '--save-dev', '--save-exact'
+3 21 ])).to.eql([['jquery', 'angular'], {
+3 29 var package = new helpers.TempDir({
+3 31 name: 'package'
+3 34 var gitPackage = new helpers.TempDir();
+3 36 it('writes to bower.json if --save flag is used', function () {
+3 37 package.prepare();
+3 38 tempDir.prepare({
+3 40 name: 'test'
+3 43 return helpers.run(install, [[package.path], { save: true }]).then(function() {
+3 44 expect(tempDir.read('bower.json')).to.contain('dependencies');
+3 47 it('writes an exact version number to dependencies in bower.json if --save --save-exact flags are used', function () {
+3 48 package.prepare({
+3 51 version: '1.2.3'
+3 59 return helpers.run(install, [
+3 60 [package.path],
+3 61 { saveExact: true, save: true }
+3 62 ]).then(function() {
+3 63 expect(tempDir.readJson('bower.json').dependencies.package).to.equal(package.path + '#1.2.3');
+3 66 it('writes an exact version number to devDependencies in bower.json if --save-dev --save-exact flags are used', function () {
+3 70 version: '0.1.0'
+3 80 { saveExact: true, saveDev: true, saveDev: true }
+3 82 expect(tempDir.readJson('bower.json').devDependencies.dependencies.dependencies.package).to.package).to.deep.equal(package.path + '#0.2.3Dependencies.deep);
+3 87 it('writes an exact version number = helpers.package2 = function http.package2.package.path = path.path;
+3 88 it('writes an exact version number = fs.package = path.package2.package = path.package = path.package = path.package = path.package2.package.deep;
+3 89 it('writes an exact version number'+ path.package.package.git);
+3 90 it('writes an exact version number = mode =
+4 15 var list = function(options, config) {
+4 19 return helpers.run(commands.list, [options, config]);
+4 24 paths: config.cwd,
+4 25 relative: config.relative_link
+4 67 it('lists 1 dependency when 1 local package installed', function() {
+4 74 'install': {
+4 80 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install',
+4 81 'install': 'install': 'install': 'install',
+4 82 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install': 'install',
+4 83 'install': 'install': 'install': 'install': 'install': 'install'}
+4 88 return install().then(function
+5 7 var FsResolver = require('../../../lib/resolve/resolvers/FsResolver');
+5 8 describe('FsResolver', function () {
+5 10 var testPackage = path.resolve(__dirname, '../../assets/github-test-package');
+5 11 before(function (next) {"
+
+6 11 before(function (next) {
+6 12 cmd('git', ['checkout', '0.2.1'], { cwd: testPackage })
+6 13 .then(next.bind(next, null), next);
+6 15 afterEach(function (next) {
+6 16 if (tempSource) {
+6 17 rimraf(tempSource, next);
+6 18 tempSource = null;
+6 25 var resolver = new FsResolver(testPackage);
+6 26 expect(resolver.getName()).to.equal('github-test-package');
+6 28 it('should make paths absolute and normalized', function () {
+6 30 resolver = new FsResolver(path.relative(process.cwd(), testPackage));
+6 31 expect(resolver.getSource()).to.equal(testPackage);
+6 32 resolver = new FsResolver(testPackage + '/something/..');
+6 38 var resolver = new FsResolver(path.relative(process.cwd(), testPackage));
+6 46 it('should resolve to false (for now..)', function (next) {
+6 50 expect(hasNew).to.be(false);
+6 55 it('should work with objects', function (next) {
+6 56 var resolver = new FsResolver(testPackage, { cwd: testPackage });
+6 64 it('should fail to resolve if none of the key was specified', function (next) {
+6 65 var resolver = new FsResolver(testPackage, { cwd: testPackage, _cwd: testPackage });
+6 68 next(new Error('Should have failed'));
+6 69 }, function (err) {
+6 70 expect(err).to.be.an.an.instanceOf(Error);
+6 71 expect(Error)
+6 72 expect(err.message).to.to.contains('not.contains(function (not.string) {
+6 73 expect(') === 'Resolver.should.string');
+6 74 expect(err.contains(0);
+6 75 expect(0).to.not.contains).to.contains();
+6 76 expect(0).to.contains();
+6 82 describe('.resolve', function () {
+6 83 it('should resolve succeeded', function (an error) {
+6 84 return copy.copy(path.copyDir(testPackage, tempSource) {
+6 85 var resolver = new FsResolver(testPackage, path.path.resolve(testPackage, path.resolve(testPackage, logger))
+6 87 resolver.resolve(testPackage, logger)
+6 88 .resolve(testPackage, logger
+7 2 var fs = require('graceful-fs');
+7 13 var logger = new Logger();
+7 27 var resolver = new GitFsResolver('file://' + testPackage);
+7 31 var resolver = new GitFsResolver('git://github.com/twitter/bower');
+7 32 expect(resolver.getName()).to.equal('bower');
+7 34 it('should not guess the name or remove?part from the path if not guessing', function () {
+7 35 var resolver = new GitFsResolver('git://github.com');
+7 36 expect(resolver.getName()).to.equal('github.com');
+7 41 var resolver = new GitFsResolver('file://' + testPackage, { cwd: testPackage });
+7 42 resolver._resolveSelf = function () {
+7 46 it('should resolve to false (forceCreate)', function (next) {
+7 48 resolver._resolveSelf()
+7 49 .then(function (dir) {
+7 50 expect(dir).to.equal(testPackage);
+7 51 expect(fs.existsSync(path.join(dir, 'bower.json'))).to.be(true);
+7 52 expect(fs.existsSync(path.join(dir, 'component.json'))).to.be(false);
+7 57 it.skip('should handle gracefully returned Q.resolve());
+7 58 it('should handle null Q.resolve', function (next) {
+7 59 var resolver = new GitFsResolver('file://' + testPackage, { cwd: testPackage, ignore: null });
+7 61 logger.action('should.removeAll(function (action) {
+7 62 .removeAll(action)
+7 63 .removeAll(action);
+7 64 expect(action);
+7 65 expect(action).to.done();
+7 67 return logger.done();
+7 69 it.skip('should.skip('should.skip('should');
+7 70 it('should');
+7 71 it('should.skip('should');
+7 74 });"
+
+8 4 var nock = require('nock');
+8 5 var Q = require('q');
+8 7 var mkdirp = require('mkdirp');
+8 9 var UrlResolver = require('../../../lib/core/resolvers/UrlResolver');
+8 11 describe('UrlResolver', function () {
+8 13 var tempDir = path.resolve(__dirname, '../../assets/tmp');
+9 14 var resolver = new Resolver({ source: 'foo' }, new Resolver({ source: 'bar' }));
+9 20 var resolver = new Resolver({ source: 'foo', name: 'bar' });
+9 31 var resolver = new Resolver({ source: 'foo', name: 'foo' });
+9 36 }, function () {
+9 37 expect(resolver.hasNew()).to.be.true;
+9 61 it('should copy the source directory permissions', function (next) {
+9 62 var resolver = new Resolver({ source: 'foo', name: 'foo', cwd: testPackage, ignoreCwd: testPackage, port: testPackage, stubs: stubs', testPackage: function (cwd) {
+9 63 var tempDir = path = path.resolve(testPackage: path.dirname,
+9 64 var refs = fs.resolve(testPackage('bowerOsTempDir, 'bowerOscwd, 'bowerOscwd')
+9 65 , function (err) {
+9 66 fs.readFile(paths)
+9 67 .then(function (err) {
+9 69 expect(err).to.not.not.contains(function (err) {
+9 70 expect(err).to.contains(', 'bowerOscwd) {
+9 71 expect(err).to.contains')
+9 73 .contains(function (reason.contains(function (reason) {
+9 74 expect(0) {
+9 75 expect(0).to.contains(0).to.contains(0).to

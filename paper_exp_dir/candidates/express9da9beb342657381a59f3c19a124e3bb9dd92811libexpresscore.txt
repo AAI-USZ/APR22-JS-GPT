@@ -1,0 +1,29 @@
+Min editdistance: 17.00
+Closest candidate: 0 1  } }' })
+0 1  } }' })
+0 2 })
+0 3 Express.server = set('static views = new Server
+0 4 Express.static server
+0 5 Express.static = http.compareFile = http
+0 7 Express.compareFile = function (options) {
+0 8 return'render()'s', I\
+0 9 join('compress views'
+0 10 post('fixtures/',     'xhr')
+0 11 }
+0 14 }'Express.testExpress.hamlanguages: http')
+0 15 function get('views')
+2 1  })" })"
+3 1  }() })"
+4 1  }() }() })
+4 3 get('/readFile(fileList', function(fileList)
+4 4 return fs.readFile, function(fileList, callback) {
+4 5 return this.addListener('any', callback) {
+4 6 return this.addListener('fileList', function(){
+4 7 return this.readFile(require('part, callback)
+4 10 set('cache'static files' in fileList', function(){
+4 11 return this.addFileneansizeMovedFiles(fileList, function(
+7 1  })
+7 2 })"
+8 1  } function (formatters' })
+8 2 Express.halt() }()})"
+9 1  }

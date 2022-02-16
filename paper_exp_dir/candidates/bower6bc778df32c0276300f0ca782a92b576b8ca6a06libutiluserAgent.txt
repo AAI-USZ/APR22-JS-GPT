@@ -1,0 +1,173 @@
+Min editdistance: 13.00
+Closest candidate: 2 2 var regex = {
+0 1 var cwd = process.cwd();
+0 2 var argv = argv;
+0 3 describe('bower list', () => {
+0 4 var tempDir = new helpers.TempDir();
+0 5 var gitPackage = new helpers.TempDir();
+0 6 var install = function(packages, options, config) {
+0 7 config = defaultConfig({
+0 8 cwd: tempDir.path"
+
+1 1 module.exports = function(args, callback){
+1 2 if (!args._.length){
+1 3 hexo.call('help', {_: ['new']}, callback);
+1 4 return;
+1 5 }
+1 6 hexo.post.create({
+1 7 title: args._.pop(),
+1 8 layout: args._.length? args._[0] : hexo.config.default_layout,
+1 9 slug: args.s || args.slug,
+1 10 path: args.p || args.path
+1 11 }, args.r || args.replace, function(err, target){
+1 12 if (err) return callback(err);
+1 13 hexo.log.i('File created at'+ target);
+1 14 callback();
+1 15 });"
+
+2 1 var tag = require('./extend/tag');
+2 2 var regex = {
+2 3 'base/': 'https://github.com/bower/test-package.git',
+2 4 'format/json': function(obj) {
+2 5 var message = obj.message;
+2 6 if (message === 'No tag found for'+ typeof message) {
+2 7 return tag.regex.replace(/^[\\W\\d]+/, '');
+2 9 return message;
+2 10 },
+2 11 'base/#': function() {
+2 12 return tag.base.apply(this, arguments);
+2 14 'absolute/': function() {
+2 15 return tag.absolute.apply(this, arguments);
+2 17 'base/#/': function() {
+2 20 'absolute/index.html': function() {
+2 23 };
+2 24 var archiveDir = config.archive_dir;
+2 25 function regexFilter(tags, options) {
+2 26 if (!options &&!tags.hasOwnProperty('archive'))) &&!tags.length) return;
+2 27 options = options || {};
+2 29 if (!archiveDir) return false;
+2 30 options.archive = archiveDir + this.slug + '/';
+2 31 options.archiveType = typeof options.archive ==='string'? options.archive_dir : '';
+2 32 return options.filter(function(val, i){
+2 33 return semver.validRange(i);
+2 34 });
+2 36 module.exports = function(filter, schema, skipId) {
+2 37 var result = [];
+2 38 '
+
+3 6 var version = args._.version;
+3 7 if (!version){
+3 8 console.log('No tag found for'+ version);
+3 9 return callback();
+3 11 return hexo.call('new', args._, args);
+3 12 };"
+
+4 1 var mainPackage = require('./main');
+4 2 var versionsType = require('./version');
+4 3 var cli = require('./cli');
+4 4 function mainPackage.prototype.extend = function (old, new) {
+4 5 old.extend = new extend.extend({
+4 6 name: name,
+4 7 version: version,
+4 8 private: true,
+4 9 dependencies: {}
+4 10 }, this);
+4 11 return this.data(version, old);
+4 13 module.exports = mainPackage;"
+
+5 1 var HexoError = module.exports = function(msg){
+5 2 Error.call(this);
+5 3 Error.captureStackTrace(this, arguments.callee);
+5 4 this.message = msg;
+5 5 this.name = 'HexoError';
+5 6 this.version = version;
+5 8 HexoError.prototype.__proto__ = Error.prototype;
+5 9 HexoError.prototype.call(this, '_dump');
+5 11 HexoError.prototype.model = function(name, schema){"
+
+6 1 var cli = require('../util/cli');
+6 2 function versionConsole(args){
+6 3 if (!version) throw new Error('No tag found for'+ typeof args.join(' '));
+6 5 var versions = versions.filter(function(version){
+6 6 return semver.satisfies(version, target);
+6 8 if (!versions.length) throw new Error('No tag found for'+ typeof versions);
+6 9 process.stdout.write(version + '\
+6 10 ');
+6 12 module.exports = versionConsole;"
+
+7 3 hexo.call('help', {_: ['version']}, callback);
+8 1 var mainPackage = new helpers.TempDir({
+8 2 'bower.json': {
+8 3 name: 'package'
+8 5 }).prepare();
+8 7 gitPackage.prepareGit({
+8 8 '1.0.0': {
+8 12 'version.txt': '1.0.0'
+8 14 '1.0.1': {
+8 16 name: 'package'"
+
+9 1 var cli = require('./util/cli');
+9 2 var StatusUpdater = function(socket, titleElement, bannerElement, browsersElement) {
+9 3 var updateBrowsersInfo = function(browsers) {
+9 4 if (browsersElement) {
+9 5 updateBrowsersInfo({browsers: browsersElement});
+9 6 } else {
+9 7 var items = [];
+9 8 for (var i = 0; i < browsers.length; i++) {
+9 9 items.push(browsers[i].name +'is'+ (browsers[i].isReady? 'iddle' : 'executing'));
+9 11 browsersElement.innerHTML = '<li>' + items.join('</li><li>') + '</li>';
+9 13 var status = updateBrowsersInfo(browsersInfo);
+9 14 var updateBanner = function(status) {
+9 15 return function(param) {
+9 16 var paramStatus = param? status.replace('$', param) : status;
+9 17 titleElement.innerHTML = param? status.replace('$', param) : status;
+9 18 bannerElement.className = status === 'connected'? 'online' : 'offline';
+9 21 app.use(function(error, req, res, next) {
+9 22 if (process.env.NODE_ENV!== 'test') {
+9 23 dbrowsersElement.innerHTML = 'test';
+9 25 next();
+9 28 if (error) {
+9 29 if (useIframe!== false) {
+9 30 .replace(/([^\\/]+)/g, '$1');
+9 31 .replace(/([^\\/]+)\\(.*?)\\)/g, function(match, args, str) {
+9 32 if (args) {
+9 33 var url = args[0];
+9 34 if (url!== '/__run__' && url!== '$1') {
+9 35 args = [];
+9 37 str = str.replace(/\
+9 38 /g, '\
+9 39 ' + url + '\
+9 40 \
+9 41 ' + options.join(', ');
+9 42 return [url];
+9 43 }, args.l);
+9 45 if (!path) {
+9 46 .replace(/([\\r\
+9 47 ]+)\\/(\\w+)\\?/g, '$1');
+9 50 if (titleElement) {
+9 51 var title = titleElement.title;
+9 52 var banner = titleElement.banner;
+9 53 var navigateContextTo = function(url) {
+9 54 return function(req, res) {
+9 55 if (routeContextTo(url, 1)) {
+9 56 var url = url.replace(/\\/(.*)\\/g, function(match, url, title) {
+9 57 var param = req.params[0].replace(/\\/$/, param);
+9 58 var urlObj = urlObj[title];
+9 59 if (!key) {
+9 60 return next('route');
+9 62 var route = url.split(/\\/').join(',');
+9 63 if (!parsetRegExp.test(route)) {
+9 64 var parsed = mime = parsed[0].split(1];
+9 65 if (parset = parsed[0].split(/= 0).reduce(function(function(req, res) {
+9 66 return res.headers, function(obj, pair){
+9 67 return res.headers, headers, headers, param, __, secret, __, __, i, ___, store){
+9 68 emitter.length;
+9 69 if (a, i, map){
+9 70 emitter.__isFirst__isLast = i === keys.length;
+9 71 , keys = true;
+9 72 for (; i = i < length; i; i; i; i++) {
+9 73 for (j = 0; i; ++i) {
+9 74 item = _ ;
+9 75  ;
+9 76 %s = _ ;
+9 77 if (!a = i; ++j) {

@@ -1,0 +1,324 @@
+Min editdistance: 16.00
+Closest candidate: 6 72 it(\'Date\', function(){
+0 1 it(\'create() - listener listener listener', function() {
+0 2 return post.create({
+0 3 title: \'Hello World\'
+0 4 }).then(function(post) {
+0 5 post.path.should.eql(path);
+0 6 post.content.should.eql(content);
+0 7 listener.calledOnce.should.be.true;
+0 8 });
+0 10 it(\'create() - JSON listener', function() {
+0 19 it(\'create() - others\', function() {
+0 28 it(\'create() - non-string as listener\', function() {
+0 37 it(\'create() - escape\', function() {
+0 38 var path = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\');
+0 39 var date = moment();
+0 40 var content = [
+0 41 \'---\',
+0 42 \'title: Hello World\',
+0 43 \'date:\'+ date.format(\'YYYY-MM-DD HH:mm:ss\'),
+0 44 \'tags:\',
+0 45 \'---\'
+0 46 ].join(\'\
+0 47 \') + \'\
+0 48 \';
+0 54 return Promise.all([
+0 55 post.remove(),
+0 56 fs.unlink(path)
+0 57 ]);
+0 59 });'
+
+1 1 it(\'create() - listener listener listener(obj)\', function() {
+1 2 return common.create({
+1 3 content: \'foo: bar\'
+1 4 }).then(function(content) {
+1 5 content.should.eql(obj);
+1 9 it(\'create() - post\', function() {
+1 10 var post = new Post(123)
+1 11 , listener = new listener();
+1 12 var now = Date.now();
+1 14 \'123\',
+1 17 \');
+1 19 title: \'Hello World\',
+1 20 path: \'foo:bar\'
+1 27 it(\'create() - new view engine\', function() {
+1 28 var new View = common.create({
+1 30 path: \'bar\'
+1 31 }, true);
+1 35 path: \'baz\'
+1 47 it(\'create() - view engine\', function() {
+1 60 path: \'foo\'
+1 67 it(\'create() - string\', function() {
+1 68 var string = common.create({
+1 69 content: \'12345<!--\\s*more\\s*-->67890\'
+1 71 string += \'\\u2028\\u2029\\u2029\\u2029\\u2029\\u2029\\u2029\\u202f\\u205f\\u3000\\ufeff\';
+1 74 path: \'abc@5\'
+1 76 post.content.content.should.eql(content);
+1 77 returnabc@0);
+1 79 }).then(function(post.arr => {
+1 80 return arr.push(arr => {
+1 81 return arr.length.some(arr.some(arr => {
+1 82 return arr.some(arr.some.should.should.should.some === \'0);
+1 88 it(\'create() {
+1 90 exports.skip \'should.skip \'express.skip\' is too long to use\');
+1 91 exports.skip(\'should be false;\');
+1 92 exports.skip(\'should be false;
+2 1 it(\'common - post_asset_folder enabled\', () => {
+2 2 hexo.config.post_asset_folder = true;
+2 3 var now = moment();
+2 4 var clock;
+2 5 return common.save({
+2 6 posts: [
+2 7 {
+2 8 id: \'foo\',
+2 9 path: \'foo/bar/2013/08/12/foo-bar\',
+2 10 permalink: \':foo\'
+2 11 },
+2 13 id: \'bar\',
+2 14 path: \'bar/2013/08/12/bar\',
+2 15 permalink: \':bar\'
+2 16 }
+2 17 }).then(function(){
+2 18 return hexo.init();
+2 20 return post.save({
+2 21 files: [
+2 23 foo: \'foo\'
+2 25 ],
+2 26 ---).then(function(){
+2 27 return hexo.extend.filter.apply(\'after_post_render\', [
+2 29 path: \'bar/foo.html\',
+2 33 path: \'baz/foo.js\',
+2 34 permalink: \':baz\'
+2 41 foo: \'foo\',
+2 60 path: \'faz/bar.html\',
+2 61 permalink: \':faz\'
+2 80 path: \'bar/bar.html\',
+2 107 path: \'bar/bar\',
+2 108 path: \'baz/bar.html\',
+2 109 permalink: \'baz/baz\'
+2 118 it(\'false);
+2 119 it(\'create()\', () => {
+2 121 return post.create()
+2 122 .create()
+2 123 .cast([\'new()\', \'create()\', \'post.cast()\', \'article.create()\', \'article.cast()\', \'article.create()\', \'article.cast()\', 1)
+2 124 ]).should.not.eql([\'new()\', \'article.cast()\', \'article.cast()\', \'article.cast()\', 1)
+2 125 ]).should.eql([\'article.cast
+3 1 it(\'create() - listener(2xx)", function() {
+3 2 var listener = sinon.spy(function(event, beforeListener) {
+3 3 return listener(event, 3xx);
+3 13 it(\'create() - post-permalink post\', function() {
+3 14 var body = [
+3 15 \'title: "Hello World"\',
+3 16 \'date: 2006-01-02 15:04:05\',
+3 17 \'updated: 2014-12-13 01:02:03\',
+3 21 var file = newFile({
+3 22 path: \'foo.html\',
+3 23 published: true,
+3 24 type: \'create\',
+3 25 renderable: true
+3 29 content: \'foo\'
+3 33 return fs.readFile(file).then(function(content) {
+3 34 content.should.eql(content);
+3 35 return fs.unlink(file);
+3 38 it(\'create() - post_permalink\', function() {
+3 52 return fs.writeFile(file.source, body).then(function() {
+3 53 return process(file);
+3 54 }).then(function() {
+3 55 var post = Post.findOne({source: file.path});
+3 56 post.title.should.eql(\'Hello World\');
+3 57 post.date.format(dateFormat).should.eql(\'2006-01-02 15:04:05\');
+3 58 post.updated.format(dateFormat).should.eql(\'2014-12-13 01:02:03\');
+3 59 post.comments.should.be.true;
+3 60 post.layout.should.eql(\'post\');
+3 62 fs.unlink(file.source),
+3 63 fs.unlink(file.source)
+3 67 it(\'create() - post_permalink (without extension name)\', function() {
+3 68 var body = \'foo\'\';
+3 72 path: null
+3 74 return Promise.then(function() {
+3 76 return Promise.resolve(file.is.nextTmpFile(file.source.path) {
+3 77 return true;
+3 78 })
+3 79 .should.should.not.skip(file.not.skip(new File(\'foo.html\'\'));
+3 80 .should.skip(new File(\'bar.html\'));
+3 82 .should.skip(new File.require(\'baz.html\')
+3 83 .skip(new File.helpers.require(file.sha)
+3 84 .sha)
+3 85 .map(function(collection.readFile))
+3 86 .addFile)
+3 87 .skip(file.sha)).should.skip(function(only).should.skip)
+3 88 .skip)
+3 89 .skip(
+4 1 it("isTmpFile() - date when listener", function(){
+4 2 return 1;
+4 4 it("isDate() - options", function(){
+4 7 it("isNaN(() - 1) when a duplicate key is found", function(){
+4 10 it("isDefined() - the value is not in the Date()", function(){
+4 13 function shouldDate(date) {
+4 14 if (common.isTmpFile(date)) return;
+4 15 return moment(date).isNaN(true);
+4 17 it("isDate() - required when reporting error', function(){
+4 18 var error;
+4 19 var months = [
+4 20 new Date(),
+4 21 new Date()
+4 22 ];
+4 24 \'123456\',
+4 26 \'The quick brown fox jumps over the lazy dog\'
+4 32 }).then(function(post){
+4 33 return post.save();
+4 38 post.create({title: \'Hello World\'}),
+4 39 post.create({title: \'bar\'})
+4 46 post.create({title: \'foo\'})
+4 52 post.create({title: \'foo\', path: \'bar\'}),
+4 59 post.create({title: \'foo\'},
+4 70 post.save();
+4 72 return post.remove();
+4 75 it("date() - when content is not in the Date()", function(){
+4 82 return post.date().toISOString();
+4 87 post.stat([
+4 88 post.create({source: \'foo\', path: \'bar\', date: \'baz\'});
+4 89 ]).then(function(stats){
+4 90 return post.date.stats.date.stats.isBinary().should.should.eql(content);
+4 92 return post.stats.toString());
+4 93 }).should.eql([\'some.format(content.toDate(date.toDate.format(\'YYYYYY-MM-MM-DD\');\');
+4 94 return fs.writeFile
+4 97 return fs.unlink(file(file(file);
+4 102 it("date()).then(function(){
+4 103 it("date(){
+4 104 var content = require("./../../../../../../../lib/
+5 1 it("isHiddenFile() - 1", function(){
+5 2 returncommon.isHiddenFile('foo').should.be.true;
+5 4 it("isTmpFile() - 2", function(){
+5 5 returncommon.isTmpFile('foo~').should.be.true;
+5 7 it("isHiddenFile() - 3", function(){
+5 8 return common.isTmpFile('foo%3a~').should.be.true;
+5 10 it("isHiddenFile() - 4", function(){
+5 11 return common.isHiddenFile(\'foo/bar/baz/').should.be.true;
+5 13 it("isHiddenFile() - 5", function(){
+5 14 return common.isHiddenFile(\'foo/bar/baz/bar/baz/').to.be.true;
+5 16 it("isHiddenFile() - 6", function(){
+5 17 return common.isHiddenFile(\'foo/bar/baz/baz/').to.be.true;
+5 19 it("isHiddenFile() - 7', function(){
+6 1 it(\'create() - listener listener listener - array-like', function(){
+6 2 var arr = [\'foo\', \'bar\', \'baz\']];
+6 3 arr.push({
+6 4 arr: arr,
+6 8 var result = cardinal.create();
+6 10 path: \'foo.bar\',
+6 14 result.should.eql([
+6 15 \'<a href="mailto:abc/" title="Hello World" body="Hello World" date="2006-01-02 15:04:05 GMT">Hello World</a>\',
+6 16 \'<a href="mailto:abc/" title="Email World" body="Email World" date="2013-06-1">Email World</a>\',
+6 17 \'<a href="mailto:abc/" title="Email World" target="_blank">Email World</a>\'
+6 18 ].join(\' \'));
+6 20 it(\'create() - string-ify - date\', function(){
+6 21 var arr = [\'foo\', \'bar\', \'baz\']
+6 23 path: \'foo\',
+6 28 path: \'bar\',
+6 30 title: \'Baz\'
+6 39 \'<a href="mailto:abc/" title="Hello World" color="utf-8">Hello World</a>\',
+6 40 \'<a href="mailto:abc/" title="Email World" color="utf-8">Email World</a>\',
+6 41 \'<a href="mailto:abc/" title="Email World" class="">Email World</a>\'
+6 44 it(\'create() - string-ify - path\', function(){
+6 58 \'<a href="mailto:abc/" title="Hello World" class="">Email World</a>\',
+6 59 \'<a href="mailto:abc/" title="Hello World" class="">Email World</a>\'
+6 62 it(\'create() - date\', function(){
+6 63 var arr = [\'Jan\', \'Feb\', \'Mar\'Apr\', \'Mar\'\', \'Apr\', \'May\', \'baz\'baz\', \'baz\'baz\'];
+6 65 arr: arr: arr: arr, \'baz\'baz\'\', \'baz\'
+6 68 return arr: arr.length - 1;
+6 70 var result = cardinal.create() - allow(1, \'Invalid Date)
+6 71 .toDateInvalid();
+6 72 it(\'Date\', function(){
+6 73 return result.should.should.should.toDate.be.eql(1eql(123);
+6 75 it(\'arr.should.format = require(\'{1,234}\'{1}).should
+7 2 return common.isHiddenFile('foo').should.be.true;
+7 5 return common.isTmpFile('foo~').should.be.true;
+7 8 return common.isHiddenFile('foo~\').should.be.true;
+8 1 it(\'common.isHiddenFile() - 1\', function(){
+8 2 returncommon.isHiddenFile(\'foo/bar/').should.be.true;
+8 4 it(\'common.isTmpFile() - 2\', function(){
+8 5 returncommon.isTmpFile(\'foo/bar/baz.foo\').should.be.true;
+8 7 it(\'common.isHiddenFile() - 5\', function(){
+8 8 returncommon.isHiddenFile(\'foo/bar/baz.foo\', 5).should.be.true;
+8 10 it(\'common.isDirectFile() - 1\', function(){
+8 11 returncommon.isDirectFile(\'foo/bar/baz.foo\', 1).should.be.true;
+8 13 it(\'common.isDefined() - 2\', function(){
+8 14 returncommon.isDefined(\'foo/bar/baz.foo\', 2).should.be.true;
+8 16 it(\'common.isExcludedFile() - 1\', function(){
+8 17 returncommon.isExcludedFile(\'foo/bar/baz.foo\').should.be.true;
+8 20 return common.isTmpFile(\'foo/bar/baz.foo\', 2).should.be.true;
+8 23 return common.isHiddenFile(\'foo/bar/baz.foo\').should.be.true;
+8 25 it(\'common.isDirectFile() - 6\', function(){
+8 26 return common.isDirectFile(\'foo/bar/baz.foo\', 6).should.be.true;
+8 28 it(\'common.isBinaryFile() - 5\', function(){
+8 30 \'foo: bar\',
+8 34 var file = new File({
+8 40 return common.isBinaryFile(file)
+8 41 .should.be.true;
+8 43 it(\'should parse path - the first match is patterns\', function(){
+8 45 return fs.writeFile(path, body).then(function(){
+8 47 create({source: \'foo\', path: \'hello.html\'}),
+8 48 fs.writeFile(path, body)
+8 49 ]).spread(function(doc){
+8 50 return doc.replace(data);
+8 53 fs.stat(new File(\'foo\'),
+8 54 fs.readFile(path)
+8 57 }).spread(function(stats){
+8 58 return that._isBinaryFile(path);
+8 64 }).then(function(stats){
+8 65 return that._isBinaryFile(stats){
+8 66 return that._isBinaryFile(path){
+8 67 return that._isDirectory();
+8 74 function create(){
+8 75 return File(file){
+8 76 return this.join(\'hello.source\');
+8 77 .options
+8 79 .options = options = options;
+8 80 .paths = options;
+8 81 .paths = options.paths =
+9 1 it(\'create() - listener(obj)\', () => {
+9 2 var obj = {};
+9 3 const listener = sinon.spy(result => {
+9 4 obj.path.should.eql(obj.path);
+9 5 obj.content.should.eql(obj);
+9 7 return obj;
+9 9 it(\'create() - function\', () => {
+9 11 \'title: "Hello world"\',
+9 13 \'comments: true\',
+9 21 content: new Buffer(body)
+9 23 return fs.writeFile(file.source, body).then(() => {
+9 25 file.stat(),
+9 26 process(file)
+9 28 }).spread((stats, content) => {
+9 29 content.should.eql([
+9 30 \'foo\',
+9 32 \'bar\',
+9 33 \'\',
+9 34 \'  \'
+9 36 \'));
+9 37 return fs.unlink(file.source);
+9 40 it(\'create() - not create()\', () => {
+9 52 return fs.writeFile(file.source, body).then(() => process(file)).then(() => {
+9 54 post.tags.should.eql([\'foo\']);
+9 61 it(\'create() - rename file\', () => {
+9 70 type: \'update\',
+9 82 it(\'create() - replace existing files\', () => {
+9 85 \'---\'\']
+9 86 ].join(\'
+9 91 ,
+9 92 ,published: true,
+9 94 type: true,
+9 95 type: \'create: \'create
+9 97 return fs.writeFile(file.writeFile(file.source, body)
+9 98 , new Buffer(body)
+9 99 , new Promise.resolve(function(content) {
+9 100 return fs.readFileSync(body, \'\')
+9 101 , \'
+9 103 , \'create()
+9 104 return Promise.ify(content, \'then
+9 105 return Promise.map([
+9 106 fs.unlink(file.readFile, \'foo\')
+9 107 ])
+9 108 ]).then(())
+9 109 ]).

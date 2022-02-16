@@ -1,0 +1,16 @@
+Min editdistance: 53.00
+Closest candidate: 6 3 if (err) return emitter.emit('error', err);
+0 1 '
+
+6 1 module.exports.completion = function (opts, cb) {
+6 2 glob('./*', { cwd: config.cache }, function (err, dirs) {
+6 3 if (err) return emitter.emit('error', err);
+6 4 dirs = dirs;
+6 5 return this.emit("completion", opts);
+6 6 }.bind(this));
+6 7 return this;
+6 8 };'
+
+7 4 cb();
+7 5 });
+7 6 return module.exports(completed, { cwd: config.cache });

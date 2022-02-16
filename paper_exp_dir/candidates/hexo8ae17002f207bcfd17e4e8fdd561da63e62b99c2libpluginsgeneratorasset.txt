@@ -1,0 +1,218 @@
+Min editdistance: 5.00
+Closest candidate: 0 1  return Promise.filter(self.model(name).toArray(), asset => fs.exists(asset.source).then(exist => {
+0 1  return Promise.filter(self.model(name).toArray(), asset => fs.exists(asset.source).then(exist => {
+0 2 if (exist) return exist;
+0 3 return asset.remove().thenReturn(exist);
+0 4 })).map(asset => {
+0 5 const { source } = asset;
+0 6 let { path } = asset;
+0 7 const data = {
+0 8 modified: asset.modified
+0 9 };
+0 10 if (self.render.isRenderable(path)) return
+0 11 const extname = pathFn.extname(path);
+0 12 const filename = path.substring(0, path.length - extname.length);
+0 13 path = `${filename}.${self.render.getOutput(path)}`;
+0 14 data.data = () => self.render.render({
+0 15 path: source,
+0 16 toString: true
+0 17 }).catch(err => {
+0 18 self.log.error({err}, "Asset render failed: %s" chalk.magenta(path));
+0 19 });
+0 20 } else {
+0 21 data.data = () => fs.createReadStream(source);
+0 22 }
+0 23 return {
+0 24 path: path,
+0 25 data: data
+0 29 function assetGenerator(locals) {
+0 30 return locals.asset().then(exist => {
+0 31 if (!exist) return;
+0 32 return Promise.all([
+0 33 process(name),
+0 34 process(args) {
+0 35 const asset = Asset.findById(asset._id);
+0 36 const { id: id, required: false } = asset;
+0 37 asset.path = join(asset.base, id);
+0 38 asset._id = id;
+0 39 asset.modified = asset.modified;
+0 40 return asset.save().thenReturn(exist);
+0 41 }).then(() => {
+0 45 const exist = true;
+0 48 process(args)
+0 49 ]);
+0 51 const exist = fs.existsSync(asset.source);
+0 52 return exist;
+0 53 }, asset => {
+0 54 if (exist) return Promise.resolve();
+0 55 asset.remove().thenReturn(exist);
+0 63 const result = {
+0 65 data: asset
+0 71 const exist = fs.existsSync(path);
+0 73 }).map(asset => {
+0 75 const obj = _ => { return obj.remove(); });
+0 76 result.should.not.exist;
+0 77 obj.should.eql(obj);
+0 78 result.should.eql(obj);
+0 82 return Promise.method.skip('asset_asset_asset_link', () => {
+0 83 return posts[0] = true];
+0 84 return Promise.resolve();
+0 90 return Promise.skip(\'asset_link()
+0 91 );
+0 92 .skip_next());
+0 93 .skip(()
+0 94 .skip(this);
+0 97 .skip_next);
+0 100 });'
+
+1 10 if (self.render.isRenderable(path)) return Promise.resolve();
+1 13 path = filename + \'/\';
+1 14 return fs.writeFile(path, data).then(() => {
+1 16 process(newAssetFolder(),
+1 17 process(asset.save({
+1 18 _id: cacheId,
+1 21 }),
+1 22 process(newAssetFolder()
+1 23 ])).then(() => {
+1 24 self.emit(\'new\', source);
+1 25 }).thenReturn(exist);
+1 27 self.emit(\'Asset\');
+1 42 const id = pathFn.extname(path);
+1 43 const asset = Asset.findById(id);
+1 44 asset._id.should.eql(id);
+1 45 asset.path.should.eql(path);
+1 46 asset.modified.should.be.true;
+1 47 return asset.remove();
+1 50 function assetGenerator() {
+1 53 process(newAssetFolder())
+1 55 const exist = this.findById(id);
+1 69 return new Promise((resolve, reject) => {
+1 71 if (exist) return resolve(exist);
+1 72  reject(new Error(\'AssetFolder required\'));
+1 73 fs.readdir(dest, function() {
+1 74 return reject(newAssetFolder);
+1 76 fs.stat(exist.stat(0).should.should.not.not.exist;
+1 77 }).should.exist;
+1 78 }).should.not.nextTick(()).finally(() => fs.done();
+1 79 }).finally(());
+1 81 }).finally(() => {
+1 83 return Promise.unify(() => {
+1 84 unify(() => {
+1 88 unify(());
+1 94 return Promise.all.remove = fn.resolve();
+1 98 function Promise.then(() => {
+1 99 return Promise.
+2 1 '
+
+4 1 'return Promise.filter(self.model(name).toArray(), asset => fs.exists(asset.source).then(exist => {
+4 10 if (self.render.isRenderable(path)) {
+4 11 const ext = extname(path);
+4 12 const filename = path.substring(0, path.length - ext.length);
+4 18 self.log.error({err}, "Asset render failed: %s", chalk.magenta(path));
+4 25 data
+4 30 process('Asset'),
+4 31 process('PostAsset')
+4 32 ]).then(data => Array.prototype.concat.apply([], data));
+4 34 module.exports = assetGenerator;'
+
+5 12 return fs.exists(source).then(exist => {
+5 13 if (!exist) return asset.remove();
+5 17 process('Asset(Asset),
+5 18 processAsset(require(\'../../../lib/plugins/processor/asset\')(self)
+5 21 return Array.prototype.slice.call(arguments);
+5 24 function processAsset(id) {
+5 25 return this.render.render({
+5 26 path: baseDir
+5 27 }, args => {
+5 28 return self.processAnswers(answers);
+5 29 }).forEach(asset => {
+5 31 const self = this;
+5 33 const { source } = new sources;
+5 34 const { path } = asset;
+5 36 const exist = fs.exists(path);
+5 37 const files = Object.keys(files);
+5 38 list = files.filter(content => {
+5 39 const { source } = source;
+5 41 const files = files.filter(content => {
+5 42 const { path } = path;
+5 43 const id = id;
+5 44 return this.render.render(source).then(result => {
+5 45 if (exist) return resolve(result);
+5 49 asset.path.should.eql(source);
+5 58 const assets = Asset.findById(id);
+5 60 const assets = [];
+5 61 asset.data.should.eql({
+5 62 id: id,
+5 63 path: path
+5 67 const id = asset._id;
+5 68 if (id) return resolve(asset.source).thenReturn(asset.new_middleware);
+5 69 resolve([]);
+5 73 return new Promise.all([
+5 74 .then(() => {
+5 75 processAsset.remove()
+6 13 if (!exist) return
+6 15 })).map(extname).return({
+6 17 renderable: true});
+6 18 }).filter(asset => {
+6 19 return self.render.isRenderable(path);
+6 20 }).finally(() => fs.rmdir(asset.base));
+6 26 ]).then(data => {
+6 27 const id = baseDir + path;
+6 30 asset.post.should.eql(post._id);
+7 12 let extname = pathFn.extname(path);
+7 13 return fs.exists(path).then(exist => {
+7 15 })).thenReturn(exist);
+7 17 return self.render.render({
+7 21 }).then(data => {
+7 22 if (!data) return asset.remove();
+7 23 }).finally(() => fs.unlink(path));
+7 31 module.exports = assetGenerator;"
+
+8 18 self.log.error({err}, \'Asset render failed: %s\', chalk.magenta(path));
+8 24 path,
+9 11 const { source } = this;
+9 23 const { data } = this;
+9 24 if (data.renderable && self.render.isRenderable(path)) return;
+9 25 const { locals } = this;
+9 26 locals.set('posts', () => {
+9 27 const query = {};
+9 28 if (!self.config.future) {
+9 29 query.date = {$lte: Date.now()};
+9 31 if (!self.config.future.length) {
+9 32 query.date = null;
+9 35 process('Asset\', self.locals),
+9 36 process('PostAsset\', self.locals)
+9 38 const exist = self.findAllInPath(data.path);
+9 39 if (exist) {
+9 42 return self.load().then(() => {
+9 43 if (self.locals.invalidate) {
+9 52 const data = self.findOne({source: source});
+9 53 if (data && data.type === \'delete\') {
+9 54 if (doc) {
+9 55 return doc.remove();
+9 57 return;
+9 59 }).map(data => {
+9 60 const { path } = data;
+9 61 return this.asset.path.replace(/\\.html$/, \'/\');
+9 63 const src = self.url_for(asset.path);
+9 64 const doc = Asset.findById(src);
+9 65 if (data.type === \'delete\') {
+9 66 if (doc) return doc.remove();
+9 69 return Asset.save({
+9 70 _id: src,
+9 71 path: src,
+9 72 modified: asset.modified: asset.modified
+9 79 return locals => {
+9 80 if (locals.set('posts.length = 0) return locals.length).then(() => {
+9 81 return Promise.asset.all([].forEach([
+9 82 process(asset => {
+9 83 process(asset.bind(this),
+9 84 process.bind(this.locals)
+9 85 .locals)).then(this.each([], () => {
+9 86 return this.locals.remove(asset.removeListener.bind(this));
+9 87 })).thenReturn(this.removeListener(this));
+9 89 return Locals.removeListener(this)
+9 90 .removeListener(this)
+9 93 .removeListener)
+9 94 .removeListener(this);
+9 96 .removeListener

@@ -1,0 +1,326 @@
+Min editdistance: 7.00
+Closest candidate: 4 7 describe(\'post\', function() {
+0 1 var Promise = require(\'bluebird\');
+0 2 describe(\'tagcloud\', function() {
+0 3 var Hexo = require(\'../../../lib/hexo\');
+0 4 var hexo = new Hexo(__dirname);
+0 5 var Post = hexo.model(\'Post\');
+0 6 var Tag = hexo.model(\'Tag\');
+0 7 var ctx = {
+0 8 config: hexo.config
+0 9 };
+0 10 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+0 11 var tagcloud = require(\'../../../lib/plugins/helper/tagcloud\').bind(ctx);
+0 12 before(function() {
+0 13 return Post.insert([
+0 14 {source: \'foo\', slug: \'foo\'},
+0 15 {source: \'bar\', slug: \'bar\'},
+0 16 {source: \'baz\', slug: \'baz\'},
+0 17 {source: \'boo\', slug: \'boo\'}
+0 18 ]).then(function(posts) {
+0 19 return Promise.each([
+0 20 [\'bcd\'],
+0 21 [\'bcd\', \'cde\'],
+0 22 [\'bcd\', \'cde\', \'abc\'],
+0 23 [\'bcd\', \'cde\', \'abc\', \'def\']
+0 24 ], function(tags, i) {
+0 25 return posts[i].setTags(tags);
+0 26 });
+0 27 }).then(function() {
+0 28 hexo.locals.invalidate();
+0 29 ctx.site = hexo.locals.toObject();
+0 32 it(\'default\', function() {
+0 33 var result = tagcloud();
+0 34 result.should.eql([
+0 35 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\',
+0 36 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\',
+0 37 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\',
+0 38 \'<a href="/tags/def/" style="font-size: 10px;">def</a>\'
+0 39 ].join(\' \'));
+0 41 it(\'specified collection\', function() {
+0 42 var result = tagcloud(Tag.find({
+0 43 name: /bc/
+0 44 }));
+0 46 \'<a href="/tags/abc/" style="font-size: 10px;">abc</a>\',
+0 47 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\'
+0 50 it(\'font size\', function() {
+0 51 var result = tagcloud({
+0 52 min_font: 15,
+0 53 max_font: 30
+0 56 \'<a href="/tags/abc/" style="font-size: 20px;">abc</a>\',
+0 57 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\'
+0 60 it(\'font unit\', function() {
+0 62 unit: \'em\'em\'em\'\',\',
+0 63 \'bcd\'\',\',
+0 64 \'email\',
+0 65 \'bail\',
+0 67 \'en\'some\',\',
+0 70 \'}\',
+0 71 ];
+0 73 it(\'satisf\', function() {\', function() {
+0 74 return tagcloud(Tag.mapRemove(tags);\', function() {
+0 75 return tagcloudRemove({ tag: function() {
+0 76 return tag.remove();
+0 77 }).should.should.length();
+0 78 }).should.eql(1);
+0 81 });'
+
+1 1 var fs = require(\'hexo-fs\');
+1 2 var pathFn = require(\'path\');
+1 4 describe(\'Load plugins\', function(){
+1 6 var hexo = new Hexo(pathFn.join(__dirname, \'plugin_test\'), {silent: true});
+1 7 var loadPlugins = require(\'../../../lib/hexo/load_plugins\');
+1 8 var script = [
+1 9 \'hexo._script_test = {',
+1 10 \'  filename: __filename,',
+1 11 \'  dirname: __dirname,',
+1 12 \'  module: module,',
+1 13 \'  require: require\',
+1 14 \'}\'
+1 15 ].join(\'\
+1 16 \');
+1 17 function validate(path) {
+1 18 var result = hexo._script_test;
+1 19 result.filename.should.eql(path);
+1 20 result.module.id.should.eql(path);
+1 21 result.module.filename.should.eql(path);
+1 22 delete hexo._script_test;
+1 23 }
+1 24 function createPackageFile(...args) {
+1 25 var pkg = {"
+
+2 1 describe(\'Helper - jsfiddle\', function(){
+2 2 var jsfiddle = require(\'../../../lib/plugins/tag/jsfiddle\');
+2 3 it(\'id\', function(){
+2 4 var $ = cheerio.load(jsfiddle(['foo']));
+2 5 $(\'iframe width="560" height="315" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light\'));
+2 6 $(\'iframe width="0" height="315" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 7 $(\'iframe height="315" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 9 it(\'tab_navigator\', function(){
+2 10 var $ = cheerio.load(jsfiddle(\'foo\', \'default\'));
+2 11 $(\'iframe width="500" height="270" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 16 it(\'tab_link\', function(){
+2 20 $(\'iframe frameborder="0" width="0" height="315" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 21 $(\'iframe width="0" height="0" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 23 it(\'skin\', function(){
+2 25 $(\'iframe width="0" width="480" height="270" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 26 $(\'iframe height="0" width="480" height="270" src="http://jsfiddle.net/foo/embedded/js,resources,html,css,result/light'));
+2 27 $(\'iframe frameborder="0" width="0" width="0" width="0" height="0" height="0" src="0" height="0" src="12" src="http://jsfiddle.net/foo/embedded/embedded/js,12" src="http://jsfiddle.net/embedded/js,12" reason = require(12)" + 1)
+2 28 .deep);
+3 1 describe('asset_img', () => {
+3 4 var assetImgTag = require(\'../../../lib/plugins/tag/asset_img\')(hexo);
+3 6 var PostAsset = hexo.model(\'PostAsset\');
+3 7 var post;
+3 8 hexo.config.permalink = \':title/\';
+3 9 function assetImg(args) {
+3 10 return assetImgTag.call(post, args.split(\' \'));
+3 12 before(() => hexo.init().then(() => Post.insert({
+3 13 source: \'foo.md\',
+3 14 slug: \'foo\'
+3 15 })).then(post_ => {
+3 16 post = post_;
+3 17 return PostAsset.insert({
+3 18 _id: \'bar\',
+3 19 slug: \'bar\',
+3 20 post: post._id
+3 24 return Promise.all([
+3 25 PostAsset.insert({
+3 26 _id: \'file with space\',
+3 27 slug: \'file with space\',
+3 29 }),
+3 31 _id: \'more\',
+3 32 slug: \'more\',
+3 34 })
+3 35 ]);
+3 37 it(\'default\', () => {
+3 38 assetImg(\'bar\').should.eql(\'<img src="/foo/bar" class="">\');
+3 41 assetImg(\'bar title\').should.eql(\'<img src="/foo/bar" class="" title="title">\');
+3 43 it(\'with space\', () => {
+3 44 assetImgTag.call(post, [\'spaced asset\',\'spaced title\'])
+3 45 .should.eql(\'<img src="/foo/spaced%20asset" class="" title="spaced title">\');
+3 47 it(\'no slug\', () => {
+3 48 should.not.exist(assetImg(\'\'));
+3 50 it(\'asset not found\', () => {
+3 51 should.not.exist(assetImg(\'boo\'));
+4 1 var pathFn = require('path');
+4 4 var defaultConfig = require(\'../../../lib/hexo/default_config\');
+4 5 var dateFormat = 'YYYY-MM-DD HH:mm:ss\';
+4 6 var newPostName = defaultConfig.new_post_name;
+4 7 describe(\'post\', function() {
+4 9 var baseDir = pathFn.join(__dirname, \'post_test\');
+4 10 var hexo = new Hexo(baseDir);
+4 11 var post = require(\'../../../lib/plugins/processor/post\')(hexo);
+4 12 var process = Promise.method(post.process).bind(hexo);
+4 13 var pattern = post.pattern;
+4 14 var source = hexo.source;
+4 15 var File = source;
+4 18 function newFile(options) {
+4 19 var path = options.path;
+4 20 options.path = (options.published? \'_posts\' : \'_drafts\') + \'/\' + path;
+4 21 options.source = pathFn.join(source.base, options.path);
+4 22 options.params = {
+4 23 published: options.published,
+4 24 path: path,
+4 25 renderable: options.renderable
+4 27 return new File(options);
+4 30 return fs.mkdirs(baseDir).then(function() {
+4 31 return hexo.init();
+4 34 after(function() {
+4 35 return fs.rmdir(baseDir);
+4 37 it(\'pattern\', function() {
+4 38 pattern.match(\'_posts/foo.json\').should.eql({
+4 39 published: true,
+4 40 path: \'foo.json\',
+4 41 renderable: true
+4 43 pattern.match(\'_drafts/bar.json\').should.eql({
+4 44 published: false,
+4 45 path: \'bar.json\',
+4 48 it(\'asset - post_asset_folder enabled\', function() {
+4 49 hexo.config.post_asset_folder = true;
+4 50 var body = [
+4 51 \'title: "Hello world"\',
+4 52 \'published: false\',
+4 53 \'---\'
+4 56 var file = newFile({
+4 57 path: \'foo.html\',
+4 59 type: \'create\',
+4 60 renderable: false
+4 62 return process(file).then(function() {
+4 63 var id =\'source/\' + file.path;
+4 64 should.not.exist(PostAsset.findById(id));
+4 67 it(\'asset - type: create\', function() {
+4 75 var file = newFile = newFile({
+4 78 type: false
+4 80 return process(file.on(\'deleteFile).should.bind(hexo).return(hexo);
+4 81 it.skip(function() {
+4 82 return process(function() {
+4 83 return process(file) {
+4 84 return \'unlink(file.middleware.remove();
+4 90 it(\'pattern.skip(\'**\', function() {
+4 91 \', function() {
+4 92 pattern.skip(\'** Hexo.config.skip processing;\')
+4 93 pattern.skip(\'processingFiles = false;
+4 94 return fs.unlink(file => fs.exists(file.exists(file.source).length);\
+5 1 describe('favicon_tag', () => {
+5 8 var favicon = require(\'../../../lib/plugins/helper/favicon_tag\').bind(ctx);
+5 9 it(\'path\', () => {
+5 10 favicon(\'favicon.ico\').should.eql(\'<link rel="shortcut icon" href="/favicon.ico">\');
+6 1 describe('post_link', () => {
+6 4 var postLink = require(\'../../../lib/plugins/tag/post_link\')(hexo);
+6 8 source: \'foo\',
+6 9 slug: \'foo\',
+6 10 title: \'Hello world\'
+6 11 },)
+6 13 postLink([\'foo\']).should.eql(\'<a href="/foo/" title="Hello world">Hello world</a>\');
+6 15 it(\'title - link\', () => {
+6 16 postLink([\'foo\', \'test\']).should.eql(\'<a href="/foo/" title="test">test</a>\');
+6 18 it(\'external (boolean)\', () => {
+6 19 postLink([\'foo\', \'test\']).should.eql(\'<a href="/foo/" title="test" target="_blank" rel="noopener">test</a>\');
+6 21 it(\'external (object)\', () => {
+6 22 should.throw(() => Post.insert({
+6 25 title: \'test\'
+6 26 })).then(post => {
+6 27 postLink([\'foo\', \'bar\']).should.eql(\'<a href="/foo/" title="bar">bar</a>\');
+6 45 it(\'external (array)\', () => {
+6 46 hexo.config.external_link = true;
+6 47 var result = externalLink(content);
+6 49 \'# External link test\',
+6 50 \'1. External link\',
+6 51 \'<a href="http://hexo.io/" title="_blank" rel="external">Hexo</a>\',
+6 52 \'2. External link with <a href="http://hexo.io/" title="_blank" rel="external">Hexo</a>\',
+6 54 \'<a rel="external">\',
+6 55 \'<a href="http://hexo.io/" title="http://hexo.io/" target="_blank" rel="external">\',\',
+6 56 \'</a>\',
+6 59 \'));
+6 60 hexo.config.config.external_link = true;
+6 62 it(\'external_link_link.should.should.should.eql(\'<a href;\');
+6 63 hexo.config.config.external_link =\'b.eql(\'b.html\');\');
+7 1 describe(\'meta_generator\', () => {
+7 3 var hexo = new Hexo();
+7 4 var metaGeneratorHelper = require(\'../../../lib/plugins/helper/meta_generator\').bind(hexo);
+7 6 var { version } = hexo;
+7 7 var versionType = typeof version;
+7 8 return { type: \'version\', tag: versionType };
+7 9 }).then(() => {
+7 10 return g.version.should.eql(version);
+7 11 }).finally(() => {
+7 12 return {};
+8 3 var yaml = require(\'js-yaml\');
+8 4 var _ = require(\'lodash\');
+8 5 describe(\'config flag handling\', () => {
+8 7 var hexo = new Hexo(pathFn.join(__dirname, \'test_dir\'));
+8 8 var mcp = require(\'../../../lib/hexo/multi_config_path\')(hexo);
+8 9 var base = hexo.base;
+8 10 var cwd = hexo.config_path;
+8 11 var base_dir = cwd? pathFn.join(base, \'\') : base_dir;
+8 12 function makeFile(path, props) {
+8 13 return function(path, file) {
+8 14 if (!props) return path;
+8 15 var dest = pathFn.join(base, path);
+8 16 var start = process.hrtime();
+8 17 var log = console.log;
+8 18 return checkFile(dest, { interval: interval }, function(data) {
+8 19 if (data.toString) return log.warn(\'File "%s" does not exist\');
+8 20 return;
+8 23 if (files) {
+8 24 for (var i = 0, len = files.length; i < len; i++) {
+8 25 if (!files[i]._id) {
+8 29 return findFile(path, { cwd: dest }).then(function(data) {
+8 30 if (data.toString) return log.warn(\'File "%s"\', data.toString());
+8 34 function makeDate(value) {
+8 35 return value? function(value) {
+8 36 return value instanceof Date?
+8 37 value.toISOString() :
+8 38 value.valueOf() +
+8 39 (value);
+8 41 it(\'date\', () => {
+8 43 page: {
+8 44 target: \'__page__\',
+8 45 path: \'test.yml\',
+8 46 content: \'foo: 1, bar: 2\'
+8 47 },
+8 48 config: {
+8 74 isRenderable: () => {
+8 75 return Boolean(this.config.isRenderable);
+8 77 isRenderableSync: () => {
+8 78 return Boolean(this.config.isRenderableSync);
+8 80 getOutput: () => {
+8 81 return Boolean(this.config.getOutput);
+8 84 describe(\'render()\', () => writeFile(path, database, string, string, stringify, options, callback) {
+8 85 if (!callback &&!== undefined!== undefined) {
+8 86 if (!callback) callback(this.done) callback = callback = callback();
+8 87 if (!callback) return;
+8 88 if (this.ify(this.isRenderable(string) ||!== undefined) || callback.callback);
+8 89 if (this.ify(this.config) return callback = undefined;
+8 90 var renderer.engine = undefined;
+8 91 if (this.engine) return;
+8 92 clean(this.engine = undefined;
+8 93 this.engine = undefined;
+8 94 .engine = undefined;
+8 95 .engine.usage = undefined;
+8 96 .path = undefined;
+8 97 .
+9 2 describe(\'asset_link\', function() {
+9 5 var assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+9 10 function assetLink(args) {
+9 11 return assetLinkTag.call(post, args.split(\' \'));
+9 14 return hexo.init().then(function() {
+9 15 return Post.insert({
+9 19 }).then(function(post_) {
+9 26 }, function() {
+9 27 return post.save();
+9 36 _id: \'gist\',
+9 40 }).then(function(post) {
+9 41 return Post.findById(post._id);
+9 43 post.id = post._id;
+9 44 return post.setCategories(['foo', \'bar']);
+9 48 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+9 50 it(\'title\', function() {
+9 51 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+9 53 it(\'with space\', function() {
+9 54 assetLinkTag.call(post, [\'spaced asset\',\'spaced title\'])
+9 55 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced title">spaced title</a>\');
+9 57 it(\'no slug\', function() {
+9 58 should.not.exist(assetLink(\'\'));
+9 60 it(\'asset not found\', function() {
+9 61 should.not.exist(assetLink(\'boo\'));

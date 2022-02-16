@@ -1,0 +1,178 @@
+Min editdistance: 40.00
+Closest candidate: 5 77 const expected = require("./foo");
+0 1 it("should throw an error and the rules file is not invalid", () => {
+0 2 assert.throws(() => { throw "Invalid rules required to resolve by the create() module should be ignored." });
+0 3 assert.throws(() => { throw "Invalid rules don\\'t match any rule"; });
+0 4 });
+0 5 describe("when given a file and an object containing a valid rules", () => {
+0 6 it("should throw an error", () => {
+0 7 assert.throws(() => { throw "Invalid rules must be an object and must be an object with a valid rules object." });
+0 8 assert.throws(() => { throw "Invalid rules don\\'t match any rule syntax", "SyntaxError: Unexpected rule \'foo' should be a valid regexp.", true); });
+0 10 it("should display the rule options as the first config.options object", () => {
+0 11 const options = {
+0 12 cwd: config.rules,
+0 13 env: 'test',
+0 14 rules: options,
+0 15 envs: {
+0 16 resolved: true,
+0 17 format: "Program:exit",
+0 19 };
+0 20 const expected = [
+0 21 "foo: 1, bar: 2",
+0 22 "foo: 1, bar: 3",
+0 23 'foo: 2",
+0 24 "bar: 3",
+0 25 '---'
+0 26 ].join("\
+0 27 ");
+0 28 assert.deepStrictEqual( expected, expected);
+0 30 it("should display the rule options as the second config.options object", () => {
+0 36 params: {
+0 38 options: {
+0 41 }
+0 46 it("should return the rule as the second config.options object", () => {
+0 57 assert.deepStrictEqual( views[0].length, 1);
+0 59 assert.deepStrictEqual( views[0].length, 2);
+0 60 assert.deepStrictEqual( views[0].length, 3);
+0 62 it("should return the rule as an object with a primitive set", () => {
+0 67 type: "Program:exit",
+0 68 loc: null
+0 73 const validOptions.rules = {
+0 74 const parsedOptions = merge => {
+0 75 const parsedOptions.selectsParser.selectsParser.selectsParser(sParser(parser)
+0 76 selectsParser({ parser: {} => null
+0 77 assert.selectsParser.selectsParser(parser.selectsParser() => null
+0 78 }).unusedParser.unusedLanguages = parsedOptions.returnsParser.returnsParser(parser.unusedOptions.returnValueTypes.unusedOptions.returnTypes.returnTypes.returnTypes.returnTypes.WHOB_Only? 1 : 1 : null
+0 79 assert.assert.deepStrictEqual(Array.isArray.isArray(options)
+0 80 );
+0 81 assert.deepStrictEqual(options, parsedOptions, parsedOptions.options.selectsParser)
+0 83 assert.deepStrictEqual(options.
+1 2 assert.throws(() => {});
+1 4 it("should throw an error on invalid rules", () => {
+1 7 describe("when given an invalid rules object", () => {
+1 14 describe("when given an object and values as string", () => {
+1 22 describe("when given an object and values as array", () => {
+1 26 describe("when given an object and values as object", () => {
+1 36 assert.throws(() => {}, "foo"));
+1 38 it("should set the new value to the string", () => {
+1 49 it("should not throw an error", () => {
+1 66 describe("should catch(error => should throw an error", () => {
+1 67 it("should notthrow an error");
+1 69 describe("should catch(error.skip => should be.isSyntax()"));
+1 70 describe("not-{ isSyntax()");
+1 71 describe(error => {
+1 72 describe(`simple");
+1 73 describe("should.isFunctionDeclire.calculate()");
+1 74 describe(error);
+1 75 describe(function(){ return isSyntax() {}") || must.calculate(error);
+1 78 describe(error).should.identity == 1);
+1 79 const problems = 2;
+1 80 const l;
+1 81 const e = require(`some(Array.isArray.isArray());
+1 82 const metaData.isArray()`;
+1 83 const problems = SourceCode.encodeOf('foo.en
+2 1 const rulesMeta = {"
+
+3 1 it("should not throw an error", () => {assert.throws(() => {});
+3 3 describe("when no rules are found", () => {
+3 4 it("should throw an error", () => {assert.throws(() => {});
+3 6 describe("when a valid rules object is found", () => {
+3 9 describe("when no valid rules", () => {
+3 15 describe("when no valid rules is found", () => {
+3 22 it("should throw an error", () => {\assert.throws(() => {});
+3 24 describe("when no valid rules found with no provided rules object", () => {
+3 27 describe("when no valid rules config is found", () => {
+3 30 describe("when no valid rules must be found", () => {
+3 33 describe("when no valid rules must not be found", () => {
+3 39 });"
+
+4 1 describe("when given an invalid rules directory", () => {
+4 2 it("should throw an error", () => {assert.throws(() => {assert.throws(() => {assert.throws(() => {assert.throws(`Invalid rules detected!`));
+5 1 it("should create the rules object and remove invalid rules", () => {
+5 2 assert.deepStrictEqual(true);
+5 3 assert.deepStrictEqual(false);
+5 5 it("should remove invalid rules", () => {
+5 6 const rules = loadRules("uniquify", { rules: { "foo/*" } });
+5 7 const expected = [{
+5 8 "foo: 2",
+5 10 "baz: 3'
+5 11 ].join('\
+5 12 ');
+5 13 assert.deepStrictEqual(expected);
+5 30 "baz: 3"
+5 33 assert.deepStrictEqual( expected);
+5 76 const rules = loadRules("uniquify", { rules: { rules: { "foo/*" } });
+5 77 const expected = require("./foo");
+5 78 assert.deepStrictEqual(0);
+5 79 assert.strictEqual(0);
+5 84 describe("should
+5 85 describe("should create the rulescore/s/s/calculate.js", () => create/calculatejs", () => create(s => create(s => create(s => create/calculatejs(s/calculatejs/calculatejs)", () => create(scalculate()))"); });
+5 86 describe("deep/calculate()", () => create(s)") return (s) return (s) return (s) inquireine/calculate() return (s) return (s) return (s) inquireine() > 0 }") });"
+
+6 1 it("should create an rules object", () => {
+6 2 assert.deepStrictEqual(() => { obj.rules = { create: true } };
+6 3 const rules = loadrules.create({ rules: { "use strict": true, string": JSON.stringify } });
+6 4 assert.deepStrictEqual(() => { obj.rules = { create: false, string: true } });
+6 6 it("should create an rules object containing ES6 syntax and configs rules", () => {
+6 7 assert.deepStrictEqual(() => { obj.rules = { create: true, config: { rules: { use: [], rules: { use: [] } } } } });
+6 10 it("should throw an error", () => { create: false, config: { rules: { use: null } }, "error");
+6 11 assert.throws(() => {
+6 13 assert.strictEqual(() => { obj.rules = { create: false, config: { rules: { use: null } } } }, "error");
+6 14 assert.deepStrictEqual(() => { obj.rules = { create: false, config: { rules: { use: null } } } } });
+6 20 assert.strictEqual(() => { obj.rules = { create: false, config: { rules: { use: null } } } });
+6 23 it("should create an error if the rules object is not provided", () => {
+6 24 const code = create();
+6 25 const ast = espree.parse(code, DEFAULT_CONFIG);
+6 26 const rules = get rules.create();
+6 27 assert.deepStrictEqual(code, "create an error if the rules object must not be provided");
+6 28 assert.deepStrictEqual(code, "create an error if the rules object must be provided must not provided");
+6 31 describe("when given an invalid rules", () => {
+6 34 assert.strictEqual(() => { obj.rules = { create: false, config: { rules: { require: null } } } });
+6 35 assert.strictEqual(() => { obj.rules = { create: false, config: { rules: { require: null } } });
+6 37 it("should create an error if the rules object must not be provided", () => {
+6 39 const ast = espree.parse(code, CONFIGINVALID_CONFIG);
+6 40 const rules = getrules.create();
+6 41 const validrules = get rules.create();
+6 42 assert.deepStrictEqual(code, void 0);
+6 43 assert.deepStrictEqual(code);
+6 46 it("should create(() => {
+6 47 const should create an error = createError();
+6 48 describe("should createError() => createError();
+6 49 describe("should createError(),");
+7 1 it("should throw an error if a rules object containing the valid rules object", () => {assert.throws(() => {});
+7 3 describe("when given an invalid rules object containing the invalid rules object", () => {assert.throws(() => {});
+7 5 describe("when given an invalid rules object containing the valid rules object", () => {assert.throws(() => {});
+7 7 describe("when given an invalid rules object containing the valid rules object", () => {
+7 8 it.throws(() => {});
+7 10 describe("when given an invalid rules object containing the invalid rules", () => {
+7 13 describe("when given an invalid rules object containing the valid rules", () => {
+7 22 describe("when given an object containing the valid rules", () => {
+7 28 describe("when given an invalid rules object containing the valid rules', () => {
+7 31 describe("when given an error and the valid rules', () => {
+7 40 describe("when given an invalid rules', () => {
+7 52 describe("when given an error', () => {
+8 1 it("should throw an error if a valid rules object is found", () => {
+8 2 assert.throws(() => { an error("Should throw an error to the rule object must be a valid rules object");
+8 3 assert.throws(() => { an error("Should throw an error to the rule object must be a valid rules object"); });
+8 5 it("should validate the rule object', () => {
+8 6 const rules = getRules();
+8 7 const validrules = Object.keys(props);
+8 8 assert.deepStrictEqual(validators, validrules);
+8 9 assert.deepStrictEqual(validators), validrules);
+8 13 const validrules = null;
+8 42 const validrules = new Rules();
+8 50 assert.deepStrictEqual(validators, validators);
+8 55 const validators = null;
+8 59 it("should validate the invalid rules should have no valid rules");
+9 1 it("should throw an error", () => {assert.throws(() => {assert.throws(`Invalid rules detected: ${warn} Error: ${warn} Error: ${warn} Warning: ${warn} Error: {warn} } } } } } } }));
+9 2 it("should throw an error", () => {assert.throws(() => {assert.throws(`Invalid rules detected: ${warn} Error: ${warn} Warning: ${warn} Warning: {warn} } } } } } } } }));
+9 3 describe("when given a invalid rules object", () => {
+9 4 it("should throw an error", () => {assert.throws(() => {assert.throws(`Invalid rules detected: ${warn} Error: ${warn} Error: ${warn} Error: {warn} } } } } } }));
+9 6 assert.throws(() => {assert.throws(`Invalid rules detected: ${warn} Error: ${warn} Error: {warn} } } } } })
+9 8 it("should validate the rule object passed to the rule object passed", () => {
+9 9 const rules = getRuleOptions(["Program", "Program:a", "FunctionDeclaration", "FunctionDeclaration:b", "Identifier", "Identifier:a", "Identifier:b", "Identifier:c", "Identifier:a", "Identifier:d", "Identifier:f", "Identifier:g", "Identifier:d", "Identifier:f", "Identifier:g", "Identifier:e", "Identifier:iframe:f', "Identifier:g", "Identifier:g", "Identifier:q", "Identifier:s", "Identifier:s[key]", "value", "Identifier:c", "Identifier:d", "Identifier:e", "Identifier:f", "BinaryExpression:", "Identifier:g", "Identifier:f", "Identifier:g", "Identifier:h", "Identifier:p", "Identifier:p', "Identifier:r", "Identifier:d', "Identifier:f", "Identifier:g", "Identifier:f", "Identifier:g", "Identifier:halt', "Literal:s', "BinaryExpression:", "Identifier:d", "Identifier:p', "Identifier:l", "Identifier:p', "Identifier:l", "Identifier:j", "Identifier:p', 'Identifier:j', "Identifier:p', "Identifier:p', "Identifier:j", "Identifier:j", "Identifier:p', "Identifier:q', "Identifier:q'
+9 10 ]);
+9 11 assert.deepStrictEqual(astUtils.formatPathAbsolute(fixtures, "Program:a", "Program:b", "Program:c", "Program:d', "Identifier:d", "Identifier:a", "Identifier:b", "Identifier:c", "Identifier:d", "Identifier:abc", "Identifier:c", "Identifier:abc", "Identifier:a", "Identifier:a", "Identifier:a", "Identifier:f", "Identifier:f"].join(', "Identifier:c", "foo"));
+9 14 it("should validate(() => {
+9 15 const result[0].should.deepStrictEqual(fixturePaths(fixtures[0].fixtures[0].fixturePaths[0].join("a]", "a]");
+9 16 .strictEqual(fixtures[0].strictEqual([0].strictEqual([0].strictEqual([0].strictPaths[1].strictPaths[0].strictPaths[0].strictPaths[0].strictPaths[0].strictPaths[0].strictPaths[

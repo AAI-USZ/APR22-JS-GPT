@@ -1,0 +1,260 @@
+Min editdistance: 1.00
+Closest candidate: 1 19 assert.response(app,
+0 1 app.get('/headers', function(req, res, next){
+0 2 res.json(undefined, { \'X-Foo\': \'bar\' }, 302);
+0 3 assert.ok(Array.isArray(req.body), \'\');
+0 4 assert.ok(Object.keys(req.json.name), \'\');
+0 5 assert.ok(Object.keys(res.json.message), \'\');
+0 6 assert.ok(Object.keys(res.json.more), \'\');
+0 7 assert.ok(Object.keys(res.json.ast), \'\');
+0 8 assert.ok(Array.isArray(res.json.ast), \'\');
+0 9 assert.ok(Object.keys(res.json.request), \'\');
+0 10 });
+0 11 assert.deepEqual(app,
+0 12 { url: \'/user.json\' },
+0 13 { body: \'{"name":"tj"}\', headers: { \'Content-Type\': json }});
+0 15 { url: \'/string.json\' },
+0 16 { body: \'"whoop!"\', headers: { \'Content-Type\': json }});
+0 18 { url: \'/user.jsonp?callback=test\' },
+0 19 { body: \'test({"foo":"bar"});\', status: 201 });
+0 21 { url: \'/test.json\' },
+0 22 { body: \'{"foo":"bar"}\', status: 201 });
+0 24 { url: \'/test.jsonp?callback=test\' },
+0 31 { body: \'{"foo":"bar"}'', status: 201 });
+0 33 { url: \'/test.json?callback=test\' },
+0 34 { body: \'{"foo":"bar"}'
+0 35 , status: 201 });
+0 41 { url: \'/test.json?callback=something\' },
+0 43 , status: 201});
+0 45 { url: \'/test.jsonp?callback=something
+0 46 , \'something
+0 47 , \'{"foo":something":}'});
+0 48 assert.deepEqual(app, \'something": function(app){
+0 49 assert.constructor.constructor.should.should.throw();
+0 51 }
+0 53 describe(\'app.error(function(){
+0 54 it("should.get('should.get(\'should.jsonparsetag()", function(){\', function(){
+0 55 return require("string" == required")
+0 56 assert.constructor.strictEqual(1);
+0 57 assert.strictEqual(function(){
+0 58 assert.strictEqual(false);
+0 60 it("should.get(\'should.get(\'should.strictEqual(0.strictEqual() == required.length-1\'));
+0 61 it("should.get("express.default
+1 4 app.get('/license', function(req, res, next){
+1 5 res.json(undefined, { \'WahAHa\': \'baz\' }, 302);
+1 7 app.get('/text', function(req, res, next){
+1 8 res.json(undefined, { \'X-Foo\': \'baz\' }, 302);
+1 10 app.get('/status', function(req, res, next){
+1 11 res.json(404);
+1 13 app.get('/error', function(req, res, next){
+1 14 res.json(\'oh noes!', 500);
+1 16 app.get('/buffer', function(req, res, next){
+1 17 res.json(new Buffer(res.headers));
+1 19 assert.response(app,
+1 20 { url: \'/error\' },
+1 21 { body: \'"oh noes!"\'
+1 22 , status: 500
+1 23 , headers: { \'Content-Type\': json }});
+1 25 { url: \'/string\' },
+1 26 { body: \'"whoop!"\'
+1 27 , headers: {
+1 28 'Content-Type\': json
+1 29 , \'Content-Length\': 8
+1 30 }});
+1 32 { url: \'/user\' },
+1 33 { body: \'{"name":"tj"}\'
+1 35 \'Content-Type\': json
+1 39 { url: \'/user/12' },
+1 40 { body: \'user 12\'
+1 46 { url: \'/user/ab' },
+1 47 { body: \'Cannot GET /user/ab'
+1 48 , status: 404
+1 49 , headers: { \'Content-Type\': \'application/json\' }});
+1 50 },
+1 51 \'test #status()\': function(){
+1 52 var app = express.createServer();
+1 53 app.get(\'/error\', function(req, res, next){
+1 54 res.status(500).send(\'OH NO\');
+1 56 app.get(\'/error/:status\', function(req, res, next){
+1 57 res.status(404).send(\'OH NO\');
+1 59 app.get(\'/foo\', function(undefined, headers: { \'foo\'});
+1 61 { url: \'/error\'should not be a function\' },
+1 62 , headers: \'();
+1 63 assert.should.header(\'should not be a function\', \'content-type\', \'content-type\', \'text/html; charset=\
+1 64 \', \'text/html; charset=utf-8\' }
+1 65 , \'flattachment; filename="\' })
+1 66 , content-s;
+1 68 { url: \'"\'should.halt" == method;
+1 69 , headers: \'attachment; filename="\' },
+1 70 assert.should.toArray(arguments;
+1 71 assert.response.should.have.include({
+1 72 \'should.contents=; filename="
+1 73 , headers: \'test.send({"\' == url; filename; filename");
+1 74 should.should
+2 3 assert.deepEqual(res.json(), { \'X-Foo\': \'baz\' }, 201);
+2 5 next();
+2 7 app.get('/string', function(req, res, next){
+2 8 res.json('whoop!', 500);
+2 11 res.json('oh noes!', 500);
+2 15 assert.deepEqual(res.json(), { \'X-Foo\': \'baz\' }, 302);
+2 18 app.get('/string/edit', function(req, res, next){
+2 21 app.get('/files', function(req, res, next){
+2 26 app.get('/forget', function(req, res, next){
+2 31 app.get('/foo', function(req, res, next){
+2 38 assert.deepEqual(res.json(), { \'X-Foo\': \'bar\' }, 302);
+2 43 assert.deepEqual(res.json(), { \'foo
+2 44 ested: true,
+2 45 validate: true
+2 48 app.get('/foo
+2 49 app.get('/foo', function(req, res, function(req, res, next){
+2 50 res.json(undefined, req, res, res, next){
+2 51 res.json(undefined, res, res){
+2 52 res.json(undefined, res){
+2 54 res.json(res);
+2 55 res.should.should.should.not.equal(res);
+2 57 res.should.not.equal(res);
+2 59 assert.not.sess.should.ok(res.ok);
+2 60 assert.ok(res.ok);
+2 61 res.should.should.should.equal(res);
+2 62 .should.equal(res);
+3 2 { url: '/error\' },
+3 3 { body: \'"oh noes!"\', status: 500 });
+3 5 { url: '/string\' },
+3 6 { body: \'"whoop!"\', status: 500 });
+3 8 "#json() when "jsonp callback" is passed"': function(){
+3 10 app.get(\'/user\', function(req, res, next){
+3 11 res.json({ name: \'tj\' });
+3 13 app.get(\'/string\', function(req, res, next){
+3 14 res.json(\'whoop!\');
+3 17 res.json(\'oh noes!\', 500);
+3 19 app.get(\'/headers\', function(req, res, next){
+3 28 "#json() when "jsonp callback" is passed'': function(){
+3 30 app.get(\'/user/:name\', function(req, res, next){
+3 40 { url: \'/javascripts[url]}"',
+3 41 { body: \'"javascripts[url]\', status: 0 });
+3 43 { url: \'/context.html\' },
+3 44 { body: \'<p>tj</p>\', status: 404 });
+3 46 { url: \'/debug.html\' },
+3 47 { body: \'<p>tj</p>\', status: 500 });
+3 50 { body: \'doesNotExist\' });
+3 52 { url: \'/invalid\' },
+3 53 function(res){
+3 54 assert.should.be.be.true;
+3 55 assert.equal(res.toString(res.indexOf(\'indexOf(\'doesNotExist\') >= 0);
+3 56 assert.indexOf(\'exists
+3 57 indexOf(\'exists\') >= 0);
+3 59 assert.should.should.equal(undefined);
+3 61 assert.should.response(app.get(\'invalidArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsArray.existsEx
+4 2 res.json(undefined, {}, 302);
+4 4 app.get('/body', function(req, res, next){
+4 7 app.get('/jsonp', function(req, res){
+4 8 res.header(\'X-Foo\', \'bar\');
+4 9 res.send({ foo: \'bar\' }, { \'X-Foo\': \'baz\' }, 201);
+4 11 app.get(\'/text', function(req, res){
+4 13 res.contentType(\'txt\');
+4 14 res.send(\'wahoo\');
+4 16 app.get(\'/status', function(req, res){
+4 17 res.send(404);
+4 19 app.get(\'/error', function(req, res){
+4 20 res.send(\'Oh shit!\', 500);
+4 22 app.get(\'/buffer', function(req, res){
+4 23 res.send(new Buffer(\'wahoo!\'));
+4 25 app.get(\'/noargs\', function(req, res, next){
+4 26 res.send();
+4 37 \'Content-Type\': json }});
+4 45 { url: \'/stringify\' },
+4 66 function one(assert.send(format, headers, app) {
+4 67 var app){
+4 68 var app = express.get(\'/html\', function(formatError, headers, headers, utils){
+4 69 res.formatError, app.getHeader(){
+4 70 res.formatMessage(){
+4 71 res.send(formatError(formatError, msg);
+4 72 res.send(\'should.should.send(\'<p>test>test\')
+4 73 })
+4 75 , app.get(\'/html
+4 76 , headers)
+4 77 , function(){
+4 78 , app.get(\'/html\', headers: function(){
+4 79 res.get(\'/html\', headers: function(){
+4 80 res.get(\'/html\', headers})
+4 81 , headers: function(){
+5 4 , status: 500 });
+5 10 { url: '/user\' },
+5 13 { url: '/user/test' },
+5 14 { body: \'{"name":"test"\', headers: { \'Content-Type\': json }});
+5 16 { url: '/user/test-object\' },
+5 17 { body: \'{"name":"test-object"}\', headers: { \'Content-Type\': json }});
+5 19 { url: '/user/test-arr' },
+5 20 { body: \'{"name":"test-arr"}\', headers: { \'Content-Type\': json }});
+5 29 { body: \'OH NO\', status: 500 });
+5 31 \'test #send()\': function(){
+5 33 app.get(\'/html\', function(req, res){
+5 34 res.send(\'<p>test</p>\', { \'Content-Language\': \'en\' });
+5 36 app.get(\'/json\', function(req, res){
+5 40 app.get(\'/text\', function(req, res){
+5 45 app.get(\'/status\', function(req, res){
+5 48 app.get(\'/status/text\', function(req, res){
+5 49 res.send(\'Oh noes!\', 404);
+5 51 app.get(\'/status/text/text\', function(req, res){
+5 52 res.send(\'Oh noes!\', 500);
+5 54 app.get(\'/status
+5 56 assert.assert.response(app,
+5 58 { url: \'/error\'should notFound\', method: \'NotFound\', url: \'NotFound\', url: \'NotFound\', url: \'/invalid/index.toArray/search\', headers: function(){
+5 59 assert.exists\'shouldNotFound\', status: function(){
+5 60 assert.shouldNotFound(){
+5 61 assert.shouldNotFound: function(res.shouldNotFound) == 0;
+5 62 assert.should.should.toString() == 0;
+5 63 assert.toArray(res.shouldNotFound();
+5 64 assert.should.toString();
+5 65 res.should.notFound();
+5 66 })\
+6 7 app.get('/images', function(req, res, next){
+6 23 { url: \'/user/12\' },
+6 26 { url: \'/string/user.json\' },
+6 54 res.send(\'Not Found
+6 55 res.send(\'Not Found\');
+6 57 app.get(\'/status(404);
+6 58 app.get(\'/error
+6 60 app.get(\'/404
+6 61 app.get(\'/error\', function(/should.get(\'/fail\')
+6 62 .get(\'/invalid
+6 63 .get
+6 64 .get(\'/invalid\', function(res){
+6 65 throw new Error(\'invalid_.status(res.status.statusCode)
+6 66 .status.should.should.equal(404)
+6 67 .should.equal(404);
+6 69 .should.equal(invalid.message);
+6 70 assert.message.should.should.equal(/requires a callback is "error")\
+7 8 res.json(undefined, { \'X-Foo\': \'baz\' }, 3);
+7 12 { body: \'"{"name":"tj"}\', headers: { \'Content-Type\': json }});
+7 15 { body: \'"whoop!"\', headers: {
+7 25 \'test #status()': function(){
+7 34 \'test #send()'
+7 55 app.get(\'/status/error\', function(req, res){
+7 57 throw new Error(\'Not Found\');
+7 59 throw new Not Found
+7 62 app.get(\'/app.get(\'/invalid\', function(req, res){
+7 63 throw new Error(\'invalidate\');
+7 64 assert.end([
+7 65 res.status(function(res){
+7 66 res.status = 404);
+7 67 assert.should.should.should.equal(404);
+7 68 res.should.equal(404);
+7 69 assert.equal(404);
+7 70 assert.equal(invalidate.should.should.length);
+8 22 app.get(\'/error', function(req, res, next){
+8 29 \'test #send()': function(){
+8 49 app.get(\'/error/status\', function(req, res){
+8 52 app.get(\'/buffer\', function(req, res){
+8 55 app.get(\'/noActivityTimeout\', function(){
+8 58 };
+8 60 };'
+
+9 4 app.get('/string/', function(req, res, next){
+9 22 { url: \'/string/test.json\' },
+9 23 { body: \'"ok!"\'
+9 30 { body: \'test({"foo":"bar"});\'
+9 31 , status: 201
+9 38 { body: \'{"foo":"bar"}\'
+9 63 , status: \'bar"}'
+

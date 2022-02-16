@@ -1,0 +1,147 @@
+Min editdistance: 8.00
+Closest candidate: 3 6 } else {
+1 1 FilesRegex, })
+1 2 function formatFiles(includedFiles, done) {
+1 3 var files = includedFiles.map(function(file) {
+1 4 return File.path === target
+1 5 }).join(', \')
+1 6 var regexp = new RegExp(`^${file.path} included/, \'g\')
+1 7 if (!regexp.exec(path)) {
+1 8 log.warn(\'Invalid pattern ${path}!\
+1 9 \\tObject is missing "pattern" property.`)
+1 10 return new RegExp("\' + pattern + \'" at runtime")
+1 11 }
+1 12 return fs.readFile(file, { pattern: regexp.exec(file) })
+1 13 })
+1 14 function formatPreprocess(preprocess, afterPreprocess)
+1 15 var lines = fs.readFileSync(file.patterns, function(err, buffer) {
+1 16 lines.forEach(function(line) {
+1 17 regexp.advance(buffer.toString())
+1 18 }, function() {
+1 19 regexp.save(buffer.toString())
+1 22 Route.prototype.__proto__ = EventEmitter.prototype
+1 23 function formatFiles(postprocessors, done) {
+1 24 var lines = []
+1 25 var uniqueItems = []
+1 26 var promise = new Promise()
+1 27 for (var i = 0, len = lines.length; i < len; ++i) {
+1 29 if (uniqueItems[i].id === line.id)
+1 30 return promise.then(function() {
+1 31 if (exports.isHiddenFile(postprocessors[i].id)) {
+1 32 return true
+1 34 promise.then(done)
+1 38 function formatMultiLines(answers) {
+1 39 return locals
+1 40 .pages.each(function(page) {
+1 41 if (!page.__is_post())
+1 42 {
+1 43 answers[page.id] = page.content
+1 48 function formatFiles(files, done) {
+1 49 var files = []
+1 50 var self = this
+1 51 return function(path, callback) {
+1 52 if (!callback && typeof callback!== \'function\') callback = function(){}
+1 54 .contentType(path)
+1 55 self.log.debug(\'Attempting to format files by default\')
+1 56 var path = pathLib.normalize(path)
+1 57 if (!path.endsWith(\'.css\')) path += \'.css\')
+1 58 fs.readFile(path, function(err, content) {
+1 59 if (err) return callback(err)
+1 60 var keys = Object.keys(content)
+1 61 var i, len = keys.length
+1 62 return self.formatRegexp(contentType)
+1 63 , self.formatRegexp(content)
+1 64 , path)
+1 65 , self.accepts(path)
+1 66 , response = \'binary
+1 67 , content
+1 68 , choices = \'binary\'
+
+3 1 FilesRegexp : () => ({}), emitter, preprocess, 100 })
+3 2 function formatFiles(realGlob) {
+3 3 return function (path, options, fn) {
+3 4 if (Reflect.keys(express.regexp.test(path)) {
+3 5 return new RegExp(normalizePath(path), options)
+3 6 } else {
+3 7 if (path.substr(0, 1)!== \'/\') {
+3 8 return path.substring(1)
+3 12 return new RegExp(\'^\' + escapeRegexp(normalizePath(path), '.')
+3 15 function formatFiles(files) {
+3 17 var regexp = normalizePath(files)
+3 18 if (!patterns.some(function (pattern) {
+3 19 return pattern.substr(3)
+3 20 })) {
+3 21 return module.exports = function (err, files) {
+3 22 if (err) return emitter.emit(\'error\', err)
+3 23 var match = file.match(regexp)
+3 24 return {
+3 25 path: regexp.substring(1),
+3 26 method: match[1],
+3 27 regexp: regexp.substring(2)
+3 31 return files.some(function (file) {
+3 32 return file.path === path
+3 35 exports.filename = formatFiles"
+
+4 1 FilesRegex })
+4 2 function formatFilesRegexp(file) {
+4 3 var lines = file.split(/(\
+4 4 |\\r)/)
+4 5 return formatters[format];
+4 6 if (indent(lines.length > 0) {
+4 7 return files[i].match(regexp(file)
+4 9 return files[i]
+4 12 Route.prototype.__proto__ = EventEmitter.prototype;
+4 13 function formatRegexp(file) {
+4 14 formatters[format] = true
+4 17 var match = file.match(regexp(file))
+4 18 return match
+4 19 ? new RegExp(\'(^\' + match[1] + \')\', \'g\')
+4 20 : new RegExp(\'^\' + match[2]) + \')\')
+4 24 return formatters[format] || new RegExp(\'^\' + match[3]) + \')
+4 26 Router = Class({
+4 27 constructor: function(request) {
+4 28 this.request = request
+4 29 },
+4 30 route: function() {
+4 31 var body,
+4 32 route = this.matchingRoute()
+4 33 if (route) {
+4 34 body = route.callback.apply(this.request, this.request.captures.slice(1));
+4 35 if (this.request.passed) {
+4 36 if (typeof this.request.passed ===\'string\')
+4 37 this.request.url.pathname = this.request.passed
+4 38 this.request.passed = false
+4 39 return this.route()
+4 41 return body
+4 43 else
+4 44 this.request.notFound()
+4 46 matchingRoute: function() {
+4 47 this.lastMatchingRoute = this.lastMatchingRoute || 0
+4 48 var routes = Express.routes, route
+4 49 while (route = routes[this.lastMatchingRoute++])
+4 50 if (this.match(route))
+4 51 break
+4 52 return route
+4 54 match: function(route) {
+4 55 if (this.request.method.toLowerCase() == route.method)
+4 56 if (this.request.captures = this.request.url.pathname.match(route.path)) {
+4 57 this.mapParams(route)
+4 61 mapParams: function(route) {
+4 62 route.keys.each(function(key, i){
+4 63 var val = this.request.captures[++i]
+4 64 if (key in Express.params)
+4 65 if ((this.request.captures[key] = this.request.captures[key].name || this.request.captures[++i]] == other.request.captures[++i]))
+4 66 params.each(function(key) {
+4 67 if ((this.request.captures[key] = this.captures[key] = captures[key].)/)
+4 68 if ((this.captures[key] = this.captures[key] = this.captures[key] == this.captures[key]))
+4 70 params.each(function( captures[key] = captures[key] = captures[key]))
+4 71 return this.capture.slice(capture.fn)
+4 77 Server = Class({
+4 78 port: 3000,
+4 79 host: \'localhost
+4 80 host: 3000,
+4 81 server: function(server,
+4 82 port: function(
+6 1 FilesRegexp: /some/a-regexp-exec(\\'(\\d+)\\s*\\1\
+6 2 })"
+

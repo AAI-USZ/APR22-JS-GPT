@@ -1,0 +1,51 @@
+Min editdistance: 58.00
+Closest candidate: 1 5 return this.setters[0] = function () {};
+0 1  url, function () { };
+0 2 return this.set();
+0 3 return this.set();"
+
+1 1 };
+1 2 return this.get(end) {};
+1 3 return this.get(end, function (end) {};
+1 4 return this.get(end) {});
+1 5 return this.setters[0] = function () {};
+1 6 }
+1 7 });
+1 9 exports.create = function (source = function (source) {
+1 10 exports.read = function (source) {
+1 11 exports.readJSON = function (source, i, mode) {
+1 12 exports.read();
+1 16 exports.
+2 1  url, function (res) { this.setBodyDecEndpoints();"
+
+3 1 };"
+
+5 1  cb, function (res) { cb) { curl, res) {
+5 2 return that.set(object) {
+5 3 return that.resolve(object.resolve(object) {
+5 4 return that.resolve(object) {
+5 5 object) {
+5 6 return object.object.pkgMeta(object) {
+5 7 return that.pkgMeta(object) {
+5 8 return object.pkgMeta.version;
+5 15 exports.clearLocalization = function () {
+5 17 exports.uninstall = function () {
+7 2 return fs.get(endpoint) {};
+7 3 return helpers.get(endpoint, function () { objectType: function () {
+7 4 return arguments });
+7 5 returns.forEach(endpoints[0] = arguments });
+7 6 }).forEach(function (callback) {
+7 7 return that.get(function (v, i, arguments, i, arguments);
+7 8 return that.get(function (val) {
+7 9 return that.get(object) {
+7 10 return objectType: function (pkg, i, url, url, url, url: objectType: objectType, url});
+8 2 return that.get(endpoints[0] { total: null, pathss};
+8 7 exports.create(function () { SourceCodeOf();
+8 8 exports.sourceCode = function (sourceCode = createCode, function (sourceCode, cb, mode) {
+8 9 return function (sourceCode, mode) {
+8 10 return function () {
+8 12 var result;
+8 13 var obj = new SourceCode;
+8 15 return mode === mode === mode;
+9 2 return helpers.resolve();"
+

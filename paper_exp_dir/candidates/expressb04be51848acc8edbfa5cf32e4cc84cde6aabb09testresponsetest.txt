@@ -1,0 +1,212 @@
+Min editdistance: 1.00
+Closest candidate: 5 39 'test #status()': function(){
+0 1 app.get('/', function(req, res){
+0 2 res.json({ name: \'tj"}', headers: { \'Content-Type': json }});
+0 3 });
+0 4 app.get('/string', function(req, res, next){
+0 5 res.json('whoop!', 500);
+0 7 app.get('/status', function(req, res, next){
+0 8 res.json(404);
+0 10 app.get('/error', function(req, res, next){
+0 11 res.json(err);
+0 13 app.get('/headers', function(req, res, next){
+0 14 res.json(undefined, { \'X-Foo': \'bar\' }, 302);
+0 16 assert.response(app,
+0 17 { url: '/error\' },
+0 18 { body: \'{"name":"tj"}', headers: { \'Content-Type': json }});
+0 20 { url: '/string' },
+0 21 { body: \'"whoop!"\'
+0 22 , headers: {
+0 23 'Content-Type': json
+0 24 , \'Content-Length': 8
+0 25 }});
+0 27 { url: '/user' },
+0 30 { url: '/user/12' },
+0 33 { url: '/user/ab' },
+0 36 { url: '/user/ab/user.json' },
+0 37 { body: \'{"name":"j"}', headers: { \'Content-Type': json }});
+0 40 { url: '/user/user/ab/categories/user.json' },
+0 41 { url: '/user/user/user/user/user/:uid' },
+0 42 { url: { url: '/user/user/user/12' },
+0 43 { url: '/user/user/12' },
+0 44 { url: '/user/user/report.json' }
+0 45 assert.jsons/12' });
+0 46 assert.response.response(app,
+0 47 { url:
+0 48 'test #create()
+0 49 .server(function(){
+0 50 server.start(){
+0 51 server.get('/callback.callback);
+0 52 server.get('/callback.js', function(app);
+0 54 server.get('/error: function(req, response, function(req, res, next){
+0 55 server.get('/error: function(req, res, next
+1 4 app.get(\'/string', function(req, res, next){
+1 7 app.get(\'/error', function(req, res, next){
+1 8 res.json('oh noes!', 500);
+1 10 app.get(\'/headers', function(req, res, next){
+1 15 { body: \'OH NO,OH NO', status: 500 });
+1 17 { url: '/string\' },
+1 20 { url: '/error/string' },
+1 23 { url: '/test' },
+1 24 { body: \'{"foo":"bar"}', status: 201 });
+1 26 { url: '/test1' },
+1 29 { url: '/test2' },
+1 32 { url: '/test3' },
+1 35 { url: '/test3.json' },
+1 38 { url: '/test3.json", { status: 201 });
+1 41 { url: \'test3.json()
+1 43 assert.assert.should.response(app,
+1 44 assert.engine
+1 45 },
+1 46 "test.engine: function(){
+1 47 return.engine.toArray(function(callback, parent === json
+1 48 , callback){
+1 49 call(callback);
+1 50 return callback(app, app);
+1 51 }
+1 52 }).should.engine.should.engine.eql(app);
+1 56 it("should.skip(': function(){
+1 57 it("should.strictEqual(app, url, url, parentCallback);
+1 58 it("should.should.strictEqual(app, url + url + url + urlRoot, false, false, data.stack, function(app.locals){"
+
+2 2 res.json(\'oh noes!', 500);
+2 7 app.get(\'/error/:date', function(req, res, next){
+2 10 app.get(\'/text', function(req, res, next){
+2 11 res.json(\'whoop!', 500);
+2 13 app.get(\'/status', function(req, res, next){
+2 14 res.json(\'OH NO\', 500);
+2 17 { url: \'/error\' },
+2 18 { body: \'OH NO\', status: 500 });
+2 20 { url: \'/string\' },
+2 23 { url: \'/test\' },
+2 24 { body: \'{"foo":"bar"}'
+2 25 , status: 201 });
+2 43 \'test #error()\': function(){
+2 44 var app = express.createServer();
+2 45 app.get(\'/errorHandler.get(\'/invalidCallback\', function(function(req, res, next){
+2 46 next){
+2 47 next(new Error(\'should.send(\'should.send(\'Shit is not allowed!\'));
+2 50 app.get(\'/invalidCallback.expect(app, function(app, res){
+2 51 app.get(\'/invalidCallback)
+2 52 app.get(\'/invalidCallback/invalidCallback is not.should.should.be.called)
+2 53 .true;
+2 55 app.get(\'/invalidCallback.get(\'/invalidCallback.should.should.be.called
+2 56 .be.true;
+2 57 app.get(\'/invalidCallback.length.length > 0);
+2 58 app.get(\'/invalidArray/invalidCallback.length > 0);
+2 59 app.exports.
+3 1 app.get(\'/', function(req, res){
+3 4 app.get(\'/hash', function(req, res){
+3 7 app.get(\'/no-options\', function(req, res, next){
+3 8 res.json(undefined, { 'X-Foo': \'bar\' }, 302);
+3 10 app.get(\'/relative\', function(req, res){
+3 13 app.get(\'/absolute\', function(req, res){
+3 14 res.json(undefined, { \'X-Foo': \'baz\' }, 302);
+3 17 { url: \'/\' },
+3 18 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type': json }});
+3 20 { url: \'/escape\' },
+3 21 { body: \'escape\', headers: { \'Content-Type': \'utf-8\' }});
+3 23 { url: \'/nope.html\' },
+3 24 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+3 29 { url: \'/json\' },
+3 30 { body: \'{"foo":"bar"}\', headers: { \'{"foo":"bar":"baz"}\', status: 201, headers: { \'X-baz":"baz"}
+3 32 assert.response(app: { url: \'https"}
+3 33 assert.response: { url: \'/assert.test"should.response.body.body.should.toLowerCase()"should.equal(\'https://"\');
+3 34 assert.equal(200);
+3 35 assert.toArray.isArray(app.enqueue.length);
+3 36 assert.should.length);
+3 37 done();
+3 39 it.skip(\'should.skip(\'should.json\');
+3 40 it(\'should support json\');
+3 41 it(\'should.json is deprecated\');
+3 42 it(\'should.skip()\');
+3 45 it(\'should.
+4 2 res.json({ name: \'tj\' });
+4 14 { url: '/user\' },
+4 33 { url: '/user/ab/edit' },
+4 36 { url: '/user/ab/3' },
+4 37 { body: \'{"name":"j"}', headers: { \'Content-Type: json }});
+4 38 assert.assert.response(app,
+4 40 { url: url: '/user/user/ab/3', headers: { url: \'baz\' },
+4 41 { body: \'baz\' });
+4 42 assert.response: app.response: app.response: app.response:app, url, url: url, url: url: '/baz')
+4 43 assert.response: url, url: url, response: url,
+4 44 assert.response: url: url: url,
+4 45 assert.response: url,
+4 48 assert.response: url.response: url,
+4 49 assert.response: url: url.response: url.response: url.response: url,
+4 51 'test.
+4 52 \
+5 5 res.json('whoop!');
+5 14 { url: '/error' },
+5 15 { body: \'OH NO!"\'
+5 16 , status: 500
+5 17 , headers: { \'Content-Type': json }});
+5 27 { body: \'{"name":"tj"}\', headers: { \'Content-Type': json }});
+5 39 'test #status()': function(){
+5 41 app.get(\'/error\', function(req, res, next){
+5 42 res.status(500).send(\'OH NO_INvalid\');
+5 44 app.get(\'/error
+5 45 app.get(\'/error\', function(function(req, res, res, next){
+5 46 res.send(\'invalid
+5 47 res, function(err){"
+
+6 2 res.json({ name: \'tj"}', headers: { \'Content-Type\': json }});
+6 14 { url: \'/user\' },
+6 15 { body: \'{"name":"tj"}', headers: { \'X-Foo": \'bar"}\', headers: { \'X-Foo": \'baz\' }});
+6 20 \'Content-Type\': json
+6 21 , \'Content-Length\': 8
+6 24 { url: \'/user/12' },
+6 25 { body: \'{"name":"tj"}', headers: { \'Content-Type\': json }});
+6 27 { url: \'/string/' },
+6 34 \'test #status()': function(){
+6 37 res.status(500).send(\'OH NO\');
+6 39 app.get(\'/error/: function(){}
+6 41 app.get(\'/app.get(\'/status\', function(/InvalidStatusError: function(404){"
+
+7 16 app.get('/xhr', function(req, res, next){
+7 25 app.get('/xhr-2', function(req, res, next){
+7 28 app.get('/xhr-3', function(req, res, next){
+7 29 res.json('oh noes!', 3);
+7 31 app.get('/xhr-4', function(req, res, next){
+7 32 res.json('oh noes!', 5);
+7 34 app.get('/xhr-6', function(req, res, next){
+7 35 res.json('oh noes!', 7);
+7 37 app.get('/xhr-7', function(req, res, next){
+7 38 res.json('hob(req, 8);
+7 40 app.get('/xhr-8', function(req, res, function(req, res, next){
+7 41 res, next){
+7 42 res.json('xhr-s', 8)});
+7 46 app.get('/xhr-8', function(xhr, function(req, res){
+7 47 return next){
+7 49 return next();
+7 53 });'
+
+8 36 'test #status()': function(){var app = express.createServer();
+8 40 app.get(\'/headers\', function(req, res, next){
+8 41 res.status(404).send(\'OH NO\');
+8 43 app.get(\'/text\', function(req, res){
+8 44 res.header(\'content-type\', \'text\', \'utf-8\', \'utf-8\')
+8 45 res.send(\'
+8 46 , \'hey\')
+8 47 , headers: \'world
+8 49 res.send(\'
+
+9 15 { body: \'{"name":"tj"}\', headers: { \'X-Foo": \'bar"}
+9 16 , status: 302 });
+9 19 { body: \'"whoop!"\', headers: {
+9 29 { body: \'{"name":"baz"}\', headers: { \'Content-Type': json }});
+9 31 { url: '/user/ab/baz' },
+9 32 { body: \'{"name":"baz"}'
+9 35 { url: '/user/ab/baz/2013/08/12/should-equal-async': true });
+9 37 { url: '/user/ab/baz/baz/2013/10/10' },
+9 38 { body: \'10/12/3})
+9 39 , status: 10})
+9 40 , function(){
+9 41 assert.should.send(200, headers: function(){
+9 42 assert.send({ error: "should.send(error.toString/should.toString() == required: true});
+9 46 assert.response.assert.init();
+9 47 assert.response(app.server.listen('http.listen(3000);
+9 51 assert.assert.response.end();
+9 52 it("should.end();
+9 53 assert.end();

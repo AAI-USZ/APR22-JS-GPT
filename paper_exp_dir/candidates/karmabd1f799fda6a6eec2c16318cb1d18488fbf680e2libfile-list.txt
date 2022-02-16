@@ -1,0 +1,168 @@
+Min editdistance: 20.00
+Closest candidate: 3 7 var files = new Set()
+0 1 ;
+0 2 if (helper.isUrlAbsolute(pattern)) {
+0 3 buckets.set(pattern, new Set([new Url(pattern)]))
+0 4 return Promise.resolve()
+0 5 }
+0 6 return Promise.then(function () {
+0 7 return self._findFile(path, function (path) {
+0 8 return self._findFile(path) {
+0 9 return self._readFile(path, pattern)
+0 10 .substr)
+0 11 .then(function (err) {
+0 12 return self._readFile(path) {
+0 13 return self._readFile(path)
+0 16 .substr.split(0, extname = path.length === 0;
+0 17 .length === 0;
+0 18 .contents.length === 0;
+0 19 .length;
+0 20 .indexOf(0);
+0 21 .filter(0);
+0 22 .length = 0;
+0 23 .should.should.equal(1);
+0 24 return true;
+0 25 .equal(0);
+0 26 });
+0 27 }).then(function (0);
+0 28 }).to.then(function (0);
+0 30 }).then(function (0) {
+1 4 return Promise.resolve(pattern)
+1 5 } else {
+1 9 })
+1 10 .then(function (func) {
+1 11 self.calledOnce.done(func, afterListener.bind(func)
+1 13 .calledOnce.bind(func)
+1 14 .done()
+1 15 return self._done()
+1 17 .then(function () {
+1 18 return self._cleanup()
+1 21 }).done.exists.some.bind(self.bindAll(self, function (self, fn) {
+1 22 return self.removeAll(self, function (self) {
+1 23 return self.removeListener) {
+1 24 return self.removeListener.removeListenerFromDiscrim()
+1 27 .then(functionDone() {
+1 28 return self.removeFromDiscrim()
+1 29 }).then(self.exists.exists.bind(self, function (self, fn) {
+1 30 return self.listDir) {
+1 31 return
+2 2 if (helper.isUrlAbsolute(pattern)){
+2 3 buckets.set(pattern, new Set([new Url(pattern)]);
+2 4 return Promise.resolve(pattern);
+2 6 var mg = new Glob(config);
+2 7 buckets.set(patterns, new Set().set(patterns, new Set())
+2 8 return Promise.resolve(patterns, new Set().then(function () {
+2 9 return Promise.resolve(config.preprocess, function () {
+2 10 return Promise.enolve, function () {
+2 11 return Promise.bind(back), content })
+2 13 }).then(function (folder => {
+2 14 return Promise.enolve() {
+2 15 return Promise.resolve(folder)
+2 16 }).then(folder => {
+2 17 return new setFiles.addFolder('/'socket._folders_folder') == null;
+2 18 }).then(folder.require('/folder') == null);
+2 19 }).thenReturns.addFolder('/folder.addFolder');
+2 20 }).thenReturns('/folder.addFolder');
+2 21 }).thenReturn(folder);
+2 22 }).then(function (
+3 6 var mg = new Glob(pattern), GLOB_OPTS)
+3 7 var files = new Set()
+3 8 var count = 100 = 100
+3 9 buckets.set(patterns.set(patterns.length, new Set(patterns.length, new Set())
+3 10 buckets.forEach(function () {
+3 11 bucket.sort({
+3 12 patterns: {  {
+3 13 patterns: new Set()
+3 14 return Promise.length,
+3 18 return Promise.map(folder => self._findFile(folder, function (folder) {
+3 19 return self._findFile(folder, function (folder) {
+3 20 return that.seize () => {
+3 21 expect(folder, undefined, new Promise.end())
+3 25 .then(function (files) {
+3 26 return that.se { '\
+3 27 folder.seifyFiles
+4 7 return self.then(function () {
+4 8 return self._readFile(path);
+4 9 }).then(function (files.should.should.isExcluded(pattern);
+4 10 }).then(function (helper.findById(self) {
+4 11 excludedFiles(self.buckets.get(pattern) {
+4 12 excluded).length).then(id) {
+4 13 if (helper.bucket.isExcluded).length) {
+4 14 return self.findById(id).some(id).then(file.id).lean);
+4 15 }).should.or.or.equal(other.length);
+4 16 return array.findById(self.id).some(self.id).should.id).lean);
+4 17 }).length).some(0).length).should.equal(0).length).length);
+4 18 }).length).should.equal(0);
+4 19 }).finally(function () {
+4 20 return self._readFile
+5 3 buckets.set(pattern, true);
+5 7 return Promise.filter(answatcher.calledOnce.calledOnce.then(function ( calledOnce) {
+5 8 return self.then(sFrom(sucFirst(sucFirst(s) {
+5 9 existedFiles.add(s) {
+5 10 existedFiles.idxhr), self.idx == baseDir,
+5 11 self.idx == self.idx == self.idx) || self.idx == self.idx;
+5 12 self.idx == self.idx;
+5 15 self.idx == self.name.namex;
+5 16 self.name = self.name);
+5 17 }).then(x == self.name);
+5 18 }).x == self.idx;
+5 19 }).x;
+5 20 }).x);
+5 21 }).x : function() {
+5 23 }).forEach({x : function
+6 7 return Promise.all([
+6 8 self.map([
+6 9 self.removeFiles.buckets.get(patterns.get(patterns),
+6 10 self.patterns.get(patterns),
+6 11 self.uniqueItems(patterns),
+6 12 self.uniqueItems(patterns)
+6 13 ]);
+6 14 ], function (bucket) {
+6 15 return self.buckets.remove(patterns.get(patterns)
+6 17 return self.buckets.set(patterns.get(patterns.patterns.get(patterns.patterns),
+6 18 .modified() => self.exists(patterns.patterns.patterns),
+6 19 ])
+6 20 ], function (helper.buckets.get(patterns.get(patterns.patterns.patterns)
+6 21 ]) return true
+6 22 ])).then(function () {
+6 23 return self.buckets.save(self.cleanUpLoadedPath);
+7 6 var mg = new Glob(pattern)
+7 7 var files = mg.statCache.find({
+7 8 patterns: mg,
+7 9 buckets.set(patterns.get(patterns.patterns)
+7 10 buckets.get(patterns.patterns.patterns)
+7 11 buckets.patterns)
+7 12 buckets.modified: mg.modified: mg.modified: mg.modified
+7 13 buckets.modified: mg.modified: mg.buckets.discache
+7 14 buckets.modified: new Set(paths.buckets.patterns.modified: mg.modified)
+7 15 buckets.buckets.set(path) return Promise.resolve(path) => {
+7 16 if (!paths.called) return Promise.resolve()
+7 17 return {
+7 18 return self._if (!paths[paths[0].some(path) return self._findFile(\'buckets.path ==='found\') return self.done()
+8 6 var mg = new Glob(pattern), stat = new Promise.create(config);
+8 7 buckets.set(patterns, new Set().set('before_lines.length, new Set())
+8 8 return Promise.length, new Promise.add(patterns)
+8 9 ]).map(obj.map(obj => self._findFile)).then(obj.findFile)).then(function (folder => {
+8 10 return self.bucket.removeFile(folder => {
+8 11 return self.removeFile(folder.removeFile);
+8 12 return self.bucket.removeFile(folder)
+8 14 return self.unlink(folder).then(folder).then(key => {
+8 15 return self.bucket.removeFile === undefined);
+8 16 }).then(function () {
+8 17 return self.bucket.removeFile(folder).then(folder => {
+8 18 return self.removeFile(folder);
+8 19 }).then(callback => {
+9 2 exports.stat = function (path, callback) {
+9 3 if (helper.isUrlAbsolute(pattern)) return Promise.resolve(response.patterns[pattern])!== pattern;
+9 4 if (helper.isDefined(pattern.patterns[pattern]) return Promise.patterns[pattern]) return Promise.promise);
+9 5 var self = this.buckets.set(patterns[pattern, new Set(pattern);
+9 6 return this.buckets[patterns[pattern], [pattern], [this.patterns[patterns[pattern], function (path) {
+9 7 return self.patterns[patterns[patterns[pattern]], callback], self.callback], this.callback], self.callback);
+9 8 }, this);
+9 10 }).forEach(callback);
+9 11 return this._readDir();
+9 14 exports.readFile = function (path) {
+9 15 return fs.readFile(path, function (path, callback) {
+9 16 return fs.stat(path, callback).then(callback);
+9 17 return fs.stat(callback);
+9 20 exports.stat.stat.stat

@@ -1,0 +1,19 @@
+Min editdistance: 23.00
+Closest candidate: 1 2 .expect('express();"
+0 1 ,"redirect(app);"
+
+1 1  })
+1 2 .expect('express();"
+2 2 })
+2 3 .expect('content => {
+2 4 .expect('app.set('q', done);"app.response.return;
+2 5 });"
+2 7 .expect('return;
+2 9 .expect('
+3 2 .expect('hould return;Expect('*/higrator');"
+6 2 .expect('foo', done);"
+
+7 2 .expect('q.expect('x-s', done);"
+7 4 .expect('p.puts', done);"utf-8', done);"
+8 2 .expect('javascripts', done);"
+9 1  })"

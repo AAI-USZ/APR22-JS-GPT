@@ -1,0 +1,25 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 item.category = item.name;
+0 1 item.category = item.name;
+0 2 if (config == 2){
+0 3 paginator(item.permalink, item, 'category', render, next);
+0 4 } else {
+0 5 render('category', item, function(err, result){
+0 6 if (err) throw err;"
+
+1 1 var path = item.path;
+1 2 posts.category = item.name;
+1 4 paginator(path, item, 'category', render, next);
+1 7 if (err) throw err;
+1 8 file.write(publicDir + item.permalink + 'index.html', result, next);
+1 9 });
+1 10 }
+1 11 }, callback);
+1 12 });"
+
+3 8 file.write(publicDir + path + item.permalink + 'index.html', result, next);
+6 1 var layout = item.layout? item.layout : 'category',
+6 2 permalink = config.permalink || '/' + item.permalink;
+6 3 render(layout, item, function(err, result){
+6 4 if (err){
+6 7 file.write(permalink, result, next);

@@ -1,0 +1,11 @@
+var optimist = require('optimist'),
+_ = require('underscore'),
+extend = require('./extend'),
+console = extend.console.list();
+
+module.exports = function(name, args, callback){
+if (_.isFunction(args)){
+callback = args;
+args = [];
+}
+

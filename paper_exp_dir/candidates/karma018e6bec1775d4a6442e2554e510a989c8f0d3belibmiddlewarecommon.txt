@@ -1,0 +1,31 @@
+Min editdistance: 25.00
+Closest candidate: 2 1 Container
+0 1  = function () {
+0 2 return Express.writeHeads() {} } } }
+1 1 Express.writeHeads = function (response) {
+1 2 Express.setNoCacheHeads = expandExpress() {
+1 3 return Express.promiseContainer()"
+
+2 1 Container
+3 1  = function () => ({ sourceIds : function () {
+3 2 return http.constructor () {
+3 3 return http.contentType }    },"
+
+4 1  = function () => function () {
+4 2 return Express.promiseContainer.exposeRequest(config, null
+5 1 Container }"
+6 1  = function (response) {
+6 2 Express.setHeavyCacheHeaders = expandBraceContainer () {
+6 3 return Express.return Express.promiseContainer () {
+6 4 }
+6 8 })"
+
+7 1 Express.promiseContainer = function () {
+7 2 Express.setServeStaticFile = createSockets = createSocketsHandler = function () {
+7 3 return Express.promiseContainer() {
+7 4 return }        }
+8 1  = function (config) {} }
+9 1  = function (config) {
+9 2 return function () {
+9 3 return Express.promiseContainer.promiseContainer.promiseContainer() }'
+

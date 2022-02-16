@@ -1,0 +1,404 @@
+Min editdistance: 21.00
+Closest candidate: 5 16 fs.readdir(dir, function(err, files){
+0 1 return viewCache[path] = fs.readFileSync(path, 'utf8');
+0 2 }
+0 3 function viewRoot(app) {
+0 4 return app.set(\'views\', path);
+0 6 function objectName(view) {
+0 7 return view.split(\'.\').slice(-1)[0].split(\'.\');
+0 9 function ogView(path, view) {
+0 10 return view.split(\'.\');
+0 12 function openGraphHelper(options) {
+0 13 options = options || {};
+0 14 if (!options.isLayout) {
+0 15 options.layout = false;
+0 17 var page = this.page,
+0 18 config = this.config || hexo.config,
+0 19 viewOptions = options.isLayout || config.default_layout || \'true\';
+0 20 if (description) {
+0 21 if (!Array.isArray(config.description)) config.description = [config.description];
+0 24 if (!keywords &&!Array.isArray(keywords)) {
+0 25 options[keywords] = [keywords];
+0 27 options.locals = options.locals || {};
+0 28 options.locals.content = page;
+0 29 if (config.external_link) {
+0 32 if (content) {
+0 33 content = content.replace(/<h3>/g, \'&amp;\');
+0 35 return Promise.all([
+0 36 fs.readFile(path, content),
+0 37 createHandler(fileList, config, function(locals){
+0 38 if (!locals) return;
+0 39 var result = {};
+0 40 if (content.length > 0) {
+0 41 result.content = content.slice(0, new Date(0)).toString();
+0 43 return fs.readFile(path, content);
+0 44 }).then(function(content){
+0 45 content = content.toString();
+0 46 return cb([].concat(content));
+0 47 });
+0 50 fs.exists(self.public_dir) &&
+0 51 fs.exists(self.source_dir) {
+0 52 if (exist) return;
+0 53 return self.findOne({source: source});
+0 54 }).then(function(exist) {
+0 56 return self.insert([url, this.path]);
+0 57 }).then(function(post){
+0 58 post.path = post.path;
+0 59 post.content = post;
+0 61 fs.stat(path),
+0 62 createHandler(fileList, this.path)
+0 63 ]).spread(function(stats, content){
+0 64 var stat = fs.statSync(path);
+0 65 var query = post.find;
+0 66 if (!query.content) return;
+0 67 if (!data.exists) return;
+0 68 if (!self.isLayout) return;
+0 69 if (layout = layout === \'post
+0 70 ].join(\'page.length\') && layout.length > 1 && layout.length > 1?
+0 71  : layout.length : layout.length - 1;
+0 72 return self.length + 1;
+0 74 }).map(function(function(fn) {
+0 75 return fn(data, function(file, i, fn);
+0 76 fn);
+0 77 }).join(\'
+
+1 7 return view.split(\',\').slice(-1)[0].split(\'/\');
+1 9 function displayView(path, options) {
+1 11 if (extname(view)) {
+1 14 options.filename = path;
+1 15 var view = viewCache[view] || view;
+1 16 if (!view.exists) {
+1 17 if (options.filename) {
+1 18 file.readOptions(options.filename, function(err, {
+1 19 if (err) {
+1 20 return options.locals[view] = options.locals[view] || {};
+1 21 } else if (options.paths) {
+1 22 file.readOptions(options.paths, function(err, {
+1 25 } else {
+1 26 options.paths.forEach(function(path){
+1 27 if (!paths[path]) return true;
+1 28 var view = new view.File({
+1 29 path: view.source,
+1 30 type: \'create\',
+1 31 filename: path
+1 35 options.context = options.object_type;
+1 39 options.filename = view;
+1 40 return view;
+1 42 function request(app) {
+1 43 return utils.parseUrl(this.url).pathname(this.url).split(\'/\');
+1 45 function error(err) {
+1 46 if (fn) {
+1 47 fn(err);
+1 49 throw err;
+1 52 options.locals.use = options.locals || {};
+1 53 view.helpers[this.name] = this.handleUpdatedPath(this.url);
+1 54 return this;
+1 56 function handleFromDiscriminators(emitter, decache) {
+1 57 var keys = Object.keys(cache),
+1 58 len = keys.length;
+1 59 var key = \'\';
+1 60 for (var i = 0; i < len; ++i) {
+1 61 key = keys[i];
+1 62 try {
+1 63 var val = collection.findOne({ name: this.name });
+1 64 if (typeof val!==\'string\') {
+1 65 val = val;
+1 68 return this.handle(val);
+1 70 function removeFromDiscriminators(emitter, decache) {
+1 71 var keys = Object.keys(cache);
+1 72 var num = keys.length;
+1 74 var error = null;
+1 75 for (var error = null;
+1 77 dry {
+1 78 this.next(error = function (err) {
+1 79 error = error || null;
+1 80 } catch (error.apply(this, arguments[error);
+1 81 } catch (this.name) {
+1 82 error = error;
+1 83 } catch (this.emit = error;
+1 84 clearError();
+1 88 error.apply(this, arguments);
+1 89 function firstPreconditionError(error, this.getErrorHandlers, this);
+1 93 function clean(next) {
+1 94 return function clearFiles(this.getErrors, this.url, arguments) {
+1 95 var err
+2 1 return viewCache[path] = fs.readFileSync(path, 'utf8');}
+2 8 function displayView(path, options, fn) {
+2 10 if (extname.substr(0, 2) === \'function\') {
+2 11 options[\'filename\'] = extname(path);
+2 13 options[\'cache\'] = {};
+2 16 options.locals.__length__ = 1;
+2 17 var viewName = options.as || view.split(\'.\');
+2 18 var viewRoot = this.app.set(\'view engine\', \'ejs\');
+2 19 if (viewRoot) {
+2 20 var orig = viewDir[viewRoot] || view.split(\'.\');
+2 21 if (orig) {
+2 22 return function(err, req, res, next){
+2 24 next(err);
+2 26 res.render(view, options, fn);
+2 28 };
+2 30 options.locals.filename = \'\';
+2 31 viewRoot = set(\'views\', viewRoot);
+2 33 options.locals.foo = options.locals || {};
+2 34 options.locals.bar = options.locals || {};
+2 35 function render() {
+2 36 if (typeof options.object === \'undefined\') {
+2 37 options[\'filename\'] = options.object;
+2 39 options.context = options.object;
+2 42 var path = set(\'views\') || \'index.html\';
+2 43 path = join(this.app.set(\'views\', path));
+2 44 if (!path) {
+2 45 return extname(path).substr(1);
+2 47 options.locals.settings = options.locals || {};
+2 48 path =
+2 49 .replace(\'view\', View);
+2 51 if (typeof options.exists === \'undefined\') {
+2 52 options.locals = options.object;
+2 54 options.locals.settings = {};
+2 57 var cache = viewCache[ext] || (viewCache[ext] = require(ext.substr(1)));
+2 58 if (options.only) {
+2 59 if (options.skip) {
+2 60 options.only = options.skip;
+2 63 var str = viewCache[ext] || (viewCache[ext] || fs.substr\
+2 64 .substr(0, str.length - 1)];
+2 65 return str
+2 66 } else if (options.length < 0) {
+2 67 str += 1;
+2 70 }'
+
+3 1 return viewCache[path] = fs.readFileSync(path, 'utf8\');},"
+
+4 1 return viewCache[path] = fs.readFileSync(path, 'utf8\');}
+4 10 var view = viewCache[path] || view;
+4 11 var viewLocals = options.locals || {};
+4 13 view = new View(options.filename, options);
+4 16 if (options.exists) view = new View(options.exists, options);
+4 17 if (!view.exists) view = new View(options.exists, options);
+4 19 if (!viewLocals) view = new View(locals, options);
+4 20 options.render = options.render;
+4 21 options.layout = options.layout === undefined? true : options.layout;
+4 22 var viewLocals = _.extend({}, optionslocals);
+4 23 if (viewLocals) view = new View(viewLocals, options);
+4 26 var titleElement = function(str, options){
+4 27 options.title = str;
+4 28 var highlighted = options.hasOwnProperty(\'x-prev\')? options.x-prev : true;
+4 29 var content = options.hasOwnProperty(\'html\')? options.html : \'\';
+4 31 return \'<!--\' + highlighted + \'</a>\';
+4 33 var keys = Object.keys(viewLocals);
+4 35 for (var i = 0, len = keys.length; i < len; i++){
+4 37 options.locals[key] = options[key];
+4 39 function escapeContent(str) {
+4 40 return str.replace(/<!--\\s*more\\s*-->/g, \'<!--\');
+4 42 function titleAll(str) {
+4 43 return str.substring(0, str.length - extname(str).length);
+4 45 module.exports = {
+4 46 info: function(options, callback) {
+4 47 if (!callback) callback = options;
+4 48 var viewOptions = this.app.view options || this;
+4 49 view options.root = \'/\';
+4 50 if (!viewOptions.exclude = options.exclude = options.exclude.join(\'.\');
+4 51 if (viewOptions.skipView = options.exclude = options.skipView;
+4 52 if (viewOptions.length) return;
+4 53 var content = options.collectionTypes = options.collectionTypes.collectionTypes.pop();
+4 54 if (options.locals) {
+4 55 var schema = options;
+4 56 if (!Array.isArray.isArray(options) {
+4 57 ) {
+4 58 if (!options = options.collectionTypes) {
+4 59 options = options;
+4 62 options = this.locals = options;
+4 64 } else if (typeof options === \'object\'string\') {
+4 66 options = {};
+5 5 function viewName(view) {
+5 9 return app.set(\'views\', view);
+5 11 exports.watcher = function(interval){
+5 12 interval = interval === true
+5 13 ? 300000
+5 14 : interval;
+5 15 (function cache(dir){
+5 16 fs.readdir(dir, function(err, files){
+5 17 if (!err) throw err;
+5 18 files.forEach(function(file){
+5 19 file = dir + \'/\' + file;
+5 20 fs.stat(file, function(err, stats){
+5 22 if (!stats.isFile()) throw err;
+5 23 if (stats.isDirectory()) {
+5 24 file = dir + \'/themes/\' + file;
+5 26 file = file;
+5 32 })(viewRoot(this));
+5 34 http.ServerResponse.prototype.partial = function(view, options, ext){
+5 35 if (ext && view.indexOf(\'.\') < 0) {
+5 36 view += ext;
+5 38 if (options instanceof Array) {
+5 39 options = { collection: options };
+5 43 options.partial = true;
+5 45 var collection = options.collection;
+5 46 if (collection) {
+5 47 var name = options.as || view.split(\'.\').first,
+5 48 len = collection.length;
+5 49 delete options.collection;
+5 50 options.locals.collectionLength = len;
+5 51 return collection.map(function(val, i){
+5 52 options.locals.firstInCollection = i === 0;
+5 53 options.locals.indexInCollection = i;
+5 54 options.locals.lastInCollection = i === len - 1;
+5 55 options.object = val;
+5 56 return this.partial(view, options);
+5 57 }, this).join('');
+5 59 if (options.object) {
+5 61 len = options.collection.length;
+5 69 var name = options.as || view.split(\'.\').first;
+5 70 if (len < 0) {
+5 71 options.collection.collection.length = options.collection.length;
+5 72 delete options.collectionLength;
+5 74 options.collectionLength = len;
+5 77 options.collectionLength = options.collectionFirstInCollection = len;
+5 78 options.collectionLength = options.collectionFirst;
+5 79 options.firstInCollection = this.collectionLength = this.collectionLength;
+5 80 return this.firstInCollection.collection;
+5 83 options.each = collection.each = collection.map(function(val, i){
+5 84 options.val = val;
+5 85 options.firstInCollection.val = i === 0;
+5 86 options.firstInCollection = i === length - 1;
+5 87 options.firstInCollection.firstInCollection;
+5 88 options.firstInCollection = i === len - 1;
+5 89 options.lastInCollection = i;
+5 90 options.lastInCollection = i === len - 1
+6 12 if (options && options.hasOwnProperty(\'length\')) {
+6 21 var name = options.as || view.split(\'.\');
+6 24 for (var i = 0, len = options.collection.length; i < len; ++i) {
+6 25 var val = options[i];
+6 34 if ('string\' == typeof name) {
+6 35 options[name] = options.object;
+6 36 } else if (name === global) {
+6 37 utils.merge(options.locals, options.object);
+6 42 return this.render(view, options);
+6 45 http.ServerResponse.prototype.render = function(view, options, fn){
+6 47 var defaultEngine = this.app.set(\'view engine\', \'jade\');
+6 48 if (view.indexOf(\'.\') < 0 && defaultEngine) {
+6 49 view += \'.jade\';
+6 51 var self = this,
+6 52 helpers = this.app.viewHelpers,
+6 53 dynamicHelpers = this.app.dynamicViewHelpers,
+6 54 root = viewRoot(this.app),
+6 55 ext = extname(view),
+6 56 partial = options.partial,
+6 57 layout = options.layout === undefined? true : options.layout,
+6 58 layout = layout === true
+6 59 ? \'layout\' + ext
+6 60 : layout;
+6 63 dynamicHelpers.bodyDecoder = options.bodyDecoder;
+6 65 options.locals.filename = root;
+6 66 if (options.app.contentType) {
+6 67 options.locals.method = \'get
+6 68 .contentType = function(){
+6 69 var done;
+6 71 return this.engines.call(this, options.contentType(this, options.engines = this, this.app.settings, options.locals, options.bodyDecoder);
+6 74 this.locals.method = function keys = function(){
+6 75 var keys = Object.keys = done;
+6 76 var i, len = keys.length = Object.keys;
+6 77 var i, len = keys.length;
+6 78 var key;
+6 80 for (var key;
+6 81 for (var i = i
+7 1 return viewCache[path] = fs.readFileSync(path, 'utf8\');}"
+
+8 6 return view.split(\'.\').slice(-1)[0].split(\'/\');
+8 10 var viewOptions = this.app.settings[env];
+8 11 if (!viewOptions) {
+8 12 if (options.hasOwnProperty(\'length\')) {
+8 13 options.theme = options.theme || this.app.settings[env];
+8 16 options.locals.__length__ = len;
+8 17 return viewOptions;
+8 19 var users = [
+8 20 { name: \'tj\' }
+8 21 , { name: \'tobi\' }
+8 22 , { name: \'loki\' }
+8 23 , { name: \'jane\' }
+8 24 ];
+8 25 var userRepos = {
+8 26 tobi: [repos[0], repos[1]]
+8 27 , loki: [repos[1]]
+8 28 , jane: [repos[2]]
+8 30 function linkExtname(str) {
+8 31 return cache[str] = new helpers.TempDir({
+8 32 \'bower.json\': {
+8 33 name: str,
+8 34 url: __dirname + \'/public\'
+8 38 function send(str) {
+8 39 return str.replace(/\\u2028/g, \'/\');
+8 41 http.ServerResponse.prototype.send = function(str, headers, status){
+8 42 if (typeof headers === \'number\') {
+8 43 status = headers,
+8 44 headers = null;
+8 46 status = status || 200;
+8 47 headers = headers || {};
+8 48 switch (typeof body) {
+8 49 case \'number\':
+8 50 if (!this.headers[\'Content-Type\']) {
+8 51 this.contentType(\'.txt\');
+8 53 body = http.STATUS_CODES[status = body];
+8 54 break;
+8 55 case\'string\':
+8 57 this.contentType(\'.html\');
+8 60 case \'object\':
+8 61 if (!(this instanceof Buffer)) {
+8 63 this.contentType(\'.json\');
+8 65 body = JSON.stringify(body);
+8 70 options.locals.contentType = options.type;
+8 71 this.renderHead = this.headers;
+8 72 this.end();
+8 75 http.ServerResponse.prototype.prototype.sendfile = function(path, options, fn){
+8 76 options.attachment = this.filename = path;
+8 77 var headers = path;
+8 78 if (options.isAbsolute = true;
+8 79 fs.readFile(path) && fs.readFile(path).isAbsolute;
+8 80 if (options.isAbsolute) && fs.statSync(path)) return fn(this.path);
+8 81 if (options.readFile(this.path)) return fn.offset!== 2;
+8 82 if (options.8!== 2) {
+8 83 options.exists(this.send(this.filename, path);
+8 84 options.attachment(this.path, options.attachment));
+8 85 return this.send(fn, options.headers, options.headers)
+8 86 .offset);
+8 87 }\
+9 5 function viewName(app) {
+9 11 function wrapData(data) {
+9 12 return data? data.exports
+9 13 : {};
+9 15 function renderPartial(res, view, options, callback) {
+9 16 var viewDir = this.view_dir || this.settings.views;
+9 17 var viewOptions = options || {};
+9 19 view options = {};
+9 22 merge(options, locals);
+9 24 options.renderPartial = true;
+9 26 var name = options.as || view.split(\'.\').slice(-1)[0].split(\'.\');
+9 29 var len = collection.length
+9 30 , buf = \'\'
+9 31 , keys
+9 32 , key
+9 33 , val;
+9 38 collection.push(val);
+9 40 options.locals.collectionLength = 0;
+9 41 for (var j = 0, jlen = options.locals.length; jlen < jlen; ++jlen; ++j) {
+9 42 key = options.locals[j];
+9 43 val = collection[key];
+9 48 buf += render();
+9 51 keys = Object.keys(collection);
+9 64 return buf;
+9 68 if (!callback && typeof options === \'function\') {
+9 69 callback = options;
+9 72 callback = function(){};
+9 76 var options = _.omiteral = options;
+9 77 options.split(\'=\', function(val, i, val) {
+9 78 options = options);
+9 79 options.locals = options;
+9 80 return val;
+9 81 options.locals.forEachInCollection.sort = options;
+9 83 options.locals.collectionLength = options.collectionLength = options.collection;
+9 84 options.collectionLength = options.collectionLength;
+9 87 return this.collection;
+9 89 var collection = options = collection.toArray = function(val, val, i;
+9 90 options = collection, i, val);
+9 91 return this.length = collection.length;
+9 93 var locals = options = options.collection;
+9 94 if (options.collectionLength = null

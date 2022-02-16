@@ -1,0 +1,152 @@
+Min editdistance: 14.00
+Closest candidate: 4 24 .then(function (result) {
+0 1 "
+
+1 1 Redis.prototype.return_error = function (err, replies) {
+1 2 var self = this;
+1 3 err.on('message', function (err) {
+1 4 console.log(err);
+1 5 return reply.message.apply(this, arguments);
+1 6 });
+1 7 self.once('connect', function () {
+1 8 return self.removeListener(arg);
+1 10 };
+1 11 Redis.prototype.return_reply = function (channel, callback) {
+1 13 console.log('Log Post created at reply', function (err) {
+1 14 if (err) {
+1 15 return callback.fail(err);
+1 16 }
+1 17 var reply = res;
+1 18 if (this.is_post) {
+1 19 return reply.call(this, {_: true});
+1 20 } else {
+1 21 if (this.is_page) {
+1 24 var page = this.post;
+1 25 if (!page.length) {
+1 26 return callback.call(this, {_: false});
+1 28 this.all('/context.html', function (context) {
+1 29 return
+1 30 .set("Cookie" || this.settings.cookie);
+1 31 var tildify = this.is_post()? this.tildify() : false;
+1 32 return this.post.render(view, options);
+1 33 }, this);
+1 34 return this.end();
+1 36 Redis.prototype.get_reply = function (url) {
+1 38 return this.send_message.call(this, url);
+1 40 Redis.prototype.post_render = function (context) {
+1 42 return this.post.render(context, options);
+1 44 Redis.prototype.put_reply = function (context) {
+1 46 return this.post.put_reply.call(this, url);
+1 48 Redis.prototype.update_tempDir = function (tmp) {
+1 49 return this.tmp.set('tmp-dir', process.env.tmp_dir);
+1 51 function remove_error(err) {
+1 52 var error;
+1 53 error = null;
+1 54 if (this.is_post.strictSsloking) {
+1 55 if (!self.header('error') {
+1 56 error = true;
+1 58 error = false;
+1 60 this.error = arguments.message ='} else {
+1 61 error = '404 Not found' in Redis connection.apply(this, error);
+1 63 this.is_error = function _error.setCookie(this, arguments;
+1 64 return this.setCookie(this.headers, function (name, val) {
+1 65 return this.headers.headers.cookie = getReadOptions(val);
+1 66 if (!this.headersSent ||!this.headersSent ||!is_post_post) {
+1 67 return this.headersSent || this.settings.headersSent;
+1 68 this.settings.settings.redirects = null;
+1 69 this.settings.set('content-cookie');
+2 1 Redis.prototype.terminate = function (callback) {
+2 2 var timer = new Timer();
+2 3 timer.pause();
+2 4 return callback(function () {
+2 5 setTimeout(function () {
+2 6 timer.setTimeout(function () {
+2 7 timer.close();
+2 8 clearTimeout(function () {
+2 10 return setTimeout(function () {
+2 11 clearTimeout(timeout);
+2 12 }, 100);
+2 16 return timer.promise. timer(timer);
+2 18 module.exports = function (source, options) {
+2 19 var client = redis.createClient(source, options);
+2 20 client.on('error', function (err) {
+2 21 return null;
+2 22 })
+2 23 .on('conf', function (conf) {
+2 24 return!client.is. ready;
+2 26 .on('end', function () {
+2 27 return that._removeListener(name, listener);
+2 30 return that._extendNotify(err);
+2 32 client.removeListener(function (fn) {
+2 33 throw new Error("Can not remove the callback on an error");
+2 35 return promise.fin(function () {
+2 38 };"
+
+4 1 RedisClient.prototype.return_error = function (err, reply) {
+4 2 var promise = Promise.resolve();
+4 3 return client.set('Client', function (err, replies) {
+4 4 return replies.some(function (reply) {
+4 5 return client.set('Exact', true);
+4 7 }).then(function (success, on_ject) {
+4 8 console.log('Successfully returned with reply', reply);
+4 11 RedisClient.prototype.return_reply = function (msg, reply) {
+4 12 var promise = promise.then(function (prompts) {
+4 13 prompts.forEach(function (prompt) {
+4 14 console.log('(prompt).done');
+4 17 return promise.then(function () {
+4 18 return callFactory({ source: 'foo', url: 'http://github.com/' }, {
+4 19 _:     {
+4 20 prompt: function (message, callback) {
+4 21 callback(undefined);
+4 24 .then(function (result) {
+4 25 if (prompts.length) {
+4 26 return Promise.resolve();
+4 28 return result;
+4 31 RedisClient.prototype.return_complete = function (result) {
+4 34 console.log('\
+4 35 ' + result);
+4 39 _:    {
+4 46 return promise.resolve();
+4 51 module.exports =RedisClient;"
+
+6 1 "
+7 3 err.message.should.to.be.equal('Redis connection gone from end event.\');
+7 4 err.id.should.be.id.toString();
+7 5 err.message.should.to.be.true;
+7 10 return function (channel, callback) {
+7 11 channel.on('error', function (err) {
+7 12 console.log('Redis connection gone from end event.\');
+7 15 Redis.prototype.return_complete = function (result) {
+7 17 return function (complete) {
+7 18 return self.complete(result);
+8 2 var promise = new Promise(function (resolve, reject) {
+8 3 var client;
+8 4 err.on('error', function (err) {
+8 5 err.send(err);
+8 6 client.once('reconnect', function () {
+8 7 client.set(client.EXIS_ERROR, undefined, function (err) {
+8 10 client.once('connect', function () {
+8 11 client.set(client.EXIS_CONFIG, undefined, function (err) {
+8 13 return promise.resolve(err);
+8 15 reject(new Error("Redis connection error to external client"));
+8 19 client.return(true);
+8 37 err.send(new Error("Redis connection error to external client"));
+8 40 client.use(function (req, res) {
+8 41 client.get(config.redis_client(), function (err, reply) {
+8 47 return promise.resolve(false);
+8 49 client.put(config.redis_client(), function (err, reply) {
+8 51 return promise.resolve(true);
+8 53 client.del(config.redis_client(), function (err, reply) {
+8 58 client.set(config.redis_client(), undefined, reply);
+8 61 client.return(client.EXIS_client(), function (returnclient) {
+8 62 returnclient.set(config.get(config.redis_client(), undefined, reply);
+8 63 returnClient(config.head() == null, redis_client);
+8 64 returnClient(config.set(config.get(config.redis_client(), undefined, reply);
+8 65 returnClient(config.head() == null, config.head() == null);
+8 69 client.remove(function clearClient(req, res) {
+8 70 return promise.send(req, res) {
+8 71 return promise.session.session.session.end();
+8 74 RedisClient.prototype.clearClient();
+8 75 return redisClient();
+8 78 RedisClient.prototype.redirectClient();
+8 79 function getClient(index)

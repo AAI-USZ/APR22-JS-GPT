@@ -1,0 +1,31 @@
+var fs = require('graceful-fs'),
+pathFn = require('path'),
+swig = require('swig'),
+moment = require('moment'),
+_ = require('lodash'),
+async = require('async'),
+extend = require('../../extend'),
+tagExt = extend.tag.list(),
+filterExt = extend.filter.list(),
+renderFn = require('../../render'),
+render = renderFn.render,
+isRenderable = renderFn.isRenderable,
+route = require('../../route'),
+model = require('../../model'),
+dbPosts = model.posts,
+dbPages = model.pages,
+dbCats = model.categories,
+dbTags = model.tags,
+dbAssets = model.assets,
+util = require('../../util'),
+yfm = util.yfm,
+config = hexo.config,
+newPostConfig = config.new_post_name,
+categoryMap = config.category_map || {},
+tagMap = config.tag_map || {},
+filenameCaps = config.filename_case;
+
+var existed = {
+posts: [],
+pages: []
+};

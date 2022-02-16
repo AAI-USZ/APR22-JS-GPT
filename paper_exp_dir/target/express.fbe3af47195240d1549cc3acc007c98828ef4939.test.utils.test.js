@@ -1,0 +1,3 @@
+'test .miniMarkdown()': function(assert){
+},
+

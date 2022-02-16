@@ -1,0 +1,161 @@
+Min editdistance: 22.00
+Closest candidate: 1 1 const dest = output;
+0 1 const data = {
+0 2 content: content
+0 3 };
+0 4 this.config.permalink = config.permalink
+0 5 .replace(/:category/, category? category : config.default_category)
+0 6 .replace(/:year/, date.format('YYYY'))
+0 7 .replace(/:month/, date.format('MM'))
+0 8 .replace(/:day/, date.format('DD'))
+0 9 .replace(/:i_(month|day)/g, date.format('M'))
+0 10 .replace(/:title/, args.length);
+0 11 const link = this.config.url.replace(/^https?:\\/\\/|\\/(index.html?)?$/g, \'\');
+0 12 if (prev === undefined) {
+0 13 return this.call('route\', this.config.replace());
+0 14 }
+0 15 return this.post.render(this.config.path, [data]);
+0 17 module.exports = renderConsole;"
+
+1 1 const dest = output;
+1 2 return this.post.render(dest, {
+1 3 content: result,
+1 4 engine: args.engine
+1 5 }).then(() => {
+1 6 this.log.info(dest);
+1 7 }).catch(err => {
+1 8 this.log.error({ err }, `Render HTML failed: ${output}`);
+1 9 });
+1 11 if (this.env.silent) return this.call('help', {_:'render'});
+1 13 content: text,
+1 16 this.log.info('Home layout: 'layouts/default-layout.md\');
+1 17 return this.
+1 18 .locals.first().then(result => {
+1 19 return result.engine.render(this.path, {
+1 20 layout: false,
+1 21 data: {
+1 22 content: result.content
+1 26 this.locals.indexOf(result.engine).should.eql(0);
+1 29 .locals.last().date.format(args.l || args.l || args.config.default_layout).format(args.l || args.config.default_layout).format(args.l || args.config.default_layout).format(config.default_layout).renderWith({
+1 37 return Promise.all([
+1 38 this.remove(),
+1 39 this.render.render(this.path)
+1 40 ]);
+2 1 const dest = output.replace(/^_|\\/_/g, \'\');
+2 2 return fs.exists(dest).then(exist => {
+2 3 if (!exist) return {};
+2 4 return fs.readFile(dest).then(content => {
+2 5 const result = content.toString('encode: \'utf-8\');
+2 6 return fs.unlink(dest);
+2 11 writeFile(dest, content),
+2 12 renderConsole(args)
+2 13 ]).then(() => {
+2 14 return args.unshift({
+2 15 path: src,
+2 19 this.log.info('Rendered in %s: %s -> %s', chalk.magenta(tildify(src)), chalk.magenta(tildify(dest)));
+2 42 module.exports = renderConsole;'
+
+3 1 const dest = output.replace(/\\\\/g, \'.\');
+3 2 const interval = prettyHrtime(process.hrtime(start));
+3 3 log.info('Rendered in %s: %s -> %s', chalk.cyan(interval), chalk.magenta(tildify(src)), chalk.magenta(tildify(dest)));
+3 4 return fs.writeFile(dest, result);
+3 10 this.source.execFilter(\'after_render:html\', data),
+3 11 this.theme.execFilter(\'after_render:html\', data)
+3 14 return this.execFilter(\'after_render:html\', data);
+3 16 this.log.info(\'Theme config loaded.\');
+3 18 this.source.execFilter(\'after_render:html\', data)
+3 21 this.theme.config = themeConfig;
+3 26 this.render.compile({
+3 29 }, options);
+3 30 return this.post.render(this.source.substring(baseDir.length));
+3 32 return fs.exists(this.public_dir);
+3 33 }).then(exist => {
+3 34 if (exist) return;
+3 35 return this.source.substring(baseDir.length + 1);
+3 37 if (!this.public_dir) return;
+4 3 if (exist) return fs.readFile(dest, true).then(content => {
+4 4 const result = content.toString('utf-8');
+4 8 return result;
+4 12 createAssetFolder(path.join(dest, \'post\')),
+4 13 createAssetFolder(path.join(dest, \'asset_folder\'))
+4 17 fs.exists(dest),
+4 18 fs.readFile(dest)
+4 20 }).then(result => {
+4 21 if (exist) return fs.exists(dest);
+4 22 const asset = Asset.findById(id);
+4 23 const self = this;
+4 24 asset._id.should.eql(id);
+4 25 asset.path.should.eql(dest);
+4 26 asset.modified.should.be.true;
+4 27 return asset.remove();
+4 28 }).finally(() => fs.unlink(dest)).then(() => {
+4 30 fs.rmdir(dest),
+4 40 const exist = fs.exists(dest);
+4 41 if (exist) return fs.unlink(dest);
+4 42 return;
+5 1 const dest = output.replace(/^_posts\\/([^_](?:(?!\\/_).)*$/g, "./");
+5 3 if (!exist) return next(new Error(\'No input file or string\'));
+5 4 log.info(\'Rendered in %s: %s -> %s', chalk.cyan(tildify(src)), chalk.magenta(tildify(dest));
+5 5 return true;
+5 7 return args.unshift(output);
+6 1 const data = fs.createWriteStream(baseDir);
+6 2 data.content = data.content.replace(/^\\/+/, \'\');
+6 3 return fs.writeFile(dest, data);
+6 7 fs.unlink(dest)
+8 1 const src = output.substring(baseDir.length);
+8 2 const output = fs.readFileSync(src).toString();
+8 4 writeFile(src, result)
+8 6 return Promise.resolve(output);
+8 9 return output({
+8 14 this.log.info('Rendered in %s: %s -> %s', chalk.magenta(tildify(src)), chalk.magenta(tildify(dest));
+8 15 return this.post.render(this.source, this.assetType);
+8 17 this.log.info('Created: %s', chalk.magenta(tildify(src)), chalk.magenta(tildify(dest)));
+8 21 const content = this.render.render({
+8 24 }, args.content);
+8 25 return this.log.info(`Writing database to ${baseDir}/db.json`);
+8 27 this.log.info('Database saved\');
+8 28 this.database.save({
+8 30 content: JSON.stringify(this.db.json)
+8 33 merge(this.database)
+8 34 .then(() => {
+8 35 this.log.info('Created: %s\', chalk.magenta(tildify(src)).green;
+8 43 merge(this.theme.base_dir, {
+8 44 _config: this.config,
+8 45 _posts: this.post.uri.path
+8 48 this.log.info('Created: %s\', chalk.magenta(tildify(src)));
+8 56 this.log.info.info.bind(this);
+8 57 }).then(this.log.bind(this);
+8 58 }).then(this.bind(this));
+8 60 module.skip('layout = args => {
+8 61 return args => {
+8 62 return this.render.render.render.render(this.bind(this);
+8 63 this);
+8 64 this.bind(this);
+8 65 this.registerModels.bind(this);
+8 66 };'
+
+9 1 const src = output;
+9 2 const outputDir = outputDir;
+9 3 return this.post.render(createFile(src).then(result => {
+9 4 if (!result) return;
+9 6 fs.writeFile(src, result, {
+9 7 args: [
+9 8 {
+9 10 output: result,
+9 11 message: `Rendering post: ${output}`,
+9 12 filename: path,
+9 13 path: src.substring(0, 1),
+9 14 ---/,
+9 18 message: `Writing post: ${output}`,
+9 20 path: src.substring(0, 1)
+9 25 fs.readFile(src),
+9 28 }).spread((path, data) => {
+9 29 const post = this.post.create({
+9 30 title: `${title}`,
+9 31 layout: post.layout,
+9 32 content: data
+9 34 return post.path === target;
+9 35 }, args => {
+9 36 const message = args.l || args.logger.message;
+9 37 if (!message) return;
+9 38 return this.route.set(dest, post.path);

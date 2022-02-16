@@ -1,0 +1,84 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 migrator: {},
+0 1  "static: {}, "url: {}", "static: {}, "root: {}", "base: {}"},
+0 2 schema: {},
+0 3 swig: {}
+0 4 };
+0 5 var _generate = function(name, locals){
+0 6 return store[name] || {};
+0 8 var _generateSync = function(name){
+0 9 return store[name] = {};
+0 11 var escape = function(str){
+0 12 return str.toLowerCase()
+0 13 .replace(/\\\\/g, '-')
+0 14 .replace(/\\\\|\\?|%|\\*|:|\\||"|<|>|\\./g, '');"
+
+1 1 migrator: {},
+1 2 filter: {}
+1 4 exports.generator = {
+1 5 "
+
+2 5 list: function(){
+2 6 return store.generator;
+2 7 },
+2 8 register: function(method){
+2 9 store.generator.push(method);
+2 10 }
+2 12 var rendererFn = exports.renderer = {
+2 14 return store.renderer;
+2 16 register: function(tag, output, method, sync){
+2 17 if (sync){
+2 18 store.rendererSync[tag] = method;
+2 19 store.rendererSync[tag].output = output;
+2 20 store.renderer[tag] = function(){
+2 21 var args = _.toArray(arguments),
+2 22 callback = args.pop();
+2 23 callback(null, method.apply(null, args));
+2 25 } else {
+2 26 store.renderer[tag] = method;
+2 28 store.renderer[tag].output = output;
+2 31 exports.rendererSync = {
+2 33 return store.rendererSync;
+2 35 register: function(tag, output, method){
+2 36 rendererFn(tag, output, method, true);
+2 39 exports.tag = {
+2 41 return store.tag;
+2 43 register: function(tag, method, ends){
+2 44 store.tag[tag] = function(indent, parentBlock, parser){
+2 45 var args = this.args,
+2 46 tokens = this.tokens? this.tokens.join('') : '';
+2 47 var result = method(args, tokens)
+2 48 .replace(/\\\\/g, '/')
+2 49 .replace(/\
+2 50 /g, '\\\
+2 51 ')
+2 52 .replace(/\\r/g, '\\\\r')
+2 53 .replace(/"/g, '\\\\"\');
+2 54 return result;
+2 56 if (ends) store.tag[tag].ends = true;
+2 58 };"
+
+3 4 exports.generator = {};"
+
+5 1  "static: {}, "url: {}"}, "generator: {},"
+
+6 3 }, {
+6 4 "Program": function(node) {
+6 5 var store = {};
+6 6 if (store.hasOwnProperty(node)) {
+6 7 return store[node];
+6 9 return [tree, function(node){
+6 10 if (exports.hasOwnProperty(node)) {
+6 13 return true;
+6 14 }, true);
+6 19 if (this.working) {
+6 20 return Q.reject(createError('No module', 'ENOENT'));
+6 24 var renderer = this.get('renderer'),"
+
+8 8 register: function(name, fn, ends){
+8 9 if (!fn) store.generator.push(fn);
+8 10 }"
+
+9 2 filter: {},
+9 3 pre: [],
+9 4 post: []

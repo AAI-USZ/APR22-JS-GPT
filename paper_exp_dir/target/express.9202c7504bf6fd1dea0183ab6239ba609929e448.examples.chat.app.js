@@ -1,0 +1,1 @@
+use(Logger, { format: 'request' })

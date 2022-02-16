@@ -1,0 +1,68 @@
+Min editdistance: 2.00
+Closest candidate: 1 2 if (options.colors!= null) template.showColors(options.colors);
+0 1 .options.color = options.colors === false? options.colors : true;
+0 2 return emitter;
+0 3 };'
+
+1 1 _lines   = options.argv.remain.slice(1);
+1 2 if (options.colors!= null) template.showColors(options.colors);
+1 3 if (options.logLevel!= 2) template.showColors(options.logLevel);
+1 4 emitter.emit('end', list.emit.bind(emitter, \'error\', 1));
+1 5 };
+1 6 module.exports.completion = install.completion;"
+
+2 2 if (options.colors!= null) {
+2 3 options.colors = true;
+2 4 }
+2 5 if (options.paths!= null) {
+2 6 options.paths = [
+2 7 "module.exports,"
+
+3 2 if (options.colors!== undefined) template.showColors(options.colors);
+3 3 if (options.help) return help('install');
+4 1  = arguments[1];
+4 4 module.exports.install = function (emitter) {
+4 5 return emitter.emit('end', emitter);
+5 1 Only? optionTypes : {};
+5 2 if (options.colors!== undefined) {
+5 3 return emitter.emit('error', new Error(\'colors\'));
+6 1  = options.argv.remain.slice(1);
+6 3 if (options.help) return help('register');
+6 4 var url = options.url || this.url;
+6 5 return emitter.emit('end', url, false);
+7 4 if (options.assume!= null) template.showColors(options.assume);
+7 5 if (options.paths!= 5) template.showPaths(options.paths);
+7 6 if (options.reporters && options.reporters.length) template.reporters.push(injector.getters[0]));
+7 7 if (options.browsers) template.showPrompts(Prompts);
+7 9 };"
+
+8 1 .name = options.argv.remain.slice(1);
+8 4 module.exports.show = function (name, url) {
+8 5 var emitter  = new Emitter;
+8 6 if (!name) return emitter.emit('error', emitter);
+8 7 var fn  = runInThisContext(this, path);
+8 8 return fn.call(this, url, false, true, false);
+8 10 module.exports.search = function (name, url) {
+8 11 return module.exports.search.call(this, name, url);
+8 13 module.exports.info = function (name, url) {
+8 14 var emitter = new Emitter;
+8 15 var pair;
+8 16 if (2 == arguments.length) {
+8 17 pair = arguments[1];
+8 18 } else if (1 == 2) {
+8 21 emitter.emit('search', pair);
+9 1 .colors = options.colors;
+9 4 module.exports.register = function (name, url, emitter) {
+9 5 var args = nopt(optionTypes, shorthand, argv);
+9 6 if (!args) {
+9 7 var argv = args.join(\' \');
+9 8 if (nopt(nopt(url, args).length.startsWith(Q.stringify(args)), {
+9 9 name = options.argv.remain.slice(1);
+9 10 } else {
+9 12 if (nopt(url, args).length.startsWith(Q.stringify(args)), {
+9 15 if ((opts[0] === 2) || (opts[0] === 3)) {
+9 16 return true;
+9 19 return nopt(url).then(function (result) {
+9 20 result = result || {};
+9 21 emitter.emit('end', result);
+9 22 });

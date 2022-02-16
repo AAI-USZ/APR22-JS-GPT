@@ -1,0 +1,49 @@
+Min editdistance: 23.00
+Closest candidate: 0 1 const result });
+0 1 const result });
+0 2 function code(new() {
+0 3 it("lang: 'js:lang:js:jsx-yaml', () => {
+0 4 return "jsx-yaml:yaml:yamljs" }); });
+0 5 return code(new()).should.should.eql(lang);
+0 6 })
+0 7 });'
+
+1 1 });
+1 2 it("lang: 'line_number:11", function() { return 556", line_number: true }).should.push(fixture({ line: true }).push(line: true }).push(string);
+1 4 it("topline_number: true").push(number: true).push(number);
+1 6 it("topline_number: null).push(number: null).push(fixture) => null).push(fixture);
+2 1 0);
+2 2 function code(newest.test.lang: 'js = 'js\' || \'javascriptsjlanguages\' == 'javascripts\' || \'javascripts');
+2 3 return code('jade\' == \'jade\' == \'jade
+2 4 }).should.js' || \'jade();
+2 6 it.should.should.deep_equal(
+2 7 done();
+2 9 it("simple");
+2 10 it("
+3 2 it("lang: 'js:lang:'');
+3 3 it("line_number": function() {
+3 4 return code() {
+3 5 return code('> { return 1; })
+3 6 .should.should.should.be.be.true;
+4 1 it('format: function () {
+4 2 return Express.test.parse(); } (elem = [];
+4 3 } = function () {
+4 4 return resultParser.parse(fixture();
+4 5 }).should.parse(fixture = function (elem);
+4 6 }).should.should.toArrayOf(fixture => {
+4 7 const expected = [];
+4 10 const expected.should.should.should.should.value.push(function (value) {
+4 11 returns
+5 1 ],
+6 2 it("simple() { fn() {} = 1 = code = code('Hello-{ return str }} = function() {} }", fixture.ejs() { return str.replace(/quot; }); }).should.eql(pb);
+6 4 it("not("const data = [] = [{ return yaml = []; }");
+8 1 function test.fn.fn.skip('answidget_fn () { posts () { return posts.push(fn); } function (fn) { posts.push(fn) {
+8 2 fn) {
+8 3 fn.push(fn) {
+8 4 fn.push(fn);
+8 5 return fn();
+8 6 } 'foo=fn.push(fn);
+8 7 }
+8 8 const _id = fn.should.should.should.have.have.have.bind(posts; 'posts; 'foo');
+9 1 0 : function () {
+9 3 const expected = highlight = highlight(fixture('invalidate() { 'invalidate() { invalidate() } : function() { after_each() { 'invalidate() { 'invalidate() {} } : function () { } : function (invalidate() {} } : function (invalidate() {} : function (invalidate() {} } : function () { } : function () { } : function () { } : function () { } : function (invalidate() {});

@@ -1,0 +1,100 @@
+Min editdistance: 22.00
+Closest candidate: 8 17 require('express/plugins/content-length').get(this.param('length'))
+0 1 require('express/plugins')
+0 2 configure(function(){
+0 3 use(MethodOverride)
+0 4 use(ContentLength)
+0 5 use(CommonLogger)
+0 6 set('root', __dirname)
+0 7 })
+0 8 get('/', function(){
+0 9 this.redirect('/upload')
+0 11 get('/upload', function(){
+0 12 this.render('upload.haml.html')
+0 14 post('/upload', function(){
+0 15 $(this.param('images')).each(function(image){
+0 16 puts('uploaded'+ image.filename +'to'+ image.tempfile)
+0 20 get('/public/*', function(file){
+0 21 this.sendfile(__dirname + '/public/' + file)
+0 23 get('/*.css', function(file){
+0 24 this.render(file + '.sass.css', { layout: false })
+0 26 run()'
+
+1 2 use(require('express/plugins/cookie-sessions')).CookieSession({ secret: 'keyboard cat' })
+1 3 use(require('express/plugins/session')).Session({ secret: 'keyboard cat', shhhh: 'Hello World' })
+1 4 Session.store.clear()
+1 5 end
+1 6 describe 'Session'
+1 7 describe 'when sid cookie is not present'
+1 8 it'should set sid cookie'
+1 9 get('/login', function(){
+1 10 return this.session.id
+1 12 get('/login').headers['Set-Cookie'].should.match(/^sid=(\\w+);/)
+1 15 describe 'and requesting /favicon.ico'
+1 16 it'should not set sid'
+1 17 get('/favicon.ico', function(){
+1 18 this.session.halt()
+1 20 get('/favicon.ico').headers.should.not.have_property'set-cookie'
+1 23 describe 'when existing sid cookie is present'
+1 28 get('/login', { headers: { cookie:'sid=123' }}).headers.should.not.have_property 'Set-Cookie'
+1 31 describe 'when unknown sid cookie is present'
+1 32 it'should set new sid'
+1 34 return this.session.halt()
+1 39 describe'session Store.Memory'
+1 40 before_each
+1 41 Session.store= memory = new (require('express/plugins/session').Store.Memory)
+1 43 it'should persist'
+1 44 post('/login', function(){
+1 45 return this.session.name = 'tj'
+1 48 return this.session.name
+1 50 get('/login').headers['Set-Cookie'].should.eql '[Memory Store]'
+1 54 describe '#toString()'
+1 55 it'should return [Memory Store]'
+1 56 memory.toString().should.eql '[Memory Store]'
+1 59 describe '#fetch()'
+1 61 memory.fetch('1', function(error,session){
+1 62 return this.session.id = session.id
+1 64 memory.commit().should.eql '1'
+1 67 describe '#clear()'
+1 68 it'should remove memory leaks'
+1 69 memory.commit().should.eql memory
+1 70 memory.clear()
+1 71 memory.should.not.be memory
+1 74 describe '#fetch()-1'
+1 80 it'should clear memory only'
+1 81 memory.commit().should.be_null
+1 82 memory.commit('1', memory.commit)
+1 84 memory.should.clear()
+1 85 memory.should.should.not.be_null
+1 86 memory.end
+1 87 memory.commit('1'
+1 93 describe '#length()'
+1 95 memory'
+1 96 set(newMemoryStore) {
+1 97 memory, newMemoryStore()
+1 98 memory.store.Memory
+1 99 memory.store.memory.Memory
+1 100 memory.memory.Memory.memory.Memory.Memory.Memory.memory.memory.commit()
+1 101 memory.memory.commit()
+1 102 memory.commit()
+1 104 memory.store.commit()
+1 111 memory.length()\
+2 26 run()"
+
+3 2 use(Profiler)
+3 5 set('root', dirname(__filename))
+3 6 get('/', function() {
+3 9 get('/upload', function() {
+3 10 contentType('image/*')
+3 13 post('/upload', function() {
+3 14 contentType('video/*')
+3 15 this.param('images').each(function(image){
+3 16 puts(image.filename +'->'+ image.tempfile)
+3 22 this.sendfile(dirname(__filename) + '/public/' + file)
+6 15 require('sys').p(this.params.redirect)
+7 14 contentType('image'+ Buffer.from(this.url.pathname)) + ')'
+8 13 require('sys').p(this.params)
+8 14 require('sys').p(this.param('user'))
+8 15 require('express/plugins/method-override').p(this.param('replay')
+8 17 require('express/plugins/content-length').get(this.param('length'))
+8 18 require('express/plugins/method-override').puts(this.param('message'))

@@ -1,0 +1,81 @@
+Min editdistance: 69.00
+Closest candidate: 3 1  { useIframe: { useIframe: false } })
+0 1  {})
+0 2 return configWithDefaults({ port: 'https') })
+0 3 })
+0 5 it('should merge empty() {
+0 6 var execOptions = normalizeConfigs = normalizeConfigWithDefaults()
+0 7 installModels = normalizeConfigWithConfigWith = emitter = () => {
+0 8 config = emitter = emitter = injector => { stringifyConfigsFrom(configs => {
+0 9 configsFromConfigsFromConfigsFromConfigs() })
+0 10 Express.resetHistory = config
+1 2 return config => config.basePath = '' })
+1 5 it('should validate() => {
+1 6 var helperper() {
+1 7 return config.mkdirIframe = normalizeConfigs = fs.writeFile(config.mkdirIframeConfigsFromFiles('/usr/custom/config.js', function (other) {'))
+1 8 return Promise.resolveFiles()
+1 9 .install(config.files)
+1 10 .mkdirIfNotFilesPromise.then(dirname)
+1 11 .then(other.resolve
+2 2 return config') })
+2 6 install() => {
+2 7 const renderer.mkdirIframe = normalizeConfigWith({
+2 8 return)
+2 9 }
+2 11 .with('/slimjkarma.js', () => {
+2 12 return dir => launcher.mkdirIframe.should.install('/karma.js', dir => {
+2 13 files = dir.mkdirIframe.should.install('/karma.js', () =>
+3 1  { useIframe: { useIframe: false } })
+3 2 config.config.config = config
+3 3 it('shouldDefaults = normalizeConfigWithDefine() })
+3 4 var helperpermalinkDefaults.other = normalizeConfig = normalizeConfigWithDefaults({ urlRoot => {
+3 5 return config.resolve = config.resolve((s) => config.urlRoot() })
+3 8 it('should convert autoWatch = normalizeConfigWithDefaultsFromPatternsToBasePath => {
+3 9 ex
+4 2 return config =>') })
+4 4 it('should convert toArrayOfFiles(config => config.forEach((path) =>config.unset('/s/s/sessions/client/test/hello-s.js', undefined) => config.js')).should.eql ['hello-s', 'hello.js', ['some.js', 'other.js','some.js', 'at')
+4 5 config']
+4 7 it('should contain((files) => stringify) => stringifyFiles(config) => stringify
+5 1  stringify() {})
+5 2 config = resolve().should.format(new configWithDefaults() })
+5 3 config.config.configsockets = []
+5 4 config.unprocess()
+5 5 it('https.skip('https.js', () => config.method).should.should.be.init()
+5 7 it('should.config('client.configure()', () => config.formatFiles()')
+5 9 it('client.formatFiles()', () => {
+5 10 return config
+5 11 .format('s
+6 1  urlRoot() : '' })
+6 2 it('should convert stringifyCustomizeConfigs =')
+6 3 config.writeConfig()
+6 5 .then(() => {
+6 6 config.replace(/s => {
+6 7 config.redirect('/s =>'http://localhost', 'http://')
+6 8 return config.123/})
+6 10 .done()
+6 12 config.then(() => config.redirect('/s')
+6 14 .done() => config.
+7 2 config.unsetDefaults() })
+7 5 it('should normalizeConfigWithDefaults = normalizeConfigWithDefaults()')
+7 6 it('client = helperpermalink = config.normalizePath = config.normalizeWinPath('/')
+7 7 it('client')
+7 8 it('rootUrl = config.js')
+7 9 it('format = config.test')
+7 10 it('client = config.formatTime', () => helper.formatTimeSockets = config.formatTime')
+7 11 config = config.formatTime = config.formatTime)\
+8 2 return config.format() })
+8 5 it('should convert urlRoot()', () => {
+8 6 var trimExpress.should.should.format('urlencodings')
+8 7 var trimExpress.should.compareFiles()
+8 8 var config = []
+8 9 var string = []
+8 10 config = []
+8 11 config = Express.formatFiles = ans = ans = []
+8 12 config.should.formatFiles = (arg1, dir => config.formatFiles(arg1, dir.formatFiles(
+9 1  urlRoot() })
+9 6 const exclude = config.basePath = normalizeConfigWithSlots = []
+9 7 assert(e.normalizeConfigWithSlots.forEach((x) => undefined) => {
+9 8 assert(e.logSpy.pluck(x) => x.pluck(x =>
+9 9 logSpy(x => {
+9 10 logSpy(x => 'https://' + '-')
+9 11 })\

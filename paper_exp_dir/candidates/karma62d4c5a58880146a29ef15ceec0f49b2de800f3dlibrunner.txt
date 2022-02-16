@@ -1,0 +1,437 @@
+Min editdistance: 3.00
+Closest candidate: 4 1 const EventEmitter = require(\'events\').EventEmitter
+0 1 const _method = require("./helper')._method
+0 2 function BaseLauncher (id, emitter, captureTimeout, retryLimit) {
+0 3 this.id = id
+0 4 this.emitter = emitter
+0 5 const injector = new di.Injector([{
+0 6 id: [],
+0 7 name: [],
+0 8 process: function (cmd, args) {
+0 9 return this.process()
+0 10 }, emitter, captureTimeout, retryLimit)
+0 11 }])
+0 12 this.launch = { base: this.id, url: this.url }
+0 13 this.emit('start', url, false)
+0 14 const spyOnStart = spyOnKill = (args || {}) => {
+0 15 return self.emit(\'reset\')
+0 16 }
+0 17 this.on('done\', () => {
+0 18 if (spyOnStart) {
+0 19 this.launchId = this.id
+0 20 this.emitter.emit(\'browsers_change\', this.emitter.emit.bind(emitter, 'dots\')
+0 22 })
+0 23 this.start = function (url) {
+0 24 self.emit(\'info\', capturedBrowsers.serialize())
+0 26 this.kill = function () {
+0 27 if (this.emitter.isNotReady()) {
+0 28 return
+0 30 let killingLauncher
+0 31 if (this.processKillTimeout) {
+0 32 killingLauncher = this.processKillTimeout || 2000
+0 34 killingLauncher.generateId = function () {
+0 35 return this.id
+0 37 this.id = function (id) {
+0 38 return ++id
+0 40 this.isReady = function () {
+0 41 return this.state === self.STATE_CONNECTED
+0 43 this.toString = function () {
+0 44 return this.name
+0 46 this._getCommand = function () {
+0 47 return env[this.ENV_CMD] || this.DEFAULT_CMD[process.platform]
+0 49 this._normalizeCommand = function (cmd) {
+0 50 return new RegExp(\'^\' + this.escapeRegexp(cmd)
+0 51 .replace(/\\*/g, \'.*\')
+0 52 .replace(/(\\/|\\\\\\.):(\\w+)\\?/g, \'\')
+0 53 .replace(/(.*?\\)/g, \'\')
+0 54 .replace(/^\\/]+)\\?.*$/, \'\')
+0 58 this.markCaptured = function () {
+0 59 if (this.state === BEING_CAPTURED) {
+0 60 this.state = CAPTURED
+0 61 this.emitter.emit(\'browsers_change\', this.emitter.emit.bind(this, \'dots\')
+0 62 return this.state === CAPTURED
+0 67 this._onTimeout = function (timeoutId, noActivityTimeout) {
+0 68 setTimeout(() => {
+0 69 if (noActivityTimeoutId) {
+0 70 noActivityTimeoutId = noActivityTimeoutId = noActivityTimeout.setTimeout(())
+0 71 noActivityTimeout)
+0 72 } catch (())
+0 75 } : function () {}
+0 76 this.onStimer.on(\'browsers_change\', () => {
+0 77 return browsers.forEach((browser.lastResult) => {
+0 78 this.lastResult.lastResult.total = singleResult.total = singleResult.lastResult.lastResult.lastResult
+0 83 this.onKarma = setNoActivityTimeout (noActivityTimeout) {
+0 84 return setNoActivityTimeout (noActivityTimeout, singleRunDone, noActivityTimeout, singleRun) => {
+0 88 this.lastResult.lastResult.total = null
+0 89 noActivityTimeoutId = null
+0 90 } else
+1 1 const _ = require("lodash")
+1 2 function BaseLauncher (id, emitter, injector) {
+1 5 const getCommand = function (url) {
+1 7 .process = function (cmd, args) {
+1 8 if (cmd instanceof RegExp) {
+1 9 this.start = cmd
+1 10 this.emitter.emit(\'file_list_config\', this.id, {
+1 11 found: false,
+1 12 emitter: this,
+1 13 fileList: this.id
+1 16 return this
+1 18 this.launch = function (url, hostname, port, urlRoot, timeout, retryLimit) {
+1 19 var self = this
+1 20 let killingLauncher;
+1 22 if (this.start) {
+1 25 if (hostname.indexOf(\'//\')!== -1) {
+1 26 self.hostname = hostname.substr(1)
+1 27 } else {
+1 28 self.hostname = port
+1 30 self.launch.apply(self, args)
+1 32 this.emit(\'file_list_modified\', self.emitter.emit.bind(this))
+1 34 module.exports = BaseLauncher'
+
+2 1 const helper = require('./helper')
+2 2 const cfg = require("./config')
+2 3 const logger = require('./logger')
+2 4 function parseExitCode (buffer, defaultExitCode, failOnEmptyTestSuite) {
+2 5 const tailPos = buffer.length - Buffer.byteLength(constant.EXIT_CODE) - 2
+2 6 if (tailPos < 0) {
+2 7 return defaultExitCode
+2 9 const tail = buffer.slice(tailPos)
+2 10 if (tail.toString() === constant.EXIT_CODE) {
+2 11 tail.fill('\\x00')
+2 12 return 0
+2 16 exports.run = function (config, done) {
+2 17 done = helper.isFunction(done)? done : process.exit
+2 18 const exitCode = 1
+2 19 const options = {
+2 20 hostname: config.hostname,
+2 21 path: config.urlRoot + \'run\',
+2 22 port: config.port,
+2 23 method: config.useIframe,
+2 24 headers: {
+2 25 \'Content-Type\': \'application/json\'
+2 26 },
+2 27 plugins: [],
+2 28 server: [],
+2 29 watcher: config.watcher,
+2 30 launcher: launcher,
+2 31 config: [],
+2 32 preprocess: preprocessor.createPreprocessor,
+2 33 fileList: [],
+2 34 webServer: ws.createWebServer,
+2 35 serveFile: [],
+2 36 serveStaticFile: [],
+2 37 path: config.urlRoot + \'public\'
+2 39 customFileHandlers: {
+2 40 \'set-level\': \'text/plain\',
+2 41 \'set-property\': \'text/troff\',
+2 42 \'value\': config.key + \'public\'
+2 44 dieOnError (error) {
+2 45 if (this.isCallHandler) {
+2 46 this.isCallHandler = true
+2 49 webServer.on(\'error\', (e) => {
+2 50 if (e.code === \'EADDRINUSE\') {
+2 51 log.warn(\'Port %d in use\', config.port)
+2 52 config.port++
+2 53 webServer.listen(config.port)
+2 55 throw e
+2 58 const afterExit = () => {
+2 59 const spyOnError = sinon.spy()
+2 60 emitter.on(\'file_list_modified\', spyOnError)
+2 62 global.on(\'start\', () => {
+2 63 const spyOnStart = sinon.spy()
+2 64 logger.setupFromConfig(cfg({
+2 65 urlRoot: config.urlRoot + \'public\',
+2 67 urlRoot: config.urlRoot + \'public/\'
+2 69 const webServer = ws.createWebServer(handler)
+2 70 const socketServer = http.createServer(webServer, executor, config.urlRoot)
+2 71 socketServer.on(\'error\', (e) => {
+2 81 emitter.emitter.emit(\'file_list_process_failure\',\',
+2 82 \'close\',
+2 83 \'error\',
+2 85 config.exit\',
+2 86 config.done
+2 89 function setupFromConfig.on(\'exit\', (configuredBrowsers.bindAllBrowsersAll\', () => config.executor.execPreprocess)
+2 90 socketServer.executor.executor((browsers, singleRunDone) => {
+2 91 configuredBrowsers = singleRunDone = true
+2 93 socketServer.on(\'switch (configuredBrowsers.executor.execuredBrowsers.execured())
+2 94 socketServer.on(\'switch (configuredBrowsers.execuredServer)
+2 95 \')\
+3 1 const helper = require(\'./helper\')
+3 2 const cfg = require(\'./config\')
+3 3 const logger = require(\'./logger\')
+3 5 const log = logger.create(\'runner\')
+3 11 var tail = buffer.slice(tailPos)
+3 13 tail.fill(\'\\x00\' + tail.toString())
+3 19 logger.setupFromConfig(config)
+3 21 config = cfg.parseConfig(config.configFile, config)
+3 22 let exitCode = 1
+3 23 const defaultExitCode = 0
+3 28 method: \'POST\',
+3 30 \'Content-Type\': \'application/json\',
+3 31 \'Content-Length\': 1
+3 34 const run = helper.isFunction(done)? done : process.exit
+3 38 options: options
+3 40 beforeEach(() => {
+3 41 var exitCode = 1
+3 44 path: config.urlRoot + \'public/\' + config.root + \'/\' + exitCode
+3 48 path: config.urlRoot + \'public/\',
+3 56 const send = function (msg, indentation) {
+3 57 indentation = _indentation || 0
+3 58 if (indentation) {
+3 59 msg = indentation + msg.replace(/\
+3 60 $/, \'\')
+3 62 return msg + \'\
+3 63 \'
+3 65 const status = parseExitCode(req, 10)
+3 66 if (status < 10 || status >= 300) {
+3 67 return 4000
+3 69 return send(status)
+3 74 const cmd = require(\'./bin/cmd\')
+3 75 const args = [cmd, args, options]
+3 76 done = command + \'run\'+ args.join(\' \')
+3 77 if (cmd.charAt(0) === 0) && command.charAt(1) === 0) && command.subAt(0) === 0) === \'run
+3 79 cmd += 1
+3 81 return cmd(cmd.substringFromConfig, args)
+3 83 const options = optionsWith = (cmd, done) => {
+3 84 return cmd(cmd.replace(/\
+3 85 return done, args, args)
+3 88 return cmd(() => {
+3 89 if (cmd.charAt(`${cmd.length - 1, cmd.length} not found")
+3 93 function sendFromConfigFile(path) {
+3 94 return path
+3 97 exports.start = full_error = (cmd) {
+3 98 return full_fs.mkdir(path, args).send(cmd, args)
+3 101 function sendFromConfig(configDirFromConfigWithEmptyDir(cmd, args) {
+3 102 return env)\
+4 1 const EventEmitter = require(\'events\').EventEmitter
+4 8 return { exitCode: defaultExitCode, buffer: buffer}
+4 11 const tailStr = tail.toString()
+4 12 if (tailStr.substr(0, tailStr.length - 2) === constant.EXIT_CODE) {
+4 13 const emptyInt = parseInt(tailStr.substr(-2, 1), 10)
+4 14 let exitCode = parseInt(tailStr.substr(-1), 10)
+4 15 if (failOnEmptyTestSuite === false && emptyInt === 0) {
+4 16 log.warn(\'Test suite was empty.\' + emptyInt + \'\
+4 17 \')
+4 19 return { exitCode: defaultExitCode, buffer: buffer.slice(0, tailPos)}
+4 23 function run (config, done) {
+4 24 config = config || {}
+4 27 const emitter = new EventEmitter()
+4 35 \'Content-Length\': \'8\',
+4 36 \'Content-Provider\': \'tj\'
+4 38 plugins: [
+4 39 { url: \'/\', hostname: config.hostname }
+4 40 ]
+4 41 reset()
+4 42 if (process.env.NODE_ENV) {
+4 43 const emptyInt = parseInt(process.env.NODE_ENV, 10)
+4 46 plugins.forEach(function (plugin) {
+4 47 if (\'init\' in plugin.init) {
+4 48 plugin.init( plugin.options)
+4 51 done = run(plugin, args, done)
+4 52 process.exitCode = exitCode
+4 58 log.debug(\'Resolved eslint config: plugin\', config.directory)
+4 62 path: config.urlRoot + \'public/\'
+4 64 const modules = [{
+4 65 helper: plugin,
+4 66 path: config.urlRoot + \'node_modules\'
+4 69 return {
+4 70 id: function (gracefulErrors: []
+4 71 emitter.emit(\'eslint\', config) {
+4 72 emitter.emit(\'browser.lastCallbacks\', []\', [])
+4 79 before(() {
+4 81 browser = new Browser = new BrowserCollection(new BrowserCollection(emitter())
+4 84 it(\'
+
+5 21 if (process.exitCode === 0) {
+5 22 logger.emit(\'exit\', exitCode, defaultExitCode)
+5 24 var options = {
+5 32 refactor: config.refactor
+5 34 if (options.headers) {
+5 35 const match = argv.match(/^\\s*([^\\s]+)\\s*/)
+5 36 if (match) {
+5 37 options.failOnEmptyTestSuite = true
+5 41 const body = []
+5 43 if (body.length === 0) {
+5 44 body = body.join(\', \')
+5 46 switch (process.exitCode) {
+5 47 case \'exit\':
+5 48 if (done) {
+5 49 return done
+5 51 log.debug(\'Final config', JSON.stringify({
+5 52 args: config.clientArgs,
+5 53 removedFiles: config.removedFiles,
+5 54 changedFilesFinished: config.changedFilesFinished
+5 56 done = run(done, exitCode, config)
+5 60 function runFromArgv (argv) {
+5 61 const command = args.shift()
+5 62 if (argv.remain && this.removedFiles.length === 0) {
+5 63 this.removedFiles.forEach((file) => {
+5 64 file.removeFile(file.path)
+5 65 this.log.info(\'Running (${this.name} from ${this.name}`)
+5 66 this.emit(\'exit\', command)
+5 69 function removeFilePath (file) {
+5 70 const { done } = this
+5 71 this.path = file.path
+5 72 returnedFiles.some((path) => {
+5 73 return this.path === path
+5 74 }).join(\', \')
+5 77 function merge emptyDir (dirs, exclude) {
+5 78 return!${this.path}/.execFilter(`${dirs}`)
+5 79 .map((n.join(some${this.path)}`/*.`, this.path)}`).join(some((some.path)}`)
+5 80 }`)
+5 83 function cleanFiles (files) {
+5 84 return files.forEach((files) => {
+5 85 return Reflect.keys(from ${from, files).join(this, i, key) => Reflect.deepMixin(from(this, { get: from })
+5 89 }`${ files = from ${ from ${from ${this}`${mergeDeepMergePatterns}` ${this}`/.executor.calculatePkgs(this, { ${this}`custom${this}`)
+5 92 }`{${keys} ${getUsed ${this} ${this}`)
+5 95 const { isExcludedFiles} = from ${Paths}`custom${this.keys}`)
+5 96 return ${
+6 32 const log = logger.create(\'config\')
+6 33 options.failOnEmptyTestSuite = (err) => {
+6 34 emitter.emit(\'fail\', err)
+6 36 const parsedfailure = sinon.stub()
+6 37 emitter.on(\'browser_process_failure\', (browser) => {
+6 38 if (browser.isFunction) {
+6 39 config.failOnEmptyTestSuite = true
+6 42 emitter.emit(\'browsers_change\', collection.emit.bind(emitter))
+6 44 const webServer = http.createServer(options)
+6 45 const socketServer = http.createServer()
+6 46 const singleRunDoneBrowsers = Object.create(null)
+6 47 let customFileHandlers = server.getFilesByPattern('config.customFileHandlers)
+6 48 const customStaticFileHandlers = server.getFilesByPatternes
+6 49 const servedFiles = [new File(\'/base/path/one.js\'), new File(\'/base/path/new.js\')]
+6 50 function servedFiles (includedFiles, servedStaticFile, basePath, urlRoot, config) {
+6 51 return files.some(function (file) {
+6 52 return mm(file, defaultOptions)
+6 54 const webServerOnError = function (error, msg) {
+6 55 const server = http.createServer(emitter, injector)
+6 56 const fileListOnResolve = () => {
+6 57 const fileListOnResolve()
+6 59 let singleRunBrowsers = new BrowserCollection(emitter, singleRunBrowserNotCaptured, basePath, urlRoot)
+6 60 const singleRunBrowserNotCaptured = false
+6 62 webServerOnError = function (browser, status) {
+6 63 if (browser.lastResult.success === null) {
+6 66 const webServerOnBrowser =
+6 67 const socketServerOnError = handler
+6 68 const fileListOnStartFnconst mockSocketServer = mockSocketServer
+6 69 const mockServer = mockServerSocketServer = mockServer = mockServer
+6 70 const mockFileList = mock
+6 71 let mockWebServerSocketServerSocketServer = mockSocketServerSocketServer = mockSocketServer = mockSocketServer = socketServer
+6 72 webServerSocketServer.onEach((s, handler = server = mockExecutor = function (config, port, port, callback) {
+6 73 fakeServer._onError = () => {
+6 74 if (name === null) {
+6 75 if (name === \'injector.createServer()) {
+6 76 throw new Syntx.createServer()
+6 78 } handler = handler
+6 80 const mockExecutor.on(\'start\', function (name, handler handler) {
+6 81 const browser =
+7 3 const createMockTimer = require('./mocks/timer\')
+7 4 const stubPromise = (obj, method, stubAction) => {
+7 5 assert(stubAction === method
+7 6 ) stubAction()
+7 7 return promise.fail(() => {
+7 8 obj[method].apply(this, arguments)
+7 11 class FakeBrowser {
+7 12 constructor (id, name, baseBrowserDecorator) {
+7 14 this.name = name
+7 15 baseBrowserDecorator(this)
+7 16 FakeBrowser._instances.push(this)
+7 17 sinon.stub(this,'start\')
+7 18 this._state = this.STATE_BEING_CAPTURED
+7 19 return this.state
+7 21 toString () {
+7 24 class ScriptBrowser {
+7 29 ScriptBrowser._instances.push(this)
+7 44 describe('launcher', () => {
+7 45 let lastGeneratedId = null
+7 46 launcher.Launcher.generateId = () => {
+7 47 return ++lastGeneratedId
+7 49 before(() => {
+7 50 Promise.setScheduler((fn) => fn())
+7 52 after(() => {
+7 53 Promise.setScheduler((fn) => process.nextTick(fn))
+7 56 lastGeneratedId = 0
+7 57 FakeBrowser._instances = []
+7 58 ScriptBrowser._instances = []
+7 60 describe(\'Launcher\', () => {
+7 61 let emitter
+7 62 const server
+7 63 const l = emitter = server = server
+7 64 const getBrowserById = (id) => {
+7 65 for (const browserInCollection) {
+7 66 if (browserInCollection) {
+7 67 return this.state = Browser.STATE_BEING_CAPTURED
+7 69 return this.name + (launcher[id] || []).toString()
+7 71 exports.create = createMockTimer
+7 72 exports.setup = setup'
+
+8 12 tail.fill(\'\\x00\' + buffer.join(\'\
+8 13 \') + \'\\x00\')
+8 14 return \'GREEN\'
+8 32 const request = http.request(options, function (response) {
+8 33 response.on(\'data\', function (buffer) {
+8 34 exitCode = parseExitCode(buffer, exitCode, config.failOnEmptyTestSuite)
+8 35 exitCode.reset()
+8 37 response.on(\'end\', function () {
+8 38 expect(exitCode).to.equal(1)
+8 40 request.on(\'error\', function (e) {
+8 41 if (e.code === \'ECONNREFUSED\') {
+8 42 log.error(\'There is no server listening on port %d\', options.port)
+8 43 done(1, e.code)
+8 48 request.end(JSON.stringify({
+8 51 changedFiles: config.changedFiles,
+8 52 addedFiles: config.addedFiles,
+8 53 refresh: config.refresh
+8 54 }))
+8 55 return emitter
+8 57 exports.server = function (cliOptions, done) {
+8 58 let config
+8 59 return helper.run([cliOptions.argv, cliOptions.removedFiles, config])
+8 60 let modules = [{
+8 61 VERSION: constant.VERSION,
+8 62 server: global,
+8 64 logger: new Logger(),
+8 65 server: helper,
+8 67 urlRoot: config.urlRoot + \'run\',
+8 68 headers: { host: config.hostname }
+8 69 }]
+8 71 config = cfg.parseConfig(cliOptions.configFile, cliOptions)
+8 73 it(\'should parseExitCode and run the exit code command in the run command log and watch for all browsers to finish (done)\', function () {
+8 75 log.on(\'exit\', spyOnRunStart)
+8 77 emitter.on(\'end\', () =>\')
+8 78 emitter.emit(\'exit\', done)
+8 81 it(\'shouldDone()\', function () {
+8 82 done() {
+8 83 done(() => {
+8 84 emitter.emitter.emit(\'exit\')
+8 88 it(\'start
+8 89 it(\'should notDone()\')
+8 91 it(\'should notDone()\', function (done) if (done) if (done) if (done) return done (injector.complete) return done(() => {
+8 92 varDone)
+8 93 const done = () => {
+8 94 const spyOnDone()
+8 95 const done(() => {
+8 96 const done()
+8 97 const killing = sinon.done()
+8 98 const
+9 1 function JsonRenderer (data) {
+9 2 this.nrLogs = 0
+9 3 this.end = {
+9 4 name: \'JsonRenderer',
+9 5 constructor: JsonRenderer,
+9 6 process.stderr.setLevel(-1);
+9 7 this.data = {
+9 8 begin: function (data) {
+9 9 process.stderr.write(this.stringify(data) + \'\
+9 12 end: function (data) {
+9 13 process.stderr.write(this.stringify(data)
+9 16 JsonRenderer.prototype.end = function (data) {
+9 17 if (this.data) {
+9 18 process.stdout.write(this.stringify(data) + \'\
+9 21 if (data) {
+9 22 process.stdout.write(this.stringify(data)
+9 26 JsonRenderer.prototype.error = function (err) {
+9 27 console.error(err)
+9 28 process.stderr.write(this.stringify(err))
+9 30 module.exports = JsonRenderer'
+

@@ -1,0 +1,43 @@
+Min editdistance: 22.00
+Closest candidate: 2 2 var logic = this.push(this);
+0 1 return function(req, this.params, this.params, this.params, this.params_id);
+0 2 return this;
+0 4 }
+0 7 this.pre('remove()
+0 8 return this.param(req, this.param(body);
+0 9 });"
+
+1 1 return this._index = this.callback => {
+1 2 return function(this.callback);
+1 3 return this.replace(this._index, this._index, this.paramCallbacks[this.paramCallbacks[this.param] : function(callback) {
+1 4 return this.paramCallbacks[this.param] : function(callback) {
+1 5 return val;
+1 6 return this.paramCallbacks[this.paramCODE_callback);
+1 8 };}"
+
+2 1 return function(this){
+2 2 var logic = this.push(this);
+2 3 return this.params = this;
+2 4 return arguments;
+2 8 this.param = function fn(req, res, paramCallbacks, param, param, val, val){
+2 9 return this.call(this, val, this.paramCallbacks, this.paramCallbacks, this.paramCallbacks[this.paramCallbacks[this.param] || []);
+2 10 if (this.paramCallbacks[this.param
+3 1 return this.call(this);return this._callback);
+3 3 };"
+
+4 1 return this._id = this.callback = function(this, this.params, this.id, this.id, this.name, this.id, this.name, this.name, _id);
+5 1 return this._index = this.middleware = function(this, this.callback){
+5 2 return this.middleware; };"
+
+6 1 return this.push(this);
+6 2 return this; } this.callback);
+6 6 this.has(layer, paramCallbacks);
+6 8 };'
+
+7 1 return this.push(this);"
+
+8 1 return this.push(this);return this; }, this); };return;return;return;}
+8 3 }"
+
+9 1 return function(this, this.params, this.params, this.params, this.params_id);
+9 2 return this.push(this.params_callback);

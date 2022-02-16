@@ -1,0 +1,73 @@
+Min editdistance: 30.00
+Closest candidate: 2 6 install(anslazyLoadingConfigs() {
+0 1 });
+0 2 describe('should copy extractedFiles', function (next) {
+0 3 var src = fs = fs;
+0 4 fs.readdirs.copyDir();
+0 5 function test.test.should.should.should.not.not.containEqual(fs);
+0 6 it.should.containEqual(fs);
+0 7 fs.should.should.should.not.containEqual(fs);
+0 8 .should.should.cont
+1 1 it('should rename single file; old; filenameREPLACE_WITH_WITH_BOUND_WOL35_BOUND_ART = false;returns', function (1_EOL35_ERROR)
+1 2 .contains_BOUND_FILENAB) {
+1 3 it('shouldcontains_FILACE_FILACE_FILACE_ERROR_ERROR_ERROR_ENGORE_ENGORE_BOUND_ART = 1000);
+1 4 it('should not=1_FILACE_FILACE_FILACE_FILACE_ERROR_EN
+2 2 describe('should rename single file source : function (next) {
+2 3 var source = new FsResolver(testSourceGenerateError);
+2 4 function testGenerateError();
+2 5 function testGenerateError() {
+2 6 install(anslazyLoadingConfigs() {
+2 7 fs.writeFile(ansrGeneratedConfigs();
+2 8 return Q.defer();
+2 9 })
+2 10 .pipe(
+3 2 it('should replaceCustom resolver = function resolverFactory({ source: function resolverFactory();
+3 3 return resolverFactory();
+3 7 describe.create('.resolveFactory();
+3 8 .create();
+3 9 it('should.resolveFactory');
+3 10 it('should.should.resolveFactory');
+3 12 it('should.should.get();
+3 13 it('should.
+4 2 describe.skip('should return error handling of 3s', function (next) {
+4 3 it('should emitter.should.should.fn.on('should.bind(next);
+4 6 it('should.queue = function (next) {
+4 7 it('should.queue.push(function (next) {
+4 8 var resolver; })
+4 10 .on();
+4 11 .on('error (error)
+4 12 .onError())
+4 13 .on
+5 2 describe('should rejectSourceFiles();
+5 3 it('should reject();
+5 4 it('should create(function (folder, source is required');
+5 5 it('should require a callback');
+5 7 it('should create if a callback is required');
+5 8 it('should reject() is required');
+5 12 it('should reject()
+6 1 it('should rename single file with custom source sourceId', function (next) {
+6 2 var resolver = new FsResolver(testSource()
+6 3 .a.a;
+6 4 .a;
+6 5 fs.copyFile(testSource(testSource());
+6 6 fs.copyFile(testSource());
+6 7 f.copyFile(testSource());
+6 8 .a.someFile(testSource);
+6 9 .a.someFile(
+7 1 it('should rename single file; a= null; function (next) {
+7 2 fs.lint.lint.should.should.should.not.not.not.containsSync(false);
+7 3 function assertMain(dir, fs;
+7 4 return resolver;
+7 6 .should.should.should.throw(false);
+7 8 .should.lean()
+7 9 .should.should.lean()
+7 10 .should.should
+8 2 .done();
+8 3 it('should rename single file matchingfolder = ['different-folder', function (folder', function (folder, source];
+8 4 fs.expect(123535)"]).a = 1;
+8 5 fs.expect(12).should.should.should.not.contains(2);
+8 6 fs.expect(1);
+8 7 fs.expect(12);
+8 9 \
+9 6 it('should copy "should copy extracted folder contents if source is an archive and rename single folder with only with just bower.json/component.json file', function (next)', function (next) { done) { done) { done) { done) { done) { done: true, results= false; });
+9 7 var resolver = new FsResolver = new FsResolver(path.resolve(__dirname, null);

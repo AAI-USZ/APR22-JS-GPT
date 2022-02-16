@@ -1,0 +1,231 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var app = express.createServer();
+0 1 var app = express.createServer();
+0 2 app.get(\'/html\', function(req, res){
+0 3 res.send(\'<p>test</p>\', { \'Content-Language\': \'en\' });
+0 4 });
+0 5 app.get(\'/json\', function(req, res){
+0 6 res.header(\'X-Foo\', \'bar\');
+0 7 res.send({ foo: \'bar\' }, { \'X-Foo\': \'baz\' }, 201);
+0 9 app.get(\'/text\', function(req, res){
+0 11 res.contentType(\'.txt\');
+0 12 res.send(\'wahoo\');
+0 14 app.get(\'/status\', function(req, res){
+0 15 res.send(404);
+0 17 app.get(\'/error\', function(req, res){
+0 18 res.send(\'Oh shit!\', { \'Content-Type\': \'text/plain\' }, 500);
+0 20 app.get(\'/buffer\', function(req, res){
+0 21 res.send(new Buffer(\'wahoo!\'));
+0 23 app.get(\'/noargs\', function(req, res, next){
+0 24 res.send();
+0 26 assert.response(app,
+0 27 { url: \'/html\' },
+0 28 { body: \'<p>test</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+0 30 { url: \'/json\' },
+0 31 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+0 33 { url: \'/text\' },
+0 34 { body: \'wahoo\', headers: { \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+0 36 { url: \'/status\' },
+0 37 { body: \'Not Found\', status: 404, headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+0 39 { url: \'/error\' },
+0 40 { body: \'Oh shit!\', status: 500, headers: { \'Content-Type\': \'text/plain\' }});
+0 42 { url: \'/buffer\' },
+0 43 { body: \'wahoo!\', headers: { \'Content-Type\': \'application/octet-stream\' }});
+0 45 { url: \'/noargs\' },
+0 46 { status: 204 }, function(res){
+0 47 assert.equal(undefined, res.headers[\'content-type\']);
+0 48 assert.equal(undefined, res.headers[\'content-length\']);
+0 50 },
+0 51 \'test #contentType()\': function(assert){
+0 54 res.contentType(\'index.html\');
+0 55 res.writeHead();
+0 56 res.end();
+0 58 assert.get(\'<p>yay\');
+0 59 assert.skip(\'
+
+1 1 describe(\'app\', function(){
+1 2 describe(\'.locals\', function(){
+1 3 it(\'should merge locals\', function(){
+1 4 var app = express();
+1 5 Object.keys(app.locals).should.eql([\'settings\', \'user\', \'age\', \'gender\', \'text/html; charset=utf-8\');
+1 6 app.locals({ user: \'tobi\', age: 1 });
+1 7 app.locals({ age: 2 });
+1 9 app.locals.user.should.equal(\'tobi\');
+1 10 app.locals.age.should.equal(2);
+1 11 })
+1 13 describe(\'.locals.settings\', function(){
+1 14 it(\'should expose app settings\', function(){
+1 16 app.set(\'title\', \'House of Manny\');
+1 17 var obj = app.locals.settings;
+1 18 obj.should.have.property(\'env\', \'test\');
+1 19 obj.should.have.property(\'title\', \'House of Manny\');
+1 22 describe(\'on app.locals\', function(){
+1 23 it(\'should locals with collection\', function(){
+1 25 app.locals.collection.should.deep.equal(app);
+1 28 describe(\'on app.locals with a Collection\', function(){
+1 29 it(\'should locals with the collection\', function(){
+1 34 describe(\'on app.locals with the reptition type\', function(){
+1 35 it(\'should locals with the reptition type\', function(){
+1 37 app.locals. reptition.should.equal(app);
+1 40 describe(\'on app.locals with the text\', function(){
+1 41 it(\'should locals with the text\', function(){
+1 43 app.locals.text.should.equal(\'12345\');
+1 47 it(\'should locals with the reptition type and charset\', function(){
+1 49 app.locals.transition.should.equal(app);
+1 52 describe(\'on app.locals with the text and charset\', function(){
+1 59 it(\'should locals with the reptition type but charset\', function(){
+1 65 describe(\'on app.locals with the text but the charset\', function(){
+1 66 it(\'should locals should be split\', function(){
+1 67 var app = express(){
+1 70 app.locals.set(\'foo\', \'bar\', \'baz\', \'baz\', \'baz\', \'baz\', \'baz\', \'baz\';
+1 76 describe(\'#toArray.use(function(app) {
+1 77 it(\'should contain(callback && app) {\', function(req, callback) {\', function(req, res){
+1 78 var app) {
+1 79 var calls = function(req, res, next){
+1 80 var app, next) {
+1 81 var arr = [];
+1 82 res.push(app, callback, next);
+1 83 res.push(app, function(req, res, next){
+1 84 res.concat(req, res, function
+2 2 app.use(function(req, res, next){
+2 3 res.send(req.params.lat +\'\' + req.params.long);
+2 5 app.post(\'/\', function(req, res){
+2 8 app.post(\'/pets\', function(req, res){
+2 12 { url: \'/pets\' },
+2 13 { body: {
+2 14 \'pets: {
+2 15 length: 2,
+2 16 arr: {
+2 17 toArray: function() {
+2 18 return [\'one\', \'two\', \'three\']
+2 19 }
+2 21 }));
+2 24 { body: \'pets: {
+2 35 length: 0,
+2 104 assert.response.sendfile = function(path, options, fn){
+2 105 var app = express.handle_error = require(\'../../../../client/lib/../lib/error\')
+2 106 , blog = fn);
+2 107 , req = fn = express();
+2 108 if (\'test
+2 109 if (\'function error!= process.env.env.env.NODE_ENV.test!= process.env.ENOCHA)
+2 110 , app.env.test;
+2 111 fn.fn.locals = map = map = app.env;
+2 112 app.locals.settings.settings.settings.test = app.settings.settings.settings.settings.test;
+2 113 app.use(function(app, fn!= process.env.env.env.NODE_ENV)
+2 114 , app.settings.view_ENV;
+3 2 it(\'should emit "mount" when mounted\', function(done){
+3 3 var blog = express()
+3 4 , app = express();
+3 5 blog.on(\'mount\', function(arg){
+3 6 arg.should.equal(app);
+3 7 done();
+3 9 app.use(blog);
+3 11 describe(\'.use(app)\', function(){
+3 12 it(\'should mount the app\', function(done){
+3 15 blog.get(\'/blog\', function(req, res){
+3 16 res.end(\'blog\');
+3 19 request(app)
+3 20 .get(\'/blog\')
+3 21 .expect(\'blog\', done);
+3 23 it(\'should support mount-points\', function(done){
+3 25 , forum = express()
+3 27 blog.get(\'/\', function(req, res){
+3 30 forum.get(\'/\', function(req, res){
+3 31 res.end(\'forum\');
+3 33 app.use(\'/blog\', blog);
+3 34 app.use(\'/forum\', forum);
+3 37 .expect(\'blog\', function(){
+3 39 .get(\'/forum\')
+3 40 .expect(\'forum\', done);
+3 44 })'
+
+4 2 it(\'should create a route', function(done){
+4 4 app.get(\'/user/:id\', function(req, res, next){
+4 5 res.send(req.params.id);
+4 7 app.get(\'/user/:id/:op?\', function(req, res, next){
+4 8 var op = req.params.op || \'view\';
+4 9 var id = req.params.id;
+4 11 var names = op.split(\'/\');
+4 13 if (op === \'view\') {
+4 14 name = opt;
+4 15 op = \'view\';
+4 18 app.get(\'/user/:id/edit\', function(req, res){
+4 22 .get(\'/user/:id/edit\')
+4 23 .expect(404, done);
+4 25 it(\'should format\', function(done){
+4 27 app.get(\'/:id/:op?\', function(req, res){
+4 29 res.send(req.params.op || \'view\');
+4 32 .get(\'/users/:id/edit\')
+4 33 .expect(200, done);
+4 36 describe(\'when format is an alias for all capture groups\', function(){
+4 37 it(\'should format the capture group\', function(done){
+4 39 app.get(\'/user/:user/:op?\', function(req, res){
+4 40 res.end(req.params.op + \'ing\'+ req.params.user);
+4 43 .get(\'/user/tj\')
+4 44 .expect(\'result\', done);
+4 47 describe(\'when several capture groups\', function(){
+4 48 it(\'should format the order\', function(done){
+4 54 .get(\'/user/tj/edit\')
+4 55 .expect(\'editing tj\', done);
+4 58 describe(\'when several capture groups with the exception\', function(){
+4 69 describe(\'when several capture groups are found\', function(){
+4 70 it(\'should populate the specific routes\', function(done){
+4 73 app.get(\'/user/user/:user/:user/:user/:user/:user/:op?\', function(req, res){
+4 74 /user: req, next();
+4 75 return done();
+4 77 app.get(\'/user/user/user/:user/:user/:op?\', function(req, res){
+4 78 /user/op;
+4 79 /op;
+4 82 app.use(function i = parseInt(req, res, 10);
+4 83 op;
+4 85 op = 0;
+4 86 app.use(function (req, res, next) {
+4 87 op.setHeader(\'op;
+5 2 app.get(\'/\', function(req, res){
+5 3 res.send(\'<p>Visit /blog</p>\', { name: \'title test\' });
+5 6 res.send(\'<p>Visit /more</p>\', { name: \'title test\' });
+5 8 app.listen(3000);
+5 9 console.log(\'Express app started on port 3000\');'
+
+6 2 describe(\'.render(name, fn)\', function(){
+6 3 it(\'should support absolute paths\', function(done){
+6 5 app.locals.user = { name: \'tobi\' };
+6 6 app.render(__dirname + \'/fixtures/user.jade\', function(err, str){
+6 7 if (err) return done(err);
+6 8 str.should.equal(\'<p>tobi</p>\');
+6 12 it(\'should support absolute paths with "view engine"\', function(done){
+6 14 app.set(\'view engine\', \'jade\');
+6 16 app.render(__dirname + \'/fixtures/user\', function(err, str){
+6 22 it(\'should expose app.locals\', function(done){
+6 24 app.set(\'views\', __dirname + \'/fixtures\');
+6 26 app.render(\'user.jade\', function(err, str){
+6 32 it(\'should support index.<engine>\', function(done){
+6 36 app.render(\'blog/post\', function(err, str){
+6 38 str.should.equal(\'<h1>blog post</h1>\');
+6 42 describe(\'when an error occurs\', function(){
+6 43 it(\'should next(err)\', function(done){
+6 47 process.nextTick(function(){
+6 48 err.message.should.match(/user is not defined/);
+6 53 describe(\'when "view engine" is given\', function(){
+6 54 it(\'should render the template\', function(done){
+6 57 app.render(\'email\', function(err, str){
+6 59 err.message.should.match(/This is an email\');
+6 65 describe(\'when "views" is given\', function(){
+6 66 it(\'should lookup\', function(){
+6 67 it(\'should lookup the file in the app\', function(done){
+6 70 app.set(\'views
+6 71 app.set(\'views\', __dirname\', __dirname + \'/fixtures\');
+6 72 app.render(\'index.end();
+6 73 app.set(\'app.end();
+6 74 app.end();
+6 75 app.locals.locals.set(\'views\', { user: { user: { name: \'tobi\' }
+6 77 app.lookup.lookup.lookup.should.should.should.be.empty;
+6 78 app.lookup.should.should.have.have.toArray(3);
+6 79 .toArray(3);
+7 43 it(\'should set the child\\\'s.parent\', function(){
+7 47 blog.parent.should.equal(app);
+8 56 res.end(\'<p>yay\');
+8 60 assert.get(\'/html
+8 61 assert.skip(\'/\', function(function(req, res){
+8 62 res){
+8 64 res.end(\'<p>\');

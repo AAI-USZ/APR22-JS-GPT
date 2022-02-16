@@ -1,0 +1,53 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 posts.archive = true;
+0 1 posts.archive = true;
+0 2 if (config.archive == 2){
+0 3 paginator(target, posts, 'archive', render, next);
+0 4 } else {
+0 5 render('archive', posts, function(err, result){"
+
+1 5 render('archive', posts, function(err, result){
+1 6 if (err) throw err;
+1 7 file.write(publicDir + target + 'index.html', result, next);
+1 8 });
+1 9 }
+1 10 },
+1 11 function(next){
+1 12 var yearly = {},
+1 13 monthly = {};
+1 14 posts.each(function(item, i){
+1 15 var year = item.date.year(),
+1 16 month = item.date.format('MM');
+1 17 if (yearly.hasOwnProperty(year)){
+1 18 yearly[year].push(item);
+1 20 yearly[year] = posts.slice(i, i + 1);
+1 22 if (!monthly.hasOwnProperty(year)) monthly[year] = {};
+1 23 if (monthly[year].hasOwnProperty(month)){
+1 24 monthly[year][month].push(item);
+1 26 monthly[year][month] = posts.slice(i, i + 1);
+1 29 async.forEach(Object.keys(yearly), function(year, next){
+1 30 async.parallel([
+1 32 var target = config.archive_dir + '/' + year + '/';
+1 33 yearly[year].year = year;
+1 35 paginator(target, yearly[year], 'archive', render, next);
+1 37 render('archive', yearly[year], function(err, result){
+1 44 async.forEach(Object.keys(monthly[year]), function(month, next){
+1 45 var target = config.archive_dir + '/' + year + '/' + month + '/';
+1 46 monthly[year][month].year = year;
+1 47 monthly[year][month].month = month;
+1 49 paginator(target, monthly[year][month], 'archive', render, next);
+1 51 render('archive', monthly[year][month], function(err, result){
+1 56 }, callback);
+1 58 ], callback);
+1 59 });"
+
+2 10 }, function(){
+2 11 console.log('archive archives generated.');
+2 12 callback();
+2 15 ]);
+3 2 if (config.archive === 2){
+3 34 yearly[year].archive = true;
+3 40 file.write(publicDir + target + 'index.html', result, callback);
+3 49 monthly[year][month].archive = true;
+9 16 };"
+

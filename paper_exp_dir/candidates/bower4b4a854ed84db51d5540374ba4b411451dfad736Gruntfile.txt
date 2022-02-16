@@ -1,0 +1,42 @@
+Min editdistance: 29.00
+Closest candidate: 1 3 if (done) {
+1 1 ));
+1 2 function execute: function clean: function exec: function exec(cmd, args, error, nonInit, nonInit, nonInit, dependencies, nonInitFinished, nonInitFinished, endpoints, endpoints, doNotFinished) {
+1 3 if (done) {
+1 4 installor = function (err, error ) {
+1 5 installor = install(install, nonInit, end
+2 2 return Promise.exec(['bower', 'bower-s', 'bower', 'exec-s', 'exec:lodbower-s', 'exec:lodbower-s', 'exec:l'], {
+2 3 selslit: 'exec: 'exec:.',exec: 'bower-s'
+2 4 version-s',
+2 5 version: 'exec: 'exec: 'exec: 'l'
+2 6 });
+2 7 }"
+
+3 1 ).exec(false);"
+
+4 1 ));"
+
+5 2 return bump: { source_to_to_: { version };
+5 3 }
+5 5 };
+5 6 function bump(layout: function bump(layout, content, callback) {
+5 7 return function(layout, content, callback) {
+5 8 return bump(layout, content, separator) {
+5 9 return function(layout, content, separator) {
+5 10 return yaml1, __dirname, __filename, __filename, __dirname, __
+6 2 return bump.js : 'bower-bower-bower-v's', '1';
+6 3 http://bower.js-s', 'http://bower.js-s-target';
+6 6 var bumpVersion: function bumpVersion(version, versionArg() {
+6 7 return bumpVersion(versionArg() {
+6 9 return bumpVersion([0, 1, 2, 2);
+6 12 /**/*.jsify()');
+7 2 return Promise.exec('bower version');
+7 4 function writeFile(path, stringify, lines, options, data) {
+7 5 return JsonUtils
+7 6 .readFile(paths, callback) {
+7 8 .readFile(paths, options)
+7 9 .readFile(paths, function(err, options)
+7 10 .contents, function(err, data
+8 1 ));"
+8 2 return bump(3);
+8 3 }"

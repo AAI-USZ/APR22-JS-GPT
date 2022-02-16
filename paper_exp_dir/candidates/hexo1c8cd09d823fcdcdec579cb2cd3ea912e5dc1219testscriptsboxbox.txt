@@ -1,0 +1,87 @@
+Min editdistance: 15.00
+Closest candidate: 0 11 }).then(function(){
+0 1 return Promise.list(){
+0 2 return Promise.next();
+0 3 return Promise.all([
+0 5 })
+0 7 );
+0 11 }).then(function(){
+0 13 fs.writeFile(src, 'a'), 'a');
+0 14 return Promise.stat();
+0 15 }).then(function(function(err => {
+0 16 return fs.stat(err);
+0 17 return Promise.stat(err);
+0 18 }).then(function
+1 4 box.removeFile(newSrc);
+1 5 box.unwatch();
+1 7 ]);
+1 10 }).delay(500).then(function(){
+1 11 return Promise.resolve();
+1 15 .then((){
+1 16 return Promise.skip('_generate()
+1 18 return fs.unlink
+2 1 return box.watch(){
+2 2 return Promise.unwatch();
+2 6 .then(function () {
+2 7 return Promise.then(function(){
+2 8 return Promise.exit(callback);
+2 9 return fs.exit(false);
+2 11 return fs.stat();
+2 12 }).then(function(function(){
+2 13 return Promise.next);
+2 15 next();
+2 17 }).delay(function(){
+2 18 }).delay
+3 10 .done();
+3 11 });
+3 14 });"
+
+4 1 return Promise.next(){
+4 6 .then(function (){
+4 7 return Promise.then(function (){
+4 10 return Promise.then(function (box.addProcessor)
+4 11 .reduce((answ, next){
+4 12 return box.reduce((answ, next){
+4 13 return newPath){
+4 14 return that.reduce((a, next
+5 1 return box.unwatch();
+5 5 return Promise.then(function () {
+5 11 .then(function (err => {
+5 12 return Promise.next => {
+5 13 return Promise.next(err);
+5 14 next);
+5 15 }).done();
+5 16 }).delay(function (}).done();
+6 1  return box.watch(){
+6 3 fs.stat(){
+6 6 }).then(function () {
+6 7 return fs.readFile(file.readFile(file);
+6 8 }).then(function(function(val);
+6 9 return val);
+6 10 }).then(newCallback);
+6 11 }).then(function (err => {
+6 12 return newCallback);
+6 13 }).should.done();
+7 3 fs.unwatch();
+7 8 }).then(function (){
+7 11 }).delay(500).then(300).then(function(){
+7 12 return new Promise.resolve();
+7 13 }).then(function(callback);
+7 14 }).then(function (callback);
+7 19 it('process.register(){
+7 20 it('_gener
+8 9 var box.watch();
+8 11 return Promise.listen((){
+8 12 return Promise.unlink((){
+8 13 return Promise.delay);
+8 15 return Promise.delay(500).then(500).then(function(){
+8 16 return newPromise.then(function(){
+8 17 return Promise.resolve
+9 1  return Promise.exitCallback(file => Promise.all([
+9 3 return fs.stat(){
+9 6 return fs.readFile(file);
+9 8 return Promise.unlink(file);
+9 9 return Promise.cleanFile(file);
+9 10 }).then(function(err);
+9 13 fs.stat();
+9 14 }).then(

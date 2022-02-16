@@ -1,0 +1,295 @@
+Min editdistance: 12.00
+Closest candidate: 3 1 const { htmlTag } = require(\'hexo-util\');
+0 1 const fs = require(\'hexo-fs\');
+0 2 const { join, dirname } = require(\'path\');
+0 3 const Promise = require(\'bluebird\');
+0 4 describe(\'Load plugins\', () => {
+0 5 const Hexo = require(\'../../../lib/hexo\');
+0 6 const hexo = new Hexo(join(__dirname, \'plugin_test\'), {silent: true});
+0 7 const loadPlugins = require(\'../../../lib/hexo/load_plugins\');
+0 8 const script = [
+0 9 \'hexo._script_test = {',
+0 10 \'  filename: __filename,',
+0 11 \'  dirname: __dirname,',
+0 12 \'  module: module,',
+0 13 \'  require: require,\',
+0 14 \'}\'
+0 15 ].join(\'\
+0 16 \');
+0 17 function validate(path) {
+0 18 const result = hexo._script_test;
+0 19 result.filename.should.eql(path);
+0 20 result.dirname.should.eql(dirname(path));
+0 21 result.module.id.should.eql(path);
+0 22 result.module.filename.should.eql(path);
+0 23 delete hexo._script_test;
+0 24 }
+0 25 function createPackageFile(...args) {
+0 26 const pkg = {"
+
+1 1 var Promise = require(\'bluebird\');
+1 2 function Migrator() {
+1 3 this.store = {};
+1 5 Migrator.prototype.list = function() {
+1 6 return this.store;
+1 7 };
+1 8 Migrator.prototype.register = function(name, fn) {
+1 9 if (!name) throw new TypeError(\'name is required\');
+1 10 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+1 11 if (options == null || typeof options === \'boolean\') {
+1 12 options = {ends: options};
+1 14 var self = this;
+1 15 return this.store[name] || this.store[name] || [];
+1 17 module.exports = Migrator;'
+
+2 2 describe(\'asset_link\', () => {
+2 4 const hexo = new Hexo(__dirname);
+2 5 const assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+2 6 const Post = hexo.model(\'Post\');
+2 7 const PostAsset = hexo.model(\'PostAsset\');
+2 8 let post;
+2 9 hexo.config.permalink = \':title/\';
+2 10 function assetLink(args) {
+2 11 return assetLinkTag.call(post, args.split(\' \'));
+2 13 before(() => hexo.init().then(() => Post.insert({
+2 14 source: \'foo.md\',
+2 15 slug: \'foo\'
+2 16 })).then(post_ => {
+2 17 post = post_;
+2 18 return Promise.all([
+2 19 PostAsset.insert({
+2 20 _id: \'bar\',
+2 21 slug: \'bar\',
+2 22 post: post._id
+2 23 }),
+2 25 _id:\'spaced asset\',
+2 26 slug:\'spaced asset\',
+2 28 })
+2 29 ]);
+2 30 }));
+2 31 it(\'default\', () => {
+2 32 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+2 33 });
+2 34 it(\'title\', () => {
+2 35 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+2 37 it(\'should escape tag in title by default\', () => {
+2 38 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+2 40 it(\'should not escape tag in title\', () => {
+2 41 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+2 44 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&#x2F;world&#x2F;">\');
+2 47 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&#x2F;">\');
+2 50 assetLink(\'bar "Hello" <world> true true, true, true, true, true, true, true, true, true, true, false"\').should.should.should.to.to.to.to.be.deep.equal(true);
+2 53 it(\'should.skip(\'
+
+3 1 const { htmlTag } = require(\'hexo-util\');
+3 2 const createLink = (options, ctx) => {
+3 3 const { base, format } = options;
+3 4 return i => ctx.url_for(i === 1? base : base + format.replace(\'%d\', i));
+3 6 const createPageTag = (options, ctx) => {
+3 7 const link = createLink(options, ctx);
+3 8 const { current, transform } = options;
+3 9 return i => {
+3 10 if (i === current) {
+3 11 return htmlTag(\'span', { class: \'page-number current\' }, transform? transform(i) : i);
+3 13 return htmlTag(\'a\', { class: \'page-number', href: link(i) }, transform? transform(i) : i);
+3 16 function paginatorHelper(options = {}) {
+3 17 options = Object.assign({
+3 18 base: this.page.base || \'\',
+3 19 current: this.page.current || 0,
+3 20 format: `${this.config.pagination_dir}/%d/`,
+3 21 total: this.page.total || 1,
+3 22 end_size: 1,
+3 23 mid_size: 2,
+3 24 space: \'&hellip;\',
+3 25 next_text: \'Next\',
+3 26 prev_next: true
+3 27 }, options);
+3 28 const {
+3 29 current,
+3 30 total,
+3 31 space,
+3 32 end_size: endSize,
+3 33 mid_size: midSize,
+3 34 prev_text: prevText,
+3 35 next_text: nextText,
+3 36 prev_next: prevNext
+3 37 } = options;
+3 38 if (!current) return \'\';
+3 39 const link = createLink(options, this);
+3 40 const pageLink = createPageTag(options, this);
+3 41 let result = \'\';
+3 42 if (prevNext && current > 1) {
+3 43 result += pageLink(i);
+3 45 result += currentPageTag;
+3 46 const leftEnd = current <= endSize? current - 1 : endSize;
+3 47 const rightEnd = total - current <= endSize? current + 1 : total - endSize + 1;
+3 48 const leftMid = current - midSize <= endSize? leftEnd + 1 : current - midSize;
+3 49 const rightMid = current + midSize + endSize > total? rightEnd - 1 : current + midSize;
+3 50 const spaceHtml = \'<span>\' + space + \'</span>\';
+3 51 for (let i = 1; i <= leftEnd; i++) {
+3 54 if (space && current - endSize - midSize > 1) {
+3 55 result += spaceHtml;
+3 57 if (leftMid > leftEnd) {
+3 58 for (let i = leftMid; i < current; i++) {
+3 62 if (rightMid < rightEnd) {
+3 63 for (let i = current; i <= rightMid; i++) {
+3 67 if (space && total - endSize - midSize > 1) {
+3 70 return htmlTag(\'a\', space, space, true, false, false, true, false);
+3 73 function paginatorHelper(options = createPageHelper() {
+3 74 return `<!--Helper() {
+3 75 if (options = options = options = Object.assign({
+3 76 base: \'page\',
+3 77 categories: this.config.permalink} = \'\',
+3 78 categories: this.page.exclude\',
+3 79 categories: this.site.paths} = \'\'s\'s\'s\'s\'s\'s\'s\'s\'s\'s\'s\'s},'
+
+4 1 var should = require(\'chai\').should();
+4 3 describe(\'tagcloud\', function(){
+4 4 var Hexo = require(\'../../../lib/hexo\');
+4 5 var hexo = new Hexo(__dirname);
+4 6 var Post = hexo.model(\'Post\');
+4 7 var Tag = hexo.model(\'Tag\');
+4 8 var ctx = {
+4 9 config: hexo.config
+4 11 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+4 12 var tagcloud = require(\'../../../lib/plugins/helper/tagcloud\').bind(ctx);
+4 13 before(function(){
+4 14 return Post.insert([
+4 15 {source: \'foo\', slug: \'foo\'},
+4 16 {source: \'bar\', slug: \'bar\'},
+4 17 {source: \'baz\', slug: \'baz\'},
+4 18 {source: \'boo\', slug: \'boo\'}
+4 19 ]).then(function(posts){
+4 20 return Promise.each([
+4 21 [\'bcd\'],
+4 22 [\'bcd\', \'cde\'],
+4 23 [\'bcd\', \'cde\', \'abc\'],
+4 24 [\'bcd\', \'cde\', \'abc\', \'def\']
+4 25 ], function(tags, i){
+4 26 return posts[i].setTags(tags);
+4 28 }).then(function(){
+4 29 hexo.locals.invalidate();
+4 30 ctx.site = hexo.locals.toObject();
+4 33 it(\'default\', function(){
+4 34 var result = tagcloud();
+4 35 result.should.eql([
+4 36 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\',
+4 37 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\',
+4 38 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\',
+4 39 \'<a href="/tags/def/" style="font-size: 10px;">def</a>\'
+4 40 ].join(\' \'));
+4 42 it(\'specified collection\', function(){
+4 43 var result = tagcloud(Tag.find({'
+
+5 1 function iframeTag(args) {
+5 2 const url = args[0];
+5 3 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+5 4 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+5 5 return `<iframe src="${url}" width="${width}" height="${height}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+5 7 module.exports = iframeTag;'
+
+6 1 var util = require(\'hexo-util\');
+6 2 var htmlTag = util.htmlTag;
+6 3 var rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+6 4 var rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+6 5 function imgTag(args, content){
+6 6 var classes = [];
+6 7 var meta = \'\';
+6 8 var width;
+6 9 var height;
+6 10 var title;
+6 11 var alt;
+6 12 var src;
+6 13 var item = \'\';
+6 14 for (var i = 0, len = args.length; i < len; i++){
+6 15 item = args[i];
+6 16 if (rUrl.test(item)){
+6 17 src = item;
+6 18 break;
+6 19 } else {
+6 20 if (item[0] === \'/\'){
+6 24 classes.push(item);
+6 27 args = args.slice(i + 1);
+6 28 if (args.length){
+6 29 if (!/\\D+/.test(args[0])){
+6 30 width = args.shift();
+6 31 if (args.length &&!/\\D+/.test(args[0])){
+6 32 height = args.shift();
+6 35 meta = args.join(\' \');
+6 37 if (meta && rMeta.test(meta)){
+6 38 var match = meta.match[1];
+6 39 title = match[2];
+6 40 alt = match[3];
+6 42 var attrs = {
+6 43 src: src,
+6 44 class: classes.join(\' \'),
+6 45 width: width,
+6 46 height: height,
+6 47 title: title,
+6 48 alt: alt
+6 50 return htmlTag(\'img\', attrs);
+6 52 module.exports = imgTag;'
+
+7 2 function vimeoTag(id) {
+7 3 const src = \'https://player.vimeo.com/video/\' + id;
+7 4 const iframeTag = htmlTag(\'iframe\', {
+7 5 src,"
+
+8 2 const { Readable } = require(\'stream\');
+8 3 const { join, extname } = require(\'path\');
+8 4 const crypto = require(\'crypto\');
+8 5 const { createReadStream, readdir, stat, unlink, writeFile } = require(\'hexo-fs\');
+8 6 const { spy, stub, match } = require(\'sinon\');
+8 7 describe(\'Router\', () => {
+8 8 const Router = require(\'./router\');
+8 9 const router = new Router();
+8 10 function checkStream(stream, expected) {
+8 11 return testUtil.stream.read(stream).then(data => {
+8 12 data.should.eql(expected);
+8 15 function checksum(stream) {
+8 16 return new Promise((resolve, reject) => {
+8 17 const hash = crypto.createHash(\'sha1\');
+8 18 stream.on(\'readable\', () => {
+8 19 let chunk;
+8 20 while ((chunk = stream.read())!== null) {
+8 21 hash.update(chunk);
+8 23 }).on(\'end\', () => {
+8 24 resolve(hash.digest(\'hex\'));
+8 25 }).on(\'error\', reject);
+8 28 it(\'format\', () => {
+8 29 router.format = spy();
+8 30 return router.format(format);
+8 32 it(\'format - string\', () => {
+8 33 router.format = String(JSON.stringify(obj));
+8 34 return router.format(\'foo\', \'bar\'));
+8 36 it(\'format - cache\', () => {
+8 37 router.format = JSON.stringify({
+8 38 foo: \'bar\',
+8 39 bar: \'baz\'
+8 41 return router.format(
+8 42 \'foo\', \'bar\', \'baz\'));
+8 44 it(\'format - view\', () => {
+8 45 router.format = join(hexo.theme_dir, \'test.html\');
+8 46 return router.format(join(hexo.theme_dir, \'test.html\'));
+8 48 it(\'format - path\', () => {
+8 56 it(\'format - null\', () => {
+8 60 it(\'format - slash\', () => {
+8 64 it(\'format - no format\', () => {
+8 66 return checkStream(router.format);
+8 68 it(\'format = feedFn
+8 69 it(\'rest\', () => {
+8 70 return checkStream()
+8 71 .on(\'end\', () => {
+8 72 return checkStream.on(\'end\', () => return checkStream.on(\'end\', listener.end\')
+8 73 .pipe(router.format)
+8 74 .pipe(router.end(router.end)
+8 75 .end
+8 77 .on(\'end
+8 78 .on(\'error\')
+8 79 .on(\'error
+8 80 .on(\'end\', listener.format)
+9 1 var url = require(\'url\');
+9 18 src = makeUrl(item);
+9 39 var match = meta.match(rMeta);
+9 40 title = match[1];
+9 41 alt = match[2];

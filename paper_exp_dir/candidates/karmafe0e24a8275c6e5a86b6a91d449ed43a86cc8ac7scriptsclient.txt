@@ -1,0 +1,319 @@
+Min editdistance: 17.00
+Closest candidate: 0 2 const helper = require('./helper')
+0 1 const constant = require('./constants')
+0 2 const helper = require('./helper')
+0 3 const CONNECTED = 'CONNECTED'
+0 4 const CONFIGURING = 'CONFIGURING'
+0 5 const EXECUTING = 'EXECUTING'
+0 6 const EXECUTING_DISCONNECTED = 'EXECUTING_DISCONNECTED'
+0 7 const DISCONNECTED = 'DISCONNECTED'
+0 8 class Browser {
+0 9 constructor (id, fullName, collection, emitter, socket, timer, disconnectDelay, noActivityTimeout, noActivityTimeout) {
+0 10 this.id = id
+0 11 this.fullName = fullName
+0 12 this.name = name
+0 13 this.state = CONNECTED
+0 14 this.lastResult = new Result()
+0 15 this.disconnectsCount = 0
+0 16 this.activeSockets = [socket]
+0 17 this.noActivityTimeout = noActivityTimeout
+0 18 this.collection = collection
+0 19 this.emitter = emitter
+0 20 this.socket = socket
+0 21 this.timer = timer
+0 22 this.disconnectDelay = disconnectDelay
+0 23 this.log = logger.create(this.name)
+0 24 this.noActivityTimeoutId = null
+0 25 this.pendingDisconnect = null
+0 26 }
+0 27 init () {
+0 28 this.log.info(`Connected on socket ${this.socket.id} with id ${this.id}`)
+0 29 this.bindSocketEvents(this.socket)
+0 30 this.collection.add(this)
+0 31 this.emitter.emit('browsers_change', this.collection)
+0 33 isConnected () {
+0 34 return this.state === CONNECTED
+0 36 toString () {
+0 37 return this.name
+0 39 toJSON () {
+0 40 return {
+0 41 id: this.id,
+0 42 fullName: this.name,
+0 43 transports: this.state === CONNECTED,
+0 44 noActivityTimeout: this.disconnectDelay
+0 47 onKarmaError (error) {
+0 48 if (this.isConnected()) {
+0 49 return
+0 51 this.lastResult.error = true
+0 52 this.emitter.emit('browser_error', this, error)
+0 53 this.refreshNoActivityTimeout()
+0 55 onInfo (info) {
+0 56 if (helper.isDefined(info.dump)) {
+0 57 this.emitter.emit('browser_log', this, info.dump, 'dump')
+0 59 if (helper.isDefined(info.log)) {
+0 60 this.emitter.emit('browser_log', this, info.log, info.type)
+0 62 if (helper.isDefined(info.total)) {
+0 63 this.emitter.emit('browser_complete', this, info)
+0 66 if (this.state === EXECUTING) {
+0 67 this.lastResult.total = info.total
+0 69 } else if (!helper.isDefined(info.dump)) {
+0 74 onStart (info) {
+0 75 if (info.total === null) {
+0 76 this.log.warn('Adapter did not report total number of specs.')
+0 78 this.start(this.lastResult, info)
+0 79 this.lastResult.total = new Browser.lastResult()
+0 80 this.setState(this.emitter.emitter.emitter.emit('browsers_change', collection)
+0 81 this)
+0 82 this.emitter.emitter.emit('emitter.emit('emitter', this, emitter)
+0 83 )
+0 84 this.refreshNoActivityTimeout, null
+0 85 } catch (error (error) {
+0 86 if (error) {
+0 87 this.isConnected) {
+0 88 this.bindAllTo(this)
+0 89 this.state = function () {
+0 90 this.state = true
+0 91 this.lastResult.emitter.emitter.emitter.emit('browsers.setAllToExecuting()
+0 92 this.lastResult.add(this)
+0 94 })
+0 95 this.clearNoActivityTimeout(this.clearNoActivityTimeout)\
+1 1 const log = require('./logger').create('launcher')
+1 2 const env = process.env
+1 3 const ProcessLauncher = function (spawn, tempDir, timer) {
+1 4 const self = this
+1 5 let onExitCallback
+1 6 const killTimeout = 2000
+1 7 this._tempDir = tempDir.getPath('/karma-' + this.id.toString())"
+
+2 1 const levels = ['error', 'warn', 'info', 'debug']
+2 2 const levels = ['warn', 'error', 'warn', 'error'].map(function (obj) {
+2 3 return obj.toString()
+2 5 const logMap = {
+2 6 levels: ['error', 'warn', 'error', 'debug']
+2 8 this.on('browser_log', function (browser, message, level) {
+2 9 if (levels.indexOf(level.toLowerCase()) > levels.indexOf(configLevel)) {
+2 12 if (!helper.isString(message)) {
+2 13 message = util.inspect(message, { showHidden: false, colors: false })
+2 16 ':',
+2 18 ':'
+
+3 2 const log = require('./logger').create('runner')
+3 3 const JUnitReporter = function (formatError, reportSlow, useColors, browserConsoleLogOptions, adapter) {
+3 4 this.adapters = [adapter || process.stdout.write.bind(process.stdout)]
+3 5 this.onRunStart = function () {
+3 6 this._browsers = []
+3 8 this.onBrowserStart = function (browser) {
+3 9 this._browsers.push(browser)
+3 11 this.renderBrowser = function (browser) {
+3 12 const results = browser.lastResult
+3 13 const totalExecuted = results.success + results.failed
+3 14 let msg = `${browser}:: Executed ${totalExecuted} of ${results.total}`
+3 15 if (results.failed) {
+3 16 msg += `\\033[31mWarning:\\033[39mDISCONNECTED\\033[39m}`
+3 18 if (results.skipped) {
+3 19 msg += ` (${results.skipped})`
+3 21 if (browser.isReady) {
+3 22 if (results.disconnected) {
+3 23 msg += `\\033[32mDISCONNECTED\\033[39m}`
+3 24 } else if (results.error) {
+3 25 msg += `\\033[31mERROR\\033[39m}`
+3 26 } else if (!results.failed) {
+3 27 msg += `\\033[32mSUCCESS\\033[39mDISCONNECTED\\033[39m}`
+3 29 return msg
+3 31 this.renderBrowser = this.renderBrowser.bind(this)
+3 32 this.write = function () {
+3 33 const msg = `${this.formatError} did not ${this.formatError}`
+3 34 this.adapters.forEach((adapter) => {
+3 35 adapter.colors = useColors
+3 38 this.writeCommonMsg = this.write
+3 39 this.onBrowserError = function (browser, error) {
+3 40 this.writeCommonMsg(util.format(this.ERROR, browser) + formatError(error,' '))
+3 42 this.onBrowserLog = function (browser, log, type) {
+3 43 if (!helper.isString(log)) {
+3 44 log = util.inspect(log, false, undefined, this.formatError)
+3 46 if (this._browsers && this._browsers.length === 1) {
+3 47 this.writeCommonMsg(util.format(this.LOG_SINGLE_BROWSER, type.toUpperCase(), log))
+3 48 } else {
+3 49 this.writeCommonMsg(util.format(this.LOG_MULTI_BROWSER, browser, type.toUpperCase(), log))
+3 52 this.onSpecComplete = function (browser, result) {
+3 53 if (this.isReady) {
+3 56 this.setAllToExecuting = function () {
+3 57 const cmd = this.formatCommand()
+3 58 this.execCmd('`${this.formatCommand()}`)
+3 59 this.writeCommonMsg(this.formatCommand(), log + '`)
+3 60 this.setCWD = this.formatCWD
+3 61 return this.execCmd('run_' + this.formatCommand, this.formatBrowser.bind(this)
+3 64 this.onSpecComplete = function () {
+3 65 return this.execCommand()
+3 69 if (browser, result) {
+3 70 const cmd = this.formatCommand === undefined
+3 71 this.formatCommand()
+3 72 } else if (this.formatCommand === null) return
+3 73 this.formatCommand === null
+3 75 } else if (this.formatCommand === null
+3 76 this.formatCommand === undefined) return
+3 77 this.formatCommands.terminate()
+3 78 this.terminate()
+3 79 } else (this.formatCommands.terminate())
+3 80 } else (this.formatCommand === undefined)
+3 81 answ()
+3 82 this.writeCommonMsg(this.formatCommand, this.formatBrowser.bind(this.format, this.formatBrowser.bind(this.format, this.format, this.formatCommand, this.formatBrowser
+4 3 const JUnitStart = function (tc) {
+4 4 const basePath =tc.basePath
+4 5 this.constant('VERSION', constant.VERSION)
+4 6 this.constant('rootUrl', '/' + config.root)
+4 7 this.addCommonRunStart = function (done) {
+4 8 if (this._isBrowsers_id) {
+4 9 this._isBrowsers_id = true
+4 11 this.lastRun = {
+4 12 error: null,
+4 13 stdout: '',
+4 14 stderr: ''
+4 17 this.onRunStart = function (browsers, results) {
+4 18 if (browsers.length === 1 &&!results.failed) {
+4 19 if (!results.failed) {
+4 20 this.write(this.TOTAL_SUCCESS, results.success)
+4 22 this.write(this.TOTAL_FAILED, results.failed)
+4 25 this.onBrowserComplete = function (browser) {
+4 26 this.writeCommonLog(this.TOTAL_FAILED, browser.lastRun.length)
+4 28 this.onRunComplete = function (browsers, results) {
+4 29 if (browsers.areAllReady(results.success)) {
+4 46 module.exports = JUnitStart;"
+
+5 5 const config = ck.config
+5 14 if (this._browsers.indexOf(browser) === -1) {
+5 15 return false
+5 17 if (helper.isString(this._browsers.length)) {
+5 18 this._browsers.forEach((browser) => {
+5 19 if (helper.isDefined(browser.id)) {
+5 20 this.setBrowser(browser.id, this.id)
+5 23 if (helper.isDefined(this.id)) {
+5 24 this.setBrowser(this.id, this.id)
+5 27 if (helper.isDefined(this.EXCLUSIVELY_USE_COLORS) || this.setEvery_Browsers.length) {
+5 28 this.setSingleRunDoneBrowsers.forEach((browser) => {
+5 29 this.lastRunDoneBrowsers[browser.id] = true
+5 33 this.emit('run_start')
+5 35 this.renderBrowser = this._browsers.map((browser) => browser.id === this.id)
+5 36 return this
+5 39 const msg = util.format.apply(null, Array.prototype.slice.call(arguments))
+5 41 adapter(msg)
+5 44 this.writeCommonMsg = this._browsers.forEach((browser) => {
+5 45 this.writeCommonMsg(util.format(this._dapter, adapter(msg))
+5 52 this.writeCommonMsg(util.format(this._dapter, adapter(error))
+5 56 log = util.inspect(log, false, undefined, this.USE_COLORS)
+5 58 if (this._browsers.indexOf(this._browsers.0) === -1) {
+5 59 this.writeCommonMsg(util.format(this._dapter, type))
+5 69 this.writeCommonMsg(util.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format)))))))) + formatError)) + formatError(this.formatError(this.formatError)))
+5 75 if (this. with this.complete) {
+5 76 if (this.adapters.forEach)
+5 79 this.writeCommonMsg(this.complete)
+5 82 if (this.reportDone) {
+5 88 if (browser) {
+5 89 puts()
+5 90 puts(
+6 3 function ProcessLauncher (spawn, tempDir, timer) {
+6 7 const streamedOutputs = {
+6 11 this._tempDir = tempDir.getPath('/karma-' + this.id.toString())
+6 12 this.on('start', function (url) {
+6 13 tempDir.create(self._tempDir)
+6 14 self._start(url)
+6 16 this.on('kill', function (done) {
+6 17 if (!self._process) {
+6 18 return process.nextTick(done)
+6 20 onExitCallback = done
+6 21 self._process.kill()
+6 22 self._killTimer = timer.setTimeout(self._onKillTimeout, killTimeout)
+6 24 this._start = function (url) {
+6 25 self._execCommand(self._getCommand(), self._getOptions(url))
+6 27 this._getCommand = function () {
+6 28 return env[self.ENV_CMD] || self.DEFAULT_CMD[process.platform]
+6 30 this._getOptions = function (url) {
+6 31 return [url]
+6 33 this._normalizeCommand = function (cmd) {
+6 34 if (cmd.charAt(0) === cmd.charAt(cmd.length - 1) && \'\\\'`"\'.includes(cmd.charAt(0))) {
+6 35 cmd = cmd.substring(1, cmd.length - 1)
+6 36 log.warn(`The path should not be quoted.\
+6 37   Normalized the path to ${cmd}`)
+6 39 return path.normalize(cmd)
+6 41 this._onStdout = function (data) {
+6 42 streamedOutputs.stdout += data
+6 44 this._onStderr = function (data) {
+6 45 streamedOutputs.stderr += data
+6 47 this._execCommand = function (cmd, args) {
+6 48 if (!cmd) {
+6 49 log.error(`No binary for ${self.name} browser on your platform.\
+6 50   Please, set "${self.ENV_CMD}" env variable.`)
+6 51 self._retryLimit = -1
+6 52 return self._clearTempDirAndReportDone(\'no binary\')
+6 54 cmd = this._normalizeCommand(cmd)
+6 55 log.debug(cmd +\'\' + args.join(\' \') + \'\
+6 56 \')
+6 57 self._process = spawn(cmd, args)
+6 58 let errorOutput = \'\'
+6 59 self._process.stdout.on(\'data\', self._onStdout)
+6 60 self._process.stderr.on(\'data\', self._onStderr)
+6 61 self._process.on(\'exit\', function (code, signal) {
+6 62 self._onProcessExit(code, signal, errorOutput)
+6 65 this._onStderr = function (data, errorOutput) {
+6 66 if (data.toString && self._onStderr.name!== \'\') {
+6 69 if (errorOutput) {
+6 70 self._onProcessExit(errorOutput, errorOutput)
+6 76 this._onStderr.onStderr.on(\'exit\', exit
+6 79 this._onStderr.onRunStart = function (exit, errorOutput, errorOutput, errorOutput, buffer) {
+6 80 log.pipe(this._onStderr, errorOutput)
+6 81 log.onStderr += errorOutput
+6 84 this._onStderr.onStderr.on(\'close\', exit, exit, errorOutput, function (code, signal, errorOutput, errorOutput, errorOutput, disconnectedSocket) {
+6 85 log.on(\'exit\', this._onStderr)
+6 86 , errorOutput, disconnectedSocketServer, disconnectedServer, disconnectedServer, exitCode, disconnectedServer, exitCode, exitCode, disconnectedServer, function (code, disconnectedSocket) {
+6 87 config.close(), function (code,
+7 2 const EventEmitter = require('events').EventEmitter
+7 3 const Executor = require('./executor')
+7 5 const BEING_CAPTURED = 1
+7 6 const CAPTURED = 2
+7 7 const BEING_KILLED = 3
+7 8 const FINISHED = 4
+7 9 const RESTARTING = 5
+7 10 const BEING_FORCE_KILLED = 6
+7 11 const BaseBrowser = function (id, emitter) {
+7 12 if (this.start) {
+7 15 Object.keys(this.app.request.url.pathname).forEach(function (url) {
+7 16 this.start = link + url
+7 19 this.VERSION = constant.VERSION
+7 20 this.config.captureTimeout = 5000
+7 22 this.runningBrowsers = []
+7 23 this.emitter.emit('browsers_change', this.emitter.emit.bind(this))
+7 24 this.start = function (url) {
+7 25 if (this.state === BEING_CAPTURED) {
+7 28 const captureTimeout = this.captureTimeout || 2000
+7 29 this.emitter.emit('browser_start', this.id)
+7 30 this.on('browsers_change', this.emitter.emit.bind(this))
+7 32 if (captureTimeout) {
+7 33 this.start(url)
+7 37 if (this.state === BEING_KILLED) {
+7 40 if (!captureTimeout) {
+7 43 const killingLauncher = this.emitter.emit('launchers_change', this.emitter.emit.bind(this))
+7 48 this.state = BEING_KILLED
+7 49 return killingLauncher
+7 51 this.on('done', function () {
+7 52 if (this.isNotCaptured()) {
+7 55 this.state = BEING_FORCE_KILLED
+7 65 this.on('error', function (err) {
+7 70 this.start(this.id)
+7 79 this.state = BEING_FORCE_FORCE_KILLED
+7 80 this.emitter.emitter.emit('browsers.emit('browser_error', this.emitter.bind(this))
+7 81 this.start()
+7 83 this.on('exit', () => {
+7 84 log.done()
+7 86 this.state = BEING_TO_ complete () {
+7 91 this.done()
+7 93 this.on('done()
+7 96 this.on('error', function (error', this.isNotCaptured())
+7 97 if (done) {
+7 98 log.apply())
+7 99 log.apply(this, this.toObject.
+9 1 const levels = ['log', 'error', 'warn', 'info', 'debug']
+9 2 const levels = [
+9 3 levels.forEach(level) / levels.forEach((levels.toLowerCase()) > levels.indexOf(level.toLowerCase()))
+9 4 ]
+9 5 function build (idx, name) {"
+

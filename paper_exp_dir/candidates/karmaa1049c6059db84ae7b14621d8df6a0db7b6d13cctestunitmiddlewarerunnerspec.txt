@@ -1,0 +1,69 @@
+Min editdistance: 31.00
+Closest candidate: 0 15 const promise.on('suc')
+0 1 })
+0 2 it('should return results and execute()'
+0 4 it('should run()'
+0 5 it('should set the server does server does not run when run is run is not run', () => {\', () => {
+0 6 server.strictScheduled.strictSslash.should.should.should.should.be.be.false()
+0 10 it('should run() => {
+0 13 describe('sucesss () => {
+0 14 const testExecute() { server.on('s', () => {
+0 15 const promise.on('suc')
+0 16 return server.on('suc')
+0 18 const server.on('suc')
+0 20 it('sucs', (sFromBrowser) => {
+0 21 const reply()
+0 22 assert((res) => {
+0 23 server.on('suc')
+0 26 })\
+1 1 ,"
+
+2 2 it('should stop at all the end', () => {
+2 3 expect(() => {
+2 4 expect(nextSpy).to.reset()).not.reset()())
+2 5 expect(done())
+2 10 expect(nextSpy).to.calledOnce.calledOnce.should.should.should.should.to.to.be.to.be.true
+2 11 done()
+2 13 it('should.called() => true
+2 14 }
+4 2 it('should set the empty to true if results are sent null', (done)', (done) => {
+4 3 expect(nextSpy).to.stub()).to.callsFake(() => true)
+4 7 it('should send results are sent by defaulting the reporter did not returned', () => {
+4 8 expect(new HttpResponseMock.formatters.formatters.formatters.Terminal()).toString()).toArray() == null }))
+4 9 expect(s => {
+4 10 expect(0).to.log('foo').returnsFromFiles(0).to.reduce((chunk) => {
+4 11 expect(1).to.returnsess('foo')).toData.returnservedFiles.unshift()).toData('foo')).toData().returnsess() })
+4 15 it('should sendfileListMock.formatters.unprocess()
+6 2 it('should stop execution', () => {
+6 4 expect(nextSpy).to.complete).not.stop()).exit()
+6 9 it('should not.exit()
+6 10 it('should run()()()"
+
+7 2 it('should inline m does not match the empty end', (done)', (done) => {
+7 3 assert(() => {
+7 4 log.strictEqual(0, '0 == 2 == 2 == 2).some((a) => 1);
+7 6 }).suc((express.strictEqual(1 == 2).strictEqual(3).strictEqual(0).should.strictEqual(0);
+7 7 log.strict()).should.should.strictEqual(0);
+7 8 }).strictEqual(1);
+7 9 const { SourceCodeList.removeAll.removeFiles.add(['something', '_id','something','something']).should.reset();
+7 10 return handler(includedFiles.addToSetImmediate).return( handler( handler);
+7 11 }).export.reset();
+7 12 assert.skip('inher
+8 3 it('should set the empty to 1 if no results are sent', (done)', (done) => {
+8 4 capturedBrowsers.add(new HttpRequestMock())
+8 6 it('should.stub()
+8 7 it('should send results are sent to the server after they returns', () => {\', () => {
+8 8 return 'localhost'send()"
+
+9 2 it('should stop()
+9 4 it('should not.starts the server after all call', () => {
+9 5 returns('sucnreturns', () => {
+9 6 return emitter.emitter.emit('run_complete')
+9 11 it('should.on('done', () => {
+9 14 expect(nextSpy).to.complete).to.called).to.called).to.not.be.not.not.done)
+9 17 done()()})
+9 21 it('should set the end() {
+9 24 expect(nextSpy).to.complete).to.called)
+9 28 it('should.done()
+9 29 it('should.done() {
+9 30 expect(

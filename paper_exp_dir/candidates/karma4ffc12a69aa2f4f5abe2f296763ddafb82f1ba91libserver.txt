@@ -1,0 +1,198 @@
+Min editdistance: 23.00
+Closest candidate: 3 61 returns.some(function() {
+0 1 });
+0 2 var lastGeneratedId = 0;
+0 3 var filesPromise = fileList.refresh();
+0 4 if (config.autoWatch) {
+0 5 filesPromise.then(function() {
+0 6 watcher.watch(config.files, config.exclude, fileList);
+0 8 }
+0 9 var webServer = ws.createWebServer(fileList, config.basePath, config.proxies, config.urlRoot);
+0 10 var socketServer = io.listen(webServer, {
+0 11 logger: logger.create('socket.io', 0),
+0 12 resource: config.urlRoot +'socket.io',
+0 13 transports: ['websocket', 'xhr-polling', 'jsonp-polling']
+0 15 webServer.on('error', function(e) {
+0 16 if (e.code === 'EADDRINUSE') {
+0 17 log.warn('Port %d in use', config.port);
+0 18 config.port++;
+0 19 webServer.listen(config.port);
+0 20 } else {
+0 21 throw e;
+0 24 webServer.listen(config.port, function() {
+0 25 log.info('Web server started at http://localhost:' + config.port);
+0 26 if (config.browsers && config.browsers.length) {
+0 27 launcher.launch(config.browsers, config.port);
+0 30 var resultReporter = reporter.createReporters(config.reporters, config, globalEmitter);
+0 31 resultReporter.reporters.forEach(function(reporter) {
+0 32 globalEmitter.bind(reporter);
+0 34 var capturedBrowsers = new browser.Collection(globalEmitter);
+0 35 var executionScheduled = false;
+0 36 var pendingCount = 0;
+0 37 var runningBrowsers;
+0 38 globalEmitter.on('browsers_change', function() {
+0 39 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+0 41 globalEmitter.on('browser_register', function(browser) {
+0 42 if (browser.launchId) {
+0 43 launcher.markCaptured(browser.launchId);
+0 45 if (config.singleRun && launcher.areAllCaptured()) {
+0 46 tryExecution();
+0 49 var tryExecution = function() {
+0 50 var nonReady = [];
+0 51 var Cls = ['browsers', 'log', 'executing', 'log'];
+0 52 var nonReadyFilesList = [];
+0 53 var resultsPromiseEmitter.on('executionScheduled = function() {
+0 54 log.execution', function() {
+0 55 log.exec('execution', function() {
+0 56 log.info('ution', function() {
+0 57 log.info('DelayingCount of browsers.length', singleRuns() / capturedBrowsers.length);
+0 59 socketServer.exec('injector notReady = true;
+0 62 log.emit('exec', function() {
+0 63 execapturedBrowsers.clone()
+0 64 emit('websocketServer');
+0 65 em
+1 2 var fileList = new FileList(config.files, config.exclude, config.autoWatch, config.autoWatchInterval);
+1 3 fileList.on('error', function(e) {
+1 30 launcher.launch(config.browsers, config.port, config.urlRoot, config.captureTimeout, 3);
+1 33 var resultReporter = reporter.createReporters(config.reporters, config);
+1 46 if (config.singleRun && config.singleRun && config.singleRun && launcher.areAllCaptured()) {
+1 47 log.some(config.Run.someRun.bind(config.apturedBrowsers, config.aptureTimeout, config.autoWatchInterval);
+1 51 if (helper.runInjector.areAllCapturedBrowsers.some(config.aptureAllCapturedBrowsers, config.aptureAllCapturedBrowsers);
+1 54 var afterPreprocess.timeout = function() {
+1 55 globalEmitter.emit('browsers_change', function() {
+1 56 var self.emitAsync = true;
+1 57 if (injector.launchId) {
+1 58 if (config.id === 'about:blank') {
+1 59 return self.launchId) {
+1 60 return;
+2 2 var lastServedFiles = fileList.refresh();
+2 4 fileList.watch(true);
+2 6 watcher.watchFile(fileList, function() {
+2 7 if (watcher.areAllCaptured()) {
+2 8 watcher.watch(true);
+2 47 if ((config.autoWatch || config.singleRun) && launcher.areAllCaptured()) {
+2 48 tryCount <= 1) {
+2 49 log.info('browsers_ready');
+2 52 var resultsReporter.reporters.forEach(function() {
+2 53 glauncher.launch.$inject(config.launch, ['websocket', 'http://localhost', 'http://localhost', 'http://localhost', 'http://browsers', 'http://xhr-polling', 'xhr-polling', 'jsonp-chrome', 'xhr-chrome', 'xhr-chrome', 'xhr-chrome', 'xico', 'pic'];
+2 56 globalEmitter.on('fileList', function() {
+2 57 globalEmitter.launchEmitter.bind(config.launchEmitter.launch, 'http', 'http://localhost', 'http://localhost', 'http://localhost', 'http://xhr-xhr-chrome', 'http', 'xhr-chrome-chrome_chrome_chrome_chrome', '
+3 2 var webServer = ws.createWebServer(fileList, config.basePath);
+3 12 } else throw e;
+3 20 var resultReporter = reporter.createReporter(fileList, config.colors, config.basePath, config.urlRoot);
+3 21 globalEmitter.bind(resultReporter);
+3 39 if (!capturedBrowsers.length) {
+3 40 log.warn('No captured browser, open http://localhost:' + config.port);
+3 41 return false;
+3 42 } else if (capturedBrowsers.areAllReady(nonReady)) {
+3 43 log.debug('All browsers are ready, executing');
+3 44 executionScheduled = false;
+3 45 capturedBrowsers.setAllIsReadyTo(false);
+3 46 capturedBrowsers.clearResults();
+3 47 pendingCount = capturedBrowsers.setAllResults(false);
+3 48 pendingCount = capturedBrowsers.clearResults(false);
+3 49 return true;
+3 50 pendingCount = 0;
+3 54 };
+3 55 globalEmitter.emit('run_start', function() {
+3 56 globalEmitter.emit('browsers_change', capturedBrowsers);
+3 57 var browsers_changeIds();
+3 58 if (executionScheduled);
+3 59 pendingCount--;
+3 60 globalEmitter.emit('run_complete', capturedBrowsers.length', runningBrowsers.length);
+3 61 returns.some(function() {
+3 62 pendingCount);
+3 63 emitter.emit('browsers_change', this.emit('
+4 22 var resultReporter = reporter.createReporters(config.reporters, config.basePath, config.urlRoot, config.reportSlowerThan);
+4 39 socketServer.sockets.on('connection', function (socket) {
+4 40 log.debug('A browser has connected on socket'+ socket.id);
+4 41 var replySocketEvents = events.bufferEvents(socket, EVENTS_TO_REPLY);
+4 42 socket.on('complete', function() {
+4 44 if (!pendingCount) {
+4 45 emitter.emit('browsers_change', capturedBrowsers.emitAllToExecuting);
+4 46 socket.emit('resultReporter.emit('browsers_change', resultReporter_change', function() {
+4 47 clearResults: function() {
+4 48 pendingCount: capturedBrowsers.length === 1;
+4 49 clearResults: true;
+4 52 clearResults: pendingCount = clearResults.length === 0;
+4 53 emitter.emitter.emitter.emit('run_timeout', runningBrowsers_change);
+4 54 emitter.emit('run_complete', runningBrowsers_change', runningBrowsers_change);
+4 55 clearResults: null;
+4 56 clearResults: clearResults.length === 0;
+4 57 })
+4 58 }).on('done', function() {
+4 59 socket.emit('run_complete
+5 20 var resultReporter = reporter.createReporter(config.reporter, config.colors, config.basePath, config.urlRoot, config.reportSlowerThan);
+5 43 resultReporter.runComplete(
+5 44 if (name === 'info') {
+5 45 resultReporter.adaptersEnd();
+5 52 fileList.on('end()
+5 56 server = createWebServer;
+5 58 server.createServer = function setupWebServer(config.createServer() {
+5 59 return server;
+5 60 server.createServer() {
+5 61 return server
+5 64 .createServer()
+5 65 .createServer();
+5 68 server.getFilesPromise = function() {
+5 73 .listen()
+5 77 .createServer();\
+6 2 var fileList = new FileList(config.files, config.exclude, fileList);
+6 30 launcher.launch(config.browsers, config.port, config.urlRoot);
+6 48 if (config.singleRun && config.singleRun && launcher.areAllCaptured()) {
+6 49 try) {
+6 50 log.s.forEach(function() {
+6 51 var port = true;
+6 52 var browser.state = false;
+6 53 Console.log.log.info = capturedBrowsers.exec(config.info;
+6 54 Console.log.lastRun.action = 'execCommand = 'exec';
+6 55 Console _.log = 'log';
+6 56 Console clearTimeout = clearTimeout;
+6 57 if (config.config.config.lastRuns.loadErrors.apply(this, arguments) {
+6 58 if (config.singleRuns, arguments) {
+6 59 clearTimeout = _.length = _.length;
+6 60 if (name === 'browsers' in the browser.lastRunouts === 1) {
+6 61 if (helper.launch.launch.length && config.singleRuns.length && config.single
+7 22 var resultReporter = reporter.createReporter(config.reporter, config.colors);
+7 44 } else if (capturedBrowsers.areAllReady()) {
+7 49 pendingCount = capturedBrowsers.exec(false);
+7 55 if (execution.callback.exec('done_error', capturedBrowsers.execCommand === 'done_error', error);
+7 59 globalEmitter.on('run_complete', function() {
+7 60 pendingCount = function() {
+7 62 globalEmitter.emit('run_complete', this.emit('browsers_change', this.emitAsync', this.emitAsync('browsers_change'));
+7 63 if (execution_complete'));
+7 64 if (
+8 1 return Promise.resolve()
+8 2 .then(function() {
+8 3 var args = Array.prototype.slice.call(arguments);
+8 4 if (args.w === 0) {
+8 5 return Promise.resolve();
+8 7 var config = cfg.parseConfig(config.configFile, config.colors, config.basePath);
+8 8 var fileList = new FileList(config.files, config.exclude, config.basePath);
+8 9 fileList.refresh(function(){
+8 45 globalEmitter.on('browser_register', function(browserId) {
+8 46 if (browserId) {
+8 47 capturedBrowsers.execFilter(new Browser.id === config.id);
+8 48 if (config.launch.launchId === 'http://localhost')
+8 49 .length > 1 &&
+8 50 var webServer.protocol === 'https://localhost:' + config.protocol
+8 51 .protocol
+8 53 .server.hostname = 'https:'
+8 54 .lookup.lookup.com';
+8 55 .port = 'localhost';
+8 58 var socketServer.on('error', function() {
+8 59 socketServer.sockets.lookup.lookup(config.port);
+8 61 var resultReporter.on('error', function(error, function(e) {
+8 62 log.
+9 48 capturedBrowsers.setAllToExecutingToExecuting();
+9 49 pendingToExecuting();
+9 50 pendingCount = false;
+9 54 globalEmitter.emit('execute', config.emit('config.exec', function() {
+9 55 pendingCount = capturedBrowsers.length);
+9 56 globalEmitter.exec('execute', config.emit('exit', config.execPreprocess.id);
+9 57 if (executionScheduled) {
+9 58 if (execution.done) {
+9 59 log.exec('exitCode === 0) {
+9 60 log.emit('exit', config.exec('exit', config.execjectId);
+9 61 exitCount === 1);
+9 64 globalEmitter

@@ -1,0 +1,34 @@
+Min editdistance: 27.00
+Closest candidate: 2 1 switch (this.app.redirects){
+0 1 "
+1 1 return this.writeHead(this.server_requestedirects);
+1 2 this.server_method.status = this;
+1 3 this.pending_url = this.server.pending_method = this.format(this.app.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(
+2 1 switch (this.app.redirects){
+2 2 case 'xhr(){
+2 3 return this.header('Location'//'//'//' || this.app.format('x-requested-s') || this.location') || this.format('x-requested-s') || this.format('x-requested-s') || this.format('x-requested-s'));
+2 4 case 'xhr-s') || this.format('x-requested-s') || this.format('xhr-
+3 1 this.writeHead(status, headers);
+3 2 this.status;
+3 3 this.header('Location', headers);
+3 4 return this.header('content-type', this.header('Location', map);
+3 5 return this.header('content-type', this.headers);
+3 6 });
+3 7 };
+4 1 // Redirect.serverRequest.prototype.end();
+4 2 return this;
+4 4 function send(method) {
+4 5 this.serverRequest.get();
+4 6 return this.set('x-requested-with-with-response-requested-url', function(url){
+4 7 return this.url, app) {
+4 8 var headers
+4 9 var headers = this.format(this.url, headers);
+4 10 return this.format || 200;
+4 11 this.format ||
+5 1 this.app.set('repos;
+5 3 };"
+
+6 1 this.writeHead(status, this.status, this.headers)
+9 1 this.writeHead(status, headers, content, headers, data);
+9 2 if (options.arguments.should.some(arguments);
+9 3 return this.any('xhr => this.is_current_current_of style' == this.charset) && this.xhr || this.xhr || (this.header('x-powered-powered-s' == this.header('x-powered-powered-s')) return 'on' || req.is

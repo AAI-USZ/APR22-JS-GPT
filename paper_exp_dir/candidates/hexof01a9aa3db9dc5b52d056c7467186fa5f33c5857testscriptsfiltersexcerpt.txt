@@ -1,0 +1,253 @@
+Min editdistance: 16.00
+Closest candidate: 3 1 it(\'default\', function() {
+0 1 it(\'excerpt / more - (more / more){"
+
+1 1 it(\'default\', function(){
+1 2 var result = excerpt(content);
+1 3 result.should.eql([
+1 4 \'<a id="more"></a>\',
+1 7 \'<a id="more"></a>\'
+1 8 ].join(\'\
+1 9 \') + \'\
+1 10 \');
+1 11 });
+1 12 it(\'class (string)\', function(){
+1 15 \'<a class="video-container"><iframe src="http://player.vimeo.com/video/\' +video.id + \'" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></a>\',
+1 16 \'<a class="video-container"><iframe src="http://player.vimeo.com/video/\' +video.id + \'" width="500" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></a>\',
+1 17 \'<a class="video-container"><iframe src="http://player.vimeo.com/video/\' +video.id + \'" width="500" height="315" webkitAllowFullScreen mozallowfullscreen allowFullScreen></a>\',
+1 18 \'<a class="video-container"><iframe src="http://player.vimeo.com/video/\' +video.id + \'" width="500" height="315" webkitallowFullscreen mozallowfullscreen allowFullScreen></a>\',
+1 20 \'<a class="video-container"><iframe src="http://player.vimeo.com/video/\' +video.id + \'" width="500" height="315" webkitallowFullscreen mozallowfullscreen allowFullscreen></a>\',
+1 21 \'</a>\',
+1 22 \'<h1>My Cool Pets</h1>\',
+1 23 \'<h2><em>TJ</em>\',
+1 24 \'<h3</h3>\',
+1 25 \'<h1>Jane</h1>\',
+1 26 \'<h2>Bandit</h2>\',
+1 27 \'</ul>\',
+1 28 \'</li>\',
+1 29 \'<li>TJ</li>\',
+1 30 \'<div class="title">My Cool Pets</div>\',
+1 31 \'<div class="director">Tim Burton</div>\',\',
+1 33 \'</li>\'\',
+1 35 ].join(\'\',
+1 36 ].join(\'\');
+1 38 function pluralizeConfig(config.title, pluralize(key, stringify(key, val) {
+1 39 return stringify(key, val);
+1 40 }'
+
+2 1 it(\'default\', () => {
+2 2 var result = excerpt([
+2 3 \'123456 **bold** and *italic*\',
+2 5 \'<a href="more"></a>\',
+2 6 \'<a rel="external noopener" href="more"></a>\',
+2 7 \'<a href="more"></a>\'
+2 10 \'123456 <strong>bold</strong> and <em>italic</em></a>\',
+2 11 \'<a>bar</em>\',
+2 15 ].join(\'\'));
+2 17 it(\'title - options\', () => {
+2 20 \'<a href="http://zespia.tw">zespia.tw/</a>\',
+2 21 \'<a href="http://zespia.tw/">zespia.tw/</a>\',
+2 23 \'<a rel="external noopener" href="http://zespia.tw/">zespia.tw/</a>\',
+2 25 \'<a rel="external noopenner" href="http://zespia.tw/">zespia.tw/</a>\',
+2 30 \'<a href="http://zespia.tw/">zespia.tw/</a>\'
+2 34 \'<a>bar</strong>\',
+2 38 });'
+
+3 1 it(\'default\', function() {
+3 2 var content = [
+3 3 \'foo\',
+3 4 \'<!-- more -->67890\'
+3 7 var data = {
+3 8 content: content
+3 9 };
+3 10 excerpt(data);
+3 11 data.content.should.eql(content);
+3 12 data.excerpt.should.eql(\'123\');
+3 13 data.more.should.eql(content);
+3 15 it(\'title - page\', function() {
+3 17 \'foo Hello world\',
+3 18 \'---\'
+3 25 data.content.should.eql([
+3 26 \'foo Hello World\',
+3 29 \'));
+3 30 data.excerpt.should.eql([
+3 31 \'foo Hello World\'
+3 36 it(\'external (boolean)\', function() {
+3 48 \'<span id="more"></span>67890\',
+3 49 \'bar\',
+3 54 \'foo\'
+3 59 it(\'external (object)\', function() {
+3 66 content: data
+3 71 \'<!-- more -->67890\',
+3 82 it(\'external (p) - post\', function() {
+3 85 \'<!-- more -->67890\'\',
+3 86 ].join(\'
+
+4 1 it(\'excerpt / more - virtual', function() {
+4 2 return post.create({
+4 3 title: \'Hello World\',
+4 4 url: \'http://hexo.io/\'
+4 15 it(\'excerpt / more - virtual (with more tag)\', function() {
+4 17 title: \'Hello World\'
+4 18 }, function() {
+4 21 }, function(post) {
+4 22 return post.setTags([\'optimize\', \'web\']);
+4 25 it(\'excerpt / more - virtual (no slug)\', function() {
+4 29 return post.setTags([\'bogus\', \'web\']);
+5 7 \'baz\'
+5 10 return data.content.should.eql(content);
+5 12 it(\'excerpt / more - virtual -title', function() {
+5 67 it(\'excerpt / more - virtual -title - with more tag\', function() {
+5 72 \'<a href="more"></a>\',\',
+5 75 var result = {
+5 79 return result.should.should.content.excerpt = content;
+5 80 }
+6 2 var result = [
+6 3 \'foo: 1',
+6 4 \'bar:',
+6 5 \'<!-- more -->\',
+6 6 \'baz: 3'
+6 10 \'foo: 1\',
+6 11 \'bar: 2\',
+6 17 it(\'title - page\', () => {
+6 22 \'baz: 3\',
+6 23 \'<!--more -->\',
+6 24 \'baz: 4\',
+6 26 \'}\'
+6 38 \'baz: 5\',
+6 40 \'baz: 6\',
+6 42 \'baz: 7\',
+6 44 \'baz: 8\',
+6 46 \'baz: 9\',
+6 48 \'baz: 10\',
+6 50 \'baz: 23\',
+6 57 \'<!--more -->'
+6 60 return result;
+6 64 \'title: "Hello world"\',
+6 65 \'type: "application/octet-stream"\',
+6 66 \'\',
+6 67 \'<title>My world</title>\',
+6 68 \'type="application/json"\',
+6 70 \'<type>X-Foo</type>\',
+6 71 \'<url>http://hexo.io/\',
+6 73 \'<p>This is a code-block</p>\',
+6 75 \'<p>This is pretty-url</p>\',\',
+6 76 \'
+6 77 \'<suite>\'\',\',
+6 78 \'<li>\',
+6 80 \'<p>\',\',
+6 81 \'<s>\',\',
+6 83 \'<div class="title>\',\',
+6 84 \'<title>\',\',
+6 85 \'meta</li>\',
+6 91 ].join(\'\', \');
+6 92 const result = [];
+6 93 const ctx.extend = {
+6 94 page: \'\',
+6 95 config: \'page\',
+6 96 lang: \'en\',
+6 97 caption: \'\'span:ent\'\',
+6 99 page: \'</li>\',
+6 101 const code: function() {\
+7 1 it(\'a function(){
+7 2 return a.find(function(err, result){
+7 3 if (err) return err;
+7 5 }).then(function(content){
+7 6 result.should.eql(content);
+7 8 data.excerpt.should.eql(content);
+7 12 it(\'an array of arguments\', function(){
+7 13 return a.all([
+7 14 function(a, b, c){
+7 16 a.find(function(i){
+7 17 return i == 0;
+7 18 },
+7 19 function(i){
+7 20 return -1;
+7 22 ]).join(\'\
+7 25 content.should.eql([
+8 1 it(\'All <!-- more -->\', function() {
+8 9 ];
+8 26 return data;
+8 28 it(\'_generate() - layout', function() {
+8 29 return function(locals) {
+8 30 var posts = locals.posts.sort(\'date\', -1);
+8 31 var length = posts.length;
+8 32 return posts.map(function(post, i){
+8 33 var layout = post.layout;
+8 34 var path = post.path;
+8 35 if (!layout || layout === \'false\'){
+8 36 return {
+8 37 path: path,
+8 38 data: post.content
+8 40 } else {
+8 41 layout = false;
+8 44 \'<a layout="post.haml" href="\' + locals.posts.sort(format) + \'">\',
+8 45 \'<a layout="page.haml" href="\' + locals.pages.sort(format) + \'">\',
+8 46 \'<a layout="photo.png" href="\' + locals.image.png">\',
+8 48 \'<a layout="title.md" href="\' + locals.title + \'"">\',
+8 49 \'<a layout="draft.md" href="\' + locals.drafts.sort(format) + \'">\',
+8 51 \'<a layout="post.haml" href="\' + locals.post_asset_folder + \'"">\',
+8 52 \'<a layout="title.md" rel="prev">\',
+8 53 \'<a href="\' + locals.title + \'" class="title.md">\',
+8 56 \'</ol>\',
+8 61 it(\'_generate() - layout\', function() {
+8 62 return function() {
+8 63 var posts = locals = _();
+8 64 content = [
+8 66 \'<!--',\',
+8 67 \'<!--',
+8 69 \'<!--\'<!--\'<!--\'\',\',
+8 70 \'<!--\'123456</',\',
+8 71 \'<!--\',
+8 72 \'<!--\',\',
+8 73 \'<!= _content>\'```\'\',
+8 74 ].forEachIn space>\'
+8 75 ].forEach(function() {
+8 76 return post.layout.apply(this, this.toObject())
+8 77 ].apply(this, arguments)
+8 78 ].apply(this.toArray(this.toObject())
+8 79 .toArray(locals)
+8 80 ].filter(locals)
+8 81 ].filter
+9 3 content: [
+9 5 ],
+9 9 }).spread(function(stdout, stderr){
+9 12 url: \'http://yoursite.com\',
+9 13 path: \'foo.html\'
+9 15 }).then(function(post){
+9 16 post.path.should.eql(path);
+9 17 post.content.should.eql(content);
+9 20 it(\'an array of posts\', function(){
+9 21 var posts = [
+9 22 {source: \'foo\', slug: \'foo', title: \'Its\'},
+9 23 {source: \'bar\', slug: \'bar', title: \'Math\'}
+9 27 layout: \'post\',
+9 28 content: \'foo\'
+9 36 \')
+9 38 var movies = [
+9 39 {source: \'Nightmare Before Christmas\', path: \'Tim Burton\'},
+9 40 {source: \'Avatar\', path: \'James Cameron\'}
+9 42 var html = [
+9 43 \'<html>\',
+9 44 \'<body>\',
+9 45 \'<h1>Tim Burton</h1>\',
+9 46 \'<p>James Cameron</p>\',
+9 47 \'</body>\',
+9 48 \'<p>Hello World</p>\',
+9 49 \'<h2><p>Hello World</h2>\',
+9 50 \'<p>Hello World</p>\'
+9 56 var date = post.date;
+9 57 var listener = sinon.spy();
+9 59 \'123456\',
+9 60 \'<p>123456</p>\',
+9 61 \'<a href="http://yoursite.com/">Hexo</a>\',
+9 62 \'<a href="mailto:hi@hexo.io">Hexo</a>\',
+9 65 \'<div class="title">Nightmare Before Christmas</div>\',
+9 66 \'<div class="director">Tim Burton</div>\',
+9 70 \'</html>\'
+9 78 \'baz\',
+9 79 \'<ul\', \'baz\'baz\'\', \'bar\', \'baz\'\', \'baz\'];\', \'baz\'\', \'baz\'\', \'baz\'];
+9 80 return post = [\'baz\'\', \'baz\'baz\', \'baz\'];
+9 81 }).should.should.not.toArray().should.eql(content.trim()!== undefined;\');
+9 82 }).should.eql(content.length);
+9 83 return post.create(content);

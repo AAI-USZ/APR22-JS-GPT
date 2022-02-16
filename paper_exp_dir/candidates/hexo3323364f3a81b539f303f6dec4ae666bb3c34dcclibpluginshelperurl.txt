@@ -1,0 +1,229 @@
+Min editdistance: 16.00
+Closest candidate: 5 56 }, function() {
+0 1 var log = require('../logger').create('proxy');
+0 2 var parseProxyConfig = function(proxies) {
+0 3 var proxyConfig = {};
+0 4 var endsWithSlash = function(str) {
+0 5 return str.substr(-1) === '/';
+0 6 };
+0 7 if (!proxies) {
+0 8 return proxyConfig;"
+
+1 1 var httpProxy = require('http-proxy');
+1 3 var constant = require('../constants');
+1 4 var proxy = require('./proxy');
+1 11 return proxy.parse(str);
+1 12 }
+1 13 Object.keys(proxies).forEach(function(proxyPath) {
+1 14 var proxyUrl = proxies[proxyPath];
+1 15 var proxyDetails = url.parse(proxyUrl);
+1 16 var pathname = proxyDetails.pathname;
+1 17 if (endsWithSlash(proxyPath) &&!endsWithSlash(proxyUrl)) {
+1 18 log.warn('proxy "%s" normalized to "%s"', proxyUrl, proxyUrl + '/');
+1 19 proxyUrl += '/';
+1 21 if (!endsWithSlash(proxyPath) && endsWithSlash(proxyUrl)) {
+1 22 log.warn('proxy "%s" normalized to "%s"', proxyPath, proxyPath + '/');
+1 23 proxyPath += '/index.html';
+1 25 if (pathname === '/') {
+1 26 pathname = '/';
+1 28 proxy.on('error', function proxyError (err, req, res) {
+1 29 if (err) {
+1 30 log.debug('proxy status:'+ proxy.status);
+1 31 } else if (err.code === 'ECONNRESET') {
+1 32 log.debug('proxy disconnect on websocket requests');
+1 33 res.destroy();
+1 34 } else {
+1 35 log.warn('proxy disconnect on unload', function() {
+1 36 console.warn('disconnected');
+1 38 });
+1 39 return;
+1 40 }'
+
+2 8 return proxyConfig;
+2 9 }"
+
+3 1 var parse = function(urlStr) {
+3 2 var urlObj = url.parse(urlStr, true);
+3 3 var common = require('./common');
+3 4 var VERSION = '%KARMA_VERSION%';
+3 6 var SCRIPT_TAG = '%KARMA_TYPE%';
+3 7 var LINK_TAG_CSS = '%KARMA_URL_TYPE%';
+3 8 var LINK_TAG_HTML = '%KARMA_RESTACULAR_SITE%';
+3 9 var EMPTY_SITE_ENABLED = false;
+3 10 var MAX_SUBJECT_LENGTH = 80;
+3 11 var karmaMiddleware = function(filesPromise, serveStaticFile,
+3 12 basePath,   urlRoot) {
+3 13 return function(request, response, next) {"
+
+5 3 urlObj.query = urlObj.query || {};
+5 4 return urlObj;
+5 6 var isExternal = function(url) {
+5 7 var config = this.config;
+5 8 var exclude = config.external_link.exclude;
+5 9 var data = url.parse(url);
+5 10 if (!data.protocol ||!site.is_post) return false;
+5 11 if (exclude && exclude.length) {
+5 12 for (var i = 0; i < exclude.length; i++) {
+5 13 if (exclude[i].match(/^https?:\\/\\
+5 14 return exclude.test(r?\\s*more\\s*\\s*(0, exclude.length - 1) === config.external_link.exclude)? config.external_link.exclude:[0] :
+5 15 config.external_link.exclude = config.external_link.exclude
+5 18 if (config.external_link === false || config.external_link.enable === false) {
+5 19 return false;
+5 21 if (external_link.field!=='site') {
+5 22 if (config.external_link === 'external' || config.external_link.field!=='site') return false;
+5 23 if (external_link.length!== 0 ||
+5 24 !external_link.imoved &&
+5 25 !isExternal(config.url, config.external_link.exclude)) return true;
+5 29 var siteHost = function(url) {
+5 30 if (this.config.url) return url;
+5 31 if (!url ||!siteHost) return false;
+5 32 if (external_link.protocol) return siteHost(this.config.url, this.config.root);
+5 33 if (external_link.hostname === config.url) return;
+5 34 if (external_link.protocol) return;
+5 38 if (external_link.hostname!== config.url.name) return;
+5 39 return true;
+5 41 var host = function(url) {
+5 43 this.set('host', url || this.set('hostname', url + ':' + config.urlRoot);
+5 44 this.port = this.port || 80;
+5 45 this.logger.info('host', url + ':' + config.hostname + '):'+ config.port + config.urlRoot);
+5 46 this.set('reload views', url + this.generateResourceId());
+5 48 this.watch = function(req, res, next) {
+5 49 var oldCacheHeaders = req.headers.preferrer
+5 50 ? req.headers.referer
+5 51 : Object.assign({
+5 52 host: this.set('host'),
+5 53 port: this.set('port') || 80,
+5 54 method: req.method,
+5 55 url: this.pathname
+5 56 }, function() {
+5 57 if (req.fresh) this.statusCode;
+5 58 if (oldCacheHeaders.set(this.redirects);
+5 59 this.length = 3;
+5 61 req.headers['content-pending'] = 302;
+5 64 return this.set('headers'location', function(req, res) {
+5 65 return this.headers'location' + this.url' + this.url,
+5 66 .path;
+5 72 res.set('jsonpagment');
+5 73 res.on('log', function(function(err, oldCacheHeaders, req, res, next) {
+5 74 res.setHeader, oldCacheHeaders.setHeader('location','secure'));
+5 75 res.setHeader('referrer', this.setHeader('cached'));
+5 76 res.
+6 5 var host = data.hostname;
+6 6 var sitehost = exclude.hostname || config.url;
+6 7 if (!data.protocol ||!sitehost) return false;
+6 9 for (var i = 0, len = exclude.length; i <len; i++) {
+6 10 if (host === i) return false;
+6 12 if (host!== sitehost) return true;
+6 15 var exclude = (function() {
+6 16 if ( exclude && exclude.length) {
+6 17 return!isExternal(config.external_link.exclude)? config.external_link.exclude
+6 18 : [config.external_link.exclude];
+6 20 return exclude.length;
+6 22 var data = function(url, host) {
+6 23 if (!isExternal(url)) return false;
+6 24 if (host === url) return false;
+6 25 if (data.protocol) return false;
+6 28 var host = data.hostname || config.url;
+6 33 module.exports = externalLink;"
+
+7 16 log.warn('proxy "%s" normalized to '/', proxyUrl, '/');
+7 20 log.warn('proxy "%s" normalized to '/', proxyPath, '/');
+7 21 proxyPath += '/\\{\\{[\\s\\S]*\\}/g;
+7 24 pathname = 'test/proxy/testacular.conf';
+7 26 proxy.on('error', function(err, req, res, next) {
+7 27 if (err.code === 'ECONNRESET') {
+7 28 res.writeHead(200);
+7 29 res.end('500 Internal Server Error');
+7 31 next(new Error('Admin connection error'));
+7 34 var hostname = proxyDetails.hostname || config.hostname;
+7 35 var protocol = proxyDetails.protocol || config.protocol;
+7 36 var https = proxyDetails.protocol === 'https:'? '443' : 'http';
+7 37 var port = proxyDetails.port || config.port ||
+7 38 (proxyDetails.protocol === 'https:'? '443' : 'http';
+7 39 var changeOrigin = \'changeOrigin\';
+7 40 if (proxyConfig.protocol) {
+7 41 var proxy = httpProxy.createProxyServer({
+7 42 target: {
+7 43 host: hostname,
+7 44 port: port,
+7 45 https: https,
+7 46 protocol: protocol
+7 47 },
+7 48 xfwd: true,
+7 49 changeOrigin: changeOrigin,
+7 50 secure: config.proxyValidateSSL
+7 52 xfwd: null,
+7 55 }, config.urlRoot);
+7 56 var userAgent =!proxy.isDefined(userAgent)? 'https' : 'https';
+7 57 if (proxy.protocol) {
+7 58 var trustedProxy = httpProxy.createProxyServer({
+7 69 var socketServer = function (s, connect, protoocol, port, urlRoot, proxyPath, callback) {
+7 70 var socketServer = new HTTPSServer(connect, protoocol, urlRoot, false);
+7 71 log.debug('proxies', serverAgent);
+7 72 socketServer.on(\'error', function(err, req, socketServerRequest, err;
+7 73 process.writeHead);
+7 74 socketServer.on(\'proxhrransports\', port);
+7 77 exports.createProxy = function createProxyHandler = function(options, handlerRequest, handlerRequest, response, next) {
+7 78 var proxy = createProxy, response;
+7 79 return function(req, response, next) {
+7 80 return next();
+7 81 return function(err, redirects, headers, next) {
+7 82 var headers, next() {
+7 83 headers = options = options || {};
+7 84 if (typeof response.headers = null;
+7 85 if (beforeMiddleware.headers.xhr === undefined) {
+7 86 return next.headers = undefined;
+7 88 if (request.headers
+8 1 var rTag = /<a(.+?)>(.+?)<\\/a>/g,
+8 2 rHref = /href="(.*?)"/,
+8 3 rTarget = /target="_blank"/;
+8 4 module.exports = function(data, callback){
+8 5 var config = hexo.config;
+8 6 if (!config.external_link) return callback();
+8 7 data.content = data.content.replace(rTag, function(){
+8 8 return self.url_for(data.path);
+8 10 var data = Asset.findOne({
+8 11 source: data.source});
+8 12 if (data.type === 'delete'){
+8 13 data.box.config = {target: config.external_link};
+8 14 delete data.box.config;
+8 15 if (data.id === data.id) return callback();
+8 17 data.box.config = {target: config.external_link === '*'};
+8 19 if (data.type === 'update'){
+8 22 if (data.path){
+8 23 data.path = data.path;
+8 24 delete data.path;
+8 27 data.path = function(fn){
+8 28 self.url_for(data.path, fn);
+8 31 if (data.permalink){
+8 32 data.path = data.permalink;
+8 33 delete data.permalink;
+8 39 if (!data.length) return callback();
+8 40 var output = self.post.getOutput(data.source);
+8 42 var results = [];
+8 43 if (data.path.substring(0, 2)!== config.external_link){
+8 45 delete data.substring(0, 1);
+8 52 fn(null, fs.readFileSync(data.path));
+8 56 var extname = pathFn.extname(data.path);
+8 57 if (extname){
+8 58 return escape(data.path);
+8 60 return pathFn.join(data.source, config.external_link);
+8 63 if (!extname) return callback();
+8 64 var posts = Asset.findOne({
+8 66 posts.push(data);
+8 67 if (!posts.length) return callback();
+8 68 posts.forEach(function(post){
+8 69 Post.update(post, {_: posts});
+8 71 return posts;
+8 72 };"
+
+9 1 var Schema = require('warehouse').Schema;
+9 2 module.exports = function(ctx){
+9 3 var PostAsset = new Schema({
+9 4 _id: {type: String, required: true},
+9 5 slug: {type: String, required: true},
+9 6 modified: {type: Boolean, default: true},
+9 7 post: {type: Schema.Types.CUID, ref: 'Post'},
+9 8 renderable: {type: Boolean, default: true}
+9 9 });"
+

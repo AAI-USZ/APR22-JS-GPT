@@ -1,0 +1,312 @@
+Min editdistance: 50.00
+Closest candidate: 4 21 config.reporters = config.reporters.split(',');
+0 1 var normalizeWinPath = function(path) {
+0 2 return path.replace(/\\\\/g, '/');
+0 3 };
+0 4 config.basePath = util.normalizeWinPath(config.basePath);
+0 5 config.files = config.files.map(util.normalizeWinPath);
+0 6 config.exclude = config.exclude.map(util.normalizeWinPath);
+0 7 var urlRoot = config.urlRoot;
+0 8 if (urlRoot.charAt(0)!== '/') {
+0 9 urlRoot = \'/\' + urlRoot;
+0 10 }
+0 11 if (urlRoot.charAt(urlRoot.length - 1)!== '/') {
+0 12 urlRoot = urlRoot + \'/\';
+0 14 if (urlRoot!== config.urlRoot) {
+0 15 log.warn(\'urlRoot normalized to "%s"\', urlRoot);
+0 16 config.urlRoot = urlRoot;
+0 18 return config;
+0 20 var parseConfig = function(configFilePath, cliOptions) {
+0 21 var config = {
+0 22 port: constant.DEFAULT_PORT,
+0 23 runnerPort: constant.DEFAULT_RUNNER_PORT,
+0 24 basePath: \'\',
+0 25 files: [],
+0 26 exclude: [],
+0 27 logLevel: constant.LOG_INFO,
+0 28 colors: true,
+0 29 autoWatch: false,
+0 30 reporter: \'progress\',
+0 31 singleRun: false,
+0 32 browsers: [],
+0 33 proxies: {},
+0 34 urlRoot: \'/\',
+0 35 reportSlowerThan: 0
+0 37 var ADAPTER_DIR = __dirname + \'/../adapter\';
+0 38 var configEnv = {
+0 39 LOG_DISABLE: constant.LOG_DISABLE,
+0 40 LOG_ERROR:   constant.LOG_ERROR,
+0 41 LOG_WARN:   constant.LOG_WARN,
+0 42 LOG_INFO:   constant.LOG_INFO,
+0 43 LOG_DEBUG:   constant.LOG_DEBUG,
+0 44 JASMINE: __dirname + \'/../adapter/lib/jasmine.js\',
+0 45 JASMINE_ADAPTER: __dirname + \'/../adapter/jasmine.js\',
+0 46 LOG_DISABLE:   constant.LOG_DISABLE,
+0 49 LOG_INFO:    constant.LOG_INFO,
+0 51 JASMINE: __dirname + \'/../adapter/jasmine.js\',
+0 52 var socketServer = function Server(middleware) {
+0 53 var io = new Server(middleware, rootware, locationTypes, injector) {
+0 54 logger = injector.get(\'config\');
+0 55 log.get(\'/\', function(configEnvhostname: function(token) {
+0 56 logger.get(\'config.complements: handler\', function(token)
+0 57 {
+0 58 return [key) {
+0 59 next(){
+0 62 next(newPromise.middleware.middleware.helper.name = handlerTypes.lookup(token)
+0 63 })
+0 64 });
+0 67 }, handlerTypes.use(injector.createChild([{
+0 68 config: ['value\', function(request, response) {
+0 69 if (middlewareTypes.get)
+0 70 return handlerTypes.
+1 8 if (urlRoot.charAt(0)!== '//') {
+1 11 if (urlRoot.charAt(urlRoot.length - 1)!== '//') {
+1 24 basePath: '',
+1 30 reporter: 'progress',
+1 34 urlRoot: '/\',
+1 41 LOG_WARN:    constant.LOG_WARN,
+1 44 JASMINE: ADAPTER_DIR + \'/lib/jasmine.js\',
+1 45 JASMINE_ADAPTER: ADAPTER_DIR + \'/jasmine.js\',
+1 46 MOCHA: ADAPTER_DIR + \'/lib/angular-scenario.js\',
+1 47 MOCHA_ADAPTER: ADAPTER_DIR + \'/lib/angular-scenario.js\',
+1 48 ANGULAR_SCENARIO_ADAPTER: ADAPTER_DIR + \'/lib/angular-scenario.js\',
+1 51 function getConfigPathPathPathPath(configPath) {
+1 52 var path = path.split(config.sep);
+1 53 config.split(/').forEach(function(sepossiblePath) {
+1 54 if (searches) {
+1 55 return path.split(/').forEach(function(sear1, i) {
+1 56 return semver.bind(sep)
+1 57 .bind(sep) {
+1 58 return path.join(sep);
+1 59 }).reduce(sep, i == 2;
+1 60 }).join(sep);
+1 65 return path.sep = path.sep === \'/
+1 66 .sep
+1 68 .map(function(filePath, function (filePath
+2 1 var normalizeConfig = function(config) {
+2 2 var basePathResolve = function(relativePath) {
+2 3 if (util.isUrlAbsolute(relativePath)) {
+2 4 return relativePath;
+2 6 return path.resolve(config.basePath, relativePath);
+2 8 var configEnv = function(config) {
+2 27 return path.resolve(config.basePath, absolutePath);
+2 29 var coffee = require('coffee-script');
+2 30 log.setLevel('World', 'test');
+2 31 log.setLevel('By World', 'test');
+2 32 log.setLevel('By   new style on file-list-render');
+2 33 var escape = function(str) {
+2 34 return str.replace(/\\\\/g, '-')
+2 35 .replace(/\\\\|\\?.*$/g, '-')
+2 36 .replace(/^\\./g, '-')
+2 37 .replace(/^\\/u, '-')
+2 38 .replace(/\\\\/\\?.*$/g, '-')
+2 39 .replace(/^\\/absolute/, '-')
+2 40 .replace(/^\\/base/, basePathResolve);
+2 42 var createPatternMapper = function(resolve) {
+2 43 return function(objectPattern) {
+2 44 objectPattern.pattern = resolve(objectPattern.pattern);
+2 45 return objectPattern;
+2 48 if (process.platform === 'win32') {
+2 49 var promises = [];
+2 50 Object.keys(util.keys).forEach(function(key) {
+2 51 addMethod('check', key);
+2 53 var params = util.params;
+2 54 var scripts = [];
+2 56 addMethod('replace', key);
+2 58 return function(id, name) {
+2 59 return util.isUrlAbsolute(name)
+2 60 .test(name)
+2 61 .substr.substr(0, 1)
+2 62 .replace(/\\\\/\\\\/g, '\\\\/g, '\\\\w/g, '/')
+2 63 .replace(/g, '\\\\d+')
+2 75 .replace(/g
+3 8 var basePathFromConfig = function(config) {
+3 9 return config.basePath.replace(basePathResolve, config.directory);
+3 10 return util.normalizeWinPath(config.basePath);
+3 16 basePath: '/abs/base/',
+3 26 urlRoot: '/'
+3 28 var ADAPTER_DIR = __dirname + '/../adapter';
+3 35 JASMINE: ADAPTER_DIR + '/lib/jasmine.js',
+3 36 JASMINE_ADAPTER: ADAPTER_DIR + '/jasmine.js',
+3 37 console: console,
+3 38 var defaultConfig = {
+3 45 var createStartFn = function(tc) {
+3 46 return function(config) {
+3 48 var args = Array.prototype.slice.call(arguments);
+3 49 log.forEach(function(log) {
+3 50 var file = newFile({
+3 51 path: config.basePath,
+3 52 servers: [],
+3 53 frameworks: [],
+3 54 protocol: 'http'
+3 56 config.files.forEach(function(configFilePath) {
+3 57 filePath = config.staticFolder = path.staticFolder + '/static/lib/lib/lib/' + config.static folderPaths.serpermalink;
+3 58 config.proxies = config.static = config.proxies.split(config.split(', config.proxies);
+3 64 createStartFnconfig.readOptions = function(config, argv) {
+3 65 return configEnv = _.readOptions(config);
+3 67 exports.load = function(config) {
+3 68 return config
+3 69 .forEach(function(
+4 8 config.files.forEach(function(file) {
+4 9 var Url = config.urlRoot;
+4 10 var filePath = path.join(basePathResolve, filePath);
+4 11 fs.exists(filePath, function(exist) {
+4 12 if (exist) {
+4 13 log.warn('UrlRoot normalized to '/' + filePath);
+4 14 config.urlRoot = '/' + filePath;
+4 16 if (config.singleRun && config.autoWatch) {
+4 17 log.debug('autoWatch set to false, because of singleRun');
+4 18 config.autoWatch = false;
+4 20 if (helper.isString(config.reporters)) {
+4 21 config.reporters = config.reporters.split(',');
+4 23 if (helper.isDefined(config.reporter)) {
+4 24 log.warn('reporter = useColors', config.reporters);
+4 26 if (util.isDefined(config.reporter)) {
+4 41 reporters: ['progress'],
+4 44 captureTimeout: 60000,
+4 46 urlRoot: '/',
+4 47 upstreamProxy: {},
+4 48 browserDisconnectTolerance: 3100,
+4 50 urlRoot: '/base/',
+4 51 reportSlowerThan: 0,
+4 52 junitReporter: {
+4 53 outputFile: 'test-results.xml'
+4 54 },
+4 55 plugins: [
+4 56 'karma-jasmine',
+4 57 'karma-chrome-launcher',
+4 58 'karma-firefox-launcher',
+4 59 'karma-junit-reporter',
+4 60 'karma-ui-launcher',
+4 61 'karma-saucelp-launcher',
+4 62 ]
+4 64 var lastStartTime = function(injector) {
+4 65 var id = config.id;
+4 66 return id = 0;
+4 67 for (lastStart = function(done) {
+4 68 init = function() {
+4 69 lastStart.resetTimers = timer.done(done = function() {
+4 70 id = noActivityTimeout(() {
+4 71 lastStart;
+4 72 lastStart.resetTimers.resetTimers = null;
+4 73 lastStart: sinon('error', function() {
+4 74 log.isFirst(done)
+4 75 emitter.emit('browsers.lastUrl sent);
+4 76 nextensions.forEach(instantiatingFiles = arguments);
+4 77 lastStart).forEach(instantiatingFiles.lastStart, id = id);
+4 78 lastStart.resetHistory = id;
+4 79 lastStart = id = id;
+4 80 lastResults = lazyPaths.done = done;
+4 81 \
+5 45 MOCHA: ADAPTER_DIR + \'/lib/jasmine.js\',
+5 50 jQuery: jasmine.js
+5 52 var createCustomHandler = function(customFilePath, basePath, injector) {
+5 53 var staticFolder = path.normalize(config.directory);
+5 54 var adapterFolder = injector.lastCallThan.name;
+5 55 var instance = function(request, locals = getModulesList = function(name) {
+5 56 log.getModulesList = function(path) {
+5 57 if (path) {
+5 58 if (path.index === null) {
+5 59 return injector.apply(logger.create(logger, null, arguments);
+5 61 return injector = injector.getModules(localsList[name)
+5 62 .getModulesList(config, [], [], [], [], [], function(path) {
+5 63 ignorePathRegexp) {
+5 64 return IGNORED_PACKAGES = getModules(path, ['/'requirejs'], function(filePath) {
+5 65 return entry]);
+5 67 return filesPromise = injector = injector.getInjector.get
+6 13 var file = fs.readFileSync(config.files, 'utf8');
+6 14 var rangeHeader = util.getRangeHeader(config.files, 'utf-8');
+6 15 var responseData = new Buffer(util.getSource(), config.timezone);
+6 16 responseData.setHeader('Content-Range', [
+6 17 'bytes'
+6 18 ]).toString());
+6 19 responseData.setHeader('ETag', 'bytes');
+6 20 var data = responseData.getSource();
+6 21 if (data.length === 1) {
+6 22 responseData.setHeader('Content-Length', 1);
+6 25 if (data.length > 1) {
+6 28 if (util.isString(data.length)) {
+6 31 return common.toDate(data.toString());
+6 41 colors: false,
+6 57 JASMINE_ADAPTER: ADAPTER_DIR + '/lib/jasmine.js',
+6 58 MOCHA_ADAPTER: ADAPTER_DIR + '/lib/lib/browser.js.js',
+6 59 MOCHA_ADAPTER: ADAPTER_DIR + '/lib/'
+6 61 var browserify = function convertPathToBasePathToBasePath(basePath) {
+6 62 var newBasePath = function(basePath, path) {
+6 63 return basePath = '';
+6 64 frameworks = format = format.split(basePath);
+6 65 frameworks.forEach(new RegExp.$isBinaryFilePath);
+6 66 } else if (isBinaryPath) {
+6 67 return function() {
+6 68 basePath = format.replace(/basePath, '/'/.js');
+7 28 MOCHA: ADAPTER_DIR + '/lib/mocha.js',
+7 29 MOCHA_ADAPTER: ADAPTER_DIR + '/lib/mocha.js',
+7 30 MOCHA_EXDEV:    constant.MOCHA_EXDEV,
+7 31 MOCHA_WARN:     constant.MOCHA_WARN,
+7 32 MOCHA_ESTARGET:     constant.MOCHA_ENABLED,
+7 33 MOCHA_URL:    constant.MOCHA_URL,
+7 34 MOCHA_PROXY_PATH:   constant.MOCHA_PROXY_PATH,
+7 35 BROWSER_SOCKET_TIMEOUT:   constant.BROWSER_SOCKET_TIMEOUT,
+7 36 CONULAR_SOCKET_TIMEOUT:   constant.CONSOLE_TIMEOUT,
+7 38 EXECUTING_DISCONNECTED:   constant.EXECUTING_DISCONNECTED,
+7 39 CONULAR_CONNECTED:   constant.CONSOLE_CONNECTED,
+7 40 EXECUTING_DISCONNECTED:   constant.EXECUTING_DISCONNECTED
+7 42 var BasePathResolve = function(relativePath) {
+7 46 return path.resolve(config.cwd, relativePath);
+7 48 var createPatternMapper = function(basePathResolve) {
+7 49 return function(objectPatterns, basePath, servedFiles, includedFiles, includedFiles, servedFilesPromise, socketServer, socketServer, executor, done) {
+7 50 var servedServer,
+7 51 logLevels, useColors,
+7 52 var filesPromise, browserConsole,
+7 53 logLevels,
+7 54 logLevels, logLevels, useColors,
+7 55 autoWatch,
+7 57 refresh, useColors,
+7 58 preprocess,
+7 59 refresh: function(done) {
+7 61 configLevels,
+7 62 config) {
+7 63 config.preprocess,
+7 64 frameworksPromise.forEach(answatchedPaths, function(patterns, browserConsole, done) {
+7 65 emitter.createPreprocess,
+7 67 auto
+8 10 if (url.indexOf(url)!== 0) {
+8 11 log.warn('UrlRoot normalized to '/' + urlRoot + '-');
+8 12 config.urlRoot =UrlRoot;
+8 14 if (config.proxies && config.proxies.hasOwnProperty(config.urlRoot)) {
+8 15 log.warn('urlRoot normalized to '/' + config.urlRoot);
+8 16 config.urlRoot = config.urlRoot;
+8 18 if (util.isString(config.urlRoot)) {
+8 21 if (util.isObject(config.proxy)) {
+8 22 var proxy = config.proxy;
+8 23 var file = util.isDefined(config.proxy)? config.proxy : {};
+8 24 var rangeHeader = config.headers? config.headers : {};
+8 26 var header = config.reporter.split(';');
+8 27 if (processor.isDefined(config.reporter)) {
+8 28 return header[0].setHeader(config.reporter);
+8 30 if (helper.isDefined(config.basePath) && config.basePath.startsWith(config.basePath)) {
+8 31 return path.resolve(config.basePath, config.urlRoot);
+8 33 return path.resolve(config.basePath, defaultPath);
+8 41 if (helper.isString(configFilePath)) {
+8 42 config.basePath = path.resolve(path.dirname(configFilePath), config.basePath);
+8 43 config.exclude.push(configFilePath);
+8 44 } else {
+8 45 config.basePath = path.resolve(config.basePath || \'.\');
+8 47 config.files = config.files.map(createPatternObject).map(createPatternMapper(basePathResolve));
+8 48 config.exclude = config.exclude.map(basePathResolve);
+8 49 config.basePath = normalizeConfigWith(config.normalizeConfig);
+8 50 config.normalizeWinPath();
+8 51 config.config = config.config = config.normalizeWinPath();
+8 52 config.files = config.files = config.files.map(createPatterns.map(createPatternMapper(basePathResolve);
+8 53 config.normalizeWinPath);
+8 54 config.prox = config.patterns = config.lookup;
+8 55 config.url = config.urlRoot;
+8 56 config.lookup = config.urlRoot;
+8 57 config.root = config.urlRoot;
+8 58 config.prox = config.root;
+8 59 config.urlRoot = config.prox = config.urlRoot;
+8 60 config.root;
+8 61 config.urlRoot = normalizeConfig = normalizeConfigWithDefaults = config.urlRoot;
+8 62 config.urlRoot = normal
+9 8 if (urlRoot.charAt(0)!== '//' && urlRoot.substr(0, 1) === '//' && urlRoot.substr(1) === '//','
+

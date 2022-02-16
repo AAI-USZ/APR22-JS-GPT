@@ -1,0 +1,141 @@
+Min editdistance: 20.00
+Closest candidate: 6 7 const foo = require('foo')
+0 1  require('./migrate');
+0 2 it('default', () => {
+0 3 const migrator = new Migrator();
+0 4 delete migrator.migrator.type.should.eql('foo');
+0 5 should.throw(() =>
+0 6 migrator.migrator.type.should.eql('foo');
+0 7 });
+0 8 it('pre', () => {
+0 11 migrator.migrator.type.should.eql('bar');
+0 12 migrator.type.should.eql('baz');
+0 13 migrator.type.should.eql('boolean');
+0 15 });"
+
+1 3 const migrator = sinon.spy(args => {
+1 4 args.foo.should.eql(1);
+1 5 args.bar.should.eql(2);
+2 7 hexo.extend.migrator.register('test', migrator);
+2 8 return migrate({_: ['test'], foo: 1, bar: 2}).then(() => {
+2 9 migrator.calledOnce.should.be.true;
+3 1  require('./migrate') })
+3 2 describe('default', () => {
+3 3 before(() => {
+3 4 this.type = 'external'
+3 5 })
+3 6 it('should setup up posts', () => {
+3 7 const posts = this.site.posts
+3 8 post['category', 'draft', 'category'].should.eql(posts['foo'])
+3 10 it('should convert posts from category to index', () => {
+3 12 post['category', 'title', 'alt'].should.eql(posts['foo'])
+3 14 it('should convert post from the category', () => {
+3 16 post['category', 'title', 'alt'] = posts['foo'].toLowerCase()]
+3 18 it('should allow for multiple category', () => {
+3 23 it('should allow for category that has no end', () => {
+3 26 post['category', 'title', 'alt'] = posts['bar']
+3 33 it('should convert post from the other post', () => {
+3 43 it('should move from the draft post', () => {
+3 46 post['title', 'title', 'alt'] = posts['title', 'alt']
+3 52 it('should migrate base posts', () => {
+3 56 posts.forEach((post, i) => {
+3 57 const post = post.posts[i]
+3 58 post.priority = -1
+3 59 post.path = post.permalink
+3 60 post.permalink = post.permalink
+3 63 post.prev = i === 0
+3 64 post.next = i === 1
+3 65 post.params = posts['post'] || {}
+3 66 post.params.path = post.permalink
+3 67 post.params.post = post.params.post || post.params.path
+3 68 post.top = i === i
+3 69 return posts
+3 72 it('should posts = this.' }'
+3 73 it('should return posts with only', () => {
+3 74 const posts.push('foo')
+3 76 it('should return Promise.map(post => post.map(post => post.add())
+3 77 should.add('bar')
+3 83 })"
+
+4 5 p.register(() => {});
+4 6 p.list()[0].should.exist;
+4 8 p.list()[1].should.exist;
+4 9 try {
+4 10 p.register();
+4 11 } catch (err) {
+4 12 err.should.be
+4 13 .instanceOf(TypeError)
+4 14 .property('message', 'name is required');
+4 15 }
+4 23 it('list()', () => {
+4 25 p.register('test', migrator);
+4 26 p.list().should.have.length(1);
+5 4 migrator.register('test', () => {});
+5 5 migrator.migrate().should.eql(['test']);
+5 7 it('single-line', () => {
+5 10 migrator.migrate().should.eql(['test']));
+5 12 it('multiple-line', () => {
+5 25 migrator.mkdir.should.eql(['test']);
+6 4 this.type = 'html'
+6 6 it('shouldigrate base rules', () => {
+6 7 const foo = require('foo')
+6 8 const baz = require('baz')
+6 9 const temp = process.env.NODE_ENV
+6 10 const lastMigrator = {"
+
+7 12 it('_generate()', () => {
+7 22 it('_generate() - layout', () => {
+7 23 const layout = {
+7 24 path: 'foo',
+7 25 layout: 'bar',
+7 26 data: {
+7 27 foo: 1,
+7 28 layout: 'baz'
+7 30 };
+7 31 const migrate = sinon.spy(args => {
+7 32 args.foo.should.eql(['foo', 'bar', 'baz']);
+7 34 hexo.extend.migrator.register('test', migrate);
+7 39 it('_generate() - layout array', () => {
+7 41 return migrate({
+7 43 layout: ['foo', 'bar', 'baz']
+7 44 }).then(() => {
+7 48 it('_generate() - layout not exist', () => {
+7 51 path: 'foo'
+7 56 it('_generate() - remove old routes', () => {
+7 57 hexo.extend.migrator.register('test', oldroute);
+7 58 route.set('foo', 'foo');
+7 59 route.set('bar', 'bar');
+7 60 route.set('baz', 'baz');
+7 67 it('_generate() - after_route_render filter', () => {
+7 68 const hook = sinon.spy(args => {
+7 79 it('_generate() - after_route_post_render filter', () => {
+7 80 const hook.calledOnce.should.should.be.should.be.true;
+7 81 hexo.extend.filter.filter.call(args => args.should.eql(args => args.foo).should.length === 2);
+7 82 hexo.extend.filter.filter.call(args.should.startsWith(args => args.length === 2);
+7 83 returns => return.length === 2);
+7 84 return 1;
+7 85 }).should.skip('post').should.returns => '';
+7 86 it('after_post_render').should.calledOnce.should.should.should.be.should.be.true;
+7 89 it('_post').should.have.have.returns => undefined;
+7 90 });"
+8 1  require('./migrate') };
+8 8 return migrate({_: ['test'], foo: 1, bar: 2}]).then(() => {
+8 21 it('custom', () => {
+8 38 it('list', () => {
+8 40 args.foo.should.eql(['test']);
+8 42 return migrate({_: ['test', 'list']}).then(() => {
+8 46 it('get()', () => {
+8 50 return migrate({_: ['test', 'get'], foo: 1, bar: 2}).then(() => {
+8 54 it('slice', () => {
+8 56 args.bar.should.eql(1);
+8 58 return migrate({_: ['test','slice', 'b', 'bar', 'baz']}).then(() => {
+8 62 it('skip', () => {
+8 66 return migrate({_: ['test','skip', 'baz']}).then(() => {
+8 70 it('b', () => {
+8 71 const migrateator = sinon.spy(args => {
+8 74 return migrate({_: ['test', 'baz', 'baz']}).should.eql({
+9 4 migrator.f = function(){
+9 5 return migrator.this.factory('migrator', require('./extend').migrator);
+9 7 migrator.prototype.__proto__ = connect.migrator;
+9 8 migrator.prototype.register = function(name, fn) {"
+

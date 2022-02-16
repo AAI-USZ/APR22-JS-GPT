@@ -1,0 +1,21 @@
+var async = require('async'),
+fs = require('graceful-fs'),
+path = require('path'),
+term = require('term'),
+_ = require('lodash'),
+EventEmitter = require('events').EventEmitter,
+Database = require('warehouse'),
+call = require('./call'),
+extend = require('./extend'),
+i18n = require('./i18n'),
+render = require('./render'),
+route = require('./route'),
+util = require('./util');
+
+module.exports = function(args){
+var safe = args.safe ? true : false,
+debug = args.debug ? true : false,
+dirname = __dirname,
+baseDir = process.cwd() + '/',
+db = new Database(baseDir + 'db.json'),
+config = {};

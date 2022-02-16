@@ -1,0 +1,74 @@
+
+
+
+
+
+var sys = require('sys'),
+url = require('url'),
+view = require('./view'),
+connect = require('connect'),
+utils = require('connect/utils'),
+queryString = require('querystring'),
+router = require('connect/middleware/router');
+
+
+
+var Server = exports = module.exports = function Server(middleware){
+var self = this;
+this.config = {};
+this.settings = {};
+this.redirects = {};
+this.viewHelpers = {};
+this.dynamicViewHelpers = {};
+connect.Server.call(this, middleware || []);
+
+
+this.set('home', '/');
+
+
+this.set('env',
+process.env.EXPRESS_ENV ||
+process.connectEnv.name);
+
+
+this.use(function(req, res, next){
+req.query = {};
+res.headers = {};
+req.app = res.app = self;
+req.res = res;
+res.req = req;
+req.next = next;
+
+if (req.url.indexOf('?') > 0) {
+var query = url.parse(req.url).query;
+req.query = queryString.parse(query);
+}
+next();
+});
+
+
+var fn = router(function(app){ self.routes = app; });
+this.__defineGetter__('router', function(){
+this.__usedRouter = true;
+return fn;
+});
+};
+
+
+
+sys.inherits(Server, connect.Server);
+
+
+
+Server.prototype.use = function(route, middleware){
+if (typeof route !== 'string') {
+middleware = route, route = '/';
+}
+
+connect.Server.prototype.use.call(this, route, middleware);
+
+
+if (middleware instanceof Server) {
+
+var app = middleware,
+home = app.set('home');

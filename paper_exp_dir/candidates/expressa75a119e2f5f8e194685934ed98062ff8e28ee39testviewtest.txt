@@ -1,0 +1,242 @@
+Min editdistance: 5.00
+Closest candidate: 5 1 app.set(\'view engine\', \'jade\');
+0 1 app.get(\'/\', function(req, res){
+0 2 res.render(\'index.jade\', { layout: \'cool.layout.jade\' }, function(err, str){
+0 3 assert.ok(!err);
+0 4 res.send(str.replace(\':(\', \':)\'));
+0 5 });
+0 7 app.get(\'/haml\', function(req, res){
+0 8 res.render(\'hello.haml\', { layout: \'cool.layout\' }, function(err, str){
+0 10 res.send(str.replace(\'Hello World\', \':)\'));
+0 12 app.get(\'/callback/layout/no-options\', function(req, res){
+0 13 res.render(\'hello.jade\', function(err, str){
+0 18 app.get(\'/callback/layout\', function(req, res){
+0 19 res.render(\'hello.jade\', { layout: \'cool.layout\' }, function(err, str){
+0 25 res.render(\'hello.jade\', { layout: \'cool.layout\' });
+0 27 app.get(\'/invalid\', function(req, res){
+0 28 res.render(\'invalid.jade\', { layout: \'invalid\' });
+0 30 app.get(\'/invalid-async\', function(req, res){
+0 31 process.nextTick(function(){
+0 32 res.render(\'invalid.jade\', { layout: \'invalid-async\' });
+0 34 app.get(\'/error\', function(req, res){
+0 37 app.get(\'/absolute\', function(req, res){
+0 38 res.render(__dirname + \'/fixtures/index.jade\', { layout: \'absolute\' });
+0 40 assert.response(app,
+0 41 { url: \'/\' },
+0 42 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+0 44 { url: \'/jade\' },
+0 45 { body: \'<p>Welcome</p>\' });
+0 47 { url: \'/absolute\' },
+0 50 { url: \'/haml\' },
+0 51 { body: \'\
+0 52 <p>Hello World</p>\' });
+0 54 { url: \'/callback/layout/no-options\' },
+0 55 { body: \'<p>: \'<options>]should.should.be.empty()
+0 56 },
+0 57 }),
+0 58 assert.response: function(){
+0 59 assert.send(app.get(\'/custom.body.options.options.customArgs(express);
+0 60 assert.should.should.id)
+0 61 })
+0 64 assert.send(app.get(\'/error: function(){
+0 65 assert.session.session.flashFormatters = []
+0 66 assert.sess.length.length.should.equal(require(\'customArgs\')
+0 69 describe(\'should.formatters.redirects = []
+0 70 describe(\'when formatters.jade.jade.jade\', function(){
+0 71 assert.formatters.jade.formatters.jade = function(){
+0 72 assert(\'jade.jade.jade\', function(){
+0 73 return \'when defined\')
+0 74 assert.
+1 20 res.render(\'hello.jade\', {}, function(err, str){
+1 32 res.render(\'invalid.jade\', { layout: \'invalid.jade\' }, function(err){
+1 34 res.send(err.arguments[0]);
+1 45 res.render(\'invalid.jade\', { layout: \'invalid.jade\' }, function(){
+1 56 res.render(__dirname + \'/fixtures/index.jade\', { layout: __dirname + \'/fixtures/absolute\' }, function(err){
+1 58 res.send(process.ok(!err);
+1 62 app.get(\'/file
+1 63 app.get(\'/file\', function(file, function(file, function(file){
+1 64 assert){
+1 65 assert.equal(require.equal(require.parent.parent.parent, \'../lib/lib/express.express.js\', \'express.js\'));
+1 66 assert.equal(__dirname, \'test.js
+1 67 assert.test
+1 68 },'should.js
+1 69 );
+1 72 describe(\'server
+1 73 it(\'server\', function(){\', function(){
+1 74 it(\'should(){\', function(){
+1 75 assert({"
+
+2 4 str.should.equal("<cool><p>Welcome</p></cool>");
+2 5 done();
+2 7 }, function(){
+2 8 assert.ok(called);
+2 11 var users = [
+2 12 { name: \'tj\' },
+2 13 { name: \'tj@learnboost.com\' },
+2 14 { name: \'loki\' },
+2 15 { name: \'jane\' },
+2 16 { name: \'bandit\' }
+2 17 ];
+2 19 res.render(\'user.jade\', {
+2 20 locals: {
+2 21 title: \'Router</title>\'
+2 22 }
+2 25 app.get(\'/ejs\', function(req, res){
+2 26 res.render(\'ejs\', { layout: \'cool.layout\' });
+2 28 app.get(\'/precedence\', function(req, res){
+2 29 res.render(\'precedence.jade\', {
+2 31 title: \'Hello World\'
+2 38 str.should.equal(\':<pre><code>Hello World</code></pre>\');
+2 43 res.render(\'hello.jade\', {
+2 49 res.render(\'invalid.jade\', { layout: \'invalid.jade\' });
+2 58 res.locals.invalidate();
+2 62 res.render(__dirname + \'/fixtures/index.jade\', { layout: __dirname + \'/fixtures/absolute\' });
+2 64 app.get(\'/ferret\', function(req, res){
+2 65 res.render(\'ferret\', { layout: \'invalid.jade\', { layout: \'invalid.jade\' });
+2 68 app.get(\'/status
+2 69 app.get(\'/status\', function(/requires: function('./disposition\', function(req, called; })
+2 70 return res){
+2 71 return res.render(\'get(\'status\', function(req, res){
+2 72 res.render(res){
+2 73 res.render(res.status: function(res.status, called; function(res){
+2 74 res.status.toString(){
+2 75 res.toString(){
+2 76 res.should.should.equal(res);
+2 77 called = true;
+2 78 res.should.should.equal(res.toString());
+2 79 called.should.should.equal(res.toString());
+2 80 res.should.equal(res.toString());
+2 81 res.equal(res.toString());
+2 83 return
+3 1 app.get(\'/', function(req, res){
+3 2 res.render(\'index.jade\', { layout: \'cool.layout.jade\' }, function(err, html){
+3 4 res.send(html);
+3 7 app.get(\'/haml', function(req, res){
+3 8 res.render(\'hello.haml\', { layout: \'cool.layout\' }, function(err, html){
+3 36 res.render(\'invalid.jade\', { layout: \'invalid-async\' }, function(err){
+3 42 app.get(\'/ferret/:no-referret\', function(req, res){
+3 43 res.render(\'ferret\', { layout: \'invalid-async\' });
+3 45 app.get(\'/status\', function(req, res){
+3 46 res.render(\'hello.jade\', { status: 500 });
+3 52 res.render(\'invalid.jade\', { layout: __dirname + \'/fixtures/absolute\' });
+3 54 app.get(\'/ferret/:no-ferret\', function(req, res){
+3 55 res.render(\'invalid.jade\', { layout: \'invalid: \'invalid-async\' });
+3 58 app.get(\'/
+3 59 assert.get(\'/assert.skip(\'should\', function(function(req, res){
+3 60 assert.segment, called;
+3 61 assert.should.should.equal(segment, 1);
+3 62 assert.equal(segment, function(){
+3 63 assert.equal(segment, parent, parent, \'Test did);
+3 65 assert.equal(segment, parent, \'Test should.segment is not found\');
+3 66 assert.segment.should.equal(segment,segment,segment, tab: tab, tab);
+3 68 assert.segment.should.equal(segment.segment, tab);
+3 69 assert.segment.segment.segment.
+4 25 app.get(\'/callback\', function(req, res){
+4 55 { url: \'/absolute\' }, function(req, res){
+4 56 assert.body: \'<p>Welcome</p>\' });
+4 57 assert.res){
+4 58 assert.res: \'<p>\'
+
+5 1 app.set(\'view engine\', \'jade\');
+5 3 res.render(\'index.jade\', { layout: \'cool-layout\' }, function(err, str){
+5 5 res.locals. { \'cool-layout': \'cool-layout\' }, str);
+5 6 res.render(\'index\', { layout: \'cool-layout\' }, function(err, str){
+5 11 app.get(\'/no-ext\', function(req, res){
+5 12 res.render(\'index.jade\', { layout: \'index.jade\' }, function(err, str){
+5 14 res.locals. { \'index.jade\': \'index.jade\' } === str;
+5 17 res.locals. { \'cool-layout': \'cool-layout\' } = str;
+5 20 app.get(\'/relative\', function(req, res){
+5 23 res.locals. { \'index.jade\': \'index.jade\' } = str;
+5 24 res.render(\'index.jade\', { layout: \'index.jade\' });
+5 27 res.render(\'index.jade\', { layout: __dirname + \'/fixtures/layouts/foo.jade\' });
+5 29 app.get(\'/nope\', function(req, res){
+5 30 res.render(\'index.jade\', { layout: \'nope.jade\' });
+5 32 app.get(\'/routes\', function(req, res){
+5 33 res.render(\'index.jade\', { layout: \'cool-layout\' });
+5 42 res.render(\'index.jade\', { layout: \'doesNotExist\' });
+5 45 res.render(\'index.jade\', { layout: \'invalid\' });
+5 48 process.nextQuestion.process.nextTick(function(){
+5 49 res.expose();
+5 53 app.get(\'/error
+5 54 });'
+
+6 20 res.render(\'hello.jade\', { layout: \'layouts/foo.jade\' }, function(err, str){
+6 42 app.get(\'/ferret/:id\', function(req, res){
+6 43 res.render(\'ferret\', { layout: \'ferret\' }, function(err, str){
+6 45 res.send(str.replace(\'ferret\', \':)\'));
+6 48 { url: \'/ferret/12\' },
+6 49 { body: \'<li class="ferret">Tobi</li>\' });
+6 51 { url: \'/ferret/1\' },
+6 52 { body: \'<li class="ferret">Loki</li>\' });
+6 54 { url: \'/ferret/ferret/2\' },
+6 55 { body: \'<li class="ferret: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer: referer:
+7 4 assert.ok(str.replace(/</g, \'&lt;\'));
+7 5 assert.ok(str.replace(/>/g, \'&gt;\');
+7 9 { body: \'<cool><p>Welcome</p></cool>\' });
+7 11 { url: \'/no-ext\', body: \'<cool><p>Welcome</p></cool>\' });
+7 13 { url: \'/relative\' },
+7 14 { body: \'<foo></foo>\' });
+7 19 \'test #render() specific layout "view engine"': function(assert){
+7 20 var app = express.createServer();
+7 21 app.set(\'views\', __dirname + '/fixtures\');
+7 24 res.render(\'index\', { layout: \'cool\', href: \'http://zespia.tw\' }, function(err, str){
+7 26 assert.ok(str.replace(/\
+7 27 /g, \'\
+7 28 <p>Welcome</p>\', \'\
+7 29 <p>This is an email</p>\');
+7 33 { body: \'<p>This is an email</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+7 41 { url: \'/html\' },
+7 44 { url: \'/json\' },
+7 45 { body: \'{"foo":"bar"}\'
+7 46 , status: 201
+7 47 , headers: { \'Content-Type\': \'application/json\' }});
+7 49 { url: \'/text\' },
+7 50 { body: \'wahoo\'
+7 51 , headers: { \'Content-Type\': \'text/plain; charset=utf-8
+7 52 , \'X-Foo\': \'bar\' }});
+7 54 { url: \'/status\' },
+7 55 { body: \'Not Found\' });
+7 57 { url: \'/error\'should.notFound\' },
+7 59 { url: \'/invalidate()
+7 60 assert.invalidate()
+7 62 assert.exclude: function(res.exclude = function(res.exclude){
+7 63 assert.should.should.should.be.be.indexOf(false)
+7 64 .indexOf(0);
+7 65 assert.should.equal(0);
+7 67 res.locals.should.locals.should.should.get("envalidate())
+7 68 .should.invalidate() = function(){
+7 69 .invalidate();
+7 70 .should.length = 2;
+8 3 called.should.be.true;
+8 4 res.locals.content.should.equal(\'<cool><p>Welcome</p></cool>\');
+8 5 res.text.should.equal(\'<cool><p>Welcome</p></cool>\');
+8 9 { body: \'<p>Welcome</p></cool>\' });
+8 13 <p>Hello World</p></haml>\' });
+8 15 { url: \'/callback\' },
+8 17 <p>:)</p>\' });
+8 19 { url: \'/error\' },
+8 20 { body: \'doesNotExist\' });
+8 22 { url: \'/invalid\' },
+8 23 function(res){
+8 24 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+8 25 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+8 28 };'
+
+9 2 res.render(\'index.jade', { layout: false });
+9 25 \'test #render() layout': function(assert){
+9 27 app.set(\'views\', __dirname + \'/fixtures\');
+9 29 res.render(\'index.jade\');
+9 33 { body: \'<html><body><p>Welcome</p></body></html>\' });
+9 35 \'test #render() specific layout': function(assert){
+9 39 res.render(\'index.jade\', { layout: \'cool.layout.jade\' });
+9 45 \'test #partial()\': function(assert){
+9 49 res.render(\'items.jade\', { locals: { items: [\'one\', \'two\'] }});
+9 53 { body: \'<html><body><ul><li>one</li><li>two</li></ul></body></html>\' });
+9 54 var movies = [
+9 55 { title: \'Nightmare Before Christmas\', director: \'Tim Burton\' },
+9 56 { title: \'Avatar\', director: \'James Cameron\' }
+9 58 app.get(\'/movies\', function(req, res){
+9 59 res.render(\'movies.jade\', { locals: { movies: movies }});
+9 61 var html = require(\'<html\');
+9 62 assert.skip(\'
+

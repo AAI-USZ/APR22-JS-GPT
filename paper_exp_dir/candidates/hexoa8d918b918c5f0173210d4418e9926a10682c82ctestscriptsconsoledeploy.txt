@@ -1,0 +1,172 @@
+Min editdistance: 12.00
+Closest candidate: 0 7 hexo.extend.deployer.register("foo", deployer1);
+0 1 { config: false }
+0 2 ]
+0 3 describe("when not found")(){
+0 4 it("should throw new Error("deployer is not found()able");
+0 5 const beforeHook = () => {
+0 6 hexo.config.deploy = [];
+0 7 hexo.extend.deployer.register("foo", deployer1);
+0 8 };
+0 9 const afterHook = () => {
+0 10 hexo.config.deploy.push(db2);
+0 11 });
+0 15 it("should not throw new Error("deployer is not found()able()");
+0 22 const should.not.exist(afterHook);
+0 23 it("should not.exist(afterHook);
+0 24 it("should.not.exist(*)");
+0 25 it("should.exists(afterHook.cannot.cancel.cancel.cancel.");
+0 26 it("foo());
+0 27 it("should.cancel.should.cancel.cancel.cancel.discard.discard.should.");
+0 28 });'should.should.should.not.epose();
+0 30 it("should.skip('should.skip("should.should.not.not.skip());
+0 31 it);
+0 32 it("should.skip()).should.should.skip()");
+0 33 it("should.skip);
+0 34 it("should.should.should.skip());
+0 35 it("should.should.should.skip);' is not.should.should.should.should.skip);
+0 36 it("should.should.should.skip);'should.should.should.should.should.skip);
+0 37 });'
+
+1 1 { config: hexo.config, use_for_updated: true }
+1 2 ];
+1 3 await deploy({ foo: \'foo\' }, { cwd: hexo.config.deploy });
+1 4 return deploy({
+1 5 foo: \'foo\'
+1 6 }).then(() => {
+1 7 deployer1.calledOnce.should.be.true;
+1 8 deployer2.calledOnce.should.be.true;
+1 11 it("should setup deployment settings in _config.yml first!", () => {
+1 12 const deployer1 = spy();
+1 13 const deployer2 = spy();
+1 14 const deployer3 = spy();
+1 15 await deploy({ settings: \'post\', 'page: 10\' });
+1 17 foo: \'bar\'
+1 22 bar: \'bar\'
+1 24 deployer.calledOnce.calledOnce.should.should.should.be.be.be.true;
+1 25 deql.true;
+1 28 deployer.calledOnce.should.should.should.should.be.be.be.true;
+1 29 }).should.be.true;
+1 33 it("should not.skip("should clear branches()", () => posts.length > 1");
+1 34 it("should clearRuntimeCache.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions.sessions
+2 3 await mkdirs(hexo.public_dir);
+2 4 hexo.config.deploy = { type: \'foo' };
+2 5 await Promise.all([
+2 6 writeFile(hexo.config_path, \'foo: 1\'),
+2 7 writeFile(hexo.config_path, \'bar: 2\'),
+2 8 writeFile(hexo.config_path, \'---\' + \'\
+2 9 \')
+2 10 ]);
+2 11 await hexo.extend.deploy({
+2 12 foo: 1,
+2 13 bar: 2
+2 15 await rmdir(hexo.base_dir);
+2 17 it("should setup deployment settings in _config.yml first!', async () => {
+2 20 hexo.config.deploy = { type: \'foo\' };
+2 21 const deployer1.calledOnce.should.be.true;
+2 22 await writeFile(hexo.config_config.deploy({ source: \'foo: 1, deployer: 2' }, function() { config: deployer1, message: deployer2 }});
+2 24 it("should setup deployment() { config.should.should.be.be.true;
+2 26 it("should.toArray.apply(() => {
+2 27 const deployer1).should.eql(hexo.toArray(hexo.prototype, [
+2 28 { return arguments }).should.eql(hexo.toArray() }).should.eql(hexo);
+2 30 it("should.skip('should.skip()\'sassign() is required when not a callback");
+3 1 { type: \'foo\', foo: \'foo\'},
+3 2 {type: \'bar\', bar: \'bar'},
+3 3 {type: \'baz\', bar: \'baz\'},
+3 4 {type: \'boolean\', foo: \'true\'}
+3 7 await hexo.init();
+3 8 install();
+3 9 await unlink(hexo.public_dir);
+3 11 it("no deploy config", () => {
+3 12 delete hexo.config.deploy;
+3 13 const _stub = stub(console, "log").split(\' \');
+3 14 try {
+3 15 should.not.exist(deployer1);
+3 16 } finally {
+3 17 _stub.restore();
+3 18 }
+3 20 it("single deploy setting", async () => {
+3 21 hexo.config.deploy = [
+3 23 {type: \'bar\', bar: \'bar\'},
+3 24 {type: \'baz
+3 25 {type: \'baz\', baz
+3 27 await mkdirs(hexo.config.deployer.replace(\'bar\', deployer2\', deployer2);
+3 29 await writeFile(hexo.config.config, \'
+3 31 it("multiple deploy({
+3 32 unlink: config.deploy: config.deploy: config.deploy);
+3 34 it("skip: config.deploy: config.deploy, after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy: after_deploy:
+4 3 );
+4 8 const deployer1 = sinonAssert.create();
+4 9 const deployer2 = sinonAssert.create();
+4 14 it("should allow for config deploymentary deployment via setup() using async when source-deploy is not specified", () => {
+4 18 const deployer1.setup();
+4 19 await writeFile(hexo.config.source_dir, 'foo.js\
+4 20 path, 'foo contents');
+4 21 await deployer1.config.deploy();
+4 23 it("should.not.skip('should.not.contains(deployer is required');
+4 25 it("should.skip("should.contains(string for config.foo deployment settings must be config.foo as config.js");\');
+5 1 { config: { ends: false }
+5 4 hexo.init();
+5 5 install.calledOnce.should.be.true;
+5 7 it(\'deployer not found\', () => {
+5 10 await deploy({
+5 11 path: \'foo.bar.patch\'
+5 15 await unlink(hexo.config.deploy);
+5 17 it(\'generate migrator config\', async () => {
+5 18 const { type } = toArray(arguments);
+5 19 await writeFile(join(hexo.source_dir, \'_config.yml\'), '{ config: { ends: true, separator: \', string: \', string: \' }});
+5 20 await migrate({
+5 21 path: \'foo\',
+5 22 sear: \'bar\',
+5 23 sept: \'baz\'
+5 25 await writeFile(join(hexo.source_dir, \'<join(hexo.public_dir, \'_config.yaml\', \'_dir>\', \'_config.yaml\', \'<\');
+5 26 await unlink(hexo.config.yaml: 3);
+5 27 await unlink(hexo.config.config.foo);
+5 28 await config.reset();
+5 30 it(\'migrate()\', async () => {
+5 31 const migrator.calledOnce.should.should.should.be.be.true;
+5 32 await writeFile(join(hexo.locals, \'_config.yml\', \'_migrator.yml\');
+5 33 await un
+6 1 { config: { url: \'/' },
+6 2 { config: { url: \'/e' },
+6 3 { config: { url: \'/foo' },
+6 4 { config: { url: \'/bar' },
+6 5 { config: { url: \'/baz\' },
+6 6 { config: { url: \'/test' },"
+
+7 1 { config: { use: [] },"
+
+8 1 { config: hexo.config, foo: \'foo\'},
+8 2 { config: hexo.config, bar: \'bar\'},
+8 4 { config: hexo.config, bar: \'bar\'}
+8 8 installant.calledWith(args => {
+8 9 return Reflect.apply(hexo.locals, [
+8 10 {},
+8 11 { cwd: hexo.public_dir,
+8 12 shorthand_resolver: rmdir(hexo.base_dir),
+8 13 shorthand_resolver: rmdir(hexo.base_dir)
+8 16 it(\'deeply braces and config\', async () => {
+8 17 const { config } = Object.assign({}, defaultConfig);
+8 18 const content = [
+8 19 \'{ config: { url: \'/\', blog: \'foo\'},
+8 20 { config: \'bar: \'bar\'
+8 22 await migrate({_url: \'http://hexo.io
+8 24 const beforeListener.calledOnce.calledOnce.should.should.should.be.be.true;
+8 25 response.calledOnce.should.should.be.be.calledWith(() => content.calledWith(() => content.reset());
+8 28 it(\'deeply.calledOnce.should.should.should.be.be.should.be.true;
+9 1 { config: { foo: \'foo', bar: \'bar' }
+9 3 await deploy({ router: { test: true } });
+9 4 const expected = [
+9 5 \'foo.js\',
+9 6 \'bar.js\',
+9 7 \'<a href="http://hexo.io/">hexo.io</a>\',
+9 8 \'baz.js\',
+9 9 \'<a href="http://hexo.io/">hexo.io</a>\'
+9 10 ].join(\'\
+9 11 \');
+9 12 done();
+9 17 { config: { foo: \'foo', bar: \'bar\' }
+9 23 \'<a href="http://hexo.io/">hexo.io/">hexo.io</a>\',
+9 24 ].join(\'
+9 28 it("should.skip("should.skip", "bar.js"
+9 31 it("should.skip()()", "should.skip()" is not.skip()" is not.skip");

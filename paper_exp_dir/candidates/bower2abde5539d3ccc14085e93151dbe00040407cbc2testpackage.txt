@@ -1,0 +1,74 @@
+Min editdistance: 16.00
+Closest candidate: 2 52 package = function () {
+0 1 it('Should resolve git URLs properly', function () {
+0 2 var pkg = new Package('jquery', 'git://github.com/jquery/jquery.git');"
+
+1 1 nit('Should resolve git URLs properly', function () {
+1 2 var pkg = new Package('jquery', 'git://github.com/jquery/jquery.git');
+1 3 assert.equal(pkg.gitUrl, 'git://github.com/jquery/jquery.git');
+1 4 });
+1 5 it('Should resolve git HTTP URLs properly', function () {"
+
+2 5 it('Should resolve git HTTP URLs properly', function () {
+2 6 var pkg = new Package('jquery', 'git+http://example.com/project.git');
+2 7 assert.equal(pkg.gitUrl, 'http://example.com/project.git');
+2 9 it('Should resolve git HTTPS URLs properly', function () {
+2 10 var pkg = new Package('jquery', 'git+https://example.com/project.git');
+2 11 assert.equal(pkg.gitUrl, 'https://example.com/project.git');
+2 13 it('Should resolve git URL tags', function () {
+2 14 var pkg = new Package('jquery', 'git://github.com/jquery/jquery.git#v1.0');
+2 15 assert.equal(pkg.tag, 'v1.0');
+2 17 it('Should resolve github urls', function () {
+2 18 var pkg = new Package('jquery', 'git@github.com:twitter/flight.git#v1.0');
+2 20 assert.equal(pkg.gitUrl, 'git@github.com:twitter/flight.git');
+2 22 it('Should resolve url when we got redirected', function() {
+2 23 var redirecting_url    = 'http://redirecting-url.com';
+2 24 var redirecting_to_url = 'http://redirected-to-url.com';
+2 25 var redirect_scope = nock(redirecting_url)
+2 26 .defaultReplyHeaders({'location': redirecting_to_url + '/jquery.zip'})
+2 27 .get('/jquery.zip')
+2 28 .reply(302);
+2 29 var redirect_to_scope = nock(redirecting_to_url)
+2 31 .reply(200, 'jquery content');
+2 44 var redirect_to_scope = nock(redirecting_to_scope)
+2 45 .to_scope)
+2 47 .zip)
+2 48 .reply(200, 'jquery.zip');
+2 50 it('Should resolveLocalization', function () {
+2 51 var mode0777;
+2 52 package = function () {
+2 53 package.copy = resolveLocal();
+2 54 package = resolveLocal();
+2 55 package.resolveLocal();
+2 57 resolveLocal();
+7 23 var redirecting_url   = 'http://redirecting-url.com';
+7 44 var redirect_to_scope = nock(12)
+7 47 .reply(200, '12.zip');
+7 48 .updotag()
+7 49 .should.should.equal(12.should.equal(12.tmpdir(),12.length);
+7 50 it('should.not.equal(12.contains (12.contains((12.zip, 3.zip, 3.zip, 2.zip)
+7 51 .length, 3.zip)
+7 52 .should.contains(12.length)
+7 53 );
+7 54 it('should.not.contains(12.contains.zip, 3.zip, 3.zip)
+7 56 describe('should.download())
+7 57 .download())
+7 58 .with('jquery(email sent')
+7 59 .with('', function () {
+7 60 it('should. with('should. with('should. Redirecting an error', function (http://redirect
+9 14 var pkg = new Package('jquery', 'git://github.com/jquery/jquery.git#v1.0.1');
+9 15 assert.equal(pkg.tag, 'v1.0.1');
+9 18 var pkg = new Package('jquery', 'git@github.com:twitter/flight.git#v1.0.1');
+9 41 var pkg = new Package('jquery', redirecting_url + '/jquery.zip');
+9 42 pkg.on('resolve', function () {
+9 43 assert(pkg.install.install();
+9 45 assert.resolve();
+9 47 it('Should have.skip('Should have.skip('Should have.skip('Should have.skip');
+9 48 ');
+9 49 it('should.skip('should.skip');
+9 50 it('should.skip');
+9 51 it('should.skip is not.skip');
+9 52 it('skip is required');
+9 53 it('should.skip is required');
+9 55 });"
+

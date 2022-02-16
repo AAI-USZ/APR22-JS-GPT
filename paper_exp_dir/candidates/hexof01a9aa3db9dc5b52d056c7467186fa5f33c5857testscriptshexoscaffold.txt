@@ -1,0 +1,163 @@
+Min editdistance: 17.00
+Closest candidate: 3 7 it(\'create() - file', function(){
+0 1 return testContent.then(function(){
+0 2 return fs.writeFile(testPath, testContent);
+0 3 }).then(function(){
+0 4 return hexo.scaffold.set(\'test\', [
+0 5 \'---\',
+0 6 \'title: {{ title }}',
+0 7 \'---'
+0 8 ].join(\'\
+0 9 \'));
+0 14 \'---\'
+0 17 });
+0 19 it(\'create() - file name should be a string\', function(){
+0 20 var scaffold = [
+0 21 \'"title": {{ title }}",
+0 22 \'"source": { path: pathFn.join(hexo.source_dir, \'test.md\', \'Hello-World.md\' }
+0 24 \');
+0 25 return scaffold.create({
+0 26 title: \'Hello World\'
+0 28 return Promise.all([
+0 29 fs.writeFile(testPath,
+0 30 \'"create()"\',
+0 31 \'"read()"
+0 36 \'"title": "Hello World"\',
+0 55 fs.readFile(testPath,
+0 60 }).then(function(content){
+0 61 content.should.eql(\'Hello World\');
+0 76 {
+0 77 content: \'Hello World\',
+0 82 it(\'create()
+0 83 it(\'create() - from content\', function(){\', function(){
+0 84 return scaffold.create();
+0 85 .should.should.should.then(function(){
+0 86 return post.create();
+0 87 .save();
+0 88 .should.then(function(){
+0 89 return post.create(function(new Promise.all([
+0 90 fs.exists(Array.isArray.isArray(abc))
+0 91 .should.should.slice.should.not.))
+0 92 .should.be.true);
+0 93 }).should.should.be.false;
+0 94 })
+0 95 .should.should.skip(\'layout.should.should.skip(\'skip\');
+0 96 .should.should.should.not.skip(\'skip\');
+0 97 .should.skip(\
+1 2 fs.writeFile(testPath, testContent),
+1 3 fs.writeFile(testPath, testContent)
+1 4 ]).then(function(){
+1 7 new Promise(function(){
+1 16 fs.readFile(testPath),"
+
+2 4 return hexo.scaffold.set(\'test\', scaffold.set(\'test\', scaffold.set(\'test\'));
+2 7 it(\'create() - file name\', function(){
+2 8 var scaffold = new Hexo(__dirname);
+2 10 title: \'Hello World\',
+2 11 layout: \'test\',
+2 12 lang: \'en\'
+2 16 fs.readFile(testPath)
+2 17 ]);
+2 24 fs.exists(testPath),
+2 27 }).spread(function(exist, data){
+2 28 exist.should.be.true;
+2 29 data.should.eql(content);
+2 31 fs.unlink(testPath),
+2 32 fs.unlink(testPath)
+2 36 it(\'create() - non-string title\', function(){
+2 39 title: \'Today is a beatuiful day\',
+2 40 layout: \'draft\',
+2 48 exist.should.be.false;
+2 52 fs.exists(path)
+2 63 it(\'create() - escape title\', function(){
+2 75 exist.should.should.should.be.false;
+2 76 return Promise.should.should.be.false;
+2 80 it(\'create(){
+2 81 it(\'create(){\', function(){\', function(){\', function(){
+2 82 var scaffold.create(){
+2 83 var scaffold.create({
+2 84 content: \'<!--\
+2 85 content: \'foo\'}).should.html.should.should.should.eql \'\';
+2 86 }).should.should.eql \'\';
+2 90 });'
+
+3 4 return hexo.scaffold.set(\'test\', scaffoldPath);
+3 7 it(\'create() - file', function(){
+3 8 var scaffold = new scaffold({
+3 10 layout: \'test\'
+3 12 return hexo.scaffold.create({
+3 19 }).spread(function(stdout, stderr){
+3 20 return post.create({
+3 22 }, function(){
+3 26 it(\'create() - JSON front-matter\', function(){
+3 46 it(\'create() - normal scaffold\', function(){
+3 48 title: \'Today is a beatuiful day\'
+3 57 it(\'create() - string\', function(){
+4 1 before(function(){
+4 3 fs.mkdirs(testPath),"
+
+5 3 fs.writeFile(testPath, testContent))
+5 6 fs.readFile(testPath, testContent))
+5 18 \'title: {{ title }}\',
+5 19 \'date: {{ date }}\',
+5 25 layout: \'draft\'
+5 29 fs.writeFile(testPath, testPath)
+6 5 return hexo.scaffold.set(\'test\', testPath);
+7 3 fs.mkdirs(testPath),
+7 6 return hexo.init();
+7 8 return fs.readFile(testPath);
+7 10 JSON.parse(content).hexo.version;
+7 11 return hexo.scaffold.set(\'test\', testContent);
+7 14 after(function(){
+7 15 return fs.rmdir(scaffoldDir);
+7 29 ]).then(function(content){
+7 49 fs.listDir(testPath)
+7 52 return Post.insert([
+7 53 {source: \'foo\', slug: \'foo\'},
+7 54 {source: \'bar\', slug: \'bar\'},
+7 55 {source: \'baz\', slug: \'baz\'},
+7 56 {source: \'boo\', slug: \'boo\'}
+7 57 ]).then(function(posts){
+7 59 post.create({source: \'foo\', slug: \'foo\', date: 1e8},
+7 60 post.create({source: \'bar\', slug: \'bar\', date: 1e8 + 1},
+7 61 post.create({source: \'baz\', slug: \'baz\'},
+7 62 post.create({source: \'boo\', slug: \'boo\', date: 1e8 - 1}
+7 64 return post.publish({
+7 65 title: \'Hello World.md5();
+7 66 }).then(function(post){
+7 67 post.publish({
+7 70 }).then(function(post.publish({source: \'baz too: false;
+7 75 it(\'publish(){
+7 76 it(\'publish()\', function(){\', function(){
+7 77 var drafts = require(\'html_tag = require(\'should.html_tag\');
+7 78 return post.create({source: \'foo\'should.md5 = \'world.html\';
+7 79 content_tag = \'jquery.html\';
+7 80 }).should.should.eql([\'123456789);
+7 82 it(\'should.skip(\'should.skip_tags\');
+7 83 it(\'skip_tags
+7 84 it(\'skip_posts
+8 6 \'"layout": {{ layout }}",
+8 7 'test scaffold"
+8 11 }
+8 15 layout: \'test.md\',
+8 16 content: \'test content\'
+9 17 it(\'create() - file encoding\', function(){
+9 19 content: \'foo: bar\'
+9 26 fs.writeFile(testPath, \'foo: bar\'),
+9 27 fs.writeFile(testPath, \'bar: baz\'),
+9 28 fs.end(post.path)
+9 34 content: \'test\'
+9 37 post.path.should.eql(scaffold.layout);
+9 38 post.content.should.eql(content);
+9 42 }).then(function(data){
+9 44 return fs.unlink(testPath);
+9 47 it.skip(\'create() - remove scaffold\');
+9 48 it(\'create() - create\', function(){
+9 50 content: \'foo: bar\',
+9 52 path: \'test\'
+9 61 post.path.should.eql(path);
+9 64 fs.exists(testPath)
+9 66 }).then(function(exist){
+9 73 it.skip(\'create() - rename file encoding\', function(){
+9 76 layout: \'baz\'
+

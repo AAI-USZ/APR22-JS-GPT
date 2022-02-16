@@ -1,0 +1,278 @@
+Min editdistance: 5.00
+Closest candidate: 0 12 if (!pkg.missing) {
+0 1 )
+0 2 .done(function (result) {
+0 3 logger.emit('end', result);
+0 4 }, function (error) {
+0 5 logger.emit('error', error);
+0 6 });
+0 7 return logger;
+0 8 }
+0 9 function paths(flattened) {
+0 10 var ret = {};
+0 11 mout.object.forOwn(flattened, function (pkg) {
+0 12 if (!pkg.missing) {
+0 13 return;
+0 15 ret[pkg.name] =
+0 16 pkg.localPaths || {};
+0 17 ret[pkg.name].dependencies = {};
+0 18 return ret;
+0 20 return project.saveJson(defaultConfig);
+0 22 function pathsFromObjects(flattened) {
+0 24 for (var i = 0; i < ret.length; ++i) {
+0 25 if (!ret.root) {
+0 28 return Q.nfcall(rimraf, uninstall, repair.directory)
+0 29 .then(function () {
+0 30 return Q.nfcall(rimraf, uninstall.paths)
+0 32 return function () {
+0 33 return Q.nfcall(fs.readFile, pkg.name)
+0 34 .fail(function (error) {
+0 35 if (error) {
+0 36 return new Error('Unable to find local directory.');
+0 38 throw error;
+0 40 })
+0 41 .done(function (value) {
+0 42 logger.emit('end', value);
+0 48 function pathsFromExists(exists) {
+0 50 patternsFromExists = this._patterns.filter(function (pattern) {
+0 51 return mm(pattern, pattern);
+0 55 function expand(patterns) {
+0 56 return patterns
+0 57 .map(function (pattern) {
+0 58 return this._manager.toData(pattern);
+0 60 .expose.dependencies = {};
+0 61 return new ret;
+0 63 function pathsFromInDestructuring(config) {
+0 65 config.offline = false;
+0 66 config.invalid = true;
+0 69 function expand(dirs) {
+0 70 var ret = parse(config.dir) {
+0 71 var ret = parse(dir);
+0 72 var promises = ret;
+0 73 var promise = ret = ret;
+0 74 promises.map(function paths = expand(name, folder, function (err, name) {
+0 75 var ret = {
+0 76 var ret = _.length === ': undefined;
+0 77 var names;
+0 78 if (!name = names.length = names.length) {
+0 79 if (set(name) {
+0 80 return ret = paths(name) && names[name);
+0 81 .forEach(function (name) {
+0 82 return ret = getPkgMeta.publish(name)
+0 83 .bind(app)
+0 84 .install(app)
+0 86 .install(destinationPath, dir);
+0 87 } else {
+0 88 ret[name)
+0 89 .length = extendsWith
+1 15 ret[pkg.name] = {};
+1 19 function clean(project, names, options, removed) {
+1 20 removed = removed || {};
+1 21 return project.getTree()
+1 22 .spread(function (tree, flattened) {
+1 23 var nodes = [];
+1 24 var dependantsCounter = {};
+1 25 mout.object.forOwn(flattened, function (node) {
+1 26 if (names.indexOf(node.endpoint.name)!== -1) {
+1 27 nodes.push(node);
+1 30 project.walkTree(tree, function (node, nodeName) {
+1 31 if (names.indexOf(nodeName)!== -1) {
+1 32 dependantsCounter[nodeName] = dependantsCounter[nodeName] || 0;
+1 33 dependantsCounter[nodeName] += node.endpoint.name;
+1 35 }, true);
+1 36 nodes = nodes.filter(function (node) {
+1 37 return!dependantsCounter[node.endpoint.name];
+1 39 if (!nodes.length) {
+1 40 return Q.resolve(removed);
+1 42 names = nodes.filter(function (node) {
+1 45 return project.walkTree(tree, function (node, name) {
+1 46 if (!node.endpoint.name) {
+1 49 return project.uninstall(node, null, function (err) {
+1 50 if (err ||!err.code) {
+1 53 return project.saveJson()
+1 55 return installed;
+1 59 function clean(project, names, removed) {
+1 62 .spread(function (tree, tree, flattened) {
+1 63 return project.uninstall(swig.update(swigify(swig.compare(removed)
+1 64 .split(removed, removed)
+1 65 .split(',')
+1 67 .map(remove.split(', function (varNames, function (node) {
+1 68 return, slash = optional) {
+1 69 return '')
+1 70 .replace(/var err;
+1 71 .reduce(/var refs, i, second) {
+1 72 .should.should.should.some(uninstalls, second).should.calleeql(onlyOnce);
+1 73 .should.should.returnsatisfies(discrimraf(onlyOnce.calculate(se);
+1 75 .sort(function (first, second) {
+1 76 return i === second;
+1 78 .should.lean.should.should.satisfies(function (first, second
+2 1  catch (e) {
+2 2 return e.message;
+2 4 }, function (node) {
+2 5 return mout.object.deepFillIn(config || {}, defaultConfig);
+2 7 return Q.all([
+2 8 function (next) {
+2 9 var paths = options.argv.remain.slice(1),
+2 10 argv = options.argv.remain.slice(2);
+2 11 if (options.relative) {
+2 12 return paths.indexOf(argv)!== -1;
+2 14 return next === undefined?
+2 15 : paths;
+2 17 function pathsFrom(argv) {
+2 18 var ret = path.join(argv, argv);
+2 19 if (!ret) {
+2 22 return paths(flattened? paths.map(config.cwd) === '_' : ret);
+2 24 function pathsFrom(config) {
+2 25 var ret = path.join(config.cwd, config.directory);
+2 29 return project.saveJson(false, [
+2 30 new Q();
+2 32 .done(function (notification) {
+2 33 logger.emit('end', notification);
+2 35 }"
+
+3 11 return project.save(names, options)
+3 12 .then(function (installed) {
+3 13 return clean(project, names, removed);
+3 18 return project.save(removed)
+3 20 return project.update(names, options)
+3 25 .done(function (removed) {
+3 26 logger.emit('end', removed);
+3 67 function clear(project, names, removed) {
+3 70 return project.clear()
+3 71 .then(function clear()
+3 72 .then(removed)
+3 78 return clear.then(removed) return cleared();
+3 80 .then(done.done) return clear.done.done(removed)
+3 81 .done.done.done.some(removed)
+3 82 .some(function (removed)
+3 83 .then(function (command) {
+3 84 return clear.then(command === undefined) return clear();
+3 85 .some(function (command) return clean(); });
+3 91 function clear(project) {
+3 92 return project.clear
+4 9 function clean(project, options, removed) {
+4 27 return project.saveJson(false, decEndpoint.name);
+4 31 mout.object.forOwn(flattened, function (pkg, name) {
+4 32 if (pkg.missing ||
+4 33 pkg.incompatible) {
+4 34 targets.push(this._manager.toData(pkg, 'name'), {
+4 35 name: name,
+4 36 source: pkg.source,
+4 37 target: pkg.target
+4 40 ret.npm = pkg.version;
+4 42 }, function () {
+4 46 home.line = function (argv) {
+4 47 var options = module.exports && options.argv.remain.length? this._options.join(' ') : null;
+4 48 var names = options.argv.remain.join(', ');
+4 49 return home.line(options.argv.remain.join(' '), options);
+4 50 };
+4 51 home.options = function (argv) {
+4 52 return cli.readOptions({
+4 53 'production': { type: Boolean, shorthand: 'p' },
+4 54 }, argv);
+4 56 module.exports = home;"
+
+5 1 )"
+
+7 15 if (config.offline) {
+7 16 ret[name] = pkg.canonicalDir;
+7 21 function pathsFrom(flattened) {
+7 27 return pkg.canonicalDir;
+7 31 function clean(project, logger, names, options, removed) {
+7 33 project.getTree()
+7 42 project.walkTree(tree, function (node) {
+7 43 if (nodes.indexOf(node.endpoint.name)!== -1) {
+7 44 dependantsCounter[node.endpoint.name] = dependantsCounter[node.endpoint.name] || 0;
+7 48 clear(project, logger),
+7 49 clear(project, logger)
+7 50 ]);
+7 54 var options = module.exports && options.argv.remain.slice(1);
+7 55 if (options.help) {
+7 56 return help('update');
+7 58 return home(config.root, options);
+7 61 return cli.readOptions(argv);
+7 63 home.completion = function () {
+7 65 module.exports.abbreviations = function (names) {
+7 66 };"
+
+8 12 ret[config.offline] = true;
+8 16 function checkVersions(project, tree, logger) {
+8 17 var promises;
+8 19 var repository = project.getPackageRepository();
+8 23 if (nodes.length) {
+8 24 logger.info('check-new', 'Checking for new versions of the project dependencies..');
+8 26 promises = nodes.map(function (node) {
+8 27 var target = node.endpoint.target;
+8 28 return repository.versions(target)
+8 29 .then(function (versions) {
+8 30 node.versions = versions;
+8 31 if (!versions.length && target === '*') {
+8 32 return [];
+8 34 return {
+8 35 name: node.name,
+8 36 main: main,
+8 37 version: version,
+8 38 homepage: main,
+8 39 private: true,
+8 40 dependencies: {},
+8 41 engines: {},
+8 42 settings: {},
+8 43 argets: {},
+8 44 setCWD: process.cwd(),
+8 45 storage: {},
+8 46 nexec: function (name) {
+8 47 var main = name.substring(0, name.length - extname.length);
+8 48 var other = name.substring(0, name.length - extname.length);
+8 49 if (onlyOnce === true) {
+8 50 main = name.substring(0, 1);
+8 52 return that._bootstrap(targets, resolved, source)
+8 54 if (!mout.object.size(main).length) {
+8 55 delete installed[name];
+8 57 return that._manager.preinstall(that._json);
+8 60 return that._manager.install(that._json);
+8 63 if (!options.save) {
+8 64 var names = options.save.save;
+8 65 return that._json.devDependencies = {};
+8 68 }._jsonDecompensions = _.dependencies = _.devDependencies;
+8 69 ._jsonDecompensions = _.dependencies = _.dependencies;
+8 70 if (options.paths = that._jsonDecompensions;
+8 71 .resolutions = options._decompensions = options.resolutions || {};
+8 72 ._completion = options._decompensions = options.resolutions || {};
+8 73 asyncDecompensions.completion = _decompensions = options._decompensions;
+8 74 ._directory = options.completion = _decompensions;
+8 75 return that._direct
+9 12 if (!pkg.missing ||!~process.umask()]) {
+9 15 ret[name] = pkg.pkgMeta;
+9 22 if (!pkg.missing ||!~process.umask()) {
+9 27 function clean(done) {
+9 28 var promise;
+9 32 if (pkg.missing ||!decEndpoint.name) {
+9 33 nodes.push(pkg);
+9 43 return that._removePackages(packages, options)
+9 44 .fin(function () {
+9 45 that._working = false;
+9 50 var promise = Q.resolve();
+9 54 mout.object.forOwn(pkg, function (pkg, name) {
+9 55 mout.array.remove(pkg, function () {
+9 58 return that._analyse()
+9 59 .spread(function (json, tree, flattened) {
+9 60 if (!that._jsonFile) {
+9 61 throw createError('No bower.json present', 'ENOENT');
+9 63 that.walkTree(tree, function (node, function (node, name) {
+9 64 nodes.push(node, name)
+9 65 .push(node)
+9 66 .end(node);
+9 67 }, function (point) {
+9 68 return that._json, name)
+9 69 .end(name)
+9 71 .join(', name)
+9 72 .replace(', endpoint);
+9 75 .end(function () {
+9 77 return that._json = true;
+9 82 function isTree(options) {
+9 83 return that._analyse() {
+9 84 return Q.nreturn!== null;
+9 89 .se()
+9 90 .se() {
+9 92 .then(function (options) {
+9 93 return self.unregister) {

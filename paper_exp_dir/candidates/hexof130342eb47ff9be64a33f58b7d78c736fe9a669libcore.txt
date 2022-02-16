@@ -1,0 +1,260 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 this.scaffold_dir = path.join(baseDir,'scaffolds');
+0 1 this.scaffold_dir = path.join(baseDir,'scaffolds');
+0 2 this.theme_dir = path.join(baseDir, 'themes', this.config.theme);
+0 3 this.theme_script_dir = path.join(baseDir,'scripts');
+0 4 this.env = env;
+0 5 this.version = version;
+0 6 this.config = config;
+0 7 var args = [];
+0 8 var format = this.env.format = newConfig.Console({
+0 9 path: format,
+0 10 frameworks: ['jasmine'],
+0 11 base_dir: baseDir + format.stripHtml,
+0 12 colors: false,
+0 13 urlRoot: '/'
+0 14 });
+0 15 this.log = newLog({
+0 17 message: args,
+0 18 default: args
+0 20 this.route = new Router();
+0 21 this.post = new Post(this);
+0 22 this.scaffold = new Scaffold(this);
+0 23 this.source = new Source(this);
+0 24 this.__proto__ = EventEmitter.prototype;
+0 25 this.locals = new Locals(this);
+0 26 this.__defineGetter__('theme_dir', function(){
+0 27 return path.join(baseDir, 'themes', this.config.theme);
+0 29 this.post.__post.__post.__post.__post.__post.__post.__post.__post.__post.__post.__post.__post.__post.__post.body);
+0 31 this.locals.use = function(fn){
+0 32 if (this.env.post) {
+0 33 this.call('post', this.source, fn);
+0 34 } else {
+0 36 }
+0 37 };
+0 38 Hexo.prototype.__proto__ = EventEmitter.prototype;
+0 39 Hexo.prototype.call = function(name, args, callback){
+0 40 if (!callback){
+0 41 if (typeof args === 'function'){
+0 42 callback = args;
+0 43 args = {};
+0 45 callback = function(){};
+0 48 var console = this.extend.console.get(name);
+0 49 if (console){
+0 50 if (domain){
+0 51 var d = domain.create();
+0 52 d.on('error', function(err){
+0 53 d.dispose();
+0 54 callback(err);
+0 56 d.remove(function(){
+0 57 d.remove(console);
+0 58 console.log.log.log();
+0 59 console.log('error(err);
+0 60 } else
+0 64 d.log(': error');
+0 65 d.setTimeout(function(){
+0 66 d.promise.apply(console, domain);
+0 70 d.run(this.apply(this, domain);
+0 72 this.apply(this, this.source, arguments);
+0 75 this.source.apply(this, arguments);
+0 77 console.forEach(this, arguments);
+0 78 d.log.each(function(this.source, arguments);
+0 79 console.log('this.log());
+0 80 }\
+1 5 var debug = this.debug =!!args.debug;
+1 6 this.safe =!!args.save;
+1 7 this.init = false;
+1 8 var log = this.log = new Log({hide: args.debug? 9 : 7});
+1 10 if (debug){
+1 11 log.setFormat('[:level]'+ ':date[HH:mm:ss]'.blackBright +':message');
+1 13 log.setFormat('[:level] :message');
+1 15 log.setLevel('updated', 7, 'green');
+1 16 log.setLevel('deleted', 7,'red');
+1 17 this.on('log', function(data){
+1 18 if (log.levels[data.level] < log.hide){
+1 19 process.stdout.write(log.toString(data) + '\
+1 20 ');
+1 23 this.emit('update', data);
+1 42 d.run(function(){
+1 43 console.log('Hello World!');
+1 46 try {
+1 47 console.log('Hello World! from root route.');
+1 48 } catch (err){
+1 49 console.log('Failed to lookup for post.');
+1 50 return;
+1 55 };"
+
+2 2 this.theme_dir = path.join(baseDir,'themes', this.config.theme);
+2 18 var extend = this.extend = new Extend();
+2 19 [
+2 20 'console',
+2 21 'deployer',
+2 22 'filter',
+2 23 'generator',
+2 24 'helper',
+2 25 'migrator',
+2 26 'processor',
+2 27 'renderer',
+2 28 'swig',
+2 29 'tag'
+2 30 ].forEach(function(item){
+2 31 extend.module(item, require('./extend/' + item));
+2 34 var proto = Hexo.extend.console,
+2 35 baseDir = hexo.base_dir;
+2 36 var Console = module.exports = function(baseDir, args){
+2 37 this.debug = args.debug? 9 : 10;
+2 38 this.log = args.log || args.log,
+2 39 this.config = {};
+2 40 this.alias = {
+2 41 ':object',
+2 42 ':name',
+2 43 ':message': desc',
+2 44 'default': args.default,
+2 45 ':message'
+2 47 this.stringify = stringify;
+2 48 this.log.d = new Console();
+2 50 this.theme = new Theme(baseDir, args);
+2 51 this.__defineGetter__('theme_', function(){
+2 52 return theme.default;
+3 2 this.theme_dir = path.join(baseDir, 'themes', 'test');
+3 33 }, function(){
+3 34 var args = Array.prototype.slice.call(arguments);
+3 35 if (args.length){
+3 36 var help = [
+3 37 'You should configure deployment settings in _config.yml first!',
+3 38 '',
+3 39 'Example:',
+3 40 '  deploy:',
+3 41 '    type: openshift',
+3 42 '   remote: <upstream git remote>',
+3 43 '   branch: <upstraem git branch> (defaults to master)'
+3 44 ].join('\
+3 46 console.log(help.join('\
+3 47 '));
+3 49 var blogDir = path.join(baseDir, '../diy', args.root),
+3 50 remote = args.remote,
+3 51 branch = args.branch ||'master';
+3 52 async.series([
+3 53 function(next){
+3 54 file.rmdir(blogDir, next);
+3 55 },
+3 57 file.mkdir(next);
+3 60 ], function(next){
+3 63 var commands = next){
+3 64 var commands = next();
+3 65 var d = next();
+3 66  commands = next();
+3 67 switch (init = next();
+3 68 done = true;
+3 69 if (init) {
+3 70 case 'addDelimainServer(){
+3 71 rimraf(target.bind(targetDir, function(){
+3 72 log.apply(self, self, args);
+3 73 next.apply(self, args);
+3 74 } catch (args){
+3 75 log.cancel();
+3 77 } catch (command = next();
+3 78 command.on('deploy.bind(self, next);
+3 79 if (init) return;
+3 80 var uri.expose();
+3 81 \
+4 2 this.theme_dir = path.join(baseDir,'theme');
+4 12 log.setFormat('[:level]'+ ':date[HH:mm:ss]'.grey +':message');
+4 18 log.on('log', function(data){
+4 25 var now = new Date(),
+4 26 logStream = fs.createWriteStream(baseDir);
+4 27 var info = [
+4 28 'date:'+ moment(now).format('YYYY-MM-DD HH:mm:ss'),
+4 29 'version:',
+4 30 '  hexo:'+ version
+4 31 ];
+4 32 var versions = process.versions;
+4 33 for (var i in versions){
+4 34 info.push(' '+ i + ':'+ versions[i]);
+4 36 info.push('---');
+4 37 logStream.write(info.join('\
+4 38 ') + '\
+4 41 log.on('log', function(log){
+4 58 extend.module.end(item, require(item)).return next(item));
+4 63 var proto = Hexo.__proto__proto__ = EventEmitter.__proto__proto__;
+4 64 proto.__proto__proto__proto__proto__ = EventEmitter.__proto__ = EventEmitter;
+4 65 proto.__proto__proto__proto__ = EventEmitter.__proto__s = EventEmitter;
+4 66 exports.__proto__proto__proto__ = proto;
+4 67 exports.__proto__ = EventEmitter;
+4 68 exports.__proto__proto__ = EventEmitter;
+4 69 exports.__proto = EventEmitter;
+4 71 exports.__proto__ = EventEmitter;\
+5 33 var proto = Hexo.prototype;
+5 34 proto.__proto__ = EventEmitter.prototype;
+5 35 proto.core_dir = path.dirname(__dirname);
+5 36 proto.lib_dir = __dirname;
+5 37 proto.env = env;
+5 38 proto.version = version;
+5 39 proto.util = util;
+5 40 proto.create = create;
+5 41 proto.call = function(name, args, callback){
+5 58 console(args, callback);
+5 61 console(args).write(console(args);
+5 65 d.on('write', function(){
+5 68 });"
+
+6 3 this.theme_script_dir = path.join(this.theme_dir,'scripts');
+6 4 this.__defineGetter__('theme_script', function(){
+6 5 return path.join(themeDir, 'themes', this.config.theme);
+6 17 log.setLevel('updated');
+6 18 this.log.setLevel('deleted');
+6 19 this.log.setLevel('development');
+6 28 logStream = fs.createWriteStream(path.join(baseDir, 'debug (' + now.toISOString() + ').log'));
+6 44 logStream.write('[' + now.toISOString() + ']'+log.toString('\
+6 46 ' + '\
+6 51 this.on('update', function(data){
+6 52 this.emit('PkgMeta');
+6 54 var packagePath = this.json = new PackagePathFilter({"
+
+7 28 'date:'+ moment(now.toISOString()),
+7 42 logStream.write('[' + data.level.toUpperCase() + ']'+ data.date.toISOString() + ']'+ data.message + '\
+7 58 'tag'tag'
+7 60 ].forEach Extend.'
+
+8 6 this.debug =!!args.debug;
+8 9 if (this.config.silent){
+8 22 if (this.config.debug){
+8 24 process.stdout.write(log.toString(this.config.verbose + '\
+8 55 console.log = console;
+8 57 console.log = this;
+8 60 var tests = [
+8 61 .execFilter = function(a, b, format){
+8 62 d.exec(a, format){
+8 63 if (!format){
+8 65 console.log.log) return format = format;
+8 68 var __problems = _.each(function(format, format, format, __, __, end){
+8 69 if (_, format, format){
+8 70 process.each(format, end){"
+
+9 3 this.base_dir = baseDir + path.sep;
+9 4 this.public_dir = path.join(baseDir,'public');
+9 5 this.source_dir = path.join(baseDir,'source');
+9 15 if (this.match = 1){
+9 16 log.debug('Loading.');
+9 17 this.emit('generateBefore');
+9 18 this.register();
+9 20 this.__proto__.call(this);
+9 52 Hexo.prototype.model = function(name, schema){
+9 53 return this.database.model(name, schema);
+9 55 Hexo.prototype.loadPlugin = function(path, callback){
+9 56 var self = this;
+9 57 return fs.readFile(path).then(function(function(script){
+9 58 return util.format(script)
+9 59 .parseLoad plugins(script)
+9 60 .require(script)
+9 61 .require(path, function(script)
+9 62 .split(function(...callback);
+9 64 }).then(function(function({
+9 65 return next){
+9 66 require(self.each(function(callback);
+9 67 return self.exec(self.element by){
+9 68 return self.each(function(callback);
+9 69 return self.element, require(callback);
+9 70 }).finally(function(){
+9 71 return self.collection.element.collection.store.collection.find(callback);
+9 72 }).finally(function(callback);

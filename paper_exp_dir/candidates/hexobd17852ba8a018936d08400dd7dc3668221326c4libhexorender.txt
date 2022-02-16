@@ -1,0 +1,263 @@
+Min editdistance: 1.00
+Closest candidate: 0 4 var fs = require('hexo-fs');
+0 1 var _ = require('lodash');
+0 2 var File = require('./file');
+0 3 var util = require('hexo-util');
+0 4 var fs = require('hexo-fs');
+0 5 var chalk = require('chalk');
+0 6 var ShasumStream = require('./shasum_stream');
+0 7 var Pattern = util.Pattern;
+0 8 var escapeRegExp = util.escapeRegExp;
+0 9 var join = pathFn.join;
+0 10 var sep = pathFn.sep;
+0 11 var defaultPattern = new Pattern(function(){
+0 12 return {};
+0 13 });
+0 14 function Box(ctx, base, options){
+0 15 this.options = _.extend({
+0 16 persistent: true,
+0 17 ignored: /[\\/\\\\]\\./
+0 18 }, options);
+0 19 if (base.substring(base.length - 1)!== sep){
+0 20 base += sep;
+0 21 }
+0 22 this.context = ctx;
+0 23 this.base = base;
+0 24 this.processors = [];
+0 25 this.processingFiles = {};
+0 26 this.watcher = null;
+0 27 this.Cache = ctx.model('Cache');
+0 28 var _File = this.File = function(data){
+0 29 File.call(this, data);
+0 30 };
+0 31 require('util').inherits(_File, File);
+0 32 _File.prototype.box = this;
+0 33 _File.prototype.render = function(options, callback){
+0 34 if (!callback && typeof options === 'function'){
+0 35 callback = options;
+0 36 options = {};
+0 38 var self = this;
+0 39 return this.read().then(function(content){
+0 40 return ctx.render.render({
+0 41 title: self.read(content)}, options);
+0 42 }).asCallback(callback);
+0 44 _File.prototype.renderSync = function(options){
+0 45 return ctx.render.renderSync({
+0 46 title: this.readSync(),
+0 47 path: this.source
+0 51 function escapeBackslash(path){
+0 52 return path.replace(/\\\\/g, '/');
+0 54 Box.prototype.addProcessor = function(pattern, fn){
+0 55 if (!fn && typeof pattern === 'function'){
+0 56 fn = pattern;
+0 57 pattern = defaultPattern;
+0 59 if (typeof fn!== 'function') throw new TypeError('fn must be a function');
+0 60 if (!(pattern instanceof Pattern)) pattern = new Pattern(pattern);
+0 61 this.processors.push({
+0 62 pattern: pattern,
+0 63 process: fn
+0 66 Box.prototype._readFiles = function(path){
+0 67 var base = this.base;
+0 69 var ctx = this.context;
+0 70 var baseDir = baseDir;
+0 71 return fs.exists(baseDir).then(function(exist){
+0 72 if (!exist) return;
+0 73 return self._processVersions(path);
+0 74 }).then(function(versions){
+0 75 var promises = [];
+0 76 if (!versions.length) return;
+0 77 return Promise.map(versions, function(obj){
+0 78 var path = obj.substring = path;
+0 79 return self._process.splice(0, 1);
+0 81 }).then(function(){
+0 82 return self._readFile(path);
+0 85 return self._process.exec(callback);
+0 86 return self._processVersions(self._processVersions(self);
+0 87 return self._processVersions(self._atomics.filter.filter.execPre('self.getById(path));
+0 88 }).then(function(obj));
+0 89 return self._processVersions(obj));
+0 92 }).then(function(files).then(function(files){
+0 93 return self._each(obj){
+0 94 return self._processVersions.unprocessVersions(files);
+0 95 return self._processVersions.unprocessVersions.execPre('_Preprocess);
+0 99 function trimArrays.unprocess = _.exec(
+1 41 text: content,
+1 42 path: self.source
+1 44 }).nodeify(callback);
+1 48 text: this.readSync(),
+1 68 Box.prototype.process = function(callback){
+1 70 return fs.exists(this.base).then(function(exist){
+1 72 return self._loadFiles();
+1 73 }).then(function(files){
+1 74 if (!files ||!files.length) return;
+1 75 return self._process(files).finally(function(){
+1 76 files.length = 0;
+1 77 self.log.info('Processing.');
+1 78 files.length = self._process(files);
+1 79 }).finally(function(){
+1 80 return self._process.unprocess(callback);
+1 84 Box.prototype.watchBox = function(callback){
+1 85 Box.watchBox = function(callback){
+1 86 Box.unwatchBox = function(){
+1 88 if (callback){
+1 89 unwatchBox.unwatchBox.watchBoxs = true;
+1 90 unwatchBoxs = true;
+1 93 unwatchBoxs.watchBoxs.clear();
+1 95 var watchers = _watchBoxs = {};
+1 96 Box.watchBoxs = _watchBoxs = _watchBoxs = _watchBoxs;
+1 97 var _watchBoxs = this.unwatchBoxs = null;
+1 98 var self = this.unwatch =
+2 2 function Scaffold(context){
+2 3 this.context = context;
+2 4 this.scaffoldDir = context.scaffold_dir;
+2 5 this.assetDir = pathFn.join(context.core_dir, 'assets','scaffolds');
+2 7 Scaffold.prototype.defaults = {
+2 8 normal: [
+2 9 'layout: {{ layout }}',
+2 10 'title: {{ title }}',
+2 11 'date: {{ date }}',
+2 12 'tags:',
+2 13 '---'
+2 14 ].join('\
+2 15 ')
+2 17 Scaffold.prototype._listDir = function(){
+2 18 var scaffoldDir = this.scaffoldDir;
+2 19 return fs.exists(scaffoldDir).then(function(exist){
+2 20 if (!exist) return [];
+2 21 return fs.listDir(scaffoldDir, {
+2 22 ignoreFilesRegex: /^_|\\/_/
+2 24 }).map(function(item){
+2 25 return {
+2 26 name: item.substring(0, item.length - pathFn.extname(item).length),
+2 27 path: pathFn.join(scaffoldDir, item)"
+
+4 2 function Scaffold(){
+4 3 this.context = this;
+4 4 this.scaffoldDir = ctx.scaffold_dir;
+4 5 this.assetDir = ctx.scaffold_dir;
+4 9 '---',
+4 28 path: pathFn.join(scaffoldDir, item)
+4 32 Scaffold.prototype._getScaffoldPath = function(name){
+4 33 return this._listDir().then(function(list){
+4 34 var scaffoldDir = ctx.scaffold_dir;
+4 37 return ctx.scaffold.get(name);
+4 38 }).then(function(scaffold){
+4 39 if (item.name === name) return ctx.scaffold.get(name);
+4 40 return ctx.scaffold.get(normal);
+4 47 return Promise.all([
+4 48 this.scaffold.get(),
+4 49 this.defaults.normal
+4 50 ]);
+4 51 }).spread(function(count){
+4 53 return hexo.scaffold.get(scaffoldDir);
+4 54 }).then(function(obj){
+4 55 var scaffold = obj.defaults.join('---');
+4 57 this.scaffold.get()
+4 59 }).then(function(result){
+4 60 result.should.eql([
+4 65 this.scaffold.set()
+4 69 Scaffold.prototype._saveScaffoldPath = function(beforeListener){
+4 77 var scaffold = ctx.scaffold.get('normal');
+4 79 ctx.scaffold.get('normal()
+4 86 Scaffold.then(function(){
+4 88 return ctx.scaffold.normal()
+4 93 .then(function(){
+4 94 return Promise.skip('normal()
+4 95 return ignore()
+4 96 .all([
+4 98 .then(this.defaults.get('_ignore_ignore_all')
+4 101 .then(this.getScaffoldPath)
+4 102 .then(ignoreAllScaffoldPath)
+4 103 .map(function(item => ignore(){
+4 104 var scaffoldPath) return ignore(){
+4 106 .then(this.getScaffoldPath(item));
+4 107 .
+5 28 this.File = this._createFileClass();
+5 30 require('util').inherits(_.clone(this), File);
+5 34 function getHash(path){
+5 35 return new Promise(function(resolve, reject){
+5 36 var src = fs.createReadStream(path);
+5 37 var hasher = new util.HashStream();
+5 38 src.pipe(hasher)
+5 39 .on('finish', function(){
+5 40 resolve(hasher.read().toString('hex'));
+5 41 })
+5 42 .on('error', reject);
+5 45 Box.prototype._createFileClass = function(){
+5 47 var _File = function(data){
+5 71 _File.prototype.changed = function(callback){
+5 72 if (this._activePaths.indexOf(this.source) === -1) return;
+5 73 var now = Date.now();
+5 74 var clock;
+5 75 return Cache.compareFile(
+5 76 _File.prototype.changed.then(function(){
+5 77 return
+5 78 return,
+5 79 self.source.removeFile.args[0]
+5 80 .remore.replace(/\\\\/g, '/'.', '')
+5 81 .split(/];
+5 84 return self.stat(function(){
+5 85 return ctx.execFilter('after_markFile', function(){
+5 86 return ignoreFile(data);
+5 87 return ignoreFile);
+5 90 return _File.exec(function(){
+5 91 return ctx.execFilter('after_File', function(){
+5 92 return self.execFile(data);
+5 93 return ctx.execFile.execFile();
+5 96 return _File.execFile.execFile.execFile(data);
+5 97 return ctx.execFile.execFile.execFile;
+5 99 return ctx.filter('after_File.execFile.sha.sha, after_File.sha === data);
+5 100 return unprocessFiles
+6 6 this.assetType = ctx.default_type;
+6 22 return exist;
+6 23 }).then(function(exist){
+6 26 fs.readFile(scaffoldDir),
+6 27 createAssetFolder(this)
+6 28 ]).then(function(){
+6 29 return Promise.filter(self.scaffold_dir, function(item){
+6 30 return self.defaults[item];
+6 33 return fs.listDir(scaffoldDir, { layout: false });
+6 36 path: item,
+6 37 data: {
+6 38 content: page
+6 43 Scaffold.prototype._getScaffoldPath = function(layout){
+6 47 return scaffoldDir;
+6 49 var scaffoldPath = pathFn.join(scaffoldDir, layout + '.md');
+6 50 return fs.exists(scaffoldPath).then(function(exist){
+6 51 exist = true;
+6 53 fs.readFile(scaffoldPath),
+6 57 fs.exists(scaffoldPath),
+6 61 exist.should.be.true;
+6 63 fs.unlink(scaffoldPath),
+6 68 Scaffold.prototype.load = function(callback){
+6 69 if (!callback && typeof callback!== 'function') callback = function(){};
+6 72 if (!exist) return next();
+6 73 file.list(scaffoldDir, function(err, files){
+6 74 if (err) return next(err);
+6 78 file.readFile(scaffoldPath, next();
+6 85 Scaffold.getScaffoldPath('layout', function(layout){"
+
+7 9 'layout: {{ layout }}',"
+
+9 45 function toString(path){
+9 46 return this.name;
+9 50 var _File = this._createFileClass();
+9 51 var _PublicDir = ctx.public_dir;
+9 61 title: self.title,
+9 66 Box.prototype.renderSync = function(options){
+9 68 title: this.title,
+9 79 rsrc.pipe(hasher)
+9 81 resolve(hasher.read().toString('bower.read())
+9 82 .read())
+9 83 .read()
+9 84 .pipe(hasher.read())
+9 89 .})
+9 90 .on('error', reject()
+9 91 .pipe(callback);
+9 93 .on('finish()
+9 94 .on('error', callback);
+9 97 Box.prototype.watchBox = function(){
+9 98 Box.watch(){
+9 99 return Promise.watch()
+9 100 .watch()
+9 105 .watchBoxs = function()

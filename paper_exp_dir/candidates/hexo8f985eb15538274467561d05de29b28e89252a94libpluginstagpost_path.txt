@@ -1,0 +1,72 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 module.exports = ctx => {
+0 1 const url_for = require(\'../../plugins/helper/url_for\').bind(hexo);
+0 2 module.exports = ctx => {
+0 3 const PostAsset = ctx.model(\'PostAsset\');
+0 4 return function assetPathTag(args) {
+0 5 const slug = args.shift();
+0 6 if (!slug) return;
+0 7 const asset = PostAsset.findOne({post: this._id, slug});
+0 8 if (!asset) return;
+0 9 let escape = args[0];
+0 10 if (escape === \'true\' || escape === \'false\') {
+0 11 args.shift();
+0 12 } else {
+0 13 escape = \'false\';
+0 14 }
+0 15 let title = args.length? args.join(\' \') : asset.slug;
+0 16 const attrTitle = escapeHTML(title);
+0 17 if (escape === \'true\') title = attrTitle;
+0 18 return `<a href="${url_for.call(ctx, asset.path)}" title="${attrTitle}">${title}</a>`;
+0 19 };
+0 20 };'
+
+1 1 const url_for = require(\'../helper/url_for\');
+1 18 const link = encodeURL(res.url_for(asset.path));
+1 19 return `<a href="${link}" title="${attrTitle}">${title}</a>`;
+2 1 const flatten = function(arr, result = []) {
+2 2 for (const i in arr) {
+2 3 const value = arr[i];
+2 4 if (Array.isArray(value)) {
+2 5 flatten(value, result);
+2 7 result.push(value);
+2 10 return result;
+2 12 function cssHelper(...args) {
+2 13 let result = \'\
+2 14 \';
+2 15 let items = args;
+2 16 if (!Array.isArray(args)) {
+2 17 items = [args];
+2 19 items.forEach(item => {
+2 20 if (typeof item ===\'string\' || item instanceof String) {
+2 21 let path = item;
+2 22 if (!path.endsWith(\'.css\')) {
+2 23 path += \'.css\';
+2 25 result += `<link rel="stylesheet" href="${this.url_for(path)}">\
+2 26 `;
+2 27 } else {'
+
+3 8 const path = encodeURL(ctx.config.root + asset.path);
+3 9 return path;
+4 2 const Post = ctx.model(\'Post\');
+4 3 return function postLinkTag(args) {
+4 6 const post = Post.findOne({slug});
+4 7 if (!post) return;
+4 8 const link = encodeURL(ctx.config.root + post.path);
+4 9 return link;
+5 4 return function assetLinkTag(args) {
+5 9 const path = encodeURL(url_for.call(ctx, asset.path));
+6 8 let title = args.length? args.join(\' \') : post.title;
+6 9 return `<a href="${ctx.config.root}${post.path}" title="${title}">${title}</a>`;
+8 1 function iframeTag(args) {
+8 2 const url = args[0];
+8 3 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+8 4 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+8 5 return `<iframe src="${url}" width="${width}" height="${height}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+8 7 module.exports = iframeTag;'
+
+9 10 if (escape!== false && title!== ctx.config.title) {
+9 11 const link = `/${attrTitle}`;
+9 12 if (link) link += `<a href="${ctx.config.root}${link}" title="${attrTitle}">${title}</a>`;
+9 14 const link = (config.root + post.path) === config.default_layout? config.default_layout : default_layout;
+9 15 return `<a post="${link}" title="${title}">${title}</a>`;

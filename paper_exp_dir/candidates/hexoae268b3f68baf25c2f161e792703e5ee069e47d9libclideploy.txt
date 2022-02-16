@@ -1,0 +1,300 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 util = require('../util'),
+0 1 _ = require('underscore'),
+0 2 extend = require('../extend'),
+0 3 util = require('../util'),
+0 4 file = util.file,
+0 5 spawn = util.spawn;
+0 6 var command = function(comm, args, callback){
+0 7 spawn({
+0 8 command: comm,
+0 9 args: args,
+0 10 exit: function(code){
+0 11 if (code === 0) callback();
+0 12 }
+0 13 });
+0 14 };
+0 15 var deploy = function(){
+0 16 var config = hexo.config.deploy;
+0 17 if (!config.repo &&!config.repository){
+0 18 var help = [
+0 19 'You should configure deployment settings in _config.yml first!',
+0 20 '',
+0 21 'Example:',
+0 22 '  deploy:',
+0 23 '    type: heroku',
+0 24 '   repository: <repository url>',
+0 26 'For more help, you can check the online docs:'+ 'http://zespia.tw/hexo/'.underline
+0 27 ];
+0 28 console.log(help.join('\
+0 29 '));
+0 30 return callback();
+0 32 var url = config.repo || config.repository;
+0 33 async.series([
+0 34 function(next){
+0 35 var files = ['app.js', 'Procfile'];
+0 36 async.forEach(files, function(item, next){
+0 37 var src = path.join(hexo.public_dir, item);
+0 38 fs.exists(src, function(exist){
+0 39 if (exist){
+0 40 file.write(dest, next);
+0 41 } else {
+0 44 }, next);
+0 45 },
+0 47 var commands = [
+0 48 ['init'],
+0 49 ['remote', 'add', 'heroku', url]
+0 51 async.forEachSeries(commands, function(item, next){
+0 52 run('git', item, function(code){
+0 53 if (code == 0) next();
+0 54 else console.log('You should configure deployment settings in %s', clc.bold('hexo setup_deploy'));
+0 58 ], callback);
+0 60 module.exports = function(args, callback){
+0 67 '    repository: <repository url>',
+0 79 else console.log('You should use only until deployment.');
+0 85 };"
+
+1 1 rimraf = require('rimraf'),
+1 4 log = util.log,
+1 7 spawn(comm, args, callback);
+1 9 exports.deploy = function(){
+1 10 var target = process.cwd();
+1 11 if (args.repo &&!args.repository){
+1 12 var branch = args.repo || args.repository;
+1 13 if (branch){
+1 14 var branch ='master';
+1 16 var branch = 'gh-pages' || {};
+1 19 if (options.branch){
+1 20 var branch = process.cwd();
+1 24 if (options.paths){
+1 25 file.empty(target + s + callback);
+1 27 file.write(target + s, message + '\
+1 28 ');
+1 32 var branch = args.branch;
+1 34 var message = '\
+1 35 You should configure deployment settings in'+ clc.bold('_config.yml') +'first!\
+1 36 \
+1 37 Type:\
+1 38 ';
+1 39 message += 'Example:\
+1 42 var config = this.config.deploy;
+1 45 'You should configure deployment settings in'+ clc.bold('_config.yml') +'first!\
+1 47 ',
+1 53 'For more help, you can check the docs:'+ clc.underline('http://zespia.tw/hexo/docs/deployment.html');
+1 63 var src = path.join(__dirname, item),
+1 64 dest = path.join(baseDir, item);
+1 65 fs.exists(dest, function(exist){
+1 67 next();
+1 69 fs.mkdir(dest, next);
+1 79 run('git', item, function(){
+1 86 exports.setup = function(){
+1 87 var config = hexo.config,
+1 88 baseDir = hexo.base_dir;
+1 89 var args = baseDir = process.sepagination_dir;
+1 90 var regex = /publicDir = hexo.public_dir;
+1 91 log.selection.selection.selection = function(){
+1 92 preprocess = function(){
+1 93 preprocess.next();
+1 94 preprocess.nextTick();
+1 96 } finally {
+1 98 preprocess.next;
+1 99 preprocess.stop = function(){
+1 100 log.reset();
+1 104 };'
+
+2 1 path = require('path'),
+2 15 var baseDir = hexo.base_dir,
+2 16 deployDir = path.join(baseDir, '.deploy'),
+2 17 publicDir = hexo.public_dir;
+2 18 if (!args.repo &&!args.repository){
+2 24 '   type: git',
+2 25 '   message: [message]',
+2 27 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline
+2 33 var url = args.repo || args.repository,
+2 35 var run = function(command, args, callback){
+2 36 var cp = spawn(command, args, {cwd: baseDir});
+2 37 cp.stdout.on('data', function(data){
+2 38 process.stdout.write(data);
+2 40 cp.stderr.on('data', function(data){
+2 41 process.stderr.write(data);
+2 43 cp.on('close', callback);
+2 48 async.each(files, function(item, next){
+2 53 file.copyFile(src, dest, next);
+2 55 file.writeFile(dest, dest, next);
+2 62 ['remote', 'add', 'heroku', 'openshift'],
+2 63 ['remote', 'add', 'openshift']
+2 65 async.eachSeries(commands, function(item, next){
+3 19 require('../config')(target, function(){
+3 20 if (hexo.config.deploy) next();
+3 21 else log('You have to use `%s` to setup deploy.', clc.bold('hexo setup_deploy'));
+3 25 var publicDir = hexo.public_dir;
+3 26 file.dir(publicDir, function(files){
+3 28 file.copy(publicDir + item, target + '/.deployment/' + item);
+3 30 }, next());
+3 34 ['add', '-A'],
+3 35 ['commit', '-m', 'First commit'],
+3 36 ['branch', '-m', config.branch],
+3 37 ['remote', 'add', 'github', config.repository]
+3 40 command('rm', item, next());
+3 41 }, function(){
+3 42 log.info('Deploy complete.');
+3 46 command('cp', [
+3 51 ], next());
+3 54 command('git add', '-A', next());
+3 57 var message = 'Site updated:'+ moment.format(hexo.config.date_format +'' + hexo.config.time_format);
+3 58 log.info('Commiting:'+ message);
+3 59 command('git push origin', message);
+3 60 command('git push origin -s', message);
+3 61 command('git push origin -target', message);
+3 65 ], function(){
+3 66 log.success('Deploy complete.');
+3 69 exports.setup = function(args){
+3 70 var repo = args[0];
+3 71 if (repo === undefined) return false;
+3 72 if (args[1]){
+3 73 var branch = args[1];
+3 75 if (repo.match(/^(https?:\\/\\/|git(@|:\\/\\/))([^\\/]+))([^\\/]+)){2}/.test(args[3])/.test(args[4].split(' '))[3].split('/')[0]]/))[1]/.split(/');
+3 77 var branch ='master'master'master'_' = args[1] = args[1] ||'master'master'}' = args = args[3] || newVersion();
+3 80 var run = command = command('git', args, args, callback);
+3 81 var config = args = command = args,
+3 82 args.setup = args.setup('answ = command');
+3 83 if (config.stdout = function(){
+3 84 var output = process.stdout.stdout.pipe(process.stdout) process.stdout);
+3 85 if (process.stdout) return output;
+3 86 command = process.stdout.pipe(process.stdout);
+3 88 if (process.stderr) return;
+3 89 command = process.stderr
+4 2 sep = new RegExp('g');
+4 3 var function(comm, args){
+4 4 var key = args._[0];
+4 5 if (!mout.string.startsWith(key)){
+4 6 return process.exit(0);
+4 8 if (mout.object.keys(args).length){
+4 9 return module.exports;
+4 12 return command.apply(this, [key]);
+4 17 pkgfile = baseDir + 'package.json';
+4 18 return new hexo.filters.Array(function(arg){
+4 19 return args.filters.some(function(path){
+4 20 return arg.charAt(0)!== '_';
+4 23 return new Promise(function(resolve, reject){
+4 24 var dest = path.join(baseDir, '_multiconfig.yml');
+4 25 return fs.exists(dest).then(function(exist){
+4 27 file.dir(dest, function(files){
+4 29 var dirs = item.split(sep);
+4 30 for (var i=0, len=dirs.length; i<len; i++){
+4 31 var front = dirs[i].substr(0, 1);
+4 32 if (front === '_' || front === '.'){
+4 33 return next();
+4 36 file.copy(dest, next);
+4 40 fs.exists(baseDir + item, function(exist){
+4 42 file.dir(baseDir + item, function(files){
+4 54 }).load(function(err){
+4 55 if (err) throw err;
+4 56 if (hexo.log!= null){
+4 57 return hexo.log.e(err);
+4 59 return checkStream(route.get(src), false);
+5 15 extend.deployer.register('openshift', ['-fr', '--setup', '--silent', '--reporters=dots'], function(args, callback){
+6 15 else require('../loader')(target, function(){
+6 18 if (this.config.deploy) next();
+6 28 else {
+6 34 log.info('Deploying.');
+6 38 command('rm', ['-fr', target + '--setup'], next());
+6 41 command('cp', ['-r', target + '--setup'], next());
+6 44 var package = new helpers.TempDir({
+6 45 'bower.json': {
+6 46 name: 'package'
+6 48 'version.txt': '1.0.0'
+6 50 '1.0.1': {
+6 54 'version.txt': '1.0.1'
+6 57 var setup = function(){
+6 58 var args = [
+6 59 'bower.json',
+6 60 '_config.yml',
+6 61 '_config.yaml',
+6 64 '_config.yaml'
+6 66 async.waterfall([
+6 68 file.dir(target + '_config.yml', function(err, files){
+6 69 if (err) throw new Error('Failed to remove target');
+6 71 log.info('Failed to remove target');
+6 72 next(null, item);
+6 78 fs.exists(publicDir, function(exist){
+6 82 log.info('Copying files.');
+6 83 file.copy(publicDir + item, target + '_config.yml');
+6 89 log.error('You require('You require a timeout for your next().').write());
+6 95 command('cd', ['publish', 'http', 'ws', 'ws-del', 'x', 'x', 'x', 'npm', 'x', 'x', 'npm', '--repo', '--repo', '--tags', '--port', '--arch', '--arch']);
+6 96 command', function()'], next());
+6 98 command('git', ['x', 'git', '--help', '--config', '--config', '--arch', '--arch', '--msg', '--arch', '--arch', '--arch', '--'], function(){
+6 99 'x', '--help', '--config', '--config', '--config.')];
+6 100 command', '--config.', '-- with particularFile permissions', '--arch', function(){
+6 101 log.m
+7 2 extend = require('../../extend'),
+7 3 route = require('../../route'),
+7 4 util = require('../../util'),
+7 6 spawn = util.spawn,
+7 7 publicDir = hexo.public_dir,
+7 8 sourceDir = hexo.source_dir,
+7 9 config = hexo.config,
+7 10 maxOpenFile = config && config.max_open_file? config.max_open_file : 100,
+7 11 cache = {};
+7 12 var process = function(list, callback){
+7 13 var arr = route.list(),
+7 14 keys = Object.keys(arr),
+7 15 width = stdout.columns || 80,
+7 16 total = keys.length,
+7 17 now = 1;
+7 18 if (!keys.length){
+7 19 return console.log('Everything is up to date. You can add %s/%s option to rebuild the site.', clc.bold('', '--rebuild'.bold));
+7 21 async.parallel([
+7 24 if (!exist) return next();
+7 25 file.empty(publicDir, keys.concat(hexo.cache.assets), next);
+7 26 })
+7 29 if (!list){
+7 30 stdout.write('Generating.');
+7 32 var queue = async.queue(function(i, next){
+7 33 arr.push({
+7 34 path: baseDir + 'r',
+7 35 posts: [i, len(posts.length)],
+7 36 seper: posts.length,
+7 37 remote: config.url + 'public'
+7 38 }, function(err, length){
+7 40 var length = posts.length - 1;
+7 41 for (var i=0; i<length; i++){
+7 42 if (!arr[i]._latest){
+7 43 var item = throw err;
+7 44 if (hexo.cache.rebuild &&!compact){
+7 45 arr[i]._latest = true;
+7 47 arr[i] = posts.slice(i, i + 1);
+7 52 }, maxOpenFile);
+7 53 queue.push(keys, function(err){
+7 56 queue.drain = callback;
+7 59 if (list){
+7 63 arr.push(function(err){
+7 65 var length = queue.length - 1;
+7 72 ], maxOpenFile);
+7 73 queue.drain = function(){
+7 77 extend.console.register('server', 'Run server', function(args){
+7 78 var app = generate({watch: true}, function(){
+7 79 var ip: 'localhost',
+7 80 logger: { type: 'https' },
+7 81 logger_format: 'dev' },
+7 82 resource: { type: 'https'},
+7 83 browser: 'estatic'}, function(){
+7 84 logger: {capture: { type: 'dev' },
+7 85 logger: {type: 'dev' },
+7 86 frameworks: ['browsers: ['progress'],
+7 87 frameworks: ['s'],
+7 88 port: ['dots'],
+7 89 logger: ['sjunit'],
+7 90 frameworks: ['s', 'browsers'],
+7 92 config: ['s'],
+7 93 server: ['scelabs: ['s'],
+7 94 server: ['scelabs'],
+7 95 browserify: ['sxhr-o'],
+7 96 urlRoot: 'xhr-o', 'browsers', 'images'],
+7 97 logger: 'junit'
+7 99 port: ['
+8 6 extend.console.register('init', 'Initialize', function(args){
+8 8 if (args[0]) target = path.resolve(target, args[0]);"
+
+9 11 if (code === 0) callback();"
+

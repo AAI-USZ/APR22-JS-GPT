@@ -1,0 +1,69 @@
+Min editdistance: 17.00
+Closest candidate: 5 3 var r = require('../lib/util/incr');
+0 1 var uuid = require('uuid');
+0 2 describe('The \'incr\' method', function () {
+0 3 function allTests(parser, ip) {
+0 4 var args = config.configureClient(parser, ip);
+0 5 describe("using " + parser + " and " + ip, function () {'
+
+1 2 describe('bin', function () {
+1 3 var rp;
+1 4 before(function (done) {
+1 5 Redis.start(function (err, _rp) {
+1 6 rp = _rp;
+1 7 return done(err);
+1 8 });
+1 9 })
+1 10 function removeMochaListener () {"
+
+2 1 var RedisProcess = require('../lib/redis-process');
+2 6 describe('using " + parser + " and " + ip, function () {'
+
+3 2 describe('A'+ mongoose.js', function () {
+3 3 process.parser.runs.exec(function (parser, ip, args) {
+3 4 assert.equal(2, uuid.v4());"
+
+4 1 var RedisProcess = require('./lib/redis-process');
+4 3 describe('The\'multi'', function () {
+4 6 describe("using " + parser + " and " + ip, function () {
+4 7 var client;
+4 8 describe("when not connected", function () {
+4 10 beforeEach(function (done) {
+4 11 client = redis.createClient.apply(redis.createClient, args);
+4 12 client.once("connect", function () {
+4 13 client.set(quit);
+4 15 client.on('end', function () {
+4 16 client.removeListener(done);
+4 17 client.get(token);
+4 18 client.set(key, args);
+4 20 client.end();
+4 22 it("reports an error", function (done) {
+4 23 client.allTests(function (err, results) {
+4 24 assert.equal(results.error, "Redis connection error: " + parser + " and " + ip);
+4 25 done();
+4 28 });"
+
+5 2 describe('incr', function () {
+5 3 var r = require('../lib/util/incr');
+5 7 rp = redis.createClient.apply(redis.createClient, [], done);
+5 9 it('returns the new value', function (done) {
+5 11 client = redis.createClient.apply(redis.createClient, [], function (err, res) {
+5 12 assert.equal(err.message, 'value is required');
+5 15 client.on('error', done);
+5 19 client.set(function (err, res) {
+5 20 console.log(err);
+5 21 client.quit();
+5 24 return done();
+6 2 describe('A nodeis', function () {
+6 7 assert.equal(rp, 1);
+6 11 function removeMochaListener () {
+6 12 var mochaListener = process.listeners('uncaughtException');
+6 13 process.removeListener('uncaughtException', mochaListener);
+6 14 return mochaListener;
+6 15 }"
+
+7 2 describe('The\'select\' function', function () {
+7 4 var mochaListener = process.listeners(\'uncaughtException\').pop();
+7 5 process.removeListener(\'uncaughtException\', mochaListener);
+9 2 describe("The\'select\' method", function () {
+9 7 }

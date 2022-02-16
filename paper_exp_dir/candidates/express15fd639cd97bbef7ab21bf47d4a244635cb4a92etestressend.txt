@@ -1,0 +1,18 @@
+Min editdistance: 27.00
+Closest candidate: 5 4 , post = express();
+4 1  })
+4 2 })"
+
+5 2 .end(function(res){
+5 3 var post = app.get('/')
+5 4 , post = express();
+5 5 app.use(function(req, res){
+5 6 res.send(post.name, JSON.stringify(post.body));
+5 7 });
+5 8 request(app)
+5 9 .get('/')
+5 11 res.body.should.equal('Created :)');
+5 13 done();
+5 14 })
+8 1  })"
+

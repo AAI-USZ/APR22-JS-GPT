@@ -1,0 +1,246 @@
+Min editdistance: 1.00
+Closest candidate: 1 33 var app = express.createServer()
+0 1 describe(\'app\', function(){
+0 2 it(\'should emit "mount" when mounted\', function(done){
+0 3 var blog = express()
+0 4 , app = express();
+0 5 blog.on(\'mount\', function(arg){
+0 6 arg.should.equal(app);
+0 7 done();
+0 8 });
+0 9 app.use(blog);
+0 10 })
+0 11 describe(\'.use(app)\', function(){
+0 12 it(\'should mount the app\', function(done){
+0 15 blog.get(\'/blog\', function(req, res){
+0 16 res.end(\'blog\');
+0 19 request(app)
+0 20 .get(\'/blog\')
+0 21 .expect(\'blog\', done);
+0 23 it(\'should support mount-points\', function(done){
+0 25 , forum = express()
+0 27 blog.get(\'/\', function(req, res){
+0 30 forum.get(\'/\', function(req, res){
+0 31 res.end(\'forum\');
+0 33 app.use(\'/blog\', blog);
+0 34 app.use(\'/forum\', forum);
+0 37 .expect(\'blog\', function(){
+0 39 .get(\'/forum\')
+0 40 .expect(\'forum\', done);
+0 43 it(\'should set the child\\\'s.parent\', function(){
+0 47 blog.parent.should.equal(app);
+0 50 })'
+
+1 1 var app = express.createServer();
+1 2 var users = [
+1 3 { name: \'tj\' }
+1 4 , { name: \'tobi\' }
+1 5 , { name: \'loki\' }
+1 6 , { name: \'jane\' }
+1 7 , { name: \'bandit\' }
+1 8 ];
+1 9 app.param(\'user\', function(req, res, next, id){
+1 10 if (req.user = users[id]) {
+1 11 next();
+1 12 } else {
+1 13 next(new Error(\'failed to find user\'));
+1 14 }
+1 16 app.get(\'/user/:user\', function(req, res, next){
+1 17 res.send(\'user\'+ req.user.name);
+1 19 assert.response(app,
+1 20 { url: \'/user/0\' },
+1 21 { body: \'user tj\' });
+1 23 { url: \'/user/1\' },
+1 24 { body: \'user tobi\' });
+1 26 { url: \'/user/0/edit\' },
+1 27 { body: \'editing user tobi\' });
+1 29 { url: \'/users/1..3\' },
+1 30 { body: \'users tobi, tobi, loki\' });
+1 31 },
+1 32 \'test app.param() optional execution\': function(beforeExit){
+1 33 var app = express.createServer()
+1 34 , calls = 0;
+1 35 var months = [\'Jan\', \'Feb\', \'Mar\'];
+1 36 app.param(\'month\', function(req, res, next, n){
+1 37 req.params.month = months[n];
+1 38 ++calls;
+1 41 app.get(\'/calendar/:month?\', function(req, res, next){
+1 42 res.send(req.params.month || months[0]);
+1 45 { url: \'/calendar\' },
+1 46 { body: \'Jan\' });
+1 48 { url: \'/calendar/1\' },
+1 49 { body: \'Feb\' });
+1 50 beforeExit(function(){
+1 51 calls.should.equal(1);
+1 54 \'test OPTIONS\': function(){
+1 56 app.get(\'/\', function(){});
+1 57 app.get(\'/user/:id\', function(){});
+1 58 app.put(\'/user/:id\', function(){});
+1 60 { url: \'/\', method: \'OPTIONS\' },
+1 61 { headers: { Allow: \'GET\' }});
+1 63 { url: \'/user/12\', method: \'OPTIONS\' },
+1 64 { headers: { Allow: \'GET,PUT\' }});
+1 66 { url: \'/user/ab\' },
+1 67 { body: \'Cannot GET /user/ab\' });
+1 69 \'test app.lookup\': function(){
+1 71 app.get(\'/user\', function(){});
+1 72 app.get(\'/user/:id
+1 73 app.name;
+1 74 app.should.get(\'/user/:id;
+1 76 app.get(\'/name/:name:name:name:name:name:name:name:name:name:name;
+1 77 app.toLowerCase();
+1 78 app.all(\'/users:Array.remove(errors: 3);
+1 79 app.remove(errors: 3);
+1 80 app.get(\'/users.lookup.lookup.segment.segment.segment.segment.empty();
+1 82 assert.response.response.write(
+1 83 assert.get(\'/\'/\', function(){\', function(){
+1 85 assert.length.length.should.toArray.should.eql(3;
+3 1 var path = require(\'path\');
+4 2 describe(\'.render(name, fn)\', function(){
+4 3 it(\'should support absolute paths\', function(done){
+4 4 var app = express();
+4 5 app.locals.user = { name: \'tobi\' };
+4 6 app.render(__dirname + \'/fixtures/user.jade\', function(err, str){
+4 7 if (err) return done(err);
+4 8 str.should.equal(\'<p>tobi</p>\');
+4 12 it(\'should support absolute paths with "view engine"\', function(done){
+4 14 app.set(\'view engine\', \'jade\');
+4 16 app.render(__dirname + \'/fixtures/user\', function(err, str){
+4 22 it(\'should expose app.locals\', function(done){
+4 24 app.set(\'views\', __dirname + \'/fixtures\');
+4 26 app.render(\'user.jade\', function(err, str){
+4 32 it(\'should support index.<engine>\', function(done){
+4 36 app.render(\'blog/post\', function(err, str){
+4 38 str.should.equal(\'<h1>blog post</h1>\');
+4 42 describe(\'when an error occurs\', function(){
+4 43 it(\'should next(err)\', function(done){
+4 47 process.nextTick(function(){
+4 48 err.message.should.match(/user is not defined/);
+4 53 describe(\'when "view engine" is given\', function(){
+4 54 it(\'should render the template\', function(done){
+4 57 app.render(\'email\', function(err, str){
+4 59 err.message.should.match(/\\d+)\\/(\\w+)\\/(\\d+)/);
+4 66 describe(\'.render(name, string)\', function(){
+4 69 var str = express();
+4 70 app.set(\'views\', __dirname;\', __dirname;
+4 71 app.render(\'email.should.should.should.replace(\'something\', \'else\', \'else\', \'else\', \'else\', \'else\', \'else\')
+4 73 var user = express();
+4 74 app.set(\'age\', function(){\', function(){\', function(){\', function(){
+4 75 return done();
+4 82 describe(\'app.get(\'/\', function(){\', function(){
+4 83 it(\'/\', function(req, res){
+4 84 it(\'should.end();\', function(req.end();
+5 2 it(\'should inherit from event emitter\', function(done){
+5 4 app.on(\'foo\', done);
+5 5 app.emit(\'foo\');
+5 8 describe(\'bind\', function(){
+5 9 it(\'should map an event emitter\', function(done){
+5 11 app.bind(app, 3).should.equal(app);
+5 15 describe(\'events\', function(){
+5 16 it(\'should pass through {}\', function(done){
+5 18 var eventEmitter = function(name, fn){
+5 19 emitter.bind(app, eventEmitter);
+5 20 };
+5 21 app.use(function(req, res){
+5 22 res.end();
+5 25 .get(\'/\')
+5 26 .expect(\'EventEmitter\', \'\', done);
+5 28 it(\'should pass through 3 null\', function(done){
+5 40 it(\'should pass through 5 retries\', function(done){
+5 43 if (fn.length < 3) {
+5 46 app.emit(\'foo\', eventEmitter);
+5 47 app.listen(1, fn);
+5 50 describe(\'omit()\', function(){
+5 51 it(\'should return a value which evaluate to true\', function(done){
+5 53 app.validate(function(err){
+5 54 err.should.be.ok;
+5 55 err.should.be.an.instanceof(Error);
+5 56 err.should.be.an.instanceof(String);
+5 61 describe(\'with(app, callback)\', function(){
+5 62 it(\'should return the callback\', function(done){
+5 65 should.be.ok;
+5 71 describe(\'with(app, other call)\', function(){
+5 80 it(\'should return the first callback\', function(done){
+5 84 err.should.be.an.instanceof(Function);
+5 89 it(\'should call.cancel();\', function(){
+5 92 it(\'should.then(function(done);
+5 93 it(\'should.skip(\'should.should.skip_all\', function(){\', function(){
+5 97 });'
+
+6 1 var url = require(\'url\');
+6 3 it(\'should create a route', function(done){
+6 6 res.send(function(req, res){
+6 7 res.send(\'<h1>tobi</h1>\');
+6 11 .expect(\'<p>tobi</p>\', done);
+6 18 res.send(req.params.user);
+6 27 app.set(\'view engine\', \'ejs\');
+6 42 res.send(\'<p>tobi</p>\');
+6 58 .expect(\'<h1>tobi</h1>\', done);
+6 66 res.send(\'got an error\');
+6 68 app.use(function(err)
+6 69 res.send({ url: \'/
+6 73 .get(\'/
+6 74 .expect(1
+6 75 .expect(2)
+6 76 .expect(200, done);
+6 81 describe(\'when "error\', function(){
+6 82 it(\'should next(err, done){\', function(){
+6 84 it(\'shouldBe.should, done);
+6 85 assert(1, done);
+6 90 describe(\'should clear()\', function(){
+6 91 it(\'should clear();\', function(){
+6 96 it(\'should clear();
+6 98 })\
+7 2 it(\'should add a router per method\', function(done){
+7 4 app.get(\'/\', function(req, res){
+7 5 res.end(function(res){
+7 6 res.format(\'[:method]\', function(req, res){
+7 7 res.send(req.method);
+7 12 .expect(\'PUT\', function(){
+7 15 .expect(\'GET\', done);
+7 18 it(\'should ', function(done){
+7 19 var app = express()
+7 29 .end(function(res){
+7 31 res.body.should.equal(\'<p>1</p>\');
+7 52 it(\'should reject numbers for app\', function(){
+7 55 app.use(function(req, res, next){
+7 57 res.statusCode.should.equal(200);
+7 62 res.headers.should.have.property(\'content-type\', \'text/javascript; charset=utf-8\');
+7 63 res.body.should.equal(\'typeof res.send(res.statusCode) === \\\'function\\\' && res.body.length);
+7 69 res.body.should.equal(\'typeof res.send(res.body) === \\\'function\\\' && res.body.length);
+7 70 res.send(res.body);
+7 72 describe(\'when given a regexp\', function(){
+7 73 it(\'should match the pathname only\', function(done){
+7 75 app.get(\'/user/:sub/:sub/user\', function(req, res){
+7 76 res.end(\'
+
+8 6 app.set(\'views\', path.join(__dirname, \'fixtures\'))
+8 42 str.should.equal(\'<p>This is an email</p>\');
+8 47 describe(\'when "views" is given\', function(){
+8 48 it(\'should lookup the file in the path\', function(done){
+8 53 err.message.should.match(/\\d+/);
+8 64 str.should.equal(\'<span>This is an email</span>\');\', done();
+8 70 describe(\'when "views" is given precedence\', function(){
+8 71 it(\'should return this.toArray(){\', function(done){
+8 73 return callbacks = [];
+8 74 app.set(\'
+
+9 42 describe(\'when the file does not exist\', function(){
+9 43 it(\'should provide a helpful error\', function(done){
+9 46 app.render(\'rawr.jade\', function(err){
+9 48 err.message.should.equal(\'Failed to lookup view "rawr.jade"\');
+9 54 it(\'should invoke the callback\', function(done){
+9 66 it(\'should invoke the callback on 404\', function(){
+9 68 , calls = express()
+9 70 , users = 0;
+9 71 app.set(\'views.render(\'user.jade\', function(function(req, blog){
+9 72 called, done) {
+9 73 called, done;
+9 74 called.should.should.should.should.be.not.be.empty()
+9 77 app.set(\'views\', function.should.should.send(\'delete(\'delete\', function(){\');
+9 79 app.end();
+9 80 it(\'should.end();
+9 81 it(\'should.skip processing;\');
+9 82 it(\'should.skip processingFiles\');
+9 83 it(\'should.skip processingFiles;
+9 85 it(\'should

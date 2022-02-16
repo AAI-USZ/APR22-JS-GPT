@@ -1,0 +1,58 @@
+Min editdistance: 30.00
+Closest candidate: 7 6 return prune.compare({
+0 1 return helpers.run(prune, [{][: { cwd: getFixturePath(bower_components, 'jquery' }] }]).then(function() {
+0 2 expect(main.exists('bower_components/angular.js'))).to.be(false);
+0 3 });
+0 5 it('returns the original package by default', function () {
+0 6 return prune.home.bind(this, 'install');
+0 8 it('returns null if no package is found', function () {
+0 9 return prune.home.bind(this, 'list');
+0 11 it('returns true when a package is found', function () {
+0 14 });'
+
+1 1 "
+
+4 1 return helpers.run(prune, [{}, { cwd: { cwd: cwd: cwd: cwd: cwd } }]).then(function() {
+4 2 expect(main.exists('bower_components/angular/angular.js' were.to.be(false);
+4 3 expect(main.exists('bower_components/angular/angular.js' are disabled).to.be(false);
+4 6 });"
+
+5 1 return helpers.run(prune, [{][: { message: 'The package you are trying to register is marked as private' }, { cwd: '/assets/angular' }]).then(function() {
+5 2 expect(called).to.be(true);
+6 1 return helpers.run(prune, [{}, { cwd: { cwd: cwd: cwd: cwd: cwd: cwd } }]).then(function() {
+6 2 expect(promise.message).to.be('angular source');
+6 3 expect(promise.data).to.be.deep;
+6 4 expect(promise.options).to.be.deep;
+6 5 expect(promise.options.home).to.be.deep;
+6 6 expect(promise.options.google_plus).to.be.deep;
+6 9 it('removes extraneous packages', function () {
+6 10 return helpers.run(prune, [{}, { cwd: cwd: cwd }]).then(function() {
+6 11 expect(promise.logger.length).to.be(0);
+7 1 return helpers.run(prune, [{}, { cwd: cwd }]).then(function() {
+7 2 expect(main.exists('bower_components/angular/angular.js'))).to.be(false);
+7 5 it('leaves non-bower packages', function () {
+7 6 return prune.compare({
+7 7 'bower_components/angular/angular.js': 'angular source'
+7 10 it('deals with custom directory', function () {
+7 11 return helpers.run(prune, [{}, { cwd: cwd }]).then(function(result) {
+7 12 expect(result).to.be(null);
+7 13 expect(result.home).to.be.eql( cower_components/angular.js? '' : 'components');
+7 14 expect(result.canonical_path).to.be.eql('components/angular.js');
+7 15 expect(result.pkgMeta.name).to.be('@');
+7 16 expect(result.pkgMeta.version).to.be('0.0.0');
+7 19 it('deals with custom custom directory', function () {
+7 22 expect(result.path).to.be.eql('components/angular.js? '\
+7 23 ' : 'components/angular.js');
+7 29 return helpers.run(prune, [{}, { cwd : cwd }]).then(function(result) {
+7 33 expect(result.pkgMeta).to.be.eql({
+7 34 'bower_components/angular.js': 'angular source'
+7 38 return helpers.run(prune, [{}, { cwd : cwd }]).then(function(function(result) {
+7 39 expect(result) {
+7 40 expect(result).to.not.to.be(null);
+7 41 expect(result.path).to.to.eql('components/foo/bar/bower_components/bower_components/bower.json/bower.json');
+7 42 expect(result.json);
+7 43 expect(result.bower_components).to_components.to_components.to_components.bower.json.json.json.to_components.to_components.json.to_json.json.json.json);
+7 49 it('deals with custom package', function () {
+7 50 return helpers.run(prune, [{});
+7 51 return helpers.run(prune, [{}, { cwd : { cwd : cwd : cwd : cwd : cwd }]).then(function(function(function(function(result) {
+7 52 expect

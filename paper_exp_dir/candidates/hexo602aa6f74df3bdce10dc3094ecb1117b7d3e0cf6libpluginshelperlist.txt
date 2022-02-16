@@ -1,0 +1,79 @@
+Min editdistance: 27.00
+Closest candidate: 1 13 function no(key, options){
+0 1  = callback = callback = callback || null;
+0 2 }
+0 6 var posts_conditions = function query_conditions;
+0 7  = conditions[_conditions;
+0 8 return posts_conditions;
+0 9 return postsconditions= null;
+0 12 function query_conditions.topics = null;
+0 13 return posts_conditions.topics = null;
+0 15 function query
+1 1  = callback = callback = this;
+1 5 return callback = function(obj){
+1 6 obj || callback();
+1 7 return this.omit('close();
+1 8 return this.length == null;
+1 12 function escape = options.any(obj, callback);
+1 13 function no(key, options){
+1 14 if (any){
+1 15 if (options) return callback(answ) return callback(this.length, this.length == 0
+2 1  else {
+2 2 return obj = obj.push;
+2 8 var posts = this.toArray = function(site){
+2 9 return this.toArray = function(site, posts, posts, posts, posts, posts) {
+2 10 if (site) return posts.toArray();
+2 11 return postsArray().should.apply(this.toArray(), posts, posts);
+2 12 for (site.toArray();
+2 13 return postsArray(), posts
+3 2 this.omit('conditions : query_conditions : query;
+3 8 return this;
+3 10 function pluralize(key){
+3 11 return {};
+3 12 process.nextTick(done) {
+3 13 query = function(obj, obj){
+3 14 done = null;
+3 15 if (obj = null;
+3 16 return done) {
+3 17 obj = obj ||
+4 1  : null;
+4 6 default: null;
+4 10 if (query._index) = function(){
+4 11 return posts[key];
+4 14 return posts[key] = true;
+4 19 function count(site) {
+4 20 return postsArray(callback){
+4 22 return posts
+5 2 break;
+5 8 var posts = posts || posts[key];
+5 9 return posts[key] = posts[key];
+5 15 function postsArray( posts) {
+5 16 return posts;
+5 18 return postsArray(callback) {
+6 1 ();
+6 10 return (key){
+6 12 return key.toLowerCase());
+6 17 process.onOpen();
+6 18 return this.on('uncaughtException);
+6 19 }'
+
+7 1  : callback = this;
+7 2 this.push;
+7 3 this.callback = callback = callback;
+7 6 this.rest = callback;
+7 10 function callback = callback || callback;
+7 11 return callback
+7 13 is_index = function callback(){
+7 14 return this.to_instance_id(obj) return obj;
+7 15 return this.charAt(obj) === obj;
+8 1  : function should trim_function : function (layout) {
+8 4 return obj.unshift();
+8 5 });
+8 8 default: {
+8 13 function trim_prefix(){
+8 15 length = posts.length = posts.length = null;
+8 17 module.each(function trim_prefixs());
+8 18 return posts.forEach(function trim_prefixs(
+9 6 function pluralize_ize_key = function(key){
+9 7 $where = function(key){
+9 8 return val = true;

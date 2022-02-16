@@ -1,0 +1,116 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Renderer = module.exports = function(){
+0 1 var Renderer = module.exports = function(){
+0 2 this.store = {};
+0 3 this.storeSync = {};
+0 4 };
+0 5 Renderer.prototype.list = function(sync){
+0 6 return sync? this.storeSync : this.store;
+0 8 Renderer.prototype.register = function(name, output, fn, sync){
+0 9 if (!name) throw new ExtendError('name is required');
+0 10 if (!output) throw new ExtendError('output is required');
+0 11 if (typeof fn!== 'function') throw new ExtendError('fn is required');
+0 12 name = name.replace(/^\\./, '');
+0 13 output = output;
+0 14 if (sync){
+0 15 this.storeSync[name] = fn;
+0 16 this.storeSync[name].output = output;
+0 17 this.store[name] = function(){
+0 18 var args = Array.isArray(this.store[name])? [this.store[name].output : ''];
+0 19 this.store[name] = this.store[name] || [];
+0 20 args.forEach(function(item){
+0 21 if (typeof item === 'undefined'){
+0 22 return;
+0 23 } else {
+0 24 if (typeof item === 'object'){
+0 25 return = item;
+0 27 store[name] = this.store[name] || [];
+0 28 }
+0 29 this.store[name].push(fn);
+0 30 }, this);
+0 33 this.store[name] = fn;
+0 35 return this;
+0 37 Renderer.prototype.registerSync = function(name, output, fn){
+0 38 if (typeof name === 'undefined') throw new ExtendError('name is required');
+0 40 name = (name === 'function')?output : '';
+0 41 output = output || '';
+0 45 this.store[name] = {};
+0 47 if (fn.length > 0) fn = Promise.promisify(fn);
+0 48 this.store[name].output = output;
+0 50 Renderer.prototype.registerSync = function(name, fn){
+0 53 var store = this[store[name] = this.store[name] || [];
+0 54 fn.length > 0? fn : Promise.promisify(fn);
+0 55 store[name] = store;
+0 57 };"
+
+1 18 var args = Array.isArray(this.store[name])? this.store[name] : [this.store[name], fn);
+1 19 if (args){
+1 20 this.store[args] = args;
+1 22 if (args.length){
+1 23 fn = args.pop();
+1 25 args.unshift(this.store[args]);
+1 30 var getExtname = function(str){
+1 31 return (pathFn.extname(str) || str).replace(/^\\./, '');
+1 33 Renderer.prototype.isRenderable = function(path){
+1 34 return!!this.get(path);
+1 36 Renderer.prototype.isRenderableSync = function(path){
+1 37 return!!this.get(path, true);
+1 39 Renderer.prototype.getOutput = function(path){
+1 40 return this.get(path, true);
+1 42 Renderer.prototype.register = function(name, output, fn){
+1 45 if (typeof fn!== 'function') throw new ExtendError('fn must be a function');
+2 6 return sync? this.storeSync : this.store;"
+
+3 12 if (typeof output === 'object') throw new ExtendError('output is required');
+3 14 output = output.replace(/^\\./, '');
+3 18 this.storeSync[name] = output;
+4 19 var args = Array.isArray(this.storeSync[name])? this.storeSync[name].output : '';
+4 21 var d = args.shift();
+4 22 this.store[this.store[name]].output = output;
+4 23 d.push(fn);
+4 25 this.store[this.store[name] = fn;
+4 33 if (typeof fn!== 'function') throw new ExtendError('fn must be a function');"
+
+5 5 Renderer.prototype.list = function(){
+5 6 return this.store;
+5 8 Renderer.prototype.register = function(name, output, fn, ends){
+5 9 if (typeof name === 'undefined'){
+5 10 throw new ExtendError('Renderer name is not defined');
+5 13 throw new ExtendError('Renderer output is not defined');
+5 16 throw new ExtendError('Renderer function is not defined');
+5 18 this.store[name] = store[name] || [];
+6 18 var args = Array.isArray(this.store[name])? [this.store[name]] : this.store[name];
+6 20 this.store[args.shift()] = args;
+6 22 this.store[args.shift()] = output;
+7 22 d.store[name] = dir;
+7 28 this.store[name] = item;
+7 29 });
+7 39 var args = Array.isArray(this.store[name])? [this.store[name].output : '';
+7 43 d.store[name] = d;
+7 52 output =output.replace(/^\\./, '');
+7 55 Renderer.prototype.register = function(name, fn){
+7 58 var store = this[store] = this.store[name] || [];
+7 59 fn.store[name] = store;
+7 60 return fn(this.store, this.fn);
+8 12 if (typeof!== 'object') throw new ExtendError('type is required');
+8 21 return this.list().then(function(){
+8 22 return sync? this.storeSync[name] : this.store;
+8 23 }.bind(this));
+8 34 name = (name || '').replace(/^\\./, '');
+8 47 this.store[name].compact = true;
+8 54 var format = this.format = fn.format;
+8 55 if (this.store.hasOwnProperty(format)){
+8 56 return this.store[format];
+8 57 } else if (fn.length){
+8 58 fn(null, format);
+8 60 this.store[format];
+8 63 Renderer.prototype.prototype.format = function(format, fn){
+8 64 if (fn){
+8 65 this.format(fn);
+8 66 return this.format(fn);
+8 69 .format.fn.list = format, format);
+8 71 .list = fn.list = function(){
+8 72 .stat = function(){
+8 73 return this.list = this.list || [];
+8 76 };'
+

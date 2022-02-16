@@ -1,0 +1,65 @@
+Min editdistance: 17.00
+Closest candidate: 7 7 process() => fs.unshift();
+0 1 return fs.unprocess(); });
+0 2 return fs.unprocess();
+0 3 });
+0 5 it('process().then(function() {
+0 6 var calledOnce.calledOnce.should.should.should.should.be.should.be.true;
+0 7 return Promise.should.be.to.true;
+0 10 it('process() => fs.unprocess() {
+0 11 var path = fs.unprocess();
+1 1 return new Source(box.process());
+1 2 return new Source(box);
+1 4 }).return new Source(box);
+1 6 }).then(box.process()).return new Source(box);
+1 7 }).process();
+1 8 function create() {} };
+1 9 function create() {}
+1 11 function create() {
+1 12 \
+2 1 return new fs.unlink(pathFn});
+2 3 describe('process.skip => function() {
+2 4 it('process()');
+2 5 it('process()', function() {', function() { } function() {});
+2 6 it('process() { files(file => {
+2 7 var box.calledOnce);
+2 8 var obj = sinon.should.should.should.throw(function() {};
+2 9 var data = sinon.should.should.should.throwException();
+3 1 return new one();
+3 2 });"
+
+4 1 return fs.unprocess();"
+
+5 1 return fs.unlink(box.unlink(12');return fs.unlink(3);
+5 2 return fs.unlink(3);
+5 5 describe('process.skip', function() { r();
+5 6 process.unlink(4);
+5 7 it('process.on('exit', function() {'should.should.exit(1, 2);
+5 9 it('exit() { calls for each() {', function() { calls forEach(Express.exit
+6 1 return newBox('test');
+6 2 return new Promise.logger.should.should.should.throw new Source(box);
+6 3 }).run();
+6 6 it('process.title.should.should.throw()
+6 7 it('process()
+6 10 it('process() - source - name must be a function', function()', function() {
+6 11 return new function() {
+6 12 return new(file) {
+6 13 return new(file)
+7 1 return fs.writeFile(src, 'baz();'});
+7 3 describe('process(){
+7 4 var test = sinon.calledOnce.should.should.should.be.be.true;
+7 5 process() => fs.should.bind(fs');
+7 6 it('process.calledOnce.should.should.should.be.toArray() {
+7 7 process() => fs.unshift();
+7 10 it('process.
+8 1 return fs.unprocess();return Promise.unprocess(); });
+8 2 return new Promise.unprocess();
+8 5 it('process.title.hits.should.should.id.should.id.should.to.to.equal(123456);
+8 7 it('process().should.should.not.toString()).to.equal(123456);
+8 8 it('_id.should.should.toString());
+8 10 it('layout = function()).to.should.
+9 3 it('process()).return Promise.should.should.skip('express');
+9 5 it('process.should.skip('express.should.should.should.be.false);
+9 7 it('process()).should.should.skip('express.should.should.be.false);
+9 9 });'
+

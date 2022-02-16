@@ -1,0 +1,14 @@
+Min editdistance: 26.00
+Closest candidate: 8 2 ? fs.readFile(filename)
+0 1 this.header(\'Content-Disposition', filename
+0 2 ? \'attachment; filename="\' + path.basename(filename) + \'"\'
+0 3 : \'attachment\');
+0 4 return this;
+0 5 };"
+
+1 1 this.header('Content-Disposition', filename);
+7 1 return this.header(\'Content-Disposition\', filename);
+8 1 return this.header(\'Content-Disposition', filename
+8 2 ? fs.readFile(filename)
+8 3 : path);
+9 1 this.header(\'Content-Disposition', filename);

@@ -1,0 +1,174 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 app.use(methodOverride('_method'));
+0 1 app.use(methodOverride('_method'));
+0 2 app.use(cookieParser());
+0 3 app.use(bodyParser());
+0 4 app.use(express.static(__dirname + '/public'));
+0 5 function post(name, content, escape) {
+0 6 if (escape!== false && typeof content ==='string') {
+0 7 content = escapeHTML(content);
+0 8 }
+0 9 return function(req, res, next){
+0 10 res.render('post/form', {
+0 11 locals: {
+0 12 id: regexp.substr(0, 1),
+0 13 name: name,
+0 14 alt: escape || ''
+0 16 });
+0 18 function restrict(req, res, next) {
+0 19 if (req.session.is_login) {
+0 20 next();
+0 21 } else {
+0 22 req.session.is_login = true;
+0 25 app.get('/', site.index);
+0 26 app.get('/users', user.list);
+0 27 app.get('/users/list', user.load);
+0 28 app.get('/users/list-item', user.list-item);
+0 30 if (!module.parent) {"
+
+1 3 app.use(bodyParser.urlencoded({ extended: false }));
+1 6 app.all('/users', user.list);
+1 7 app.all('/user/:id/:op?', user.load);
+1 8 app.get('/user/:id/view', user.view);
+1 9 app.get('/user/:id/edit', user.edit);
+1 10 app.put('/user/:id/edit', user.update);
+1 11 app.get('/posts', post.list);
+1 12 app.listen(3000);
+1 13 console.log('Express app started on port 3000');"
+
+2 4 app.use(methodOverride('_content'));
+2 5 app.use(methodOverride('_method-'));
+2 6 function post(req, res, next){
+2 7 var body = req.param('message', {
+2 8 'Content-Type': 'application/json'
+2 10 if (req.session.views){
+2 11 ++req.session.views;
+2 13 req.session.views = 1;
+2 14 body.message = req.body.message || '';
+2 15 if (req.session.captureConsole){
+2 16 console.log('%s have not been registered yet!', req.session.views);
+2 18 req.session.captureConsole = false;
+2 19 console.log('\
+2 20 <p>Visit <a href="/user/0 or <a href="/user/1" class="user-count">view raw</a>\
+2 21 <p>This is an email</a>\
+2 22 </p>');
+2 24 req.session.pagment = function(args, fn){
+2 25 var args = this.args;
+2 26 var format = args.l || args.logger? ['name': 'tj', 'user-', 'age'] : 'kids',
+2 27 length = args.length;
+2 28 if (args.length){
+2 29 var n = args.length;
+2 30 format = args.l || args.logger.format;
+2 32 var args = args.slice(0, args.length);
+2 33 format = args.shift();
+2 38 format = defaults.format;
+2 40 if (n == args.length){
+2 41 this.session.pagment = format;
+2 43 this.session.pagment = '/';
+2 45 this.write = function(){
+2 46 var args = _.toArray(arguments),
+2 47 msg = args.shift(),
+2 48 cookie = args.pop(),
+2 49 fn = args.pop(),
+2 50 default = args.pop(),
+2 51 layout = args.length? args.join(' ') : '',
+2 52 self = this;
+2 53 if (layout === 'false') args.unshift(layout);
+2 55 this.param('posts', posts);
+2 56 if (n!this.session.posts.length) this.session.posts = undefined;
+2 57 if (length){
+2 58 var length = this.session.posts.length;
+2 59 for (var i = 0; i < length; i++){
+2 60 var item = posts[i];
+2 61 if (item.length){
+2 62 if (typeof item ==='string'){
+2 63 this.session.posts.push(item);
+2 65 break;
+2 70 this.write(format);
+2 71 };
+2 72 app.use(function(req, res, next){
+2 73 res.redirects(req, res){
+2 74 res.redirects(req);
+2 77 app.get('/res.redirects', function(req);
+2 78 app.get('/'back');
+2 79 app.get('back');
+2 80 return res);
+2 81 app.get('home', function(){
+2 82 res.get('home', function(){
+2 83 res.setHeader'
+
+3 6 function post(req, res, next) {
+3 7 var body = req.body;
+3 8 var query = req.query || {};
+3 9 if (!message) {
+3 12 req.session.name = answers[0];
+3 15 next('
+
+5 5 app.use(regexp());
+6 6 function post(name, fn) {"
+
+7 5 function post(id, post) {
+7 6 if (id == 0) {
+7 7 return Promise.resolve();
+7 9 post.id = id;
+7 10 post.title = title;
+7 11 if (!this.name) {
+7 14 var body = [
+7 15 'name:',
+7 16 'Posts:',
+7 17 '---'
+7 18 ].join('\
+7 19 ');
+7 20 return this.database.model('Post').save(function(err) {
+7 21 if (!err) return this.emit('error', err);
+7 22 this.session.name = id;
+7 23 this.message = 'Site updated:'+ this.id.toString();
+7 24 log.debug('Generated: %s', this.name, { error: err }, function(err, user) {
+7 25 if (err) return this.emit('error', err);
+7 26 this.session.name = user.name;
+7 31 function delete(id) {
+7 32 var file = this.format(post.id);
+7 33 this.id = id;
+7 34 this.post.slug = format.jquery(' + now.format('YYYY-MM-DD') + ':year',' + data.date.format('YYYY-MM-DD'));
+7 35 return this.database.set('Post', file);
+7 38 res.locals.path = req.params.path;
+7 41 app.get('/', function(req, res){
+7 42 res.render('index', { title: 'Route Separation Example' });
+7 44 app.get('/404', function(req, res, next){
+7 47 app.get('/500', function(req, res, next){
+7 56 app.get('/text', function(req, res){
+7 57 res.render('success', { title: 'Route Separation Example' });
+7 59 app.get('/url', function(req, res){
+7 60 res.render('url', { title: 'Route Separation Example' }, function(err, user) {
+7 61 assert.strictEqual(false, req.body.password === ': user.passed', user.name);
+7 62 res.message;
+7 67 app.get('/post.get('/status', function(function(req, res){
+7 68 res){
+7 69 res.sendStatus = 200;
+7 70 res.send('404 Not Found');
+7 73 app.get('/something', function(req, callback){
+7 74 throw new Error('something', function(err, headers, status){
+7 75 throw new Error('something')
+7 76 throw new Error('something' in Express.status code!')
+7 80 app.get('//, function(){ url: function(){ })
+7 82 throw new Error('something', status: error')
+8 7 User.call(this, req, res, next);
+8 9 function delete(req, res, next) {
+8 10 if (!module.parent) {
+8 13 res.send(req.body || '');
+8 16 function create(req, res, next) {
+8 17 res.locals.posts = posts;
+8 18 res.locals.settings = self.settings;
+8 19 res.locals.posts.forEach(function(post){
+8 20 if (!post.length) return next();
+8 21 post.create({
+8 22 title: post.title,
+8 23 path: post.path,
+8 24 content: post.content
+8 25 }, function(err, post){
+8 26 if (err) return next(err);
+8 27 res.locals.posts.push(post.path);
+8 33 console.log('Express started on port 3000');"
+
+9 3 app.use(bodyParser());"
+

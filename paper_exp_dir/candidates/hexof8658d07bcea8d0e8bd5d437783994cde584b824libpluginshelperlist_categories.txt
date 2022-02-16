@@ -1,0 +1,244 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 const self = this;
+0 1 const prepareQuery = parent => {
+0 2 const query = {};
+0 3 if (parent) {
+0 4 query.parent = parent;
+0 5 } else {
+0 6 query.parent = {$exists: false};
+0 7 }
+0 8 return categories.find(query).sort(orderby, order).filter(cat => cat.length);
+0 9 };
+0 10 const hierarchicalList = (level, parent) => {
+0 11 let result = \'\';
+0 12 prepareQuery(parent).forEach((cat, i) => {
+0 13 let child;
+0 14 if (!depth || level + 1 < depth) {
+0 15 child = hierarchicalList(level + 1, cat._id);
+0 17 let isCurrent = false;
+0 18 if (showCurrent && this.page) {
+0 19 for (let j = 0; j < cat.length; j++) {
+0 20 const post = cat.posts.data[j];
+0 21 if (post && post._id === this.page._id) {
+0 22 isCurrent = true;
+0 23 break;
+0 26 if (!isCurrent && this.page.base) {
+0 27 if (typeof page ===\'string\') {
+0 28 return {
+0 29 path: path,
+0 30 permalink: this.url_for(cat.path)
+0 33 return Boolean(this.page.base.startsWith(cat.path));
+0 36 let additionalClassName = \'\';
+0 37 if (typeof page.base === \'undefined\' || typeof page.base === \'object\'
+0 38 || page.base.options.id === this.page.base) {
+0 39 additionalClassName = page.base.options.id;
+0 40 if (additionalClassName!== undefined) {
+0 41 additionalClassName = this.page.base.options.id;
+0 43 this.page.base = base;
+0 44 this.page.permalink = this.url_for(site.base);
+0 45 this.page.archive = this.page.archive;
+0 46 this.page.category = this.page.category;
+0 47 this.page.tag = this.page.tag;
+0 48 if (prev === undefined) {
+0 49 return next();
+0 52 if (current && this.page.base.startsWith(cat.path) && this.page.base.startsWith(cat.path)) {
+0 53 additionalClassName = this.page.startsWith(cat.path));
+0 55 if (skipCustomClassName!== undefined) {
+0 56 additionalClassName = this.hasCustom = this.page.type!== undefined;
+0 58 addCustom = this.type = \'\';
+0 60 this.setCustom(this.customClass, additionalClassName = config, {};
+0 61 if (isCurrent? function() {
+0 62 addCustomProperty: config.pre};
+0 63 if (customProperty) {
+0 64 if (customProperty.customProperty) {
+0 65 addCustomProperty.preventor.call(this, this.customProperty, this.customProperty);
+0 67 const { getUsedAncestors(this.customClass);
+0 68 if (this.customProperty) {
+0 69 this.checkModified();
+0 70 \
+1 1 const self = this;
+1 2 function prepareQuery(parent) {
+1 11 function hierarchicalList(level, parent) {
+1 19 if (showCurrent && self.page) {
+1 22 if (post && post._id === self.page._id) {
+1 27 if (!isCurrent && self.page.base) {
+1 28 if (self.page.base.startsWith(cat.path)) {
+1 32 const additionalClassName = \'\';
+1 33 result += `<li class="${className}-list-item${additionalClassName}">`;
+1 34 result += `<a class="${className}-list-link${isCurrent?\'current\' : \'\'}" href="${self.url_for(cat.path)}${suffix}">`;
+1 35 result += transform? transform(cat.name) : cat.name;
+1 36 result += \'</a>\';
+1 37 if (showCount) {
+1 38 result += `<span class="${className}-list-count">${cat.length}</span>`;
+1 40 result += \'</li>\';
+1 41 });
+1 42 return result;
+1 44 module.exports = listCategoriesHelper;'
+
+2 33 if (child && childrenIndicator) {
+2 34 additionalClassName = ` ${childrenIndicator}`;
+2 36 result += `<li class="${class.name}-list-item${additionalClassName}">`;
+2 37 result += `<a class="${class.name}-list-link${isCurrent?\'current\' : \'\'}" href="${self.url_for(cat.path)}${suffix}">`;
+2 41 result += `<span class="${class.name}-list-count">${cat.length}</span>`;
+2 48 let post = cat.posts.data[i];
+2 49 if (post && post._id === self.page.base.startsWith(cat.startsWith(cat.path)) {
+2 50 result += 1;
+2 52 result += separator = post.startsWith(post.startsWith(post.path);
+2 53 if (field.type === \'post_id === \'post\')? \'article\' : \'draft\' : \'image\' + post._id
+2 54 }s
+2 56 result += page.type === \'
+2 58 result += \'drafts
+2 60 result += \'\';
+2 65 function appendFile(field, data) {
+2 66 let result = {
+2 67 let result;
+2 68 if (data.length && result!== 0) {
+2 69 field++'
+
+3 18 let isCurrent = options.isCurrent || (this.url.pathname || \'/\').startsWith(cat.name);
+3 19 if (showCurrent && this.page.base && self.page.base.startsWith(cat.pathname)) {
+3 29 result += `<a class="${className}-list-link${isCurrent?\'current\' : \'\'}" href="${self.url_for(cat.pathname)}${suffix}">`;
+3 40 let item = cat.pkgMeta.split(/ *, i);
+3 41 if (typeof item ===\'string\') {
+3 42 result += `<a class="${className}-link" href="${pkgMeta.url_for(cat.pathname)}${suffix}">`;
+3 43 if (`message in item[0] === \'initialClass="${item[0]}">` === \'</a>`;
+3 45 result += \'</a>`;
+3 48 result += \'</categories\';
+3 52 if (sucFirst(answers) {
+3 53 return this.length > 0?
+3 54 this.length() :
+3 55 this.join(0) :
+3 56 .join(sucFirst(s);
+3 58 this.length :
+3 59 }'
+
+4 36 result += `<a class="${className}-list-link${isCurrent?\'current\' : \'\'}" href="${this.url_for(cat.path)}${suffix}">`;
+4 42 if (child) {
+4 43 result += `<ul class="${className}-list-child">${child}</ul>`;
+5 1 const childrenIndicator = options.hasOwnProperty('children_indicator')? options.children_indicator : false;
+5 2 const clear = options.hasOwnProperty(\'clear\')? options.clear : false;
+5 3 const prepareQuery = (tags, options) => {
+5 5 if (typeof options === \'object\' && options.posts) {
+5 6 query.published = true;
+5 8 query.posts = targets;
+5 10 if (options.length) {
+5 11 query.categories = this.site.categories;
+5 12 if (options.categories) {
+5 13 query.categories = [];
+5 15 if (options.posts) {
+5 16 query.posts.push({
+5 17 name: this.site.categories,
+5 18 show_count: true,
+5 19 count: options.count,
+5 20 orderby: options.orderby || \'name\',
+5 21 name: options.name,
+5 22 sort: options.orderby,
+5 23 show_count: options.show_count,
+5 24 style: options.style === \'list\'? \'list\': \'list\';
+5 28 return { type: \'input type="hidden" value="put" name="qeqeqeqeqeqeqeqeqeqeqeqeqeqeqeqmatch(exports.search_form, options.report_id)));
+5 30 const post = this.site.posts.sort(\'date\', -1);
+5 31 if (data.length) {
+5 32 if (data.length && data.length) {
+5 33 return Promise.resolve(data.data);
+5 35 if (data.length === 0) {
+5 36 return Promise.resolve();
+5 38 post.categories = this.site.categories;
+5 40 return posts.length;
+5 42 function searchFormHelper(options = {}) {
+5 43 const config = this.config;
+5 44 const className = options.class || \'category\';
+5 45 const depth = options.depth? parseInt(options.depth, 10) : 0;
+5 46 const orderby = options.hasOwnProperty(\'name\')? options.name : this.config.options.id.format || \'(path\');
+5 48 const order = this;
+5 49 if (let result = [];
+5 50 let i, len = 0;
+5 51 if (typeof options.length = options.length && (typeof options.length && id && id && id && id && id!== 0) {
+5 52 if (options.length && id && id!== 0) {
+5 53 result.length) {
+5 54 length = parseInt(id);
+5 55 op = parseInt(id);
+5 56 op =
+5 57 op = size;
+5 59 } else if (op!== 0) {
+5 64 op = options;
+5 65 op = self.name = options;
+5 66 op = trim(op);
+5 67 op = self.length = undefined;
+6 1 const childrenIndicator = options.hasOwnProperty(\'children_indicator')? options.children_indicator : false;
+6 2 const clearContext = function(s) {
+6 3 return s.replace(/<!--\\s*([^\\/\\\\s]+)\\s*>/g, (str, href) => {
+6 4 if (!isExternal(href, posts, 'does-no-exist\')) return str;
+6 5 if (prev == null) return str.replace(/href=.*/, \'\');
+6 6 return str;
+6 9 class LocalsHelper(locals) {
+6 10 constructor() {
+6 11 this.site = site;
+6 12 this.categories = locals;
+6 14 listCategoriesHelper(categories, options) {
+6 15 if (!options &&!categories.length) return '';
+6 16 options = options || {};
+6 17 const { style } = options;
+6 18 const showCount = options.hasOwnProperty(\'show_count\')? options.show_count : true;
+6 19 const className = options.as || this.site.categories.length;
+6 21 const orderby = options.orderby || \'name\';
+6 22 const order = options.order || 1;
+6 23 const transform = options.transform;
+6 24 const separator = options.hasOwnProperty(\'separator\')? options.separator : \', \';
+6 25 const showCurrent = options.show_current || false;
+6 26 const suffix = options.suffix || \'\';
+6 27 const childrenIndicator = options.hasOwnProperty(\'children_indicator\')? options.children_indicator : false;
+6 28 const exclude = options.exclude || [];
+6 29 if (style === \'list\') {
+6 30 result += `<ul class="${className}-list">`;
+6 31 for (let i = 0, len = style.length; i < len; i++) {
+6 32 const item = pattern[i];
+6 33 result += `<li class="${className}-list-item">`;
+6 34 result += `<a class="${className}-list-link" href="${this.url_for(item)}">`;
+6 35 result += transform? transform(item.name) : item.name;
+6 36 result += transform(item.transform);
+6 37 result += transform(item.path);
+6 38 result += \'</a>`</li>`;
+6 40 return result += \'</ul>\';
+6 42 module.skip(style = style === \'list\';
+7 5 const separator = options.hasOwnProperty(\'separator')? options.separator : \', \';
+7 6 const showCurrent = options.hasOwnProperty(\'show_current\')? options.show_current : false;
+7 9 const prefix = options.prefix || \'/\';
+7 11 const prefixColor = options.prefix || \'/\';
+7 12 const shorthand = options.hasOwnProperty(\'separator\')? options.separator : \', \';
+7 20 const ends = options.hasOwnProperty(\'end\')? options.end : \'\';
+7 23 result += prefixColor;
+7 24 result += transform? transform((result.name) : result.name;
+7 25 result += \'\
+7 26 \';
+7 27 if (showCurrent && result.length) {
+7 28 result += `<ul class="${className}-listCategories/${id}">`;\';
+7 30 result += `<li class="${className}-listCategories${id}-listCategories${id}-listCategories">${className}">${classStyle.top}">`;\';
+7 32 `;
+7 36 result += \'<li class="${className}-numberClass="${className}-listCategories">${className}-listCategories">${className}-listCategories">${className}-s(classesIndicator}">${className}">${className}</li>`;
+7 38 result += \'<li class="${className}-item\' == result.length>\' class="\' + className) ||
+8 2 const clearContext = function() {
+8 3 if (this.config. clearContext) return Promise.resolve();
+8 4 const exclude = [],
+8 5 settings = this;
+8 6 this.config = {};
+8 7 return this.site.categories = {};
+9 26 isCurrent = isCurrent || (this.page.base && this.page.base.startsWith(cat.path));
+9 28 const additionalClassName = `${className} ${id? ` ${className}` : `${className}`;
+9 38 if (this.page.base) {
+9 41 query.published = false;
+9 43 if (this.assetUrl) {
+9 48 return categories.map((category) => {
+9 49 if (Category.exists(self.page.base) || this.assetUrl) === undefined) || this.assetUrl).length) return self.url_for(self.path);
+9 50 return self.path === undefined;
+9 51 }).join(this.config.site.canonical_dir, this.config.canonical_dir);
+9 52 }).format(config.source);
+9 53 }).format(config.url_format);
+9 56 function convertToLocals(answitter(name) {
+9 57 const { posts, i, i, i, mode) {
+9 58 const { } = this;
+9 59 return self = this;
+9 60 return this;
+9 62 if (!name = config.preprocess } = function() {
+9 63 const {};
+9 64 const return i = _ ;
+9 65 if (!isCurrentHelper(name, url, prefix, posts, separ

@@ -1,0 +1,176 @@
+Min editdistance: 15.00
+Closest candidate: 2 2 if (!response.length) {
+0 1 response.headers['content-length'] =
+0 2 response.headers['content-length'] ||
+0 3 response.body.length
+0 4 }
+0 6 })
+0 7 describe \'Express\'
+0 8 describe \'.header()\'
+0 9 it\'should set the content-length header\'
+0 10 get(\'/style.css\', function(){
+0 11 return \'body { background: #000; }\'
+0 13 get(\'/style.css\')
+0 15 end
+0 18 end'
+
+1 9 it\'should set the response header\'
+1 11 this.header(\'Content-Type\', \'css\')
+2 1 ;
+2 2 if (!response.length) {
+2 3 return;
+2 5 if (event.request.type.toLowerCase() ===\'string\') {
+2 6 return true;
+2 8 return 0;
+2 9 }, on);
+2 11 module.exports = Plugin.extend({
+2 12 on: {
+2 13 request: function(event) {
+2 14 var response = event.request.response;
+2 18 return on;
+2 22 var request = event.request.uri.path
+2 23 || request.uri.path
+2 24 || path.normalize((cache.type).toString()) => {
+2 25 return fs.readFile(cache.type, \'utf8\')
+2 26 .replace(/^\\w+/, \'\')
+2 27 .replace(/GMT.*$/, \'GMT\')
+2 28 .replace(/^\\w+/, \'GMT\')
+2 30 }), on);
+2 34 })"
+
+3 4 response.body.length;
+4 2 if (!response.length) return;
+4 3 Express.header(\'Content-Length\', (new Date(0)).toString()).length);
+4 4 response.headers['content-length'] = new Buffer(response.headers);
+4 5 Express.plugins.each(function(plugin){
+4 6 if (!plugin.length) return;
+4 7 res.header(\'Content-Length\', new Date(0)).toString();
+4 8 });
+4 9 Express.plugins.redirect = function(url, headers) {
+4 10 header('Location\', url).headers = headers || {};
+4 11 Express.header(\'Content-Length\', (new Date(0)).toString());
+4 12 var posts = this.site.posts.sort(\'date\', -1).toArray();
+4 13 posts.forEach(function(post){
+4 14 if (!post.length) return;
+4 15 posts.limit(0, post.length - 1);
+4 16 for (var i = 0, len = posts.length; i < len; i++) {
+4 17 var title = post.title || post.slug;
+4 18 var body = post.content;
+4 19 post.slug = title;
+4 20 if (body) posts.removeHeader(\'Content-Length\');
+4 21 var callback = this.post.callback;
+4 22 post.path = post.path;
+4 23 post.regexp = new RegExp(title);
+4 24 if (regexp.test(body)){
+4 25 post.content = content.replace(regexp, \'.\');
+4 27 if (content.length > 1){
+4 28 Express.header(\'Content-Length\', content.length);
+4 30 return Promise.all([
+4 31 post.create({title: post.path, layout: post.content}),
+4 32 post.create({title: post.path, layout: post.content})
+4 33 ]).spread(function(count){
+4 34 return posts.length;
+4 36 };'
+
+5 3 Express.header(\'Content-Length\', (new Date).format(format));
+5 4 response.body.should.equal(expected).to.equal(expected);
+5 5 response.encode.should.equal(200);
+5 6 response.message.should.equal(\'\');
+5 7 response.headers[\'content-length\'] = \'\';
+5 9 response.status.should.equal(200);
+5 10 response.headers[\'content-type\'] = \'application/octet-stream\';
+5 14 describe \'Express\' }, function(){
+5 15 it(\'should set a session cookie\'
+5 16 Express.header(\'cookie\', function(val){
+5 17 val = parseInt(val), 10);
+5 18 assert.equal(val instanceof Date, \'1\');
+5 20 it(\'should return undefined when no session is given\'
+5 26 describe \'.argsArray()\'
+5 27 it(\'should return an array of arguments\'
+5 28 Express.argsArray(-{ return arguments }(\'foo\', \'bar\')).should.eql [\'foo\', \'bar\']);
+5 29 it(\'should allow an offset\'
+5 30 Express.argsArray(-{ return arguments }(\'foo\', \'bar\'), 1).should.eql [\'bar\']);
+5 33 describe \'.escape()\'
+5 34 it(\'should escape html\'
+5 35 Express.escape(\'<p>this & that').should.eql \'&lt;p&gt;this &amp; that'
+5 38 describe \'.contentsOf()\'
+5 39 it(\'should return the body of a function as a string\', function(val){
+5 40 return \'foo\' == val.toString()
+5 42 it(\'should return the body as a string\', function(val){
+5 45 it(\'should return the body as a string with indexed values and length\'
+5 46 Express.contentsOf(val)
+5 49 Express.end
+5 52 it(\'should set the Set-Cookie header\'
+5 53 get(\'/public\', function(){
+5 54 this.header(\'x-powered-salt\', \'bar\');
+5 56 get(\'/public\').headers.setHeader(\'x-powered-salt\', \'bar\');
+5 57 get(\'/public\').headers.setHeader(\'x-powered-salt\', \'baz\');
+5 67 describe \'.cookie()\'\', function(){
+5 68 it(\'should return a cookie\', function(){
+5 69 Express.body.cookie.should.should.eql \'\';
+5 76 describe \'.session = Plugin.cookie.fetch = function(plugin) {
+5 77 Express.fetch = function(plugin){
+5 78 Express.__super(){
+5 79 return Express.header(\'user-\', function(plugin.cookie)
+5 80 Express.body.should.fetch(plugin.cookie)
+5 81 Express.body.should.eql(\'foo\', 1);
+5 86 it(\'should.header(\'should.session\', function(session)
+5 87 .session.session.params.position(){
+5 88 Express.should.eql \'tj\'/./ getId; path\')
+6 6 },
+6 7 header: function(key, value) {
+6 8 return value === undefined?
+6 9 this.response.headers[key.toLowerCase()] :
+6 10 this.response.headers[key.toLowerCase()] = value;
+6 12 param: function(key) {
+6 13 return this.request.uri.params[key] ||
+6 14 this.response.uri.params[key] ||
+6 15 this.response.body[key];
+6 17 accepts: function() {
+6 18 var accept = this.header(\'accept\')
+6 19 return accept?
+6 20 $(arguments).any(function(path){
+6 21 var type = mime.type(path)
+6 22 return accept.indexOf(type)!== -1 ||
+6 23 accept.indexOf(type.split(\'/\')[0]+\'/*\')!== -1
+6 24 }) :
+6 25 true
+6 27 get isXHR() {
+6 28 return (this.header(\'x-requested-with\') || \'\').lowercase === \'xmlhttprequest\'
+6 30 status: function(code) {
+6 31 this.response.status = code;
+6 32 return this;
+6 34 halt: function(code, body, encoding, callback) {
+6 35 if (body!== null) throw new TypeError(\'body must be a string\')
+6 36 if (encoding instanceof Function)
+6 37 callback = encoding;
+6 38 encoding = null;
+6 40 var rEscapeContent = /<escape( indent=[\'"](\\d+)[\'"])?>([\\s\\S]+?)<\\/escape>/g,
+6 41 rLineBreak = /(\
+6 42 (\\t+)){2,}/g,
+6 43 rUnescape = /<notextile>(\\d+)<\\/notextile>/g;
+6 44 if (data.length)
+6 45 this.header(\'Content-Length\', data.length);
+6 47 res.send = function(body, encoding, callback) {
+6 48 var req = this.req;
+6 49 var msg = req.body.replace(/\\u2028/g, \'\\\\u2028\')
+6 50 var self = this;
+6 51 if (2 == arguments.length) {
+6 52 callback = arguments[1];
+6 58 if (body instanceof Buffer)
+6 59 return this.header(\'Content-Type\', Buffer.isBuffer(body)
+6 60 ? body.length
+6 61 : Buffer.byteLength(body)
+6 62 : Buffer.byteLength(body));
+6 64 if (encoding === \'utf8\' ||
+6 65 encoding === \'utf-8\')
+6 66 this.header(\'Content-Type\', \'text/html; charset=utf-8\');
+7 1 this.header = response.headers['content-length'] ||
+7 9 return \'body { background: white; }\'
+7 11 get(\'/style.css\').headers[\'content-length\'] = \'"zespia"\'
+8 7 describe \'Express\' extends the request prototype.
+8 8 it\'should parse the response header and body as a string\'
+8 10 return \'<link rel="stylesheet" href="\' + event.request.url.pathname + \'" style="text/css">\'
+8 16 it\'should not be processed by the request\'
+9 1 response.headers['content-length'] = 200
+9 2 response.body.should.equal(this.response.body)

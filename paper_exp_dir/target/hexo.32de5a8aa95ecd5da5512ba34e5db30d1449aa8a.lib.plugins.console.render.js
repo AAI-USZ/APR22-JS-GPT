@@ -1,0 +1,2 @@
+function renderConsole(args){
+}

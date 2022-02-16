@@ -1,0 +1,54 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 data._content.should.eql('');
+0 1 data._content.should.eql('');
+0 2 data.raw.should.eql('');
+0 3 return Page.removeById(data._id);
+0 4 });
+0 5 });"
+
+1 2 data.author.should.eql('');
+1 4 data.author.type.should.eql('create');
+1 5 data.author.format.should.eql('default');
+1 6 data.content.should.eql('');
+1 7 data.excerpt.should.eql('');
+1 8 data.more.should.eql('');
+2 3 should.not.exist(data.updated);
+2 4 should.not.exist(data.comments);
+5 5 Page.removeById(data._id);
+7 9 it('default values', function(){
+7 10 var now = Date.now();
+7 11 return Page.insert({
+7 12 source: 'foo',
+7 13 path: 'bar'
+7 14 }).then(function(){
+7 15 data.title.should.eql('');
+7 16 data.date.valueOf().should.gte(now);
+7 17 data.comments.should.be.true;
+7 18 data.layout.should.eql('page');
+7 27 it('source - required', function(){
+7 28 return Page.insert({}).catch(function(err){
+7 29 err.should.have.property('message', '`source` is required!');
+7 32 it('path - required', function(){
+7 34 source: 'foo'
+7 35 }).catch(function(err){
+7 36 err.should.have.property('message', '`path` is required!');
+7 39 it('permalink - virtual', function(){
+7 43 }).then(function(data){
+7 44 data.permalink.should.eql(hexo.config.url + '/' + data.path);
+7 48 it('permalink - trailing_index', function(){
+7 50 source: 'foo.md',
+7 51 path: 'baz'
+7 53 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/index\\.html$/, ''));
+7 57 it('permalink - trailing_html', function(){
+7 62 data.permalink.permalink.should.eql(hexo.config.url + '/' + '/' + '/' + data.path.replace(/', ''));
+7 63 return Page.removeById(data.id);
+7 68 it('permalink - return Page
+7 69 it('permalink - trailing_html - should be encoded', function(){
+7 71 source: false, path: 'foo'
+9 4 data.email.should.eql('');
+9 5 data.something.should.eql('');
+9 34 path: 'bar/index.html'
+9 37 hexo.config.pretty_urls.trailing_index = false;
+9 44 path: 'bar/foo.html'
+9 46 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/\\.html$/, ''));
+9 47 hexo.config.pretty_urls.trailing_html = false;

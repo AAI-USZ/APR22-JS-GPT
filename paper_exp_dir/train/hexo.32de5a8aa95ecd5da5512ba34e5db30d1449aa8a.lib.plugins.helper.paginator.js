@@ -1,0 +1,103 @@
+function paginatorHelper(options){
+options = options || {};
+
+var current = options.current || this.current || 0;
+var total = options.total || this.total || 1;
+var endSize = options.hasOwnProperty('end_size') ? +options.end_size : 1;
+var midSize = options.hasOwnProperty('mid_size') ? +options.mid_size : 2;
+var space = options.hasOwnProperty('space') ? options.space : '&hellip;';
+var base = options.base || this.page.base || '';
+var format = options.format || this.config.pagination_dir + '/%d/';
+var prevText = options.prev_text || 'Prev';
+var nextText = options.next_text || 'Next';
+var prevNext = options.hasOwnProperty('prev_next') ? options.prev_next : true;
+var transform = options.transform;
+var self = this;
+var result = '';
+var i;
+
+var currentPage = '<span class="page-number current">' +
+(transform ? transform(current) : current) +
+'</span>';
+
+function link(i){
+return self.url_for(i === 1 ? base : base + format.replace('%d', i));
+}
+
+function pageLink(i){
+return '<a class="page-number" href="' + link(i) + '">' +
+(transform ? transform(i) : i) +
+'</a>';
+}
+
+
+if (prevNext && current > 1){
+result += '<a class="extend prev" rel="prev" href="' + link(current - 1) + '">' + prevText + '</a>';
+}
+
+if (options.show_all){
+
+for (i = 1; i < current; i++){
+result += pageLink(i);
+}
+
+
+result += currentPage;
+
+
+for (i = current + 1; i <= total; i++){
+result += pageLink(i);
+}
+} else {
+
+var leftEnd = current <= endSize ? current - 1 : endSize;
+var rightEnd = total - current <= endSize ? current + 1 : total - endSize + 1;
+var leftMid = current - midSize <= endSize ? current - midSize + endSize : current - midSize;
+var rightMid = current + midSize + endSize > total ? current + midSize - endSize : current + midSize;
+var spaceHtml = '<span class="space">' + space + '</span>';
+
+
+for (i = 1; i <= leftEnd; i++){
+result += pageLink(i);
+}
+
+
+if (space && current - endSize - midSize > 1){
+result += spaceHtml;
+}
+
+
+if (leftMid > leftEnd){
+for (i = leftMid; i < current; i++){
+result += pageLink(i);
+}
+}
+
+
+result += currentPage;
+
+
+if (rightMid < rightEnd){
+for (i = current + 1; i <= rightMid; i++){
+result += pageLink(i);
+}
+}
+
+
+if (space && total - endSize - midSize > current){
+result += spaceHtml;
+}
+
+
+for (i = rightEnd; i <= total; i++){
+result += pageLink(i);
+}
+}
+
+
+if (prevNext && current < total){
+result += '<a class="extend next" rel="next" href="' + link(current + 1) + '">' + nextText + '</a>';
+}
+
+return result;
+}

@@ -1,0 +1,62 @@
+Min editdistance: 19.00
+Closest candidate: 1 1 return newBrowser.execute(newBrowser);
+0 1 instant.addListener(socket);return;return newBrowser.socket.call(newBrowser);
+0 2 }
+0 3 });
+0 4 this.on('emit('emitAsync', function() {
+0 5 var oldBrowser = injector.launch.$inject = ['config.id === 'injector'];
+0 6 var injector = injector.createChild([{
+0 7 id: ['
+1 1 return newBrowser.execute(newBrowser);
+1 2 } else {
+1 3 hook.on('reject(newBrowser);
+1 6 return newBrowser.pipe(newBrowser);
+1 7 });"
+
+2 1 instate(); } function () {return newBrowser.execute(socket);
+2 4 return newBrowser.execute(newBrowser.execute(newBrowser);
+2 6 var serverSocketEvents = server = io.createEventEmitter.on('socketServer(serverSocket', serverSocket);
+2 7 const events = serverEmitter.on('server', function() {
+2 8 server.on('error', function() {
+2 9 server.on('error', function(error', function(error, i, replySocketEvents) {
+2 10 emitter.emit('browsers_change
+3 1 return newBrowser.execute(newBrowser); } else {});
+3 3 return newBrowser.listen(config.execute(newBrowser);
+3 7 globalEmitter.on('serverSocket', function() {
+3 8 globalEmitter.on('error', function() {
+3 9 var i = injector.launch.launch(config.launch, launcher);
+3 11 var browser.on('browsers.forEach(function (browser, i) {
+3 12 emitter.launch.launch.$injector.launch, function() {
+3 13 it('browser', function(browser, i, i, i
+4 1 injector.call(newBrowser.state);return newBrowser.STATE_change());"
+
+5 1 return newBrowser.execute(newBrowser.name);
+5 2 });return newBrowser.execute(newBrowser.STATE_change());"
+
+6 1 instant.interceptor.bind(newBrowserDecorator(newBrowser);return newBrowser);
+6 4 var server = server.on('error', function() {
+6 5 return function() {
+6 6 return di.execFilter(request, session =>
+6 7 server.apply(server, session, session);
+6 12 return server.on('server.on('error', function() {
+6 13 return;
+6 14 return server.apply(request, session);
+7 1 instate(); }()});
+7 2 return newBrowser.exec(newBrowser.execute(newBrowser);
+7 5 var socketServer.on('error', function() {
+7 6 var spyExecute(error => {
+7 7 return newBrowser.execute(error => {
+7 8 if (error === null) {
+7 9 if (
+7 10 newBrowser.state === 'error') {
+7 13 if (config.state === 'close()) {
+7 14 config.state = function()
+8 1 return newBrowser.execute(newBrowser); });
+9 5 var server = newPromise.socket.on('complete', function() {
+9 6 return server.exec('http://localhost', server.id, i => {
+9 7 return server.id = null;
+9 10 return server.on('error', function() {
+9 11 return Promise.complete(function() {
+9 12 return newBrowser.state = function() {
+9 13 return newBrowser.state === true;
+9 14 return that._browsers.exec('All browsers.exec('All browsers.exec

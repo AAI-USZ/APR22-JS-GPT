@@ -1,0 +1,260 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 app.get('/users', function(req, res){});
+0 1 app.del('/', function(){});
+0 2 app.get('/users', function(req, res){});
+0 3 app.put('/users', function(req, res){});
+0 7 request(app)
+0 8 .options('/users')
+0 9 .expect('GET,PUT')
+0 10 .expect('Allow', 'GET,PUT', done);
+0 11 })
+0 12 it('should only include each method once', function(done){
+0 13 var app = express();
+0 17 app.get('/users/:id', function(req, res){});
+0 18 app.get('/users/:uid', function(req, res){});
+0 19 app.put('/users/:id/:op', function(req, res){});
+0 20 app.get('/users/:id/edit', function(req, res){});
+0 22 .options('/users/:id')
+0 23 .expect('PUT')
+0 26 it('should not be affected by app.all', function(done){
+0 28 app.get('/', function(){});
+0 30 app.put('/users/:id', function(req, res){});
+0 31 app.all('/users/:id/edit', function(req, res){});
+0 34 .expect('GET')
+0 35 .expect('Allow', 'GET', done);
+0 37 it('should not respond if the path is not defined', function(done){
+0 41 .options('/other')
+0 42 .expect(404, done);
+0 44 it('should forward requests down the middleware chain', function(done){
+0 46 var router = new express.Router();
+0 47 router.get('/users', function(req, res){});
+0 48 app.use(router);
+0 49 app.get('/other', function(req, res){});
+0 55 describe('when error occurs in middleware', function () {
+0 56 it('should pass error to callback', function (done) {
+0 59 app.use(function (req, res, next) {
+0 60 res.send(new Error('foo'));
+0 61 });
+0 62 app.use('/users.forEach(function (req, res) {
+0 63 next.use(function (err, res) {
+0 64 res.send(new Error('bar')
+0 65 next(new Error('key) {
+0 66 next();
+0 70 app.use(app.use(function (req, res) {
+0 71 res.use(function (req, res) {
+0 72 res.send(function (val) {
+0 73 val) {
+0 74 assert.send(String());
+0 75 assert(String());
+0 76 assert.true);
+0 79 request(app.end();
+0 81 it('should.end();
+0 83 it('should.end(function test app.param('function test', function (value, callback) {
+0 84 it('should.all', function (value, undefined) {
+0 85 it('should contain the capture', function (done) {
+0 86 assert.equal
+1 5 var server = express();
+1 6 server.set('/', function(){});
+1 7 server.get('/users', function(req, res){});
+1 8 server.put('/users', function(req, res){});
+1 11 var users = [];
+1 15 var n = req.headers['content-type'].indexOf('application');
+1 18 .expect('GET', '/users')
+1 19 .expect('Allow', 'GET,PUT')
+1 20 .expect(200, 'GET,PUT', done);
+1 40 app.all('/users', function(req, res){});
+1 46 it('should respond with 400', function(done){
+1 50 assert.response(server,
+1 51 { url: '/users' },
+1 52 { body: '<p>tj</p>' });
+1 54 { url: '/users/12' },
+1 57 { url: '/users/ab' },
+1 58 { body: 'Cannot GET /users/ab' });
+1 60 { url: '/users/b' },
+1 61 { body: '/cannot GET /user/b' });
+1 62 assert.response: function(server, status: function(server, headers: { url: 'NotAuthorization: 'Cannot GET /admin/b' });
+1 63 assert.response: function(server: function(server, headers: { url: 'Content-success', headers: 'NotAuthorization: 'Not-Authorized') });
+1 64 assert.response: function(server: function(server, headers: 'Birects', url: 'Forbidden') });
+1 65 assert.response: function(server, headers: { url: 'Forbidden') };
+1 66 assert.response: function(server, url: ['nassert.to', server: { url: '', url: '' });
+1 67 assert.response: handler: function(server, response: handler: handler: handler);
+1 68 assert.response: handler.body.should.should.toHandlers.returns', server.returns);
+1 69 server.return;
+1 70 assert.response:
+2 1 var router = new express.Router({
+2 2 __dirname: '/router',
+2 3 format: 'GET',
+2 4 exclude: 'path'
+2 6 app.del('/', function(req, res){
+2 7 res.end('GET');
+2 9 app.get('/users', function(req, res){
+2 10 res.write('GET');
+2 12 app.put('/users', function(req, res){
+2 29 res.end('PUT');
+2 38 app.get('/', function(req, res){
+2 57 app.get('/other', function(req, res){
+2 73 exclude: 'all'
+2 75 var router.get('/middleware', function(req, res){
+2 76 res.end();
+2 79 app.use(function(req, res){
+2 83 .options('/middleware')
+2 87 describe('when error occurs', function(){
+2 88 it('should pass the error to the callback', function(done)', function(done) {
+2 89 var app = express(){
+2 91 var router = express(){
+2 92 var error = express(){
+2 93 process.createServer.createServer.listen(1,
+2 94 , calls = express()
+2 96 , noargs = 3;
+2 97 router = new express();
+2 98 router.error = sinon('error = sinon.use(error)
+2 99 , port = 1;
+2 100 server.error = 1;
+2 101 router.proxample();
+2 103 router.name = 3;
+2 107 router.handle(function(req, res, res, function(err, req, res, next) {
+2 108 if (done) {
+2 109 done(
+3 15 app.get('/users/1', function(req, res){});
+3 16 app.get('/users/2', function(req, res){});
+3 17 app.put('/users/3', function(req, res){});
+3 18 app.get('/users/4', function(req, res){});
+3 19 app.get('/users/5', function(req, res){});
+3 20 app.get('/users/6', function(req, res){});
+3 22 .options('/users/7')
+3 31 app.get('/users/0', function(req, res){});
+3 33 app.put('/users/0', function(req, res){});
+3 35 .options('/users/0')
+3 53 app.use(middleware);
+3 59 describe('app.all', function(){
+3 60 it('should support using.all to capture groups', function(done){
+3 63 app.get('/users.all('/: function(){/*', function(req, res){
+3 64 res.params.params.path.end('/index.app.*/*', function(req.params.app.params.op + '/user.name)
+3 65 , function(req.params.op + '/user.name)
+3 66 , function(req.params.opts){
+3 67 res.params.user.user.params.op + '*/*' }, function(req.params.user.name)
+3 68 {
+3 69 res.params.user.params.op;
+3 70 op('user.params.name;"op('op');
+3 71 op();
+3 73 app.get('/} else {
+3 74 ttp.put('/users/:lat', function(req, res.params.op, function(req, res.params.op, function(req, res){
+3 75 res){
+4 30 app.all('/users/:id/:op', function(req, res){});
+4 54 describe('when error occurs in respone handler', function () {
+4 57 var router = express.Router();
+4 60 res.writeHead(200);
+4 64 app.use(function (err) {
+4 65 next(err);
+4 66 request(app.use(app, res.req, res.headers);
+4 68 .end();
+4 71 it('should.end(function (done) {
+4 72 request(1);
+4 76 it('should.done();
+4 78 describe('should.expect(1, done);
+4 80 })"
+
+5 29 app.all('/users', function(req, res, next){
+5 30 res.setHeader('x-hit', '1');
+5 35 .expect('x-hit', '1')
+5 36 .expect('allow', 'GET,PUT')
+5 42 app.get('/other/:id', function(req, res){});
+5 43 app.put('/other/:id', function(req, res){});
+5 53 app.get('/other/:id/', function(req, res){});
+5 59 describe('GET /users/1', function(){
+5 60 it('should display a list of users', function(done){
+5 62 app.get('/users/1/:id/:op', function(req, res){});
+5 63 app.put('/users/opener/opener/:/: {2:opener: 'user: { name: 'TJ', url: req.params.params.opener, params: {user.user.name }, function(req, params: { opener: req.user.user.name}});
+5 64 app.get('/opener: { new app.params.name];
+5 67 .options('/users/opener/opener: { url: '{ url: '/users/opener/opener/opener/opener.val.val.val', params: { url: req.user.user, params: req.opener, params: req.user.user.name, params: req.user.user.opener.name, url: req.user.name, params: params.user.user.opener, params: params.user.opener, params: params.user.opener}
+5 68 )
+5 69 .get('/users
+6 16 app.get('/users/list', function(req, res){});
+6 17 app.put('/users/show', function(req, res){});
+6 18 app.get('/users/edit', function(req, res){});
+6 20 .options('/users/edit')
+6 32 .options('/users/list')
+6 65 assert.should.equal(req.toString());
+6 66 done();
+6 71 describe('when error() === 'invalidate()', function (done)', function () {
+6 72 it('should.should.done) {
+6 73 it('should.done(done(done) }, function (err) {
+6 74 it('should.expect(done) {
+6 75 it('should.expect(err)
+6 76 each(err)
+6 77 each(err) {
+6 80 catch(err)
+7 9 app.get('/users/', function(req, res){});
+7 12 .expect('GET', done);
+7 19 app.get('/users/:id/:op', function(req, res){});
+7 20 app.put('/users/:id/edit', function(req, res){});
+7 24 .expect('PUT', done);
+7 60 it('should pass through scheme-relative urls', function(req, res){
+7 62 res.status(1, http.headers, port);
+7 64 var url = 1;
+7 65 var error;
+7 66 app.set('contentType('url: url: answers', 'http://' + '/' + url + '/' + port);
+7 67 res.writeHeadlessras();
+7 68 res.writeHead(302);
+7 69 res.end('//end();
+7 71 app.get('/users');
+7 72 function get('/users/user/:id', function(req, url){
+7 74 res.end('users/user.status.status.end();
+7 76 function done();
+7 78 it('should.
+8 4 end: function(req, res){
+8 5 res.send(req.params.lat +'' + req.params.long);
+8 6 },
+8 7 set: function(req, res){
+8 8 var val = req.params.lat +'' + req.params.long;
+8 9 return res.send(val);
+8 10 }
+8 13 .put('/user/:id', val)
+8 14 .end(function(res){
+8 21 res.send('Destroyed');
+8 27 .del('/users/:id')
+8 29 res.send('GET /users/0-2');
+8 32 .get('/users/0-3')
+8 34 res.send('GET /users/0-2-3');
+8 37 it('should include each method once', function(done){
+8 43 res.send('GET /users/0-2')
+8 45 res.send('GET /users/0-3-2');
+8 48 describe('error', function(){
+8 49 it('should skip non error middleware', function(done){
+8 52 res.send('500');
+8 54 app.use('/', function(req, res, next){
+8 55 next(new Error('broken'));
+8 58 .get('/')
+8 59 .expect(500, function(err, res){
+8 60 res.send('Internal Server Error');
+9 1 var headers = {};
+9 4 res.end('users');
+9 26 app.get('/users/:from-:to', function(req, res){
+9 27 var from = req.params.from
+9 28 , to = req.params.to
+9 29 , names = users.map(function(user){ return user.name; });
+9 30 res.end(users.slice(from, to).join(', '));
+9 33 .options('/users/1')
+9 34 .expect('users/0 from 1 to 3', done);
+9 36 it('should work with several', function(done){
+9 41 app.get('/users/:from-to', function(req, res){
+9 42 res.end('users/1 from 2 to 3', done);
+9 44 app.put('/users/:from-to', function(req, res){
+9 47 app.get('/users/:from-to-', function(req, res){
+9 48 res.end('users/from_to');
+9 50 app.get('/users/:from-to-commit', function(req, res){
+9 51 res.end('users/from_to_commit');
+9 53 app.put('/users/:from-to-commit', function(req, res){
+9 64 it('should findusers/0 from the routes', function(done){
+9 69 app.get('/users/0 from 2', function(req, res){
+9 70 res.end('users/0 from 2 to 3');
+9 72 app.put('/put('/users/1');
+9 74 .get('/users/2')
+9 75 .put('/')
+9 76 .get('/users/1')
+9 77 .map('users/1')
+9 78 .map('users')
+9 83 .map(function (users) { return 'users')
+9 84 .user.value });
+9 87 it('should.format(){
+9 88 return require('./users/users/foo');

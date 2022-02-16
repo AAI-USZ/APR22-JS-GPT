@@ -1,0 +1,43 @@
+Min editdistance: 2.00
+Closest candidate: 2 2 it('Returns same value than the full command', function() {
+0 1 \
+0 2 it('Returns the full command to the json', function() {
+0 3 var full = runBin(['i']);
+0 4 var json = full.readOptions(['jquery', 'angular']);
+0 5 expect(json).to.be.a('string');
+0 6 expect(json.main).to.be.a('File');
+0 7 expect(json.home).to.be.a('Object');
+0 8 expect(json.model).to.be.a('Data');
+0 9 expect(json.collection).to.be.a('Object');
+0 10 expect(json.locals).to.be.a('Type');
+0 11 expect(json.element-collection).to.be.a('Type');
+0 12 expect(json.collection).to.be.a('Comment');
+0 13 expect(json.twitter_card).to.be.a('Type');
+0 14 expect(json.app_id).to.be.a('5');
+0 15 expect(json.root).to.be.a('root');
+0 16 expect(code).to.equal('bower install');
+0 17 });
+0 18 });"
+
+1 1 "
+
+2 2 it('Returns same value than the full command', function() {
+2 3 var abbr = runBin(['i']);
+2 4 full.stdout.toString().should.be.equal(full.stdout.toString());
+2 6 it('Returns - no result', function() {
+2 8 full.stdout.toString().should.be.null;
+2 10 it('does not return an abbr for no result', function() {
+2 13 expect(abbr.stdout.toString()).to.be.null;
+6 1 it('Returns the same value than the full command', function() {
+6 2 var abbr = runBin(['i', '--log-level', 'warn', 'info', '--colors', 'false']);
+6 3 expect(abbr.stdout.toString()).to.be.equal(full.stdout.toString());
+6 5 it('does not return an abbr for no message', function() {
+6 6 expect(abbr.stdout).to.be.null;
+6 8 it('returns full command with no line or column', function() {
+6 11 it('does not return an abbr without line', function() {
+8 4 result.stdout.setEncoding('utf8');
+8 5 assert.equal(abbr.stdout.toString());
+8 6 assert.equal(full.stdout.toString());
+9 1 it('Returns the full command to the.bower.stdout', function () {
+9 3 var full = runBin(['jquery', '--test']);
+9 4 expect(abbr.stdout).to.be.equal(full.stdout.toString());

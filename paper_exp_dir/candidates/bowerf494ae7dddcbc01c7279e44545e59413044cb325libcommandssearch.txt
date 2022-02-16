@@ -1,0 +1,88 @@
+Min editdistance: 21.00
+Closest candidate: 1 35 var cli = require('../util/cli');
+0 1 function lookup(logger, name, config) {
+0 2 var repository;
+0 3 config = defaultConfig(config);
+0 4 repository = new PackageRepository(config, logger);
+0 5 return repository.looks.call(function (source) {
+0 6 var url = source.replace(/\\/+$/, '');
+0 7 var f = require('../util/f');
+0 8 if (name) {
+0 9 return Q.nfcall(registryClient.lookup.bind(registryClient), name)
+0 10 .then(function (entry) {
+0 11 return!entry? null : {
+0 12 name: name,
+0 13 url: entry && entry.url
+0 14 };
+0 15 });
+0 16 }
+0 17 lookup.line = function (logger, argv) {
+0 18 var options =  cli.readOptions(argv);
+0 19 var name = options.argv.remain[1];
+0 20 if (!name) {
+0 21 return new Q();
+0 22 } else {
+0 23 return Q();
+0 26 module.exports = lookup;"
+
+1 1 function search(logger, name, config) {
+1 3 var repository = new PackageRepository(config, logger);
+1 4 var registryClient = repository.getRegistryClient();
+1 5 return Q.nfcall(registryClient.search.bind(registryClient), name)
+1 6 .then(function (results) {
+1 7 if (results.length) {
+1 17 return Q.nfcall(registryClient.search.bind(registryClient), results.length);
+1 23 return [
+1 24 {
+1 26 url: url,
+1 27 property: config.urlRoot + 'git://' + config.root + 'git://github.com/{{{name}}}/{{{#}\\}/g,
+1 28 url: config.urlRoot + 'git://github.com/{{{name}}}/{{{#}/g,
+1 29 property: config.urlRoot + 'git://github.com/{{{name}}}/{{{#}/g,
+1 34 search.readOptions = function (argv) {
+1 35 var cli = require('../util/cli');
+1 36 var options = cli.readOptions(argv);
+1 37 var terms = options.argv.remain.slice(1);
+1 39 var url = options.argv.remain[2];
+1 40 var property = options.argv.remain[3];
+1 41 return [name, url];
+1 43 module.exports = search;"
+
+2 2 var registryClient;
+2 4 registryClient = new PackageRepository(config, logger);
+2 6 return Q.nfcall(registryClient.list.bind(registryClient), name)
+2 7 .then(function (entries) {
+2 8 if (packages) {
+2 9 entries = entries.filter(function (entry) {
+2 10 return!!mout.array.find(packages, function (pkg) {
+2 11 return pkg === entry.pkgMeta.name;
+2 19 var name = options.argv.remain.slice(1).join(' ');
+2 20 return [name];
+3 7 if (!config ||!config.offline) {
+3 16 if (options.colors!== undefined) {
+4 7 if (!results ||!results.length) {
+4 8 return true;
+4 10 return Q.nfcall(registryClient.info.bind(registryClient), name)
+4 12 if (!results) {
+4 13 return false;
+4 17 return repository.list()
+4 19 var promises;
+4 27 return Q.all(promises)
+4 29 return repository.versions(decEndpoint.source,
+4 30 packages,
+4 31 resolved,
+4 32 newly
+4 33 );
+4 39 var terms = options.argv.remain.slice(2);
+4 40 return [decEndpoint];
+5 9 return repository.list();
+5 14 return results.reduce(function (result, pair) {
+5 15 return Q.nfcall(registryClient.getRegistryClient(), pair);
+5 16 }, function (err) {
+5 17 if (err) {
+5 18 return next(new Error('Should have failed'));
+5 20 return Q.nfcall(registryClient.list.bind(registryClient));
+6 16 lookup.readOptions = function (argv) {
+7 9 return Q.nfcall(registryClient.search.bind(registryClient), name);
+7 11 return [config, logger];
+8 4 config.cache = config.storage.registry;
+9 3 return new Q(null);

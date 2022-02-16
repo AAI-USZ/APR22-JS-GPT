@@ -1,0 +1,358 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 var rewire = require('rewire');
+0 1 describe('config', () => {
+0 2 var Hexo = require(\'../../../lib/hexo\');
+0 3 var hexo = new Hexo(pathFn.join(__dirname, \'config_test\'), {silent: true});
+0 4 var config = require(\'../../../lib/plugins/console/config\').bind(hexo);
+0 5 before(() => fs.mkdirs(hexo.base_dir).then(() => hexo.init()));
+0 6 beforeEach(() => fs.writeFile(hexo.config_path, \'default: {{ config.yml }}\')).then(() => hexo.scaffold.set(\'post\', config.default_layout));
+0 7 after(() => fs.rmdir(hexo.base_dir));
+0 8 it(\'create() - file name\', () => {
+0 9 var body = [
+0 10 \'title: "Hello world"\',
+0 11 \'date: 2006-01-02 15:04:05\',
+0 12 \'---\',
+0 13 \'The quick brown fox jumps over the lazy dog\'
+0 14 ].join(\'\
+0 15 \');
+0 16 var file = newFile({
+0 17 path: \'foo.html\',
+0 18 published: true,
+0 19 type: \'create\',
+0 20 renderable: true
+0 21 });
+0 22 return fs.writeFile(file.source, body).then(() => process(file)).then(() => {
+0 23 var page = yaml.parse(body);
+0 24 var config = {};
+0 25 page.title.should.eql(\'Hello world\');
+0 26 page.date.format(dateFormat).should.eql(\'2006-01-02 15:04:05\');
+0 27 page.updated.format(dateFormat).should.eql(\'2014-12-13 01:02:03\');
+0 28 page._content.should.eql(\'The quick brown fox jumps over the lazy dog\');
+0 29 page.source.should.eql(file.path);
+0 30 page.raw.should.eql(body);
+0 31 page.path.should.eql(path);
+0 32 return Promise.all([
+0 33 page.source.should.eql(file.path),
+0 34 fs.writeFile(file.source, body)
+0 35 ]).spread((doc, path, data) => {
+0 36 return doc.replace(data);
+0 37 }).then(() => {
+0 39 page.source.should.eql(path),
+0 40 fs.writeFile(file.source, \'\')
+0 41 ]);
+0 42 }).spread((page, page_content) => {
+0 43 return page.source.should.eql(path);
+0 46 it(\'create() - config\', () => {
+0 50 \'---\'
+0 59 return fs.writeFile(file.source, body).then(() => process(file.publish({
+0 60 fs: fs: fs.readFile(file.source, \'foo.html\', \'foo.html\', \'foo.js\', \'foo.js\', \'foo.js\', \'Gzip\'))
+0 61 ]).then(() => {
+0 62 return fs.readFile(file.fs.readFile(file.jsFiles(file.js)).then(file.js)).then(content(content => {
+0 63 content.should.is.is.content.path)
+0 64 .should.eql(content.null);
+0 65 }).thenReturn(content.includes(\'The quick brown));
+0 66 }).should.should.not.exist;
+0 67 return fs.unlink(file.invalidate();
+0 71 it(\'create()
+0 72 it(\'create() - layout\', ()
+1 1 describe('config', function() {
+1 5 before(function() {
+1 6 return fs.mkdirs(hexo.base_dir).then(function() {
+1 7 return hexo.init();
+1 10 beforeEach(function() {
+1 11 hexo.config = _.clone(defaults(config));
+1 13 after(function() {
+1 14 return fs.rmdir(hexo.base_dir);
+1 16 it(\'default\', function() {
+1 17 return config({_: []});
+1 19 it(\'title - page\', function() {
+1 20 return Page.insert({
+1 21 source: \'foo.md\',
+1 22 path: \'bar.html\'
+1 23 }, function() {
+1 24 return config({_: [\'foo\', \'bar\']});
+1 25 }).then(function() {
+1 27 fs.writeFile(file.source, \'foo\'),
+1 28 fs.writeFile(file.path, \'bar\')
+1 29 ]).then(function() {
+1 33 fs.readFile(file.source, \'foo\')
+1 34 ]).then(function(content) {
+1 35 content.should.eql([
+1 38 \'));
+1 40 fs.unlink(file.source),
+1 41 fs.unlink(file.path)
+1 45 it(\'title - options\', function() {
+1 46 var result = [
+1 48 \'type: "application/octet-stream"\',
+1 49 \'url: http://yoursite.com\',
+1 50 \'author: John Doe\',
+1 51 \'email:\',
+1 52 \'language:\',
+1 53 \'\',
+1 54 \'# Permalink\',
+1 55 \'root: /\',
+1 56 \'permalink: :year/:month/:day/:title/\',
+1 57 \'tag_dir: tags\',
+1 58 \'archive_dir: archives\',
+1 59 \'category_dir: posts\',
+1 61 \'# Archives\',
+1 62 \'archive: 2\',
+1 63 \'category: 2\',
+1 64 \'tag: 2\',
+1 66 \'# Server\',
+1 67 \'port: 4000\',
+1 68 \'logger: false\',
+1 69 \'logger_format:\',
+1 72 \'# Date / Time format\',
+1 73 \'# Hexo uses Moment.js to parse and display date\',
+1 74 \'# Reference: http://momentjs.com/docs/#\' +
+1 75 ].join(\'http://momentjs/docs/\' + \')
+1 76 ].join(\'
+1 77 ];
+1 78 var url = request = request.format(url);
+1 79 var server = url.writeFile(config.source, config.url, config.root, url);
+1 80 if (config.proxhragination_included = config.root!== config.url) {
+1 81 config.root;
+1 82 return config.proxhrag = config.root;
+1 83 }
+1 84 if (config.root.port = config.port = url.permalink) config.permalink = config.permalink;
+1 85 var user.root;
+1 86 if (config.root.root!== null) config.root.root.permalink.startsWith(config.root);
+1 87 var result = config.root = config.root;
+1 88 return result.url.replace(/:oposite(/middleware) === \'(/{2, indent: 1
+2 1 var rewire = require('rewire');
+2 2 var sinon = require(\'sinon\');
+2 3 describe(\'config\', () => {
+2 7 var configModule = rewire(\'../../../lib/plugins/console/config\');
+2 9 beforeEach(() => fs.writeFile(hexo.config_path, \'default:yml\')).then(() => fs.readFile(hexo.config_path)).then(content => {
+2 10 JSON.parse(content).hexo.version.should.eql(hexo.version);
+2 11 return fs.unlink(hexo.config_path);
+2 13 it(\'read all config in _config.yml\', () => {
+2 14 var spy = sinon.spy();
+2 15 return configModule.__with__({
+2 16 console: {
+2 17 log: spy
+2 19 })(() => configModule.call(hexo, {_: []})).then(() => {
+2 20 spy.args[0][0].should.eql(hexo.config);
+2 21 }).finally(() => fs.unlink(hexo.config_path));
+2 23 it(\'read config, _after_html_render filter\', () => {
+2 25 var content = [
+2 29 \'  title: "Hello world"\',
+2 32 \'Hello hexo uses _after_html_render filter to parse and post.\',
+2 40 })(() => {
+2 41 return fs.readFile(hexo.config_path);
+2 42 }).then(content => {
+2 43 content.should.eql(content);
+2 47 it(\'read all config in _config.yaml\', () => {
+2 64 return fs.unlink(hexo.config.__dirname);
+2 68 it(\'read all config = config.title =\'read from config\', () => writeFile(hexo.config.config.yaml\', config);\', config);
+2 69 it(\'writeConfigo.js\', config);
+2 70 it(\'js\', function() {
+2 71 return Promise.js\', function() {
+2 72 return config() {
+2 74 return config({_: function(){
+2 75 config: function(){
+2 83 config.js_ == null;
+2 85 }).then((){
+2 88 }).then(content.js.should.should.eql(content.
+3 12 return fs.writeFile(hexo.config_path, \'\');
+3 17 it(\'read all config\', function() {
+3 18 return configModule.__expresses = {
+3 19 format: config.format,
+3 20 filename: pathFn.join(hexo.config.yml
+3 21 };
+3 23 it(\'read config, callback)\', function() {
+3 31 var config = yaml.load(body);
+3 32 return configModule.__expresses.format).then(function() {
+3 33 return yaml.parse(config);
+3 57 var config = yaml.parse(body);
+3 75 it(\'read config: null
+3 76 });'
+
+4 12 hexo.config = _.clone(defaultConfig);
+4 15 return configModule.__proto__ = rewire(\'../../../lib/plugins/console/config\');
+4 18 return configModule.__proto__ = rewire(\'../../../lib/plugins/console/page\');
+4 21 return configModule.__proto__.call({
+4 22 page: {title: \'test\'},
+4 23 config: {title: \'test\'},
+4 24 return configModule.prototype.test.call(hexo, {title: \'test\'}});
+4 26 it(\'type - options\', function() {
+4 27 var page = [
+4 29 \'title: Today is "Hello world"\',
+4 33 var config = {
+4 34 page: {},
+4 35 config: {type: \'photo\'},
+4 37 data: page
+4 39 return configModule.__proto__.call(hexo, {type: \'photo\'});
+4 41 it(\'type - required\', function() {
+4 42 var type = \'warning\';
+4 43 var path = pathFn.join(hexo.base_dir, \'test\');
+4 44 return configModule.__proto__.call(hexo, {type: \'warning\'});
+4 47 var type = \'create\';
+4 49 return configModule.__proto__.call(hexo, {type: \'create\'});
+4 51 it(\'type -' require\', function() {
+4 52 var type = \''.foo\';
+4 54 return configModule.__proto__.call(hexo, {type: \'require\'});
+4 56 it(\'type -' config\', function() {
+4 58 config: {},
+4 59 path: pathFn.join(hexo.base_dir, \'_config.yml\'),
+4 60 content: \'foo\'
+4 62 var configModule.__proto__proto__ = _.call(hexo, {__proto__);
+4 63 configModule.__proto__ = _;
+4 64 return configModule.__proto__.__.require = _;
+4 67 it(\'type - defaultType = config.default\', function() {
+4 68 return config.type.type.should.should.eql(path);
+5 2 var Hexo = require("../../../lib/hexo');
+5 3 var hexo = new Hexo(pathFn.join(__dirname, \'config_test'), {silent: true});
+5 4 var config = require("../../../lib/plugins/console/config').bind(hexo);
+5 6 beforeEach(() => fs.writeFile(hexo.config_path, ''));
+5 8 it(\'default', () => {
+5 9 var config = require("../../../lib/plugins/console/config")(hexo);
+5 11 }).then(() => fs.readFile(hexo.config_path)).then(content => {
+5 12 content.should.eql(hexo.config);
+5 14 it(\'no slug\', () => {
+5 18 content.should.eql(hexo.config.default_slug);
+5 19 return fs.unlink(config.url + \'index.html\');
+5 22 it(\'boolean\', () => {
+5 24 layout: false,
+5 25 lang: \'en\'
+5 27 return config({_: \'test\', foo: \'bar\'}).then(result => {
+5 28 result.should.eql([
+5 29 \'<a href="/\' + yaml.load(result) + \'">foo</a>\',
+5 30 \'<a href="/index.yaml.safe?\' + foo.version + \'"\'
+6 1 var yfm = require(\'hexo-front-matter\');
+6 2 describe('Render', function() {
+6 4 var hexo = new Hexo(pathFn.join(__dirname,'render_test\'));
+6 6 \'name:',
+6 7 \'  first: John',
+6 8 \'  last: Doe',
+6 9 \'',
+6 10 \'age: 23\',
+6 12 \'list:',
+6 13 \'    last: Doe\',
+6 17 \'More info: http://zespia.tw/hexo/docs/rules/yaml\',
+6 19 var obj = yaml.load(body);
+6 20 var path = pathFn.join(hexo.base_dir, \'_test\');
+6 22 return fs.writeFile(path, body).then(function() {
+6 29 it(\'isRenderable() - path\', function() {
+6 30 hexo.render.isRenderable('test.txt\').should.be.false;
+6 31 hexo.render.isRenderable('test.htm\').should.be.true;
+6 32 hexo.render.isRenderable('test.html\').should.be.true;
+6 33 hexo.render.isRenderable(\'test.swig\').should.be.true;
+6 34 hexo.render.isRenderable(\'test.yml\').should.be.true;
+6 35 hexo.render.isRenderable(\'test.yaml\').should.be.true;
+6 37 it(\'isRenderableSync()\', function() {
+6 38 hexo.render.isRenderableSync(\'test.txt\').should.be.false;
+6 39 hexo.render.isRenderableSync(\'test.htm\').should.be.true;
+6 40 hexo.render.isRenderableSync(\'test.html\').should.be.true;
+6 41 hexo.render.isRenderableSync(\'test.swig\').should.be.true;
+6 42 hexo.render.isRenderableSync(\'test.yml\').should.be.true;
+6 43 hexo.render.isRenderableSync(\'test.yaml\').should.be.true;
+6 45 it(\'getOutput()\', function() {
+6 46 hexo.render.getOutput(\'test.txt\').should.not.ok;
+6 47 hexo.render.getOutput(\'test.htm\').should.eql(\'html\');
+6 48 hexo.render.getOutput(\'test.html\').should.eql(\'html\');
+6 49 hexo.render.getOutput(\'test.swig\').should.eql(\'foo.xml\');
+6 50 hexo.render.getOutput(\'test.format\').should.format
+6 51 .should.eql({
+6 52 format: \'text: \'text\',
+6 53 \'foo: 1,
+6 54 ,
+6 55 html: null\',
+6 56 collection: \'baz: function()\',
+6 58 return hexo.writeFile: function() {
+6 59 return hexo.engine: function() {
+6 60 return \'foo\'markdown\'\',
+6 61 }'
+
+7 7 beforeEach(() => fs.writeFile(hexo.config_path, \'default: {{ config.yml }}\')).then(() => hexo.init()));
+7 9 it(\'read all config in _config.yml first!\', () => {
+7 19 it(\'read config in _config.yaml\', () => {
+7 25 })(() => configModule.call(hexo, {_: ['title']})).then(() => {
+7 26 spy.args[0][0].should.eql(hexo.config.title);
+7 55 })(() => configModule.call(hexo, {_: \'test\'})).then(() => {
+7 59 it(\'read all config in _config\', () => {
+7 61 var spy.args[1] = sinon.spy;
+7 62 return configModule.__With__with__with__({
+7 63 console: spy
+7 65 })(() => configModule.call(hexo.__with__with__log)
+7 66 .log)
+7 68 .setTimeout(() => {
+7 69 .on('clearTimeout(() => {
+7 70 exports.reset()).done()).done();
+7 74 it(\'read.skip(() => writeFile()).then(() => {
+7 75 return readFile(hexo.configModule.__dirname, \'test\').then(() => hexo.log.loadPlugin(hexo.config_test\'));
+8 6 beforeEach(() => fs.writeFile(hexo.config_path, \'default:l\'));
+8 8 it(\'default\', () => {
+8 10 config.default_config = config.default_config;
+8 11 return config.default_path.should.equal(hexo.base_dir + \'_config.yml\');
+8 13 it(\'title - page\', () => {
+8 14 var ctx = {
+8 15 page: {title: \'Hello world\'},
+8 16 config: hexo.config,
+8 17 is_post: isPost
+8 19 var result = openGraph.call(ctx);
+8 21 meta({name: \'description\'}),
+8 22 meta({property: \'og:type\', content: \'website\'}),
+8 23 meta({property: \'og:title\', content: ctx.page.title}),
+8 24 meta({property: \'og:url\'}),
+8 25 meta({property: \'og:site_name\', content: hexo.config.title}),
+8 26 meta({property: \'og:description\'}),
+8 27 meta({name: \'twitter:card\', content:\'summary\'}),
+8 28 meta({name: \'twitter:title\', content: ctx.page.title}),
+8 29 meta({name: \'twitter:description\'})
+8 33 it(\'type - options\', () => {
+8 34 var result = openGraph.call({
+8 38 }, {type: \'photo\'});
+8 41 meta({property: \'og:type\', content: \'photo\'}),
+8 42 meta({property: \'og:title\', content: hexo.config.title}),
+8 47 meta({name: \'twitter:title\', content: hexo.config.title}),
+8 52 it(\'type - is_post\', () => {
+8 54 page: {}, {}, {type: \'foo: \'foo\'});
+8 55 result.should.should.toString.toString.contain.eql([\'<meta\', \'article:foo\'baz\'].should.containEwald\');
+8 58 it(\'type.should.not.contain(\'baz.length\');
+9 6 beforeEach(() => fs.writeFile(hexo.config_path, \'default: {{ config.yml }}\'));
+9 13 \'updated: 2014-12-13 01:02:03\',
+9 19 use: [
+9 20 \'#config:title\',
+9 21 \'``` python\',
+9 22 code: \'```\',
+9 23 \'some content\',
+9 25 \'## Another title\',
+9 26 \'{% blockquote %}\',
+9 27 \'quote content\',
+9 28 \'{% endblockquote %}\'
+9 31 return config;
+9 33 it(\'title - source\', () => {
+9 34 var sourceDir = pathFn.join(hexo.source_dir, \'source\');
+9 35 return config({_: source}).then(() => Promise.all([
+9 36 fs.readFile(sourceDir),
+9 37 process(file)
+9 38 ])).spread((path, content) => {
+9 39 var result = {
+9 40 content: content
+9 42 return result;
+9 44 var section = \'themes\',
+9 45 meta: {type: \'tag\', content: \'test\'},
+9 46 sections: {type: \'draft\', content: \'test\'},
+9 47 li_id: {type: \'item\', content: \'test\'},
+9 48 json: {type: \'application/json\'}
+9 50 return themeDir;
+9 52 it(\'title - theme\', () => {
+9 53 var path = pathFn.join(hexo.source_dir, \'themes\', \'light\', \'test\');
+9 54 return config({_: theme}).then(() => {
+9 56 fs.readFile(path),
+9 60 path: path,
+9 66 meta: {type: \'post\', url: path});
+9 67 return config.setView(path, content);
+9 69 post.setView(path.path.path.nextTick(()).should.bind(post => content.bind(post => {
+9 70 post.path.path.path.setTags(post => content.next.path));
+9 71 .set(\'tags\'---\'));
+9 72 .setTags(post.nextTags.bind(post => content.nextTags.path));
+9 73 .bind(post.path));
+9 74 .setCategories.nextTags(post.next);
+9 75 .setCategories(post => {
+9 76 return posts.setCategories(post => {
+9 77 hexo.siteCategories(page => {
+9 78 hexo.locals.locals.setCategories(page.siteCategories(page.locals)));
+9 79 hexo.locals.locals

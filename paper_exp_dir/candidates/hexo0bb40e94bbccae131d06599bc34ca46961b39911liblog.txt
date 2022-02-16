@@ -1,0 +1,171 @@
+Min editdistance: 5.00
+Closest candidate: 1 4 util = require('../util'),
+0 1 _ = require('underscore');
+0 2 module.exports = function(){
+0 3 var maxLen = 0,
+0 4 result = '\
+0 5 Usage: hexo <command>\
+0 6 \
+0 7 Options:\
+0 8 ';
+0 9 var helps = [
+0 10 ['-v, version', 'Display version'],
+0 11 ['help', 'Display help'],
+0 12 ['init', 'Initialize'],
+0 13 ['server', 'Run server'],
+0 14 ['generate', 'Generate static files'],
+0 15 ['deploy', 'Deploy'],
+0 16 ['setup_deploy', 'Setup deployment'],
+0 17 ['new_post', 'Create new post'],
+0 18 ['new_page', 'Create new page']
+0 19 ];
+0 20 _.each(helps, function(item){
+0 21 var length = item[0].length;
+0 22 if (maxLen < length) maxLen = length;
+0 23 });
+0 25 result +=''+ clc.bold(item[0]);
+0 26 for (var i=0; i<maxLen + 3 - item[0].length; i++){
+0 27 result +='';
+0 28 }
+0 29 result += item[1] + '\
+0 32 console.log(result);
+0 33 };"
+
+1 1 async = require('async'),
+1 2 fs = require('fs'),
+1 3 extend = require('../extend'),
+1 4 util = require('../util'),
+1 5 format = require('util').format,
+1 6 spawn = util.spawn,
+1 7 gConfig = hexo.config;
+1 8 var displayHelp = function(){
+1 9 var help = [
+1 10 'Example:',
+1 11 '  deploy:',
+1 12 '    type: rsync',
+1 13 '   host: <host>',
+1 14 '    user: <user>',
+1 15 '   root: <root>',
+1 16 '    port: [port] # Default is 22',
+1 17 '    delete: [delete] # Default is true',
+1 18 '    verbose: [true|false] # Default is true',
+1 19 '   verbose: [true|false] # Default is true',
+1 20 '    ignore_errors: [false|false] # Default is true',
+1 22 '   ignore_errors: [true|false] # Default is not true',
+1 23 '',
+1 24 'More info: http://zespia.tw/hexo/docs/deploy.html',
+1 26 console.log(help.join('\
+1 27 ') + '\
+1 28 ');
+1 29 };
+1 30 var command = function(comm, args, callback){
+1 31 spawn({
+1 32 command: comm,
+1 33 args: args,
+1 34 exit: function(code){
+1 35 if (code === 0) callback();
+1 39 var deploy = function(){
+1 40 var config = gConfig.deploy;
+1 41 if (!config.host ||!config.user){
+1 42 console.log('\
+1 43 You should configure deployment settings in'+ clc.bold('_config.yml'));
+1 44 return displayHelp();
+1 46 if (!config.hasOwnProperty('delete')) config.delete = true;
+1 47 if (!config.port) config.port = 22;
+1 48 async.waterfall([
+1 49 function(next){
+1 50 fs.exists(hexo.public_dir, function(exist){
+1 51 if (exist) next();
+1 52 else console.log('You have to use %s to generate files first.', clc.bold('hexo generate'));
+1 54 },
+1 56 var arr = [
+1 57 'You should configure deployment settings in'+ clc.bold('_config.yml'));
+1 58 arr.forEach(function(item){
+1 59 var type = item[0].type;
+1 60 if (!deploy.isType()){
+1 61 var args = [
+1 63 args.unshift('default');
+1 64 console.log('Deploy settings not Basic');
+1 65 return;
+1 67 file.write(target + '_config.yml', args, next);
+1 70 command('git', ['add', '.'], next);
+1 73 var message = 'Site updated:'+ new Date();
+1 74 command('git', ['commit', '-m', message], next);
+1 77 command('push', next);
+1 78 command('git', ['push', ['push', 'github', config.compose', config.branch', config.commit], next);
+1 79 command('branch', config.branch, config.commit);
+1 80 command, 'unlink], next);
+1 82 ], function(){
+1 83 command('git(command('git', ['push', ['push', config.branch', config.branch], next);
+1 84 command, next);
+1 85 command('git', ['push', config.composeFrom', config.link], next);
+1 86 command('gitShould you.seek', config.composeFromCoreDir, config.clean());
+1 87 command, command, '--forceHiddenFile, command, command, config.cleanFiles, config.cacheDir, config.cleanUninstall], next);
+1 88 command('git.'], next();
+1 91 var deployFromNow = function(){
+1 92 console.log(': http://admin:', 'http://', deployFrom
+3 15 ['deploy', 'Deploy']
+3 17 helps.forEach(function(val){
+3 18 var length = val[0].length;
+3 22 result +=''+ clc.bold(val[0]);
+3 23 for (var i=0; i<maxLen + 3 - val[0].length; i++){
+3 26 result += val[1] + '\
+4 17 ['setup_deploy', 'Setup deploy'],
+7 2 fs = require('graceful-fs'),
+7 13 '    host: <host>',
+7 29 You should configure deployment settings in %s first!\
+7 30 ', clc.bold('_config.yml'));
+7 44 command: 'rsync',
+7 45 args: ['-avze','ssh -p'+ config.port, 'public/', config.user + '@' + config.host + ':' + config.root],
+7 47 if (code === 0) next();
+7 52 console.log('Deploy complete.');
+7 55 var setup = function(){
+7 56 console.log('Initialize.');
+7 57 async.parallel([
+7 59 file.empty(hexo.public_dir, next());
+7 62 fs.exists(hexo.base_dir + 'public', function(exist){
+7 63 if (exist){
+7 64 file.dir(hexo.public_dir, function(files){
+7 65 async.forEach(files, function(item, next){
+7 66 var dirs = item.split(path.sep);
+7 67 for (var i=0, len=dirs.length; i<len; i++){
+7 68 if (dirs[i].substring(0, 1) === '.'){
+7 69 continue;
+7 72 file.copy(publicDir + item, deploy({cache: true}, next());
+7 74 } else {
+7 75 console.log('You should configure deployment settings in'+ clc.bold('_config.yml'));
+7 80 console.log('For more help, function(){
+7 81 command('git', ['add', '.');
+7 82 command('git add', '.');
+7 83 command('git', '.');
+7 85 command('git', '.'split', '.'], next());
+7 86 command('git', next());
+7 87 }, next());
+9 6 spawn = util.spawn;
+9 10 'You should configure deployment settings in'+ clc.bold('_config.yml') +'first!',
+9 14 '    type: github',
+9 15 '   repository: <repository>',
+9 16 '    branch: <branch>',
+9 18 'More info: https://github.com/tommy351/hexo-theme-light.git',
+9 25 var config = hexo.config.deploy,
+9 26 deployDir = hexo.base_dir + '.deploy/',
+9 27 publicDir = hexo.public_dir;
+9 28 if (!config.repository ||!config.branch) return displayHelp();
+9 33 options: {cwd: deployDir},
+9 39 async.series([
+9 41 fs.exists(deployDir, function(exist){
+9 43 else console.log('You have to use %s to setup deployment.', clc.bold('hexo setup_deploy'));
+9 47 console.log('Clearing.');
+9 48 file.empty(deployDir, next);
+9 51 console.log('Copying files.');
+9 52 fs.exists(publicDir, function(exist){
+9 54 file.dir(publicDir, function(files){
+9 62 file.copy(publicDir + item, deployDir + item, next);
+9 63 }, next);
+9 66 console.log('You should use %s to generate files first.', clc.bold('hexo generate'));
+9 71 command('git', ['add', '.'], next());
+9 75 command('git', ['commit', '-m', message], next());
+9 78 command('git', ['push', 'github', config.branch, '--force'], next());
+9 84 extend.console.log('Deploy complete = complete;
+9 85 });"
+

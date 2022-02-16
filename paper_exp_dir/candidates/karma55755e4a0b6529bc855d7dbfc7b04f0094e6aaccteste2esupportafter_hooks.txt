@@ -1,0 +1,83 @@
+Min editdistance: 25.00
+Closest candidate: 6 33 this.child.on('error', function(e, callback) {
+0 1  else {
+0 2 this.child.on('error', function (err) {
+0 3 this.lastRun.apply(this, arguments)
+0 4 })
+0 5 this.child.emit('exit', 1)
+0 6 }
+0 8 if (this.child.length) {
+0 9 this.child.kill()
+0 10 this.child.shift()"
+
+1 2 this.child.on('exit', function(){
+1 4 }.bind(this));
+1 6 };"
+
+2 2 this.child.on('error', function(err) {
+2 3 if (err) {
+2 5 this.child.start()"
+
+3 2 this.child.on('exit', function() {this.child.kill()})
+3 4 } else {
+3 5 this.child.list()"
+
+4 2 this.child.on('exit', function() {});
+4 4 this.child.emit('exit');
+5 2 this.child.kill()"
+
+6 2 this.child.on('error', function(e) {
+6 3 if (e.code === 'EADDRINUSE') {
+6 4 this.child.emit('error', e);
+6 6 this.child.emit('close');
+6 8 });
+6 10 this.child.on('nonerror', function(e) {
+6 19 this.lastRun.push(e);
+6 23 this.child.on('exit', function() {
+6 24 if (e.code === 'EACCES') {
+6 25 this.child.emit('exit', this.child);
+6 29 var Pool = this.database.model('Post').({
+6 30 _id: this.id,
+6 31 path: this.post.path
+6 33 this.child.on('error', function(e, callback) {
+6 36 this.message = 'Site updated:'+ this.id.toString();
+6 37 this.time = new Date()
+6 38 this.writeModel(this.database.model('Asset')._id, this.message, callback);
+6 40 .catch(this);
+7 2 this.child.process = function(){
+7 3 var args = Array.prototype.slice.call(arguments, 0);
+7 4 args.unshift('all');
+7 5 var child;
+7 6 if (Array.isArray(this.child.kill)) {
+7 7 child.child.kill();
+7 9 this.child.process.exit(0);
+7 11 child.id = args.shift();
+7 14 this.child.kill();
+7 16 this.child.process.exit(e);
+7 20 var array = this.site.length()
+7 21 var exec = function(cmd, args, failMsg) {
+7 22 var child = this.child
+7 23 if (this.child.process.stderr.isTTY) {
+7 26 this.child.lastRun.apply(this.child, args);
+7 27 failMsg = this.child.lastRun.apply(this.child, args);
+7 30 this.child.stderr.on('data', function(e) {
+7 53 this.lastRun.apply(this.child, args);
+7 66 this.child.stdout.pipe(process.stdout)
+7 67 this.child.stderr.pipe(process.stderr)
+7 70 process.error(e)
+7 74 this.on('close', function() {
+7 75 this.child.child.close()
+7 78 return this
+8 3 var args = arguments
+8 4 , callback = this.child.kill()
+8 5 , self = this;
+8 9 this.child.on('error', function(err){
+8 11 this.emit('error', err);
+8 12 } else if (this.child.kill) {
+8 13 exitCode = this.child.kill()
+8 14 , callback = this.child.kill();
+8 15 body = this.child.kill();
+8 16 self.child.kill();
+8 18 process.nextTick(callback);
+8 20 }'
+

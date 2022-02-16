@@ -1,0 +1,433 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 function cleanConsole(args) {
+0 1 function cleanConsole(args){
+0 2 return Promise.all([
+0 3 deleteDatabase(this),
+0 4 deletePublicDir(this)
+0 5 ]);
+0 6 }
+0 7 function deleteFile(path){
+0 8 var dest = this.public_dir;
+0 9 return fs.exists(dest).then(function(exist){
+0 10 if (exist){
+0 11 return fs.unlink(dest);
+0 12 } else {
+0 13 return;
+0 15 });
+0 17 function deleteStaticFile(path){
+0 18 var dest = pathFn.join(this.public_dir, path);
+0 21 return fs.rmdir(dest);
+0 23 return checkFile(dest).then(function(files){
+0 24 if (files).some(function(err, files){
+0 25 if (err) return done(err);
+0 32 function createReadStream(options){
+0 33 options = options || {};
+0 34 return new Promise(function(resolve, reject){
+0 35 var src = fs.createReadStream(options);
+0 36 return fs.exists(src).then(function(exist){
+0 37 if (exist) return resolve(exist);
+0 38 if (!exist) return reject(new Error(\'NoReadStream\'));
+0 39 return exists(src);
+0 40 }).then(function(exist){
+0 41 var data = Data.findById(\'source\');
+0 42 if (data) return reject(null, data);
+0 43 if (data){
+0 44 data.remove();
+0 45 return Promise.resolve(true);
+0 49 }).then(function(){
+0 50 return fs.readFile(src);
+0 51 }).then(function(content){
+0 56 function testJson(){
+0 58 fs.readFile(testJson(),
+0 59 new config.jsonFile()
+0 60 ])
+0 61 .spread(function(json, jsonFile){
+0 62 return jsonFile
+0 63 .replace(/\\{"baz": 3}\\s+(?|\\*\\*)(.*?)\\1/g, function(_, slash, format){
+0 64 return \'[\']\';
+0 65 })
+0 66 .replace(/([\\]\\w+)/g, function(_, format){
+0 67 return format
+0 68 .replace(/((:\\d+)/g, function(_, format){
+0 69 return \'\
+0 70 \';
+0 72 .replace(/GMT.*)/g, function(){
+0 74 .replace(/GMT.*$/g, \'MMM D YYYY\')
+0 76 .replace(/GMT*([^\\d]+)/g, \'GMT\');
+0 79 fs.stat(testJson(),
+0 80 create()
+0 81 ]).spread(function(stats, stats){
+0 82 var stats = stats || {};
+0 83 stats.isDirectory()
+0 84 .should.be.true;
+0 85 return i.should.should.s.s.true;
+0 86 .s.should.should.to.be.true;
+0 87 .s.to.to.some;
+0 88 .is.to.to.some.is.is.some;
+0 89 .to.is.some;
+0 90 .to.is.is.to.to.some;
+0 91 .to.filename.filename.should.should.be.be.to.filename.to.should.be.to.to.be.filename;
+0 92 .to.to.be.filename.to.be.to.to.be.to.to.have.true;
+0 93 .filename.to.to.be.to.have.filename.to.to.be.to.have.path.toLowerCase();
+0 94 return.to.skip('bower.json\', function(){
+0 95 return unlink(this);
+1 1 function cleanConsole(args) {
+1 7 function deleteFile(path) {
+1 9 return fs.exists(dest).then(function(exist) {
+1 10 if (exist) return fs.unlink(dest);
+1 13 function deletePublicDir(this) {
+1 14 var publicDir = this.public_dir;
+1 15 return fs.exists(publicDir).then(function(exist) {
+1 16 if (exist) return fs.rmdir(publicDir);
+1 25 function generateFile(path) {
+1 28 if (exist) return writeFile(dest, true);
+1 29 if (removePublicDir(dest) return writeFile(dest);
+1 32 function writeFile(dest, force) {
+1 34 var force =!!args.length;
+1 35 var path = pathFn.join(dest, \'bower.json\');
+1 36 var contents = fs.readFileSync(path).toString();
+1 38 fs.writeFile(dest, force),
+1 39 fs.writeFile(dest, \'bower.json\'),
+1 40 fs.writeFile(dest, \'component.json\'),
+1 41 fs.writeFile(dest, \'more/docs/bower.json\')
+1 42 ]).then(function() {
+1 43 return fetch({
+1 44 name: path,
+1 45 url: this.url
+1 47 }).then(function(result) {
+1 48 if (result == null ||!result) return;
+1 50 fs.readFile(dest),
+1 51 fs.readFileSync(path)
+1 53 }).spread(function(stdout, stderr) {
+1 54 return stdout.toString()
+1 55 .replace(/\
+1 56 (\\t+)/g, function() {
+1 57 return (\
+1 58 ) + \'\
+1 63 function renderError(err) {
+1 64 var str = \'\';
+1 65 var stack = err.stack || err.stack || "Error: Unexpected foo.\';
+1 66 err.level = \'error\';
+1 67 err.data = err.data || {};
+1 68 err.data.end();
+1 69 return str;
+1 71 function firstGenerate() {
+1 72 var interval = prettyHrtime(process.hrtime(start));
+1 73 log.info(\'Files loaded in %s with id="\' + this.id + \'"></a>\', interval);
+1 75 function generateFile(path, force) {
+1 76 var dest = pathFn.join(publicDir, \'index.md5, path);
+1 77 return fs.exists(dest).then(function(function(exist) {
+1 78 return!isRender(dest) {
+1 79 return!isRender(dest).then(isRender(path) || generateFile(path)) return true;
+1 80 }).is(path)
+1 81 }).is(path) : path;
+1 82 }).map(generateFile(source);
+1 83 }).join(', function(path));
+1 84 }).set(sourceDir, function(path, i, function(dest, mode) {
+1 85 return this.render(path, mode);
+1 86 return this.render(path);
+1 87 }, function(path, mode);
+1 88 return this.render(mode);
+1 89 }, function() {
+1 90 return mode);
+1 94 if (ignoreFilesRegexp.test(path) {
+1 95 return ignore
+2 1 var pathFn = require(\'path\');
+2 2 var tildify = require(\'tildify\');
+2 3 var Database = require(\'warehouse\');
+2 4 var _ = require(\'lodash\');
+2 5 var chalk = require(\'chalk\');
+2 6 var EventEmitter = require(\'events\').EventEmitter;
+2 7 var fs = require(\'hexo-fs\');
+2 8 var Module = require(\'module\');
+2 9 var vm = require(\'vm\');
+2 10 var pkg = require(\'../../package.json\');
+2 11 var logger = require(\'hexo-logger\');
+2 12 var extend = require(\'../extend\');
+2 13 var Render = require(\'./render\');
+2 14 var registerModels = require(\'./register_models\');
+2 15 var Post = require(\'./post\');
+2 16 var Scaffold = require(\'./scaffold\');
+2 17 var Source = require(\'./source\');
+2 18 var Router = require(\'./router\');
+2 19 var Theme = require(\'../theme\');
+2 20 var Locals = require(\'./locals\');
+2 21 var defaultConfig = require(\'../default_config\');
+2 22 var loadDatabase = require(\'../load_database\');
+2 23 var libDir = pathFn.dirname(__dirname);
+2 24 var sep = pathFn.sep;
+2 25 var dbVersion = 1;
+2 26 function Hexo(base, args) {
+2 27 base = base || process.cwd();
+2 28 args = args || {};
+2 29 EventEmitter.call(this);
+2 30 this.base_dir = base + sep;
+2 31 this.public_dir = pathFn.join(base, \'public\');
+2 32 this.source_dir = pathFn.join(base, \'source\');
+2 33 this.plugin_dir = pathFn.join(base, \'node_modules\');
+2 34 this.script_dir = pathFn.join(base, \'scripts\');
+2 35 this.scaffold_dir = pathFn.join(base, \'scaffolds\');
+2 36 this.theme_dir = pathFn.join(base, \'themes\', defaultConfig.theme) + sep;
+2 37 this.theme_script_dir = pathFn.join(this.theme_dir,'scripts\');
+2 38 this.env = {
+2 39 args: args,
+2 40 debug: Boolean(args.debug),
+2 41 safe: Boolean(args.safe),
+2 42 silent: Boolean(args.silent),
+2 43 env: process.env.NODE_ENV || \'development\',
+2 44 version: pkg.version,
+2 45 init: false
+2 46 };
+2 47 var multiConfigPath = require(\'./multi_config_path\');
+2 48 this.config_path = multiConfigPath(base, args);
+2 49 this.extend = {
+2 50 console: new extend.Console(),
+2 51 deployer: new extend.Deployer(),
+2 52 filter: new extend.Filter(),
+2 53 generator: new extend.Generator(),
+2 54 helper: new extend.Helper(),"
+
+3 3 function assetGenerator(locals){
+3 4 var self = this;
+3 5 function process(name){
+3 6 return Promise.filter(self.model(name).toArray(), function(asset){
+3 7 return fs.exists(asset.source).then(function(exist){
+3 8 if (exist) return exist;
+3 9 return asset.remove().thenReturn(exist);
+3 11 }).map(function(asset){
+3 12 return self.render.render({asset: asset});
+3 14 return self.save();
+3 19 return self.loadAsset();
+3 22 return self.locals.set(\'post\', undefined);
+3 26 process('Asset\',
+3 27 processAsset
+3 28 ]).then(function(){
+3 29 return self.locals.set(\'data\', self.render.render({
+3 30 path: self.source
+3 38 return self.post.asset.length;
+3 41 return function(){
+3 42 return self.process(name);
+3 49 process(\'Asset\',
+3 51 ], function(){
+3 59 function process(asset){
+3 61 return assignIn({}, locals, {
+3 62 render: function(asset){
+3 63 return self.render.render(asset._source, {
+3 64 path: this.source
+3 66 }, function(){
+3 67 return Q.all([
+3 73 function newFile(options){
+3 75 var path = pathFn.join(this.source, \'.md\');
+3 76 return Q.nfcall(mkdirs, options)
+3 77 .then(function(){
+3 78 return newAssetGenerator(locals);
+3 81 return self.process(newAsset);
+3 96 return self.updateAsset();
+3 99 return self.process('PostAsset
+3 100 .bind(self);
+3 102 self.updatePost.bind(self.bind(self);
+3 103 }).then(self.getAsset.bind(self);
+3 104 .bind(self.post.bind(self.post.bind(self.post);
+3 105 .bind(self.bind(self.post);
+3 107 .bind(self.bind(self.post.bind(self.bind(self.post));
+3 108 .bind(self.bind(self));
+3 109 .bind(self.post.bind(self.bind(self));
+3 110 .skip('/: function(){
+3 111 return self.getExmalink = self.getExmalink);
+3 112 .bind(self.bind(self.getExmalink));
+3 113 .bind(self.getExmalink));
+3 114 .setExmalink = self.getExmalink);
+3 115 .setExmalink = self.bind(self.get
+4 7 function deleteDatabase(ctx){
+4 8 var dbPath = ctx.database.options.path;
+4 9 return fs.exists(dbPath).then(function(exist){
+4 10 if (!exist) return;
+4 11 return fs.unlink(dbPath).then(function(){
+4 12 ctx.log.info(\'Deleted database\');
+4 16 function deletePublicDir(ctx){
+4 17 var publicDir = ctx.public_dir;
+4 18 return fs.exists(publicDir).then(function(exist){
+4 20 return fs.rmdir(publicDir).then(function(){
+4 21 ctx.log.info(\'Deleted public folder\');
+4 34 module.exports = cleanConsole;'
+
+5 2 function Scaffold(context) {
+5 3 this.context = context;
+5 4 this.scaffoldDir = context.scaffold_dir;
+5 5 this.assetDir = pathFn.join(context.core_dir, \'assets\');
+5 7 Scaffold.prototype.defaults = {
+5 8 normal: [
+5 9 \'layout: {{ layout }}",
+5 10 \'---\'
+5 11 ].join(\'\
+5 12 \')
+5 14 Scaffold.prototype._listDir = function() {
+5 15 var scaffoldDir = this.scaffoldDir;
+5 16 return fs.exists(scaffoldDir).then(function(exist) {
+5 17 if (!exist) return [];
+5 18 return fs.listDir(scaffoldDir, {
+5 19 ignoreFilesRegex: /^_|\\/_/
+5 21 }).map(function(item) {
+5 22 return {
+5 23 name: item.substring(0, item.length - pathFn.extname(item).length),
+5 24 path: pathFn.join(scaffoldDir, item)"
+
+6 10 if (exist) return;
+6 11 return fs.unlink(dest).then(function() {
+6 20 return fs.rmdir(publicDir).then(function() {
+6 21 next();
+6 25 function deleteFiles(path) {
+6 28 fs.exists(publicDir),
+6 29 cleanFile(path)
+6 30 ]).spread(function(doc) {
+6 31 var deleted = _.difference(doc, undefined);
+6 32 return fs.unlink(publicDir).then(function() {
+6 35 return fs.rmdir(publicDir);
+6 47 return deletePublicDir(this);
+6 52 function createReadStream(options) {
+6 54 var promise = Promise.map(function(val, key) {
+6 55 return this.readOptions(options);
+6 56 }, function(error, content) {
+6 57 varnerror = sinon.spy(function(err) {
+6 58 err.should.have.property(err);
+6 59 error.message.should.eql(\'error\', {});
+6 61 return this.readOptions(options)
+6 62 .spread(function(json, options) {
+6 63 var key = options[0];
+6 64 var error;
+6 65 if (options.silent) {
+6 66 msg.error = createError("Hide output on console: Use res.send() instead");
+6 67 } else if (options.json) {
+6 68 json = options[0];
+6 70 if (!this.env.init ||!this.env.debug) {
+6 71 return Promise.resolve();
+6 73 var args = [
+6 74 {
+6 75 path: this.local_dir,
+6 76 content: content
+6 78 ];
+6 80 fs.writeFile(path, args).then(function() {
+6 81 return this.readFile(path);
+6 83 .then(function() {
+6 84 return fs.readFile(path);
+6 85 }).then(function(content) {
+6 86 content.should.eql(content);
+6 87 if (typeof args[0] === \'object\') return content;
+6 88 return this.log.info({
+6 89 path: path});
+6 90 }).finally(function() {
+6 91 return content;
+6 94 }).then(function() {
+6 95 return Promise.all();
+6 97 .catch(function(error);
+6 100 function testDelete(error);
+6 101 it("should.skip processingFiles(answatcher);
+6 102 it("ignoreFiles = off processingFiles = require(", function() {
+6 103 return!!~s) {
+6 104 return!!== undefined;
+6 105 return Promise.mapFiles(this.cleanFile) && fs.exists = false;
+6 106 .unlink(path) && this.cleanFile(path) && fs.existsSync(path) ||!== undefined);
+6 107 return Promise.existsSync(path)
+7 9 var basename = path.basename;
+7 12 return fs.unlink(path.join(baseDir, \'.\'));
+7 14 return require("../../../lib/plugins/console/clean").bind(this);
+7 31 var data = utils.createReadStream(options);
+7 32 data.on('error', function(err){
+7 33 if (err) throw err;
+7 34 var message = fs.readFileSync(path);
+7 36 return Promise.resolve(data);
+7 38 return callFactory({ source: data, path: path, date: new Date(data.date) });
+7 40 return data;
+7 43 }).then(function(ures){
+7 44 var str = template.render(data);
+7 45 if (str) return str;
+7 47 fs.readFile(path),
+7 48 createReadStream(options)
+7 49 ]).spread(function(stdout, stderr){
+7 50 var data = createReadStream(options);
+7 53 str = ';
+7 54 return fs.stat(path);
+7 56 .on('close', function(){
+7 57 if (options.debug) return;
+7 59 stderr
+7 62 }).spread(function(stdout, stderr){
+7 76 function setNoCacheHeaders((){
+7 77 var noCacheHeaders = this.app.settings.cookie.ignore;
+7 78 this.app.settings.cookie.forEach(function(session){
+7 79 var noCacheHeaders = session.set.cookie.split(/\\s*;\\s*/);
+7 80 setNoCacheHeaders(noCacheHeaders);
+7 83 function generateReadStream(stream){
+7 85 var data = fs.createReadStream(new Buffer(fixture);
+7 86 return fs.readFile(stream).then(writeFile(destination);
+7 87 }).then(function(destination);
+7 88 }).on('finish(function(){
+7 89 return reject.on.on('finish, cleanup);
+7 92 .on('error', cleanup.on('finish', function(){
+7 96 .on('error', on generate.on res.on('close', function(){
+7 97 var headersFinished = cleanup.resolve, reject);
+7 103 function on cleanUpLocal(removeLocal(removeLocal(removeLocal);
+7 104 function clearFile(dir){
+7 105 return repository = resolveLocal);
+7 106 return repository.removeLocal(dir){
+8 12 return self.render.render({
+8 13 path: asset.path,
+8 14 renderable: true
+8 17 return self.emit(\'asset\', { layout: false });
+8 21 return checkStream(route.get(asset.source),
+8 22 self.emit(\'after_render\', self.emit.bind(self, \'render\'));
+8 24 return self.emit(\'after_render\', self.emit.bind(self, \'end\'));
+8 27 self.emit(\'after_render\', self.emit.bind(self, \'end\'));
+8 53 return self.emit(\'exit\', self.emit.bind(self, \'end\');
+8 55 self.emit.bind(self.exit.bind(self, \'n}
+8 59 function checkStream(route.get(route.get(route.get(route.get(function(){
+8 60 return route.get(\'get(\'get\')
+8 62 return route.name)
+8 63 .name)
+8 64 .name == route.name;
+8 65 .endsWith(route.substring)
+8 66 .sep++) == route.sep);
+8 67 route.sep;
+8 68 route.exec(route.exec(route.getPath(route.path)
+8 69 .sep);
+8 71 function merge(route.get, route.sep)
+8 72 .exec(route.path)
+8 73 .exec(route.sep);
+8 74 function render(){
+8 75 if (\'/*\' == route.length\' == route.length\' && method
+9 13 return [];
+9 17 function deletePublicDir(this){
+9 27 function deleteFiles(path){
+9 43 return fs.rmdir(this);
+9 47 function firstGenerate(){
+9 49 start = setInterval(function(){
+9 50 log.info(\'Generated interval: %s\', interval.toFixed(3));
+9 52 setInterval(function(){
+9 53 this.on(\'generate\', function(path){
+9 54 this.render.render({
+9 55 path: path,
+9 57 }, this.bind(this));
+9 60 init = function(options){
+9 61 this.assetDir = base + sep;
+9 62 this.public_dir = path;
+9 63 this.source_dir = base + sep;
+9 64 this.plugin_dir = base + sep;
+9 65 this.script_dir = base + sep;
+9 66 this.scaffold_dir = base + sep;
+9 67 this.theme_dir = base + sep;
+9 68 this.theme_script_dir = base + sep;
+9 79 console: new Console(),
+9 80 deployer: new Deployer(),
+9 81 filter: new Filter(),
+9 82 generator: new Generator(),
+9 83 helper: new Helper(),
+9 84 migrator: new Migrator(),
+9 85 processor: new Processor(),
+9 86 renderer: new Renderer(),
+9 87 tag: new Tag()
+9 89 this.config = cloneDeep(defaultConfig);
+9 90 this.log = logger(this);
+9 91 this.render = new Render(this);
+9 92 this.route = new Router();
+9 94 methods = require('./helper').inherits(callback);
+9 95 };'
+

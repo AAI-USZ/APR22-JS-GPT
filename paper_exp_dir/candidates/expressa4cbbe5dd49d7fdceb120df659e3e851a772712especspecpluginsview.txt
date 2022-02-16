@@ -1,0 +1,168 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 describe 'when layout: false'
+0 1 end
+0 2 describe 'when given a custom layout name with a layout name'
+0 3 it'should render the layout and view'
+0 4 get('/', function(){ this.render('hello.haml.html', { layout: 'page' }) })
+0 5 get('/').body.should.include '<title>Express'
+0 6 get('/').body.should.include '<h2>Hello'
+0 9 describe 'when given an abitrary layout name'
+0 10 it'should render the layout'
+0 11 get('/', function(){ this.render('hello.haml.html', { layout: 'front' }) })
+0 12 get('/index.html').body.should.include '<h2>Hello'
+0 17 get('/', function(){ this.render('hello.haml.html', { layout: 'front' })
+0 18 get('/index.html').body.should.include '<h3>Hello'
+0 21 describe 'when given an invalid layout name'
+0 22 it'should throw an error'
+0 23 get('/', function(){ this.render('invalid.haml.html') })
+0 24 -{ get('/index.haml.html') }.should.throw_error "Invalid layout: "invalid.haml.html"!"
+
+1 2 describe 'when layout: false'
+1 3 it'should render the view only'
+1 4 get('/', function(){ return this.render('hello.haml.html', { layout: false })
+1 5 get('/').body.should.not.include '<body>'
+1 9 describe 'when "cache view contents" is enabled'
+1 10 it'should read the views into memory only'
+1 11 enable('cache view contents')
+1 12 get('/', function(){ return this.render('hello.haml.html') })
+1 13 get('/cached', function(){ return this.cache.get('hello.haml.html') })
+1 14 get('/', { headers: { 'cache-watch': true }}).body.should.eql 'yes'
+1 15 get('/', { headers: { 'cache-watch': true }}).body.should.eql 'no'
+1 16 get('/cached', { headers: { 'cache-watch': false } }}).body.should.eql 'yes'
+1 17 get('/', { headers: { 'cache-watch': 0 } }}).body.should.eql 'yes'
+1 18 get('/cached', { headers: { 'cache-watch': 0 } }}).body.should.eql 'yes'
+1 19 get('/', { headers: { 'cache-watch': 1 } }}).body.should.eql 'yes'
+1 20 get('/cached', { headers: { 'cache-watch': 2 } }}).body.should.eql 'no'
+1 21 get('/cached', { headers: { 'cache-watch': 3 } }}).body.should.eql 'yes'
+1 22 get('/\', { headers: { 'cache-watch': 4 } }}).body.should.eql 'yes'
+1 23 get('/end')
+1 25 it'should override object', function()'
+1 26 get('/param()'
+1 27 get('/user'\', function(){
+1 28 return this.body(){
+1 29 return 'test'
+1 30 })
+1 32 get('/user.body.body.should.should.eql 'test'
+1 34 end()
+1 42 end"
+
+2 10 it'should read the views and view'
+2 13 get('/cached').body.should.eql 'localhost'
+2 20 describe '#render() - backtick cocde block'
+2 21 it'should be passed the rendered content'
+2 22 get('/context.html', function(){
+2 23 this.render('hello.haml.html', { backtick: false })
+2 25 get('/context.html').body.should.include '<html><body>'
+2 26 get('/context.html').body.should.include '<h2>Hello'
+2 29 describe 'when "cache view contents" is given'
+2 30 it'should return the canonicalized emitter'
+2 32 this.render('hello.haml.html', {cache: true})
+2 35 get('/body>'
+2 36 get('/cached').body.body.should.should.eql 'localhost'
+2 42 describe '#cache = request'
+2 43 describe '#render()'
+2 44 it'should work with session = this'
+2 45 before_each
+3 14 get('/').body.should.include '<h3>Hello'
+3 17 describe 'when given a custom layout name'
+3 19 get('/', function(){ return this.render('hello.haml.html', { layout: 'page' })
+3 22 get('/\').body.should.include '<h3>Hello'
+3 28 get('/').body.should.include '<h1>Hello'
+3 29 get('/\').body.should.include '<h1>Asynchronous Example'
+3 30 get('/\', function(){ return this.render('hello.haml.html') })
+3 31 get('/\').body.should.not.include '<h1>Lame'
+3 32 get('/
+3 33 get('/\')
+3 37 describe '#render()'\'
+3 38 it'sh1'
+3 40 Express.rout = function()'
+4 11 get('/', function(){ this.render('hello.haml.html') })
+4 13 get('/').body.should.eql 'yes'
+4 14 get('/cached').body.should.eql 'yes'
+4 17 describe 'when engine cannot be found'
+4 19 get('/', function(){ throw new Error('invalid input error') })
+4 20 -{ get('/') }.should.throw_error "invalid input error");
+4 23 describe 'when the view does not exist'
+4 25 get('/', function(){ throw new Error('invalid view') })
+4 26 -{ get('/') }.should.throw_error "invalid view on your view"
+4 31 set('views', function(){ return set('root') })
+4 33 it'should work with several browsers'
+4 34 get('/', function(){ this.render('something-Else.html.haml') })
+4 35 get('/s', function(){ return set('views') })
+4 36 get('/s/edit', function(){ return set('views') })
+4 37 get('/edit', function(){ return set('posts') })
+4 38 get('posts') })
+5 14 get('/', { headers: { Accept: 'text/html,text/plain' }}).body.should.eql 'true'
+5 15 get('/cached').body.should.eql 'false'
+5 18 describe 'when the file exists for the requested output'
+5 19 it'should read the file and set the session'
+5 21 get('/\').headers['set-session'].should.eql this.session
+5 22 get('/', { headers: { 'content-type': 'text/plain' }}).body.should.eql 'text/plain'
+5 23 get('/\', { headers: { 'accept': 'text/plain' }}).body.should.eql 'application/x-www-form-urlencoded'
+5 29 get('/').headers['set-session'].should.eql this.session
+5 30 get('/', { headers: { headers: { 'content-type': 'text/plain' }}).body.should.eql 'text/plain' }}).body.should.eql 'application/plain'
+5 37 it'should work with several calls the rendered middleware'
+5 38 engine = function'
+5 39 engine = Express.engine = require('./halt()'sasset(require('./sasset('./sasset('./title, function(), function(){
+5 40 Express.server, function(){
+5 41 return this.session, this.session, this.session, this.session)
+5 42 returnsalt())
+5 48 describe 'with (middleware.isxhr()'
+5 49 describe 'when request does not in the end()'
+5 50 it'should be false'
+6 2 put('/', function(){
+6 3 throw new Error('not allowed!');
+6 5 -{ get('/') }.should.throw_error 'No such file or directory'"
+
+7 15 get('/').body.should.eql 'cache'
+7 21 set('views', function(){ return set('root') + '/views' })
+7 23 describe 'given a custom layout name'
+7 25 get('/', function(){ return set('title') + '/views' })
+7 26 get('/').body.should.include '<title>Custom layout'
+7 29 get('/', function(){ return set('title') + '/cached' })
+7 30 get('/user/:id/edit').body.should.include '<h2>For the user'+ this.session.name + '</h2>'
+7 31 get('/user/:id/edit').body.should.include '<h3>For the edit'
+7 32 get('/user/:id/:id/:12').body.should.toLowerCase().should.have.toLowerCase().should.have.toLowerCase().should.toLowerCase()'
+
+8 2 describe 'when given a category number'
+8 4 get('/user/:category', function(){
+8 5 return this.render('hello.haml.html', { layout: 'category', name: 'test' })
+8 7 get('/user/12').body.should.include '<h2>test'
+8 8 get('/user/:category/:tag', function(){
+8 9 return this.render('hello.haml.html', { layout: 'tag', name: 'test' })
+8 11 get('/user/12/edit').body.should.include '<h2>Hello'
+8 12 get('/user/12/edit').body.should.include '<h3>Hello'
+8 15 describe 'when given an invalid layout'
+8 17 get('/', function(){ throw new Error('invalid layout:') })
+8 18 -{ get('/') }.should.throw_error "Invalid layout:   at <unknown> or <unknown> when no such as a valid regexp' }
+8 23 set('views', function(){
+8 24 this.render('hello.haml.html', { layout: 'invalid', name: 'title' })
+8 26 get('/', function(){
+8 27 this.render('invalid.haml.html')
+8 29 get('/invalid.haml.html')
+8 34 describe '#render()-without-options-async'
+8 37 this.render('invalid.haml.html', { layout: 'invalid' })
+8 39 -{ get('/requires the middleware.length to be one' }
+8 47 describe 'given a middleware'
+8 48 describe 'given'
+8 49 it'should throw new function'
+8 50 it'should throw a function'
+8 51 it'should throw a request'
+8 52 it'should call'
+8 53 it'should set the value'
+8 54 get()'
+8 55 get('/o is the current'
+8 57 get('/user/users/1')
+8 58 get('/1')
+8 59 get('/users/1')
+8 60 get('/user/1').body.body.should.should.eql '1'
+8 66 describe '#end
+9 14 get('/').body.should.eql '123'
+9 17 describe 'given an abitrary layout name'
+9 20 -{ get('/') }.should.throw_error 'Cannot find appropriate layout/' + '#123' }.should.not.throw_error 'Cannot find appropriate layout/' + '#125' }.should.not.throw_error 'Invalid layout/' +'should work with several browsers'
+9 26 get('/', function(){ return this.render('hello.haml.html', { layout: null })
+9 27 -{ get('/') }.should.throw_error 'Cannot find layout/' + '#123' }.should.not.throw_error 'Cannot find layout/' + '#125' }.should.not.throw_error 'Invalid layout/'
+9 34 catch (e) {
+9 40 catch (e) {catch (e) {catch (e) {}
+9 41 catch (e) {}
+9 42 }

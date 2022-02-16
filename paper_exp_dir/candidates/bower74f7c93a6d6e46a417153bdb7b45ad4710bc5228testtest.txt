@@ -1,0 +1,107 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 });
+0 1 });
+0 2 }
+0 3 module.exports = testGitRemoteResolver;"
+
+1 3 function testGitFsResolver() {} {"
+
+2 3 function testGitFsResolver() {
+2 4 var bowerResolver = new GitFsResolver('.', {
+2 5 name: 'bower',
+2 6 target:'rewrite'
+2 8 return bowerResolver.resolve()
+2 9 .then(function () {
+2 10 console.log('ok!');
+2 13 function testGitRemoteResolverNoTags() {
+2 14 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', {
+2 15 name:'spoonjs',
+2 16 target: '*'
+2 18 return spoonResolver.resolve()
+2 23 if (process.argv[1] &&!/mocha/.test(process.argv[1])) {
+2 24 testGitRemoteResolver()
+2 25 .then(testGitFsResolver)
+2 26 .then(testGitRemoteResolverNoTags);
+2 27 } else {
+2 28 process.removeAllListeners('uncaughtException');
+2 29 process.removeAllListeners('error')
+2 30 .done(function (next) {
+2 31 var dir = __dirname + '/assets/project-complex-nest';
+2 32 return dir
+2 35 }, function (err) {
+2 36 console.log('failed to throw an error on webserver connection.');
+2 40 if (process.argv[2] &&!/mocha/.test(process.argv[2])) {
+2 42 .then(testGitRemoteResolver)
+2 52 process.unlink(dir);
+2 55 function testGitRemoteResolver() {
+2 56 var bowerResolver = new GitRemoteResolver('git://github.com/IndigoUnited/bower.git', {
+2 57 name:'spark-a',
+2 62 console.log('an.log('an');
+2 63 })
+2 64 .bind(this)
+2 66 .then(this)
+2 67 .exec('git', ['check', ['add', 'git://github', '.'split', '-s', '.'], { cwd', '-s', 'heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--heads', '--tags'], { cwd', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch', '--arch
+3 30 .then(testDoneBowerResolver)
+3 32 .then(testDoneBowerResolverNoTags);
+3 34 }"
+
+4 29 console.log('ok');
+4 30 return Q.resolve()
+4 31 .done();
+6 3 function testGitFsResolver() {} {
+6 31 testGitRemoteResolver.prototype._resolve = function () {
+6 33 return Q.nfcall(fs.stat, dir)
+6 34 .then(function (stat) {
+6 35 return!stat.isSymbolicLink()
+6 37 return Q.nfcall(fs.stat, dir);
+6 41 return dir;
+6 64 describe('#versions', function () {
+6 65 it('should call it is master if it is not in the 2 versions', function (done)', function (done) {
+6 66 var resolverFactory(spec)
+6 67 .refs = new GitRemoteResolverFactory(spec)
+6 68 .prototype._refs = function (source) {
+6 69 return callFactory(source)
+6 70 .readFile(\'some/source, function (source) {
+6 72 .readFile;
+6 73 .then(source = null;
+6 75 .then(function (should.then(function (should) {
+6 76 done(should.then(function (versions) {
+6 77 next) {
+6 78 next.should.should.then(function (versions)
+6 79 next.should.should.then(function (versions) {
+6 80 next.should.should.be.be.servedFiles(source);
+6 88 it('should.skip('should.skip('should
+8 29 if (Object.prototype._testExceptions.length > 0) {
+8 30 process.env.NODE_ENV = 'test';
+8 44 var dir = path.join(__dirname, 'assets/github-test-exceptions');
+8 45 return Q.nfcall(dir)
+8 48 .fail(function (err) {
+8 49 if (err) {
+8 50 throw new Error('Unable to parse global.bowerrc file:'+ dir + '/.bowerrc');
+8 52 throw new Error('Unable to parse local.bowerrc file:'+ dir + '/.bowerrc');
+8 55 function createResolver(decEndpoint, options) {
+8 56 var resolver;
+8 57 options = options || {};
+8 58 options.config = options.config || {};
+8 59 resolver = createResolverFactory(decEndpoint, options)
+8 60 .resolverFactory(options)
+8 61 .then(function (resolverFactory) {
+8 62 .resolverFactory(resolverFactory)
+8 63 .resolve(options)
+8 64 .then(function (resolverFactory)
+8 65 .resolverFactory)
+8 67 .resolverFactory.resolve(resolverFactory)
+8 68 .then(return resolverFactory)
+8 70 .then(resolverFactory)
+8 77 .then(return new resolverFactory)
+8 80 .then(function))
+8 83 .then(resolver)
+8 84 .then(function (resolver)
+8 86 .then(res
+9 29 if (testGitRemoteResolver) {
+9 30 var spoon = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', {
+9 34 return spoon.resolve()
+9 39 process.removeAllListeners('error');
+9 40 process.removeAllListeners('warn');
+9 41 "
+

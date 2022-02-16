@@ -1,0 +1,340 @@
+Min editdistance: 1.00
+Closest candidate: 7 1 contentType(ext)
+0 1 ,
+0 2 locals = options.locals || {};
+0 3 return \'<body>\' + render.renderSync({
+0 4 content: \'<h1>\' + render.renderSync({content: \'<h1>\' + render.renderSync({content: \'<h1>\' + render.renderSync({content: \'<h1>\' + render.renderSync({content: \'<h1>\' + render.renderSync({content: \'<h1>\' + render.renderSync({content: \'<h1>\' + render.renderSync({content: \'<h1>\' + content + \'</h1>\'}) + \'</body>\';
+0 5 }
+0 6 });
+0 8 return \'<html>                                                        \
+0 9 \\
+0 10 <head>                                                       \
+0 12 <title>Express --\'+ render.renderSync({title: \'Express --\'+ render.renderSync({title: \'Router --\'+ render.renderSync({title: \'Router --\'+ render.renderSync({title: \'Router --\'+ render.renderSync({title: \'Router --\'+ render.renderSync({title: \'Router>\'+ render.renderSync({title: \'<router>\' + middleware(){ get(\'<li>foo</li>\') }}).join(\', \'));
+0 13 }                                             \
+0 15 <title>Express --\'+ render.renderSync({title: \'Express --\'+ render.renderSync({title: \'Router --\'+ render.renderSync({title: \'Router --\'+ render.renderSync({title: \'<span>foo</span>\'})
+0 16 .join(\', \'));
+0 17 }                                   \
+0 19 </head>                                             \
+0 21 </div>                                 \
+0 23 </body>                                              \
+0 26 </div>                                                                                                                                                                                           \
+0 29 </div>       
+1 2 locals = { layout: false };
+1 3 if (set(\'cache view contents\') && set(\'cache view contents\')!== undefined) {
+1 4 render.compile(locals, options, {filename: view.split(\'.\'), content: options.locals}).tap(function(str){
+1 5 options.filename = view.split(0, str.length - ext.length);
+1 6 if (options.cache) return str.replace(/< cache>(.*?)<\\/a>/g, escape(str));
+1 7 }'
+
+2 2 source = options.source
+2 3 || (source && source.substring(0, 2) + "./),
+2 4 dest = path.join(source.substring(layoutDir.length + 1) + "./
+2 5 return \'<html><body><p>Welcome</p></body></html>\'
+2 6 + render.renderSync({
+2 7 content: body,
+2 8 engine: options.layout === undefined? true : options.layout,
+2 9 source: options.source,
+2 10 target = publicDir(source)
+2 11 }), \'<html><body><p>Welcome</p></body></html>\'
+2 13 path: source,
+2 14 target: target,
+2 15 content: content
+2 20 headers: options.headers,
+2 21 statuses: options.statuses
+2 22 }), \'</html>\'
+2 25 engine: options.engine,
+2 26 renderString: true
+2 27 })
+2 30 engine: options.renderString,
+2 35 content: file,
+2 36 engine: options.engine
+2 38 + formatters.extend({
+2 39 index: function(next){
+2 40 return render.renderSync({
+2 41 path: base + format.replace(\'index.html\', \'\')
+2 42 }, options)
+2 45 exports.render = function(source, ext, locals){
+2 46 return renderSync({
+2 48 text: ext,
+2 49 locals: locals
+2 53 exports.renderSync = function(source){
+2 56 text: this.isDefined()? \'true\' : \'false\'
+2 60 exports.compile = function(){
+2 61 var args = Array.prototype.slice.call(arguments),
+2 62 str = args.join(\' \')
+2 63 return str
+2 64 .replace(/\
+2 65 /g, \'\
+2 66 \')
+2 67 .replace(/\\r/g, \'\\r\')
+2 68 .replace(/"/g, \'\\"\')
+2 69 .replace(/\\r/g, \'\\"\')
+2 70 .replace(/\\u0085/g, \'\\u2000\')
+2 71 .replace(/\\u2028/g, \'\\u3040\')
+2 72 .replace(/\\u2029/g, \'&lt;\')
+2 73 .replace(/>/g, \'&gt;\')
+2 76 if (this.isDefined()){
+2 77 return output(source)
+2 78 .replace(/\\\\/g, \'\
+2 79 /g\', \'\
+2 81 .replace(/g, \'\\r\')
+2 82 .replace(/g, \'\
+2 83 .replace(/g, \'\\\\r\')
+2 85 .replace(/g, \'\\\\u01\', \'\\\\d\')
+2 86 .replace(/g, \'\\\\d\')
+2 89 .replace(/g, \'\\\\d\', \'\\\\d\')
+2 95 .replace(/g, \'\\\\d\', \'\\\\d\')\
+3 2 source = set(\'source\') + \'/\' + source + \'.html\',
+3 3 layout = options.layout === undefined? true : options.layout,
+3 5 var sourceDir = hexo.source_dir;
+3 6 if (file.readOptions(options)) {
+3 7 var lang = options.languages;
+3 8 var object = options.object;
+3 9 var locals = options.locals || {};
+3 10 object = set(\'name\', \'description\');
+3 11 if (lang) {
+3 12 locals[lang] = generate(locals[lang], options);
+3 13 } else {
+3 14 options.lang = object;
+3 17 options.lang = config;
+3 19 if (options.only) {
+3 20 if (options.skip) {
+3 21 return Promise.resolve(options.skip);
+3 23 if (exports.isRenderable(path)) {
+3 24 render.compile(sourceDir + \'.js\', _.extend({filename: path}, options, {
+3 25 filename: path
+3 26 }));
+3 28 return Promise.resolve(options.only);
+3 31 return locals;
+3 33 module.exports = function(options, callback) {
+3 34 if (!callback && typeof options === \'function\') {
+3 35 callback = options;
+3 36 options = {};
+3 38 var options = _.extend({
+3 39 ignoreHidden: true,
+3 40 ignorePattern: null
+3 41 }, options);
+3 42 var parent = options._parent;
+3 43 return function(name, options, fn){
+3 44 var parent = pathFn.dirname(sourceDir);
+3 45 if (options.ignoreHidden) {
+3 46 options.ignoreHidden = true;
+3 48 if (options.ignorePattern && parent === fs.existsSync(options.ignorePattern)) {
+3 49 options.ignorePattern = options.ignorePattern;
+3 51 var keys = Object.keys(options);
+3 52 var key = \'\';
+3 53 var val = [],
+3 54 buf = \'\';
+3 55 if ((!this.env.init && this.env.safe) || this.env.debug) && fs.existsSync(options.ignorePattern)) {
+3 56 val += \\
+3 57 (options.ignoreHidden && options.ignorePattern.test(this.env.args.length?\'\' + this.env.args.join(\' \') : \'\'));
+3 59 for (var i = 0, len = keys.length; i < len; i++) {
+3 60 key = keys[i];
+3 61 if (!this.env.init) {
+3 62 var msg = \'\';
+3 63 var key = keys[i];
+3 64 val = this.env.args[key];
+3 65 buf += \'\
+3 66 \';
+3 68 if (options.catch) {
+3 69 return this.call(this);
+3 71 return this;
+3 72 };
+3 73 exports.renderSync = function(){
+3 74 return renderSync({text: function(){
+3 75 return renderSync(this.content, options);
+3 80 };'
+
+4 3 res.locals.cache = true;
+4 4 res.locals.only = function(){
+4 5 return this.cache.apply(this, arguments);
+4 7 res.render = function(source, options, callback) {
+4 8 var ext = extname(source),
+4 9 filename = path.split(/').slice(-1)[0],
+4 12 if (layout) {
+4 13 options.locals[filename] = layout;
+4 14 layout = false;
+4 17 options.locals.only = options.only;
+4 19 var content = res.render(source, options)
+4 20 .replace(/<h3>/g, \'<strong>\' + typeof options.locals.cache === \'undefined\')? \'options\' : options.options,
+4 23 options.locals.layout = false;
+4 25 options.layout = true;
+4 27 var cache = [];
+4 28 res.content = function(source) {
+4 29 if (isAbsolute(source)) {
+4 30 return Promise.resolve(cache[source]);
+4 32 return content;
+4 35 res.attachment = function attachment(filename) {
+4 36 if (filename) {
+4 37 return Promise.resolve(cache[filename]);
+4 39 if (content.length!== 0) {
+4 40 return Promise.resolve(content);
+4 42 filename = filename || path;
+4 43 return this.set(\'Content-Disposition\', content.join(\'.\'));
+4 47 res.append = function append(field, val) {
+4 48 var prev = this.get(field);
+4 49 var value = val;
+4 50 if (prev) {
+4 51 value = Array.isArray(prev)? prev.concat(val)
+4 52 : Array.isArray(val)? [prev].concat(val)
+4 53 : [prev, val];
+4 55 return this.set(field, value);
+4 57 res.set =
+4 58 res.header = function header(field, val) {
+4 59 if (arguments.length === 2) {
+4 60 var value = Array.isArray(val)
+4 61 ? val.map(String)
+4 62 : String(val);
+4 63 if (field.toLowerCase() === \'content-type\') {
+4 68 var value = String(val);
+4 74 res.getHeader = function header(field, val) {
+4 75 return this.setHeader(field, val);
+4 78 res.getResponseHeader = function header(field, val) {
+4 82 res.clearHeader = function clearHeader(field, val) {
+4 83 clearHeader(field, val) {
+4 84 if (arguments.length === undefined) {
+4 85 var headers = this.setHeader;
+4 87 var headers = this.setHeaders.length === undefined;
+4 88 return this.setHeaders.redirects.length;
+5 3 if (set(\'cache view contents\') &&
+5 4 !ext &&
+5 5 engine.register(ext)
+5 6 {
+5 7 var cache = {};
+5 9 var view = new View(path, ext);
+5 10 if (!view.exists) {
+5 11 if (options.hasOwnProperty(\'cache view contents\')) {
+5 12 options.cache = true;
+5 14 view.render(view, options);
+6 2 source = path.split(/^https?:\\/\\
+6 3 var scaffold = exports.scaffold = function(content, options) {
+6 4 options = options || {};
+6 5 var scaffoldDir = set('scaffolds/hello-world.md\');
+6 6 return swig.compile(content, options)
+6 7 .replace(/{2,}/g, \'\
+6 9 .replace(/}/g, \'\
+6 11 .replace(/^https?:\\/\\
+6 13 .replace(/\\
+6 15 var scaffolds = module.exports = function(data, options) {
+6 18 return swig.compile(data, options)
+6 22 \');
+6 24 var scaffolds = scaffolds.sort(\'date\', -1).join(\'\
+6 26 for (var i = 0, len = scaffolds.length; i < len; i++) {
+6 27 var item = scaffolds[i].split(\'---\');
+6 28 if (item) {
+6 29 return swig.compile(item);
+6 31 return [i];
+6 34 return scaffoldDir + item;
+6 48 var createSuccessResult = function() {
+6 49 var scaffoldDir = this.scaffoldDir;
+6 50 return function(data, options) {
+6 52 var promise = createSuccessResult({
+6 53 title: data.title,
+6 54 layout: options.layout,
+6 55 scaffold_content: data.content
+6 57 return Q.all([
+6 58 writeFile(target(data.source),
+6 59 createSuccessResult()
+6 60 ])
+6 61 .then(function() {
+6 62 return
+6 63 fs.readFile(target.source, function(err, content) {
+6 64 if (err) {
+6 65 return callback(err);
+6 67 var scaffoldPath = path.join(target.source, data.content);
+6 68 return swig.compile(scaffoldPath, options)
+6 70 \
+6 72 );
+6 76 createSuccessResult.prototype.createSuccessResult = function() {
+6 77 var scaffoldDir = this.createSuccessResult;
+6 78 return function success = createSuccessResult;
+6 79 return function successResult() {
+6 80 return Q.map(data, callback = createSuccessResult;
+6 83 if (success.then) {
+6 84 return Q.then(function(success, error)
+6 85 .then(function(error, result) {
+6 86 return Q.nreturn Q.n.n.n.n.n.then(function.n.nelseject)
+6 87 .then(function.close(function() {
+6 88 return reject(error)
+6 89 .some(error)
+6 90 .close();
+6 91 .then(function.then(function() {
+6 92 return reject.reject)
+6 94 .then(error)
+6 97 .done(function.then(function() {
+6 98 .reset
+7 1 contentType(ext)
+7 2 posix
+7 3 .cat(path)
+7 4 .addCallback(function(content) {
+7 5 content = engine.parse(content, options)
+7 6 if (layout)
+7 7 render([layout, contentType(contentType(layout)])
+7 8 else
+7 9 halt(200, content)
+7 14 exports.renderSync = function(options) {
+7 15 return (options && options.layout!== undefined) || rmdir.exists(path).then(function(exist) {
+7 16 if (!exist) return
+7 17 set(\'views\', resolve('post', options))
+7 18 .exists(path)
+7 19 .spread(function(views, i){
+7 20 var style = \'<h1>\'
+7 21 , height = options.height || options.height
+7 22 , title = options.title || config.title
+7 23 , alt = options.alt || config.alt
+7 25 , alt = alt || config.alt
+7 27 .join(\' \')
+7 28  + \'-\')
+7 32 exports.compile = function(source, content, options) {
+7 33 var locals = _.extend({}, options)
+7 34 var partial = source.split(\'.\'),
+7 35 extname = path.extname(source).substring(1)
+7 36 , transform = options.transform
+7 37 , partial = options.isAbsolute()? \'(\\\\\' : \'\')
+7 38 , union = options.union
+7 39 , url = options.as || partial.split(\'.\')
+7 40 , utils = options.utils
+7 41 , path = locals.path
+7 42 , extname = path.extname
+7 43 , join = path.join
+7 44 , fs = require(\'fs\')
+7 45 , qs = require(\'qs\')
+7 46 , mime = options.mime;
+7 48 exports.dirname = function(source, options, fn) {
+7 50 if (\'string\'!= typeof options) fn = options;
+7 51 options.filename = source;
+7 52 if (options.archive) {
+7 53 var archiveDir = resolve(' archiveDirne% > 1)
+7 54 archiveDir = resolve('archiveDirne% > 2)
+7 55 archiveDir = resolve('category_dir') + 1
+7 56 var format = exports.format = function(str, transform){
+7 57 var separator = \', \';\' + format.stripHtml;
+7 58 if (\'monthly\' in options) {
+7 59 options.archive = options.archive || \'MMMM YYYY\'
+7 60 } else if (\'day\' in options)
+7 61  {
+7 62 options.category = options.category || \'DD\'
+7 64 options.archive = options.archive || \'MM YYYY\'
+7 66 options.archive = posts.archive
+7 69 if (options.year) {
+7 70 var target = 1;
+7 71 if (options.year = options.year = options.year || 10;
+7 72 return options.month = options.month || 20;
+7 74 var year = options.year = 300;
+7 75 var month = 300;
+7 77 var month = options.year = 300;
+7 79 var month = 300 = 300;
+7 80 var full_month = 1000;
+7 81 var full_year = 1000;
+7 82 var month = 1000;
+7 84 var month = 1;
+7 85 var full_month = 20 = 35;
+7 86 if (format = function'monthly\'mm 3 = 10;\');
+7 87 if (format = format = format.format) {
+7 88 format = format.format = format.format;
+7 89 if (format = format.
+8 2 filename = path.join(this.filename_dir, view),
+8 3 extname = path.join(this.extname_dir, "layout") + extname;
+8 4 return \'<html><body><p>Welcome</p></body></html>\';
+9 1 ,'
+

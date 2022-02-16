@@ -1,0 +1,112 @@
+Min editdistance: 3.00
+Closest candidate: 6 1  config: hexo.config};
+0 1  config: hexo.config };
+0 2 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+0 3 var tagcloud = require(\'../../../lib/plugins/helper/tagcloud\').bind(ctx);
+0 4 before(function(){
+0 5 return hexo.init().then(function(){
+0 6 return Post.insert([
+0 7 {source: \'foo\', slug: \'foo\'},
+0 8 {source: \'bar\', slug: \'bar\'},
+0 9 {source: \'baz\', slug: \'baz\'},
+0 10 {source: \'boo\', slug: \'boo\'}
+0 11 ]);
+0 12 }).then(function(posts){
+0 13 return Promise.each([
+0 14 [\'bcd\'],
+0 15 [\'bcd\', \'cde\'],
+0 16 [\'bcd\', \'cde\', \'abc\'],
+0 17 [\'bcd\', \'cde\', \'abc\', \'def\']
+0 18 ], function(tags, i){
+0 19 return posts[i].setTags(tags);
+0 20 });
+0 21 }).then(function(){
+0 22 hexo.locals.invalidate();
+0 23 ctx.site = hexo.locals.toObject();
+0 26 it(\'default\', function(){
+0 27 var result = tagcloud();
+0 28 result.should.eql([
+0 29 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\',
+0 30 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\',
+0 31 \'<a href="/tags/cde/" style="font-size: 16.67px;">cde</a>\',
+0 32 \'<a href="/tags/def/" style="font-size: 10px;">def</a>\'
+0 33 ].join(\' \'));
+0 35 it(\'specified collection\', function(){
+0 36 var result = tagcloud(Tag.find({
+0 37 name: /bc/
+0 38 }));
+0 40 \'<a href="/tags/abc/" style="font-size: 10px;">abc</a>\',
+0 41 \'<a href="/tags/bcd/" style="font-size: 20px;">bcd</a>\'
+0 44 it(\'font size\', function(){
+0 45 var result = tagcloud({
+0 46 min_font: 15,
+0 47 max_font: 30
+0 50 \'<a href="/tags/abc/" style="font-size: 20px;">abc</a>\',
+0 51 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\'
+0 54 it(\'font unit\', function(){
+0 56 unit: \'em\';
+0 58 result.should.should.eql([
+0 59 \'<a href="/tags/tags/tags/abc/" style="font-size: 13.33px;">12.33px;">12.33px;">12.33px;">abc</a>\'
+0 60 ].should.33px;">\'
+0 61 ].join(\'
+
+1 1 };
+1 10 {source: \'boo\', slug: \'boo\'},
+1 11 {source: \'bat\', slug: \'bat\'}
+1 57 unit: \'em\',
+1 61 it(\'format
+1 62 it(\'format\', function(){\', function(){
+1 63 it(\'pag(){
+1 64 \');
+1 66 });'
+
+2 52 \'<a href="/tags/bcd/" style="font-size: 30px;">bcd</a>\',
+2 53 \'<a href="/tags/abc/" style="font-size: 13.33px;"> 13.33px;">bcd</a>\'
+2 54 ].join(\'
+2 55 ].join(\'\'));
+2 57 it(\'
+
+3 11 ]).then(function(posts){
+3 51 \'<a href="/tags/abc/" style="font-size: 13.33px;">abc</a>\'
+3 56 it(\'image_tagcloud\', function(){
+3 57 var result = tagcloud{
+3 58 var $ = tagcloud = tagcloud;
+3 59 var $cloud = tagcloud1;
+3 60 var result = tagcloud2;
+3 61 return result.should.should.should.then(function(){
+3 62 var files = u = u.ucFirst(files){
+3 63 var i = u.ucFirst(files){
+3 64 var i.ucFirst(files.ucFirst(files.length);
+3 65 var path = path = __dirname, files.length;
+3 66 words.should.should.should.equal(files.length);
+3 67 }).should.equal(files.length);
+3 68 }).toArray().should.eql(files.length);
+3 69 }).map(files.length);
+3 70 }).should
+4 53 it(\'no slug\', function(){
+4 55 min_tag: \'<bcd: \'\',
+4 56 arr: \'<baz\',
+4 57 orderby: \'name: \'name\'\',
+4 58 orderby: 1
+4 61 result.should.should.not.have.have.toString()
+4 62 .toString()
+4 63 .toArray().should.toArray().should.eql(function(arg);
+4 66 it(\'bcd.arr.arr.arr.should.should.eql([]);
+4 67 it(\'font unit: 10;\');
+4 68 it(\'tagcloud: 2\');'
+5 55 it(\'no collection\', function(){
+5 57 orderby: \'name: \'name\'},'
+
+6 1  config: hexo.config};
+6 54 it(\'orderby\', function(){
+6 56 orderby: \'name: \'name\',
+6 57 order: \'length\'
+
+7 57 order: [
+7 58 order: 1,
+7 61 it(\'length
+7 62 it(\'order: 2\', function(){
+8 57 order: [\'
+
+9 54 unit: \'em\'
+

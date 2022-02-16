@@ -1,0 +1,55 @@
+Min editdistance: 1.00
+Closest candidate: 0 5 use(MethodOverride)
+0 1 var fiveMinutes = 300000, injector = new di.Injector([{
+0 2 useDelay: 3,
+0 3 useIframe: false
+0 4 }])
+0 5 use(MethodOverride)
+0 6 use(ContentLength)
+0 7 use(CommonLogger)
+0 8 use(Cookie)
+0 9 use(Cache, { lifetime: fiveMinutes, reapInterval: oneMinute })
+0 10 use(Session, { lifetime: fiveMinutes, reapInterval: oneMinute })
+0 11 set('root', __dirname)
+0 12 })
+0 13 var messages = [],
+0 14 utils = require('express/utils')
+0 15 get('/', function(){
+0 16 this.redirect('/chat')
+0 18 get('/chat', function(){
+0 19 this.render('chat.haml.html', {
+0 20 locals: {"
+
+1 1 var fiveMinutes = 300000,
+1 2 oneMinute = 60000
+2 1 this.opts})
+2 8 this.redirect('/upload')
+2 10 get('/upload', function(){
+2 11 this.render('upload.haml.html')
+2 13 post('/upload', function(){
+2 14 this.param('images').each(function(image){
+2 15 puts('uploaded'+ image.filename +'to'+ image.tempfile)
+2 19 get('/public/*', function(file){
+2 20 this.sendfile(__dirname + '/public/' + file)
+2 22 get('/*.css', function(file){
+2 23 this.render(file + '.sass.css', { layout: false })
+2 25 run()'
+
+3 18 locals: {
+3 19 title: 'Chat',
+3 20 messages: messages,
+3 21 name: this.session.name,
+3 22 usersOnline: Session.store.length()
+3 23 }
+3 26 post('/chat', function(){
+3 27 this.session.name = this.param('name')
+3 28 messages.push(utils.escape(this.param('message')))
+3 29 this.halt(200)
+3 31 get('/chat/messages', function(){
+3 32 var self = this,
+3 33 previousLength = messages.length,'
+
+5 1 require('express/config')})
+5 11 this.render('upload.haml.html', {
+5 13 flashes: this.flash('info')
+7 14 $(this.param('images')).each(function(image){

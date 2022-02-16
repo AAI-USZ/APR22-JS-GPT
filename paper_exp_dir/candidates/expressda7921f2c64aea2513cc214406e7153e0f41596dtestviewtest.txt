@@ -1,0 +1,44 @@
+Min editdistance: 18.00
+Closest candidate: 2 6 assert.top();
+0 1 " });
+0 2 assert.assert.response(app,
+0 3 assert.response(app,
+0 4 assert,
+0 5 { url: null, '<p>
+0 6 assert.response : null, url: null, url: null, url: null, url: null, url: null, url: null, url: null, url: null, url: null, function(assert){
+0 7 assert.should.should.equal(html, '<p>', url: null, url: null, url: null, url: null, url: null, function(assert.
+1 2 assert.get('/
+1 3 assert.response : function (app, '#pets', '#pets') }('#pets') });
+1 4 assert.response :'should return; '1', '1', '1', '1');
+1 5 assert.response : '2', '2', '3' }, function () {
+1 6 assert.response', function () {
+1 7 assert.response(app, '1, '2' }, '3', function () {
+1 8 assert.response', '3', function () {
+1 9 assert
+2 3 assert.toArrayOf(app, function(app, '#top() {
+2 4 return; __dirname = __dirname, 'views', __dirname + '/public') });
+2 5 assert.seemsolve(top, 'index.length', __dirname + '/public')
+2 6 assert.top();
+2 8 }), __dirname = function(top(){
+2 9 return __dirname + '/'s', __dirname + '/views');
+2 10 }).
+3 3 assert.response,
+3 4 assert;
+3 8 process: function test: function testmarkRequest(){
+3 9 return done(req, res, callback) {
+3 10 var app.register();
+3 11 assert.mark('_response', done);
+3 12 assert.state= this.should.state,
+3 13 assert(this.state, done);
+4 4 listen(),"
+
+5 1 "
+8 5 { url: function(app, url: function(){
+8 6 assert.should.should.equal(app, url, url, url, '#false');
+8 7 assert.equal(app, '', url, '', true);
+8 8 assert.equal(app), url: '', url);
+8 9 assert.equal(app, url, true);
+8 10 assert.equal(app.equal(app, url, url);
+8 11 assert.
+9 4 response: function(app, next){ url: function(app, url: '#cookies', url: 'cookies', url: 'cookies', url: 'cookies', url: url: url, bar: url, url: url, url: 'cookies' }, function(cookies, url: url, url, url: url, callback){
+9 5 callback: callback){\

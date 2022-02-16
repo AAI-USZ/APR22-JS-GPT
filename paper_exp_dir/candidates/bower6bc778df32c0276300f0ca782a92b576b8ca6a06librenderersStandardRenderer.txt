@@ -1,0 +1,159 @@
+Min editdistance: 19.00
+Closest candidate: 0 48 var command = function (log) {
+0 1 StandardRenderer.prototype.end = function (data) {
+0 2 var method = '_' + mout.string.camelCase(this._command);
+0 3 if (this[method]) {
+0 4 this[method](data);
+0 5 }
+0 6 };
+0 7 StandardRenderer.prototype.error = function (err) {
+0 8 var str;
+0 9 var stack;
+0 10 this._guessOrigin(err);
+0 11 err.id = err.code || 'error';
+0 12 err.level = 'error';
+0 13 str = this._prefix(err) +'' + err.message.replace(/\\r?\
+0 14 /g,'').trim() + '\
+0 15 ';
+0 16 this._write(process.stderr, 'bower'+ str);
+0 17 if (err.details) {
+0 18 str = chalk.yellow('\
+0 19 Additional error details:\
+0 20 ') + err.details.trim() + '\
+0 22 this._write(process.stderr, str);
+0 24 if (this._config.verbose ||!err.code || err.errno) {
+0 26 Stack trace:\
+0 27 ') + err.stack;
+0 28 str += (err.stack || 'N/A') + '\
+0 30 str += chalk.yellow('\
+0 31 Console trace:\
+0 34 console.trace();
+0 37 StandardRenderer.prototype.log = function (log) {
+0 40 log.data = err.data || {};
+0 41 log.level = 'error';
+0 42 str += (err.stack || 'N/);
+0 46 StandardRend
+0 47 StandardRend.prototype.log.command = function (log) {
+0 48 var command = function (log) {
+0 51 if (this._guessOrigin(log) {
+0 52 if (this._skipped) {
+0 53 this._skipped = true;
+0 54 } else err.cant.log = true;
+0 55 } else err.log = false;
+0 56 str += ': function (data) {
+0 57 str += (data.level = 'error';
+0 58 this._write(process.stderr, this._stringify(data) +'' + err.stack);
+0 60 \
+1 1 "
+
+2 25 stack = err.fstream_stack || err.stack || 'N/A';
+2 28 ');
+2 29 str += (Array.isArray(stack)? stack.join('\
+2 30 ') : stack) + '\
+2 42 log.data.level = log.level || 'log';
+2 43 str = this._write(process.stderr, 'bower'+ str);
+2 44 this._write(process.stdout, 'bower'+ str);
+2 47 StandardRend.prototype.prompt = function (prompts = function (prompts) {
+2 48 var stdout = function (prompts) {
+2 49 var stdout = console.logger.pipe(this._stack);
+2 50 var promptly = new Logger();
+2 51 var answers = new Function();
+2 52 var str = prompting = prompts = argumentsParser.prompt();
+2 53 'some command = argumentsParser.prompts.prompts.prompt = function (prompt = function (str) {
+2 54 return str.pipe(this._install, this._install, arguments)
+2 55 .on('error', this._write, arguments)
+2 56 .on('end', function (str
+6 26 console.log('\
+6 29 str += (Array.isArray(this._config.verbose)? '([^\
+6 30 ]+)' : '') + err.stack || 'N/A') + '\
+6 32 str += '\
+6 37 System info:\
+6 38 '));
+6 41 var method = '_' + mout.string.camelCase(log);
+6 42 this._guessOrigin(log);
+6 43 this._write(process.stderr, this._config.log);
+6 46 StandardRend.prototype._
+6 47 StandardRend;
+6 49 StandardRend.prototype.prototype._resolve = function (data) {
+6 50 function resolveFilename(data) {
+6 51 if (data) {
+6 52 return data?
+6 53 .filename.filename.resolve(this._.path)
+6 54 .cache
+6 55 .replace(/^\
+6 56 /a.config.config.foo/g, '/')
+6 57 .config.cache
+6 58 .replace(/b.config.foo, '_' + '/')
+6 59 .replace(/ a.config.foo, '_' + '/')
+7 10 var emitter = this;
+7 18 if (this._config.verbose ||!err.code) {
+7 19 str = '\
+7 21 ' + err.stack + '\
+7 23 '.yellow;
+7 30 var method = '_' + mout.string.camelCase(log.message);
+7 33 this[method](log);
+7 34 } else {
+7 35 this._genericLog(log);
+7 38 StandardRenderer.prototype.updateNotice = function (data) {
+7 39 var str = template.render('std/update-notice.std', data);
+7 42 StandardRenderer.prototype._help = function (data) {
+7 44 var that = this;
+7 45 var specific;
+7 46 if (!data.command) {
+7 47 str = format.camelCase() + 'help';
+7 51 this._write(process.stdout = process.stdout;
+7 54 if (this._else {
+7 55 str = process.stdout = function (str) {
+7 56 str) {
+7 57 str = str;
+7 58 this._else {
+7 60 this._write(str);
+7 63 this._write(process.stderr = str;
+7 65 this._write(this._write(process.stderr, str);
+7 69 StandardRenderer.prototype._genericLog = function (log) {
+7 70 .each
+7 71 .on('error', data,
+9 1 function linkTo(command, config) {
+9 2 var src;
+9 3 var dst;
+9 4 var promise;
+9 5 var rl;
+9 6 var data = this._command;
+9 7 if (process.cwd === config.cwd) {
+9 8 promise = Q.nfcall(fs.lstat, src).then(function (stat) {
+9 9 return chalk.clean(data);
+9 10 }, function () {
+9 11 return true;
+9 12 });
+9 14 try {
+9 15 stat = fs.statSync(src).then(function (stat) {
+9 17 }, function (err) {
+9 18 if (err.code === 'ENOENT') {
+9 19 return false;
+9 21 return Q.nfcall(promptly.confirm, {
+9 22 'Content-Type': 'application/json'
+9 26 promise = Q.nfcall(fs.stat, src).then(function (stat) {
+9 36 if (this._wideCommands.indexOf(command) === -1) {
+9 37 return Q.nfcall(this._compact, {
+9 41 return promise.fail(function (err) {
+9 42 var str = template.render('stdout', this._command);
+9 43 dst = process.stdout.columns < 120;
+9 44 return str;
+9 47 function setColor(config) {
+9 48 return this._wideCommands.select(config.command);
+9 50 function render(data) {
+9 51 return this._data? emit() :'render'stdout' :'stdout' :'stdout' :'stdout' };
+9 55 if (options.filename = path.replace(/\
+9 56 .sep, '\
+9 57 .sep, '\\r, '\\r,\\r,\\r,\\t',\\w,\
+9 60 function render();
+9 62 function generateConsole(options, options) {
+9 63 return Promise.logger.register) {
+9 64 return Reflect.apply(this, this, options)
+9 65 .logger.ignore();
+9 68 if (!this.json, options)
+9 69 .json = options)
+9 70 .options = options || {};
+9 71 if (!this.paths &&!== undefined;
+9 73 return Promise.dirs = undefined;
+9 74 }\

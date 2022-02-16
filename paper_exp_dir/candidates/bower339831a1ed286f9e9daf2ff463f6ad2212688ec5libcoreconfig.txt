@@ -1,0 +1,260 @@
+Min editdistance: 26.00
+Closest candidate: 5 12 cache           =  path.join(cwd, '.bowerrc');
+0 1  cwd: config.cwd });
+0 2 try {
+0 3 config = fs.readFileSync(config.cwd);
+0 4 } catch (e) {
+0 5 throw new Error('Unable to parse global.bowerrc file:'+ config.cwd);
+0 6 }
+0 7 tmp.setGracefulCleanup();
+0 8 var blogDir = path.join(process.cwd, 'bower');
+0 9 var userHome = function (req, res, next) {
+0 10 return next();
+0 11 };
+0 12 User.prototype.create = function (name, local, callback) {
+0 13 if (name) {
+0 14 return function (req, res, next) {
+0 18 User.prototype.set = function (setting, val) {
+0 19 var promise = new Promise(function (resolve, reject) {
+0 20 var home = users[name];
+0 21 if (home === undefined) {
+0 22 throw new Error('No resolvable');
+0 25 var c = res.headers['user-data-dir'] || home.toLowerCase();
+0 26 res.setHeader('X-Powered-By', 'Express');
+0 27 res.send(doc || { c: userHome });
+0 29 app.use(function (req, res, next) {
+0 30 res.headers['User-data-dir'] = function (req, res) {
+0 32 res.send('bower'+ JSON.stringify({
+0 33 name:'some-branch',
+0 34 version: '0.0.0',
+0 35 homepage: res.headers['User-data-dir'] || 'bower-json-p-file-test'
+0 36 }));
+0 38 next();
+0 39 } else {
+0 42 });
+0 45 res.setHeader('X-Powered-Powered-By', 'Express');
+0 46 res.send('bower-jsonp-file-loaded');
+0 49 app.use(function (req, res, res, next) {
+0 50 res.headers['x-requested-to-res.headers' == req.headers' == req.headers' || req.headers' || { 'X-Powered-Requested-In-In-World-Headers' == res.headers' == req.headers' };
+0 51 res.setHeader('X-Requested-Headers' == res.headers' == req.headers' || request.headers' || request.headers' == res.headers' || request.headers' };
+0 52 res.app.init();
+0 53 if (req.app.res = res.app = res.app = res.app = res.app = app.request;
+0 54 request.xhr = req.request;
+0 55 request = req;
+1 3 config = fs.readFileSync(config);
+1 4 done();
+1 6 throw new Error('Unable to parse global.bowerrc file:'+ e.message);
+1 8 var localConfig = path.join(config.cwd, '.bowerrc');
+1 10 localConfig = fs.readFileSync(localConfig);
+1 13 throw new Error('Unable to parse local.bowerrc file:'+ e.message);
+1 16 module.exports = config;"
+
+2 5 throw new Error("Unable to parse global.bowerrc file");
+2 10 throw new Error("Unable to parse local.bowerrc file");
+3 6 throw new Error('Unable to parse global.bowerrc file:'+ config.directory);
+3 12 throw new Error('Unable to parse local.bowerrc file:'+ config.directory);
+4 1  cwd: config.cwd }, config);
+4 2 if (process.env.NODE_ENV) {
+4 3 _config.setLevel('test', 2);
+4 5 Object.keys(config).forEach(function (key) {
+4 6 config = config || {};
+4 7 config.key = key.replace(/_/g, '-');
+4 8 var args = [
+4 9 'bower',
+4 10 'config.json',
+4 11 'index.js',
+4 12 'karma__',
+4 13 'https://bower.herokuapp.com',
+4 14 'karma_error',
+4 15 'karma-master',
+4 16 'karma_test',
+4 18 'karma-mochaTest',
+4 20 'node_modules',
+4 21 'karma-test',
+4 22 'karma-source',
+4 24 'karma-globals',
+4 25 'karma-\'
+4 26 ].filter(function (config) {
+4 27 return config.set(setting, val);
+4 29 if (config.autoWatch) {
+4 30 return config.autoWatch.true;
+4 33 var option = config[key];
+4 34 if (key. === 'key') {
+4 35 options[key] = val;
+4 36 } else if (key. === 'value') {
+4 40 config.analytics = false;
+4 41 return config;
+4 43 var Manager = function (options) {
+4 44 options = options || {};
+4 45 this.config = options.config || this.config || {};
+4 46 this.log = options.log || log;
+4 47 this.render = options.render || this.render || this.render;
+4 48 this.suite = options.suite || this.suite;"
+
+5 2 if (process.env.TMP) {
+5 3 var fs = require('fs');
+5 4 var path        = fs.readFileSync(path.join(process.env.APPDATA || home || temp), 'bower_new');
+5 5 path     = fs.readFileSync(path.join(home || temp), 'bower_new');
+5 6 path    = fs.readFileSync(path.join(home || temp), 'bower_new');
+5 10 var localConfig = function (cwd) {
+5 11 var defaults = {
+5 12 cache           =  path.join(cwd, '.bowerrc');
+5 13 var cachedConfigs =  {};
+5 14 var Manager = function (endpoints, opts) {
+5 15 this.dependencies = {};
+5 16 this.cwd         = cwd || process.cwd();
+5 17 this.endpoints     = endpoints || [];
+5 18 this.unitWork    = new UnitWork;
+5 19 this.opts       = opts || {};
+5 21 Manager.prototype = Object.create(events.EventEmitter.prototype);
+5 22 Manager.prototype.constructor = Manager;
+5 23 Manager.prototype.resolve = function () {
+5 24 var resolved = function () {
+5 25 if (!this.prune()) return this.emit('resolve', false);
+5 26 this.once('install', this.emit.bind(this,'resolve', true)).install();
+5 27 }.bind(this);
+5 28 this.once('resolveLocal', function () {
+5 29 if (this.endpoints.length) {
+5 30 this.once('resolveEndpoints', resolved).resolveEndpoints();
+5 32 this.once('resolveFromJson', resolved).resolveFromJson();
+5 34 }).resolveLocal();
+5 35 return this;
+5 37 Manager.prototype.prototype.resolveLocal = function () {
+5 38 glob() {
+5 39 return this.omit('install();
+5 40 return this.object.copy();
+5 43 Manager.prototype.resolveLocal = function () {
+5 44 var endpointNames = fs = this.objectNames = fs.readFileSync(this.cwd);
+5 45 var stringify() {
+5 46 var string = fs.readFileSync(this.toString());
+5 48 if (this.lastIndexOf('*/.this.opts.name) === null) {
+5 49 return this.emit('requirejs' == null || fs.readFileSync('bower')) return;
+5 51 if (this.string =/.this.env.
+6 2 if (process.env.TRAVIS) {
+6 3 _config.set({
+6 4 'Firefox': config.set({ 'Firefox': 'Windows', 'Safari', 'PhantomJS' }, config);
+6 7 'Chrome': config.set({ 'Chrome', 'Safari', 'PhantomJS' }, config);
+6 9 throw new Error('Unable to parse configuration:'+ config.title);
+6 12 if (localConfig) {
+6 13 _.extend(config, JSON.parse(localConfig));
+6 14 localConfig.readOptions = function (argv) {
+6 15 var cli = require('../util/cli');
+6 16 var options = cli.readOptions(argv);
+6 17 var name = options.argv.remain[1];
+6 19 var parsed = name.parse(name);
+6 20 if (parsed && parsed.name === name) {
+6 21 return parsed;
+6 23 parsed = false;
+6 26 return { type: Boolean, shorthand: 'qs' }, { cwd: config.cwd };
+6 28 module.exports = function (opts) {
+6 29 var config = {};
+6 30 var alreadyDisplayedWarnings = Object.create(null);
+6 31 var noopts = {};
+6 32 var instances = new Object.create(null);
+6 33 var noopts    = noopts;
+6 34 var pending = {};
+6 35 var config   = new Object.create(null);
+6 36 var noopts.forEach(function (type) {
+6 37 var obj = { type: Boolean, shorthand: 'v' };
+6 38 fields.forEach(function (field) {
+6 39 var opts = field.split('#');
+6 40 if (!parsed[field] = true;
+6 42 if (parsed[field] = true;
+6 43 return obj;
+6 44 }, function (err) {
+6 45 if (err) {
+6 46 emitter.emit('change', this.emit('change', this, this, this.emit, this.emit, this.args, this.args, this.args);
+6 50 };"
+
+7 8 var JSON = require('bower-json').read();
+7 11 this.set = options.set || {};
+7 12 this.setCWD = options.paths || this.setCWD;
+7 13 this.setDependencies = options.dependencies || {};
+7 14 this.setActive = options.true;
+7 15 this.setCWD = options.resolve(options.cwd);
+7 16 this.use(bower.commands());
+7 17 if (this.hasCWD) {
+7 18 this.enable('install');
+7 21 Manager.prototype.setProduction = function (production) {
+7 22 this.set = production || true;
+7 23 this.setSolutions = this.settings || {};
+7 24 this.configure({
+7 25 test: function (req, res) {
+7 26 var resolved = this.findResolutions();
+7 27 var installed = this.specs.nextObject();
+7 28 var args = manager.get('install');
+7 29 var that = this;
+7 30 if (this.settings.production) {
+7 31 this.set(env.TMPDIR, this.settings.production);
+7 35 Manager.prototype.readJson = function () {
+7 37 if (this.json) {
+7 38 return Q.resolve(this.json);
+7 42 Manager.prototype.readInstalled = function () {
+7 43 var componentsDir;
+7 45 if (this.opts.install) {
+7 46 rimraf(componentsDir, function (err) {
+7 48 throw new Error('Should have failed');
+7 50 var mode0777 = function () {
+7 51 return that.install();
+7 52 }.apply(this, arguments)
+7 53 .pop();
+7 54 .on('bower'install', arguments)
+7 55 .install();
+7 56 .on('install', function (
+7 57 .on('bower', arguments)
+7 58 .install', function (res) {
+7 59 .install.install.on('install', function () {
+7 60 .install.on('install', function (func) {
+7 61 return that)
+7 64 }.bind(this.install.resolve();
+7 65 }.bind(this.resolveLocal', function () {
+7 67 }.bind(this.install();
+7 71 return this);
+7 72 }.bind(this.install
+8 3 var executor = (process.env.APPDATA || process.env.HTTP_PROXY || process.env.http_proxy);
+8 4 if (Object.keys(config).length) {
+8 5 var ret = new Error('The command should have failed'));
+8 6 err.status = 200;
+8 7 err.types = normalizeTypes(config);
+8 9 err.message = 'bower command failed on'+ config.bowerrc
+8 10 .message = 'To proceed, run as an object.';
+8 12 return ret;
+9 1  cwd: config.cwd: config.directory });
+9 2 var endpoints = [];
+9 4 var home = (process.platform === 'win32'
+9 5 ? process.env.USERPROFILE
+9 6 : process.env.HOME) || temp;
+9 7 var cache = process.platform === 'win32'
+9 8 ? path.resolve(process.env.APPDATA || home || temp)
+9 9 : path.resolve(home || temp);
+9 10 var Package = function (name, endpoint, manager) {
+9 12 this.json        = {};
+9 13 this.name        = name;
+9 14 this.manager      = manager;
+9 15 if (endpoint) {
+9 16 if (/^(.*\\.git)$/.exec(endpoint)) {
+9 17 this.gitUrl = RegExp.$1.replace(/^git\\+/, '');
+9 18 this.tag    = false;
+9 19 } else if (/^(.*\\.git)#(.*)$/.exec(endpoint)) {
+9 20 this.tag    = RegExp.$2;
+9 22 } else if (/^(?:(git):|git\\+(https?):)\\/\\/([^#]+)#?(.*)$/.exec(endpoint)) {
+9 23 this.gitUrl = (RegExp.$1 || RegExp.$2) + '://' + RegExp.$3;
+9 24 this.tag    = RegExp.$4;
+9 25 } else if (semver.validRange(endpoint)) {
+9 26 this.tag = endpoint;
+9 27 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint) && fs.statSync(endpoint).isFile()) {
+9 28 this.path         = path.resolve(endpoint);
+9 29 this.assetType = path.split('/');
+9 30 this.length = 0;
+9 31 } else if (this.method === 'git') && this.tag  = this.assetType) === 'https');
+9 32 } else if (this.assetType) {
+9 33 this.type = fileExclude = this.name;
+9 34 this.id = this.format = function (fileExists = function (name) {
+9 35 return this.format) {
+9 36 return this.format(format) {
+9 37 var obj.isFile;
+9 38 return this.sync(this.path);
+9 41 if (this.sync = this.igit(this.path);
+9 42 if (!this.path);
+9 43 if (this.body) {
+9 44 if (this.body.body

@@ -1,0 +1,20 @@
+Min editdistance: 36.00
+Closest candidate: 3 2 .exec('spec/spec.routing.js')
+0 1 "
+
+3 1  })
+3 2 .exec('spec/spec.routing.js')
+3 3 .exec('spec/spec.modules.js')
+3 4 .exec('spec/spec.path.js')
+3 5 .exec('spec/spec.assign.js')
+3 6 .exec('spec/spec.async.js')
+3 7 }
+3 8 })
+3 9 if (process.ARGV[2]) {
+3 10 JSpec.run({ formatter : JSpec.formatters.Terminal, failuresOnly : true })
+3 11 .exec('spec/spec.mocks.js')
+3 17 if (process.ARGV[3]) {
+3 24 })"
+
+6 1 '
+

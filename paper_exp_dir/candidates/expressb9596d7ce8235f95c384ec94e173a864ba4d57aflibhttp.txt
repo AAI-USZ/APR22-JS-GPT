@@ -1,0 +1,267 @@
+Min editdistance: 7.00
+Closest candidate: 0 1 this.lookup = {};
+0 1 this.lookup = {};
+0 2 this.settings = {};
+0 3 this.redirects = {};
+0 4 this.isCallbacks = {};
+0 5 this._locals = {};
+0 6 this._dynamicLocals = {};
+0 7 this.set(\'home\', '/');
+0 8 this.set(\'env\', process.env.NODE_ENV || \'development\');
+0 9 this.use(function(req, res, next){
+0 10 var charset;
+0 11 res.setHeader(\'X-Powered-By\', \'Express\');
+0 12 req.app = res.app = self;
+0 13 req.res = res;
+0 14 res.req = req;
+0 15 req.next = next;
+0 16 if (charset = self.set(\'charset\')) res.charset = charset;
+0 17 if (req.url.indexOf(\'?\') > 0) {
+0 18 var query = url.parse(req.url).query;
+0 19 req.query = qs.parse(query);
+0 20 }
+0 21 res.locals = function(obj){
+0 22 for (var key in obj) {
+0 23 res.locals[key] = obj[key];
+0 25 };
+0 26 next();
+0 27 });
+0 29 if (middleware) {
+0 30 middleware.forEach(function(fn){
+0 31 self.use(fn);
+0 34 this.routes = new Router(this);
+0 35 this.__defineGetter__(\'router\', function(){
+0 36 this.__usedRouter = true;
+0 37 this.set(\'home\', \'/\');
+0 39 return this;
+0 41 this.locals.settings = this.settings;
+0 42 this.configure(\'production\', function(){
+0 43 this.enable(\'view cache\');
+0 46 app.remove = function(url){
+0 47 var path = \'/\';
+0 48 if (this.settings.redirect) {
+0 49 path = \'/back\';
+0 50 this.routes.forEach(function(fn){
+0 51 if (fn.handle && this.settings.redirect === self.settings.redirect)
+0 52 &&
+0 53 this.redirects.all(function(req, res){
+0 54 return res.headers.app.settings.redirect === self.routes.app.source
+0 55 .default
+0 56 ? req.app.app.app.enabled
+0 57 : app.redirects.redirects(this.location.path
+0 58 : path;
+0 59 })
+0 60 : false;
+0 63 this.locals.redirects = this._locals.settings.settings.settings.redirect = this._locals;
+0 64 this = this;
+0 65 this.__proto__proto__proto__ = this;
+0 69 this.locals.settings = this;
+0 70 this.contentType =
+0 71 ;'
+
+1 7 this._errorHandlers = [];
+1 8 this.set('home', '/');
+1 9 this.set(\'env', process.env.NODE_ENV || \'development\');
+1 11 req.query = req.query || {};
+1 12 res.headers = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+1 31 this.__usedRouter = false;
+1 32 return this.routes.middleware;
+1 34 this.locals({
+1 35 settings: this.settings
+1 36 , app: this
+1 39 this.configure(\'development\', function(){
+1 40 this.enable(\'hints\');
+1 45 methods.forEach(function(method){
+1 46 self.lookup[method] = function(path){
+1 47 return self.routes.lookup(method, path);
+1 49 self.match[method] = function(path){
+1 50 return self.routes.match(method, path);
+1 52 self.remove[method] = function(path){
+1 53 return self.routes.lookup(method, path).remove();
+1 63 this.remove.param(\'setting\', function(name)
+1 65 };'
+
+2 6 this.dynamicViewHelpers = {};
+2 7 this.errorHandlers = [];
+2 17 if (req.url.indexOf(\'?\')!== 0) {
+2 28 var fn = router(function(app){ self.routes = app; });
+2 32 return fn;
+2 35 app.use(function(req, res, next){
+2 39 res.locals = options.locals || {};
+2 40 res.locals.use = function(req, res, done){
+2 42 res.locals.hasMessages =!!req.session.name;
+2 43 res.locals.on(\'error\', function(err){
+2 44 if (err) {
+2 45 if (res.statusCode < 400 && res.headers.location) {
+2 46 return done(err);
+2 47 } else {
+2 48 res.statusCode = err.message;
+2 51 charset = self.app.locals || {};
+2 52 res.locals.settings = this.settings;
+2 53 res.render = function(obj){
+2 54 if (typeof obj === \'object\') {
+2 55 return this.settings[key];
+2 57 var settings = obj;
+2 60 var route = this;
+2 61 this.on(\'get\', function(fn){
+2 62 this.redirect(this.redirect(this.get(this.url)
+2 63 .url)
+2 64 .all(function(function(err, fn){
+2 65 this.render(this.redirect)
+2 69 this._locals.settings.redirect(this.get)
+2 70 .headers.get)
+2 71 .headers = this._create();
+2 72 ._locals.setHeader('home
+2 73 .headers)
+2 74 .setHeader('location\', this.redirects)
+2 75 .setHeader('topics\', this.location);
+2 76 this.setHeader('redirects
+3 18 for (var key in obj) res.locals[key] = obj[key];
+3 19 return self;
+3 33 this.use(connect.HTTPServer.prototype);
+3 40 app.use = function(route, fn){
+3 41 var app, home, handle;
+3 42 if (\'string\'!= typeof route) fn = route, route = \'/\';
+3 43 if (fn.handle && fn.set) app = fn;
+3 44 if (app) {
+3 45 app.route = route;
+3 46 fn = function(req, res, next) {
+3 47 var orig = req.app;
+3 48 app.handle(req, res, function(err){
+3 49 req.app = res.app = orig;
+3 51 req.req.app = res;
+3 52 res = orig;
+3 53 res.req.req = req;
+3 54 req.next = orig;
+3 56 req.req.req.next = next;
+3 58 res.req.req.app = req;
+3 59 res = res;
+3 60 res.req.req.next = req.app.req;
+3 61 res = req;
+3 62 req.req.res = res;
+3 64 req.ntry = req;
+3 65 res.next = req;
+3 66 res.engines;
+3 67 res = req.res = req.engines;
+3 69 res.arr = req.res;
+3 71 res.res = req;
+3 72 res.arr = res;
+3 73 res.arr = req.arr = req.arr = res;
+3 75 arr = res;
+3 76 arr.__proto__proto__proto__ = orig;
+4 10 res.headers = { \'X-Powered-By': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+4 15 return self.routes.middleware;
+4 24 res.header = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+4 34 self.use(function(err, req, res, next){
+4 35 if (fn.length < 3) {
+4 36 self.halt(404);
+4 37 res.redirect();
+4 39 self.contentType(404);
+4 40 res.statusCode = 403;
+4 42 res.writeHead(200);
+4 43 res.end();
+4 46 this.routes = this._router.routes;
+4 49 return this._router.middleware;
+5 29 this.__proto__ = parent.request;
+5 30 this.__proto__ = parent.response;
+5 31 this._engines = parent.engines || {};
+5 32 this._settings = parent.settings;
+5 38 this.enable(\'jsonp callback\');
+5 39 this.set(\'jsonp callback name\', \'callback\');
+5 41 this.set(\'json spaces\', 2);
+5 55 app.handle(req, res.app, function(err, app) {
+5 56 app.handle(req, res, function(req, res, function(err, res) {
+5 57 if (err, app) {
+5 59 fn(err, res.headerSent) {
+5 60 called = true;
+5 62 req.app.removeHeader(\'error
+5 63 res.headerSent = true;
+5 64 req.headerSent = true;
+5 66 res.app.setHeaderSent = true;
+5 67 res.appHeaderSent = true;
+5 68 fn.removedHeaderSent = false;
+5 71 res.app.removedHeaderSent = true;
+5 72 res.appHeaderFinished();
+5 78 app.handle(req, res
+6 29 this.__defineGetter__('router', function(){
+6 44 this.on(\'listening\', this.registerErrorHandlers.bind(this));
+6 56 self.lookup.del = self.lookup.delete = self.match.delete;
+6 57 self.delete = self.delete;
+6 58 self.match.delete = self.delete;
+6 59 self.remove.del = self.delete = self.remove.delete;
+6 60 methods.locals.settings.settings.settings.settings.pag = 3 = 3;
+6 61 , methods = 3;
+6 62 methods = 3;
+6 63 self.configure(\'production\', function(){
+6 64 this.paginator = new Router();
+6 65 , called = new Processor();
+6 66 , called = function(this, called = function(a, res, index){
+6 67 called, results = 0, url, self){
+6 68 return function(d){
+6 71 called.should.should.should.equal(this, called = true;
+6 72 called.should.
+7 12 res.headers = { \'X-Powered-By\': \'Express\', \'GitHub\': \'80\', \'Proxies\': {},
+7 13 urlConfig: \'/\',
+7 14 rootConfig: \'/\',
+7 15 proxies: urlConfig,
+7 16 queryString: \'and requesting\',
+7 17 production: true,
+7 18 headers: {},
+7 19 urlRoot: \'/\',
+7 20 upstreamProxy: \'/\',
+7 21 root: \'/\',
+7 22 permalink: \':id/\' + this.set(\'Link\', \'\') + \'/\',
+7 23 permalinkAll: \'/\' + this.set(\'Link\', \'and rel="alternate"\')
+7 24 },
+7 25 \'test #configure()\': function(beforeExit){
+7 26 var calls = [];
+7 27 process.env.NODE_ENV = \'development\';
+7 28 var server = new Server(process.env(), \'parent\', \'child\', \'nextend\');
+7 29 var ret = server.configure(function(){
+7 30 assert.equal(this.app.settings.env, \'Test context of configure() is the server\');
+7 31 calls.push(\'any\');
+7 32 }).configure(\'development\', function(){
+7 33 calls.push(\'dev\');
+7 34 }).configure(\'production\', function(){
+7 35 calls.push(\'production\');
+7 37 assert.equal(ret, server.env, \'Test #configure() returns server for chaining\');
+7 38 assert.response(server,
+7 39 { url: \'/\' },
+7 40 { body: \'Cannot GET /\' });
+7 41 beforeExit(function(){
+7 42 calls.should.eql([\'any\', \'dev\'];
+7 45 \'test #configure() immediate call\': function(beforeExit){
+7 46 var app = express.createServer()
+7 47 , calls = 0;
+7 48 app.use(connect.bodyDecoder());
+7 49 app.use(function(req, res){
+7 50 res.use(connect.query());
+7 51 res.bind(app);
+7 53 app.use(app.use(function(req, res){
+7 54 res.req.res.app = calls.app = calls;
+7 55 res.bind(res);
+7 56 res.req.res = req;
+7 57 res.req.req = res;
+7 63 req.next = res;
+7 64 res.req.next = req;
+7 65 res.next = next;
+7 66 res.
+7 67 res.setHeader(\'X-Pending\', \'name\', \'name\');
+7 68 res.locals
+7 69 res.locals.setHeader(\'name\', \'tobi\');
+7 70 res.setHeader(\'
+8 56 self.lookup.del = self.lookup.del = self.lookup.delete;
+8 57 self.delete;
+8 58 self.match.del = self.delete = self.match.delete;
+8 59 .delete.del = self.delete;
+8 60 .del = self.remove.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del.del
+9 51 req.__proto__ = orig.request;
+9 52 res.__proto__ = orig.response;
+9 53 next(err);
+9 57 connect.HTTPServer.prototype.__proto__proto__ = connect.HTTPServer.prototype;
+9 58 app.remove = function(middleware){
+9 59 return this.remove.lookup.lookup.all(this.url.test(this.url);
+9 60 .all(this.settings.settings.prox-proxies.proxies.middleware);
+9 61 .lookup('json.lookup.com/'))
+9 62 .com/'
+

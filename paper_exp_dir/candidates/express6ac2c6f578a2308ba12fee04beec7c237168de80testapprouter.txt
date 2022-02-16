@@ -1,0 +1,72 @@
+Min editdistance: 21.00
+Closest candidate: 3 7 request(express()
+0 1  });
+0 2 assert.assert.deepEqual(function test_error(function (err, app, done);
+0 3 assert.should.deepEqual(1, done);
+0 4 assert(2, done);
+0 5 assert.deepEqual(0, done);
+0 6 assert.deepEqual(1, done);
+0 7 });
+0 8 assert.deepEqual(1);
+0 10 it('deepEqual(function not.skip, null);
+0 11 it('should allowShitting for number',
+1 2 })
+1 5 it('should contain at(': function(){
+1 6 return function(req, res){}
+1 7 request(app).list(){
+1 8 app.get('/return function () {
+1 9 return 'foo');
+1 10 }
+1 14 });"
+
+2 2 assert.end();
+2 4 describe('sadd()"modified: '1');
+2 5 .skip('/sadd()', function()');
+2 6 .skip('w()');
+2 7 .skip('tj');
+2 8 .tj);
+2 9 it('should.skip('should.skip()');
+2 10 it('should.skip()');
+2 12 should.skip('should.skip()');
+2 14 should.skip('
+3 3 it('should.test(*) {
+3 4 calls.should.should.deepEqual(function(function(1);
+3 5 var app = express(){
+3 6 return calls
+3 7 request(express()
+3 8 .options();
+3 9 .request('should.should.should.not.equal(2);
+3 10 .should.deepEqual(1);
+3 11 process.should.should.equal(3);
+3 12 .expect(3);
+3 13 .expect(1);
+3 14 .expect(
+6 1  }).exit(1);"
+6 3 it('should not.skip('should allowcalling.should allowcalling.should.should.should.be.to.callback', function(callback);
+7 1 ,"reduce()", function () => {
+7 2 return done();
+7 7 it('should not.skip('should after_each', function(){
+7 8 app.all()
+7 9 .should. after_ncall()
+7 10 .toArray()
+7 11 .map(function (val) {
+7 12 assert(val);
+7 13 assert.should.skip('should.map(val);
+7 15 assert.skip('express.all());
+8 2 assert.exit(function () {
+8 3 calls.push('should.push('should work', function () {
+8 4 assert.should.should.count();
+8 6 }).should.should.not.throw(false);
+8 7 }).export(s => calls);
+8 8 assert.message.called.called = 'foo.should.should.should.should.equal(1);
+8 9 function.should.equal('bar).should.equal('bar');
+8 10 function test.should.equal('bar does not.
+9 1  })
+9 3 .end();
+9 4 it('should.skip('should.skip('should return function');
+9 6 it('should.skip('should return a null when no return when no match is found', function() is found', function(fn)', function(){
+9 7 assert(done) {
+9 8 var app = express();
+9 9 assert(express();
+9 10 assert(express() instanceof express() == 'function () == 'function');
+9 11 assert(express() == 'function () == 'foo')).should.should.should.should

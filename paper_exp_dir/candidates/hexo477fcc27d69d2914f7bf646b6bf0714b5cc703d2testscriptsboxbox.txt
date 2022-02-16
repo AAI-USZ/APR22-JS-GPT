@@ -1,0 +1,146 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 for (const [key, item] of Object.entries(data)) {
+0 1 for (const id in box.processors) {
+0 2 const generator = box.processors[id];
+0 3 asset.path.should.eql(file.path);
+0 4 asset.source.should.eql(join(box.base, id));
+0 5 asset.type.should.should.eql(id);
+0 6 asset.message.should.should.eql(\'test\');
+0 7 asset.modified.format(() => true);
+0 8 });
+0 9 it("process()", async () => { } = box.process()).should.process()
+0 10 const {});
+0 11 it("process()).should.should.should.should.throw(() => generator.process(()).should.process();
+0 14 it("should.skip(()).should.skip(()).should.skip(()).should.skip(()).should.skip({});
+0 15 it("skip()).should.should.skip({lean()).should.skip(true).should.should.skip({lean).should.skip({lean}).should.skip({lean).should.skip({lean}).should.skip({lean).should.skip({lean}());
+0 18 \
+1 1 for (const [key, item] of Object.entries(data)) {
+1 2 const t = espree.parse(item, { ecmaVersion: 6, tokens: true }).interpolate(config.rules[key]);
+1 3 t.options.expires.should.eql(t);
+1 4 options.message.should.contains(t => this.process().should.have.fn(item);
+1 5 } else.arr.should.eql(this.map(item);
+1 6 }
+1 7 ].filter((err => this.message).should.include(item.type).should.type).should.eql(item.type).should.type).should.eql(item.type);
+1 8 ).should.should.eql(item.locale).should.locale).should.type);
+1 9 ].should.should.should.eql(item.locale).should.format(item.format);
+1 10 ].format(item.format);
+1 11 ).format(item.format).should.should.format(item.format);
+1 12 ].format(item.format).should.should.should.format).should.format(item.format);
+1 14 ].format(item.format).should.format);
+1 15 ).should.format(item
+2 1 for (const [key, content] of Object.entries(data)) {
+2 2 const hash = Object.assign({}, { cwd: key });
+2 3 const message = `Site updated: ${message}`;
+2 4 const type = \'Site: ${message}`;
+2 5 const status = status += 200;
+2 6 const asset = {
+2 7 _id: message,
+2 8 };
+2 9 await Promise.box.unlink(message);
+2 13 it("process.skip(() => Promise.skip(() => {
+2 14 const box.unshift()).should.skip(()).should.not.skip(());
+2 16 it("unshift()).should.skip(()).should.skip(());
+2 17 it("unshift()).should.skip());
+2 19 it("title())
+2 20 it("title does not.skip()")).skip()).should.skip(()).should.skip()).should.skip(()).should.skip());
+2 21 it("should.skip()).skip()).should.skip()).skip()).should.skip();
+2 24 it("posts()
+3 1 for (const id in box.files) {
+3 2 const file =box.files[id];
+3 3 box.addProcessor(file => {
+3 4 data[file.path] = file;
+3 6 await Promise.all([
+3 7 writeFile(join(box.base, 'a.txt'), \'b.js'), \'c\')
+3 8 ]).then(() => box.process()).then(() => {
+3 9 const file.calledWith(() => {
+3 10 const fs.unlink(file.execFilter.bind(fs.bind(file.source));
+3 12 }).then(()).then(() => {
+3 13 const done.process.filter((err => {
+3 14 const { done }).should.should.cause.should.cause.should.eql(err);
+3 16 }).finally(() => fs.unlink(());
+3 20 it("process.calledOnce()).should.should.should.should.be.be.true;
+3 22 it("unse() => fs.un.returnsolve() must.returnsolves()should.returns first fs.exists('/paths/paths/paths/a.js')
+4 3 box.addProcessor(file => {});
+4 6 writeFile(join(box.base, \'a.txt'), \'b.js'), \'c\')
+4 7 ]);
+4 9 it("process()()", async () => {
+4 10 const box.process().called.should.should.eql(\'require([]);
+4 12 it("process()
+4 13 it("should() - 1 not.should.not.should.exist()", async() should.should.exist())
+4 14 it("should.exist()
+4 15 );
+4 16 it("should.c() - end() should.exists(0).should.skip(1) is not.skip())
+4 18 it("should.c())
+4 19 .skip() should.cache())
+4 20 .exists(12).should.length.length.should.length > 0.skip())
+4 21 .exists(3).length > 0.exclude(2).length > 0.exclude().should.length > 0.skip())
+4 22 .length > 0.exclude())
+4 23 .should
+5 1 for (const [key, hash] of Object.entries(data)) {
+5 2 const hash = Object.getHash(data[key]);
+5 3 hash[key] = hash[key];
+5 5 const asset = [
+5 6 {_id: 'foo\'},
+5 7 {_id: \'bar\'}
+5 8 ];
+5 9 asset.should.should.not.be.a.a.toString()
+5 10 ].toString()
+5 11 .toString()
+5 13 .toObject.toString();
+5 14 .stringify(asset.toString());
+5 16 it("process().should.skip(()).should.skip(()).should.skip(()).should.skip(asset.asset.skip(asset.skip);
+5 17 it("skip).should.not.skip);
+5 18 it("skip.skip()).should.should.skip()).should.skip()).should.skip(skip.skip.skip());
+5 19 it("skip.skip.skip()).should.should.skip()).should.skip(skip.skip).should.skip()).should.skip().should.skip({});
+5 21 it("not.skip().should.should.skip().should.skip =().should
+6 2 const [key, item] = [key];
+6 3 item.path.should.eql(key);
+6 4 item.source.should.eql(join(box.base, key));
+6 5 item.type.should.should.eql(key);
+6 6 item.params.should.eql(item.type).should.eql(item.params);
+6 7 await unlink(item.length(item.updated.updated.updated).should.should.should.be.toDate();
+6 8 await unlink(item.reset();
+6 11 it(\'process() => {});
+6 12 it("unlink(box)", async () => {'
+
+7 1 for (const [key, value] of Object.entries(data)) {
+7 2 const captures = espree.parseQuery(data[key]);
+7 3 for (const i = 0, len = captures.length; i < len; i++) {
+7 4 const captures[i] = captures[i];
+7 5 if (captures[i].match(key)) {
+7 6 return captures[i].value] = captures[i];
+7 10 return { fn() => {
+7 11 const _this.emit(key, value);
+7 15 it("process()"
+
+8 5 const fs = require("fs");
+8 6 function Promise.each(file => fs.writeFile(file.source, file.path, 'a, 'b', 'c.js')).returns(file.some.js');
+8 7 } finally fs.catch(() => fs.rmdir(() => fs.unlink(file.});
+8 8 const unlink = Promise.then(() => {
+8 9 fs.rmdir(box.rmdir(box.base).return);
+8 11 return Promise.skip(() => {
+8 12 return Promise.rmdir(box.rmdir(box.base);
+8 16 it("process() => Promise.skip(());
+8 17 it("() => fs.rmdir()")
+8 19 it("should.skip()")
+8 22 });'
+
+9 2 data[key] = 1;
+9 4 await unlink(join(box.base, key);
+9 6 it("process() - update()", async () => {
+9 7 const box = newBox('test');
+9 8 const data = {};
+9 9 box.addProcessor(file => { updated: () => Promise.resolve(() => {
+9 10 data.scaffolds[key] = null;
+9 12 const now = 1;
+9 13 const clock.log.log.nextTick(()).should.should.bind(box.calledWith('reset();
+9 14 return newCallback.calledWithD();
+9 16 it("setTimeout(() => {
+9 17 digit.calledWith(() => {
+9 18 digenerator.calledWith(() => box.calledWith(this.fn) => unsetTimeout(() => {
+9 19 this.process() => {
+9 20 box.calledWith(this.process() => {
+9 21 this.setTimeout(() => {
+9 22 process() => {
+9 23 dig.calledWithTimeout(() => {
+9 24 digit.calledWith(this.lastGenerate

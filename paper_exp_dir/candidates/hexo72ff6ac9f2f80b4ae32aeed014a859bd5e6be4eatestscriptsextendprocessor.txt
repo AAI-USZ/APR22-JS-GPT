@@ -1,0 +1,223 @@
+Min editdistance: 15.00
+Closest candidate: 9 5 var util = require('hexo-util');
+0 1 var fs = require('hexo-fs');
+0 2 var pathFn = require('path');
+0 3 var Promise = require('bluebird');
+0 4 var yaml = require('js-yaml');
+0 5 describe('File', () => {
+0 6 var Hexo = require('../../../lib/hexo');
+0 7 var hexo = new Hexo(__dirname);
+0 8 var Box = require('../../../lib/box');
+0 9 var box = new Box(hexo, pathFn.join(hexo.base_dir, 'file_test'));
+0 10 var File = box.File;
+0 11 var body = [
+0 12 'name:',
+0 13 '  first: John',
+0 14 '  last: Doe',
+0 15 '',
+0 16 'age: 23',
+0 18 'list:',
+0 19 '- Apple',
+0 20 '- Banana'
+0 21 ].join('\
+0 22 ');
+0 23 var obj = yaml.load(body);
+0 24 var path = 'test.yml';
+0 25 var file = new File({
+0 26 source: pathFn.join(box.base, path),
+0 27 path: path,
+0 28 type: 'create',
+0 29 params: {foo: 'bar'},
+0 30 content: new Buffer(body)
+0 31 });
+0 32 before(() => Promise.all([
+0 33 fs.mkdirs(box.base),
+0 34 fs.writeFile(file.source, body)
+0 35 ]).spread((doc, content) => {
+0 36 var result = [
+0 37 'foo:bar',
+0 38 '---',
+0 39 'some content',
+0 40 '---'
+0 43 return fs.writeFile(file.source, content).then(() => Promise.all([
+0 44 fs.readFile(file.source),
+0 45 fs.readFile(file.path)
+0 46 ])).spread((file, data) => {
+0 47 var content = yaml.parse(content);
+0 48 data.content.should.eql({
+0 49 foo: 'bar',
+0 50 var split = file.split('---');
+0 51 for (var i = 0, len = split.length; i < len; i++) {
+0 52 var item = split[i];
+0 53 if (item.substring(0, 1) === '_content') {
+0 54 result.push(item);
+0 55 }
+0 57 return result;
+0 58 }).then(() => fs.readFile(file.source)).then(result => {
+0 59 result.should.eql(content);
+0 60 return Promise.all([
+0 61 fs.unlink(file.source),
+0 62 fs.rmdir(box.base)
+0 63 ]);
+0 65 it('read all file', () => {
+0 66 var content = [
+0 69 '{{ test }}'
+0 73 fs.writeFile(file.source, content),
+0 75 ]).spread((file, data) => {
+0 77 'foo: bar',
+0 81 return fs.writeFile(file.source, content).then(() => {
+0 83 fs.stat(file.source),
+0 86 }).spread((stats) => {
+0 88 content.should.should.should.not.exist;
+0 89 content.should.toString()
+0 90 .not.exist;
+0 91 return content.should.regenerror.should.return content.should.toString()
+0 92 .toString()
+0 93 .eql(content.replace('foo);
+0 94 return content.toLowerCase()
+0 95 .should.should.replace(/\
+0 96 .toLowerCase());
+0 97 return 'bar').should.should.replace(/\
+0 98 .replace(/\
+0 103 it('save database.should.should.should.getById(data);
+0 105 it('list().should.skip('_data', () => {
+0 106 return db.db.all());
+0 108 });'
+
+1 4 describe('data', function(){
+1 6 var baseDir = pathFn.join(__dirname, 'data_test');
+1 7 var hexo = new Hexo(baseDir);
+1 8 var processor = require('../../../lib/plugins/processor/data')(hexo);
+1 9 var process = Promise.method(processor.process).bind(hexo);
+1 10 var source = hexo.source;"
+
+2 4 var defaultConfig = require('../../../lib/hexo/default_config');
+2 5 var dateFormat = 'YYYY-MM-DD HH:mm:ss';
+2 6 var newPostName = defaultConfig.new_post_name;
+2 7 describe('post', function(){
+2 9 var baseDir = pathFn.join(__dirname, 'post_test');
+2 11 var post = require('../../../lib/plugins/processor/post')(hexo);
+2 12 var process = Promise.method(post.process).bind(hexo);
+3 1 describe('Excerpt', function(){
+3 3 var hexo = new Hexo();
+3 4 var excerpt = require('../../../lib/plugins/filter/after_post_render/excerpt').bind(hexo);
+3 5 it('without <!-- more -->', function(){
+3 7 'foo',"
+
+4 4 var _ = require('lodash');
+4 5 var rewire = require('rewire');
+4 6 var sinon = require('sinon');
+4 7 describe('config', () => {
+4 9 var hexo = new Hexo(pathFn.join(__dirname, 'config_test'), {silent: true});
+4 10 var config = require('../../../lib/plugins/console/config').bind(hexo);
+4 11 var configModule = rewire('../../../lib/plugins/console/config');
+4 12 before(() => fs.mkdirs(hexo.base_dir).then(() => hexo.init()));
+4 13 beforeEach(() => fs.writeFile(hexo.config_path, ''));
+4 14 after(() => fs.rmdir(hexo.base_dir));
+4 15 it('read all config', () => {
+4 16 var spy = sinon.spy();
+4 17 return configModule.__with__({
+4 18 console: {
+4 19 log: spy
+4 21 })(() => configModule.call(hexo, {_: []})).then(() => {
+4 22 spy.args[0][0].should.eql(hexo.config);
+4 23 }));
+4 24 it('read config', () => {
+4 30 })(() => configModule.call(hexo, {_: ['title']})).then(() => {
+4 31 spy.args[0][0].should.eql(hexo.config.title);
+4 33 it('read nested config', () => {
+4 35 hexo.config.server = {
+4 36 port: 12345
+4 37 };
+4 42 })(() => configModule.call(hexo, {_: ['server.port']})).then(() => {
+4 43 spy.args[0][0].should.eql(hexo.config.server.port);
+4 44 }).finally(() => {
+4 45 delete hexo.config.server;
+4 68 return configModule.__with__with__({
+4 73 }).catch(() => {
+4 74 de.log.log.calledOnce.should.should.should.be.true;
+4 75 } finally.should.should.be.true;
+4 76 } finally.should.be.be.true;
+4 79 it('read().should.skip('read().skip('after_each').skip').forEach(() => write());
+4 80 it('after_each').forEach() => after_each).skip('at').forEach().should.save()').forEach(() => write(() => after_each(() => write(() => after_each(() => after_each(() => after_each(() => write(() => write(()));')));'));'));
+4 81 it('save().save('save()')).save()').forEach().should.should.skip('after_each(() => after_each()));
+4 82 it('save()').save('save()')).should.
+5 1 describe('Helper - is', function(){
+5 2 var is = require('../../../lib/plugins/helper/is'),
+5 3 config = hexo.config;
+5 4 it('is_current', function(){
+5 5 is.is_current.call({path: config.is_current, config: config}, 'foo').should.be.true;
+5 6 is.is_current.call({path: config.is_current, config: config}, 'foo/bar').should.be.true;
+5 7 is.is_current.call({path: config.is_current, config: config}, 'foo/baz').should.be.false;
+5 9 it('is_home', function(){
+5 10 var paginationDir = config.is_home;
+5 11 is.is_home.call({path: config.is_home);
+5 12 is.is_home.call({path: config.is_home, config: config}).should.be.true;
+5 32 is.is_home.call({path: config.is_home, config: config.is_home}).should.be.true;
+5 33 is.is_path.should.should.be.false;
+5 34 is.is.is_path.should.should.should.should.should.should.be.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.is.
+6 5 describe('deploy', () => {
+6 7 var hexo = new Hexo(pathFn.join(__dirname, 'deploy_test'), {silent: true});
+6 8 var deploy = require('../../../lib/plugins/console/deploy').bind(hexo);
+6 9 before(() => fs.mkdirs(hexo.public_dir).then(() => hexo.init()));
+6 10 beforeEach(() => {
+6 11 hexo.config.deploy = {type: 'foo'};
+6 12 hexo.extend.deployer.register('foo', () => {});
+6 15 it('single deploy setting', () => {
+6 16 hexo.config.deploy = {
+6 17 type: 'foo',
+6 18 foo: 'bar'
+6 20 var deployer = sinon.spy(args => {
+6 21 args.should.eql({
+6 23 foo: 'foo',
+6 24 bar: 'bar'
+6 27 const beforeListener = sinon.spy();
+6 28 const afterListener = sinon.spy();
+6 29 hexo.extend.filter.register('before_deploy', beforeListener);
+6 30 hexo.extend.filter.register('after_deploy', afterListener);
+6 32 return deploy({
+6 33 foo: 'foo'
+6 34 }).then(() => {
+6 35 deployer.calledOnce.should.be.true;
+6 36 beforeListener.calledOnce.should.be.true;
+6 37 afterListener.calledOnce.should.be.true;
+6 40 it('multiple deploy setting', () => {
+6 41 var deployer1 = sinon.spy(args => {
+6 45 test: true
+6 48 const deployer2 = sinon.spy(args => {
+6 50 type: 'bar',
+6 51 bar: 'bar',
+6 55 hexo.extend.filter.register('before_deploy', afterListener);
+6 61 deployer1.calledOnce.should.be.true;
+6 66 it('deployer not found');
+6 67 it('generate', () => fs.writeFile(pathFn.join(hexo.source_dir, 'test.txt'), 'test').then(() => deploy({generate()).then(()).then(() => {
+6 68 return deploy({watch: true}).then(()).then(() => {
+6 69 return Promise.delay.then(()).then(() => {
+6 70 return deploy({generate()).then(()).then(()).then(() => {
+6 71 return Promise.then(()).then(() => {
+6 72 return {
+6 73 list.delay.then(()).then(()).then(()).then(() => {
+6 75 list.delay.then(()).then(() => {
+6 76 hexo.dispose()).then(()).then(()).then(() => {
+6 77 hexo.dispose.dispose()).then(()).}).then(()).}).}).finally(()).finally(()).finally(() => {
+6 78 hexo.destroy()).then(()).then(() => fs.unlink()).then(()).then(() => {
+6 79 hexo.destroy()).
+7 6 var newPostName = defaultConfig.new_post_name;"
+
+8 4 var crypto = require('crypto');
+8 5 describe('i18n', () => {
+8 8 var processor = require('../../../lib/theme/processors/i18n');
+8 9 var process = Promise.method(processor.process.bind(hexo));
+8 10 var themeDir = pathFn.join(hexo.base_dir, 'themes', 'test');
+8 11 function newFile(options) {
+8 12 var path = options.path;"
+
+9 5 var util = require('hexo-util');
+9 6 var Pattern = util.Pattern;
+9 7 var testUtil = require('../../util');
+9 8 function checksum(content){
+9 9 var hash = crypto.createHash('sha1');
+9 10 hash.update(content);
+9 11 return hash.digest('hex');
+9 12 }"
+

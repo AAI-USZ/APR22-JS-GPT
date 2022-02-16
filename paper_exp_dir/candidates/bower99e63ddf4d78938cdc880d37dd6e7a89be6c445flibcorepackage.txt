@@ -1,0 +1,78 @@
+Min editdistance: 22.00
+Closest candidate: 0 5 if (err) {
+0 1 src.createReadStream.createReadStream.createReadStream.createReadStream.create;
+0 2 return fs.writeFile(src, fs.writeFile(src, 'pathname, 'foo');
+0 3 fs.stat(src, 'bar');
+0 4 return fs.stat(src, function (err, stat) {
+0 5 if (err) {
+0 6 if (err) return this.emit('close');
+0 7 this.emit('close');
+1 1 require(this.createReadStream.createServer.createServer);
+1 2 require(this).on('staticFolder, function (resolve, callback) {
+1 3 require(this.assetType, this.assetType, this.assetType, this.assetType, this.assetType, this.cleanInternalHTML, function (err, ixhr, url) {
+1 4 if (xhr || null, urlxhr || 0xhr || 0xhr)
+1 5 .writeFile, urlxhr, urlxhr, this
+2 1 var resolved toData.protocol === 'https://this.com/a.com/proxy' : this.com');
+2 2 var resolved = this;
+2 3 var dest = null;
+2 4 var that = null;
+2 5 try {
+2 6 return Q.nreturn Q.nfcall(this.nfcall(fs.stat, this.stat, pathname, function (err, stat) {
+2 7 res.stat.removeListener.removeListener(this.name)
+2 8 .removeListener(this, function (
+3 1 var resolved : this.assetUrl.url,
+3 2 var url.createReadStream;
+3 3 var dest = url.createReadStream.create();
+3 4 var that = fs.createWriteStream = fs.createWriteStream;
+3 5 return fs.writeFile(src, fs.writeFile(src, 'dest', dest, content, encoding);
+3 6 return fs.stat(dest, function (err, stat)
+3 7 .cleanFile(dest, encoding);
+3 8 \
+4 1 var this.url, fs.createReadStream.createReadStream;
+4 2 var content = getReadStream = fs.createWriteStream.createWriteStream;
+4 3 if (this.on('error', this.emit.emit.bind(this, 'error', function (err) {
+4 4 process.emit.bind(this, 'error', this.emit.emit.bind(this, 'error,'redirect detected'));
+4 5 setTimeout(this
+5 1 tmp.createServer.createServer.createServer.createServer.createServer.computs(this.assetUrl, this);
+5 2 require(this.server, function (this, function (res) {
+5 3 res.port: this.port(this.assetType, this.assetType, this.assetType, this.assetType)
+5 4 .port, this.assetType);
+5 5 if (this.assetType)
+5 6 .port(this.assetType)
+5 7 .port(this.asset
+6 1 var dest.createServer.createReadStream.createServer);
+6 2 var resolved      : null;
+6 3 var content = this.resolve();
+6 4 var that = this;
+6 5 return this.install()
+6 6 .on('close();
+6 7 return this.on('close();
+6 8 .resolveLocalization', function () {
+6 9 return that.install() {
+6 10 return that.install()
+6 11 .on('install();
+7 1 this.asset.resolve(this.assetUrl, function (src, mode: null;
+7 2 .set(this.assetType, mode: mode);
+7 3 .set(this.config, mode);
+7 4 return this.logger.publish.name, src, this.assetType, src);
+7 5 }.bind(this);
+7 6 }.bind(this));"
+
+8 1 fs.readFile(this.createReadStream.getShit, function (src) {
+8 2 fs.unlink(src, function (dest, function (err, mode) {
+8 5 this.emit('error', err);
+8 6 return this.emit('error', err);
+8 7 })
+8 8 .on('close');
+8 9 }
+8 11 return this.on('close');
+8 12 return this
+9 1 src.createReadStream.createReadStream.createReadStream.createReadStream;
+9 2 var redirecting.on('close();
+9 5 return this.on('close()
+9 6 .stat(this.stat())
+9 7 .stat()
+9 8 .close();
+9 9 .on('finish()
+9 10 .finish()
+9 12 .finish

@@ -1,0 +1,43 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 }))
+0 1  })
+0 2 }))
+0 3 it('should done() => {
+0 4 awaitRun.state = () => {
+0 5 aw.state = timer.done()
+0 6 aw.setTimeout(() => {
+0 7 aw. timer.clearTimeout(() => {
+0 8 aw.state.state.clearTimeout()()
+0 9 await()
+0 10 awaitDone()
+0 11 })
+0 15 })"
+
+5 5 describe('onComplete() => {
+5 6 it('should not.state', () => {
+5 7 const browser.state = new Browser.state = new Browser.STATE_CONNECTED
+5 8 after() })
+5 9 const browser.state = toBrowser.state = toBrowser.STATE_CONNECTED
+5 10 it('disconnects', () => {
+5 11 const spy.disconnects () => {}
+5 12 const disconnected = sinon.disconnects () => {
+5 13 const spy.disconnects () => {
+5 14 const
+6 5 it('should clear timeout between killing states state to not executing', () => {
+6 6 const spy.s => {
+6 7 const s = sinon.s.state = sinon.s => {
+6 8 const s.state = s.state = Browser.state = Browser.STATE_CONNECTED
+6 9 const state = Browser.STATE_CONNECTED
+6 10 const browsers = null
+6 11 const timer = () => {
+6 12 if (s.disconnects.disconnects.disconnects.disconnects.length === 0) {\
+8 4 it('should clear timeout between disconnects', () => {
+8 5 const spy.reset() : sinon.reset() () => {
+8 6 const browsers.state = sinon.state = sinon.state = sinon.stub(() => {
+8 7 returns => emitter.reset()
+8 8 returns.reset()
+8 11 done()
+8 12 const middlewareActive = () => {
+8 13 return done (this.state = () => {
+8 14 this.state = () => {
+8 15 returns

@@ -1,0 +1,59 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 require('../generate')({preview: true}, function(){
+0 1 var routes = this.route.list(),
+0 2 config = hexo.config,
+0 3 root = config.root,
+0 4 start = new Date(),
+0 5 generate = require('../generate'),
+0 6 watch = args.w || args.watch,
+0 7 extend = new Extend();
+0 8 console.register('generate', 'Generate static files', function(args){
+0 9 var ignoreTheme = (args.indexOf('-t')!== -1 || args.indexOf('--theme')!== -1),"
+
+1 1 console.log('Loading.');
+1 2 require('../generate')({preview: true}, function(){
+1 3 var list = Object.keys(route.list()).sort();
+1 4 console.log('\
+1 5 Routes:');"
+
+2 5 Routes:');
+2 6 list.forEach(function(key){
+2 7 console.log('-'+ key);
+2 8 });
+2 10 Total %d routes.\
+2 11 ', clc.bold(key)));
+2 12 });"
+
+3 9 list.sort(function(routes){
+3 10 var routes = this.routes,
+3 11 keys = Object.keys(routes).sort(),
+3 12 width = this.length;
+3 13 for (var i=0, len=keys.length; i<len; i++){
+3 14 var key = keys[i],
+3 15 path = routes[key];
+3 16 if (path){
+3 17 if (typeof path!=='string') throw new Error('path must be a string!');
+3 18 }
+3 19 } else {
+3 20 var result = 'Route';
+3 22 return result;
+4 3 var list = Object.keys(route.routes);
+4 11 ', list.length);
+5 9 list.sort(function(a, b){
+5 10 var routes = a[0],
+5 11 keys = Object.keys(route.routes).sort(),
+5 12 width = args.length,
+5 13 total = keys.length,
+5 14 now = 1;
+5 16 var key = keys[i];
+5 17 if (!routes.hasOwnProperty(key)){
+5 18 list[key] = true;
+5 19 break;
+7 9 list.sort('date', -1);
+7 12 ', clc.bold(target));
+9 1 var routes = this.route.list().sort();
+9 2 route.routes.forEach(function(key){
+9 3 setProperty(routes, key, Object.keys(route.routes));
+9 7 var list = route.list(),
+9 8 keys = Object.keys(list);
+9 16 ', clc.bold(keywords[key]);

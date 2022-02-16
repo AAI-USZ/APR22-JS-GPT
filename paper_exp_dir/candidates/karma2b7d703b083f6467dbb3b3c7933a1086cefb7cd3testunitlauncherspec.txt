@@ -1,0 +1,95 @@
+Min editdistance: 13.00
+Closest candidate: 0 13 this.id = id
+0 1 baseBrowserDecorator(this)
+0 2 FakeBrowser._instances.push(this)
+0 3 sinon.stub(this,'start', () => {
+0 4 this.state = this.STATE_BEING_CAPTURED
+0 5 return this.state
+0 6 })
+0 7 stubPromise(this, 'forceKill')
+0 8 sinon.stub(this,'restart')
+0 9 }
+0 11 class ScriptBrowser {
+0 12 constructor (id, name, baseBrowserDecorator) {
+0 13 this.id = id
+0 14 this.name = name
+0 16 ScriptBrowser._instances.push(this)
+0 24 describe('launcher', () => {
+0 25 var lastGeneratedId = null
+0 26 launcher.Launcher.generateId = () => {
+0 27 return ++lastGeneratedId
+0 29 before(() => {
+0 30 Promise.setScheduler((fn) => fn())
+0 32 after(() => {
+0 33 Promise.setScheduler((fn) => process.nextTick(fn))
+0 35 beforeEach(() => {
+0 36 lastGeneratedId = 0
+0 37 FakeBrowser._instances = []
+0 38 ScriptBrowser._instances = []
+0 40 describe('Launcher', () => {
+0 41 var emitter
+0 42 var server
+0 43 var l = emitter = server = server = null
+0 45 emitter = new events.EventEmitter()
+0 46 server = {'loadErrors': []}
+0 47 var injector = new di.Injector([{
+0 48 'launcher:Fake': ['type', FakeBrowser],
+0 49 'launcher:Script': ['type', ScriptBrowser],"
+
+1 11 function ScriptBrowser (id, name, baseBrowserDecorator) {
+1 41 var l = emitter = server = null
+1 46 'launcher:Script': ['type', ScriptBrowser],
+1 47 'emitter': ['value', emitter],
+1 48 'config': ['value', {captureTimeout: 0}],
+1 49 'timer': ['factory', function () {return emitter.emit('browsers_change', {injector: ['type', FakeBrowser]}])
+1 50 }])
+1 51 l = new launcher.Launcher()
+1 53 describe('launch', () => {
+1 54 it('should inject and start all browsers', () => {
+1 55 l.launch(['Fake'], 'http:', 'localhost', 1234, '/root/', 1)
+1 56 var browser = FakeBrowser._instances.pop()
+1 57 expect(browser.start).to.have.been.calledWith('http://localhost:1234/root/')
+1 58 expect(browser.id).to.equal(lastGeneratedId)
+1 59 expect(1).to.equal(lastGeneratedId)
+1 62 describe('noimer', () => {
+1 63 it('should injector.launch(['Fake')
+1 66 it('should injector.launch.start = no()
+1 67 it('should injector. but injector.injector.injector. but already injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector.injector()
+1 70 it('injector', () => {
+1 71 var already = injector = launcher.start
+1 72 var injector = injector = injector. injector.createChild([{
+1 73 'launcher:Script', ['type', ['type', ['value', ['value', emitter],
+1 74 'config', emitter, injector]
+1 76 \
+4 28 Promise.setScheduler(fn => fn())
+4 31 Promise.setScheduler(fn => process.nextTick(fn))
+5 48 'launcher:Fake': ['type', FakeBrowser],"
+
+6 11 }() => {
+6 12 this.state = this.STATE_CONNECTED
+6 16 this.emit('start')
+6 19 this.state = null
+6 21 describe('createMockTimer', () => {
+6 22 it('creates a mockTimer timer timer that bootstraps a file deep down the middleware chain', () => {
+6 23 this.timer.create({ timer: () => {
+6 24 return Math.floor((Math.random() * 100) | 0
+6 26 var mockTimer = createMockTimer()
+6 27 var fsMock = fs.createWriteStream(path.join(__dirname, '../../static/karma.js'), [], emitter, MockSocket)
+6 28 var staticFolder = path.join(this.id, '../../static/context.html'))
+6 29 var adapterFolder = path.join(base, './karma-' + emitter, '../../static/karma.js')
+6 30 var executor = (cmd, args, failMsg) => {
+6 31 var process = new EventEmitter()
+6 32 var stubPromise = (cmd, args, failMsg) => {
+6 33 var promise = new Promise((resolve) => {
+6 34 stubPromise.setScheduler((fn) => fn())
+6 36 sinon.stub(timer, () => {
+6 37 if (stubPromise.called) {
+6 38 return process.nextTick(fn)
+6 42 describe('_normalizeCommand', () => {
+6 43 it('return {'
+
+7 43 var l = emitter = server = server = emitter = server
+7 44 varLauncher = function (id, emitter) {
+7 45 var self = this
+8 10 }"
+

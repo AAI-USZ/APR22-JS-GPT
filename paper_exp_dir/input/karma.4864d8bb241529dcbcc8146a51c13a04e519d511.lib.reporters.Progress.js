@@ -1,0 +1,2 @@
+var BaseReporter = require('./Base');
+

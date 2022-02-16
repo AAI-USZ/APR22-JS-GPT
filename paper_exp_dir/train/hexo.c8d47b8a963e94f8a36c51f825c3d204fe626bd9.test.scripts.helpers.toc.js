@@ -1,0 +1,29 @@
+var should = require('chai').should();
+var _ = require('lodash');
+
+function ifTrue(cond, yes, no) {
+return cond ? yes : no;
+}
+
+describe('toc', () => {
+var toc = require('../../../lib/plugins/helper/toc');
+
+var html = [
+'<h1 id="title_1">Title 1</h1>',
+'<h2 id="title_1_1">Title 1.1</h2>',
+'<h3 id="title_1_1_1">Title 1.1.1</h3>',
+'<h2 id="title_1_2">Title 1.2</h2>',
+'<h2 id="title_1_3">Title 1.3</h2>',
+'<h3 id="title_1_3_1">Title 1.3.1</h3>',
+'<h1 id="title_2">Title 2</h1>',
+'<h2 id="title_2_1">Title 2.1</h2>',
+'<h1 id="title_3">Title should escape &amp;, &lt;, &#39;, and &quot;</h1>',
+'<h1 id="title_4"><a name="chapter1">Chapter 1 should be printed to toc</a></h1>'
+].join('');
+
+var genResult = options => {
+options = _.assign({
+class: 'toc',
+list_number: true,
+max_depth: 6
+}, options);

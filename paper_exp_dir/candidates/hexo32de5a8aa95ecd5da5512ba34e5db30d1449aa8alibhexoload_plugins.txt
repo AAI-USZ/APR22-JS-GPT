@@ -1,0 +1,220 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Promise = require('bluebird');
+0 1 var Promise = require('bluebird');
+0 2 var vm = require('vm');
+0 3 var Module = require('module');
+0 4 var chalk = require('chalk');
+0 5 var pre = '(function(exports, require, module, __filename, __dirname, hexo){';
+0 6 var post = '});';
+0 7 module.exports = function(ctx){
+0 8 if (!ctx.env.init || ctx.env.safe) return;
+0 9 return Promise.all([
+0 10 loadModules(ctx),"
+
+1 4 if (!ctx.env.init || ctx.env.safe) return Promise.resolve();
+1 5 return loadModules(ctx).then(function(){
+1 6 return loadScripts(ctx);
+1 7 }).then(function(){
+1 9 loadScripts(ctx),"
+
+2 1 var tildify = require('tildify');
+2 3 var prettyHrtime = require('pretty-hrtime');
+2 5 var _ = require('lodash');
+2 6 function renderConsole(args){
+2 7 var force = args.f || args.force;
+2 8 var baseDir = this.base_dir;
+2 9 var render = this.render;
+2 10 var log = this.log;
+2 11 var self = this;
+2 12 var start = process.hrtime();
+2 13 var Cache = this.model('Cache');
+2 14 function generateFile(path){
+2 15 var dest = pathFn.join(baseDir, path);
+2 16 return fs.exists(dest).then(function(exist){
+2 17 if (exist){
+2 18 file.empty(dest, callback);
+2 19 } else {
+2 20 file.write(dest, content, function(){
+2 21 next(null, true);
+2 22 });
+2 23 }
+2 26 function deleteFile(dest){"
+
+6 6 var vmPath = require('path');
+6 7 var pkg = require('../../package.json');
+6 8 var logger = require('hexo-log');
+6 9 var extend = require('../extend');
+6 10 var Render = require('./render');
+6 11 var registerModels = require('./register_models');
+6 12 var Post = require('./post');
+6 13 var Scaffold = require('./scaffold');
+6 14 var Source = require('./source');
+6 15 var Router = require('./router');
+6 16 var Theme = require('../theme');
+6 17 var defaultConfig = require('./default_config');
+6 18 var loadDatabase = require('./load_database');
+6 19 var libDir = pathFn.dirname(__dirname);
+6 20 var sep = pathFn.sep;
+6 21 var dbVersion = 1;
+6 22 var libDir = dirname(__dirname);
+6 23 var dbOptions = {
+6 24 _: process.env.NODE_ENV || 'development',
+6 25 _: 'test',
+6 26 _: 'blog',
+6 27 _: 'dev',
+6 28 layout: 'layout',
+6 29 _: 'pattern',
+6 30 };
+6 31 var mout = new Theme(ctx);
+6 32 var Locals = function(path, locals){
+6 33 this.path = path;
+6 34 this.is_post = true;
+6 35 this.is_archive = false;
+6 36 this.__defineGetter__('parent', function(){
+6 37 return parent;
+6 42 this.engine = new Router();
+6 44 this.locals = _.extend({
+6 45 posts: this.site.posts,
+6 46 pages: this.site.pages
+6 47 }, locals);
+6 48 this.config = _.clone(defaultConfig);
+6 49 this.log.debug('Loading.');
+6 50 this.emit('generateBefore');
+6 51 this.load = function(path){
+6 52 var db = self.database;
+6 53 var baseDir = ctx.base_dir;
+6 54 var logPath = pathFn.join(baseDir, 'db.json');
+6 55 return fs.exists(dbPath).then(function(exist){
+6 56 if (!exist) return;
+6 57 log.debug('Loading.');
+6 58 return db.load(dbPath);
+6 60 ctx.emit('generateAfter');
+6 63 var findExcludedFile = function(path){
+6 64 var extname = pathFn.extname(path);
+6 65 var dirname = pathFn.dirname(path);
+6 66 var basename = pathFn.basename(path, extname);
+6 67 return fs.exists(dirname).then(function(exist){
+6 69 return fs.readdir(dirname, function(err, files){
+6 70 if (err) return ctx.log.destroy(err);
+6 74 var Post.create = function(post){
+6 75 this.path = post;
+6 76 this.source = post;
+6 78 this.content = this.permalink = this.permalink;
+6 79 this.site.path = config.permalink = config.root + this.root;
+6 80 this.asset_dir = this.asset_dir;
+6 81 this.asset_dir = path;
+6 82 this.root = path;
+6 83 return this.permalink = config.root;
+6 85 createPost.readFile = function(file = config.new_post_name, function(){
+6 86 var new_path = config.path = config.permalink;
+6 87 var new_permalink = config.permalink = config.permalink;
+6 88 var path = config.permalink = this.permalink;
+6 89 \
+8 3 function assetGenerator(locals){
+8 5 function process(name){
+8 6 return Promise.filter(self.model(name).toArray(), function(asset){
+8 7 return fs.exists(asset.source).then(function(exist){
+8 8 if (exist) return exist;
+8 9 return asset.remove().thenReturn(exist);
+8 11 }).map(function(asset){
+8 12 var source = asset.source;
+8 13 var path = asset.path;
+8 14 var data = self.render.bind(self);
+8 15 return fs.exists(path).then(function(exist){
+8 17 return self.update(data);
+8 19 self.emit('asset');
+8 21 self.removeListener.call(self, null);
+8 26 process('Asset'),
+8 27 process('PostAsset')
+8 28 ]).then(function(){
+8 29 return self.exec('asset');
+8 31 return self.process('PostAsset');
+8 34 function prepareAssetFolder(path){
+8 35 var dest = pathFn.join(hexo.base_dir, asset.source);
+8 36 var id = 'themes/' + path;
+8 37 var asset;
+8 39 if (!exist) return [];
+8 40 return fs.readdir(dest).then(function(files){
+8 41 var PostAsset = hexo.model('PostAsset');
+8 42 var Post = hexo.model('Post');
+8 44 var Asset = hexo.model('Asset');
+8 45 var doc = PostAsset.findById(id);
+8 46 if (file.type ==='skip' && doc){
+8 47 return;
+8 49 if (file.type === 'delete'){
+8 50 if (doc){
+8 51 return doc.remove();
+8 57 fs.unlink(dest),
+8 58 fs.rmdir(default_layout),
+8 59 fs.unlink(pathFn.join(post.base, 'db.json')),
+8 61 fs.rmdir(pathFn.join(post.base, '_posts', 'Hello-World.md')
+8 62 ]);
+8 65 function removeAssetFolder(path){
+8 68 var Post = hexo.model('PostAsset');
+8 71 return fs.unlink(dest).then(function(){
+8 72 return fs.rmdir(post.base);
+8 78 locals.asset = locals;
+8 79 .assetGenerator.assetRender = self.asset
+8 80 .asset
+8 81 .asset.modified = _.modified = _.modified;
+8 82 if (this.post.paths._id!== null) return self.endsWith(this._id)
+8 83 .path);
+8 84 ._id = this._id;
+8 86 return self.post.paths = this._id = this._id;
+8 88 ._id = this._id.paths.substring = path.substring(0, this.id.length);
+8 89 return self.site.site_dir = this._id;
+8 90 .site = this._id;
+8 92 return self.site = this
+9 16 var Locals = require('./locals');
+9 22 function Hexo(base, args) {
+9 23 base = base || process.cwd();
+9 24 args = args || {};
+9 25 EventEmitter.call(this);
+9 26 this.base_dir = base + sep;
+9 27 this.public_dir = pathFn.join(base, 'public') + sep;
+9 28 this.source_dir = pathFn.join(base,'source') + sep;
+9 29 this.plugin_dir = pathFn.join(base, 'node_modules') + sep;
+9 30 this.script_dir = pathFn.join(base,'scripts') + sep;
+9 31 this.scaffold_dir = pathFn.join(base,'scaffolds') + sep;
+9 32 this.theme_dir = pathFn.join(base, 'themes', defaultConfig.theme) + sep;
+9 33 this.theme_script_dir = pathFn.join(this.theme_dir,'scripts') + sep;
+9 34 this.env = {
+9 35 args: args,
+9 36 debug: Boolean(args.debug),
+9 37 safe: Boolean(args.safe),
+9 38 silent: Boolean(args.silent),
+9 39 env: process.env.NODE_ENV || 'development',
+9 40 version: pkg.version,
+9 41 init: false
+9 43 this.config_path = args.config? pathFn.resolve(base, args.config)
+9 44 : pathFn.join(base, '_config.yml');
+9 45 this.extend = {
+9 46 console: new extend.Console(),
+9 47 deployer: new extend.Deployer(),
+9 48 filter: new extend.Filter(),
+9 49 generator: new extend.Generator(),
+9 50 helper: new extend.Helper(),
+9 51 migrator: new extend.Migrator(),
+9 52 processor: new extend.Processor(),
+9 53 renderer: new extend.Renderer(),
+9 54 tag: new extend.Tag()
+9 57 this.log = createLogger(this.env);
+9 58 this.render = new Render(this);
+9 59 this.route = new Router();
+9 60 this.post = new Post(this);
+9 61 this.scaffold = new Scaffold(this);
+9 62 this._db.source = new Database({
+9 65 var db = new Scaffold(this);
+9 66 .filter.route.skip = function(function(){
+9 67 return db(err, callback){
+9 68 return db.findRaw(this.content){
+9 69 return!~this.content == null;
+9 71 if (this.content == null) return callback.nextTick(this.engines.middleware) ||!== undefined;
+9 72 if (!this.middleware.middleware.length) return false;
+9 73 this.middleware.forEach(function (fn){
+9 74 db.handle_;
+9 75 return db.handle_;
+9 76 })
+9 77 .handle_;
+9 78 .use(this, this);
+9 79 if (

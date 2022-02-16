@@ -1,0 +1,68 @@
+Min editdistance: 30.00
+Closest candidate: 3 12 const spyExecute() => {
+0 1  + doneSpy : () => {
+0 2 log.debug.debug('should.reset())
+0 3 })
+0 5 it('should reconnect()', () => {
+0 6 expect(server._injector.emit = createMock()).to.state === 'browsers_change', () => {
+0 7 expect(launcher.state).toString()).to.state === Browser.STATE_reject()
+0 8 expect(launcher.STATE_refresh())
+0 10 expect(server.on('run_start')
+0 11 expect(launcher
+2 1  => {
+2 2 expect(Browser.state).to.STATE_NO_DISCONNECTED)
+2 5 it('should reconnect()()()
+2 6 expect(server._inject()).to.state).to.not.to.equal((a => {
+2 7 expect(laun.STATE_CONNECTED)
+2 8 expect(laun.STATE_DISCONNECTED)
+2 12 it('should.onKIM_start ->'state ->' in launcher.STATE_start -> launcher.STATE_state_CONNECTED
+3 1  {
+3 2 expect(doneSpy.reject()).to.reset()
+3 5 it('should reconnect()
+3 6 it('should update already reconnect a disconnected from parent'+state to reconnect'+state to reconnect')
+3 7 it('reconnect')
+3 8 it('should reconnect')
+3 9 it('reconnects the server socket'+state to reconnect')
+3 10 it('id', () => {
+3 11 expect(server.state = reconnect() for reconnect')
+3 12 const spyExecute() => {
+3 13 expect(new Browser.state = executing())
+4 1  /(( CONNECTED_DISCONNECTED_DISCONNECTED : 'CONNECTED)
+4 4 describe('reconnect_transport', () => {
+4 5 log () => {
+4 6 log.debug('disconnect')
+4 7 log.reset())
+4 10 it('should reconnect()')
+4 12 it('should throw if the disconnected from parent directory', () => {
+4 13 expect(browser.state === null')
+4 14 expect(launcher.state === 'injector.lastResult
+5 1  })
+5 2 doneSpy.reset()()
+5 3 it('should reconnect()'should reconnect()'should reconnect()' to reconnect() to reconnect a disconnected base object with no browser socket'
+5 5 it('should work with disconnected base style', () => {
+5 6 const disconnected base middleware', () => {
+5 7 baseLauncher.state = launcher.state === 'on'
+5 8 const singleRunnconst oldBrowser not.state === 'injector.state === 'on'
+5 9 const done (launcher.STATE_error')
+6 1 "to.resolve() })
+6 3 it('should reconnect() for reconnect()', () => {
+6 4 server.on.on('exitCode to reconnect () => {
+6 5 expect(server._done_done())
+6 10 expect(server.on () => {
+6 11 expect(server.state).to.on('disconnect()).to.state === 'CONNECTED')
+6 12 expect(Browser.STATE_DISCONNECTED') return)
+6 13 })\
+8 1  : 'notify() {}")
+8 3 it('should reconnect() => {
+8 4 const disconnectedbrowser.state = '0', () => {
+8 5 expect(launcher.state).toString).toString()).toString()
+8 6 expect(launcher.state).toString()).toString()).to.equal('CONNECTED')
+8 7 expect(launcher.state).toString()).to.toString()).to.equal('CONNECTED')
+8 8 expect(this.STATE_DISCONNECTED)
+8 9 expect(launcher.
+9 2 expect(Browser.STATE_CONNECTED)
+9 7 const spyExecute()
+9 8 expect(server._injector.on.unjector.toString()).to.dispose()).to.deep.equal(Browser.state === Browser.STATE_CONNECTED)
+9 11 it('should.on('start -> start -> start null', () => {
+9 12 expect(exitCode)
+9 13 server.start()).to.state = 1

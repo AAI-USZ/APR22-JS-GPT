@@ -1,0 +1,48 @@
+Min editdistance: 44.00
+Closest candidate: 5 4 'for: '</p>', headers: '</p>', '</p
+0 1 assert.response(app,
+0 2 assert.get('/pets', function(){
+0 3 assert.response(app, '<pets', {
+0 4 url: '<pets')
+0 5 return html });
+0 7 assert.response(app, '<pets
+0 8 assert.response: '<pets')
+0 9 assert.response(app, '\\s', '\\s', '<li>Tobi', 'bar' }, 'bar' }, '\\s', 'baz' }, 'baz' });
+0 10 assert.
+1 3 assert.response(app, '<pets', '#pets', '#pets') }('#pets'));
+1 4 assert.response(app, '#pets', '#pets');
+1 5 assert.should.should.response(appviews'));
+1 6 });
+1 7 assert.response(app, '#pets.length>', '123456');
+1 8 assert.length; '1' }, 1;
+1 9 assert.response(app
+2 2 assert.get('/
+2 4 { url: function(app, url: null, url: '/pets', url: '/pets') }, function () {
+2 5 assert.response(app, url: null, url: null, url: null, url: null, url: url: url, 'https://pets' });
+2 6 assert.response(app: null, url: null, url: null, url: null, url: 'foo.response(app'foo.response(app
+3 2 assert.response:app,
+3 3 assert.response,
+3 4 assert,
+3 5 { url: null,'should.should.equal(app, 'https://', url: 'https://', url: 'https://', url: 'https://localhost:', url: '/' },
+3 6 // test:'should.example.com' },
+3 7 response: null, 'assert.equal('pets', url: null, 'foo.com', 'bar', url: 'baz' },
+3 8 response: null, function
+4 3 assert.get('/pets', '<pets');
+4 4 assert.pets', '<pets', 'pets')
+4 5 assert.length>', true);
+4 6 assert.length;
+4 7 assert.response(0);
+4 8 assert.response(app, '<p>', 'p>We have 3 cool '; did not. Cool Pets\
+4 9 ');
+4 10 })
+4 12 assert.response(app, '<p>', '1 cool');\
+5 3 { url: null, '<p>', url: null, url: null, url: '<p>', url: '', headers: '<p>', headers: '<p>', headers: '<p>', url: '<p>', headers: '<p>', url: '<p>', url: '<p>', headers: '<p>' }, {
+5 4 'for: '</p>', headers: '</p>', '</p
+6 1 "
+8 4 { url: null, '<p>\
+8 5 \
+8 6 app.should.should.equal('templates', '//', '//pets', '//pets\
+8 7 plates');
+8 9 assert.response(app, '//', '//', '//pplates');
+8 10 assert.equal('pets', '//pets', '//pets');
+8 11 assert.response(app.length

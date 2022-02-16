@@ -1,0 +1,61 @@
+Min editdistance: 16.00
+Closest candidate: 4 16 var self = this
+0 1 configure(function(){
+0 2 use(MethodOverride)
+0 3 use(ContentLength)
+0 4 use(CommonLogger)
+0 5 use(Cookie)
+0 6 use(Session)
+0 7 use(Flash)
+0 8 set('root', __dirname)
+0 9 })
+0 10 get('/', function(){
+0 11 this.redirect('/upload')
+0 13 get('/upload', function(){
+0 14 this.render('upload.haml.html', {
+0 15 locals: {
+0 16 flashes: this.flash('info')
+0 17 }
+0 20 post('/upload', function(){
+0 21 this.param('images').each(function(image){
+0 22 puts(image.filename +'->'+ image.tempfile)
+0 23 this.flash('info', 'Uploaded'+ image.filename)
+0 24 }, this)
+0 27 get('/public/*', function(file){
+0 28 this.sendfile(__dirname + '/public/' + file)
+0 30 get('/*.css', function(file){
+0 31 this.render(file + '.sass.css', { layout: 'layouts/styles/css' })
+0 33 run()"
+
+1 11 this.render('upload.haml.html')
+1 14 $(this.param('images')).each(function(image){
+1 15 puts('uploaded'+ image.filename +'to'+ image.tempfile)
+1 23 this.render(file + '.sass.css', { layout: false })
+2 5 set('root', dirname(__filename))
+2 6 enable('helpful 404')
+2 7 enable('show exceptions')
+2 8 enable('cache views')
+2 10 get('/hello', function(){
+2 11 contentType('html')
+2 12 return '<h1>World<h1>'
+2 14 get('/user/:id?', function(id) {
+2 15 render('user.haml.html', {
+2 17 name: id? 'User'+ id : 'You'
+2 21 post('/user/:id?', function(id, user) {
+2 24 name: id? 'User'+ id +': 'You'
+2 27 run()'
+
+4 1 use(require('express/plugins/processor'))
+4 2 use(require('express/plugins/renderer'))
+4 3 use(require('express/plugins/tag'))
+4 8 use(Cache, { lifetime: (5).minutes, reapInterval: (1).minute })
+4 9 use(Session, { lifetime: (15).minutes, reapInterval: (1).minute })
+4 13 this.pass('/upload')
+4 16 var self = this
+4 17 Session.store.length(function(err, len){
+4 18 self.render('upload.haml.html', {
+4 20 title: 'uploaded'
+7 8 use(Logger)
+7 10 use(Static)
+8 18 flashes: false,
+9 23 this.render(file + '.sass.css', { layout: 'attachment' })

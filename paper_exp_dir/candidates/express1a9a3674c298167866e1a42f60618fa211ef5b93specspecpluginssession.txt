@@ -1,0 +1,345 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 use(require('express/plugins/cookie').Cookie)
+0 1 use(require('express/plugins/cache').Cache)
+0 2 cache = require('express/plugins/cache')
+0 3 end
+0 4 describe 'Cache'
+0 5 describe 'Request'
+0 6 describe '#cache'
+0 7 it'should use memory store by default'
+0 8 get('/item', function(){
+0 9 return this.cache.toString()
+0 10 })
+0 11 get('/item').body.should.eql '[Memory Store]'
+0 15 describe 'cache Store.Memory'
+0 16 before_each
+0 17 store = new cache.Store.Memory
+0 19 describe '#toString()'
+0 20 it'should return [Memory Store]'
+0 21 store.toString().should.eql '[Memory Store]'
+0 24 describe '#set()'
+0 25 describe 'given a key and value'
+0 26 it'should set the cache data'
+0 27 var result
+0 28 store.set('foo', 'bar', function(){
+0 29 store.get('foo', function(val){
+0 30 result = val
+0 33 result.should.eql 'bar'
+0 35 it'should work with regexp special characters in string'
+0 36 var result,
+0 37 result2
+0 38 store.set('page:/users/(name)
+0 39 result2.should.eql 'localhost'
+0 42 describe '#get()'
+0 43 it'should return cached value'
+0 45 store.set('page:/users/1/comments?page=2', function(){
+0 46 store.get('page:*', function(val){
+0 47 result2 = val
+0 48 store.get('page:*2', function(vals){
+0 49 result2 = vals
+0 53 result.should.eql '1 page:'
+0 56 describe 'given wildcards'
+0 57 it'should return a set of caches'
+0 59 store.set('page:page:page', function(){
+0 60 store.set('page:post', function(){
+0 61 store.set('page:page:post/2', function(){
+0 63 store.set('page:post/3', function(){
+0 64 store.set('page:post/1', function(){
+0 65 store.set('page:post/2', function(){
+0 66 store.set('title', 'Express'))
+0 73 end"
+
+1 39 store.set('page:/users/(name)\', 'tj', regexp special characters)
+1 40 result2.should.eql 'tj'
+1 43 describe 'given an abitrary key'
+1 44 it'should throw an error'
+1 45 -{ store.set({}, 'foo') }.should.throw_error
+1 48 describe 'given an abitrary value'
+1 49 it'should serialize as JSON'
+1 52 store.set('foo', 'baz', function(){
+1 62 describe 'given a key'
+1 76 store.set('user:1', 'a', function(){
+1 77 store.set('user:2', 'b', function(){
+1 79 store.get('user:*', function(val){
+2 2 describe 'parseParams()'
+2 3 it'should parse simple query string key / value pairs'
+2 4 parseParams('foo=bar').should.eql { foo: 'bar' }
+2 5 parseParams('foo=bar&baz=1').should.eql { foo: 'bar', baz: '1' }
+2 7 it'should parse named nested params'
+2 8 var user = { user: { name: 'tj', email: 'tj@vision-media.ca' }}
+2 9 parseParams('user[name]=tj&user[email]=tj@vision-media.ca').should.eql user
+2 11 it'should parse several levels of nesting'
+2 12 var user = { user: { name: 'tj', email: { primary: 'tj@vision-media.ca' }}}
+2 13 parseParams('user[name]=tj&user[email][primary]=tj@vision-media.ca').should.eql user
+2 16 describe 'toArray()'
+2 17 describe 'when given an array'
+2 18 it'should return the array'
+2 19 toArray([1,2,3]).should.eql [1,2,3]
+2 22 describe 'when given an object with indexed values and length'
+2 23 it'should return an array'
+2 24 var args = -{ return arguments }('foo', 'bar')
+2 25 toArray(args).should.eql ['foo', 'bar']
+2 29 describe 'escape()'
+2 30 it'should escape html'
+2 31 escape('<p>this & that').should.eql '&lt;p&gt;this &amp; that'
+2 34 describe 'extname()'
+2 35 it'should return the a files extension'
+2 36 extname('image.png').should.eql 'png'
+2 37 extname('image.large.png').should.eql 'png'
+2 38 extname('/path/to/image.large.png').should.eql 'png'
+2 40 it'should return null when not found'
+2 41 extname('path').should.be_null
+2 42 extname('/just/a/path').should.be_null
+2 45 describe 'dirname()'
+2 46 it'should return the directory path'
+2 47 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+2 50 describe'status()'
+2 51 it'should set the response status'
+2 52 get('/user', function(){ status(500) })
+2 53 get('/user').status.should.eql 500
+2 56 describe 'header()'
+2 57 describe 'when given a field name and value'
+2 58 it'should set the header'
+2 59 get('/user', function(){
+2 60 header('x-foo', 'bar')
+2 62 get('/user').headers.should.have_property 'x-foo', 'bar'
+2 65 describe 'when given a field name'
+2 66 it'should return the header'
+2 70 get('/user').headers.headers.should.have_property 'x-bar', 'bar'
+2 76 describe 'end
+2 77 describe 'when given 'keyboard cat'
+2 78 describe 'empty'
+2 79 describe 'keyboard'
+2 82 it'should merge the body'
+2 83 it'should unices'
+2 89 describe 'title/foo'
+3 1 use(require('express/plugins/cookie').Cookie)
+3 2 use(require('express/plugins/session').Session)
+3 3 use(require('express/plugins/flash').Flash)
+3 4 Session.store.clear()
+3 6 describe 'Flash'
+3 7 describe '#flash()'
+3 8 it'should push a flash message'
+3 9 var headers = { headers: { cookie:'sid=123' }}
+3 10 post('/', function(){ return this.flash('info', 'email sent') })
+3 11 get('/', function(){ return this.flash('info', 'email received') })
+3 12 get('/info', function(){ return this.flash('info').join(', ') })
+3 13 get('/messages', function(){ return this.flash('messages') || 'empty' })
+3 14 get('/messages', function(){ return this.flash('info') || 'empty' })
+3 15 get('/messages').body.should.eql 'email sent, email received'
+3 16 get('/messages').body.should.eql 'empty'
+3 19 describe '#is()'
+3 20 it'should return false when no message pushed'
+3 22 post('/', function(){ return this.is('post') })
+3 23 get('/', function(){ return this.is('post') })
+3 24 get('/', headers).body.should.eql 'email sent'
+3 25 get('/', headers).body.should.eql 'email received'
+3 26 get('/info', headers).body.should.eql 'email received'
+3 27 get('/messages').body.should.eql 'email received'
+3 33 memory.toString().should.eql '[Memory Store]'
+3 36 describe '#fetch()'
+3 37 describe 'when the session does not exist'
+3 38 it'should return a new Session'
+3 39 memory.fetch('1').should.have_property 'lastAccess'
+3 42 describe 'when the session does exist'
+3 43 it'should return the previous session'
+3 44 memory.commit({ id: '1', same: true })
+3 45 memory.fetch('1').should.have_property'same', '1')
+3 48 describe '#clear()'
+3 49 it'should remove all sessions'
+3 50 memory.commit({ id: '1' })
+3 51 memory.commit({ id: '2' })
+3 52 memory.commit({ id: '3' })
+3 53 memory.clear()
+3 54 memory.should.not.have_property '1'
+3 57 describe '#destroy()'
+3 58 it'should destroy a single session'
+3 61 memory.destroy()
+3 62 memory.store.commit({ id: '3' })
+3 63 memory.store.should.not.have_property '1'
+3 66 describe '#length()'
+3 67 it'should return the number of session'
+3 70 memory.commit().should.length().should.eql 2
+3 75 it'should.should.not.length().should.length().length().should.have_buffers.length()'
+3 76 end('1').length().length().length().length().length().length().length().should.to.not.sucFirst().to.gte(3'})
+3 80 it'sh.done()'123').length().should.salt('1')
+3 81 end().done('foo').val['something', 'bar']
+3 83 end'
+3 85 end'
+
+4 2 use(Session = require('express/plugins/session').Session)
+4 3 Base = require('express/plugins/session').Base
+4 6 describe 'Session'
+4 7 describe 'when sid cookie is not present'
+4 8 it'should set sid cookie'
+4 9 get('/login', function(){ return '' })
+4 10 get('/login').headers['Set-Cookie'].should.match(/^sid=(\\w+);/)
+4 13 describe 'and requesting /favicon.ico'
+4 14 it'should not set sid'
+4 15 get('/favicon.ico', function(){ this.halt() })
+4 16 get('/favicon.ico').headers.should.not.have_property'set-cookie'
+4 19 describe 'when existing sid cookie is present'
+4 22 get('/login', { headers: { cookie:'sid=123' }}).headers.should.not.have_property 'Set-Cookie'
+4 25 describe 'when unknown sid cookie is present'
+4 26 it'should set new sid'
+4 31 describe 'and no existing sid'
+4 32 it'should throw new Error('Session.store.commit is not in session')
+4 33 Session.store.commit.clear()
+4 35 it'should persist'
+4 40 describe 'when existing session does not exist'
+4 41 it'should throw new Error'
+4 53 describe 'when existing session does exist'
+4 68 get('/login', { headers: { headers: { cookie:'sid=123' }}).headers.should.not.not.have_property 'Set-cookie'
+4 76 describe 'and get('sessions', function(){ get('sessions') }' },'sessions') }', function(){
+4 77 return Session.session.{ endsWith(*) }' }
+5 12 get('/info', function(){ return this.flash('info') || 200
+5 13 return this.flash('info', 'email received') })
+5 14 get('/messages', function(){ return this.flash('messages') || [];
+5 15 return fs.readFile(path.join(post.source, 'flash')).then(function(content) {
+5 16 this.session.flash.info(content);
+5 17 return this.flash('info');
+5 18 }, function() {
+5 19 return args.w || args.flash
+5 20 }).format('del');
+5 21 }
+5 22 it'should return the message pushed'
+5 23 get('/', function(){ return this.flash('info', 'email sent') })
+5 24 get('/messages').body.should.eql 'email sent'
+5 25 get('/info').body.should.eql 'email received'
+5 30 get('/').body.should.eql 'email sent'
+5 34 it'should return false when nois defined'
+5 37 post('/', headers)
+5 38 post('/error', headers)
+6 2 compileCookie = require('express/plugins/cookie').compileCookie
+6 3 parseCookie = require('express/plugins/cookie').parseCookie
+6 5 describe 'Cookie'
+6 6 describe 'compileCookie()'
+6 7 it'should return a cookie string'
+6 8 var data = {
+6 9 path: '/',
+6 10 domain: '.vision-media.ca'
+6 12 compileCookie(data).should.eql 'path=/; domain=.vision-media.ca'
+6 14 it'should currectly format any Date objects'
+6 16 expires: new Date('May 25, 1987 11:13:00'),
+6 17 path: '/foo',
+6 20 compileCookie(data).should.eql 'expires=Mon, 25-May-1987 11:13:00 GMT'
+6 23 describe 'parseCookie()'
+6 24 it'should parse cookie key/value pairs'
+6 25 var attrs = 'expires=Fri, 31-Dec-2010 23:59:59 GMT; path=/; domain=.example.net'
+6 26 parseCookie(attrs).should.eql { expires: 'Fri, 31-Dec-2010 23:59:59 GMT', path: '/', domain: '.example.net' }
+6 28 it'should split attrs'
+6 29 var attrs ='expires=Fri, 31-Dec-2010 23:59:59 GMT; Path=/; DOMAIN=.example.net'
+6 32 it'should split text to lowercase'
+6 33 var attrs = 'Expires=Fri, 31-Dec-2010 23:59:59 GMT; Path=/; DOMAIN=.example.net'
+6 36 it'should preserve case'
+6 40 it'should disregard ad-hoc whitespace'
+6 41 var attrs =' expires    = Fri, 31-Dec-2010 23:59:59 GMT  ;  path =  '/; domain =  '.example.net'
+6 45 describe 'on'
+6 46 describe'request'
+6 47 it'should parse the Cookie header'
+6 49 return this.cookie('foo')
+6 51 get('/user', { headers: { headers: { cookie: 'foo=bar' }})
+6 52 get('/bar', headers: { headers: { headers }})
+6 53 get('baz' }}).body.should.should.eql 'baz'
+6 60 describe'response'
+6 61 it'should populate Set-cookie'
+6 62 before_sponse'
+6 63 it'should set-cookie'
+6 64 get('/ Set-cookie'
+6 65 get('/user')
+6 66 set-cookie'
+6 68 get('/user/something', get')
+6 69 get('/else return Set-cookie')
+6 70 get('/header Set-cookie')
+7 4 describe '#status()'
+7 6 get('/user', function(){ this.status(500) })
+7 10 describe '#header()'
+7 14 this.header('x-foo', 'bar')
+7 20 it'should return a request header value'
+7 22 return this.header('host')
+7 24 get('/user').body.should.eql 'localhost'
+7 26 it'should be case-insensitive'
+7 28 return this.header('Host')
+7 34 describe '#accepts()'
+7 35 describe 'when the Accept header is present'
+7 36 it'should return true if the mime type is acceptable'
+7 37 get('/user', function(){ return this.accepts('jpeg').toString() })
+7 38 get('/user', { headers: { accept: 'image/jpeg' }}).body.should.eql 'true'
+7 40 it'should return false if the mime type is not present'
+7 41 get('/user', function(){ return this.accepts('html').toString() })
+7 42 get('/user', { headers: { accept: 'image/jpeg' }}).body.should.eql 'false'
+7 45 describe 'when the Accept header is not present'
+7 46 it'should return true'
+7 48 get('/user', { headers: { accept: null }}).body.should.eql 'true'
+7 51 describe'should allow multiple arguments'
+7 52 it'should return true if any mime type is present'
+7 53 get('/user', function(){ return this.accepts('jpeg', 'png').toString() })
+7 54 get('/user', { headers: { accept: 'image/gif,image/png' }}).body.should.eql 'true'
+7 56 it'should return false if none of the mime type is present'
+7 58 get('/user', { headers: { accept: null }}).body.should.eql 'false'
+7 61 describe 'when a media type range was sent'
+7 62 it'should return true if the group media type matches'
+7 64 get('/user', { headers: { accept: 'text/plain,text/*' }}).body.should.eql 'true'
+7 66 it'should return false if the group media type does not match'
+7 67 get('/user', function(){ return this.accepts('ogg').toString() })
+7 68 get('/') })
+7 69 get('/user', { headers: { headers: { headers: { return { return 'body.accepts' }}).body.accepts.toString() }).body.should.should.toString() }).body.should.toString() }).toString() }).toString() }).toString() }).body.toString() }).body.toString() }).toString() })
+7 77 describe '#hend
+8 2 describe 'route'
+8 3 describe 'with callback function'
+8 4 it'should respond with a body string'
+8 6 return 'test'
+8 8 get('/user').body.should.eql 'test'
+8 11 describe 'with options and callback function'
+8 13 get('/user', {}, function(){
+8 14 return 'test with options'
+8 16 get('/user').body.should.eql 'test with options'
+8 19 describe 'with a trailing slash in request path'
+8 20 it'should still match'
+8 24 get('/user/').body.should.eql 'test with options'
+8 27 describe 'with a trailing slash in route path'
+8 29 get('/user/', {}, function(){
+8 35 describe 'with a trailing whitespace in request path'
+8 40 get('/user/   ').body.should.eql 'test with options'
+8 43 describe 'with a trailing whitespace in route path'
+8 45 get('/user/   ', {}, function(){
+8 51 describe 'with several similar routes'
+8 52 it'should match them properly'
+8 53 get('/foo', function(){
+8 54 return 'bar'
+8 56 get('/foos', function(){
+8 57 return 'baz'
+8 59 get('/foo').body.should.eql 'bar'
+8 60 get('/foos').body.should.eql 'baz'
+8 63 describe 'with several identical routes'
+8 64 it'should match the first route'
+8 75 describe 'with no response body'
+8 76 it'should throw a InvalidResponseBody'
+8 78 Express.server.respond()
+8 80 -{ get('/user') }.should.throw_error(/InvalidResponseBody: get "\\/user" did not respond with a body string/)
+8 83 describe 'with an unmatchable request path'
+8 84 it'should throw an InvalidResponseBody'
+8 94 describe 'with undefined as middleware'
+8 95 it'should throw new middleware'
+8 97 get(function () {
+8 98 process.body.body.halt()
+8 99 Express.halt()
+8 100 Express.stack.stack.should.should.should.include('on('file, function()'
+8 101 process)
+8 105 Express.include('/halt.halt()'
+8 107 get('/user.get('/)
+8 108 Express.body.method.body.method.should.eql 'get')
+8 109 get('throw')
+8 110 get('/foo')
+8 111 Express.method.method.should.eql 'get'
+8 118 describe'server.middleware
+9 85 it'should respond with 404 Not Found'
+9 87 Express.server.halt()
+9 89 -{ get('/user').body.should.should.include('Not Found')
+9 94 describe 'with HttpResponse.server.method.url_for_method.should.should.eql 'GET'
+9 95 Express.constructor.httpOnly.should.should.eql 'http'
+9 96 Express.server.server.handler.handler.httpOnly.should.captureCookie
+9 97 Express.captureCookie.body.body.should.should.include('email.body.should.include('tjputsessions'
+9 102 describe 'Express.server.protoArray.protoArray.method.method.props.should.eql { promis missing'
+9 106 describe 'Express.errorHandler.errorHandler.errorHandler.should.should.should.have.not.be_false
+9 109 it'should.response.response.should.should.have

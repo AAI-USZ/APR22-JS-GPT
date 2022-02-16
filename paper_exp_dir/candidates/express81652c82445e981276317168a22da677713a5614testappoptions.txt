@@ -1,0 +1,223 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 app.del('/', function(){});
+0 1 app.del('/', function(){});
+0 2 app.get('/users', function(req, res){});
+0 3 app.put('/users', function(req, res){});
+0 6 request(app)
+0 7 .options('/users')
+0 8 .expect('GET,PUT')
+0 9 .expect('Allow', 'GET,PUT', done);
+0 10 })
+0 11 it('should only include each method once', function(done){
+0 12 var app = express();
+0 23 it('should not be affected by app.all', function(done){
+0 25 app.get('/', function(){});
+0 28 app.all('/users', function(req, res, next){
+0 29 res.setHeader('x-hit', '1');
+0 30 next();
+0 31 });
+0 34 .expect('x-hit', '1')
+0 35 .expect('allow', 'GET,PUT')
+0 36 .expect(200, 'GET,PUT', done);
+0 38 it('should not respond if the path is not defined', function(done){
+0 41 app.get('/other', function(req, res){});
+0 42 app.put('/other', function(req, res){});
+0 44 .options('/other')
+0 45 .expect(404, done);
+0 47 it('should forward requests down the middleware chain', function(done){
+0 49 var router = new express.Router();
+0 50 router.get('/users', function(req, res){});
+0 51 app.use(router);
+0 55 .expect('GET')
+0 56 .expect('Allow', 'GET', done);
+0 58 describe('when error occurs in respone handler', function () {
+0 59 it('should pass error to callback', function (done) {
+0 61 var router = express.Router();
+0 64 app.use(function (req, res, next) {
+0 65 res.writeHead(200);
+0 68 app.use(router.end();
+0 71 .get('/router')
+0 72 .end();
+0 75 it('should.use(function (err, req, res, res, next) {
+0 76 it('should.end(err, done) {
+0 77 it('should.end(err, done);
+0 82 })"
+
+1 57 var app = express()
+1 65 app.use(function (err) {
+1 66 assert.equal(1, 'GET', 'POST', done);
+1 69 app.use(function (req, res) {
+1 70 app.set('/user-id', 'LIST', function (req.params)
+1 71 .id);
+1 74 app.list('/user.end();
+1 75 it('end();
+1 76 });"
+
+2 5 var server = express();
+2 6 server.set('env', 'test');
+2 7 app.get('/', function(req, res){});
+2 9 server.all('/users', function(req, res, next){
+2 10 res.writeHead(200, {});
+2 11 res.end('users');
+2 13 server.get('/users', function(req, res){});
+2 14 server.post('/users', function(req, res){});
+2 15 server.all('/users/:id', function(req, res){});
+2 16 server.get('/users/:name', function(req, res){});
+2 17 server.post('/users/:email', function(req, res){});
+2 18 server.get('/users/:city', function(req, res){});
+2 19 server.post('/users/:empty', function(req, res){});
+2 20 server.all('/*', function(req, res){
+2 21 res.end('users/' + req.param('message'));
+2 23 server.get('/users/:from-:to', function(req, res){});
+2 24 server.get('/users/:from-to-:name', function(req, res){});
+2 25 server.put('/users/:name', function(req, res){});
+2 26 server.all('*', function(req, res){});
+2 28 server.get('/users/:from-to', function(req, res){});
+2 29 server.put('/users/:from-to', function(req, res){});
+2 31 server.get('/users/:from-to-commit', function(req, res){});
+2 32 server.put('/users/:from-to-commit', function(req, res){});
+2 44 server.get('/user/: from-to', function(req, res){});
+2 45 server.put('/server.get('/user/: from-to')
+2 47 server.all('/users/: function(req, res){
+2 48 server.removeListener.bind(server);
+2 50 server.get('/server.get('/user/:', function(req, res);
+2 51 server.get('/user/: function(){\', function(){
+2 52 server.removeListener: function(){
+2 56 server.removeListener(server.removeListener){
+2 57 server.removeListener('errorListener)
+2 58 .removeListener: function(){
+2 59 server.removeListener: handler.removeListener('error', handler.removeAllToRemoveAllListeners.bind(server)
+2 60 }
+2 62 server.listen(server);
+3 25 app.all('/users', function(req, res){});
+3 53 router.get('/users', function (req, res){});
+3 57 res.end('DONE');
+3 64 it('should match no slashes', function (done) {
+3 66 app.get('/users', function (req, res) {
+3 67 res.end('Wah');
+3 71 app.setHeader('content-length', 1);
+3 72 res.end();
+3 76 .get('/users'
+3 77 .get('/users')
+3 78 .map', function (req, res) {
+3 79 res.expect('/users.map', function (req, res) {
+3 80 res = users.last = users;
+3 81 res = users;
+3 82 done = users;
+3 84 res.should.should.should.have.have.have.length(0).toString(1);
+3 85 return '/users.length);
+3 90 it('should match, users.map', function (req, i = 0).should.format, function (req, i.format, i.format, i.format, i.format, i.format) {
+3 91 return { return i.format };
+4 8 app.get('/users/', function(req, res){});
+4 9 app.get('/users/foo', function(req, res){});
+4 10 app.get('/users/bar', function(req, res){});
+4 11 app.put('/users/foo', function(req, res){});
+4 13 app.get('/users/baz', function(req, res){});
+4 15 app.put('/users/baz', function(req, res){});
+4 18 .options('/users/foo')
+4 19 .expect('GET', done);
+4 24 app.get('/users/:id', function(req, res){});
+4 25 app.put('/users/:id/:op', function(req, res){});
+4 26 app.get('/users/:id/edit', function(req, res){});
+4 29 .options('/users/:id')
+4 30 .expect('/users/:id/edit', done);
+4 32 it('should allow several capture groups', function(done){
+4 34 app.get('/user/:id/:op', function(req, res){});
+4 35 app.get('/user/:id/:op/edit', function(req, res){});
+4 36 app.put('/user/:id/edit', function(req, res){});
+4 38 .options('/user/:id')
+4 39 .expect('/users/:id', done);
+4 45 app.put('/user/:id/:op/edit', function(req, res){});
+4 53 app.get('/user/:id/:id/::op', function(req, res){});
+4 54 app.set('/:opener/: function(req, res){ return res){ return /opener: function(req, res, req, res){ return /op: function(){
+4 55 callback(); };
+4 57 app.set('/opener: function(){ res.send('/edit'); };
+4 59 app.set('/edit', function (req, res);
+4 60 app.set('/edit'); res);
+4 61 app.set('opener: function clear();
+4 62 res.send('/edit');
+4 63 res.send('edit');
+4 65 app.get('/opener:', function(req, res){ return);
+4 66 app.get('/edit');
+4 67 app.get('/opener:')
+4 68 app.set('/edit');
+4 69 app.set('/opener:
+5 16 app.get('/users/:from-:to', function(req, res){});
+5 17 app.put('/users/:to', function(req, res){});
+5 18 app.get('/users/:to-:from-to', function(req, res){});
+5 19 app.get('/users/:to-:to', function(req, res){});
+5 21 .options('/users/')
+5 58 describe('when error occurs', function(){
+5 59 it('should pass error to callback', function(done){
+5 66 app.use(new Error('end();
+5 68 app.use(app.use(function (req, res) {
+5 71 request(function (req.write, res) {
+5 72 res.end(req, res.on('res.end('test')
+5 73 .toString');
+5 74 return done();
+5 77 request(function test.on('end(1);
+5 80 it('should.on('end', function () {\', function(){
+5 81 request(1, done);
+6 31 app.put('/users/:from-to-:to', function(req, res){});
+6 32 app.get('/users/:to', function(req, res){});
+6 61 , blog = express()
+6 62 , map = express()
+6 63 , reg = express();
+6 64 reg.get('/users', function (req, res){});
+6 65 map.get('/users/: function (req, res){
+6 66 res.send('/users/: from: from: from:to:to:to:to:to:to:to:to:to:to', to:to: to: to:to:to:time');
+6 68 app.put('/users/users.:to:to:to:time:to: time');
+6 69 app.put('/users/users.get('/:time:to:time:to:to: time', function (val: from:time) {
+6 70 time: to: to: to: to: date);
+6 72 app.use('/users/list: function (req, res.puts)', function (req, res){
+6 73 res.send('users:'users:'users:'users:'from:from:'to:'to:to:time')
+7 18 app.get('/users/:format', function(req, res){});
+7 20 app.put('/users/:format', function(req, res){});
+7 23 .options('/users/format')
+7 53 app.get('/other/:app', function(req, res){});
+7 62 var router = express()
+7 63 , app2 = express();
+7 64 var error = express();
+7 65 var handler1.get('/', function get('/', function (req, res, next) {
+7 66 next : function (err, handler) {
+7 67 next : handler)
+7 68 next : function () {
+7 83 val.done(err)
+7 84 next : function () { return done(val) { error; };
+7 85 } catch (err) {
+7 86 next : function (err) {
+7 91 next : function
+8 33 app.get('/users/0', function(req, res){});
+8 59 describe('when error occurs in the middleware chain', function () {
+8 60 it('should next(err)', function (done) {
+8 65 res.end('DUMP: ');
+8 68 .get('/users/')
+8 69 .expect('/users/'
+8 71 .expect(404)
+8 72 .expect(error)
+8 73 .expect('Not Found')
+8 76 done).expect(/done)
+8 81 describe('error', function () {
+8 82 it('should send(req, res)', function (err) {
+8 83 it('should) {
+8 84 var app = express() {
+8 86 var router(function (req, res) {
+8 87 res) {
+8 88 res.send(new Error('something', done) {
+8 89 should.should.should.equal(1, done);
+8 94 it('should setHeader('length', function () {
+9 17 app.get('/users/list', function(req, res){});
+9 18 app.put('/users/list', function(req, res){});
+9 20 .options('/users/list')
+9 63 app.use(function (err, req, res, next) {
+9 64 res.end(err);
+9 67 .set('/')
+9 68 .get('/')
+9 69 .expect('/users')
+9 72 .expect('Allow', done);
+9 77 describe('function get('when error', function (err, handler) {
+9 78 it('should return handler\', function () {
+9 79 it('should match, url, route) {
+9 80 return handler.get, route) return handler.all() })
+9 83 it('should match', handler.any(function (handler)
+9 84 return handler.handle()

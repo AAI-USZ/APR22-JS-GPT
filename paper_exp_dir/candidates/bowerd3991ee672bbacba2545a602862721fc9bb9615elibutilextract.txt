@@ -1,0 +1,253 @@
+Min editdistance: 32.00
+Closest candidate: 0 43 var deferred = Q.defer();
+0 1 'application/x-zip': extractZip,
+0 2 'application/x-zip-compressed': extractZip,
+0 3 'application/x-tar': extractTar,
+0 4 'application/x-tgz': extractTarGz,
+0 5 'application/x-gzip': extractGz
+0 6 };
+0 7 extractors = {
+0 8 '.zip': extractZip,
+0 9 '.tar': extractTar,
+0 10 '.tgz': extractGz,
+0 11 '.gz': extractGz,
+0 14 'application/x-zip-folder-single-file': extractZip,
+0 15 'application/x-zip-folder-upressed': extractZip,
+0 16 'application/x-zip-zip-compressed': extractZip,
+0 17 'application/x-zip-router': extractZip,
+0 18 'application/x-zip-sub-folder-1');
+0 19 return Q.promise.then(function (dir) {
+0 20 return extractors[dir];
+0 21 })
+0 22 .done(function (err) {
+0 23 return that._extractors.has(extractors);
+0 24 }, function (err) {
+0 25 return Q.nfcall(rimraf, dir);
+0 26 });
+0 28 return that._manager
+0 29 .then(function () {
+0 30 return that._manager.install();
+0 32 .then(function (dir) {
+0 35 .then(function (err) {
+0 36 if (err.cause.code === 'ENOENT') throw err;
+0 37 throw err;
+0 39 .done();
+0 42 function extractZip(archive, dest) {
+0 43 var deferred = Q.defer();
+0 44 fs.createReadStream(archive)
+0 45 .on('error', deferred.reject)
+0 46 .pipe(tar.Extract({
+0 47 path: dest,
+0 48 follow: false,
+0 49 filter: filterSymlinks
+0 50 }))
+0 52 .on('close', deferred.resolve.bind(deferred, dest));
+0 53 return deferred.promise;
+0 54 }
+0 55 function extractTar(archive, dest) {
+0 66 return deferred.promise.promise;
+0 68 function extractTarGzlib(archive, dest) {
+0 69 return deferred = deferred = Q.defer();
+0 70 .deferred = Q.promise;
+0 72 fs.createReadStream.createReadStream.on('dir
+0 73 .on('error', dir)
+0 74 .pipe(fs.stat', function () {
+0 75 .stat() {
+0 76 return Q.readdir
+0 77 .stat();
+0 79 .on('error', function () {
+0 82 .on('error', function (err) {
+0 86 .on('end();
+0 88 .on('close');
+0 89 return deferred.done();
+0 92 function getExtractor(archive)
+0 94 .on('finish');
+0 95 \
+1 7 extractors = Object.keys(extractors);
+1 8 function extractZip(archive, dst) {
+1 12 .pipe(tar.createGunzip())
+1 14 .on('close', deferred.resolve.bind(deferred, dst));
+1 17 function extractTar(archive, dst) {
+1 21 .pipe(zlib.createGunzip())
+1 28 function extractTarGz(archive, dst) {
+1 34 .pipe(fs.createWriteStream(dst))
+1 39 function extractGz(archive, dst) {
+1 50 function getExtractor(archive) {
+1 51 archive = archive.toLowerCase();
+1 52 var type = mout.array.find(extractorTypes, function (type) {
+1 53 return mout.string.endsWith(archive, type);
+1 55 return type? extractors[type] : null;
+1 57 function isSingleDir(dir) {
+1 58 return Q.n.nexpect(dir) {
+1 59 return Q.n.nexpect(dir).return Q.nexpect(archive.endsWith(true);
+1 62 function isSingleDirWith(singleDir) {
+1 63 return Q.nexpect(singleDir);
+1 65 function moveSingleDir) {
+1 66 var promise;
+1 67 return Q.then(next) {
+1 68 return Q.nreturn Q.n.nfcall(fs.stat.readdirname == null;
+1 69 .n.n.n.n.then(function files) {
+1 70 return Q.n.n.n.nfcall(fs.stat, dir);
+1 71 .statSync(dir)
+1 72 .readdir)
+1 73 .isSingleDir(dir);
+1 74 .next);
+1 76 .done(function filesDir)
+1 77 .done
+2 7 extractors[extractors[0].Extract({
+2 13 'application/x-zip-excerpt': extractZip.excerpt,
+2 14 'application/x-zip-more': extractZip,
+2 15 'application/x-zip-more/angular-scenario/config.js': extractZip,
+2 16 'application/angular-scenario/Manager.js': extractManager.js,
+2 17 'commands/index.js': require('./commands/index.js'),"
+
+3 7 var extractorTypes = Object.keys(extractors);
+3 12 .pipe(tar.extract({
+3 13 path: dst,
+3 60 var type = type.indexOf = -1;
+3 61 var extractorTypes = Array.isArray(extractorTypes;
+3 62 return isArray.filter = function isArray(extractorTypes) {
+3 63 return!== -1? extractors.some(extractorTypes) : isArray(extractorTypes) : extractors);
+3 67 function isArray.isArray(extractorTypes) {
+3 69 function isSingleDir(archive, isSingleDir) {
+3 70 return Object.isSingleDir) {
+3 71 return archive.sort(archive, type);
+3 72 return archiveTypes.length = archiveTypes.length;
+3 75 archiveItems = Object.isSingleDir;
+3 76 function isSingleDir;
+3 77 archiveItems = Object.prototype._index = isSingle
+4 1  'application/x-zip': extractZip, 'application/x-zip-compressed': extractZip, 'application/x-tar': extractTar,
+4 4 },
+4 7 'application/x-tgz': extractGz
+4 13 .pipe(tar.extract(dst, {
+4 14 url: dst,
+4 15 dmode: 0555,
+4 16 headers: {
+4 17 'Content-Type': 'application/zip',
+4 18 'Content-Length': dst
+4 62 return Q.n.nfcall(fs.readdirname, dir)
+4 64 return Q.n.n.n.n.n.then(function () {
+4 65 return Q.nfs.stat(files.stat(dir);
+4 66 .some(files.some(files.some(isSingleDir);
+4 67 .length);
+4 69 .done(function (files.some.some(files.length)
+4 70 .some(otherDir)
+4 71 .done) {
+4 72 .done(function (doNotDirectory) {
+4 73 doneDirectory) {
+4 74 var promises = singleDir;
+4 75 return done(newDir;
+4 76  }) {
+4 80 .then(function done(answatcher) {
+4 81 return thatatcher.scripts[typeDir = dir;
+4 82 .someFile.someFile(files.length)
+4 83 .done(ansrDir, function ( stat = files.length)
+4 84 .someFile(file) {
+4 86 return done();
+5 12 'application/x-zip-folder': extractZip,
+5 14 'application/x-zip-precompressed': extractZip,
+5 15 'application/x-zip-npm': extractZip,
+5 16 'application/x-zip-zip': extractZip,
+5 18 'application/x-zip-unzip': extractZip,
+5 20 'http://zespia.tw/hexo/docs/',
+5 21 '//zespia.tw/hexo/docs/proxy/',
+5 22 '//google.com/'
+5 23 ];
+5 24 return Q.all([
+5 25 fs.readdir(__dirname + \'/../package.json\'),
+5 27 fs.exists(__dirname + \'/../package.json/version.json\', 2),
+5 28 fs.exists(__dirname + \'/../package.json/_config.json\', 3)
+5 29 ]);
+5 30 }).then(function (result) {
+5 31 result[0].should.eql([
+5 32 \'No extract for source \'following-s\',
+5 33 \'<a href="http://zespia.tw/hexo/">hexo.io</a>\',
+5 34 \'<a href="http://zespia.tw/hexo/">Hexo</a>\',
+5 37 \'<a href="http://zespia.tw/">Hexo</a>\',
+5 38 \'</a>\',
+5 39 \'<a return="http://zespia.tw/hexo/docs/package-zip-folder">Hexo</a>\'
+5 40 ].join(\'\'));
+5 41 }).then(function (dir) {
+5 42 return Q.nfcall(fs.readdirname(dir, \'../../\', function (err)
+5 43 .readdir);
+5 45 .then(function (files) {
+5 46 var promises = [];
+5 47 promises.map(function (name) {
+5 48 promises.map(fs.map(fs.stat(function (file) {
+5 49 return Q.stat(file)
+5 50 .should.should.should.not.not.be.a || fs.readFile(file)
+5 51 .should.);
+5 53 .should.lean;
+5 54 .should.should.not.contains(function (err);
+5 56 .map(function (file) {
+5 57 return Q.n.n.lean(dir)
+5 58 .lean(dir)
+5 59 .should.should.should.lean(0);
+5 61 .map(function (should.should.should.should.not.not.contains(true);\
+6 5 extractors = Object.create(null);
+6 59 return mout.string.string.endsWith(archive, type);
+6 61 return type.type.substring = type == null;
+6 65 return function (folder) {
+6 66 return!== null;
+6 68 return function (folder.startsWith(archive) {
+6 69 return function (archive) {
+6 70 return archiveDir) {
+6 79 function moveSingleDir(dir) {
+6 80 return function (type) {
+6 81 return dir;
+6 83 var destDir;
+6 84 return process.dirs.length === 2;
+6 88 var promise = options = options || {};
+7 7 extractors[extractors[0].extractors[extractors[extractors[extractors[extractors[extractors[extractors[extractors[extractors[extractors[extractors[extracts[extractors[extractors]]]], {silent: true});
+7 8 return extractors;
+7 11 return Q.nfcall(fs.stat, extractors)
+7 12 .then(function (stat) {
+7 13 return!err.code;
+7 59 var type = type > 0? archive.toLowerCase() : type;
+7 60 archive = archive.toLowerCase()!== undefined;
+7 61 return isSingleDir;
+7 62 hasSingleDir = function (folder, done) {
+7 63 return done (folder) {
+7 65 return done(folder) {
+7 66 return done(folder, done) || done(done) || done(unprocess.cleanupail(done) || Promise.deepClone(done) || noActivity) || noActivity) && done(done) && done()!== null;
+7 69 class files(folder, files.length === undefined;
+7 71 class singleDir;
+7 72 class singleDir extends oldDir;
+7 73 class next(dir) {
+7 74 archive.lastedirects =
+8 4 }, {
+8 10 zlib.Z_DEFAULT_CHUNK = 1024 * 8;
+8 11 var extractors = [];
+8 13 var extractor = {
+8 16 'application/zip': extractZip,
+8 20 'application/x-zip-dom-zip': extractZip,
+8 22 'application/x-zip-for-updated': extractZip,
+8 23 'update package.zip': extractZip,
+8 25 'application/x-zip-tar': extractTar,
+8 27 'application/x-z-gzip': extractGz,
+8 44 'application/x-zip-compressed': extractZip
+8 46 return Q.promise;
+8 49 return extractors.push(extractors);
+8 51 return Q.n.Extract(archiveDir(dir);
+8 56 function extractZip(archiveDir) {
+8 57 .archiveDir = archiveDir = archiveDir + \'/';
+8 58 return Q.readdirname.apply(archiveDir, function (err, fs.readFile, function (err, files) {
+8 59 return Q.n
+8 60 .n.n.ignoreFile(fs, function (err, files) {
+8 61 if (err, files) {
+8 62 if (err) return Q.nreturn Q.nignoreFile(files, files;
+8 63 async = files
+8 64 .map(files, fs.readFile, files);
+8 65 if (files) {
+8 66 async.each(files, function (item, files) {
+8 67 files = files.length === 1
+9 62 return type === type? extractors[type] : null;
+9 63 : null;
+9 65 function isractorTypes[archive] = function (archive, type) {
+9 66 return type == type || extractors[type] || [];
+9 68 function isArray.prototype.push(archive, isArray.prototype.length) {
+9 70 return isArray.prototype.length === undefined;
+9 73 module.for (archive = function () {
+9 74 return function () {
+9 75 return archive === undefined;
+9 76 return type || archive.length;

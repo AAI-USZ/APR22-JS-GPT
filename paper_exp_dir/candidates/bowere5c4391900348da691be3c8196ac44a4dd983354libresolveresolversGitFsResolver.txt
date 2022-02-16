@@ -1,0 +1,39 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 GitResolver.call(this, source, options);
+0 1 };
+0 2 GitResolver.call(this, source, options);
+0 3 this._source = path.resolve(this._source);
+0 5 util.inherits(GitFsResolver, GitResolver);
+0 6 mout.object.mixIn(GitFsResolver, GitResolver);
+0 7 GitFsResolver.prototype._copy = function () {
+0 8 return copy.copyDir(this._source, this._tempDir);
+0 10 GitFsResolver.prototype._checkout = function () {
+0 11 var resolution = this._resolution;
+0 12 return this._copy()
+0 13 .then(cmd.bind(cmd, 'git', ['checkout', '-f', resolution.tag || resolution.branch || resolution.commit], { cwd: this._tempDir }))
+0 14 .then(cmd.bind(cmd, 'git', ['clean', '-f', '-d'], { cwd: this._tempDir }));
+0 16 GitFsResolver.fetchRefs = function (source) {
+0 17 var cache;
+0 18 this._refs = this._refs || {};
+0 19 cache = this._refs[source];
+0 20 if (cache) {
+0 21 if (cache.then) {
+0 22 return cache;
+0 23 }
+0 24 return Q.resolve(cache);
+0 26 return this._refs[source] = cmd('git', ['show-ref', '--tags', '--heads'], { cwd : source })
+0 27 .then(function (stdout) {
+0 28 var refs = stdout.toString()
+0 29 .trim()
+0 30 .replace(/[\\t ]+/g,'')
+0 31 .split(/\\r?\
+0 32 /);
+0 33 return this._refs[source] = refs;
+0 34 }.bind(this));
+0 36 module.exports = GitFsResolver;"
+
+1 16 if (this._refs && this._refs[source]) {
+1 17 return Q.resolve(this._refs[source]);
+1 19 return cmd('git', ['show-ref', '--tags', '--heads'], { cwd : source })
+3 11 return cmd('git', ['checkout', '-f', resolution.tag || resolution.branch || resolution.commit], { cwd: this._tempDir })
+4 3 this._source = path.resolve(this._config.cwd, source);

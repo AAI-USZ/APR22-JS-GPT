@@ -1,0 +1,43 @@
+Min editdistance: 19.00
+Closest candidate: 9 3 if (name) {
+0 1  pattern.replace '' } pattern.pattern, { return { return { return { return { return { return { return { return { return { return { return { return { return } } } } } } } } } } } } } } } } } } } } } } } } } } } } }, {
+0 2 id: 'answatcher: { return { return { return { return { string } } } }' } }' }' }' }' }' }' } } }' } }
+1 1  return {' } questions.sejector.sizePattern }.sejects.optional, validate, or "any pattern.sejector.');
+1 2 validatePatterns}];
+1 3 var policy = function validateBrowserDecoratorFactory = function(opts) {
+1 4 return function(browser
+2 1  return { return { return { return { return { return { return } } } } } } } });
+2 2 validate: validatePatterns});
+2 3 var policy = { categories: '**/*.js', \'**/*.js', \'**/*.js' }', \'**/*.js' }.js', \'**/*' }.
+3 1  pattern, optional optional: true, or "nmultiple");
+3 2 validate: validate: true, ignored: true, ignored: true },"select: true },"stubended: true },"stub: true },"stubbed: true, paths', "stubbed: true, paths.should be ignored.should be ignored.should be ignored for the users' },'static/answondidate: true', "s" },"static: true },"stubbed: true, string or potentially.should be ignored.should be ignored for the first string.se {
+4 1  pattern.join(', '**/*' } pattern } pattern.suitable, validate.suitable, "**/*' } pattern.suitable, "**/*' } pattern.optional" } pattern.pattern);
+4 2 var policy = {segments: {... } = {
+4 3 segmentsssegments: {
+4 4 segments: {
+4 7 se
+5 1  }', {
+5 2 validate: true, validate: validatePatterns: []}
+5 3 }, { pattern: { pattern: { pattern: { pattern: { pattern: '**/*' } } } } } } } });
+5 4 var policy = function noopts = function noopacity : function () {
+5 5 return ignore : function (s
+6 1  return {'solve: validatePatterns/*' } });
+6 2 validate: validatePatterns: validatePatterns: ignoredPatterns } validatePatterns});
+6 3 }
+6 4 var validate: function(answatchedPatterns, resolved, pattern) {
+6 5 return markedPatterns.forEachPatterns.forEach(function(function(pattern) {
+6 6 return markedPattern) {
+6 7 var pattern = pattern.pattern = pattern.watchedPatterns.concat('// matchedPatterns', pattern => pattern.patterns.pattern)
+7 1  7, validate, validate: true, { files: true, ignored: true, ignored: true } } } });
+7 2 var policy = function validate: function(answ) {
+7 3 return ignore = function(answ) {
+7 4 return ignoreDir = (answ || {};
+8 1 ' } questions.join(this.s => {
+8 2 return { return { return { return { return { return { return { stringify, validate: ignored: false } } } }; } } } }; } } } } } } } } });
+8 3 validate: validatePatterns.patterns.should.should.toString());
+8 4 });
+8 5 var validateBrowserDec
+9 1 ' } });
+9 2 var policy = function validateBrowserDecoridateNameToBrowserDecorator(name) {
+9 3 if (name) {
+9 4 installPackage.installoratorFactory({});

@@ -1,0 +1,111 @@
+Min editdistance: 12.00
+Closest candidate: 2 1 it(\'file', function() {
+0 1 it(\'default', () => {
+0 2 var $ = cheerio.load(gist(['foo', \'bar']));
+0 3 $('script').attr(\'src').should.eql(\'//gist.github.com/foo.js?file=bar\'));
+0 4 });'
+
+1 1 it(\'default', function(){
+1 2 var $ = cheerio.load(gist(['foo\', \'bar']));
+1 3 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=bar\'));
+1 4 });
+1 5 it(\'with space\', function(){
+1 6 var $ = cheerio.load(gist(\'foo\', space));
+1 7 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=space\'));
+1 9 it(\'no slug\', function(){
+1 10 var $ = cheerio.load(gist(\'foo\', \'bar\'));
+1 13 it(\'asset - virtual\', function(){
+1 17 it(\'asset - type: create\', function(){
+1 19 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=test\'));
+1 21 it(\'asset - type: delete\', function(){
+1 25 it(\'invalid input - number\', function(){
+1 26 var $ = cheerio.load(gist(123456)));
+1 27 $(\'article-invalid-input.js\').attr(\'type\').should.eql(\'string\');
+2 1 it(\'file', function() {
+2 2 var $ = cheerio.load(gist(\'foo\'));
+2 3 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=\' + $(\'script\'));
+2 5 it(\'file - - with optional strings in blockquote\', function() {
+2 7 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=\' + $(\'script\') + \'\
+2 8 \');
+2 10 it(\'file - with non-string whitespace in blockquote\', function() {
+2 11 var $ = cheerio.load(gist( \'foo\'));
+2 15 it(\'file - with spaces\', function() {
+2 20 it(\'file - with nested whitespace in blockquote\', function() {
+2 37 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=\' + $(\'script\') + \') + \'\
+2 40 it(\'file - with nested whitespace in backtick and non-inspace\', function() {
+2 41 var $ = cheerio.load(function() {
+2 42 var $ = cheerio.load(gist(\'backtick_code_tag\'));
+2 43 $(\'
+
+3 1 it(\'default', function() {
+3 3 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=bar\');
+3 5 it(\'with space\', function() {
+3 7 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=space\');
+3 9 it(\'no slug\', function() {
+3 11 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=test\');
+3 13 it(\'asset - virtual\', function() {
+3 17 it(\'asset - file://\' + $ = cheerio.load(gist(\'foo\'));
+3 20 it(\'asset - title\', function() {
+3 24 it(\'asset - link\', function() {
+3 26 $(\'link\').attr(\'href\').should.eql(\'//gist.github.com/foo.js?file=test\');
+3 28 it(\'asset - link text\', function() {
+3 31 $(\'link text\').attr(\'href\').should.eql(\'//gist.github.com/bar.js\');
+4 8 })
+5 3 $('script').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=bar\'));
+5 5 it(\'float', function() {
+5 6 var $ = cheerio.load(gist(['foo', \'bar\', \'baz\']));
+5 7 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=baz\'));
+5 9 it(\'multiple strings\', function() {
+5 10 var $ = cheerio.load(gist(['foo\', \'bar\', \'baz\']));
+5 13 it(\'multiple arrays\', function() {
+5 14 var $ = cheerio.load(gist(['foo\', \'bar\']));
+5 17 it(\'mixed\', function() {
+5 18 var $ = cheerio.load(gist(\'foo\', \'bar\')));
+6 3 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=\' + $.file.path + \'.js\');
+6 5 it(\'with space\', () => {
+6 9 it(\'no slug\', () => {
+6 13 it(\'asset - virtual\', () => {
+6 17 it(\'asset - category_tag\', () => {
+6 19 $(\'tag\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=\' + $.file.path + \'.js\');
+6 21 it(\'asset - main_dir\', () => {
+6 22 var $ = cheerio.load(gist(\'foo\', [\'bar\']));
+6 25 it(\'asset - link_to\', () => {
+6 28 $ = cheerio.load(gist(\'foo\', [\'bar\', \']));
+6 31 it(\'asset - link_to link\', () => {
+6 32 var $ = cheerio.load(gist(\'foo\', [\'bar\', \'baz\']));
+6 33 $(\'tag\').attr(\'src\').should.eql(\'href\').should.eql(\'//gist.github.com/foo.com/bar.js?file=\' + $.file.js\' + $.file.path + \'baz\' + $.path + $.file.js\'baz\' + $.js\'
+
+7 6 var $ = cheerio.load(gist(\'foo\', space)));
+7 11 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=foo\'));
+7 17 it(\'asset - trailing slash\', () => {
+7 25 it(\'asset - trailing whitespace\', () => {
+8 6 var $ = cheerio.load(gist(['foo\', space]));
+8 13 it(\'lazy-sizes\', function() {
+8 15 $(\'script\').attr(\'src\').should.eql(\'//gist.github.com/foo.js?file=baz\');
+8 17 it(\'multiple-s-options\', function() {
+8 18 var $ = cheerio.load(gist( [\'foo\', \'bar\', \'baz\'])));
+8 21 it(\'multiple-s-options-no-default\', function() {
+8 22 var $ = cheerio.load(gist( \'foo\', \'bar\', \'baz\'])));
+8 25 it(\'skip processing if any file has moved to `end`\', function() {
+8 26 var $ = cheerio.load(gist( \'foo\', \'bar\'));
+8 27 $(\'a\').each(function() {
+8 28 var file = $({ source: \'foo\', path: \'/foo\' });
+8 29 app.use(function(req, res, next){
+8 30 res.render(\'source.jade\', { layout: \'cool-layout.jade\' }, function(err, result){
+8 31 if (err) return next(err);
+8 32 res.type(\'html\');
+8 33 res.send(result);
+8 39 var file = $({ source: \'foo\', path: \'/foo\'});
+8 41 res.render(\'source.jade(\'source.jade\', { layout: \'cool-layout.jade\', locals: \'cool-layout\', locals: \'multipart\', \'tag: \'tag\', \'tag: \'\' });
+8 44 request(function(app)
+8 45 .get(\'/source\')
+8 46 .get(\'/source
+8 47 .jade\', function() {
+8 48 .jade(\'source\', locals = get(\'foo\')
+8 49 .jade(\'bar\', locals)
+8 50 .locals = locals)
+8 51 .locals.foo = \'foo = \'foo\';
+8 53 .locals.bar = \'bar = \'bar\'
+8 54 .jade\', locals = \'baz\'
+8 55 .split(': \'baz\'
+8 56 .split

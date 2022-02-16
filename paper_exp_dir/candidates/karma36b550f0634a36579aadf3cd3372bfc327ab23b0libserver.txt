@@ -1,0 +1,42 @@
+Min editdistance: 22.00
+Closest candidate: 8 15 return this', function () {
+0 1  _configache = function () {} } () {} } function (e) {} () {}return config = config = {} () {} } () {} } function () {}return config = {}
+1 1  = function () {} } function (e) {} } () {}() {} } = function (e) {} () {}return fs.readFile(config) {} () {}return config = function (e) {} }() {}return config = config() {} } () {} } () {} } () {} }() {}return config.export() {} }() {} }() {}return config() {} }return config.export() {} } = function (e) {} }() {} : function (e) {} }() {} () {} } } () {} }return config() {}return config : function (e)
+2 1  should contain((config.example.server) {} } function (config) {} }() {}`)
+2 2 return fs.writeFileExpress.hooks.call(config, function (config, done) {})
+2 3 log.debug('Express.cleanAll plugins(config) {})
+2 4 return fs.hooksFromConfigs('http') }'
+2 5 }).on('exit', function (exitCode)
+2 6 var server = function (exitCode) {
+2 7 this.exitCode = function (exitCode) {
+2 8 log.debug('exitCode, i, i, arguments)\
+3 1  should have been used to reconnecting the server') }'
+3 2 return this: [] }"
+
+4 1  should contain((config.js, config.exportsor).exitCodeAt(config.config.config, function (config) { use(config) { use(config) { useIframe, 'http:'sucnconfig'] = config.config.config = config.config = config.config, 'http') } elseif (config.config = config.config = config.config = config.configor () => config.config = config.config = config.config || config.config')}
+5 1  should be sent.'sucusedEADAPTER_DISCONFIG_CONFIG_COMpose
+6 1  has noopenerator = function (config) to reconnectify() {} () {}return function (config) {} at (config = function (config) {} })
+6 2 config.exports.on('httpOnly').on('httpOnly', function () {
+6 3 return config.on('exit', function () {
+6 4 log.emit('exit', function () {
+6 5 log.debug('exitCode for reconnected')
+6 6 return config.reset())
+6 7 })
+6 10 this.on('close())
+6 11 return config.on('exit', function () {\
+7 1  should contain((env]).exitCode)
+7 2 return config.config = function (config) {} }' }'
+
+8 1 (config.exitCode = function () {})
+8 2 log.debug('Express.exitCode', done) } = function () {
+8 3 log.debug('exitCode', done)
+8 4 return done()
+8 5 }
+8 7 var server = send()
+8 8 return this.on('exit', function (done) {
+8 9 log.exitCode = done)
+8 14 server.on('close()
+8 15 return this', function () {
+8 16 return done(done) {
+8 17 return done(
+9 1  for chok

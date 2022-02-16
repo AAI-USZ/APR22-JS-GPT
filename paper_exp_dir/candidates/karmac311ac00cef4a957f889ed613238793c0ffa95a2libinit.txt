@@ -1,0 +1,320 @@
+Min editdistance: 38.00
+Closest candidate: 8 15 log.debug(`${options.exitCode} ${2}`)
+0 1  return }
+0 2 const scopedPackage = new Package({
+0 3 name: pkgName,
+0 4 version: pkgName,
+0 5 homepage: pkgName
+0 6 });
+0 7 return function () {
+0 8 return exec(cmd, args, options)
+0 9 .then(() => {
+0 10 let c = new Console({
+0 11 version: '0.0.1',
+0 12 homepage: c
+0 14 const test = fs.readFileSync(path.join(__dirname, '../../templates/test.js\'),
+0 15 env: process.env,
+0 16 version: version,
+0 17 init: false
+0 19 }
+0 20 let isBinary = (name) => {
+0 21 if (isBinary) {
+0 22 return typeof name === "string" ||
+0 23 name === `array-like" ||
+0 24 name === [name] ||
+0 25 default: { useEslint: false }
+0 26 },
+0 27 config: { type: 'array' }
+0 29 isBinary = (name) => {
+0 31 name === `objectPattern" ||
+0 32 name === null;
+0 33 };
+0 34 const _isExcluded = (url) => {
+0 35 return _isExcluded(url).length === 0;
+0 37 const validatePattern = (url) => {
+0 38 if (!validatePattern(url)) return false;
+0 39 const pkg = new Package({
+0 41 version: validatePattern
+0 43 return pkg.config === undefined?
+0 44 pkg.config() :
+0 45 pkg.config.typeOnly = (typeof pkg.config === \'function\')?
+0 46 pkg.config.cwd :
+0 47 pkg.config.subdomain offset = 1;
+0 48 return pkg.onRunStart({
+0 49 resolved: function (name) {
+0 50 return this.xhr()
+0 51 }).asCallback(callback);
+0 54 schema: function (patterns, schematype) {
+0 55 return schematype.schema.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discriminators.discinators.discriminators.discinators.discinators.discriminators.discinators.discinators.discriminators.discinators.discriminators.discinators.discriminators.discinators.discinators.discriminators.discinators.discinators.discriminators.discinators.discinators.discinators.discinators.discinators.discinators.discinators.discriminators.discinators.discinators.discinators.discinators.discinators.discinators.discinators.discinators.discinators.discinators.discinators
+1 1  }
+1 2 const scopedPackage = new Package("simple-package-helper")
+1 3 return exec(`${pkgName} no problems were reported in ${formatters.join(" ")}`)
+1 4 }).then(() => {
+1 5 spyPackage.publish({
+1 6 source: pkgName,
+1 7 title: args._.pop(),
+1 8 url: pkgName,
+1 9 root: true
+1 12 if (args.length) {
+1 13 console.log.writeln([
+1 14 "Loading for JavaScript.js",
+1 15 "\
+1 16    at ${pkgName} ${this.opts.}"`,
+1 17 "    at ${this.path}`
+1 18 ].join(" "));
+1 21 const isBinary = (name) => {
+1 22 return module.exports == null?
+1 23 name : name.startsWith("eslint-as-is") return module.exports;
+1 25 function convertPathToPosix (filepath) {
+1 26 const normalizedFilepath = path.normalize(path.join(process.cwd(), config.directory));
+1 27 const baseDir = path.join(baseDir, path.join(baseDir, \'\') + path.sep);
+1 28 return normalizedFilepath
+1 29 .replace(/\\\\/g, \'/\')
+1 31 .replace(/\\?.*$/, \'\')
+1 32 .replace(/^\\/u, \'\')
+1 38 .replace(/^\\/u, \'\');
+1 40 function convertPathToPosixTypes (dirname, prefix, path) {
+1 41 const normalizedFilepath = path.dirname
+1 42 const prefix = prefix === \'base/\'? `${dir}/' : path.resolve(process.cwd})'
+
+2 2 const mockRli = {
+2 3 close: true,
+2 4 writying: true,
+2 5 tail: true,
+2 6 strict: true,
+2 7 trim: true,
+2 8 etc: true,
+2 9 Rendering: false
+2 11 const installPackage = function (pkgName) {
+2 12 return helpers.run(installPackage, mockRli, json);
+2 14 before(() => {
+2 15 return Promise.all([
+2 16 fs.mkdirs(themeDir),
+2 17 process.stdout.writeFile(hexo.config_path, 'db.json")
+2 18 ]).then(() => {
+2 19 return hexo.init()
+2 21 hexo.emit("install")
+2 23 exec(\'npm install\', mockRli, {
+2 24 filename: \'hello-world.yml\',
+2 25 error: "No install installed."
+2 27 )
+2 29 exec(\'rm -rdf\'+ pkgName + \'\', {
+2 30 cwd: packageName
+2 33 exec(\'rm -rdf -bail\', {
+2 39 error: "No install ignored"
+2 44 filename: \'test-package.json\',
+2 49 beforeEach(() => {
+2 52 installPackage.bind(hexo)
+2 54 hexo.emit("uninstall")
+2 56 exec(\'npm uninstall\', mockRli, {
+2 59 })
+2 62 exec(\'npm install\', mockRli.bind(hexo)
+2 68 it("Should have line number of configure files in the middle segments to the partials as their separator config in the code", () => {
+2 69 config.interpolate() is merged()
+2 70 config = 2 stringify()
+2 71 config = 2
+2 72 config.process.on("one = 2 stringify()"
+2 74 config.on("one = 2 stringify()")
+2 75 config = 2 stringify()")
+2 76 config.on("two = 2")
+2 77 config.on("sep")
+2 78 config = 2")
+2 81 config = 2"s = 2x = 2"deepStUP =")
+2 83 config.halt()
+2 85 it("deepStrictS
+3 2 const modules = new StateMachine({"
+
+4 2 const scopedPackage = new Package(\'spark-schemes', { parser: "box" }, {}),
+4 3 path.resolve(__dirname, '../../fixtures/package-a');
+4 4 return exec(cmd, args)
+4 6 logQueue.shift()()()
+4 8 .done(() => {
+4 9 if (exec.apply(logQueue, [
+4 10 createPackage(name) {
+4 11 return Promise.resolve(resolve(
+4 12 'package-a')
+4 13 ),
+4 14 'package-b\',
+4 15 'something-Else\',
+4 16 'else\',
+4 17 'resetHistory\'
+4 18 ) })
+4 20 logQueue.length()
+4 23 const c = launcher.create()
+4 24 c.on('exit', () => {
+4 25 if (!e.code) throw e
+4 27 const onceKilled = launcher.areAllCaptured()
+4 28 .exec(\'browsers_change\', () => {
+4 29 emitter.emit(\'browsers_change\', this)
+4 31 .catch((e) => {
+4 32 exec.resetHistory()
+4 61 class ScriptBrowser {
+4 62 constructor () {
+4 63 this.server = createBrowserCollection
+4 64 class ScriptBrowserCollection.apply(Browser, [Browser, this, [Browser]
+4 67 createBrowserCollection. Collection. Collection {
+4 70 createBrowserCollection.add (Browser, [Browser, emitter () => {
+4 71 if (Browser) {
+4 72 if (this.isBrowsers) {
+4 73 this.isBrowsers.length === null) {
+4 74 return this.length()
+4 76 this.length = this.length = 0
+4 77 return this.length = 0
+4 79 return this.length = this.length = this.length < this.length
+4 81 add (browser) {
+4 82 super() {
+4 83 return this.length < this.length < this.length
+4 87 this
+5 2 const scopedPackage = new Package(\'something-Else\', { cwd: answers.cwd }, {})
+5 3 return exec([], [
+5 4 \'"config.clientArgs must be an array of strings\',
+5 5 \'"property: __dirname + \'/debug.js",
+5 6 \'"message: {}",
+5 7 '\',
+5 8 '_config.clientArgs must pass a callback for a single configuration.\',
+5 9 \'"config.clientArgs must an object.\',
+5 10 { opts: {
+5 11 cwd: answers.cwd, answers.domainArgs: \'localhost\' }
+5 13 ])([
+5 14 "when no messages have been pushed to yet.')
+5 15 ])
+5 16 .done()
+5 17 } else {
+5 18 throw new Error("No Config file found for"+ '..")
+5 20 }'
+
+6 2 return exec([
+6 3 function () {
+6 4 return glob.sync(PATTERN_LIST_APPENDER),
+6 5 fs.statSync(PATTERN_LIST_APPENDER)
+6 6 ]);
+6 8 }), {
+6 9 console: {
+6 10 log: function () {
+6 11 return glob.warn('Config file does not exist\')
+6 13 function (err, stdout, stderr) {
+6 14 return (
+6 15 process.exitCode?
+6 16 process.exitCode :
+6 17 process.exitCode + 1
+6 19 ).on('end', () => {
+6 20 exec(\'npm install\'+ pkgName + (options.filename || 'test.js\'));
+6 23 function runInContext () {
+6 24 const context = this
+6 25 function cleanContext(answers) {
+6 26 return this.session
+6 27 .on('error', function (err) {
+6 28 return mockWindow.error.apply(context, [err])
+6 31 function deletePackageName (pkgName) {
+6 32 return this.session.settings[pkgName] || {
+6 33 settings: this.settings
+6 36 function objectConfig (config) {
+6 37 return config?
+6 38 this.config.settings[pkgName] instanceof Function?
+6 39 objectConfig :
+6 40 objectConfig
+6 41 .deepMixIn(config, defaultOptions)
+6 43 exports.create = createApplication}'
+
+7 1  console.log(`${pkgName} is not installed!`);
+7 2 return
+7 3 } else if (/is not in the npm registry/.test(NODE_MODULES_DIR) || /at\\s\\\'(nODE_MODULES_DIR)/.test(NODE_MODULES_DIR)`);
+7 4 return {
+7 5 name: 'package',
+7 6 url: `https://example.com/test/rule_modules/hexo-theme-nest@gmail.com`
+7 9 const installPackageCache = function (pkgName) {
+7 10 return function (err, json) {
+7 11 if (err) return this.emit('error', err);
+7 12 if (this.json) {
+7 13 return Promise.resolve();
+7 15 if (!this.env.init) {
+7 16 this.env.init = true;
+7 18 this.env.settings = this.env.settings || {};
+7 19 this.env.settings.init = false;
+7 20 return this;
+7 23 let expected = [
+7 24 'if (this.env.init) {
+7 25 this.log.debug(`Writing node app to ${this.env.init}`);
+7 26 this.modules.push(this);
+7 28 '
+
+8 1  console.log(`${pkgName} is not installed yet!`)
+8 2 return exec(`${pkgName} ${pkgName}`).exec(options)
+8 4 if (!options.line) throw new Error `Console \\`s* \'+ e.message}`
+8 5 const options = {
+8 6 cwd: path.resolve(NODE_MODULES_DIR, '..', '--force-latest': options.cwd,
+8 7 env: process.env.NODE_MODULES_DIR,
+8 10 console.log(`${pkgName} ${pkgName}`)
+8 11 }).done(() => {
+8 12 if (options.exitCode) {
+8 13 process.exitCode = 0
+8 14 } else if (options.exitCode === 0) {
+8 15 log.debug(`${options.exitCode} ${2}`)
+8 17 log.error(`${options.exitCode} ${0}`)
+8 21 const NetUtils = {
+8 22 bindAvailablePort (port, listenAddress) {
+8 23 return function (request, response) {
+8 24 handle request
+8 25 for (const NetUtils.bindAvailablePort(request), mockSource(request))
+8 26 handle response
+8 29 glob.withArgs('webServer').returns(mockSourceMapConsumer)
+8 30 .withArgs("appendFileSystem.bindAvailablePort(multipartServer), mockLauncher(request)
+8 31 .withArgs("browserSocketServer")
+8 32 .withArgs("noCache").returns(noCache)
+8 33 .withArgs("address").returns(address)
+8 36 function createSocketIoServer (webServer, executor, config) {
+8 37 const server = new SocketIO(webServer, {
+8 38 destroyUpgrade: false,
+8 39 path: config.urlRoot +"
+
+9 2 const mockRli = function (nrli) {
+9 3 return rli.replace(/\
+9 4 (\\t+)/g, function (match, args) {
+9 5 return args.reduce((a, b) => a.startsWith(match), a.startsWith(match)
+9 6 }).join("\
+9 7 ") + 1 : "text/x-fortran",
+9 8 word: [
+9 9 "if (word[0] === 'aaron") {
+9 10 return [1, 2];
+9 13 return rli.substring(0, 1);
+9 15 function runInContext (context) {
+9 16 return  (this.env.Program() == context.settings.env) ||
+9 17 this.env.Program() == context.settings.env) ||
+9 18 this.env.Program() == end;
+9 20 function bootControllers (options) {
+9 21 return this.controllers(options || null);
+9 23 function bootFromDisc() {
+9 26 function renderFromDisc() {
+9 27 return this.controllers(answers);
+9 29 function clearContext(s) {
+9 30 return this.set(\'home\', s);
+9 32 function clearRuntimeCache(s) {
+9 33 return this.clear(\'home\');
+9 35 function clearRuntimeCache() {
+9 36 return this.clear(\'post-cache\');
+9 39 if (this.tag) {
+9 40 this.tag = this.tag;
+9 41 } else if (isNaN(this.tag)) {
+9 46 this.on(\'error\', function(err) {
+9 47 if (err) {
+9 48 return this.emit(\'error\', err);
+9 50 this.emit(\'warn\', this.emit: this.cache\');
+9 53 this.on(\'install\', function() {
+9 54 }.bind(this.resolve.bind(this));
+9 55 }.bind(this));
+9 57 addConfiguration({
+9 58 init: function() {
+9 59 init: function onInit, onInit.bind(this)
+9 60 }, function onInit.bind(this)
+9 61 }, function onLocationRebind(this)
+9 62 }, function onConfig)
+9 63 bindServerRequest.bindServerRequest.bind(this)
+9 64 bindServer, answers = this;
+9 65 query = handler)
+9 66 }, function onServerResponse.bindServer.bindServer
+9 67 , getServerResponse: handler
+9 68 }, function onResponse: handler
+9 69 return handler
+9 70 if (init, route: handler)
+9 72 , getServer: handler
+9 73 , getServer

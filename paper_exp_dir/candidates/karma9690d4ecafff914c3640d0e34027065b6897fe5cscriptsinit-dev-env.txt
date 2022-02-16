@@ -1,0 +1,247 @@
+Min editdistance: 1.00
+Closest candidate: 2 5 });
+0 1  function (error) {}
+0 2 var gcli = exec('npm install', function (error, stdout, stderr) {
+0 3 if (error) {
+0 4 process.exit(1)
+0 5 } else {
+0 6 console.log('error installing grunt-cli:'+ error)
+0 7 }
+0 8 gcli.stdout.pipe(process.stdout)
+0 9 var stdout = process.stderr
+0 10 var stderr = process.stderr
+0 11 if (process.env.NODE_ENV) {
+0 12 str = input.toString(' ')
+0 13 } else if (process.env.NODE_ENV === 'test') {
+0 14 str = fs.readFileSync(gruntCli, 'utf8')
+0 16 str = pathTo('/', 'install.js')
+0 18 return str
+0 20 var validatePattern = function (value) {
+0 21 if (!glob.sync(value).length) {
+0 22 log.warn('There is no file matching this pattern.\
+0 23 ' + colors.NYANES6join("\
+0 24 ") + '\
+0 25 '
+0 27 return validatePattern(glob)
+0 29 var validateBrowser = function (name) {
+0 30 installPackage('karma-\' + name.toLowerCase().replace(\'headless\', \'\') + \'-launcher\')
+0 32 var validateFramework = function (name) {
+0 33 installPackage(\'karma-\' + name)
+0 35 var validateRequireJs = function (useRequire) {
+0 36 if (useRequire) {
+0 37 validateFramework(\'requirejs\')
+0 40 var questions = [{
+0 41 id: \'framework\',
+0 42 question: \'Which testing framework do you want to use?\',
+0 43 hint: \'Press tab to list possible options to list. Enter to move to the next question.\',
+0 44 options: [\'jasmine\',\'qunit\', \'\'\'mocha\', \'qunit\', \'\'\', \'qunit\', \'\'\', \'\'\', \'\'\', \'\'\']
+0 45 }]
+0 47 var githubTestacular = {
+0 48 var answers = new githubTest = new helpersTestSuite(
+0 49 version: function () {
+0 50 return {
+0 51 validate: \'Press tabToKillFormatter\',
+0 54 id: function (id: \'Testmoolean\',
+0 56 } = validateFramework
+0 59 var questions
+0 61 var githubTestSuite = function () {
+0 62 return \'Press tabToKill()
+0 63 if (setup) {
+0 64 validateTestacularSetup()
+0 65 checkjobs.forEach(function (input, next) {
+0 66 username, next) {
+0 67 username = line
+2 2 if (exec('npm install -g grunt-cli --save-dev', callback) {
+2 3 installGruntCli(function (error) {
+2 4 console.log(error, 'Saved workspace, done');
+2 5 });
+2 7 callback();
+2 9 })
+2 11 var gcli = exec('npm install', function (error) {
+2 12 if (error!== null) {
+2 13 console.error('Error installing karma-cli:'+ error);
+2 16 gcli.stdout.pipe(process.stdout);
+2 17 gcli.stderr.pipe(process.stderr);
+2 18 };
+2 19 var exec = function (cmd, args, failMsg) {
+2 20 console.log('Commands:\
+2 21 ' + scriptPath + '\
+2 22 ' + setTimeout(function () {
+2 23 installGruntCli(function (err) {
+2 24 if (err) {
+2 25 console.error(err);
+2 28 install.stdout.pipe(process.stdout);
+2 29 install.stderr.pipe(process.stderr);
+2 31 function exec(cmd, args, failMsg) {
+2 33 ' + command + '\
+2 34 ' + command +'\
+2 35 ' + classNames.join(', ');
+2 39 function runFromArgv (argv) {
+2 40 return exec([cmd, args, failMsg], undefined, config);
+2 43 return exec([cmd, args, args, failMsg], undefined, config);
+2 45 if (\'some-is-is\' in argv\' in argv') === undefined) {
+2 46 ans = argv'
+
+3 1  = function (error) {};
+3 2 console.log(cli.stack);
+3 3 return exec(function (cmd, args, failMsg) {
+3 5 console.error(error);
+3 6 return;
+3 8 var items = fs.readFileSync(path.join(', 'items.js')).toString();
+3 9 items.forEach(function (item) {
+3 10 if (item.substr(0, 1)!== '.') {
+3 11 size([ item, require('./' + item)], {
+3 12 glob: require('./' + item)
+3 16 installGruntCli(installNode(args) || [], function (err, stdout, stderr) {
+3 18 console.log(err)
+3 20 stdout.setEncoding('utf8');
+3 21 stdout.on('data', stdout);
+3 22 stdout.on('end', function () {
+3 23 install(cmd(args, failMsg, { cwd: getFailedIds(config.clientArgs) })
+3 31 console.log(stdout);
+3 40 function trimBodyDecoder () {
+3 41 return function (value) {
+3 42 return value === undefined? function () : value : value;
+3 47 function trimBodyDecoder.decode = function (s () {
+3 48 return values = trimBodyDecoder(decodeURICompress (content) {
+3 49 return /= /^\\s*decodeURICompress || content);
+3 54 module.parse = function trimArrParam = function trimArr (decodeArrParam (key) {
+3 55 .decodeArr;
+3 57 module.unregister = function(options) {
+3 58 var params = function (body) {
+3 59 return function (key) {
+3 60 var params = params = params || {};
+3 61 paramArr = params || {};
+3 62 return parser.userDecodeArr = parseParams(pb.decodeArr, key);
+3 63 param = params
+3 64 return parser.userDecodeArr;
+3 65 }\
+4 1  else {
+4 2 console.log('grunt-cli is already installed:');
+4 3 console.log(process.env.NODE_ENV + 'test'));
+4 4 return true;
+4 7 function checkForGruntCli(command, args) {
+4 8 return exec('npm install', [
+4 9 'grunt --version',
+4 10 'grunt --watch-dev --timeout 30000 -R dot test/test.js'
+4 11 ], function (err, stdout, stderr) {
+4 12 var stdout = stdout.toString()
+4 13 .pipe(stdout)
+4 14 .on('data', function (chunk) {
+4 15 var lines = fs.readFileSync(chunk)
+4 16 .map(line => {
+4 17 return line.replace(/\
+4 18 \\r\
+4 19 \\t/g, '\
+4 20 ' + stdout + '\
+4 21 ' + stderr
+4 23 .on('end', function () {
+4 24 console.log('Installing grunt-cli...')
+4 25 var gcli = exec('npm install', [
+4 27 'grunt --watch-dev --port',
+4 28 'grunt --watch-evze --tags',
+4 29 'grunt --heads',
+4 30 'grunt --verify',
+4 31 'grunt --env',
+4 32 'grunt --watch-other-branch',
+4 33 'grunt --bail',
+4 35 'grunt --files-grunt-cli',
+4 39 'grunt --silent',
+4 41 'n'grunt --quiet',
+4 42 'grunt --colors',
+4 43 'grunt-cli'
+4 44 ],'
+
+5 2 var gcli = runInThisContext(glob, '*/.bin/test')
+5 6 process.stdout.on('data', function (buffer) {
+5 7 process.stdout.write(buffer)
+5 9 process.stderr.on('data', function (chunk) {
+5 10 if (failMsg) {
+5 11 console.error(chunk)
+5 14 gcli.stdout.on('data', function (chunk) {
+5 15 process.stdout.write(chunk)
+5 17 process.stderr.on('error', function (err) {
+5 18 console.error(err)
+5 20 gcli.on('close', function (code) {
+5 21 if (code!== 0) throw new Error('code argument is deprecated')
+5 22 if (++code) {
+5 23 console.log('Merging components in the NPM registry.')
+5 24 const pkg = new Package('name', '../../package.json')
+5 25 pkg.on('resolve', function () {
+5 26 fs.renameSync(path.join(process.cwd(), 'git://github.com/yui/npm-embedded-package-jquery.git'), {
+5 27 name: '',
+5 28 version: '0.0.0'
+5 30 pkg.on('error', function (err) {
+5 33 function validatePattern (name) {
+5 34 installPackage('jquery', {
+5 35 name: name,
+5 43 version: name,
+5 44 installPackage: name
+5 48 var npmVersion = JSON.parse(Browser(Browser.toString())
+5 50 var browsers = function (browser.split(' '\
+5 51 if (options) {
+5 52 if (options.length === 1) {
+5 53 browser.unshift()
+5 55 } = \'<li>\' +\'              '>\'
+5 57 } catch (options = \'9' + npm install\'s\'s\'s=\'s=\'s>\'s=\'s>\'s>\'s            = npm.map((s) +    '\
+5 58          = require(Browser.format || '\
+5 59        '\
+5 60            '\
+6 2 var gcli = exec('npm install -g grunt-cli', function (error) {
+6 4 console.error('404 installing grunt-cli:'+ error);
+6 12 describe('exec', function () {
+6 13 it('should run e when run is exec', function () {
+6 14 exec('npm run init -d configure', function () {
+6 15 installGruntCli({
+6 16 pkg: '<json:package.json>',
+6 18 }, function () {
+6 44 pkg: '<json:package.json>'
+6 50 describe(\'npm run 'exec -dpm run and update', function () {
+6 51 it('should run tests', function () {
+6 52 installGruntCli = exec(\'install', function () {
+6 53 installGruntCli, npm run tests = exec(\'y, failuresOnly tests', {'should run tests=1 unresolvable=1 unresolvable=1 }\', function (env) {
+6 54 installStubbed = 2 tests.exec(env)
+6 56 var npm run = exec(\'s', [\'sucumberjs: update\'sucumberjs: 2 tests complete test; --no problems = 2 tests with 2 tests = 2 tests = 2 unresolvable > 0xies httpOnly\'\', function () {
+6 57 installGruntCli = exec([env: 2.exec(\'sucumberjs: 2.exec(\
+7 6 function setupFromConfig (config, callback) {
+7 7 var baseDir = pathTo(process.cwd());
+7 8 return function (config) {
+7 9 return fs.readFile(config.directory, function (err, content) {
+7 10 var json = JSON.parse(content);
+7 11 var target = '*';
+7 12 if (pkgHash.hasOwnProperty(json)) {
+7 13 return pkgHash[json];
+7 15 if (!config.interactive) {
+7 16 return process.nextTick(function () {
+7 17 return fs.mkdirSync(baseDir);
+7 20 console.log('Disying for karma dependencies..');
+7 21 file.dir(baseDir, function (err, content) {
+7 27 return Promise.all([
+7 28 fs.writeFile(baseDir, content),
+7 29 fs.readFile(baseDir, function (err, content) {
+7 31 return Promise.resolve(content);
+7 33 var bowerJson = JSON.parse(content);
+7 34 return bowerJson.read(
+7 35 path.join(baseDir, config.directory, 'bower.json'),
+7 36 fs.writeFile(baseDir, config.json, JSON.stringify(content,' ') + '\
+7 37 ')
+7 38 ]).then(function () {
+7 39 return Promise.resolve(function (content) {
+7 40 return fs.readFile(baseDir);
+7 41 }).then(function (readFile) {
+7 43 }).then(function (content) {
+7 44 return content;
+7 45 }).toString.toString();
+7 46 }).toString();
+7 50 function run(command = function (cmd, args) {
+7 51 return exec(cmd, args) {
+7 52 return exec(cmd, args);
+7 53 return args = args || {};
+7 54 if (cmd.apply(this, args, args, args, arguments);
+7 55 if (cmd.apply(this, arguments);
+7 56 return exec(this, [cmd].apply(this, arguments);
+7 58 if (args.length === 1) {
+7 59 return exec(cmd, arguments);
+7 60 var fullscreen.apply(this, [].apply(this,
+8 2 console.log('error installing grunt-cli-answers-jsh://localhost:8080/lib/cli.js')"
+

@@ -1,0 +1,11 @@
+Min editdistance: 49.00
+Closest candidate: 4 1  'bar'});" : 'baz'});" : 'baz'});" : 'baz'});
+0 1  'bar'});"
+2 1  'bar'
+2 2 });"
+4 1  'bar'});" : 'baz'});" : 'baz'});" : 'baz'});
+6 2 });
+7 1  'bar' : 'bar' : 'baz' : 'baz' : 'baz' : 'baz' }).should.return fs.unlinksaddix' : 'baz' : 'baz'
+7 4 });"
+
+8 1  'bar'});

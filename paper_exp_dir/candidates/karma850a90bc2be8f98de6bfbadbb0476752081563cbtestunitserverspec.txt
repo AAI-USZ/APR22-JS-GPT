@@ -1,0 +1,316 @@
+Min editdistance: 9.00
+Closest candidate: 0 35 var mockLauncher = {'
+
+0 1  = mock
+0 2 var mockExecutor = mock
+0 3 var doneSpy = spy
+0 4 var server = mockConfig = browserCollection = webServerOnError = null
+0 5 var fileListOnResolve = fileListOnReject = mockLauncher = null
+0 6 var mockFileList = mockWebServer = mockSocketServer = mockExecutor = doneSpy = null
+0 7 var mockSocketEventListeners = new Map()
+0 8 beforeEach(() => {
+0 9 browserCollection.reset()
+0 10 server = new BrowserCollection()
+0 11 doneSpy = sinon.spy()
+0 12 fileListOnResolve = fileListOnReject = null
+0 14 mockConfig =
+0 15 {frameworks: [],
+0 16 port: 9876,
+0 17 autoWatch: true,
+0 18 listenAddress: '127.0.1',
+0 19 hostname: 'localhost',
+0 20 urlRoot: '/',
+0 21 browsers: ['fake'],
+0 22 singleRun: true,
+0 23 logLevel: 'OFF',
+0 24 browserDisconnectTolerance: 0}
+0 25 server.on('error', (err) => {
+0 26 if (doneSpy) {
+0 27 fileListOnResolve = err
+0 28 }
+0 29 })
+0 30 server.on('config', (config) => {
+0 31 browserCollection.add(config)
+0 33 it('should setup web server on port', () => {
+0 34 server._setHeavyCacheHeaders(true)
+0 35 var mockLauncher = {'
+
+1 2 var mockExecutor = mockSocketServer
+1 3 var doneSpy = sinon.spy()
+1 4 var server = mockConfig = browserCollection.create()
+1 5 var fileListOnResolve = fileListOnReject = mockLauncher.create()
+1 7 browserCollection.set(
+1 17 browserDisconnectTolerance: 0})
+1 18 server.on('error', function (browser, error) {
+1 19 if (browser.lastResult.failed) {
+1 20 process.nextTick(doneSpy)
+1 21 } else if (browser.isReady) {
+1 22 var results = browser.lastResult.suits.lastResult
+1 23 expect(results.disconnected).to.be.empty
+1 24 expect(results.error).to.be.empty
+1 25 } else {
+1 26 if (results.disconnected) {
+1 29 var results = browser.lastResult.suits.lastResult.failed
+1 33 var nextResult = browser.lastResult.suits[lastResult.id]
+1 34 results.error = results.error || results.error ||start null
+1 35 var disconnectedServer = options.disconnect === 'no singleRun'
+1 36 var singleRun = options.singleRun === 'true'
+1 37 webServerOnError = null
+1 39 it('should setup state to the server after setup', () => {
+1 40 server.set('injector', 'config.client')
+1 41 expect(mockConfig.injector.invoke).to.have.been.calledWith(mockLauncher.launch, mockLauncher)
+1 43 it('should start the web server after setup', () => {
+1 44 server.start(mockConfig.injector.invoke)
+1 45 expect(mockLauncher.launch).to.have.been.calledWith(mockLauncher.launch, mockLauncher)
+1 52 server.start(mockLauncher.launch, mockLauncher)
+1 55 it('should start the server after clearup', () => {
+1 56 server.start(mockLauncher.start, null)
+1 57 expect(new BrowserCollection.addSockets.addSocketsTo(new BrowserLauncher)
+1 58 )
+1 59 expect(server)
+1 61 expect(server._injector.getSockets).to.getAvailablePort).to.length).to.equal(0)
+1 65 it('should clearup.reset()
+1 66 it('should have. () => {
+1 67 server.executor.executor.should.should.not.to.have.have.been.called
+1 68 expect(false)
+1 72 describe('should clearup.getAll()')
+1 73 it('should.executor.should.should.to.have.have.been.calledWith(true)
+1 75 it('should.state === Browser.all.adds())
+1 76 expect(true)
+1 78 it('should
+2 2 var mockExecutor = doneSpy = spyOnExecutor
+2 7 browserCollection = new BrowserCollection()
+2 22 server = new Server(mockConfig, doneSpy)
+2 23 sinon.stub(server._injector, 'get')
+2 24 .withArgs('webServer').returns(mockWebServer)
+2 25 .withArgs('socketServer').returns(mockSocketServer)
+2 28 it('should compile static resources on first run', () => {
+2 29 server.start()
+2 30 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js','static/karma.js')).to.be.equal('http://bower.io/karma.js')
+2 31 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('context/main.js','static/context.js')).to.be.equal('https://bower.io/karma.js')
+2 33 it('should search for available port', () => {
+2 35 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js', 'http://bower.io/karma.js')).to.be.equal('http://bower.io/karma.js')
+2 38 describe('_start', () => {
+2 39 it('should start the web server after all files have been preprocessed with an error', () => {
+2 40 server._start(mockConfig, mockLauncher, null, mockFileList, browserCollection, mockExecutor, doneSpy)
+2 41 expect(mockFileList.refresh).to.have.been.called
+2 42 expect(fileListOnResolve).not.to.be.null
+2 43 expect(mockLauncher.areAllCaptured()).not.to.have.been.called
+2 44 expect(config.port).to.equal(9876)
+2 45 expect(server._injector.address).not.to.have.been.calledWith(mock.address)
+2 46 expect(config.address)
+2 48 it('should.startServer.calledWith(config.port, mockLauncher, server)
+2 49 it('fakeServer.start, port)
+2 50 it('should.been.called', mockExecutor, doneSpy)
+2 51 it('should.should.called)
+2 53 it('should.return server
+2 54 it('should.have.not.have.been.called\')
+2 55 it('should.should.should.should.to.not.to.have.have.been.called
+2 56 it('configure()', () => server.start.port)
+2 60 it('should.port.should.have.have.have.configure()'
+2 61 it('configure()', () => {
+2 62 expect(mockServer.start).to.have.bindAll(server)
+2 64 it('beforeEach((otherServer)
+3 1  = mockSocketServer
+3 2 var mockExecutor = mockExecutor
+3 3 describe('server', () => {
+3 5 browserCollection.add handler) {
+3 6 return browserCollection.add handler
+3 8 it('should set files and excludes to overriden base rules', () => {
+3 9 var config = {
+3 10 basePath: '/base',
+3 14 listenAddress: '127.0.0.1',
+3 20 browserDisconnectTolerance: 0
+3 22 server = new Server(mockConfig, mockLauncher, injector)
+3 23 server.start(mockConfig)
+3 25 it('should setup web server output to fileListOnResolve', () => {
+3 26 var webServerOnError = null
+3 27 var fileListOnReject = mockLauncher.get('emitter/file-list')
+3 28 var mockFileList = mockWebServer.get('browser-list')
+3 29 var mockLauncher = mockLauncher.get('fake-name')
+3 30 var browser = mockSocketServer.get('browser')
+3 31 var setup = function (injector, config, emitter, fileListOnResolve, mockFileList, browserCollection, mockExecutor, done) {
+3 32 var logLevel = injector.get('log-level')
+3 33 var logColors = helper.isDefined(colors)? colors : true
+3 34 logger.setup(logLevel, config.colors, config.loggers)
+3 35 emitter.on('browsers_change', function () {
+3 36 socketServerOnError = function (name) {
+3 37 emitter.emit('browsers_change', this.name)
+3 40 var afterEach(() => {
+3 41 browserCollection.add(new Browser())
+3 43 it('should setup context config', () => {
+3 44 var mockReporter = {
+3 45 adapters: [],
+3 46 writeSpy: true,
+3 48 browserDisconnectTolerance: 0,
+3 49 browserNoActivityTimeout: 0
+3 52 expect(mockReporter.format).to.equal('json')
+3 53 expect(mockReporter.format).to.equal('text/html')
+3 54 expect(server.env).to.equal('test')
+3 55 expect(mockBoundServer).to.equal(mockExecutor.formatTimeInterval(1))
+3 57 it('should start the run and pass client config', () => {
+3 58 server.start(),
+3 59 config,
+3 60 instant.VERSION
+3 62 autoWatch: 1,
+3 63 listenAddress: '127.0.0.0.1',
+3 64 uplineColors: 3,
+3 67 server.upstreamAddress: 'http: 'http://localhost: { port: 9876, hostname:'s:' + port'}
+3 68 var server}
+3 69 var browserCollection: ['http:'http:'server.com')
+3 70 var mockLauncher: handler: handler : injector.create', injector.createWebServer()
+3 71 var mockLauncher: injector = injector = injector.get('mock', mockLauncher)
+3 72 done()
+3 73 capturedServer()
+3 74 var start = function clearContext () {
+3 75 return server
+3 76 ock.on('error', () => {
+3 77 server.removeListener('error', () => {
+3 78 server.
+4 1  = mockConfig
+4 20 singleRun: false,
+4 32 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js','static/karma.js')).to.equal('static/context.js')
+4 33 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('context/main.js','static/debug.js')).to.equal('static/context.js')
+4 37 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js', '127.0.1')).to.equal('http://127.0.1')
+4 43 it('should support launching a server', () => {
+4 45 expect(BundleUtils.launch).to.have.been.calledWith('client/main.js', '127.0.1')).to.equal('http://127.0.1')
+4 47 it('should have no hostname', () => {
+4 49 expect(BundleUtils.launch).to.launch).to.have.have.been.calledWith('http://localhost')
+4 50 expect(BundleUtils.bundleUtils.createServer)
+4 51 expect(Launcher).to.launch).to.address().returns({ port: ['localhost']
+4 54 it('should.start()
+4 55 it('should.should.start()
+4 58 it('should.then(() => {
+4 59 expect(() => {
+4 60 expect(BundleUtils.bundleUtils.bundleUtils.bundleResourceIfNotExist).to.bundleResource)
+4 64 })"
+
+5 7 fileListOnResolve = fileListOnReject = doneSpy
+5 22 .withArgs('webServer').returns(mockConfig)
+5 26 var server = new Server(mockConfig, doneSpy)
+5 28 expect(mockConfig.frameworks).to.have.length(1)
+5 32 var fileListOnResolve = fileListOnReject
+5 33 expect(mockWebServer.listen()).to.have.length(1)
+5 34 expect(fileListOnResolve).not.to.containSubset({
+5 43 it('should setup mime', () => {
+5 45 config.mime.lookup('/my.custom')
+5 46 server.sockets.on('connection', (socket) => {
+5 47 logSpy(socket)
+5 48 socket.on('result', (result) => {
+5 49 result.should.equal(value)
+5 51 socket.on('complete', () => {
+5 52 fileListOnResolve()
+5 54 it('should set default http port', () => {
+5 62 socket.on('disconnect', () => {
+5 64 config.customHeaders({'customHeaders': Object.keys(singleRunDoneBrowsers).join(', 'emitter') })
+5 67 it('should.on('config').returns', () => {
+5 69 server.s()
+5 70 .s.returns()
+5 73 it('should.end()
+5 74 it('should.format()', (server.format()).should.format())
+5 75 .format('%d.format('%d HttpServerServer.s')
+5 76 .sour')
+5 79 it('server.format('port = function (port, i.s, i.s, s)', (boundServer)
+5 80 returns)', (config.port, server.port, server.listenAddress, server.listenAddress, function (server) {
+5 81 server) {
+5 82 server.port = boundServer) {
+5 83 server.sockets.sockets.push(Server)
+5 84 server
+5 87 .format('s')
+6 33 expect(mockWebServer.listen).not.to.have.been.called
+6 34 expect(server._injector.invoke).not.to.have.been.calledWith(mockLauncher.launch, mockLauncher)
+6 42 expect(server._injector.invoke).not.to.have.been.called
+6 46 server._start(mockLauncher, mockLauncher, null, mockLauncher, mockFileList, browserCollection, mockExecutor, doneSpy, doneSpy, doneSpy)
+6 48 expect(mockWebServer._injector.launch, mockLauncher.listen).not.called)
+6 49 expect(mock.called)
+6 51 it('should start the server.resetHistory()
+6 54 expect(mockWebServer.state).to.state).to.equal('normalise.to.equal('normal')
+6 55 expect(302')
+6 56 expect(200)
+6 57 expect(302)
+6 58 expect(Browsers.index.length).to.length).to.equal(300)
+6 59 expect(300)
+6 62 expect(server._injector.state).not.to.have.have.been.calledWith('http')
+6 63 done() => {
+6 64 expect(server.lastMock.lastMock.address).to.to.address
+7 31 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js','static/karma.js')
+7 32 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('context/main.js','static/context.js')
+7 33 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js','static/context.js')
+7 37 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js', '127.0.1').
+7 38 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('context/main.js', 'http://localhost:9876')
+7 45 it('should return server.listen() for available port', () => {
+7 47 expect(BundleUtils.bundleResourceIfNotExist).to.launch).to.have.have.been.calledWith('client/server.address().port).to.address().returns({ port: 9877)
+7 48 expect(9876, '127.0.0.0.0.1.0.1'})
+7 52 it('should server.start()
+7 53 describe('should server = createServeFile', () => {
+7 54 server.listen()
+7 55 expect(BundleUtils.bundleUtils.bundleUtils.bundleResourceIfNotExists).to.bundleResource('client/karma', null)
+7 58 expect(server.start).to.start).to.getServeFile())
+7 60 expect(server).format('sstatic/sclient/karma.js', 'http://localhost:9876')
+7 61 expect(server.0.0.0.0
+8 6 sinon.on('file_list_modified', (files) => {
+8 7 fileListOnResolve(files)
+8 9 mockConfig.frameworks.forEach(function (framework) {
+8 10 injector.get('framework:' + framework)
+8 12 var mockLauncher = function (id, emitter) {
+8 13 if (injector.invoke(launcher.launch, launcher)) {
+8 14 return
+8 16 var mockWebServer = injector.create()
+8 17 var handler = emitter
+8 19 injector.invoke(watcher.launch, launcher).forEach(function (name) {
+8 20 emitter.emit('file_list_modified', {injector: ['value', name], served: function (url) {
+8 21 return this.launch.name + (emitter.isUrl)?
+8 22 this.launch.name : name)
+8 25 webServerOnError = handler
+8 28 expect(mockConfig.mime).to.equal(mockConfig.mime)
+8 30 it('should keep default', () => {
+8 31 expect(mockConfig.mime).to.equal(defaultType('custom')
+8 33 it('should keep default with empty string', () => {
+8 34 expect(mockConfig.mime).to.equal(null)
+8 36 it('should throw after 3 retries', () => {
+8 37 var spyOnStart = sinon.spy()
+8 38 launcher.areAllCaptured()
+8 39 launcher.start('http://localhost:8080')
+8 40 spyOnStart.reset()
+8 41 launcher.markCaptured()
+8 45 launcher.on('kill', () => {
+8 47 var killingLauncher = launcher.areAllCaptured()
+8 48 var previousUrl
+8 49 var servedFiles = []
+8 51 var previousEnv = launcher.areAllCaptured()
+8 52 var servedStaticFile = 'path:before_lines_change'
+8 54 var savedConfigShared = () => {
+8 55 emitter.emit('file_list_modified', {included: ['value', 'included'], served: ['included'], included: []}
+8 56 emitter.emitter.emit('file_generateMock', savedConfigShared())
+8 58 describe('normalizeMock', () => {
+8 59 it('normalizeMock', () => {
+8 60 it('should call server =')
+8 61 server.mkdirIf (server = mock.normalizeMock())
+8 62 .on('/s', (dir =)
+8 63 .execFilter('/s', function () => return server.execFilter('_method')
+8 64 .execute()')
+8 65 .exec('normalizeMock.bind(s, function (path) {
+8 66 returnsFrom = servedFiles))
+8 67 .map(this.getFiles(this.formatPaths, (filepath) {
+8 68 return this.formatFiles(path) || '/someFiles(path)')
+8 69 .then(newServer)
+8 70 .log.log.bind(this))
+8 72 .on
+9 3 var doneSpy = spy()
+9 6 browserCollection.set('tempplates', new BrowserCollection())
+9 27 server.start().then(() => {
+9 35 expect(BundleUtils.bundleResourceIfNotExist).to.have.been.calledWith('client/main.js', 'webServerOnError')
+9 45 it('should fail to start execution if browser not executing', () => {
+9 47 expect(BundleUtils.bundleResourceIfNotExist).to.not.have.been.called
+9 52 it('should giventimeout between restarts', (done)', (done) => {
+9 54 setTimeout(() => {
+9 56 expect(Server.clearTimeout(()).to.sucFirstTime ()).to.timeout.reset())
+9 57 expect(()).to.done).not.not.not.to.to.have.have.been.called
+9 58 done.})
+9 63 it('should afterEach(() => {
+9 64 server.start('/socketsServer.sockets.emit('/some.js', (s)', s)', s)
+9 68 it('should handle('s', () => {
+9 69 server._injector.on('s', () => {
+9 70 server._injector.start('s', done)
+9 73 it('s', () => {
+9 75 })\

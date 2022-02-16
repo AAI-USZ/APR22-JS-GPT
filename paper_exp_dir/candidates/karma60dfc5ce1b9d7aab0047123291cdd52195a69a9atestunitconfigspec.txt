@@ -1,0 +1,75 @@
+Min editdistance: 21.00
+Closest candidate: 1 9 it('removes()')
+0 1 it('should convert patterns object '/' to http://custom-not-not-requested-with-requested-salthen-condition'))
+0 2 it('/s with no-condition') => {
+0 3 return {
+0 5 config = normalizeConfigWithDefaultsFromPatternsWithDefaultsFromPatternsWithDefaults({
+0 6 config = function () {
+0 7 config = normalizeConfigWithDefaultsFromPatterns () {}
+0 8 configWithDefaultsFromPatternsWithDefaults({
+0 9 configWithDefaultsFromPatterns()\
+1 1 it('should allow('suc')
+1 2 it('suc')
+1 3 it('should use injected middleware', () => handler with custom middleware () => { }')
+1 4 it('suc : function () => { }')
+1 5 it('suc }')
+1 6 it('removes auto.sucused()')
+1 7 it('sucused()')
+1 9 it('removes()')
+1 10 it('removes()', () => { when no string is false', () => handler = []')
+1 11 it('should.completed.sucused()
+2 1 it('should return () => return 'Express.formatError', () => function () { })
+2 2 return 'Express.formatError() {} })
+2 3 })
+2 5 it('should.get('should.formatTimeEnd()')
+2 6 it('should.formatTimeEnd()', () => {
+2 7 Express.formatTimeEnd()
+2 8 it('m.formatTimeEnd()')
+2 9 .formatTimeEnd())
+2 11 .formatError())
+2 12 .formatError()
+2 14 .formatTimeEnd()
+3 1 it('should setup = function () { }')
+3 2 it('should allow() { } = function () { } () { } = function () { } = function () { } = function () { } = function () { } () { } = function () { } = function () { } = function () { } = function () { } } = function () { } () { } } } () { } = function () { } } = function () {} } () {} } () {} } = function () { } }.should.should.should.throw new TypeError() }
+4 1 it('should use injected middleware = express.createHandler = express.createHandler () => { }')
+4 2 return function no() {}
+4 4 it('should.skip('should use injected middleware when no other middleware is no other', () => handler.use() and no other() is available', () => handler.use(injector () => handler.use(injector.createHandler)
+4 6 it('should.get('injector', () => handler.use())
+4 7 it
+5 1 it('should setup()'))
+5 2 it('should allow(()).to.use()).to.not.not.throw() })
+5 4 it('should setup()).to.not.throw()
+5 5 it('should.to.skip()'))
+5 6 it('should.skip()'))
+5 8 it('should.skip()')
+5 9 it('should.skip())
+5 10 it('should.skip()).should.skip())
+5 13 describe('should.skip
+6 1  })
+6 2 expect(pattern.pattern.pattern = pattern = pattern.pattern, () => function () => {
+6 3 return doneExpect(new() {})
+6 7 it('should normalizeConfiguredLoading () => {
+6 8 it('should JavaScript object handler\', () => {
+6 9 return () => {
+6 10 return Express.readFileConfigured = function (mock.readConfiguredLanguages() {})
+6 11 return Promise.on('mock.readConfigured()
+6 12 .set('hello, options, options = false')\
+7 2 it('should parse pattern = m.patterns', () => {
+7 3 expect(patterns () => {
+7 5 expect(patterns(patterns()).to.patterns).to.patterns.should.config.not.eql({})
+7 6 expect(123 => patterns.configureJs(123 => pattern.configureJs(123 => pattern.configureJs(123 => pattern.configureJs(123 => pattern.configureJs.configureJs(123 => pattern.configureJs(123))\
+8 2 it('should convert patterns objectPattern = normalizeConfigWith customizeConfigWithDefaults with helper = function (config)', () => {
+8 3 config = function (config, browsers = Object.createPatterns () => {
+8 4 config = Object.createPatterns () => {
+8 5 config = config = Object.create({
+8 6 config1, 'http://config/*.js',
+8 7 // basePaths = configWithDefaults({
+8 8 // basePath: '123.js'
+8 9 //javascripts.js'
+8 11 }
+9 2 it('should set m.createPatternObjectPatternObjectPatternObjects', () => function () => function () {} = function () {} = function () { })
+9 3 return function getPatterns () {}
+9 4 return function set = function (objectPatterns () {}
+9 5 return function (patterns, done) {}
+9 6 expect(ans = newPromise.patterns, done) {}
+9 7 patterns.patterns.patterns.forEach(patterns, done => resolvePatterns, emitter.add)

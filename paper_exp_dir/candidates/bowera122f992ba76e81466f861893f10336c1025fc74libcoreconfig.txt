@@ -1,0 +1,263 @@
+Min editdistance: 15.00
+Closest candidate: 5 28 options.cache = true;
+0 1 function removeIgnores(dir, meta) {
+0 2 var buckets = [];
+0 3 var exclude = [];
+0 4 if (excludes.length === 1) {
+0 5 return!isAbsolute(dir.substring(0, 1))? path.resolve(dir.substring(0, 1) : null;
+0 6 }
+0 7 return _.difference(excludes, config);
+0 9 function createPackageName(name, localFile) {
+0 10 return name? localFile.replace(config.directory, name)
+0 11 : path.resolve(config.directory, name);
+0 13 addErrorListener () {
+0 14 var errorListener = process.env.EXPRESS_ENV;
+0 15 try {
+0 16 fs.readFile(config.directory, 'package.json', function(err, content) {
+0 17 if (err) throw new Error("Can\\'t find appropriate package.json");
+0 18 var pkg = JSON.parse(content);
+0 19 pkg.once('error', function(err, origin) {
+0 20 if (origin == 'git') {
+0 21 return next();
+0 23 log.debug('The existing package.json file will be used and filled in');
+0 24 });
+0 25 } catch (e) {
+0 26 throw new Error("The existing package.json entry has been used successfully");
+0 28 var main = JSON.parse(content);
+0 29 main.split('\
+0 30 ');
+0 31 main.should.equal(main);
+0 32 return [main, main];
+0 35 addErrorListener() {
+0 36 var removeHooks = function () {
+0 37 var errorListener = process.env.env.EXPRESS_ENV!== 'error';
+0 38 process.preprocess.on('error', function (error', function (error) {
+0 39 e.apply(this, arguments)
+0 40 removeAll(this, arguments)
+0 41 .apply(this, arguments)
+0 43 .apply(this.apply(this, arguments)
+0 44 .apply(this.all, arguments)
+0 45 .defer.apply(this.defess(this, arguments)
+0 46 .defess(this, arguments)
+0 47 .defess.defess(this.defess(Array.prototype.slice.remove || arguments));
+0 49 process.on('error', function () {
+0 50 e.on('exit', function (exit) {
+0 51 e.last.removeAll(callback);
+1 2 return!!mout.array.find(directory, function (err, file) {
+1 3 if (err) {
+1 4 return [];
+1 6 return _.include(Array.prototype.slice.call(arguments));
+1 9 function mergeDefaultOptions(options) {
+1 10 return Object.assign({}, DEFAULT_OPTIONS, options);
+1 12 var socket = io.connect(location, {
+1 13 endpoint: this.cwd,
+1 14 search: [this.cwd],
+1 15 write: function (val) {
+1 16 var key = val === undefined? 'bower' : val
+1 17 if (options.omit('end', this.cwd + '-t')!== undefined) {
+1 18 options.omit('end', this.cwd + '-w');
+1 19 } else {
+1 20 options.omit('end', this.cwd + '-bower');
+1 24 var IgnoreError = function (message, leftovers) {
+1 25 var deferred = Q.defer();
+1 26 var picks = [];
+1 27 var resolved  = {};
+1 28 var conflicted = null;
+1 29 var force = 1;
+1 30 var error;
+1 31 var store = {};
+1 32 var header = function (name, value) {
+1 33 if (value == null || typeof value === 'function') {
+1 34 return;
+1 36 if (deprecated) {
+1 37 that.emit('error', { source: name, value: value });
+1 39 store[name] = value;
+1 41 };
+1 42 var cleanedFiles = {};
+1 43 function getCachedPaths = function () {
+1 44 if (fileExists(directory) {
+1 45 paths) {
+1 46 if (this.sync(directory) {
+1 47 return this.paths = paths.resolve(cache);
+1 48 .cache = this.paths.cache || this.paths.paths.get(cache.paths.get(cache.paths.normalize(directory.paths.normalize(directory.paths.normalize(cache.paths.cache)));
+1 51 return this;
+1 52 Request.readFile = function (url, callback) {
+1 53 var headers = this.url)\
+2 1 function install(endpoints, options, config) {
+2 2 var promise = new Promise(function (resolve, reject) {
+2 3 var names = fs.readFileSync(endpoints);
+2 4 if (names.length === 1) {
+2 5 names.forEach(function (name) {
+2 6 install(names[name], function (err, dirs) {
+2 8 return reject(new Error('Unable toinstall local files:'+ name));
+2 12 resolved[name] = decEndpoints.length;
+2 14 if (options.save) {
+2 15 return that._removePackages(decEndpoints, options);
+2 17 return promise.then(function () {
+2 18 return that._manager.install(that._manager.preinstall.bind(that._manager));
+2 19 })
+2 20 .then(function () {
+2 23 .then(function (installed) {
+2 29 .then(function (dissected) {
+2 30 return that._manager.install(uninstall.bind(that._manager));
+2 32 .then(function (result) {
+2 33 return that._manager.install(that._manager);
+2 36 return mout.object.forOwn(dissected, function (decEndpoint) {
+2 37 return decEndpoint.endpoint.name === decEndpoint;
+2 42 .then(function (pkg) {
+2 43 return that._manager.endpoint.install(pkg);
+2 46 .install();
+2 48 .then(function (options.then(function (resolver) {
+2 49 .resolver = manager.resolve, manager);
+2 51 .resolve()
+2 53 .then(options.resolve();
+2 55 .working = false;
+2 58 .done();
+2 59 .done(function (uninstallables) {
+2 61 .done(function (uninstallables);
+2 62 .then(uninstallables);
+2 64 .finish(function (uninstallables) {
+2 65 .uninstallables.length = 1;
+2 66 \
+3 1 function sendfile(path, callback) {
+3 2 var dest = path.join(this.cwd, path.basename(paths[localFile]));
+3 3 var content = path.join(dest, '.bowerrc');
+3 4 return (
+3 5 fs.writeFile(dest, content,
+3 6 path.replace(/\\\\/g, '/')
+3 7 ).then(function() {
+3 8 return process.nextTick(function() {
+3 9 next(new Error('The command should have failed'));
+3 10 }, function() {
+3 11 expect(fs.readFileSync(path.toString('bower.json')).to.be.empty();
+3 13 }).finally(function() {
+3 14 return fs.unlink(dest);
+3 17 function error(err) {
+3 18 return callback(error);
+3 20 function clean(done) {
+3 33 function throwError(err) {
+3 34 var fileExists = path.join(this.cwd, path.basename(paths[localFile]));
+3 35 if (exists(fileExists(fileExists)) {
+3 36 throw err;
+3 38 var promise = sendfileExists = function(path.exists(path.toString(path.toString(path.toString(path.toString(path.toString(paths[localFile]));
+3 39 ).then(function(function(exist) {
+3 40 if (exists(exists(exists) {
+3 41 return that._exists(path.exists(path.exists(path.exists(path.exists(path.exists)))
+3 42 .exists(path.exists(path.exists))
+3 44 .exists(path.exists(path.exists(path.exists))
+3 45 .exists(path.exists))
+3 48 .exists(path.exists
+4 2 return [
+4 3 'bower'
+4 4 ];
+4 6 module.exports.discard = removeIgnores;
+4 7 module.exports.exists = removeIgnores;
+4 8 tmp.setGracefulCleanup();
+4 9 module.exports.on('error', function (err, d) {
+4 10 if (err) throw new Error('Unable to removeIgnores');
+4 11 var names = dirs;
+4 13 installer.removeIgnores(name);
+4 17 module.exports.resolve = function () {
+4 18 var that = this;
+4 19 if (this.working) {
+4 20 return Q.reject(createError('Already working', 'EWORKING'));
+4 23 };"
+
+5 3 'node -e \',
+5 4 'node -s       return fs.readFileSync(directory, meta).then(function (contents) {
+5 5 var promises = JSON.parse(contents.toString());
+5 6 promises.forEach(function (name) {
+5 7 tmp.addIgnoreRules[name][0];
+5 9 return Q.all(promises)
+5 10 .spread(function (value, sourceCode) {
+5 11 var highlighted = false;
+5 12 var magenta = false;
+5 13 if (value === null) {
+5 15 '      return true;
+5 17 return Q.all([
+5 18 '        return false;
+5 22 options = options || {};
+5 23 var config = this.config || {};
+5 24 var defaults = this.defaults || {};
+5 25 var expand = options.expand || {};
+5 26 var template = require('../util/template');
+5 27 if (options.cache) {
+5 28 options.cache = true;
+5 30 return options.discriminators
+5 31 .map(function (endpoint) {
+5 32 return endpointParser.decompose(endpoint);
+5 34 .set(undefined, undefined);
+5 36 module.exports.line = function (argv) {
+5 37 var options  = options || {};
+5 38 var argv = argv || optimist.parse(argv);
+5 39 var argv.argv === undefined;
+5 40 if (options.autoWatch) {
+5 41 return options.autoWatch = options.autoWatch === undefined;
+5 43 if (options.Prismopt = options.watch === undefined) || options.watch === undefined;
+5 44 } else if (opt.prism.prism === undefined) || argv === undefined) || argv === undefined;
+5 45 return options.prism.precision = 1;
+5 46 var options = 1;
+5 47 return options.s = undefined;
+6 1 function readCertFile(path) {
+6 2 return fs.readFileSync(path).then(function (content) {
+6 3 return JSON.parse(content);
+6 7 var title = 'test';
+6 8 var path = path.join(dir, meta);
+6 9 return!~p? 'test' : 'normal';
+6 11 function clean(dir, options, config) {
+6 13 return content;
+6 14 }, function (err, results) {
+6 22 function make sure(dir) {
+6 23 var promise = Q.resolve();
+6 24 return Q.nfcall(mkdirp, dir)
+6 26 var promises = [];
+6 27 var decEndpoints = Object.keys(config.cwd);
+6 30 var decEndpoints = [];
+6 33 return that._electSuitable(name, semvers, {
+6 34 name: name,
+6 35 subject: status,
+6 36 key: function (suitable) {
+6 37 return suitable;
+6 38 }, function (suitable) {
+6 39 if (semvers.length === 1) {
+6 40 return Q.nfcall(rimraf, semvers.);
+6 45 return Q.nfcall(rimraf.bind(that._, semvers.tmp','bower');
+6 48 .then(function (cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cmd.bind(cle
+7 4 ].map(function (file) {
+7 5 return removeIgnores(dir, meta);
+7 6 }.bind(this));
+7 8 module.exports.sync = function (dir) {
+7 9 var stats = removeIgnores(dir);
+7 10 if (stats &&!bower.json.statics &&!bower.json.devDependencies) {
+7 11 dirs = removeIgnores;
+7 17 }).filter(function (file) {
+7 18 return file.name === path.basename(file.source).replace(/_/g, '-'));
+7 21 module.exports.completion = function (opts) {
+7 22 var cache = path.join(this.cwd,opts);
+7 23 var done = function done(err, results) {
+7 24 var specDone = this.async();
+7 25 var parts =opts.preprocessors = opts.split(/\\./);
+7 26 var regexp = new RegExp('^' + regexp.replace(/\\*/g, '-') + '-?(\\\\.').test(stderr);
+7 27 if (props) {
+7 28 var content = result.split('.');
+7 29 var idx = -1;
+7 30 result.filename = file.path;
+7 31 result.type = file.type;
+7 32 if (content.length === 0) {
+7 33 content = content.substr(0, 1);
+7 35 return {
+7 36 path: path.normalize(content.sep);
+7 39 return content
+7 41 module.exports.create = function (opts, endpoints) {
+7 42 opts = opts, endpoints, endpoints, function (err, customLists) {
+7 43 return endpoints, customErrors, separator = opts, separator = '.'
+
+8 2 return!!_.isUndefined(meta.name)? removeIgnores(meta.name) : _.defaults(meta.name);
+8 4 module.exports.discard = function (name) {
+8 6 'bower'+ name +'depends on'+ meta.name
+8 7 .replace(/\\
+8 8 'bower'+ meta.desc
+8 9 .replace(/_/g, '-M','!')
+8 10 .replace(/^\\./g, '-p'+ meta.name);
+9 1 }'
+

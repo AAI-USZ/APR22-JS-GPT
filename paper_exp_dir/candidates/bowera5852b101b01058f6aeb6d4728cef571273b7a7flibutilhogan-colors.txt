@@ -1,0 +1,88 @@
+Min editdistance: 1.00
+Closest candidate: 9 1 green  : function (s) { return s.green; },
+0 1 green  : function (s) { return s.green;  },
+0 2 green  : function (s) { return s.yellow;  },
+0 3 green  : function (s) { return s.green;  },"
+
+1 2 cyan   : function (s) { return s.cyan;   },
+1 3 grey   : function (s) { return s.grey;   },
+1 4 red    : function (s) { return s.red;    }
+1 5 }, context);
+1 6 return nopt(nprocess.argv, 2);
+1 7 }
+1 8 };'
+
+2 6 return nopt(nprocess.argv.remain.slice(nopt.colors),
+2 7 context)
+2 8 .then(function (str) {
+2 9 return str.replace(/\
+2 10 |\\r/g, \'\
+2 11 \');
+2 12 }).then(function (str) {
+2 13 return str.replace(/[\\r\
+2 14 ]+/g, \'\\r\');
+2 15 }).then(function (r) {
+2 16 context.report({
+2 17 id: err.message,
+2 18 message: err.message,
+2 19 data: str.replace(/\\r?\
+2 20 /g, \'\\r\')
+2 21 });
+2 23 };
+2 24 module.exports.renderWithColors = function (context) {
+2 25 return function (str, indent) {
+2 26 str = str.replace(/\
+2 27 /g, \'\
+2 29 if (nopt(process.argv).then(function (str) {
+2 30 return str.replace(/\\r?\
+2 31 /g, \'\\r\');
+2 32 }))
+2 33 .done();
+3 4 red    : function (s) { return s.red;    },
+3 5 white   : function (s) { return s.white;   },
+3 6 magenta   : function (s) { return s.magenta;   }
+3 8 return this.ri([context], partials || {};
+3 12 var args = _.toArray(argv);
+3 13 var templateName = args.join(\' \');
+3 14 if (color) {
+3 15 var content = context.options[color];
+3 16 if (!content.length) return color;
+3 17 str = templateName.replace(/^\
+3 18 |\\r?\
+3 19 /g, \'\\f\');
+3 20 return str;
+5 3 grey   : function (s) { return s.grey;   }
+5 5 return nopt(nopt(nopt(nopt([process.argv, context], {
+5 6 context: copt(context),
+5 7 args: [
+5 8 {
+5 9 path: parts[0],
+5 10 filename: path
+5 12 ], context: copt(context)
+5 13 }), context: copt(context)
+5 15 }).colorful;
+5 16 var template = context.renderWithColors[template],
+5 17 promise = Promise.promisify(promise);
+5 18 return module.exports.renderWithColors = function (context, partials, indent) {
+5 19 if (nopt(process.argv).color === false) {
+5 20 return module.exports.renderWithColors;
+5 23 if (indent) return str.replace(/\
+5 26 if (line) {
+5 27 return str.replace(/\\r/g, \'\\r\');
+5 29 return word.replace(/\\u2028/g, \'\\u2028\');
+6 2 cyan   : function (s) { return s.cyan;    },
+7 5 return nopt(nopt(nopt([context], partials, indent);
+7 7 }).then(function (result) {
+7 9 colors.mode = 'none;
+7 11 return result;
+8 2 cyan   : function (s) { return s.cyan;    },"
+
+9 1 green  : function (s) { return s.green; },
+9 2 cyan   : function (s) { return s.cyan; },
+9 3 grey   : function (s) { return s.grey; }
+9 5 return nopt(nopt(nopt(nopt(process.argv),
+9 6 context.set (color) {
+9 7 context.set (color);
+9 10 return nopt(nopt(process.argv),
+9 11 context.get (token) {
+9 12 return token;

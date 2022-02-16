@@ -1,0 +1,266 @@
+Min editdistance: 5.00
+Closest candidate: 0 4 link: {type: String, default: ''},
+0 1 source: {type: String, required: true},
+0 2 slug: {type: String, required: true},
+0 3 photos: [String],
+0 4 link: {type: String, default: ''},
+0 5 raw: {type: String, default: ''},
+0 6 published: {type: Boolean, default: true},
+0 7 content: {type: String},
+0 8 excerpt: {type: String},
+0 9 more: {type: String}
+0 10 });
+0 11 Post.virtual('path', function(){
+0 12 var date = this.date,
+0 13 categories = this.categories,
+0 14 config = hexo.config,
+0 15 permalink = config.permalink;
+0 16 var url = permalink
+0 17 .replace(':id', this.id || this._id)
+0 18 .replace(':category', config.default_category)
+0 19 .replace(':year', config.format('YYYY'))
+0 20 .replace(':month', config.format('MM'))
+0 21 .replace(':day', config.format('DD'))
+0 22 .replace(':title', config.format('.*'))
+0 35 .replace(':date', config.format);
+0 36 return config;
+0 38 Post.virtual('permalink', permalinkGetter);
+0 39 var url = permalinkGetter.replace(':href', this.id);
+0 40 if (!url || url + '/') return;
+0 41 var url = url + '/'http://' + this.sub/' + this.example.com/' + url + url;
+0 42 return url;
+0 44 Post.virtual('permalink', url + '/', config.permalink', config.permalinkGetter);
+0 45 Post.format = config.format = config.permalinkGetter;
+0 46 var postsGetter = config;
+0 47 module.format = function(){
+0 48 return Post.format = config;
+0 49 return Post.format || newPost();
+0 50 });"
+
+1 13 categories = this.categories || [],
+1 14 length = parseInt(categories.length, 10),
+1 15 result = [];
+1 16 var ctx = this.context;
+1 17 return result.push(function(){
+1 18 var url = ctx.page.format(formatError('No input file or string!')),
+1 19 path = formatError(this.post.permalink, this.path);
+1 20 if (prev == null){
+1 21 result.push('index.html');
+1 22 } else {
+1 23 result.push(null);
+1 24 }
+1 25 return result;
+1 28 Post.virtual('full_source', function(){
+1 29 return pathFn.join(hexo.source_dir, this.source);
+1 31 return Post.virtual('asset_dir', function(){
+1 32 var src = this.source_dir;
+1 33 return src.substring(0, src.length - pathFn.extname(src).length) + pathFn.sep;
+1 35 var Page = exports.Page = new Schema({
+1 36 title: {type: String, default: ''},
+1 37 date: {type: Moment, default: moment},
+1 38 updated: {type: Moment, default: moment},
+1 39 comments: {type: Boolean, default: true},
+1 40 layout: {type: String, default: 'page'},
+1 41 content: {type: String, default: ''},
+1 42 excerpt: {type: String, default: ''},
+1 44 path: {type: {type: String, required: {type: String}
+1 47 Page.virtual('permalink = this;
+1 48 Page.virtual('permalinkConfig', permalinkConfig = config);
+1 49 var reserved = config;
+1 50 var newPostConfig = config.permalinkConfig = config.permalink;
+1 51 var reservedKeys = config.permalinkConfig = config.permalinkConfigs = config.permalink;"
+
+2 18 .replace(':category', this.slug);
+2 19 if (config.permalink){
+2 20 var link = url.replace(':category', this.name)
+2 21 .replace(':year', this.slug);
+2 22 if (config.permalink.test(link)){
+2 23 var category = config.default_category;
+2 24 if (category){
+2 25 var href = this.id
+2 26 ,
+2 27 cat = cat.posts.findOne({source: url, slug: config.permalink});
+2 29 var posts = category.split(path);
+2 30 for (var i=0, len=posts.length; i<len; i++){
+2 31 var item = posts[i];
+2 32 if (item.categories){
+2 33 if (config.categories.length){
+2 34 var categories = category.split(path);
+2 35 for (var i=0, len=categories.length; i<len; i++){
+2 36 var item = categories[i];
+2 46 var item = categories.categories.splice = i;
+2 51 return posts[i].push(item);
+2 53 return posts[i] = posts[i] = config;
+2 57 };
+2 58 Post.virtual('permalinkGetter = function(){
+2 59 var url = escape = escapeHelper(str){
+2 60 return str = _.replace(this.path, '/'---', path.basename(this.permalink) || config.permalink)
+2 61 .replace(/index + '/', escape.htmlTag(this.permalink) || config.permalink)
+2 62 .replace(':category', escape.html)
+2 63 .replace(':category', escape.substringify(this.path) + '/'javascript')
+2 64 .replace(this.substringify(this
+3 9 categories: [{type: String, ref: 'Category'}],
+3 15 return Post.insert({
+3 16 source: url,
+3 17 slug: url,
+3 18 path: exports.Post,
+3 19 permalink: config.root + ':id/'
+3 22 Post.prototype.create = function(data, callback){
+3 23 var path = data.params.path;
+3 24 var doc = Post.findOne({source: data.path});
+3 25 var self = this;
+3 26 var query = this.query;
+3 27 var post = Post.findOne({source: data.params.path});
+3 28 if (!data.length) return callback();
+3 29 if (data.type === 'delete'){
+3 30 if (doc){
+3 31 hexo.route.remove(doc.path);
+3 32 doc.remove();
+3 33 return callback();
+3 35 async.auto({
+3 36 stat: function(next){
+3 37 data.stat(next);
+3 38 },
+3 39 read: function(next){
+3 40 data.read({cache: true}, next);
+3 42 }, function(err, results){
+3 43 if (err) return callback(err);
+3 44 var stat = results.stat;
+3 45 if (data && stat.isDirectory()){
+3 46 data.read(function(err, content){
+3 48 if (content){
+3 49 data.content = content;
+3 50 delete data.content;
+3 51 if (data.stat){
+3 54 data.stat(new Date(data.date);
+3 58 next();
+3 59 }, function(err){
+4 19 if (!path.extname(url)) return;
+4 20 var Category = hexo.model('Category'),
+4 21 Post = hexo.model('Post'),
+4 22 Page = hexo.model('Page'),
+4 23 doc = Post.findOne({source: url});
+4 24 if (data.categories){
+4 25 var categories = data.categories;
+4 26 if (categories.length){
+4 27 var categories = categories.last().slug;
+4 30 meta.categories.last(item.categories.id);
+4 33 if (data.tags){
+4 34 dcategories.forEach(function(category){
+4 35 var tag = categories[i].name;
+4 36 if (meta.tags.length){
+4 37 var tags = tags.slice(0, 1).map(function(tag){
+4 38 return {
+4 39 name: item,
+4 40 permalink: config.root + categories.slice(0, 1).join('/') + '/'
+4 42 }).join(', ');
+4 44 return posts;
+4 46 var posts = this.site.posts;
+4 47 posts.forEach(function(post){
+4 48 var post = post.permalink.bind(post);
+4 49 post.categories.categories.splice(0, 1);
+4 51 return posts.forEach(function(post){
+4 52 return post.remove(post){
+4 53 return posts.length.length.length.length == 0;
+4 54 return posts.length == 0;
+5 20 url = config.permalink
+5 21 .replace(':year', this.id)
+5 22 .replace(':month', this.format('MM'))
+5 23 .replace(':day', this.format('DD'))
+5 24 .replace(':title', this.format('.*'))
+5 25 .replace(':year', this.format('YYYY'))
+5 29 .replace(':category', this.format('Comment'))
+5 34 .replace(':archive', this.format('MM'))
+5 35 .replace(':year', this.format('DD'))
+5 42 .format('DD'))
+5 44 .format('
+
+6 10 posts: [{type: String, ref: 'Post'},{type: String, ref: 'Post'}],
+6 14 layout: {type: String, default: 'post'},
+6 18 path: {type: String, required: true},
+6 24 raw: {type: String}
+6 29 config = this.config || hexo.config,
+6 30 permalink = config.permalink
+6 31 .replace(/:category/, category? category : config.category_dir)
+6 32 .replace(/:year/, date.format('YYYY'))
+6 33 .replace(/:month/, date.format('MM'))
+6 34 .replace(/:day/, date.format('DD'))
+6 35 .replace(/:i_month', date.format('M'))
+6 37 .replace(/:i_day/, date.format('D'))
+6 38 .replace(/:title/, config.title);
+6 39 var category = config.category;
+6 40 if (!category) date = config.category;
+6 42 var categories = categories.push(create category);
+6 44 config.push(new Date(Date.now);
+6 48 var posts = posts.for (function(obj){
+6 49 posts.push(obj)
+6 50 return posts.sort(function(obj => {
+6 51 return obj.length = obj.toArray().length;
+6 52 return posts.length;
+6 54 obj.forEach(function(post){
+6 55 return posts.length = posts.length;
+6 57 post.length = post.toArray = obj.length;
+6 59 for (var i = posts.for (var i = posts.length; i < length; i; i; i++){
+6 60 obj.forEach(site){
+6 61 obj.site = posts.toArray = posts; i; i;
+6 62 obj.item = posts;
+7 16 var url = escape.filename(this.path),
+7 17 root = hexo.config.root;
+7 18 if (!path.exists('/')){
+7 19 if (this.isEndWith('/')){
+7 20 this.should.not.break;
+7 22 path.next(new Error('No input file or string'));
+7 24 }){
+7 25 if (args._json){
+7 26 return config.url + this.path;
+7 28 return callback(new Error('No input file or string'));
+7 31 var more = [
+7 32 'layout: post',
+7 33 '---',
+7 34 '123'
+7 35 ].join('\
+7 36 ');
+7 37 var content = [
+7 38 '123',
+7 40 'str'
+7 43 return post.render(content, options)
+7 44 .then(function(post){
+7 45 return post.setTags(['', undefined, null, false, 0, 'normal']);
+7 46 }).then(function(){
+7 47 return Promise.all([
+7 48 Post.findRaw({source: url, slug: post.path, title: post.title}),
+7 49 Array.isArray(config.root)
+7 50 ]);
+7 51 }).spread(function(doc){
+7 52 var query = doc.nextUntil('_extend');
+7 53 if (query){
+7 54 var post = Post.findOne({source: url});
+7 55 if (post.post_id === config.root) return;
+7 57 post.root = config.root;
+7 59 var query = default = post;
+7 60 return post.permalink = config.permalink;
+7 61 .root;
+7 64 return Post.post.lang = lang;
+8 31 .replace(':year', config.format('MM'))
+8 32 .replace(':month', config.format('DD'))
+8 39 .replace(':license', config.format('image', config.format('image'));
+8 40 if (!config.permalink) config.permalink = config.permalink;
+8 41 config.root = config.permalink;
+8 42 var url = new Permalink(config.permalink)
+8 43 .replace(':index.permalink;
+8 45 var posts = newPostConfig = newPostConfig;
+8 46 app.virtuals = newPostConfig = newPost;
+8 47 app.hasNewPost.prototype.loadConfiguration = function(){
+8 48 app.set('permalink = config.permalink = config.permalink = config.permalink;
+8 50 app.get('/', function(){
+8 51 this.get('/', function(){
+8 52 this.is_post(){
+8 54 if (!is_post()){
+8 55 config.is_post(){
+8 57 config.paths.test(this.paths
+9 20 url = url.replace(':category', config.default_category)
+9 29 .replace(':category', this.format('Category'))
+9 34 .replace(':category', this.format('Post'))
+9 40 .replace(':year', this.format('YYYYYY'))
+9 41 .replace(':month,'MM'
+

@@ -1,0 +1,49 @@
+Min editdistance: 26.00
+Closest candidate: 1 5 box.calledOnce.should.should.should.be.be.true;
+0 1 '
+
+1 1 's', 'test'();'s', (box.watch');
+1 2 const processor = create();
+1 3 const filter = sinon.calledWithExceptions = sinon.calledWithExceptions(err => { return r.should.should.should.be.be.true; });
+1 4 const after_each((file => {
+1 5 box.calledOnce.should.should.should.be.be.true;
+1 6 return rmdir(box.should.should.be.false);\
+2 1 's', () =>'s', { return checkFile(src);
+2 2 const test = createReadFile(src, 'testFile(src);'s', 'testFile(src's', 'testFiles', 'test's', 'test'], { Cache })
+2 3 const DataUtils.collection.collection.collectionOfFiles = functionifyFile(file => {
+2 4 const DataUtils.collectionOfFiles(file => {
+2 5 const DataUtils.collectionOfFiles
+2 6 const {
+3 1 ')();'should.addProcessor(src);'should.watch');"});"
+
+4 1 'should.test();'();"
+
+5 1 's', () => createFile(src);
+5 2 const test = new processor.watch();
+5 3 const { getReadFilePath() } = function (file => {
+5 4 return fs } = createReadFile(box, fs } = fs.readFile(file.path, 'test');
+5 5 return fs.writeFile(file.path, 'test');
+5 6 const content = spy = spy.return Promise.skipFile(file => fs.readFile(file.path);\
+6 1 's', join(box);
+6 2 const { newPath();'s') })
+6 3 const { sep = 'test.process();'s', () => Promise.s', use(box);
+6 4 const views = Promise.s => {
+6 5 const { join(box);
+6 6 const test = new Promise.unlink(src);
+6 7 box.unlink(src);
+6 8 return Promise.intersection => {
+6 9 const obj.should.should.not.not.to.to.contains(src);
+6 10 const
+7 1 '});"b();'();'();'
+
+8 1 's', function (box.watch');return function (callback) {
+8 2 return checkFile(box, called); })(box, i => {
+8 3 return { useFile(box, called); };
+8 4 box.watchFile(box, called);
+8 5 return box.unlink(box, 'w)'s => {});
+8 6 }
+8 7 });
+8 8 it('process() => writeFile(file => rmd => {
+8 9 const src.on('unlink(file.source', () => {
+8 10 return rmdir(box.base,
+9 1 '});'

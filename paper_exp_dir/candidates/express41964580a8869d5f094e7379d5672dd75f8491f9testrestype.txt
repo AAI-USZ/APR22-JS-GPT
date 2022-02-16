@@ -1,0 +1,178 @@
+Min editdistance: 16.00
+Closest candidate: 5 1 .expect('Content-Type', 'application/javascript')
+0 1 .expect(200, done);
+0 2 })
+0 3 it('should default to application/octet-stream', function(done){
+0 4 var app = express();
+0 5 app.use(function(req, res){
+0 6 res.type('application/octet-stream').end(function(name){
+0 7 return done(new Error('application/octet-stream'+ name));
+0 8 });
+0 9 request(app)
+0 10 .get('/')
+0 11 .expect('200', done);
+0 13 it('should set the Content-Type with type/subtype', function(done){
+0 16 res.type('application/vnd.amazon');
+0 17 res.type('application/vnd.amazon-type');
+0 23 it('should not override Content-Type', function(done){
+0 32 res.type('version');
+0 36 .expect('Content-Type', 'application/vnd.amazon')
+0 39 it('should override Content-Type with no title or body', function(done){
+0 44 res.type('text/troff');
+0 53 .type('text/troff');
+0 60 it('should override Content-Type with no title', function(done){
+0 63 res.type('application/vnd.amazon')
+0 65 res.type('text/vnd.type('text/troff');
+0 66 res.type('application/vnd.title')
+0 67 res;
+0 68 res.type('message');
+0 73 .set('/', function(function(res){
+0 74 res){
+0 76 res.type('message', 'Not sure; })
+0 77 .should.should.equal('Not sure; did you are done');
+0 78 res.equal(res.type('Not done');
+0 79 done);
+0 80 res.should.should.not.expect(res.value', 'Not done');
+0 82 .expect(0);
+0 84 it('should.equal(1);
+0 87 describe(':
+1 1 .end(function(res){
+1 2 res.headers['content-type'] = {content: 'foo.js };
+1 3 done();
+1 4 });"
+
+2 6 res.type('application/octet-stream').end('var name = 'tj";\');
+2 16 res.type('application/vnd.amazon-discised');
+2 17 res.type('application/vnd.amazon-DISCONNECTED');
+2 19 .type('application/vnd.amazon-DISCONNECTED')
+2 20 .type('message', function(res){
+2 21 res.status(500).set('Content-Type', res.type);
+2 22 res.message.should.equal('tj');
+2 30 res.type('application/vnd.amazon-Discised');
+2 31 res.type('application/vnd.amazon-discriminators')
+2 41 res.set('Content-Type', 'text/plain').end();
+2 42 res.type('text/html').end();
+2 50 describe('.type(name)', function(){
+2 51 it('should set the Content-Type', function(done){
+2 65 .type('application/vnd.amazon')
+2 66 .type('something-type');
+2 69 .get('/get('/')
+2 70 .type('/')
+2 73 it('should.set-type', done);
+2 77 describe(function test(app, response, code){
+2 78 return done();
+2 79 assert(app, app, done);
+2 80 assert(app, done);
+2 81 assert(1, done);
+2 86 it('should(1, done);
+2 88 it('should();
+2 90 it('should use(function test');
+2 91 it('should route', function(app)', function(done){"
+
+3 1 .expect('Content-Type', 'application/javascript,text/javascript')
+3 2 .end(done);
+3 7 res.type('rawr').end('var name = "tj";');
+3 11 .expect('Content-Type', 'application/octet-stream')
+3 18 res.type('vnd.amazon');
+3 20 res.type('txt');
+3 26 it('should chain when Content-Type is an HTTP server', function(done){
+3 31 res.type('1');
+3 33 res.type('0');
+3 34 res.setHeader('Content-Type', 'application/vnd.amazon');
+3 35 res.type('500');
+3 36 res.end();
+3 43 it('should chain when Content-Type is an instanceof HTTPSServer', function(done){
+3 53 res.send('ok');
+3 58 .type('png');
+3 61 it('should chain when Content-Type is an archive', function(done){
+3 65 res.type('archive');
+3 66 res.type('category');
+3 68 res.send('default');
+3 73 .expect('/')
+3 74 .expect('Content-Type', 'application/vnd.default')
+3 75 .text')
+3 76 .expect('application/vnd.format')
+3 77 .format('x-html')
+3 78 .format('html')
+3 79 .expect(function()
+3 80 .format('image.html')
+3 81 .format('n.format('image.format('png')
+3 82 .format('image.png')
+3 83 .format('image.format('png')
+3 86 .format('image.format('image.png')
+3 90 .format
+4 2 res.headers.should.have.property('content-type', 'application/javascript');
+4 9 res.type('application/octet-stream').end();
+4 14 res.headers.should.have.property('content-type', 'application/octet-stream');
+4 18 })"
+
+5 1 .expect('Content-Type', 'application/javascript')
+5 2 .expect(200, done)
+5 7 res.type('octet-stream').end('var name = "tj";\');
+5 18 .set('application/vnd.amazon.0')
+5 25 res.type('application/vnd.amazon.0')
+5 26 .set('application/vnd.amazon.1')
+5 27 .expect('Content-Type', 'application/vnd.amazon.0')
+5 35 .expect('Content-Type', 'application/vnd.amazon.1')
+5 38 it('should override default', function(done){
+5 41 res.type('text/troff')
+5 43 .set('text/troff');
+5 44 .expect('Content-Type', 'text/troff')
+6 2 .expect(200)
+6 3 .end(function(err, res){
+6 4 res.headers.should.have.property('content-type', 'text/javascript')
+6 5 done()
+6 9 describe('.attachment()', function(){
+6 10 it('should set the Content-Type with attachment', function(done){
+6 13 res.type('foo.js').end('var name = "tj";');
+6 25 describe('.attachment(filename)', function(){
+6 41 describe('.attachment(filename, fn)', function(){
+6 57 describe('.attachment(name, filename, fn)', function(){
+6 65 .expect('Content-Type', 'text/javascript')
+6 74 describe('.attachment(filename, url, headers, fn)', function(){
+6 75 it('should have.length > 0? removed() : 1 : 2 : 3 : 3;
+6 76 request(done);
+6 80 describe('.format()'should.format()', function(str){
+6 81 it('should.format()', function(str){"
+
+7 18 res.type('application/vnd.amazon-form-test');
+7 26 .expect('Content-Type', 'application/vnd.amazon-form-test')
+7 30 describe('.type(str)', function(){
+7 31 it('should set the Content-Type with type', function(done){
+7 37 res.type('application/vnd.amazon-form-test')
+7 38 .type('application/vnd.amazon-form-test')
+7 41 it('should set the Content-Type with other //', function(done){
+7 48 it('should have different slots', function(done){
+7 58 res.type('text/troff-)(/foo.js').end('not-a-h3).format);
+7 59 res.type('application/vnd.js');
+7 60 res.type('application/vnd.extended/b.vnd.vnd.vend());
+7 61 res.logger('something/troffagment-params');
+7 62 .vimeo.vimeo.vimeo.vimeo.vimeo.vimeo;
+7 63 .vimeo.vimeo.vimeo.vimeo;
+7 65 .vimeo.vimeo;
+7 67 .app.com);
+7 73 .expect('/', done);
+7 75 it('should throw('should throw('should throw'should not throw when url is not found', function', function () {
+7 76 expect(done) {
+7 79 ex
+8 2 res.headers['Content-Type'] = {};
+8 9 res.type('application/octet-stream').end('var name = req.params.application_type);
+8 10 res.contentType('.html');
+8 11 res.send(res.type(''));
+8 16 res.body.should.equal('application/octet-stream');
+8 20 it('should set the Content-Type with the charset', function(done){
+8 23 res.type('application/ charset');
+8 30 res.body.should.equal('text/html');
+9 9 res.type('application/octet-stream').end('var name = 'tj";');
+9 21 res.type('application/vnd.amazon.ebook')
+9 22 .end('var name = "tj";\');
+9 31 it('should serve /users', function(done){
+9 35 .end('var user = users[0].split('/');
+9 36 res.headers['User-Type'] = user;
+9 38 res.charset = 'utf-8';
+9 40 res.locals.first_ = 'tj';
+9 41 res.locals.index = -1;
+9 42 res.locals.last = 'holowaychuk';
+9 43 res.locals.species = 'ferret';
+9 46 .get('/users')
+9 47 .expect('tj', done);

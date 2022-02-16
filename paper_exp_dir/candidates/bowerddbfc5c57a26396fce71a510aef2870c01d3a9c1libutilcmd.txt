@@ -1,0 +1,31 @@
+Min editdistance: 28.00
+Closest candidate: 0 7 if (!config.remote) {
+0 1 return deferred.promise;
+0 2 }
+0 3 module.exports = function (command, args, options, callback) {
+0 4 if (!callback) {
+0 5 var command = createError('Commands', 'ify', '-p', args);
+0 6 var config = hexo.config;
+0 7 if (!config.remote) {
+0 8 var help = [
+0 9 'You should configure deployment settings in _config.yml first!',
+0 10 '',
+0 11 'Example:',
+0 12 '  deploy:',
+0 13 '    type: openshift',
+0 14 '    remote: <upstream git remote>',
+0 15 '   branch: [upstraem git branch] # Default is master',
+0 17 'For more help, you can check the online docs:'+ 'http://zespia.tw/hexo/'.underline
+0 18 ];
+0 19 console.log(help.join('\
+0 20 '));
+0 21 return callback();
+0 23 return config;
+0 24 };"
+
+1 1 "
+
+6 3 module.exports = createError;"
+
+9 3 module.exports = cmd;"
+

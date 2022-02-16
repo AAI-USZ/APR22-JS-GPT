@@ -1,0 +1,11 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 require('./i18n');
+0 1 require('./i18n');
+0 2 require('./source');
+0 3 require('./view');
+0 4 });"
+
+1 4 require('./post');
+4 4 require('./source-');
+6 4 require('./post');"
+

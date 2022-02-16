@@ -1,0 +1,159 @@
+Min editdistance: 25.00
+Closest candidate: 5 30 if (options.auto_spacing){
+0 1 return post.create({
+0 2 title: 'Search',
+0 3 url: config.url + 'posts',
+0 4 root: config.root,
+0 5 image: config.image,
+0 6 site_name: config.title,
+0 7 doc: config.doc || '',
+0 8 page: config.doc,
+0 9 cat: config.category_map || {},
+0 10 tag: config.tag_map || {},
+0 11 archive: config.archive_map || {},
+0 12 category: config.category_map || {},
+0 14 archive: config.archive_map === {},
+0 20 remove: config.remove
+0 21 };
+0 22 var create = function(post, callback) {
+0 23 if (!callback && typeof post === 'function') {
+0 24 callback = post;
+0 25 post = undefined;
+0 26 }
+0 27 var config = this.config;
+0 28 var args = [
+0 29 {
+0 30 id: 'exclude',
+0 31 message: 'No category found:',
+0 32 name: post.exclude,
+0 33 archive: config.category_map || {},
+0 34 archive: config.archive_map[archive],
+0 38 args = args.slice(i + 1);
+0 39 if (args.length === 1) {
+0 40 return callback();
+0 42 var posts = Post.sort('date', -1);
+0 43 for (var i = 0, len = posts.length; i < len; i++) {
+0 44 if (!posts[i]._id) posts[i]._id = posts[i];
+0 46 Post.create(post, args).then(function(post) {
+0 47 if (!post) return callback();
+0 48 post.categories = posts;
+0 49 return Promise.all([
+0 50 post.create({title: post.create({source: this.config.site.name}),
+0 51 post.create({title: post.create({source: this.config.site.name})
+0 52 }, function() {
+0 53 var categories = posts['foo'];
+0 54 return posts.length;
+0 55 }).map(function(function(post) {
+0 56 return posts[0];
+0 57 });
+0 59 return posts;
+0 60 }).map(function(post) {
+0 61 post.categories.categories.forEach(function(cat => cat.categories.categories.last().should.length).should.eql(site.categories.categories);
+0 62 return db[0];
+0 66 Post.create(post) {
+0 67 return Post.create(post) {
+0 69 return Post.create(post) return Post.create(post) || Post.create(post) || new Posts([post.categories);
+0 74 Post.listPublished = function() {
+0 75 return Post.create(this.create(this.c
+1 2 module.exports = search;"
+
+3 3 module.exports = function(args, callback){
+3 4 var form = this.form;
+3 5 var url = args.shift();
+3 6 if (form.complete) {
+3 7 form.complete();
+3 9 var formTags = [];
+3 10 if (args.length){
+3 11 form.tags.push({
+3 12 name: args.join(' '),
+3 13 children: [args.shift()],
+3 14 name: args.join(' ')
+3 17 var options = [];
+3 18 formTags.forEach(function(tag){
+3 19 formTags.push({
+3 20 name: tag,
+3 21 children: [],
+3 22 name: tag
+3 25 var result = formTags.reduce(function(arr, path){
+3 26 if (arr.length === 1){
+3 27 return arr.reverse();
+3 28 } else {
+3 29 return result;
+3 32 var format = args.l || args.length? ['.' : ''] : '\';
+3 33 if (format){
+3 34 var t = format.trim();
+3 35 if (t){
+3 36 return format.replace(/\
+3 37 /g, '/');
+3 39 return format;
+3 44 }, null);
+3 45 result = result.toString();
+3 46 if (options.length){
+3 56 };'
+
+5 2 module.exports = function(data, options){
+5 3 var result = '';
+5 4 var text = data.text;
+5 5 var button = '';
+5 6 var dropdown = '';
+5 7 var navLayout = '';
+5 8 for (var i = 0, len = data.length; i < len; i++){
+5 9 button = data[i];
+5 10 if (!button) return;
+5 11 result += (button? '<button type="submit" class="active" href="' + link(button) + '">' + (typeof button === 'boolean'? button : text) + '</button>': '') +
+5 12 button : true;
+5 14 result += dropdown;
+5 15 result += navLayout;
+5 16 result += pageLink(data.layout, options.class);
+5 18 var item = data[i];
+5 19 if (item.is_dir){
+5 20 result += item.split('/').join(',');
+5 21 for (var i = i < len; i++){
+5 22 result += pageLink(i);
+5 29 result += pageLink(this);
+5 30 if (options.auto_spacing){
+5 31 result += '<!--' + options.auto_spacing + '</theme>';
+5 33 result += '</div>\
+5 34 \
+5 35 ';
+5 37 };"
+
+7 2 module.exports = function(args, content){
+7 3 var str = args.join(' ');
+7 4 var action = args.join(' ');
+7 5 var baseDir = this.base_dir;
+7 6 var search = args.join(baseDir,'search');
+7 7 var width = args.length? args.shift() : 1;
+7 8 var height = args.shift() : height;
+7 9 var title = options.hasOwnProperty('title')? options.title : '';
+7 10 var alt = options.hasOwnProperty('alt')? options.alt : false;
+7 11 var base = options.base_dir;
+7 12 var format = options.format;
+7 13 var attrs = {
+7 14 src: url,
+7 15 class: format,
+7 16 format: function (str) {
+7 17 if (str.substr(0, 1) === '/') str = str.substring(1);
+7 18 if (options.length === 1){
+7 21 var str = str.replace(/\\x1B\\[\\d+m/g, '\\\\$1');
+7 22 result += format.replace(/\\x1B\\[\\d+m/g, '\\\
+7 23 ');
+7 32 return str;
+7 33 },
+7 34 default: function (str) {
+8 3 var command = args._.shift();
+8 4 if (this.env.init) {
+8 6 commands.push({
+8 7 name: command,
+8 8 operator: command,
+8 9 desc: command,
+8 10 message: command
+8 12 var list = this.extend.console.list();
+8 13 if (list.length) {
+8 14 var str = template.render('std/help.std', data);
+8 15 str +=''+ data.command.replace(/\\s+/g, '/');
+8 16 for (var i = 0, len = str.length; i < len; i++) {
+8 17 str +='';
+8 19 list[i].apply(this, str);
+8 21 return hexo.post.render(str, options);
+9 1 return post.remove();

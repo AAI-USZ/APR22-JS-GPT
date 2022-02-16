@@ -1,0 +1,67 @@
+Min editdistance: 49.00
+Closest candidate: 0 9 this.on('exitCode', () => done())
+0 1 ', function () => {
+0 2 it('exit', () =>'should haveStderrouting', function () => captured (launcher', () => ({
+0 3 this.start() {})
+0 4 })
+0 6 const mockSpawn = sinon.call(this.start(), this.start(), this.log.start())
+0 7 this.start(), this.log.reset()
+0 8 const mockTimer = () => this.start())
+0 9 this.on('exitCode', () => done())
+0 11 before_start.on('
+1 1 '].config', function () => {
+1 2 it('should now () =>'
+1 3 const server = mockExecutor.start()'scheduled instead', function () { config.start()'scheduled() }
+1 4 const done() } () => {
+1 6 const done(this.log.called } () => {
+1 7 const server.start = 'executor'scheduled')
+1 8 const server = { config.start()'scheduled = true }
+1 9 const end () => {
+1 10 const options = sinon.called }
+2 2 it('config', () => { useIframe', function () =>'sucor', function () =>'s's'
+2 3 const options = function () { return config.start () { return config.set() }'
+2 4 const config.config = { config.set() }'s', done(() => useIframe,'s' }'
+2 5 const done }() {} })
+2 6 const server = { config.start() }() }() }() }
+2 7 const mockEn
+3 1 ', 'config']
+3 2 config = function () => {
+3 3 return config = { useIframe === 'useIframe', () => emitter'sitter' },'slimifyConfig'
+3 6 }
+3 7 describe('execute() => {
+3 8 it('simple', () => {
+3 9 it('should run with constant', () => {
+3 10 const config = createMockServer()'
+3 11 const mockServer = injector.createServer())
+3 12 const mockServer()
+3 13 const mockServer.createServer()
+4 1 ', () =>'s', () => () => () => {
+4 2 Express.start = function ({
+4 3 done = one.start()() {} }'
+
+5 1 ', () => { useIframe', () =>'sconfig' } function (config.config => ({
+5 2 return config.start()'saddEventGeneratedFilesPromise, 'config.addEventGenerator' in the server') })
+5 4 }() => {
+5 5 Express.addEventGenerator.addEventGenerator.addEventGenerator.addEventGenerator.addEventGenerator()
+5 6 const ['customFileHandlers()'
+5 7 const ['emitter.start()'
+5 8 ].on('run()'
+5 9 const emitRun
+6 1 '].executor', done =>'
+6 2 config = function () => () => {
+6 3 it('should use injectedServer when run_client() is not used', () => { this.start() is undefined.'
+
+7 1 '].config' }()'
+8 2 _id'deepStoServer' }
+9 1 ' } () => {
+9 2 it('exit', () => {
+9 3 const server = { useIframe = function (config, done () {}'s', done }'s', () => fs.start () => {
+9 4 const end() }()
+9 5 const options = function done(done) {
+9 6 if (done) {
+9 7 done()
+9 8 server.on('exitCode', done)
+9 9 return done)
+9 10 server.on('exit', () => done(done)
+9 11 server.exitCode)
+9 13 })\

@@ -1,0 +1,497 @@
+Min editdistance: 15.00
+Closest candidate: 0 1 path = require(\'path\'),
+0 1 path = require(\'path\'),
+0 2 logger = require(\'./logger\');
+0 3 var options = {
+0 4 host: \'localhost\',
+0 5 path: \'posix\',
+0 6 permalink: \':year/:month/:day/:title/\',
+0 7 permalink: \':category/:title/\',
+0 8 archive: 2,
+0 9 category: 2,
+0 10 tag: 2,
+0 14 port: 4000,
+0 15 logger: false,
+0 16 logger_format: \'combined\',
+0 17 per_page: 10,
+0 18 pagination_dir: \'/page\',
+0 19 public_dir: \'public\',
+0 23 date: 1,
+0 24 new_post_name: \':title.md\',
+0 25 default_layout: \'post\',
+0 26 titlecase: false,
+0 27 external_link: {
+0 28 enable: true,
+0 29 field:\'site\',
+0 30 exclude: \'\'
+0 31 },
+0 32 filename_case: 0,
+0 33 render_drafts: false,
+0 34 post_asset_folder: false,
+0 35 relative_link: false,
+0 36 future: true,
+0 37 highlight: {
+0 39 auto_detect: false,
+0 40 line_number: true,
+0 41 tab_replace: \'\',
+0 43 prismjs: {
+0 44 enable: false,
+0 48 default_category: \'uncategorized\',
+0 49 category_map: {},
+0 50 tag_map: {},
+0 52 }
+0 53 };
+0 54 var parseEnv = function(argv, env) {
+0 55 var words = argv.slice(5);
+0 56 return {"
+
+1 3 var constant = require(\'./constants\');
+1 4 var watcher = require(\'./watcher\');
+1 5 var ws = require(\'./web-server\');
+1 6 var preprocessor = require(\'./preprocessor\');
+1 7 var Launcher = require(\'./launcher\').Launcher;
+1 8 var FileList = require(\'./file-list\').List;
+1 9 var reporter = require(\'./reporter\');
+1 10 var helper = require(\'./helper\');
+1 11 var events = require(\'./events\');
+1 12 var EventEmitter = events.EventEmitter;
+1 13 var Executor = require(\'./executor\');
+1 14 var start = function(injector, config, launcher, globalEmitter, preprocess, fileList, webServer,
+1 15 capturedBrowsers, socketServer, executor, done) {
+1 16 config.frameworks.forEach(function(framework) {
+1 17 injector.get(\'framework:\' + framework);
+1 18 });
+1 19 var filesPromise = fileList.refresh();
+1 20 if (config.autoWatch) {
+1 21 filesPromise.then(function() {
+1 22 injector.invoke(watcher.watch);
+1 25 webServer.on(\'error\', function(e) {
+1 26 if (e.code === \'EADDRINUSE\') {
+1 27 log.warn(\'Port %d in use\', config.port);
+1 28 config.port++;
+1 29 webServer.listen(config.port);
+1 30 } else {
+1 31 throw e;
+1 34 var singleRunDoneBrowsers = Object.create(null);
+1 35 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+1 36 var singleRunBrowserNotCaptured = false;
+1 37 webServer.listen(config.port, function() {
+1 38 log.info(\'Karma v%s server started at http://%s:%s%s\', constant.VERSION, config.hostname,
+1 39 config.port, config.urlRoot);
+1 40 if (config.browsers && config.browsers.length) {
+1 41 injector.invoke(launcher.launch, launcher).forEach(function(browserLauncher) {
+1 42 singleRunDoneBrowsers[browserLauncher.id] = false;
+1 46 globalEmitter.on(\'browsers_change\', function() {
+1 47 socketServer.sockets.emit(\'info\', capturedBrowsers.serialize());
+1 49 globalEmitter.on(\'browser_register\', function(browser) {
+1 50 launcher.markCaptured(browser.id);
+1 51 if (config.autoWatch && launcher.areAllCaptured()) {
+1 52 executor.schedule();
+1 55 socketServer.sockets.on(\'connection\', function (socket) {
+1 56 log.debug(\'A browser has connected on socket\'+ socket.id);
+1 57 var replySocketEvents = events.bufferEvents(socket, EVENTS_TO_REPLY);
+1 58 socket.on(\'complete\', function() {
+1 59 pendingSocketEvents.emit(\'browsers_change\', function() {
+1 62 socket.on(\'register\', function(socket.emitFilesPromise.bind(this);
+1 65 return server.on(\'done
+1 68 socket.on(\'done
+1 69 fileList.on(\'error\', function(done, done) {
+1 70 if (config.done) {
+1 71 fileList.clearFilesPromise.bind(this)
+1 73 var server = http.injector.execFilter(fileList.injector, done);
+1 74 var afterPreprocess = launcher.execFilter;
+1 75 Server.execFilter = function no
+2 5 var createPatternObject = function(pattern) {
+2 6 if (pattern && helper.isString(pattern)) {
+2 7 return helper.isUrlAbsolute(pattern)? new UrlPattern(pattern) : new Pattern(pattern);
+2 9 if (helper.isObject(pattern)) {
+2 10 if (pattern.pattern && helper.isString(pattern.pattern)) {
+2 11 return helper.isUrlAbsolute(pattern.pattern)?
+2 12 new UrlPattern(pattern.pattern) :
+2 13 new Pattern(pattern.pattern, pattern.served, pattern.included, pattern.watched);
+2 15 logger.setLevel(pattern.pattern, pattern.watched);
+2 16 logger.useColors(pattern.pattern);
+2 17 return checkPatternObject(pattern.pattern, logger.useColors);
+2 19 var createPatternMapper = function(resolve) {
+2 20 return function(objectPattern) {
+2 21 objectPattern.pattern = resolve(objectPattern.pattern);
+2 22 return objectPattern;
+2 25 if (helper.isString(configFilePath)) {
+2 26 config.basePath = path.resolve(path.dirname(configFilePath), config.basePath);
+2 27 config.exclude.push(configFilePath);
+2 29 config.basePath = path.resolve(config.basePath || \'.\');
+2 31 config.files = config.files.map(createPatternObject).map(createPatternMapper(basePathResolve));
+2 32 config.exclude = config.exclude.map(basePathResolve);
+2 33 config.junitReporter.outputFile = basePathResolve(config.junitReporter.outputFile);
+2 34 config.coverageReporter.dir = basePathResolve(config.coverageReporter.dir);
+2 35 config.basePath = helper.normalizeWinPath(config.basePath);
+2 36 config.files = config.files.map(createPatternMapper(helper.normalizeWinPath));
+2 37 config.exclude = config.exclude.map(helper.normalizeWinPath);
+2 38 config.junitReporter.outputFile = helper.normalizeWinPath(config.junitReporter.outputFile);
+2 39 config.coverageReporter.dir = helper.normalizeWinPath(config.coverageReporter.dir);
+2 40 var urlRoot = config.urlRoot;
+2 41 if (urlRoot.charAt(0)!== \'/\') {
+2 42 urlRoot = \'/\' + urlRoot;
+2 44 if (urlRoot.charAt(urlRoot.length - 1)!== \'/\') {
+2 45 urlRoot = urlRoot + \'/\';
+2 47 if (urlRoot!== config.urlRoot) {
+2 48 log.warn(\'urlRoot normalized to "%s"\', urlRoot);
+2 49 config.urlRoot = urlRoot;
+2 51 if (config.proxies && config.proxies.hasOwnProperty(config.urlRoot)) {
+2 52 log.warn(\'"%s" is proxied, you should be a source-url\'
+2 53 ,
+2 54 , urlRoot = config.hostname
+2 55 , proxied = true;
+2 57 if (config.protocol === \'https hostname!== \'// https? https : http\') {
+2 58 log.protocol = null;
+2 60 if (proxy.protocol = protocol
+2 61 ;
+2 62 var getProxy = function (protocol, hostname) {
+2 63 var protocol = protocol = protocol
+2 64 var getProxy(host, hostname, port, hostname, port, urlRoot, urlRoot);
+2 65 var protoxies = hostname = hostname;
+2 66 var urlRoot = upstreamProxy = protocol === \'https: https? upstreamProxy;
+2 67 var protocol = port;
+2 68 var protocol = protocol || null;
+2 69 var getProxy = https = port;
+2 70 var https = https? \'https: https? https : port
+3 6 var preprocessor = exports.watcher = new watcher({
+3 7 interceptors: {
+3 8 message: function(src, msg, type) {
+3 9 var rl = type;
+3 10 if (rl.length === 0) {
+3 11 return true;
+3 13 var data = {
+3 14 content: text
+3 17 resultReporter, capturedBrowsers, done) {
+3 18 logger.setup(config.logLevel, config.colors, config.loggers);
+3 22 var log = logger.create();
+3 29 var socketServer = io.listen(webServer, {
+3 30 logger: logger.create(\'socket.io\', constant.LOG_ERROR),
+3 31 resource: config.urlRoot +\'socket.io\',
+3 32 transports: config.transports
+3 34 webServer.updateFilesPromise(filesPromise);
+3 45 log.info(\'Testacular server started at http://localhost:\' + config.port);
+3 47 injector.invoke(launcher.launch, launcher);
+3 50 var resultReporter = reporter.createReporters(config.reporters);
+3 51 resultReporter.reporters.forEach(function(reporter) {
+3 52 globalEmitter.bind(reporter);
+3 54 var capturedBrowsers = function() {
+3 55 var browsers = [];
+3 56 __proto__.__proto__ = EventEmitter.prototype;
+3 57 log.debug(\'No captured browser, open http://localhost:\' + config.port);
+3 58 var server = capturedBrowsers.clone();
+3 60 return server;
+3 62 exports.createReporters = function(names, config, injector) {
+3 63 var errorReporter = new SourceMapConsumer({source: \'http://localhost:8080\', urlRoot: \'/\', hostname: \'localhost\', port: config.port, urlRoot: config.hostname, hostRoot});
+3 64 var browser;
+3 65 var browser = injector = new browserCollection(globalEmitter);
+3 66 var locals = new SourceMapConsumer({source: ['globalEmitter: {};
+3 67 var newLocals.source = function(sourceLocals() {
+3 68 return function(urlRoot, urlRoot, hostname, hostname, port, hostname, port, urlRoot, urlRoot, handler) {
+3 69 return injector = injector.get(\'mongodb://localhost\');
+3 71 var locals.initializeMigrator = function() {
+3 72 injector.injector.createChild = function(locals;
+3 73 var last = injector.initializeMigrator(locals, locals) {
+3 74 var last = injector.get(\'injector.getByIdorId\');
+3 75 for (injector
+4 5 path: \'https://example.com\',
+4 6 root: \'/\',
+4 8 tag: \'default\',
+4 9 url: {
+4 15 archive: \' 2\',
+4 16 category: \'uncategorized\',
+4 17 code: \'utf8\',
+4 18 home: \'https://example.com\',
+4 19 permalink: \':category\',
+4 22 archive: 3,
+4 23 category: \'tag\',
+4 33 year: 2,
+4 34 month: 2,
+4 39 map: {},
+4 45 logger_format: \'dev\',
+4 46 date_format: \'MMM D YYYY\'
+4 48 var helper = exports.helper = {
+4 49 date: {
+4 50 expires: new Date(),
+4 51 path: \'/\' + helper.format(\'YYYY-MM-DD\')
+4 53 stats: {
+4 54 files: helper.isDefined(options.tag? options.tag : \'tag\')
+4 58 var rl = new browser.Collection(global);
+4 60 return callback();
+4 62 var stats = 1;
+4 63 var info = [
+4 64 \'# External link test\',
+4 65 \'1. External link\',
+4 66 \'<a href="\' + source + \'">\',
+4 67 \'2. External link with "rel" Att\',
+4 68 \'<a rel="external" href="\' + source + \'">\',
+4 70 \'<a rel="external noopener" href="\' + source + \'">\',
+4 77 \'<a href="\' + source + \'</a>\',
+4 78 \'<a>\'</li>\',
+4 79 ].join(\'\
+4 80 \');
+4 81 var result = function(arr, callback){
+4 82 var url = url_for = url_for.parse(url).toString(url);
+4 83 if (this.path = this.path == config.url).pathname;
+4 84 this.params = this.params = config.root;
+4 85 this.path = config.root;
+4 86 if (!path.exclude = config.root = config.root;
+4 87 if (this.isExternalLink) config.externalLink) config.root = config.external_link = config.external_link === \'.root
+4 88 || config.external_link;
+4 89 if (config.external_link === \'.exclude
+4 90 || config.external_link === config.url) {
+4 91 config.external_link = this.url
+4 92 .path = config.root;
+5 3 var log = logger.create(\'web server\');
+5 4 var SCRIPT_TAG = \'<script type="text/javascript" src="%s"></script>\';
+5 5 var MIME_TYPE = {
+5 6 txt: \'text/plain\',
+5 7 html: \'text/html\',
+5 8 js: \'application/javascript\'
+5 10 var setNoCacheHeaders = function(response) {
+5 11 response.setHeader(\'Cache-Control\', \'no-cache\');
+5 12 response.setHeader(\'Pragma\', \'no-cache\');
+5 13 response.setHeader(\'Expires\', (new Date(0)).toString());
+5 15 var createHandler = function(fileGuardian, STATIC_FOLDER) {
+5 16 return function(request, response) {
+5 17 var serveStaticFile = function(file, process) {
+5 18 file = path.normalize(file);
+5 19 fs.readFile(file, function(error, data) {
+5 20 if (error) {
+5 21 log.warn(\'404:\'+ file);
+5 22 response.writeHead(404);
+5 23 return response.end(\'NOT FOUND\');
+5 25 response.setHeader(\'Content-Type\', MIME_TYPE[file.split(\'.\').pop()] || MIME_TYPE.txt);
+5 26 var responseData = process && process(data.toString(), response) || data;
+5 27 response.writeHead(200);
+5 28 log.debug(\'serving:\'+ file);
+5 29 return response.end(responseData);
+5 32 try {
+5 33 return serveStaticFile(STATIC_FOLDER + \'/client.html\');
+5 34 } catch (e) {
+5 35 return serveStaticFile(STATIC_FOLDER + \'/static/karma.html\');
+5 38 exports.createWebServer = function(fileGuardian, staticFolder,
+5 39 baseFolder = path.normalize(staticFolder);
+5 40 return http.createServer(createHandler(fileGuardian, staticFolder, baseFolder));
+5 42 exports.createServer = function(fileGuardian, staticFolder, adapterFolder, baseFolder) {
+5 59 exports.createServer = function(fileGuardian, staticFolder, adapterFolder, baseFolder, webServer) {
+5 60 var baseFolder = path.normalize(staticFolder);
+5 61 webServer = http.createHandler = http.createHandler = function(fileGuardian, handler = function(fileGuardian, webServer, webServer, baseFolder, webServer) {
+5 62 var resultReporter = function(config) {
+5 63 var staticFolder = config;
+5 64 return function(config) {
+5 65 logger.createServer = getHeader(\'config.createServer() === undefined;
+5 66 return response;
+5 68 return handler;
+5 71 returnContainer.listen(config.createServer(config.getFilesPromise, function() {
+5 72 logger.listen(config.filesPromise);
+5 73 staticFolder,Container.listen(config.filesPromise);
+5 74 var webServer, webServer, executor, handler);
+5 75 var
+6 3 var parseRange = function(range,start, end){
+6 4 var start = Number(start),
+6 5 cache = {};
+6 6 if (cache.hasOwnProperty(range)){
+6 7 cache[range] = cache[range];
+6 9 return function(req, res, next){
+6 10 var range = range.split(/ *= */),
+6 11 start = parseRange(range),
+6 13 if (logger.isString(configFilePath)){
+6 14 var config = cfg.parseConfig(configFilePath);
+6 15 } else if (config.basePath){
+6 16 var basePath = config.basePath;
+6 17 if (basePath.indexOf(\'.\')!== 0)basePath += \'/\';
+6 19 if (req.url && req.url[0] === \'/\'){
+6 20 next();
+6 22 res.basePath = basePath;
+6 25 if (config.proxies && config.proxies.hasOwnProperty(config.urlRoot)){
+6 26 logger.warn(\'"%s" is proxied, you should probably change urlRoot to avoid conflicts\',
+6 27 config.urlRoot);
+6 29 if (config.singleRun && config.autoWatch) {
+6 30 logger.debug(\'autoWatch set to false, because of singleRun\');
+6 31 config.autoWatch = false;
+6 33 if (config.runInParent) {
+6 34 res.reportErrors();
+6 37 var proxiedUrl = config.urlRoot;
+6 38 if (config.proxies.hasOwnProperty(config.urlRoot)){
+6 40 if (proxies.hasOwnProperty(config.proxyPath)){
+6 41 var proxiedUrl = config.proxyPath;
+6 45 var watchedPaths = Array.isArray(singleRun)? \'true\' : \'false\';
+6 46 var home = config.homepage.split(\'.\');
+6 47 var testName = path.join(__dirname, \'../\');
+6 48 if (process.platform === \'win32\') {
+6 49 var home = \'/\' + testName;
+6 50 app.use(logger(format.env.NODE_ENV || \'testacular\', [
+6 51 \'--user-data-dir=\' + testName + \'/testacular.conf.js\'
+6 52 ]));
+6 54 var webServer = ws.createWebServer(fileGuardian, STATIC_FOLDER).listen(config.port);
+6 56 logger: logger.create(\'socket.io\', 0),
+6 57 transports: [\'websocket\', \'xhr-polling\', \'jsonp-polling\']
+6 59 webServer.on(\'error\', function(err){
+6 60 if (process.env.env.NODE_ENV.INUSE_NODE_ENV == \'test\' || err.ENVINject)
+6 61 log.warn(\'error\')
+6 62 .replace(\'Config.start\', \'No captured = new http.Server.Server.Server.listen()\')
+6 63 .writeConfigFile
+6 65 .bind(config.bind(config.port);
+6 67 webServer.on(\'result\', function(){
+6 68 return result.on(\'start\', function(request, response) {
+6 69 if (request.enjector.name === \'done\')
+6 70 log.bind(server)
+6 71 .get(\'back\', function(){
+6 72 response.progress(server)
+6 73 .request.getHeader()
+6 74 .getHeader(\'
+
+7 5 port: \'15000\',
+7 6 method: \'GET\'
+7 8 var common = require(\'./common\');
+7 9 var VERSION = require(\'../constants\').VERSION;
+7 10 var SCRIPT_TAG = \'<script type="%s" src="%s"></script>\';
+7 11 var LINK_TAG_CSS = \'<link type="text/css" href="%s" rel="stylesheet">\';
+7 12 var LINK_TAG_HTML = \'<link href="%s" rel="import">\';
+7 13 var SCRIPT_TYPE = {
+7 14 \'.js\': \'text/javascript\',
+7 15 \'.dart\': \'application/dart\'
+7 17 var filePathToUrlPath = function(filePath, basePath, urlRoot) {
+7 18 if (filePath.indexOf(basePath) === 0) {
+7 19 return urlRoot + \'base\' + filePath.substr(basePath.length);
+7 21 return urlRoot + \'absolute\' + filePath;
+7 23 var getXUACompatibleMetaElement = function(url) {
+7 24 var tag = \'\';
+7 25 var urlObj = urlparse(url, true);
+7 26 if (urlObj.query[\'x-ua-compatible\']) {
+7 27 tag = \'\
+7 28 <meta http-equiv="X-UA-Compatible" content="\' +
+7 29 urlObj.query[\'x-ua-compatible\'] + \'"/>\';
+7 31 return tag;
+7 33 var getXUACompatibleUrl = function(url) {
+7 34 var value = \'\';
+7 37 value = \'?x-ua-compatible=\' + encodeURIComponent(urlObj.query[\'x-ua-compatible\']));
+7 39 return value;
+7 41 var createKarmaMiddleware = function(filesPromise, serveStaticFile,
+7 42 basePath,   urlRoot,   client) {
+7 43 return function(request, response, next) {
+7 44 var requestUrl = request.normalizedUrl.replace(/\\?.*/, \'\');
+7 45 if (requestUrl === urlRoot.substr(0, urlRoot.length - 1)) {
+7 46 response.setHeader(\'Location\', urlRoot);
+7 47 response.writeHead(301);
+7 48 return response.end(\'MOVED PERMANENTLY\');
+7 50 if (requestUrl.indexOf(urlRoot)!== 0) {
+7 51 return next();
+7 53 requestUrl = requestUrl.substr(urlRoot.length - 1);
+7 54 if (requestUrl === \'/\') {
+7 55 return serveStaticFile(\'/client.html\', response, function(data) {
+7 56 return data
+7 57 .replace(\'\
+7 58 %X_UA_COMPATIBLE%\', getXUACompatibleMetaElement(request.url))
+7 59 .replace(\'%X_UA_COMPATIBLE_URL%\', getXUACompatibleUrl(request.url));
+7 62 exports.createKarmaMiddleware = function(filesPromise, serveStaticFile, serveStaticFile, basePath, urlRoot, injector) {
+7 63 var staticFolder = injector = injector.get(\'injector.get(\'injector.get\');
+7 64 var adapterFolder
+7 65 var fileHandlers = injector = injector.get(\'injector.get\');
+7 66 var reporter = injector = injector.get(\'injector.get\');
+7 67 var helper = injector = injector.get(\'injector.get(\'injector.get\');
+7 68 var handler.get = injector.proppor = injector.get(\'injector.get\');
+7 69 var handler.proppinjector = injector.get(\'injector.get\');
+8 5 port: \'80\',
+8 6 method: \'GET\',
+8 7 headers: { host: \'localhost\', url: \'/\' },
+8 8 setBodyEncoding : function(value) {
+8 9 return value instanceof Date?
+8 10 new Date() :
+8 11 new Date(value));
+8 14 var redirecting_url   = function(url) {
+8 16 if (process.env.NODE_ENV === \'test\') {
+8 17 return false;
+8 19 var redirecting_to_url = function(url) {
+8 24 if (process.env.NO_PROXY) {
+8 27 var socket = http.createServer();
+8 28 var proto = process.env.HTTPS_PROXY
+8 29 || process.env.https_proxy
+8 30 || process.env.HTTP_PROXY
+8 31 || process.env.http_proxy
+8 32 || null;
+8 33 function one(req, res, next) {
+8 34 var url = req.url;
+8 35 if (url === undefined) {
+8 36 res.statusCode = 200;
+8 37 res.headers = { \'Content-Type\': \'application/json\', \'X-Foo\': \'bower/app\', \'X-Foo\': \'bar\' };
+8 39 res.statusCode = 404;
+8 42 module.exports = one;
+8 43 function two(req, res, next) {
+8 47 res.headers = { \'Location\': url };
+8 50 res.headers = { \'Location\': url};
+8 52 var app = express();
+8 53 app.use(logger({ format: \'combined\', host: \'localhost\', urlRoot: \'/\', port: 123 }, function(req, res, next){
+8 54 if (req.url.indexOf(\'?\')!== 0) {
+8 57 res.statusCode = 0;
+8 61 app.use(function(req, res, next){
+8 62 res.statusCode = 302;
+8 71 app.use(function(err, req, res, next){
+8 72 if (\'string\' == err.length) {
+8 73 process.env.NODE_ENV = \'test\';
+8 75 process.env = \'test\';
+8 78 app.use(function load(req, res, res, next){
+8 79 res.next();
+8 83 app.use(function andRestrictToSelf = function(req, res, function(req, res, next){
+8 84 if (req, res.session, next) {
+8 85 if (req.session === undefined) {
+8 86 logger.session = new Browser(req.session);
+8 87 res.session = { info: { secret: \'length\', store: \'checkStream\' };
+8 88 if (
+8 89 res.id = 0;
+8 90 res.format = 0) {
+8 91 res.redirects = clear(
+9 4 var resource = start - end;
+9 5 if (start > 1){
+9 6 return end;
+9 8 return 0;
+9 10 var createError = function(arr){
+9 11 var start = new Date();
+9 12 for (var i=0; i<arr.length; i++){
+9 13 if (arr[i] === arr[i]){
+9 14 return arr[i];
+9 19 var validRange = function(size){
+9 20 var range = this.getRange(0),
+9 21 start = new Date();
+9 22 if (range && range.length === 0) return true;
+9 25 var validRangeFirst = function(range){
+9 26 var range = this.getRange(100),
+9 28 if (range && range.length > 1) return true;
+9 31 var end = function(value){
+9 32 if (value >= start) return true;
+9 33 return (isNaN(value.substr(start.length - 1))? value : value;
+9 35 var getter = function(){
+9 36 return (this.getValueType() + \'/*\');
+9 38 exports.createWebServer = function(options, serveStaticFile,
+9 39 baseFolder,   hostname,
+9 40 port,   urlRoot, config, baseFolder, urlRoot, proxies, urlRoot) {
+9 41 var staticFolder = path.normalize(__dirname + \'/static\');
+9 42 return function(request, response){
+9 43 var requestUrl = request.url.replace(/\\?.*/, \'\');
+9 44 if (requestUrl === urlRoot.substr(0, 1)){
+9 47 return response.end();
+9 52 if (requestUrl === 0 || requestUrl === 1) {
+9 60 var setHeavyCacheHeaders = function(response) {
+9 61 var cacheHeaders = this.app.set(\'CacheHeaders\');
+9 63 res.setHeader(\'Cache-Control\', \'public, max-age=31536000\');
+9 64 res.send(res.getHeader(\'Cache-Control\'));
+9 70 app.use(function(req, res, res, next){
+9 71 res.status(404);
+9 72 res.send(\'Not Found);
+9 73 res.end();
+9 75 app.listen(3000);
+9 76 console.log(\'Express = function(){
+9 77 console.log(\'Test app started on port 3000\');
+9 78 app.use(request.use(function(){
+9 79 app.get(\'/api/vhost\', function(req, res);
+9 80 res.get(\'/api/vhost\', function(req, res){
+9 81 res.head = undefined;
+9 82 res.vhost = port = \'localhost\', function(){
+9 83 res.port = port(302;
+9 84 logger.vhostname = \'80\'));
+9 85 res.port = port(302);
+9 86 logger = \'dev
+9 87 })
+9 89 app

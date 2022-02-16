@@ -1,0 +1,14 @@
+Min editdistance: 75.00
+Closest candidate: 5 3 return function (uninstall) return function (pkg, opts, opts) {};
+0 1 };'
+
+1 1 "
+
+3 1 return config;
+5 1 };
+5 2 return config = function (opts = opts, argv; } = function (opts.opts.uninstall) return(opts, opts, opts, opts.uninstall);returns, opts.install;
+5 3 return function (uninstall) return function (pkg, opts, opts) {};
+5 4 };"
+
+7 1 return config;return config;
+9 1 return config = install();

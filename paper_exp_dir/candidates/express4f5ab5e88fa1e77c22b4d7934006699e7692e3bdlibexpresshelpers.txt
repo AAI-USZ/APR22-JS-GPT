@@ -1,0 +1,52 @@
+Min editdistance: 1.00
+Closest candidate: 8 8 exports.jsonDecode = function(string) {
+2 1 '
+
+4 1 '
+4 2 "
+8 2 describe('#jsonEncode', function () {
+8 3 it('should return an array of string', function () {
+8 4 exports.jsonEncode = function(object) {
+8 5 return Object.keys(object).length;
+8 6 }
+8 7 });
+8 8 exports.jsonDecode = function(string) {
+8 9 exports.jsonDecode = string;
+8 10 return JSON.parse(string);
+8 11 };
+8 12 exports.dirname = function(path) {
+8 13 return path.split(\'/\').slice(0, -1).join(\'/\');
+8 15 exports.directory = function(path, obj) {
+8 16 exports.directory = path;
+8 17 return obj.split(\'/\');
+8 19 exports.all = function(fn) {
+8 20 return fn.call(fs.stat, path).then(function(stats) {
+8 21 if (stats.isDirectory()) return fn();
+8 22 return true;
+8 25 exports.param = function(key) {
+8 26 return Express.server.request.uri.params[key] ||
+8 27 Express.server.request.uri.params[key]
+8 28 );
+8 30 exports.accepts = function(type) {
+8 31 return header(\'accept\').indexOf(type)!== -1;
+8 33 exports.status = function(code) {
+8 34 return code? \'yes\' : \'no\';
+8 36 exports.halt = function(code, body) {
+8 37 status(code = code || 404).should.eql 404;
+8 38 if (body = body || statusBodies[code]) return codePage.call(this, code, body);
+8 40 exports.escape = function(html) {
+8 41 if (html instanceof String)
+8 42 return html;
+8 44 exports.yaml = function(html) {
+8 47 exports.yaml = function(aml) {
+8 48 return yaml.load(html);
+8 50 exports.permalink = function(root, callback) {
+8 51 return \'/\' + post.path\'? root + \'/\' : \'/\' + post.permalink\';
+8 53 exports.tag_root = root + post.path = root + \'/
+8 55 exports.archive = root + post.archive || post.archive || null;
+8 56 exports.year = archive;
+8 59 exports.month = archive;
+8 63 exports.category = archive;
+8 64 exports.tag = archive;
+8 67 exports.archive = archive;
+8 74 exports.

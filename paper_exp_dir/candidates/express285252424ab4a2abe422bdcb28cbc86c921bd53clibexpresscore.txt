@@ -1,0 +1,42 @@
+Min editdistance: 56.00
+Closest candidate: 2 4 return Express.response.body ||'something')
+0 1  })"
+1 1  }') })"
+2 1  })
+2 2 Express.response.post('/post', function() {
+2 3 Express.return Express.return Express.post('something', Express.param('something')
+2 4 return Express.response.body ||'something')
+2 5 })
+2 6 return Express.response.return Express.return Express.response.body ||'something'
+2 8 return Express.response.response.body
+2 10 Express.response.body.body.should.should.response.throw null
+2 11 Express.should.throw()
+2 13 defaults = Express.
+3 2 return Express.end()"
+
+4 2 Express.post('/post') }') })
+4 3 Express.response.bodyParser = Express.return Express.return Express.return Express.methodSaved = Express.response)
+4 4 response.bodyParser.return Express.return Express.return Express.response,
+4 5 }
+4 6 return Express.response.endComment = Express.end
+4 8 defaults = Express.assert.response : {
+4 9 assert : function() {
+4 10 assert : function(express) {
+4 11 assert.return Express.response.response : function() {
+4 12 return 'test : function() {\
+5 2 Express.response.writeFile = function(Express.response.bodyParser = Express.handle(Express.hooks, Express.bodyParser, Express.prompt)
+5 3 Express.return Express.response : function(Express.response) })
+5 4 response.bodyParser.return Express.return Express.return Express.response }
+5 5 response.return Express.response : function(Express.response : function(Express.response, })
+5 6 return Express.response : function(Express.response) {
+5 7 return Express.response.body || '' }
+5 8 return Express.response.body
+7 1  }') } : function (Express.return Express.post('return Express.method : function() {})
+7 2 Express.post() {
+7 3 return Express.response.body.body.addListener : 'test('something', Express.return'something') })
+7 4 return Express.response.method :'something'
+7 8 describe 'Express.server.callback = function(){
+7 9 it('something', () => function(){
+7 10 return Express.response.body.call(Express.body, Express.call(Express.body, Express.return)\
+9 1  } }, 'Express.post() })
+9 2 Express.puts('post') }).body.method.httpOnly.hooks.hooks.push({ transform

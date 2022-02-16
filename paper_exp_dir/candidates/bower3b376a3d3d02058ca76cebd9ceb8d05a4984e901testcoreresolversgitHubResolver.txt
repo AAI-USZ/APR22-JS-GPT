@@ -1,0 +1,106 @@
+Min editdistance: 1.00
+Closest candidate: 1 5 describe('.constructor', function () {
+0 1 "
+
+1 1  else {
+1 2 return new GitHubResolver(decEndpoint, config || defaultConfig, logger);
+1 3 }
+1 5 describe('.constructor', function () {
+1 6 it.skip('should throw an error on invalid GitHub URLs');
+1 7 it.skip('should ensure.git in the source', function () {
+1 8 var resolver;
+1 9 resolver = create('git://github.com/twitter/bower');
+1 10 expect(resolver.get('source')).to.equal('git://github.com/twitter/bower.git');
+1 11 resolver = create('git://github.com/twitter/bower.git/');
+1 15 });
+1 17 describe('.resolve', function () {
+1 18 it('should download and extract the.tar.gz archive from GitHub.com', function (next) {
+1 20 nock('https://github.com')
+1 21 .get('/IndigoUnited/events-emitter/archive/0.1.0.tar.gz')
+1 22 .replyWithFile(200, path.resolve(__dirname, '../../assets/package-tar.tar.gz'));
+1 23 resolver = create({ source: 'git://github.com/IndigoUnited/events-emitter.git', target: '0.1.0' });
+1 24 resolver.resolve()
+1 25 .then(function (dir) {
+1 26 expect(fs.existsSync(path.join(dir, 'foo.js'))).to.be(true);
+1 27 expect(fs.existsSync(path.join(dir, '.bower.json'))).to.be(true);
+1 28 expect(fs.existsSync(path.join(dir, 'bar.js'))).to.be(true);
+1 29 expect(fs.existsSync(path.join(dir, 'package-tar.tar'))).to.be(true);
+1 30 next();
+1 31 })
+1 32 .done();
+1 34 it('should fallback();
+1 36 describe('.downloads', function () {
+1 37 it('should downloading');
+1 38 it('should extract from GitHub.com');
+1 39 it('should download from GitHub.com');
+1 40 it('should download from Q.com');
+1 41 it('should extract from Geo');
+1 42 it('should move to http:// http:// fallback@github.com');
+1 43 it('http://git@github.com');
+1 44 it('http:// http://github.com');
+1 45 it('http://github.com/bower.com');
+1 46 it('http://hexo.com');
+1 47 it('//github.com');
+1 50 it('///js');
+1 51 });"
+
+2 1  catch (e) {
+2 2 return new GitHubResolver(decEndpoint, config, logger);"
+
+3 1 '
+
+5 2 return create({ source: key });
+5 5 .done(function (result) {
+5 6 if (result.skipped) {
+5 7 return result.success;
+5 9 return checkoutVersions(result.versions)
+5 10 .then(function (versions) {
+5 11 expect(versions).to.be.an('array');
+5 12 expect(versions).to.eql(['foo', 'bar']);
+5 17 it('should guess the name from the path', function () {
+5 18 var resolver = create({ source: 'foo', name: 'bar' });
+5 19 expect(resolver.getName()).to.equal('bar');
+5 21 it('should remove?part from the source when guessing the name', function () {
+5 23 expect(resolver.getName()).to.equal('foo');
+5 25 it('should validate the name', function () {
+5 29 it('should validate the name and url', function () {
+5 42 var resolver = create({ source: 'foo', name: 'foo' });
+6 2 return new GitHubResolver(decEndpoint, config, logger);
+6 7 it('should ensure.git in the source', function () {
+6 10 expect(resolver.getSource()).to.equal('git://github.com/twitter/bower.git');
+6 18 resolver = create('git://github.com/twitter/bower.git');
+6 34 resolver = create('git://github.com/twitter/bower.com/bower.git/bower.git/bower.git/');
+6 35 expect.git/bower.git/bower.git/');
+6 36 expect(function () {
+6 37 expect(resolver.getSource()).to.to.to.equal('git.to.git');
+7 7 var resolver = create('file://' + testPackage);
+7 8 expect(resolver.getName()).to.equal('github-test-package');
+7 10 it('should remove?part from the source', function () {
+7 11 var resolver = create('git://github.com/twitter/bower');
+7 12 expect(resolver.getName()).to.equal('bower');
+7 14 it('should not guess the name from the path if the name was specified', function () {
+7 15 var resolver = create('git://github.com');
+7 16 expect(resolver.getName()).to.equal('github.com');
+7 18 it('should make paths absolute and normalized', function () {
+7 20 resolver = create(path.relative(process.cwd(), testPackage));
+7 21 expect(resolver.getSource()).to.equal(testPackage);
+7 22 resolver = create(testPackage + '/something/..');
+7 27 it('should checkout correctly if resolution is a branch', function (next) {
+7 28 var resolver = create({ source: testPackage, target:'some-branch' });
+7 31 expect(dir).to.be.a('string');
+7 32 var files = fs.readdirSync(dir);
+7 33 var fooContents;
+7 34 expect(files).to.contain('foo');
+7 35 expect(files).to.contain('baz');
+7 37 fooContents = fs.readFileSync(path.join(dir, 'foo')).toString();
+7 38 expect(fooContents).to.equal('foo foo');
+7 43 it('should checkout correctly if resolution is a tag', function (next) {
+7 44 var resolver = create({ source: testPackage, target: '~0.0.0.1.1' });
+7 45 var resolver.resolve()
+7 46 .resolve()
+7 48 expect(dir)
+7 50 expect(dir).to.should.dir).to.should.be.a('tmp');
+7 51 expect(dir).to.equal(testPackage);
+7 52 expect(testPackage);
+7 53 expect(tmp.dir).to.length).to.length).to.be.a('0');
+7 58 it('should checkout correctly.sort()).to.to.to.to.be.be.empty();

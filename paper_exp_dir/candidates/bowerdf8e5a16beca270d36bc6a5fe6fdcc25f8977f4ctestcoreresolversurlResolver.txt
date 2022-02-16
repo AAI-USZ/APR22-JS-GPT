@@ -1,0 +1,9 @@
+Min editdistance: 34.00
+Closest candidate: 8 2 return Stream.resolve();
+0 1 "should.should.should.throw new TypeError() });
+0 2 });"
+1 1 "
+8 1 "should.should.call(function (should.call(this.prototype.original_error) === 'http://function () => resolve() {
+8 2 return Stream.resolve();
+8 3 });"
+

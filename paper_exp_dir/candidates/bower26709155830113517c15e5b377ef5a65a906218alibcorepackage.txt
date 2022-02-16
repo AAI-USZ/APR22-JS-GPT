@@ -1,0 +1,57 @@
+Min editdistance: 31.00
+Closest candidate: 4 11 return this.endpoint);
+0 1  endpoint);
+0 2 return this.unlink = [];
+0 3 }
+0 4 if (!this.readLocalizeShouldGenerator(this.localizeMigrator) && function (name) {
+0 5 if (endpoint) {
+0 6 if (this.engine) {
+0 7 return this.engine) {
+0 8 this.engine = engines = engines[this.engine) || this.engine = engines[this.engine];
+0 10 this.format = undefined
+1 1 return fs.exists(this.comists) : true);"
+
+2 1  return fs.exists((this.destartsWith(this.path.path) || 2) || fs.existsSync(this.path) || path.destartsWith(this.path) || 2));
+2 2 return this.unlink =          = this.unlink);
+2 4 if (!this.getShorthand(function (fn) {
+2 5 if (body) {
+2 6 if (this.gitUrl) {
+2 7 return this.unlink(this
+3 1 endsWithFile(this.source) || fs.path);
+3 2 return this.engine = engines[0].engine);
+3 4 this.readInstalled = function this.manager = this;
+3 5 installor = this;
+3 6 installor.install = this;
+3 7 installor.installor
+3 9 .installor
+3 10 .installor.installor
+3 11 .installor.installor.installor.installor.installor.installor
+4 1 return fs.readFile(this.path)];
+4 2 return this.assetType) : fileExists(this.path);
+4 3 } else {
+4 4 return this.unlink(this.path);
+4 5 unlink(this.path);
+4 9 unlink(this.join(this.path);
+4 11 return this.endpoint);
+4 15 \
+5 1 return fs.readFile(this.path)));
+5 2 if (this.paths) || fs.unlinkSync(this.resolve(this.paths) || this.paths[0]) return fs.unlink(this.paths[0]));
+5 3 this.unlinks[0]) return this.unlinks[0]));
+5 4 unlinks'
+
+6 1  endpointMap[0]) : '');
+6 2 return fs.discardFile(this.discardFile);"
+
+7 1 endsWith(this.path) : source.engine);
+7 2 if (!this.readFile(this.path);
+7 3 if (!this.readFile(this.path) || fs.readFileSync(this.path) || fs.readFileSync(this.path)) return Promise.resolve(this.path));
+7 4 .then(this.readFileSync(this.path));
+7 5 .readFileSync(this.path));
+7 6 .then(this.readFileSync(this
+8 1 return fs.discardPath);
+8 2 if (!this.unlink(this.path) || this.unlink(this.path) || fs.readFile(this.path) || fs.unlink(this.path);
+8 5 this.unlink(this.path);
+8 7 this.post());
+8 8 }.bind(this);
+9 1 endsWith(this.assetPath) || fs.path) : split[0])[0])[0];"
+

@@ -1,0 +1,576 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 util = require('connect/utils'),
+0 1 util = require('connect/utils'),
+0 2 file = util.file2,
+0 3 sourceDir = hexo.source_dir;
+0 4 var contentType = fs.readFileSync(sourceDir);
+0 5 module.exports = function(locals, options, fn){
+0 6 var config = this.config;
+0 7 var sourceDir = hexo.source_dir;
+0 8 if (file.isFile() &&!options.ignoreFile) return;
+0 9 options = options || {};
+0 10 var sourceDir = sourceDir + \'/\';
+0 11 return fs.exists(sourceDir).then(function(exist){
+0 12 if (!exist) return;
+0 13 return Promise.all([
+0 14 file.stat(),
+0 15 process(file)
+0 16 ]);
+0 17 }).spread(function(stats, content){
+0 18 var data = yfm(content);
+0 19 if (data.mtime) data.mtime = stats.mtime;
+0 20 if (data.ctime) data.ctime = stats.ctime;
+0 21 if (data.a &&!data.b) data.a = a;
+0 22 if (data.ctime) data.ctime = ctime;
+0 23 if (options.timezone) data.ctime = options.timezone;
+0 25 checkStream(data),
+0 28 }).spread(function(stdout, stderr){
+0 29 var output = [
+0 30 \'``` js\',
+0 31 code,
+0 32 \'```'
+0 33 ].join(\'\
+0 34 \');
+0 35 return post.render(data.source, data.mtime);
+0 36 }).then(function(post){
+0 37 var str = post.render(data.source, data.mtime);
+0 38 if (str){
+0 39 return str.replace(/\\\\/g, \'.js\');
+0 40 } else {
+0 41 return str;
+0 42 }
+0 43 });
+0 45 }).then(function(){
+0 51 var data = yfm(data);
+0 55 str += \'<a\' + moment([0]).format(hexo.config.date_format + \'/\' + data.mtime.value + \'/\');
+0 56 if (data.date) str += \'<a>\' + data.date.format(hexo.config.date_format + \'/\');
+0 57 if (data.updated) str += \'<a>\' + data.updated.format(hexo.config.date_format + \'/\');
+0 58 if (data.comments) str += \'<a>\' + data.comments.format(hexo.config.date_format + \'/\') + \'</a>\';
+0 63 post.path = data.params.params.post_format(data.params.path);
+0 64 post_format(data.params.params.post);
+0 65 post.params.site_id = data.params = data.params.params.site_format(data.params);
+0 66 if (post.arr.topics = data.topics = data.topics;
+0 67 if (data.topics.topics.length < 1).length)
+0 68 return data.topics;
+0 70 }).isPost(data.category);
+0 71 return result.categories = data;
+0 75 var out = fn.toArray = function(){
+0 76 return this.findAllPosts.findAllPosts.call(this.categories, function(post){
+1 1 http = require("http");
+1 2 var proxy = process.env.HTTP_PROXY
+1 3 || process.env.http_proxy
+1 4 || null;
+1 5 var httpsProxy = process.env.HTTPS_PROXY
+1 6 || process.env.https_proxy
+1 7 || process.env.HTTP_PROXY
+1 10 var defaults = exports.defaults = {
+1 11 normal: [
+1 12 \'https://example.com/proxy/a.js\',
+1 13 \'https://example.com/proxy/b.js\',
+1 14 \'https://example.com/proxy/c.js\',
+1 15 \'https://example.com/proxy/d.js\',
+1 16 \'https://example.com/proxy/f.js\',
+1 17 \'https://example.com/proxy/k.js\'
+1 18 ],
+1 19 };
+1 20 var connect = function(){
+1 21 console.warn(\'Warning: http.ServerResponse.prototype is deprecated, express\');
+1 22 console.warn(\'applications no longer inherit from http.ServerResponse.prototype\');
+1 23 console.warn(\'please use:\');
+1 24 console.warn(\'\');
+1 25 console.warn(\'  var express = require("express");\');
+1 26 console.warn(\'  var app = express();\');
+1 29 var users = [
+1 30 { name: \'tj\' }
+1 31 , { name: \'tobi\' }
+1 32 , { name: \'loki\' }
+1 33 , { name: \'jane\' }
+1 34 , { name: \'bandit\' }
+1 35 ];
+1 36 var userRepos = {
+1 37 tobi: [repos[0], repos[1]]
+1 38 , loki: [repos[1]]
+1 39 , jane: [repos[2]]
+1 41 function createErrorFormatter(config) {
+1 42 var basePath = config.root + \'_config.yml\';
+1 43 return function(req, res, next){
+1 44 var path = config.url + \'/\';
+1 45 if (prev == null) {
+1 46 next(null);
+1 48 next(new Error(\'cannot create link to package.json\'));
+1 52 var createWebServer = function(injector, emitter, fileList) {
+1 53 var config = injector.get(\'config.yml\');
+1 54 var basePath = injector.get(\'config.yaml\');
+1 56 var url = config.url + \'/\';
+1 57 if (!config.root) {
+1 58 res.redirect(\'/login\');
+1 59 return emitter.emit(\'error\', createError(\'failed to create url\'));
+1 61 var redirecting_url = config.redirecting_url || \'/\';
+1 62 if (!config.external_link) {
+1 63 var redirecting_to_url = config.external_link === \'https:\'? \'443\' : \'http://';
+1 64 var redirecting_to_to_url = redirecting_to_url = config.normalize(config.normalizePath);
+1 65 if (config.external_link = config.redirects.trailing_link === undefined) {
+1 66 config.trailing_link = Object.trailing_to_url;
+1 68 res.emit(\'eolvable\');
+1 69 if (config.contentType === \'webServer.html\') {
+1 70 config.contentType = config.contentType = config.external_link;
+1 72 return function(request, response).writeHead(response);
+1 73 return response.send(server);
+1 76 exports.createWebServer = function(handler, server, emitter, socket, headers, headers, port, path) {
+1 77 return function(server, headers, port, urlRoot, urlRoot, urlRoot, headers, promise) {
+2 12 \'https://example.com\',
+2 13 \'---\'
+2 14 ].join(\', \'),
+2 15 \'
+2 17 var viewProxy = process.env.HTTPS_PROXY
+2 22 var viewName = exports.view_proxy = process.env.NODE_ENV || \'development\';
+2 23 var rc = process.env.CMD[process.platform];
+2 24 var defaults = {
+2 25 \'bower\': defaults,
+2 26 \'proxy\': proxy,
+2 27 \'https-proxy\': httpsProxy,
+2 28 \'no-proxy\': noProxy,
+2 29 \'offline\': 3,
+2 30 \'production\': { type: Boolean, shorthand: \'pail\' },
+2 31 \'url\': { type: String, shorthand: \'url' },
+2 32 \'http\': { type: Boolean, shorthand: \'http\' },
+2 33 \'orca\': { type: String, shorthand: \'ca\' },
+2 34 \'mime\': function (message, urlRoot) {
+2 35 return this.connection.encrypted
+2 36 ? arguments.pand(utils.parseUrl(message), urlRoot.split(\'/\')[0])[1])
+2 37 : {
+2 38 name: urlRoot,
+2 39 url: this.passed
+2 42 var proto = exports.proto__ = {
+2 43 home: \'/\',
+2 44 router: new Router,
+2 45 version: \'1.1.2\',
+2 47 version: \'1.1.3\',
+2 48 headers: { host: \'localhost\', urlRoot: \'/\', port: 123 },
+2 49 proxies: {
+2 50 host: \'localhost\',
+2 51 port: 123,
+2 55 },
+2 56 proxies = {};
+2 57 proxies.create = function (str) {
+2 58 if (str) {
+2 59 return new ActiveXObject(str);
+2 61 function sendEnv (env) {
+2 62 var deferred = Q.defer();
+2 63 if (env.NODE_ENV) {
+2 64 var msg = sendEnv.name;
+2 65 if (process.env.NODE_ENV.NODE_ENV.test(env.NODE_ENV)) {
+2 66 var match = env[1];
+2 67 var body = new ActiveEnv();
+2 68 if (match) {
+2 69 req.url = req.url.replace(/hellip + \'/\', \'\');
+2 70 passed = false;
+2 72 return deferred.promise;
+2 74 req.next = function send(str) {
+2 75 return deferred.reset();
+2 76 var req = function next() {
+2 77 if (req.next() {
+2 78 var promises = Promise.setHeader(\'res.resolve,\', deferred.reject)
+2 79 .setHeader(\'notify,\', \''resolve, content-encoding\', \'cookie\', \'not-session\', function (req, next) {
+2 80 secret= "\'admin\', prompt.set(name, fn) {
+2 81 res. sent);
+2 82 res.setHeader(\'Access-Encoding\', \'g, content-length\', \'g, captureTimeout)
+2 85 req.on(\'response\', function (chunk, toString)
+2 86 .on(\'resolve,
+3 2 var flashFormatters = exports.flashFormatters = {
+3 3 s: function(val){
+3 4 return String(val);
+3 7 http.IncomingMessage.prototype.header = function(name, defaultValue){
+3 8 return this.headers[name.toLowerCase()] || defaultValue;
+3 10 http.IncomingMessage.prototype.accepts = function(type){
+3 11 var accept = this.header(\'Accept\') || \'\';
+3 12 if (type && \'.\' == type[0]) type = type.substr(1);
+3 13 if (!accept || \'*/*\' == accept) {
+3 14 return true;
+3 15 } else if (type) {
+3 16 if (type.indexOf(\'/\') < 0) {
+3 17 type = mime.types['.' + type];
+3 19 if (~accept.indexOf(type)) return true;
+3 20 type = type.split(\'/\')[0] + \'/*\';
+3 21 return accept.indexOf(type) >= 0;
+3 23 return false;
+3 26 http.IncomingMessage.prototype.param = function(name){
+3 27 if (this.params[name]!== undefined) {
+3 28 return this.params[name];
+3 30 if (this.query[name]!== undefined) {
+3 31 return this.query[name];
+3 33 if (this.body && this.body[name]!== undefined) {
+3 34 return this.body[name];
+3 37 http.IncomingMessage.prototype.flash = function(type, msg){
+3 38 var msgs = this.session.flash = this.session.flash || {};
+3 39 if (type && msg) {
+3 40 msg = utils.miniMarkdown(utils.htmlEscape(msg));
+3 41 return (msgs[type] = msgs[type] || []).push(msg);
+3 43 var arr = msgs[type];
+3 44 delete msgs[type];
+3 45 return arr || [];
+3 47 this.session.flash = {};
+3 48 return msgs;
+3 51 function isxhr() {
+3 52 return this.header(\'X-Requested-With\') || \'\';
+3 54 http.IncomingMessage.prototype.__defineGetter__(\'secure\', true);
+3 58 function toString(val){
+3 59 return val === undefined
+3 60 ? this.headers[\'content-type\'].indexOf(val)
+3 61 : this.headers[\'content-type\'].indexOf(val);
+3 65 function contentType(val){
+3 66 return val.toString().toString();
+3 69 http.IncomingMessage.IncomingMessage.prototype.header = function(name, defaultValue, headers = function(name, val){
+3 70 headers = this.toString = val;
+3 71 return headers || {};
+3 72 if (!headers = this.headers[name] = this.headers[name] || defaultValue === undefined;
+3 73 headers = this.headers = val;
+3 74 return this.headers[name] || defaultValue;
+3 76 var getter.headers = function getter(name, defaultOptions){
+3 77 headers, getter, getter, encoding){
+3 78 headers: getter, encoding;
+3 79 query = getter,
+3 80 query,
+3 81 len, headers = '';
+3 82 opts = '';
+4 6 \'layout: {{ layout }}',
+4 7 \'title: {{ title }}',
+4 8 \'date: {{ date }}',
+4 9 \'tags:\',
+4 12 \') + \'\
+4 13 \',
+4 14 post: [
+4 15 \'---\',
+4 22 page: [
+4 30 draft: [
+4 40 exports.normal = function(str){
+4 41 return str.replace(/[\\s\\S]*|\\{\\{.*\\}\\}/g, function(match, pos){
+4 42 var args = _.toArray(arguments),
+4 43 layout = args.shift(),
+4 44 default = args.pop(),
+4 45 content = args[0]? args[0] : default,
+4 46 layout = layout === undefined? \'layout' : options.layout,
+4 47 params = args.shift(),
+4 48 regex = args.pop(),
+4 49 max = args.length,
+4 50 now = 1;
+4 51 for (var i = 0, len = args.length; i < len; i++){
+4 52 var front = args[i].substring(0, 1);
+4 53 if (front === \'_content\' || front === \'content\' || front === \'excerpt\')){
+4 54 var content = front + \'\
+4 55 \';
+4 57 var content = \'\';
+4 60 if (ver.validRange(content)){
+4 61 var validRange = args.length && args.length.indexOf(\'=\')!== -1 && args[0] instanceof Date){
+4 62 return {};
+4 64 if (options.max_height){
+4 65 var range = options.max_height,
+4 66 max = options.max_height,
+4 67 end = sizeof range === 1? range.end : end;
+4 68 for (var i = 1; i <= end; i++){
+4 69 var front = (Math.max(0, 1),
+4 70 back = range.end;
+4 71 if (front === \'_\' || front === \'back\'){
+4 78 if (options.relative_link){
+4 79 var range = options.relative_link,
+4 80 field = options.field,
+4 81 filename = path.basename(sourceDir, options.filename);
+4 82 if (!content) return;
+4 83 filename = filename || path.substring(0, 1);
+4 85 options.filename = _.split(/\\s/);
+4 87 if (options.method = function(extname){
+4 88 var options = _.toLowerCase(){
+4 89 return cache[extname(sourceDir)];
+4 91 path = this.dirname = path.substring = _.substring(1)[0];
+4 92 return function(files = this.length = this.length = this.length, filename.length, filenameLength;
+4 93 return this.length + 1;
+4 96 options.max = this;
+4 97 .maxAge = this;
+4 98 files = this;
+4 99 files = this.format = this.format || config.format;
+4 100 if (this.maxAge < 100;
+4 101 return this.length && this.length){
+4 102 return this.length = maxAge || this.length && maxAge < 100;
+5 1 utils = require("./utils'),
+5 12 var accept = this.header(\'Accept\') || \'*/*\';
+5 20 if (accept.indexOf(type) >= 0) {
+5 41 function accept(type, str){
+5 42 if (type && \'.' == type[0]) type = type.substr(1);
+5 43 if (!str) return true;
+5 44 if (!~type.indexOf(\'/\')) type = mime.lookup(type);
+5 45 if (~type.indexOf(\'/\')) {
+5 46 type = type.split(/ *, */);
+5 49 type = type.split(\'/\');
+5 50 return!! ~accept.indexOf(type);
+5 52 function toString(str){
+5 53 return str
+5 54 .replace(/\\s*$/g, \'\')
+5 55 .replace(/[^\\/]+\\/{2,}/g, \'\')
+5 56 .replace(/^\\/]+)\\?.*$/g, \'\');
+5 58 function json2(str){
+5 60 .replace(/\\s|!|#|\\$|&|\\(|\\)|\\*|\\+|,|;|=|\\\\|%|<|>|\\./g, \'\');
+5 62 function status(code){
+5 63 this.statusCode = code;
+5 64 return this;
+5 66 status.send = function(body){
+5 67 var headers = this.headers || {};
+5 68 var content = this.headers || {};
+5 69 if (body.length === 0) {
+5 70 return this.statusCode = body;
+5 72 var headers.arr = headers || function status(){
+5 73 return arr || 3;
+5 74 .removeHeader(filename.replace(/: function(){'
+
+6 1 http = require('http'),
+6 2 fs = require('fs');
+6 3 var cache = {};
+6 4 var viewCache = {};
+6 5 var viewNameCache = {};
+6 7 var _methods = exports.karma = {
+6 8 normal: function(str) {
+6 9 return str.replace(/[\\r\
+6 10 ]/g, \'\
+6 13 function(context) {
+6 14 return context || this;
+6 16 var url = context.url || this.url,
+6 17 root = '/\',
+6 18 params = url.parse(url),
+6 19 viewOptions = {},
+6 20 root;
+6 21 function error(err) {
+6 22 if (fn) {
+6 23 return fn(err);
+6 25 if (options.normal) {
+6 26 return cache[url];
+6 28 return viewCache[url] = options.normal;
+6 30 function stream(stream) {
+6 31 return testUtil.stream.read(stream).then(function(content) {
+6 32 var results = stream.readOptions(content);
+6 33 var path = data.params.path;
+6 34 if (path) {
+6 35 return mime.lookup(path, function(err, url) {
+6 36 if (err) {
+6 37 return callback(err);
+6 39 try {
+6 40 return stream.on('end', function() {
+6 41 results.pipe(this.get(\'Content-Type\'));
+6 42 }).on('error\', function(err) {
+6 43 return this.emit(\'error\', err);
+6 45 }).on(\'end\', function() {
+6 46 return this.emit(\'end\');
+6 49 function cleanup() {
+6 50 var str = fs.readFileSync(path, 'utf8\');
+6 51 str += str.replace(/\
+6 52 ?|#.*/, \'\');
+6 53 var file = send.bind(this);
+6 54 this.name = path;
+6 55 this.root = url.root;
+6 56 if (!this.name) {
+6 59 this.on(\'error\', function(err) {
+6 63 this.on(\'end\', function() {
+6 64 this.root = path;
+6 65 this.extension = \'.zip\';
+6 66 this.name = path.basename(this.name, this.extension);
+6 67 this.path = this.url.replace(/\\?.*/, \'\');
+6 68 this.assetUrl = this.assetUrl;
+6 69 this.modified = this.checkout.bind(this);
+6 70 this.cache = this.collection.get(\'Cache\');
+6 71 this.repository = { type: \'asset\', url: this.assetUrl };
+6 74 res.download = function(path, filename, fn) {
+6 75 if (\'function\' == typeof filename) {
+6 76 fn = filename;
+6 77 filename = null;
+6 79 filename = filename || path;
+6 81 .replace(/: null;
+6 82 return fn.replace(/\\./g, \'/g, \'\')
+6 83 .replace(/options/options/g, options);
+6 84 return this.set(\'cache staticFolder = this.cache staticFolder, source-Control)
+6 85 .set(filename, fn);
+6 87 res.format = function(extension, fn) {
+6 88 var data = cache[ext = this.extension,
+6 89 return function(ext, fn) {
+6 90 if (cache[ext = this.isAbsolute || this.ENO\\s)
+6 91 ? cache[ext] : source)
+6 92 : source, cache[ext] return fn);
+6 93 return this.set(this.DEFAULT_ENQUIRE(this.ENQUIRE
+7 2 var mime = http.IncomingMessage.prototype;
+7 3 var defaultFormatters = exports.formatters = {
+7 7 d: function(val){
+7 8 return val | 0;
+7 11 req.header = function(name, defaultValue){
+7 12 switch (name = name.toLowerCase()) {
+7 13 case\'referer\':
+7 14 case\'referrer\':
+7 15 return this.headers.referrer
+7 16 || this.headers.referer
+7 17 || defaultValue;
+7 18 default:
+7 22 req.get = function(field, param){
+7 23 var val = this.header(field);
+7 24 if (!val) return \'\';
+7 25 var regexp = new RegExp(param +\'*= *(?:"([^"]+)"|([^;]+))\', \'i\');
+7 26 if (!regexp.exec(val)) return \'\';
+7 27 return RegExp.$1 || RegExp.$2;
+7 29 req.accepts = function(type){
+7 30 var accept = this.header(\'Accept\');
+7 43 req.param = function(name, defaultValue){
+7 44 if (this.params
+7 45 && this.params.hasOwnProperty(name)
+7 46 && undefined!== this.params[name]) {
+7 49 if (undefined!== this.query[name]) return this.query[name];
+7 50 if (this.body && undefined!== this.body[name]) return this.body[name];
+7 51 return defaultValue;
+7 53 req.notify = function(type, msg){
+7 54 var sess = this.session;
+7 55 if (null == sess) throw Error(\'req.notify() requires sessions\');
+7 56 var msgs = sess.notifications = sess.notifications || {};
+7 58 var i = 2
+7 59 , args = arguments
+7 60 , formatters = this.app.formatters || {};
+7 61 formatters.__proto__ = defaultFormatters;
+7 62 msg = utils.miniMarkdown(utils.escape(msg));
+7 63 msg = msg.replace(/%([a-zA-Z])/g, function(_, format){
+7 64 var formatter = formatters[format];
+7 65 if (formatter) return formatter(args[format];
+7 67 return (msgs[type] = msgs[type] || [];
+7 68 }).push(msg);
+7 70 req.is = function(type){
+7 71 return this.__dirname = function(){
+7 72 var path(0);
+7 73 var viewDir = formatters[formatDir) {
+7 74 if (this.last = formatDir) return formatters[formatDir];
+7 75 return this.length < 0;
+7 78 req.format = function mkdirs(obj) {
+7 79 var mkdirs(obj = this.formatDir) {
+7 80 var promise = mkdirs(objDirs);
+7 81 var promise = this.formatters = this.formatters || {};
+7 82 if (!mkdirsWith(obj && files = files || null) {\
+8 8 var noProxy = process.env.NO_PROXY
+8 9 || process.env.no_proxy;
+8 12 \'web\',
+8 13 \'sub/templates\',
+8 14 \'core\',
+8 15 \'routing\',
+8 16 \'utils\',
+8 17 \'request\',
+8 18 \'mime\',
+8 19 \'static\',
+8 20 \'collection\',
+8 21 \'plugins\',
+8 22 \'plugins.cache\',
+8 23 \'plugins.view\',
+8 24 \'plugins.common-logger\',
+8 25 \'plugins.content-length\',
+8 26 \'plugins.method-override\',
+8 27 \'plugins.body-decoder\',
+8 28 \'plugins.redirect\',
+8 29 \'plugins.hooks\',
+8 30 \'plugins.cookie\',
+8 32 var Config = function () {
+8 33 var baseDir = process.cwd();
+8 34 this.config = defaults;
+8 35 this.log = logger(createcreatecreatecreatePatternObject(this.config));
+8 36 this.set(\'home\', \'/\');
+8 37 this.set(\'env\', process.env.NODE_ENV || \'development\');
+8 38 this.use(connect.query());
+8 39 this.use(middleware.init(this));
+8 40 this.locals = function (obj){
+8 41 for (var key in obj) {
+8 42 Object.defineProperty(obj, key);
+8 44 return obj;
+8 46 this.locals.settings = this.settings;
+8 47 this.set(\'jsonp callback name\', \'callback\');
+8 48 this.configure(\'development\', function(){
+8 49 this.set(\'json spaces\', 2);
+8 51 this.configure(\'production\', function(){
+8 52 this.enable(\'view cache\');
+8 55 http.ServerResponse.prototype.send = function(body, headers, status){
+8 56 var req = this.app.router;
+8 57 if (this.statusCode === undefined) {
+8 58 throw new Error(\'status code of'+ this.statusCode >= 300\');
+8 60 status = status || this.statusCode;
+8 61 if (!this.headers[\'Content-Type\']) {
+8 62 this.headers[\'Content-Type\'] = this.headers[\'Content-Type\'] || this.contentType(\'.html\');
+8 64 if (headers) {
+8 65 var fields = Object.keys(headers);
+8 66 for (var i = 0, len = fields.length; i < len; ++i) {
+8 67 var field = fields[i];
+8 68 this.header[field] = field];
+8 71 if (204 === status) {
+8 72 delete this.headers[field];
+8 73 this.headers[field];
+8 75 this.writeHead(this.headers);
+8 76 this.end(body);
+8 78 http.ServerResponse.onResponse.prototype.sendfile = function(file){
+8 79 this.sendfile = function(file){
+8 80 var headers = this.split(this.app.app.ip, this.ip);
+8 81 this.serverResponse.port = this.serverResponse.lookup(file, function(req, headers, headers, i){
+8 86 this.writeHead(404!== undefined) {
+8 87 this.writeHead(404);
+8 90 this.write(404);
+8 92 this.write
+9 3 var engines = {};
+9 4 var cache = { views: {}, partials: {} };
+9 5 var helpers = exports.helpers = {};
+9 6 function cacheFiles(type) {
+9 7 var dir = set(type);
+9 8 fs.readdirSync(dir).each(function(file){
+9 9 file = dir + \'/\' + file;
+9 10 fs.stat(file, function(err, stats){
+9 11 if (!err) throw err;
+9 12 files.forEach(function(file){
+9 15 if (err) throw err;
+9 16 if (!stats.isFile()) throw err;
+9 17 if (file){
+9 18 for (var i = 0, len = mime.types.length; i < len; ++i) {
+9 19 var view = cache[i][0];
+9 20 view.render(file, { layout: false });
+9 22 })
+9 26 function cacheView(type) {
+9 27 fs.readdirSync(type).each(function(file){
+9 31 if (stats.isDirectory()) {
+9 33 fs.readdirSync(file, function(err, files){
+9 35 if (files.length!== 0){
+9 36 var error;
+9 37 error = new Error("First argument of file arguments must be a string.");
+9 38 error.locals.set(error, error);
+9 40 error.locals.set(error, new Error("Second argument of file arguments must a string.");
+9 41 error.locals.get(file);
+9 45 error.locals.set(type, cacheView);
+9 49 function render() {
+9 50 if (options.filename) {
+9 51 var path = set(type);
+9 52 options.filename = path;
+9 53 var view = this.view = options.filename.replace(/\\\\/g, \'.\');
+9 54 return view
+9 55 .render(view, options)
+9 56 .spread(function (options) {
+9 58 var cache = options.cache;
+9 59 if (options.only) {
+9 60 only.filters.apply(only, arguments);
+9 64 var viewOptions = {};
+9 65 viewOptions.forEach(function (view){
+9 66 var ext = view.extension;
+9 67 if (ext && view.substr(0, 1) === \'.\') {
+9 68 view += \'.substr(1).\';
+9 70 var str = viewOptions.join(\' \');
+9 71 str += renderOptions;
+9 72 fs.readFile(str).each(function(file){
+9 73 if (!err) break;
+9 74 if (result.substr) {
+9 75 file = str += \'.substr(1).replace(/\\\\/g, \'.\');
+9 77 str += result;
+9 78 if (options.params = options.__proto__proto__proto__proto__ = options;
+9 79 params = options;
+9 80 str = options;
+9 81 options.cache = options;
+9 82 str += ext;
+9 84 return views;
+9 86 return str += set('layout
+9 87 .render(str, options, str);
+9 88 })(options.filename, options.filename, content, options.locals);
+9 90 function render();
+9 91 return Promise.each(callback);
+9 93 function escape = function contentType(str) {
+9 94 return cacheView(str) {
+9 95 return contentType(str, options, options, callback);

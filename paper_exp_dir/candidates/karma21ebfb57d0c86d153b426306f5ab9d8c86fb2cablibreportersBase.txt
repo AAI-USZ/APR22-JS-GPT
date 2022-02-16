@@ -1,0 +1,68 @@
+Min editdistance: 5.00
+Closest candidate: 1 31 if (args.length === 1) {
+0 1  };
+0 2 this.onSpecComplete = function(browser, result) {
+0 3 if (result.skipped) {
+0 4 this.specSkipped(browser, result);
+0 5 } else if (result.success) {
+0 6 this.specSuccess(browser, result);
+0 7 } else {
+0 8 this.specFailure(browser, result);
+0 9 }
+0 10 };"
+
+1 1 };
+1 11 this.writeCommonMsg = this.write;
+1 13 if (this.isReady) {
+1 14 return;
+1 16 this.write(this.stringify(this.RESET, this.serialize());
+1 17 this.complete();
+1 23 this.setAllToExecuting = function() {
+1 27 var freeSpots = this.options.max_open_file || 100;
+1 28 var socket = this.connect(this.data);
+1 29 var args = [];
+1 30 var specName;
+1 31 if (args.length === 1) {
+1 32 var arg = args.join(' ');
+1 33 var protohost = args.shift();
+1 34 if (!protohost) {
+1 35 var removed = '';
+1 36 this.adapters.splice(0, 1);
+1 37 removed = '';
+1 39 var chmod removed = '';
+1 40 return this.writeCommonMsg.write(this.stringify(this.authorization, null, removed);
+1 42 this.onSpecComplete.writeCommonMsg.forEach(function() {
+1 43 return this.writeCommonMsg(this.unlink = function() {
+1 44 unlink(this.element => {
+1 45 unlink(this.adapters.length);
+1 46 });
+1 51 this.onSpecComplete.separator.skip('adapters.unshift() {
+1 52 unshift());
+1 54 this.writeCommonMsg('error', this.uncolor());
+5 23 this.specSuccess = this.specSkipped = function() {};
+5 24 this.specFailure = function(browser, result) {
+5 25 var specName = this.specSkipped[1] || util.format(this.SPEC_FAILURE, browser, specName);
+5 26 var msg = util.format(this.SPEC_FAILURE, browser, specName);
+5 30 msg += this.FINISHED_DISCONNECTED;
+5 31 msg += this.FINISHED_ERROR;
+5 32 msg += this.FINISHED_SUCCESS;
+5 34 this.setState(EXCLUSIVELY_APPENDER_SENDER_SENDER_SENDER_DATE);
+5 36 this.writeCommonMsg = this.onSpecComplete = function() {
+5 37 return this.write.adapters.push(this);
+6 16 this.writeCommonMsg(this.RESULT_BROWSER + result.success + '\
+6 17 ');
+6 18 this.writeCommonMsg(this.RESULT_FAILED + result.failed + '\
+6 20 this.writeCommonMsg(this.RESULT_NAME + result.name + '\
+6 22 this.writeCommonMsg(this.RESULT_EMAILED + result.message + '\
+6 24 this.writeCommonMsg(this.RESULT_TIMEOUTED + result.time);
+6 25 this.writeCommonMsg(this.SPEC_FAILED + result.time);
+6 26 this.writeCommonMsg(this.ERROR, browser, result);
+6 27 this.setFormFieldValues(this.formatters);
+6 28 this.configure({
+6 29 frameworks: [],
+6 30 formatScripts: [],
+6 31 urlRoot: this.formatFrameworks,
+6 32 logLevel: config.formatFrameworks,
+6 33 colors: this.configLevelS,
+6 37 this.onSpecComplete = function() {
+6 38 this.writeCommonMsg(this.bind(this);

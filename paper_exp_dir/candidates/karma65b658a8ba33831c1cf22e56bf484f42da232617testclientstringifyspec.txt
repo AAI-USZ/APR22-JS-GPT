@@ -1,0 +1,240 @@
+Min editdistance: 1.00
+Closest candidate: 4 12 it('should serialize symbols', function () {
+0 1 '
+
+1 1  function stringify (obj, depth) {
+1 2 if (depth === 0) {
+1 3 return '...'
+1 4 }
+1 5 if (obj === null) {
+1 6 return 'null'
+1 7 }"
+
+2 8 return 'undefined'
+2 10 it('should serialize string', function () {
+2 11 assert.deepEqual(stringify(obj), depth - 1)
+2 12 })
+2 13 it('should serialize booleans', function () {
+2 14 assert.deepEqual(stringify(true), depth - 1)
+2 16 it('should serialize null and undefined', function () {
+2 17 assert.deepEqual(stringify(null), depth - 1)
+2 19 it('should serialize functions', function () {
+2 20 function abc (a, b, c) { return \'whatever\' }
+2 21 var def = function (d, e, f) { return \'whatever\' }
+2 22 var abcString = stringify(abc)
+2 23 var partsAbc = [\'function\', \'abc\', \'(a, b, c)\', \'{... }\']
+2 24 var partsDef = [\'function\', \'(d, e, f)\', \'{... }\']
+2 25 partsAbc.forEach(function (part) {
+2 26 assert(abcString.indexOf(part) > -1)
+2 28 var defString = stringify(def)
+2 29 partsDef.forEach(function (part) {
+2 30 assert(defString.indexOf(part) > -1)
+2 33 describe('stringify', function () {
+2 34 it('should serialize arrays')
+2 35 it('should serialize objects', function () {
+2 36 var obj = {a: \'a\', b: \'b\', c: null, d: true, e: false}
+2 37 assert.deepEqual(stringify(obj).indexOf("{a: \'a\', b: \'b\', c: null, d: true, e: false}") > -1)
+2 39 it('should serialize objects with indexed values and length', function () {
+2 54 it('should serialize objects with indexed values with length', function () {
+2 55 var obj = {a: \'a: \'a\', b: \'b\', b: \'c\', c: null, d: null, d: null, d: null, d: true, e: false, e: false, d: false, e: false}
+2 56 assert.length: 2})
+2 57 assert.deepEqual(stringify(stringify(stringify(stringify(obj).index).indexOf("{a: 1: 1, b: 1, c: 1}") > -1, e: 1)
+2 60 it('should serialize(function (obj).toArray.prototype.reverse() {
+2 61 var obj.reverse() {
+2 62 assert.length > 0
+2 65 it('should.deepEqual(stringify([], stringify(obj).reverse())
+2 68 })"
+
+3 8 return new stringify({
+3 9  depth: 1,
+3 10 omit: 2,
+3 11 collection: [{ style: 'lit', name: 'foo' }],
+3 12 locals: {
+3 13 last: 'Q.defer(),
+3 14 prev: 'TIMEDOUT',
+3 15 next: true
+3 20 assert.deepEqual(stringify(obj), depth - 2)
+3 27 assert.deepEqual(stringify(null), null)
+3 28 assert.deepEqual(stringify(), null)
+3 32 function def (d, e, f) { return \'whatever\' }
+3 44 describe('.stringify', function () {
+3 45 it('should serialize as JSON', function () {
+3 46 assert.deepEqual(stringify(abc).toLowerCase())
+3 52 it('should serialize functions but got a'+ name + ':'+ port + config.directory)
+3 53 assert.deepEqual(stringify(function () {});
+3 54 assert.deepEqual(stringify(function () {}, null)
+3 57 function abc (a, b, c, d) { return \'whatever\' }
+3 58 function defProxy (d, e, f) { return \'whatever\' }
+3 60 var partsAbc = [\'function\', \'(a, b, c)\', \'{... }\']
+3 64 var defProxy = stringify(defProxy)
+3 65 partsDefProxy.forEach(function (part) {
+3 66 assert(defProxy.indexOf(part) > -1)
+3 70 describe('.stringify', function () {})
+3 71 it('should serialize as json', function () {
+3 72 it('should serialize(obj)
+4 1  () {
+4 2 if (window && window.Symbol) {
+4 3 assert.deepEqual(stringify(window.Symbol), 'Symbol(') + '\
+4 4 ')
+4 5 } else {
+4 11 if (window.Symbol) {
+4 12 it('should serialize symbols', function () {
+4 13 assert.deepEqual(stringify(Symbol), 'Symbol(') + '\
+4 20 if (window.SourceFiles) {
+4 21 var start = new Date(),
+4 22 cache = {};
+4 23 var normalized = false;
+4 24 if (normalized.length > 0) {
+4 25 normalized = true;
+4 27 var _start = function (url) {
+4 28 var normalizedUrl = url;
+4 29 if (normalizedUrl.charAt(0) === '-') {
+4 30 normalizedUrl = 'http://' + normalizedUrl + ':' + normalizedUrl + '\\\\/?' + normalizedUrl + '\\\\/?' + normalizedUrl + '\\\\/?' + normalizedUrl + '\\\\/?' + _start.substr(1) + ')';
+4 32 return normalizedUrl;
+4 33 };
+4 34 var socket = function (parent) {
+4 35 return parent.toString();
+4 37 vardump = function () {
+4 40 dump.forEach(function (dump) {
+4 41 var info = '';
+4 42 if (dump.level === 'warn') {
+4 43 info += dump.warn();
+4 45 dump = function () {
+4 48 if (info) {
+4 49 dump.dump();
+4 51 });
+4 52 info.total = info.total;
+4 53 info.dump = function () {
+4 54 var args = Array.prototype.slice.call(arguments);
+4 55 if (!info.total) {
+4 56 console.log(dump);
+4 58 if (info.total > 0) {
+4 59 return;
+4 65 console.log(info.total + '\
+4 66 ' + stats.mtime.getTime());
+4 67 info.totalTimeEnd = function () {
+4 68 this.totalTime = info.totalTime;
+4 73 describe('date', function () {
+4 74 it('should date the new Date', function () {
+4 75 var newDate = document.createElement('date');
+4 76 if (!newDate) {
+4 77 newDate = new Date;
+4 79 var now = moment();
+4 80 done = new Date(now);
+4 81 }).set(now, custom(now, custom.getTimezone);
+4 82 var nowArr = function now(now) {
+4 83 return custom offset = offset = offset(x) {
+4 84 return now.setTime /=0;
+4 85 return offset(x);
+4 87 var nowMoment.set(x, customTime, customTime, customTime = offset);
+4 88 delem = offset(x);
+4 89 delem.toString = customTime);
+4 90 delem.set( customTime, customTime, customTime, customTime, offset);
+4 91 if (nowMoment.getTimeEndWith(1) === customTime) {
+4 92 delem.valueOf(nowMoment, 'YYYYYY-MM-MM-DD-DD-YYYY-MM-DD')!== moment(now-YYYYYY-MM-
+5 6 assert.deepEqual(stringify('aaa'), "\'aaa\'")
+5 9 assert.deepEqual(stringify(true), {
+5 10 false: true,
+5 11 validator: [\'some\', \'and\', \'at\', \'but\']
+5 14 assert.deepEqual(stringify(null), \'null\')
+5 15 assert.deepEqual(stringify(), \'undefined\')
+5 31 if (window.Proxy) {
+5 32 it('should serialize proxied functions', function () {
+5 33 var abcProxy = new Proxy()
+5 34 assert.deepEqual(stringify(abcProxy), \'Proxy(function abcProxy(...) {... })\')
+5 37 it('should serialize arrays', function () {
+5 38 assert.deepEqual(stringify([\'a\', \'b\', null, true, false]), "[\'a\', \'b\', null, true, false]")
+5 41 var obj
+5 42 obj = {a: \'a\', b: \'b\', c: null, d: true, e: false}
+5 43 assert(stringify(obj).indexOf("{a: \'a\', b: \'b\', c: null, d: true, e: false}") > -1)
+5 44 function MyObj () {
+5 45 this.a = \'a\'
+5 47 obj = new MyObj()
+5 48 assert(stringify(obj).indexOf("{a: \'a\'}") > -1)
+5 49 obj = {constructor: null}
+5 50 var s = stringify(obj)
+5 51 assert(s.indexOf(\'{constructor: null}\') > -1 || s.indexOf(\'Object{}\') > -1)
+5 52 obj = Object.create(null)
+5 53 obj.a = \'a\'
+5 56 it('should serialize html', function () {
+5 57 var div = document) {
+5 58 assert.deepEqual(stringify(stringify(stringify(div).tr") > -1)
+5 60 assert(stringify(div).indexOf("{stringify(div).index).indexOf("{div).indexOf("{}\') > - 1}") > - 1}") > -1)
+5 63 it('should.deepEqual(stringify(stringify(doc).index).indexOf("{}\') > - 1})
+5 65 it('should.deepEqual(function(){})
+5 68 it('should.skip('should.skip('should.skip('should.skip()')
+5 69 it('should.skip()')
+5 74 it('should.skip())\')
+5 75 it('should.skip())
+5 78 it('
+7 3 assert.deepEqual(stringify(window.Symbol), {
+7 4 assign(stringify(window.Symbol), {
+7 5 name: module.exports,
+7 6 url: window.__karma__.start
+7 12 assert.deepEqual(stringify(window.Symbol), \'Symbol(\\d+)\\.\\d+\\.\')
+7 14 assert.deepEqual(stringify(window.Symbol), \'Symbol(\\d+)\\.\\d+\')
+7 18 if (window.SourceId) {
+7 19 assert.deepEqual(stringify(window.SourceId), \'Symbol(\\d+)\\.\\d+\')
+7 21 assert.deepEqual(stringify(window.SourceId), \'Symbol(\\d+)\\.d+\')
+7 24 if (window.addEventListener) {
+7 25 var event = document.createEventEmitter.call(this)
+7 26 var KarmaEventEmitter = function (emitter, injector) {
+7 27 var events = emitter.get(\'events\')
+7 28 var alreadyDisplayedErrors = {}
+7 29 var instances = {}
+7 30 var patterns = Object.keys(emitter.emit.bind(emitter))
+7 31 var removeIgnores = function (injector) {
+7 32 var reader = injector.get(\'preprocessor\')
+7 33 var pkgMeta = injector.get(\'preprocessor.json\')
+7 34 return function (pkg) {
+7 35 if (!preprocessors.hasOwnProperty(pkgMeta)) {
+7 36 return
+7 38 var locals = {
+7 39 id: [
+7 40 'http://some.com\',
+7 41 'https://more.org/file.js'
+7 42 ],
+7 43 name: [
+7 47 ]
+7 50 emitter.on(\'load_error\', function handle_error(error, req, res, next) {
+7 51 var name = req.params.id
+7 52 if (error) {
+7 53 return next()
+7 55 var redirectingUrl = 1
+7 56 var redirectingToUrl = 3
+7 57 var redirectingToUrl = 4
+7 58 var redirectingToUrl = 5
+7 59 var Route = function (method) {
+7 60 var routes = {}
+7 61 if (method === \'GET\') {
+7 62 route = handler
+7 63 .get('/hello\')
+7 64 .reply(400)
+7 65 if (!route) {
+7 68 req.socket.on(\'error\', function handle_error(err) {
+7 69 if (err) {
+7 72 var getConsole = function (currentWindow) {
+7 73 return currentWindow.console || {
+7 74 log: function () {},
+7 75 info: function () {},
+7 76 warn: function () {},
+7 77 error: function () {},
+7 78 debug: function () {}
+7 83 var getConsoleMethod = function getConsoleMethod () {
+7 84 if (currentWindow) {
+7 85 return function getConsoleMethod(currentWindow.consoleMethod() {
+7 86 return getConsoleMethod() {
+7 91 var getConsoleMethod() {
+7 95 var ConsoleWindow.consoleMethod() {
+7 100 var getLazyLoading = function getConsoleMethod() {
+7 103 describe '
+
+8 1  {
+8 7 caption: '<span>{1}</span><a href="{2}">{3</a>',
+8 8 caption: \'<span>{2}</span>',
+8 9 lang: 'en'
+8 32 assert.deepEqual(stringify(abcProxy), \'Proxy(function abc (...) {... })\')
+8 33 assert.deepEqual(stringify(abcProxy), \'Proxy(function (...) {... })\')
+8 36 it('should serialize arrays to avoid memory leaks', function () {
+9 4 assert.deepEqual(stringify('aaa'),"
+

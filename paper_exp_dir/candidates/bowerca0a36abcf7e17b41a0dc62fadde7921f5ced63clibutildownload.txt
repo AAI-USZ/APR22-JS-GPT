@@ -1,0 +1,307 @@
+Min editdistance: 3.00
+Closest candidate: 0 1  'ESOCKETTIMEDOUT'];
+0 1  'ESOCKETTIMEDOUT'];
+0 2 function download(url, file, options) {
+0 3 var operation;
+0 4 var deferred = Q.defer();
+0 5 var progressDelay = 8000;
+0 6 options = mout.object.mixIn({
+0 7 retries: 5,
+0 8 factor: 2,
+0 9 minTimeout: 1000,
+0 10 maxTimeout: 35000,"
+
+1 2 var errorData = {
+1 3 id: '123',
+1 4 message: function (message) {
+1 5 return mout.string.rpad(message, 0);
+1 6 },
+1 7 data: function (message, color) {
+1 8 return mout.string.rpad(message, color);
+1 9 }
+1 10 };
+1 11 var MockRequest = function(uri, path, injector) {
+1 12 var response;
+1 13 var requestUrl = config.normalizeUrl(uri);
+1 14 var proxy = injector.isFunction? 'https' : 'http';
+1 15 this.response = response;
+1 16 this.statusCode = statusCode;
+1 17 this.opts = {};
+1 18 this.request = function(url, args, content) {
+1 19 var url = normalizeUrl(url);
+1 20 var args = parse(args);
+1 21 var urlObj = new Object();
+1 22 var protohost = {
+1 23 host: url,
+1 24 port: url,
+1 25 path: url,
+1 26 baseUrl: '/',
+1 27 files: [],
+1 28 logLevel: 3,
+1 29 logColors: true,
+1 30 autoWatch: false,
+1 31 proxies: {},
+1 32 urlRoot: '/',
+1 33 reportSlowerThan: 0
+1 35 this.customContext = function(context) {
+1 36 return this.settings[url] || {
+1 37 logger: function(s) {
+1 38 return log.warn('error', createError('No binary for'+ customContext + ':' + urlRoot));
+1 40 config: function() {
+1 41 return this.config.context;
+1 44 this.customDebug = function(context) {
+1 45 return this.debug =!!mout.string.repeat(' ', n + '\
+1 46 ');
+1 48 this.customClientContext = function(context) {
+1 49 return this.config.client.get(config.url).returns(this.url);
+1 51 this.get('/', function(req, res) {
+1 52 res.render('index.jade', { layout: 'index.jade', headers: { 'Content-Type': 'text/html; charset=utf-8' }});
+1 53 });
+1 55 function convertUrl(url) {
+1 56 var proto = injector.createChild([{
+1 60 baseUrl: '/base',
+1 62 headers: {},
+1 64 before: function(url) {
+1 65 protocol = 'http';
+1 66 if (url.indexOf('//')!== -1) {
+1 67 url = 'http://' + url + ':' + urlRoot;
+1 69 return proto.call(this, url, this.uri);
+1 70 }, this);
+1 72 return this.uri.params = urlObj = urlObj;
+1 74 proto.createServer = function() {
+1 75 return this.lookup = function(req, port() {
+1 76 return this.lookup = function(req, url) {
+1 77 var headers = getHeader('x-answ, url, headers, headers, port, urlRoot, retry = '') {
+1 78 var url = '';
+1 79 var err = '';
+1 80 var headers = '';
+1 82 var headerspending = '';
+1 83 var removed = '';
+1 84 var slashAdded = false;
+1 85 var paramcalled = false;
+1 86 var paramcalled = '';
+1 89 if (name === 'name'restored' in params') {
+1 90 for (var i = restoreIndex === 0;
+1 91 for (var
+2 10 maxTimeout: 35000,
+2 11 randomize: true,
+2 12 url: url
+2 13 }, options || {});
+2 14 operation = retry.operation(options);
+2 15 operation.attempt(function () {
+2 16 Q.fcall(fetch, url, file, options)
+2 17 .then(function (response) {
+2 18 deferred.resolve(response);
+2 19 })
+2 20 .done(function () {
+2 21 return deferred.promise;
+2 22 }, function (error) {
+2 23 return deferred.reject(error);
+2 27 function fetch(url, file, options) {
+2 29 var promise = Q.resolve();
+2 30 if (name) {
+2 31 promise = promise.then(function () {
+2 32 return Q.nfcall(fs.stat, url).then(function (stat) {
+2 33 deferred.notify({
+2 34 level: 'action',
+2 35 tag: 'download',
+2 36 format: 'GET'
+2 38 } else {
+2 39 deferred.reject(error);
+2 43 function createReadStream(options) {
+2 44 var content = [
+2 45 '``` js Hello World',
+2 46 '```'
+2 47 ];
+2 48 options.filename = path.basename(url);
+2 49 return Q.nfcall(fs.stat, options)
+2 50 .then(function (stat) {
+2 52 level: 'info',
+2 57 .on('error', deferred.reject)
+2 58 .on('end', function () {
+2 63 return deferred.reject;
+2 66 return deferred.resolve(response);
+2 70 var headers = {};
+2 71 files = options.headers || {};
+2 72 return files.deferred.promise.then(function (files) {
+2 73 var file;
+2 75 '``` js Hello World\
+2 76 '
+2 78 content.forEach(function (file) {
+2 79 content.push(file);
+2 80 }, function () {
+2 81 deferred.notify(content);
+2 83 .promise.resolve(content);
+2 87 .download()
+2 88 .on('download()
+2 89 .on('error', deferred.resolve.bind(deferred.reject)
+2 90 .resolve.bind(deferred, function () {
+2 91 .resolve.resolve.bind(deferred, deferred.reject);
+2 92 .resolve.bind(deferred, deferred.resolve, deferred.reject);
+2 96 return deferred.pipe(deferred.deferred = deferred.defer = deferred.promise;
+2 97 .Handler.Handler.exec('defer.exec('deferred',deferred.promise, executor', deferred.promise, deferred.deferred, executor, function (deferred, dir) {
+2 98 return deferred.deferred, deferred.reject);
+2 99 return deferred
+4 23 var timeout = operation._timeouts[0];
+4 24 if (errorCodes.indexOf(error.code) === -1) {
+4 27 if (operation.retry(error)) {
+4 30 return deferred.promise.then(function () {
+4 31 return that._removePackages(promise);
+4 34 return that._analyse();
+4 40 var contentLength;
+4 41 var bytesDownloaded = 0;
+4 42 var reject = function (error) {
+4 43 var initialDir = this._tempDir;
+4 44 var home = this._parent.os.home;
+4 45 var file = path.join(that._tempDir, file);
+4 46 if (process.env.HTTP_PROXY) {
+4 47 process.env.HTTP_PROXY = 'https:';
+4 49 if (process.env.http_proxy) {
+4 50 process.env.http_proxy = 'https:';
+4 52 return Q.nfcall(mkdirp, this._tempDir)
+4 53 .then(function () {
+4 54 var promises = [];
+4 55 mout.object.forOwn(that._dissected, function (decEndpoint, endpoint) {
+4 56 var promise;
+4 57 var dst;
+4 58 var release = decEndpoint.pkgMeta._release;
+4 59 dst = path.join(that._tempDir, (decEndpoint.name) + '-' + release);
+4 60 if (dst === decEndpoint.name) {
+4 61 return;
+4 63 return Q.all(promises)
+4 65 return that._extract(content, dst);
+4 66 }, function (err) {
+4 67 return mout.rimraf(dest, function (err) {
+4 68 if (err) {
+4 69 return Q.n.removePackages.removePackages.remove(decEndpoint.pkgMeta._extract({
+4 70 name: err.name,
+4 71 name: dst
+4 76 }.bind(this);
+4 78 }.bind(this));
+4 79 promises.done();
+4 80 return deferred.progress = function () {
+4 81 return deferred.deferred.reject();
+4 84 .on('error', function (error', function (error, error, done) {
+4 85 return deferred.reject(error, deferred.reject)
+4 86 .on('error', deferred.resolve, deferred.reject)
+4 87 .pipe(error);
+4 88 .pipe(process.on('progressDelay')
+4 89 .on('progress', deferred.pipe
+5 12 progressDelay: progressDelay,
+5 13 gzip: true
+5 19 var responseData = response.toString;
+5 20 deferred.notify(responseData);
+5 21 progressDelay = 1000;
+5 22 that._logger.action('download', responseData);
+5 23 emitter.pipe(progressDelay);
+5 30 var timer = createError('Request - not fetching not yet');
+5 31 promise = promise.progress(function (notification) {
+5 32 deferred.reject(createError('No binary for'+ url + ':' + extension));
+5 34 return deferred.promise.then(function (progress) {
+5 35 progressDelay = Math.round(0, 1);
+5 36 that._logger.info('progress', receivedMtime.toString());
+5 40 function createError(error) {
+5 41 var nonReady = [];
+5 42 if (!error.code) {
+5 43 if (arguments.length === 1 && undefined === 2) {
+5 44 return Q.resolve(error);
+5 46 if (error.code === 0) {
+5 47 return Q.nfcall(mkdirp, [\'--path\', \'-\' + path]).fail(function (err) {
+5 48 error.code = \'ENOENT\';
+5 49 throw err;
+5 52 nonReady.push(content);
+5 55 function fetchFromUrl(url) {
+5 57 var responseData = responseData || {};
+5 58 process.nextTick(function () {
+5 59 deferred.notify(error);
+5 63 function that._write(progress, response) {
+5 64 var promises;
+5 66 var that = this;
+5 67 promises = that._bail;
+5 68 promises.progressDelay = 0;
+5 69 .clearErrors = false;
+5 70 .setTimeout(function () {
+5 71 clearTimeout(function () {
+5 72 clearTimeout(timeout, errTimeout, err) {
+5 73 clearTimeout(err) {
+5 74 rimraf('error = noopener.reset();
+5 75 next(err);
+5 76 noopenerators.removeAll();
+5 77 clearTimeout(this._bailAll();
+5 79 }.bind(this.deferred, null);
+5 80 }.bind(this.deferred, decache.deferred, function (err) {
+5 81 clearInterval.cancel.reject(this.ignoreAll(this);
+5 83 clearTimeout(this._error) {
+5 84 this._dots.length = false;
+5 86 this._write(
+8 24 .done();
+8 26 Q.nfcall(fetch, url, file, options)
+8 31 operation.on('error', function (error) {
+8 32 emitter.emit('error', createError('There is no appropriate package in the\'));
+8 34 .on('resolve', function () {
+8 37 .fin(function () {
+8 38 deferred.resolve();
+8 46 var contentLength = 0;
+8 48 var bytesDownloaded = 1;
+8 49 if (contentLength && bytesDownloaded < contentLength) {
+8 50 return deferred.reject(createError('No binary for\'));
+8 52 req.on('error', function (error) {
+8 53 emitter.emit('error', createError('No binary for\'));
+8 55 opts.progressDelay = 1000;
+8 56 if (opts.progressDelay === 0) {
+8 57 deferred.reject(createError('No binary for\'));
+8 59 opts.buffer = {
+8 60 toString: function (toString, encoding) {
+8 61 return 'W/"0-9" is constant.Binary;
+8 64 opts.attempt = function () {
+8 65 throw new Error('Unable to parse binary for'+ proto + '\
+8 68 opts.wetag = function (body) {
+8 69 var encoding;
+8 70 var len = buf.length;
+8 71 return etag(contentLength, 3);
+8 73 proto.on('error', function (error) {
+8 74 emitter.emit('error', error);
+8 76 return deferred.on('end
+8 77 .resolve();
+8 79 });"
+
+9 21 .progress(function (status) {
+9 22 deferred.notify(status);
+9 24 .fail(function (error) {
+9 29 if (error.details) {
+9 30 file.contentPath = null;
+9 31 file.content = uuid.v4();
+9 33 throw createError('Bower command line client is not connected', 'ENOENT');
+9 36 return Q.nfcall(fetch, url, file, options)
+9 48 var stream = createError('Bower command line client is not connected', 'ENOENT');
+9 50 var error;
+9 51 try {
+9 52 promise.progress(error);
+9 53 } catch (error) {
+9 54 error = createError('Bower command line client is not connected', 'ESOCKET');
+9 56 function callHandler(url, response, next) {
+9 58 var type;
+9 60 var prototype = require('./prototype');
+9 62 promise = promise.then(function (func) {
+9 63 return that._readJson(source, options);
+9 65 .then(function (result) {
+9 66 result.setHeader('Content-Type', 'application/json');
+9 67 if (typeof result === 'Error') {
+9 68 that._write(process.stderr, result, 'DEBUG');
+9 70 result.write(promise.end();
+9 73 return promise.progress(function (notification) {
+9 74 return that._readJson();
+9 75 return notification;
+9 79 return promise.then(function () {
+9 80 return Q.then(func, error);
+9 81 return retry.catch(function (err) {
+9 82 return retry.then(error)
+9 83 .done) {
+9 84 deferred.reject(function (err);
+9 85 deferred.reject(err);
+9 92 function callHandler.then(func, retry.then(error) {
+9 93 return retry.done) {
+9 94 it('should.complete(function (func);
+9 95 deferred.complete(function (func);
+9 96 deferred.state) {
+9 97 return

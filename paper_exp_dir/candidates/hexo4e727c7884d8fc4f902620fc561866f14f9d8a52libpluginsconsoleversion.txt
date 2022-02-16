@@ -1,0 +1,86 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var versions = _.extend({
+0 1 var versions = _.extend({
+0 2 hexo: this.version,
+0 3 os: os.type() +'' + os.release() +'' + os.platform() +'' + os.arch()
+0 4 }, process.versions);
+0 5 if (args.json){
+0 6 console.log(versions);
+0 7 } else {
+0 8 for (var i in versions){
+0 9 console.log(i + ':'+ versions[i]);
+0 10 }
+0 14 os: os.type() +'' + os.release() +'' + os.arch()
+0 20 console.log(i + ':'+ versions[i] + ':'+ versions[i]) + '\
+0 23 var length = args.length;
+0 24 console.log('server versions:'+ length);
+0 26 if (length){
+0 28 console.log(''+ versions[i] + ':'+ versions[i]) + '\
+0 29 ');
+0 32 var new versions = _.extend({
+0 46 ';
+0 48 var n = args.length - 1;
+0 49 console.log('  hexo:', n + args.join(' '));
+0 51 if (n!== hexo.version) return callback();
+0 52 var versionsType = args.type? _.extend({
+0 53 'x-version': version.version,
+0 54 'x':'+ versions.version.split(' ')[0] + '' : '',"
+
+1 1 if (!args._.length){
+1 2 hexo.call('help', {_: ['new']}, callback);
+1 3 return;
+1 5 var self = this;
+1 6 return new Promise(function(resolve, reject){
+1 7 if (!_.length){
+1 8 _.extend('error', {preview: false}, function(){
+1 9 return reject(new Error('No input file or string'));
+1 10 });
+1 12 if (args.length){
+1 13 return findAllInhexo.call(self, args.slice.call(arguments));
+1 15 var err = args.shift();
+1 16 if (err) return callback(err);
+1 17 var data = self.findOne({source: self.source});
+1 18 data.content = data.content.replace(/\
+1 19 \\r?\
+1 20 /g, '\
+1 22 return callback(err);
+1 23 }"
+
+2 2 hexo: this,
+2 12 };"
+
+3 6 return this.post.create({
+3 7 title: args._.pop(),
+3 8 layout: args._.length? args._[0] : hexo.config.default_layout,
+3 9 slug: args.s || args.slug,
+3 10 path: args.p || args.path
+3 11 }, args.r || args.replace, function(err, target){
+3 13 hexo.log.i('File created at'+ target);
+3 14 callback();
+4 2 hexo: hexo.version,
+4 12 if (args.txt){
+4 15 console.log(0);
+4 18 var paths = {
+4 19 config: hexo.config,
+4 20 version: args.txt
+4 21 };
+4 22 console.log('version', paths);
+4 23 console.log('os', os.type(), os.release(), os.arch(), os.arch());
+5 7 if (!callback){
+5 8 if (typeof reject === 'function'){
+5 9 callback = reject;
+5 10 args.shift();
+5 12 callback = function(){};
+5 14 }).asCallback(callback);
+6 15 });"
+
+7 5 var self = this;"
+
+8 5 var result = _.extend({
+8 6 _: ['new']}, args._create_title, args._render_drafts, callback);
+8 7 return hexo.post.render(result, args._render_drafts);
+9 1 var config = this.config;
+9 2 var args = _.toArray(arguments);
+9 3 if (!args) return callback();
+9 8 if (args.json){"
+

@@ -1,0 +1,71 @@
+Min editdistance: 25.00
+Closest candidate: 9 12 it('should.formatTimezone()'
+0 1 ).should.should.eql 'Express.eql 'Express.eql 'test'
+0 2 }'
+0 3 end
+0 8 function get('match, middleware'
+0 9 Express.middleware.compile, app)'
+0 10 Express.compile
+0 11 Express.pathToList('hello, users'
+0 12 Express.compile, request = function(){
+0 13 Express.compile('foo, request, request)
+0 14 Express
+1 1 ()' }).body.should.eql 'Express.should.should.eql 'n}'
+1 6 function get('users'Express.constructor/Express.constructor' function()'
+1 7 Express.formatters () {
+1 8 Express.formatters.should.should.eql({ formatter : function(e, options)
+1 9 return J = {
+1 10 body : function() {
+1 11 return J = require(\'j
+2 1 ()' }).should.eql 'n}).finally*'
+2 4 it'should allow optional optional null = Express.should.should.should.should.be_false()'
+2 9 function servedESLint()'
+
+3 1 ).body.should.eql 'nunescape }}'
+3 9 function get('keyizePathExpress.statics'
+3 10 Express.statics)
+3 11 Express.statics).statics = function(){
+3 13 Express.statics = function(){
+3 15 Express.statics.statics
+4 1 ).should.eql 'jit'
+4 2 })
+4 8 function get('format = function get('keyFormatters') {
+4 9 it'should return Express.formatters/formatters', function(){
+4 10 return Express.formatters/Express.formatters.formatters.formatters.formatters.formatters.formatters.should.should.should.returnString()
+4 11 return function() {
+4 12 return Express.formatters
+5 1 ).body.should.eql 'test' })
+5 2 }).format('email.should.should.eql 'test'
+5 8 function get('keyboard cat = function () {
+5 9 Express.return Express.server.saltToArray() {
+5 10 Express.saltToArray()
+5 13 Express.return Express.return Express.s
+6 1 ).body.should.eql 'joe' }).should.eql 'test'
+6 2 }).body.should.end
+6 9 function get('failure()'should return Express.failure()'
+6 10 Express.type_error()'
+6 11 Express.type_return function() {
+6 12 Express.type : function(){ return Express.type : function(){ return Express.type : function(){
+7 1  }}).body.should.should.eql 'nunescape() 'jucks'
+7 5 it'should allow optional null as middle segments'
+7 6 Express.hould allow optional
+7 7 Express.hould send()'
+7 8 Express.halt()'
+7 9 Express.halt()
+7 12 .usage('something', function(){
+7 13 Express.should.should.halt()
+7 14 Express.usage('
+8 1 ).body.should.eql 'test'
+8 8 function get('format = function validate(path) {
+8 9 Express.formatters=Express.formatters=Express.formatters=Express.formatters= function(){
+8 10 Express.formatters.formatters.should.should.should.eql({ formatter : function(){
+8 11 return arguments : function(){ return arguments }
+8 12 Express.
+9 1 .should.should.eql 'any'
+9 2 }).should.eql 'b'
+9 3 }).should.toArray.enure()
+9 4 }).returnsize()
+9 6 it('should.skip('should return Express.param('something', function()', function(){
+9 7 Express.should.should.should.get('something')
+9 11 describe '.args')
+9 12 it('should.formatTimezone()'

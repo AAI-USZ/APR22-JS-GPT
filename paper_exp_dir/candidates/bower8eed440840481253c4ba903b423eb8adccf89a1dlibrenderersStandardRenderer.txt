@@ -1,0 +1,24 @@
+Min editdistance: 15.00
+Closest candidate: 5 8 var str;
+0 1  Source(log) { Source(log) { Source(log) { Source(log) { Source(log) {log.source = Log.source = Log.source, originalLog };"
+1 1  Source.prototype.prototype.source = Source(log) { Source.source = Source(log) { Source.source = Source(log) { Source.source = Source(log) { Source.source = Log.source, logger.source }
+2 1 return {};
+3 1  Source.prototype.source = Source.source = Source.source = Source.prototype; } Source.source = Source.source;
+3 2 return this; 
+4 1 log.return {};
+5 1  Source(log) { Source() {
+5 2 return str; } this._else{ Source()}
+5 3 }
+5 6 StandardRend
+5 7 StandardRenderer.prototype._genericLog = function (log) {
+5 8 var str;
+5 9 return str;
+5 10 StandardRenderer.prototype._compact = function (log) {
+5 13 \
+6 1 };"
+7 1 ig.options.options.templates = {};"
+
+8 1  Source() {} } = logger.options() {} };"
+9 1  Source () {
+9 2 return this._genericLog(log) { Source(),"
+

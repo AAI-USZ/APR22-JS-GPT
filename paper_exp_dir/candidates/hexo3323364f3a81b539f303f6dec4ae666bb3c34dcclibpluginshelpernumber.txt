@@ -1,0 +1,97 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var split = num.toString().split('.');
+0 1  = options.separator;
+0 2 var split = num.toString().split('.');
+0 3 var before = split.shift();
+0 4 var after = split.shift();
+0 5 var delimiter = options.delimiter;
+0 6 var separator = options.separator;
+0 7 var show = options.show;
+0 8 var width = options.width;
+0 9 var height = options.height;
+0 10 var frameborder = options.frameborder;
+0 11 var wrap = options.wrap;
+0 12 var escape = options.escape;"
+
+2 2 var split = num.toString().split('.'),
+2 3 i;
+2 4 var before = split.shift(),
+2 5 after = split.length? split[0] : '';
+2 6 var before_lines = new before.split(separator);
+2 7 if (before) {
+2 8 before.push(a(_.extend(_.omit(this, 'name')));
+2 9 }
+2 10 var after_lines = split.length? split[0] : '';
+2 11 if (after_lines && after_lines.length){
+2 12 var after_lines = after.split(separator);
+2 13 after_lines.forEach(function(item){
+2 14 var after_lines = item.split(separator);
+2 15 for (var i = 0, len = precision - item[0].length; i < len; i++){
+2 16 after_lines[i] = after_lines[i];
+2 19  after_lines.push(item);
+2 20 });
+2 22 if (nafter_lines.length){
+2 23 var after_lines = [];
+2 26 var should = this.charset || 'utf-8';
+2 27 for (var i = 0, len = precision - after_lines.length; i < len; i++){
+2 28 after_lines.push(more_lines[i]));
+2 34 describe('separator', function(){
+2 35 it('outputs with no //', function(){
+2 36 var result = [
+2 37 '<!--' + options.join(' ') + '-->'
+2 38 ].join('\
+2 39 ');
+2 40 result.separator = function(str){
+2 41 return str.replace(/\\\\/g, '/');
+2 42 };
+2 43 var before_lines = new after_lines.split(separator);
+2 44 var after_lines = split.separator(separator);
+2 45 var after_lines = new after_lines.split(separator);
+2 58 var after_lines.forEach(function(item){
+2 59 var id = item._id = split[id];
+2 60 if (!isNaNested(id)) return;
+2 61 item = item;
+2 62 if (isNaested(item) return;
+2 63 this.setCategories(item, item, id = item);
+2 66 var clearCategories(category, item, i, i, item_id, clearCategories, clearCategories, clearCategories, item_id);
+2 67 return belongs = item_id, clearCategories, clearCategories, i, clearCategories);
+2 69 exports.push(keys = item_id, clearCategories);
+2 70 exports.push(keys);"
+
+5 3 i, len = split.length;
+5 5 a, len = before.length,
+5 6 w, ret;
+5 7 if (delimiter){
+5 8 var beforeArr = [],
+5 9 beforeLength = before.length,
+5 10 beforeFirst = beforeLength % 3;
+5 11 if (beforeFirst) beforeArr.push(before.substr(0, beforeFirst));
+5 12 for (i = beforeFirst; i < beforeLength; i += 3){
+5 13 beforeArr.push(before.substr(i, 3));
+5 15 before = beforeArr.join(delimiter);
+5 17 if (options.separator){
+5 19 if (separator){
+5 22 var split = after.split(separator);
+5 23 for (i = beforeFirst; i < split.length; i++){
+5 24 var item = split[i];
+5 25 if ((result + item + omission).length - 1 <= beforeLength) || item === last){
+5 26 result += item +'';
+5 27 } else {
+5 28 break;
+5 33 var result = item;
+5 35 result.push(separator + item + omission);
+5 37 return result;
+5 38 };"
+
+7 2 var split = num.toString().split('.'),"
+
+9 6 delimiter = options.delimiter,
+9 7 root = parseInt(navigator.isAbsolute(length)), 10),
+9 8 start = new Date();
+9 13 if (beforeFirst) beforeArr.push(before.substr(0, 1));
+9 26 var 1 = '.' + 1;
+9 27 for (i = 0, len = separator.length; i < len; i++){
+9 28 var item = separator[i];
+9 29 if ((cur = cur.length - 1) === 0){
+9 30 arr = arr.reverse();
+9 35 return before + (separator? separator + after : '');

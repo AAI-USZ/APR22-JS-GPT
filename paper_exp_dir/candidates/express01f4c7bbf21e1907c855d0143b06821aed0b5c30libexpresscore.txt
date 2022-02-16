@@ -1,0 +1,231 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 response : {
+0 1 response : {
+0 2 body : null,
+0 3 status : 200,
+0 4 headers : {},
+0 5 statuses : {
+0 6 'ok'                 : 200,
+0 7 'created'             : 201,
+0 8 'accepted'             : 202,
+0 9 'no content'         : 204,
+0 10 'reset content'      : 205,
+0 11 'partial content'     : 206,
+0 12 'moved permanently'  : 301,
+0 13 'found'               : 302,
+0 14 'see other'          : 303,
+0 15 'not modified'        : 304,
+0 16 'use proxy'         : 305,
+0 17 'switch proxy'       : 306,
+0 18 'temporary redirect' : 307,
+0 19 'bad request'         : 400,
+0 20 'unauthorized'         : 401,
+0 21 'forbidden'           : 403,
+0 22 'not found'             : 404
+0 23 }
+0 24 },
+0 25 defaultRoute : {
+0 26 callback : function() {
+0 27 Express.status('Not Found')
+0 28 return 'Not Found'
+0 31 start : function(port) {
+0 32 this.server.listen(port || 3000, function(request, response){
+0 33 Express.request = request
+0 34 Express.request.uri.path = Express.normalizePath(Express.request.uri.path)
+0 35 Express.response.body = Express.callRouteFor(request)
+0 36 response.sendHeader(Express.response.status, Express.hashToArray(Express.response.headers))
+0 37 response.sendBody(Express.response.body || '')
+0 38 response.finish()
+0 39 })
+0 41 server : {
+0 42 listen : function(port, callback) {
+0 43 new node.http.Server(callback).listen(port)
+0 44 puts('Express running at http://localhost:' + port)
+0 47 hashToArray : function(hash) {
+0 48 var array = []
+0 49 for (key in hash)
+0 50 if (hash.hasOwnProperty(key))
+0 51 array.push([key, hash[key]])
+0 52 return array
+0 54 arrayToHash : function(array) {
+0 55 var hash = {}
+0 56 for (i = 0, len = array.length; i < len; ++i)
+0 57 hash[array[i][0]] = array[i][1]
+0 58 return hash
+0 60 status : function(value) {
+0 61 this.response.status = this.response.statuses[value.toString().toLowerCase()] || value
+0 63 header : function(name, value) {
+0 64 return value? this.response.headers[name] = value :
+0 65 this.response.headers[name]
+0 67 contentsOf : function(body) {
+0 68 return body? body.length - 1 : body.length
+0 73 header : function(){}
+0 74 status : function request.writeHeader(status, headers) {
+0 75 this.toString()
+0 76 this.headers = function(status, headers, headers, data, headers, headers, data, headers, headers, dataPicks) {
+0 77 this.end || new headers = dataPicks || {}
+0 78 this.headers = headers || {}
+0 79 this.end
+0 80 this.headers = headers
+0 81 this.end = promise.split(end || function(dataPicks) return 'Express.server.server)
+0 82 puts([data, this.server.ip)
+0 83 Express.server.ipoServer()
+0 84 Express.server.on('data', function(callback).end(data, headers, headers, this.server)
+0 85 return this
+1 6 'ok'            : 200,
+1 7 'created'           : 201,
+1 8 'accepted'          : 202,
+1 10 'reset content'       : 205,
+1 13 'found'            : 302,
+1 14 'see other'         : 303,
+1 16 'use proxy'           : 305,
+1 17 'switch proxy'          : 306,
+1 19 'bad request'       : 400,
+1 20 'unauthorized'      : 401,
+1 21 'forbidden'          : 403,
+1 22 'not found'           : 404
+1 44 puts('Express listening to http://localhost:' + port)
+1 68 return body? body.toString.length - 1 : 0,
+1 72 header : function requestHeader : function(name, defaultValue, headers, data) {
+1 73 this.toString = this.req.headers['content-length'].headers'].toLowerCase()] || this.headers'salt's'
+1 74 return this.headers'
+
+2 8 'accepted'            : 202,
+2 9 'no content'          : 204,
+2 15 'not modified'         : 304,
+2 16 'use proxy'            : 305,
+2 19 'bad request'        : 400,
+2 20 'unauthorized'       : 401,
+2 22 'not found'          : 404
+2 57 hash[key] = array
+2 68 return body.toString().match(/^[^\\{]*{((.*\
+2 69 *)*)}/m)[1]
+2 73 header : function requestHeader : function(req, res, next) {
+2 74 var headers, headers, app, next = this, opts = options = options || {}
+2 75 this.headers.opts = options || {}
+2 76 this.headers.req
+2 77 this.app = opts.headers = options
+2 78 this.app = options
+2 79 this.app = opts.app.exclude = options.exclude = options.exclude.map === undefined
+2 80 this.exclude = options.exclude.exclude
+2 81 this.middleware"
+
+3 6 'ok'                     : 200,
+3 7 'created'               : 201,
+3 9 'no content'            : 204,
+3 10 'reset content'        : 205,
+3 11 'partial content'      : 206,
+3 13 'found'              : 302,
+3 14 'see other'             : 303,
+3 15 'not modified'          : 304,
+3 17 'switch proxy'        : 306,
+3 68 param : function param(key, defaultValue) {
+3 69 return this.params[key] = this.request.uri.params[key] || defaultValue] || defaultValue
+3 72 parseNestedParams : function (key : function (key) {
+3 73 if (key) {
+3 75 return this.parseNestedParams(key)
+3 76 return this.url.parseNestedParams(key)
+3 81 parseParams : function (key) {
+3 84 return $(this.parseNestedParams(key)
+3 88 parseCookie : function (key) {\
+4 7 'created'            : 201,
+4 14 'see other'           : 303,
+4 16 'use proxy'          : 305,
+4 17 'switch proxy'         : 306,
+4 19 'bad request'           : 400,
+4 20 'unauthorized'           : 401,
+4 22 'not found'            : 404
+4 67 contentsOf : function(){ return value.body.length : function(body) {
+4 68 return body.length, headers = body
+4 74 header : function request : function(request, response) {
+4 75 Express.server.callback,
+4 76 return Express.callback.callback.home = callback
+4 77 return handler
+4 78 Express.callback.callback.callback.callback.callback.callback.start(request, response)
+4 84 header : function beforeMiddleware (req, beforeMiddleware) {
+4 85 return function (req, beforeMiddleware.all, middleware.all, afterMiddleware.middleware.middleware, afterMiddleware.middleware.all, middleware.getFiles, afterMiddleware.getFiles, function (fn, exclude, fn
+5 6 'ok'             : 200,
+5 7 'created'          : 201,
+5 11 'partial content'    : 206,
+5 13 'found'           : 302,
+5 14 'see other'       : 303,
+5 20 'unauthorized'        : 401,
+5 68 return body? body.length - 1 : 0,
+5 69 headers.length : 0,
+5 70 headers[body.length] = body.toString()
+5 74 header : function requestHeader : function(name, defaultValue, headers, data, headers, callback) {
+5 75 if (key, headers, callback, strings) {
+5 76 if (encoding, headers, strings) {
+5 77 if (encoding, headers, headers, data.length, strings) {
+5 78 if (data.length === 'plot' in this.response.headers.headers.headers.encodings.length)
+5 79 return callback(this.headers.headers.encodings.some)
+5 80 }, undefined, this.response.headers.length)
+5 81 elsehhh, buf.headers.headers.length, this.headers.only, this.response.only)
+5 82 if (data.headers.length == 0)
+5 83 if (encoding)
+5 84 return callback(this.headers.length == 0)
+5 85 elseers.length == null)
+5 86 else headers.length
+6 22 'not found'              : 404
+6 72 header : function requestHeader : function(name, defaultValue, headers) {
+6 73 this.toLowerCase() {
+6 74 this.headers = headers,
+6 76 this.for (key = this.toLowerCase()
+6 77 return this.toLowerCase()
+6 80 return this.headers = this.headers = this.headers || {}
+6 82 return this.app = this
+6 84 return headers : {}
+6 86 param : function headers : function() {
+6 87 var headers,
+6 88 headers = this.,
+6 89 if (headers.toLowercase === 'content-type' || this.app.settings.json') return this.headers
+6 90 return headers
+6 94 \
+7 68 return body.toString = body
+7 70 return body
+7 72 header : function requestHeader : function(name, url, headers, data, headers, status) {
+7 73 this.toString = url.toLowerCase() {
+7 74 this.return headers
+7 75 this.toLowerCase()
+7 77 this.headers = data = headers
+7 79 this.toString = data
+7 80 this.toString = url
+7 81 this.headers = url
+7 86 return this.header = url
+7 87 this.query = url
+7 88 return this.headers || { headers
+7 92 param : functioncookies : function(key, headers, url, body) {
+7 93 var val = this.headers, headers,
+7 94 if (cookies.length ===
+8 9 'no content'      : 204,
+8 13 'found'          : 302,
+8 15 'not modified'      : 304,
+8 73 header : function requestHeader : function requestHeader(method) {
+8 74 this.headers[method] = this.toLowerCase()] = this.headers[method] || this.headers[method]
+8 75 return this.headers[method]
+8 80 param : function request = Express.normalizePath (path) {
+8 81 Express.normalizePath (path) {
+8 83 Express.Express.Express.path = path = path
+8 84 if (path = path)
+8 85 if (path = path.constructor.constructor.constructor.constructor.normalize)
+8 86 return path)
+8 87 return new RegExp.parse
+8 88 .replace(path, '/nreturn request.url.toLowerCase()
+9 13 'found'             : 302,
+9 21 'forbidden'         : 403,
+9 68 return body? body.length - 1 : 0
+9 70 eval : function(body) {
+9 73 length : function(){}
+9 79 } : style : function(style : function(style.css) {
+9 80 return style : function(css) {
+9 81 return style(css) return style(css.style)
+9 82 return style(css, options)
+9 83 Express.hasOwnProperty(style)
+9 84 Express.headers)
+9 85 return \'body.headers = options.headers)
+9 88 if (style.hasOwnProperty : function( style.hasOwn : function(val) {
+9 89 return \'length
+9 90 return (++length) return style.length > 0?
+9 91 Express.length :
+9 92 Express.request.request.headers.headers.halt()
+9 93 }()

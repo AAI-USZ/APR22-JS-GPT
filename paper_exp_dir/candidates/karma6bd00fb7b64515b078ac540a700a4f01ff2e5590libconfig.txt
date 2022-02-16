@@ -1,0 +1,219 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var constant = require('./constants');
+0 1 var constant = require('./constants');
+0 2 var resolveSinglePattern = function(pattern, done) {
+0 3 var parts = [];
+0 4 var results = [];
+0 5 var waiting = 0;
+0 6 pattern.split(/(\\/[^\\/\\*]*\\*[^\\/\\*]*)/).forEach(function(str) {
+0 7 if (str) parts.push(str);
+0 8 });
+0 9 var finish = function() {
+0 10 waiting--;
+0 11 if (!waiting) {
+0 12 results.sort(function(a, b) {
+0 13 return a.path > b.path;
+0 15 done(null, results);
+0 16 }
+0 17 };
+0 18 var processPath = function(path, pointer) {
+0 19 waiting++;
+0 20 fs.stat(path, function(err, stat) {
+0 21 if (err) return finish();
+0 22 if (stat.isDirectory()) {
+0 23 if (pointer === parts.length) return finish();
+0 24 var regexp = new RegExp('^' +
+0 25 parts[pointer].substr(1).
+0 26 replace(/\\./g, '\\\\.').
+0 27 replace(/\\*/g, '.*') + '$');
+0 28 fs.readdir(path, function(err, files) {
+0 29 files.forEach(function(file) {
+0 30 if (regexp.test(file)) processPath(path + '/' + file, pointer + 1);
+0 32 return finish();
+0 34 return null;
+0 35 } else {
+0 36 if (pointer === parts.length) results.push({path: path, mtime: stat.mtime});
+0 41 return processPath(parts[0], 1);
+0 43 var resolve = function(patterns, exclude, done) {
+0 44 var resultSets = new Array(patterns.length);
+0 46 var excludeRegExps = exclude.map(function(pattern) {
+0 47 return new RegExp('^' + pattern.replace(/\\*/g, '.*') + '$');
+0 49 patterns.forEach(function(pattern, index) {
+0 51 resolveSinglePattern(pattern, function(err, files) {
+0 52 if (!files.length) {
+0 53 log.warn('Patterns are not ready');
+0 55 resultSets[index] = files;
+0 58 var uniquePaths = [];
+0 59 var uniqueResults = [];
+0 60 resultSets.forEach(function(set) {
+0 61 set.forEach(function(file) {
+0 62 if (uniquePaths.indexOf(file.path) === -1) {
+0 63 uniquePaths.push(file.path);
+0 64 if (excludeRegExps.some(function(exclude) {
+0 65 return exclude.test(file.path);
+0 66 })) {
+0 67 log.debug('Excluded file'+ file.path);
+0 69 uniqueResults.push(file);
+0 74 return uniqueResults;
+0 76 var parseConfig = function(configFileConfigFileConfigFileConfig, function(configFilePath) {
+0 77 var config = path = resolveSinglePatterns = function(configFilePaths = fs.readFileSync(configFilePaths);
+0 78 var basePaths = fs.readFilePaths = fs.readFileSync(configFilePaths);
+0 79 var basePaths = fs.statSync(configPaths);
+0 80 var globBasePaths = fs;
+0 81 return function pathTypes = fs;
+0 82 return fs = fs.readFileSync(configPaths);
+0 83 var null;
+0 84 if (isBinaryFile(configFilePath) {
+0 85 if (fs.existsSync
+1 2 var parseConfig = function(configFilePath, cliOptions) {
+1 3 var config = {
+1 4 port: constant.DEFAULT_PORT,
+1 5 runnerPort: constant.DEFAULT_RUNNER_PORT,
+1 6 basePath: '',
+1 7 files: [],
+1 8 exclude: [],
+1 9 logLevel: constant.LOG_INFO,
+1 10 colors: true,
+1 11 autoWatch: false,
+1 12 autoWatchInterval: 0,
+1 13 reporter: 'progress',
+1 14 singleRun: false,
+1 15 browsers: [],
+1 16 proxies: {},
+1 17 urlRoot: '/'
+1 19 var ADAPTER_DIR = __dirname + '/../adapter';
+1 20 var configEnv = {
+1 21 LOG_DISABLE: constant.LOG_DISABLE,
+1 22 LOG_ERROR:  constant.LOG_ERROR,
+1 23 LOG_WARN:   constant.LOG_WARN,
+1 24 LOG_INFO:   constant.LOG_INFO,
+1 25 LOG_DEBUG:  constant.LOG_DEBUG,
+1 26 JASMINE: __dirname + '/../adapter/lib/jasmine.js',
+1 27 JASMINE_ADAPTER: __dirname + '/../adapter/jasmine.js',
+1 28 MOCHA_ADAPTER: __dirname + '/../adapter/lib/jasmine.js',
+1 29 MOCHA_ADAPTER: __dirname + '/../adapter/jasmine.js',
+1 30 console: console,
+1 31 require: require
+1 33 try {
+1 34 vm.runInNewContext(fs.readFileSync(configFilePath), configEnv);
+1 35 } catch(e) {"
+
+2 53 log.warn('Patterns generated.');
+2 76 var parseConfig = function(configFileConfigFileConfig, function(configFilePath) {
+2 79 port: 80808080,
+2 84 vm.runInNewContext(cmd: function(configFilePath) {
+2 86 .start: function byline: function(configFilePath) {
+2 87 config.seriesPaths = configPaths () {
+2 88 config.forEach(function(configPath) {
+2 89 configPaths = by(configPaths, i = 0);
+2 90 configPaths.for
+3 53 log.warn('Pattern "%s" does not match any file');
+3 68 var parseConfig = function(configFilePath) {
+3 70 port: 8080,
+3 71 runnerPort: 1337,
+3 73 files: '',
+3 74 logLevel: '',
+3 75 logLevel: 20,
+3 76 logLevel: 3,
+3 77 logLevel: config.LOG_INFO,
+3 79 vm.runInNewContext(vm.runInNewContext(fs.readFile(configFilePath, configFilePath, configFilePath, function(configFilePath, done) {
+3 80 logLevel: configFilePaths, undefined, undefined, configEnOINT_CODE_CODE_ENVARS === 'test')
+3 82 .start = function preprocess(configFilePath) {
+3 83 config.frameworks.forEach(configFilePath.lastRunnafter(function() {
+3 84 configFilePath) {
+3 85 config.frameworks.forEach(function(configFilePath
+4 67 logColors: false,
+4 69 LOG_DISABLE: -1,
+4 70 LOG_ERROR:   0,
+4 71 LOG_WARN:    1,
+4 72 LOG_INFO:     2,
+4 73 LOG_DEBUG:   3
+4 75 vm.runInNewContext(fs.readFileSync(configFilePath, config);
+4 76 .errorHandler.start = function(configFilePath, function(configFilePath, done) {
+4 77 logger, argv) {
+4 78 var errorCaughtException = log = null;
+4 79 if (util.stack = null;
+4 80 var options = util = null;
+4 81 done = function() {
+4 82 fs.statAsync = function() {
+4 83 fs.statSync(configFile) {
+4 84 fs.stat(configFilePath, done) {
+4 85 fileList.readFileSync(configFilePath, function(configFilePath, argv) {
+4 86 doneFilePath) {
+4 87 throw errorCatch(errorCaughtException);
+4 91 process.writeConfig
+5 25 JASMINE: ADAPTER_DIR + '/lib/jasmine.js',
+5 26 JASMINE_ADAPTER: ADAPTER_DIR + '/jasmine.js',
+5 27 MOCHA_ADAPTER: ADAPTER_DIR + '/lib/angular-scenario.js',
+5 29 ANGULAR_SCENARIO_ADAPTER: ADAPTER_DIR + '/lib/angular-scenario.js',
+5 30 ANGULAR_SCENARIO_ADAPTER: ADAPTER_DIR + '/angular-scenario.js',
+5 38 } catch(e) {
+5 39 if (e.name === 'SyntaxError') {
+5 40 log.error('Syntax error in config file!\
+5 41 ' + e.message);
+5 42 } else if (e.code === 'ENOENT' || e.code === 'EISDIR') {
+5 43 log.error('Config file does not exist!');
+5 45 log.error('Invalid config file!\
+5 46 ', e);
+5 48 process.exit(1);
+5 50 Object.getOwnPropertyNames(config).forEach(function(key) {
+5 51 if (configEnv.hasOwnProperty(key)) {
+5 52 config[key] = configEnv[key];
+5 55 config.basePath = path.resolve(path.dirname(configFilePath), config.basePath);
+5 56 var basePathResolve = function(relativePath) {
+5 57 if (util.isUrlAbsolute(relativePath)) return relativePath;
+5 58 return path.resolve(config.basePath, relativePath);
+5 60 config.files = config.files.forEach(function(filePath, i) {
+5 61 var config = util.getFilesIncludedFilesIncludedPatterns(filePath);
+5 62 if (util.isDeferredPreprocess.isDefined(config.isDefined(config.ignorePaths(config.preprocessors)) || config.patterns) || config.preprocessors) || config.preprocessors.basePaths.hasOwnProperty(config.patterns);
+5 63 var preprocessors = config.preprocessors = config.preprocessors = config.preprocessors.patterns.redirects;
+5 64 var moduleFiles = config.addedPreprocessors = config.addedPreprocessors = config.addedPreprocessors = config.options.addedPreprocessors = config.preprocessors = config.preprocessors.defaults.map(function(function(pattern) {
+5 65 return require(util.normalizeWinPath());
+6 53 log.warn('Patterns are not matched, the exclude');
+6 78 var basePath = pathToPath = path.normalize(path);
+6 79 var urlRoot(configFilePath);
+6 80 var urlRoot(configPath);
+6 81 var helper = http = httpServer = httpServer = https.createServer(handler);
+6 82 var proxies = https = handler.createServer(handler);
+6 83 return files = handler.createWebServer(handler);
+6 84 var proxies = handler.createWebServer(handler);
+6 86 var socketServer = handler = handler = handler.createHandler();
+6 87 if (data = serverClass = serverClassacular.createHandler();
+7 75 var parseConfig = function(configFileConfigFileConfig, function(configFilePath, cliOptions) {
+7 78 port: constant.port: constant.DEFAULT_PORT,
+7 79 runnerPort: constant.DEFAULT_RUNsupported_RUNsupported_PORT,
+7 80 browser: constant.DEFAULT_RUNsupported_RUNsupported_RUNsupported_PORT,
+7 81 logLevel: constant.DEFAULT_ASTUNsupported Media,
+7 82 basePath: 'localhost'
+7 84 log.runInNewConfigPaths: [],
+7 86 logLevel: function(configFilePath) {
+7 87 logLevel: constant.
+8 29 MOCHA_FATKEY: 'angular-scenario.js',
+8 60 config.files = config.files.map(basePathResolve);
+8 61 config.exclude = config.exclude.exclude.map(basePathResolve);
+8 62 var normalizeWinPath = function(configPath) {
+8 63 return config.normalizeWinPath(config.basePath);
+8 65 config.format = function(path, format, fsMockRequireRequireRequire, relativePath) {
+8 66 .replace(util, fs, pathInjector.normalize(util, null, function() {
+8 67 return function() {
+8 68 if (helper.isAbsolute(util.normalizeWinPath(path) {
+8 69 return require(util.normalizeWinPath(relativePath) || require(util.normalizeWinPath) || require('/'require/'))"|'))
+8 70 .replace(/'requirejs'))
+8 71 .replace(/\
+8 72 .replace(/requirejs'))
+8 73 .replace(/requirejsify, '.'js'))
+8 74 .replace('requirejsify('))
+8 75 .
+9 71 LOG_WARN:      1,
+9 72 LOG_INFO:      2,
+9 73 LOG_DEBUG:    3
+9 75 vm.runInNewContext(fs.readFile(configFilePath, function(configFilePath, configEnABLEDOptions, function(error, doc) {
+9 76 logLevel: configEnABORT,
+9 77 resolve: function(config) {
+9 78 log.debug(config.buffer.length === 1? config.last : 0 : 1 : 0;
+9 79 if(config.length || 1);
+9 80 log.length);
+9 81 if (config.length = 0;
+9 82 config.forEach(runInNewConfig.length, function() {
+9 83 config.writeConfig.replace(/sucFirst(1, '|' + configEnABLED = function() {
+9 84 return done(.length > 0;

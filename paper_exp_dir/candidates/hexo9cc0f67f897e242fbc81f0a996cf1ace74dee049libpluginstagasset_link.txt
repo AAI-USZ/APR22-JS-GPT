@@ -1,0 +1,110 @@
+Min editdistance: 12.00
+Closest candidate: 2 1 const { htmlTag } = require(\'hexo-util\');
+0 1 const util = require(\'hexo-util\');
+0 2 const htmlTag = util.htmlTag;
+0 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+0 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+0 5 module.exports = ctx => {
+0 6 const config = ctx.config;
+0 7 function makeUrl(path) {
+0 8 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+0 9 return path;
+0 10 }
+0 11 const data = url.parse(path);
+0 12 if (data && data.protocol) {
+0 15 path = config.root + path;
+0 16 return path.replace(/\\/{2,}/g, \'/\');
+0 18 return function imgTag(args, content) {
+0 19 const classes = [];
+0 20 let width, height, title, alt;
+0 21 while (args.length > 0) {
+0 22 const item = args.shift();
+0 23 if (rUrl.test(item) || item[0] === \'/\') {
+0 24 src = makeUrl(item);
+0 25 break;
+0 26 } else {
+0 27 classes.push(item);
+0 30 if (args && args.length) {
+0 31 if (!/\\D+/.test(args[0])) {
+0 32 width = args.shift();
+0 33 if (args.length &&!/\\D+/.test(args[0])) {
+0 34 height = args.shift();
+0 36 }'
+
+2 1 const { htmlTag } = require(\'hexo-util\');
+2 5 const { config } = ctx;
+2 19 let width, height, title, alt, src;
+2 20 let i = 0;
+2 21 const len = args.length;
+2 22 for (; i < len; i++) {
+2 23 const item = args[i];
+2 31 args = args.slice(i + 1);
+2 32 if (args.length) {
+2 39 if (args &&!/\\D+/.test(args[0])) {
+2 40 alt = args.shift();
+2 42 const match = rMeta.exec(args);
+2 43 if (match) {
+2 44 width = match[1];
+2 49 if (meta.attr &&!match[2]) {
+2 50 alt = match[3];
+2 52 if (match[4]) {
+2 53 alt = match[4];
+2 55 return imgTag(\'img\', imgTag(args[0], width, height);
+2 56 };
+2 57 };'
+
+3 22 for (const len = args.length; i < len; i++) {
+4 5 function imgTag(args, content) {
+4 7 let meta = \'\';
+4 13 if (rUrl.test(item)) {
+4 22 const width = args.shift();
+4 26 meta = args.join(\' \');
+4 28 if (meta && rMeta.test(meta)) {
+4 29 const match = meta.match(rMeta);
+4 30 title = match[1];
+4 31 alt = match[2];
+4 33 const attrs = {
+4 34 src,
+4 35 class: classes.join(\' \'),
+4 36 width,
+4 37 height,
+4 38 title,
+4 39 alt
+4 41 return htmlTag(\'img\', attrs);
+4 43 module.exports = imgTag;'
+
+5 6 let src, width, height, title, alt;
+5 23 const meta = args.join(\' \');
+6 1 const urlObj = (str) => {
+6 2 try {
+6 3 return new URL(str);
+6 4 } catch (err) {
+6 5 return str;
+6 8 const isExternal = (url, config) => {
+6 9 const exclude = config.external_link.exclude;
+6 10 const data = urlObj(url);
+6 11 const host = data.hostname;
+6 12 const sitehost = typeof urlObj(config.url) === \'object\'? urlObj(config.url).hostname : config.url;
+6 13 if (!sitehost || typeof data ===\'string\') return false;
+6 14 if (data.origin === \'null\') return false;
+6 15 if (exclude && exclude.length) {
+6 16 for (const i of exclude) {
+6 17 if (host === i) return false;
+6 20 if (host!== sitehost) return true;
+6 21 return false;
+6 23 function externalLinkFilter(data) {
+6 24 const { config } = this;
+6 25 if (typeof config.external_link === \'undefined\' || typeof config.external_link === \'object\'
+6 26 || config.external_link === true) {
+6 27 config.external_link = Object.assign({
+6 28 enable: true,
+6 29 field:\'site\',
+6 30 exclude: \'\'
+6 31 }, config.external_link);
+6 33 if (config.external_link === false || config.external_link.enable === false ||
+6 34 config.external_link.field!== \'post\') return;"
+
+7 19 let src, width, height, title, alt, srcColor, alt;
+7 29 args = args.slice(0, args.length);
+8 34 '
+

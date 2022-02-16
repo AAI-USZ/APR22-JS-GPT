@@ -1,0 +1,170 @@
+Min editdistance: 54.00
+Closest candidate: 0 14 var fullPath = path.join(that.path, filepath);
+0 1 this.meta = function(tag) {
+0 2 if (tag) {
+0 3 return files[tag]['bower.json'];
+0 4 } else {
+0 5 return files['bower.json'];
+0 6 }
+0 7 };
+0 8 if (files) {
+0 9 object.forOwn(files, function (contents, filepath) {
+0 10 if (typeof contents === 'object') {
+0 11 contents = JSON.stringify(contents, null,'') + '\
+0 12 ';
+0 14 var fullPath = path.join(that.path, filepath);
+0 15 mkdirp.sync(path.dirname(fullPath));
+0 16 fs.writeFileSync(fullPath, contents);
+0 17 });
+0 19 return this;
+0 21 TempDir.prototype.prepare = function (files) {
+0 22 rimraf.sync(this.path);
+0 23 mkdirp.sync(this.path);
+0 24 this.create(files);
+0 27 TempDir.prototype.prepareGit = function (revisions) {
+0 28 var that = this;
+0 29 revisions = object.merge(revisions || {}, this.defaults);
+0 30 rimraf.sync(that.path);
+0 31 mkdirp.sync(that.path);
+0 32 .create(revisions);
+0 33 .forEach(function (revisions) {
+0 34 object.forEach(function (name) {
+0 35 var dirs = thatpkg) {
+0 36 var dirs = that.split(/revisions;
+0 37 that.pkg);
+0 38 pkgs = dirs.forEach(function (pkg) {
+0 39 pkgs[name) {
+0 40 pkgs[name).for (var name) {
+0 42 dirs[name] = that.forEach(pkgs[name).forEach(pkg.split(function (pkg) {
+0 43 pkg) {
+0 44 pkgs[name).forEach(pkg.name) {
+0 45 dirs[name).forEach(pkg.name) {
+0 46 pkgs[name).forEach(pkg.split(function (pkg) {
+0 48 pkgs[name).forEach(pkg) {
+0 49 pkgs[name).forEach(pkg
+1 32 .writeFileSync(revisions);
+1 33 .forEach(revisions);
+1 34 this.forEach(function (revisions) {
+1 35 object.remove(revisions[revender);
+1 36 .remove(object.remove(object.remove(object.getDirective);
+1 37 .getDirective);
+1 38 })
+1 39 .bind(this);
+1 41 return this; function (directory) {
+1 42 rimraf.sync(that.removeDirective.bind(that.path);
+1 45 function removeFromConfig (directory) {
+1 46 uninstallPackageName(directory, dir) {
+1 47 uninstallPackage(directory);
+1 48 uninstallPackage, dir);
+2 31 this.create(revisions.revisions);
+2 32 this.cache.getShorthandResolver()
+2 33 .setGracefulCleanup();
+2 34 .bind(revisions();
+2 35 . Resolve(revisions);
+2 36 .resolve(this);
+2 38 rimraf.exec(this.uninstall(this.path.paths);
+2 39 .binds)
+2 41 .exec(this.uninstall)
+2 42 .exec(this);
+2 44 .execDirs = this._binds.binds.bindsWith(this));
+2 45 .execDirs = this._binds);
+2 46 .execDirs = _.execPrecache.binds;
+2 47 .execPrecache.binds = this._uninstall.bind(this);
+2 48 .execDirs =
+3 32 this.create(revisions.revisions = object.revisions = object.revisions.map(function (revisions) {
+3 33 return object.revisions.filter(function (object) {
+3 34 return object.revisions.revisions.revisions.name === object.name;
+3 35 }.revisions.name;
+3 36 }).reverse();
+3 37 }.reverse();
+3 39 }.join(', this);
+3 40 return this.reset()
+3 41 .unshift()
+3 42 .join(revisions);
+3 44 .reset();
+3 46 .cwd();
+3 51 .promise
+3 52 .empty()
+3 53 .unlink(this.empty()
+3 54 .unlink(this.paths);
+3 55 .setGr
+4 5 return files['bower.json'] || {};
+4 35 .bind(revisionsWith({
+4 36 this.paths: that.paths, {
+4 37 unsafe:!== this.configurableSockets
+4 38 }, function () {
+4 39 this.emit() {
+4 40 throw new Error('unusedDeps.reset() {
+4 41 this.reset();
+4 42 unenabledDeps.restore();
+4 47 this.then(revisions.then(revisions);
+4 48 return this.then(true);
+4 51 TempDir.prototype.readJson = function (directory, logger) {
+4 52 .readPkgMeta(directory,
+5 32 this.set(revisions;
+5 33 this.map.forEach(function (revisions) {
+5 34 object) {
+5 35 object.forEach(revisions[object.endpoint) {
+5 36 instant.endpoint.endpoint.name =revisions[object.name] = object.name] = object.name;
+5 38 .sort(function (revender.name) {
+5 39 return that.toString.name === object.name;
+5 40 }).join(revisions[name);
+5 43 .for (function main.name = main; });
+5 44 .sort(function main.name in main; });
+5 45 return object.version;
+5 47 .for (function mainTypes;
+5 48 return objectTypes;
+5 49 if (typeof mainTypes = mainTypes.some) {
+5 50 return Object.compose;\
+6 32 .uninstall();
+6 36 TempDir.prototype.readJson = function (defaults) {
+6 37 .toString() {
+6 38 return this.toString() {
+6 40 return this.name;
+6 45 .toString = function () {
+6 47 'defaults = env
+6 48 .toString = env
+6 49 .toObject.toString = env
+6 52 .toString = env.toString || this.toString() || this.toString
+6 53 .toString;
+6 54 .trim()
+6 55 .replace(revisions = env, delete;
+6 56 .toString)
+6 57 .replace
+7 32 .replace(revisions);
+7 33 .uninstall = that;
+7 38 TempDir.prototype.create = function ResolveCache.prototype.retrieve = function (source) {
+7 39 var sourceId = function (source) {
+7 40 var sourceId = this._id;
+7 41 this.split(/^\
+7 42 this._id = _id = this._id);
+7 43 this.split(/[0]$/this.length);
+7 44 this.length = 2;
+7 45 this.name = this._id = 2;
+7 46 this.sourceId = this._id = split[0];
+7 48 return this._id = this._id = this._
+8 32 .unshift(revisions);
+8 34 .extend(revisions);
+8 35 .resolve(that.reset(revisions);
+8 36 .done) {
+8 39 TempDir.prototype.reset = function () {
+8 41 return ResolveCache.prototype.create = function (files) {
+8 42 return ResolveCache.uninstall = function (err) {
+8 43 if (err) {
+8 44 return that.retrieve(files, files) {
+8 45 .store = engines = engines.store.uninstall({
+8 46 _id: null,
+8 47 _id: Object.keys: Object.keys(revisions)
+8 49 return that.set(revisions, id, id
+9 32 this.create(revisions);
+9 33 this.setIgnoreIgnore();
+9 34 this.removeIgnore();
+9 35 this.done();
+9 39 TempDir.prototype.applyIgnores = function (error, admin = function (error, nonIgnores) {
+9 40 if (var xhr) {
+9 41 var ret =!== undefined;
+9 42 var buckets = this.some(this.defaults);
+9 43 var excludeIgnores = this.first = function (ignore) {
+9 44 this.map = function (item) {
+9 45 if (ignore) {
+9 46 if

@@ -1,0 +1,305 @@
+Min editdistance: 1.00
+Closest candidate: 0 22 transports: config.transports,
+0 1 transports: config.transports
+0 2 });
+0 3 executor.socketIoSockets = server.sockets;
+0 4 return server;
+0 5 }
+0 6 var Server = function(cliOptions, done) {
+0 7 EventEmitter.call(this);
+0 8 logger.setupFromConfig(cliOptions);
+0 9 this.log = logger.create();
+0 10 var log = logger.create();
+0 11 var globalEmitter = new EventEmitter();
+0 12 var fileList = new FileList(globalEmitter);
+0 13 fileList.refresh(function() {
+0 14 if (config.autoWatch) {
+0 15 watcher.watch(config.files, fileList);
+0 18 var webServer = ws.createWebServer(fileList, config.basePath, config.proxies, config.urlRoot);
+0 19 var socketServer = io.listen(webServer, {
+0 20 logger: logger.create('socket.io', 0),
+0 21 resource: config.urlRoot +'socket.io',
+0 22 transports: config.transports,
+0 23 forceJSONP: config.forceJSONP
+0 25 webServer.on('error', function(e) {
+0 26 if (e.code === 'EADDRINUSE') {
+0 27 log.warn('Port %d in use', config.port);
+0 28 config.port++;
+0 29 webServer.listen(config.port);
+0 30 } else {
+0 31 throw e;
+0 34 webServer.listen(config.port, function() {
+0 35 log.info('Web server started at http://localhost:' + config.port + config.urlRoot);
+0 36 if (config.browsers && config.browsers.length) {
+0 37 launcher.launch(config.browsers, config.port, config.urlRoot, config.captureTimeout, 3);
+0 40 var resultReporter = reporter.createReporters(config.reporters, config, globalEmitter);
+0 41 resultReporter.reporters.forEach(function(reporter) {
+0 42 globalEmitter.bind(reporter);
+0 44 var capturedBrowsers = new BrowserCollection(globalEmitter);
+0 45 var executionScheduled = false;
+0 46 var pendingCount = false;
+0 47 var runningBrowsers = [];
+0 48 globalEmitter.on('browsers.on('browsers_change', function() {
+0 49 glazyCount = true;
+0 50 globalEmitter.emit('error', function() {
+0 51 execution.on('run_error', function() {
+0 52 browsers.removeAllBrowsers.removeAll(executor.executor.execuredAll browsers.execured) {
+0 53 if (execuredBrowsers.some(execuredBrowsers.getById(execuredBrowsers.getById(execuredBrowsers.getById(exec
+1 1  config.hostname,
+1 6 return server.sockets.sockets.sockets.call(this, server);
+1 8 function setupLogger (level, colors) {
+1 9 var logLevel = logLevel || constant.LOG_INFO;
+1 10 var logColors = helper.isDefined(colors)? colors : true;
+1 11 logger.setup(logLevel, logColors, [constant.CONSOLE_APPENDER]));
+1 13 exports.createSocketIoServer = createSocketIoServer;
+1 14 exports.setup = setupLogger;
+1 15 exports.setupFromConfig = setupLogger;
+1 16 exports.setupFromExact = process.env.EXPRESS_ENV;
+1 17 exports._injector = new EventEmitter();
+1 19 exports._exact = process.env.EXPRESS_ENV;
+1 20 var Server = function (cliOptions, done) {
+1 23 this.loadErrors = [];
+1 24 var config = cfg.parseConfig(cliOptions.configFile, cliOptions)
+1 25 this.log.debug('Final config', util.inspect(config, false,   null))
+1 26 var modules = [{
+1 27 helper: ['value', helper],
+1 28 logger: ['value', logger],
+1 29 done: ['value', done || process.exit],
+1 30 emitter: ['value', this],
+1 31 server: ['value', this],
+1 32 watcher: ['value', watcher],
+1 33 launcher: ['factory', Launcher.factory],
+1 34 config: ['value', config],
+1 35 preprocess: ['factory', preprocessor: ['factory', preprocessor.createPriorityPreprocessor],
+1 36 fileList: ['factory],
+1 37 webServer: ['factory: ['factory', Launcher.factory],
+1 38 serveFileList: ['factory],
+1 39 capturedBrowsers: ['value',apturedBrowsers]
+1 40 }]
+1 41 modules.forEach(function (name) {
+1 42 var socketServer.use(function (name, socket, next) {
+1 43 config.use(httpServer.getFilesFromUrlPath());
+1 44 if (name) {
+1 45 config.use(name);
+1 46 if (name in this.use(httpServer.getFilesPath());
+1 47 if (name in this.isDefaults.protocol === 'httpsServer()) {
+1 48 config.startServer()) {
+1 49 config.use(this.protocol);
+1 52 var webServer = this;
+1 53 var socketServer = this;
+1 54 webServer.on('error', this.on('error', this.use(this.getFilesProm
+2 2 }n
+2 3 var cfg = require('./config')
+2 4 var logger = require('./logger')
+2 5 var browser = require('./browser')
+2 6 var reporter = require('./reporter')
+2 7 var helper = require('./helper')
+2 8 var events = require('./events')
+2 9 var constant = require('./constants')
+2 10 var watcher = require('./watcher')
+2 11 var plugin = require('./plugin')
+2 12 var ws = require('./web-server')
+2 13 var preprocessor = require('./preprocessor')
+2 14 var Launcher = require('./launcher').Launcher
+2 15 var FileList = require('./file-list')
+2 19 var EventEmitter = events.EventEmitter
+2 20 var Executor = require('./executor')
+2 21 var Browser = require('./browser')
+2 22 var BrowserCollection = require('./browser_collection')
+2 23 var EmitterWrapper = require('./emitter_wrapper')
+2 24 var processWrapper = new EmitterWrapper(process)
+2 25 var BrowserCollection = function (emitter, browsers, parent, store, isBrowsers, singleRun, client,
+2 26 capturedBrowsers, socketServer, executor, done) {
+2 27 var filesPromise = fileList.refresh()
+2 28 emitter.on('browsers_change', function () {
+2 29 socketServer.sockets.emit('info', capturedBrowsers.serialize())
+2 30 })
+2 31 var singleRunDoneBrowsers = Object.create(null)
+2 32 var singleRunBrowsers = new BrowserCollection(emitter, singleRunBrowserNotCaptured,
+2 33  singleRunBrowserNotCaptured = false
+2 34 webServer.on('error', function (e) {
+2 36 log.warn('Port %dbs_DISCONNECTED')
+2 37 config.remove()
+2 38 webServer.listen(e)
+2 40 log.info.destroy()
+2 43 var afterPreprocess.done(function () {
+2 44 if (config.done) {
+2 45 config.done()
+2 47 var afterPreprocessor.for (configFile = function (configFile = configFile in webServer) {
+2 48 if (configFile in configFile in configFile) {
+2 49 if (configFile in configFile in configFile in configFile) {
+2 50 configFile in configFile in configFile in configFile in configFile in configFile) {
+2 51 config.addFile in configFile in configFile in configFile in configFile in configFile in configFile in configFile in configFile in configFile in configFile in configFile in webServer
+2 52 configFile (injector.createServer)
+2 53 config.handleFile injector.getFilesPromise.bind(config
+3 4 executor.socketIoSockets = server.sockets
+3 5 return server
+3 8 EventEmitter.call(this)
+3 9 logger.setupFromConfig(cliOptions)
+3 10 this.log = logger.create()
+3 18 launcher: ['type', Launcher],
+3 20 preprocess: ['factory', preprocessor.createPreprocessor],
+3 21 fileList: ['type', FileList],
+3 22 webServer: ['factory', ws.create],
+3 23 socketServer: ['factory', createSocketIoServer],
+3 24 executor: ['type', Executor],
+3 25 customFileHandlers: ['value', []],
+3 26 customScriptTypes: ['value', []],
+3 27 reporter: ['factory', reporter.createReporters],
+3 28 capturedBrowsers: ['type', BrowserCollection],
+3 29 args: ['value', {}],
+3 30 timer: ['value', {setTimeout: setTimeout, clearTimeout: clearTimeout}]
+3 32 modules = modules.concat(plugin.resolve(config.plugins))
+3 33 this._injector = new di.Injector(modules)
+3 35 dieOnError (error) {
+3 36 if (this.log.debug) throw e
+3 37 log.error(error)
+3 38 process.exitCode = 1
+3 39 process.kill()
+3 41 async start () {
+3 42 var config = this.get('config')
+3 43 config.start = function (config, launcher, preprocess, fileList, webServer, webServer, executor, done) {
+3 44 config.resetHistory()
+3 45 log.on('fileList.resetHistory()
+3 46 config.on('error', function (error', function (e) {
+3 47 log.removeAllBrowsers.addErrors.add(e)
+3 48 var names = []
+3 49 var singleRunDoneBrowsers = singleRunbrowsers = singleRunBrowsers = []
+3 50 var singleRunBrowsers.run()
+3 51 webServer.on('error', function () {
+3 52 log.run() {
+3 53 log.done(injector.emit('error', singleRunbrowsers.lastRuns.lastRuns.bind( singleRuns)
+3 55 var filesPromise.run(config, singleRunBrowsers.run( singleRunBrowsers, singleRunBrowsers, singleRunBrowsers, singleRunBrowserNotCaptured
+4 1  config: config})
+4 15 launcher: ['type', Launcher],"
+
+5 3 exports.createSocketIoSockets = function (emitter) {
+5 4 return new Promise((resolve, reject) => {
+5 5 var server = new SocketIO(emitter);
+5 7 .on('error', function (e) {
+5 9 fs.warn('Port %d in use', config.port);
+5 14 .on('listening', function () {
+5 15 log.info('Web server started at http://localhost:' + config.port);
+5 16 var result = browser.lastResult;
+5 17 result.pipe(fs.createWriteStream(browser.name + '\'));
+5 18 return result;
+5 21 exports.start = function (cliOptions, done) {
+5 22 var config = cfg.parseConfig(cliOptions.configFile, cliOptions);
+5 23 var singleRunDoneBrowsers = Object.create(null);
+5 24 var singleRunBrowsers = new BrowserCollection(new EventEmitter());
+5 25 var singleRunBrowserNotCaptured = false;
+5 35 var afterPreprocess = function () {
+5 36 var config = cfg.parseConfig(config.preprocessors, cliOptions);
+5 39 var filesPromise = fileList.refresh();
+5 41 filesPromise.then(function () {
+5 42 watcher.watch(config.files, config.exclude, function (exists) {
+5 43 if (exists) {
+5 44 return true;
+5 46 watcher.watch();
+5 48 }), function (req) {
+5 51 };
+5 52 webServer.on('error', function (e, i, res) {
+5 53 if (i.isat(webServer.start) {
+5 54 if (webServer.start) {
+5 55 config.done) {
+5 56 config.done(injector.stop(function () {
+5 57 watcher.stopWatcher.addAll(config.port);
+5 61 server.on('injector.stopWatcher.restart();
+5 63 var afterPreprocess = function (e, done) {
+5 64 if (config.isDone) {
+5 65 return done(done) {
+5 66 fileList.removeFilesPromise.some(config.preprocess
+6 3 })"
+
+7 15 var afterPreprocess = function() {
+7 16 var afterPreprocess = function(callback) {
+7 18 var parsed = cfg.parse(preprocess)
+7 19 , error = null;
+7 20 if (error) {
+7 21 if (error.code === 'EADDRINUSE') {
+7 26 throw error;
+7 31 var parsed = false;
+7 32 var error = null;
+7 33 var initialEventEmitter = events.EventEmitter;
+7 34 var store = {};
+7 35 var clearContext = function() {
+7 36 var clearDebug = false;
+7 37 log.debug('Disconnecting all browsers');
+7 38 var err = _.isFunction;
+7 39 if (process.env.NODE_ENV === 'test') {
+7 40 executor.scheduleError();
+7 42 clearContext();
+7 45 var exec = function(cmd, args, failMsg) {
+7 46 var msg = '\
+7 47 ' +
+7 48 'You should pass config as the first configure command to Testacular server\
+7 49 \
+7 54 'Type:\
+7 56 '  +
+7 59 '   'Run server.Run server.Run server.\
+7 61 ' +'    'Run server.\
+7 62 ' + port = parseInt(server.port || 'public/' + parseInt(server.env.url.name, 10) + 'n' + parseInt(port, 10) +'n'npm\
+7 63 ' + 'n' + 'Run server.httpServer.search/' + parseInt(port, 10) + parseInt(server.port, 10) +'s'.n' + 'Delay' + parseInt(port, 10) + ') + ':' + ':' + parseInt(port, 10,'
+
+8 1  config.hostname + 'public/' + config.portRoot);
+8 2 var server = new SocketIO(webServer, {
+8 3 destroyUpgrade: false,
+8 4 path: config.urlRoot +'socket.io/',
+8 21 var afterPreprocess = function (i, next) {
+8 22 var parsed = cfg.parseConfig(config.configFile, config.root, 3);
+8 23 log.debug('Testacular server started at http://localhost:' + config.port);
+8 24 var webServer = ws.createWebServer(served, STATIC_FOLDER).listen(config.port, function (log) {
+8 25 if (log.level === 'log' && log.id === 0) {
+8 26 return next();
+8 28 var resultReporter = new reporter.Progress();
+8 29 globalEmitter.bind(resultReporter);
+8 30 var capturedBrowsers = new BrowserCollection(globalEmitter());
+8 32 var pendingCount = 0;
+8 33 var runningBrowsers;
+8 34 globalEmitter.on('browsers_change', function () {
+8 35 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+8 37 var tryExecution = function () {
+8 38 var nonReady = [];
+8 39 if (!capturedBrowsers.length) {
+8 40 log.length = 0;
+8 41 log.emitter.emit('run_error', singleRunbrowsers_change);
+8 43 socketServer.emit('run_error', singleRunBrowsers.run_error', singleRunBrowsers.exec);
+8 44 var tryExecution = null;
+8 45 globalEmitter.reportDone = function () {
+8 46 log.clearTimeout = function () {
+8 47 if (scheduled = function () {
+8 48 if (scheduledId === null) {
+8 49 return;
+8 50 log.length = true;
+8 53 var tryExecution.on('run_complete', function (scheduled, runningBrowsers, runningBrowsers.length) {
+8 54 globalEmitter.emit('run_complete', singleRunBrowsers.execate);
+8 55 socketServer);
+8 56 socketServer.sockets
+9 4 return server.sockets.QoSockets;
+9 9 logger.setup(logLevel, logColors, [constant.CONSOLE_APPENDER])
+9 11 exports.createSocketIoSockets = createSocketIoServer;
+9 13 exports.filename = path.normalize(path.join(__dirname, '/../static'));
+9 14 exports.static = path.join(__dirname, '/../static/');
+9 15 exports.urlRoot = normalizeUrl(urlRoot);
+9 16 exports.mkdirIfNotExists = function (proxyPath) {
+9 17 var socket = new SocketIO(proxyPath);
+9 18 socket.on('error', function (err) {
+9 19 if (err) {
+9 20 log.warn('Port %d in use', proxyPath);
+9 21 proxyPath = upstream(config.port);
+9 23 throw err;
+9 38 var afterExit = function () {
+9 39 log.info('Testacular server started at http://localhost:' + config.port);
+9 40 var exitCode = 0;
+9 41 var options = [];
+9 42 var server = new Server(new BrowserCollection(new EventEmitter());
+9 43 var browsers = new BrowserCollection(new BrowserCollection(new EventEmitter());
+9 44 var handler = new BrowserCollection(new EventEmitter());
+9 45 var handler.on('error', function (browser, emitter, socket, done) {
+9 46 if (browser, urlRoot, headers, headers, port) {
+9 47 emitter.removeListener.removeListener(done) {
+9 48 log.removeAll(done(done)
+9 51 if (name === 'error') {
+9 52 emitter.removeAll(done);
+9 54 emitter.emit('browsers.removeAll(done);
+9 56 if (brows

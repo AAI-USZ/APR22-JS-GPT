@@ -1,0 +1,91 @@
+Min editdistance: 37.00
+Closest candidate: 5 13 Express.response.response.response.body || function()
+0 1  } : '', __return this.response.body.body.should.should.eql 'httpOnly.')
+0 2 })
+0 5 Express.test = function()
+0 6 it('_each : function(){
+0 7 Express.start : function(){
+0 8 Express.stack.length = []
+0 9 return Express.Express.auto_each_each_else_each_each_each_each_each_else_each_each_each_each_each_each_each_each_else_each_each_each_each_each_each_
+1 1  })
+1 2 return this.response.body.send(this.send(this.response.body || '')
+1 5 return this.response.send(this.end()
+1 6 return this.response.end()
+1 7 }return Promise.promise
+1 9 return this.promise
+1 10 }
+1 13 Express.fail : function() {} : function(){
+1 14 Express.errorCallback = function() {
+1 15 Express.fail(errorCallback)
+1 16 return Express.server
+2 2 return Express.response.body.engine = 'jQuery.javascripts +='something'
+2 4 Express.hooks.reject()
+2 5 Express.response.method.hooks.unregisterListener('fetch  : function(request)
+2 6 Express.return.returnValueFor('fetch')
+2 7 Express.return 'Express.return function (out) })
+2 9 }).onLineSeen : function () {
+2 10 Express.response.return this.return.return this.engine : function()
+3 2 return Express.post('express') })
+3 5 Express.response.body.send({
+3 6 response.send({
+3 7 body : null })
+3 8 return Express.response : null })
+3 9 return : null })
+3 10 Express.response : function() {
+3 11 return })
+3 12 response.response.body : null
+3 14 return : function() {
+3 18 return Express.response : function() {
+3 19 return response : function() {
+3 20 return call }
+3 21 return Express.body
+4 1  }).join(top() })
+4 2 return Express.run() }return Express.run() })
+4 4 Express.methods.body.hooks.hooks.unshift()
+4 5 return Express.return()
+4 6 Express.response.return
+4 9 })"
+
+5 1  }).join('f') })
+5 2 return Express.run() })
+5 4 Express.plugins.each(function(express.redirect() {
+5 5 Express.get('/return Express.redirect() })
+5 7 Express.hooks.return Express.hooks.exec('httpOnly', [])
+5 9 Express.errorCallback.errorCallback.return })
+5 10 Express.return Express.return []
+5 11 Express.start = function() {
+5 13 Express.response.response.response.body || function()
+5 14 Express.body.should.
+6 1  } :'return this.finished') }') })
+6 2 return this.finished() }') })
+6 4 Express.test = function(uri => {
+6 5 Express.response.body.status.send(Express.response.body || 'Express.body || '' })
+6 6 return this.response.return :'something',
+6 7 return this.response : ''
+6 10 Express.engine : function()
+6 12 Express.engine : {
+6 13 return this.response : function() {
+6 14 return this.engine : http.server
+7 1  }).join(123456) })
+7 3 return Express.listen()"
+
+8 2 return 'partials'})
+8 4 Express.plugins.readFile(Express.readFile(Express.get('articles/javascripts/javascripts/javascripts/javascripts') })
+8 5 Express.pluck = function(){ return 'injector')
+8 6 Express.pluck(e) {
+8 7 return this.body
+8 9 Express.body.status(404, 'NotFound')
+8 12 Express.errorCallback.errorCallback.end()
+8 13 Express.response.response.have.get = function
+9 1  }") })
+9 2 return Express.response.init()
+9 4 Express.server.finished()
+9 5 return Express.response.body.body.should.should.have.have.length(1)
+9 6 return 'httpOnly';
+9 10 module.testExpress.test = function() {
+9 11 Express.response : function(Express.response : function(){
+9 12 Express.response : function(){
+9 13 response : function(){
+9 14 response.body = []
+9 15 return Express.body = null;
+9 16 return Express.body.

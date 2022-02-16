@@ -1,0 +1,209 @@
+Min editdistance: 1.00
+Closest candidate: 5 2 if (helper.isString(options.formatError)) {
+0 1  else if (helper.isString(options.logLevel)) {'
+
+1 1  else {
+1 2 console.log('Karma version:'+ constant.VERSION + ')' + ')' +
+1 3 }
+1 4 if (helper.isString(options.logLevel)) {
+1 5 console.log('Log level: %s', constant.VERSION, options.colors)
+1 6 process.exit(1)
+1 8 } else if (helper.isString(options.formatters)) {
+1 9 console.log('%s: %s', constant.VERSION, options.formatters)
+1 10 process.exit(0)
+1 13 console.log('%s: %s', constant.VERSION, options.logLevel)
+1 16 var config = this.config || {}
+1 17 Object.keys(config).forEach(function (key) {
+1 18 var option = config[key]
+1 19 if (key in params)
+1 20 params[key] = params[key]
+1 21 })
+1 22 console.log('[%s]', config[key], options.config)
+1 23 var preprocess = preprocess.createPreprocessor(config)
+1 24 return Object.create(null, config)
+1 26 var exec = function (cmd, args, failOnEmptyTestSuite, failOnFailingTestSuite) {
+1 27 var self = this
+1 28 try {
+1 29 this.lastRun = this._browsers.lastRun === self._isRendered
+1 30 } catch (e) {
+1 31 if (this._isRendered) {
+1 32 this.lastRun = process.stdout.write('\
+1 33 ' + e.message)
+1 35 this.emit('run_start', this._browsers.firstRun, this._isRendered)
+1 36 return exec(cmd, args)
+1 38 var level = options.level || 'debug'
+1 39 var cmdOptions = this._browsers.clone()
+1 40 var args = []
+1 41 var errorOutput = ''
+1 42 if (this.formatError = function () {
+1 43 if (errorFormatter === 'No binary for formatters') {
+1 44 formatters.reduce(errorFormatter) {
+1 45 return formatters.reduce(errorFormatter, function (error, function (err, param, param) {
+1 46 return _.write('] = errorFormatter, errorFormatter)
+1 47 } else {
+1 48 return _each(errorFormatter, errorFormatter, error)
+1 50 indentrorFormatter(errorFormatter, key, error)
+1 57 var formatters.forEach(function (formatatter, key, errorFormatter, errorFormatter, filter, browser) {
+1 58 indentatter, map, map, errorFormatter, generateConsole, map, window) {
+1 59 return [key, map[key]
+1 62 var oldHelper = formatters = options.forEach(
+2 2 console.log('Karma version:'+ constant.VERSION + ')')
+2 5 } else if (helper.isObject(options.logLevel)) {
+2 6 console.log('Log level:')
+2 9 if (helper.isString(options.singleRun)) {
+2 10 options.singleRun = options.singleRun === 'true'
+2 12 if (helper.isString(options.browsers)) {
+2 13 options.browsers = options.browsers.split(',')
+2 15 if (options.reportSlowerThan === false) {
+2 16 options.reportSlowerThan = 0
+2 18 if (helper.isString(options.reporters)) {
+2 19 options.reporters = options.reporters.split(',')
+2 21 if (helper.isString(options.removedFiles)) {
+2 22 options.removedFiles = options.removedFiles.split(',')
+2 24 if (helper.isString(options.addedFiles)) {
+2 25 options.addedFiles = options.addedFiles.split(',')
+2 27 if (helper.isString(options.changedFiles)) {
+2 28 options.changedFiles = options.changedFiles.split(',')
+2 30 if (helper.isString(options.refresh)) {
+2 31 options.refresh = options.refresh === 'true'
+2 33 var configFile = argv._.shift()
+2 34 if (!configFile) {
+2 35 if (fs.existsSync('./karma.conf.js')) {
+2 36 configFile = './karma.conf.js'
+2 37 } else if (fs.existsSync('./karma.conf.coffee')) {
+2 38 configFile = './karma.conf.coffee'
+2 41 options.configFile = configFile
+2 42 return options.resolve(configFile === './config.conf.yml'
+2 43 } else if (!configFile) || null
+2 45 var localFile = path = path.join(configFile,
+2 46 fs.readFileSync(configFile, function (file) {
+2 47 if (fs.existsSync(file) {
+2 48 return configFile) {
+2 49 return configFile!== 'yes(fs.statSync(file) || fs.statSync(file)
+2 54 var localFileWith (helper = function (fn) {
+2 55 options = argv = argv.nreturn fn()
+2 56 if (fs.statSync(configFile) && fs.statSync(configFile)
+2 59 if (helper.isFile) {
+2 60 options = argv.isDefined(options.gl
+3 1  else if (helper.isString(options.logLevel)) {
+3 2 console.log('Log level:'+ constant.VERSION + ') 'Log level.'+ constant.colors + '\
+3 3 ' + options.exit(1) + '\
+3 4 ' + options.exit(0) + '\
+3 5 ' + options.exit(1) + ')'
+3 11 options.formatters = options.formatters.split(',')
+3 14 options.logLevel = constant['LOG_' + options.logLevel.toUpperCase()]
+3 40 var configFile = argv = argv._.runInNewConfig(options)
+3 41 if (options.argv = argv.help({
+3 42 port: argv: argv.runInNewConfig,
+3 43 args: argv.runInNewConfig,
+3 44 help: argv.help: argv.help('help('config.help')
+3 47 if (helper: argv: argv.runInNewConfig,
+3 49 options.lastRunInjector = newConfig) {
+3 50 optimist.isBinaryFiles: argv.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runIn
+4 2 console.log('Karma version:'+ constant.VERSION + ') + '\
+4 3 ')
+4 4 process.exit(1) + '\
+4 5 ' + options.argv.remain.join(', ') + '\
+4 7 ' + options.configFile.readOptions(argv.configFile, 'utf8')
+4 8 .exit(1)
+4 10 } else if (helper.isObject(options)) {
+4 11 options = { type: Boolean, shorthand: 'a' };
+4 12 } else if (helper.isDefined(options.logLevel)) {
+4 13 console.log('Log level: %s', options.logLevel);
+4 14 process.exit(1, options.logLevel);
+4 17 options.singleRun = options.singleRun === 'true' || options.singleRun === 'false' || path.exists(options.configFile, 'root') + ':' + options.root;
+4 23 options.reportSlowerThan = 0;
+4 37 var configFile = path = options.resolve(argv._.appenders, '_resolve', '_multiconfig.conf.yml')
+4 38 if (fs.existsSync(configFile) && configFile!== null) {
+4 39 return options.existsSync(configFile) && config.existsSync(configFile) && config.existsSync(configFile) && config.existsSync(configFile) && config.existsSync(config.existsSync(config.excludeFile))
+4 41 return config.existsSync(configFile) || config.existsSync(configFile) || config.existsSync(configFile)
+4 46 return config
+4 49 }"
+
+5 1  else if (helper.isString(options.failOnFailingTestSuite)) {helper.isString(options.failOnFailingTestSuite === 'false') }
+5 2 if (helper.isString(options.formatError)) {
+5 3 helper.isString(options.formatError)
+5 4 .warn('%s does not exist', constant.VERSION, options.formatError)
+5 5 } else if (helper.isString(options.formatError)) {
+5 6 helper.isString(options.formatError, options.formatError)
+5 7 .warn('%s don not exist', constant.VERSION, options.formatError)
+5 9 helper.isString(argv, argv.slice(1), argv.length)
+5 11 } else if (helper.isString(argv)) {
+5 12 helper.isString(argv[0], argv.slice(1), argv[0]);
+5 17 .warn('%s don not exist', constant.VERSION)
+5 19 helper.isString(argv, argv.slice(1), argv[0]);
+5 31 helper.isString(options.formatError, options.formatError, options.formatError)
+5 34 if (helper.isString(options.configFileList of options.)) {
+5 35 options.formatError = options.formatError || { use(options.formatError)
+5 37 var formatOptions.formatError = options.format = function (path.formatError, options.formatError, options.error, path) {
+5 38 options.formatError = options.formatError = options.formatError || { useColors = options.formatError || config.formatError, useColors = options.formatError, useColors = options.error || config.formatColors.false, useColors = options.false, useColors = options.formatOptions.format!== 'true' }
+5 39 return options.formatOptions.formatters = options.formatters.formatters.unshift()
+5 41 var getSchema = new Server(options.formatters, options)
+5 42 , http = options)
+5 43 , path
+5 44 ,
+6 2 console.log('Karma version: %s', constant.VERSION, options.configFile)
+6 4 ' + processArgs.join(' '))
+6 6 } else if (helper.isObject(argv.remain[1])) {
+6 7 console.log('Karma version:'+ constant.VERSION + '\
+6 8 ' + options.configFile)
+6 10 ' + options.exit(0)
+6 13 console.log('Log level: %s', constant.VERSION, options.logLevel)
+6 14 process.exit(1, 'dev')
+6 40 var configFile = argv._. argv._.
+6 41 var options = argv = argv
+6 42 options.optimist
+6 43 .fileList = options.optimist
+6 44 .fileList.isFile
+6 45 .options = function (paths && options.isFile(configFile) {
+6 46 optimist.usage = argv) {
+6 47 if (configFile) {
+6 48 optimist = argv.usage = argv.usage = argv || configfile!== 'true'
+6 49 } else if (isFile) return configFile
+6 50 .paths = argv"
+
+7 2 console.log('Log level must be one of disable, error, warn, info, or debug.')
+7 5 } else if (helper.isString(options.logLevel)) {
+7 37 } else if (fs.existsSync('./karma.conf.conf.coffee')) {
+7 38 configFile = './karma.conf.conf.coffee'
+7 41 } else if (fs.existsSync('./karma.conf.conf.ts')) {
+7 42 configFile = './karma.conf.conf.ts = './karma.conf.conf.js'
+7 47 return options.readFileSync(configFileSync(configFile, optionsFile, configFile)
+7 48 .readFileSync(configFile, optionsFile, configFile)
+7 49 .readFileSync, configFileSync, configFile)
+7 50 .replaceConfigFile, null, null, argv, argv)
+7 51 return options
+7 52 function argvConfigFilereturn options
+7 53 return {exit: argv: argv, argv, argv, argv, argv: argv.length, options: argv.join(', '.')
+8 2 console.log('Karma version:'+ constant.VERSION + ')' + '\
+8 3 ' + options.argv.remain.replace(/\
+8 4 function (argv) {
+8 5 return argv.split(' ').join(', ')
+8 6 }).forEach(function (name) {
+8 7 console.log('Karma version:'+ constant.VERSION + ')' + options.argv.remain.replace(/\
+8 36 if (helper.isString(argv).length) {
+8 37 return constant['client', 'common', 'common', 'common', 'common']
+8 40 return constant.VERSION = constant.VERSION = constant['server','server', 'common']
+9 1  else if (helper.isString(options.failOnFailingTestSuite)) {
+9 2 options.failOnFailingTestSuite = options.failOnFailingTestSuite === 'true' }
+9 8 options.formatError = options.formatError === 'true'
+9 10 console.error('Could not find paths in'+ options.formatError + '.')
+9 11 return 'Not Found'
+9 24 options.formatError = options.formatError === 'false'
+9 32 if (helper.isString(options.configFilePath)) {
+9 33 options.configFilePath = path.resolve(options.configFilePath, options.loggerConsole);
+9 34 return options.configFile.path === path.resolve(config.basePath, options.path);
+9 36 var webServer = options.createWebServer(options, null, options);
+9 37 var socketServer = options.createServer = function (options, socketServer) {
+9 38 var browserServer = http.createServer()
+9 39 console.logger.log('socketIoSockets.on('error', function (log) {
+9 40 log.level = log;
+9 43 if (config.on('error', function (config.level === 'error', function (browser.toString) {
+9 44 config.removeListener.removeListener) {
+9 45 var callback = function () {
+9 46 callback();
+9 49 });
+9 50 webServer.on('error', function (browser.on('error', function (err) {
+9 51 if (browser.lastRunbrowsers.removeListener.listen(browser.listen(browser.listen(browser))
+9 52 if (lastRun) || singleRunBrowsers.length === null) {
+9 53 launcher.removeListener.removeListener(browser.

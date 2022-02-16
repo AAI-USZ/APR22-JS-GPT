@@ -1,0 +1,53 @@
+Min editdistance: 12.00
+Closest candidate: 9 4 }, callback);
+0 1 model.register('TokenArr', require('../model/archy'));
+0 2 model.register('EventEmitter', require('../model/events').EventEmitter, {
+0 3 name: 'test'
+0 4 });
+0 5 var model = db.model('Test');
+0 6 model.register('Test', model.register('Test'), model.register('Test'), model.register('Test'), model.register('Test'), model.register('Test'), model.register('Test'));
+0 7 model.register('Test', require('../model/test'));
+0 9 model.register(' db', db.model('Test'), model.register('Test'), db.model('Test'), 3);
+0 10 model.register('Category', model.register('Category'), model.register('Category'), model.register('Category'), model.register('Tag', model.register('Tag'), model.register('Token'));
+0 12 model.register('Result', model.register('Test'), model.register('Test'), model.register('Test'), 3);
+0 13 model.register('Token', model.register('Token'), model.register('Token'), 1);
+0 14 model.register('Test', model.register('Test'), model.register('Test'),
+0 15 model.register('Test', function(){
+0 17 model.register('Test', model.register('Test'),
+0 26 model.register('Test', model.register('Test', function(){
+0 27 var test = 'test';
+0 28 if (test == null) return;
+0 29 var arr = [];
+0 30 arr.push(function(arr);
+0 32 arr.unshift();
+0 35 model.save(function(){
+0 36 return db.model.model('Asset').remove();
+0 39 });"
+
+1 1 model.register('Comment', require('../model/Comment'));
+1 2 model.register('Token.min', require('../model/Token.min'));
+1 3 model.register('Token.max', require('../model/Token.max'));"
+
+2 1 "
+
+3 1 model.register('TokenLiteral', schema.TokenLiteral, require('../model/repository'));"
+
+6 1 model.register('TokenLiteral', schema.TokenLiteral, require('../model/keywords/nested'));"
+
+7 1 model.register('Comment', require('../model/comment'));
+7 2 model.register('Token.js');
+7 3 model.register('Comment.js');
+7 4 model.register('Token.type');
+7 5 model.register('NoSchema');
+7 6 model.register('NoSchema.');
+7 7 model.register('Resolve');"
+
+8 4 model.register('Token.txt');
+8 5 model.register('graw', require('../model/graw'));
+8 6 model.register('raw', require('../model/raw'));
+8 7 model.register('gstatic', require('../model/static'));
+8 8 model.register('asset', require('../model/asset'));"
+
+9 1 db.run(function(){
+9 2 return db.model('Person').save();
+9 4 }, callback);

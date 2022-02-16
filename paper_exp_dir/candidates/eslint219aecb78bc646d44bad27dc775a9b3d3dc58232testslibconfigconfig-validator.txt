@@ -1,0 +1,25 @@
+Min editdistance: 48.00
+Closest candidate: 8 7 const users.invalidateColumnsParser();
+0 1 "
+3 1 it("should report an error if the rule has been passed \\"severity === 2 string" for 2 string should be 2 string should be 2 string for 2 string", ()", () => {
+3 2 const fn = null", () => {
+3 3 const fn = validator.validateColumnsParsers () =>
+3 4 const source = () => {
+3 5 const sourceCode.validateColumns () => {
+3 6 const sourceCode.validateColumns () => SourceCode = SourceCode = SourceCode.validateColumns () => {
+3 7 const message = SourceCode.valid
+6 1 it("should return", () => {
+6 2 it("should throw new PermalinkMachine for rule \'rule \'new\' is no use the new one string as a commentifier for the rule', () => {
+6 3 const fn must be a string\', () => {
+6 4 const fn must be null", () => {
+6 5 const fn = new SourceCodeTester.validateColumnsParser.exec(`\\s`something\\`");
+6 6 const code = new SourceCode-TypeAn optional function string
+6 7 const message must be a string
+6 8 const typeof string
+8 2 it("should throw new one instanceof User is not-null", () => {
+8 3 const User is null", () => {
+8 4 const fn = function (new User() { return ; })
+8 5 const fn = createMock.is null; } = function (invalidator.prototype.toString() == null; } () => {
+8 6 const result = new User();
+8 7 const users.invalidateColumnsParser();
+8 8 const l = function (input) {

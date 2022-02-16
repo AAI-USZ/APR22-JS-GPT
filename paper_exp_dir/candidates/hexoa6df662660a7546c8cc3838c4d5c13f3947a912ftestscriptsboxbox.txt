@@ -1,0 +1,15 @@
+Min editdistance: 38.00
+Closest candidate: 2 5 it(\'watch()).export.skip(function(){
+0 1 "
+2 1 "];
+2 2 it('process()).export.exit(1).exit(1).should.watch()
+2 3 });
+2 5 it(\'watch()).export.skip(function(){
+2 6 it('_(){
+2 7 return box.watch(){
+2 8 return Promise.unwatch(){
+2 9 return call must.watch() == null;
+2 11 });'
+
+3 1 " });"
+7 2 return Promise.bind(box.unwatch()"should.return Promise.bind(box);"});" });"

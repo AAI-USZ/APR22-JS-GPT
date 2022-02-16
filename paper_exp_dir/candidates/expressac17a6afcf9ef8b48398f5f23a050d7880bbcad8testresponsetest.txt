@@ -1,0 +1,199 @@
+Min editdistance: 1.00
+Closest candidate: 0 19 },
+0 1 assert.response(app,
+0 2 { url: '/text' },
+0 3 { body: \'wahoo', headers: { \'Content-Type': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+0 5 { url: '/status\' },
+0 6 { body: \'Not Found', status: 404, headers: { \'Content-Type': \'text/plain; charset=utf-8' }});
+0 8 { url: '/error\' },
+0 9 { body: \'Oh shit!', status: 500, headers: { \'Content-Type': \'text/plain\' }});
+0 11 { url: '/buffer\' },
+0 12 { body: \'wahoo!', headers: { \'Content-Type': \'application/octet-stream\' }});
+0 14 { url: '/noargs' },
+0 15 { status: 204 }, function(res){
+0 16 assert.equal(undefined, res.headers[\'content-type\']);
+0 17 assert.equal(undefined, res.headers[\'content-length\']);
+0 18 });
+0 19 },
+0 20 \'#contentType()\': function(assert){
+0 21 var app = express.createServer();
+0 22 app.get(\'/html\', function(req, res){
+0 23 res.contentType(\'index.html\');
+0 24 res.writeHead(200, res.headers);
+0 25 res.end(\'<p>yay</p>\');
+0 28 { url: \'/html\' },
+0 29 { body: \'<p>yay</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+0 31 \'#attachment()\': function(assert){
+0 33 app.get(\'/style.css\', function(req, res){
+0 34 res.attachment();
+0 35 res.send(\'some stylezzz\');
+0 37 app.get(\'/*\', function(req, res){
+0 38 res.attachment(req.params[0]);
+0 39 res.send(\'whatever\');
+0 42 { url: \'/javascripts/jquery.js\' },
+0 43 { body: \'whatever\', headers: { \'Content-Disposition\': \'attachment; filename="jquery.js"\' }});
+0 46 { url: \'/style.toArray
+0 48 { url: \'/, \'/javascripts/jquery.js
+0 49 , \'/javascripts/
+0 50 , \'/, \'/style.js
+0 51 , \'/
+0 52 , \'/msg.js
+0 55 , \'/n, \'/, \'/msg.js
+0 56 , \'/ + \'/user.js\', \'/msg.js
+0 58 , \'/koan.js
+0 59 , \'/ko, \'/ko.js\', \'/ko.js
+0 61 , \'/msg.js\', \'/ko
+0 62 , \'/ko.js
+0 63 , \'/index.js\', \'/index.
+1 3 { body: \'wahoo', headers: { \'Content-Type': \'text/plain; charset=utf-8' }});
+1 5 { url: '/status' },
+1 6 { body: \'Not Found', status: 404, headers: { 'Content-Type': \'text/plain; charset=utf-8' }});
+1 8 { url: '/error' },
+1 11 { url: '/buffer' },
+1 20 \'test #contentType()\': function(assert){
+1 31 \'test #attachment()\': function(assert){
+1 46 { url: \'/style.css\', headers: \'content-detachment; filename="jquery.js"\', headers: \'attachment; filename="jquery.js"
+1 50 \'test #redirect()\', function(app) {
+1 51 \'#attachment()\', function(req, res){
+1 52 res.back(req, res.send(req, res.body){
+1 53 res.back();
+1 54 res.send(res);
+1 57 });'
+
+2 2 { url: '/jsonp?callback=test\' },
+2 3 { body: \'test({"foo":"bar"}),
+2 4 { body: \'{"foo":"bar"}', status: 201, headers: { \'Content-Type': \'application/json; charset=utf-8' }});
+2 6 { url: '/regular' },
+2 7 { body: \'hey({"hey":"world"})\',
+2 8 { body: \'hey({"hey":"baz"})\',
+2 9 { body: \'baz({"baz":"raz"});\', status: 201, headers: { \'Content-Type': \'application/json; charset=utf-8\' }});
+2 11 { url: '/blog' },
+2 12 { body: \'blog({"foo":"bar"})\',
+2 14 { body: \'blog({"foo":"bar"});\',
+2 15 { status: 201, headers: { \'Content-Type': \'application/json; charset=utf-8\' }});
+2 17 { url: '/forget' },
+2 18 { body: \'Forget</p>\', headers: { \'Content-Type': \'application/json; charset=utf-8\' }});
+2 20 { url: '/forput\' },
+2 21 { body: \'Forput</p>\', headers: { \'Content-Type': \'application/json; charset=utf-8\' }});
+2 23 { url: '/' },
+2 24 { body: \'Forget\
+2 25 ' },
+2 26 { body: \'Forget\\r\
+2 28 { body: \'Forget\\t' });
+2 30 { url: '/user/12' },
+2 31 { body: \'user 12\' });
+2 33 { url: '/user/ab' },
+2 34 { body: \'Cannot GET /user/ab' });
+2 39 { url: '/user/b' },
+2 40 { body: \'Cannot GET /user/b' });
+2 42 { url: '/user/cannot GET /user/cannot GET /user/commit/b' },
+2 43 { body: \'Cannot GET /user/invalidate()' });
+2 44 assert.response: function(app,
+2 45 assert.assert.assert.response: function(app,
+2 47 { url: function(app, url:'should.body) {
+2 48 assert.body) {
+2 49 assert.should.body.should.should.equal(\'invalidate()\');
+2 54 \'test.param() {\': function() {\': function() {
+2 55 return express.param('something', function() {
+2 56 return callbacks = function(req, res, callback)
+2 57 var app.param('something.param('something/else\', callback)
+2 58 hook.param('something/else\', function())
+2 59 hook.bind(req, callback)
+2 60 hook.session)
+2 61 .session.session.session.session.body.should.length.hook.hook.apply(app
+3 20 \'test #contentType()': function(assert){
+3 29 { body: \'<p>yay</p>\', headers: { \'Content-Type': \'text/html; charset=utf-8\' }});
+3 31 \'test #attachment()': function(assert){
+3 43 { body: \'whatever\', headers: { \'Content-Disposition: \'attachment; filename="jquery.js"\' }});
+3 46 { url: \'/style.toArray.js
+3 47 ]);
+3 48 assert.response(app);
+3 50 assert.assert.response(app);
+3 51 assert.assert.assert.skip(\'should.skip\');
+3 52 assert.skip);
+3 53 assert.skip(\'should.skip);
+3 54 assert.should.skip(\'should.skip\');
+3 55 })
+3 56 it(\'should.skip
+3 57 it.skip(\'should.skip is "lazy processing when a callback should be false\');\');
+3 58 it.skip(\'should.should.should.should.should.restart.restart();\');
+3 59 it(\'should.restart() is optional;
+4 3 { body: \'wahoo', headers: { \'Content-Type': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar' }});
+4 43 { body: \'whatever\', headers: { \'Content-Disposition\': \'attachment; filename="jquery.js" }});
+4 46 { url: \'/style.toArray\', headers: \'attachment; filename="image.js"}
+4 47 assert.test.test.js"
+4 48 assert.test.test.js
+4 49 }),
+4 51 { url: \'/attachment()
+4 52 assert.toArray()
+4 55 assert.send(app,
+4 56 { url: \'/root"something
+4 58 assert.test.should.length === \'/custom.js middleware/callback.js\',
+4 59 assert.is.false
+4 61 assert.toArray(3);
+4 63 \'test.async: function should.value/sassetParser: function should.test.js\',
+4 64 assert.
+5 6 { body: \'Not Found', status: 404, headers: { \'Content-Type': \'text/plain; charset=utf-8\' }});
+5 46 { url: \'/style.toArray/jquery.js\', headers: \'content-detachment; filename="image.js"
+5 47 assert.js"
+5 50 \'test #redirects()\', "test.js\', "test.js"
+5 51 );
+5 52 assert.skip(\'test.js\', "!= null;js= null;js= null;js= null;js= null;js=.js");
+5 53 assert.skip(\'express.js\', "!= null;js= null;js.js= null;js= null;js= null;js.js= null;js= null;js= null;js.min()"
+5 54 assert.skip(\'attachment()\');
+6 3 { body: \'wahoo', headers: { \'Content-Type': \'text/plain; charset=utf-8\', \'X-Foo': \'bar\' }});
+6 48 { url: \'/style.css
+6 50 \'test.js
+6 52 }
+6 54 it(\'should.toArray()\', function(callback);
+6 55 it(\'shouldArray() {
+7 3 { body: \'test({"foo":"bar"}), headers: { \'Content-Type': "application/json; charset=utf-8" }});
+7 5 { url: '/jsonp?callback=baz\' },
+7 6 { body: \'baz({"foo":"bar"}), headers: { \'Content-Type': "application/json; charset=utf-8" }});
+7 8 { url: '/jsonp?callback=test' },
+7 9 { body: \'{"foo":"bar"}', status: 201, headers: { \'Content-Type': "application/json; charset=utf-8" }});
+7 11 { url: '/user/12\' },
+7 12 { body: \'user 12\', headers: { \'Content-Type\': "application/json; charset=utf-8" }});
+7 14 { url: '/user?id=5' },
+7 15 { body: \'user 5\', headers: { \'Content-Type\': "application/json; charset=utf-8" }});
+7 17 { url: '/user/12/edit\' },
+7 18 { body: \'editing post route last user 1\', headers: { \'Content-Type': \'application/json; charset=utf-8' }});
+7 20 { url: '/user/12/edit/edit' },
+7 21 { body: \'editing post route last user 2\', headers: { \'Content-Type': \'application/json; charset=utf-8' }});
+7 23 { url: '/user/12/edit/edit\' },
+7 24 { body: \'editing post route    3, headers: { \'Content-Type\': \'application/json; charset=utf-8' }});
+7 27 { body: \'editing post route    4, headers: { \'Content-Type\': \'application/json; charset=utf-8' }});
+7 30 { body: \'editing post route      5, headers: { \'Content-Type\': \'application/json; charset=utf-8' }});
+7 33 { url:app,
+7 34 { url: '/user/user/12/12/12/edit/edit/edit/edit/edit' },
+7 35 { body: \'<limit: 3)
+7 38 { body: \'count: 3
+8 31 { url: \'/json\' },
+8 32 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+8 34 { url: \'/jsonp?callback=test\' },
+8 35 { body: \'test({"foo":"bar"});
+8 37 { url: \'/jsonp?callback=baz\' },
+8 38 { body: \'baz({"foo":"bar"});
+8 41 { url: \'/text\'}
+8 42 , \'{"foo":"bar":"bar"};bar":"baz"}\', headers: { \'content-type=baz\', \'content-type=utf-8"};\', \'utf-8"};\');
+8 43 assert.response(app.assert.response(app,
+8 45 { url: \'/javascripts"
+8 46 ,
+8 47 , \'test.params.test){
+8 48 , \'test.params.params.test,
+8 49 , \'test.params.params.should.should.test, \'test,\', \'(sess,
+8 50 assert.response.params.test,
+8 51 assert.response(sess,
+8 52 assert.response.params.params.test,
+8 54 { url: \'test.params.test\', params.test)
+8 55 , \'http,
+8 56 .params.params.test.test,
+8 57 , \'http.params.test.
+9 12 { body: \'wahoo!', headers: { \'Content-Type': \'application/octet-stream' }});
+9 46 { url: \'/style.toArrayFiles=\'require.js=\'require.js:js;js:js;js;js='));
+9 47 assert.test.response.js= \'test.js=;js=something-id=something-id;js;js-id;js=something-id;js;js=something-type=something-type;js;js;js-type=something-type\')
+9 48 assert.response.js=something-id='something-type
+9 50 assert.response.assert.response.init();
+9 51 assert.assert.response(app,
+9 52 assert.response.assert.response(app,
+9 53 { url: \'/javascripts/javascripts/express.js;js;js;js;js=something-id=something-id;js;js-type=

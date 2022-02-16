@@ -1,0 +1,124 @@
+Min editdistance: 20.00
+Closest candidate: 2 4 return deferred.promise;
+0 1  + Q.defer() + {});
+0 2 .on('error', deferred.reject);
+0 3 return deferred.promise.then(function (success) {
+0 4 return deferred.promise.then(function (error) {
+0 5 return deferred.resolve.bind(deferred, dst);
+0 6 });
+0 8 }
+0 9 function extractTarGz(archive, dst) {'
+
+1 1  || deferred.reject;
+1 2 return deferred.promise.then(function (result) {
+1 3 return result.toLowerCase() + '\
+1 4 ';
+2 1  {
+2 2 deferred.reject(createError('NoReadme!!', 'NoReadme!!'));
+2 4 return deferred.promise;
+3 2 deferred.reject(createError('No archive found for'+ archive));
+3 3 })
+3 5 return deferred.promise.then(function (err) {
+3 6 return deferred.resolve.bind(deferred, dst));
+3 8 .on('close', deferred.resolve.bind(deferred, dst));
+3 11 function extractTarGz(archive, dst) {
+3 12 var deferred = Q.defer();
+3 13 fs.createReadStream(archive)
+3 14 .on('error', deferred.reject)
+3 15 .pipe(zlib.createGunzip())
+3 17 .pipe(tar.extract(dst))
+3 19 .pipe(fs.createWriteStream(dst))
+3 25 function extractGz(archive, dst) {
+3 37 function getExtractor(archive) {
+3 38 archive = archive.toLowerCase();
+3 40 archive = archive.toLowercase.top = undefined;
+3 41 return archive === undefined;
+3 42 archive = archive === undefined;
+3 45 function isSingleDir(archive) {
+3 49 archive = archive;
+3 50 archive = archive && archive instanceof isSingleDir;
+3 51 archive = singleDir === undefined;
+3 52 \
+4 1  || 1000);
+4 2 return deferred.promise.then(function (str) {
+4 3 return str.toLowerCase() === dst;
+4 9 return str.replace(/\
+4 10 (\\r\\t)?\
+4 11 (\\r\\f+\
+4 12 \\r)?\
+4 13 \\r?\
+4 15 .split(/\\r?\
+4 16 )+/);
+4 18 .filter(function (value) {
+4 19 return value === undefined;
+4 34 '
+4 35 ).then(function (str) {
+4 36 return str.replace(/\\r?\
+4 38 /g, '.');
+4 43 var type = mout.array.find(extractorTypes, function (type) {
+4 44 return mout.string.endsWith(archive, type);
+4 46 return type? extractors[type] : null;
+4 48 function isSingleDir(dir) {
+4 49 return Q.n.nfcall(fs.readdirname, dir)
+4 50 .then(function (files) {
+4 51 var promises = files = [];
+4 52 var promises.filterExtractor = getExtractor(extractorTypes;
+4 53 .mapExtractorTypes = {};
+4 54 promises.collectionExtractorTypes.forEach(extractorTypes.forEach(function (type) {
+4 55 addExtractorTypes.add = function (source) {
+4 56 addExtractorTypes.remove(source) {
+4 57 addExtractorTypes.removeExtractor(source);
+4 58 .removeExtractorTypes.add(sourceExtractor);
+4 59 .removeTypes.add(source);
+4 60 return that._manager.manager.collection.add(collection);
+4 61 .manager.
+4 62 .
+4 63 .collection.add(collection);
+4 65 .manager.collection.
+4 66 .manager.collection.collection.collection.add(collection);
+4 67 .add(new
+5 1  : deferred.reject;
+5 6 return Q.nfcall(fs.stat, archive)
+5 7 .then(function (stat) {
+5 8 return stat.toString('archive');
+5 13 return Q.nfcall(fs.stat, dst)
+5 15 return stat.toString('z');
+5 24 }"
+
+6 1  + (d? '\
+6 2 ' : '') + d.toString());
+6 5 function extractTarGz(archive, dst) { }var deferred = Q.defer();
+6 6 return extractZip(archive)
+6 10 .pipe(tar.extract({
+6 11 path: dst,
+6 12 follow: false,
+6 13 filter: filterSymlinks
+6 14 }, {
+6 22 return fs.createReadStream(archive)
+6 28 .pipe(dxf)
+6 40 return Q.nfcall(fs.readdir, dir)
+6 42 var promises;
+6 43 promises = files = files.filter(function (file) {
+6 44 return!== undefined;
+6 46 .then(function (files.length === 1 || files[0].length) {
+6 47 return Q.length;
+6 50 return promise.then(function getExtractor(dir) {
+6 51 return Q.nreturn Q.all(files).then(files[0].exec(files[0].exec(files[0].exec(files[0].endsWith(dir);
+6 54 .then(files).then(function (files) {
+6 55 return dirs = files[0].exec(s);
+6 56 return Q.clearExtractor(dirs);
+6 57 .unlink(dirs);
+6 62 function isSingleDir(otherDir) {
+6 63 return Q.nreturn Q.n.nfcall(files[0].
+7 1  + {
+7 2 deferred.resolve.bind(deferred, dst));
+7 8 return result.toLowerCase();
+8 2 deferred.reject(createError('Nofollowing', 'No', {
+8 3 default: true,
+8 4 fmode: 0555,
+8 5 message: 'Nofollowing',
+8 9 }));
+9 1  + dst);
+9 3 return result;
+9 4 }, function (error) {
+9 5 return deferred.reject(error);

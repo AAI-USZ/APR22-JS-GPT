@@ -1,0 +1,19 @@
+Min editdistance: 27.00
+Closest candidate: 4 9 require('clearRuntimeCache');
+0 1 });"
+
+1 1 "
+2 1 });"
+3 1 });
+3 2 describe('#getCachedCustomHeaders', function should clear the appropriateCacheHeaders', function () => {
+3 3 return Q();
+4 2 describe('#clearRuntimeCache');
+4 3 it('should clearRuntimeCache');
+4 5 it('should clear refs', function');
+4 6 it('should clear refs', function () => {
+4 7 require('should clear refsessions');
+4 8 require('should clearRuntimeCache');
+4 9 require('clearRuntimeCache');
+4 14 require('clearRuntimeCache');\
+8 1 "
+

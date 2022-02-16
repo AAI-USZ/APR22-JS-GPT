@@ -1,0 +1,127 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 it('with no config (disabled)', function(){
+0 1 it(\'with no config (disabled)\', function(){
+0 2 var content = [
+0 3 \'``` js',
+0 4 code,
+0 5 \'```\'
+0 6 ].join(\'\
+0 7 \');
+0 8 var data = {content: content};
+0 9 var oldConfig = hexo.config.highlight;
+0 10 delete hexo.config.highlight;
+0 12 codeBlock(data);
+0 13 data.content.should.eql(content);
+0 14 hexo.config.highlight = oldConfig;
+0 15 });
+0 16 it(\'default\', function(){
+0 17 var data = {
+0 18 content: [
+0 23 \')
+0 24 };
+0 26 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + highlight(code, {lang: \'js\'}) + \'</hexoPostRenderEscape-->\');
+0 28 it(\'without language name\', function(){
+0 31 \'```\',
+0 37 var expected = highlight(code);
+0 39 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + expected + \'</hexoPostRenderEscape-->\');
+0 41 it(\'without language name - ignore tab character\', function(){
+0 44 \'``` \\t\',
+0 54 it(\'```\
+0 55 ested.js\', function(){
+0 59 \'``````\',
+0 62 \'```\'```\'
+0 63 ].join(\'
+0 64 ].join(\'```
+0 66 }
+0 68 }).join(\'\
+0 70 });'
+
+1 1 it('with no config (disabled)', function(){
+1 3 '``` js',
+1 5 \'```'
+1 15 it('default', function(){
+1 18 \'``` js Hello world\',
+1 40 it(\'title\', function(){
+1 49 var expected = highlight(code, {
+1 50 lang: \'js\',
+1 51 caption: \'<span>Hello world</span><a href="https://hexo.io/">link</a>\'
+1 54 data.content.should.eql(\'<span>Hello world</span><a>}
+1 56 it(\'type\', function(){
+1 58 _content: [
+1 61 return codeBlock(data);
+2 40 it(\'title - escape\', function(){
+2 53 it(\'url - link\', function(){
+2 56 '```http://hexo.io/\',
+2 59 \'```baz@zespia\'\',
+2 66 var expected = highlight = highlight(code,
+2 67 .replace(/{/g, \'&#x1{2, 2}/g, 3}/g, 3)
+2 68 .replace(/g, \'&#1, 3)
+2 70 .replace(/g, \'&#2\', 3)
+2 72 .replace(/g, \'&#1)
+2 73 .replace(/g, 3)
+2 75 .replace(/g,
+3 5 '```'
+3 25 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + highlight(code, {lang: \'js\'}) + \'</hexoPostRenderEscape>\');
+3 38 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + expected + \'-->\');
+3 53 it(\'url\', function(){
+3 56 \'``` http://hexo.io/\',
+3 59 \'```{2{2}\',
+3 60 ].join(\'```\',
+3 67 it(\'link_method\', function(){
+3 68 var expected = highlight(code, expected + \'<a>\', expected + \'world.html\'\',
+3 69 , expected + \'world.html\'\',
+3 70 , expected + expected + \'}\', function(){
+3 71 , function(){
+3 72 return expected + \'}
+3 73 })
+3 75 it(\'
+
+4 9 content: content
+4 27 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + indent + \':hexoPostRenderEscape-->\');
+4 40 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + expected + \':hexoPostRenderEscape-->\');
+4 57 var url = {
+4 58 config: hexo.config.url,
+4 60 hexo.config.config.root.permalink = \'/root = \'/root/: \'/\';
+4 63 codeBlock(data.permalink = \'/javascript/\';
+4 65 it(\'link\', function(){
+4 66 var link = link + link + 
+4 67 .replace(/index\
+4 68 /{2){
+4 69 return \'index.replace(/}/g, \'&#\'\');
+4 71 link += \'&\';
+4 72 link += \'&\'{2>\' + link + \'</a>\';
+5 18 \'``` js\',
+5 51 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + expected + \'"
+
+6 29 it(\'without language name - ignore tab character', function(){
+6 42 it(\'title - escape title\', function(){
+6 53 caption: \'<span>Hello world</span><a href="http://hexo.io/">link</a>\'
+6 56 data.content.content.should.eql(\'<expected + expected + \'<span>Hello world</span>\'\');
+6 58 it(\'link - link\', function(){
+6 60 var expected = {
+6 63 \'```https://hexo is a space-source/../../../../../../../../\\\\d+\\.com/foo.html>\',
+6 64 _source=.html>\',
+6 65 _content: \'<span>=.html_tag: <span>500</span>\'\',
+6 70 var expected = highlight = highlight(code, {
+6 71 lang: \'<span>Hello world</span><a href="https://hexo.io/embedded/</span><a href="https://hexo.io/embedded/</span><a href="https://hexo.io/embed
+7 42 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + expected + \'</hexoPostRenderEscape>\');
+7 55 caption: \'<span>Hello world</span><a href="https://hexo.io/">\'
+7 59 data.content.content.content.should.should.eql(\'<expected = expected;
+8 6 ].join(\'\');
+8 20 ].join(\'\')
+8 47 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + expected + \'"-->\');
+8 61 .highlight)
+8 62 .replace(\'http://zespia.js\', \'&#123456\', \'&#456\', \'&#80\', \'&b\', \'&b\', \'&gt;\')
+8 63 .skip(\'
+8 65 );
+8 69 data.content.content.content.should.should.eql(\'<!--hexoPostRenderEJS\');
+9 19 data.content.should.eql(\'<!--hexoPostRenderEscape:\' + escape(code) + \'</hexoPostRenderEscape-->\');
+9 21 it(\'with no config (disabled)', function(){
+9 38 it(\'default - with options, but with limit\', function(){
+9 53 \'``` js,\',
+9 55 arg,
+9 59 arg: arg: arg: arg: arg
+9 64 content: data.content
+9 67 .replace(/```{2{2,}/g, online/g, b}/g, format}
+9 71 data.content.content.content.should.should.eql(expected);
+9 72 codeBlock(expected);

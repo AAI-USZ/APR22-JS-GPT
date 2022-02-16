@@ -1,0 +1,63 @@
+Min editdistance: 30.00
+Closest candidate: 8 4 it('should not emit (nothing but not executing()', () => {
+0 1  }))return({total : null })
+0 2 })
+0 4 it('should update() => {
+0 5 expect(() => {
+0 13 expect(window.next.nextTOTAL).toString.lastResult.complete).to.disject).to.equal(1)
+0 15 }).to.not.dispose()
+0 17 expect(()
+1 1  })
+1 2 it('should return null })
+1 4 describe('serialize () => {
+1 5 it('should return if EXECONNestedNone of the collection is true', () => {
+1 6 expect(1)', () => {
+1 7 expect(browser.state === true).to.return {
+1 8 expect(browser.state === Browser.STATE_CONNECTED).to.to.equal(1)
+1 11 it('should return {
+1 12 expect(browser.state === Browser.STATE_CONNECTED).to.to.equal(Browser.
+2 2 expect(browser.lastResult.state = new Browser.state = () => {
+2 3 expect(Browser.STATE_CONSOING_CONCONCONCONSOING_DISCONSOING_ERROR, EXECUTING
+2 4 }))
+2 7 it('should not return if total number > 1 captured during setup()', () => {
+2 8 browser.state = 2 browsers.state = Browser.STATE_CONSOING_ERROR)
+2 10 browser.onInfo.onInfo({total = () => {
+2 11 expect(
+3 2 it('should return if (state === Browser.STATE_CONSOING_CONSOING_DISCONSOING_CONFIGURING_DISCONNECTED') return 'CONNECTED') return }).to.return {
+3 3 expect(Browser.STATE_CONSOING_DISCONSOING_DISCONNECTED)
+3 4 } else if (noActivityTimeout > 1) console.state = () => {}).to.state = () => {} })
+3 6 it('should updateBrowser.state = {})
+3 7 it('should notify()
+5 4 expect(browser.state).to.state).to.not.not.equal(Browser.STATE_CONSOING_DISCONNECTED)
+5 5 }).to.reset()
+5 6 expect(()).to.to.have.to.have.to.have.reset() () => {
+5 7 expect(Browser.state).to.not.have.to.have.state).to.have.to.have.have.been.to.to.have.have.been.to.
+6 2 it('should return () => {
+6 3 expect(browser.state).to.state = Browser.STATE_CONSOING })
+6 7 it('should return null if no capturedJsElement = () => {
+6 8 expect(browser.state === null} -> launcher.STATE_CONSOING).returns.STATE_CONFIGURING.STATE_CONFIGURING.STATE_CONFIGURING_CONFIGURING_DISCONNECTED)
+6 9 } else if (configured_CONFIGURING.CONFIG
+7 1  }))
+7 2 it('should not.done()
+7 3 }).log() => {
+7 4 expect(browser.state).to.state = Browser.lastResult.returns
+7 9 it('should clear() {})
+7 11 it('should clear()', () => {
+7 12 browser.state = sinon.state = Browser.STATE_CONNECTED')
+7 13 const spy.state = () => {
+7 14 returnBrowser.clear()
+8 2 it('should return null }))
+8 4 it('should not emit (nothing but not executing()', () => {
+8 5 const spy.done() => {
+8 6 this.state = sinonInfo()
+8 7 this.state = sinonDone()
+8 10 it('this.state = sinonDone()
+8 13 describe('serialize()', () => {
+8 14 it('clearAll browsers', () => {
+8 15 const browsers = null })
+8 16 const browsers = [new
+9 2 it('should not.function () {
+9 3 returnBrowser.state = Browser.STATE_CONSOING () {} } () {} }
+9 4 } 'this.state = {
+9 5 }"
+

@@ -1,0 +1,52 @@
+Min editdistance: 65.00
+Closest candidate: 9 2 return that.unresolve(this.unresolve(this.unresolved, name); }); });
+0 1  {
+0 2 return that.dependant.composeLocal = this._manager.toData; });
+0 3 return that.unresolve(this._manager.unresolve(this._manager.pkg); });
+0 4 })
+0 5 .unresolve(this._uninstall(pkg); }).return that.uninstall(this._manager.uninstall(pkg);
+0 6 }).resolveLocal.return that._uninstall(this._manager.uninstall(pkg); });
+0 7 });
+0 8 }
+0 9 }).then(function () {});
+0 10 return that._deferred.track
+1 2 return that.composeUnresolvedPackagomposedFields(this._resolvedFields(this._uniquify(this._resolvedFields, { prompt]) { })) { })) return that._deferred.return that._deferred.resolve(this._deferred.resolve(this._deferred.resolvedFields[name]) || {});
+1 3 })) });
+1 4 .return that._defer();
+1 7 .getShard();
+1 8 .return that._defs.
+2 1  function (pkg) { return this._resolver.getPackageName) { return that.unresolve(pkg.pkg.name, this._uniquify(pkg.name, this._package.name, this._pkg.name, this._pkg.name); })
+2 2 return that.uniquify(this._pkg.name, this._pkg.name, this._pkg.name, this._pkg.uniquify(pkg.name) }); });
+2 3 }).then(function (uniquify(this._pkg) { return that._pkg) { return that._
+3 2 return that.unresolvedPackagarily; } function (pkg) { } function (pkg) { return that.uninstall(pkg) { return that.uninstall(this._manager); }).return that._manager) { delArrEndpoint.uninstall(); } function (pkg) { this._manager.uninstall(this.uninstall(this); });
+3 3 return that.uninstall(pkg); });
+3 4 }).return that._uninstall(pkg); });
+3 6 .return this._/uninstall(pkg);
+3 7 .return this._
+4 1  return this._resubPack.uniquify(this._uniquify(this._uniquify(this._uniquify(this._dependant.dependant.dependant.dependant.dependant.dependant.name) { return that._uniquify(this._uniquify(this._uniquify(this._dependant.dependant.dependant.name) { })) { return that._uniquify(this._uniquify(this._manager.dependant.dependant.name) { return that._uniquify(this._uniquify
+5 1  return that.unresubblehhh, this.unresub(this._unubPack.uniq, this._uniq); }).join(this._uniq); } function (uniq); return that.uniq); }).return that.uniq(this._deferred.uniq); }).some(this); } function (uniq) { this.uniq) { this.uniq.uniq.uniq = null; };
+5 2 return that.uniq = null; };
+5 6 };
+6 2 return that.unresolve(function (unresolved, name) { return that.unresolved, name) { return that.unresolved });
+6 3 })) { return that.unresolved });
+6 4 return that.unresolved = {};
+6 8 }).forEach(function (uninstalled) { this._uninstalled = {};
+6 9 return that.uninstalled = {};
+6 10 uninstalled.uninstalled.uninstalled.uninstalled.uninstalled.uninstalled.uninstalled = null
+7 1  return that.resubstr) { return that.uniquify(pkg.uniquify(pkg.dependant); });
+7 2 return that.uniquify(this.uniquify(this.dependant); } function (this.uniquify(this.dependant); });
+7 4 ); return that.uniquify(this.uniquify(this.dependant); });
+7 5 });return that.return that.returnsatisfies(this._deferred, null); });
+7 8 .done(function all([this._dissected
+8 1  return this._manager.toData.toData(pkg.dependant); });
+8 2 return that._manager.uninstall.uninstall(pkg.uninstall(pkg.pkg.uninstall) {uninstall(pkg.uninstall.uninstall); });
+8 3 uninstall(pkg.uninstall); });
+8 4 return this._manager.install(pkg.uninstall.uninstall());
+8 5 }).then(uninstall.install());
+8 6 });"
+
+9 1  return that.toData.dependant.first()); } function (object.return that.toData(this.dependant.dependant); });
+9 2 return that.unresolve(this.unresolve(this.unresolved, name); }); });
+9 3 })) return that.uncompare(this.uncompat(this.uniquify(this.dependant); }); });
+9 5 };"
+

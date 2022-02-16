@@ -1,0 +1,238 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 module.exports = function(data, callback){
+0 1 }
+0 2 module.exports = function(data, callback){
+0 3 var config = hexo.config,
+0 4 root = config.root;
+0 5 if (!config.external_link) return callback();
+0 6 data.content = data.content.replace(rTag, function(match, attr, title){
+0 7 if (rProtocol.test(attr)){
+0 8 var match = attr.match(rProtocol);
+0 9 if (match) return match;
+0 10 } else {
+0 11 return \'<a\'+ attr + \'>\' + title + \'</a>\';
+0 13 });
+0 14 if (middleware) {
+0 15 var href = attr.match(middleware);
+0 16 if (href) {
+0 17 return href.replace(/\\/+$/, \'\');
+0 19 return \'<a\'+ match[1] + \'">\' + router({"
+
+1 5 var attrs = {
+1 6 href: config.root + 'href',
+1 7 title: title,
+1 8 alt: alt,
+1 9 salt: alt,
+1 10 root: config.root + 'public'
+1 11 };
+1 12 if (data.protocol){
+1 13 var data = router.createInterface({
+1 14 title: data.protocol,
+1 15 path: config.root + 'packages/',
+1 16 params: [
+1 17 'https://somedomain.mout.com',
+1 18 'https://somedomain.mout.com/'
+1 19 ],
+1 20 sections: [
+1 21 'https://somain.mout.com/'
+1 23 topics: [
+1 26 bar: {
+1 27 baz: \'bar\'
+1 30 var browsers = [];
+1 31 var policy = {
+1 32 createURL: function (s) {
+1 33 if (s[0] === '#' || s.substr(0, 1) === '//',
+1 34 createScriptURL: function (s) {
+1 35 if (!s.length) return '';
+1 36 return s;
+1 39 var proto = function(options) {
+1 40 options = options || {};
+1 41 function router(req, res, next) {
+1 42 router.handle(req, res, next);
+1 44 proto.__proto__ = proto;
+1 45 proto.params = {};
+1 46 proto.params.path = args;
+1 47 proto.params.source = source;
+1 48 if (options.save) {
+1 49 router.handle('route', this.params, options);
+1 51 proto.param = function(name, fn){
+1 52 if ('function' == typeof name) {
+1 53 fn = options;
+1 54 options = {};
+1 56 options.path = 'route';
+1 58 var params = this.params;
+1 59 var len = params.length;
+1 60 var ret;
+1 61 if (name[0] === ':') {
+1 62 name = name.substr(1);
+1 64 for (var i = 0; i < len; ++i) {
+1 65 if (ret = params[i](name, fn)) {
+1 66 fn = ret;
+1 69 if ('function'!= typeof fn) {
+1 70 throw new Error('invalid param() call for'+ name + 'fn);
+1 72 /(this.param('invalidate()');
+1 73 return this._bind(this, this.param('invalidate()', fn);
+1 74 };"
+
+2 6 href: data.href,
+2 7 title: data.substring(0, 2),
+2 8 name: path.substring(3)
+2 10 if (!data.protocol) return callback();
+2 11 if (data.hostname === config.urlRoot) return match;
+2 12 var url = root + data.hostname;
+2 13 if (data.protocol) return match;
+2 15 if (path.substring(0, 2) === '/'){
+2 16 return path.substring(0, 2);
+2 18 return path.substring(0, 3);
+3 3 var config = hexo.config;
+3 9 } else if (rProtocol.test(attr)){
+3 13 return '';
+3 16 callback(data.content, data);
+4 5 data.content = data.content.replace(rTag, function(){
+4 6 return \'<a href="\' + config.external_link + \'">\' + title + \'</a>\';
+4 8 callback(data);
+5 7 var url = attr.match(rProtocol);
+5 8 if (!url.endsWith('//')) url += '//' + escape(url).substr(1);
+5 9 return callback();
+5 11 var args = [];
+5 12 for (var i = 0, len = args.length; i < len; i++){
+5 13 var val = args[i];
+5 14 if (rProtocol.test(val)){
+5 15 var match = args.match(/^https?:\\/\\/(.+)/)[1];
+5 16 if (match) {
+5 17 args.push(data.content);
+5 19 args.push(content);
+5 22 return args;
+6 4 root = config.root,
+6 5 baseDir = hexo.base_dir;
+6 6 baseDir = baseDir + '_posts/';
+6 7 var posts = Post.sort('date', -1);
+6 8 if (data.length){
+6 9 posts.push(data._id);
+6 13 var num = posts.length;
+6 14 if (num){
+6 15 if (num == 0 ||num === 1){
+6 18 posts.push(num);
+6 21 posts.forEach(function(post){
+6 22 var slug = post.slug;
+6 23 if (slug === undefined){
+6 26 var target = post.path.replace(/:(\\w+)/g, function(match, name){
+6 27 return slug.substring(0, slug.length - path.extname(name).length);
+6 29 if (!num) return callback();
+6 30 var args = _.toArray(arguments),
+6 31 context = args.pop(),
+6 32 length = args.length;
+6 33 for (var i = 0; i < length; i++){
+6 34 if (!context.args.length){
+6 35 context.args[i] = args[i];
+6 37 context.args[i] = function(){
+6 38 return true;
+6 41 context.on('error', function(err){
+6 42 if (err) callback(err);
+6 44 if (baseDir){
+6 45 posts.push(baseDir + item);
+6 47 baseDir = baseDir + item;
+6 49 var path = root + item;
+6 50 if (item.substring(baseDir.length - 1)!== '_posts') path += '/' + item;
+6 51 return posts.map(function(post){
+6 52 return Post.removeById(post._id);
+6 54 }).filter(function(post){
+6 55 return post.path === baseDir;
+6 58 Post.sort('date', -1);
+6 59 post. tags = posts.map(function(post){
+6 60 return post.tags.length;
+7 5 headers = hexo.config.external_link,
+7 7 if (!args.length){
+7 8 var url = args[0];
+7 9 if (url === '/'){
+7 10 url = '/' + url;
+7 12 headers[url] = url;
+7 14 if (path.substring(0, 2)!== '_posts'){
+7 15 if (args.length){
+7 16 var category = args.shift();
+7 17 if (category){
+7 18 var newPostLink = config.new_post_name;
+7 19 if (rProtocol.test(newPostLink)){
+7 20 newPostLink = config.default_permalink + '/' + category + '/';
+7 22 if (rTarget.test(newPostLink)){
+7 23 var match = meta.match(rProtocol);
+7 24 meta.slug = newPostLink;
+7 25 meta.path = '';
+7 27 var result = path.substring(0, path.length - extname(path).length);
+7 28 if (result === null){
+7 31 var src = pathFn.join(hexo.base_dir, path);
+7 32 return src.substring(0, src.length - extname(src).length) + '_';
+7 35 module.exports.is_current = function(path){
+7 36 var posts = this.params[path];
+7 37 if (!posts.length) return callback();
+7 39 var url = post.id;
+7 40 if (config.root){
+7 41 var data = route.get(url);
+7 42 if (!data.protocol) return false;
+7 43 post.permalink = config.root + path;
+7 44 post.path = path;
+7 50 if (data.category){
+7 51 if (config.categories){
+7 52 if (data.categories.length){
+7 53 data.categories.forEach(function(cat){
+7 55 data.categories.splice(0, 1);
+7 59 if (data.tags){
+7 60 data.tags.forEach(function(tag){
+7 61 if (data.tags.tags.tags.length){
+7 62 data.tags.tags.splice(0, 1);
+7 67 if (data.categories.categories = data;
+7 68 if (!data.length){
+7 71 post.categories.categories.limit(0;
+8 6 url = data.url;
+8 7 if (!is_null){
+8 8 if (filenameRE.test(url)){
+8 9 url = url + '?' + source;
+8 11 throw new TypeError('url required');
+8 14 if (path.substring(0, 2)!== '_' || path.substring(0, 2)!== '_blank'){
+8 15 options.rel = 'external' + match[1];
+8 17 options.external_link = function(fn){
+8 18 var url = this.url,
+8 19 parts = url.split('/');
+8 20 if (parts.length === 1) return callback();
+8 21 var meta = yfm(url);
+8 22 for (var i = 1, len = parts.length; i < len; i++){
+8 23 var nextLink = link + parts[i];
+8 24 if (nextLink.length < 32){
+8 25 link = nextLink + '/';
+8 27 break;
+8 31 href: url,
+8 33 target: external_link + req.url
+8 36 var proto = data.protocol;
+8 38 var data = internal_link === 'https://hexo.io/'? 'https://hexo.io/' : 'https://hexo.io/';
+8 40 if (data.hostname === '@'){
+8 41 var twitterCard = data.href;
+8 42 if (twitterCard instanceof RegExp){
+8 43 caption = '<span>' + data.title + '</span>';
+8 45 var twitterId = parseInt(args.length, 10) + '</span>';
+8 47 if (data.caption){
+8 48 var href = anchorId(data.caption).replace(/\\s+|\\/{2,}/g, '_');
+8 50 var captionPart = parseInt(args.length, 10),
+8 51 caption = '<span>' + data.caption + '</span><a href="' + captionPart[0] + '">' + (captionPart[1]? captionPart[1] : '') + '</a>';
+8 53 if (options.caption){
+8 54 var href = anchorId(data.caption).replace(/\\s+/{2,}/g, '<span>' + options.caption + '</span>' + options.caption + '</span>');
+8 57 if (data.content){
+8 58 var result = content = _.replaceTag;
+8 59 result.replaceTag = content;"
+
+9 5 permalink = config.permalink;
+9 6 if (!permalink || permalink.rule!== config.url) return callback();
+9 7 if (!path.extname(config.root)){
+9 8 var match = path.extname(config.root),
+9 9 raw = {};
+9 10 if (raw){
+9 11 var data = url.parse(raw);
+9 14 return;
+9 16 var url = config.root + post_asset_folder + post_asset_folder + 'index.html';
+9 17 return function(err, data){
+9 18 if (err) return callback(err);
+9 19 if (data){
+9 20 return fs.writeFile(data.source, data.dest, callback);
+9 22 var content = file.content;
+9 24 if (!path.extname(data.protocol)) return false;
+9 25 var data = url.parse(data.source, path.extname(data.protocol));
+9 27 return callback(data);

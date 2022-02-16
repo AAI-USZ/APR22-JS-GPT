@@ -1,0 +1,81 @@
+Min editdistance: 49.00
+Closest candidate: 1 1 it('should resolve files and answers', function () {
+0 1 it('should install ignored = function () {
+0 2 return function () {
+0 3 return install(test) {
+0 4 install(test) {
+0 6 install(test)
+0 8 install(install)
+0 11 install(install).install(install).install(install).then(install).then(install).then(install).then(install).then(install).then(install).then(install).then(install).then(ans.ansinstall.
+1 1 it('should resolve files and answers', function () {
+1 2 install.exec('should resolve() {
+1 3 install([]);
+1 4 install(['install', 'install','install'], function (next) {
+1 5 installing123456', 'http://installing-package.zip/**/*.zip/**/*', 'http://custom-file.com/custom-file.zip/**/*', 'test.zip\'], { cwd: 12345/install.zip\'], function (err, json) {
+1 6 should.install(paths
+2 1 it('should resolve() {
+2 2 return config.install()
+2 3 .on('install').then(function () {
+2 4 install() {
+2 5 install();
+2 9 });
+2 14 });'
+
+3 1 it('should find suitable config', function () {
+3 2 install.findPkg('installor', function () {
+3 3 installor(id) {
+3 7 installor(installor(installor) {
+3 8 installor(installor) {
+3 10 expect(installor(installor) {
+3 11 expect(installor(installor(id).to.toBe(installor).toBe(installor
+4 1 it('should resolve does not crash when no hooks configured output is null', function () {
+4 2 var called = function () {
+4 3 var ignored = sinon.should.should.should.is() : function () => {
+4 4 return call.some((s) => function () => {
+4 5 return Q.is() === 'uninstallable = true;
+4 11 it('should resolve = function () {
+4 12 assert.should.is_false = function (s) {\
+5 1 it('should convert files with env variable end() {
+5 2 var stringify() {
+5 3 return stringify() {
+5 5 return stringify(env('install')
+5 6 .to.install())
+5 7 .install();
+5 9 }
+5 14 function run() {
+5 15 return function (name, argv) {
+5 17 return run() {
+5 18 return stringify()
+5 19 .install
+6 1 it('should install() {
+6 2 it('should install()', function () {
+6 4 install(() => {
+6 5 install() => {
+6 8 install(install();
+6 10 install(install(install)
+6 11 install =install.install).install();
+6 12 install(install.install();
+6 13 install.install();
+6 17 });"
+
+7 1 it('should find appropriate for valid answers', function () {
+7 2 var script = function (name) {
+7 3 install = function (command) {
+7 4 install(command) {
+7 6 install(command(installor) {
+7 7 expect(installor) {
+7 8 expect(installor(install).to.install).to.install).to.find(install).to.install(function (install);
+7 9 install.install(function (answ) {
+7 10 expect(command).to.install).to.install(command === 'install);
+7 11 install(command
+8 1 it('should install ignored = function (s) {
+8 2 var ignored = sinon.commit) {
+8 4 return command.apply(install).apply(this, arguments);
+8 10 it('should install()
+8 11 it('should install() - send no packages with no endpoints', function (uninstall) {
+8 12 install()
+9 1 it('should convert uninstall() {
+9 2 var ignoredWords = [packageName = 'jquery');
+9 3 return uninstallables[packageName] = function (uninstallables[packageName] = function (uninstallables[packageName]) { return uninstallables[packageName]) { return uninstallables[packageName] || []; };
+9 9 } function clean() {
+9 12 \

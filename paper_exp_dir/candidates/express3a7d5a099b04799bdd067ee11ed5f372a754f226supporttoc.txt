@@ -1,0 +1,395 @@
+Min editdistance: 4.00
+Closest candidate: 0 1 toc = [\'<ul id="toc">\']
+0 1 toc = [\'<ul id="toc">\']
+0 2 sections = {};
+0 3 if (js.indexOf(\'id="toc"\') < 0){
+0 4 headers.forEach(function(header){
+0 5 var captures = header.match(/id="(.*?)">(.*?)</),
+0 6 id = captures[1],
+0 7 title = captures[2].replace(/\\(.*?\\)/, \'()\')
+0 8 if (~title.indexOf(\'.\')) {
+0 9 var parts = title.split(\'.\'),
+0 10 recv = parts.shift()
+0 11 if (recv == null) parts.shift() = true
+0 12 for (var i = 0, len = parts.length; i < len; ++i){
+0 13 var val = parts[i]
+0 14 if (regex.test(val)) {
+0 15 vals[i].set captures[1]
+0 16 return true
+0 17 } else {
+0 18 var key = parts[i]
+0 19 if (regex.test(key)) {
+0 20 vals[key] = captures[2].replace(/\\(.*?\\)/, \'()\')
+0 22 var val = [params[0]
+0 23 }
+0 26 if (renderer.indexOf(extname) === -1)
+0 29 return \'<li><a href="#\' + id + \'">\' + title + \'</a></li>\'
+0 31 });
+0 33 var result = function(obj, indentation){
+0 34 if (indentation) {
+0 35 msg = indentation + msg.replace(/\
+0 36 /g, \'\
+0 37 \' + indentation)
+0 39 return {
+0 40 words: words,
+0 41 count: parseInt(...args.length),
+0 42 msg: text
+0 45 var app = module.exports = function(){
+0 47 id: [],
+0 48 title: __filename,
+0 49 icon: __filename,
+0 50 folder: __filename,
+0 51 close:!this.get(\'env\')? \'words\' : \'\'
+0 54 };
+0 55 app.get(\'/\', function(req, res){
+0 56 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, html){
+0 57 if (err) throw err;
+0 58 res.send(html);
+0 61 app.get(\'/no-ext\', function(req, res){
+0 62 res.render(\'index.jade\', { layout: \'cool-layout\' });
+0 64 app.get(\'/relative\', function(req, res){
+0 65 res.render(\'index.jade\', { layout: \'layouts/foo.jade\' }, function(err, html){
+0 70 app.get(\'/absolute\', function(req, res){
+0 71 res.render(__dirname + \'/fixtures/index.jade\', { layout: __dirname + \'/fixtures/absolute/foo.jade\' });
+0 74 app.get(\'/n
+0 75 if (layout) {
+0 76 res.render();
+0 77 } else {\!== \'/section;
+0 78 res.render(res);
+0 79 }'
+
+1 2 if (js.indexOf(\'id="toc"\') < 0) {
+1 3 headers.forEach(function (header){
+1 9 recv = parts.shift(),
+1 10 method = parts.shift(),
+1 11 headers = [\'<h1 id="more"></h1>\']
+1 12 if (recv == null) {
+1 14 if (++recv == 0) break
+1 15 headers[\'Content-Type\'] = \'text/javascript\' + type + \'"></h1>\'
+1 16 if (recv == 0 ||!recv == 0) {
+1 17 headers[\'Content-Length\'] = 0
+1 18 headers[\'Content-Type\'] = \'application/javascript,text/html,text/plain\'
+1 21 headers.forEach(function (title){
+1 22 if (recv == null) throw new Error(\'title required\')
+1 23 if (!(headers[\'Content-Type\'].indexOf(\'.\') < 0). endsWith(title)) {
+1 24 headers[\'Content-Type\'] = \'text/plain\' + title + \'"\'
+1 27 headers.forEach(function (title, i){
+1 28 if (i == 2 &&!semver.validRange(title)) {
+1 29 var semver = semver.maxSatisfying(versions, i + 1),
+1 30 maxSatisfying = maxSatisfying.length,
+1 31 max = semver.maxSatisfying.length,
+1 32 latest = semver.latest? \'*\' : \'latest\'
+1 33 if (version) {
+1 34 versions.push( version)
+1 36 })
+1 37 var result = [title, version];
+1 38 if (!result.length) {
+1 39 if (notables.length > 0) {
+1 40 result.push(notables[0].replace(/\
+1 41 $/, \'\'));
+1 43 result = result.concat(args)
+1 44 .replace(/([\\/]+/g, \'\
+1 45 \')
+1 46 .replace(/\
+1 47 ([^\\/]+)/g, \'\
+1 49 .replace(/\\r/g, \'\\r\')
+1 50 .replace(/\\u0085/g, \'\\u2000-\\u30FF]\')
+1 51 .replace(/\\u2028/g, \'\\u3029'
+1 52 ].join(\' \'));
+1 54 return result;
+1 56 var out = [
+1 57 \'Of * a configuration with:\
+1 58 \',
+1 59 \'1\',
+1 60 \'2\'
+1 61 ];
+1 62 out.forEach(function (part){
+1 63 out.push(/^\
+1 64  configuration[key]\
+1 65 ])(/\
+1 66 )
+1 68 .done(function ( function () {
+1 69 return out(err) {
+1 70 if (invalidConfig.code){
+1 71 return!= code
+1 72 return!= undefined;
+1 80 if (function validate((){
+1 81 process.env) {
+1 82 if (process.env.env.env.env.NODE_ENV.test = \'development = \'test\'\')
+1 83 .js = env.glob = fn;
+1 84 .ejs = [\'some-glob\';
+1 85 process.env.glob = \'test;q = \'at;q = \'q.js;q =  ;q=\' + __dirname;q=\' + __dirname;q=\' } = env.exports;q=\' }
+1 86 } = \'test;q=\' + 1;
+1 88 \
+2 1 toc = [\'<ul id="toc">\'];
+2 2 sections = { \'text:</text></li>\'];
+2 7 title = captures[2].replace(/\\(.*?\\)/, \'()\');
+2 9 var parts = title.split(\'.\');
+2 10 if (parts.length === 0) return \'\';
+2 11 for (var i = 0, len = parts.length; i < len; i++) {
+2 12 var val = parts[i].replace(\']\', \'\');
+2 13 if (i == len - 1) {
+2 14 val += \'></li>\';
+2 18 var result = [title, val];
+2 20 module.exports = function(app) {
+2 21 return function(){
+2 22 var fs = require("fs");
+2 23 var path = app.set(\'home\');
+2 24 app.get(\'/html\', function(req, res){
+2 25 res.render(\'index.jade\', {
+2 26 layout: \'jade\',
+2 27 locals: {
+2 28 lastName: \'holowaychuk\'
+2 32 app.get(\'/json\', function(req, res){
+2 33 res.header(\'X-Foo\', \'bar\');
+2 34 res.send({ foo: \'bar\' }, { \'X-Foo\': \'baz\' }, 201);
+2 37 app.get(\'/text\', function(req, res){
+2 39 res.contentType(\'.txt\');
+2 40 res.send(\'wahoo\');
+2 42 app.get(\'/status\', function(req, res){
+2 43 res.send(404);
+2 45 app.get(\'/error\', function(req, res){
+2 46 res.send(\'Oh shit!\', { \'Content-Type\': \'text/plain\' }, 500);
+2 48 app.get(\'/buffer\', function(req, res){
+2 49 res.send(new Buffer(\'wahoo!\'));
+2 51 app.get(\'/noargs\', function(req, res, next){
+2 52 res.send();
+2 54 assert.response(app,
+2 55 { url: \'/html\' },
+2 56 { body: \'<p>test</p>\'
+2 57 , headers: {
+2 58 \'Content-Language\': \'en\'
+2 59 , \'Content-Type\': \'text/html; charset=utf-8\'
+2 60 }});
+2 62 { url: \'/json\' },
+2 63 { body: \'{"foo":"bar"}\'
+2 64 , status: 201
+2 66 \'Content-Type
+2 67 , \'X-Foo\': \'baz\', \'baz\'
+2 69 assert.response: function(app,
+2 71 { url: function(app,
+2 72 { url: \'/json, headers: \'/json', headers: \'/json', status: \'/json', \'json', \'utf-8
+2 73 , \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'utf-8\', \'x8\', \'x-8\', \'x-
+3 2 sections = fs.readFileSync(file, 'utf8');
+3 9 var parts = title.split(\'.\')[1].split(\'.\');
+3 10 return parts[0].replace(/\
+3 11 $/, \'()\')
+3 13 var content = file.readFileSync(file, \'utf8\');
+3 18 var result = [title, path.extname(title)];
+3 20 result.push(\'<h1 id="container">\' + js.substr(1).replace(/\
+3 22 <h1>\' + content + \'</h1>\');
+3 24 return result.join(\'\
+3 25 \');
+3 27 module.exports = function(options) {
+3 28 options = options || {};
+3 29 var keys = Object.keys(options);
+3 30 var defaults = {
+3 31 normal: config.default,
+3 32 layout: config.default,
+3 33 filter: config.ignore()
+3 36 if (keys.length === 0){
+3 37 return \'\';
+3 39 var i = 0;
+3 40 var len = keys.length;
+3 41 for (; i < len; i++) {
+3 42 var key = keys[i];
+3 43 if (!reservedKeys[key]) data[key] = options[key];
+3 45 if (data.length) {
+3 46 var out = [\'string\'];
+3 47 for (var i = 0; i < len; i++) {
+3 48 out.push(out[i]);
+3 51 return out;
+3 52 };'
+
+4 9 var id = parts[id];
+4 10 if (parts[id]) return parts[id];
+4 11 sections[id] = parts[id] || [];
+4 12 if (partials[id]) return parts[id];
+4 13 sections[id].push(partials[id]);
+4 16 var result = [title, path.resolve(}\');
+4 17 result.push(\'<h1><p>No content at <a id="container">\' + result.join(\'\
+4 18 \') + \'</a>\');
+4 22 module.exports = function(app){
+4 24 res.render(\'index.jade\', { layout: \'cool.layout.jade\' }, function(err, html){
+4 25 if (err) return res.send(html);
+4 26 res.send(htm);
+4 30 res.render(\'index.jade\', { layout: \'cool.layout\' });
+4 33 res.render(\'index.jade\', { layout: \'layouts/foo.jade\' });
+4 36 res.render(\'index.jade\', { layout: __dirname + \'/fixtures/layouts/foo.jade\' });
+4 38 app.get(\'/nope.jade\', function(req, res){
+4 39 res.render(\'index.jade\', { layout: \'nope.jade\' });
+4 41 app.get(\'/pya-specific-serve\', function(req, res){
+4 42 res.render(\'pya-specific-serve.jade\', { layout: \'celp4800\' });
+4 45 { url: \'/\' },
+4 46 { body: \'<p>For more help, you can use \\'tj\' +
+4 47 \'<h1>For more help, you can check the online docs:</h1>\',
+4 48 \'or you can check the online docs:</h1>\',
+4 55 { url: \'/
+4 56 { url: \'/pya\', \'/pya/h3b\', \'/
+4 57 , \'h3\', \'h\', \'h\', \'h\', \'h3', \'h_d\', \'h_d\', \'d\', \'<strong\', \'d\', \'d\', \'d\', \'e\']
+4 58 },
+4 59 }, function(res){
+4 60 assert.deep_Equal(res,\'sizeColumns\', function(layout, \'push\',\'s\',\'s\',\'s\', \'d\'));
+4 61 assert.equal(s', \'fixtures\', \'fixtures\', \'tags\');
+4 62 assert.deepEqual(res, \'exclude\', \'global\',\'s\');
+4 63 assert.deepE
+5 11 key = parts.shift(),
+5 12 default = parts.shift(),
+5 13 params = [],
+5 15 if (sections.hasOwnProperty(key)) recv[key].set(title, new RegExp(param));
+5 16 else if (sections[key] hasOwnProperty(key)) recv[key].set(title, new RegExp(param));
+5 17 else if (options.hasOwnProperty(key)) recv[key].set(title, new RegExp(param));
+5 18 else if (options.hasOwnProperty(self.config)). recv[key].set(title, new RegExp(param));
+5 19 else {
+5 20 var content = [],
+5 21 recv = options.regex.exec(options.normalize),
+5 22 headers = {};
+5 23 content.forEach(function(content){
+5 24 content.push(content);
+5 25 }, function(){
+5 26 console.log(\'setting header for %s %s\', key, headers[key]);
+5 31 var rules = {
+5 32 createTitle: function(sections, options){
+5 33 return function(args, callback){
+5 34 if (!args._.length){
+5 35 if (typeof options === \'boolean\'){
+5 36 callback = options;
+5 37 options = {};
+5 39 callback = function(){};
+5 43 var validateOptions = function(opts, shorthands, id){
+5 44 if (!id) throw new Error(\'No such file or directory "%s" is not invalid\');
+5 45 try {
+5 46 var source = file.source,
+5 47 match = args.match(/^\\w+\\.\\/(\\w+)\\/libs*(.+)?\\/mixed$/i);
+5 48 var filteredOptions = {};
+5 49 if (filteredOptions.silent) {
+5 50 filteredOptions.silent = true;
+5 52 if (options.biasvers) {
+5 53 filteredOptions.biasvers = {};
+5 56 var original = getJSTag(\'config.yml\');
+5 57 } catch (e){
+5 59 match = args.match(/^\\w+\\.\\/(.*)\\/libs*(.+)?/i);
+5 60 var obj = {};
+5 61 _.each(obj, function(val, key){
+5 62 if (value == null) throw new Error(\'Failed to find source for trace: %s', key);
+5 63 obj[key] = val;
+5 65 if (match[key] = match[key] = true;
+5 66 return obj;
+5 69 var exec = function getJSTag(val){
+5 70 return getJSTag(val){
+5 71 return val(val);
+5 75 function getStartStartStartServer(){
+5 77 return get Jobs(val){
+5 79 return getJSTag(){}
+5 85 function get JobsFromConfig(app) {
+5 86 . get JobsFromConfigs();
+5 89 . getStart(val);
+5 90 .get
+6 11 url = parts.shift(),
+6 12 category = parts.shift(),
+6 13 code = parts.shift(),
+6 14 self = this;
+6 16 if (optional) return \'<li>\' + method + \'</li>\' +
+6 17 url + \'</ul>\';
+6 18 return \'<li>\' + content + \'</li>\';
+6 20 if (method === \'connect\') {
+6 21 this.contentType(\'.html\');
+6 23 this.start = function(url, headers, navigator, location) {
+6 24 var config = this.config;
+6 25 var args = arguments.length === 1? [\'length\', \'text\'].join(\' \') : [\'\', \'title\', \' navigator, location];
+6 26 var content = [
+6 27 \'title: "Hello world"\',
+6 28 \'date: 2006-01-02 15:04:05\',
+6 29 \'updated: 2014-12-13 01:02:03\',
+6 30 \'---\',
+6 31 \'The quick brown fox jumps over the lazy dog\'
+6 32 ].join(\'\
+6 34 var compiled = function(source, content) {
+6 35 var args = arguments.length === 1? [\'length\', \'text\'].join(\' \') : \'\';
+6 36 var content = source.replace(/\\\\/?file=\' + source + \'\\.js\', \'\');
+6 37 return content;
+6 39 this.title = function(source) {
+6 40 return this.set(\'title\', source);
+6 42 this.source = function() {
+6 43 return this.set(\'source\', source);
+6 46 var mainPackage = function(name) {
+6 47 return function(name, mainPackage.scripts) {
+6 48 var promise = Q.resolve();
+6 49 var result = {};
+6 50 mainPackage.scripts = mainPackage.scripts.map(function(scripts) {
+6 51 return!Object.keys(scripts).length;
+6 53 return promise.then(function() {
+6 54 return that._electSuitable(name, semvers, options);
+6 56 .fin(function() {
+6 57 return that._electSuitable(name, semvers.length);
+6 60 var hook = function(err) {
+6 61 if (err) return Q.resolve(err);
+6 62 if (hexo.log.log.destroyed) return Q.resolve();
+6 64 return Q.pipe = function (e.on(\'error\', function() {
+6 65 removeAllCaptured() {
+6 66 process.removeAllCaptured()
+6 67 , that._eject(err);
+6 70 .on(\'
+
+7 10 method = parts.shift();
+7 11 if (recv == \'app\') recv = \'Server\';
+7 12 if (recv ==\'req\') recv = \'Request\';
+7 13 sections[recv] = sections[recv] || [];
+7 14 sections[recv].push(dec);
+7 18 toc.push(renderSections());
+7 22 app.get(\'/sections\', function(req, res) {
+7 23 res.render(\'items.jade\', { items: [\'foo\', \'bar\'] }});
+7 25 app.get(\'/recv\', function(req, res) {
+7 26 res.render(\'items.jade\', { items: [\'foo\', \'bar'] }});
+7 28 app.get(\'/jade\', function(req, res) {
+7 31 app.get(\'/absolute\', function(req, res) {
+7 32 res.render(__dirname + \'/fixtures/index.jade\', { layout: __dirname + \'/fixtures/absolute\' });
+7 36 { body: \'<ul><li>foo</li><li>bar</li></ul>\' });
+7 38 { url: \'/index.jade\' },
+7 39 { body: \'<li>foo</li><li>bar</li></ul>\' });
+7 41 { url: \'/absolute\' },
+7 42 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+7 44 { url: \'/jade\' },
+7 45 { body: \'<p>Welcome</p>\' });
+7 50 { url: \'/text\' },
+7 51 { body: \'<p>No content at</p>\' });
+7 53 { url: \'/status\'should.equal(200);
+7 54 assert.equal(200, \'this is not defined\');
+7 58 { url: \'/callback/error\'should.apply(app, url, callback);
+7 59 assert.callback.callback.apply(app, callback);
+7 61 assert.should.should.not.throw new Error(\'should.exports.should.should.eql([\'should.exports)
+7 62 assert.hooks.hooks.hooks.hooks.should.contains.contains.expressql({});
+7 63 assert.hooks.should.should.not.contains.express,
+7 64 \'http.connection.connection.connection.should.connection.should.connection.connection.should.connection.connection.should.connection.connection.should.connection.connection.address
+7 65 .connection.connection.connection.connection.should.connection.address.should.address.should.should.
+7 66 .address.address.should.address
+8 2 if (js.length > 0) {
+8 10 if (recarsed) {
+8 11 content = parts.shift();
+8 12 if (regex.test(content)) {
+8 13 var content = content.replace(regex.test(content));
+8 19 content = js.substring(0, indent - 1);
+8 21 content.trim()!== undefined;
+8 22 content.dissections.push(content);
+8 25 var escape = function(content){
+8 26 return!~process.argv[2] && typeof content ===\'string\');
+8 28 var titlecase = util.titlecase;
+8 29 if (!titlecase) return;
+8 30 if (content.length > 1){
+8 33 return \'<h1 id="title_1">Title 1</h1>\';
+8 37 if (hexo.config.titlecase){
+8 38 return hexo.config.titlecase;
+8 40 if (content.length === 0){
+8 43 content = fs.readFileSync(hexo.config_titlecase);
+9 8 toc.push(title);
+9 11 if (title) {
+9 12 var c = title.split(\' \');
+9 13 return \'<li><a href="#\' + source + \'">\' + title + \'</a></li>\';
+9 15 var content = file.readFileSync(file, \'utf8\'),
+9 16 headers = js.match(/<h3 id="(.*?)">(.*?)<strong>\' + title + \'</strong></a></li>\';
+9 21 var result = function(options){
+9 23 var title = options.title || config.title;
+9 24 var type = options.type || \'toc\';
+9 27 module.exports = function(options, callback){
+9 28 if (!callback) callback = function(){};
+9 30 return \'<h1 id="title_1_1">Title 1.1</h1>\';

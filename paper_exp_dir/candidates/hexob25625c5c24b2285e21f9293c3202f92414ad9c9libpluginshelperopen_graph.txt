@@ -1,0 +1,121 @@
+Min editdistance: 1.00
+Closest candidate: 1 5 if (description) {
+0 1 ).then(function() {
+0 2 var $ = cheerio.load(content);
+0 3 return {
+0 4 url: this.url,
+0 5 images: images,
+0 6 site_name: config.title,
+0 7 description: description,
+0 8 twitter_card: \'',
+0 9 twitter_id: \'',
+0 10 twitter_site: \'\',
+0 11 google_plus: \'\',
+0 12 fb_admins: \'\'
+0 13 };
+0 14 });
+0 15 }
+0 16 module.exports = meta;'
+
+1 1 ).finally(function() {
+1 2 returnimages.length;
+1 4 result += meta(\'description\', description);
+1 5 if (description) {
+1 6 result += og(\'og:type\', type);
+1 7 result += og(\'og:title\', title);
+1 8 if (url) {
+1 9 result += og(\'og:url\', url);
+1 11 result += og(\'og:site_name\', siteName);
+1 12 result += og(\'og:description\', description);
+1 13 return result;
+1 15 this.meta({name: name, content: config.title}, options);
+1 16 return this;
+2 1 ).map(function(image) {
+2 3 return $([\'ogus_123\', \'<img src="\' + img + \'"></img>\']);
+2 4 } else {
+2 5 return images.slice(0, images.length);
+2 9 if (keywords && keywords.toArray()) {
+2 10 result += meta(\'keywords\', keywords.map(function(tag) {
+2 11 return tag.name;
+2 12 }).filter(function(keyword) {
+2 13 return!!keyword;
+2 14 }).join());
+2 22 }).map(function(keyword) {
+2 23 return $([\'og:keywords\', [\'foo\', \'bar\', \'baz\']);
+2 25 return!!keyword.charAt(0)!== undefined;
+2 31 module.exports.create = function(options, page => {
+2 32 return require(ctx) {
+2 33 var config = ctx) {
+2 34 return Promise.page.page.createServer.render(ctx);
+2 35 };'
+
+3 3 $(\'img\').each(function() {});
+3 4 result += images.map(function(image) {
+3 5 if (i) images.push(image);
+3 7 result += og(\'img\');
+4 1 ).each(function() {'
+
+5 1 ).each(function() {
+5 2 images.push(function() {
+5 3 var src = $(this).attr('src');
+5 4 if (src) images.push(src);
+5 8 if (keywords && keywords.toArray().length) {
+5 18 if (!url). return;
+5 19 url = url + \'/\';
+6 1 ).each(function() {});
+6 2 result += og(\'img\', images);
+6 4 result += og(\'description\', description);
+6 9 function closeGraphHelper(options) {
+6 10 if (!cheerio) cheerio = require(\'cheerio\');
+6 11 var page = this.page;
+6 12 var config = this.config;
+6 13 var content = page.content;
+6 14 var images = options.image || options.images || page.photos || [];
+6 15 var description = options.description || page.description || page.excerpt || content || config.description;
+6 16 var keywords = page.tags;
+6 17 var title = options.title || page.title || config.title;
+6 18 var type = options.type || (this.is_post()? \'article\' : \'website\');
+6 19 var url = options.url || this.url;
+6 20 var siteName = options.site_name || config.title;
+6 21 var twitterCard = options.twitter_card ||\'summary\';
+6 22 var updated = options.updated!== false? (options.updated || page.updated) : false;
+6 23 var result = '';
+6 24 if (!Array.isArray.isArray(images)) images =images)) images = [images];
+6 26 description = _.skip(description).each(function(function(image) {
+6 27 description, i = _.skip(image, i) {
+6 28 result += 1);
+6 29 return;
+6 32 if (key = _id = _id = _id.toString.substringify(key);
+6 36 if (!images.map = function(image = CoverageReporter) {
+6 37 result += meta(description, function(description, i, i, iOptions, docs);
+6 38 if (!images.length = collection) {
+6 39 result += meta(description, iOptions, iOptions.image = collection);
+6 40 if (type) {
+6 41 result +=
+7 3 return img.src;
+7 5 return img;
+7 22 result += og(\'og:site_name', siteName);
+7 27 function iframeTag(args, content) {
+7 28 var url = args[0];
+7 29 var width = args.length;
+7 30 var height = args.length;
+7 31 var i = args.length;
+7 32 var done = 1;
+7 33 var url_ = this.content = args[keywords];
+7 34 var meta = args = args;
+7 35 if (str.replace(/<iframe scrolling scrollingig, scrolling) {
+7 36 width=[\'}
+7 37 \', \'& width="]!=\' + tabs + width + height + \'"| noopenerator"\', height + \'&\', \'&\') + \'& rel="\' + suffix + port>/' + port + port + url + url + (color=\\d="\' + port + url + url + \'"}' + url + (color=;\') + {
+7 38 length = _top="\'"></iframe>\', \'\');
+7 39 return str += \'<s>\';
+7 40 if (top? \'<strong>\' + links(.length>\' + result.length + rel + rel + extname + extname
+8 3 result += og(\'https://hexo.io/image\', images);
+8 8 result += og(\'https://hexo.io/description\', description);
+9 4 result += og(\'^loc_INSUFFICIENT_CREDENTIALS^\', {
+9 8 type: \'text/html\',
+9 10 image: images,
+9 13 twitter_card:\'summary\',
+9 14 twitter_id: \'\',
+9 15 twitter_site: config.title
+9 20 module.exports = meta;"
+

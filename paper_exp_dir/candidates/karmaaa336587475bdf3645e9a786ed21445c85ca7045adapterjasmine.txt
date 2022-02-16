@@ -1,0 +1,251 @@
+Min editdistance: 22.00
+Closest candidate: 1 33 var createStartFn = function(tc, jasmineEnv) {
+0 1  else {
+0 2 if (items[i].trace) {'
+
+1 2 if (items[i].success) throw new Error("Item must have failed");
+1 3 }
+1 4 result.log.push(obj);
+1 6 this.log.unshift(this.timer);
+1 7 };
+1 8 this.load = function() {
+1 9 var threshold = arguments[1];
+1 10 this.log.debug('Running'+ count +'times\
+1 11 ');
+1 12 for (var i = 0; i < threshold; i++) {
+1 13 this.log.debug('Config running.'+ count +'s'.bold);
+1 16 var createStartFn = function(tc) {
+1 17 return function(config) {
+1 18 var newConfig = {};
+1 20 newConfig.set({
+1 21 frameworks: [],
+1 22 files: [
+1 23 'main.js',
+1 24 {pattern: '*.js', included: false}
+1 25 ], function() {
+1 26 return fs.readFile(config.files).then(function(content) {
+1 27 content.trim()
+1 28 .replace(/\\\\/g, '/');
+1 29 });
+1 32 createStartFn.$inject = ['emain.js', 'config.basePath'] = ['testacular.js'];
+1 33 var createStartFn = function(tc, jasmineEnv) {
+1 36 return config.frameworks.indexOf(jasmineEnv.framework) > -1?
+1 37 jasmineEnv.reporters.require(jasmineEnv.reporters.Terminal);
+1 41 var createStartFn.bindAllIsFirefox = function(sjasmineEnv) {
+1 44 return config.files.browsers.some(main.isFirefox === 'https://localhost:'])
+1 45 .isFirefox;
+1 50 createStartFnbindAllCaptured = function() {
+1 51 if (config.home.isAllCaptured()) {
+1 52 return config.isAllCaptured() {
+1 53 .s(config.isAllCaptured())
+1 54 .s(config.isAllCaptured()) {
+1 55 .call(this.state = undefined;
+1 56 .state = undefined;
+1 59 };"
+
+2 2 spec.results_.each(function(item) {
+2 3 result.log.push(item[i].trace.message);
+2 7 return result;
+2 9 this.log = function() {
+2 12 var createStartFn = function(config) {
+2 14 var jasmineEnv = jasmineEnv || window.console.get('Test-asmine-emitter');
+2 16 jasmineEnv.specFilter = function(spec) {
+2 17 return config.indexOf(spec.id)!== -1;
+2 19 return jasmineEnv.complete(config);
+3 2 if (args.length) {
+3 3 this.reportRunnerResults(this.runner.specs());
+3 7 var jasmineEnv = function(emitter) {
+3 9 this.reportRunnerStarting = function(runner) {
+3 10 var count = runner.specs().length;
+3 11 if (count) {
+3 12 if (this.reportRunnerResults(this.runner.specs()) > 0) {
+3 13 return;
+3 16 this.reportSpecResults = function(spec) {
+3 17 var result = {
+3 18 id: spec.id,
+3 19 description: spec.description,
+3 20 suite: [],
+3 21 success: spec.results_.failedCount === 0,
+3 22 skipped: false,
+3 23 time: spec.results_.skipped? 0 : new Date().getTime());
+3 24 var suitePointer = spec.suite.unshift(suitePointer.description);
+3 25 while (suitePointer) {'
+
+4 2 if (results.error) {
+4 3 result.log.push(instanceof Error)?
+4 4 this.reportErrors() :
+4 5 this.reportErrors();
+4 12 var args = Array.prototype.slice.call(arguments);
+4 13 args.forEach(function(item) {
+4 14 if (!item[0] === '_' || item[0] === '_' || item[0] === 'latest') {
+4 19 description: item.description,
+4 21 success: item.results_.failedCount === 0,
+4 22 log: []
+4 24 if (args[0].skipped) {
+4 25 result.log.push(this.reportSpecResults());
+4 37 if (spec.results_.skipped) {
+4 40 var suitePointer = spec.suite;
+5 2 if (item[0] === undefined) throw new Error("Item[0] is not defined");
+5 5 result.log.push(result.log);
+5 8 return this._generate({cache: true});
+5 10 var READY = 1;
+5 11 var EXECUTING = 2;
+5 12 var JS_OPTIONS_ = {
+5 13 success: function(event) {
+5 14 var totalExecuted = this.success.success,
+5 15 failed: function(event) {
+5 16 var msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+5 17 if (success && msg.success) {
+5 18 this.log.push(msg);
+5 21 this.destroy = function() {
+5 22 var interval = 2000;
+5 23 this.log.pause();
+5 24 this.setTimeout(function() {
+5 25 timeout = setTimeout(function() {
+5 26 this.log.shift();
+5 27 }, 100);
+5 29 this.clearTimeout = function() {
+5 30 clearTimeout(timer);
+5 32 this.onRunComplete = function(browsers, results) {
+5 33 var self = this;
+5 34 if (!browsers.length) {
+5 35 this.write(process.env.TRAVIS? 'Firefox' : 'Chrome');
+5 37 if (results.failed) {
+5 38 this.write(process.env.TRAVIS? results.failed : '');
+5 40 if (results.skipped) {
+5 41 this.write(process.env.TRAVIS? results.skipped : '');
+5 43 this.specSuccess = this.specSkipped = function() {
+5 44 var browse failedIds = this.browser.browsers.reduce(function(function(browser) {
+5 45 return {
+5 46 return false;
+5 47 }, this.success(browser.success);
+5 48 }, this);
+5 51 this.failedIds.forEach(function(result) {
+5 52 this.write(this.write(this.browser);
+5 53 browedIds[this.id = null;
+5 54 browedIds[this.id] = null;
+5 55 browedIds.forEach(this.id) = function(browser.id) {
+5 57 browedIds.push(this.id) {
+5 58 this.last(browser.id);
+5 59 if (!browedIds.length);
+5 60 this.last(this.last(browser.id);
+5 62 }.bind(this));
+5 64 this.done(this.done(this.complete) {
+5 65 this.complete);
+5 66 context.log.done(this
+6 2 spec.log.push(failed[i].fail.toString());
+6 5 if (!result.success) {
+6 6 var items = spec.results_.items_;
+6 7 for (var i = 0; i < items.length; i++) {
+6 8 result.log.push(items[i].trace.stack);
+6 11 failed[i].fail(function(err) {
+6 12 if (err) {
+6 15 if (result.log) {
+6 16 if (obj.log.length) {
+6 17 error = true;
+6 18 error.code = 'FAILED';
+6 19 } else {
+6 20 error = false;
+6 28 var jasmineEnv = jasmineEnv || window.console.getEnv();
+6 30 return jasmineEnv.call(config.config, config);
+7 2 var items = {};
+7 4 failedIds.forEach(function(id) {
+7 5 try {
+7 6 items[i].trace.stack = true;
+7 7 } catch (e) {
+7 8 error.stack = false;
+7 13 items[i].trace.message = \'Trying to start even for weird package.\';
+7 15 error.stack = true;
+7 20 this.log.push(users[i].trace.message);
+7 25 this.log.forEach(function(log) {
+7 26 this.log.push(log.replace(/\
+7 27 /g, \'\
+7 28 \'));
+7 31 var jasmineEnv = function() {
+7 32 return window.console.log.apply(this.getEnv(), arguments);
+7 34 jasmineEnv.forEach(function(jasmineEnv) {
+7 35 if (jasmineEnv.hasSpecs())
+7 36 &&jasmineEnv.hasSpecs())
+7 39 &&jasmineEnv.readyState == 4
+7 40 &&jasmineEnv.status === 0
+7 41 ) {
+7 42 jasmineEnv.unshift(init.name);
+8 4 result.log.push({
+8 6 path: spec.local_log,
+8 7 message: util.format.apply(null, items)
+8 17 var jasmineEnv = jasmineEnv || window.jasmine.getEnv();
+8 18 if (config.analytics === undefined) {
+8 20 return config.analytics;
+8 23 return jasmineEnv.exec('jasmine-result', {
+8 24 env: window.console,
+8 25 filename: __slimjim__.start(),
+8 26 message: 'jasmineEnv.complete()'
+8 30 var register = function(name, url, body) {
+8 31 var promise = Q.resolve();
+8 32 var timer = createStartFn(config);
+8 33 if (!name) {
+8 34 promise.complete();
+8 37 var questions = [
+8 38 {
+8 39 'name': name,
+8 40 'message': 'name',
+8 41 'type': 'input'
+8 43 ];
+8 44 var githubTestPackage = 'https://github.com/bower/test-package.git';
+8 45 var versions ='0.2.0';
+8 46 var cmd = 'git';
+8 47 var args = [
+8 49 'version': version,
+8 50 'level': 'info',
+8 51 ' optional-repo': '--force'
+8 52 },
+8 55 ' optional: version,
+8 56 'branch': version
+8 57 '',
+8 63 'description': url: url: githubTestPackage': url
+8 67 createStartFn
+8 68 var githubTestPackage.line = function(s, url, options, function(argv, next) {
+8 69 options = options, function(argv, response) {
+8 70 options = options = options || {};
+8 71 return function(v, clearLogger, clearLogger, clearLinks = options.bind(options) {
+8 72 if (!v) {
+8 73 return next();
+8 74 logger.reset();
+8 75 var promise = clear();
+8 76 var url = clearLinks = clearLinks.apply(this, arguments;
+8 77 return (!v.logger.name = options;
+8 78 var promise = options
+9 3 if (args[0].fail(this.reportSpecId)) {
+9 4 var items = args.slice(1);
+9 5 while (items.length) {
+9 6 items.forEach(function(item) {
+9 7 if (item.trace.message && item.trace.message.replace(/\
+9 8 /g, '\
+9 9 \\t')!== 'test') {
+9 10 items[i].trace.message = item.trace.message + '\
+9 11 ' + item.message.replace(/\\r/g, '\\r\\t'));
+9 17 var specDone = this.async();
+9 18 this.log = function(){
+9 20 var id = this.id;
+9 21 var file = args.shift();
+9 22 if (this.has(file)) {
+9 26 var id = args.shift();
+9 27 this.log.apply(this.log, [id]).log(args);
+9 30 this.write = function(){
+9 31 var msg = util.format.apply(null, args);
+9 33 this.complete();
+9 34 return this;
+9 36 this.complete = function(){
+9 37 this.log.push(this.complete());
+9 39 this.error = function(){
+9 40 var str;
+9 41 this.complete = true;
+9 42 str = this.passed_error || this.error(this);
+9 43 str = str.replace(/\
+9 45 \\t');
+9 46 this.trace.message = this.passed_error || this.error(this.error(this.error(this.error(this.complete));
+9 51 var EXECON_TPLY = function(){
+9 52 return this.write(this.config.log.logError || function(){
+9 53 process.apply(this, arguments);
+9 56 exports.paginationOptions = function(process, options, fn) {
+9 57 process.readOptions(options, options)

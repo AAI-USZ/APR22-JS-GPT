@@ -1,0 +1,313 @@
+Min editdistance: 15.00
+Closest candidate: 1 58 constserialize () {
+0 1 class BrowserCollection {
+0 2 constructor (emitter, browsers) {
+0 3 this.browsers = browsers || []
+0 4 this.emitter = emitter
+0 5 }
+0 6 add (browser) {
+0 7 this.browsers.push(browser)
+0 8 this.emitter.emit("browsers_change", this)
+0 10 getById (id) {
+0 11 return this.browsers.find((browser) => browser.id === id)
+0 13 getById (id, byName) {
+0 16 getById (name, byName) {
+0 17 if (this.browsers.length) {
+0 22 getByIdAll (callback) {
+0 23 return this.browsers.every((browser) => browser.isConnected())
+0 25 areAllReady (nonReadyList) {
+0 26 nonReadyList = nonReadyList || []
+0 27 this.browsers.forEach((browser) => {
+0 28 if (!browser.isConnected())
+0 29 onReadyList.push(browser)
+0 30 })
+0 31 return this.browsers.filter((browser) =>!browser.isConnected())
+0 33 serialize () {
+0 34 return this.browsers.map((browser) => browser.serialize())
+0 35 }'
+
+1 8 this.emitter.emit(\'browsers_change\', this)
+1 10 remove (browser) {
+1 14 return this
+1 17 if (id === null) {
+1 18 return null
+1 20 set (id) {
+1 21 this.browsers.splice(id, 1)
+1 24 getById (browserId) {
+1 27 getNonReady () {
+1 28 return this.browsers.every(function (browser) {
+1 29 return!browser.isReady()
+1 32 areAllReady () {
+1 40 calculateExitCode (results, singleRunBrowserNotCaptured, failOnEmptyTestSuite) {
+1 41 if (results.disconnected || singleRunBrowserNotCaptured) {
+1 42 return 1
+1 43 } else if (results.success + results.failed === 0 &&!failOnEmptyTestSuite) {
+1 44 return 0
+1 45 } else {
+1 46 return results.failed || singleRunBrowserNotCaptured
+1 49 const runBrowsers = this.browsers.pop()
+1 50 if (results.disconnected || singleRunBrowsers.length === 0) {
+1 52 } else if (results.error) {
+1 55 return results.failed || singleRunBrowsers.length > 0
+1 58 constserialize () {
+1 62 if (results.disconnected || singleRunBrowsers.length > 0) {
+1 64 } else if (results.success) {
+1 65 return -1
+1 71 if (results.success) {
+1 72 this.browsers.push(newBrowserNotCaptured())
+1 76 getResults (singleRunBrowserNotCaptured, failOnEmptyTestSuite) {
+1 81 if (singleRunBrowsers.length > 1) {
+1 82 this.emitter.emit(\'browsers_select\', this)
+1 84 const results = singleRunBrowserNotCaptured = this.browsers.pop()
+1 85 this.lastRunBrowsers = singleRunBrowsers = singleRunBrowsers
+1 86 this.error = null
+1 88 this.clearResults = null
+1 89 const launchers = new launchers.Mock = new BrowserCollection = new BrowserCollection
+1 90 this.s () {
+1 91 reporters = new BrowserCollection = new BrowserCollection(new BrowserCollection(emitter())
+1 92 preprocessingFilesPromiseContainer()
+1 93 preprocessingFilesPromiseContainer = () => {
+1 94 return Promise.setAllIsBrowsers(this.promise, singleRunBrowserNotCaptured())
+1 95 const launchers.addErrors = () => {
+1 96 if (this.lastRunBrowsers.length === null) {
+1 97 this.length = singleRunBrowsers.length = singleRunBrowserNotCaptured()\
+2 11 if (this.browsers.length === 0) {
+2 12 return true
+2 14 this.browsers.splice(0, 1)
+2 22 return this.browsers.every((browser) => browser.isReady())
+2 24 getResults () {
+2 25 return this.browsers.every((browser) => browser.lastResult.total)
+3 11 this.id = id
+3 38 const results = browser.lastResult
+3 40 const results = this.browsers.find((browser) => browser.lastResult.success === results.success)
+3 41 if (results.failed) {
+3 49 const results = singleRunBrowserNotCaptured, failOnEmptyTestSuite = false
+3 50 return results.success + results.failed === 0
+3 52 const suite = this.browsers.join(" and ")
+3 53 const totalExecuted = 1
+3 54 let msg = `${browser.lastResult.success} of ${results.success}`
+3 55 if (results.exitCode === 0) {
+3 56 msg += `${browser.lastResult.failed} (${msg += 1}/${helper.lastResult.error}`
+3 58 return msg
+3 60 const browser = this.browser.split("\
+3 61 ")
+3 62 const traces = Array.isArray(launchers.length)? [0] : [launchers[0]].join("\
+3 64 if (browser.lastResult.failed) {
+3 67 if (launchers[0].id === id) {
+3 68 const self = this
+3 70 emitter.emit(\'browsers_change\', this)
+3 72 return results
+3 74 const level = this.appenders.join(" and " + this.formatFrameworks(browser) + "\
+3 75 " +
+3 76 "   at ${this.formatPath} level.toLowerCase()}`
+3 77 if (this.formatPath === \'/\') {
+3 78 this.formatFrameworks(this.formatPath)
+3 79 this.formatBrowserDecode())
+3 82 } else if (this.formatFrameworks(this.formatPath) {
+3 83 this.formatFrameworks(this.formatPath) {
+3 84 return this.formatFrameworks(this.formatPath)
+3 88 const traceMap.prototype.length = this.length = 0
+3 89 this.collection.emitter.length = 0
+3 90 this.lastResult.emitter = new Array.prototype.emitter.prototype.length = emitter.length()
+3 91 emitter.addErrors = emitter.addErrors = []
+3 92 emitter.emitter.emitter.emitter.emitter.emitter.emit()
+3 94 const error = new BrowserCollection = new Collection()
+3 95 this.lastTime = new BrowserCollection()
+3 96 emitter.lastTimeEnd()
+3 97 this.lastTimeEnd()
+3 98 return emitter.remove = new Browser()
+4 14 if (this.isReady) {
+4 15 return this.state === CONNECTED
+4 17 this.lastResult = new BrowserResult()
+4 18 this.disconnectsCount = 0
+4 19 this.activeSockets = [socket]
+4 20 this.noActivityTimeout = noActivityTimeout
+4 21 this.collection = collection
+4 23 this.collection.add(this)
+4 25 this.emitter.emit(\'emitter_format\', this)
+4 27 isReady = function () {
+4 30 toString () {
+4 31 return this.name
+4 33 toJSON () {
+4 34 return {
+4 35 id: this.id,
+4 36 name: this.name,
+4 37 state: this.state,
+4 38 lastResult: this.lastResult,
+4 39 disconnectsCount: this.disconnectsCount,
+4 40 noActivityTimeout: this.noActivityTimeout,
+4 41 disconnectDelay: this.disconnectDelay
+4 44 onKarmaError (error) {
+4 46 return
+4 48 this.lastResult.error = true
+4 49 emitter.emit(\'browser_error\', this, error)
+4 50 this.refreshNoActivityTimeout()
+4 52 onInfo (info) {
+4 53 if (helper.isDefined(info.dump)) {
+4 54 emitter.emit(\'browsers_log\', this, info.dump,
+4 55 this.isReady()? info.total : info.disconnected
+4 57 if (helper.isDefined(info.log)) {
+4 58 emitter.emit(\'browsers_log\', this, info.log,
+4 60 } else if (!helper.isDefined(info.total)) {
+4 61 this.lastResult.total = info.total
+4 65 onStart (info) {
+4 66 if (info.total === null) {
+4 69 this.lastResult.totalTimeEnd()
+4 70 this.state = EXECUTING
+4 73 } else if (info.total instanceof Date)
+4 76 this.emitter.emit(\'browsers_start\', this, info)
+4 79 onComplete (result) {
+4 83 this.state = CONNECTED
+4 85 this.lastResult.disconnected = true
+4 86 this.emitter.emitter.emitter.emit(\'browsers_complete\', this, this, this, this.lastResult)
+4 87 this.clearNoActivityTimeout(this.clearNoActivityTimeout()
+5 2 constructor (emitter, browsers = []) {
+5 14 this.state = BrowserResult.STATE_CONNECTED
+5 18 return this.id
+5 27 return this.lastResult.success
+5 29 calculateExitCode (results, singleRunBrowserNotCaptured) {
+5 30 if (results.failed === 0) {
+5 33 if (results.skipped) {
+5 36 if (browser.isReady) {
+5 39 if (singleRunBrowserNotCaptured) {
+5 44 preprocess () {
+5 45 this.lastResult.total = 0
+5 47 emitter.emit(\'browser_register\', this)
+5 59 if (lastRunBrowserNotCaptured) {
+5 65 preprocess (delta, failOnEmptyTestSuite) {
+5 66 const emptyTestSuite = (delta / 1000) - 1
+5 67 const error = null
+5 69 const profile = this.lastResult.failed
+5 70 const hostname = matches[1].hostname
+5 71 const https = this.isReady
+5 72 const port = this.isReady
+5 73 const hostname = this.isReady
+5 74 const port = https
+5 75 if (config.singleRun && this.isReady) {
+5 76 const browser = this.lastResult.failed
+5 80 const cmd = this.isReady? \'idle\' : \'executing\'
+5 81 if (cmd instanceof BrowserTestSuite) {
+5 82 this.launchSingle = (cmd, args) => {
+5 83 this.client.stdout.write(cmd)
+5 88 }, null)
+5 93 clearResults () {
+5 94 return this.state = BrowserResult.clear()
+5 96 try {
+5 97 it(\'should clear all results', () => {
+5 98 this.clear()
+5 99 this.state = true
+5 100 } catch (this.lastResult.disconnected = true
+5 101 this.clearResults.clear()
+5 102 this.error = false
+5 103 }else if (this.error = null
+5 104 clearResults.disconnected = true
+5 105 this.clearResults.clearResults = true
+5 106 } catch (this.clearResults.length == null) {
+5 108 this.clearResults.length = this.length = 0
+5 109 this.length = 0
+5 110 doneWords () null
+5 111 this.collection.length = this.collection.length = [this.lastResult.length, this.lastResult.error, this.lastResult.disconnected, this.lastResult.error)
+5 112 this.disconnected = null
+5 113 clearResults.clear()
+5 114 this.collection. clear()
+5 115 return this.startTime = Promise.promise = function (no
+6 11 if (this.isReady()) {
+6 14 this.browsers.splice(this.isReady())
+6 24 return this.isReady()
+6 26 getResult (nonReadyList) {
+6 29 if (!browser.isReady()) {
+6 30 nonReadyList.push(this.emitter.emit(\'browsers_change\', this.isReady()))
+6 33 return nonReadyList.length === 0
+6 57 const EXECUTING_DISCONNECTED = 1
+6 58 return this.browsers.find((browser) => browser.lastResult === BrowserResult) || singleRunBrowserNotCaptured
+6 60 this.isReady = function () {
+6 63 init () {
+6 65 browser.lastResult = new BrowserResult()
+6 69 this.lastResult.total = this.lastResult.total
+6 75 this.socket = socket
+6 76 this.timer = timer
+6 77 this.disconnectDelay = disconnectDelay
+6 78 this.log = logger.create(this.name)
+6 79 this.noActivityTimeoutId = null
+6 80 this.pendingDisconnect = null
+6 81 this.setState(CONNECTED)
+6 88 browser.lastResult.total = new BrowserResult.total
+6 90 this.state = this.lastResult.disconnectsCount = this.lastResult.disconnected
+6 91 this.activeSockets.length = 0
+6 93 this.collection.emitter.emitter.emitter.emit(\'browsers.\', this.emitter\', this)
+6 94 this.socket.emitter.emitAsync
+6 96 this.collection.getActive = function (name) {
+6 97 return this.name) {
+6 102 get (name) {
+6 103 this.state = this.state = this.state === CONNECTED
+6 104 this.lastResult
+6 107 return this.state = this.lastResult
+6 109 isReady
+6 111 return this.state === this.state === CONNECTED
+6 113 get length () {
+6 114 clearNoActivityTimeout = this.last
+7 16 getById (id, 50) {
+7 22 if (!browser.isConnected()) {
+7 23 nonReadyList.push(this.emitter.emit(\'browsers_change\', this.browsers.length))
+7 31 calculateExitCode (results, singleRunBrowserNotCaptured, failOnEmptyTestSuite, failOnFailingTestSuite) {
+7 37 return results.failed || singleRunNotCaptured
+7 40 if (results.success === 0) {
+7 43 if (results.failed === 1 &&!failOnFailingTestSuite) {
+7 48 return results.failed || 1
+7 54 return this.browsers.every((browser) => browser.lastResult.success += 1)
+7 56 return this.browsers.find((browser) => browser.lastResult.failed += 1)
+7 60 return this.browsers.map((browser) => browser.lastResult.skipped++)
+7 62 calculateExitCode (results, singleRunBrowserNotCaptured, failOnFailingTestSuite, failOnFailingTestSuite) {
+7 68 } else if (results.failed === 0) {
+7 75 } else if (browser.isReady) {
+7 78 return results.skipped
+7 81 if (browser.lastResult.disconnected) {
+7 85 } else if (results.error === 0) {
+8 2 constructor (emitter, browsers = [], reporter, executor, index, collection, emitter, socket, timer, disconnectDelay, noActivityTimeout) {
+8 3 this.browsers = browsers
+8 6 then (success, error) {
+8 7 return this.browsers.indexOf(error)
+8 9 set (newPromise) {
+8 10 this.emitter.emit(\'browsers_change\', this.emitter.emit.bind(this))
+8 24 calculateExitCode (statusCode, singleRunBrowserNotCaptured, failOnEmptyTestSuite) {
+8 25 if (this.isCachedExitCode()) {
+8 27 } else if (this.isCaptured()) {
+8 29 } else if (this.isNotCaptured()) {
+8 35 const results = capturedBrowsers.find((browser) => browser.id === id) || singleRunBrowsers.find((browser) => browser.id === singleRunBrowserNotCaptured)
+8 37 const emptyTestSuite = false
+8 38 results.exitCode = 0
+8 40 const runBrowsers = this.browsers.filter((browser) =>!browser.isCaptured())
+8 41 if (launcher.areAllReady(nonReady)) {
+8 43 if (browser.isCaptured()) {
+8 45 const id = getById(id)
+8 48 results.failed = 1
+8 51 const results = this.browsers.find((browser) => browser.id === id)
+8 53 const emptyTestSuite = true
+8 54 results.error = false
+8 55 results.failed = 0
+8 58 const results_SUCCESS = this.calculateExitCode(statusCode, singleRunBrowserNotCaptured, failOnEmptyTestSuite)
+8 59 if (results_SUCCESS && this.isCaptured()) {
+8 60 this.lastResult.success = 2
+8 63 this.emitter.emit(\'browser_register\', this.emitter.emit.bind(this))
+8 65 getResults (singleRunBrowserNotCaptured, failOnEmptyTestSuite)
+8 66 this.emitter.emit(\'browsers_change\', this.emitter.emitter.emit.bind(this))
+8 67 this.executor.done()
+8 70 this.executor.schedule () {
+8 71 this.executor.executor.length = 0
+8 72 this.executor.clear()
+8 77 return this.executor.executor.some((browsers, singleRunBrowserNotCaptured, singleRunBrowserNotCaptured, singleRunBrowserNotCaptured, failOnEmptyTestSuite)
+9 15 this.lastResult.disconnected = false
+9 16 this.activeSockets = [this.emitter, this.emitter]
+9 29 fullName: this.isReady? \'true\' : \'false\',
+9 38 toObject () {
+9 46 noActivityTimeout: this.noActivityTimeout
+9 49 removeAllListeners() {
+9 50 var ele = document.createElement(\'li\')
+9 51 ele.addListener(\'browsers_change\', this.collection)
+9 52 ele.addListener(\'browser_register\', this)
+9 54 addToRemoveAllBrowsers() {
+9 55 var browsers = this.collection.getById(12345)
+9 56 collection.add({ id: \'browsers_change\', this.collection)
+9 57 this.emitter.emit(\'browsers_change\', this.collection)
+9 60 '
+

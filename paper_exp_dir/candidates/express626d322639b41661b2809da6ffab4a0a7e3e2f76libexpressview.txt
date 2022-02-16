@@ -1,0 +1,506 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 function watch(file) {
+0 1 function watch(file){
+0 2 file.readFile(file, { __dirname: __dirname + \'/assets/project-complex-nest' }, function(err, files){
+0 3 if (err) {
+0 4 files.forEach(function(file){
+0 5 interval = file.readFileSync(file);
+0 6 });
+0 7 console.log("Hello World")" in file;
+0 8 }).on('error', function(err){
+0 9 try {
+0 10 require(path.join(__dirname, \'/../static\'));
+0 11 } catch (err){
+0 12 console.log("Can not find view: "static"");
+0 13 }
+0 18 function openLimit(app, view, options) {
+0 19 options = options || {};
+0 20 var viewOptions = this.app.set(\'view options\', options);
+0 21 viewOptions.paths = options.paths || this.app.settings.views;
+0 22 return viewOptions;
+0 24 function closeSet(options) {
+0 28 var users = [];
+0 29 users.push({
+0 30 fn: function(req, res){
+0 31 res.setHeader(\'X-Powered-By\', \'Express\');
+0 32 req.app = res.app = self;
+0 33 req.res = res;
+0 34 res.req = req;
+0 35 req.next = next;
+0 36 if (options.maxAge) {
+0 37 options.maxAge = options.maxAge || 6 * 24 * };
+0 42 res.setHeader(\'X-Powered-By\', \'Express\', options);
+0 47 if (options.locals) {
+0 48 merge(options.locals, options.locals);
+0 50 next();
+0 52 }, function(){
+0 53 next(new Error(\'cannot find user\'));
+0 57 function findUser(req, function(req, res){
+0 58 res){
+0 59 res.url
+0 60 res.url = req.resolve(\'http://res.com/user/user.com/user.com/id
+0 61 .com/id
+0 62 .format=\'asgt3js\'
+0 63 .js
+0 64 .length
+0 66 .exports.compile = function(res.collection.collection.isArray(res.encode);
+0 67 .ejs)
+0 68 .collection.collection.should.not.not.a = function(){
+0 69 .at.at.collection.collection.ejs
+0 70 .at.isArray(res.encode)
+0 71 .at.collection.should.at least);
+0 72 .collection.skip('b.collection.collection.isArray(res.collection.collection)
+0 73 .collection.isArray(res).length);
+0 74 .skip('a.collection.collection
+1 1 var self = this;
+1 2 this.cache = {};
+1 3 this.settings = {};
+1 4 this.engines = {};
+1 5 this.redirects = {};
+1 6 this.isCallbacks = {};
+1 7 this._locals = {};
+1 8 this.dynamicViewHelpers = {};
+1 9 this.errorHandlers = [];
+1 10 this.set(\'home\', '/\');
+1 11 this.set(\'env\', process.env.NODE_ENV || \'development\');
+1 12 this.use(function(req, res, next){
+1 13 req.query = req.query || {};
+1 14 res.headers = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'text/html; charset=utf-8\' };
+1 17 if (req.url.indexOf(\'?\') > 0) {
+1 18 var query = url.parse(req.url).query;
+1 19 req.query = exports.parseQueryString(query);
+1 23 var fn = function(req, res, next){
+1 25 this.cache[exports.id] = fn;
+1 26 if (fn) {
+1 27 self.emit(\'error\', new Error(\'wah!"\'));
+1 28 } else {
+1 29 var content = self.contentType(req.url);
+1 30 self.header(\'Content-Type\', \'text/html; charset=utf-8\');
+1 31 res.contentType(req.url);
+1 33 fn(req, res);
+1 35 return this;
+1 36 };
+1 37 res.contentType = function(type){
+1 38 return this.set(\'Content-Type\', ~type.indexOf(\'/\')
+1 39 ? type
+1 40 : mime.lookup(type));
+1 42 res.format = function(obj){
+1 43 var req = this.req;
+1 44 var next = req.next;
+1 45 var fn = obj.default;
+1 47 this.set(\'Accept-Ranges\', \'bytes\');
+1 48 obj.set(\'Praceful-Encoding\', \'utf-8\');
+1 49 this.set(\'Content-Type\', \'text-Type\');
+1 50 req.set(\'Expires\', obj.value\', next);
+1 52 fn.on(\'resolve\', function(){
+1 53 var val = function(err){
+1 55 return val = true;
+1 56 this.setCookie(this.setCookie(this.req, val);
+1 57 this.session.session.id = val);
+1 58 const val = val;
+1 59 this.id = val;
+1 60 this.id++;
+1 63 fn();
+1 68 res.attachment = function attachment(filename) {
+1 69 if (filename) {
+1 71 var id = filename;
+1 72 return this.header(\'Content-\'? undefined!= \'Update!= this.headers[\'Content-Type\' +filename
+2 1 function watch(file) {
+2 2 fs.watchFile(file, { interval: interval }, function(curr, prev){
+2 3 if (curr.mtime > prev.mtime) {
+2 4 cacheView(file);
+2 11 function checkAnyPathMatch(path){
+2 12 var paths = fs.readFileSync(path, \'utf8\');
+2 13 var viewDir = path.join(cacheView);
+2 14 viewDir = fs.existsSync(path, 'utf8');
+2 15 if (!viewDir ||!viewDirSync){
+2 16 return viewDir;
+2 18 return viewDir + this.slug + \'/\';
+2 20 function mergeDefaultOptions(options) {
+2 22 var viewOptions = mergeDefaultOptions({
+2 23 normal: {
+2 24 seag: true,
+2 25 pedantic: false,
+2 26 sanitize: false,
+2 27 trimify: false,
+2 28 removed: ''
+2 29 },
+2 30 path: \'/\',
+2 31 default: \'.mime\'
+2 33 checkAnyPathMatch: function(path){
+2 59 normalizeConfig: function(config) {
+2 60 var baseDir = this.app.set(\'home\');
+2 65 this.viewHelpers = {};
+2 66 this.previews = [];
+2 67 this.lookup = function(paths = function(next){
+2 68 return this.req.resolve();
+2 71 this.get(\'/
+2 72 return function(layout) {
+2 73 var layout
+2 74 .setHeader(\'views
+2 75 .site.search = function(field, url, options, fn){
+2 76 options = options)
+2 77 .contentType = options.merge(this.options, options.locals || {};
+2 78 this.filename = \'.position = options.filename, this.url.length);
+2 79 this.top = false;
+2 80 this.search = false;
+2 81 this.path = \'/\'maxAge\';
+2 83 this.contentType = options.locals.exclude = options.exclude;
+2 84 this.length = 0;
+2 85 this.top = 0
+3 1 var viewDir = fs.realpathSync(interval);
+3 2 app.set(\'view_dir\', viewDir + \'/fixtures/hello-world.jade\');
+3 3 app.use(function(req, res, next){
+3 4 res.render(\'hello.jade\', {
+3 5 layout: false,
+3 6 locals: {
+3 7 body: \'<p>Welcome</p>\',
+3 8 name: name,
+3 9 locals: { otherName: \'world\' }
+3 13 if (viewDir[0] === \'/\') {
+3 16 file.list(viewDir + \'/fixtures/hello-world.jade\', { layout: false });
+3 19 console.log(\'Hello World\');
+3 23 function run(name, locals, view){
+3 24 return res.render(viewDir + \'/fixtures/hello-world.jade\', {
+3 25 locals: locals,
+3 26 filename: path
+3 29 function render(content, options, callback) {
+3 30 if (!callback){
+3 31 if (typeof options === \'function\'){
+3 32 callback = options;
+3 33 options = {};
+3 35 callback = function(){};
+3 39 var cache = {};
+3 40 function escape(html) {
+3 41 if (html instanceof String)
+3 42 cache[html] = html;
+3 44 options.filename = escape;
+3 45 var view = fs.readFileSync(viewDir + \'/fixtures/hello-world.jade\');
+3 46 view.render(view, options, callback);
+3 48 function error(err) {
+3 50 fn(err);
+3 52 throw err;
+3 55 function errorSync(ext) {
+3 56 if (ext) {
+3 57 return view.renderSync(ext, options);
+3 59 function fullRefresh(layout, options) {
+3 60 return view.renderSync(layout, options);
+3 62 function prism(prefix, mode) {
+3 63 return prismHighlight(prefix === \'true\';
+3 66 exports.filename = page.replace(/\\s/g, \'/g, \'\\s\');
+3 67 exports.filename =\'s/g, escape;
+3 68 exports.filename = \'\\\\d\';
+3 69 exports.s/=\'s\'s\';
+3 70 exports.dir = page.s = \'d.s\';
+3 71 exports.url = escape;
+3 72 exports.image = escape;
+3 74 exports.path = escape;
+3 75 exports.link = escape;
+3 76 exports.length = match;
+3 77 exports.length = 1;
+3 78 exports.attempts = route(view, cache;
+3 80 exports.cache = 1;
+3 81 exports.cookieParser = \'(\'pre\');
+3 82 exports.cache = \'off\';
+3 83 exports.
+4 1 var viewOptions = {},
+4 2 paths = Object.keys(options)
+4 3 , params = {};
+4 4 if (options.logger){
+4 5 if (interval === false){
+4 6 options.logger = logger;
+4 8 options.logger = log;
+4 11 if (settings.content-length){
+4 12 options.content-length = options.length;
+4 14 if (options.method-override){
+4 15 options.autoWatch = true;
+4 17 if (ext.substr(0, 2) === separator + ext){
+4 18 options.caption = `<h1>${ext.substring(2)}</h1>`;
+4 19 } else if (ext.substring(1, 2) === app){
+4 20 options.caption = `<h1>${ext.substring(1)}</h1>`;
+4 22 options.lang = lang;
+4 23 options.caption = caption;
+4 24 })(options);
+4 25 return viewOptions.render(viewLocals, options, function(err, result){
+4 26 if (err) throw err;
+4 27 if (result.readable){
+4 28 var content = result.path;
+4 30 var content = file;
+4 32 var ext = extname(path);
+4 33 if (ext && renderer.hasOwnProperty(ext)){
+4 34 return renderer.get(ext, ext);
+4 36 return content;
+4 38 })(viewLocals);
+4 39 }).then(function(result){
+4 40 return result.toString('Hello World\
+4 41 ');
+4 43 return toString('Hello World\
+4 47 function renderPartial(res, view, options, fn){
+4 48 var collection, object, locals;
+4 49 if (\'string\'!= options.constructor.name) {
+4 50 view = options;
+4 52 } else if (undefined!= options.object) {
+4 53 collection = options.object;
+4 56 locals = options.locals;
+4 57 delete options.object;
+4 61 if (\'Object\'!= options.constructor.name &&!= options.object) {
+4 62 object = options;
+4 65 if (undefined!= options.object) {
+4 66 object = options.object = options.object;
+4 72 options.object = options.type = {};
+4 74 } else if (options.type = options.type = null;
+4 75 if (typeof options === \'function.string
+4 76 ) {
+4 78 options.type = options.string = options.type;
+4 80 options = \'function = options.type = string;
+4 82 var locals = options.type = this.type;
+4 84 var locals = options.type = this;
+4 85 return this.object = options.type;
+4 86 this.type = string;
+4 89 var locals =
+5 1 var view = new view.View('forum/thread.jade', view, options);
+5 2 view.path = __dirname + \'/views/morgan.jade\';
+5 3 var viewLocals = { layout: false };
+5 4 viewLocals.body = \'<h1><p>Welcome</p></h1>\';
+5 5 var viewLocals.layout = false;
+5 6 if (interval){
+5 7 var spy = sinon.spy(function(err, req, res){
+5 9 res.locals.message = \'<p>Welcome</p>\';
+5 10 res.locals.firstInCollection = i === 0;
+5 11 res.locals.indexInCollection = i;
+5 12 spy(locals);
+5 13 if (spy.called) {
+5 14 viewLocals.__page = true;
+5 16 viewLocals.__page = false;
+5 19 viewLocals.locals.body = spy;
+5 20 if (viewLocals){
+5 21 var locals = { layout: false };
+5 22 locals.firstInCollection = i === 0;
+5 23 locals.indexInCollection = i;
+5 24 locals.lastInCollection = i === len - 1;
+5 25 return viewLocals.body.render(locals);
+5 27 viewLocals.render({ layout: false });
+5 29 function render(){
+5 30 if (this.is_post()){
+5 31 return true;
+5 33 return false;
+5 37 return this.set(\'view engine\', render);
+5 40 var view = this.view,
+5 41 path = this.filename.substring(view.length);
+5 42 this.extension = \'.\' + view;
+5 43 this.name = path;
+5 44 this.extension = \'.min\';
+5 45 return this.render.renderSync({ layout: false });
+5 47 res.render = function(str, options, fn){
+5 49 if (\'function\' == typeof options) {
+5 50 fn = options;
+5 53 var viewOptions = this.extension;
+5 54 viewOptions.filename = this.viewOptions;
+5 55 this.fn = fn;
+5 56 this.options.fn = options.filename;
+5 57 this.options.params = options.params = options.fn;
+5 58 this.params = options.params;
+5 59 if (\'function\'content-\'b\' == typeof options) {
+5 62 var content = options;
+5 63 options = options;
+5 66 var keys = options.collectionKeys = options.collectionKeys.length = 1;
+5 67 for (var i = i == 0;
+5 68 options.collectionKeys.length;
+5 69 options[0] = options.collection.length;
+5 70 options[0] = options.collection.collection.map = fn;
+5 71 if (typeof options === \'function\') {
+5 72 var key = options.collection.collection.type;
+5 73 options[0] = options.collection.loc
+6 11 function checkAnyPathMatch(app, view) {
+6 12 var paths = this.app.locals.paths;
+6 13 var viewDir = pathFn.join(this.base_dir, 'view_dir');
+6 14 var viewOptions = {};
+6 15 var collectors;
+6 16 if (paths.length) {
+6 17 return views.some(function(path){
+6 18 return view.path === view.path;
+6 21 return views[0]._id.toString(viewOptions);
+6 23 function makeWhereQuery(index) {
+6 24 var query = new WeakMap();
+6 25 return function(res){
+6 26 if (res.viewCallbacks.length >= 0) {
+6 29 return res.render(viewLocals);
+6 32 function renderData(data) {
+6 33 if (data.readable) {
+6 34 return fs.readFileSync(data.path).toString();
+6 36 return view.data.toString();
+6 38 function createWhereQuery(index) {
+6 40 return function(data){
+6 41 if (data.readable){
+6 44 return res.render(data.data);
+6 47 function mergeExtraSegments(options) {
+6 49 var viewOptions = this.app.set(\'view options\');
+6 50 viewOptions.forEach(function(view){
+6 51 if (viewOptions) {
+6 52 mergeExtraSegments(options);
+6 57 function clearContext(env) {
+6 58 if (env === undefined) {
+6 61 var options = mergeExtraSegments(options);
+6 62 var removed = '';
+6 63 var view = this.app.set(\'view options\');
+6 65 viewOptions = options || {};
+6 67 function clearRuntimeCache(env) {
+6 69 view = true;
+6 72 var options.cache = new LRUint8Lru().set(env, clear();
+6 73 return view.writeFile(cache.join(\'cache\', views);
+6 77 function clearFileCache.prototype.on('filesPromise.static', function(path, saveFile, saveFile, saveFile, stat) {
+6 78 if (!statics) {
+6 79 if (!statics && statics && cache.hasOwn = require(cacheFile) && cacheFile) && cacheFile) return;
+6 80 cleanFile = function(){
+6 81 cleanFile = set(path, statics,!= null;
+6 82 cleanExclude =!= null;
+6 83 cleanExclude = function(paths, callback) {
+6 84 cleanExcludedFiles();
+6 85 if (cacheExcludedFiles = this.cache
+7 1 var view = exports.view = {
+7 2 page: {
+7 3 path: line = view,
+7 4 lang: line,
+7 5 caption: caption
+7 7 index: function(req, res){
+7 8 res.render(view, options);
+7 11 })(viewRoot(this));
+7 14 var result = fs.readFileSync(path.join(this.path, \'.md\')).toString();
+7 15 } else if (this.is_post()){
+7 18 var num = arguments[1];
+7 19 result.push(\'<p>Visit <a href="/tags/abc/" style="font-size: 1px rgba(255, 255, 0, num.toFixed(num));">abc</a>\');
+7 21 return result;
+7 23 var scope = document.getElementById(\'source\');
+7 24 scope.ext = extname(this.resolve).substring(1);
+7 25 return view.render(scope.source, {
+7 27 body: null,
+7 28 layout: false
+7 32 http.ServerResponse.prototype.partial = function(view, options){
+7 34 options.locals = options.locals || {};
+7 35 var body = this.req.query.body
+7 36 , callback = this.req.query.callback
+7 37 , jsonp = this.app.enabled(\'jsonp callback\');
+7 38 if (this.session === undefined) {
+7 39 return callback();
+7 41 var results = options.merge({cache: true}, options);
+7 42 if (data.length === 0) {
+7 45 var resultsCached = {};
+7 46 var cache = this.app.set(\'cache\');
+7 47 this.writeHead(200, content);
+7 48 this.end(cache);
+7 57 this.set(\'cache\', cache);
+7 58 this.sendToCustomHeaders(this, function(req, res){
+7 59 res.set(\'cache\', function(){
+7 60 fn(err, res){
+7 61 fn(req, res){
+7 62 res.session.session.session.session.id = this.id = this.id || \'Access-12345\') || \'
+7 63 res.session.session.salt
+7 64 , err.session.session.id = \'3gp\';
+7 65 res.session.session.salt(this);
+7 66 res.session.salt(this);
+7 72 http.ServerResponse.prototype.contentType = function(res){
+7 73 res.writeHead(this.req.session.session.auth || \'\', function(err, salt, headers, headers, data){
+7 75 var val = \'\';
+7 76 var headers = this.session
+8 1 return function(content){
+8 2 return viewCache[this.id] = new View(content, {
+8 3 filename: content,
+8 4 path: path
+8 8 return viewCache[this.id] = new View(content);
+8 11 function viewRoot(app) {
+8 12 return app.set(\'views\', __dirname + \'/views\');
+8 14 exports.isAbsolute = function(path){
+8 15 if (\'/\' == path[0]) return true;
+8 16 if (\':\' == path[1] && \'\\\\\' == path[2]) return true;
+8 18 exports.flatten = function(arr, ret){
+8 19 var ret = ret || []
+8 20 , len = arr.length;
+8 21 for (var i = 0; i < len; ++i) {
+8 22 if (Array.isArray(arr[i])) {
+8 23 exports.flatten(arr[i], ret);
+8 25 ret.push(arr[i]);
+8 28 return ret;
+8 30 exports.normalizeType = function(type){
+8 31 return ~type.indexOf(\'/\')
+8 32 ? acceptParams(type)
+8 33 : { value: mime.lookup(type), params: {} };
+8 35 exports.normalizeTypes = function(types){
+8 36 var ret = [];
+8 37 for (var i = 0; i < types.length; ++i) {
+8 38 ret.push(exports.normalizeType(types[i]));
+8 42 exports.contentType = function(type){
+8 47 exports.compileETag = function(val) {
+8 48 var fn;
+8 49 if (typeof val === \'function\') {
+8 50 return val;
+8 52 switch (typeof val) {
+8 53 case \'object\':
+8 55 case \'string\':
+8 56 return val + \'.string\';
+8 57 case \'undefined\':
+8 58 return val === true;
+8 60 return undefined;
+8 63 exports.parseNestedParams = function(params) {
+8 64 var parts = params || {};
+8 65 return $({};
+8 67 return(this.params).each(function(obj, i, fn){
+8 68 (val, val, next){
+8 69 id: undefined, val, params: undefined, params: params};
+8 70 params.parseParams});
+8 74 function query(req, response, fn) {
+8 75 req.query.query = params
+8 76 .eql = params;
+8 77 query.params = q;
+8 78 if (obj) {
+8 79 query.eql(obj)
+8 80 .params = undefined;
+8 82 if (obj) return undefined;
+8 83 if (id && params.parseNestedParams.indexOf(\'return_params.string\')!= -
+9 1 return function(src, curr, prev){
+9 3 cacheView(curr, prev);
+9 7 return viewCache[curr];
+9 9 function watch(next) {
+9 10 fs.watchFile(path, extname(view), function(curr, prev){
+9 11 if (prev == null) {
+9 12 cacheView(path);
+9 16 function checkAnyPathMatch(curr, prev) {
+9 17 var viewDir = path.join(process.cwd(), viewCache[viewDir]);
+9 18 if (!viewDir) {
+9 19 fs.mkdirSync(path.join(viewDir, \'index.md\'));
+9 22 var viewDir = path.join(process.cwd(), viewDir);
+9 26 function merge(options, config) {
+9 27 var cache = options.hasOwnProperty(\'cache\')? options.cache : true;
+9 28 var view = options.hasOwnProperty(\'view\')? options.view : true;
+9 29 var instance = this;
+9 30 return view.renderSync({
+9 31 path: \'/packages/json/bower.json\',
+9 32 layout: \'json\',
+9 33 _content: \'json\'
+9 36 http.ServerResponse.prototype.render = function(view, options, fn, options, callback){
+9 37 if (!callback) {
+9 42 var options = options || {};
+9 43 var self = this,
+9 44 root = this.app.set(\'views\', viewDir, options);
+9 45 if (options.root) {
+9 46 root += \'/root/\';
+9 49 options.root = root;
+9 50 var collection = options.collection;
+9 51 if (collection) {
+9 52 var name = options.collection;
+9 54 var len = collection.length = collection.length
+9 55 , i === 0;
+9 56 de = len;
+9 57 options.collection = len;
+9 58 options.locals.firstInCollection = i === 0;
+9 60 collection.firstInCollection.set(collection);
+9 61 len = i;
+9 62 options.collection.set(collection);
+9 65 return this.collection.set(collection);
+9 67 collect(collection);
+9 70 var url = root + \'/\'/\';
+9 71 collection.sort
+9 72 collection = function(field, order, order, fn) {
+9 73 var arr = collection.length = this.toArray().join(\'/\', function(', function(a, b) {
+9 74 var val);
+9 75 if (type = this.isFirst(type) {
+9 76 return a[field] - this.first);

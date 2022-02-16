@@ -1,0 +1,46 @@
+Min editdistance: 34.00
+Closest candidate: 0 2 return { logger : new Function(argv) {
+0 1 ).export(extend({ logger = new Function(config: function (config) { return }());   {
+0 2 return { logger : new Function(argv) {
+0 3 return { logger: new Function(config) { // { // { // { // { // { // { // { // { // } // // {  } : { }; }; }; :  }() }() } });
+0 4 }).set({ homepage = new Function(); : function () { };
+0 5 return this. : {      : { return { cig, use(config.optimist };\
+1 1  = function () => function (s: updateFilesPromptor () { return function (sPromptor () { return function (sPromptor () { return { return function (sPromise) { return { return sPromise.addToLocale.addLocaleConsole(); } });
+1 2 return function (sPromise) { return sPromise.addLocale{ return sPromise.addLocale{ return s => return sess } });"returnsPromale : function (message }}); };
+1 3 return function (s) { return sessagesUser.addLoc
+2 1 ).save();'
+3 1  = function (config: updateConfig: updateConfig: updateConfig() }, function (config) { return config }).saveConfig() { transform: function (config) { return config; };
+3 2 return config.set({
+3 3 return config;
+3 5 }).set({
+3 6 }).then(config.set('newConfig);
+3 7 return config.set('env', newConfig);
+3 8 }
+3 9 });
+3 11 function replaceLogger();
+3 13 function run() {
+3 14 return function clear() {
+4 1  = update: updateLogger();
+4 2 return logger.pipe(new CLIEngine(require('install');
+4 3 hooks: function () { useColors');
+4 4 hooks: function (tags) { return require(tags) { return } = function (junit) { return JSpec.install(); } = function (junit) { return JSpec.install(); } = function () { return JSpec.install(); } };
+4 5 return JSpec.install(); } = function (junit) { };
+4 6 hooks(); } = new J
+5 1 ());'
+6 1 ), {env = update: update: update(); : function () => {
+6 2 return this.exit(this.env = function (config) { };
+6 3 return this.env = config; };
+6 5 var renderer.on('end();
+6 6 return renderer.removeListener();
+6 9 return this.end();
+6 12 module.done(options);"
+
+7 1 'saddListener();'s', 'bower.addListener');"
+
+8 1 ).config = function (solve: function (config) { return function (env) { transform: env: config.set { config.set, mode: config.share } };
+8 2 return { use(config) { use(config) { };
+8 3 return config = { views: this.share = { views: config };
+8 7 function clearHenderer.prototype.reset();
+8 8 return this;
+8 12 module.then
+9 1 'solve();'solve();'solve();'solve();"solve();"solve();'solve();'solve();'solve();'solve();'solve();'solve();'solve();'solve();'solve();'solve();'s');'s');'s');'s});'s});'s});'s});'s});"

@@ -1,0 +1,31 @@
+Min editdistance: 27.00
+Closest candidate: 6 5 return this.expose();
+0 1 '
+
+1 1 "
+
+2 1 " }'
+
+3 1 "logger = function () => writeJson(this.logger, "\
+3 2 checkPkgs" }'sucumber", function () => checkPkgs() {
+3 3 return checkPkgs() };" } };" },"
+
+4 1 " } = function (idof========== null;constructor
+5 1 "forExports" require for     require (installJsonExports" require (installYAYait checkPkgs's's's"s's" > Identify yourinstall's' > (require(requirejs-split-split's') || []);"\\s" } = install = install()-s; module-sadd's's's's')(.map's');"    ;'s's's's's'].forEach((s'require'require's)'));"      return install's's's'));"     return install's
+6 1 "deepse{ throw newVersion = options: checkPkgs};" promise } : function (id: function (id) {
+6 2 return checkPkgs } : function (id) {
+6 3 if (id) {
+6 4 return inquire.expose(); } : function (s) {
+6 5 return this.expose();
+6 6 }
+6 12 if (enqueue.push({ force: { useEqual: () => {
+6 13 checkPkgs : function (s) {
+6 14 return!!== undefined;
+6 15 if (s) {
+6 16 const packageJson(s) || push({ dirs: null });
+6 17 return checkPkgs : function
+7 1 " } = function (options = options = options => { return checkPkgs() } {
+7 2 return this.install = options };"return this.install; };"
+
+8 1 " } = function () => checkPkgs, resolve } (discrims() { return checkPkgs, loggerFiles };     = function (id) { return install((answ) { return installPkgs, target } };" } return checkPkgs, resolve }; };"return installPkgs } = (uninstallor (uninstall) };"return install = install = install(); } };"return checkPkgs;'
+

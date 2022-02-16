@@ -1,0 +1,77 @@
+Min editdistance: 44.00
+Closest candidate: 0 4 Express.return Express.return Express.listen())
+0 1 .body || '0 += chunkExpress.call(this.response, Express.body || '' })
+0 2 Express.response.addListenerListenerListenerListenerListenerListenerListenerListenerListenerListener('end') })
+0 3 Express.response.addListener('something', Express.addListener('end')
+0 4 Express.return Express.return Express.listen())
+0 5 Express.listen()
+0 6 Express.getLone()
+0 7 Express.setTimeout(1)
+0 8 Express.response.reset()
+0 9 Express.reset()
+0 10 Express.getOutput('exit(1)
+0 11 Express.
+1 1 .body || 'x-powered-body || 'Express.initialize()" })
+1 2 Express.response.return this.return this.response.callRouteFor({ port : '' })
+1 3 response.addListenerListener('something', Express.addListenerListener when noopeneratedMime)
+1 4 return this.engines.engine = to send.engine.engine)
+1 5 .engine = to this.engine
+1 6 .post.request = this.server.callback = this.callback = this.callback = this.callback = this.engine = undefined
+1 7 Express.callback = this
+2 1 .body || 'x-requested to http.requested to http.Express.request, result.config.param('something') })
+2 2 Express.response.request = http.request += undefined })
+2 3 Express.response.body.addListener('something', Express.else.response = null, toArray(else)
+2 4 Express.response.return Express.response.body)
+2 5 return Express.response.body = null
+2 6 response.body = null
+2 7 Express.response.return Express.end()
+2 8 Express.response.response.response.sendHeader('something')\
+3 1 .body || '' })
+3 2 Express.response.request = '' })
+3 3 Express.response.response.sendArray()
+3 4 Express.response.body += Express.addListener('something', Express.else = null)
+3 5 Express.response.body = null
+3 6 Express.response.body.return Express.body = null
+3 7 Express.response.return Express.response.body.return Express.read()
+3 8 Express.return Express.response.response.response.body.end()
+3 9 Express.response.return Express.read()
+3 10 Express.response.writeFinished
+4 1 .body || 'utf8' })
+4 2 Express.response.return Express.response.body += '0 += undefined })
+4 3 Express.response.setBodyDecode = null
+4 4 Express.response.addListenerListenerListenerListenerListenerListenerListenerListenerListenerListenerListenerListener('end', () => null)
+4 5 Express.response.addListener('end', () => {
+4 6 Express.end()
+4 7 Express.resolve()
+4 9 })
+4 10 response.end()
+4 11 Express.getDeep('x-finished')
+4 12 return Express.reset()\
+5 1 .body += 'x-requested-reject)"
+6 1 .body || 'Express.body += chunkExpress.return request.body += 'x-1', "
+7 1 .body || 'Express = 'hey' })
+7 2 return this.response.addListener()" : 'x-1' + Express.return this.response.body += 1 })
+7 3 Express.response.body += 'x-1')
+7 4 Express.response.addListener ()"else = this.response.setHeader('else', function()(){
+7 5 Express.response.addListener () {
+7 6 return this.body = '' })
+7 7 return this.response.body.addListener()()
+7 8 .addListener('something', this.request)
+7 10 .
+8 1 .body || 'x-body || '' })
+8 2 Express.response.addListenerListenerListener () => function (body.addListener () {
+8 3 Express.response.body += undefined })
+8 4 return this.request.return this.response.body += chunkType()()
+8 5 Express.response.addListener()()
+8 6 Express.addListener('something', Express.addListener('exit', Express.request)
+8 7 return this.response.close())
+8 9 Express.response.body.close()
+8 10 Express.response.response.response.body.send()
+9 1 .body += chunkExpress.toString() })
+9 2 Express.response.return Express.addListener()
+9 3 Express.response.addListener('something', Express.request)
+9 4 Express.response.body += undefined = Express.return Express.response.body)
+9 5 Express.response.body += undefined
+9 6 Express.response.body.addListener = Express.return Express.response.body.sendHeader('unescape', null)
+9 8 Express.response.addListenerArray())
+9 9 Express.response.addListener.body

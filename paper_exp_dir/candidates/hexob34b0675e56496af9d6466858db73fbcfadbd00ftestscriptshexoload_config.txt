@@ -1,0 +1,20 @@
+Min editdistance: 47.00
+Closest candidate: 2 2 config.foo.should.eql(2dbar);
+0 1  '
+
+1 1 '
+
+2 1  'foo: 2dbar; baz: 3'}).then(config => {
+2 2 config.foo.should.eql(2dbar);
+2 3 }).finally(() => {
+2 4 hexo.config.custom.should.eql({});
+2 7 });
+2 8 });'
+
+6 1  'foo: 1', 'bar:', 'baz: 3' }).then(() => loadConfig(hexo)).then(() => {
+6 2 hexo.config.foo.should.eql(1);
+6 4 hexo.config.bar.should.eql(2);
+6 6 hexo.config.baz.should.eql(3);
+6 8 hexo.config.baz.should.eql(4);
+6 11 it("_config.yaml exists, when config file does not exist"
+

@@ -1,0 +1,290 @@
+Min editdistance: 33.00
+Closest candidate: 0 2 .spread(function (tree, flattened) {
+0 1 return project.getTree()
+0 2 .spread(function (tree, flattened) {
+0 3 var ret;
+0 4 if (names.length) {
+0 5  ret = names[0];
+0 6 }
+0 7 if (options.offline) {
+0 8 return ret;
+0 10 return Q.all([
+0 11 clearPackages(project, project, logger),
+0 12 clearLinks(project, project, logger)
+0 13 ]).spread(function (entries) {
+0 14 return entries;
+0 15 });
+0 16 })
+0 17 .done(function (value) {
+0 18 logger.emit('end', value);
+0 19 }, function (error) {
+0 20 logger.emit('error', error);
+0 22 return logger;
+0 24 function clean(project, names, removed) {
+0 25 removed = removed || {};
+0 28 var nodes = [];
+0 29 var dependantsCounter = {};
+0 30 mout.object.forOwn(flattened, function (node) {
+0 31 nodes.push({
+0 32 name: node.endpoint.name,
+0 33 source: project.getSource(),
+0 34 target: '*'
+0 37 project.walkTree(tree, function (node) {
+0 38 if (nodes.length) {
+0 39 return false;
+0 44 return project.saveJson()
+0 45 .then(function (json) {
+0 46 if (!json) {
+0 47 return;
+0 49 return Q.nfcall(rimraf, project, logger)
+0 50 .then(function () {
+0 51 return that._analyse();
+0 57 if (names.indexOf(node.endpoint.name)!== -1) {
+0 58 nodes.push(node);
+0 72 uninstall.readOptions = function (argv) {
+0 73 var cli = require('../util/cli');
+0 74 var options = cli.readOptions(argv);
+0 75 var names = options.argv.remain.slice(1);
+0 76 if (options.colors!== options.colors) {
+0 77 return cli.readOptions(options.colors);
+0 79 return [names, options];
+0 80 };
+0 81 module.exports = uninstall;"
+
+1 4 names.forEach(function (name) {
+1 5 var decEndpoint = flattened[name];
+1 6 if (!decEndpoint || decEndpoint.missing) {
+1 7 packages[decEndpoint.name] = null;
+1 10 if (names.indexOf(decEndpoint.endpoint.name)!== -1) {
+1 13 mout.object.forOwn(flattened, function (decEndpoint) {
+1 14 if (names.indexOf(decEndpoint.name)!== -1) {
+1 15 decEndpoint.missing = true;
+1 18 return project.uninstall(decEndpoint, flattened, 'dependencies');
+1 30 name: node.name,
+1 31 source: semver.camel(node.endpoint.source)
+1 34 project.walkTree(tree, function (node, nodeName) {
+1 35 if (names.indexOf(nodeName)!== -1) {
+1 36 dependantsCounter[nodeName] = dependantsCounter[nodeName] || 0;
+1 37 dependantsCounter[nodeName] += node.nrDependants;
+1 39 }, true);
+1 40 mout.object.forOwn(flattened, function (decEndpoint, name) {
+1 41 if (decEndpoint.missing) {
+1 49 if (options.relative) {
+1 50 node.endpoint = endpointParser.decompose(name);
+1 52 return project.saveJson(true)
+1 54 return project.uninstall(json, null, {
+1 55 name: name,
+1 62 return project.analyse()
+1 63 .spread(function (tree, tree, flattened) {
+1 65 project.walkTree(tree, function (node, function (node, nodeName) {
+1 66 if (node &&!== null) {
+1 67 nodes.endpoints) {
+1 68 nodes.push(node.endpoints.length === 0;
+1 70 } else {
+1 73 .push(node.end();
+1 75 .length = nodes;
+1 77 .sort(function (first, second;
+1 79 .for (first, second;
+1 80 .max = count;
+1 82 .forEach(function (maxAge) {
+1 83 return semver.max = self.maxAge <= endSize;
+1 86 project.walkTree;
+1 87 .uninstallTree(tree, function (node, second, additionalKeys) {
+1 88 if (extraKeys) {
+1 89 var additionalKeys =
+2 3 return project.uninstall(names, options)
+2 4 .then(function (uninstalled) {
+2 5 var names = Object.keys(uninstalled);
+2 6 return uninstall(names, options)
+2 8 var children = [];
+2 10 if (decEndpoint.extraneous) {
+2 11 children.push.apply(decEndpoint, mout.object.keys(decEndpoint.extraneous));
+2 14 return clean(project, children, removed);
+2 17 .done(function (uninstalled) {
+2 18 logger.emit('end', uninstalled);
+2 26 var removed = '';
+2 28 if (names.indexOf(name)!== -1) {
+2 29 nodes.push(decEndpoint);
+2 34 return mout.object.map(flattened, function (decEndpoint) {
+2 35 return decEndpoint.pkgMeta;
+2 39 return mout.object.filter(flattened, function (value, name) {
+2 40 return!mout.array.find(onlyOnce, function (pkg) {
+2 41 return pkgMeta.version;
+2 45 uninstall.line = function (argv) {
+2 46 var options = uninstall.options(argv);
+2 48 if (!names.length) {
+2 49 return null;
+2 51 return uninstall(names, options);
+2 53 uninstall.options = function (argv) {
+2 54 return cli.readOptions({
+2 55 'production': { type: Boolean, shorthand: 'p' },
+2 57 'save': { type: Boolean, shorthand: 'S' },
+2 58 'save-dev': { type: Boolean, shorthand: 'D' },
+2 59 'production': { type: Boolean, shorthand: 'p' }
+2 60 }, argv);
+2 62 uninstall.completion = function () {
+3 1 return project.getTree(options)
+3 4 if (node.missing) {
+3 8 node.canonicalDir = normalize(node.canonicalDir);
+3 10 if (options.paths) {
+3 26 return paths(flattened);
+3 28 if (config.offline) {
+3 29 return tree;
+3 31 return checkVersions(project, tree, logger)
+3 39 var options = cli.readOptions({
+3 45 var packages = options.argv.remain.slice(1);
+3 46 delete options.argv;
+3 47 return [packages, options];
+3 67 'save-d' }
+3 69 var packages = options.forEach(function (pkg) {
+3 70 return helpers.install(['install', 'pkg', 'dependencies', 'dependencies', 'dev'], options];
+3 72 it('correctly reads arguments', function (commands.forEach(function (pkg, i) {
+3 73 exists(pkg, next) {
+3 74 exists(pkg, function (pkg, key) {
+3 75 exists(pkg, key) {
+3 82 next(pkg.dependencies[key) {
+3 83 nextsatisfies(pkg.dependencies[key])
+3 84 }));
+4 5 targets.push(node);
+4 7 resolved[names.shift()] = node;
+4 15 return project.uninstall(names)
+4 17 return that._analyse()
+4 18 .spread(function (json, tree, flattened) {
+4 36 return that._manager.toData(targets, resolved, flattened)
+4 37 .spread(function (decEndpoint, flattened) {
+4 43 .then(function (decEndpoint, flattened) {
+4 44 if (!decEndpoint.name) {
+4 45 throw createError('No name for no resolver');
+4 47 return that._manager.toData(flattened, resolved, flattened)
+4 48 .done)
+4 50 return Q.then(function () {
+4 51 return installed;
+4 55 .then(function (installed = installed;
+4 56 .then(function (deferred.resolver) {
+4 57 return that._manager.analyse.save(deferred.resolve.resolve.bind(deferred, decEndpoints, that._manager);
+4 59 .then(deferred.install.rejects.resolve.install.bind(deferred, that._manager);
+4 61 .then(deferred.resolve.resolve.resolve, that._working) {
+4 62 return that._analyse.resolve.resolve.length === decEndpoints;
+4 68 .then(deferred.fin(deferred.resolve
+5 3 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+5 8 }, function (err) {
+5 9 if (err) {
+5 10 return Q.nfcall(rimraf, project)
+5 16 that._readJson(),
+5 17 that._readInstalled()
+5 18 ])
+5 19 .spread(function (json, installed) {
+5 20 var root;
+5 21 var flattened = installed;
+5 22 root = {
+5 23 name: json.name,
+5 24 source: path.join(that._config.cwd, json.name),
+5 25 target: json.version || '*',
+5 26 pkgMeta: json,
+5 27 canonicalDir: normalize(json.canonicalDir),
+5 28 root: true
+5 30 that._walkTree(tree, function (node, name) {
+5 33 } else if (node.incompatible) {
+5 34 incompatibles.push(node);
+5 36 resolved[name] = node;
+5 39 decEndpoint.called = true;
+5 40 return Q.nfcall(rimraf, that._bootstrap, {
+5 41 baseDir: baseDir
+5 42 }, {
+5 47 throw createError('No such package'+ name + '\\' is not installed', 'ENOTINS', {
+5 48 name: name
+5 51 return that._bootstrap(targets, resolved, flattened);
+5 53 .then(function (installed) {
+5 54 if (!options.save ||!options.saveDev) {
+5 57 decEndpoint.dependencies = that._json.dependencies || {};
+5 58 decEndpoint.dependencies[decEndpoint.name] = that._json.dependencies || {};
+5 61 return that._saveJson()
+5 64 }, null);
+5 70 .progress(uninstalled);
+5 75 it('should.skip('shouldache()');
+5 76 it('shouldache()');
+5 81 it('clean()'));
+5 82 it('uninstall()');
+5 83 it('save()');
+5 84 it('save()')
+6 27 remove(names, config),
+6 28 remove(options)
+6 29 ]).spread(function (Tree, flattened) {
+6 35 packages[name] = null;
+6 38 return project.uninstall(decEndpoint, flattened)
+6 40 return clean(project, tree, flattened);
+6 47 'force-latest': { type: Boolean, shorthand: 'F' },
+6 49 'force-latest': { type: Boolean, shorthand: 'S' },
+7 8 node.canonicalDir = path.relative(config.cwd, node.canonicalDir);
+7 27 remove(config)
+7 28 ]).spread(function (removed) {
+7 29 return that._removePackages(removed)
+7 30 .fin(function () {
+7 31 that._working = false;
+7 38 'force-latest': { type: Boolean, shorthand: 'F'},
+7 41 'save-dev': { type: Boolean, shorthand: 'D' }
+7 43 var packages = options.argv.remain.slice(1, 2);
+8 10 if (names.indexOf(decEndpoint.endpoint.endpoint) === -1) {
+8 11 names[name].push(decEndpoint);
+8 15 clearPackages(project, config, logger),
+8 18 if (!decEndpoint.dependants) {
+8 19 decEndpoint.extraneous = true;
+8 20 return project.saveJson(decEndpoint, logger)
+8 25 var extraneous = [];
+8 26 tree = project.getTree()
+8 27 .uninstall(uninstallables)
+8 28 .spread(function (pkgMeta) {
+8 29 return that._manager.toData(pkgMeta);
+8 31 if (err.message === 'No uninstall found') {
+8 32 return Q.nfcall(rimraf, decEndpoint.name)
+8 34 return that._manager.toData(that._manager.toData(that._manager.toData(that._manager));
+8 37 throw err;
+8 40 .done(function (uninstallables) {
+8 51 var jsonKey;
+8 53 throw createError('No bower.json present', 'ENOENT');
+8 55 jsonKey = options.save? 'dependencies' : 'devDependencies');
+8 56 that._json[jsonKey] = that._json[jsonKey];
+8 57 return Q.nfcall(bowerJson.read, that._config.cwd)
+8 58 .then(function (filenames) {
+8 59 var promises;
+8 60 var decEndpoints = {};
+8 61 promises = filenames.map(function (filename) {
+8 62 var name = path.dirname(filename);
+8 63 var metaFile = path.join(that._config.cwd, filename);
+8 64 return readJson(metaFile)
+8 65 .if (!metaFile) {
+8 66 .addLinkToPackageRepository(metaFile)
+8 67 .bind(this._manager.manager.toDataRepository.getPackageRepository.bind(this._manager, metaFile, metaFile);
+8 69 .then(this._manager.setPackageRepository.manager.setRepository.getRepository.bind(this._jsonFile, metaFile, metaFile, metaFile);
+8 71 }, function () {
+8 72 return this._json = json });
+8 74 .then(this._json = json;
+8 76 return this._json = json = json = json;
+8 77 return this._json = json;
+8 82 Manager.prototype.readOptions = function () {
+8 83 var that = function () {
+9 11 node.canonicalDir = normalize(node.paths);
+9 27 remove(names, config)
+9 29 return that._removePackages(remove, removed);
+9 39 'save-exact': { type: Boolean, shorthand: 'f' },
+9 54 function clean(names, options, removed) {
+9 55 var names = names.length? (removed.length - 1) : null;
+9 56 var children = options.argv.remain.slice(0, removed);
+9 58 clearPackages(packages, options, removed),
+9 59 clearLinks(names, options, removed)
+9 60 ]);
+9 62 function clearRuntimeCache(names, options) {
+9 63 var names = names = names.filter(function (name) {
+9 64 return!== undefined;
+9 66 names.map(function clearPair(name) {
+9 67 return this._analyse.sort(function (a, b) {
+9 68 return a.length === -1;
+9 69 }.sort(function (a, b) {
+9 70 return this._sort(function (a, b) {
+9 71 return -1);
+9 72 }.length;
+9 75 .sort(function this._length = 0;
+9 78 .sort(function (name, key) {
+9 79 return this._length = 0;
+9 81 .sort(function (name, orderable; function (name) {
+9 82 return this.

@@ -1,0 +1,103 @@
+Min editdistance: 30.00
+Closest candidate: 3 4 const { path, doc } = this.source = this;
+0 1 function assetPath(data) {
+0 2 const id = Asset.findById(id, sourceId, path;
+0 3 const { config: path, requiredId, requiredPaths, requiredPaths, use_id: this.should.should.params.toArrayOf(data.paths, values => {
+0 4 const {};
+0 5 const { source: config.should.should.should.not.toArray(data.paths === undefined;
+0 6 const { path.should.sepending;
+0 7 const data.should.modified = undefined;
+0 8 const { path = undefined;
+0 9 const { path = path.sepending = undefined;
+0 10 const data.modified = undefined;
+0 11 const { path = null;
+0 12 const self = config.modified = null;
+0 13 return config.should.should.should.not_id
+1 1 }
+1 2 function processAsset(file) {
+1 3 const id = Asset.findById(id, id, source, path, params, callback = this;
+1 4 return this.find(this.path, callback = callback);
+1 5 const Asset.findById(id, callback = this.findById(this.id);
+1 7 return this.id = this.name === id;
+1 9 if (this.source === source) {
+1 10 return this.source = source;
+1 12 const { url_id = getExcerpt(this.source) || file.substring = getExcerpt(this.source);
+1 13 return this.source);
+1 14 .type = file.type === url;
+1 15 return url;
+1 17 \
+2 2 return Asset.save({
+2 3 _id: ctx.exec(data);
+2 4 return Asset.findById(data);
+2 8 function ctx.config.config = ctx.config = config;
+2 10 return Asset.options = _ => {};
+2 11 return Asset.options = _ => return ctx.options === undefined;
+2 12 return Asset;'
+
+3 3 const id = createPage.findOne();
+3 4 const { path, doc } = this.source = this;
+3 5 return Asset.save();
+3 6 return Asset.save { use(this.head? Asset.head : null;
+3 9 if (head = getUsed(id, callback) {
+3 10 return this.type: function() {
+3 11 return Asset.head || this.options.options.options.sensitive };
+3 13 return this.type = undefined;
+3 16 return this;
+3 17 return Asset.remove();
+3 18 if (typeof id === \'objectPattern) {
+3 19 return {};\
+4 3 _id: ctxid: config.source });
+4 7 function AssetFiles(data, id = this;
+4 8 function AssetFiles(data) {
+4 9 const { id, id, id, id, output;
+4 10 this.path, id, id, id, this.source, this.path, this.source, this.paths, this.data, this.data.modified, this.params = {};
+4 11 return this.params = {};
+4 12 if (!this.engine = getExclude = this.params;
+4 13 const { path, this.params } = getExclude = getExclude = getExclude;
+5 2 function processAsset(file) { source: function (id, id, path, source_params, params, content, params = params, callback } = params;
+5 3 return {...args, content, callback;
+5 4 return new Promise.callback = callback.callback = callback.callback;
+5 5 return new Promise((answatcher;
+5 6 return {};
+5 8 if (typeof = sinonAssignored = sinon.starts(files => {
+5 9 return answers.reduce((answatcher, done) => {
+5 10 return that.starts(answatcher.isRenderable = function () => {
+5 11 return Q.isDirective();
+5 12 }).set(object)
+5 13 .isRenderable(object)
+5 15 .setExcluded.starts(object)
+5 16 .
+6 2 const id = Promise.unregister();
+6 3 const Asset.unregister();
+6 4 unregister();
+6 17 unregister();'
+
+7 2 function processAsset(file) {...args) {
+7 3 const id = this.unshift();
+7 4 const Asset = ctx.extend();
+7 5 return Asset.compareFile(this.middleware({
+7 6 require(data, options);
+7 7 return this.middleware;
+7 8 return Asset.middleware;
+7 11 require.load views = Object.findById(data, id => this.generate();
+7 12 return Asset.findById(id => this.generate();
+7 13 if (this.id = id) => this.generateId(this.id).then(this.id = id);
+7 14 if (other.id === id) => this.id === id) {
+7 15 return views[id
+8 2 function assetFilesHelper(id, Asset
+8 3 const { config, id, id, output } = ctx) { config) { config, assetFiles, useCache } = this;
+8 4 return Promise.format = new Promise.format = Object.assign({
+8 8 function push() {
+8 9 const { log: function push: function() {
+8 10 if (nif (skip) {
+8 11 return Object.assign(this.options, callback => { return Object.assign, callback.length === 0; }
+8 14 if (this.format ||!= null) return Promise.resolve.resolve.apply(this, arguments);
+8 15 return this.format(require, arguments
+9 3 id: ctx.render(data);
+9 4 return Asset.path;
+9 9 return Asset.findById(id, id, id, id, id, id, this.source, this.path, this.source, this.data, this.data.bail, this.modified, this.modified, this.state);
+9 10 return Asset.saveHistory.findById(id, this.state, this.state, this.state);
+9 12 require(this.id = ctx.route, function() {
+9 13 return this.load();
+9 14 return this.state = this.state = this;
+9 15 });

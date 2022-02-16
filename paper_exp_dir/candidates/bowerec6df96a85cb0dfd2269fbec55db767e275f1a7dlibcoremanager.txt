@@ -1,0 +1,399 @@
+Min editdistance: 23.00
+Closest candidate: 0 9 var app = express();
+0 1 `;
+0 2 result.should.eql([
+0 3 \'<a href="https://bower.io/">https://bower.io/post/1">1</a>\',
+0 4 \'<a href="https://bower.io/">https://bower.io/post/2">2</a>\',
+0 5 \'<a href="https://bower.io/"/"/"/"/"/"/"/"/></a>\'
+0 6 ].join(\' \'));
+0 7 });
+0 8 it(\'should allow for query strings in URL\', function(done){
+0 9 var app = express();
+0 10 app.use(function(req, res){
+0 11 res.redirect(\'http://bower.io/\');
+0 13 request(app)
+0 14 .get(\'/\')
+0 15 .set(\'Host\', \'example.com\')
+0 16 .expect(200, \'\', done);
+0 17 })
+0 18 it(\'should allow []\', function(done){
+0 21 res.header(\'Host\', \'foo.com\');
+0 22 res.send(req.params.host);
+0 26 .expect(\'Content-Type\', \'application/json; charset=utf-8\')
+0 29 it(\'should disallow arbitrary js\', function(done){
+0 33 res.contentType(\'json\');
+0 34 res.send({});
+0 38 .end(function(err, res){
+0 39 res.headers.should.have.property(\'content-type\', \'application/json; charset=utf-8\');
+0 40 res.text.should.equal(\'foobar\');
+0 41 done();
+0 44 describe(\'when given primitives\', function(){
+0 45 it(\'should respond with json\', function(done){
+0 48 res.redirect(\'/\');
+0 54 res.text.should.equal(\'null\');
+0 59 describe(\'when given an array\', function(){
+0 63 res.redirect(\'foo.com\');
+0 70 res.text.statusCode.should.equal(200);
+0 77 describe(\'when given an object\', function(){
+0 78 it(\'should respond with json\', function(){
+0 83 app.use(function(val)
+0 84 return val = express();
+0 85 val = express();
+0 86 assert(k.server)
+0 92 describe(\'should use(function(assert)
+0 93 it(\'should allow(': function(){\', function(){
+0 94 it(\'should allow(1, 2)\', function(){
+0 95 it(\'should contain map the map of the collection\', function(val)
+0 96 assert(': function(val)
+0 100 d
+1 1 ');
+1 3 \'<a href="https://bower.io/">bower.io</a>\',
+1 4 \'<a href="https://bower.io/" title="Hello World">Hello World</a>\',
+1 6 \'<a href="https://bower.io/" title="Hello World.">Hello World</a>\',
+1 7 \'</a>\'
+1 8 ].join(\'\'));
+1 9 it(\'should escape html entities\', function(done){
+1 10 var app = createApp();
+1 11 app.get(\'/\', function(req, res, next){
+1 12 res.send(\'<p>tobi &lt;tobi@learnboost.com&gt;</p>\
+1 13 \');
+1 17 .expect(200, done);
+1 19 it(\'should supportcodem for example script\', function(done){
+1 21 app.get(\'/forget\', function(req, res){
+1 22 res.send(\'woot\');
+1 25 .get(\'/forget\')
+1 26 .expect(200, function(err, res){
+1 27 res.headers.should.have.property(\'content-type\', \'text/javascript; charset=utf-8\');
+1 28 res.text.should.equal(\'typeof foo === \\\'function\\\' && foo({"foo":"bar"});\');
+1 33 it(\'should respond with json for null\', function(done){
+1 36 res.jsonp(null);
+1 41 .end(done);
+1 43 it(\'should respond with json for Number\', function(done){
+1 46 res.jsonp(300);
+1 53 it(\'should respond with json for String\', function(done){
+1 56 res.jsonp(str);
+1 67 res.jsonp([\'foo\', \'bar\', \'baz\']);
+1 71 .end(function(function(err, res){
+1 72 res.headers)
+1 73 .headers.should.have.have.contentType(\'content-type\', \'application/json; charset=utf-8\');
+1 74 res.should.should.send(res.send(res.toString());
+1 75 res.end(res.toString());
+1 77 .done();
+1 80 it(\'should.test(\'should.skip(\'should.json\');
+1 81 describe(\'should.jsonp\');
+1 82 it(\'should.jsonp)\');
+1 83 it(\'should.jsonp.json.json.should.json.should.json.json\');\')
+1 84 it(\'should.skip(\'should.json.json.json.should.json\');
+1 85 it(\' optional; should.json should.json should.json should
+2 1 ]',
+2 2 halt: function (s) { return chalk.magenta[s]; }
+2 3 },
+2 4 status : function (value) {
+2 5 if (value == undefined) return;
+2 6 if (typeof value == \'number\') return this.response.status = value;
+2 7 for (var code in node.http.STATUS_CODES)
+2 8 if (node.http.STATUS_CODES.hasOwnProperty(code))
+2 9 if (node.http.STATUS_CODES[code].toLowerCase() == value.toLowerCase())
+2 10 return this.response.status = parseInt(code)
+2 12 respond : function (body, status) {
+2 13 this.response.body = body;
+2 14 this.status(status);
+2 15 throw new Error(\'\');
+2 17 header : function(name, value) {
+2 18 return value?
+2 19 this.response.headers[name.toLowerCase()] = value :
+2 20 this.response.headers[name.toLowerCase()]
+2 22 requestHeader : function(name, defaultValue) {
+2 23 return this.request.headers[name.toLowerCase()] || defaultValue;
+2 25 param : function(key, defaultValue) {
+2 26 return this.request.uri.params[key] || defaultValue;
+2 28 parseParams : function(string) {
+2 29 var params = {}, pairs = string.split(\'&\'), pair
+2 30 for (i = 0, len = pairs.length; i < len; ++i) {
+2 31 pair = pairs[i].split(\'=\')
+2 32 params[pair[0]] = pair[1];
+2 33 }
+2 34 return this.parseNestedParams(params)
+2 35 .filter(function(params) {
+2 36 return semver.parseNestedParams(params)
+2 38 return params.split(\'=\').join(\'=\')
+2 39 .replace(/[\\s]+/g, \'\\\
+2 40 \')
+2 41 .replace(/\\/|\\\\\\?.*$/g, \'\')
+2 42 .replace(/^\\/user\\/.*$/g, \'\')
+2 43 .replace(/\\?.*$/g, \'\')
+2 44 .replace(/^\\/user\\/[^\\/]+/g, \'\\\
+2 47 .replace(/^\\/user\\/project..*$/g, \'\')
+2 48 .replace(/^\\/public\\/.*$/g, \'\')
+2 49 .replace(/^\\/source\\/test-main.js\')
+2 50 .replace(/^\\/blog\\/app..*$/g, \'\')
+2 51 .replace(/^\\/blog\\/app.*$/g, \'\')
+2 53 .replace(/^\\/public\\/.]*)(.?)\\?.*$/g, \'\');
+2 55 parseNestedParams : function(params) {
+2 56 var params = {};
+2 57 for (var key in params)
+2 58 if (params.hasOwnProperty(key))
+2 59 if (parts = key.split(\'[0])
+2 60 if (parts.length\'[0] == null)
+2 61 params[key.length] instanceof undefined(key] == undefined(key))
+2 62 params[key] = 1)
+2 63 params[key.substr])
+2 64 return params[key] = parts[key];
+2 65 }, this;
+2 66 return params;
+2 68 return params = this.parseParams(parts[key] : function(parts[key] : function(parts[key] : function(parts[key], params, i) {
+2 69 return parts[key] {
+2 70 return parts[key], params, this.parse(parts[key], params, this.substr, this.params, this.params)
+2 71 }, this.params);
+2 72 }, this).join(\', \'
+2 73 }, function(/ * optional * optional * parts)
+2 74 , optional * parts)
+2 75 , optional * partsAbse if (key) {
+2 76 ,
+3 2 \'));
+3 6 \'<a href="https://bower.io/" target="_blank" rel="external noopener">a</a>\',
+3 10 ].join(\'\
+3 13 it(\'should allow multiple arguments\', function (next) {
+3 14 var content = [
+3 15 \'<!--2.3.1\',
+3 16 \'<!--3.2.1\',
+3 18 \'<!--2.3.2\',
+3 23 \'<!--1.2.3>\',
+3 24 \'<!--1.3.2\',
+3 28 \'<!--1.3.3>\',
+3 29 \'<!--1.4</a>\',
+3 30 \'<!--1.5</a>\',
+3 31 \'<!--1.6.0>\',
+3 32 \'<!--1.7.0>\',
+3 33 \'<!--1.8.1>\',
+3 34 \'<!--1.8.0>\',
+3 35 \'<!--1.9.0>\',
+3 37 \'<!--1.9.2>\',
+3 40 \'<!--1.8.2>\',
+3 41 \'<!--1.8.3>\',
+3 45 \'</a>\',
+3 63 \'<!--1.2.2.3</a>\',
+3 64 ].join(\',
+3 65 \'
+3 66 ].join(\', \'));
+3 68 it(\'should work {
+3 69 .exec(data = createFuncs(removeIgnores(removeIgnores);
+3 70 .exec(removeIgnores);
+3 71 .exec(should.exec = createFuncs = [];
+3 72 .exec.exec.exec = function (dirname) {
+3 73 .should.should.exec.should.eql([\'/foo\', \'foo\', [\'bar\']\', \'baz\'baz\'];\']
+3 74 .should.exec.should.eql(dirs/;\', [\'baz\']
+3 75 .exec.exec.should.helpersignore;
+3 76 .exec.should.exec.should.eql([]);
+3 77 .exec.should.eql({ __dirname;
+3 78 .should.
+4 2 const expected = [false, false, false, false, false, true, false, false];
+4 3 describe("isOpeningBraceToken()", () => {
+4 4 const rulesMeta = {
+4 5 url: "https://bower.herokuapp.com",
+4 6 foo: "bar baz",
+4 7 cache: { foo: \'bar\' }
+4 8 };
+4 9 it("should return ${expected[0]} for the token passed", () => {
+4 10 const result = rulesMeta.bind(this);
+4 12 {
+4 16 ]);
+4 18 it("should return ${expected[1]} for the token passed", () => {
+4 27 });'
+
+5 2 maxLevel : 10,
+5 3 randomize : function(object)
+5 5 var startTime = Date.now()
+5 6 return {
+5 7 expect : \'word\'
+5 10 function Karma (socket, iframe, opener, navigator, location, document) {
+5 11 this.updater = updater
+5 12 var startEmitted = false
+5 13 var karmaNavigating = false
+5 14 var self = this
+5 15 var queryParams = util.parseQueryParams(location.search)
+5 16 var browserId = queryParams.id || util.generateId(\'manual-\')
+5 17 var displayName = queryParams.displayName
+5 18 var returnUrl = queryParams[\'return_url\' + \'\'] || null
+5 19 var resultsBufferLimit = 50
+5 20 var resultsBuffer = []
+5 21 var policy = {
+5 22 createURL : function (s) {
+5 23 return s
+5 25 createScriptURL : function (s) {
+5 29 var trustedTypes = window.trustedTypes || window.TrustedTypes
+5 30 if (trustedTypes) {
+5 31 policy = trustedTypes.createPolicy(\'karma\', policy)
+5 32 if (!policy.createURL) {
+5 33 policy.createURL = function (s) { return s }
+5 36 var socketReconnect = false
+5 37 this.VERSION = constant.VERSION
+5 38 this.config = {}
+5 39 this.socket = socket
+5 40 if (window.addEventListener) {
+5 41 window.addEventListener(\'message\', function handleMessage (evt) {
+5 42 var origin = evt.origin || evt.originalEvent.origin
+5 43 if (origin!== window.location.origin) {
+5 44 return
+5 46 var method = evt.data.__karmaMethod
+5 47 if (method) {
+5 48 if (!self[method]) {
+5 49 self.error(\'Received `postMessage` for "\' + method + \'" but the method doesn\\\'t exist\')
+5 52 self[method].apply(self, evt.data.__karmaArguments)
+5 54 }, false)
+5 56 var childWindow = null
+5 57 function navigateContextTo (url) {
+5 58 karmaNavigating = true
+5 59 if (self.config.useIframe === false) {
+5 60 if (self.config.runInParent === false) {
+5 61 if (childWindow!== null && childWindow.closed!== true) {
+5 62 childWindow.close()
+5 64 childWindow = opener(url)
+5 65 } else if (url!== \'about:blank\') {
+5 66 var loadScript = function (idx) {
+5 67 if (idx < window.__karma__.scriptUrls.length) {
+5 68 var parser = new DOMParser()
+5 69 var string = window.__karma__.scriptUrls[idx]
+5 70 .replace(/\\\\x3C/g, \'<\')
+5 71 .replace(/\\\\x3E/g, \'>\')
+5 72 var doc = parser.parseFromString(string, \'text/html\')
+5 73 var ele = doc.head.firstChild || doc.body.firstChild
+5 74 if (ele.tagName.toString.call(ele)
+5 75 .replace(ele)
+5 76 .replace(ele.tagName)
+5 78 } else {
+5 79 ele.tagName.ele = ele
+5 84 function getWindow (idxhr, openLimit = window.__karma__karma__.length__karma__.length__ /= 1
+5 85 return this.length
+5 87 process.onKarma__s = function (err, openHandlers, failOnEmptyTestSuite) {
+5 88 if (e, err, done) {
+5 89 if (process.platform === \'init\') {
+5 90 var promise = promise.errorHandlers.errorHandlers.length === undefined
+5 91 preprocess = function (err, self.request, done) {
+5 92 preprocess.kill()
+6 1 ') {
+6 2 this.should.eql [false, false, false, false, false, false, false, false, false]
+6 4 it(\'should sendCompletion for a single file\', function (done) {
+6 5 varCompletion = 50000
+6 6 var done = 0
+6 7 var msg = util.format.apply(null, Array.prototype.slice.call(arguments))
+6 8 var files = [done]
+6 9 mail.on(\'end\', function (str) {
+6 10 emitter.emit(\'end\', str)
+6 12 request(server)
+6 14 .expect(200, \'CONTEXT\
+6 15 <script type="text/javascript" src="%s"></script>\
+6 16 <script type="application/dart" src="dart""></script>\'
+6 20 it(\'should set Link header field\', function (done) {
+6 21 var content = [done]
+6 23 var headers = { \'Content-Type\': \'text/javascript\' }
+6 25 header[\'Content-Type\'] = \'text/javascript\';
+6 26 content.should.eql \'text/javascript; charset=utf-8\'
+6 27 return content.toString();
+6 31 .set(\'Content-Type\', \'application/json\')
+6 32 .send(content.toString());
+6 34 it(\'should sendCompletion for a single file with a single segment\', function (done) {
+6 35 var content = [\'file://\' + formatError(new Date())\']
+6 36 var file = formatError(new RegExp(\'^\' + content.join(\'\
+6 37 \') + \'"\')
+6 38 var filter = sinon.spy()
+6 39 emitter.on(\'end\', function (d) {
+6 40 return d.replace(\'file://\' + formatError(new RegExp(\'^\' + content.join(\'\
+6 44 .get(\'/file\')
+6 45 .end(function (err, res) {
+6 46 res.headers.should.have.property(\'content-type\', \'application/json\');
+6 47 res.text.should.equal(\'application/json\');
+6 48 res.statusCode.should.equal(200);
+6 52 it(\'should set Link header field for multiple files\', function (done) {
+6 53 var content = [\'file://\' + formatError(new RegExp(\'^\' + formatError(new RegExp(\'^\' + data.join(\'\
+6 56 emitter.emit(\'end\', function (d) {
+6 57 returnd.replace(\'file://\' + formatError(new RegExp(\'^\' + data.join(\'\
+6 62 .set(\'Referrer\', \'http://hexo.io.io/\')
+6 63 .end(function (res) {
+6 64 return res.headers.headers.should.have.property(\'content-type\', \'text/html; charset=UTF-8\');
+6 65 res.text.statusCode.should.should.equal(200);
+6 70 it(\'should sendCompletionFiles option must be a string for regexpion for any preprocessor\', function (folder)\', function (Folder) {
+6 71 get(\'/usr/folder, source)\', function () {
+6 72 get(\'/usr/folder.bin.bin.test(source)
+6 74 return request(server)
+6 75 .get(\'/
+6 79 .pipe(app/custom-browser/\')
+6 80 .get(\'/custom-browser.bin.json\')
+6 81 .pipe(request)
+6 82 .get(\'/custom
+6 83 .get(\'/custom\')
+7 3 return post.hasOwnProperty(post._id))
+7 4 .then(function (post) {
+7 5 return post.setTags(false, undefined, post._id);
+7 7 .then(function () {
+7 8 return Post.removeById(post._id);
+7 11 it.skip(\'should set the session if existed\');
+7 12 it(\'sets session if existed with the same package meta\', function () {
+7 13 var body = [
+7 14 \'title: "Hello world"\',
+7 15 \'date: 2006-01-02 15:04:05\',
+7 16 \'---\'
+7 19 var file = newFile({
+7 20 path: \'foo.html\',
+7 21 published: true,
+7 22 type: \'create\',
+7 23 renderable: true
+7 25 return fs.writeFile(file.source, body).then(function () {
+7 26 return process(file);
+7 27 }).then(function() {
+7 28 var post = Post.findOne({source: file.path});
+7 29 post.content.trim().should.eql([
+7 30 \'---\',
+7 32 \'date:2006-01-02 15:04:05\',
+7 35 \') + \'\
+7 37 return Promise.all([
+7 38 post.remove(),
+7 39 fs.unlink(file.source)
+7 43 it(\'sets the session if existed\', function () {
+7 46 \'date: 20000\',
+7 56 return fs.writeFile(file.source, body).then(function() {
+7 95 ].join(\'
+7 102 it.skip(\'set([\'batch interval\', function() {\');
+7 103 it(\'return post.clearFile(\'unlockAll the entire.\');
+7 105 it(\'_log-any.txt\');
+7 108 describe(\'
+7 109 it.skip(\'skip\'\', function()\', function(){
+7 110 return Post.skip(\'\');
+7 111 return Post.findRawLoadFiles().then(function(){
+7 112 return Post.findRawFiles().findRawFiles().findRawFiles().findRawFiles().findRawFiles().findRawFiles().some({ tags = undefined;
+7 113 return arguments = undefined;
+7 115 .skip(\'skipCustomWords = []\');
+7 117 it(\'skipCustomTasks.skip
+7 119 \
+8 1 ')
+8 2 .split(/ *, */)
+8 3 .join("\
+8 4 ");
+8 6 return post.create({
+8 7 title: \'Hello World\',
+8 8 foo: \'bar\'
+8 9 }).then(function (post) {
+8 10 post.path.should.eql(path);
+8 11 post.content.should.eql(content);
+8 14 it(\'create() - rename if target existed\', function () {
+8 15 var path = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World-1.md\');
+8 17 title: \'Hello World\'
+8 20 return post.publish({
+8 21 slug: \'Hello-World\'
+8 42 it(\'create() - replace existing files\', function () {
+8 43 var path = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\');
+8 50 }, true);
+8 87 post.path.should.should.eql(path.should.eql(path);
+8 88 return post.post);
+8 92 it.skip(\'publish()\', function()
+8 93 it(\'publish()\', function () {
+8 94 it(\'publish()\', function()
+8 96 it(\'should.skip()
+8 97 it(\'should.skip()\', function()
+8 98 )
+8 99 ).should.skip(\'should.skip(\'should.skip()\')
+8 101 .skip(\'should.skip()
+8 102 ).should.skip(\'express/.skip()\')
+8 103 ).should.skip(\'should.skip(\'express/fixtures/external_link\')
+8 104 .skip(\'express
+8 105 .skip.skip

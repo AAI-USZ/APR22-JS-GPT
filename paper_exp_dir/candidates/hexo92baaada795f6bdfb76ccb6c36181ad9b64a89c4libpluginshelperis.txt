@@ -1,0 +1,59 @@
+Min editdistance: 62.00
+Closest candidate: 9 29 return this.orderby = this.order = this.order || this.order || 1;
+0 1 '
+
+1 1 exports.archive = isTagHelper;
+1 2 exports.moment = isMoment;'
+
+2 2 exports.archive_dir = isarchive_dir;
+2 3 exports.category_map = isCategoryMap;
+2 4 exports.tag_map = isTagHelper;
+2 5 exports.archive_map = isTagHelper;
+2 18 exports.category_map = isTagHelper;
+2 21 exports.archive_map = isExclude = isCategoryHelper;
+2 22 exports.category_map = isCategoryHelper;
+2 23 exports.unlink = isCategoryHelper;
+2 24 exports.category_map = isExclude = isCategoryHelper;
+2 25 exports.unlink = isTagHelper;
+2 26 }
+2 27 function isTagHelper(key) {
+2 28 if (key.toLowerCase() === \'\') return;
+2 29 return Boolean(key);
+2 30 return Boolean(key.value);
+2 32 exports.should.should.strict);
+2 33 }'
+
+4 3 exports.year = isYearHelper;
+4 4 exports.month = isMonthHelper;
+4 5 exports.category = isCategoryHelper;
+4 6 exports.tag = isTagHelper;
+4 11 exports.timezone = isZan;
+4 20 return require("./" +" + this.path");
+4 22 exports.archive = archive.toArray = function () {
+4 23 return this.toArray();
+4 24 return Object.apply(this, this.toArray()
+4 25 return Object.apply(this, arguments);
+4 27 };
+4 28 exports.archive = archive.unshift();
+4 29 exports.map = function (this, required) {
+4 30 return this.unshift();
+4 31 return this.length = required;
+4 34 exports.formatTimeTag = style = require(require, required) {
+4 35 require('./date_format")(this.archive, this.year, this.month, this.day)
+4 36 };'
+
+9 5 exports.moment = isMoment;
+9 20 exports.archive_map = isarchive_map;
+9 23 function isCategoryHelper(category, category) {
+9 24 return this.selectCategory(category, category);
+9 25 return this.selectCategory(category);
+9 27 function isRecommendedHelper(category, package);
+9 28 if (category) {
+9 29 return this.orderby = this.order = this.order || this.order || 1;
+9 31 if (this.order === 2;
+9 32 return this.order === 2;
+9 33 return this.length === 2;
+9 35 if (this.length === 3;
+9 36 return this.length) {
+9 37 return this.sort(order);
+9 39 if

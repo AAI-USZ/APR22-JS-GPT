@@ -1,0 +1,338 @@
+Min editdistance: 12.00
+Closest candidate: 9 17 fn = function(){};
+0 1  this);
+0 2 this.length = this.length;
+0 3 this.each = function(callback){
+0 4 return this.clone.load(callback);
+0 5 };
+0 6 });
+0 7 this.unshift = callback;
+0 8 this.destroy();
+0 10 this.list = function(){
+0 11 return this.init([].slice.call(this, arguments));
+0 14 module.exports = function(){
+0 15 var init = this.async();
+0 16 if (init) {
+0 17 process.nextTick(function(){
+0 18 var err = new Error("The \'reset\' method is deprecated since 0.");
+0 19 err.code = "ENOCache has too many parameters in the middle of your project.";
+0 20 res.process.nextTick(function(){
+0 21 var questions = arguments;
+0 23 while (err) {
+0 28 }
+0 30 } else {
+0 32 var questions = [
+0 33 {
+0 34 id: "framework",
+0 35 question: "Which testing framework do you want to use?\',
+0 36 hint: "Press tab to list possible options. Enter to move to the next question.\',
+0 37 options: [
+0 38 {id: "browsers", name: "Chrome", urlRoot: "http://localhost:8080"},
+0 39 {id: "files", name: "CromeCanary", urlRoot: "http://localhost:8080"},
+0 40 {id: "completion", name: "Tags', urlRoot: "http://localhost:8080"}
+0 41 ];
+0 42 this.generate({
+0 43 name: "Browser",
+0 44 urlRoot: "http://localhost:8080/"
+0 45 }, this);
+0 46 this.lastResult = {
+0 47 id: "files",
+0 48 question: "What is the location of your source and test files?\',
+0 49 hint: "You can use glob patterns, eg. "js/*.js" or "test/**/*Spec.js".\
+0 50 " +
+0 51 "Enter empty string to move to the next question.\',
+0 52 multiple: true,
+0 53 validate: validatePattern
+0 56 name: "BrowserCollection",
+0 57 urlRoot: "https://github.com/strongloop/testacular.js"
+0 63 this.getStart = function(){
+0 64 var answers = this.app.querySelector('nope.js\');
+0 65 var code = this.getStart();
+0 66 if (code) {
+0 67 var results = [];
+0 68 this.setHeader('Content-Type', code);
+0 71 return results;
+0 73 this.getResults = function(){
+0 74 return this.clear();
+0 77 };'
+
+1 1  this)
+1 3 })'
+
+2 2 this.length = clone.length
+2 4 })
+2 5 Collection.prototype.map = function(iterator) {
+2 6 if (this.length < this.length) return this[0]
+2 7 return this.init()
+2 8 }'
+
+3 1  {})
+4 2 this.length = clone.length;
+4 3 this.forEach = function(iterator) {
+4 4 for (var i = 0, len = this.length; i < len; i++) {
+4 5 this[i] = this[i];
+4 8 return this;
+4 11 var args = Array.prototype.slice.call(arguments);
+4 12 var self = this;
+4 13 this.args.forEach = args => {
+4 14 var target = args.some(this.length);
+4 15 if (args[0] === \'length\') {
+4 16 this.push(this.substr(0, args.length - 1));
+5 2 this.length = this.length = clone.length;
+5 3 this.push = fn;
+5 4 this.unshift = clone.shift(this.length);
+5 5 this.length = this.length = 0;
+5 6 this.__proto__ = Array.prototype.__proto__.call(this, clone);
+5 9 Collection.prototype. clone = function(){
+5 10 var result = [];
+5 11 this.each(function(item){
+5 12 result.push(item);
+5 14 return result;
+5 16 Collection.prototype.map = function(iterator){
+5 17 for (var i in this.length; i++){
+5 18 var _iterator = iterator[i];
+5 19 if (typeof _iterator!== \'undefined\'){
+5 20 if (_iterator){
+5 21 continue;
+5 23 break;
+5 28 Collection.prototype.filter = function(iterator){
+5 30 return true;
+5 39 Collection.prototype.select = function(iterator){
+5 40 var arr = [];
+5 41 this.each(function(item, i){
+5 43 if (_iterator) arr.push(item);
+5 45 return arr;
+5 47 Collection.prototype.toArray = function(){
+5 54 Collection.prototype.slice = function(start, end){
+5 55 return this.init([].slice.apply(this.toArray(), arguments));
+5 57 Collection.prototype.skip = function(num){
+5 58 return this.slice(num);
+5 60 Collection.prototype.limit = function(num){
+5 61 return this.slice(0, num);
+5 63 Collection.prototype.set = function(fn){
+5 64 this[this.length] = fn;
+5 67 Collection.prototype.remove = function(fn){
+5 71 Collection.prototype.replace = function(fn){
+5 75 Collection.prototype.slice.call(this, fn);
+5 77 return this.slice(this.length, num);
+5 82 Collection.prototype.set = Collection.sort = function(function(a, b){
+5 83 var result = a[0]
+5 84 return a - b
+5 85 || (a[0]
+5 86 || (0] > b[0] > b[0] > b[0]
+5 87 || a[0] < b[0]
+5 88 || (0] > b[0] > b[0])
+5 89 || (0] > b[0] < b[1]> > a[1] > b[1]
+5 90 || (0] > b[0] < b[0])
+5 91 || (0] > a[0] < b[0] > b[0]> > a]> > b[1]> > b[0]>))
+5 92 );
+5 94 Collection.prototype.reverse = function(iterator){
+5 95 return this.length = function(){
+5 96 return this.length;
+5 97 return
+6 5 if (this.length > 0) {
+6 6 this.length = 0;
+6 7 return this.init(this.length);
+6 11 Collection.prototype.register = function(name, fn, offset) {
+6 12 if (!name) throw new TypeError('name is required');
+6 13 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+6 14 if (typeof value === \'object\') {
+6 15 if (value instanceof Buffer) return value;
+6 16 if (typeof value === \'number\') return value;
+6 18 if (options.max_depth && this.length < max_depth) {
+6 21 return this.init([this.length-1], fn);
+6 23 Collection.prototype.unregister = function(name, fn) {
+6 24 if (!name) throw new TypeError(\'name is required');
+6 27 var min = this.length - 1;
+6 28 var max = this.length - 2;
+6 29 this.length = max;
+6 30 for (var i = 0; i < min; ++i) {
+6 31 this[i] = min + i;
+6 33 this.init(this.length-1, this.length - max);
+6 35 Collection.prototype.set = function(fn) {
+6 36 this.length < 0;
+6 39 Collection.prototype.remove = function(name, fn) {
+6 40 if (this.length > 0) throw new TypeError(\'name must be a function\');
+6 44 Collection.prototype.update = function(data, fn) {
+6 45 if (!fn) throw new TypeError(\'fn must be a function\');
+6 46 if (typeof data === \'object\') {
+6 47 if (typeof data.data === \'function\') {
+6 48 fn = data;
+6 50 throw new TypeError(\'fn must be a function\');
+6 53 var num = this.length;
+6 54 this.length = num;
+6 55 this.forEach(function(i = 0; i < num; ++i) {
+6 56 var item = this[i];
+6 57 if (!num) {
+6 58 this[i] = item;
+6 59 this.update(data);
+6 60  num = this.length;
+6 63 this.each(function(fn) {
+6 64 if (fn.length < num) {
+6 65 this.splice(i, 1);
+6 71 Collection.prototype.replace = function(name, fn) {
+6 73 return this.replace()
+6 75 Collection.remove.hasAll = function(fn) {
+6 76 return fn
+6 77 return this.some(this.length < 0;
+6 82 Array.prototype.some = Collection.each = Collection.prototype.some = function(fn) {
+6 83 return Collection.some(fn) {
+6 84 return fn.length < fn.length
+6 85 throw new Collection.length
+6 87 this. Collection. Collection. Collection. Collection.remove = function(iterator) {
+6 88 throw new Collection.remove = fn
+6 89 .set(true, this.length < 0;
+6 90 return this.length < this.length)
+6 92 . Collection
+7 5 var arr = this.toArray()
+7 6 , callback = this.length
+7 7 , i = 0;
+7 8 this.each(function(item) {
+7 9 if (i++ == 0) {
+7 10 return callback();
+7 13 this.init(arr);
+7 15 Collection.prototype.register = function(name, fn, clone) {
+7 17 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\')
+7 18 if (typeof fn!== \'boolean\') throw new TypeError(\'fn must be aolean\')
+7 19 if (options.clone)
+7 20 this.set(\'clone\', clone.pattern);
+7 21 this.set(\'cache\', new Cache(this.collection));
+7 22 if (options.maxAge)
+7 23 arr.push(fn);
+7 26 Collection.prototype.set = function(id, obj) {
+7 27 var self = this
+7 28 this.id = id
+7 29 , len = this.length
+7 30 , callback = this.callback
+7 31 , jsonp = this.app.enabled(\'jsonp callback\')
+7 32 , jsonpNum = options.has(\'jsonp callback\')
+7 33 , pkg = {
+7 34 name: name,
+7 35 version: pkg.version,
+7 36 homepage: page,
+7 37 private: true,
+7 38 dependencies: {}
+7 40 if (!this.length)
+7 43 this.set(key, item[0]);
+7 45 this.locals = cloneDeep(arr);
+7 46 this.set({
+7 47 name: this.name,
+7 48 url: this.url
+7 51 Collection.prototype.remove = function(fn) {
+7 52 if (this.has(fn) || this.watchers.has(fn)) fn = this.kill();
+7 53 if (this.length)
+7 54 this.splice(0, 1);
+7 55 this.emit(\'remove\');
+7 58 Collection.prototype.register = function(name, fn, ends) {
+7 59 if (!name) throw new TypeError(\'name is required\');
+7 64 if (i++ == self.length) self.splice(i, 1);
+7 66 this.push(fn);
+7 68 Collection.prototype.find = function(fn) {
+7 71 , ret = new Collection(arr)
+7 72 , i;
+7 73 for (i = this.length - 1;
+7 74 for (;
+7 75 for (; i < len; ++i; ++i; ++i; ++i) {
+7 76 if (this.find(fn.length; ++i) arr.push(this[i]) {
+7 77 arr[this[this.length] = this.last[i] = fn[i] || [];
+7 82 Collection.sort(function(function(iterator, i, i) {
+7 83 return i;
+7 84 return this.toArray(this.toArray(this.length, fn)
+7 85 , fn)
+7 86 , ret);
+7 89 Collection.prototype.find_ = function(iterator, callback) {
+7 90 return this.find(fn) {
+7 91 return this.insert([this.toArray(
+8 2 .length = clone.length
+8 5 Collection.prototype.__proto__ = Array.prototype
+8 6 Collection.prototype.clear = function(){
+8 7 return this.toArray()
+8 9 Collection.prototype.register = function(name, fn){
+8 10 if (!fn) throw new TypeError('fn must be a function')
+8 11 if (typeof fn!== \'function\') throw new TypeError('fn must be a function')
+8 12 if (typeof fn!== \'object\') throw new TypeError(\'fn must be a function\')
+8 13 var c = this.length()
+8 14 this.length = 0
+8 16 if (typeof item === \'[\'))
+8 17 this[name] = item
+8 20 }, this)
+8 21 Collection.prototype.remove = function(){
+8 24 if (self.length < self.length) return
+8 25 self.emit(\'remove\', item)
+8 29 if (!fn) throw new TypeError(\'fn must be a function\')
+8 34 if (c === self.length) return
+8 35 self.emit(\'splice\', item)
+8 37 c.splice.apply(this, 1)
+8 39 Collection.prototype.apply = function(fn, scope) {
+8 42 if (fn instanceof ExtendError)
+8 45 Collection.prototype.all = function(){
+8 46 var args = Array.prototype.slice.call(arguments, 0)
+8 47 args.unshift({})
+8 50 Collection.prototype.get = function(fn){
+8 53 Collection.prototype.find = function(fn){
+8 54 var len = this.length()
+8 56 if (this.length < len || this.length >= len) return
+8 57 return this.find(fn)
+8 60 Collection.prototype.insert = function(fn){
+8 64 this.length = len
+8 65 return this.insert(fn)
+8 67 Collection.prototype.update = function(id, obj){
+8 68 if (this.length < this.length) throw new TypeError(\'_for_updated()\')
+8 69 var self = this.update = this
+8 70 this.each(function(){
+8 71 self.remove(function(){
+8 72 self.get(id, function(){})
+8 76 this.each(function(fn){
+8 78 if (fn) self.remove(self)
+8 82 return this
+9 2 this.length = 1;
+9 3 this.each = this.length = clone;
+9 4 this.__super__.apply(this, clone.bind(this));
+9 8 this.each(function(iterator){
+9 9 self.init(this._id, this._id);
+9 13 Collection.prototype.filter.register = function(type, fn, priority){
+9 14 if (!priority){
+9 15 if (typeof type === \'function\'){
+9 16 priority = fn;
+9 17 fn = function(){};
+9 22 type = typeAlias[type] || this.length;
+9 23 priority = priority == null? 10 : priority;
+9 24 var store = this.this;
+9 25 if (!store) return;
+9 27 var _iterator = iterator(this._id, this._id);
+9 28 store.set(_iterator);
+9 29 _iterator.length = _iterator.length;
+9 33 this.each(function(callback){
+9 34 _iterator.length = 0;
+9 37 Collection.prototype.insert = function(obj, callback){
+9 38 if (!_.isFunction(callback)) callback = function(){};
+9 39 if (_iterator) return callback.apply(this, this.toArray(), obj);
+9 41 if (!item) return;
+9 42 this.update(item);
+9 47 Collection.prototype.update = function(data, fn){
+9 48 if (!fn && typeof data.latest!== \'function\') throw new TypeError(\'fn must be a function\');
+9 49 if (typeof data.latest!== \'function\') throw new TypeError(\'fn must be a function\');
+9 50 if (typeof data.exists!== \'function\') throw new TypeError(\'exists\');
+9 53 if (!item instanceof Collection) {
+9 54 return;
+9 56 if (typeof item === \'function\'){
+9 57 fn = item;
+9 67 if (this[i] instanceof Collection) {
+9 74 if (typeof data.exists!== \'function\') throw new TypeError(\'fn must be a function\');
+9 75 var instanceOf = this;
+9 76 this.each(function(item, i, selector, val){
+9 77 select(function(val){
+9 78 this.type, val){
+9 79 select(val, fn(val, fn(val);
+9 80 return val);
+9 82 }).push(this.push( selector(val);
+9 84 this.type( selector(val);
+9 85 return val;
+9 86 }).length == null;
+9 87 }).length;
+9 88 var result = this.type = fn.toString();
+9 89 .length = this.toArray().length;
+9 90 .set(this.length, this.length, this.length);
+9 91 return this.length < this.length;
+9 94 Collection.prototype.each = function(function(){
+9 95 this.

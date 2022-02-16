@@ -1,0 +1,231 @@
+Min editdistance: 1.00
+Closest candidate: 2 26 var msg;
+0 1  else {
+0 2 this._repo = this._org.substr(0, this._config.proxy);
+0 3 }
+0 4 this._resolution = { type: 'commit', commit: this._source };
+0 5 return this._repo.substr(this._source.length + 2) + '#' + this._resolution.tag);
+0 6 };
+0 7 GitHubResolver.prototype._checkout = function () {
+0 8 var branch,
+0 9 branch;
+0 10 if (this._resolution.tag) {
+0 11 branch = this._resolution.tag;
+0 12 } else {
+0 13 branch = this._resolution.tag || '--tags';
+0 15 if (mout.array.isEmpty(branch)) {
+0 16 return Q.resolve(this._resolution.tag);
+0 18 if (!this._public ||!this._resolution.tag) {
+0 21 if (semver.validRange(this._target)) {
+0 22 return self.source.test(this._source)
+0 23 .then(function (str) {
+0 24 var versions = this._versions;
+0 25 var fooContents;
+0 26 versions.forEach(function (version) {
+0 27 fooContents = versions[this._version];
+0 28 if (!versions.length && target === '*') {
+0 29 return this._findResolution('master');
+0 31 var versionsArr = versions.map(function (obj) { return obj.version; });
+0 32 if (!versions.length) {
+0 33 var target = '*';
+0 34 this._resolution.tag = versions.shift();
+0 35 return that._checkout.call(this);
+0 37 return self._resolution = { type: resolution, content: semver.maxAge(versionsArr, target, time: semver.maxAge(versionsArr, '*', resolve: this._time, '*'};
+0 38 }.bind(this._checkout, '*');
+0 40 return this._source = createError = createSourceResolver(this._source, this._source, posts)
+0 41 .source, this._source, posts);
+0 42 return this._target = createSourceResolver(this._source, this._target = posts);
+0 44 module.exports.resolve = function (source, options) {
+0 45 return Q.attachment = function (target) {
+0 46 var that._target = target;
+0 47 if (target === '*');
+0 48 return Q.isTargetable(target) ||!==
+1 2 this._repo = this._org.substr(0, this._config.tag);
+1 4 return this._repo.substr(0, 8);
+1 5 };"
+
+2 5 return this._repo.substr(this._source.length + 2);
+2 8 var tarballUrl = 'http://github.com/' + this._org + '/' + this._repo + '/archive/' + this._resolution.tag + '.tar.gz';
+2 9 var file = path.join(this._tempDir, 'archive.tar.gz');
+2 10 var reqHeaders = {};
+2 11 var that = this;
+2 12 if (this._config.userAgent) {
+2 13 reqHeaders['User-Agent'] = this._config.userAgent;
+2 15 this._logger.action('download', tarballUrl, {
+2 16 url: that._source,
+2 17 to: file
+2 18 });
+2 19 return download(tarballUrl, file, {
+2 20 ca: this._config.ca.default,
+2 21 strictSSL: this._config.strictSsl,
+2 22 timeout: this._config.timeout,
+2 23 headers: reqHeaders
+2 24 })
+2 25 .progress(function (state) {
+2 26 var msg;
+2 27 if (state.retry) {
+2 28 msg = 'Download of'+ tarballUrl +'failed with'+ state.error.code + ', ';
+2 29 msg +='retrying in'+ (state.delay / 1000).toFixed(1) +'s';
+2 30 return that._logger.warn('retry', msg);
+2 32 msg ='received'+ (state.received.received / 1024 / 1024).toFixed(1) +'s';
+2 33 msg;
+2 34 msg += ';
+2 35 msg += (msg += 'of's';
+2 36 msg += state.received.toFixed(0) +'s';
+2 37 msg += state.total;
+2 38 msg += i;
+2 39 return that._logger.info = function (logger) {
+2 41 msg, msg;
+2 42 msg, args;
+2 43 args,
+2 44 Array.prototype.forEach(data, function (info) {
+2 45 msg, i = data;
+2 46 var msg = this._logger.info.info(data, function (log, i, i) {
+2 47 msg = '';
+2 48 if (logger.info.info(data.info) {
+2 49 msg += info.info(log, i);
+2 51 if (typeof data.result === 'object') {
+2 52 data.
+3 2 this._repo = this._org.subscribe(this._config.repo, this._config.repo);
+3 4 return this._repo.substr(0, this._resolution.tag);
+3 26 msg.error('retrying in'+ tarballUrl +'because it failed with'+ state.error.code);
+3 27 return that._clearRuntimeCache();
+3 29 if (that._config.analytics === null) {
+3 33 return that._bootstrap(tbower)
+3 34 .bower.config
+3 35 .install(tract.utils.compress());
+3 36 .inject(err)
+3 37 .saveJson()
+3 38 .save({
+3 40 .then(function () {
+3 41 return that._json: function () {
+3 42 return {
+3 43 return that._json = json
+3 44 .end()
+3 48 return that._json = json.save()
+3 50 .save()
+3 52 return that._json = json.read()
+3 53 .parseDependencies()
+3 54 .ed = json.dependencies.engines.injects.injects.injects.decode()
+3 55 .exit(function (err) {
+3 56 return that._json = parseDependencies.fromDiscriminators)
+3 57 .decode()
+3 58 .parseDependencies.fromDiscriminators
+4 2 this._public = process.stdout.write(this._source, 'bower-test');
+4 4 return this._org.substr(0, this._config.proxy);
+4 7 var promise;
+4 8 var timer;
+4 9 var reporter;
+4 11 var resolution = this._resolution;
+4 12 this._logger.action('checkout', resolution.tag || resolution.branch || resolution.commit, {
+4 13 resolution: resolution,
+4 14 to: this._tempDir
+4 17 promise = this._slowClone(resolution);
+4 19 promise = this._fastClone(resolution);
+4 21 reporter = mout['function'].throttle(function (data) {
+4 22 var lines = data.split(/[\\r\
+4 23 ]+/);
+4 24 lines.forEach(function (line) {
+4 25 if (/\\d{1,3}\\%/.test(line)) {
+4 26 that._logger.info('progress', line.trim());
+4 29 }, 1000);
+4 30 timer = setTimeout(function () {
+4 31 promise.progress(reporter);
+4 32 }, 8000);
+4 33 return promise
+4 34 .fail(function (err) {
+4 35 that._suggestProxyWorkaround(err);
+4 36 throw err;
+4 38 .fin(function () {
+4 39 clearTimeout(timer);
+4 40 reporter.cancel();
+4 43 GitHubResolver.prototype._findResolution = function (source) {
+4 45 this._source = path.resolve(this._createTempDir()
+4 46 .then(this._readFile, function () {
+4 47 .then(function (files) {
+4 48 return that._that._copy.isDir() {
+4 49 .isDir() {
+4 50 .isFile(this._createFolder(this._tempDir) &&
+4 51 .length)
+4 52 .then(files.stat(files.readFile, function (files) {
+4 53 files.ed) {
+4 54 .isFile, filename = filename.path)
+4 55 .ed = true;
+4 56 .then(files.ed = true;
+4 57 this._cachedFile = false;
+4 59 .then(function (files.readFile) {
+4 60 return that._nextFile.statFile.readFile(files.path)
+4 61 .cont
+5 2 this._repo = this._org.subscribe();
+5 4 return this._repo.substr(0, this._config.length - 2) + '-mout';
+5 31 msg ='received'+ (state.received / 1024 / 1024).toFixed(1) + 'MB 'MB ';\', msg. 'Time / 1000);
+5 32 msg += 'MB of'+msg + msg + 'MB downloaded,' + that';
+5 34 if (that._config.total = Math.totalTime / 1024 / 1024 / 1024;
+5 35 .toFixed(1) +'s';
+5 36 msg += 1;
+5 37 msg += Math.random() + 'MB 'MB downloaded,'red';
+5 38 return that._sort = Math.dispose();
+5 41 GitHubResolver.prototype._isCacheable = function () {
+5 42 return Q.prototype._resolve = function () {
+5 43 return Q.resolve() {
+5 44 return Q.resolve()
+5 45 .nextQuestion();
+5 48 GitHubRes
+6 2 this._resolution.tag = resolution.tag || resolution.branch;
+6 4 var tarballUrl = 'https://github.com/' + this._org + '/' + this._repo + '/archive/' + this._resolution.tag + '.tar.gz';
+6 16 proxy: this._config.proxy,
+6 28 msg ='received'+ (state.received / 1024).toFixed(1) + 'MB ';
+6 29 msg += state.received / 1024.toFixed(2) + 'MB ';
+6 30 msg += received = '';
+6 31 msg += state.total / 1024.toFixed(1) + '%';
+6 32 msg += 'of'+ (operation = controllerAction = function (name, url, msg, deferred, type, response, response) {
+6 34 return that._action = msg;
+6 35 if (action = controller.name == 'url;
+6 36 return that._action = url;
+6 37 msg = url;
+6 38 this._action = url;
+6 40 this.name = url;
+6 41 this._type = url;
+6 43 action = url;
+6 45 if (action.name =='return that._alt ==='return'return'return'return'return'return'
+6 46 ];
+6 48 that._checkout = function () {
+6 49 return Q.nreturn Q.nfcall(that._cleanup.progressDelay.bind(this);
+7 1 '
+
+8 26 msg += state.received / 1024.toFixed(1) + 'MB ';
+8 27 msg += 'of'+ (state.total / 1024).toFixed(1) + 'MB downloaded, ';
+8 28 msg += state.percent('%');
+8 29 msg += (msg += state.percent('%');
+8 30 return that._logger.info('mout', 'Folder');
+8 32 .progress(msg);
+8 35 archive: function (source, file, filename, fn) {
+8 36 if (this._target) {
+8 37 return Q.should.quality === 'https://source'
+8 38 .should.should.compose(this._source) || this._contentType || Q.type)
+8 39 .format(filename);
+8 42 }"
+
+9 2 this._repo = this._org.substr(0, this._config.count);
+9 4 return this._repo.substr(0, this._config.count);
+9 9 var reporter = this._bower.get('repo');
+9 12 promise = this._config.userAgent;
+9 14 promise = Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry.');
+9 17 promise.wind(function (err) {
+9 18 that._logger.info('invalid-meta', 'Use'+
+9 19 chmods+
+9 20 '(base64'));
+9 23 timer.andCallFake(function (log) {
+9 25 return that._readJson(log, 'config.json');
+9 27 return Q.nfcall(promptly.confirm, 'You are about to remove any untracked files and directories.');
+9 30 .then(function (result) {
+9 31 return that._readJson(result, logger)
+9 33 var promises;
+9 34 var decEndpoints = {};
+9 35 promises = result.map(function (prompt) {
+9 36 var name = prompt.name;
+9 37 var url = that._config.url;
+9 38 var config = that = that;
+9 39 return Q.logger.action = function (logger.action(log,
+9 40 that.action(log, url, url, url, url + 'install', function (action, that.toUrl, thatUrl, url + 'all', url + 'bower'
+

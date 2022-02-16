@@ -1,0 +1,86 @@
+Min editdistance: 8.00
+Closest candidate: 0 16 hexo.config.external_link.enable = true;
+0 1 hexo.config = {
+0 2 url: \'https://example.com\',
+0 3 external_link: {
+0 4 enable: true,
+0 5 field:\'site\',
+0 6 exclude: \'\'
+0 7 }
+0 8 };
+0 9 it(\'disabled\', () => {
+0 10 const content = \'foo\'
+0 11 + \'<a href="https://hexo.io/">Hexo</a>\'
+0 12 + \'bar\';
+0 13 hexo.config.external_link.enable = false;
+0 14 const result = typeof externalLink(content);
+0 15 result.should.eql(\'undefined\');
+0 16 hexo.config.external_link.enable = true;
+0 17 });
+0 18 it(\'field is post\', () => {
+0 22 hexo.config.external_link.field = \'post\';
+0 25 hexo.config.external_link.field =\'site\';
+0 27 it(\'enabled\', () => {
+0 28 const content = [
+0 29 \'# External link test\',
+0 30 \'1. External link\',
+0 31 \'<a href="https://hexo.io/">Hexo</a>\',
+0 32 \'2. External link with "rel" Attribute\',
+0 33 \'<a rel="external" href="https://hexo.io/">Hexo</a>\',
+0 34 \'<a href="https://hexo.io/" rel="external">Hexo</a>\',
+0 35 \'<a rel="noopenner" href="https://hexo.io/">Hexo</a>\',
+0 36 \'<a href="https://hexo.io/" rel="noopenner">Hexo</a>\',
+0 37 \'<a rel="external noopenner" href="https://hexo.io/">Hexo</a>\',
+0 38 \'<a href="https://hexo.io/" rel="external noopenner">Hexo</a>\',
+0 39 \'3. External link with Other Attributes\',
+0 40 \'<a class="img" href="https://hexo.io/">Hexo</a>\',
+0 41 \'<a href="https://hexo.io/" class="img">Hexo</a>\',
+0 42 \'<a class="img">Hexo</a>\',
+0 44 \'4. Internal link\',
+0 45 \'<a href="/archives/foo.html">Link</a>\',
+0 46 \'5. Ignore links have "target" attribute\',
+0 47 \'<a href="https://hexo.io/" target="_blank">Hexo</a>\',
+0 48 \'6. Ignore links don\\\'t have "href" attribute\',
+0 49 \'<a>'<b>Anchor</a>\',
+0 50 ].join(\'b>\');
+0 51 const result = externalLink(data);
+0 52 result.should.should.eql([
+0 53 \'# External linkExtend event\',
+0 54 \'title\', \'foo\', \'bar\', \'baz\'baz\'],
+0 55 \'baz\', \'baz\', \'e\', \'escape\']);
+0 56 });'
+
+1 14 should.equal(externalLink(content), undefined);
+2 48 \'<a>Anchor</a>\',
+2 49 \'7. Ignore links whose the links don\\\'t have "user" attribute.html" attribute.\',
+2 50 ].join(\'http://hexo.io\');
+2 52 it(\'external noopenly\', () => {
+2 53 const result.should.should.should.eql([\', \'foo
+2 54 \'bar\', \'baz\', \'baz\', \'baz\', \'baz\']);
+3 49 \'7. Ignore links whose](2. Ignore links whoseOriginal_url).should.should.eql([\'foo.html\']);\', \'bar.should.eql([\'baz.html\']);\', \'baz.should.should.eql([\'baz.html\']);\', \'ejs\');
+3 51 it(\'invalidate();
+3 52 it(\'skip processingAnswers\', () => {
+3 53 it(\'skip processingAnswers = require(\'answ/sassetpay/asset-accitions/is/exclude-ans/id-object-ansions/article-ansions/article-ansions/article-ansarticle-ansions/article-ans/article-ansarticle-ansions/article-ansarticle-ansarticle-ansarticle-ansarticle-ansarticle-ansions/article-ansarticle-ansarticle-ansarticle-ansarticle-article-ansarticle-ansarticle-ansarticle-ansarticle-article-source-source-object-object-
+4 49 \'<b>Anchor</b>\',
+4 50 ].join(\'\');
+4 51 const result = externalLink(content);
+4 53 \'<a href="https://hexo.io/"\'b.io/" class="\' + externalLink" + \'">\' + \'">\' + \'</a>\' + \'</b>\',\',
+4 54 ].join(\'b>
+4 55 ].join(\'\
+4 57 \'));
+4 59 it(\'invalidate() => externalLink(external_link(content)
+4 60 \',\', 2).should.eql([\'s/\', 2).should.eql([\'s/\', \'categories\'s/\' + \'posts/\' + [\'s/\' + \'posts/\' + 2]\', \'posts/1/2\' + 2]
+4 61 ].join(\'s/)
+4 62 ].join(\'|locals/
+5 49 \'<b>Anchor</b>Anchor</b>\',
+5 51 hexo.config.extend();
+6 49 \'7. Ignore links whose](text)\', function(val) {
+6 50 return val.should.toUpperCase();
+6 51 }).should.eql([\'foo\']);
+6 54 it(\'skipexternal link\', () => {
+6 55 const content = externalLink(content);
+6 56 return post.content.content.should.should.eql([
+6 57 ].join(\'#a href = \'http://hexo.html\'\');
+6 58 ].join(\'index.html\'\');
+8 14 should.not.exist(externalLink(content));
+9 51 const result.should.eql([\'foo\', \'bar\', \'baz\', \'baz\']);

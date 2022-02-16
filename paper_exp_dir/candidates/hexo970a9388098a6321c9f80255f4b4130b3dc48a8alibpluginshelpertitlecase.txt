@@ -1,0 +1,146 @@
+Min editdistance: 2.00
+Closest candidate: 1 4 util = require('../../util'),
+0 1 _ = require('lodash'),
+0 2 config = hexo.config;
+0 3 extend.helper.register('paginator', function(options){
+0 4 var defaults = {
+0 5 base: '/',
+0 6 format: config.pagination_dir + '/%d/',
+0 7 total: 1,
+0 8 current: 0,
+0 9 prev_text: 'Prev',
+0 10 next_text: 'Next',
+0 11 space: '&hellip;',
+0 12 prev_next: true,
+0 13 end_size: 1,
+0 14 mid_size: 2,
+0 15 show_all: false
+0 16 };
+0 17 var current = options.current,
+0 18 total = options.total,
+0 19 endSize = options.end_size,
+0 20 midSize = options.mid_size,
+0 21 space = options.space,
+0 22 base = options.base,
+0 23 format = options.format,
+0 24 front = '',"
+
+1 1 async = require('async'),
+1 2 fs = require('graceful-fs'),
+1 3 colors = require('colors'),
+1 4 util = require('../../util'),
+1 5 file = util.file,
+1 6 spawn = util.spawn,
+1 8 extend.deployer.register('rsync', function(args, callback){
+1 9 if (!config.host ||!config.user ||!config.root){
+1 10 console.log('\
+1 11 You should configure deployment settings in %s first!\
+1 12 ', '_config.yml'.bold);
+1 13 return console.log([
+1 14 'Example:',"
+
+2 17 var options = _.extend(defaults, options),
+2 18 current = options.current,
+2 20 end_size = options.end_size,
+2 21 mid_size = options.mid_size,
+3 4 term = require('term'),
+3 9 extend.deployer.register('openshift', function(args, callback){
+3 10 if (!config.deploy.remote){
+3 15 'Example:',
+3 16 '  deploy:',
+3 17 '   type: openshift',
+3 18 '   remote: <upstream git remote>',
+3 19 '   branch: <upstraem git branch> (defaults to master)'
+3 20 ].join('\
+3 21 ') + '\
+3 22 ');
+3 23 }
+3 24 var baseDir = hexo.base_dir,
+3 25 blogDir = baseDir + '../diy' + config.root,
+3 26 generatedDir = baseDir + 'public/',
+3 27 remote = config.deploy.remote,
+3 28 branch = config.deploy.branch ||'master';
+3 29 var command = function(comm, args, callback){
+3 30 spawn({
+3 31 command: comm,
+3 32 args: args,
+3 33 exit: function(code){
+3 34 if (code === 0) callback();
+3 36 });
+3 38 async.series([
+3 39 function(next){
+3 40 command('rm', ['-fr', blogDir], next());
+3 41 },
+3 43 command('cp', ['-r', generatedDir], next());
+3 46 var commands = [
+3 47 ['add', '-A', baseDir],
+3 48 ['add', '-A', blogDir],
+3 49 ['commit', '-m', 'Blog updated:'+ new Date()],"
+
+4 16 '    type: openshift',
+4 18 '    branch: <upstraem git branch> (defaults to master)'
+4 42 command('cp', ['-r', generatedDir, blogDir], next());
+5 4 _ = require('underscore'),
+5 8 config = hexo.config.deploy;
+5 9 extend.deployer.register('heroku', function(args){
+5 10 if (!config.repository){
+5 17 '   type: heroku',
+5 18 '   repository: <repository>',
+5 19 '',
+5 20 'More info: http://zespia.tw/hexo/docs/deploy.html'
+5 26 setup = args.setup;
+5 38 async.every([\'Procfile\', \'app.js\'], function(item, next){
+5 39 fs.exists(baseDir + item, function(exist){
+5 40 next(null, exist);
+5 42 }, function(result){
+5 43 if (result &&!setup) return next();
+5 44 console.log(\'Setting up.');
+5 45 async.parallel([
+5 47 file.write(baseDir + \'Procfile\', \'web: node app\', next());
+5 50 file.read(baseDir + \'package.json\', function(err, content){
+5 51 if (err) throw new Error(\'Failed to read file:\'+ baseDir + \'package.json\');
+5 52 var pkg = JSON.parse(content);
+5 53 if (_.isObject(pkg.dependencies)){
+5 54 pkg.dependencies = _.extend(pkg.dependencies, {connect: \'*'});
+5 55 } else {
+5 56 pkg.dependencies = {connect: \'*\'};
+5 58 file.write(baseDir + \'package.json\', JSON.stringify(pkg, null,\' \') + \'\
+5 59 \', next());
+5 63 var content = [
+5 64 \'var connect = require("connect"),\',
+5 65 \'  app = connect.createServer(),\',
+5 66 \'  port = process.env.PORT;\',
+5 67 \'\',
+5 68 \'app.use(connect.static(__dirname + "/public"));\',
+5 69 \'app.use(connect.compress());\',
+5 71 \'app.listen(port, function(){\',
+5 72 \'  server = http.createServer()\',
+5 75 \'  server.set(env.PORT, server.addressAddress, function(){\', "unknown")\',
+5 77 'server.port,
+5 78 'address\',
+5 79 '\',
+5 80 'lookup.completion.completion.completion.completion.completion.completion,\',
+5 81 ];
+5 82 file.write(baseDir + \'\', content);
+5 84 next();
+5 85 }, next());
+5 87 ], function(){
+5 91 });"
+
+7 6 current: 5,
+7 9 current_url: base + config.pagination_dir + '/' + num + '/',
+7 13 prev_next: true,"
+
+8 1 _ = require('lodash');
+8 2 extend.helper.register('number_format', function(num, options){
+8 4 precision: false,
+8 5 delimiter: ',',
+8 6 separator: '.'
+8 8 var num = num.toString().split('.'),"
+
+9 2 moment = require('moment'),
+9 3 root = hexo.config.root;
+9 6 base: root,
+9 7 format: paginationDir + '/%d/',
+9 8 total: this.total || 1,
+9 9 current: this.current || 0,

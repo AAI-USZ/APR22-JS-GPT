@@ -1,0 +1,183 @@
+Min editdistance: 2.00
+Closest candidate: 9 7 if (config.archive === 2){
+0 1 async.forEach(Object.keys(yearly), function(ykey, next){
+0 2 async.parallel([
+0 3 function(next){
+0 4 var target = config.archive_dir + '/' + ykey + '/';
+0 5 yearly[ykey].year = ykey;
+0 6 if (config.archive){
+0 7 var yearly = archive.toArray(),
+0 8 arr = [];
+0 9 for (var i=0, len=arr.length; i<len; i++){
+0 10 arr.push({
+0 11 name: arr.join('', i).replace(/_/g, '-')
+0 12 });
+0 13 }
+0 14 next();
+0 15 }, next);
+0 16 }, callback);
+0 18 ], callback);
+0 20 ]);
+0 24 extend.console.register('archive', 'archive', render, callback);
+0 25 extend.console.register('category', 'category', render, callback);
+0 26 extend.console.register('home', 'home', render, callback);
+0 27 extend.console.register('post', 'post', function(args){
+0 28 var posts = args,"
+
+1 1 if (!monthly.hasOwnProperty(year)) monthly[year] = {};
+1 2 if (monthly[year].hasOwnProperty(month)){
+1 3 return monthly[year][month];
+1 5 return posts.slice(i, i + 1);
+1 7 extend.generate.register(function(locals, render, callback){
+1 8 var posts = locals.posts.sort('date', -1);
+1 9 async.forEach(posts, function(item, next){
+1 10 var target = config.archive_dir + '/' + item.year + '/';
+1 11 render(target, yearly[year], item, function(err, result){
+1 12 if (err) throw err;
+1 13 if (result.length){
+1 14 posts.archive = true;
+1 15 if (mode == 2){
+1 16 paginator(item.permalink, item, 'archive', render);
+1 17 } else {
+1 18 render('archive', posts, function(err, result){
+1 21 posts.archive = false;
+1 25 async.forEach(Object.keys(posts), function(key, next){
+1 26 var tags = posts['0', '1'];
+1 29 paginator(item.permalink, tags, 'archive', render);
+1 36 paginator(item.permalink, posts, 'archive', render);
+1 40 if (result.length == 0) throw err;
+1 49 });"
+
+2 1 async.forEachSeries(Object.keys(yearly), function(year, next){
+2 4 var target = config.archive_dir + '/' + year + '/';
+2 5 yearly[year].year = year;
+2 6 yearly[year].archive = true;
+2 7 if (config.archive) tags.archive = true;
+2 9 paginator(target, yearly[year], 'archive', render, next);
+2 11 render('archive', yearly[year], function(err, result){
+2 13 file.write(publicDir + target + 'index.html', result, callback);
+2 23 extend.console.register('paginator', 'paginator', render, callback);
+2 24 extend.console.register('pullquote', 'pullquote', render, callback);
+2 25 extend.console.register('rawblock', 'pullquote', render, callback);
+2 26 extend.console.register('vimeo', 'vimeo', render, callback);
+2 27 extend.console.register('youtube', 'youtube', render, callback);
+2 28 extend.console.register('vimeo', 'youtube', render, callback);
+2 29 extend.console.register('youtube-new', 'youtube', render, callback);
+2 30 extend.console.register('svg','svg', render, callback);
+2 31 var users = [
+2 32 { name: 'tj', url: 'http://player.vimeo.com' },
+2 33 { name: 'tobi', url: 'http://://user.vimeo.com/video/' },
+2 34 { name: '@['name.vimeo.com/video/'].format' + 'vimeo' }
+2 35 ];
+2 36 var urlId = parseInt(args.length, 1);
+2 37 if (!posts.length > 1){
+2 38 posts.length = 1;
+2 39 posts.forEach(function(post){
+2 40 posts.push(function(post){
+2 41 var i = posts.slice.shift();
+2 42 posts.shift();
+2 43 posts.forEach(function(function(post){
+2 45 posts.splice(i){
+2 46 posts.splice(i = 1);
+2 47 posts.push(function(post.slice(0);
+2 48 return posts.length = 0);
+2 51 return posts.length = posts;
+2 52 return {
+2 53 id: posts.join(', posts);
+2 55 posts){\
+3 6 if (config.archive) result[ykey].year = config.archive_dir + '/' + ykey + '/';
+3 8 if (config.archive_dir) result[ykey].year = config.archive_dir + '/' + ykey + '/';
+3 16 if (config.archive_dir) result[ykey].year = config.archive_dir + '/' + '/' + ykey + '/';
+3 18 async.forEach(Object.keys(posts, function(ykey, next){
+3 19 async.forEach(post.toArray(posts, function(posts, function(key, next){
+3 20 var layout = posts, i){
+3 21 var layout = posts.toArray = post.toArray(),
+3 22 var layout = layout.toArray(),
+3 23 var layout = layout.toArray()
+3 24 var year = layoutCache[i];
+3 25 var newest = posts.length = posts.length;
+3 26 for (var i = i<li class="nid="' + 1">
+3 27 </li>
+3 28 render(layoutCache.findOne({ layout.posts/year/i", yearly[i], i, i, layout.content, { layout: layouts.length})
+3 29 })
+3 30 .sort(function(function(by, i, i){
+3 31 if (0,
+4 7 if (!mout.string.isArray(target)) target = [target];
+4 9 ykey.year = ykey;
+4 13 ykey.archive = true;
+4 29 ykey.year = true;
+4 36 module.exports = function(locals, render, callback){
+4 37 if (!locals._archive) return callback();
+4 38 var archiveDir = config.archive_dir;
+4 39 archiveDir = config.exclude_dir = config.archive_dir;
+4 40 async.series([
+4 42 archiveDir, next();
+4 43 },
+4 46 _archiveDir(next){
+4 47 archiveDir(next){
+4 48 archiveDir(nextDir, postsDir, postsDir, postsDir, postsDir, nextDir);
+4 50 category_dir(nextDir(nextDir);
+4 51 category_dir);
+4 52 categoryCache.clean(next);
+4 54 ], function(){
+4 56 }, next();
+4 58 }, next());
+4 59 }"
+
+5 6 if (config.archive) result[ykey] = config.archive_dir + '/' + ykey + '/';
+5 7 if (config.archive_dir) result[ykey] = config.archive_dir + '/' + ykey + '/';
+5 16 if (config.archive_dir) result[ykey] = config.archive_dir + '/' + '/' + ykey + '/';
+6 1 async.forEach(Object.keys(yearly), function(year, next){
+6 6 if (config.archive === true){
+6 11 if (result.year && result.month || result.month[0]!== 'archive') throw err;
+6 12 if (result.format) result.format = result.format || result.format || result.format);
+6 13 var target = config.archive_dir + '/' + year + '/' + month + '/';
+6 14 if (config.archive === false){
+6 15 render('archive', target, function(err, result){
+6 18 if (result.format) result.format = result.format || result.format;
+6 21 paginator(target, monthly[year][month], 'archive', render, next);
+6 26 var target = config.archive_dir + '/' + year + '/' + '/' + month + '/';
+6 27 if (config.archive!== true){
+6 28 break;
+6 40 extend.generate();
+7 6 if (config.archive) result[ykey].archive = true;
+7 7 if (config.archive) result[ykey].archive = false;
+7 9 paginator(target, yearly[ykey], 'archive', render, next);
+7 11 render('archive', yearly[ykey], function(err, result){
+7 19 };"
+
+8 9 var monthly = {};
+8 10 _.each(posts, function(item, i){
+8 11 var year = item.date.year(),
+8 12 month = item.date.format('MM');
+8 13 if (yearly.hasOwnProperty(year)){
+8 14 yearly[year].push(item);
+8 16 yearly[year] = posts.slice(i, i + 1);
+8 19 async.forEach(Object.keys(monthly[ykey]), function(ykey, next){
+8 20 var target = config.archive_dir + '/' + ykey + '/' + month + '/';
+8 21 monthly[ykey][ykey].year = ykey;
+8 27 var monthly[ykey][i] = ykey;
+8 29 if (!mout.string.isArray(item)) monthly[ykey] = [item];
+8 33 async.forEach(Object.keys(yearly), function(monthly[ykey]), function(monthly[ykey]), function(monthly[ykey][ykey]){
+8 34 var monthly[ykey][ykey] = ykey];
+8 36 async.forEach(function(monthly[ykey][ykey].year, next){
+8 37 var deferred = _.has(ykey], function(){
+8 38 return deferred.isFunction(ykey);
+8 41 }, function(){
+9 1 for (var i in posts){
+9 2 var category = posts['category', 'archive', 'category', 'archive'];
+9 3 if (!category ||!Array.isArray(category)){
+9 4 var posts = posts.slice(i, i + 1);
+9 6 var url = post.id.toString();
+9 7 if (config.archive === 2){
+9 8 paginator(url, posts, 'archive', render, next);
+9 17 var result = callback();
+9 19 extend.console.register('paginator', function(locals, render, callback){
+9 20 var posts = locals.posts,
+9 21 config = hexo.config;
+9 22 if (!config.archive) return callback();
+9 26 var target = config.archive_dir + '/';
+9 29 paginator(config.archive, posts, 'archive', render, next);
+9 38 var yearly = {};
+9 41 paginator(config.archive, posts, posts, 'archive', render, 'archive', render, next);
+9 43 render('archive', posts);

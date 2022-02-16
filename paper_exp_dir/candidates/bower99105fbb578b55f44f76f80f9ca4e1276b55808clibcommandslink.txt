@@ -1,0 +1,18 @@
+Min editdistance: 13.00
+Closest candidate: 2 2 var cli = require('../util/cli');
+0 1 module.exports.link = createLink;"
+
+1 1 "
+
+2 1 module.exports.readOptions = function (argv) {
+2 2 var cli = require('../util/cli');
+2 3 var options = cli.readOptions(argv);
+2 4 var name = options.argv.remain[1];
+2 5 var localName = options.argv.remain[2];
+2 6 return [name, localName];
+2 7 };"
+
+3 2 return cli.readOptions(argv);
+4 1 module.exports.line = function (argv) {
+4 5 return module.exports(name, localName);
+8 5 return module.exports.line.call(argv, options);

@@ -1,0 +1,96 @@
+var render = require('./render'),
+  util = require('./util'),
+  file = util.file,
+  yfm = util.yfm,
+  partial = util.partial,
+  async = require('async'),
+  path = require('path'),
+  _ = require('underscore'),
+  cache = {};
+
+var config = exports.config = {};
+
+exports.init = function(callback){
+  render.compile(hexo.theme_dir + 'config.yml', function(err, file){
+    if (err) throw err;
+
+    if (file){
+      for (var i in file){
+        (function(i){
+          config.__defineGetter__(i, function(){
+            return file[i];
+          });
+        })(i);
+
+        callback();
+      }
+      console.log(file);
+    } else {
+      callback();
+    }
+  });
+};
+
+exports.assets = function(callback){
+  var themeDir = hexo.theme_dir,
+    publicDir = hexo.public_dir;
+
+  file.dir(themeDir, function(files){
+    async.forEach(files, function(item, next){
+      var extname = path.extname(item),
+        filename = path.basename(item, extname),
+        dirs = path.dirname(item).split('/');
+
+      if (filename.substring(0, 1) === '_' || filename.substring(0, 1) === '.'){
+        next(null);
+      } else {
+        if (dirs[0] === 'layout'){
+          var inside = item.replace('layout/', '');
+
+          if (inside.substring(0, 1) === '_'){
+            next(null);
+          } else {
+            file.read(themeDir + item, function(err, file){
+              if (err) throw err;
+              cache[filename] = yfm(file);
+              cache[filename].source = themeDir + item;
+              next(null);
+            });
+          }
+        } else {
+          if (item.substring(0, 1) === '_'){
+            next(null);
+          } else {
+            render.compile(themeDir + item, function(err, result){
+              if (err) throw err;
+              file.write(publicDir + item, result, next);
+            });
+          }
+        }
+      }
+    }, callback);
+  })
+};
+
+exports.render = function(template, locals, callback){
+  if (_.isFunction(locals)){
+    callback = locals;
+    locals = {};
+  }
+
+  var layout = cache[template],
+    body = partial.render(layout.source, layout._content, locals);
+
+  if (layout.layout && cache.hasOwnProperty(layout.layout)){
+    var parent = cache[layout.layout];
+
+    var newLocals = _.clone(locals);
+    newLocals.body = body;
+
+    var content = partial.render(parent.source, parent._content, newLocals);
+  } else {
+    var content = body;
+  }
+
+  callback(null, content);
+};

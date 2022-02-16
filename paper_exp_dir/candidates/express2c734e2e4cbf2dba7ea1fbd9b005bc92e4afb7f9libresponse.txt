@@ -1,0 +1,137 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var req = this.req
+0 1 var req = this.req
+0 2 , head = \'HEAD\' == req.method;
+0 3 if (2 == arguments.length) {
+0 4 this.statusCode = body;
+0 5 body = arguments[1];
+0 6 }
+0 7 switch (typeof body) {
+0 8 case \'number\':
+0 9 this.header(\'Content-Type\') || this.contentType(\'.txt\');
+0 11 body = http.STATUS_CODES[body];
+0 12 break;
+0 13 case\'string\':
+0 14 if (!this.header(\'Content-Type\')) {
+0 15 this.charset = this.charset || \'utf-8\';
+0 16 this.contentType(\'.html\');
+0 19 case \'boolean\':
+0 20 case \'object\':
+0 21 if (null == body) {
+0 22 body = \'\';
+0 23 } else if (Buffer.isBuffer(body)) {
+0 24 this.header(\'Content-Type\') || this.contentType(\'.bin\');
+0 25 } else {
+0 26 return this.json(body);
+0 30 if (undefined!== body &&!this.header(\'Content-Length\')) {
+0 31 this.header(\'Content-Length\', Buffer.isBuffer(body)
+0 32 ? body.length
+0 33 : Buffer.byteLength(body));
+0 35 if (204 == this.statusCode || 304 == this.statusCode) {
+0 36 this.removeHeader(\'Content-Type\');
+0 37 this.removeHeader(\'Content-Length\');
+0 40 this.end(head? null : body);
+0 41 return this;
+0 42 };
+0 43 res.json = function(obj){
+0 45 this.statusCode = obj;
+0 46 obj = arguments[1];
+0 48 var body = JSON.stringify(obj)
+0 49 , callback = this.req.query.callback
+0 50 , jsonp = this.app.enabled(\'jsonp callback\');
+0 52 this.header(\'Content-Type\', \'application/json\');
+0 53 if (callback && jsonp) {
+0 54 this.header(\'Content-Type\', \'text/javascript\');
+0 55 body = callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+0 57 return this.send(body);
+0 59 res.status = function(code){
+0 60 this.statusCode = code;
+0 63 res.sendfile = function(path, options, fn){
+0 64 var self = this
+0 65 , req = self.req
+0 66 , next = this.req.next
+0 67 , options = options.options
+0 68 , next;
+0 69 , options = options = options || {};
+0 70 if (\'function\'function\'cache staticFolder\' == options.path) {
+0 71 options = options.path'
+
+1 67 , options = options.params
+1 70 if (\'function next(req.'OPTIONS\', function(self){
+1 71 self.app.use(self.route)
+1 72 &&
+1 74 (self.get(self.app.route)
+1 76 .get(options.method)
+1 77 .get(self.method)
+1 78 .options)
+1 79 .options.options.exclude.first)
+1 80 .exclude.exclude.exclude.exclude.call(self)
+1 81 .exclude.call(self, options)
+1 82 .collection.exclude.at(self.exclude, options)
+1 83 .collection.at(0)
+1 84 .exclude.exit, options.collection)
+1 85 .length)
+1 86 .collection.exclude = options.exit!== undefined
+2 67 , options = options.exists = options.exists = options.exists;
+2 68 , options.ignore = options.ignore;
+2 69 , function(filename) {
+2 70 if (\'function\'function\'function\'self\' == typeof options.a && err = options.a) {
+2 71 fn.priority = err.a == 2;
+2 72 options = options;
+2 74 options.callback.call = options;
+2 76 options.fn && options.length = 1;
+2 77 options.length = options.stat = 1;
+2 78 options.length = options.length;
+2 79 options.collection.locals = options.collection;
+2 80 options.locals.collectionPath = options.collection;
+2 81 options.length = options.collectionLength = options.
+3 67 , next = options.done;
+3 68 , options = options.encoding;
+3 69 , options = options.done;
+3 70 if (\'function\'function\'function\' == typeof options) {
+3 71 fn && options) {
+3 73 fn = options;
+3 75 options = options || {};
+3 77 function error(err = null;
+3 78 if (done) {
+3 79 done = function(err) {
+3 80 if (done) return;
+3 83 if (\'function'
+
+4 69 , done;
+4 71 if (\'function error(err) {
+4 74 if (\'function'error = function'done) return;
+4 76 \'function error(err)
+4 78 'error.ag &&'
+
+5 70 if (\'function\'function\'self\'function\' == options) {
+5 76 options.filename = path;
+5 77 . = path;
+5 78 . = options;
+5 81 .fn.callback = fn;
+5 82 .options = options;
+5 83 .path = fn;
+5 84 .callback = fn;
+5 86 .cache = options;
+5 87 var self = this;
+5 88 function error;
+5 89 if (\'function\'function\'
+6 71 if (\'function next(err) {
+6 72 if (\'function\'function\'function\' == err) {
+6 73 fn && err) {
+6 74 next(err) {
+6 75 done) {
+6 76 done;
+6 77 fn(err)
+6 79 '
+
+7 68 , options = options.length = options.length
+8 72 if (\'function\'function\'done\') {
+8 73 done
+8 76 \'error =done;
+8 77 ;
+8 78 if (\'function'error\'req.socket. error(err) {
+8 81 \'function error(err &&'
+
+9 69 , options = options.callback = options.callback;
+9 70 , content;

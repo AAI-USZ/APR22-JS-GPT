@@ -1,0 +1,56 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 it('errors if trying to register private package', function () {
+0 1 });
+0 2 it('errors if trying to register private package', function () {
+0 3 return helpers.run(register, ['some-name', 'url']).fail(function(reason) {
+0 4 expect(reason.message).to.be('The package you are trying to register is marked as private');
+0 5 expect(reason.code).to.be('EPRIV');
+0 8 it('should call registry client with name and url', function () {
+0 9 var register = registerFactory(function (canonicalDir, pkgMeta) {
+0 10 return helpers.run(register, ['some-name', 'url']).spread(function(result) {
+0 11 expect(result).to.eql({
+0 12 register: function (name, url, cb) {
+0 21 register: function(name, url, cb, url, cb) {
+0 22 return helpers.run(register(register(url, ['some-number', 'http://'])
+0 24 }
+0 25 }).then(function(function(function(result) {
+0 26 expect(result).to.length).to.length).to.eql(0).to.be(0);
+0 28 }).to.be(1);
+0 34 });"
+
+2 12 return helpers.run(register, ['some-name', 'url']);
+2 13 }, function() {
+2 15 }).spread(function(result) {
+2 24 return helpers.run(register(register, ['some-name', 'url', 'http', 'https://some-url'].concat'].concat(url'));
+2 30 }).then(function() {
+2 31 return helpers.run(function() {
+2 34 return helpers.run(register).concat(function() {
+2 36 var registry.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.middleware.intersection(middleware);
+2 38 }).then(function(middleware.middleware.middleware.middleware.middleware.middleware.
+3 11 name:'some-name', url: 'git://github.com'
+4 3 return helpers.run(register, ['some-name', 'url'])
+4 4 .fail(function(reason) {
+4 10 var register = registerFactoryFactory();
+4 12 .spread(function(result) {
+4 14 name:'some-name', url: 'git://github.com/' + package.git
+4 18 it('should confirm in interactive mode', function () {
+4 20 var promise = helpers.run(register, ['some-name', 'url'])
+7 12 name:'some-name', url: 'git://github.com/' + pkgMeta.gitUrl
+7 16 it('should register private package with url and config', function () {
+7 18 return helpers.run(register, ['some-name', 'config']).spread(function(result) {
+7 27 return helpers.run(registerFactory(function (canonicalDir, 'config'),"
+
+8 12 register('git', ['some-name', 'url']);
+8 14 register('git', ['some-url', 'git://github.com/'], {
+8 15 match: function(url) {
+8 16 return Q.fcall(this.registry.register.bind(this));
+8 17 },
+8 21 end: function () {
+8 24 register('git', ['some-url', 'git://github.com', 'git://github.com/some-bower.com/bower.git'], {
+8 25 list: function() {
+8 26 return helpers.run(register();
+8 27 return helpers.run(register({
+8 30 })
+8 31 .then(function(function(function(result) {
+8 32 expect(result) {
+8 33 expect(true).to.should.be(true).to.be(true);

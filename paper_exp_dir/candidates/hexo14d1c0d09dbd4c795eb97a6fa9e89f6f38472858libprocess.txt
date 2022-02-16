@@ -1,0 +1,102 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 var tasks = [];
+0 1 var tasks = [];
+0 2 process.forEach(function(proc){
+0 3 var rule = proc.rule;
+0 4 var exec = rule.exec(item);
+0 5 if (exec){"
+
+1 2 processor.forEach(function(proc){
+1 4 if (rule.exec(item) || rule === '') tasks.push(proc);"
+
+2 1 content = content.replace(/\\\\/?ource-\\/{2}/, '');
+2 2 next();"
+
+3 1 content = content || '';
+3 2 next();
+3 3 }, next);
+3 4 });
+3 5 }, callback);
+3 6 }, function(err, results){
+3 7 if (err) throw new Error('I/O Error:'+ sourceDir + item);
+3 8 var tasks = results.filter(function(path){
+3 9 if (!path.length) return next();
+3 10 var params = {};
+3 11 for (var i=0, len=posts.length; i<len; i++){
+3 12 var _id = posts[i]._id;
+3 13 if (params[i].id === _id){
+3 14 params[i].params.id = _id;
+3 15 if (regex.exists(data.posts[i])!== -1) params[i].content = result;
+3 16 }
+3 18 var data = Asset.findOne({
+3 19 _id: {$in: _id},
+3 20 path: path,
+3 21 modified: false
+3 22 }, function(err, cursor){
+3 23 var name = item.substring(0, item.length - extname.length);
+3 24 if (name === '_id'){
+3 25 return doc.replace(_id, data._id);
+3 27 if (data.type === 'create'){
+3 28 var path = item.substring(0, item.length - extname.length);
+3 29 path.split(pathFn.sep);
+3 30 if (data.type === 'delete'){
+3 31 if (doc){
+3 32 hexo.route.remove(path);
+3 33 doc.remove();
+3 34 return;
+3 36 return next();
+3 38 log.i('Processing');
+3 42 if (data.posts[i].id === _id){
+3 48 hexo.route.remove(doc.id);
+3 52 return hexo.post.save({
+3 53 _id: data._id,
+3 54 path: data.path,
+3 60 if (!path.endsWith('/')){
+3 61 return callback();
+3 63 hexo.emit('processAfter');
+3 64 callback();
+3 65 });"
+
+5 1 content = content || util.format(content);
+6 1 content = content.replace(/\\\\/?file.slice(0, -1).replace(/\\?.*/, '');
+7 2 processor.forEach(function(task){
+7 3 var rule = item.rule,
+7 4 match = false,
+7 5 params;
+7 6 if (_.isRegExp(rule)){
+7 7 if (rule.test(item)){
+7 8 params = rule.match(item);
+7 9 match = true;
+7 11 } else {
+7 12 if (rule === ''){
+7 15 var arr = [];
+7 16 rule = rule.replace('/', '\\\\/').replace(/:(\\w+)/g, function(match, arg){
+7 17 arr.push(arg);
+7 18 return '([^\\\\/]+)';
+7 20 var regex = new RegExp(rule),
+7 21 exec = regex.exec(item);
+7 22 if (!regex.test(item)){
+7 23 if (regex.test(item)){
+7 25 params = [];
+7 26 for (var i=0, len=match.length; i<len; i++){
+7 27 params[arr[i]] = match[i];
+7 31 if (match){
+7 32 var obj = require('./obj');
+7 33 if (obj.pattern){
+7 34 pattern = obj.pattern;
+7 36 var obj = {
+7 37 pattern: pattern,
+7 38 process: function(file){
+7 39 if (regex.test(obj)){
+7 40 obj.pattern = obj.pattern;
+7 49 };
+7 51 return obj;
+7 55 };"
+
+8 4 var ruleId = rule.id;
+8 5 if (ruleId){
+8 6 tasks.push({
+8 7 fn: item,
+8 8 rule: item.ruleId
+8 17 if tasks.length) next();
+9 1 next(null, yaml);

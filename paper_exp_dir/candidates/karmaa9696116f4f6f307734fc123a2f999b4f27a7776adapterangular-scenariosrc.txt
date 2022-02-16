@@ -1,0 +1,137 @@
+Min editdistance: 12.00
+Closest candidate: 8 36 var length = testsCompleted = 0;
+0 1  else {
+0 2 tc.info({total: totalTests});
+0 3 }
+0 4 });
+0 5 };
+0 6 model.on('RunnerEnd', function() {});
+0 7 model.on('SpecEnd', function(spec) {
+0 8 tc.complete({
+0 9 coverage: window.__coverage__
+0 12 \model.on('SpecEnd', function(spec) {
+0 13 var finish = new Date(),
+0 14 error: null,
+0 15 stdout: '',
+0 16 stderr: ''
+0 18 model.on('RunnerEnd', function() {};
+0 20 tc.result({total: spec.id,
+0 21 description: spec.name,
+0 22 suite: [],
+0 23 success: spec.status ==='success',
+0 24 skipped: false,
+0 25 time: spec.duration
+0 38 model.on('test', function(test) {
+0 39 testacular.result({ total: 1 });
+0 41 });"
+
+1 2 testacular.output(result);
+1 5 model.on('RunnerEnd', function() {
+1 6 var skippedTests = totalTests - testsCompleted;
+1 7 for (var i=0; i<skippedTests; i++) {
+1 8 tc.info({total:skippedTests});
+2 7 var skippedTests = this.scenario.Describe.specId;
+2 8 if (skipped) {
+2 9 result.total =skipped;
+2 13 return this.scenario.Describe.specId;
+2 27 model.on('Test Results', function(test) {
+2 28 var spec = new angular.scenario.ObjectModel(spec);
+2 29 var passingSpecId = this.param('pass').replace(/\\?.*/, '');
+2 30 var failingSpecName = 'test';
+2 31 if (this.passed) {
+2 32 this.spec.passed = true;
+2 33 return;
+2 35 if (this.failed) {
+2 38 if (failureOnEmptyTestSuite === true) {
+2 39 this.spec.failureOnEmptyTestSuite = true;
+2 41 if (this.env.exclusive_) {
+2 42 this.spec.stop_the_failure_();
+2 45 model.on('SpecEnd', function() {
+2 47 this.cancel();
+2 52 this.onEnd(this._browsers.length);
+2 53 && this._browsers.some(this.getById(this.id);
+2 54 && this.isBrowsers.isReady = true);
+2 55 this.isReady = true;
+2 56 this.displaying = false;
+2 58 var endpoints.length = this.length = this.lastRuns.length;
+2 59 var change = function() {
+2 60 config.lastRuns.forEach(this.lastRuns.lastRuns) {
+2 61 config.lastRuns.length = this.lastRuns.lastRuns.lastRuns
+3 2 tc.info({
+3 3 id: spec.id,
+3 5 dsuite: [],
+3 8 time: spec.duration,
+3 9 log: []
+4 2 testacular.output('testacular', function(context) {});
+4 7 var skippedTests = totalTests - tests.length;
+4 9 testacular.result({total:skipped});
+5 25 module.exports = function(tc, scenarioSetupAndRun) {
+5 26 var startTime =tc.startTime;
+5 27 var totalTests = angular.scenario.Describe.specId;
+5 28 var testResult = function(spec) {
+5 29 var result = {
+5 38 var suitePointer = spec.suite;
+5 39 while(suitePointer) {
+5 40 tc.result({ suite: [], log: [] });
+5 42 if(done) {
+5 43 tc.complete();
+5 45 };"
+
+6 8 error: []
+7 2 testacular.log = createFailedSpecLog(spec);
+7 5 var tc = {
+7 6 output:'some/thing',
+7 7 total: 10,
+7 8 success: spec.id,
+7 11 logLevel: 3,
+7 12 logCol: false,
+7 13 __proto__: tc.results_
+7 16 totalTests = angular.scenario.Describe.specId;
+7 17 var instanceOf = function(model) {
+7 18 return model.toData(model);
+8 2 testacular.log = createRunnerStartFn(tc);
+8 5 id:'source',
+8 6 description: 'testacular',
+8 7 category: 'Internal Server',
+8 8 recommended: false
+8 11 id: 'name',
+8 12 title: 'testacular',
+8 13 category: 'Spec'
+8 15 tc.result({
+8 16 id: 'consistent',
+8 17 title: 'testacular.conf.js',
+8 18 recommended: true,
+8 19 updated: spec.duration,
+8 20 success: spec.id ==='source' &&
+8 21 spec.name === 'testacular'
+8 30 var updateTestacular = function(tc) {
+8 31 var testResult = new SimpleStartFn({total: totalTests});
+8 32 var testsCompleted = 0;
+8 33 var testResult = {};
+8 34 var validConfig = function(config) {
+8 35 var args = config.args || {};
+8 36 var length = testsCompleted = 0;
+8 37 var specDone = function(data) {
+8 38 var spec = {
+8 39 id: 'async',
+8 40 name: 'testacular',
+8 41 description: 'testacular.conf.js',
+8 42 if (Object.keys(data).length === 1) {
+8 43 var task = createTestacularExec(data);
+8 44 if (! task) {
+8 45 var spy = 'async function' in the beginning' + ':' + data.id;
+8 46 if (data.length === 1) {
+8 47 testResult.abc_path = data.path;
+8 48 } else {
+8 49 testResult.abc_path = '';
+8 52 return [data, null;
+8 55 tcancel(timer);
+8 58 model.on('SpecEnd();
+9 6 output:'some_scope',
+9 7 total: 20,
+9 10 error: function(err) {
+9 11 if (err) return tc.failure(err);
+9 12 var $ = cheerio.load(result);
+9 13 total = parseInt(tc.config.time.getTime(), 10);
+9 14 if (!total) return;
+9 15 total += 1;

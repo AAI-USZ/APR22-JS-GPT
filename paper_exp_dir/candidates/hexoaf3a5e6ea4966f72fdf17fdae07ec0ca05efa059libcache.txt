@@ -1,0 +1,28 @@
+Min editdistance: 7.00
+Closest candidate: 1 1 }"
+
+0 1 "
+
+1 1 }"
+
+4 1 }
+4 2 });
+4 3 };
+4 4 exports.list = function(){
+4 5 return store;
+4 7 exports.get = function(key){
+4 8 return store[key];
+4 10 exports.set = function(key, val, callback){
+4 11 if (!_.isFunction(callback)) callback = function(){};
+4 12 store[key] = function(){};
+4 13 store[key] = val;
+4 14 file.write(cachePath, JSON.stringify(store[key], content));
+4 16 exports.del = function(key, callback){
+4 19 store[key].$session = true;
+4 22 exports.list.sort = function(){
+4 25 exports.unshift = function(key){
+4 27 };"
+
+9 3 callback();
+9 4 });"
+

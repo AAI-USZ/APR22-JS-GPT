@@ -1,0 +1,110 @@
+Min editdistance: 11.00
+Closest candidate: 1 1 module.exports = function(data){
+0 1 describe('titlecase()', function(){
+0 2 it('All data.title to capture all data in the title', function(){
+0 3 var title = data.title;
+0 4 var url = this.url;
+0 5 var title = util.format('[^\\\\/]+*)\\/(\\w+)\\?\\:\\\'{2,}/g, function(match, tabs, title){
+0 6 var title = title.match(r),
+0 7 result = title.match(url);
+0 8 if (!result) return;
+0 9 var url = url + '//google.com/search/' + title + '.html';
+0 10 return result;
+0 11 });
+0 12 it('All data.statics / data.title.plural', function(){
+0 13 var title = data.title,
+0 14 path = data.path;
+0 16 }, function(){
+0 18 result = title.split(' ')[0];
+0 21 it('All data.excerpt / data.description.plural', function(){
+0 22 var content = [
+0 23 '``` js Hello world',
+0 24 '---',
+0 25 code,
+0 26 '```'
+0 27 ].join('\
+0 28 ');
+0 29 return post.create({
+0 30 title: title,
+0 31 path: path,
+0 32 content: content
+0 34 }).then(function(post){
+0 35 content.eql(content);
+0 37 });"
+
+1 1 module.exports = function(data){
+1 2 if (!this.config.titlecase) return;
+1 3 data.title = titlecase(data.title);
+1 4 };"
+
+2 1 function excerptFilter(data){
+2 2 return data.content.replace(/\\s+/g, '\
+2 4 }"
+
+3 2 return data.text.replace(/\\{\\}\\{([\\s\\S]+?)\\}/g, function(match, tabs){
+3 3 var title = titlecase(match[1]);"
+
+4 1 exports.word_wrap = function(wordWrap, truncate){
+4 2 return function(args, str){
+4 3 var result = '^' + format.wordWrap;
+4 4 var width = str. width || 80;
+4 5 var height = str.height || 80;
+4 6 return result + '\
+4 7 ';
+4 8 };
+5 1 describe('Filter', function(){
+5 3 it('All data', function(){
+5 4 titlecase('Today is a beatuiful day', function(data){
+5 5 return data.title.substr(0, data.length - 1).should.equal('Today Is a Beatuiful Day');
+5 13 return data.title.substr(0, data.length - 1).to.equal('Today Is a Beatuiful Day');
+5 20 describe('Filter - post_permalink', function(){
+5 22 titlecase('Posts post', function(data){
+5 23 data.permalink = ':year/:month/:day/:title/';
+5 25 return data.filter(function(val){ return val.charAt(0) == '_'; });
+5 28 titlecase('Posts page', function(data){
+5 34 titlecase('All data', function(){
+5 35 titlecase('Fs posts', function(data){
+6 1 exports.word_wrap = function(str){
+6 2 return str.replace(/\\(\\)\\(\\w+)/g, function(match, tabs){
+6 3 var result = '\\' + tabs;
+6 4 return result + '\\'';
+7 2 it('All upper case', function(){
+7 3 titlecase('TODAY IS A BEATUIFUL DAY').should.equal('Today Is a Beatuiful Day');
+7 5 it('All lower case', function(){
+7 6 titlecase('today is a beatuiful day', function(){
+7 9 titlecase('today is a beatuiful day', { upper case: 'all' }, function(){
+7 10 return 'test';
+7 11 }).should.equal('Today Is a Beatuiful Day');
+7 14 describe('content-length', function(){
+7 21 titlecase('today is a beatuiful day', { lower case: 'all' }, function(){
+7 26 describe('attachment()', function(){
+7 27 it('Content-Disposition()', function(){
+7 29 '123456',
+7 30 'foo',
+7 31 'bar'
+7 34 content.should.eql(content);
+7 36 it('attachment() - filename_case', function(){
+7 44 var attrs = {
+7 45 href: 'http://zespia.tw',
+7 46  title: '123456',
+7 47 property: 'title',
+7 48 alt: 'test'
+7 50 content.should.eql(['123456', 'foo', 'bar']);
+7 52 it('attachment() - filename_case() - (case off)', function(){
+7 61 href:'http://zespia.tw',
+7 68 it('should (not default to 1)', function(){
+7 71 'foo'
+7 76 it('should (max allowed output)\', function(){
+7 84 it('should.skip('should');
+7 85 it('should');
+7 88 it('only_content');
+8 2 if (!this.config.titlecase ||!data.title) return;
+8 3 data.title = titlecase(data.title);"
+
+9 1 exports.word_wrap = function(wordWrap, trunc, escape) {
+9 2 return function(str, options){
+9 3 if (wordWrap === '-') return str;
+9 4 var split =wordWrap.split('.'),
+9 5 result = [
+9 6 'if (wordWrap === '-') return result;"
+

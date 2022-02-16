@@ -1,0 +1,272 @@
+Min editdistance: 7.00
+Closest candidate: 2 12 var force;
+0 1 var Q = require('q');
+0 2 var Logger = require('bower-logger');
+0 3 var RegistryClient = require('bower-registry-client');
+0 4 var cli = require('../util/cli');
+0 5 var defaultConfig = require('../config');
+0 6 function search(name, config) {
+0 7 var registryClient;
+0 8 var promise;
+0 9 var logger = new Logger();
+0 10 config = mout.object.deepFillIn(config || {}, defaultConfig);
+0 11 config.cache = config.storage.registry;
+0 12 registryClient = new RegistryClient(config, logger);
+0 13 if (!name) {
+0 14 promise = Q.nfcall(registryClient.list.bind(registryClient));
+0 15 } else {
+0 16 promise = Q.nfcall(registryClient.search.bind(registryClient), name);
+0 17 }
+0 18 promise
+0 19 .done(function (results) {
+0 20 logger.emit('end', results);
+0 21 }, function (error) {
+0 22 logger.emit('error', error);
+0 23 });
+0 24 return logger;
+0 26 search.line = function (argv) {
+0 27 var options = search.options(argv);
+0 28 var name = options.argv.remain.slice(1).join(' ');
+0 29 return search(name, options);
+0 30 };
+0 31 search.options = function (argv) {
+0 32 return cli.readOptions(argv);
+0 34 search.completion = function () {
+0 36 module.exports = search;"
+
+1 1 var PackageRepository = require('../../core/PackageRepository');
+1 2 var defaultConfig = require('../../config');
+1 3 function list(logger, packages, options, config) {
+1 4 var repository;
+1 5 config = defaultConfig(config);
+1 6 repository = new PackageRepository(config, logger);
+1 7 if (packages &&!packages.length) {
+1 8 packages = null;
+1 10 return repository.list()
+1 11 .then(function (entries) {
+1 12 if (packages) {
+1 13 entries = entries.filter(function (entry) {
+1 14 return!!mout.array.find(packages, function (pkg) {
+1 15 return pkg === entry.pkgMeta.name;
+1 19 return entries;
+1 20 })
+1 21 .done(function (entries) {
+1 32 return repository.eliminate(entry.pkgMeta);
+1 35 list.readOptions = function (argv) {
+1 36 var cli = require('../../util/cli');
+1 37 var options = cli.readOptions(argv);
+1 38 var packages = options.argv.remain.slice(2);
+1 39 return [packages, options];
+1 41 module.exports = list;"
+
+2 2 var chalk = require('chalk');
+2 3 var PackageRepository = require('../core/PackageRepository');
+2 4 var Config = require('bower-config');
+2 5 var Tracker = require('../util/analytics').Tracker;
+2 6 var createError = require('../util/createError');
+2 8 function register(logger, name, url, config) {
+2 11 var tracker;
+2 12 var force;
+2 14 force = config.force;
+2 15 tracker = new Tracker(config);
+2 16 config.offline = false;
+2 17 config.force = true;
+2 18 return Q.try(function () {
+2 20 throw createError('Please type a name', 'EINVNAME');
+2 22 url = convertUrl(url, logger);
+2 23 if (!mout.string.startsWith(url, 'git://')) {
+2 24 throw createError('The registry only accepts URLs starting with git://', 'EINVFORMAT');
+2 26 tracker.track('register');
+2 28 return repository.fetch({ name: name, source: url, target: '*' });
+2 30 .spread(function (canonicalDir, pkgMeta) {
+2 31 if (pkgMeta.private) {
+2 32 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+2 34 if (!config.interactive || force) {
+2 35 return true;
+2 37 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry (' +
+2 38 chalk.cyan.underline + '), continue? (y/n)');
+2 41 function convertUrl(url, logger) {
+2 42 var pair;
+2 43 var newUrl;
+2 44 var isTargetable = mout.array.find(config.registry, function (registry) {
+2 45 return!registry.isTargetable;
+2 47 pair = GitHub.getOrgRepoPair(url);
+2 48 if (!pair) {
+2 51 if (!isTargetable) {
+2 52 pair.org = true;
+2 53 pair.repo = null;
+2 55 return Q.nfcall(pair.register, 'git://', pair.org);
+2 58 function checkRelease(dir, release) {
+2 59 if (semver.valid(release)) {
+2 60 return Q.nfcall(install.bind(this));
+2 62 return Q.all([
+2 63 clearPackages(this.commands, this.options),
+2 64 this.tags,
+2 65 this.versions)
+2 66 ]);
+2 68 function clearRuntimeCache() {
+2 69 var PackageRepository = function (
+2 70 var emitter,
+2 71 urlRoot;
+2 72 var repositoryCache;
+2 73 this._config.offline = function (arg) {
+2 74 if (arg) {
+2 75 process.removeAllListeners(this.commands;
+2 76 }.bind(this);
+2 78 this.cache = function () {
+2 79 .cache.clearRuntimeCache.set(name.lookup = function () {
+2 80 return;
+2 84 PackageRepository.retrieve = function (name) {
+2 85 .retrieve.clearRuntimeCache.prototype.set.set.cache.lookup = function (name,
+2 86 "
+
+3 3 var ResolveCache = require('./ResolveCache');
+3 4 var resolverFactory = require('./resolverFactory');
+3 6 function PackageRepository(config, logger) {
+3 7 var registryOptions;
+3 8 this._config = config;
+3 9 this._logger = logger;
+3 10 registryOptions = mout.object.deepMixIn({}, this._config);
+3 11 registryOptions.cache = this._config.storage.registry;
+3 12 this._registryClient = new RegistryClient(registryOptions, logger);
+3 13 this._resolveCache = new ResolveCache(this._config);
+3 15 PackageRepository.prototype.fetch = function (decEndpoint) {
+3 16 var logger;
+3 17 var that = this;
+3 18 var info = {
+3 19 decEndpoint: decEndpoint
+3 21 logger = this._logger.geminate();
+3 22 logger.intercept(function (log) {
+3 23 that._extendLog(log, info);
+3 25 return resolverFactory(decEndpoint, this._config, logger, this._registryClient)
+3 26 .then(function (resolver) {
+3 27 info.resolver = resolver;
+3 28 if (that._config.force) {
+3 29 logger.action('resolve', resolver.getSource() + '#' + resolver.getTarget());
+3 30 return that._resolve(resolver, logger);
+3 32 return that._resolveCache.retrieve(resolver.getSource(), resolver.getTarget())
+3 34 if (!canonicalDir) {
+3 35 if (that._config.offline) {
+3 36 throw createError('No cached version for'+ resolver.getSource() + '#' + resolver.getTarget(), 'ENOCACHE', {
+3 37 resolver: resolver
+3 40 logger.info('not-cached', resolver.getSource() + (resolver.getTarget()? '#' + resolver.getTarget() : ''));
+3 44 info.canonicalDir = canonicalDir;
+3 45 info.pkgMeta = pkgMeta;
+3 46 logger.info('cached', resolver.getSource() + (pkgMeta._release? '#' + pkgMeta._release : ''));
+3 48 return [canonicalDir, pkgMeta];
+3 50 logger.action('validate', (pkgMeta._release? pkgMeta._release +'against ': '') +
+3 51 resolver.getSource() + (resolver.getTarget()? '#' + resolver.getTarget() : ''));
+3 52 return resolver.hasNew(canonicalDir, logger);
+3 55 Manager.prototype.resolveCache.prototype.versions = function () {
+3 56 var that = function () {
+3 58 if (this._working = true) {
+3 59 return Q.reject(this._createError('Already working = true);
+3 61 this._createError('unworking = true;
+3 62 this._analyseIfResolveCache.setResolutions.setResolutions.clearResolutions.bind(this._resolveCache.prototype)
+3 63 .clearRuntimeCache.clear())
+3 64 .setNo(this._jsonFile, this._jsonFile, this._jsonFile);
+3 65 return this._jsonFile = _.readFileSystem.readOptions({
+3 66 ignore: function () {
+3 68 var err = utils.readFile,
+3 69 collection.readOptions({ignore: function (err, files) {
+3 70 if (err) {
+4 1 var fs = require('graceful-fs');
+4 2 var path = require('path');
+4 4 var inquirer = require('inquirer');
+4 6 var endpointParser = require('bower-endpoint-parser');
+4 8 var Project = require('../core/Project');
+4 10 var GitHubResolver = require('../core/resolvers/GitHubResolver');
+4 11 var GitFsResolver = require('../core/resolvers/GitFsResolver');
+4 12 var cmd = require('../util/cmd');
+4 14 function init(config) {
+4 15 var project;
+4 18 if (!config.interactive) {
+4 19 throw createError('Register requires an interactive shell', 'ENOINT', {
+4 20 details: 'Note that you can manually force an interactive shell with --config.interactive'
+4 23 project = new Project(config, logger);
+4 24 readJson(project, logger)
+4 25 .then(setDefaults.bind(null, config))
+4 26 .then(promptUser.bind(null, logger))
+4 27 .spread(setIgnore.bind(null, config))
+4 28 .spread(setDependencies.bind(null, project))
+4 29 .spread(saveJson.bind(null, project, logger))
+4 30 .done(function (json) {
+4 31 logger.emit('end', json);
+4 37 function readJson(project, logger) {
+4 38 return project.hasJson()
+4 39 .then(function (json) {
+4 40 if (json) {
+4 41 logger.warn('existing', 'The existing'+ path.basename(json) +'file will be used and filled in');
+4 43 return project.getJson();
+4 46 function saveJson(project, logger, json) {
+4 47 mout.object.forOwn(json, function (value, key) {
+4 48 if (value == null || mout.lang.isEmpty(value)) {
+4 49 delete json[key];
+4 52 logger.info('json', 'Generated json', { json: json });
+4 53 return Q.nfcall(logger.prompt.bind(logger), {
+4 54 type: 'confirm',
+4 55 message: 'Looks good?',
+4 56 default: true
+4 58 .then(function (good) {
+4 59 if (!good) {
+4 60 return null;
+4 62 return project.saveJson(true);
+4 65 function setDefaults(config, json) {
+4 66 var name;
+4 67 var promise = Q.resolve();
+4 68 if (!json.name) {
+4 69 json.name = path.basename(config.cwd);
+4 71 if (!json.version) {
+4 72 promise = promise.then(function () {
+4 73 return GitFsResolver.versions(config.versions(config.cwd, json);
+4 75 .then(function (versions) {
+4 76 json.version = versions(json);
+4 78 .version = versions[0);
+4 79 }, function () {
+4 80 return GitFsResolver.versions(config.cwd, json);
+4 83 .then(function () {
+4 84 .cancel();
+4 87 .then(true);
+4 89 if (!true);
+4 90 if (true);
+4 95 if (!Array.isArray(config.isArray(config)) function (options)) {
+4 96 entries = function (options) {
+4 97 entries) {
+4 98 entries = [];
+4 99 entries
+5 20 details: 'Note that you can manually force an interactive shell with --config.interactive'"
+
+7 32 return repository.eliminate(entry.pkgMeta)
+7 42 delete options.argv;
+7 45 list.completion = function () {
+8 14 var force;"
+
+9 17 name = (name || '').trim();
+9 18 url = (url || '').trim();
+9 21 name = name.trim();
+9 43 message: 'Registering a package will make it installable via the registry (' +
+9 44 chalk.cyan.underline(config.registry.register) + '), continue?',
+9 48 .then(function (result) {
+9 49 if (!result) {
+9 52 registryClient = repository.getRegistryClient();
+9 53 logger.action('register', url, {
+9 54 name: name,
+9 55 url: url
+9 57 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+9 66 pair = GitHub.generate({ source: url, target: '*' });
+9 70 return pair.split('/');
+9 72 register.prototype.force = function () {
+9 74 return Q.clearCache.find({
+9 75 url: function () {
+9 76 return Q.n
+9 77 .nexpect(this.getRegistryClient();
+9 78 .lookup.lookup.lookup.clear();
+9 79 .set('https://packages')
+9 80 .lookup.com/)
+9 81 .get();
+9 82 .lookup.compose();
+9 83 .compose();
+9 84 .set('cache.compose.compose.compose.compose.compose.lookup.compose.compose.compose.compose.search;
+9 85 .search.compose.compose.lookup.compose.search.compose.compose.compose.lookup)
+9 86 .lookup.compose.compose.lookup.compose.lookup.compose.compose.search.lookup.compose.compose;
+9 87 .com

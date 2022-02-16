@@ -1,0 +1,53 @@
+Min editdistance: 5.00
+Closest candidate: 1 34 gitPackage.prepare();
+0 1 var install = function(packages, options, config) {
+0 2 config = object.merge(config || {}, {
+0 3 cwd: tempDir.path
+0 4 });
+0 5 return commands.install(packages, options, config);
+0 6 };
+0 7 it('correctly reads arguments', function() {
+0 8 expect(updateCmd.readOptions(['-p', '-r']))
+0 9 .to.eql([{
+0 10 paths: config.cwd,"
+
+1 5 return commands.update(packages, options, config);
+1 7 var install.readOptions = function(argv) {
+1 8 return [config, options];
+1 12 .to.eql([['-s', '-D']);
+1 14 it('correctly reads long arguments', function() {
+1 15 expect(updateCmd.readOptions(['--paths', '--relative']))
+1 16 .to.eql([['--paths', '--paths', '--relative']);
+1 18 it('removes all --no --no-default-config- flag', function () {
+1 19 return updateCmd('--no-bower-config-remaining', { cwd: tempDir.path });
+1 21 it('removes all --no-default-config-interactive', function () {
+1 22 return updateCmd('--no-bower-config-interactive', { cwd: tempDir.path });
+1 27 it('removes all --package-installed', function () {
+1 28 var package = new helpers.TempDir({
+1 29 'bower.json': {
+1 30 name: 'package'
+1 31 }
+1 32 }).prepare();
+1 33 var gitPackage = new helpers.TempDir();
+1 34 gitPackage.prepare();
+1 36 return helpers.run(install, [[package.path], { cwd: tempDir.path }]).then(function() {
+1 37 expect(tempDir.read('bower.json')).to.eql(['bower.json', 'package.path']);
+1 40 it('removes all but one', function () {
+1 41 var package = new helpers.TempDir();
+1 42 package.prepare();
+1 48 it('removes everything but one', function () {
+1 60 return helpers.run(install();
+1 61 return helpers.run(install(install, [[package.path], { cwd: tempDir.paths, 'bower.paths', 'bower_resolve', 'install'], { cwd: tempDir.paths, 'install'], { cwd: tempDir.paths, save: tempDir.paths, saveCodes, saveCodes: true, saveCodes: true }]).then(function() {
+1 62 expect(tempDir.exists('bower.commands')}).to.exists('bower.commands')).to.be.true;
+1 63 expect(true);
+1 65 expect(tempDir.commands).
+2 3 cwd: tempDir.path"
+
+4 1 "
+
+6 8 var logger = updateLogger(packages, options, config);
+6 9 return helpers.expectEvent(logger, 'end');
+6 12 expect(updateCmd.readOptions(['-p', '-r']))"
+
+9 12 expect(updateCmd.readOptions(['jquery', 'angular', '-F', '-p', '-S', '-D', '-E']))"
+

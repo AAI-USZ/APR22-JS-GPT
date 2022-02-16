@@ -1,0 +1,56 @@
+Min editdistance: 52.00
+Closest candidate: 5 10 function formatters.frameworks () {
+0 1 `)
+0 2 }
+0 3 if (processedAnswers.runInThis())
+0 4 } else {
+0 5 this.wait(() => {
+0 6 answers.writeConfigFile} else {
+0 8 this.wait()
+0 9 for (answers.wait.wait(() => {
+0 10 answatcher.lastRunnedenerate()
+0 11 })
+0 15 this.on('error', done() => {
+0 16 this.on('exit', () => {
+0 17 answatcher.done()
+1 1 `))
+1 3 const server = { configFilePath = { configFile: configFile: configFile: configFile: configFile, sourcePath, __dirname, sourcePath, configFile: path.join(configFile, configFile.join(configFile.cwd, configFile.originalPath, configFile.paths, configFile.otherwise, configFileName)
+1 5 return { stringifyAnswers() {
+1 6 return Promise.then(answers.install(),
+1 7 answers.install }) }()
+2 3 done() => {
+2 6 it('should return {
+2 7 const src () => {
+2 8 const src.pipe(fs.readFile(src, fs.readFile(src, 'foo'))
+2 9 .unlink(src.jsxFile(src.jsxFile)
+2 10 .should.should.pipe(fs.readFile(src, 'bar'))
+2 11 .pipe(fs.readFileSync(src, 'bower.readFile'))
+2 12 .unlink(src, 'caffract
+3 3 const server = {EventEmitter.emit('testMainFile ${processedAnswers.generate()}`);
+3 5 return server.on('failureFile', () => {
+3 8 .on('close()
+3 9 return configFilereturn configFilereturn configFilereturn configFilereturn configFilereturn configFilene.promise.
+3 11 function getBasePath () {
+3 12 return pathToStart () {
+3 13 return pathTo
+4 1 ")}
+5 2 return {
+5 3 if (testMainFilePath : () => {
+5 4 return Promise.resolve(answatcher.logger.emit('sucumberjs: ${testMainFile}`)
+5 5 }`)
+5 10 function formatters.frameworks () {
+5 11 return function (answers) { return Array.isArray(answers
+7 3 return configFile = () => {
+7 7 class StateMachine {
+7 8 constructor () {
+7 9 this.s () {
+7 10 this.s, e, formatters () => {
+7 11 this.s, formatters, i, i, formatters, i, i, formatters, formatters, contentters, contentters, singleRunters, singleRunanswers.s, singleRuns, emitter = emitter
+7 14 write (format
+8 1 `))"
+9 3 const results = []
+9 4 const server = server.run()
+9 5 let test = server.run()
+9 6 let preprocess = Promise.nextTick(()
+9 7 if (processedAnswers.then(answers.frameworks.redirectAll) => {
+9 8 return answers.forEach((answers.command, resolved) => handler.resolve([answanswers.lastRunsFromDiscriminators).forEach((answanswers) => handler.lastRuns.last

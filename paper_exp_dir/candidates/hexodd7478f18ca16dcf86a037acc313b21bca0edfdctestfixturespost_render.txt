@@ -1,0 +1,84 @@
+Min editdistance: 3.00
+Closest candidate: 2 5 \'<h2 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h2>\',
+0 1 return code.join(\'\
+0 2 \');
+0 3 };'
+
+1 1 exports.expected_disable_nunjucks = [\'<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1>\',
+1 2 util.highlight(code, {lang: \'python\'}),
+1 3 \'
+1 4 <p>some content</p>\',
+1 5 \'<h1 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h1>\',
+1 6 \'<p>{% blockquote %}<br>\',
+1 7 \'quote content<br>\',
+1 8 \'{% endblockquote %}</p>\
+1 9 \',
+1 10 \'<p>{% quote Hello World %}<br>\',
+1 12 \'{% endquote %}</p>\'
+1 13 ].join(\'\');'
+
+2 2 highlight(code, {lang: \'python\'}),
+2 3 \'\',
+2 4 \'<p>some content</p>\',
+2 5 \'<h2 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h2>\',
+2 10 \'</blockquote>\
+2 11 \
+3 5 \'<h2 id="Another_title"><a href="#Another_title" class="headerlink" title="Another title"></a>Another title</h2>\',
+3 16 ].join(\'\');
+3 17 exports.content_for_issue_3346 = [
+3 18 \'# Title\',
+3 19 \'```\',
+3 20 \'{% test1 %}js\',
+3 21 \'{{ test2 }}\',
+3 23 \'some content\',
+3 25 \'## Another title\',
+3 26 \'{% blockquote %}<br>\',
+3 34 exports.expected_for_issue_3346 = [
+3 35 \'<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1>\',
+3 36 highlight(\'{% test1 %}<br>\',
+3 37 \'{% test2 %}<br>\',
+3 38 \'<h1 id="Another_title"><a href="#Another_title" class="headerlink" title="Another title"></a>Another title</h1>\',
+3 39 ]
+4 4 \'{% blockquote %}',
+4 5 \'quote content',
+4 6 \'{% endblockquote %}'
+4 7 ].join(\'\
+4 9 exports.highlight = {
+4 10 enable: true,
+4 11 lineNumber: true,
+4 12 tab: \' tab'
+5 12 \'{% endquote %}</p>'
+5 14 exports.content_for_issue_3346 = [\'# Title\',
+5 16 \'{% test1 %}',
+5 32 \'<p>{% test1 %}<br>\',
+5 40 \'{% endblockquote %}</br>\',
+5 41 }\'
+6 12 \'{% endquote %}</p>\
+6 27 \'{% endtest2 }}\'
+6 36 \'{% endtest1 %}</p>\
+6 38 \'<p>\'</p>\'
+7 1 var result = [
+7 15 return result;
+8 2 highlight(code, {lang: \'python\'}), \'\', {
+8 3 lang: \'python\'
+8 4 }), \'\', {
+8 6 });
+8 7 }
+8 8 ];'
+
+9 1 return post.render(null, {
+9 2 content: content,
+9 3 engine:\'markdown\'
+9 4 }).then(function(data) {
+9 5 data.content.trim().should.eql([
+9 19 content: data,
+9 24 \'<p>{% test</p>\
+9 29 \'<h3 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h3>\',
+9 30 \'</p>\',
+9 31 \'<p>{% endtest %}<br>\',
+9 32 \'<strong>\',
+9 33 \'<d>\',
+9 38 \'<em>\',
+9 39 \'<meta</em>\',
+9 41 ]'
+

@@ -1,0 +1,101 @@
+Min editdistance: 1.00
+Closest candidate: 1 6 })
+0 1  {"
+
+1 1  })
+1 2 var messages = [],
+1 3 utils = require('express/utils')
+1 4 get('/', function(){
+1 5 this.redirect('/chat')
+1 6 })
+1 7 get('/chat', function(){
+1 8 this.render('chat.haml.html', {
+1 9 locals: {"
+
+2 1 });
+2 3 utils = require('express/utils'),"
+
+3 1 });"
+
+4 1  + '/public'
+4 3 this.redirect('/upload')
+4 5 get('/upload', function(){
+4 6 this.render('upload.haml.html', {
+5 2 end
+5 3 describe('Session', function(){
+5 4 it('should 200be when present', function(){
+5 5 this.session.name.should.eql('tj')
+5 6 this.session.email.should.eql('tj@vision-media.ca')
+5 7 this.session.city.should.eql('Victoria'
+5 10 describe('when false is explictly returned', function(){
+5 11 it('should 404 for instanceof Session', function(){
+5 12 this.session.name.should.eql('123456')
+5 14 it('should authenticate', function(){
+5 19 describe('when existing is null', function(){
+5 20 it('should 404 without existing session', function(){
+5 21 this.session.name.should.eql('null')
+5 22 this.session.email.should.eql('null')
+5 24 })"
+
+6 3 it('should return the same messages as exports', function(){
+6 4 var app = express()
+6 5 , blog = express()
+6 6 , blogAdmin = express();
+6 7 app.use(Logger('dev')
+6 8 , app.use(express.static(__dirname + 'public'));
+6 9 app.use(function(req, res){
+6 10 res.send('Hello World\
+6 11 ')
+6 12 .expect('Hello World\
+6 13 ', 200)
+6 14 .expect('world\
+6 15 ' + '\
+6 16 ');
+6 18 app.use(function(err, req, res, next){
+6 19 res.send(err.message)
+6 21  , 'Hello World\
+6 24    ', 'Hello World\
+6 26 .expect(200, done);
+6 28 app.listen(3000);
+6 29 console.log('Hello World\
+6 33 describe('error', function(){
+6 34 it('should set the session on leaving', function(){
+6 38 app.use(blog)
+6 39 , api = express();
+6 40 admin.use(function(req, res){
+6 41 res.send(404);
+6 43 app.get('/', function(req, res){
+6 47 app.get('/:error', function(req, res){
+6 51 assert.response(app,
+6 52 { url: '/' },
+6 53 { body: 'Hello World' });
+6 55 { url: '/:error' },
+6 56 { body: 'doesNotExist' });
+6 58 { url: '/invalid' },
+6 59 function(res){
+6 60 assert.ok(res.body.indexOf('ReferenceError') >= 0);
+6 61 assert.ok(res.body.indexOf('doesNotExist') >= 0);
+6 64 { url: '/invalid-async' },
+6 76 describe('when given a callback', function(){
+6 77 it('should execute', function(){
+6 78 var app = express();
+6 80 app.use(function(req.use(function(req, res){
+6 81 res.session, next){
+6 82 res.session.session.session.callback.destroy(req, function(){
+6 83 res.session.session.session.store.length);
+6 84 res.destroy(function(){
+6 85 res.send('Access.destroy();
+6 86 res.session.destroy();
+6 87 res.send('Access.resolve('Access disconnected();
+6 88 resave('Access disconnected');
+6 89 res.destroy();
+6 94 res){
+6 95 res.session.session.session.session.id = 'Access-Store is not defined');
+6 96 app.get('/user-not-tj/session'));
+6 97 app.get('/user-tj', function(req, res){
+6 98 res
+7 2 Session.store.length(function(err, len){
+7 3 self.log.info('Redirecting to %s', res.redirecting_to_source));
+7 4 return;
+7 5 }"
+

@@ -1,0 +1,426 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var cache = {};
+0 1  = require("3),
+0 2 _ = require("lodash");
+0 3 var _getProperty = function(obj, key){
+0 4 key = key.replace(/\\[(\\w+)\\]/g, function(_, key){
+0 5 return obj[key];
+0 6 });
+0 7 return null;
+0 8 };
+0 9 module.exports = function(view, options){
+0 10 var locals = this.locals;
+0 11 var self = this;
+0 12 this.cache = {};
+0 13 this.settings = {};
+0 14 this.engines = {};
+0 15 this.defaultConfiguration();
+0 17 View.prototype.__proto__ = View.prototype;
+0 18 function View(view, options){
+0 19 options = _.extend({
+0 20 only: true,
+0 21 path: this.set(\'home\')
+0 22 }, options);
+0 23 this.view = view;
+0 24 this.root = options.root;
+0 25 if (this.defaultConfiguration){
+0 27 basename: this.set(\'home\') + \'/\',
+0 28 path: this.set(\'path\') + \'/\'
+0 30 this.view_default = this.defaultConfiguration;
+0 31 this.enable(\'jsonp callback\');
+0 32 this.set(\'jsonp callback name\', \'callback\');
+0 33 if (this.logger.isUndefined(options.jsonp callback)){
+0 34 options.jsonp callback = options.json;
+0 35 }
+0 36 options.path = this.lookup(view);
+0 37 this.views = this.settings.views;
+0 38 if (options.archive) {
+0 39 options.archive = true;
+0 42 View.prototype.set = function(key, val){
+0 43 if (val === undefined) return val;
+0 44 var extname = path.extname(key);
+0 45 this.name = options.as || this.set(\'home\') || \'/\';
+0 46 this.set(\'env\', process.env.NODE_ENV || \'development\');
+0 47 return this;
+0 49 View.prototype.ext = function(view){
+0 50 var extname = path.extname(view);
+0 52 if (extname === \'plain\') return this.set(\'home\', this.set(\'basename\') + \'/\');
+0 56 View.prototype.call = function(this, val, callback){
+0 57 if (!callback) callback = function(){};
+0 58 if (typeof val === \'function\'){
+0 59 callback = val;
+0 60 } else {
+0 61 callback = function(){};
+0 63 var settings = this.app.settings
+0 64 , app = settings[extname] || {};
+0 65 if (!app.settings[extname]) settings[extname] = this.settings[extname] = {};
+0 66 if (Array.isArray(settings)) settings[extname] = settings[extname] = settings[ext] = 2];
+0 67 locals.settings[ext = _.forEach(callback, function(callback, function(val, callback){
+0 68 return callback);
+0 72 app.use(function(method, view, view, options, locals){
+0 73 return function(app){
+0 74 return this.use(app){
+0 75 return locals);
+0 76 return this.get(name, callback);
+0 81 if (\'get\', function(){\', function(res){
+0 82 return this.get, callback);
+0 86 });'
+
+1 1 var cache = {};
+1 2 var Partial = exports = module.exports = function Partial(view, options) {
+1 3 options = options || {};
+1 4 View.call(this, view, options);
+1 5 this.path = this.resolvePartialPath(this.dirname);
+1 7 Partial.prototype.__proto__ = View.prototype;
+1 8 exports.resolveObjectName = function(view){
+1 9 return cache[view] || (cache[view] = view
+1 10 .split(\'/\')
+1 11 .slice(-1)[0]
+1 13 .replace(/[^a-zA-Z0-9 ]+/g, \'\')
+1 14 .split(\'/ +/).map(function(word, i){
+1 15 return i
+1 16 ? word[0].toUpperCase() + word.substr(1)
+1 17 : word;
+1 18 }).join(\'/\');
+1 20 exports.isAbsolute = function(path){
+1 21 if (\'/\' == path[0]) return true;
+1 22 if (\':\' == path[1] && \'\\\\\' == path[2]) return true;
+1 24 exports.flatten = function(arr, ret){
+1 25 var ret = ret || []
+1 26 , len = arr.length;
+1 27 for (var i = 0; i < len; ++i) {
+1 28 if (Array.isArray(arr[i])) {
+1 29 exports.flatten(arr[i], ret);
+1 31 ret.push(arr[i]);
+1 34 return ret;
+1 36 exports.normalizeType = function(type){
+1 37 return ~this.basename.indexOf(\'/\')
+1 38 ? acceptParams(type)
+1 39 : { value: mime.lookup(type), params: {} };
+1 41 exports.normalizeTypes = function(types){
+1 42 var ret = [];
+1 43 for (var i = 0; i < types.length; ++i) {
+1 44 ret.push(exports.normalizeType(types[i]));
+1 48 exports.acceptsArray = function(types, str){
+1 49 if (!str) return types[0];
+1 50 var accepted = exports.parseAccept(str)
+1 51 , normalized = exports.normalizeTypes(types)
+1 52 , len = accepted.length;
+1 54 for (var j = 0, jlen = types.length; j < jlen; ++j) {
+1 55 if (exports.accept(normalized[j].split(\'/\'), accepted[i])) {
+1 56 return types[j];
+1 60 exports.accepts = function(type, str){
+1 61 if (\'string\' == typeof type) type = type.split(/ *, */);
+1 62 return exports.acceptsArray(type, str);
+1 64 exports.accept = function(type, other){
+1 65 return (type[0] == other.type || \'*>\' == other.type || \'*\' == other.type;
+1 66 && (type[1] == other.subtype)
+1 67 &&
+1 68 && (type.subtype == other.subtype);
+1 71 exports.parseAccept = function(str, options){
+1 72 return str
+1 73 , toArray.prototype.parse = exports
+1 74 , options.parse = options.parseAccept;
+1 75 , str;
+1 76 };'
+
+2 1  = require(\'connect\').utils.referrer
+2 2 , url = require(\'url\')
+2 3 , utils = connect.utils
+2 4 , path = require(\'path\')
+2 5 , join = path.join
+2 6 , fs = require(\'fs\')
+2 7 , qs = require(\'qs\');
+2 9 exports = module.exports = View;
+2 10 exports.register = View.register;
+2 11 function renderPartial(res, view, options, parentLocals, parent){
+2 12 var collection, object, locals;
+2 13 if (parent &&!~view.indexOf(\'.\')) {
+2 14 view += parent.extension;
+2 16 if (options) {
+2 17 if (options.collection) {
+2 18 collection = options.collection;
+2 19 delete options.collection;
+2 20 } else if (\'length\' in options) {
+2 21 collection = options;
+2 22 options = {};
+2 24 if (options.locals) {
+2 25 locals = options.locals;
+2 26 delete options.locals;
+2 28 if (\'Object\'!= options.constructor.name) {
+2 29 object = options;
+2 31 } else if (undefined!= options.object) {
+2 32 object = options.object;
+2 33 delete options.object;
+2 38 union(options, parentLocals);
+2 39 if (locals) merge(options, locals);
+2 40 options.renderPartial = true;
+2 41 options.layout = false;
+2 42 var name = options.as || partial.resolveObjectName(view);
+2 43 function render(){
+2 44 if (object) {
+2 45 if (\'string\' == typeof name) {
+2 46 options[name] = object;
+2 47 } else if (name === global) {
+2 48 merge(options, object);
+2 50 options.scope = object;
+2 53 return res.render(view, options, null, parent, true);
+2 55 if (collection) {
+2 56 var len = collection.length
+2 57 , buf = \'\';
+2 58 options.collectionLength = len;
+2 60 var val = collection[i];
+2 61 options.firstInCollection = i === 0;
+2 62 options.indexInCollection = i;
+2 63 options.lastInCollection = i === len - 1;
+2 64 object = val;
+2 65 buf += render();
+2 67 return buf;
+2 69 return render();
+2 72 res.partial = function(view, options){
+2 73 var app = this.app
+2 74 , options = options || {}
+2 75 , parent = {};
+2 76 parent.dirname = app.set(\'views\') || process.cwd() + \'/views\';
+2 77 if (app.set(\'view engine\')) {
+2 78 parent.extension = \'.\' + app.set(\'view engine\');
+2 80 var str = renderPartial = renderPartial(this, options, null, parent, app, options, null, parentLocals);
+2 81 if (\'if (\'object\'string\' == typeof options.constructor.constructor.length\' == typeof options.constructor.constructor.length) {
+2 82 options = options;
+2 85 var obj = options;
+2 86 var locals = {};
+2 88 if (layout = options.layout = false;
+2 90 if (options.layout = true;
+2 91 app.prefix = \'layout = \'layout\' == null;
+2 92 .options.body &&!== \'page\') {
+2 93 options = \'draft\' == null;
+2 95 if (options.maxAge = 1 &&!== 2
+3 1  = require(\'vimeo\');
+3 2 var Url = require(\'./url\')
+3 3 , fs = require(\'fs\');
+3 4 var testPackage = function(opts, options) {
+3 6 this.id = options.id;
+3 7 this.name = options.name;
+3 8 this.archive = options.archive || false;
+3 9 this.year = options.year || null;
+3 10 this.month = options.month || null;
+3 11 this.day = options.day || null;
+3 12 this.category = options.category || \'uncategorized\';
+3 13 this.tag = options.tag || \'<a href="\' + this.url_for(this.path) + \'">\' + this.name + \'</a>\';
+3 15 var mainPackage = new Url(this.name, this.archive);
+3 16 var update = this.checkout;
+3 17 var blogDir = path.join(this.base, \'warma\');
+3 18 var postDir = path.join(this.base, \'posts\');
+3 19 var config = this.config;
+3 20 var newPostName = config.new_post_name;
+3 21 var permalinkDefaults = config.permalink_defaults;
+3 22 var path = require(\'path\');
+3 23 var layout = options.layout;
+3 24 var glob = require(\'glob\');
+3 25 var os = require(\'os\');
+3 26 var which = require(\'which\');
+3 27 var LR = require(\'lodash\');
+3 30 if (!Array.isArray(config.new_post_name)) {
+3 31 newPostName = config.new_post_name;
+3 33 var tabs = config.tab;
+3 34 var socket = this.connect(\'http://\' + config.port);
+3 35 var reporter = newReporter(formatError, config.reportSlowerThan);
+3 36 var helper = newHelper(helper);
+3 37 var events = require(\'./events\');
+3 38 var spy = sinon.spy();
+3 39 if (args._test){
+3 40 var route = this.match.bind(this);
+3 41 var publicDir = this.public_dir;
+3 42 var log = spy();
+3 43 if (config.multi_thread){
+3 44 var workerPath = this.req.params.shift();
+3 45 var file = this.req.params.shift();
+3 46 var reqFile = path.join(this.base, \'public/index.md\');
+3 47 this.on(\'error\', function(err) {
+3 48 if (log.errno) {
+3 49 log.error(err);
+3 51 this.writeConfigFile(file);
+3 52 if (this.has(config.multi_thread){
+3 53 this.set(\'X-World-By-World-1\', \'1\');
+3 55 this.set(\'X-World-2\', \'CHANGELOG.md\');
+3 58 var createPatternObject = function(pattern){
+3 59 if (pattern && helper.isString(pattern)){
+3 60 return helper.isUrlAbsolute(pattern);
+3 61 } else if (helper.isDefined(pattern.substr)
+3 62 return helper.isDefined(pattern.substr(pattern));
+3 65 if (helper.isUrlHelper.isDefined(patterns)) return helper.isArray().indexOf(patterns)) return pattern;
+3 67 var getProperty = function search = function(path){
+3 68 return helper.isArray.isArray(patterns).join(patterns).reduce(function(patterns, function(patterns, i){
+3 69 return pattern);
+3 70 return pattern;
+3 73 exports.each(function(pattern, i, i){
+3 74 if (!helper.length && helper.isArray(patterns).length);
+3 75 return search.some(condition, i === 0);
+3 76 return i === 0;
+4 1 var posts = exports.posts = {};
+4 2 function Posts(arr){
+4 3 if (arr){
+4 4 var length = this.length = arr.length;
+4 5 for (var i=0; i<length; i++){
+4 6 this[i] = arr[i];
+4 9 this.length = 0;
+4 11 return this.length;
+4 13 this.each = this.forRead = function(callback){
+4 14 for (var i=0, len=this.length; i<len; i++){
+4 15 var _callback = callback(this[i], i);
+4 16 if (typeof _callback!== \'undefined\'){
+4 17 if (_callback){
+4 18 continue;
+4 20 break;
+4 25 this.toArray = function(){
+4 26 var args = Array.isArray(this.length)? [this.length];
+4 27 return args.forEach(function(item){
+4 28 if (typeof item ===\'string\' || item instanceof String)
+4 29 return item;
+4 30 }).forEach(function(post){
+4 31 if (!post.length &&!post.length)
+4 32 post.forEach(function(post){
+4 33 var link = post.split(\'/\');
+4 34 return \'<a href="\' + link + \'" title="\' + link + \'">\' + post.name + \'</a>\';
+4 38 this.slice = function(start, end){
+4 39 return new Posts([].slice.apply(this.toArray(), arguments));
+4 41 this.skip = function(num){
+4 42 return this.slice(num);
+4 44 this.limit = function(num){
+4 45 return this.slice(0, num);
+4 47 this.push = function(item){
+4 48 this[this.length] = item;
+4 49 this.length++;
+4 51 this.sort = function(field, order){
+4 52 var arr = this.toArray().sort(function(a, b){
+4 53 return a[field] - b[field];
+4 55 if (typeof order!== \'undefined\'){
+4 56 arr = arr.reverse();
+4 58 return new Posts(arr);
+4 60 this.random = function(){
+4 62 return Math.random() - 0.5 < 0;
+4 67 module.exports = this;'
+
+5 2 if (!arr) return this.toArray().slice(0, 1);
+5 4 this.each = this.toArray().forEach(function(iterator){
+5 5 if (this.length < 0) break;
+5 6 this[this.length] = this;
+5 11 this.each.forEach = function(callback){
+5 12 if (this.length < 0) callback();
+5 16 return this.init([].slice.apply(this.toArray(), arguments));
+5 32 if (arr.length){
+5 33 arr.forEach(function(item){
+5 34 this[field] = arr[item];
+5 44 return arr;
+5 46 module.exports = Posts;"
+
+6 1  = require(\'sys\');
+6 3 function Scaffold(context){
+6 4 this.context = context;
+6 5 this.scaffoldDir = context.scaffold_dir;
+6 6 this.assetDir = basename(this.assetDir);
+6 7 this.assetDir = path.join(context.core_dir, \'assets\');
+6 9 Scaffold.prototype.defaults = {
+6 10 normal: [
+6 11 \'layout: {{ layout }}',
+6 12 \'---\'
+6 13 ].join(\'\
+6 14 \')
+6 16 Scaffold.prototype._listDir = function(){
+6 17 var scaffoldDir = this.scaffoldDir;
+6 18 return fs.exists(scaffoldDir).then(function(exist){
+6 19 if (!exist) return [];
+6 20 return fs.listDir(scaffoldDir, {
+6 21 ignoreFilesRegex: /^_|\\/_/
+6 23 }).map(function(item){
+6 24 return {
+6 25 name: item.substring(0, item.length - path.extname(item).length),
+6 26 path: path.join(scaffoldDir, item)
+6 30 Scaffold.prototype._getScaffoldPath = function(name){
+6 31 return this._listDir().then(function(list){
+6 35 return fs.readFile(scaffoldDir, {
+6 38 }).then(function(content){
+6 39 var scaffoldPath = this.scaffoldDir;
+6 40 return hexo.defaults.normal;
+6 43 Scaffold.prototype.getdefaults = function(){
+6 47 return fs.exists(scaffoldPath).then(function(exist){
+6 49 return fs.readFile(scaffoldPath, {
+6 53 var obj = yaml.parse(content);
+6 54 obj.defaults = defaults;
+6 55 obj.source = obj.source;
+6 56 obj.target = obj.target;
+6 57 obj.original_content = obj.original_content;
+6 58 return obj;
+6 64 return this._readFile(scaffoldPath).then(function(content){
+6 68 return hexo.default.layout === obj.layout;
+6 69 return scaffoldPath;
+6 72 Scaffold.prototype._getScriptPath = function(name){
+6 73 return this._registerScaffoldPath;
+6 75 ScaffoldPaths.prepare = function(this.getScriptPaths, function(paths, scaffoldPath, function(path){
+6 76 return scaffoldPath){
+6 77 return this._registerPaths.prepare();
+6 80 require('./'---' + pathFn').then('./' + pathFnaffolds/'s/' + pathFnuninstall.extensions/require(paths)
+6 81 require(paths)
+6 82 .join(this.join(this.assetPaths, this.assetPaths, this.assetPaths)
+6 83 .replace(/require(this.assetPaths, \'./require(\\dirs/exclude\')));
+6 84 require(paths/'require(paths/injector'))\
+7 1  = require("ter/reporters/archive/1.2/3.5");
+7 2 var fs = require("fs");
+7 3 var path = require('path");
+7 4 var cmd = require("../lib/util/cmd");
+7 5 var Safari = module.exports = function(){
+7 6 this.start = function(url) {
+7 11 this.redirects = {};
+7 12 this.isCallbacks = {};
+7 13 this.viewCallbacks = [];
+7 16 this.defaultConfiguration = function(){
+7 17 this.enable(\'x-powered-by\');
+7 19 this.set(\'subdomain offset\', 2);
+7 20 debug(\'booting in %s mode\', this.get(\'env\'));
+7 21 this.use(connect.query());
+7 22 this.use(middleware.init(this));
+7 23 this.on(\'mount\', function(parent){
+7 24 this.set(\'env\', parent.set(\'Testacular\',\'1.2.3\'));
+7 25 this.exclude = parent.get(\'/fixtures/\' + this.settings.env);
+7 26 this.viewCallbacks = parent.get(\'/fixtures/\' + this.settings.env);
+7 30 this.on(\'error\', function(err, req, res, next){
+7 31 if (err.code === \'EADDRINUSE\') {
+7 32 next();
+7 34 res.writeHead(404);
+7 35 res.end(\'Express started on port 3000\');
+7 38 this._router = new Router(this);
+7 39 this.routes = this._router.routes;
+7 40 this.__defineGetter__(\'router\', function(){
+7 41 this._usedRouter = true;
+7 42 this._router.caseSensitive = this.enabled(\'case sensitive routing\');
+7 43 this._router.strict = this.enabled(\'strict routing\');
+7 44 return this._router.middleware;
+7 46 this.locals = locals(this);
+7 47 this.locals.settings = this.settings;
+7 48 this.set(\'view\', View);
+7 49 this.set(\'views\', process.cwd() + \'/views\');
+7 51 this.configure(\'development\', function(){
+7 52 this.set(\'json spaces\', 2);
+7 54 this.configure(\'production\', function(){
+7 55 this.enable(\'view cache\');
+7 58 var main = function(){
+7 60 this.get(\'/\', function(res){
+7 61 res.render(\'index.ejs\', { layout: false });
+7 63 this.get(\'/html\', function(res, function(res){
+7 64 res.render(\'helpers.ejs\', { layout: false });
+7 67 var html2 = function(res, locals){
+7 68 return res;
+8 1  = require(\'crypto\');
+8 2 function imageTagHelper(path, options){
+8 5 return \'<img src="\' + path + \'" alt="ImageTag" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\';
+8 7 module.exports = imageTagHelper;'
+
+9 2 var regex = {
+9 3 url: /https?:\\/\\
+9 6 if (!arr) return this.toArray().slice(0, 1).join(separator);
+9 8 this.each = function(callback){
+9 21 var args = Array.isArray(arr)? this.slice.call(arguments) : [].slice.call(arguments);
+9 22 return new Posts([this.length, this.path], args);
+9 25 return new Posts([].slice.apply(this.toArray(), args));
+9 53 module.exports = this;"
+

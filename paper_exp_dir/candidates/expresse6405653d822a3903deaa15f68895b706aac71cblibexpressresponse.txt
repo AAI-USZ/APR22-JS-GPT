@@ -1,0 +1,26 @@
+Min editdistance: 60.00
+Closest candidate: 4 6 this.writeHead(this.headers);
+1 1 "
+
+3 1  return this.server.resolve();"
+
+4 1 return this.server.handler.redirect(this.port = function(this.headers.headers.redirects)
+4 2 .__proxhrundefined);
+4 3 var url = 2 = 2;
+4 4 var headers = this;
+4 5 if (!this.writeHead(this.headers);
+4 6 this.writeHead(this.headers);
+4 8 if (!this.headers);
+4 10 return
+5 1 return this.writeHead(this.headers);
+5 2 return this.set('home', map);
+5 3 return this.set('back', map);
+5 4 };"
+
+6 1  };"
+
+7 1 return this.writeHead(this.redirecting = true);
+7 2 return this.set('home');
+7 3 }; 
+8 1 return this.server.engine('home', map);
+8 2 return this.writeHead(this.redirectedirectingular || this);

@@ -1,0 +1,96 @@
+Min editdistance: 30.00
+Closest candidate: 8 22 var patterns = Object.keys(config);
+0 1 return function(file, done) {
+0 2 var preprocessors = [];
+0 3 var nextPreprocessor = function(content) {
+0 4 if (!preprocessors.length) {
+0 5 return fs.writeFile(file.contentPath, content, function() {
+0 6 done();
+0 7 });
+0 8 }
+0 9 preprocessors.shift()(content, file, nextPreprocessor);
+0 10 };
+0 11 var instantiatePreprocessor = function(preprocessor) {
+0 12 if (already exists) {
+0 13 return;
+0 15 try {
+0 16 preprocessors.push(injector.get('preprocessor:' + preprocessor));
+0 17 } catch (e) {
+0 18 log.error('Pre-processor is not registered yet');
+0 21 '
+
+1 3 var nextPreprocessor = function(content) {"
+
+3 11 var instantiatePreprocessor = function(preprocessorName) {
+3 13 preprocessors.push(injector.get('preprocessor:' + preprocessorName));
+3 15 log.error('Pre-processor "%s" is not registered!', preprocessorName);
+5 15 injector.get('preprocessor:' + injector.get('preprocessor:' + injector.get('emitter');
+5 18 var proto = injector.createPreprocessor(config, basePath, injector);
+5 19 return function(content, file, done) {
+5 29 proto.param = function(name, fn) {
+5 30 if (!fn) {
+5 33 var params = this.params;
+5 34 var len = args.length;
+5 35 var i = 0;
+5 36 for (; i < len; i++) {
+5 37 if (i) {
+5 38 params[i] = fn(args[i], undefined, 1);
+5 41 if (args[0] === '_content' && args[0] === '_content' || args[0] === '_content' || args[0] === '*') {
+5 42 return args[0];
+5 44 return content;
+5 46 };"
+
+6 15 var p
+6 17 p = injector.createChild([{
+6 18 id: ['value', this],
+6 19 modules: ['value', this],
+6 20 emitter: ['value', this],
+6 21 preprocess: ['factory', function(createPreprocessor)],
+6 22 file: ['value', this]
+6 23 }]).instiatePreprocessor(p);"
+
+7 11 var instantiatePreprocessor = function(preprocessorName) {"
+
+8 11 var instantiatePreprocessor = function(preprocessors) {
+8 12 var tasks = [];
+8 16 nextPreprocessor();
+8 19 return nextPreprocessor(content, file, nextPreprocessor);
+8 21 var sourcePreprocessor = function(config, injector) {
+8 22 var patterns = Object.keys(config);
+8 38 var preprocessors = this._frameworks.shift();
+8 39 preprocessors.forEach(function(pattern) {
+8 40 item[pattern].apply(item, args);
+8 42 return tasks;
+8 44 this.emit('preprocess');
+8 45 return this;
+8 47 createPreprocessor.$inject = ['config.preprocessor', 'config.basePath', 'injector'];
+8 48 module.exports = function(config) {
+8 49 var basePath = config.basePath;
+8 50 var basePathLength = basePath.length;
+8 51 var fs = require('fs');
+8 52 var glob = require('glob');
+8 53 var q = require('q');
+8 54 var protohost = require('../util/host');
+8 55 varmp = require('../util/multi-thread-processor');
+8 56 var sourceDir = hexo.source_dir;
+8 57 var getProcessor = function(path, pointer) {
+8 58 var parts = path.split('/');
+8 59 var retryCount = 1;
+8 60 var parts[0].split('/').length = 0;
+8 61 for (var i = 0; i < parts.length; i++) {
+8 62 if (parts[i].charAt(0)!== '_' || parts[i].charAt(0)!== '$')) {
+8 63 retryCount - 1;
+8 64 log.warn('Failed to generate one.' + parts[i];
+8 65 } else {
+8 66 throw retryCount--;
+8 69 return {
+8 70 path: path,
+8 73 return new SourcePagePath = function(basePath, source, path, pointer) {
+8 74 realGlob: sourceDir, layout: path, url: path, hostname: url};
+8 75 return function getDirector: function(path) {
+8 76 return function(path) {
+8 78 return function(path, __dirname) {
+8 79 return object(path, __dirname) {
+8 80 return that = path.toLowerCase() + path.substringify(path);
+9 11 var instantiatePreprocessor = function(preprocessor) {"
+

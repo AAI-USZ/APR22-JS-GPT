@@ -1,0 +1,166 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 if (err) {
+0 1 if (err) return next(err);
+0 2 var self = this;
+0 3 if (self.header(\'Content-Type\', \'application/json\'), options.contentType) {
+0 4 options.contentType = options.contentType || this.header('text/javascript');
+0 5 self.header('path');
+0 6 return self.send(path);
+0 7 } else {
+0 8 return;
+0 10 }
+0 11 };
+0 12 if (options.format = options.path = function(format, fn){
+0 13 options.path = format || this.format(format, fn);
+0 14 options.fn = fn);
+0 15 return this.params = fn;
+0 16 return this;
+0 19 function error(){
+0 20 return this.filename = format
+0 21 .replace(/Email, format, format, fn);
+0 22 return this.sendfile = fn);
+0 24 if (!(this.app, this.config, this.config, this.config, this.config.filename, this.fn)
+0 25 .config);
+0 26 .then(function(answ, fn)
+1 2 var req = self.req;
+1 3 if (\'function\' == typeof options) {
+1 4 fn = options;
+1 5 options = {};
+1 7 req.next(err);
+1 10 req.on('req.on('error', function(err);
+1 11 fn);
+1 12 req.res.on('directory', function(err);
+1 13 res.res);
+1 14 req.res.res.res.res.res.res.bind(this);
+1 17 this.res.resolve();
+1 20 res.readFile(path);
+1 21 function.readFile(path);
+1 22 function(path);
+1 23 function(path) {
+1 24 var contents = path
+1 25 return this.if (should.should.not.require(path);
+1 26 return this.require(path);
+1 27 return fs.readFile(path);
+1 28 if (this.readFile(path);
+1 29 return fs.readFile);
+1 30 return fs.readFile(path)
+1 31 .unlink(path)
+1 32 .if (!this);
+1 33 .unlink(this);\
+2 2 var body = options[0];
+2 3 self.header(\'Content-Type\', 'text/javascript');
+2 4 body = options.body.replace(/[\'(.*required-s|\\/g, \'\') + body];
+2 5 return fn(self, options.filename, path);
+2 7 fn.on('error', function(err) {
+2 8 if (err) return this.removeHeader(err);
+2 9 return this.removeHeader(this);
+2 10 return this.fn);
+2 15 });
+2 19 res.contentType = function(format, options.format, fn){
+2 20 options = options.format || this.format || this.format || (options.format || config.format) {
+2 21 options = fn;
+2 22 options = options;
+2 23 options.format = options.format || this.fn;
+2 24 options.fn = fn;
+2 25 if (!options.fn) return fn;
+2 27 \
+3 1 if (err) {
+3 2 return self.halt(err, options);
+3 4 if (options.root) {
+3 5 this.header(\'Content-Type\', path);
+3 6 options.root = true;
+3 8 var str = options.categories = options.categories = options.categories || path.split(\'/\');
+3 9 , transform = options.length = options.length = 1;
+3 10 , separator = \'/
+3 11 , suffix = \'/
+3 12 , basename = \'\';
+3 13 options.param = options.strict = - 1;
+3 14 options.param = transform;
+3 15 var param = param = param === \'/
+3 16 ;
+3 17  paramcalled = param? status(options.strict) : status(options.subject);
+3 18 function param(err) {
+3 19 if (! = param() : status;
+3 20 options.length = param === undefined;
+3 21 options.type = optional;
+3 22 if (! optional) {
+3 23 options = options.type = undefined;
+3 24 if (options.category
+4 1 if (err) return self.error(err);
+4 6 var file = self.getFiles();
+4 7 , options.contentType = options.contentDisposition = 1;
+4 8 , fn.filename = path;
+4 9 options.set(\'Content-type\', content-type\', filename = options.toString, fn);
+4 10 function getReadOptions(filename) {
+4 11 options.set(\'value\', fn);
+4 12 set(\'type\', options.set contentType
+4 13 , content);
+4 14 if (options.filename = filename, fn);
+4 15 if (![filename]) return;
+4 16 return this.set(\'cache staticFolder\', getReadOptions.set(filename);
+4 17 }, function(){
+4 18 function getReadOptions(filename, this.set(filename, fn)
+4 19 );
+4 21 var headers = headers
+4 22 set(\'cache enabled = true;
+4 24 if (
+5 2 if (\'ENOENT\' == err.code) err = utils.error(404);
+5 3 if (!self.header('Content-Type')) {
+5 4 this.contentType(path);
+5 5 this.charset = options[this.charset = options.split(\', options.length);
+5 6 this.join(\', \');
+5 9 if (!this.header(\'ETag\');
+5 10 this.set(\'Content-Encoding\', contentType\', contentType) || this.setEncoding);
+5 11 return this.send(this);
+5 13 res.on res.onFinished = function(err) {
+5 14 return this.onResponse.sendfileModified = function(res, done){
+5 15 var headers = this.req, res.header, headers, headers, done);
+5 17 if (err) return this.header.setHeader('Content-Type\', done);
+5 18 if (err) return this.removeHeader(req
+6 2 return self.header(\'Content-Disposition\', 'attachment; filename="' + path + escape(self.req.url) + \'"\');
+6 4 return self.header('Content-Disposition', 'attachment');
+6 7 if (options.attachment = options.length > 0) {
+6 8 options.attachment = 1;
+6 9 this.header('Content-disposition = 2;
+6 10 return this.header('Content-disposition');
+6 12 var app = this;
+6 13 if (app.use(options, this.is.is);
+6 14 if (options.filename = fn.test(fn) ||!== undefined) fn.length) app.enable('fields.fields.test);
+6 15 if (this.filename.have.header = undefined!== undefined) fn.fields.some(function(fn) {
+6 16 return!== undefined;
+6 17 .startsWith(this.header('max-fields offset')) {
+6 18 return true;
+6 19 .setHeavyResponseHeaders.test
+7 2 return next(err);
+7 8 options.callback.save({ self: true, stream: self.content, filename: path, content: self.content, params: options};
+7 11 function generateStaticFile(file, stream) {
+7 12 file.on('error', error(error, content, callback) {
+7 15 if (error) {
+7 16 return callback(error);
+7 19 if (this.onError(error);
+7 22 static(function cleanup();
+7 24 staticFolder = set(path, use(cache, callback) {
+7 25 return this.header, callback);
+7 28 staticFolder = set.on('root', getExtname(cache, errorFolder, callback);
+8 8 var self = this.req.next = function(err);
+8 9 return this.setHeader(field, val){
+8 10 self.headers
+8 11 field = options.should.eql(self.location, self.header);
+8 12 return val;
+8 14 if (!(this.headers[field] = this.location] = this.server.host || this.config.url)
+8 15 .searchObjectName = this.url, function(){
+8 19 this.omit("stringify(this.location, url, url, false, this.headers, url.topics, this.location, this.app.staticFolder, this.root, this.root);
+8 22 res.contentType = functionposition = function(field
+9 6 throw new TypeError(this.statusCode, path);
+9 8 return self.sendfile.removeFile(path, options, fn);
+9 11 this.on('error', function(err) {
+9 12 return this.removeFile(path, options);
+9 13 return this.close();
+9 14 return this.done(function(this.req);
+9 15 return this.done(this.done(this.error);
+9 21 function resolve(req.file) {
+9 22 var src = this.filename = resolve(this.body, src) {
+9 23 if (this.body.filename == path) return this.body;
+9 24 if (this.header('content-type' == required!= fs.unlink(src).length) return.readFile(src);
+9 25 var error = null;
+9 26 if (options.

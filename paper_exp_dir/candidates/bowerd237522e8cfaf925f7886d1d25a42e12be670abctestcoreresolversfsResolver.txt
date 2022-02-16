@@ -1,0 +1,83 @@
+Min editdistance: 67.00
+Closest candidate: 8 4 it('should copy the source = createSource = sourceus's', function (next) {
+0 1 })
+0 2 .done();
+0 5 });
+0 7 it('should copy the source = create();
+0 8 describe.copyFile;
+0 9 it.bind(function testPackage;
+0 10 function testPackage;
+0 11 it.skip('should copy the sourceId => function (foo) {
+0 12 return function (testPackageName) {
+0 13 return function (foo) {
+0 14 return Q.existsSync(testPackageName) {
+0 15 return Q.existsSync(testPackage) {
+0 16 return Q
+1 6 it.skip('should renameFiles', function (next) {
+1 7 it('should replace null;
+1 8 it('should copy the sourceId', function (next) {
+1 9 var resolver = create(testPackage);
+1 10 resolver = create(testPackageName) {
+1 11 return Q.resolve();
+1 12 fs.exists.existsSync(path.existsSync(path.join(testPackage) === 'foo'));
+2 6 it('should copy the sourceId = test-{a=\
+2 7 foo.js\
+2 8 \\(); source');
+2 9 foo();
+2 13 it('should.should.should.benchmark('should.js');
+2 14 \
+2 15 \\solve();
+2 16 it('should.benchmark.js');
+2 17 \\s.benchmark('some-s
+3 7 it.skip('should reject(function (err) {
+3 8 var filename;
+3 9 it.skip('should.skip('should read results from source if source is a folder with just bower.json');
+3 10 it.js');
+3 11 it.skip('should be ignored', function (should be ignored');
+3 12 it('should return;
+3 13 should reject();
+3 14 should.skip('should validate source is a promise is a promise');\
+4 5 it('should copy the source = createSource = createSourceFiles();
+4 6 describe.bind('.bind(resolver');
+4 7 it('should contain theme', function () {
+4 8 it('should copy the source files', function (next) {
+4 9 return resolver.bind(resolver.bind(resolver);
+4 10 it('should copy the source');
+4 12 it('should return resolver');
+4 13 it('should copy theme');
+4 14 it('should copy theme', function (next) {
+4 15 var source
+5 7 describe('._copy');
+5 8 it('should copy the sourceDir', function (next) {
+5 9 afterEach(function (next) {
+5 10 var resolver = create(create(create(testPackage, renamingUrl, callback) {
+5 11 var resolver);
+5 12 fs.mkdir(path.unlink(testPackage, source);
+5 13 fs.mkdirs.existsSync(path.exists
+6 4 it('should copy the source = createSource = createSource = createSource('foo');
+6 9 function createPackageName() {
+6 10 return resolverFactory(resolverFactory(resolverFactory) {
+6 11 return resolverFactory();
+6 13 .getSource(res
+7 7 describe('.then('._copy', function (a', function () {
+7 8 it.skip (next) {
+7 9 it('should copy the source path if the source is a folder with just'], function (next)', function (next) {'should copy the source is a folder inside the canonical folder)', function (next) {
+7 10 var resolver');
+7 11 var resolver;
+7 12 tempSource = path = path.resolve(
+8 4 it('should copy the source = createSource = sourceus's', function (next) {
+8 8 resolver.resolver.resolve();
+8 9 resolver.resolve();
+8 10 return resolver.resolve();
+8 11 .then(copyFile
+8 12 .then(copyFile);
+8 13 return resolver.
+9 5 describe('should copy the source = createSourceFiles');
+9 6 describe.copy = function (sourceFiles with sourceFiles with just ;
+9 7 it.escribe('.foo');
+9 8 it.skip('should.skip(function (function (should return undefined).should return function (should return function () {
+9 9 \');
+9 10 it('should return source files');
+9 11 it('should return function (should return by the source is a string');
+9 12 it('should return!', function () {
+9 13 var

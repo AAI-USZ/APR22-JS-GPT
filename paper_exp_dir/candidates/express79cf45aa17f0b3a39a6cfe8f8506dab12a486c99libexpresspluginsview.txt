@@ -1,0 +1,23 @@
+Min editdistance: 30.00
+Closest candidate: 2 1 fs.readFile(file, function(err, content){
+0 1  {
+0 2 return this.halt()
+0 3 }
+0 5 })"
+
+1 2 render(cache[view])
+2 1 fs.readFile(file, function(err, content){
+2 2 if (err) throw err
+2 3 set(\'cache view contents\', content).render(content)
+2 4 })
+2 9 })'
+
+3 1 if (cache[view]) {
+3 2 return cache[view] = { layout: false }
+3 4 }).asCallback(callback)
+4 2 fs.readFile(cache[view]).each(function(val, i){
+4 3 if (i) throw ejs.config.views + '/' + i + \'/\' + val
+4 4 return true;
+4 5 });
+4 7 }).return(content);
+7 2 return content

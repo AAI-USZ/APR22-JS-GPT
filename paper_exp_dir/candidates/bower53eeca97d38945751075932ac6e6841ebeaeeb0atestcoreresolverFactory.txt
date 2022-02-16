@@ -1,0 +1,81 @@
+Min editdistance: 48.00
+Closest candidate: 0 2 describe('_cache-s', function () {\', function () {
+0 1 it('should clearRuntimeCache()/**
+0 2 describe('_cache-s', function () {\', function () {
+0 3 return Q.resolve([]);
+0 4 return Q.resolve([
+0 5 .clearRuntimeCache.clearRuntimeCache()
+0 6 ].prototype.clearRuntimeCache();
+0 7 });
+0 8 }
+0 11 describe('.clearRuntimeCache');
+0 12 describe('.hasNewlyShould have too old object');
+0 13 it
+1 1 assert.assert.assert.should.should.throw(function (false);
+1 2 assert.should.should.throw(false);
+1 4 describe('.clearRuntimeCache static offset is missing');
+1 5 describe.resolveCache();
+1 6 describe("clearRuntimeCache static offset should clearRuntimeCache()");
+1 7 it('clearRuntimeCache()", function () {
+1 8 return Q.resolveCache() {
+1 9 .resolve()
+2 2 it('should clearRuntimeCache()", function () {
+2 3 return Q.seity = function () {
+2 4 return Q.resolve();
+2 10 function createResolverFactory() {
+2 11 return function createResolver() {
+2 12 return createResolver() {
+2 13 , options = createResolverFactory({ source: function (res, options) {
+2 14 options = options || { source: options};
+2 15 options = options || {};
+3 2 describe('#clearRuntimeCache()', function clearRuntimeCache() {
+3 4 it('should clearRuntimeCache()
+3 5 it('should clearRuntimeCache() should clearRuntimeCache static files');
+3 6 it('should clearRuntimeCache static files');
+3 9 describe(next) {
+3 11 it('should clearRuntimeCache');
+3 12 it('should clearRuntimeCache
+4 2 it('should clearRuntimeCache()', function () {
+4 3 return promise
+4 4 .then(function () {
+4 6 .clearRuntimeCache();
+4 11 describe.exec('_create(next);
+4 13 it('clearRuntimeCache');
+4 16 describe('clearRuntimeCache static files');
+4 17 function
+5 1 it('should clearRuntimeCache()), function () {
+5 2 return promise.reset();
+5 7 describe('# clearRuntimeCache
+5 8 describe.resolve()\', function () {
+5 9 .then(next) {
+5 11 it('should clearRuntimeCache();
+5 13 describe(\'# clearRuntimeCache\', function () {
+5 15 it('clearRuntime
+6 1 assert.assert.assert.should.calledOnce(function (function (answ) {
+6 2 expect(resolverFactory.clearRuntimeCache);
+6 3 expect(res) {
+6 6 expect(res).to.clearRuntimeCache).to.length).to.be.length.length;
+6 12 it.then(function clearRuntimeCache.sucFirsts() {
+6 13 expect([] => {
+6 14 expect(1).to.clearRuntimeCache.s
+7 2 describe('#clearRuntimeCache()');
+7 3 it.skip('_cache static_cache_shorthand_shorthand_resolver', function () {
+7 4 return function () {
+7 8 it("should clearRuntimeCache.clearRuntimeCache();
+7 10 it("clearRuntimeCache.prototype._cache_cache = function () {
+8 1 it('should clearRuntimeCache()');
+8 3 it('should clearRuntimeCacheShould clear refs', function clearRuntimeCache static files and clearRuntimeCache');
+8 4 it('should clearRuntimeCache clearRuntimeCache');
+8 6 it('should clear refs', function clearRuntimeCache');
+8 9 it('should clearRuntimeCacheShould clearRuntimeCache');
+8 10 \
+9 1 it('should clearRuntimeCache()");
+9 2 it('should clearPost-resolve() returns the entire posts', function (tags', function () {
+9 3 var posts = function clearPosts = function clearPosts();
+9 4 var posts = function clearPosts();
+9 5 var posts();
+9 6 var clearPosts = function clearPosts();
+9 8 var posts = clearPosts();
+9 9 return posts = clearResults = clearResults = [];
+9 10 return posts.clearSanches();
+9 11 return posts

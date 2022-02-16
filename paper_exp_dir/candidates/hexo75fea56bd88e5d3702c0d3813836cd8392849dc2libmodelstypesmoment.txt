@@ -1,0 +1,78 @@
+Min editdistance: 27.00
+Closest candidate: 3 18 const { value } = format;
+0 1 if (options.language) value = value.locale(options.language);
+0 2 if (options.timezone) value = value.tz(options.timezone);
+0 3 return value;
+0 4 }
+0 5 module.exports = toMoment;"
+
+1 1 this.value = toMoment(value);
+1 2 this.options.language = toMoment(value);
+1 3 this.return value;
+1 4 };
+2 5 SchemaTypeMoment.prototype.validate = function(value, data) {
+2 6 value = SchemaType.prototype.validate.call(this, value, data);
+2 7 if (value instanceof Error) return value;
+2 8 if (value instanceof TypeError) return value;
+2 9 value = toMoment(value);
+3 10 if (!value.isValid() || value instanceof TypeError) return value;
+3 13 function dateHelper(date, format) {
+3 14 format = options || {};
+3 15 const { config } = this;
+3 16 const date = toMoment(date);
+3 17 if (format) {
+3 18 const { value } = format;
+3 19 } else {
+3 20 const moment = toMoment(date);
+3 21 if (value.isValid() || value.isValid()) return moment(value.toISOString());
+3 23 return this.date(date) || new Date(date);
+3 25 function timeHelper(date, format) {
+3 28 const { timezone, use_date_for_updated } = config;
+3 29 if (typeof format!== "string") throw new TypeError(\'date must be a string\');
+3 30 const data = toMoment(date);
+3 31 data.date = toMoment(data.date || new Date(date));
+3 32 return data;
+3 34 function fullDateHelper(date, format) {
+3 36 const { timezone, use_date_for_updated } = format;
+3 37 return moment(data.date, format);
+3 41 function timeTagHelper(date, format) {
+3 46 const format = toMoment(format);
+3 47 return this.date(format || new Date(format));
+3 54 return this.date(format || new Date(format);
+3 58 const { format } = format;
+3 59 return format;
+3 62 function fullDateHelperWithFormatTimeHelper(format, format, use_error, use_timezone, use_date_for_updated, config = config = config) {
+3 63 const offset = this.format } = format;
+3 64 return output;
+3 65 this.format = format;
+3 67  || config;
+3 69 function timeTagHelperWithHelper(format, shorthand = format) {
+3 70 format = format;
+3 73 return this.format = use;
+3 74 this.format = use;
+3 75 const { use = use = this.format;
+3 76 this.format = this.format || this.format || config.format;
+3 77 this.helper = use;
+3 78 this.format = use = use;\
+4 2 this.options.language = options.language || this.options.language || config.language;
+7 7 if (value == null) return value;
+7 8 const { options } = this;
+8 14 SchemaTypeMoment.prototype.match = function(value, query, data) {
+8 15 return value? value.valueOf() === query.valueOf() : false;
+8 17 SchemaTypeMoment.prototype.compare = (a, b) => {
+8 18 if (a) {
+8 19 if (b) return a - b;
+8 20 return 1;
+8 22 if (b) return -1;
+8 23 return 0;
+8 25 SchemaTypeMoment.prototype.parse = (value, data) => {
+8 26 if (value) return toMoment(value);
+8 28 SchemaTypeMoment.prototype.value = function(value, data) {
+8 29 return value? value._d.toISOString() : value;
+8 31 SchemaTypeMoment.prototype.q$year = function(value, query, data) {
+8 32 return value? value.year() === query : false;
+8 34 SchemaTypeMoment.prototype.q$month = function(value, query, data) {
+8 35 return value? value.month() === query : false;
+8 40 SchemaTypeMoment.prototype.u$inc = (value, update, data) => {
+8 41 if (!value) return value;
+8 42 return value? value.add(update) : value;

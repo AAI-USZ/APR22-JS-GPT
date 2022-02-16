@@ -1,0 +1,61 @@
+Min editdistance: 23.00
+Closest candidate: 4 11 return config = function(next){
+0 1 "return', function(){
+0 2 return next();"
+
+1 1 "return next();
+1 2 return next();
+1 3 });"
+
+2 1 return fs.save();"
+3 1 " })
+3 2 var content = null;
+3 3 content = null;
+3 4 content = results = null;
+3 5 next();
+3 7 }], function(){
+3 9 return content || done();
+3 10 })
+3 11 }, function(){
+3 12 return content
+3 13 return content || function(){
+3 14 return content.replace(/^_content/, callback){
+3 15 return callback);
+3 16 return content.apply(this, arguments);
+3 17 return callback.apply(this, arguments);
+3 19 });
+4 1 "}});
+4 3 content = fs.readFile(configPath, next);
+4 4 }).export.reset();
+4 6 }
+4 7 }, true);
+4 9 content.loadJSON();
+4 11 return config = function(next){
+4 12 content = function(next){
+4 14 content = next){
+4 15 content = render.loadJSON();
+4 16 content = next();
+4 17 content = fs.content.load(next
+5 1 " } else {
+5 3 return;
+5 4 return null;
+5 5 }], __dirname = __dirname;
+5 6 }'}'utf8': function(){\', __dirname = generate();
+5 7 return '', __dirname = generate(newConfigPath);
+5 11 }, function(next){
+5 14 return configPath(next){
+5 16 return posts(next){
+5 17 return posts, posts, __dirname, posts_else = posts, posts);
+6 1 "
+
+7 1 " } 'Hello-config.json' }'];
+7 3 }).load();"
+
+8 1 " }]()] = next();"
+
+9 3 file.write(configPath, next);
+9 5 }).on('close();
+9 8 }, function(exit);
+9 10 }, args);
+9 11 });'
+

@@ -1,0 +1,1 @@
+return this.set('home');

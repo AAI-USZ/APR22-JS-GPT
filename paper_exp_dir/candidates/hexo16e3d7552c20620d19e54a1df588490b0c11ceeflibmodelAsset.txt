@@ -1,0 +1,217 @@
+Min editdistance: 6.00
+Closest candidate: 8 5 var baseDir = hexo.base_dir;
+0 1 pathFn = require('path'),
+0 2 async = require('async'),
+0 3 _ = require('lodash'),
+0 4 EOL = require('os').EOL,
+0 5 EOLre = new RegExp(EOL, 'g');
+0 6 if (!fs.exists ||!fs.existsSync){
+0 7 fs.exists = pathFn.exists;
+0 8 fs.existsSync = pathFn.existsSync;
+0 9 }
+0 10 var join = function(parent, child){
+0 11 return parent? pathFn.join(parent, child) : child;
+0 12 };
+0 13 var mkdirs = exports.mkdirs = function(path, callback){
+0 14 var parent = pathFn.dirname(path);
+0 15 fs.exists(parent, function(exist){
+0 16 if (exist){
+0 17 fs.mkdir(path, callback);
+0 18 } else {
+0 19 mkdirs(parent, function(){
+0 21 });
+0 25 var checkParent = function(path, callback){
+0 28 if (exist) return callback();
+0 29 mkdirs(parent, function(err){
+0 30 if (err && err.code === 'EEXIST') return callback();
+0 31 callback(err);
+0 35 var writeFile = exports.writeFile = function(path, data, options, callback){
+0 36 if (!callback){
+0 37 if (typeof options === 'function'){
+0 38 callback = options;
+0 39 options = {};
+0 41 callback = function(){};
+0 44 options = _.extend({
+0 45 checkParent: true
+0 46 }, options);
+0 47 async.series([
+0 48 function(next){
+0 49 if (!options.checkParent) return next();
+0 50 checkParent(path, next);
+0 52 ], function(){
+0 53 var rs = fs.createReadStream(path),
+0 54 ws = fs.createWriteStream(dest);
+0 55 rs.pipe(ws)
+0 56 .on('error', function(err){
+0 57 if (err) callback(err);
+0 59 ws.on('close', callback)
+0 65 var appendFile = exports.appendFile = function(path, data, options, callback){
+0 80 checkParent(dest, next);
+0 92 if (!callback){"
+
+1 2 path = require('path'),
+1 3 sep = path.sep,
+1 4 yaml = require('yamljs'),
+1 5 EventEmitter = require('events').EventEmitter,
+1 6 _ = require('underscore'),
+1 7 i18n = require('./i18n'),
+1 8 util = require('./util'),
+1 9 file = util.file;
+1 10 module.exports = function(root, options, callback){
+1 11 async.parallel([
+1 13 file.read(__dirname + '/../package.json', next);
+1 14 },
+1 16 fs.exists(root + '/_config.yml', function(exist){
+1 18 file.read(root + '/_config.yml', next);
+1 20 next(null, '');
+1 24 ], function(err, result){
+1 25 if (err) throw new Error('Initialize Error');
+1 26 var version = JSON.parse(result[0]).version,
+1 27 config = yaml.parse(result[1]),
+1 28 env = process.env,
+1 29 themeDir = config? root + sep + 'themes' + sep + config.theme + sep : null;
+1 30 var hexo = global.hexo = new EventEmitter();
+1 31 hexo.__defineGetter__('base_dir', function(){return root + sep});
+1 32 hexo.__defineGetter__('public_dir', function(){return root + sep + 'public' + sep});
+1 33 hexo.__defineGetter__('source_dir', function(){return root + sep +'source' + sep});
+1 34 if (themeDir) hexo.__defineGetter__('theme_dir', function(){return themeDir});
+1 35 hexo.__defineGetter__('plugin_dir', function(){return root + sep + 'node_modules' + sep});
+1 36 hexo.__defineGetter__('script_dir', function(){return root + sep +'scripts' + sep});
+1 37 hexo.__defineGetter__('version', function(){return version});
+1 38 hexo.__defineGetter__('env', function(){return env});
+1 39 hexo.__defineGetter__('safe', function(){return options.safe});
+1 40 hexo.__defineGetter__('debug', function(){return options.debug});
+1 41 hexo.__defineGetter__('config', function(){return config});
+1 42 hexo.__defineGetter__('extend', function(){return require('./extend')});
+1 43 hexo.__defineGetter__('util', function(){return require('./util')});
+1 44 hexo.__defineGetter__('render', function(){return require('./render')});
+1 45 hexo.__defineGetter__('i18n', function(){return i18n.i18n});
+1 46 hexo.__defineGetter__('route', function(){return require('./route')});
+1 47 var extend = hexo.extend,
+1 48 filter = extend.filter.list(),
+1 49 renderFn = hexo.render,
+1 50 render = renderFn.render,
+1 51 process = renderFn.process,
+1 52 themeConfig = theme.config,
+1 53 themeLayout = {},
+1 54 urlConfig = config;
+1 55 var site = {},
+1 56 config;
+1 57 var urlFnif (!Array.isArray(config)){
+1 58 config = config.url).forEach(function(item => {
+1 59 url = item = '';
+1 60 url = item;
+1 61 config = urlConfig.path = config.url;
+1 62 break;
+1 64 if (!pathFnconfig = config.root = merge(config.url, item);
+1 65 config = merge(config, config.root, config);
+1 66 var newLocals = configLink = config;
+1 67 var i18nvar layoutDir = config;
+1 68 var i18nvar i18n = new i18n();
+1 69 hexo.site.siteUrl = siteUrl(config.port = config.root, urlConfig.root, config.url, config.root, config.root, urlRoot);
+1 70 function i18n\
+2 25 if (err) throw err;
+2 47 if (config){
+2 48 require('./filter'));
+2 49 require('./renderer'));
+2 50 require('./tag'));
+2 51 require('./deployer'));
+2 52 require('./processor'));
+2 54 require('./helper')}
+2 55 var extend = function(base, args, obj, locals){
+2 56 return function(){
+2 57 return init(root, args, callback){
+2 58 for (callback){
+2 59 obj.apply(this, arguments);
+2 60 if (this.constructor.constructor.apply(this, arguments);
+2 64 for (callback.apply(this, arguments;
+2 66 base. __dirname = args = __dirname = __dirname + '/../lib/;
+2 67 .js/bin/bin/init.apply.apply(this, arguments);
+2 68 var l = args = args;
+2 69 debug = args.apply(this, arguments);
+2 70 async.apply = this;
+2 71 var target = args.__proto__proto__ = this;
+2 72 var args = args;
+2 73 var callback.core_ = args;
+2 74 try
+3 7 fs.exists = path.exists;
+3 8 fs.existsSync = path.existsSync;
+3 10 var mkdir = exports.mkdir = function(destination, callback){
+3 11 var parent = path.dirname(destination);
+3 14 fs.mkdir(destination, callback);
+3 16 mkdir(parent, function(){
+3 22 var writeFile = function(destination, content, callback){"
+
+5 3 sep = require('path').sep;
+5 4 module.exports = function(callback){
+5 5 var pluginDir = hexo.plugin_dir;
+5 6 fs.exists(pluginDir, function(exist){
+5 8 var plugins = hexo.config.plugins;
+5 9 plugins.forEach(function(item){
+5 10 try {
+5 11 require(pluginDir + item);
+5 12 } catch (err){
+5 13 console.log(seps.path(item));
+5 17 if (!hexo.init) return;
+5 18 plugins.push({
+5 19 name: item,
+5 20 path: item,
+5 21 module: item
+5 24 return function(err){
+5 25 if (err) return callback(err);
+5 26 hexo.log.d('Plugin created at'+ pluginDir + item);
+5 27 callback();
+5 28 };"
+
+6 52 ], function(err){
+6 54 fs.writeFile(path, data, options, callback);
+6 76 var appendFile = exports.appendFile = function(path, data, options){
+6 77 if (!callback) callback = function(){};
+6 78 var config = exports.config = _.extend({
+6 80 }, config);
+6 88 var appendFile = fs.readFile(path, function(path, function(err){"
+
+8 5 var baseDir = hexo.base_dir;
+8 6 fs.exists(baseDir, function(exist){
+8 8 file.dir(baseDir, callback);
+9 2 swig = require('swig'),
+9 3 moment = require('moment'),
+9 6 extend = require('../../extend'),
+9 7 renderer = Object.keys(extend.renderer.list()),
+9 8 tagExt = extend.tag.list(),
+9 9 render = require('../../render'),
+9 10 route = require('../../route'),
+9 11 model = require('../../model'),
+9 12 dbPosts = model.posts,
+9 13 dbPages = model.pages,
+9 14 dbCats = model.categories,
+9 15 dbTags = model.tags,
+9 16 dbAssets = model.assets,
+9 17 util = require('../../util'),
+9 18 yfm = util.yfm,
+9 19 titlecase = util.titlecase,
+9 20 highlight = util.highlight,
+9 21 config = hexo.config,
+9 22 catDir = (config.category_dir || 'categories') + '/',
+9 23 tagDir = (config.tag_dir || 'tags') + '/',
+9 24 siteUrl = config.url + '/',
+9 25 configLink = config.permalink,
+9 26 highlightConfig = config.highlight,
+9 27 highlightEnable = highlightConfig? highlightConfig.enable : true,
+9 28 backtickConfig = highlightConfig? highlightConfig.backtick_code_block : true,
+9 29 lineNumConfig = highlightConfig? highlightConfig.line_number : true,
+9 30 tabConfig = highlightConfig? highlightConfig.tab_replace : '',
+9 31 autoSpacingConfig = config.auto_spacing,
+9 32 titlecaseConfig = config.titlecase,
+9 33 newPostConfig = config.new_post_name,
+9 34 defaultCategory = config.default_category || 'uncategorized',
+9 35 categoryMap = config.category_map || {},
+9 36 tagMap = config.tag_map || {},
+9 37 excerptRegex = /<!--\\s*more\\s*-->/;
+9 38 swig.init({tags: tagExt});
+9 39 if (newPostConfig){
+9 40 var filenameRE = pathFn.basename(newPostConfig, pathFn.extname(newPostConfig))
+9 41 .replace(/:year/g, '(\\\\d{4})')
+9 42 .replace(/:(month|day)/g, '(\\\\d{2})')
+9 43 .replace(/:title/g, '(.*)');"
+

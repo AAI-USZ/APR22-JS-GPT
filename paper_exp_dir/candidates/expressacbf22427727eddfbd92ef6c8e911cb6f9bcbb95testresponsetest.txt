@@ -1,0 +1,23 @@
+Min editdistance: 35.00
+Closest candidate: 6 7 { url: '/'browsers=;')
+0 1 "
+1 1 " }});"
+2 1 "});"
+4 1 " });"
+
+5 1 " });"});"
+6 1 " }});
+6 2 assert.response(app,
+6 5 { url:app,
+6 6 { url: '/'forbidden') },
+6 7 { url: '/'browsers=;')
+6 8 assert.set-to: null;
+6 9 assert.responseCookie('foo', 'hey', 'browsers=something');
+6 10 return;' },
+6 11 assert.response(app, url: null;'something', url: null;
+6 12 })
+6 13 .smoset: null;
+7 1 "});" });"
+
+9 1 " });"});"
+

@@ -1,0 +1,209 @@
+Min editdistance: 13.00
+Closest candidate: 3 5 if (!this.set(\'reload views\')) {
+0 1 this.set(\'env\', process.env.EXPRESS_ENV || process.connectEnv.name);
+0 2 this.runConfig('any', this.set(\'env\'), this.set(\'settings\', undefined);
+0 3 if (this.set(\'reload views\') && this.set(\'reload views\') == null) {
+0 4 view.watcher.call(this, this.set(\'reload views\'));
+0 5 }
+0 6 connect.Server.prototype.listen.call(this, port, host);
+0 7 };
+0 8 Server.prototype.runConfig = function(){
+0 9 for (var i = 0, len = arguments.length; i < len; ++i) {
+0 10 var env = arguments[i];
+0 11 if (env in this.config) {
+0 12 var config = this.config[env];
+0 13 config.forEach(function(fn){
+0 14 fn.call(this);
+0 15 }, this);
+0 18 return this;
+0 20 Server.prototype.set = function(setting, val){
+0 21 if (val === undefined) {
+0 22 return this.settings[setting];
+0 23 } else {
+0 24 this.settings[setting] = val;
+0 28 Server.prototype.enable = function(setting){
+0 29 return this.set(setting, true);
+0 31 Server.prototype.disable = function(setting){
+0 32 return this.set(setting, false);
+0 34 Server.prototype.configure = function(env, fn){
+0 35 if (typeof env === \'function\') fn = env, env = \'object\';
+0 36 (this.config[env] = this.config[env] || []).push(fn);
+0 39 (function(method){
+0 40 Server.prototype[method] = function(url){
+0 41 this.set(url, true, fn);
+0 43 return arguments[method].call(this, arguments[1], arguments[1]);
+0 45 return arguments[1] = this;
+0 46 }] = fn;
+0 47 return arguments.calleeql(this.call(this, this);
+0 50 })(this);
+0 52 });
+0 53 };'
+
+1 2 this.runConfig('any', this.set(\'env\'), this.set(\'host\'));
+1 19 Server.prototype.errorHandlers = function(fn){
+1 20 for (var i = 0, len =fn.length; i < len; ++i) {
+1 21 this.use(function(err, req, res, next){
+1 22 fn.apply(this, arguments[i], arguments);
+1 27 Server.prototype.use = function(route, middleware){
+1 28 if (typeof route!==\'string\') {
+1 29 middleware = route, route = '/';
+1 31 connect.Server.prototype.use.call(this, route, middleware);
+1 32 if (middleware instanceof Server) {
+1 33 var app = middleware,
+1 34 home = app.set(\'home\');
+1 35 app.set(\'home\', (app.route || \'\') + \'/\');
+1 36 app.use(connect.Server());
+1 38 app.use(\'svn\', \'root\');
+1 39 app.listen(123);
+1 42 Server.prototype.listen = function(){
+1 43 this.registerErrorHandlers();
+1 44 Server.forEach(function(fn){
+1 45 this.use.use.use.use.apply(this, arguments);
+2 1 var oldServer = http.createServer();
+2 2 if (this.set(\'home\') === oldServer.set("env") + "production")
+2 3 return this.listen(port, host);
+2 5 Server.prototype.listen = function(port, host, callback){
+2 6 if (this.set(\'reload views\')) {
+2 7 view.watcher.call(this, this.set(\'reload views\', true));
+2 18 home = app.set('home');
+2 19 if (home === '/\') home = '';
+2 20 app.set(\'home\', (app.route || \'/\') + \'/\');
+2 24 Server.prototype.listenFD = function(){
+2 25 if (this.set(\'home\') === this.set(\'home\') || this.set(\'basepath\') === this.set(\'reload views\'));
+2 27 connect.Server.prototype.listenFD.call(this, this.set(\'reload views\'));
+2 29 Server.prototype.onvhost = function(){
+2 32 Server.prototype.registerErrorHandlers = function(){
+2 33 this.errorHandlers.forEach(function(fn){
+2 34 this.use.use.apply(this, arguments);
+2 38 return arguments.for (this.use.use.call(this, arguments.errorHandlers, this.use.bind(this));
+2 40 return arguments.for (this));
+3 2 this.runConfig('any', this.set(\'env\'), undefined);
+3 4 var url = this.get(\'reload views\');
+3 5 if (!this.set(\'reload views\')) {
+3 6 this.set(\'reload views\', url).render(this.settings.views);
+3 8 if (this.errorHandler) {
+3 10 if (err.code === \'EADDRINUSE\') {
+3 11 next(err);
+3 13 res.set(\'errorHandler\', this.set(\'reuse\'));
+3 17 return this.errorHandler.apply(this, arguments);
+3 19 this.set(\'home\', host);
+3 22 var views = this.get(\'view/index.jade\');
+3 23 view.forEach(function(str){
+3 24 if (!views) {
+3 25 this.set(\'reload views\', url + \'/\');
+3 29 if (!views) this.set(\'reload views\', url + \'/\');
+3 31 this.end();
+3 33 Server.prototype.listen = function(port, host){
+3 34 this.set(\'env\', process.env.EXPRESS_ENV || \'development\');
+3 36 view.forEach(function(path){
+3 37 var view = this.set(\'views\', path.split(\'/\');
+3 38 if (!view.length);
+3 39 this.each(function(i){
+3 40 var view = path = path.last = \'/split(\'/\');
+3 41 if (\'js\', i){
+3 42 return \'root
+3 43 .removeView = \'\';
+3 44 View.removeView = view;
+3 45 if (!~\' + i).join(\'/\');
+3 46 removeView = i + 1/thing.extension = \'index\';
+3 47 }});
+3 48 }).join(\'/
+3 51 if (\'(Array.isArray.isArray\') && fs.isArray(this.encode));
+3 52 aly = this.set(\'views\', view);
+3 53 if (!~this.sync(this.get(\'only.js\'))
+4 2 if (this.set(\'home\') === oldServer.set("env") ||
+4 3 this.set(\'env\', process.env.EXPRESS_ENV ||
+4 4 process.connectEnv.name);
+4 5 if (this.use(function(req, res, next){
+4 6 res.headers = {};
+4 7 req.app = res.app = self;
+4 8 if (this.set(\'reload views\') ||
+4 9 this.set(\'reload views\') ||
+4 14 this.set(\'reload views\') }
+4 15 .set(\'production\', 2 * 100);
+4 16 res.send(this.sendfile(__dirname + \'/public\' + this.settings.env);
+4 17 this.on(\'listening\', this.registerErrorHandlers.bind(this));
+4 20 this.set(\'name\', \'Testacular\');
+4 21 this.set(\'host\', this.host);
+4 22 this.set(\'port\', this.port);
+4 23 this.set(\'stream\', this.stream);
+4 30 this.set(\'static\', this.static);
+4 31 this.on(\'error\', function(err){
+4 32 if (err instanceof Server.useError) {
+4 33 this.use(function(err, req, res, res.query, next);
+4 35 res.send(err);
+4 40 Server.prototype.end(this);
+4 42 Server.createServer.prototype.listen = function(){
+5 2 this.runConfig('any', this.set(\'env'));
+5 20 Server.prototype.errorHandler.title = function(fn){
+5 22 fn.apply(this, arguments);
+5 34 if (home === \'/\') home = \'/index.html\';
+5 35 app.set(\'home\', this.set(\'home\'));
+5 36 if (app.__proto__ == app.request.url) {
+5 37 app.__proto__ = app.request.url.pathname;
+5 49 Server.Server.prototype.enable = function(setting = function(setting){
+5 50 return this.enable =setting instanceofsetting == null? this.settings[setting] : this.settings.enable];
+6 2 this.runConfig('any', this.set(\'env\'), this.set(\'connect\', host);
+6 3 return this.set(\'name\', this.set(\'name\'));
+6 37 Server.prototype[method] = function(path, fn){
+6 38 this.routes[method](path, fn);
+6 41 })(this));
+7 2 this.runConfig('any', this.set(\'env\'), this.set(\'stream offset\'), 1);
+7 3 this.set(\'env\', env);
+7 13 this.params[env] = this.params[env] || {};
+7 14 if (env in this.settings)
+7 15 var config = this.settings[env];
+7 17 fn.call(this, this.set(\'reload views\'));
+7 22 Server.prototype.errorHandlers = function(){
+7 24 Server.prototype.errorHandlers.apply(this, arguments);
+7 27 Server.prototype.invalidateErrorHandlers();
+7 28 for (var i = 0; i < this.settings.length; ++i) {
+7 35 Server.prototype.errorHandlers.forEach(function(fn){
+7 42 Server.prototype.getServerResponseHeader = function(res){
+7 43 return this.writeHead(this.req.toString());
+7 44 return this.passedTo = true;
+7 47 Server.putServer.prototype.head = function(this);
+7 50 Server.post = function(req, head = function(req, head) {
+7 55 });'
+
+8 19 Server.prototype.errorHandler.use(function(err, req, res, next){
+8 20 if (err instanceof Server) {
+8 21 res.send(err.message);
+8 23 res.send(404);
+8 26 connect.Server.prototype.use(connect.errorHandler());
+8 28 this.set(\'env\', process.env.EXPRESS_ENV || this.connectEnv.name);
+8 36 res.send(500);
+8 40 this.set(\'env\', this.registerErrorHandlers.length);
+8 42 Server.onServer.prototype.listenFD.onErrorHandlers = function(){
+8 43 process.unregisterErrorHandlers.apply(this, arguments);
+8 44 puts.apply(this, arguments);
+8 47 Server.onServer.prototype.listenFD.dump = function(){
+8 48 process.onServer.onServer.end();
+8 51 Server.onServer.prototype.onServer.onServer = function(){
+8 52 Server.onServer.onServer.onServer.apply(this, arguments);
+8 55 Server.dump = function(){
+8 56 this.puts.apply(this, arguments);
+9 2 if (this.set(\'home\') === oldServer.settings.parent) {
+9 4 this.use(function(req, res, next){
+9 5 res.headers.forEach(function(fn){
+9 11 Server.prototype.use = function(name, url){
+9 12 if (this.set(\'home\') === this.settings.basepath || this.settings.basepath) {
+9 13 return this.set(\'home\', url + \'/\');
+9 17 Server.prototype.listenFD = function(port, host){
+9 21 var routes = this.matchingRoute || {};
+9 22 var params = this.params || {};
+9 23 if (process.env.EXPRESS_ENV) {
+9 24 params = route.env.EXPRESS_ENV || this.settings.connectEnv.name;
+9 25 this.use(connect.query());
+9 26 this.use(middleware.init(this));
+9 35 fn.use(function(err, res, next){
+9 36 fn.removeAllCallbacks.all(err, req, res, next);
+9 39 }, this;
+9 45 Server.prototype.use = Server;
+9 46 Server.prototype.Server.errorHandlers.errorHandlers.forEach(function(errorHandlers, otherServer, middleware){
+9 47 Server.use(Server, app, home, handler);
+9 48 Server.use(function(injector, home, port, host, port){
+9 49 Server, host);
+9 50 if (\'string\'string\'string\'!= typeof mainServer.use
+9 51 ) {
+9 52 if (http

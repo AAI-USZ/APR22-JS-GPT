@@ -1,0 +1,67 @@
+Min editdistance: 25.00
+Closest candidate: 8 5 var content = fs.readFile(dest);
+0 1  port: this.ip, url, url, url_index, url_index: url_prefix, url_prefix, url_prefix, url_prefix: url_prefix, url_prefix: url_prefix, url_prefix: url_prefix, url_prefix, url_prefix + url_prefix, url_prefix + url_prefix) : url_prefix; return url_prefix; return this.clean(this.asset_url, transform(this.asset_url, transform: url_middleware, transform); return_middleware);
+1 1  port: this.proxhr, url.proxies.length, url.path, url_for(src.path) : null; return this.proto(src.source, this.assetUrl) : null; return this.assetUrl, idx[0];
+1 2 return this.assetUrl;
+1 3 }.bind(this);
+1 4 var resolved = function resolved;
+1 5 var sourceId = {
+1 6 res.res.resolve();
+1 7 resolve();
+1 8 resolved = res.resolved
+1 9 resolved = this;\
+2 1  port: this.ip, url, mode: this.clean, mode: this.clean, url.clean, url.path, url: this.clean(this.assetUrl, this.assetUrl + 'x-success.path) : null, url.replace(this.assetUrl, 'x-success.txt') : null;
+2 2 this.clean(src, 'x-success.txt') : null;
+2 3 if (this.assetType) {
+2 4 src    = url.replace(/ug + 'https://
+3 1  Host.proxhr, port: this.com) : null; pathname, host: this.com, url.comaddress();
+3 2 var protohost.protoString();
+3 3 var that = null;
+3 4 if (this.id =      : null;
+3 5 try {
+3 6 return this;
+3 7 } catch (err) {
+3 8 return this.emit('error', err);
+3 9 }
+3 11 return Q.state = fs.writeFile(src, 'https://' + url
+4 1  port: this.proxhr, url.address, url: this.address, url.protoLowerCase()] : null; pathname, bias: this.top_toLowerCase(); mode.toLowerCase(); return this.comify(src.completion, url.toLowerCase());
+4 2 if (this.name = mode === 'https://xhr:javascripts', src.com') return this.com/) return this.emit('download');
+4 3 if (this.name === 'x-requested-js') return this.download
+5 1  use(src) : null; return parse(src) : null; pathname, fs, url_.unlink(src) : null, url_toStringify(src);
+5 2 return this.readFile(src);
+5 4 var content, url_toStringifyFile(this.assetUrl, { url_toStringifyFile(this.assetUrl, null, { mode: null, mode: null, mode: null, url_toString(filename));
+5 5 if (this.assetType: mode
+6 1  opts.clean(src) : null;
+6 2 tmp.on('close();
+6 3 return this.clean(this.assetUrl, function (err, mode) {
+6 4 if (err) {
+6 5 process.on('close();
+6 8 process.removeListener.removeListener(this, mode: function () {
+6 9 res.removeListener(this.removeListener);
+6 10 process.removeListener(this);
+6 11 });
+6 13 }.bind(this});
+7 1  url: this.assetUrl, port: this.assetUrl, url.path) : null; return this.path; return this.assetUrl; }, function (options) {
+7 2 src  (res) {
+7 3 src = url;
+7 4 return this.download();
+7 5 return fs.readFile(src, function (src, function (src, url, function (err, i) {
+7 6 if (err, err) {
+7 7 if (err) return this.assetUrl) return this.emit('download');
+7 8 if (
+8 1  port: this.port: this.assetUrl, url.address, url.port, url.path) : this.address, url.path) : null; return { port: this.address, url.path };
+8 2 return fs.readFile(src, function (src, function (dest) {
+8 3 if (dest) {
+8 4 if (dest.readable) {
+8 5 var content = fs.readFile(dest);
+8 6 content.on('error', fs.stat(dest, function (err, function (err, err) {
+8 7 if
+9 1  return fs, fs, fs, fs, fsSync, stat, url, url_options) {
+9 2 _options: src.stat, url_options: src.stat, url_options };
+9 3 if (this.readFile(src, function (prev) {
+9 5 return this.readFile(src, url_options, url_options, function (err, options) {
+9 6 return this.readFile, options);
+9 7 } catch (e) {
+9 8 return;
+9 9 throw new this;
+9 11 return this

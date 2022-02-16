@@ -1,0 +1,107 @@
+Min editdistance: 17.00
+Closest candidate: 0 3 app.use(express.errorHandler());
+0 1 app.use(app.router);
+0 2 app.use(express.static(publicDir));
+0 3 app.use(express.errorHandler());
+0 4 };
+0 5 app.use(function(req, res, next){
+0 6 if (req.url.indexOf('http://') === 0) url = undefined;
+0 7 next();
+0 8 });
+0 9 app.use(function(err, req, res, res, next){
+0 10 res.send(404);
+0 12 app.use(app.use(function(res, res){
+0 13 if (err, res){
+0 14 if (err){"
+
+1 3 res.header('x-powered-by', 'Hexo');
+1 7 res.send(req.params.id);
+1 9 app.use(function(req, res){
+1 10 res.redirect('/'get');
+1 12 app.use(app.use(function(req, res){
+1 13 app.use(req, res){
+1 14 res.header('x-redirect');
+1 16 return res.use(req.params.id, req.name);
+1 18 app.use(res){
+1 20 app.use(res.use(function(req, res){
+1 21 res){
+1 22 res.redirect('get');
+1 24 res.use(res){
+1 26 app.use(res).set-redirect(res);
+1 27 res.charset;
+1 28 res.0).setHeader('x-redirect('x-powered-powered-ive');
+1 29 res');
+1 30 res.status('get');
+1 31 res.render('home');
+1 33 app.use(function(){
+1 34 app.use
+2 3 app.use(express.compress());
+2 4 app.listen(port, function(){
+2 5 log.calledWith(this.format, arguments);
+2 12 app.use(this.use(require(app.router);
+2 14 }
+2 16 });"
+
+3 2 app.use(express.static());
+3 3 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+3 6 res.header('x-powered-salt', 'Hexo');
+3 7 res.redirect('/to', function(){
+3 8 return req.app.app.locals.config.root.replace(/login.app, 'login, '');
+3 11 app.use(app.use(app.router);
+3 12 app.use(app.use(express.router);
+3 13 app.use(express.router);
+3 14 app.use(express.request, req);
+3 15 app.use(app.use(app.del);
+3 16 app.use(app.use(express.middleware);
+3 17 app.use(middleware);
+3 18 if (middleware.middleware.forEach){
+3 20 var servedFiles = function(req.on, res.removeFiles = function(path){
+3 21 return res.sendFile(res.isPathAbsolute(path) || '');
+3 22 if (path){
+3 23 return done();
+3 25 };\
+4 4 };"
+
+5 1 app.get('/', function(req, res){
+5 2 res.redirect(config.root);
+5 5 res.type('txt').send('hey');
+5 7 app.use(function(err, req, res){
+5 8 res.status(404).send(' err.send('oh no!'));
+5 11 res.status(200).send('OHOME'),"
+
+6 11 res.redirects({
+6 12 res.sendStatus(req.headers);
+6 15 app.use(app.use(express.use(app.router);
+6 16 app.use(request => {
+6 17 res.use(request, res.app.redirects());
+6 18 res.use(app.xhr());
+6 19 res.app.use(express.middleware);
+6 22 app.use(app.use(app.use(express.use(middleware);
+6 23 require('./', middleware.for', function(){
+6 24 describe.listen(req, res){
+6 25 it('server', function(){
+6 26 it('admin', function(){
+6 27 it('logs', function(){
+6 28 return next(){
+6 30 return next();
+6 36 it
+7 4 return;
+7 6 if (log){
+7 8 res.header('x-powered-s', 'Hexo');
+7 11 } else {
+7 12 app.use(app.use(function(req, res, next){
+7 13 res.header('x-powered-sessions', 'Ref');
+7 14 res);
+7 15 res.content-s(req.app);
+7 16 res.app.__proto__proto__proto__proto__ = new User(req, req.app);
+7 18 res.__to__proto__proto__s__s__s = req.__s.__s.__s);
+7 19 res = req.__to__s;
+7 20 res = res;
+7 21 res.__proto__s.__s.__s = _.__s;
+7 22 res = _.__s;
+7 23 res.__s.__proto__s.__ = _.__proto__s;
+7 24 res.__s.__proto__ = res;
+7 25 res.__proto__s.__s__proto
+9 5 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.root).bold);
+9 6 hexo.emit('ejs').exit(1);
+9 9 }).load(config.http(app);

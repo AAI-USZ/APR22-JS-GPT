@@ -1,0 +1,146 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 expect(console.log.calledWith(sinon.match('Name'))).be.true;
+0 1 expect(console.log.calledWith(sinon.match('Name'))).to.be.true;
+0 2 expect(console.log.calledWith(sinon.match('Posts\'))).to.be.true;
+0 3 expect(console.log.calledWith(sinon.match('Path'))).to.be.true;
+0 4 expect(console.log.calledWith(sinon.match('No tags.'))).to.be.true;
+0 5 });
+0 6 it('tags', async () => {
+0 7 const posts = [
+0 8 {source: \'foo', slug: \'foo', title: \'Its\'},
+0 9 {source: \'bar\', slug: \'bar', title: \'Math\'},
+0 10 {source: \'baz\', slug: \'baz', title: \'Dude\'}
+0 11 ];
+0 12 await hexo.init();
+0 13 const output = await Post.insert(posts);
+0 14 await Promise.each([
+0 15 ['foo'],
+0 16 ['baz'],
+0 17 ['baz']
+0 18 ], (tags, i) => output[i].setTags(tags));
+0 19 await hexo.locals.invalidate();
+0 21 it('_generate() - layout', async () => {
+0 22 const layout = [
+0 23 \'---\',
+0 24 \'title: {{ title }}</ title>\',
+0 26 \'baz\',
+0 27 \'{% endblock %}'
+0 28 ].join(\'\
+0 29 \');
+0 30 hexo.extend.generator.register('test', () => ({
+0 31 path: \'bar\',
+0 32 layout: 'test\',
+0 33 data: {
+0 34 foo: \'bar\'
+0 35 }
+0 36 }));
+0 37 await Post.insert({
+0 38 source: \'foo\',
+0 39 slug: \'foo\'
+0 41 await Promise.all([
+0 42 [\'foo\'],
+0 43 ["\'],
+0 44 ["bar"]]
+0 45 ]);
+0 48 it(\'_generate() - layout array\', async () => {
+0 49 hexo.theme.setView('baz.njk\', \'baz\');
+0 50 hexo.extend.generator.register(\'test\', () => ({
+0 51 path: \'test\',
+0 52 layout: [\'baz\', \'baz\'],
+0 54 foo: \'bar\',
+0 55 layout: \'test
+0 58 await generator(hexo.locals);
+0 59 return Promise.then(() => {
+0 60 result.should.calledOnce.should.should.be.true;
+0 61 return Promise.should.then(() => result.calledWith(() => {
+0 62 path => path.should.calledWith(() => {
+0 63 pathsFrom(\'test
+0 64 path => {
+0 65 pathsFrom(\'baz\').should.should.should.eql(path);
+0 66 .should.calledOnce.should.should.be.true);
+0 67 .should.be.true;
+0 68 .calledOnce.should.should.should.be.true;
+0 70 .true.calledWith(path => {
+0 71 pathsFrom(\'baz\').should.should.be.true;
+0 72 .calledWith(path => return);
+0 73 .calledWith(\'baz
+1 1 expect(console.log.calledWith(sinon.match('Name'))).be.true;
+1 2 expect(console.log.calledWith(sinon.match('Posts'))).be.true;
+1 3 expect(console.log.calledWith(sinon.match('No tags.'))).be.true;
+1 5 it(\'tags - tags (not array)\', () => {
+1 7 {source: \'foo\', slug: \'foo\'},
+1 8 {source: \'bar\', slug: \'bar\'},
+1 9 {source: \'baz\', slug: \'baz\'},
+1 10 {source: \'boo\', slug: \'boo\'}
+1 12 return posts.map(post => {
+1 13 const posts = Post.sort(\'date\', -1);
+1 14 const tags = posts.filter(tag => tag.length);
+1 15 expect(posts).to.have.members([\'foo\', \'bar\']);
+1 17 });'
+
+2 3 expect(console.log.calledWith(sinon.match('Path'))).be.true;
+2 6 it('tags', () => {
+2 8 {source: \'foo.md\', slug: \'foo\'},
+2 9 {source: \'bar.md\', slug: \'bar\'},
+2 10 {source: \'baz.md\', slug: \'baz\'},
+2 11 {source: \'boo.md\', slug: \'boo\'}
+2 13 return Promise.all([
+2 15 [\'baz\'],
+2 16 [\'baz\']
+2 17 ], (tags, i) => posts[i].setTags(tags))).then(() => {
+2 18 hexo.locals.invalidate();
+3 2 expect(console.log.calledWith(sinon.match('Posts'))).to.be.true;
+6 2 expect(console.log.calledWith(sinon.match('Posts\'))).be.true;
+6 6 it('tags - tags', () => {
+6 13 return hexo.init()
+6 14 .then(() => Post.insert(posts)).then(posts => Promise.each([
+6 16 [\'baz\', \'bar'],
+6 17 [\'baz\', \'raz\'],
+6 18 [\'bar\']
+6 21 })
+6 22 .then(() => {
+6 23 listTags();
+6 24 expect(console.log.calledWith(sinon.match(\'Name\'))).be.true;
+6 25 expect(console.log.calledWith(sinon.match(\'Posts\'))).be.true;
+6 26 expect(console.log.calledWith(sinon.match(\'Path\'))).be.true;
+6 27 expect(console.log.calledWith(sinon.match(\'baz\'))).be.true;
+6 28 expect(console.log.calledWith(sinon.match(\'bar\'))).be.true;
+6 30 expect(console.log.calledWith(sinon.match(\'raz\'))).be.true;
+6 32 [\'baz\', \'bar\'],
+6 34 [\'baz\', \'raz\']
+6 41 expect(console.log.calledWith(sinon.calledWith(sinon.match(\'baz\')).be.calledWith(sinon.calledWith(sinon.match(\'raz\')));
+6 42 expect(JSON.log.log.calledWith(sinon);
+6 43 expect(s => posts[i].format(s => posts[i].format(s])).format(s => {
+6 44 hexo.log.log.calledWith(s).format(s).format(s).format(s).should.unprocess.unprocess(should.stdout.stdout.write));
+6 47 .skip(\'
+
+7 6 it(\'tags - post', () => {
+7 15 ['foo\'],
+7 23 expect(console.log.calledWith(sinon.match(\'Name\'))).to.be.true;
+7 24 expect(console.log.calledWith(sinon.match(\'Posts\'))).to.be.true;
+7 25 expect(console.log.calledWith(sinon.match(\'Path\'))).to.be.true;
+7 26 expect(console.log.calledWith(sinon.match(\'baz\'))).to.be.true;
+7 27 expect(console.log.calledWith(sinon.match(\'foo\'))).to.be.true;
+7 30 it(\'tags - post_asset_folder enabled\', () => {
+7 31 hexo.config.post_asset_folder = true;
+7 32 return Post.insert({
+7 33 source: \'foo.md\',
+7 35 }).then(post => {
+7 36 post.asset_folder.should.be.true;
+7 38 create({title: \'foo\', slug: \'foo\'}),
+7 39 fs.writeFile(pathFn.join(hexo.source_dir, \'post.md\'), post)
+7 40 ]).then(() => post.then(() => {
+7 41 fs.stat(path)).then(stats => {
+7 42 return post.update(post => {
+7 43 return Promise.stats.stats.isDirectory().then(true);
+7 44 }).then(()).then(() => {
+7 45 return Promise.is.next(() => {
+7 46 next => {
+7 47 fs.is.stat(0).then(0).then(() => {
+7 48 return post.stat.stat.stat.stat.isDirectory().should.toLowerCase()).should.toLowerCase();
+7 49 .not.contains((file.toLowerCase()).toLowerCase()).toLowerCase()).toLowerCase();
+7 50 .contains(0);
+7 52 }).finally(() => fs.unlink(0);
+7 54 }).finally(() => {
+7 55 return fs.unlink(pathFnreturn fs.rmdir(hexo.dirname(path));
+7 61 it(\'

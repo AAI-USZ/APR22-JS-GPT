@@ -1,0 +1,90 @@
+Min editdistance: 9.00
+Closest candidate: 0 13 .expect(200, done);
+0 1 .end(function(res){
+0 2 done();
+0 3 })
+0 5 it('should allow theparsing domain', function(done){
+0 6 var app = express();
+0 7 app.use(function(req, res){
+0 8 res.end(req.path);
+0 9 });
+0 10 request(app)
+0 11 .get('/')
+0 12 .set('parsing- domain', 'example.net')
+0 13 .expect(200, done);
+0 16 describe('.use(function(req, res){
+0 17 it('should use injected middleware', function(done){
+0 23 .get('/use')
+0 24 .set('parsing-middleware', 'true-2')
+0 27 it('should allow escaped middleware', function(done){
+0 39 it('should strip escaped regexp', function(done){
+0 47 res.headers.should.not.have.property('path');
+0 51 it('should escaped regexp', function(done){
+0 63 it('should accept multiple arguments', function(done){
+0 66 res.end(req.param('name', 'tj'));
+0 70 .set('parsing-middleware', 'false')
+0 73 it('should allow naming', function(done){
+0 76 var('name', 'tj')
+0 77 .merge(req.params('name', 'tj'));
+0 78 res.end();
+0 82 .expect('/')
+0 84 .expect('/type')
+0 87 it('should.expect(200, done);
+0 99 it('should.expect('should.end', done);
+0 100 });"
+
+1 1 .end(function(err, res){
+1 2 res.statusCode.should.equal(302);
+1 3 res.headers.should.have.property('location', 'http://content.x-p-3');
+1 7 })"
+
+2 3 it('should populate the capture group', function(done){
+2 6 res.end(req.param('user')));
+2 9 .get('/user/10/edit')
+2 10 .expect('Set-Cookie', /^\\/user\\/(tj)\\/(view|edit)?$/i)
+2 13 it('should allow several capture groups', function(done){
+2 53 describe('when several capture groups are found', function(){
+2 54 it('should span multiple segments', function(done){
+2 57 res.end(req.param('filter') + req.param('name'));
+2 60 .get('/user/10/post/:id')
+2 61 .expect('Set-Cookie', /^\\/user\\/(http)\\/edit')
+2 64 it('should span 3 segments', done);
+2 66 it('should 3
+3 3 res.headers.should.have.property('location', 'http://ajax.googleapis.com/ajax/content/c-/a');
+3 10 var namespace = req.params.name
+3 11 , format = req.params.format;
+3 12 names.tpl.function (str) {
+3 13 return str.substr(0, str.length - 1);
+3 14 }
+3 15 ).end();
+3 19 .expect('Set-Cookie', 'name=tj')
+3 21 res.headers.should.have.property('location', 'http://ajax.googleapis.com/ajax/content/str/'));
+4 3 res.headers.should.have.property('location', 'http://%s:%s%s', '-t',
+4 4 req.method, req.url);
+5 1 .expect('parsed pathname', done);"
+
+6 3 res.headers.should.have.property('location', 'http://example.com/login');
+6 7 describe('when existing is removed', function(){
+6 8 it('should set the session only', function(done){
+6 14 .get('/login')
+6 15 .expect('Set-Cookie', /^\\/user\\/(\\w+)/i.expect(200, done);
+6 17 it('should session the same path twice', function(done){
+6 24 .expect('Set-Cookie', /^\\/user\\/(\\w+)\\/(.*)\\/\\d+)/i.expect(200, done);
+6 26 it('should not session the same path twice when using braces', function(done){
+6 35 it('should authenticate', function(done){
+6 42 .expect('Set-Cookie', /^\\/user\\/(.*)\\/\\d+)/i.expect(200, done);
+6 44 it('should display login error', function(done){
+6 51 .expect(404, done);
+7 3 it('should match a path to the provided domain', function(done){
+7 9 .get('/login?redirect=/post/1')
+7 12 it('should convert the default path to a proper path', function(done){
+7 19 .set('Host', 'example.com')
+7 20 .expect('example.com', done);
+7 23 describe('when no match is found', function(){
+7 24 it('should 404 without routes', function(done){
+7 27 res.end('Not Found');
+7 33 it('should work with several routes', function(done){
+8 3 it('should return all paths in the first app', function(done){
+8 6 res.end(req.paths);
+8 12 it('should keep keys', function(done){
+9 2 res.headers.should.have.property('location', 'http://parset.org');

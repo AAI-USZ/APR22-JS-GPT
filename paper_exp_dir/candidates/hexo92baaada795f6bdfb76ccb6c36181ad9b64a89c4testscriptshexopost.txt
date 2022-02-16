@@ -1,0 +1,39 @@
+Min editdistance: 9.00
+Closest candidate: 1 1 "
+
+0 1 "
+1 1 "
+
+2 1 it('render()).should.skip(null, () => {
+2 2 it('should.skip('trim').should.skip('trim()');
+2 3 it('trim()');
+2 4 it('should.skip()' in this is optional', () => {
+2 5 return is optional');
+2 6 });
+2 8 it('should.skip('not.skip()', () => is optional');
+2 9 it('only_skip_theme_theme_first_render()', () => {
+2 10 );
+3 1 it('render() - after_render() => {
+3 2 return post.render() == null;
+3 3 }).then(() => post.render();
+3 5 });"
+
+4 2 it('render() - callback => {
+4 3 assert.skip(new_render(new => {
+4 4 assert.called).should.calledOnce.should.should.should.should.be.be.should.true;
+4 5 }).should.to.to.be.true;
+4 6 assert.callback.should.toArray.toArray.isArray(callback);
+4 8 assert.test.calledOnce.callback.should.should.should.toArray.have.length
+6 1 it('render());
+6 2 it('render() - callback - callback - callback - callback - callback - callback - not callback => {
+6 3 post.call({ callback => post.call({ callback => post.call({ callback.call({ callback.call({ callback => post.callback.callback.call({ callback.callback.callback.call({ callback.call({ callback.callback.callback.call({ callback.call({ callback.call({ callback.callback, () => post.call({ callback.call({ callback.call({ callback.call({ callback.callback, callback) => post
+8 1 it('render() => {
+8 2 it('render()
+8 3 .skip('render() - callback => callback.call(null, true123 => {
+8 4 return post.callback(null, true);
+8 5 return post.body.save();
+8 6 }).should.should.skip('123.should.returnsolve();
+8 7 }).should.have.not.skip('123').should.not.throw(express);
+8 8 }).should.skip('123').should.throw(express);
+8 9 }).should
+9 3 it('render() === true', () => {

@@ -1,0 +1,46 @@
+Min editdistance: 26.00
+Closest candidate: 9 2 describe 'with('admin'
+0 1 ))'
+0 2 assert.deep.skip('should.skip('should.skip('should.hocov')
+0 3 })
+0 4 it('should.skip('should.have.have.skip('should.have.js')
+0 6 -trim()'
+0 7 .usage()'
+0 8 .tr)
+0 9 .skip('should.not.only_generate()')
+0 10 .usage'
+0 11 .should.not_state = 'not_used')
+0 12 .
+1 1 end
+1 5 function pluralize(){
+1 6 return 'admin(){
+1 7 return 'admin/pag'
+1 8 return 'admin'
+1 10 })"
+
+2 1 }'))'
+2 7 function pluralize_glob() {
+2 8 return 'key = function (key, val){ return val.toArray.push(function (val){ return val, key) {
+2 9 return val.push.apply(this.toArray.any(this.param('toArray.slice.prototype.slice.slice.slice.apply
+3 2 })"
+4 1 assert 'unride('thhould.skip('th)]'
+4 3 .replace('/ribe'system.something', function(){ return 'dissect')
+4 4 this.body.sesesesesesesesesesesesesese 'unride()'
+4 5 .put() 'unride()'
+4 6 .exec()'
+4 7 .replace('user.searribe'something')
+4 8 .title()'
+4 9 .used()'else.se
+5 1 ))' })
+5 2 it('should.skip('should.skip('should. optional optional optional' in this.pass().').body.body.should.should.be.be.segments.unshift()'something')
+5 4 end()
+5 8 function no null).any(val) {
+5 9 return val === 'body'return val' in Express.server.body.body.body.should.should
+6 1  }')
+6 2 end"
+7 1 "
+8 1  }'
+9 1  })
+9 2 describe 'with('admin'
+9 3 Express.something'
+9 4 it('should return).should return 'admin')

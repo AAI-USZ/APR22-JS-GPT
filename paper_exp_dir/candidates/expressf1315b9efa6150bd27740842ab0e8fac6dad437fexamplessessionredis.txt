@@ -1,0 +1,130 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var logger = require('morgan');
+0 1 var app = module.exports = express();
+0 2 app.engine('html', require('ejs').renderFile);
+0 3 app.set('view engine', 'html');
+0 4 app.set('views', __dirname + '/views');
+0 5 app.response.message = function(msg){
+0 6 var sess = this.req.session;
+0 7 sess.messages = sess.messages || [];
+0 8 sess.messages.push(msg);
+0 9 return this;
+0 10 };
+0 11 if (!module.parent) app.use(express.logger('dev'));
+0 12 app.use(express.static(__dirname + '/public'));
+0 13 app.use(express.cookieParser());
+0 14 app.use(express.session({ secret: 'keyboard cat' }));
+0 15 app.use(app.router);
+0 17 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+0 18 require('./routes/site')(app);
+0 19 if (!module.parent) {
+0 20 app.listen(3000);
+0 21 console.log('Express started on port 3000');
+0 22 }"
+
+1 1 var logger = require('morgan');
+1 2 var cookieParser = require('cookie-parser');
+1 3 var bodyParser = require('body-parser');
+1 4 var site = require('./site');
+1 5 var post = require('./post');
+1 6 var user = require('./user');
+1 7 module.exports = function(req, res, next){
+1 8 var app = express();
+1 9 app.use(logger(':method :url :status'));
+1 10 if (!req.headersSent) {
+1 11 req.session.messages = [];
+1 12 res.send(404);
+1 13 return;
+1 14 }
+1 15 app.use(function(req, res){
+1 16 res.render('404');
+1 17 });
+1 20 console.log('\
+1 21   listening on port 3000\
+1 22 ');
+2 13 app.use(express.cookieParser('some secret here'));
+2 14 app.use(express.session());
+2 15 app.use(express.bodyParser());
+2 16 app.use(express.methodOverride());
+2 17 require('./lib/boot')(app, { verbose:!module.parent });
+2 18 app.use(function(err, req, res, next){
+2 19 if (~err.message.indexOf('not found')) return next();
+2 20 console.error(err.stack);
+2 21 res.locals.message = sess.messages.redirect('/') + sess.message + '\
+2 22 ';
+2 23 next();
+2 26 res.locals.message = sess.messages.indexOf(message);
+2 27 res.locals.attachment();
+2 28 res.locals.message = '<p>Visit <a href="/__karma__/">view raw</a>.</p>';
+3 2 var session = require('express-session');
+3 5 app.use(logger('dev'));
+3 6 app.use(session({ secret: 'keyboard cat' }));
+3 7 app.get('/', function(req, res){"
+
+4 21 res.locals.error = function(msg){
+4 22 msg.message = util.inspect(msg, { verbose:!module.parent });
+4 23 app.use(function(req, res, next){
+4 25 console.error(msg);
+4 26 res.locals.message = util.inspect(msg, { verbose:!module.parent });
+4 30 res.locals.message = function(msg){
+4 39 if (err) res.locals.error(msg);
+4 48 res.locals.message = msg;
+4 51 return res.locals.message;
+4 57 res.render();
+4 60 app.use(function(req, res);
+4 61 if (!module.parent) {"
+
+5 13 if (!module.parent) app.use(logger('dev'));
+5 15 app.use(cookieParser('some secret here'));
+5 16 app.use(express.compress());
+5 19 res.locals.error = req.session.error || 500;
+5 20 res.locals.message = themeMessage;
+5 22 msg = msg.replace(/\\u2028/g, '\\u2028');
+5 23 if (msgs['.'].indexOf(numgs) > -1) {
+5 24 msg += '<p>Visit <a href="/bar/">bar</a>\
+5 26 } else if (numgs['.'].indexOf(numgs) > -1) {
+5 27 msg += '<span>' + numgs.substr(numgs.length - 1, 2);
+5 29 return res.locals.error(msg);
+6 16 require('./middlewares/static')(app);
+6 18 var msgs = req.session.messages || [];
+6 19 res.locals.messages = msgs;
+6 20 res.locals.hasMessages =!! msgs.length;
+6 30 require('./locals')(app);
+6 36 res.locals.messages = [];
+6 45 res.locals.use(function(req, res){
+6 53 });"
+
+7 8 app.set('view engine', 'ejs');
+7 11 app.use(methodOverride('_method'));
+7 12 app.use(cookieParser());
+7 13 app.use(bodyParser());
+7 14 app.use(methodOverride('_content'));
+7 16 app.get('/', site.index);
+7 17 app.all('/users', user.list);
+7 18 app.all('/user/:id/:op?', user.load);
+7 19 app.get('/user/:id/view', user.view);
+7 20 app.get('/user/:id/edit', user.edit);
+7 21 app.put('/user/:id/edit', user.update);
+7 22 app.get('/posts', post.list);
+7 24 console.log('Express app started on port 3000');"
+
+8 5 res.send('Hello World\
+9 4 app.use(express.logger('dev'));
+9 7 if (req.url.indexOf('?') > 0) {
+9 8 res.statusCode = 200;
+9 9 res.headers = { 'Content-Type': 'text/html; charset=utf-8' };
+9 10 res.body = req.method;
+9 12 } else {
+9 13 next(new Error('not found'));
+9 17 res.statusCode = err.status || 500;
+9 18 res.headers = { 'Content-Type': 'application/json' };
+9 19 res.text = res.body || \'\';
+9 24 res.headers = { \'Content-Type\': \'application/json\', \'X-Foo\': \'bar\' };
+9 29 res.statusCode = 302;
+9 30 res.headers = { \'Location\': \'http://maji.moe\', \'X-Foo\': \'baz\' };
+9 31 res.statusCode = 500;
+9 32 res.headers = headers;
+9 33 res.body = body;
+9 34 return res.end();
+9 37 console.log(\'Express app started on port 3000\');"
+

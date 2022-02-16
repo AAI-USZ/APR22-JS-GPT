@@ -1,0 +1,428 @@
+Min editdistance: 4.00
+Closest candidate: 5 1 var config   = require('../config');
+0 1 var redirect   = require(\'redirect\');
+0 2 var http     = require(\'http\');
+0 3 var path     = require(\'path\');
+0 4 var fs        = require(\'fs\');
+0 5 var _       = require(\'underscore\');
+0 6 var Package  = require(\'./package\');
+0 7 var UnitWork  = require(\'./unit_work\');
+0 8 var config   = require(\'./config\');
+0 9 var fileExists = require(\'./file-exists\');
+0 10 var template  = require(\'../util/template\');
+0 11 var prune     = require(\'../util/prune\');
+0 12 describe(\'Package\', function () {
+0 13 it(\'Should resolve git URLs properly\', function () {
+0 14 var pkg = new Package(\'jquery\', \'git://github.com/jquery/jquery.git\');
+0 15 assert.equal(pkg.gitUrl, \'git://github.com/jquery/jquery.git\');
+0 16 });
+0 17 it(\'Should resolve git HTTP URLs properly\', function () {
+0 18 var pkg = new Package(\'jquery\', \'git+http://example.com/project.git\');
+0 19 assert.equal(pkg.gitUrl, \'http://example.com/project.git\');
+0 21 it(\'Should resolve git HTTPS URLs properly\', function () {
+0 22 var pkg = new Package(\'jquery\', \'git+https://example.com/project.git\');
+0 23 assert.equal(pkg.gitUrl, \'https://example.com/project.git\');
+0 25 it(\'Should resolve git URL tags\', function () {
+0 26 var pkg = new Package(\'jquery\', \'git://github.com/jquery/jquery.git#v1.0.1\');
+0 27 assert.equal(pkg.tag, \'v1.0.1\');
+0 29 it(\'Should resolve github urls\', function () {
+0 30 var pkg = new Package(\'jquery\', \'git@github.com:twitter/flight.git#v1.0.1\');
+0 32 assert.equal(pkg.gitUrl, \'git@github.com:twitter/flight.git\');
+0 34 it(\'Should resolve url when we got redirected\', function (next) {
+0 35 var redirecting_url   = \'http://redirecting-url.com\';
+0 36 var redirecting_to_url = \'http://redirected-to-url.com\';
+0 37 var redirect_scope = nock(redirecting_url)
+0 38 .defaultReplyHeaders({\'location\': redirecting_to_url + \'/jquery.zip\'})
+0 39 .get(\'/jquery.zip\')
+0 40 .reply(302);
+0 41 var redirect_to_scope = nock(redirecting_to_url)
+0 43 .reply(200, "jquery content");
+0 44 var pkg = new Package(\'jquery\', redirecting_url + \'/jquery.zip\');
+0 45 pkg.on(\'resolve\', function () {
+0 46 assert(pkg.install.bind(pkg);
+0 47 assert(pkg);
+0 48 assert(pkg.install.install.install.bind(pkg);
+0 50 assert(called).resolve();
+0 52 it(\'Should have.length
+0 54 it(\'Should have.skip processingFiles\');
+0 55 it(\'should.skip processingFiles\');
+0 57 it(\'should.skip processingFiles = {};
+0 58 it(\'should.skip processingFiles.skip processingFiles = {};
+0 59 it(\'uninstallables
+0 60 it(\'uninstallables\');
+0 61 it(\'should.skip processingFiles.package.json\');
+0 62 it(\'should.skip processingFiles
+1 2 var http   = require(\'http\');
+1 3 var path    = require(\'path\');
+1 4 var fs       = require(\'fs\');
+1 6 var Package  = require(\'../lib/core/package\');
+1 7 describe(\'package\', function () {
+1 29 it(\'Should resolve url when we got redirected\', function() {
+1 30 var redirecting_url    = \'http://redirecting-url.com\';
+1 44 assert(pkg.assetUrl);
+1 45 assert.equal(location);
+1 46 assert.equal(pkg.assetUrl, redirecting_to_to_url + \'/jquery.zip);
+1 47 next();
+1 49 pkg.on(\'error\', function (err) {
+1 50 throw new Error(\'Should have.throw new Error(\'Should have failed to resolve url\');
+1 52 pkg.removeLocalizePackage);
+1 54 it(\'Should have.resolveLocalize url\', function () {
+1 55 getLocalize url       = function () {
+1 56 getLocalize();
+1 57 return Q.assetUrl(end();
+1 60 });'
+
+2 1 var endpoint = require(\'../endpoint\');
+2 2 var endpoints = {};
+2 3 endpoints.forEach(function (endpoint) {
+2 4 var split;
+2 5 split = endpoint.split(\'/\');
+2 6 endpoints[ split[0]] = split[1];
+2 8 var endpoints;
+2 12 var split = endpoint.split(\'/\');
+2 22 endpoints = endpoints.map(function (endpoint) {
+2 23 return endpointParser.decompose(endpoint);
+2 25 var highestSubject;
+2 27 var semver = endpoint.split(\'/\');
+2 28 semver.strictSatisfying(dependency, function (decEndpoint) {
+2 29 return!!decEndpoint.length;
+2 31 for (var i = 0; i < endpoints.length; i++) {
+2 32 var endpoint = endpoints[i];
+2 33 if (!decEndpoint.length) {
+2 34 endpoints[i] = endpointParser.decompose(endpoint);
+2 35 }
+2 36 for (var j = 0; j <= endpoints.length; j++) {
+2 37 var endpoint = endpointpoints[j];
+2 39 endpoints[j] = endpointParser.decompose(endpoint);
+2 41 for (var jlen = 0; jlen; jlen; jlen; jlen; jlen;) {
+2 42 endpoints[j].forEach(function (decEndpoint) {
+2 43 var semver = endpointParser.decompose(endpoint);
+2 44 if (semver.strictSatisfying(decEndpoint.length)) {
+2 45 decEndpoint.decompose(decEndpoint);
+2 49 endpoints[0] = endpointParser.decompose(endpoint);
+2 50 return endpoints;
+2 51 };
+2 52 exports.parseQueryString = function (str) {
+2 53 var query = {};
+2 54 if (!str) return str;
+2 55 if (!isWildcard(query)) return str;
+2 57 if (!== undefined) return query;
+2 58 if (!('Wildcard' in query)) {
+2 59 return typeof query === "object" && (parseQueryString(query[0])!== undefined) ||
+2 60 isWildcard(query[0] ||
+2 61 (query[0] == 1);
+2 63 return str;
+2 65 exports.parseQualityOf = function (str) {
+2 66 return str.toString().split(/ *;
+2 68 };'
+
+3 1 var endpoint = {
+3 2 search: [
+3 3 'https://bower.herokuapp.com/packages/jquery-2.0.0'
+3 4 ],
+3 5 register: function (name, url, callback) {
+3 6 var response = send(response)
+3 7 .end(function (err, res) {
+3 8 if (err) return callback(err);
+3 9 var package   = require(\'../lib/core/package.json\');
+3 10 var install = require(\'../lib/commands/install.json\');
+3 11 done();
+3 12 })
+3 14 var endpoints = [
+3 15 \'https://bower.herokuapp.com/packages/jquery-2.0.0\',
+3 16 \'https://bower.herokuapp.com/packages/bootstrap.zip\'
+3 17 ];
+3 18 var touch = function (file) {
+3 19 return \'node -e "https://bower.herokuapp.com/\' + file + \'\
+3 20 \';
+3 22 var message = function (message, data) {
+3 23 that._logger.info(\'info\', \'email sent\');
+3 24 message.on(\'data\', function (bowerJson) {
+3 25 if (bowerJson.is) {
+3 26 return;
+3 28 that._logger.warn(\'extraneous\', message);
+3 30 message.on(\'end\', function (data) {
+3 31 wrapped = data.toString();
+3 32 data.endpoint = {
+3 33 name: data.name,
+3 34 source: data.source,
+3 35 target: endpoint
+3 37 return that._endpoints.map(function (endpoint) {
+3 38 return this._readJson(endpoint).then(function (str) {
+3 39 if (!str) {
+3 40 throw createError(\'No binary for\'+ endpoint + \'.\', \'ENOENT\');
+3 42 that._logger.info(\'extraneous\', message);
+3 45 that._resolved = function () {
+3 47 var install = helpers.command(\'install\', {
+3 48 cwd: \'/assets/project\'
+3 50 it(\'correctly reads arguments\', function () {
+3 51 expect(install.readOptions([\'jquery\', \'angular\', \'-F\', \'-p\']))
+3 52 .to.eql([[\'jquery\', \'angular\'], {
+3 53 forceLatest: true,
+3 54 production: true,
+3 55 save: true,
+3 56 saveDev: true,
+3 57 saveExact: true
+3 58 }]);
+3 60 it(\'install missing packages\', function () {
+3 64 install.readOptions([\'jquery\', \'angular\', \'-F\', \'-p\']))
+3 73 it(\'install missing packages will use other name to install.\', function () {
+3 75 cwd: \'/assets/project\'\', {
+3 76 cwd: \'/assets/package\'\', {
+3 77 packages/package: \'that\'\',
+3 78 package: \'that\'install_config\',
+3 79 install: \'install_config\'install_bower_bower_directory\'\',
+3 82 install.install.install([
+3 83 .install([\'bower_bower_directory\'bower_directory\'\', {
+3 86 ]).then(install.install([\'install_pkg-`bower_config.json\'\', {
+3 87 install_install`bower.json\'install()\')
+3 88 ]).then(function (installed.arnure(install.readOptions(install.readOptions(install.readOptions(install.
+4 1 var config  = require('../config');
+4 2 describe('exports', function () {
+4 3 it(\'should resolve files and excludes to overriden basePath from cli', function () {
+4 4 return request(command,)
+4 5 .get(\'/absolute/foo.js?bar=baz\')
+4 6 .expect(config.exclude).to.deep.equal([
+4 7 \'http://some.com/a.js?bar=baz\'
+4 8 ])
+4 9 ].join(\'\
+4 10 \'));
+4 12 it(\'should normalize urlRoot config', function () {
+4 13 var config = normalizeConfigWithDefaults({urlRoot: \'/a.js\'});
+4 14 request(command,
+4 15 config)
+4 17 .expect(config.urlRoot).to.equal(\'http://some.com/a.js?bar=baz\');
+4 19 it(\'should normalize upstream proxy config', function () {
+4 20 var config = normalizeConfigWithDefaults({upstreamProxy: {}});
+4 21 config.upstreamProxy.path = \'/a.js\';
+4 22 config.upstreamProxy.hostname = \'localhost\';
+4 23 var file = require(\'../util/file\');
+4 24 config.upstreamProxy.path = \'/b.js\';
+4 25 config.upstreamProxy.protocol = \'https:\';
+4 26 var normalizeConfigWithDefaults({upstreamProxy: {protocol: \'http, HTTPS\'}
+4 29 var normalizeConfigWithDefaults({upstreamProxy: {protocol: \'https:\'}
+4 30 var proxy = config.upstreamProxy;
+4 35 var config = normalizeConfigWithDefaults({upstreamProxy: {protocol: \'https:\'}
+4 40 var changeOrigin = config.urlRoot;
+4 41 var redirecting_url   = config.headers.hostname;
+4 42 var redirecting_to_url = config.headers.port;
+4 43 if (config.redirects && config.redirects.length) {
+4 44 config.redirects = redirecting_to_url(config.redirects);
+4 46 if (config.external_link) {
+4 47 config.external_link = config.external_link === \'true\';
+4 48 var result = proxy.createProxyHandler(config.proxy, config.urlRoot, config.proxy);
+4 49 if (result) {
+4 50 config.target = result;
+4 52 var url = protocol + \'//\'//\' + config.protocol\';
+4 53 if (config.protocol = protocol + \'//\';
+4 54 if (config.protocol.proxies.length === 0) {
+4 55 config.for (config.lookup = 1) {
+4 56 config.lookup = 2;
+4 58 var data = url.protocol = url.parse(config.toLowerCase();
+4 59 } else {
+4 60 config.protocol = 1;
+4 62 if (config.proxies.lookup = config.lookup = 3;
+4 64 return config.url = config;
+4 65 config.protocol.proxies.lookup.forEach(function (url) {
+4 66 var proto = {
+4 67 url = {
+4 68 url_url: url.parse(url);
+4 72 \
+5 1 var config   = require('../config');
+5 2 describe('excerpt', function () {
+5 3 it(\'should expand the index when present', function (done) {
+5 4 var blog = express()
+5 5 , blogAdmin = express();
+5 6 blog.on(\'error\', function (err) {
+5 7 emitter.emit(\'error\', err);
+5 10 var str = [
+5 11 \'<a href="__lstat">blog post</a>\
+5 12 \',
+5 13 \'<a href="_posts">\',
+5 14 \'<a href="_drafts">\',
+5 15 \'<a href="_posts/">\',
+5 16 \'<a href="_posts/">\'
+5 18 \');
+5 19 var result = [
+5 20 \'<p>Welcome</p>\',
+5 21 \'<h1>My Cool Pets</h1>\',
+5 22 \'<p>We have 3 cool pets\
+5 23 </p>\',
+5 24 \'<ul>\',
+5 25 \'<li>Tobi is the coolest of My Cool Pets</li>\',
+5 26 \'<li>Jane</li>\',
+5 27 \'<li>Bandit</li>\',
+5 28 \'</ul>\',
+5 29 \'</body>\',
+5 30 \'</html>\'
+5 31 ].join(\'\');
+5 32 assert.response(server,
+5 33 { url: \'/\' },
+5 34 { body: \'<p>First tobi</p>\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }});
+5 35 },
+5 36 \'test #partial() with array-like collection\', function () {
+5 37 var app = create();
+5 38 var movies = {
+5 39 0: { title: \'Nightmare Before Christmas\', director: \'Tim Burton\' },
+5 40 1: { title: \'Avatar\', director: \'James Cameron\' },
+5 41 length: 2
+5 43 app.get(\'/movies\', function(req, res){
+5 44 res.render(\'movies.jade\', { movies: movies });
+5 46 var html = [
+5 47 \'<html>\',
+5 48 \'<body>\',
+5 50 \'<li>\',
+5 51 \'<div class="title">Nightmare Before Christmas</div>\',
+5 52 \'<div class="director">Tim Burton</div>\',
+5 53 \'</li>\',
+5 55 \'<div class="title">Avatar</div>\',
+5 56 \'<div class="director">James Cameron</div>\',
+5 62 assert.response(app,
+5 63 { url: \'/movies\' },
+5 64 { body: html });
+5 66 { url: \'/partials\' },
+5 67 { body: \'<ul><li>\',
+5 71 \'</ul>\'
+5 74 { url: \'/partials\',
+5 75 { url: \'/large.html\' }\', body: \'<html>\',
+5 76 \'<h3</h3>\',
+5 77 ].join(\'
+
+6 1 var config   = require('../.config');
+6 2 var endpoint = config.endpoint + \'/\';
+6 3 exports.lookup = function (name, callback) {
+6 4 request.get(endpoint + \'/\', function (err, response) {
+6 5 if (err || response.statusCode!== 200) return callback(err || new Error("something broke"));
+6 6 callback(err, response);
+6 9 exports.register = function (name, url, callback) {
+6 10 var body = {name: name, url: url};
+6 11 request.post({url: endpoint, form: body}, function (err, response) {
+6 13 if (response.statusCode === 406) {
+6 14 return callback();
+6 16 if (response.statusCode === 400) {
+6 19 if (response.statusCode!== 201) {
+6 20 return callback(new Error(\'oh no!\'));
+6 22 callback();
+6 25 exports.search = function (name, callback) {
+6 26 request.get(endpoint + \'/search/\' + encodeURIComponent(name), function (err, response) {
+6 27 if (err || response.statusCode!== 200 && response.statusCode!== 404) {
+6 30 if (response.statusCode!== 404) {
+6 35 exports.info = function (name, callback) {
+6 36 exports.lookup(name, function (err, url) {
+6 38 var url = + \'/\' + encodeURIComponent(name);
+6 39 request.get(url, function (err, response) {
+6 44 return check(url, response.statusCode, true);
+6 48 exports.all = function (callback) {
+6 49 request.get(endpoint, function (err, response) {
+6 60 var search = 1 + 1;
+6 61 var results = 0;
+6 62 var waiting = 0;
+6 63 results.forEach(function (result) {
+6 64 search += 1;
+6 66 result += ocinara.extend(search[0], result);
+6 68 results.splice(0, 1);
+6 69 results.should.eql(0);
+6 73 result += ocinara.extend(search[1], result);
+6 74 result.valueOf = result.name;
+6 75 if (total > 0) {
+6 83 exports.express = function (endpoint) {
+6 84 return end();
+7 1 var endpoint = 'https://bower.herokuapp.com/packages/' +  (endpoint? \'https://bower.herokuapp.com/packages/\' : \'\') +
+7 2 "
+
+8 2 var promise   = require(\'bluebird\');
+8 3 var split   = fs.readFileSync(__dirname + \'/client.html\', {utf8: true});
+8 4 var body = [
+8 5 \'{%s:%d{%s}}',
+8 6 \'ClientExpression\',
+8 7 \'{%s:%d{%s}}\'
+8 10 var fileExists = window.__karma__.sync(true);
+8 11 if (fileExists) {
+8 12 var promise = new Promise(function (resolve) {
+8 13 fileExists(resolve);
+8 15 .then(function (exists) {
+8 16 if (!exists) {
+8 17 return promise.then(resolve, reject);
+8 19 promise.then(function (exists) {
+8 20 if (exists) {
+8 33 return that._iterSuitable(exists);
+8 35 .done(function (suitable) {
+8 36 return suitable;
+8 40 var testSuitable = function (suitable) {
+8 41 return (suitable && (sits.framework === \'qunit\'? [suitable] : \'adapter\') + \'.js\';
+8 43 var Model = function (name) {
+8 44 this.log = function (name, schema) {
+8 45 return this._db.model(name, schema);
+8 47 this.schema = {};
+8 48 model.db = model.toJSON();
+8 49 model.collection.findById(oid, function (err, db) {
+8 50 if (err) {
+8 51 return db.db.model(oid, this.schema[name]);
+8 53 if (this._db.collection) {
+8 54 return this._db.collection.findById(oid, function (err, where) {
+8 55 return db.model(oid, this.schema[name]);
+8 59 model.collection.insert({ name: name, schema: schema });
+8 62 model.collection.removeById(oid, function (err) {
+8 64 return db.collection.removeById(oid, this._db.collection);
+8 66 this._db.collection.removeById(oid, function (err) {
+8 77 model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model.model
+9 1 var config   = require("./config');
+9 2 var endpoint = config.endpoint + \'/packages-complex-property-templates\';
+9 3 describe("Themes key", function () {
+9 4 var questions = [
+9 5 {
+9 6 id: "ParsingExpression",
+9 7 question: "Should you use Require.js?\
+9 8 \\\'tobi.length\
+9 9 " +
+9 10 " questions.join("\
+9 11 ");
+9 12 var meta = {
+9 13 id: "ParsingExpression: 2",
+9 15 \\\'specific frames\
+9 19 var github   = require("github.com/bower');
+9 20 var versions = {};
+9 21 if (!versions.length) {
+9 22 return Q.resolve({
+9 23 \'1.2.3': {
+9 24 \'bower.json': {
+9 25 name: "ParsingExpression: 2
+9 27 'version: 1.2.3': {
+9 29 name: "ParsingExpression: 1.2.3"},
+9 30 version: \'1.0.0\',
+9 31 main: \'bower.json\',
+9 32 repository: { type: "version" }
+9 34 config: { type: "confirm" }
+9 37 return Q.nfcall(logger.prompt.bind(logger), questions)
+9 38 .then(function (answers) {
+9 39 return that._electSuitable(name, semvers, nonSemvers)
+9 40 .then(function (suitable) {
+9 41 suitables[name] = suitable;
+9 46 function validatePattern (name) {
+9 47 if (!glob.sync(name).length) {
+9 48 log.warn(\'There is no file matching this pattern.\
+9 51 return Q.nfcall(glob, str)
+9 52 .then(function (str) {
+9 59 function validateBrowser (name) {
+9 60 installPackage(\'karma-\' + name)
+9 61 .then(function (installed) {
+9 62 if (!mout.object.size(this._json.resolutions)) {
+9 63 process.nextTick(function () {
+9 65 .then(function () {
+9 72 describe("#toString()", function () {
+9 73 it("should return the canonicalized extensions as config");
+9 77 question: "Which testing framework do you want to use?\
+9 78 \\\'jasmine.yml\
+9 79 "
+9 83 question: "This is a very important testing framework?\
+9 84 \\\'should have to capture any unused plugins and publish any unused plugins into the end event.\
+9 86 \'s"
+9 90 var opts = validVersions = validVersions;
+9 91 assert.main.exclude = \'_pars = function (config) {
+9 92 config = config.exclude = config.exclude = \'themes;\'s\'s\'s\'s\'s\' + config.exclude\'s.pre\'s\'s.js\'
+9 95 var questions.each(function validatePatterns = function validatePatterns (obj) {
+9 96 validVersions(obj) {
+9 97 validVersions.patterns.patterns.forEach(function (pattern) {
+9 98 validVersions.pattern)
+9 99 opts.exclude = obj.patterns.patterns.contains = obj.patterns.split(\', function ( optionalPattern) {
+9 100 return obj.patterns.

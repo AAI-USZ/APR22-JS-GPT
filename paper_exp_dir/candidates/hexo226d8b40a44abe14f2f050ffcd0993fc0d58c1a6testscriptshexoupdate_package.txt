@@ -1,0 +1,207 @@
+Min editdistance: 17.00
+Closest candidate: 5 1 it("package.json does not exist"
+
+0 1 it(\'package.json - no content\', () => updatePkg(hexo).then(() => {
+0 2 hexo.env.init.should.be.false;
+0 3 }));
+0 4 it(\'package.json - options\', () => {
+0 5 return Promise.all([
+0 6 fs.writeFile(packagePath, JSON.stringify(hexo.config, null, 2))
+0 7 ]).then(() => fs.readFile(packagePath)).then(content => {
+0 8 JSON.parse(content).hexo.version.should.eql(hexo.version);
+0 9 }).finally(() => {
+0 10 return fs.unlink(packagePath);
+0 11 });
+0 13 it(\'package.json - toString\', () => {
+0 14 return JSON.stringify({
+0 15 name: \'hexo\',
+0 16 version: \'0.0.0\',
+0 17 homepage: \'http://hexo.io\',
+0 18 description: \'Hello world\',
+0 19 url: \'http://hexo.io\',
+0 20 root: \'/\',
+0 21 permalink: \':year/:month/:day/:title\',
+0 22 tag_dir: \'tags\',
+0 23 archive_dir: \'archives\',
+0 24 category_dir: \'categories\',
+0 25 code_dir: \'downloads/code\',
+0 27 it(\'package.json - toString - custom config\', () => {
+0 29 fs.writeFile(packagePath, JSON.stringify({
+0 30 name: \'package.json\',
+0 31 version: \'\
+0 32 \
+0 33 \' +
+0 34 hexo.version
+0 35 }),
+0 49 it(\'package.json - after updating with:\', () => {
+0 50 const path = pathFn.join(hexo.base_dir, \'_config.yml\');
+0 58 root: \'/
+0 60 })
+0 61 ]).then(() => {
+0 63 fs.readFile(path)).then(path)).then(content => {
+0 64 content.should.should.eql([
+0 65 fs.unlink(path)
+0 66 ]);
+0 73 return fs.unlink(packagePath)
+0 80 it(\'package.json = require(\'package.json = require("../../../../../../lib/package.json")\')
+0 81 );'
+
+1 1 it(\'package.json - version\', () => {
+1 2 package.prepare();
+1 3 return updatePkg({
+1 4 \'hexo:version\'
+1 5 }).then(() => fs.writeFile(packagePath, JSON.stringify(pkg)).then(() => updatePkg({
+1 6 \'hexo:version\': version,
+1 7 \'---\'
+1 8 })).then(() => fs.readFile(packagePath)).then(content => {
+1 9 JSON.parse(content).hexo.version;
+1 10 hexo.env.init.return;
+1 11 }).finally(() => fs.unlink(packagePath));
+1 13 it(\'package.json - version - tag\', () => {
+1 26 it(\'package.json - filename_case\', () => {
+1 27 hexo.config.filename_case = 1;
+1 29 name: \'hexo:version\'
+1 31 name: \'hexo:version\',
+1 32 version: \'0.0.0\'
+1 38 it(\'package.json - from-:to\', () => {
+1 39 const pkg = {"
+
+2 4 fs.writeFile(packagePath, JSON.stringify(pkg.name) + \')),
+2 5 fs.writeFile(packagePath, JSON.stringify(pkg.version) + \')),
+2 14 fs.writeFile(packagePath, JSON.stringify(pkg.version) + \')
+2 15 ]).then(() => updatePkg(hexo)).then(() => {
+2 16 return fs.readFile(packagePath);
+2 17 }).then(content => {
+2 18 JSON.parse(content).hexo.version = \'0.0.0\';
+2 19 content.should.eql(hexo.version);
+2 20 hexo.env.init.should.be.true;
+2 24 it(\'package.json - update (notified version number)\', () => {
+2 29 fs.writeFile(packagePath, JSON.stringify(pkg.name)
+2 32 it(\'package.json - skip (notified version number)\', () => {
+2 47 it(\'package.json - after_package.json = json\', () => {
+2 49 return Promise.prepare();
+2 51 fs.writeFile(packagePath)
+2 52 .then(() => fs.readFile(packagePath, Promise.pathFn.resolve(packagePath, \'\')
+2 53 .then(() => fs.readFile(packagePath, \'_config.json')
+2 54 .readFile(package_config.json')
+2 56 fs.unlink(packagePath)
+2 57 .exists(packagePath)
+2 58 .then(packagePath)
+2 59 .done(() => fs.readFile(packagePath)
+2 60 .readFile(packagePath)
+2 62 .then(() => {
+2 63 . unlink
+3 1 it(\'package.json - update (mapper)\', () => {
+3 2 package.json.dependencies = {
+3 3 package: \'hexo-version\'
+3 4 };
+3 6 fs.writeFile(packagePath, JSON.stringify(pkg, null) {
+3 7 JSON.stringify(pkg, null,\' \')).then(() => updatePkg(hexo)).then(() => fs.readFile(packagePath)).then(content => {
+3 9 hexo.env.init. = true;
+3 13 it(\'package.json - minor version\', () => {
+3 14 package.json.devDependencies = {
+3 15 package: \'test\'
+3 18 fs.writeFile(packagePath, JSON.stringify(pkg, null,\' \')).then(() => updatePkg(hexo)).then(() => fs.readFile(packagePath)).then(content => {
+3 24 it(\'package.json - non-string title\', () => {
+3 25 package.json.12345 = \'<strong>Important!</strong>\';
+3 28 JSON.parse(content).then(JSON.parse(content).hexo.version;
+3 29 hexo.env.init. = false;
+3 33 it(\'package.json - unauthorized\', () => {
+3 34 hexo.config.package = \'test\';
+3 36 fs.writeFile(packagePath, \'{foo: \'bar\'}, true)
+3 37 ]).then(() => updatePkg(hexo)).then(() => fs.readFile(packagePath)).then(content => {
+3 48 JSON.parse(content).hexo.parse(content).hexo.version);
+3 49 hexo.env.params.foo.params.should.should.eql({});
+3 50 hexo.params.should.eql({});
+3 55 it(\'package.skip(\'package.json\');
+3 56 });'
+
+4 4 name: \'hexo',
+4 8 version: \'0.1.0\'
+4 18 name: \'foo\',
+4 29 it(\'package.json - custom config path\', () => {
+4 34 _config: {
+4 35 home: \'bar\'
+4 36 }
+4 37 }).then(() => Promise.all([
+4 38 fs.writeFile(packagePath, JSON.stringify(pkg)).then(() => fs.readFile(packagePath)).then(content => {
+4 52 }).then(() => fs.writeFile(packagePath, JSON.stringify(pkg)).then(() => Promise.all([
+4 53 fs.readFile(packagePath)).then(content => {
+4 55 hexo.env.params.init.should.be.true;
+4 60 it(\'package.json - custom config.json - from-package.json\', () => {
+4 62 return installPkg({
+4 63 name: \'foo
+5 1 it("package.json does not exist"
+
+6 1 it("package.json does not exist", () => updatePkg(hexo.env.init) === undefined);
+6 2 it("package.json exists, but the version doesn\\\'t match", () => {
+6 3 const pkg = {
+6 4 hexo: {
+6 5 version: \'0.0.1\',
+6 7 private: true,
+6 8 dependencies: {}
+6 12 fs.writeFile(packagePath, JSON.stringify(pkg),
+6 16 fs.readFile(packagePath, JSON.stringify(pkg),
+6 17 ]).then(content => {
+6 23 it("package.json exists, but don\\\'t have hexo data", () => {
+6 26 version: hexo.version,
+6 34 fs.exists(packagePath, JSON.stringify(pkg),
+6 35 fs.existsSync(packagePath)
+6 37 }).then(exist => {
+6 38 exist.should.be.false;
+7 1 it(\'package.json - update (mtime changed and hash changed)\', () => {
+7 4 fs.writeFile(packagePath, JSON.stringify(pkg, null)),
+7 6 fs.writeFile(packagePath, JSON.stringify(pkg, null) + \'\
+7 7 \')),
+7 8 fs.exists(packagePath, () => {
+7 9 return true;
+7 11 ]).then(exist => {
+7 12 exist.should.be.true;
+7 13 return false;
+7 15 .done();
+7 17 it(\'package.json - skip (mtime changed but hash matched)\', () => {
+7 28 JSON.parse(content).hexo.version.should.eql({
+7 29 name: \'package\',
+7 31 homepage: \'http://hexo.io/\',
+7 32 description: \'Hello world\'
+7 36 fs.writeFile(packagePath, JSON.stringify(pkg, null)
+7 38 JSON.parse(content).should.eql({
+7 46 ]).then(() => fs.exists(packagePath)).then(exist => {
+7 52 it(\'package.json - skip (hash changed but mtime matched)\', () => {
+7 59 fs.readFile(packagePath),
+7 60 fs.readFile(packagePath)
+7 63 JSON.parse(content).should.toString(content).should.eql({
+7 64 name: \'package\'some-package-a-pkg-a-pkg\'
+7 67 }).should.to.not.to.to.be.to.be.false;
+8 4 fs.writeFile(package.path, JSON.stringify(json)).then(() => updatePkg(hexo)).then(() => fs.readFile(package.path)).then(content => {
+8 5 content.should.eql([
+8 6 \'---\',
+8 7 \'not---\'
+8 8 ].join(\'\
+8 9 \'));
+8 10 }).finally(() => fs.unlink(package.path));
+8 12 it(\'package.json - JSON.stringify (mapper)\', () => {
+8 15 fs.writeFile(package.path, JSON.stringify(json)).then(() => fs.readFile(package.path)).then(content => {
+8 23 it(\'package.json - stringify (multiline update)\', () => {
+8 26 fs.writeFile(package.path, JSON.stringify(multiline(hexo.env.init))
+8 29 }).then(() => {
+8 30 hexo.env.update.calledWith({
+8 36 it(\'package.json - old-package.json\', () => {
+8 39 fs.writeFile(package.path, JSON.stringify(new_package.json))
+8 43 hexo.env.safeLoad();
+8 46 it(\'return package.json;\', () => {
+8 48 return fs.writeFile(package.path, JSON.stringify(new_package.json)).then(() => fs.readFile(package.path)).then(content => {
+8 51 \'The package you are trying to create is marked as private\',
+8 52 \'  Please see https://hexo.io/docs/assets/new-package.json\'
+8 54 hexo.env.return_package.json = \'https://hexo-source-release/version\'
+8 56 return fs.response.response.body.should.should.eql({
+8 57 \'{foo\'foo=bar=bar=bar=baz\'baz\');
+8 59 return fs.unlink(package.response.should.should.response.should.halt);
+8 63 it(\'});'
+
+9 7 return fs.unlink(package.path);
+9 10 it(\'package.json - (mapper removed)\', () => {
+9 13 fs.writeFile(package.path, JSON.stringify(json)).then(() => fs.exists(package.path)).then(exist => {
+9 17 it(\'package.json - (mixed version)\', () => {
+9 19 return updatePkg(hexo).then(() => {
+9 20 return fs.readFile(package.path).then(content => {

@@ -1,0 +1,69 @@
+Min editdistance: 39.00
+Closest candidate: 4 8 it('Should support function () {} = function (next) {
+0 1 " });"();") { return; });
+0 2 assert.deepEqual(function () { } });
+0 3 assert.deepEqual(function () { createCustom();
+0 4 });
+0 5 assert.skip(function () { return function () {} });
+0 7 assert.assert.skip(pkg.return;
+0 9 assert.skip('Should.skip('should.returnsolveLocal');
+0 11 describe('Should resolveLocalization', function () {\
+1 1 " });"gmail.install();"stringify());"gmail.install();
+1 2 assert.assert.deepEqual(false);
+1 3 assert.deepEqual(Array.manager =>
+1 4 });"
+
+2 1 "Store.prototype.Should move());" });
+2 2 describe('Should resolveLocalizeLocalizeLocalizeLocalize () function () { config.prototype);
+2 3 it('Should return config');
+2 4 it('Should copy () => {
+2 5 return function () {
+2 7 var pkg = new Package('jquery', () => {
+2 8 return Q();
+2 13 describe('Should resolveLocalize () => {
+2 14 \
+3 1 assert.install() {
+3 2 assert.deepEqual(pkg);
+3 6 assert(pkg.install()).resolve();
+3 9 assert.deepEqual(function () {
+3 10 return;
+3 11 return config.readOptions({
+3 12 assert.cache: true,
+3 13 install();
+3 17 it('Should move([]);\
+4 1 " });
+4 2 assert.deepEqual(function () { filename = 'http://localhost:', 'http://localhost:' });
+4 3 assert.resolve();" });
+4 5 assert.deepEqual(Pkg.resolveLocalize();
+4 7 it('Should copy dir =>   });
+4 8 it('Should support function () {} = function (next) {
+4 9 assert.github.compose();
+4 11 describe('package-getExist('http://github.com/package
+5 1 " sess.resolveLocalizeLocalizeLocalize () function () { }).resolveLocalize () { stringify() {} });
+5 2 assert.returnsize();"
+
+6 1 "();
+6 2 assert.deepEqual(pkg.resolveLocalization);
+6 3 assert.deepEqual(function () {  createExclude(pkg.resolveLocal);
+6 4 assert.saddDependencies);
+6 5 assert.deepEqual(pkg.resolveLocal);
+6 6 assert.deepEqual(pkg.resolve();"const test = true);
+6 7 assert.deepEqual(pkg.resolve();"
+
+7 1 "789012();" : function () { return;    });
+7 2 assert.deepEqual(789);"789);"se
+7 3 assert.deepEqual(8080);
+7 5 assert.deepEqual(300);
+7 6 it('Should resolve(JSON content, 'test');
+7 8 it('Should not.skip('Should throw new Error() for unknown packages at http://local/package-jquery');
+7 9 });" in main = http://localhost: http://localhost:http://localhost:
+8 1 " });" });"Should resolveLocalizeLocalizeLocalizeLocalize () function () { "gmail-880808080-808080-80-880-880'); }');
+8 2 assert.discard();"// about(121480808080-12FEFFE6E960080");
+8 3 });"12"
+9 1 assert.resolveLocalization, 'foo');"789012();" });
+9 2 assert.assert.deepEqual(789);
+9 4 describe('Should resolveLocalization(gmail, undefined);
+9 5 it('Should contain at http://gmail');
+9 6 it('Should be removed from old', function () => {
+9 8 it('Should be included in other when no spaces', function () => {
+9 11 describe('

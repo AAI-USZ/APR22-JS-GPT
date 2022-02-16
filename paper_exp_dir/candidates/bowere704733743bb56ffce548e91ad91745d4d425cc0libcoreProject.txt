@@ -1,0 +1,322 @@
+Min editdistance: 15.00
+Closest candidate: 3 20 if (options.save || options.saveDev) {
+0 1 return this.analyse()
+0 2 .spread(function (json, tree, flattened) {
+0 3 that._walkTree(tree, function (node, name) {
+0 4 if (node.missing) {
+0 5 targets.push(node);
+0 6 } else if (node.incompatible) {
+0 7 incompatibles.push(another.path);
+0 8 } else {
+0 9 resolved[name] = node;
+0 10 }
+0 11 }, true);
+0 12 mout.object.forOwn(flattened, function (decEndpoint) {
+0 13 if (extraneous) {
+0 14 throw createError('Package'+ decEndpoint.name +'is not installed', 'ENOTINS', {
+0 15 name: decEndpoint.name,
+0 16 dependencies: {
+0 17 'node': endpoint.split('#')[0]
+0 19 }, this);
+0 20 decEndpoint.unresolvable =!!decEndpoint.newly;
+0 21 });
+0 22 return that._bootstrap(targets, resolved, flattened)
+0 23 .then(function (installed) {
+0 24 if (!options.save &&!options.saveDev) {
+0 25 return installed;
+0 27 that._json.dependencies = that._json.dependencies || {};
+0 28 mout.object.forOwn(targets, function (decEndpoint) {
+0 29 var source = decEndpoint.registry? '' : decEndpoint.source;
+0 30 var target = decEndpoint.target;
+0 31 var endpoint = mout.string.ltrim(source + '#' + target, ['#']);
+0 32 if (options.save) {
+0 33 that._json.dependencies[decEndpoint.name] = that._json.dependencies[decEndpoint.name] || {};
+0 35 if (options.saveDev) {
+0 36 that._json.devDependencies = that._json.devDependencies || {};
+0 38 if (options.saveExact) {
+0 39 return that._json.devDependencies.save.act;
+0 41 return that._json.dependencies[decEndpoint.name] = endpoint;
+0 46 function cleanUpContinues(config, resolved, flattened) {
+0 47 var decEndpoints = Object.unresolved = config.resolved || {};
+0 48 var names = {};
+0 49 return promise = promise.then(function promise.then(function () {
+0 50 return that._readJson.readJson.bind(that._json) {
+0 51 return Q.parse(this._json)
+0 52 .toData(this._json);
+0 53 .endpoints.endpoints.split('/some(this._Json.endpoints, function (endpoints) {
+0 54 return that._pluck = endpoint.source)
+0 55 .endpoints.length === 2;
+0 56 })
+0 57 .then(function (key) {
+0 58 return that._pluck(options, function (endpoints) {
+0 59 return that._pluck(options, i) {
+0 60 return that._pluck(options, i === '_')
+1 1 Project.prototype.install = function (decEndpoints, options, config) {
+1 2 var that = this;
+1 3 var targets = [];
+1 4 var resolved = {};
+1 5 var incompatibles = [];
+1 6 if (this._working) {
+1 7 return Q.reject(createError('Already working', 'EWORKING'));
+1 9 this._options = options || {};
+1 10 this._config = config || defaultConfig;
+1 11 this._working = true;
+1 12 return this._analyse()
+1 13 .spread(function (json, tree) {
+1 14 if(!that._jsonFile && decEndpoints.length === 0 ) {
+1 15 throw createError('No bower.json present', 'ENOENT');
+1 17 that.walkTree(tree, function (node, name) {
+1 18 if (node.incompatible) {
+1 19 incompatibles.push(node);
+1 20 } else if (options.missing ||!options.different || that._config.force) {
+1 26 decEndpoints = decEndpoints || [];
+1 27 decEndpoints.forEach(function (decEndpoint) {
+1 28 decEndpoint.newly = true;
+1 29 targets.push(decEndpoint);
+1 31 return that._bootstrap(targets, resolved, incompatibles);
+1 33 .then(function () {
+1 34 return that._manager.preinstall(that._json);
+1 37 return that._manager.install(that._json);
+1 40 if (that._options.save || that._options.saveDev || that._options.saveExact) {
+1 42 var jsonEndpoint;
+1 43 jsonEndpoint = endpointParser.decomposed2json(decEndpoint);
+1 44 if (that._options.saveExact) {
+1 45 if (decEndpoint.name!== decEndpoint.source) {
+1 46 throw createError('Should have not been pre-install');
+1 48 decEndpoint = decEndpoint.source = decEndpoint.source;
+1 54 return that._json = json;
+1 55 return that._manager
+1 56 .set('json', decEndpoints, decEndpoints, json);
+1 58 .install();
+1 59 .then(function (that._manager
+1 60 .resolutions, that._jsonDecomposed = that._options)
+1 61 .resolutions, that._jsonDecomposedEndpoints)
+1 62 .resolutions, that._options = options._jsonDecomposedEndpoints)
+1 63 .resolutions || {};
+1 65 .then(function that._working);
+1 67 .resolutionsPromise.resolutions = res;
+1 68 .resolutions = resolutionsolutions || {};
+1 70 .})
+1 72 .then( resolved =
+2 3 var policy = this._options.frameworks || {};
+2 5 object.forOwn(flattened, function (decEndpoint) {
+2 6 if (decEndpoint.dependants) {
+2 7 decEndpoint.extraneous = true;
+2 8 options.save(decEndpoint.dependants);
+2 11 var decEndpointNames = Object.keys(decEndpoint.dependants);
+2 14 object.forOwn(flattened, function (decEndpoint, name) {
+2 16 decEndpoint.dependants = this._uniquify(decEndpoint.dependants);
+2 17 this._json.dependencies[name] = decEndpoint.pkgMeta;
+2 20 decEndpointNames = decEndpoints.split(',');
+2 29 var jsonKey;
+2 30 if (!mout.string.startsWith(that._config.cwd, decEndpoint.name)) {
+2 31 throw createError('No cached version for'+ decEndpoint.name, 'ENOCACHE', {
+2 32 details:!options.date) {
+2 36 details:!options.argets ||!options.argets.join(', ')
+2 42 .done(function (uninstalled) {
+2 43 return that._manager.notify(uninstalled);
+2 44 }, function (err) {
+2 48 };
+2 50 function.then(function (options) {
+2 51 var that = options() {
+2 52 var decEndpoints = options || {};
+2 53 var that._options = options.config = options || {};
+2 54 var that._working = options.setResolutions = this._working = this._analyseEndpoints;
+2 55 return that._analyseResolutions.setResolutions = that._analyseResolutions || {};
+2 56 return that._analyseResolutions.clearResolutions = that._analyse()
+2 57 .setResolutionsolutions = that._options = that._analyseResolutions || {};
+2 58 return that._analyseVersions = this._analyseVersions = that._analyseVersions
+3 4 if (node.missing || node.different) {
+3 13 if (decEndpoint.extraneous) {
+3 17 return that._bootstrap(targets, resolved, flattened);
+3 20 if (options.save || options.saveDev) {
+3 23 return that._saveJson()
+3 30 .then(function (json) {
+3 31 var jsonEndpoint = endpointParser.decompose(jsonEndpoint);
+3 32 if (that._options.save) {
+3 33 that._json.dependencies = mout.object.mixIn({}, jsonEndpoint);
+3 35 if (that._options.saveDev) {
+3 36 that._json.devDependencies = mout.object.mixIn({}, jsonEndpoint);
+3 38 return that._manager.saveJson()
+3 43 if (options.save || that._options.saveDev) {
+3 44 decEndpoint.dependencies = that._json.dependencies || {};
+3 49 .fin(function () {
+3 50 that._working = false;
+3 53 Project.prototype.update = function (names, options) {
+3 55 var targets = {};
+3 59 if (this._working = [];
+3 60 this._options.next = function no(this._working = true) {
+3 62 this._nthis._working = true;
+3 63 this._nthis._nthis._n} catch (nthis._n.id = this._nr READED = true;
+3 64 this._dissects = false;
+3 66 this._analyseIfResolutions = options || {};
+3 67 that._analyseIfProduction = that._analyseIfProduction = options.preure
+4 1 Project.prototype.install = function (endpoints, options) {
+4 19 } else if (node.missing || node.different || that._config.force) {
+4 38 that._json.dependencies = mout.object.mixIn(that._json.dependencies || {}, jsonEndpoint);
+4 41 that._json.devDependencies = mout.object.mixIn(that._json.devDependencies || {}, jsonEndpoint);
+4 50 return that._readJson(that._json);
+4 52 .then(function (dissected) {
+4 53 return that._dissected = true;
+4 55 .then(that._analyse.dissected = false;
+4 57 .then(dissected = false;
+4 60 .fin(function (dissected) {
+4 61 return that._working.done) {
+4 66 .then(function this._analyse.uninstall();
+4 67 .then(function (dissected = false);
+4 68 .then(that._analyse.dissected = false);
+4 70 return that._working.dissected = false;
+4 74 function that.thenVersions(project) {
+5 1 return Q.all([
+5 2 function () {
+5 3 return that._removePackages(that._manager);
+5 4 },
+5 6 return that._readJson(that._config)
+5 12 incompatibles.push(clone(that._manager.getTree());
+5 17 deced = mout.object.deepMixIn(flattened, repairDissect);
+5 30 return that._readJson(that._config);
+5 33 var jsonEndpoint = endpointParser.decompose(json);
+5 36 .then(function (enabled) {
+5 38 .then(enabled);
+5 41 return that._analyse()
+5 43 var endpoint;
+5 44 var flattened = mout.object.mixIn({}, flattened);
+5 45 endpoint = endpointParser.decompose(endpoint);
+5 52  = endpoint.split('#');
+5 53 decEndpoint.unresolvable = true;
+5 54 return that._analyse.some(function (decEndpoint) {
+5 55 return!== undefined;
+5 60 function trimjim.skip(function (extra) {
+5 61 return this._handlesShared(extra) {
+5 62 return that._handles(more = this._handles(more) {
+5 63 return that._handles(more, true);
+5 66 function clean(extra, trims) {
+5 67 return this._handles(more = trims) {
+5 68 return that._handles(more, true, trims) {
+5 69 return that._handles(more, trims) {
+5 75 function isModified(true) {
+5 77 function isExcludedIncludedIncludedIncludedIncludedIncludedIncludedIncludedIncludedIncludedPatterns(config) {
+6 3 var content = {};
+6 10 }, true)
+6 13 decEndpoint.message = 'Site updated:'+ decEndpoint.name + ':'+ decEndpoint.target;
+6 15 throw decEndpoint.promise;
+6 19 return that._manager.preinstall(that._json.endpoints, options)
+6 21 return that._manager.install(that._json.endpoints, options)
+6 24 var resolved;
+6 25 var json = mout.object.keys(installed);
+6 27 return;
+6 29 jsonKey = options.save? 'dependencies' : 'devDependencies';
+6 30 that._json[jsonKey] = that._json[jsonKey];
+6 49 if (!names) {
+6 50 that._json = names;
+6 51 that._json = {};
+6 52 that._else = decEndpoints = {};
+6 53 return that._json = decEndpoints.forEach(function (key) {
+6 54 that.walkTree(tree, flattened) {
+6 56 .sort(function (key) {
+6 57 return this._elseTree(key, key) {
+6 58 return that._options, key;
+6 60 .done(function (key) {
+6 61 return that._elseTree(key, i, next) {
+6 62 return that._options.endpoints.length === key;
+6 64 .look
+7 13 content += that._manager.toData(decEndpoint);
+7 16 return that.bootstrap(targets, resolved, flattened)
+7 18 if (!options.save) {
+7 21 return that.saveJson()
+7 23 return that._analyse();
+7 26 var dependencies;
+7 27 var queue = mout.object.values(flattened).length;
+7 30 that._json.dependencies[decEndpoint.name] = endpointParser.decompose(name);
+7 35 }, null);
+7 37 .done(function (notification) {
+7 38 that._logger.emit('end', notification);
+7 40 return Q.nfcall(promptly.confirm, 'install')
+7 41 .then(function (good) {
+7 43 .then(function (result) {
+7 44 if (!result) {
+7 45 throw createError('No resolvable', 'ENOTFOUND');
+7 52 return that._saveJson.install()
+7 54 return that._json.install();
+7 57 .saveJson.done();
+7 59 .done();
+7 66 it('Should work with local fs notify local fs notify local fs notify local fs', function (notify local fs() {
+7 67 return Q.readFile() {
+7 68 return Q.n.resolve(this._jsonFile() {
+7 69 return Q.n.n.readFile(this._tempDir, fs.readFile())
+7 70 .then(this._tempDir, function (notify) {
+7 71 return Q.n.n.then(function (notify) {
+7 72 var json = fs.stat(this._tempDir, undefined) {
+7 73 return Q.n!== 'not
+8 5 var installed;
+8 6 return that._analyse.spread(function (json, tree, flattened) {
+8 8 that._readJson(),
+8 9 that._readInstalled()
+8 10 ])
+8 11 .spread(function (json, installed) {
+8 12 var root;
+8 13 var flattened = installed;
+8 14 root = {
+8 15 name: json.name,
+8 16 source: this._config.cwd,
+8 17 target: json.version || '*',
+8 18 pkgMeta: json,
+8 19 canonicalDir: this._config.cwd,
+8 20 root: true
+8 34 that._json.dependencies[decEndpoint.name] = that._json.dependencies[decEndpoint.name] || [];
+8 36 that._json.devDependencies[decEndpoint.name] = that._json.devDependencies[decEndpoint.name] || [];
+8 48 function this._analyse() {
+8 50 this._readJson(),
+8 51 this._readInstalled()
+8 52 ], function (err, installed) {
+8 53 return that._analyse() {
+8 57 .spread(this._analyse()
+8 58 .spread(this._readLinks = true;
+8 59 .spread(answarnings > 0;
+8 61 .spread(function (json, installed;
+8 62 .some(that._dissects, installed) {
+8 63 return that._any(insight.dissects(installed, installed) {
+8 64 return that._dissects(insects(that._dissects(installed) {
+8 65 return that._dissects(installed) {
+8 66 return that._cleanup.compose())
+8 67 .compose()
+8 68 .length >= installed;
+8 69 .filter(inspect(insight.length) {
+8 72 .length(function (insight) {
+8 73 return that._read
+9 2 this._collectLocal(),
+9 3 this._collectFromJson(),
+9 4 this._collectFromEndpoints(that._config.directory)
+9 6 .spread(function (locals, jsons, endpoints) {
+9 7 var from = locals._manager.get('templates', function (templates) {
+9 8 var name = 'endpoints/' + this._manager.get('jsonp callback');
+9 9 var url = that._manager.get('url');
+9 10 if (!name) {
+9 11 return false;
+9 13 that._jsonp(url)
+9 14 .write(json);
+9 15 return Q.nfcall(bowerJson.prompt.bind(that._logger), {
+9 16 type: 'confirm',
+9 17 message: 'Looks good?',
+9 18 default: true
+9 21 return that._readJson(that._jsons, true)
+9 23 if (!json) {
+9 26 return that._saveJson(that._jsonp, json);
+9 30 function removeIgnores(dir, meta) {
+9 31 var name = path.basename(endpoints).replace(/\\\\/g, '/');
+9 34 type: 'install',
+9 39 return that._saveJson(that._jsons, true)
+9 44 jsonEndpoint = endpointParser.decompose(decEndpoint);
+9 47 throw createError('Should have no range/version', 'No range/version');
+9 48 decEndpoint = decEndpoint.source = decEndpoint.source.target;
+9 50 if (that._options.options.saveExact = true;
+9 54 return that._options.then(function () {
+9 55 return that._savePkgMeta(options);
+9 59 function jsonEndpoint.then(that._savePkgMeta);
+9 60 return Q.then(options, jsonEndpoint, resolved, logger)
+9 61 .endpointNames) {
+9 63 return Q.nelse if (options.resolve) {
+9 64 return that._options.pluck(options, function (err) {
+9 65 return Q.nelse if (options.endpoint) {
+9 66 return Q.nexpect(options.endpointNames) {
+9 67 return Q.resolve(options.object) {\

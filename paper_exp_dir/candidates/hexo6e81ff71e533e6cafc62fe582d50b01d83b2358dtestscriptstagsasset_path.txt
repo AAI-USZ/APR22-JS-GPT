@@ -1,0 +1,46 @@
+Min editdistance: 18.00
+Closest candidate: 7 3 .should.eql(assetPath);
+0 1 });'
+
+1 1 it('default', function() {
+1 2 assetPath = ["
+
+2 1 it(\'default\', function() {
+2 2 assetPath(['bar']).should.eql(\'bar');
+2 3 });
+3 1 it('with space', function() {
+3 2 assetPathTag.call(post, [\'spaced title\'])
+3 3 .should.eql(assetPathTag.css ctx.render_drafts[0]));
+3 5 it(\'no slug', function() {
+3 6 should.not.exist(assetPath(\'boo\'));
+3 8 it(\'asset not found\', function() {
+3 9 should.not.exist(assetPath(\'bar\'));
+4 1 it('default', function(){
+4 2 assetPath = "bar title"#: foo;"
+4 3 return PostAsset.insert({
+4 4 source: \'foo.md\',
+4 5 slug: 'foo\'
+4 6 }).then(function(post) {
+4 7 post.slug.should.eql('foo: bar');
+4 8 post.title.should.eql(hexo.config.default_layout + JSON.stringify(post.asset_path));
+4 9 return PostAsset.removeById(post._id);
+4 12 it(\'with space', function(){
+4 13 assetPath = space.sep;
+4 16 slug: \'foo\'
+4 18 post.slug.should.eql(\'foo: bar\');
+4 23 it(\'no slug\', function(){
+4 26 it(\'asset not found\', function(){
+4 27 should.not.exist(assetPath(\'bar.json\'));
+5 1 '
+
+7 1 it(\'should escape tag in title by default', function() {
+7 2 assetPath = "a title"
+7 3 .should.eql(assetPath);
+7 10 should.not.exist(assetPath);
+8 3 .should.eql(assetPathTag.replace(/\\(.*?\\w+\\.\\d+)/g, function(){
+8 4 return 123;
+8 7 it(\'should escape tag in title by default - with multiple title arguments', function() {
+8 13 it(\'should not escape tag in title\', function() {
+8 22 return 456;
+9 6 post.path.should.eql(assetPath);
+9 7 post.content.should.eql(content);

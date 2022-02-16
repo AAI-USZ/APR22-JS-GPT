@@ -1,0 +1,51 @@
+Min editdistance: 18.00
+Closest candidate: 0 11 }, this);
+0 1 );
+0 2 get('/', function(){
+0 3 this.redirect('/upload');
+0 4 });
+0 5 get('/upload', function(){
+0 6 this.render('upload.haml.html');
+0 7 })
+0 8 post('/upload', function(){
+0 9 this.param('images').each(function(image){
+0 10 puts('uploaded'+ image.filename +'to'+ image.tempfile);
+0 11 }, this);
+0 12 this.redirect('/upload')
+0 14 get('/public/*', function(file){
+0 15 this.sendfile(dirname(__filename) + '/public/' + file)
+0 17 get('/*.css', function(file){
+0 18 this.render(file + '.sass.css', { layout: false })
+0 20 run()'
+
+1 2 get('/hello', function() {
+1 3 contentType('html');
+1 4 return '<h1>World<h1>'
+2 4 halt(200, require('express/pages/not-found').renderWith({ error: 'Not Found' }));
+2 6 Express.start();'
+
+3 3 this.redirect('/upload'));
+3 6 this.render('upload.haml.html', {
+3 7 locals: {
+3 8 flashes: this.flash('info')
+3 9 }
+3 12 this.param('images', function(req, res, next, id){
+3 13 if (req.session.is_login) {
+3 14 next();
+3 15 } else {
+3 18 puts(image.filename +'->'+ image.tempfile);
+3 19 this.flash('info', 'Uploaded'+ image.filename);
+3 23 post('/upload')
+3 24 }, param('path').focus);
+3 26 this.sendfile(dirname(__filename) + '/public/' + file);
+3 29 this.render(file + '.sass.css', { layout: 'layouts/foo.css', included: false });
+3 31 run()"
+
+4 4 });"
+
+5 4 return '<h1>World<h1>' + hexo.version + '</h1>';
+7 3 contentType('txt');
+7 4 return '<h1>Forum Thread</h1><p>\
+7 5 <p>Hello World</p>\
+7 6 <p>\
+7 7 <p>Hello World</p>'

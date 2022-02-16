@@ -1,0 +1,149 @@
+Min editdistance: 10.00
+Closest candidate: 3 1 customFileHandlers: ['value: ['value', []],
+0 1 capturedBrowsers: ['factory', new BrowserCollection.factory],
+0 2 command: \'executor: [executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.
+1 1 _id: ['factory', getFileList.factory],
+1 2 lactory: ['factory: ['factory],
+1 3 serveStaticFile: ['factory: ['factory: ['factory: ['factory: ['factory],
+1 4 fsactory: ['factory: ['factory],
+1 5 fs: ['factory: ['factory: ['factory],
+1 7 fs: ['factory: ['factory: ['factory: ['factory],
+1 8 path: ['factory: ['factory: ['factory],
+1 9 path: ['factory: ['factory: ['factory: ['factory: ['factory],
+1 10 path: ['factory: ['factory: ['factory: ['factory],
+1 11 path: ['factory: ['factory: ['factory: ['factory: ['factory: []factory],
+1 12 path: ['factory: ['factory: ['factory: ['f
+2 1 capturedBrowsers: ['factory', null],
+2 2 config: ['factory: ['factory\', config],
+2 3  executor: ['factory],
+2 4 config: ['factory: ['factory],
+2 5 config: ['config: ['factory],
+2 6 require: ['config-listencher: function (config) return server.config],
+2 7 require (config: ['config) return server.getDirectCallThan(config)
+2 8 ], () => this.throwErrors.returns(this.executor.executor.executor.factory)
+2 9 }
+2 10 }], () => {
+2 11 const server = new Server(cliOptions = cfg.getDirectiveFilesPromen(cliOptionsOrLoopFromConfigFromConfig(config => this.config.config), this.config)
+2 12 const watcher.getDirectCallbacks = [])
+2 13 const server = new BrowserCollection(cliOptions)
+2 14 this.getDirector())
+2 15 const singleRun: ['nonRun
+3 1 customFileHandlers: ['value: ['value', []],
+3 2 customScriptTypes: ['value
+3 3 ],
+3 4 config: ['value\'value\'],
+3 5 server: ['value', config],
+3 6 this: ['value', this],
+3 7 urlRoot: []
+3 8 this: ['value
+3 10 this.toString: ['value
+3 11 ]
+3 12 const preprocess = function (cliOptions.createServeStaticFile (config, done) {
+3 13 return this.use(config, done) {
+3 14 return this.config = []
+3 15 this.use(cliOptions = config)
+3 16 this.config = []
+3 17 this.getFilesPromise = cliOptions = []
+3 18 this.filter((answers) => doInjector.createServeFile(config.createServeFile(config.createServeStaticFile(config.urlRoot, cliOptions), this)
+3 19 this.logger, config)
+3 20 this.emitter = [])
+3 21 this.emitter.on('
+4 1 capturedBrowsers: ['value', null],
+4 2 reporter: ['value', null],
+4 3 args: ['value', null],
+4 4 async: ['value', null],
+4 5 config: ['value
+4 6 paths: ['value
+4 7 config: ['value', config],
+4 8 port: ['value', config],
+4 9 logger: ['value
+4 12 colors: ['value
+4 16 server: ['value],
+4 17 client: ['value
+4 21 client: ['value', config],
+4 22 config: ['value]
+4 24 config: ['value: ['value', config]
+4 25 }],
+4 26 serverSocketServerSocketServerSocket: {
+4 27 const NetUtils: {
+4 28 return serverSocket, executor (cliOptions, serverSocket, serverSocket, done) {
+5 2 module.exports = exports = createServeStaticFile => {
+5 3 return function (configFile (config) {
+5 4 return config.setValueOf(config, basePath, fs.readFile, fs.readFile, fs.readFile, fs.readFile, fs.readFileSync, config.readFileSync, function (filepath) {
+5 5 config of fs.unlinkSync, fs.unlinkSync() {
+5 6 if (fs.unlinkSync) return config.replace(filepath) return config.replace(file.replacePath, '')
+5 7 } catch (unlinkSync(config.otherUnlink, \'otherUnlink, \'only\')
+5 11 } Launcher.factory.$injector.factory)
+5 14 const middlewareActive = ['value
+5 15 filesPromiseContainer = () => {
+5 16 filesPromise.on('filesPromise','shared
+5 17 }' : function (fileList
+5 18 return this.lastRunDone)
+6 1 _id: ['value', null],
+6 3 config: ['value', config]
+6 4 this: ['value', config],
+6 5 newServer: ['value', config],
+6 7 this._server: ['value
+6 9 this],
+6 11 return server: ['value
+6 14 this._server: ['value', this._server: ['value
+6 16 return server: ['value', this._server: ['value', this],
+6 18 return this],
+6 20 return this._server: ['value
+6 21 },
+6 22 this._server: ['value', this],
+6 23 return server
+6 24 return handler: ['value
+6 26 return handler: ['value', this._server: ['value', this],
+6 27 return handler: ['value', this],
+7 1 capturedBrowsers: ['factory: ['factory', null],
+7 2 serveStaticFile: ['factory
+7 3 filesPromise: ['factory\', createSocketIo, createWebServer],
+7 4 socketServer: ['factory: function (config) {}]
+7 5 }]
+7 6 const setAllRunPromiseProxies = server
+7 7 this.on('run () => this.run()
+7 8 if (config.start -> this.start -> this.start.start.start.applyConfig.bind(this)
+7 9 })
+7 10 this.on('error', (config.start || this.start.start.bindProxy.bind)
+7 11 this.on)
+7 12 .on('error', (config => this.start)
+7 13 .proxy.binds.bind(this))
+7 14 .on)
+7 15 .on(\'error', this.start.start.binds.bind(this))
+7 17 .on.on('error', this.start
+8 2 server: ['value: ['value],
+8 4 newServer: [newServer: [newServer],
+8 5 args: [newServer: null],
+8 6 client: [newClient: null],
+8 7 client: null],
+8 8 args: ['value],
+8 9 config: ['value: ['value
+8 12 client: ['value]
+8 15 dynamicServerSocketServer.on('error', () => {
+8 16 this.useIframe: function (url) {
+8 17 if (url.createServer.createServer.createServer()) {
+8 18 return this.use(factory)
+8 19 return this.client.start(),
+8 20 } else {
+8 21 return this.use(config.client)
+8 23 return this.getFilesPromise.start(),
+9 2 proxies: ['value', null],
+9 3 xhr: ['value
+9 4 x: ['value', null],
+9 6 thistle: ['value', null],
+9 7 as: [\'value', null],
+9 8 config: [\'value
+9 9 config: ['value\', null],
+9 10 xhrLevel: ['value],
+9 12 nextensions: ['value', null],
+9 13 xhrLevel: null],
+9 14 urlRoot: []],
+9 17 browserSocket: {
+9 18 returnLevel: ['value
+9 19 return: ['value
+9 21 linen: {
+9 22 wd: 'key: \'value\', urlRoot: \'http://localhost: null\'},
+9 23 xhr: null
+9 24 returns: false
+9 28 frameworks: ['value', singleRun: ['value', 'xhrxhr-

@@ -1,0 +1,428 @@
+Min editdistance: 19.00
+Closest candidate: 0 20 var result = exports.render = function(str, options, callback){
+0 1 return content;
+0 2 }).renderWithFile(function(str, ext){
+0 3 if (ext && renderer.hasOwnProperty(ext)){
+0 4 return engine.compile(content, options);
+0 5 } else {
+0 6 var content = file.readFileSync(ext)
+0 7 if (options.app) {
+0 8 request(ext)
+0 9 .header(\'Content-Type\', \'text/html; charset=utf-8\')
+0 10 .ext = content.toString()
+0 11 .replace(/[\\r\\t ]+/g, \'\\u2028\')
+0 12 .replace(/[\\u2029]+/g, \'\\\\u2029\')
+0 13 .replace(/\\u2029+/g, \'\\\\u2029\')
+0 14 .split(\'/\')
+0 15 options.locals = {
+0 16 id: \'exclude\',
+0 17 content: \'\'
+0 18 };
+0 19 }
+0 20 var result = exports.render = function(str, options, callback){
+0 21 if (typeof options === \'function\'){
+0 22 callback = options;
+0 23 options = {};
+0 25 callback = function(){};
+0 27 var settings = this.app.settings
+0 28 , jsonp = settings[\'jsonp callback\']
+0 29 , replacer = settings[\'json replacer\']
+0 30 , spaces = settings[\'json spaces\']
+0 31 , body = JSON.stringify(obj, replacer, spaces)
+0 32 , callback = callback.replace(/\\u2028/g, \'\\\\u2028\')
+0 33 , callback = callback.replace(/\\u2029/g, \'\\\\u2029\')
+0 34 , body = body
+0 36 , buf = \'\';
+0 37 var jsonp = p.toString()
+0 41 , callback = callback.replace(/\\u2028/g, \'\\\\u2029\')
+0 43 this.charset = this.charset || \'utf-8\';
+0 44 this.set(\'Content-Type\', \'application/json\');
+0 45 if (callback && jsonp) {
+0 46 this.set(\'Content-Type\', \'text/javascript\');
+0 47 body = callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+0 49 return this.send(body);
+0 51 res.sendfile = function(path, options, fn){
+0 52 var self = this
+0 53 , req = self.req
+0 54 , next = this.req.next
+0 55 , options = options || {}
+0 56 , done;
+0 57 if (\'function\' == typeof options) {
+0 58 fn = options;
+0 61 req.socket.on(\'error\', error);
+0 62 function error(err) {
+0 63 if (done) return;
+0 64 done = true;
+0 65 cleanupd = function stream() {
+0 66 if (done) {
+0 70 if (done &&;
+0 71 cleanup &&;
+0 75 if () return;
+0 76 if () &&;
+0 78 if ()
+0 83 function cleanup();
+0 84 .on(\'finish(err);
+0 85 \
+1 1 set('filename', content);
+1 2 }).addErrback(function(e){
+1 3 throw new Error("File `' + e.message);
+1 4 });
+1 6 res.locals = function(){
+1 7 res.render = options.layout === undefined? true : options.locals || {};
+1 8 res.renderSync = options.renderSync || {};
+1 9 res.renderFile = options.renderFile || path.join(this.filename, \'.html\');
+1 11 res.locals.__filename = posix.filename;
+1 12 res.locals.views = res.locals.views || this.settings.views;
+1 14 res.attachment = function attachment(filename) {
+1 15 if (filename) {
+1 16 this.filename = filename;
+1 18 this.header(\'Content-Disposition\', contentDisposition(filename));
+1 19 return this;
+1 21 res.append = function append(field, val) {
+1 22 var prev = this.header(\'Content-Type\') || this.header(\'Content-Type\');
+1 23 var value = val;
+1 24 if (prev) {
+1 25 value = Array.isArray(prev)? prev.concat(val)
+1 26 : Array.isArray(val)? [prev].concat(val)
+1 27 : [prev, val];
+1 29 return this.set(field, value);
+1 31 res.set =
+1 32 res.header = function header(field, val) {
+1 33 if (arguments.length === 2) {
+1 34 var value = Array.isArray(val)
+1 35 ? val.map(String)
+1 36 : String(val);
+1 37 if (field.toLowerCase() === \'content-type\') {
+1 38 if (Array.isArray(value)) {
+1 39 throw new TypeError(\'Content-Type cannot be set to an Array\');
+1 41 if (!charsetRegExp.test(value)) {
+1 42 var charset = mime.charsets.lookup(value.split(\';\')[0]);
+1 43 if (charset) value += \'; charset=\' + charset.toLowerCase();
+1 46 this.setHeader(field, value);
+1 48 for (var key in field) {
+1 49 this.set(key, field[key]);
+1 54 res.get = function(source){
+1 55 return this.getHeader(source);
+1 57 res.clearCookie = function clearCookie(name, options) {
+1 58 var opts = merge({ expires: new Date(1), path: \'/\' }, options);
+1 59 return this.cookie.set(\'name\', opts);
+1 61 res.cookie = function (name, value, options) {
+1 62 var opts = merge({}, options);
+1 63 var secret = this.req.secret;
+1 64 var val = this.req.pass.pass.params[name];
+1 65 if (typeof options === \'number\') {
+1 66 opts = merge({ user: options, params);
+1 68 opts.cookie.cookie.path = this.split(/= this.pass.pass.length);
+1 69 opempts.unshift();
+1 70 opempts.push(this.middleware;
+1 71 opts.push(this);
+1 74 var versions = opts.length = opts;
+1 75 var versions = versions = versions;
+1 76 var users = [
+1 77 '
+
+2 2 }).run(function($templateCache) {\
+2 3 " +
+2 4 "  $templateCache.puts("\
+2 5    \'+\
+2 6    \'<link rel="stylesheet" href="${this.url_for(path)}">\
+2 7    \'+
+2 8 "});\
+2 10 "})
+2 11 ].join("\
+2 12 ");
+2 13 var sel = "";
+2 14 if (set(\'views\') && set(\'partials\') ||
+2 15 set(\'views\') ||
+2 16 set(\'partials\') ||
+2 17 set(\'images\') ||
+2 20 set(\'images\')
+2 22 module.exports = function(locals, render, callback){
+2 23 var config = this.config;
+2 24 if (!config.external_link) throw new Error(\'No External link for "view engine"\');
+2 25 var site = function(view, options){
+2 26 options = options || {};
+2 27 var content = partial.render(view, options);
+2 28 if (options.only) {
+2 29 content = content.replace(/<h3 id="([^<>]*>)[^<>]*>/g, function(match, name){
+2 30 return \'<li>\' +
+2 31 name + \'</li>\';
+2 34 content = file.readSync(view);
+2 36 content = \'<h3 id="more"></h3>\';
+2 38 content = file.readSync(site);
+2 39 if (options.quotable) {
+2 40 content = \'<h1 id="more"></h1>\';
+2 43 if (content.length > 1) {
+2 44 options.top = content.substring(0, 1);
+2 46 content = engine.compact(content);
+2 47 if (layout) {
+2 48 optionslayout = layout.toLowerCase();
+2 50 if (content.hasOwnProperty(layout)) {
+2 51 options[layout] = content[layout];
+2 53 options.filename = path;
+2 54 return render(layout, options);
+2 55 };'
+
+3 1 returnposix.cat(content).render(content);
+3 2 }).spread(function(views, i){
+3 3 res.render('index.jade', {
+3 4 locals: {
+3 5 title: \'Hexo\',
+3 6 name: \'__filename__'
+3 10 app.set(\'views\', path.join(__dirname + \'/views\'));
+3 12 app.locals.version = \'0.0.1\';
+3 13 return app;
+3 14 }).locals.version = \'0.0.1\';
+3 16 assert.response(app,
+3 17 { url: \'/\' },
+3 18 { body: \'<p>Welcome</p>\'
+3 19 , headers: {
+3 20 \'Content-Type\': \'application/json\'
+3 21 , \'X-Foo\': \'bar\'
+3 22 }});
+3 24 { url: \'/jade\' },
+3 28 , \'X-Foo\': \'baz\'
+3 31 { url: \'/haml\' },
+3 32 { body: \'\
+3 33 <p>Hello World</p>\'
+3 35 \'Content-Type\': \'application/mathml+xml\'
+3 39 { url: \'/callback\' },
+3 41 <p>:)</p>\'
+3 43 \'Content-Type\': \'text/javascript\'
+3 47 { url: \'/callback/layout\' },
+3 48 { body: \'<html><body><p>:)</p></body></html>\'
+3 49 , status: 404 });
+3 51 { url: \'/error\' },
+3 52 { body: \'doesNotExist\'
+3 53 , status: 500 });
+3 55 { url: \'/invalid\' },
+3 56 function(res){
+3 57 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+3 58 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+3 61 { url: \'/invalid-async\' },
+3 75 { url: \'/invalid-async/async/async\' },
+3 77 assert.should.should.equal(res.length, callback);
+3 78 assert.length;
+3 81 })
+3 82 },
+3 83 assert.response.assert = function(app,
+3 84 { url: \'/error\'should not.type=\'should not be a function\' }\'
+3 85 , callback
+3 86 , callback = function() { callback.should.should.should.toArray() }
+3 87 , arg = function() { callback.should.length; };
+3 88 assert.should.should.should.equal(Array() == arguments.prototype.slice.length);
+3 89 assert.response.should.equal(callback.length);
+3 91 it(\'should.typeof should.not.equal.length == 0);
+4 1 set('filename', path);
+4 2 render.render(content, options, callback);
+4 4 .done();'
+
+5 2 render(content, ext);
+5 3 }).then(function(){
+5 4 return set('AssetFolder\', val);
+5 6 return hexo.locals.settings.post_asset_folder = false;
+5 9 var create = function(options){
+5 10 if (options) {
+5 11 return res.render(\'post/create\', options);
+5 13 return res.render(\'index.jade\', options);
+5 17 var Post = function(context){
+5 18 this.context = context;
+5 19 this.base = process.cwd();
+5 20 this.ext = extname(this.base);
+5 21 this.name = escape(this.substring(0, posix.cat(this.base));
+5 22 this.path = this.substring( posix.cat(this.base));
+5 23 this.replace = this.ext = newPostName(this);
+5 25 var scaffoldDir = this.scaffold_dir;
+5 26 return this.defaults.forEach(function(layout){
+5 27 var scaffoldPath = base + \'/---\';
+5 28 var content = [
+5 29 \'---',
+5 30 \'title: %s\',
+5 31 \'date: %s\',
+5 32 \'---\'
+5 33 ].join(\'\
+5 34 \');
+5 35 return post.create({
+5 36 title: \'Hello World\',
+5 37 layout: \'draft\'
+5 38 }).then(function(post){
+5 39 this.path = post.path;
+5 40 this.tag = post.tag;
+5 41 if (options.path){
+5 42 var result = {
+5 43 path: path,
+5 44 content: content
+5 47 var result = filename;
+5 49 return Promise.all([
+5 50 create(this.path, layout),
+5 51 fs.writeFile(file.source, content)
+5 52 ]).spread(function(doc){
+5 53 var page = doc.next();
+5 54 page.title = \'"\' + data.title + \'"\';
+5 55 if (data.length){
+5 56 page.source = data.source;
+5 58 page.source = path;
+5 61 page.limit(0);
+5 64 page.create(this.path, layout),
+5 73 return page.limit(0);
+5 76 var escape = function(str){
+5 77 return str
+5 78 .replace(/\\s/g, \'-\')
+5 79 .replace(/!/g, \'%21\')
+5 80 .replace(/#/g, \'%23\')
+5 81 .replace(/\\$/g, \'%24\')
+5 82 .replace(/g, \'%26\')
+5 83 .replace(/'/'/'/, \'%27\')
+5 84 .replace(/g, \'%27\')
+5 85 .replace(/g, \'%YELLIN_AT /g, \'%YELL\');
+5 88 var render = function(){
+5 89 return res = document.createServer(){
+5 90 return res.apply(this, arguments;
+5 91 } catch (ejs = require(\'markdown\');
+5 94 res.render.setHeader = function(filename){
+5 95 return res.headers = function(obj){
+5 96 var headers = obj;
+5 97 res.setHeader(obj){
+5 98 var fields = obj.user.headers = obj.headers || {};
+5 99 res.user.headers = _.headers.headers.setHeader('content-type\', \'text/html\');
+6 2 render(content, options, callback);
+6 3 }).asCallback(callback);
+6 5 var cache = {};
+6 6 res.render = function(view, options){
+6 7 if (options.relative){
+6 8 options.relative = true;
+6 10 options.filename = view;
+6 11 var path = set(\'views\') + '/' + view,
+6 12 parts = view.split(\'.\'),
+6 13 engine = parts.shift(),
+6 14 contentType = parts.shift(),
+6 15 layout = options.layout === undefined? \'layout\' : options.layout,
+6 16 layout = layout === true
+6 17 ? \'_content\' : \'\';
+6 19 options.locals = options.locals || {};
+6 20 if (view.indexOf(\'.html\')!== -1) {
+6 23 options.locals.content = content;
+6 24 options.locals.cache = true;
+6 25 return render(options.filename, content, options);
+6 27 res.renderSync = function(options){
+6 28 return function(str){
+6 29 var ext = extname(str)
+6 30 ,
+6 32 contentType = str.split(\'.\'),
+6 34 ? \'_content\'
+6 35 : \'\';
+6 38 if (options.only){
+6 39 options.only = options.only;
+6 41 options.filename = (engines[ext] || require(ext.substr(1)) + \'/\';
+6 43 var fn = cache[ext] || (cache[ext] = require(ext.substr(1)));
+6 44 if (fn) {
+6 45 if (layout) content = cache[ext] || (cache[ext] = require(ext.substr(1)));
+6 46 else content = this.cache[ext] || (cache[ext] = new LR(options.lru-cache));
+6 48 content = this.cache[ext] || content.replace(\'.\', \'\');
+6 50 return renderSync(content, options);
+6 54 var cache = this.cache[ext] || (cache[ext] = require(ext.substr(1)));
+6 56 var content = this.cache[ext] || (cache[ext] = require(ext.substr(1)));
+6 58 return cache[ext];
+6 61 res.format = function(obj){
+6 62 var req = this.format = obj;
+6 63 var next = req.format || function(obj){
+6 64 if (obj){
+6 65 var i = obj.format || require(req.format);
+6 66 obj.format(obj.format);
+6 67 req.fn = obj.default;
+6 69 var i386 = __proto__proto__proto__ = i == 1;
+6 70 res = _proto__proto__ = i;
+6 71 res = function__proto__proto__proto__ = i == 2;
+6 72 res = functionproto__proto__proto__proto__proto__ = _proto__proto__!== 3;
+6 73 res.__proto__proto__ = functionproto__== 3;
+6 74 res.__proto__proto__ = __proto__;
+6 75 res.__proto__proto__ = _proto__ = i;
+6 76 __proto__proto__proto__ = _proto__proto__ = 3;
+6 77 __proto__proto__ = __proto__ = __pro
+7 3 throw e;
+7 5 return posix.load({
+7 8 }, function(){
+7 9 if (e.code === \'EADDRINUSE\') throw e;
+7 10 var view = new View('forum/thread.ejs', { root: __dirname + \'/views/post/12.html view });
+7 11 view.render(view.source, options.locals, options.filename, options.context)
+7 12 .then(function(){
+7 13 return render.renderSync({
+7 14 path: partial,
+7 16 }, options.locals)
+7 17 .then(function(result){
+7 19 return \'<h1>Forum Thread</h1><p>\
+7 21 .replace(/:\\/{2,}/g, \'<h2><p>Welcome Overridden</p>\');
+7 24 }).load({
+7 29 }).done(function(result){
+7 33 .replace(/:\\/{2,}/g, \'<h3>\
+7 35 .replace(/:\\/\\*.*?.*$/, \'\')
+7 36 .replace(/\\?.*$/, \'\')
+7 37 .replace(/^\\/]+\\w$/g, \'\');
+7 38 return view.renderSync(view.source, options.locals)
+7 50 var view = new View(\'forum/thread.ejs\', { root: __dirname + \'/views/post/12.html view });
+7 51 view.renderSync(view.source, options.locals)
+7 55 <h2><p>Welcome Overridden</p>\';
+7 58 var view = new View(\'/www/mysite/views/path.ejs\', { root: __dirname + \'/views/post/1.ejs\');
+7 63 <h3>\
+7 64 <p>Welcome Overridden</p>\';
+7 68 var view = new View(\'/user\', { parentView: view });
+7 69 index.dirname.extname.register(\'views\', function(){
+7 70 .register(\'files\', function(ext, exports){
+7 71 return new View.register(require(\'./\'s\', new View.files\', locals)
+7 72 .pages)
+7 74 .exists(require(\'s\', function(\'s\', function(file.exclude\'s\', function(exclude\'s\', \'include\'s\', \'not.map\'s\')
+7 75 .map(function(i, i){
+7 76 .exists
+7 78 .exists(\'s\')
+7 79 .exists(\'s
+7 81 .exists(\'s.exclude\', function(
+8 1 return set(\'filename\', path);
+8 5      \'+\
+8 6     \'+\
+8 8          \
+8 9                     \
+8 10                           \
+8 11                                 \
+8 12                            \
+8 13                                  \
+8 14                              \
+8 16                             \
+8 18                               \
+8 20                          \
+8 21                         \
+8 25                      \
+8 28                                \
+8 31                                                    \
+8 32                                                                  \
+8 33                                                                       \
+8 34                                                          \
+9 1 set(\'views\', content);
+9 2 }).run(function(views){
+9 3 var ret = extname(path),
+9 4 filename = path.substring(0, ext.length - ext.length),
+9 5 subext = extname(filename),
+9 6 dest = parts[0];
+9 8 var html = function(content){
+9 9 return content.replace(/<h3 id="(.+?)">(.*?)<\\/h3>/g, function(_, name){
+9 10 filename += \'<span>\' + name + \'</span>\';
+9 11 content = \'<h1>\' + content + \'</h1>\';
+9 14 if (content) {
+9 15 if (content.substr(0, 1) === 0) {
+9 16 return true;
+9 18 content = cache[filename];
+9 20 return \'<h1 id="\' + extname(content) + \'">\' + content + \'</h1>\';
+9 23 res.render = function(view, options, fn){
+9 25 var self = this;
+9 26 var content = cache[filename] || new Virtual View(options);
+9 27 content.filename = content;
+9 28 if (this.render.isRenderable(content)){
+9 29 return self.renderer.render(content, options);
+9 31 return this.renderer.render(content, options);
+9 34 res.layout = function(view, options){
+9 36 var content = this.get(\'Content-Type\') || this.set(\'Content-Type\', \'text/html\');
+9 37 if (options.language) {
+9 38 var lang = options.language || this.set(\'Content-Type\', \'text/html\');
+9 45 return \'<li>\' + content + \'</li>\';
+9 53 return \'<html>                                                    \
+9 54 \\
+9 55 <head>                                                                                                                                                                                                                     \

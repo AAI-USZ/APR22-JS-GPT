@@ -1,0 +1,47 @@
+Min editdistance: 48.00
+Closest candidate: 1 4 return parts[key] instanceof Array? [val] : val
+0 1 '
+
+1 1 ), __proto__.exports = function(params) {
+1 2 return function(err, params) {
+1 3 if (err) return callback.fail(err)
+1 4 return parts[key] instanceof Array? [val] : val
+1 5 return parts[key] instanceof Date? [val] : val
+1 6 }
+1 8 return function(parts, key, val, params) {
+1 9 var keys = key.trim().match(/\\w+/g),
+1 10 array = /[\\]$/.test(key) || [params[key]], val
+1 11 keys = Object.keys(params)
+1 12 for (var i = 0, len = keys.length; i < len; ++i) {
+1 13 var key = keys[i],
+1 14 val = params[key]
+1 15 if (val instanceof Date)
+1 16 val = val.toGMTString()
+1 17 buf.push(val === true
+1 18 ? keys[i]
+1 19 : keys[i] + ']'
+1 21 return buf.join("\
+1 22 ")
+1 24 return exports.mergeParam = function(key, val, params) {
+1 26 array = /\\r?\
+1 27 *\
+1 28 -{2}/.test(key) || [params[key]], val
+1 33 if (key == val) return val
+1 34 params[key] = val
+1 36 return val
+1 40 } : function(key) {
+1 41 return this.params[key] = this.params[key] || {}
+1 43 return this.params[key] || {}
+1 47 exports.skip(\'key_param = function(key) {
+1 48 return this. optional_param(key) {
+1 49 return this.key)
+1 53 exports.limit_param (key) {
+1 54 return this.user.substr = null
+1 56 }'
+
+3 1 ), function(parts, key, val, params) {
+3 2 return parts[key] = params[key] || {}
+3 3 }).join("\
+3 4 ") + s"
+3 6 })'
+

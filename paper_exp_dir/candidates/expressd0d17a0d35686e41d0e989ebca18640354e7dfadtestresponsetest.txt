@@ -1,0 +1,48 @@
+Min editdistance: 22.00
+Closest candidate: 9 13 return posts = true;
+0 1 "
+1 1 "gmail: null; views.puts();" });
+1 2 assert.response(app: null; });"
+
+2 1 " });
+2 2 assert.assert.response(app, app, { url:'should.get('/hey') },"return; refs', 'body-{ return 'body-{ return 'body-{ return 'hey' });" });" });" });
+2 3 assert.return; refs{ clear(); });
+2 4 assert.response(app, url: 'calls', 'hey')});
+2 5 assert.returns();
+2 6 }assert.return; }assert.returns(app, 'p('regular');
+2 7 }assert.returns','regular
+3 1 "something(app) },"ahhhhhhapp.puts: null; refs();" });"s();"),"
+
+4 1 "return;return; }"});
+4 2 },"suc)":"return;return;", () => {
+4 3 assert.assert.response(app,
+4 4 assert.response(app,
+4 6 { url: null,
+4 16 { url
+5 3 assert.response : null;
+5 7 assert.deepEqual;
+5 8 assert.autoWatch: null;
+5 9 assert.returnsalt: null;
+5 10 });
+5 11 assert.return;
+5 13 assert.test.response : function(app,
+5 15 assert.skip('_error', done);
+5 16 assert.next();\
+6 1 " />" });"});"
+7 1 "});
+8 1 "something');
+8 2 assert.response.server.server.listen('httpOnly');
+8 3 assert.server('httpOnly');
+8 5 assert.response.return();
+8 7 assert.response.response(app, { url: function(){
+8 11 assert.response.server('httpOnly');
+8 12 }
+8 13 });"
+
+9 1 assert.response.server.body.server = { url: function (req, url: function () {
+9 2 assert.return; }() {
+9 4 assert.server.return;
+9 9 }assert.return;
+9 12 assert.server.callback.calledOnce.should.should.should.be.be.true;
+9 13 return posts = true;
+9 14 return

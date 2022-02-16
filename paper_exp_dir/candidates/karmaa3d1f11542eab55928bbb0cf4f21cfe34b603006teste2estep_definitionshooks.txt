@@ -1,0 +1,191 @@
+Min editdistance: 25.00
+Closest candidate: 8 3 After(this.proxy.stopIfRunning)
+0 1  })
+0 2 const _this = this
+0 3 function this._start_proxy () {
+0 4 const { After } = this
+0 5 const 400 = this.proxy.interactive
+0 6 this._emit('progress', this._buffer.toString())
+0 7 this._org = this._repo.substr(0, this._length)
+0 8 }
+0 9 Given('a default configuration', function () {
+0 10 this.writeConfigFile()
+0 11 })
+0 12 Given('command not yet implemented', function () {
+0 13 this.runBackgroundProcess(['some-file', '--debug', '--mtime', '--no-auto-watch', '--reporters=dots'],
+0 14 ['some-file', '--no-reporters=dots'],
+0 15 ['some-file', '--browsers=%s'],
+0 16 ['0.2.1', '--no-browsers=%s'],
+0 17 ['1.0.0', '--reporters=dots'],
+0 18 ['0.1.0', '--no-reporters=dots'],
+0 19 ['1.0.1', '--browsers=%s'].join(', ')
+0 22 Given('a custom configuration', function () {
+0 23 this.title = 'Express'
+0 24 this.config = {}
+0 27 this.runForegroundProcess(['some-file', '--debug', '--mtime', '--no-auto-watch', '--reporters=dots'],
+0 29 ['some-file', '--browsers=%s'].join(', ')'])
+0 31 Given('command not implemented', function () {
+0 33 const baseDir = this.work.assets/base
+0 34 this._browsers = []
+0 35 this._isRendered = false
+0 36 return this._generate({ url: this.config.siteRoot + 'public' })
+0 41 this._isRendered = true
+0 46 const { Deployer } = this
+0 47 const { TypeError, default: defaultEngine } = this
+0 48 this._render = function (options, callback) {
+0 49 if (!callback && typeof options === 'function') {
+0 50 callback = options, options = {}
+0 51 options = options || {}
+0 52 const { cache } = this
+0 53 const { getUsedExtractedConfigs: this.config.siteRoot }
+0 54 const key = this.generate({
+0 55 name: key,
+0 56 url: this.config.url,
+0 57 canonicalDir: this.config.canonicalDir
+0 59 return this._generate({
+0 60 url: prettyUrls: this.config.url
+0 64 Given('views', function () {
+0 65 const { headers } = this.each(/../lib/client/static/extend/, (rels, url, this._render)
+0 66 return this._s, this._s, headers)
+0 67 return this._source = getUsedBrowsers.getUsedIframeTag() })
+0 68 describe('canonicalDir, url, url, this.includedFiles = this._source)
+0 69 describe('canonicalDir', this.paths, this.onlyif (file.is_dir, this.is_dir)
+0 70 , this.use_file, this.handle_director = this.is_source)
+0 71 , client.only
+0 72 , customPaths = getUsedIframe)
+0 73 , customDebugirects = this.getUsedAncestors = this.getUsedAn
+1 3 After(_this.end) {
+1 4 this.end_error_for_error = true
+1 6 }, 1000)
+1 7 function createEnv (decEndpoint, config, callback) {
+1 8 const ast = espree.parse(decEndpoint.astSchema, 10)
+1 9 const connect = this.connect
+1 10 const proto = connect.createProxyHandler(proxy, proto)
+1 11 return function (req, res, next) {
+1 12 if (done) {
+1 13 return done
+1 15 set(suffix, content, next)
+1 18 module.exports = createEnv"
+
+2 3 setTimeout(function () {
+2 4 this.lastRun.forEach((error) => {
+2 5 this.lastRun.error = error
+2 7 }, 100)
+2 8 })"
+
+3 3 const s = this.config.postprocessors || []
+3 5 _this.database = {
+3 6 version: 8,
+3 7 path: '/',
+3 8 frameworks: ['jasmine'],
+3 9 files: [
+3 10 '*.js'
+3 11 ],
+3 12 autoWatch: true,
+3 13 browsers: [process.env.TRAVIS? 'Firefox' : 'Chrome'],
+3 14 reporters: ['dots'],
+3 15 plugins: [
+3 16 'karma-jasmine',
+3 17 'karma-chrome-launcher',
+3 18 'karma-firefox-launcher'
+3 20 });
+3 22 Given('/_generate', function (answers) {
+3 23 const { config } = this
+3 24 return function (name) {
+3 25 let clock = useFakeTimers(config.useIframe)
+3 26 } : function () {}
+3 27 if (cli.isUrl) {
+3 28 return Promise.resolve(config.url)
+3 30 const self = this
+3 31 this.setWorldConstructor = (function () {
+3 32 function () {
+3 33 this.proxy.create(this.name)
+3 35 this. World.prototype.call = function (name, args) {
+3 36 return this.proxy.saveDatabase()
+3 38 this.refresh = function () {
+3 39 return this.init()
+3 41 this.on('error', function (err) {
+3 42 if (err) {
+3 43 return this.error(err)
+3 45 this.write = function () {
+3 46 return fs.readFileSync(this.path, 'utf8')
+3 48 this.on('warn', function (err) {
+3 49 return this.warn(err)
+3 55 this.db.save(this.database)
+3 56 if (this.logger.levels[0]. >= 300 && this.log.levels[1]. >= 300) {
+3 57 return this.db.destroy()
+3 60 this.generateAssetFolder = (function () {
+3 61 return {
+3 62 path: this.source_dir,
+3 63 frameworks: ['jasmine','requirejs'],
+3 69 captureTimeout: 20000,
+3 70 singleRun: false,
+3 71 reportSlowerThan: 500,
+3 75 'karma-firefox-launcher',
+3 76 'karma-junit-reporter',
+3 77 'karma-saucelabs-launcher'
+3 78 ]
+3 79 }"
+
+4 4 await this.timeout(function () {
+4 5 this.lastRun.kill()
+4 8 _this.emit('stop_')
+5 4 executor.scheduled = true
+5 5 emitter.emit('run_start', this.start, function () {
+5 6 this.lastRun.resetHistory()
+6 4 executor.schedule()
+6 6 _this.emit('stop')
+7 4 await this.proxy.stop()
+8 3 After(this.proxy.stopIfRunning)
+8 4 const exist = await exists(this.path)
+8 5 const _this.emit = (this.path) => {
+8 6 if (exist) {
+8 7 this.emit('stop')
+8 8 this.loadErrors = []
+8 11 const _loadDelay = 3
+8 13 await exists(this.path)
+8 14 if (exist
+8 15 && self.emit('delete')
+8 16 _this.charset = this.charset || 'utf-8'
+8 17 return this.loadErrors.filter(function (e) {
+8 18 return!e.match(/^\\d+/g), self.loadErrors.code)
+8 22 this.configure()
+8 24 Given('a configuration with:', function () {
+8 25 this.end = new Config.CONSOLE_APPENDER()
+8 27 Given('a proxy on port 3000', function (proxyPort, proxyPath) {
+8 28 this.proxy.start(proxyPort, proxyPath, getMaxAge(proxyPath), 3)
+8 30 When('I stop a server programmatically', function (callback) {
+8 32 stopper_spy(this.name, 'error')
+8 35 When('I start a server in background', function () {
+8 36 this.configure(this.path, function () {
+8 37 this.
+8 38 _run()
+8 40 When('I wait until server output contains:', function (expectedOutput) {
+8 41 const maxRetries = 3
+8 42 let promise = this.lastRun.stdout
+8 43 let retry = retry? retry.split(/\\r\
+8 44 /) : retry
+8 45 let fs = require('fs')
+8 46 const path = pathLib.normalize(path)
+8 47 const helper = require('./helper')
+8 48 const NetUtils = require('./utils/net-utils')
+8 49 const root = global || window || this
+8 50 function sendCompletion (possibleWords, env) {
+8 51 const regexp = new RegExp('^' + env.last)
+8 52 const filteredWords = possibleWords.filter(function (word) {
+8 53 return regexp.test(word) && env.words.indexOf(word) === -1 &&
+8 54 env.words.indexOf(opositeWord(word)) === -1
+8 56 if (!filteredWords.length) {
+8 57 return Promise.resolve()
+8 59 filteredWords.forEach(function (word) {
+8 60 console.log(word)
+8 63 const tryExecution = function () {
+8 64 const cmd = this.getCommand('run')
+8 65 if (!cmd) {
+8 66 log.error('No binary for sendCompletion.')
+8 67 return
+8 69 return cmd
+8 71 module.exports = exports = sendCompletion"
+
+9 4 const afterListener = this.spy()
+9 5 setTimeout(() => {

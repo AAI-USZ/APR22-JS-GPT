@@ -1,0 +1,135 @@
+Min editdistance: 19.00
+Closest candidate: 3 3 var bodyParser = require('body-parser');
+0 1 var logger = require('morgan');
+0 2 var session = require('express-session');
+0 3 var app = module.exports = express();
+0 4 app.use(logger('dev'));
+0 5 app.use(session({
+0 6 resave: false,
+0 7 saveUninitialized: false,
+0 8 secret: 'keyboard cat',
+0 9 store: new Session({
+0 10 version: '3.0',
+0 11 _content: ''
+0 12 }));
+0 13 app.use(function(req, res, next){
+0 14 var body = req.session.views;
+0 15 if (req.session.views) {
+0 16 ++req.session.views;
+0 17 } else {
+0 18 req.session.views = 1;
+0 19 body += '<p>First time visiting? view this page in several browsers :)</p>';
+0 20 }
+0 21 res.send(body + '<p>viewed <strong>' + req.session.views + '</strong> times.</p>');
+0 22 });
+0 23 if (!module.parent) {
+0 24 app.listen(3000);
+0 25 console.log('Express started on port 3000');"
+
+1 2 var cookieParser = require('cookie-parser');
+1 4 app.use(cookieParser('keyboard cat'));
+1 5 app.use(cookieSession());
+1 6 app.use(count);
+1 7 function count(req, res) {
+1 8 req.session.count = req.session.count || 0;
+1 9 var n = req.session.count++;
+1 10 res.send('viewed'+ n +'times\
+1 11 ');
+1 15 console.log('listening on port 3000');"
+
+2 2 app.engine('.html', require('ejs').__express);
+2 3 app.set('views', __dirname + '/views');
+2 4 app.use(express.static(__dirname + '/public'));
+2 5 app.use(express.compress());
+2 6 app.use(app.router);
+2 8 res.status(404).render('404', { url: req.url });
+2 11 res.send(404);
+2 14 console.log('Express app started on port 3000');"
+
+3 3 var bodyParser = require('body-parser');
+3 4 var site = require('./site');
+3 5 var post = require('./post');
+3 6 var user = require('./user');
+3 7 module.exports = function(app){
+3 8 app.set('view engine', 'ejs');
+3 11 app.use(methodOverride('_method'));
+3 12 app.use(cookieParser());
+3 13 app.use(bodyParser());
+3 14 app.use(methodOverride('_content'));
+3 16 app.get('/', site.index);
+3 17 app.all('/users', user.list);
+3 18 app.all('/user/:id/:op?', user.load);
+3 19 app.get('/user/:id/view', user.view);
+3 20 app.get('/user/:id/edit', user.edit);
+3 21 app.put('/user/:id/edit', user.update);
+3 22 app.get('/posts', post.list);
+4 5 app.engine('html', require('ejs').renderFile);
+4 6 app.set('view engine', 'html');
+4 10 app.use(methodOverride());
+4 11 require('./lib/boot')(app, { verbose:!module.parent });
+4 13 res.locals.error = req.session.error || 'error';
+4 14 res.locals.message = req.session.message ||'message';
+4 15 next();
+4 17 app.use(function(err, req, res, next){
+4 18 res.locals.message = function(msg){
+4 19 msg.should.equal(':message');
+4 20 msg.should.equal(':category', 'baz');
+4 21 msg.should.equal(':year','month', 'day');
+4 22 msg.should.equal(':month', 'day');
+4 24 should.equal(':year','day');
+4 28 res.locals.message = msg;
+4 29 if (err.cause.should.be.a(Error);
+4 30 delete req.session.error;
+4 31 delete req.session.message;
+4 32 res.locals.message = '\';
+4 33 res.locals.message.should.equal('<p>Visit <a href="/__express3">view raw</a>');
+4 36 console.log('Express started on port 3000');
+4 37 }"
+
+5 9 store: new express.Store"
+
+6 2 var app = express();
+6 4 app.use(express.static(__dirname + 'public'));
+6 5 app.use('/static', express.static(__dirname + 'public/css'));
+6 6 app.use(express.static(__dirname + 'public/css')));
+6 8 console.log('listening on port 3000');
+6 9 console.log('try:');
+6 11 console.log('fetchRefs to Infinity');"
+
+7 9 language: 'en',
+7 10 timezone: '',
+7 11 root: '/',
+7 12 permalink: ':year/:month/:day/:title/',
+7 13 path: '/blog',
+7 14 permalink_defaults: {},
+7 15 canonicalDir: false,
+7 16 root: '/2013/08/12/foo-bar/',
+7 17 archiveDir: false,
+7 18 category_dir: false,
+7 19 code_dir: false
+7 22 res.render('index.jade', {
+7 23 locals: {
+7 24 last: 'holowaychuk',
+7 25 generator: 'holowaychuk',
+7 26 preview: false,
+7 27 load: function(path, callback) {
+7 28 return callback();
+7 33 res.render('chat.jade', {
+7 35 title: 'Chat',
+7 36 messages: messages,
+7 37 name: req.session.name,
+7 38 usersOnline: 1
+7 42 if (!module.parent) {"
+
+8 2 app.use(express.logger('dev'));
+8 3 app.use(express.cookieParser('keyboard cat'));
+8 4 app.use(express.session());"
+
+9 5 app.use(session());
+9 6 app.get('/', function(req, res){
+9 7 res.render('session/list', { title: 'Users', users: users });
+9 9 app.get('/user/:id', function(req, res){
+9 10 var id = req.params.id;
+9 11 res.render('user/:id/:op?', { title: 'Users' });
+9 13 app.use(function(req, res){
+9 14 res.render('req.body.html', { title: 'Users' });

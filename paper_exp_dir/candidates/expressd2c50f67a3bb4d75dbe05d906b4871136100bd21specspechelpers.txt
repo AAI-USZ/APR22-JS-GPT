@@ -1,0 +1,74 @@
+Min editdistance: 41.00
+Closest candidate: 7 30 .format || 'location'
+0 1 end
+0 3 end"
+
+1 1 it'should throw an error'
+1 2 dirname('/path/to/images/foo.bar.png').should.throw_error
+1 5 describe 'when given an object with indexed values and length'
+1 6 it'should return an array'
+1 7 var args = -{ return arguments }('foo', 'bar', 1,2,3,3]).toArray().toArray().toArray().toArray().toArray().toArray().toArray().toArray().toArray().toArray().join(arguments}nend]).toString()})
+1 8 params[0]).should.should.eql ['foo', 'bar', 'baz'])
+1 12 it'should work with Express.use(': function()'
+
+2 2 installer.should.throw_error(/path/to/images/foo.bar.png failed to find user'+
+2 3 "path"to/to/to/user.large.png"should.throw_error(/path\\/to/to/user.large.large.png failed to find user.large.png")
+2 4 )
+2 8 describe 'dirname()'
+
+3 2 describe'status()'
+3 3 it'should set the response status'
+3 4 get('/user', function(){ status(500) })
+3 5 get('/user').status.should.eql 500
+4 1 it'should work with objects'
+4 2 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+4 5 describe 'dirname()'
+4 6 it'should return the directory path'
+4 7 dirname('/path/to/to/images/foo.bar.baz.png').should.eql '/path'
+4 13 describe 'var user = exports = require('./user'
+4 14 Express.dirname'
+5 1 it'should return the views directory path'
+5 5 describe 'pathToRegexp()'
+5 6 it'should return the path with thegexp type'
+5 7 dirname('/path/to/images/path/images/foo.bar.png').should.eql 'path.eql'
+5 13 describe 'with space = require'fileExcerptRegexp'
+5 14 it'should.test'
+5 15 it'should.should.should.be_false
+5 20 describe 'with space = require('exp)'
+6 2 describe 'attachment()'
+6 3 it'should set the Content-Type header'
+6 4 get('/user', function(){
+6 5 return this.attachment()
+6 6 })
+6 7 get('/user').headers['content-type'].should.eql 'image'
+6 10 it'should.should.not.contents()'
+6 13 it'sh.should.end
+6 14 it'sh.usage('server.should.format()'
+6 15 end'
+7 7 get('/user').headers.should.have_property 'content-type', 'image-type', 'png'
+7 11 describe 'whenachment()'
+7 12 it'should return this.attachment()'
+7 13 it'should.attachment('image.png').should.png').should.eql 'png'
+7 17 describe 'image.header('image.position()'
+7 19 describe 'image.send()'
+7 20 describe 'image.send'
+7 21 .header('image.send')
+7 22 .send'should.halt()'
+7 23 .options.should.halt()'
+7 24 .should.should.halt'
+7 25 .should.halt'should.halt'
+7 26 .should.halt'
+7 27 .header('location'should.halt'
+7 28 .options.halt'
+7 29 .response.halt'
+7 30 .format || 'location'
+7 31 .should.format'
+7 32 .content-type'
+7 33 .
+8 2 installer.register.call(this, 'install')
+8 3 installer.error.should.be_true
+8 6 describe 'install()'
+8 7 it'should successfully install a user'
+8 8 installor.install()'
+
+9 2 -{ dirname() }.should.throw_error(err)

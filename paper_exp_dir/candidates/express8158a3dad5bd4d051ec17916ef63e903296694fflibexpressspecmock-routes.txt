@@ -1,0 +1,359 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 Express.plugins = []
+0 1  }
+0 2 Express.plugins = []
+0 3 Express.settings = {}
+0 4 Express.params = {}
+0 5 Express.params.path = path
+0 6 Express.errorHandler.error = Express.server.callback.error
+0 7 response.sendHeader(Express.response.status, Express.hashToArray(Express.response.headers)))
+0 8 response.sendBody(Express.response.body || '')
+0 9 response.finish()
+0 10 }
+0 12 describe \'Express\'
+0 13 describe \'.version\'
+0 14 it\'should be properly formatted\'
+0 15 Express.version.should.match /\\d+\\.\\d+\\.\\d+/"/
+0 16 end
+0 18 describe \'.parseNestedParams()\'
+0 19 it\'should parse nested params hash provided by node\'
+0 20 params = { \'foo\' : \'bar\', \'user[name]\' : \'tj\', \'user[info][email]\' : \'tj@vision-media.ca\', \'user[info][city]\' : \'Victoria\' }
+0 21 nested = Express.parseNestedParams(params)
+0 22 nested.foo.should.eql \'bar\'
+0 23 nested.user.name.should.eql \'tj\'
+0 24 nested.user.info.email.should.eql \'tj@vision-media.ca\'
+0 25 nested.user.info.city.should.eql \'Victoria\'
+0 28 describe \'.parseCookie()\'
+0 29 it\'should parse cookie pairs\'
+0 30 cookie = \'expires=Fri, 31-Dec-2010 23:59:59 GMT; path=/; q=foo%3dbar; domain=example.net\'
+0 31 parts = Express.parseCookie(cookie)
+0 32 parts.split(/Set(\'Set-Cookie\')).should.eql { expires: \'Fri, 31-Dec-Dec-Mon-Mon-2010 23:59:59:59:59:59 GMT\' }\', path: \'foo=;q=bar\' }
+0 33 parts.split(Set-Bar-Bar= \'baz\' }\')
+0 37 describe \'.signedCookies = Express.s = Express.signedCookies = { a: Set-Cookie, Set-Cookie, secret, value: \'foo\'redirectory=; path, path, s=red; q=foo\' }'\', body;
+0 38 it\'Only\'should mergeCookies=somethingredirects=redirects=something\'
+0 39 Express.cookie.expandFiles = { path, domain=redirects, expires: \'foo=bar\' }
+1 2 function body(body) {
+1 3 return body.toString()
+1 5 var s = this.param('user', function() {
+1 6 return this.param('name', arguments)
+1 7 })
+1 8 returns({ user: s, name: s, role: 'admin' })
+1 10 reset = function() {
+1 11 Express.routes. = []
+1 15 Express.uri.path = exports.normalizePath(Express.uri.path)
+1 16 Express.settings.post = '12345'
+1 17 Express.plugins.each(function(plugin){
+1 18 if (key in plugin.settings)
+1 19 plugin.settings[key] = this.param('key')
+1 22 function normalizePath(path) {
+1 23 return path.replace(/[\\s\\/]*$/g, \'\')
+1 25 exports.create = function(middleware) {
+1 26 return function(request, response) {
+1 27 for (var i = 0, len = middleware.length; i < len; ++i) {
+1 28 var item = middleware[i],
+1 29 fn = middleware.pop(),
+1 30 done = function(str) {
+1 31 if (str) return fn(str)
+1 35 exports.createReporters = function(middleware) {
+1 36 return new Class({
+1 37 constructor: function(options) {
+1 39 constructor: function(request, response) {
+1 40 this.merge(request)
+1 41 this.request, response)
+1 43 },
+1 46 })"
+
+2 2 Express.plugins.get('/', function(req, res){
+2 3 res.body.should.equal("This is no slashes');
+2 4 res.status.should.equal(200);
+2 5 default: function(){ this.status(404) }
+2 7 Express.plugins.get('/xxx', function(req, res){
+2 8 res.body.should.equal('xxx');
+2 9 res.headers.should.have.property(\'content-type\', \'application/json\');
+2 10 request.uri.should.equal(path);
+2 11 fn.should.equal(false);
+2 13 Express.plugins.post('/', function(req, res){
+2 14 this.passed = true;
+2 15 this.isCaptured();
+2 16 return this;
+2 17 });
+2 18 Express.plugins.get(\'/logout\', function(req, res){
+2 19 this.status = 302;
+2 20 this.header(\'Location\', \'/\');
+2 21 res.send(this.body);
+2 23 Express.server.run(function(){
+2 24 return this.isCaptured();
+2 27 function restrict(str) {
+2 28 return str.substr(0, str.length - 1);
+2 30 exports.server = createExpress.server;
+2 31 exports.server.listen = createExpress.server;
+2 32 exports.server.get(\'/', function(req, res){
+2 33 res.body.should.equal(\'localhost\');
+2 37 Express.server.get(\'/bob\', function(req, res){
+2 38 res){
+2 39 return this.session.session.isCaptured();
+2 40 this.lastAccessed();
+2 41 this.lastAccessed = true;
+2 42 this.session.lastAccessed = false;
+2 43 this.session.session.destroyed = false;
+2 44 this.session.destroyed = false;
+2 46 this.engines.session.req.session.res = null;
+2 47 this.session.notFound = false;
+2 48 this.session.req.session.session.isCaptured = false;
+2 49 this.session.req.resalt = false;
+2 50 this.session.session.isLocked = false;
+2 51 this.session.isReady = false;
+2 52 this.session.session.lastAccessed = false;
+2 54 this.session.server.callback.set(\'done\', null;
+2 56 \
+3 3 Express.params = { get: function(val) {
+3 4 return val === undefined }
+3 7 function route(method) {
+3 8 return function(path, options, fn){
+3 9 if (options instanceof Function)
+3 10 fn = options, options = {}
+3 11 if (fn instanceof Function)
+3 12 Express.routes.push(new Route(method, path, fn, options))
+3 13 else
+3 14 return request(method, path, options, fn)
+3 17 exports.mime = function(ext) {
+3 18 if (ext && renderer.isString(ext)) return
+3 19 return (
+3 20 Express.server.mime.get(ext),
+3 21 function send(body) {
+3 22 var req = this.req
+3 23 , head = \'HEAD\' == this.req.method
+3 24 , len;
+3 25 if (2 == arguments.length) {
+3 26 if (\'number\'!= typeof body && \'number\' == typeof arguments[1]) {
+3 27 this.statusCode = arguments[1];
+3 28 } else {
+3 29 this.statusCode = body;
+3 30 body = arguments[1];
+3 33 exports.isAbsolute = function(path) {
+3 34 if (\'/\' == path[0]) return true;
+3 35 if (\':\' == path[1] && \'\\\\\' == path[2]) return true;
+3 36 };
+3 37 exports.flatten = function(arr, ret) {
+3 38 var ret = ret || []
+3 39 , len = arr.length
+3 40 , ret.forEach(function(fn) {
+3 41 if (typeof ret === \'function\') {
+3 42 fn = ret.push(fn)
+3 44 , ret.should.push(arr[1] = ret;
+3 46 ret.push(arr[0] = ret;
+3 49 return ret;
+3 50 }).join(''
+
+4 2 Express.plugins.get('/', function(){})
+4 3 Express.plugins.get('/user/:id', function(){})
+4 4 Express.plugins.put('/user/:id', function(){})
+4 5 Express.plugins.get('/user/:id/:op', function(){})
+4 6 Express.plugins.get('/user/:id/edit', function(){})
+4 7 Express.plugins.get('/post/:id/:op', function(){})
+4 8 Express.plugins.get('/user/:id/:op?', function(){})
+4 9 Express.plugins.put('/user/:id/edit', function(){})
+4 10 Express.plugins.get('/post/:id/edit', function(){})
+4 13 Express.plugins.put('/post/:id', function(){})
+4 14 Express.plugins.get('/post/:id/:op?', function(){})
+4 20 return Express.server.respond()
+4 21 Express.server.finished()
+4 24 function createExpress() {
+4 25 var app = express.createServer()
+4 26 , blog = express.createServer()
+4 27 , blogAdmin = express.createServer()
+4 28 , admin = express.createServer()
+4 29 , cookie = express.createServer()
+4 30 , site = express.createServer()
+4 31 , map = express.createServer()
+4 32 , done = express.createServer()
+4 33 , view = express.createServer
+4 34 , path = express.createServer = express.createServer()
+4 36 ,
+4 37 , endServer = express.createServer = express.createServer
+4 38 , delay = express.createServer
+4 39 , clearServer = require('root')
+4 40 , sync = require('staticFolder) == partials
+4 41 , view = request = app.createServer = app.set('root') == null
+4 42 , viewHelpers = app.get('views')
+4 43 , url = app.get('root')
+4 44 , view = app.get('static')
+4 45 , viewHelpers = users = users')
+4 46 , route = app.get('directive = users')
+5 3 res.body.should.equal("Error: routes[0] not found")
+5 4 done()
+5 6 return response.end()
+5 9 describe('server', () => {
+5 10 it("should return the server after all files have been preprocessed with an array environment", () => {
+5 11 var server = create()
+5 12 server.callback = get(\'test\')
+5 13 server.uri.path = args.normalize(args.normalizePath(answers))
+5 14 server.callback.reporters.should.have.length(0)
+5 16 it("should allow multiple capture groups", () => {
+5 17 var user = create(server)
+5 18 server.callback.calledWith(user)
+5 19 server.uri.path = args.normalizePath(answers.basePath)
+5 22 it("should allow an uncached connection", () => {
+5 23 var remote = create(server)
+5 24 server.callback.calledWith(remote)
+5 25 server.uri.path.should.equal(ADAPTER_DISCONNECTED)
+5 27 it("should work with IPv6 Host and port', () => {
+5 29 remote.chostname = \'localhost\',
+5 30 hostname: hostname,
+5 31 port: port,
+5 32 urlRoot: \'/\',
+5 33 httpVersion: \'127.0.1\',
+5 35 proxy: {protocol: {protocol: "https: https"}}
+5 37 var data = {name: {
+5 38 headers: {
+5 39 headers: { port: {protocol: hostname: hostname: hostname, port: hostname, port: port, urlRoot}
+5 44 server.start()
+5 45 server.on(\'error
+5 48 server.on(\'response
+5 49 function handlerRun() {
+5 50 server.run() {
+5 51 server.on(callback, handler)
+5 52 return handler.apply(this, this, arguments)
+5 57 })'
+
+6 4 Express.params.settings.hasOwnProperty = true
+6 6 if (\'init\' in plugin.klass)
+6 7 plugin.klass.init(plugin.options)
+6 9 return Express.server.runInject(request, response)
+6 12 function loadUser(req, res, next) {
+6 13 var user = users[0];
+6 14 if (user) {
+6 15 req.user = user;
+6 16 next();
+6 18 next(new Error("failed to load user"));
+6 21 function andRestrictToSelf(req, res, next) {
+6 22 if (req.authenticatedUser.id == req.user.id) {
+6 25 next(new Error("Unauthorized"));
+6 28 function andRestrictTo(role) {
+6 29 return function(req, res, next) {
+6 30 if (
+6 31 req.authenticatedUser.role == role &&
+6 32 req.headers.protocol == 'https:') {
+6 38 exports.create = create
+6 39 exports.normalise = create
+6 41 exports.update = create
+6 42 exports.normalize = create
+6 45 exports.normalize = normalize
+6 46 exports.create = normalize = normalize
+6 48 exports.normalize = normalize = normalize
+6 49 exports.save = normalize = normalize
+6 50 exports.normalize = normalize'
+
+7 2 response.body = body
+7 3 Express.response.status = 200
+7 4 Express.request = fn
+7 5 response.headers = headers
+7 6 Express.hooks.forEach(function (fn) {
+7 7 request.callback.apply(this, arguments)
+7 9 return response
+7 11 function run(method, path, options, fn) {
+7 12 return this.find(function(res){
+7 13 return true == method
+7 15 this.method = method
+7 16 this.uri.path = path
+7 17 this.header('x-powered-by', 'http')
+7 18 Express.server.run(this, request)
+7 22 Express.routes = []
+7 25 Express.settings.settings.try '0.0.0-parallel = noop
+7 26 Express.settings.vhost = 'localhost\'
+7 27 Express.settings.host = 'https://example.com'
+7 28 Express.settings.vhost = 'https://example.com'
+7 29 Express.settings.commit = '2.0.0'
+7 30 Express.settings.something = Express.settings.commit
+7 31 Express.settings.something = Express.settings.something
+7 32 Express.params = Express.params
+7 33 Express.response.body = Express.server.request.body
+7 35 Express.request = request
+7 36 Express.response.body = Express.callRouteFor(request)
+7 37 response.sendHeader(Express.response.status, Express.hashToArray(Express.response.headers))
+7 38 response.sendBody(Express.response.body || \'\')
+7 43 return function(path, options, fn) {
+7 44 if (options instanceof options == 2) throw new MockRequest(method, options = options)
+7 46 Express.constructor.path instanceof options === \'function should.callback.callback)
+7 47 Express.callback.path.callback.callback.path = path
+7 48 Express.should.should.eql \'all = options
+7 49 fn = fn
+7 50 Express.path = fn
+7 51 Express.params.options = normalizePath(path)
+7 52 Express.fn = normalize(Express.normalizePath(path)
+7 55 }'
+
+8 2 function __with__(chunk, callback) {
+8 3 return callback()
+8 4 .replace(/\
+8 5 function(){/, \'\
+8 6 return \'\
+8 7 }\', callback)
+8 8 .replace(/[^\\w\\d]+/g, \'\
+8 9 \')
+8 10 .replace(/\\r\
+8 11 function(){/, \'\\r\
+8 12 return \'}\', callback)
+8 13 .replace(/\\u2028/g, \'\\\\u2028\')
+8 14 .replace(/\\u3029/g, \'\\\\u3029\')
+8 15 .replace(/\\u2029/g, \'\\\\u3029\')
+8 16 .replace(/\\u2029/g, \'\\\\u2029\')
+8 20 .replace(/\\u2C/g, \'\\\\u2C\')
+8 22 .replace(/\\u01DE/g, \'\\\\u01DE\')
+8 23 .replace(/\\u023).send(98);
+8 25 function callback(method) {
+8 29 Express.server.callback.apply(this, arguments)
+8 31 this.connection.port = options.port
+8 32 this.server.callback.middleware = fn
+8 33 Express.settings.dynamicServer.s = options.directs = options.directs
+8 34 Express.errorHandler.errorHandler.should.formatPath
+8 35 config.formatPath = options.formatters = options.formatters = []
+8 36 Express.compress = []
+8 37 Express.root = []
+8 38 Express.proxhr = []
+8 41 Express.writeConfig = {}
+8 42 configure('compressNODE_ENVARS = {}
+8 43 )
+9 2 function halt() {
+9 3 return this.routes.push({
+9 4 throws: this.body.routes,
+9 5 format: 'dev'
+9 9 this.routes.shift({
+9 13 function get(url) {
+9 14 return this.url
+9 16 exports.create = function(options, fn) {
+9 17 if (typeof options === \'function\') {
+9 20 return new MockRequest(method, this.uri.path, options)
+9 22 exports.normalize = function(url) {
+9 23 return $(this.url).replace(/[\\s\\/]*$/g, \'\')
+9 25 exports.createServer = function(options, fn) {
+9 29 var server = this.server
+9 30 server.get(options, fn)
+9 31 server.set(options, this.uri.path, options)
+9 32 server.reject(new Error("No provider for "pre-process")`))
+9 33 return server
+9 35 exports.normalizeTypes = function(types) {
+9 36 var ret = []
+9 37 for (var i = 0; i < types.length; ++i) {
+9 38 ret.push(~types[i].indexOf(\'/\')
+9 39 ? types[i]
+9 40 : mime.lookup(types[i])
+9 42 return ret
+9 44 exports.contentType = function(type) {
+9 45 return this.header(\'content-type\', type)
+9 48 exports.redirect = function(type, url, headers, hostname, port, hostname, urlRoot, upstreamProxy, proxy, proxyPath) {
+9 49 if (config) {
+9 50 if (config.proxhrag = upstreamProxy) {
+9 51 if (config.proxies = upstreamProxy) {
+9 52 port = upstreamProxy.path = upstreamProxy.path
+9 54 hostname = upstreamProxy.hostname
+9 55 proxy = upstreamProxy.hostname
+9 56 port = hostname
+9 57 port = port = upstreamProxy.hostname
+9 58 url = port
+9 60 var get(port = upstreamProxy.hostname = port || upstreamProxy.path + url, hostname)
+9 61 var urlRoot + urlRoot
+9 62 var urlRoot = upstreamProxy = upstreamProxy.path + urlRoot
+9 63 var headers = upstreamProxy.path = upstreamProxy.path
+9 64 var regexpossible = hostname
+9 65 if (proxies = hostname

@@ -1,0 +1,33 @@
+Min editdistance: 7.00
+Closest candidate: 2 2 return `<div class="video-container"><iframe src="https://www.youtube.com/embed/${id}" frameborder="0" loading="lazy" allowfullscreen></iframe></div>`;
+0 1 return `<div class="video-container"><iframe src="//www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe></div>`;
+0 2 }
+0 3 module.exports.classes = youtubeTag;'
+
+1 1 '
+
+2 1 const title = args[1];
+2 2 return `<div class="video-container"><iframe src="https://www.youtube.com/embed/${id}" frameborder="0" loading="lazy" allowfullscreen></iframe></div>`;
+2 4 module.exports.const css = args.length? [args.join(\' \') : ["
+
+3 1 while (!args.length) {
+3 2 return args.length;
+3 4 return args[0];'
+
+6 1 return new youtubeTag({
+6 2 id: id || \'divider_card\',
+6 3 rel: \'<div class="video-container"><iframe src="//www.youtube.com/embed/\' + id + \'" width="560" height="315" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>\');
+6 5 it(\'width - options\', async () => {
+6 6 const result = pullquote([], raw);
+6 7 result.should.eql(\'<iframe src="https://www.youtube.com/embed/\' + id + \'" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>\');
+6 8 });'
+
+7 1 return new Promise((resolve, reject) => {
+7 2 const src = args[0];
+7 3 return fs.exists(src).then(exist => {
+7 4 if (exist) return resolve();
+7 5  reject(new Error(\'id required\'));
+7 6 }).asCallback(callback);
+7 7 });
+7 9 module.exports.skip = [\'foo\'];'
+

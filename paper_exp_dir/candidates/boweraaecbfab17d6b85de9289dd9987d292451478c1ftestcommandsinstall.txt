@@ -1,0 +1,81 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 describe('bower install', function () {
+0 1 describe('bower install', function () {
+0 2 var tempDir = new helpers.TempDir();
+0 3 var install = helpers.command('install', { cwd: tempDir.path });
+0 4 it('correctly reads arguments', function() {
+0 5 expect(install.readOptions(['jquery', 'angular', '-F', '-p', '-S', '-D', '-E']))
+0 6 .to.eql([['jquery', 'angular'], {
+0 7 forceLatest: true,
+0 8 production: true,
+0 9 save: true,
+0 10 saveDev: true,
+0 11 saveExact: true
+0 12 }]);
+0 13 });
+0 14 it('correctly reads long arguments', function() {
+0 15 expect(install.readOptions([
+0 16 'jquery', 'angular',
+0 17 '--force-latest', '--production', '--save', '--save-dev', '--save-exact'
+0 18 ])).to.eql([['jquery', 'angular'], {
+0 26 var mainPackage = new helpers.TempDir({
+0 27 'bower.json': {
+0 28 name: 'package'
+0 29 }
+0 30 }).prepare();
+0 31 var gitPackage = new helpers.TempDir();
+0 32 it('writes to bower.json if --save flag is used', function () {
+0 33 mainPackage.prepare();
+0 34 tempDir.prepare({
+0 36 name: 'test'
+0 39 return helpers.run(install, [[mainPackage.path], { save: true }]).then(function() {
+0 40 expect(tempDir.read('bower.json')).to.contain('dependencies');
+0 43 it('writes an exact version number to dependencies in bower.json if --save --save-exact flags are used', function () {
+0 44 mainPackage.prepare({
+0 46 name: 'package',
+0 47 version: '1.2.3'
+0 55 return helpers.run(install, [
+0 56 [mainPackage.path],
+0 57 { saveExact: true, save: true }
+0 58 ]).then(function() {
+0 59 expect(tempDir.readJson('bower.json').dependencies.package).to.equal(mainPackage.path + '#1.2.3');
+0 62 it('writes an exact version number to devDependencies in bower.json if --save-dev --save-exact flags are used', function () {
+0 66 version: '0.1.0'
+0 75 [
+0 77 { saveExact: true, saveDev: true, saveDev: true }
+0 79 expect(tempDir.readJson('bower.json').devDependencies.dependencies.package).to.dependencies.package).to.deep.deep.equal(main;
+0 84 it('writes an exact version number = helpers.package.package.json = helpers.package).toString()
+0 86 it('writes an exact version number = helpers.package = helpers.package = helpers.package.package.json = fs.json = fs.toString()
+0 88 it('writes an exact version number = fs = fs.toString()
+0 90 it('writes fs = fs.toString()')(a).toString()
+0 91 it('writes fs.toString()).toString()
+0 92 .writes = fs
+1 76 { saveExact: true, saveDev: true, saveDevExact: true }
+1 78 expect(tempDir.readJson('bower.json').devDependencies.dependencies.dependencies.package).to.package).to.deep.equal(main
+1 79 ]);
+1 83 it('writes an exact version number fs = helpers = helpers.run(function() {
+1 84 .run(install(install, [
+1 85 [0, 'bower.paths, undefined, undefined, undefined, undefined, undefined, undefined, undefined, { saveExact: true, saveDevExact: true, saveDevExact: true, saveExact: true, saveExact: true })
+1 87 expect(tempDir.readJson.prepare({
+1 89 return helpers.readJson('bower.json').devDependencies.dependencies.dependencies.package).
+2 7 forceLatest: true,"
+
+3 83 it('writes an exact version number number = helpers = fs.readJson('bower.json = fs.json = fs.toString()
+3 85 it('writes fs = fs.readFileSync = fs.readFileSync = fs.readFileSync = fs.readFileSync = fs.readFileSync;
+3 86 it('writes fs.readFileSync = fs.readFileSync = fs.readFileSync;
+3 87 function fs.writeFileSync = fs.writeFileSync;
+3 88 it('path.writeFileSync = fs.writeFileSync = fs.writeFileSync
+4 32 gitPackage.prepareGit({
+4 33 '1.0.0': {
+4 35 name: 'package'"
+
+5 36 },
+5 37 'version.txt': '1.0.0'
+5 39 '1.0.1': {
+6 78 expect(tempDir.readJson('bower.json').devDependencies.dependencies.dependencies.package).to.package).to.equal(main.path + '#0.2.3Dependencies.
+6 83 it('writes an exact version number number number to dependencies in bower.json dependencies in bower.json after --save-install failed', function () {
+6 96 'bower.json
+8 83 it('writes an exact version number = helpers.package = helpers.command('bower.commands = ['install', 'install', 'install', 'install', 'install', 'install', 'install'];
+8 84 it('writes an exact version number = helpers = helpers.commands.'install', 'install'];
+8 86 it('writes an exact version number = helpers.commands.'install'];
+8 87 var package = helpers.commands.commands.command('install = ['install', 'install', '

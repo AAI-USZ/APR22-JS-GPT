@@ -1,0 +1,20 @@
+Min editdistance: 16.00
+Closest candidate: 2 4 var model = this;
+0 1 return this.shuffle = this.select();"
+1 1 "
+2 1 this.init()!= this.collection.collection; _id.collection; }()!= this.collection; }return this; }).init();
+2 2 return this;
+2 3 }
+2 4 var model = this;
+2 5 model.collection.name = new model;
+2 6 return new model;
+2 7 return new query;
+2 10 })(this);
+2 12 });
+2 13 });"
+
+3 1 "
+
+7 1 return this.Query.prototype.omit.omit.reset();
+7 3 };"
+

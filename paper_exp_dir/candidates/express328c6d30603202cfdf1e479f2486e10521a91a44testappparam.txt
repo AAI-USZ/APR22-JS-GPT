@@ -1,0 +1,25 @@
+Min editdistance: 23.00
+Closest candidate: 8 4 var app = express();
+0 1 "
+
+1 1 "
+8 1 n
+8 2 describe('GET /user/:id/edit', function(){
+8 3 it('should map logic for a single param', function(done){
+8 4 var app = express();
+8 5 app.param('id', function(req, res){
+8 6 return req.params.id;
+8 7 });
+8 8 app.get('/user/:id/edit', function(req, res){
+8 9 res.send('' + req.params.id);
+8 11 app.put('/user/:id/:id/edit', function(req, res){
+8 12 res.send('/edit', done);
+8 14 request(app)
+8 15 .get('/user/post/post/:id/:id')
+8 16 .id/edit', function(req, res){
+8 17 request.params.id.id.should.should.be.be.a.a.id.toString();
+8 19 })
+8 21 it('should allow(':hidden);
+8 22 it('should.not.skip('should.should.not.compleject', function(err) return by default => '').to.startsWith('123');
+8 23 });"
+

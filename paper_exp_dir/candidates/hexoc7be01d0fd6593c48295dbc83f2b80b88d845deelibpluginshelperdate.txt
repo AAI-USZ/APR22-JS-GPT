@@ -1,0 +1,56 @@
+Min editdistance: 3.00
+Closest candidate: 1 29 if (format){
+0 1 return date.format(format);
+0 2 }
+0 3 function toISOString(date){
+0 4 if (date == null){
+0 5 return new Date();
+0 6 } else {
+0 7 return new Date(date);
+0 10 function dateHelper(date, format){
+0 11 var config = this.config;
+0 12 return output(date, format || config.date_format, getLanguage(this), config.timezone);
+0 14 function fromNowHelper(date){
+0 16 return output(date, null, getLanguage(this), config.timezone);
+0 18 function timeHelper(date, format){
+0 20 return output(date, format || config.time_format, getLanguage(this), config.timezone);
+0 22 function fullDateHelper(date, format){
+0 23 return output(date, format || config.time_format, getLanguage(this), this.config.timezone);
+0 25 function timeTagHelper(date, format){
+0 27 return \'<time datetime="\' + toISOString(date) + \'">\' + this.date(date, format, getLanguage(this), config.timezone) + \'</time>\';
+0 29 function getLanguage(ctx){
+0 30 return ctx.page.lang || ctx.page.language || ctx.config.language;
+0 32 exports.date = dateHelper;
+0 33 exports.date_fromNow = fromNowHelper;
+0 34 exports.date_xml = toISOString;
+0 35 exports.time = timeHelper;
+0 36 exports.full_date = fullDateHelper;
+0 37 exports.time_tag = timeTagHelper;
+0 38 exports.moment = moment;'
+
+1 1 if(format!== null){
+1 4 return date.fromNow();
+1 9 return new Date().toISOString();
+1 11 if (date instanceof Date || isMoment(date)){
+1 12 return date.toDate();
+1 14 return new Date(date).toISOString();
+1 29 if (format){
+1 30 return output(format, format);
+1 32 return this.date(date) +\'\' + this.time(date);
+1 46 exports.relative_date = relativeDateHelper;
+2 1 if(format!== null) {
+2 18 return output(date, format || config.date_format + config.time_format);
+2 22 return output(date, format || config.time_format + config.time_format);
+2 28 return this.date(date) + format;
+3 6 } else if (isMoment(date)){
+3 14 return output(date, format || config.date_format + getLanguage(this), config.timezone);
+3 22 return output(date, format || config.time_format + getLanguage(this), config.timezone);
+3 26 return output(date, format, getLanguage(this), this.config.timezone);
+4 8 return date.toDate().toISOString();
+5 30 return output(format, format, getLanguage(this), this.config.timezone);
+6 22 return output(date, format, getLanguage(this), format);
+6 29 return \'<time datetime="\' + toISOString(date) + \'">\' + this.date(date, format, getLanguage(this), format));
+7 7 if (date instanceof Date){
+7 8 return date.toISOString();
+8 1 return date;
+8 24 return this.date(date) + getLanguage(this), this.config.timezone);

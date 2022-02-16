@@ -1,0 +1,47 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 if (!name) throw new ExtendError('name is required');
+0 1 if (!name) throw new TypeError('name is required');
+0 2 if (typeof fn!== 'function') throw new TypeError('fn must be a function');
+0 3 if (options){
+0 4 if (options === null){
+0 5 throw new TypeError('fn must be a function');
+0 6 } else {
+0 7 options = {};
+0 8 }
+0 9 var tag = {
+0 10 name: name,
+0 11 ends: options.ends
+0 12 };
+0 13 tag.parse = function(str, line, parser, types, options){
+0 14 parser.on('*', function(token){
+0 15 if (token.type === types.WHITESPACE || token.type === types.BLOCK_END){
+0 16 tag = new RegExp(placeholder + '(' + token.value + '), '$');
+0 18 tag = new RegExp(placeholder + '-', 'g');
+0 20 return true;
+0 21 });
+0 22 return tag.compile(tag.ends, options);
+0 23 };"
+
+1 2 if (typeof fn!== 'function') throw new TypeError('fn must be a function');"
+
+3 1 if (!name) throw new ExtendError('name is required');
+3 2 if (typeof fn!== 'function') throw new ExtendError('fn must be a function');
+3 4 if (typeof options === 'boolean'){
+3 5 options = {ends: options};
+3 18 if (token.type === types.WHITESPACE){
+3 19 this.out.push(' ');
+3 21 token.type = types[0];
+3 23 return parser.compare(args, 1);
+3 34 tokens.type = types[0];
+3 49 return tag.compare(args, 1);
+4 11 ends: options,
+4 12 name: ends
+4 19 tag.parse(str, line, parser, types, options);
+4 26 var tag = Tag.prototype.register;"
+
+5 2 if (typeof fn!== 'function') throw new ExtendError('fn must be a function');"
+
+6 2 if (typeof fn!== 'function') throw new ExtendError('fn is required');"
+
+9 1 if (!name) throw new TypeError('name is required');"
+

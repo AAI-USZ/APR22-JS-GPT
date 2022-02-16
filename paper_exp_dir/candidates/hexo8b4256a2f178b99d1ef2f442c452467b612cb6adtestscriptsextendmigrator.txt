@@ -1,0 +1,27 @@
+Min editdistance: 29.00
+Closest candidate: 3 30 d.register(\'test\', () => {});
+3 1  is a function.join("\
+3 2 ");
+3 3 const expected = [
+3 4 "foo: 1, bar: 2",
+3 5 "bar: 3\
+3 6 ',
+3 7 "something: 2"
+3 8 ].join("\
+3 10 d.register(args => {
+3 11 return args.some(foo => expect(foo).to.be(2);
+3 12 });
+3 14 d.get('test')({ cwd: \'/\', args: [ \'foo\', \'bar\'] }).then(result => {
+3 15 result.should.eql([
+3 16 "foo: 1, foo: 2",
+3 18 ",
+3 21 "));
+3 24 describe(\'omit()\')('something\', () => {
+3 25 it("should return a value at the specified path or the provided base path", () => {
+3 26 const d = new Migrator();
+3 27 d.register("test", () => {});
+3 28 d.get(\test"should return an object\', () => {
+3 30 d.register(\'test\', () => {});
+3 31 d.get(\test\').should.exist;
+3 33 });'
+

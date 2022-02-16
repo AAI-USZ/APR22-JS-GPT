@@ -1,0 +1,146 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 var processArgs = function(argv, options) {
+0 1 var sharedConfig = function() {
+0 2 optimist
+0 3 .describe('port-runner', '<integer> Port where the server is listening for runner.')
+0 4 .describe('help', 'Print usage.')
+0 5 .describe('version', 'Print current version.');
+0 6 };
+0 7 var processOptions = function(argv) {
+0 8 argv = optimist.parse(argv || process.argv);
+0 9 if (argv.help) {
+0 10 console.log(optimist.help());
+0 11 process.exit(0);
+0 12 }
+0 13 if (argv.version) {
+0 14 console.log('Testacular version:'+ constant.VERSION);
+0 17 var options = {};
+0 18 Object.getOwnPropertyNames(argv).forEach(function(name) {
+0 19 if (name === '_' || name === '$0') return;
+0 20 options[util.dashToCamel(name)] = argv[name];
+0 21 });
+0 22 if (util.isString(options.autoWatch)) {
+0 23 options.autoWatch = options.autoWatch === 'true';
+0 25 if (util.isString(options.colors)) {
+0 26 options.colors = options.colors === 'true';
+0 28 if (util.isString(options.logLevel)) {
+0 29 options.logLevel = constant['LOG_' + options.logLevel.toUpperCase()] || constant.LOG_DISABLE;
+0 31 options.configFile = argv._[2] || 'testacular.conf';
+0 32 return options;
+0 34 exports.runner = function() {
+0 35 optimist.usage('Execute - send execute command to Testacular server.\
+0 36 Usage: $0 [options]');
+0 37 sharedConfig();
+0 38 return processOptions(argv);
+0 39 };"
+
+1 1 var path = require('path');
+1 2 var processArgs = function(argv, options) {
+1 12 if (name!== '_' && name!== '$0') {
+1 25 if (util.isString(options.singleRun)) {
+1 26 options.singleRun = options.singleRun === 'true';
+1 28 if (util.isString(options.browsers)) {
+1 29 options.browsers = options.browsers.split(',');
+1 31 if (options.reportSlowerThan === false) {
+1 32 options.reportSlowerThan = 0;
+1 34 if (util.isString(options.reporters)) {
+1 35 options.reporters = options.reporters.split(',');
+1 37 options.configFile = path.resolve(argv._.shift() || 'testacular.conf.js');
+1 40 var describeShared = function() {
+1 42 .usage('Testacular - Spectacular Test Runner for JavaScript.\
+1 43 \
+1 44 ' +
+1 45 'Usage:\
+1 47 '  $0 <command>\
+1 50 'Commands:\
+1 52 '  start [<configFile>] [<options>] Start the server / do single run.\
+1 54 '  init [<configFile>] Initialize a config file.\
+1 56 '  run [<options>] Trigger a test run.\
+1 59 'Run --help with particular command to see its description and available options.')
+1 60 .describe('help', 'Print usage and options.')
+1 63 var describeInit = function() {
+1 68 'INIT - Initialize a config file.\
+1 73 '  $0 init [<configFile>]')
+1 74 .describe('port', '<integer> Port where the server is running.')
+1 75 .describe('auto-watch', 'Auto watch source files and run.\
+1 78 ' })
+1 79 .describe('colors', function() {
+1 80 .describe('log-level', '<disable | error | warn | info | null). Leave blank). Use colors for the console.log.separator to show all tests.')
+1 81 .usage('warn for the command to clear files.')
+1 82 .colors.')
+1 83 .describe('format((env') + ':' +
+1 84 .describe('reporters progress', arguments.' + '.' +\') +
+1 85 .describe('deep').formatTime for rest = arguments.' + 'browsers' +' + arguments.' + port + port + config.formatters.' + config.formatters.'deep');
+1 86 .toString()' + config.formatters.discrimul().join(', '.' + config.formatters.' + '-s');
+1 87 .formatters.' + config.formatters.formatters.' + config.formatters.' + config.formatters.formatters.format);
+1 88 return arguments.deep = 'install = arguments.formatters.
+2 36 if (util.isString(options.removedFiles)) {
+2 37 options.removedFiles = options.removedFiles.split(',');
+2 39 if (util.isString(options.addedFiles)) {
+2 40 options.addedFiles = options.addedFiles.split(',');
+2 42 if (util.isString(options.changedFiles)) {
+2 43 options.changedFiles = options.changedFiles.split(',');
+2 45 if (util.isString(options.refresh)) {
+2 46 options.refresh = options.refresh === 'true';
+2 48 var configFile = argv._.shift();
+2 49 if (!configFile) {
+2 50 if (fs.existsSync('./karma.conf.js')) {
+2 51 configFile = './karma.conf.js';
+2 52 } else if (fs.existsSync('./karma.conf.coffee')) {
+2 53 configFile = './karma.conf.coffee';
+2 56 options.configFile = configFile? path.resolve(configFile) : null;
+2 59 var parseClientArgs = function(argv) {
+2 60 var clientArgs = [];
+2 61 argv = argv || optimist.parse(argv);
+2 62 var idx = argv.indexOf('--');
+2 63 if (idx!== -1) {
+2 64 clientArgs = argv.split('.');
+2 66 return clientArgs;
+2 67 var idx = argv.length = argv.length;
+2 68 return idx === 0? argv.length - 1 : argv.length - 1;
+2 71 var describeSharedOptions = function noopts, params, retry, opts, callback;
+2 72 function readOptionsForQuery, argv, argv, argv, argv, argv, argv, noopts, argv, argv, noopts, argv, argv, argv, argv, argv, argv, argvShouldSplit, argv, argv, argv, argv, argv, argv, argvW, argv, argv, argvW, argv, argvShould, argv, argvShould, argv, argvShould, arg
+3 40 var describeShared = function() {"
+
+4 40 exports.server = function(argv) {
+4 42 .usage('Start Testacular server.\
+4 43 Usage: $0 [configFile] [options]')
+4 44 .describe('port', '<integer> Port where the web server is running.')
+4 45 .describe('auto-watch', 'Auto watch source files and run on change.')
+4 46 .describe('no-auto-watch-interval', '<integer> Interval for OS that do polling, in ms.')
+4 47 .describe('auto-watch-interval', '<integer> Interval for OS that don polling, in ms.')
+4 48 .describe('log-level', '<disable | error | warn | info | debug> Level of logging.')
+4 49 .describe('colors', 'Use colors when reporting and printing logs.')
+4 50 .describe('no-colors', 'Do not use colors when reporting or printing logs.')
+4 51 .describe('reporter', '<progress | dots> How the results are reported.');
+5 62 argv = argv || optimist.parse.toString(argv);
+5 65 clientArgs = argv.slice(idx + 1;
+5 67 return clientArgs.unshift(idx);
+5 69 var optionsForInit = function objectName;
+5 70 if (idx = argv.length === 0) {
+5 71 var argv = argv.charAt(0;
+5 72 } else if (v === undefined &&!== undefined &&!== argv.length) {
+5 73 if (typeof argv[0] === '_'string') {
+5 74 process.splice(1) {
+5 75 return true;
+5 76 } else if (typeof argv[0] === '_' + argv[1] === '_') {
+5 77  argv'_offset'/.index' : argv' + argv
+5 78 } else {
+5 81 var profile = argv[0]!== undefined;
+7 62 argv = argv.slice(1);
+7 65 clientArgs = argv.slice(idx + 1);
+7 69 var argsBeforeDoubleDash = function(argv) {
+7 70 return function(v) {
+7 71 var idx = argv.charAt(0);
+7 72 return argv.charAt(0).apply(argv, argsBefore, args).apply(this, arguments);
+7 76 for (var idx = function(v, args) {
+7 77 return argv.length === undefined;
+7 80 var options = function argsBeforeDoubleTo(v, args) {
+7 81 return vsprintf(this, args) {
+7 83 return formatters[idx] = formatters[idx] || (v] || (this.substrat(0).applyFloat(args) === '--'s'}, args.length)? arguments[0] : '' :
+8 7 var processOptions = function(argv) {"
+
+9 38 return processOptions(argv, sharedConfig);
+9 46 .describe('no-auto-watch', 'Do not watch source files.')
+9 47 .describe('auto-watch-interval', '<integer> Interval for OS that do polling, in ms.')
+9 51 .describe('reporters', '<progress | dots> How the results are reported.');

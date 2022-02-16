@@ -1,0 +1,395 @@
+var RegistryClient = require('../Client');
+var fs = require('fs');
+var expect = require('expect.js');
+var md5 = require('../lib/util/md5');
+var nock = require('nock');
+var http = require('http');
+var Config = require('bower-config');
+
+describe('RegistryClient', function () {
+beforeEach(function () {
+this.uri = 'https://registry.bower.io';
+this.timeoutVal = 5000;
+this.registry = new RegistryClient(Config.read(process.cwd(), {
+strictSsl: false,
+timeout: this.timeoutVal
+}));
+
+this.conf = {
+default: this.uri,
+search: [this.uri],
+register: this.uri,
+publish: this.uri
+};
+});
+
+describe('Constructor', function () {
+describe('instantiating a client', function () {
+it('should provide an instance of RegistryClient', function () {
+expect(this.registry instanceof RegistryClient).to.be.ok;
+});
+
+it('should set default registry config', function () {
+expect(this.registry._config.registry).to.eql(this.conf);
+});
+
+it('should set default search config', function () {
+expect(this.registry._config.registry.search[0]).to.eql(this.uri);
+});
+
+it('should set default register config', function () {
+expect(this.registry._config.registry.register).to.eql(this.uri);
+});
+
+it('should set default publish config', function () {
+expect(this.registry._config.registry.publish).to.eql(this.uri);
+});
+
+it('should set default cache path config', function () {
+expect(typeof this.registry._config.cache === 'string').to.be.ok;
+});
+
+it('should set default timeout config', function () {
+expect(this.registry._config.timeout).to.eql(this.timeoutVal);
+});
+
+it('should set default strictSsl config', function () {
+expect(this.registry._config.strictSsl).to.be(false);
+});
+});
+
+it('should have a lookup prototype method', function () {
+expect(RegistryClient.prototype).to.have.property('lookup');
+});
+
+it('should have a search prototype method', function () {
+expect(RegistryClient.prototype).to.have.property('search');
+});
+
+it('should have a list prototype method', function () {
+expect(RegistryClient.prototype).to.have.property('list');
+});
+
+it('should have a register prototype method', function () {
+expect(RegistryClient.prototype).to.have.property('register');
+});
+
+it('should have a clearCache prototype method', function () {
+expect(RegistryClient.prototype).to.have.property('clearCache');
+});
+
+it('should have a resetCache prototype method', function () {
+expect(RegistryClient.prototype).to.have.property('resetCache');
+});
+
+it('should have a clearRuntimeCache static method', function () {
+expect(RegistryClient).to.have.property('clearRuntimeCache');
+});
+});
+
+describe('instantiating a client with custom options', function () {
+describe('offline', function () {
+it('should not return search results if cache is empty', function (next) {
+
+this.registry.clearCache(function () {
+this.registry._config.offline = true;
+this.registry.search('jquery', function (err, results) {
+expect(err).to.be(null);
+expect(results.length).to.eql(0);
+next();
+});
+}.bind(this));
+});
+});
+
+describe('cache', function () {
+beforeEach(function () {
+nock('https://registry.bower.io:443')
+.get('/packages/search/jquery')
+.replyWithFile(200, __dirname + '/fixtures/search.json');
+
+this.client = new RegistryClient(Config.read(process.cwd(), {
+cache: __dirname + '/cache',
+strictSsl: false
+}));
+
+this.cacheDir = this.client._config.cache;
+this.host = 'registry.bower.io';
+this.method = 'search';
+this.pkg = 'jquery';
+
+this.path = this.cacheDir + '/' + this.host + '/' + this.method + '/' + this.pkg + '_' + md5(this.pkg).substr(0, 5);
+});
+
+afterEach(function (next) {
+this.client.clearCache(next);
+});
+
+it('should fill cache', function (next) {
+var self = this;
+
+
+self.client.search(self.pkg, function (err, results) {
+expect(err).to.be(null);
+expect(results.length).to.eql(334);
+
+
+fs.exists(self.path, function (exists) {
+expect(exists).to.be(true);
+next();
+});
+});
+
+});
+
+it('should read results from cache', function (next) {
+var self = this;
+
+self.client.search(self.pkg, function (err, results) {
+expect(err).to.be(null);
+expect(results.length).to.eql(334);
+
+fs.exists(self.path, function (exists) {
+expect(exists).to.be(true);
+next();
+});
+});
+});
+});
+});
+
+
+
+
+
+describe('calling the lookup instance method with argument', function () {
+beforeEach(function () {
+nock('https://registry.bower.io:443')
+.get('/packages/jquery')
+.reply(200, {
+name: 'jquery',
+url: 'git://github.com/components/jquery.git'
+});
+
+this.registry._config.force = true;
+});
+
+it('should not return an error', function (next) {
+this.registry.lookup('jquery', function (err) {
+expect(err).to.be(null);
+next();
+});
+});
+
+it('should return entry type', function (next) {
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry.type).to.eql('alias');
+next();
+});
+});
+
+it('should return entry url ', function (next) {
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry.url).to.eql('git://github.com/components/jquery.git');
+});
+next();
+});
+});
+
+describe('calling the lookup instance method without argument', function () {
+it('should return no result', function (next) {
+this.timeout(10000);
+this.registry.lookup('', function (err, entry) {
+expect(err).to.not.be.ok();
+expect(entry).to.not.be.ok();
+next();
+});
+});
+});
+
+describe('calling the lookup instance method with two registries, and the first missing.', function () {
+beforeEach(function () {
+nock('http://custom-registry.com')
+.get('/packages/jquery')
+.reply(200, {
+'error': {
+'message': 'missing',
+'stack': 'Error: missing'
+}
+});
+
+nock('http://custom-registry2.com')
+.get('/packages/jquery')
+.reply(200, {
+name: 'jquery',
+url: 'git://github.com/foo/baz'
+});
+
+this.registry = new RegistryClient(Config.read(process.cwd(), {
+strictSsl: false,
+force: true,
+registry: {
+search: [
+'http://custom-registry.com',
+'http://custom-registry2.com'
+]
+}
+}));
+});
+
+it('should return entry type', function (next) {
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry).to.be.an('object');
+expect(entry.type).to.eql('alias');
+next();
+});
+});
+
+it('should return entry url ', function (next) {
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry).to.be.an('object');
+expect(entry.url).to.eql('git://github.com/foo/baz');
+next();
+});
+});
+});
+
+describe('calling the lookup instance method with three registries', function () {
+beforeEach(function () {
+nock('https://registry.bower.io:443')
+.get('/packages/jquery')
+.reply(404);
+
+nock('http://custom-registry.com')
+.get('/packages/jquery')
+.reply(200, {
+name: 'jquery',
+url: 'git://github.com/foo/bar'
+});
+
+nock('http://custom-registry2.com')
+.get('/packages/jquery')
+.reply(200, {
+name: 'jquery',
+url: 'git://github.com/foo/baz'
+});
+
+this.registry = new RegistryClient(Config.read(process.cwd(), {
+strictSsl: false,
+force: true,
+registry: {
+search: [
+'https://registry.bower.io',
+'http://custom-registry.com',
+'http://custom-registry2.com'
+]
+}
+}));
+});
+
+it('should return entry type', function (next) {
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry).to.be.an('object');
+expect(entry.type).to.eql('alias');
+next();
+});
+});
+
+it('should return entry url ', function (next) {
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry).to.be.an('object');
+expect(entry.url).to.eql('git://github.com/foo/bar');
+next();
+});
+});
+
+it('should respect order', function (next) {
+this.registry._config.registry.search = [
+'https://registry.bower.io',
+'http://custom-registry2.com',
+'http://custom-registry.com'
+];
+
+this.registry.lookup('jquery', function (err, entry) {
+expect(err).to.be(null);
+expect(entry).to.be.an('object');
+expect(entry.url).to.eql('git://github.com/foo/baz');
+next();
+});
+});
+});
+
+
+
+
+describe('calling the register instance method with argument', function () {
+beforeEach(function () {
+nock('https://registry.bower.io:443')
+.post('/packages', 'name=test-ba&url=git%3A%2F%2Fgithub.com%2Ftest-ba%2Ftest-ba.git')
+.reply(201);
+
+this.pkg = 'test-ba';
+this.pkgUrl = 'git://github.com/test-ba/test-ba.git';
+});
+
+it('should not return an error', function (next) {
+this.registry.register(this.pkg, this.pkgUrl, function (err) {
+expect(err).to.be(null);
+next();
+});
+});
+
+it('should return entry name', function (next) {
+var self = this;
+
+this.registry.register(this.pkg, this.pkgUrl, function (err, entry) {
+expect(err).to.be(null);
+expect(entry.name).to.eql(self.pkg);
+next();
+});
+});
+
+it('should return entry url', function (next) {
+var self = this;
+
+this.registry.register(this.pkg, this.pkgUrl, function (err, entry) {
+expect(err).to.be(null);
+expect(entry.url).to.eql(self.pkgUrl);
+next();
+});
+});
+});
+
+describe('calling the register instance method without arguments', function () {
+beforeEach(function () {
+nock('https://registry.bower.io:443')
+.post('/packages', 'name=&url=')
+.reply(400);
+});
+
+it('should return an error and no result', function (next) {
+this.registry.register('', '', function (err, entry) {
+expect(err).to.be.an(Error);
+expect(entry).to.be(undefined);
+next();
+});
+});
+});
+
+
+
+
+
+describe('calling the unregister instance method with argument', function () {
+beforeEach(function () {
+this.pkg = 'testfoo';
+this.accessToken = '12345678';
+this.registry._config.accessToken = this.accessToken;
+
+nock('https://registry.bower.io:443')

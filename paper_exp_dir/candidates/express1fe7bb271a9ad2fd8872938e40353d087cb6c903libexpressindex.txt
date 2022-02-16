@@ -1,0 +1,173 @@
+Min editdistance: 13.00
+Closest candidate: 8 11 req.res = res;
+0 1 exports.execute = function(server){
+0 2 var self = this;
+0 3 this.config = {};
+0 4 var onExitCallback = function(fn){
+0 5 process.nextTick(function(){
+0 6 try {
+0 7 self.log.apply(self, arguments);
+0 8 } catch (err){
+0 9 errorCallback(fn);
+0 10 }
+0 11 });
+0 12 return this;
+0 13 } else {
+0 14 this.listen(this.port, function(){
+0 15 console.log.apply(this, arguments);
+0 18 };"
+
+1 2 return server.execute.apply(this, arguments);
+1 3 };
+1 5 Server.prototype.use = function(callLogger, args, callback) {
+1 6 if (typeof args === \'function\'){
+1 7 callback = args;
+1 8 args = {};
+1 11 this.port = this.server.address;
+1 12 this.hostname = this.hostname || this.server.address || {};
+1 13 this.port = port;
+1 14 this.url = this.url || \'http://localhost:\' + this.hostname + \'/\';
+1 15 return new Promise(function(resolve, reject) {
+1 16 var req = resolve,
+1 17 resolved = {};
+1 19 resolved = arguments;
+1 20 } catch (e) {
+1 21 return self.call(self, args).then(resolve, reject);
+1 27 Server.prototype.use = function(route, middleware) {
+1 28 if (typeof route!==\'string\') {
+1 29 middleware = route, route = '/\';
+1 31 var app = middleware;
+1 32 if (app. middleware) {
+1 33 app.use(connect.errorHandler());
+1 35 if (middleware.length) {
+1 36 var fn = router(function(app){ self.routes = app; });
+1 37 this.__proto__ = parent.request;
+1 39 this.__proto__.__ = app.request.uri.path + \'/\';
+1 40 this.locals = function(obj){
+1 41 for (var key in obj) {
+1 42 fn.call(this, key);
+1 47 if (typeof route!== \'function\') {
+1 51 this.cache = {};
+1 52 Server.prototype.listen = function(){
+1 53 this.registerErrorHandlers();
+1 54 connect.Server.prototype.listen.apply(this, arguments);
+1 56 Server.prototype.listenFD = function(){
+1 58 connect.Server.prototype.listenFD.apply(this, arguments);
+1 60 Server.prototype.registerErrorHandlers = function(){
+1 61 this.errorHandlers.forEach(function(fn){
+1 62 this.use(function(err, req, res, next){
+1 63 fn.apply(this, arguments);
+1 65 }, this);
+1 70 middleware = route, route = get(\'/\')
+1 71 , middleware.split(\'/
+1 72 , app);
+1 73 , app = middleware.middleware.lookup = get(\'/
+1 74 , route);
+1 75 , url = get(\'/
+1 76 , fn);
+1 77 return new Server(middleware);
+1 79 var fn.middleware.middleware.forEach(function(middleware, url, i, middleware) {
+1 80 , app, handler);
+1 81 return fn.middleware.middleware.middleware;
+1 82 , url: handler
+1 84 return function(middleware.middleware, handler.middleware, handler.middleware.middleware);
+1 85 return handler;
+1 87 middleware.middleware.forEach(function(otherware, url,
+2 2 return new Server(Array.prototype.slice.call(arguments));
+2 5 "
+
+3 1 exports.createServer.call(this, { object: { name: \'foo\' }, { object: { name: \'bar\' }, { object: { name: \'baz\' }, { object: { name: \'boo\' }, { object: { name: \'baz\' }, { name: \'bar\' } } } } }));"
+
+4 1 exports.execute = function(request, response){
+4 2 return new Server(404, { url: request.url, fullhost: url.hostname });
+5 1 exports.createServer.call(this, { object: { name: \'setting' }, filename: { get: 1 } });
+6 1 exports.createServer = function(){
+7 4 var onFinished = function(){};
+7 5 var resolution = {
+7 6 resolved: resolved,
+7 7 incompatibles: incompatibles,
+7 8 resolutions: resolved
+7 10 this.onFinished = function(){
+7 11 return this.readJson(this.config);
+7 13 this.onResolve = function(this){
+7 14 if (this.working) {
+7 15 return Q.reject(createError(\'Already working\', \'EWORKING\'));
+7 17 this.emit('ready');
+7 20 this.loadErrors = function(err){
+7 21 if (err) {
+7 22 return this.emit(\'error\', err);
+7 24 return this.insert({
+7 25 host: this.hostname,
+7 26 port: this.port,
+7 27 router: this.router,
+7 28 protocol: this.protocol
+7 31 this.listen = function(){
+7 32 return this.removeListener(function(){
+7 33 return \'error\';
+7 36 this.listenFD = function(){
+7 37 var env = this.env;
+7 38 this.on(\'error\', function(err){
+7 39 this.set(\'home\', env);
+7 40 this.set(\'env\', env);
+7 41 this.use(function(req, res, next){
+7 42 res.headers = Resire.array.prototype.slice.call(arguments);
+7 44 next();
+7 48 Server.prototype.use = function(route, middleware){
+7 52 connect.Server.prototype.use.call(this, route, middleware);
+7 53 if (middleware instanceof Server) {
+7 54 var app = middleware,
+7 55 home = app.set('home');
+7 56 app.set(\'home\', (app.route || \'/\') + \'/\');
+7 57 home.exports = {};
+7 59 app.use(connect.middleware);
+7 61 this.routes = new Router(this);
+7 62 this.__proto__ = parent.app;
+7 63 this.__proto__ = parent.app.locals;
+7 65 this.locals = app;
+7 67 this.locals.settings = this.settings;
+7 68 this.configure(\'production\', function(){
+7 69 this.enable(\'view cache\');
+7 74 connect.Server.prototype.errorHandlers.forEach(this, arguments);
+7 75 };'
+
+8 1 exports.execute = function(Server){
+8 3 this.port = 123;
+8 4 this.hostname = \'localhost\';
+8 5 this.port = this.hostname || \'https://example.com\';
+8 7 req.params = req.params || {};
+8 8 req.params.get = {};
+8 9 res.headers = {};
+8 10 req.app = res.app = self;
+8 11 req.res = res;
+8 12 res.req = req;
+8 13 req.next = next;
+8 14 if (req.url.indexOf(\'?\')!== 0) {
+8 15 var query = url.parse(req.url).query;
+8 16 req.params.get = query;
+8 17 debug(\'info\', \'Updated\'+ req.params.id);
+8 18 res.redirect(\'/login\');
+8 19 if (query) {
+8 20 return res.redirect(\'/login\');
+8 24 var users = [
+8 25 { name: \'tj\' },
+8 26 { name: \'tobi\' }
+8 27 , { name: \'loki\' }
+8 28 , { name: \'jane\' }
+8 29 , { name: \'bandit\' }
+8 30 ];
+8 31 function jsfiddleTag(args, content){
+8 32 return args.fcall(function(arg){
+8 33 var id = args[0];
+8 34 var tabs = args[1];
+8 35 var skin = args[2] && args[2]!== \'default\'? args[2] : \'light\';
+8 36 var width = args[3] && args[3]!== \'default\'? args[3] : \'100%\';
+8 37 var height = args[4] && args[4]!== \'default\'? args[4] : \'300\';
+8 38 return {
+8 39 id: id,
+8 40 name: args[0],
+8 41 width: width,
+8 42 height: height,
+8 43 title: title,
+8 44 alt: alt
+8 47 module.exports = jsfiddleTag;'
+

@@ -1,0 +1,270 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 var defaultConfig = require('../config');
+0 1 var cli = require('../util/cli');
+0 2 var Tracker = require('../util/analytics').Tracker;
+0 3 var defaultConfig = require('../config');
+0 4 function prune(logger, options, config) {
+0 5 var project;
+0 6 var tracker;
+0 7 options = options || {};
+0 8 config = defaultConfig(config);
+0 9 project = new Project(config, logger);
+0 10 tracker = new Tracker(config);
+0 11 return project.getTree(options)
+0 12 .spread(function (tree, flattened, extraneous) {
+0 13 var names = Object.keys(flattened);
+0 14 names.forEach(function (name) {
+0 15 tracker.trackNames(names, function (node) {
+0 16 if (names.indexOf(name)!== -1) {
+0 17 return;
+0 18 }
+0 22 return project.uninstall(names, options)
+0 23 .then(function (uninstalled) {
+0 24 if (!mout.object.size(uninstalled)) {
+0 25 return removed;
+0 27 mout.object.mixIn(removed, uninstalled);
+0 28 });
+0 29 tracker.trackNames('prune');
+0 30 return project.getTree()
+0 31 .spread(function (tree, flattened) {
+0 32 var nodes = [];
+0 33 var dependantsCounter = {};
+0 34 mout.object.forOwn(flattened, function (node) {
+0 35 if (names.indexOf(node.endpoint.name)!== -1) {
+0 36 nodes.push({});
+0 38 nodes = nodes.filter(function (node) {
+0 39 return!dependantsCounter[node.endpoint.name];
+0 41 if (!nodes.length) {
+0 42 return Q.resolve(removed);
+0 44 return project.uninstall(names)
+0 46 return mout.object.map(flattened, function (node) {
+0 47 return node.endpoint.target === '*';
+0 50 analytics.filters.exec('production', function () {
+0 51 return project.save(false);
+0 54 prune.readOptions = function (argv) {
+0 56 var options = cli.readOptions(argv);
+0 57 var names = options.argv.remain.slice(1);
+0 58 return [names, options];
+0 59 };
+0 60 module.exports = prune;"
+
+1 6 if (options.paths && options.relative == null)  {
+1 7 options.relative = true;
+1 11 return clean(project, options);
+1 13 function clean(project, options, removed) {
+1 14 removed = removed || {};
+1 17 var names = options.argv.remain.slice(0, -1);
+1 19 if (!names.length) {
+1 20 return removed[name];
+1 29 }, function (err) {
+1 30 if (options.relative) {
+1 35 nodes.push({
+1 36 name: node.endpoint.name,
+1 37 source: baseDir + 'public/',
+1 38 target: semver.clean(node.endpoint.source),
+1 39 pkgMeta: semver.clean(node.pkgMeta)
+1 41 }, function () {
+1 42 return that._bootstrap(targets, resolved, removed)
+1 43 .then(function (installed) {
+1 44 if (!mout.object.size(that._json.resolutions)) {
+1 45 delete this._json.resolutions;
+1 48 return that._manager.preinstall(that._json);
+1 51 Project.prototype._bootstrap = function (targets, resolved, incompatibles) {
+1 52 var installed = mout.object.map(this._json.resolutions, function (decEndpoint) {
+1 53 return decEndpoint.pkgMeta;
+1 55 this._json.resolutions = this._json.resolutions || {};
+1 56 return this._manager
+1 57 .configure({
+1 58 targets: targets,
+1 59 resolved: resolved,
+1 60 incompatibles: incompatibles,
+1 61 resolutions: this._json.resolutions,
+1 62 installed: installed
+1 63 })
+1 64 .resolve()
+1 65 .then(function () {
+1 66 var resolutions = this._json.resolutions || {};
+1 77 return that._manager.install();
+1 81 delements.length)
+1 82 .forEach(function (decEndpoint) {
+1 84 }, function (key) {
+1 86 varolutions[key] = {};
+1 90 .for (var that = that = _manager = manager;
+1 91 return that._json = url.resolutions = url.parse(decEndpoint.name
+1 92 .resolutions, function (decEndpoint.resolutions, manager)
+1 93 .keywords, function (decEndpoint, manager) {
+1 94 if (only._json.resolutions) {
+1 95 return that._json = decEndpoint.resolutions;
+1 96 , manager = manager.pkgMeta;
+1 98 .sort(function (name) {
+1 99 \
+2 25 }, function (notification) {
+2 26 var names = Object.keys(uninstalled);
+2 28 var decEndpoint = flattened[name];
+2 29 if (!decEndpoint || decEndpoint.missing) {
+2 30 packages[name] = null;
+2 33 promise = promise
+2 35 return that._analyse();
+2 37 .spread(function (json, tree, flattened) {
+2 38 var extraneous = mout.object.values(flattened);
+2 40 var local = dirs[name];
+2 41 if (!uninstalled) {
+2 47 mout.object.mixIn(names, uninstalled);
+2 48 return that._analyse()
+2 51 if (erraneous) {
+2 56 var children = [];
+2 58 children.forEach(function (name) {
+2 59 children.push.apply(children, mout.object.values(emitter.dependencies));
+2 61 return clean(project, children, removed);
+2 67 var options = cli.readOptions({
+2 68 'production': { type: Boolean, shorthand: 'p' },
+2 69 'save': { type: Boolean, shorthand: 'S' },
+2 70 'save-dev': { type: Boolean, shorthand: 'D' },
+2 71 'save-exact': { type: Boolean, shorthand: 'f' },
+2 72 '', shorthand: 'E' }
+2 73 }, argv);
+2 74 var packages = options.map = options.filter(function (pkg) {
+2 75 return repository.readOptions(function (pkg);
+2 76 return Q.exists(function (exists(exists(exists) {
+2 77 return!== undefined;
+2 79 }.bind(this.length;
+2 80 }.bind(this);
+2 82 return this._analyse.uninstall(this);
+2 84 prune.readJson = function json;
+2 85 .package.json = function () {
+2 86 .logger.json = logger.json = logger.json || json;
+2 87 .log = logger.log;
+2 88 .logger = logger.log = logger.log;
+2 90 .message = logger.message = install;
+3 27 if (!mout.string.startsWith(name, '-') && names.indexOf(name)!== -1) {
+3 28 targets.push(decEndpoint);
+3 31 return clean(project, options, removed);
+3 37 delete options.argv;
+3 42 'production': { type: Boolean, shorthand: 'p' }
+3 44 return cli.readOptions({
+4 19 nodes.splice(0, 1);
+4 25 if (uninstalled) {
+4 29 return project.getTree(options.relative, removed);
+4 31 return project.save(true);
+4 37 if (config.analytics == null) {
+4 41 'save-dev': { type: Boolean, shorthand: 'D' }
+4 46 'save-resolutions': { type: Boolean, shorthand: 'r' }
+5 16 if (!names[name]) {
+6 16 var baseDir = config.base_dir;
+6 17 project.walkTree(tree, function (node) {
+6 18 if (node.missing) {
+6 22 node.canonicalDir = normalize(node.canonicalDir);
+6 24 if (options.paths) {
+6 25 return paths(flattened);
+6 37 if (config.offline) {
+6 38 return tree;
+6 40 return checkVersions(project, tree, logger)
+6 45 .done(function (value) {
+6 49 function checkVersions(project, tree, logger) {
+6 50 var promises;
+6 52 var repository = project.getPackageRepository();
+6 54 nodes.push(node);
+6 55 }, true);
+6 56 if (nodes.length) {
+6 57 logger.info('check-new', 'Checking for new versions of the project dependencies..');
+6 59 promises = nodes.map(function (node) {
+6 60 var target = node.endpoint.target;
+6 61 return repository.versions(node.endpoint.source)
+6 62 .then(function (versions) {
+6 63 node.versions = versions;
+6 64 if (versions.length && semver.validRange(target)) {
+6 65 node.update = {
+6 66 target: semver.maxSatisfying(versions, target),
+6 67 latest: semver.maxSatisfying(versions, '*')
+6 71 tree.versions = [];
+6 72 return Q.all(promises)
+6 78 function paths(flattened) {
+6 79 var ret = {};
+6 80 mout.object.forOwn(flattened, function (pkg, name) {
+6 81 var main;
+6 82 if (!main) {
+6 83 ret[name] = pkg.canonicalDir;
+6 86 main = main.split('/');
+6 87 if (!~pkg.length && names.length) {
+6 88 return [canonicalDir, pkg.];
+6 91 main = main.map = function (pkg, main;
+6 92 , main) {
+6 93 var url;
+6 94 var repository = pkgArr = pkg;
+6 95 if (pkgArr = new Project(pkg, url, url, url + '*', url + 1, url + 1, url + 1, url + 2];
+6 96 if (isIP = metaFile) {
+6 97 return that._config.map[url] === url;
+6 99 return that._analyse = engines[url] || {};
+6 101 return that._sortVersions(pkgArr, url, function (version, url, quality, urlArr, urlArr
+7 4 function uninstall(logger, names, options, config) {
+7 11 tracker.trackNames('uninstall', names);
+7 20 children.push.apply(children, mout.object.keys(node.dependencies));
+7 23 return clean(project, children, uninstalled);
+7 26 uninstall.line = function (logger, argv) {
+7 27 var options = uninstall.options(argv);
+7 30 return new Q();
+7 38 project.walkTree(tree, function (node, name) {
+7 39 if (nodes.indexOf(name)!== -1) {
+7 40 nodes.push(name);
+7 50 var children;
+7 52 children = [];
+7 53 nodes.forEach(function (node) {
+7 74 uninstall.readOptions = function (argv) {
+7 75 var cli = require('../util/util/cli');
+7 76 var options = cli.readOptions = options.readOptions(argv);
+7 77 var names = options.readOptions = function (argv, argv) {
+7 78 var names = options.argv = argv === undefined;
+7 79 return cliOptions.uninstall;
+7 81 return cli.readOptions.words = names;
+7 82 return cliOptions = options.uninstall = options.uninstall = options.uninstall;
+7 84 module.readOptions = function (argv, argv) {
+7 85 var names = argv === undefined;
+7 86 return cli;
+7 87 };"
+
+8 1 var semver = require('../util/semver');
+8 4 function list(logger, options, config) {
+8 59 logger.emit('end', value);
+8 60 }, function (error) {
+8 61 logger.emit('error', error);
+8 63 logger.json =!!options.paths;
+8 64 return logger;
+8 74 logger.info('check-new', 'Checking for new versions..');
+8 78 return repository.versions(source)
+8 81 if (!versions.length && target === '*') {
+8 84 return {
+8 85 name: semver.maxSatisfying(versions, target, function (node) {
+8 86 node.version = semver.maxSatisfying(versions, target) {
+8 87 return semver.maxSatisfying(versions, '*', target);
+8 93 tree.versions = nodes;
+8 94 return Q.then(function paths(flattened = function (node) {
+8 95 if (node) {
+8 96 if (node.pkg.pkgMeta) {
+8 97 return repository.pages = repository.uninstall();
+8 100 return repository.then(function () {
+8 105 function checkVersions(project, tree;
+8 107 analyseIfTree(project, tree, logger)
+8 108 .exec('walkTree, tree, logger) {
+8 109 .exec(project, tree,
+9 1 var open = require('opn');
+9 2 var endpointParser = require('bower-endpoint-parser');
+9 4 var createError = require('../util/createError');
+9 6 function home(logger, name, config) {
+9 8 var promise;
+9 9 var decEndpoint;
+9 12 if (!name) {
+9 13 promise = project.hasJson()
+9 14 .then(function (json) {
+9 15 if (!json) {
+9 16 throw createError('You are not inside a package', 'ENOENT');
+9 18 return project.getJson();
+9 20 } else {
+9 21 decEndpoint = endpointParser.decompose(name);
+9 22 promise = project.getPackageRepository().fetch(decEndpoint)
+9 23 .spread(function (canonicalDir, pkgMeta) {
+9 24 return pkgMeta;
+9 27 home.line = function (logger, argv) {
+9 29 var name = options.argv.remain.slice(1).join(' ');
+9 30 return home(logger, name);
+9 32 module.exports = home;"
+

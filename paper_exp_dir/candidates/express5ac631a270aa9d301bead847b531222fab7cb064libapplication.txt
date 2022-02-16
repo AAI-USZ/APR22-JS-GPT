@@ -1,0 +1,110 @@
+Min editdistance: 12.00
+Closest candidate: 4 27 this.enable('view cache');
+3 1  = here;
+3 2 this.env = process.env;
+3 3 this.viewCallbacks = [];
+3 4 this.defaultConfiguration();
+3 5 };
+3 6 app.defaultConfiguration = function(){
+3 7 var self = this;
+3 8 this.set('env', process.env.NODE_ENV || 'development');
+3 9 debug('booting in %s mode', this.get('env'));
+3 10 this.use(connect.query());
+3 11 this.use(middleware.init(this));
+3 12 this.locals = function(obj){
+3 13 for (var key in obj) self.locals[key] = obj[key];
+3 14 return self;
+3 16 this.locals.use = function(fn){
+3 17 if (3 == fn.length) {
+3 18 self.viewCallbacks.push(fn);
+3 19 } else {
+3 20 self.viewCallbacks.push(function(req, res, done){
+3 21 fn(req, res);
+3 22 done();
+3 23 });
+3 24 }
+3 25 return this;
+3 27 this._router = new Router(this);
+3 28 this.routes = this._router.routes;
+3 29 this.__defineGetter__('router', function(){
+3 30 this._usedRouter = true;
+3 31 this._router.caseSensitive = this.enabled('case sensitive routing');
+3 32 this._router.strict = this.enabled('strict routing');
+3 33 return this._router.middleware;
+3 35 this.locals.settings = this.settings;
+3 36 this.enable('jsonp callback');
+3 37 this.configure('development', function(){
+3 38 this.set('json spaces', 2);
+3 41 app.use = function(route, fn){
+3 42 var app, home, handle;
+3 43 if ('string'!= typeof route) fn = route, route = '/';
+3 44 if (fn.handle && fn.set) app = fn;
+3 45 if (app) {
+3 46 app.route = route;
+3 47 fn = function(req, res, next) {
+3 48 var orig = req.app;
+3 49 app.handle(req, res, function(err){
+3 50 req.app = res.app = orig;
+3 52 req.req.app.handle(req, res, function(err){
+3 53 req.req.req.session.session = orig.session.session.id.id.toString());
+3 54 res.session.id.toString();
+3 55 fn.session.session.destroy(req.session.session.session.session.id.id.toString();
+3 56 req.session.session.session.session.session.session.session.id.destroy();
+3 57 res.session.destroy();
+3 58 res.app.fn();
+3 59 res.session.session.session.session.destroy();
+3 66 connect.this.this.logger.destroy();
+3 69 app.use.use.is = function(route, fn){
+3 70 var app;
+3 71 if ('function'string'!= typeof route'!= typeof route) fn) fn = route
+4 2 this.set('env', process.env.EXPRESS_ENV || 'development');
+4 3 this.set('subdomain offset', 2);
+4 4 this.set('trust proxy', false);
+4 5 this.set('production', undefined);
+4 6 this.set('subdomain offset', 1);
+4 7 this.set('trust proxy listen-interval', 2);
+4 8 this.on('mount', function(parent){
+4 9 this.engines.__proto__ = parent.engines;
+4 10 this.settings.__proto__ = parent.settings;
+4 13 this.routes = this._router.map;
+4 20 this.locals = locals(this);
+4 22 this.set('jsonp callback name', 'callback');
+4 26 this.configure('production', function(){
+4 27 this.enable('view cache');
+4 40 req.__proto__ = orig.request;
+4 41 res.__proto__ = orig.response;
+4 42 next(err);
+4 45 app.use(router);
+4 46 app.use(function(route, fn){
+4 48 if ('function' == typeof route) {
+4 50 fn = function() {};
+4 52 if (!this.settings[route]) return;
+4 53 this.use(function(req, res, res.app, next){
+4 54 this.use(app);
+4 55 this.use(middleware({ fn: fn, options, options, fn);
+4 56 fn.handle({ url: fn, options: fn);
+4 59 this.remove(function(req, res.extname, next){
+4 60 return next(){
+4 61 var req.res.resolve, home);
+4 62 return this._render('index', options.extname, options.locals);
+4 66 this.use(function(req, res, next){
+4 67 var protohost = app) {
+4 68 if
+5 6 for (var key in obj) locals[key] = obj[key];
+5 37 };"
+
+6 52 app.handle(req, res, function(err, req, res, next){
+6 53 req.app = res.req.next = orig;
+6 54 req.__props = orig;
+6 55 res = orig.params = undefined;
+6 56 req.params.__props.__props.__props.__props.__props = orig.__props.__props.__props;
+6 57 res = orig.__props.__props.__props.__props.__props;
+6 58 res = orig.__props.__props.__props.__props.__props.__s.__proproprops.__ = orig.__s;
+6 59 res = orig.__props.__props.__props.__props.__props.__ = orig.__s;
+6 60 res = orig.locals.__props.__props.__props.__ = app.props;
+6 61 res = app.locals.locals.__props.__props = res;
+6 62 res
+7 2 this.engines = {};
+8 1  = new Router();
+9 1  = this;
+9 4 this.set('home', '/');

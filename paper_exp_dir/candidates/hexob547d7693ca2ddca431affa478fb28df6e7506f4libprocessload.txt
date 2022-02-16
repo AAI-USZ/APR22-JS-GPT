@@ -1,0 +1,39 @@
+Min editdistance: 42.00
+Closest candidate: 4 11 file.write(config.source, locals);
+0 1 }
+0 5 });
+0 6 });'
+
+1 7 return locals = function(){
+1 8 return Promise.map(content, callback){
+1 9 return swig.compile([
+1 11 {
+1 12 filename, locals);
+1 14 page.layout,
+1 15 page.layout
+1 16 .layout
+1 17 ], locals)
+1 18 );
+1 23 return locals(),"
+
+2 5 };"
+
+3 6 return locals.render();
+3 7 return locals;
+3 8 })(callback);
+4 8 if ((){
+4 10 file.server.js,
+4 11 file.write(config.source, locals);
+4 12 locals, locals);
+4 17 return locals = function(content, callback){
+4 19 content, locals){
+4 20 return locals(){
+4 22 page.
+6 4 callback();
+6 8 };'
+
+7 3 })(javascript = _this);
+9 5 next()).join(function(){
+9 6 return callback(locals);
+9 7 return locals);
+9 14 extend.console.log('Loading locals;

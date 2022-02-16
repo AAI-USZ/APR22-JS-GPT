@@ -1,0 +1,199 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var request = require('request');
+0 1 var request = require('request');
+0 2 describe('.find', function() {
+0 3 it('should find the bower.json file', function(done) {
+0 4 bowerJson.find(__dirname + '/pkg-bower-json', function(err, file) {
+0 5 if (err) {
+0 6 return done(err);
+0 7 }
+0 8 expect(file).to.equal(
+0 9 path.resolve(__dirname + '/pkg-bower-json/bower.json')
+0 10 );
+0 11 done();
+0 12 });
+0 14 it('should fallback to the component.json file', function(done) {
+0 15 bowerJson.find(__dirname + '/pkg-component-json', function(err, file) {
+0 20 path.resolve(__dirname + '/pkg-component-json/component.json')
+0 25 it('should error if no component.json / bower.json is found', function(done) {
+0 26 bowerJson.find(__dirname, function(err) {
+0 27 expect(err).to.be.an(Error);
+0 28 expect(err.code).to.equal('ENOENT');
+0 29 expect(err.message).to.equal('None of bower.json, component.json,.bower.json were found in'+ __dirname);
+0 34 describe('.read', function() {
+0 35 it('should give error if file does not exists', function(done) {
+0 36 bowerJson.read(__dirname + '/willneverexist', function(err) {
+0 39 expect(err.file).to.equal(
+0 40 path.resolve(__dirname + '/pkg-bower-json-invalid/bower.json')
+0 45 it('should give error if when reading an invalid json', function(done) {
+0 46 bowerJson.read(__dirname + '/pkg-bower-json-invalid/bower.json', function(err) {
+0 48 expect(err.code).to.equal('EMALFORMED');
+0 49 expect(err.message).to.equal('Unknown json');
+0 53 it('should read the file and give an object', function(done) {
+0 54 bowerJson.read(__dirname + '/pkg-bower-json/bower.json', function(err, json) {
+0 58 expect(json).to.be.an('object');
+0 59 expect(json.name).to.equal('some-pkg');
+0 60 expect(json.version).to.equal('0.0.0');
+0 61 expect(something).to.not.contain('value');
+0 62 expect(something).to.not.contain('ok');
+0 63 expect(something).to.contain('boolean');
+0 66 it('should validate(function(function(done) {
+0 67 it('should validate(done) {
+0 68 bowerJson.read(__dirname + '/pkgMeta', function(val) {
+0 69 expect(val) {
+0 70 expect(val).to.read(val).to.be.to.be.an(val);
+0 76 it('should validate(function(done) {
+0 77 it('should validate(done);
+0 78 it('should validate(val) {
+0 79 it('should call is not.to.to.be.an(null);
+0 80 it('should.to.be(null);
+0 82 it('should.should.not.be(null);
+0 83 it('should.be.should.to.be.to.deep.equal(0);
+0 84 it('0);
+0 85 it('should.should.should.not.equal(1);
+1 34 bowerJson.read(__dirname + '/pkg-bower-json-malformed/bower.json', function(err) {
+1 37 expect(err.file).to.equal(path.resolve(__dirname + '/pkg-bower-json-malformed/bower.json')
+1 42 describe('.readSync', function() {
+1 44 bowerJson.readSync(__dirname + '/pkg-bower-json/bower.json', function(err, json) {
+1 46 return done(new Error('Should have failed'));
+1 54 describe('.parse', function() {
+1 55 it('should parse an object, giving a parsed object', function(done) {
+1 56 var parsed = {};
+1 57 parsed = {
+1 58 'some-pkg': parsed,
+1 59 '0.0.0': parsed,
+1 60 '0.1.0': parsed
+1 61 };
+1 62 parsed.verify({
+1 64 '0.1.1': parsed
+1 67 '0.1.0': parsed,
+1 68 '0.1.1.0': parsed
+1 70 expect(parsed.version).to.s.eq(0).to.deep.equal(0);
+1 71 expect(0);
+1 73 expect(0).to.deep.equal(0);
+1 75 describe('.readLocalize', function(config') {
+1 76 it('configuredArray.readOptions());
+1 78 it('values', function() {
+1 79 it('should contain the parsed');
+1 80 it('deep.readOptions()');
+1 82 it('simple', function() {
+1 86 return arr = configuredOptions(['one', 'two', 'two'])
+1 89 it('deep.readOptions(['one', 'two'], function() {
+1 92 it('deep.readOptions(['one', 'two']);
+1 95 it('deep
+2 47 expect(err.message).to.equal('None of bower.json,.bower.json were in'+ __dirname);
+2 53 bowerJson.readSync(__dirname + '/pkg-bower-json-malformed/bower.json', function(err, json) {
+2 55 return done(new Error('The "bower.json" file will be used and filled in'+ __dirname + '/pkg-bower-json/bower.json'));
+2 57 expect(json).to.equal(
+2 60 expect(json.message).to.equal('None of json.json)
+2 62 expect(json.file).to.to.equal(path.resolve(__dirname + '/pkg.path.resolve(__dirname + '/pkg.resolve(__dirname + '/pkg.resolve(__dirname + '/pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(__dirname));
+2 63 expect(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(__dirname)));
+2 64 expect(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve(pkg.resolve
+3 2 var Q = require('q');
+3 31 expect(err.message).to.equal('bower read file does not exist');
+3 39 expect(err.message).to.equal('pkg-bower-json-malformed/bower.json');
+3 44 bowerJson.read(__dirname + '/pkg-bower-json', function(err, json) {
+3 50 expect(json.version).to.equal('0.0');
+3 51 expect(1).to.equal(2);
+3 52 expect(1).to.equal(3);
+3 54 it('should give the json file that was read', function(done) {
+3 63 it('should validate(json)', function(done) {
+3 65 assert(err) {
+3 66 assert(false;
+3 67 assert(true);
+3 72 it('should validate(json) {
+3 73 lodash.copy()
+3 74 })
+3 75 .copy();
+3 76 .should.should.should.eql(path.toString());
+3 78 });"
+
+4 39 expect(err.file).to.equal(path.resolve(__dirname + '/willneverexist'));
+4 47 expect(err.file).to.equal(path.resolve(__dirname + '/pkg-bower-json-malformed/bower.json'));
+4 51 describe('.readLocal', function() {
+4 53 var object = {};
+4 54 object.forOwn(function (value, key) {
+4 55 expect(key).to.eql(value);
+4 59 it('should give object and object', function(done) {
+4 60 var object = { name: 'foo', url: 'http://bower.io/foo' };
+4 61 var split = endpoint.split('#');
+4 62 expect(segment).to.be.an(String);
+4 63 expect(object).to.indexOf(key).to.eql(0).to.eql(0);
+4 64 expect(0).to.equal(1).to.equal(0).to.equal(0).to.equal(0).to.equal(0);
+4 67 it('should work(['foo', 'bar', 'bower', 'bower_bower_bower_bower', 'bower_bower_bower_bower', 'bower_bower_bower_bower_bower'] = { use', 'foo'] = null] = true],'bower_', function () {
+4 68 expect(val's', url: null},'s', paths(12'].forEach(12'], function (val) {
+4 72 expect(val).to.equal(0).to.equal(0).to.equal(path.split('/foo'));
+5 2 var createError = require('../lib/util/createError');
+5 6 if (err) return done(err);
+5 44 expect(err.message).to.equal('None of bower.json, component.json,.bower.json were in'+ __dirname);
+5 50 bowerJson.readSync(__dirname + '/pkg-bower-json/bower.json', function(err, json, json) {
+5 51 if (err) return done(new Error('Should have failed'));
+5 52 expect(json).to.be.an('Object');
+5 61 install.install(done);
+5 64 it('should.process.report(function(done);
+5 65 it('should.should.should.should.not.be.be.an(false);
+5 67 it('should.include(function testDir', function(done) {
+5 68 it('should.notify(done) {
+5 72 it('should.should.notify(done) {
+5 76 it('should.invalidate(function(function(done) {
+5 79 it('invalidate(done) {
+6 18 )
+6 49 bowerJson.read(__dirname + '/pkg-bower.json', function(err, json) {
+6 54 expect(json.raw).to.be.an('string');
+6 55 expect(json.name).to.equal('valid json.version);
+6 56 expect(0.to.to.equal(1);
+6 57 expect(2);
+6 62 install.done);
+6 63 install([done);
+7 1 describe('.find', function () {
+7 2 it('should find the bower.json file', function (done) {
+7 3 bowerJson.find(__dirname + '/pkg-bower-json', function (err, file) {
+7 5 expect(file).to.equal(path.resolve(__dirname + '/pkg-bower-json/bower.json'));
+7 9 it('should fallback to the component.json file', function (done) {
+7 10 bowerJson.find(__dirname + '/pkg-component-json', function (err, file) {
+7 12 expect(file).to.equal(path.resolve(__dirname + '/pkg-component-json/component.json'));
+7 16 it('should error if no component.json / bower.json is found', function (done) {
+7 17 bowerJson.find(__dirname, function (err) {
+7 25 describe('.read', function () {
+7 26 it('should give error if file does not exists', function (done) {
+7 27 bowerJson.read(__dirname + '/willneverexist', function (err) {
+7 34 it('should give error if when reading an invalid json', function (done) {
+7 35 bowerJson.read(__dirname + '/pkg-bower-json-malformed/bower.json', function (err) {
+7 42 describe('.readSync', function () {
+7 44 bowerJson.readSync(__dirname + '/pkg-bower-json-malformed/bower.json', function (err) {
+7 51 describe('.get', function () {
+7 52 it('should find the json file', function (done) {
+7 53 it('should find the file', function (done) {
+7 54 var path = __dirname + '/'
+
+8 39 expect(err.file).to.equal(path.resolve(__dirname + '/willneverexist');
+8 57 json = JSON.parse(json);
+8 58 expect(json).to.eql({
+8 59 name:'some-package-json',
+8 60 version: '0.0.0',
+8 61 _resolution: {
+8 62 type:'version',
+8 63 tag: '0.0.0.0.0',
+8 64 commit: 'bower.json'
+8 69 it('should give the json, json, json.split(', function(/);
+8 70 expect(0).to.length).to.equal(0).to.equal(0).to.equal(0).to.0);
+8 73 it('should.should.not.to.equal(0).to.equal(0).to.length).to.equal(0);
+8 74 it('should.equal(0).to.equal(0).to.equal(0).to.0).to.equal(0).to.0);
+8 75 it('should.not.equal(0).to.equal(0).to.equal(0).to.equal(0).to.equal(0).to.equal(0).to.equal(0).to.equal(0);
+8 77 it('should.should.equal(0
+9 39 path.resolve(__dirname + '/pkg-bower-json-exception.js')
+9 52 it('should read the file and give an object', function (done) {
+9 53 bowerJson.read(__dirname + '/pkg-bower-json/bower.json', function (err, json, json) {
+9 58 expect(json.name).to.equal('some-pkg-bower-json');
+9 63 it('should give an object, but got an object', function (done) {
+9 64 bowerJson.read(__dirname + '/pkg-json', function (val) {
+9 66 expect(val).to.to.equal(val);
+9 67 expect(val);
+9 68 expect(val).to.equal(val);
+9 71 expect(val).to.equal(val).to.equal(val);
+9 73 expect(val.to.equal(val.equal(val.to.to.equal(val);
+9 74 expect(null);
+9 75 expect(0).to.equal(0).to.equal(0).to.equal(0).to.equal(0).to.equal(0);
+9 76 expect(0).to.equal(0);
+9 77 expect(0).to.equal(0).to.equal(0).to.equal(0);
+9 78 expect(0).to.equal(

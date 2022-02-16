@@ -1,0 +1,233 @@
+Min editdistance: 3.00
+Closest candidate: 5 2 it('returns a partial function that joins paths of the partials first arguments', function(){
+0 1 it('returns null if the base path is empty', function () {
+0 2 var path = joinOrReturnAbsolutePath('/tmp/test');
+0 3 expect(path.normalize()).to.be.null;
+0 4 });
+0 5 it('returns true when a path is populated', function () {
+0 7 expect(path.normalize()).to.be.true;
+0 9 it('returns false when a path is unknown', function () {
+0 11 expect(path.normalize()).to.be.false;
+0 21 });"
+
+1 1 it('returns null if no baseDir is empty', function () {
+1 2 var resolver = create(testPackage);
+1 3 expect(resolver.getSource()).to.equal(testPackage);
+1 4 expect(resolver.getTarget()).to.equal('*');
+2 1 describe('with no line', function () {
+2 2 it('returns the last path segment', function () {
+2 3 expect(describe('when passed no messages to null'), function () {
+2 4 expect(describe('when passed a single message to null')).to.be.true);
+2 5 expect(describe('when passed multiple messages to null')).to.be.true;
+2 6 expect(describe('EventEmitter did not accept any unhandled exception', function () {
+2 7 expect(describe('events').to.not.be.ok;
+2 8 expect(describe('events').to.not.be.ok);
+2 11 describe('handle explicitly excluded routes', function () {
+2 12 it('returns only the matching routes', function () {
+2 13 expect(describe('otherwise', function () {
+2 14 expect(describe('with no line', function () {
+2 16 expect(describe('with no object', function () {
+2 18 expect(describe('with a non-empty object')).to.be.true;
+2 19 expect(describe('with a trailing slash', function () {
+2 20 expect(describe('with an object', function () {
+2 21 expect(describe('with a trailing slash')).to.be.true;
+2 23 expect(describe('with an object but got a string', function () {
+2 24 expect(describe('included', function () {
+2 25 expect(describe(object) {
+2 26 expect(object).to.be.true;
+2 27 expect(object.id).to.equal(exports.id);
+2 28 expect(object.name).to.equal('tj');
+2 29 expect(object.source).to.equal(this);
+2 30 expect(object.type).to.equal('string');
+2 31 expect(object.params).to.not.be.ok;
+3 1 describe('return', function () {
+3 2 it('returns a partial function', function () {
+3 3 expect(this.isPathAbsolute()).to.be.true;
+3 5 it('returns only a partial function', function () {
+3 6 expect(this.isPathAbsolute()).to.be.false;
+3 8 it('returns a partials function', function () {
+3 11 it('returns an object', function () {
+4 1 describe('with no object', function () {
+4 2 it('should throw an error if a partial function is not found', function () {
+4 3 var resolver = create(path.resolve('foo'));
+4 4 expect(resolver.get('foo')).to.throwException();
+4 5 expect(resolver.get('foo')).not.to.be.ok;
+4 7 it('should set the partial function is not Basic', function () {
+4 9 expect(resolver.get('foo')).to.not.be.ok;
+4 12 it('should throw an error if a partial function is not Basic', function () {
+4 37 describe('with default', function () {
+4 38 it('should not.skip('should use relativeToBaseDir', function () {
+4 39 var resolverFactory to create(resolverFactory(resolverFactory());
+4 40 resolverFactory(resolverFactory(resolverFactory(resolverFactory(resolverFactory(resolverFactory(resolverFactory(resolverFactory({ source: null))
+4 41 }))
+4 42 .then(function (resolverFactory.get: function (source, options))
+4 43 return resolverFactory(resolverFactory(resolverFactory(resolverFactory(resolverFactory(resolverFactory, options))
+4 45 .then(function (resolverFactory)
+4 46 .getConstructor, options))
+4 48 .getConstructor, options)
+4 49 .then(resolverFactory)
+4 51 .getConstructor)
+4 54 .resolverFactory)
+5 1 describe('return function(){
+5 2 it('returns a partial function that joins paths of the partials first arguments', function(){
+5 3 expect(return helpers.capture(function(){
+5 4 return helpers.expectEvent(['one', 'two']).to.be.true;
+5 5 }).to.be(true);
+5 7 it('returns only a view post', function(){
+5 8 var view = new helpers.TempDir({
+5 9 'some.md',
+5 10 'layout.md': function () {
+5 11 return helpers.expectEvent(['photo', 'post']).to.be.true;
+5 12 }
+5 13 }).to.be(false);
+5 15 it('returns only a view when no parent view is found', function(){
+5 23 it('returns the view only when parent does not exist', function(){
+5 31 it('should remove partials from the returned partials', function(){
+5 33 'b.json': function () {
+5 34 return { layout: false };
+5 38 it('should allow fallback', function(){
+5 45 it('should allow fallback to the partials', function(){
+5 59 it('should allow paths with parentheses', function(){
+5 62 return { layout: true, layout: true, layout: true, layout: true + sep };
+5 64 }).to.to.replace(/sep('index.sep.'sep', '.'se', 'index.se', 'index.se', null);
+5 65 }).replace(/sese', null).sereplace(/\
+5 66 replace(/se', '.'se', null).sept');
+5 68 it('should ignore = true).then(function () {
+5 69 return helpers.expect(function () {
+5 70 return helpers.expect([]).toArray.isArray(ejs =>/.map(ejs| [];).toArray(e); }).exit).reduce(function(e => return 1).concat('foo'sseps'); });
+5 71 }).filter(function(val => return val.startsWith(e){ return val.startsWith(e).should).should.endWith('')); });
+5 72 }).should.deepEqual([resolve(1,
+6 1 it('returns the original path', function () {
+6 2 return helpers.run(install, [undefined, undefined,
+6 3 {
+6 4 cwd: packageRepository
+6 6 ]).then(function () {
+6 7 expect(tempDir.read('bower.json')).to.eql(null);
+6 10 it('returns the package meta if not present', function () {
+6 16 expect(tempDir.read('bower.json')).to.eql(['bower.json']);
+6 19 it('returns the file that was read', function () {
+6 20 var file = new helpers.TempDir({
+6 21 'bower.json': {
+6 22 name: 'package',
+6 23 version: '0.0.0'
+6 25 }).then(function () {
+6 26 expect(tempDir.read('bower.json')).to.eql(file);
+6 29 it('returns the json from the json', function () {
+6 30 var json = JSON.stringify({
+6 31 name: 'foo',
+6 39 expect(tempDir.read('bower.json')).to.eql(json);
+6 42 it('returns null if no json is found', function () {
+6 43 expect(tempDir.read('bower.json')).to.not.be.null;
+6 45 it('returns true when a json is found', function () {
+6 46 expect(tempDir.read('bower.json')).to.be.true;
+6 48 it('returns null if a json is not found', function () {
+6 54 it('returns false when a json is not found', function () {
+7 1 describe('relativeToBaseDir(baseDir)', function () {
+7 2 return function () {
+7 3 return helpers.capture(function () {
+7 4 return helpers.areAllAbsolutePaths(this.localPaths, true);
+7 6 return this.post.create(this.name, this.localPaths);
+7 7 }).then(function (post) {
+7 8 var path = post.path;
+7 9 return path.resolve(baseDir, post.path);
+7 11 var partial = path.join(this.localPath, this.asset_dir);
+7 12 return view.render(partial, path, false);
+7 13 }).then(function (layout) {
+7 14 return 'layout' == partial
+7 15 ? partial
+7 16 : path;
+7 18 var locals = {
+7 19 path: partial,
+7 20 layout: false
+7 21 };
+7 22 return locals && this.post.create(this.name, this.asset_dir, partial)
+7 23 .then(function (post) {
+7 24 if (!post) return false;
+7 26 return post.layout == 2? partial : path;
+7 27 }).then(function (path) {
+7 28 var result = {
+7 29 path: path,
+7 30 layout: false,
+7 31 _content: content
+7 33 return result;
+7 35 }).spread(function (stdout, stderr) {
+7 36 if (this.debug) {
+7 37 return helpers.run(this.toData(dst));
+7 38 } else {
+7 39 var data = this.data;
+7 40 this.stdout.on('data', function (data) {
+7 41 var lines = data.split(/\\r\
+7 42 ]+/);
+7 43 lines.forEach(function (line) {
+7 44 if (/\\d{1,3}\\%/.test(line)) {
+7 45 that.stdout.push(line);
+7 48 }, 1000);
+7 49 return this.post.create(this.name, this.asset_dir);
+7 54 return Reflect.apply(this, [
+7 55 this.stringify(),
+7 56 this.asset_dir
+7 57 ]).then(function (stdout) {
+7 58 return Q.nfcall(rimraf, dst);
+7 60 return that.elect(stdout, {
+7 61 return Q.sFromDiscrimraf.bind(this, this);
+7 63 }).then(function (elect(arr) {
+7 64 var ensureModifiedPaths = function (answitter = function (ansr) {
+7 65 var suitable;
+7 66 var decache;
+7 67 this.on('saveDir = that.initialize(arr) {
+7 68 if (!isBinaryDir) {
+7 69 .then(this.calculate(arr)
+7 70 .calculate(arr)
+7 71 .schema.calculate(arr)
+7 77 .calculate.calculate(arr)
+8 1 it('returns null if no baseDir is provided', function () {
+8 2 return Q.resolve({});
+8 4 it('returns true when a path is provided', function () {
+8 7 it('returns null if a baseDir is provided', function () {
+8 10 describe('files', function () {
+8 11 var files = [
+8 12 '*.js'
+8 13 ];
+8 14 before(function () {
+8 15 return helpers.require('lib/core/js/files', {
+8 16 '*.js': ['test']
+8 18 var js = document.createElement('js');
+8 19 var content = [
+8 20 'layout: js',
+8 21 'test/foo.js',
+8 22 '---',
+8 23 'karma-static-zespia.zip'
+8 25 beforeEach(function () {
+9 1 describe('_resolve()', function () {
+9 2 it('should checkout correctly if resolution is a branch', function (next) {
+9 4 expect(resolver.getName()).to.be.a('string');
+9 5 expect(resolver.getName()).to.be.a('object');
+9 6 resolver = create({ source: testPackage, target:'some-branch' });
+9 9 it('should checkout correctly if resolution is a tag', function (next) {
+9 10 var resolver = create({ source: testPackage, target: '~0.0.1' });
+9 13 resolver = create({ source: testPackage, target: '~0.1.0' });
+9 17 it('should checkout correctly if resolution is a commit', function (next) {
+9 18 var resolver = create({ source: testPackage, target: '7339c38f5874129504b83650fbb2d850394573e9' });
+9 23 it('should remove any untracked files and directories', function (next) {
+9 25 var file = path.join(testPackage, 'new-file');
+9 26 var dir = path.join(testPackage, 'new-dir');
+9 27 fs.writeFileSync(file, 'foo');
+9 28 fs.mkdir(dir);
+9 29 resolver.resolve()
+9 30 .then(function (dir) {
+9 31 expect(fs.existsSync(path.join(dir, 'baz'))).to.be(true);
+9 32 expect(fs.existsSync(path.join(dir, 'README.md'))).to.be(true);
+9 33 expect(fs.existsSync(path.join(path.join(dir, 'README.md'))).to.to.be(false);
+9 34 next();
+9 35 })
+9 36 .done();
+9 39 it('should return helpers.run(function (notReporter) {
+9 40 .should.should.not.throw(error(notReporter);
+9 41 .should.fail(function (notReporter) {
+9 42 .should.should.fail(404);
+9 43 .should.not.not.throwErrors();
+9 44 .should.not.should.throwErrors();
+9 46 .should.should.should.not.throwErrors();
+9 49 .should.should.deep.apply(app.errorHandlers.list());
+9 50 .should.not.count();
+9 51 .count();

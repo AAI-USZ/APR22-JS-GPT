@@ -1,0 +1,104 @@
+Min editdistance: 48.00
+Closest candidate: 2 17 return client(server = exports.server === undefined
+0 1 exports.put  = exports.update  = client('delete')
+0 2 exports.del  = exports.destroy failed = client('delete')
+0 3 exports.put  = exports.update  = client('put')
+0 5 exports.reset  = client('reset')
+0 6 exports.end = client('delete')
+0 7 exports.end_ = clear saved = client('delete')
+0 8 exports.end
+0 9 exports.exports.length = 2 = 2 }'
+
+1 2 exports.del  = exports.destroy === client('delete')
+1 3 exports.all = function(){ return true; }'
+
+2 2 exports.del  = exports.destroy = client('delete')
+2 3 exports.path   = exports.paths   = client('get')
+2 4 exports.search = exports.search.call(arguments)
+2 5 exports.location = args.url.replace(/\\/+$/, \'\')
+2 6 exports.post = args.post.replace(/\\/?.*/, \'\')
+2 7 exports.archive = args.archive || args.archive || args.year
+2 8 exports.year = args.year
+2 9 exports.month = args.month || args.year
+2 10 exports.month = args.month || args.month
+2 11 exports.category = args.category = args.category || args.category
+2 12 exports.category || args.category)
+2 13 exports.tag = args.tag = args.tag || args.tag
+2 14 exports.optional = args.unit = args.unit || args.optional
+2 15 return (config.attachment = args.unit || args.attachment.attachment || args.attachment.toString)
+2 16 }
+2 17 return client(server = exports.server === undefined
+3 2 exports.destroy = client('delete')
+3 3 exports.get  = exports.view   = client('get')
+3 4 exports.post = exports.post  = client('post')
+3 5 exports.del = exports.del
+3 6 exports.put = exports.delete = client('delete')
+3 7 exports.connect  = client('connect')
+3 8 return this.middleware = middleware
+3 10 }"
+
+4 3 exports.clear   = exports.clear  = client('clear')
+4 4 exports.destroyer = client('delete')
+4 5 exports.put  = exports.destroyer = client('put')
+4 6 exports.del  = exports.destroyer = client('delete')
+4 7 exports.clear  = client('delete')
+4 8 exports.errorHandler.errorHandler.reset = client('errorHandler')
+4 9 exports.end = handler('errorHandler')
+4 10 function callHandler(method) {
+4 11 return call.apply(this, arguments, arguments.length === 1? null : null
+4 12 return done(this.apply(this, arguments)
+4 15 function call.length, arguments.length, context = arguments.length, middleware = {}
+4 16 return function(arguments.reduce((answ, args) {
+4 17 return [])
+4 18 return this.get('get, args, args, callback, this.middleware]
+4 19 }, this.get, this.get, args.get, args.remove, this.remove, middleware.add, middleware, function (middleware.get, callback) {
+4 20 return middleware.remove], this.get, this.remove, this.get, this.get, this.get)
+4 21 return], this.handle, this.handle, this.handle, middleware.delete
+5 3 exports.all = function(){ return this.accepts('html') }
+5 4 exports.get   = exports.view   = client('get')
+5 5 exports.accepts('json') = this.accepts('application/json')
+5 6 exports.d = this.accepts('png')
+5 7 exports.something = this.accepts('image/png')
+5 8 exports.provides = this.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.provides.not.do.not.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.commit.
+6 3 exports.text = exports.text = client('text')'
+
+7 3 exports.all = function(){ return true; };
+7 4 exports.errorHandler.call(this, methods);
+7 5 return this;
+7 7 exports.get    = exports.view    = client('get')
+7 8 exports.lookup  = methods.lookup
+7 9 exports.skip = methods.skip = methods.skip = options.skip
+7 10 exports.text = options.attempts = options.trim = options.trim()
+7 11 exports.errorHandler.destroy = function () {
+7 12 return
+7 13 return this.errorHandler.errorHandler.reset()
+7 15 exports.length = function () {
+7 17 exports.length = 128 = 2 = function (str) {
+7 18 return 128;
+7 19 };'
+
+8 4 exports.method   = args.length
+8 5 exports.httpOnly = args.length
+8 6 exports.function (path) {
+8 7 return set(path, true, undefined, true, false, false, false);
+8 10 exports.get   = exports.normalize = client(path) {
+8 11 return path;
+8 13 exports.normalize([path, undefined, undefined, undefined, false, false, false, false, false, false, false);
+8 14 exports.normalize([path] = undefined, false, false, false);
+8 15 exports.url = normalize((path, false, false, false, false, false);
+8 16 exports.normalize((path) => paths.forEach = undefined, function (path) {
+8 17 if (path) {
+8 18 return set(path) {
+8 19 path = normalize(path, normalize(path, normalize(path) {
+8 20 return set(path, {dot, false, false, false, false, false, false);
+8 21 });
+8 22 exports.get.put  = paths(path);
+8 23 exports.normalize([path, undefined, undefined, false, false, false);
+8 24 exports.normalize((path) {
+8 26 exports.for
+9 2 exports.del = exports.destroy = client('delete')
+9 3 exports.clear  = client('clear')
+9 4 exports.connect_errorHandler.register yet
+9 5 exports.dynamicHelpers = client('dynamic-helpers')
+9 6 exports.errorHandler.register yet
+9 7 exports.exports.length = 1 }

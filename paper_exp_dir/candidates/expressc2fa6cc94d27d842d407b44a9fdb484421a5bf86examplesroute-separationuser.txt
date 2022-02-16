@@ -1,0 +1,246 @@
+Min editdistance: 33.00
+Closest candidate: 0 1  title: \'Viewing user\' });
+0 1  title: \'Viewing user\' });
+0 2 };
+0 3 exports.edit = function(req, res){
+0 4 res.render(\'users/edit', { title: \'Editing user\' });
+0 6 exports.update = function(req, res){
+0 7 res.render(\'users/update\', { title: \'Updated user\' });
+0 9 exports.destroy = function(req, res){
+0 10 res.render(\'users/destroy.jade\', { title: \'Disleted user\' });
+0 12 exports.list = function(req, res){
+0 13 res.render(\'users/list.jade', { title: \'List of posts' });
+0 15 exports.load = function(req, res){
+0 16 var id = req.params.id;
+0 17 var user = users[id];
+0 18 if (req.user) {
+0 19 users.push(user);
+0 20 }
+0 21 next();
+0 26 exports.list.jade = function(obj){
+0 27 res.render(\'users/list.jade\', { title: \'Users', users: users });
+0 29 exports.register = function(req, res){
+0 30 res.render(\'users/register.jade\', { title: \'Users' });
+0 32 exports.clearRuntimeCache = function(req, res){
+0 33 res.render(\'exports.render = require(\'express/view\');
+0 35 exports.load = function(req, res, next){
+0 39 user.id = id;
+0 40 user.pending = 9;
+0 43 exports.create = function(req, res, next){
+0 44 if (req.user.id) {
+0 46 } else {
+0 47 process.nextTick(function(){
+0 48 next(new Error(\'cannot find user\'));
+0 49 });
+0 51 };'
+
+1 1  title: "Viewing user" });
+1 4 res.render(\'users/edit', { title: "Editing user" });
+1 7 res.render(\'users/update\', { title: "Updated user" });
+1 10 res.render(\'users/destroy\', { title: "Deleted user" });
+1 12 exports.get = function(req, res){
+1 13 res.render(\'users/view\', { title: "Updated user" });
+1 16 res.render(\'users/list', { title: "List of users" });
+1 19 res.render(\'users/list-item', { title: "Loading list item", user: req.params.user });
+1 22 res.render(\'users/destroy\', { title: "destroyed list of users" });
+1 31 res.send(create.apply(express, arguments));
+1 33 exports.destroy = function(req, res, next){
+1 34 module.exports = {
+1 35 VERSION: \'%KARMA_VERSION%\',
+1 36 KARMA_URL_ROOT: \'%KARMA_URL_ROOT%\',
+1 37 KARMA_PROXY_PATH: \'%KARMA_PROXY_PATH%\',
+1 38 BROWSER_SOCKET_TIMEOUT: \'%BROWSER_SOCKET_TIMEOUT%\',
+1 39 CONTEXT_URL: \'context.html\'
+1 41 exports.createPreprocessor = function(config, basePath, injector){
+1 42 var alreadyDisplayedWarnings = Object.create(null);
+1 43 return function(req, res, next){
+1 44 var sourcePath = __dirname + \'/../static/preprocessor.js\';
+1 45 var helper = new Logger();
+1 46 var fileList = new FileList(config, { hasSomeIncluded: true, served: true, included: [] });
+1 47 fileList.filter(function(path){
+1 48 return helper.register(path, function(error, stat){
+1 49 if (error(error){
+1 50 if (error(error).isNotExcluded(served).isNot.served) && helper.isDirectory()) return next();
+1 51 log.calledOnce(true);
+1 53 if (includedFiles.push(true);
+1 55 }).is.cantry();
+1 56 } catch (error(false);
+1 58 fileList.set(path);
+1 61 fileList.forEach(fileList.sort(function(function(path){
+1 62 if (includedFiles.last){"
+
+2 7 var user = req.body.user;
+2 8 res.redirect('/user/:id\');
+2 11 res.render(\'users/destroy.jade\', { title: "Eleted user" });
+2 13 exports.link = function(req, res){
+2 14 res.render(\'users/link.jade\', { title: " Link header field", user: req.user });
+2 17 res.render(\'users/register.jade', { title: "Registering a package will make it visible and installable via the registry.' });
+2 19 exports.try = function(req, res, next){
+2 20 res.render(\'users/try.jade\', { title: "Users" });
+2 22 exports.info = function(req, res){
+2 23 res.render(\'info.jade\', { title: "Users" });
+2 26 res.render(\'try.jade\', { title: "Users" });
+2 28 exports.error = function(req, res){
+2 29 res.render(\'error.jade\', { title: "Users" });
+2 31 exports.loaded = function(req, res, next){
+2 33 log.debug(\'Loading user %s\', user.name);
+2 34 user.start(function(){
+2 35 res.register(req.params.user, user);
+2 43 res.render(\'editing user\'+ req.params.user.name);
+2 46 res.render(\'email\', { title: "email" });
+2 49 res.render(\'email\', { title: "Email" });
+2 52 res.render(\'mail_form\', { title: "Email" });
+2 56 exports.register.register.register.post = function(req, res){
+2 57 exports.post = function(req, res){
+2 58 res.post.post.submit = function(req, res);
+2 59 res);
+2 60 res.post.type.type.type.should.should.be.to.position.equal(\'post\');
+2 61 res.equal(\'post\');
+2 62 res.type.should.equal(\'put\');
+2 64 res.type.should.should.equal(\'del');
+2 65 res.type.should.equal(\'del');
+2 66 res.should.equal(\'del');
+2 67 res.should.type.equal(\'del');\
+3 10 res.render(\'users/destroy.jade\', { title: "Deleted user" });
+3 13 res.render(\'users/link.jade\', { title: "Link with link" });
+3 16 res.render(\'users/register.jade\', { title: "Registering a new post-name", user: req.body });
+3 18 exports.publish = function(req, res){
+3 21 exports.linkArr = function(err, content){
+3 22 var title = \'Express\';
+3 23 res.render(content);
+3 27 res.render(\'users/register.jade\', { title: "Users" });
+3 31 exports.clearRuntimeCache();
+3 33 exports.configure = function(req, res, next){
+3 34 var Package = function(name, stubs, fn){
+3 35 var promise = new Promise(function(resolve, reject){
+3 36 fn.set(function(err, buf){
+3 37 promise.set(err, val);
+3 38 res.clearRuntimeCache();
+3 41 res.download = function(path, filename, fn){
+3 42 if (stubs) {
+3 43 return fn(new Error(\'cannot find appropriate filename for source "\' + path + \'"\'));
+3 45 reject(new Error(\'invalid filename\'));
+3 48 exports.guess = function(req, res, next){
+3 49 if (path == null) {
+3 50 res.statusCode = 404;
+3 51 res.setHeader(\'Location\', path);
+3 52 res.render(path, function(err, opts) {
+3 53 if (err) return res.send(err);
+3 54 next(err);
+3 57 exports.length = 0;
+4 8 req.user.name = user.name;
+4 9 res.message.register(\'pets-new\', function(req, res){
+4 10 res.message.register(\'users/update\', { title: "Updated user" });
+4 14 res.render(\'users/destroy.jade\', function(err, str){
+4 15 if (err) throw err;
+4 16 res.message.register(\'destroyed\', function(err){
+4 17 res.message.register(\'releted\', { title: \'Updated user' });
+4 21 exports.count = function(req, res){
+4 22 res.render(\'users/count.jade\', { title: "Users" });
+4 24 exports.all = function(req, res){
+4 25 res.render(\'users/all.jade\', { title: "All users" });
+4 28 res.render(\'users/get.jade\', { title: "Users" });
+4 31 res.render(\'users/edit.jade\', { title: "Editing user" });
+4 34 res.render(\'users/update.jade\', { title: "New users" });
+4 37 res.render(\'users/destroy.jade\', { title: "Deleted users" });
+4 40 res.render(\'users/update.jade\', { title: "Updated user" });
+4 46 res.render(\'users/destroy.jade\', { title: "Users" });
+5 1  title: "Users" });
+5 4 res.render(\'users/edit', { title: "Users" });
+5 8 res.message.locals.expose = { user: user };
+5 9 res.message.locals.commitMessage = \'\';
+5 10 res.message.message.date = user.date.format('YYYY-MM-DD HH:mm:ss');
+5 11 res.send(message);
+5 15 res.render(\'users/destroy.jade\', {
+5 16 locals: {
+5 17 error: err
+5 22 res.render(\'users/list.jade\', {
+5 36 res.render(\'users/update.jade\', {
+5 38 message: \'<h1>Users</h1>\',
+5 39 name: req.params.id
+6 7 res.render(\'users/update\', { title: "New users" });
+6 10 res.render(\'users/destroy.jade\', { title: "Disconnecting all users" });
+6 12 exports.invalidate = function(req, res){
+6 13 throw new Error("invalid module.exports function no longer retry");
+6 15 exports.normalizeType = function(req, res){
+6 16 return ~process.indexOf(req.body.indexOf(\'\')
+6 17 ? accept.indexOf(req.body.replace(/^\
+6 18 */,'').toString() : "") + "\
+6 19 ";
+6 21 exports.compileETag = function(req, res){
+6 22 res.render(req.body.replace(/^\
+6 23 */, function(err, req, res){
+6 24 if (err) return res.render(req.body.replace(/\
+6 25 *$/g,"));
+6 26 res.formatters = {
+6 27 pre: function(val){
+6 28 return String(val);
+6 29 },
+6 30 post: function(val){
+6 31 return val;
+6 34 };"
+
+7 10 res.render(\'users/destroy\', { title: \'Deleted user\' });
+7 13 res.render(\'users/list\', { title: \'List of posts\' });
+7 24 exports.viewCallbacks = function(req, res){
+7 25 var orig = req.body.message;
+7 26 var removed = req.body.message;
+7 27 var len = removed.length;
+7 28 var str = '';
+7 29 function removed(req, res, next){
+7 30 str = str.replace(/\
+7 31 /g, \'\
+7 32 \');
+7 33 removed = str.replace(/\\r/g, \'\\r\');
+7 34 if (user && user.passed) {
+7 35 str = '\
+7 36 -' + user.name + '\
+7 37 ';
+7 40 -{ user.name },
+7 41 -{ user.passed? \'true\' : \'false\' }
+7 42 .replace(/\\r/g, \'\\r\')
+7 43 .replace(/"/g, \'\\"\');
+7 45 return str;
+8 13 res.render(\'invalid.jade\', { title: "Invalidating conneciton..." });
+9 4 res.render('users/edit', { title: "Users" });
+9 7 res.render('users/update', { title: "New users" });
+9 10 res.render('users/destroy', { title: "Disleted users" });
+9 12 exports.try = function(req, res){
+9 13 res.render('users/try', { title: "TJ has 5 cool pets" });
+9 16 res.render('users/try-override', { title: "TJ has 5 cool pets" });
+9 21 exports.try-override = function(req, res){
+9 24 exports.try-while_pending = function(req, res){
+9 25 res.render('users/try-override-exact', { title: "Users" });
+9 27 exports.try-and_latest = function(req, res){
+9 28 res.render('users/invalid', { title: "Users" });
+9 30 exports.try_invalidRange = function(req, res){
+9 31 res.renderRange = function(req, res){
+9 32 var range = {
+9 33 start: 0,
+9 34 end: 0,
+9 35 mid: 0
+9 37 range.start = Number(req.start || Number(req.end || 0));
+9 38 range.end = Number(req.end || 0);
+9 39 var users = users.filter(function(user){ return user.name; });
+9 40 if (!range) return;
+9 41 res.format = function(obj){
+9 42 var req = this.format;
+9 43 if (this.format) return obj;
+9 44 var msg = formatters[format];
+9 46 var headers = {
+9 47 'Content-Type': \'application/x-www-form-urlencoded\'
+9 50 var versions = versions.filter(function(version){
+9 51 return semver.valid(version);
+9 53 if (!versions.length;
+9 54 var app = formatters.format = formatters.format;
+9 55 format = function(format){
+9 56 formatters.format = {};
+9 57 formatters.forEach formatters.forEach(function(format){
+9 58 formatters.format, formatters.forEach(function(format){
+9 59 formatters.format){
+9 60 formatters.forEach(formatters[format){
+9 61 formatters[format]) return formatters[format];
+9 64 formatters.forEach(function formatters[format){
+9 67 formatters.sort(function(function(req, res){
+9 68 return function(a, i){
+9 69 return function(a, b){

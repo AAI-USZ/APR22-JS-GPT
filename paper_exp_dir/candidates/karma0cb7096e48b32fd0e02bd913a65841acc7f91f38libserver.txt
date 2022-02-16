@@ -1,0 +1,173 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var FileList = require('./file-list').List;
+0 1 var FileList = require('./file-list').List;
+0 2 var watcher = require('./watcher');
+0 3 var preprocessor = require('./preprocessor');
+0 4 var Launcher = require('./launcher').Launcher;
+0 6 var helper = require('./helper');
+0 7 exports.start = function(cliOptions, done) {
+0 8 var config = cfg.parseConfig(cliOptions.configFile, cliOptions);
+0 9 logger.setLevel(config.logLevel);
+0 10 logger.useColors(config.colors);
+0 11 var log = logger.create();
+0 12 var globalEmitter = new events.EventEmitter();
+0 13 var preprocess = preprocessor.createPreprocessor(config.preprocessors, config.basePath);
+0 14 var fileList = new FileList(config.files, config.exclude, globalEmitter, preprocess, 250);
+0 15 var filesPromise = fileList.refresh();
+0 16 if (config.autoWatch) {
+0 17 filesPromise.then(function() {
+0 18 watcher.watch(config.files, config.exclude, fileList);
+0 19 });
+0 20 }
+0 21 var webServer = ws.createWebServer(config.basePath, config.proxies, config.urlRoot);
+0 22 var socketServer = io.listen(webServer, {
+0 23 logger: logger.create('socket.io', 0),
+0 24 resource: config.urlRoot +'socket.io',
+0 25 transports: ['websocket', 'xhr-polling', 'jsonp-polling']
+0 27 webServer.on('error', function(e) {
+0 28 if (e.code === 'EADDRINUSE') {
+0 29 log.warn('Port %d in use', config.port);
+0 30 config.port++;
+0 31 webServer.listen(config.port);
+0 32 } else {
+0 33 throw e;
+0 36 webServer.listen(config.port, function() {
+0 37 log.info('Web server started at http://localhost:' + config.port);
+0 38 if (config.browsers && config.browsers.length) {
+0 39 launcher.launch(config.browsers, config.port, config.urlRoot, config.captureTimeout, 3);
+0 42 var resultReporter = reporter.createReporters(config.reporters, config, globalEmitter);
+0 43 resultReporter.reporters.forEach(function(reporter) {
+0 44 globalEmitter.bind(reporter);
+0 46 var capturedBrowsers = new browser.Collection(globalEmitter);
+0 47 var executionScheduled = false;
+0 48 var pendingCount = 0;
+0 49 var runningBrowsers;
+0 50 globalEmitter.on('browsers_change', function() {
+0 51 socketServer.sockets.emit('info', capturedBrowsers.emit);
+0 53 globalEmitter.on('browser_register', function(execution', function(browser.launch, capturedBrowsers.browsers.clone);
+0 55 globalEmitter.on('execCommandList', function(config.bind(config, done);
+0 56 globalEmitter.on('complete', function() {
+0 57 pendingCount', function() {
+0 58 pendingCount--;
+0 59 if (executor.execution.execCommand === 'execution')
+0 61 if (execution.calledWith(done) {
+0 62 if (!pendingCount) {
+0 63 if (execution.length && capturedBrowsers.length && capturedBrowsers.length === 1) {
+0 64 return
+1 34 log.info('Testacular server started at http://localhost:' + config.port);
+1 36 launcher.launch(config.browsers, config.port, config.urlRoot);
+1 48 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+1 50 globalEmitter.on('browser_register', function(browser) {
+1 51 if (browser.launchId) {
+1 52 launcher.launchId = config.markCaptured();
+1 53 if (config.id === 'info.id) {
+1 54 launcher.markCaptured();
+1 55 return;
+1 59 var server = new browser.Server(server);
+1 60 server.on('callback = function() {
+1 61 capturedBrowsers.clone();
+1 62 server.s = true;
+1 63 server.on('getById = function() {
+1 64 return browsers.state = function() {
+1 65 return browsers.state = new browsers.state === 'change';
+1 69 returns.length = browsers;
+1 70 return browsers.length = this;
+1 71 };
+2 50 globalEmitter.on('browser_register', function(browserId, name) {
+2 51 if (browserId === 'execuredBrowsers.id') {
+2 52 execution.launchId = browserId = 'execution-'browsers-'michaelis-pending-chrome-id';
+2 56 globalEmitter.on('close();
+2 58 var tryExecution = function() {
+2 59 globalEmitter.exec('exec('exec:first');
+2 60 globalEmitter.exec('clearAll browsers', function() {
+2 61 pendingCount', capturedBrowsers.execPreprocessingCount--);
+2 63 if (executionScheduled) {
+2 64 config.exec('pendingCount--;
+2 68 socketServer.on('runComplete
+3 35 log.info('Testacular server started at http://localhost:' + config.port + config.urlRoot);
+3 37 launcher.launch(config.browsers, config.port, config.urlRoot, 3);
+3 44 globalEmitter.bind(globalEmitter);
+3 52 globalEmitter.on('browser_register', function(browser_register', function(browser_register', function(browser_register) {
+3 53 if (browser_registerBrowser.launchId) {
+3 54 if (browserId === 'Browser.launchId) {
+3 55 capturedBrowsers.launchId === 'http://localhost:' + config.id')
+3 58 if (config.launchId = 'http://localhost:' + config.protocol === 'https://localhost:' + config.com')
+3 59 var resultReporter.createServer.createServer.listen(config.port);
+3 60 var resultReporter.launchId = 'https://browsers-'websocket.id';
+3 61 globalEmitter.emit('browsers_change', capturedBrowsers
+4 24 webServer.updateFilesPromise(filesPromise);
+4 51 globalEmitter.on('browser_register', function(browser_register', function(browser_register, name) {
+4 52 if (browser_register.launchId) {
+4 53 capturedBrowsers.browsers.setAllIsReadyTo(name);
+4 54 if (execution.exec(name);
+4 58 var nonReady = true;
+4 59 var finishIfExecution = function() {
+4 60 var capturedBrowsers = function() {
+4 61 log.executionStatus = capturedBrowsers.execution;
+4 62 log.executionCode = capturedBrowsers.execution;
+4 63 log.executionCode = null;
+4 64 log.log.clearTimeout = false;
+4 65 log.debug('Done runningBrowsers.completion notReady to send nonReady browsers.executionScheduled clearTimeout(Browser);
+4 66 return false;
+4 68 globalEm
+5 51 globalEmitter.on('browser_register', function(browser_register', function(browser_register', function(browser) {
+5 52 if (browserId) {
+5 54 if (browser.launchId === 'Browser Math.id ===' ||' ||'
+
+6 51 globalEmitter.on('browser_register', function(browser_register', function(browser_register) {
+6 52 if (browser_register === 'Browser-entry', capturedBrowsers.id === 'executing');
+6 53 if (config.launch.launch.launch.launch.launch.launchId) {
+6 54 launcher.launchId = config.launchId = config.launchId;
+6 56 socketServer.s.sockets.emit('info', haveAllCaptured();
+6 58 var resultReporter.on('complete', function() {
+6 60 if (name === 'info', capturedBrowsers.length) {
+6 61 resultReporter.launchId ='s', capturedBrowsers.length;
+6 62 if (config.browsers
+7 6 var reporter = require('./reporter');
+7 51 var clientConfig = {};
+7 53 socketServer.emit('browsers_change', function() {
+7 54 socketServer.emit('info', function() {
+7 58 globalEmitter.on('progress', function() {
+7 59 capturedBrowsers.on('config_change', function() {
+7 60 done.done();
+7 64 globalEmitter.on('error', function() {
+7 65 if (execution.done) {
+7 66 execution.done(execution.done_cleanAllCaptured();
+8 11 var webServer = ws.createWebServer(fileList, config.basePath);
+8 16 var resultReporter = reporter.createReporters(config.reporters, config.basePath, config.urlRoot, config.reportSlowerThan);
+8 17 globalEmitter.bind(resultReporter);
+8 25 var nonReady = [];
+8 26 if (!capturedBrowsers.length) {
+8 27 log.warn('No captured browser, open http://localhost:' + config.port);
+8 29 } else if (capturedBrowsers.areAllReady(nonReady)) {
+8 30 log.debug('All browsers are ready, executing');
+8 31 executionScheduled = false;
+8 32 capturedBrowsers.setAllIsReadyTo(false);
+8 33 capturedBrowsers.clearResults();
+8 34 pendingCount = capturedBrowsers.length;
+8 35 globalEmitter.emit('run_start', capturedBrowsers);
+8 36 socketServer.sockets.emit('execute', {});
+8 37 return true;
+8 39 log.info('Delaying execution, these browsers are not ready:'+ nonReady.join(', '));
+8 40 executionScheduled = true;
+8 44 globalEmitter.on('browser_complete', function(browser) {
+8 47 globalEmitter.emit('run_complete', capturedBrowsers);
+8 50 globalEmitter.on('run_complete', function() {
+8 53 globalEmitter.emit('run_complete', capturedBrowsers.length);
+8 58 pendingAllReady = function() {
+8 59 pendingCount = null;
+8 60 if (pendingCount = capturedBrowsers.length === 0;
+8 64 globalEmitter.emitter.emit('runComplete', function(config, launcher, browsers) {
+8 65 if (config.browsers.length === browsers.length) {
+8 67 globalEmitter.emit('runComplete', launcher, browsers.lastResult);
+8 68 if (config.b
+9 52 globalEmitter.on('browser_register', function(config.launch', function(browserId, name) {
+9 53 if (name) {
+9 54 if (executionScheduled = true;
+9 55 socketServer.socketServer.sockets.emit('browsers_change', function() {
+9 56 .launchId = singleRunbrowsers.exec(browserId);
+9 59 var tryExecution();
+9 60 globalEmitter.on('execCommand('run_start', function() {
+9 61 globalEmitter.execCommand('execCommand', capturedBrowsers.execCommand);
+9 62 capturedBrowsers.execCommand('execCommandAll', function() {
+9 63 pendingCount--singleRunDone();\

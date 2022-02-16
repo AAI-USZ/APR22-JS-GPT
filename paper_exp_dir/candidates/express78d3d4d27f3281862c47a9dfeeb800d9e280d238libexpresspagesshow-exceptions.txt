@@ -1,0 +1,377 @@
+Min editdistance: 15.00
+Closest candidate: 0 81 describe \'.get()'
+
+0 1 describe \'Express\'
+0 2 before_each
+0 3 Express.routes = []
+0 4 end
+0 5 describe \'.contentsOf()\'
+0 6 it\'should return the body of a function as a string\'
+0 7 Express.contentsOf(function(){ return \'foo\' }).should.include\'return\', \'foo\'
+0 10 describe \'.header()\'
+0 11 it\'should set / get headers\'
+0 12 get(\'/style.css\', function(){
+0 13 this.header(\'content-length\', 1)
+0 14 return \'body { background: white; }\'
+0 15 })
+0 16 get(\'/style.css\').headers[\'content-length\'] = \'1, colspan: 23'
+0 19 describe \'.status()\'
+0 20 after_each
+0 21 Express.response.status = 200
+0 23 it\'should set response status code by number\'
+0 24 get(\'/status\', function(){
+0 25 this.status(404)
+0 26 return \'Not Found\'
+0 28 get(\'/response.status\').headers[\'content-length\'] = \'2, colspan: 3'
+0 30 it\'should set using the status string map for padding\'
+0 35 get(\'/static/style.css\').headers[\'content-length\'] = \'3\'
+0 38 describe \'.attachment()\'
+0 39 it\'should set the Content-Disposition to attachment\'
+0 40 get(\'/report\', function(){
+0 41 this.header(\'Content-Disposition\', \'attachment: attachment\')
+0 42 get(\'/report\').headers[\'content-disposition\'] = \'attachment\'
+0 44 it\'should set the Content-Type with the mime type passed\'
+0 46 this.header(\'Content-Type\', \'text/plain\')
+0 47 get(\'/report\').headers[\'content-type\'] = \'application/octet-stream\'
+0 51 it\'should set the header\'
+0 52 get(\'/logout\', function(){
+0 53 this.header(\'Content-Disposition\', \'attachment\')
+0 54 get(\'/logout\').headers[\'content-disposition\'] = \'attachment\'
+0 57 describe \'.header() - - promisify\'
+0 60 this.header(\'Content-Type\', \'application/json\')
+0 61 get(\'/logout\').headers[\'content-type\'] = \'application/json\'
+0 64 describe \'.header() - raw buffer\'
+0 71 describe \'.header() - string-size\'
+0 72 it\'should set relative url header\'
+0 75 get(\'/logout\').headers[\'location\'})
+0 76 get(\'/logout\').headers[0].headers[0].headers[0].headers]] = \'config
+0 81 describe \'.get()'
+
+1 3 reset()
+1 5 describe \'Request\'
+1 6 describe \'#status()\'
+1 7 it\'should set the response status\'
+1 8 get(\'/error\', function(){ this.status(500) })
+1 9 get(\'/error\').status.should.eql 500
+1 12 describe \'#header()\'
+1 13 describe \'when given a field name and value\'
+1 15 get(\'/user\', function(){
+1 16 this.header(\'x-foo\', \'bar\')
+1 18 get(\'/user\').headers.should.have_property \'x-foo\', \'bar\'
+1 21 describe \'when given a field name\'
+1 22 it\'should return a request header value\'
+1 24 return this.header(\'host\')
+1 26 get(\'/user\').body.should.eql \'localhost\'
+1 28 it\'should be case-insensitive\'
+1 30 return this.header(\'Host\')
+1 36 describe \'#accepts()\'
+1 37 describe \'when the Accept header is present\'
+1 38 it\'should return true if the mime type is acceptable\'
+1 39 get(\'/user\', function(){ return this.accepts(\'jpeg\').toString() })
+1 40 get(\'/user\', { headers: { accept: \'image/jpeg\' }}).body.should.eql \'true\'
+1 42 it\'should return false if the mime type is not present\'
+1 43 get(\'/user\', function(){ return this.accepts(\'html\').toString() })
+1 44 get(\'/user\', { headers: { accept: \'image/jpeg\' }}).body.should.eql \'false\'
+1 47 describe \'when the Accept header is not present\'
+1 48 it\'should return true\'
+1 50 get(\'/user\', { headers: { accept: \'\' }}).body.should.eql \'true\'
+1 53 describe\'should allow multiple arguments\'
+1 54 it\'should return true if any mime type is present\'
+1 55 get(\'/user\', function(){ return this.accepts(\'jpeg\', \'png\').toString() })
+1 56 get(\'/user\', { headers: { accept: \'image/gif,image/png\' }}).body.should.eql \'true\'
+1 58 it\'should return false if none of the mime type is present\'
+1 60 get(\'/user\', { headers: { accept: \'text/plain,text/html\' }}).body.should.eql \'false\'
+1 63 describe \'when a media type range was sent\'
+1 64 it\'should return true if the group media type matches\'
+1 66 get(\'/user\', function(){ return this.accepts(\'text/plain\').toString() })
+1 67 get(\'/user\', { headers: { headers: { headers: { headers: { accept: { accept: \'text/plain,text/plain,text/html\' }})
+1 78 describe \'#halt()\'should allow multiple arguments'
+1 79 it\'should return the first return the first return to capture group\'
+1 80 get(\'/cal given size\'
+1 81 get(\'/cal\', function()\'s/**/*.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s.s
+2 5 describe \'#render()\'
+2 8 describe \'given a callback function\'
+2 9 it\'should set the session\'
+2 11 this.render(\'hello.haml.html\', { layout: \'front\' })
+2 13 get(\'/user\').headers.should.have_property \'content-type\', \'text/html; charset=utf-8\'
+2 16 describe \'and layout of the same type exists\'
+2 17 it\'should render the layout and view\'
+2 18 get(\'/hello\', function(){
+2 19 this.render(\'hello.haml.html\', { layout: \'page\' })
+2 21 get(\'/hello\').headers.should.have_property \'content-type\', \'text/html; charset=utf-8\'
+2 24 describe \'and layout of the same type does not exist\'
+2 25 it\'should throw an error\'
+2 29 -{ get(\'/hello\') }.should.throw_error \'No such file or directory\'
+2 32 describe \'given an abitrary layout name\'
+2 33 it\'should render an abitrary layout name\'
+2 34 get(\'/hello/base/b.js\', function(){
+2 37 get(\'/hello/base/b.js\').headers.should.have_property \'content-type\', \'application/octet-stream\'
+2 40 describe \'with no arguments\'
+2 43 throw new Error(\'should not be a function\')
+2 45 get(\'/user\').body.should.eql \'Not a function\'
+2 48 describe \'with a trailing slash in request path\'
+2 49 it\'should still match\'
+2 51 throw new Error(\'should still match\'\')
+2 53 get(\'/user/\').body.should.eql \'test\'
+2 56 describe \'with a trailing slash in route path\'
+2 58 get(\'/user/\', function(){
+2 61 get(\'/user\').body.should.eql \'test\'
+2 64 describe \'with an exception thrown'
+2 65 it\'should provide display route method and path in the stacktrace\'
+2 67 throw new Error(\'should display the stacktrace for trace\'\')
+2 69 get(\'/user/\').stack.should.include(\'get\')
+2 72 describe \'with a clear session method\'
+2 73 it\'should clear session\'
+2 75 throw new Error(\'should clear session()\')
+2 77 -{ get(\'/user/login\').headers.clear()
+2 78 end()
+2 83 describe \'end
+2 84 describe \'#formatters=multipart()\'\', function()\'\', function(){
+2 85 it\'should allowmultipart()'should allowmultipart()'\', function()'\', function(){
+2 86 it\'should allowmultipation\'\', function(){
+2 87 return this.should.should.should.be_null
+2 90 get(\'/users.get(\'/users.multipat(1)
+2 91 end\', function(){ return \'multip = function(){ return \'multipat\' })
+2 92 get(\'halt\', function(){ return \'multip.halt\', function(){ return \'multip})
+2 93 get(\'3ds += 1\' })
+2 94 get(\'/users.multip.halt\', function(){ return \'multipop(1, 3})
+3 5 describe \'.set()\'
+3 6 it\'should set a session\'
+3 8 return \'tj\'
+3 10 get(\'/user\').headers[\'x-powered-by\'].should.eql \'tj\'
+3 13 describe \'.enable()\'
+3 16 this.enable(\'case sensitive routing\')
+3 17 this.halt(200)
+3 19 get(\'/user\').headers[\'x-powered-by\']).headers.should.eql \'tj\'
+3 22 describe \'.disable()\'
+3 25 this.disable(\'case sensitive routing\')
+3 26 this.halt()
+3 31 describe \'.configure()\'
+3 32 describe \'.use()\'
+3 33 it\'should check to capture a callback function\'
+3 35 this.use(function(req, res){
+3 36 res.status(500).end(\'tj\');
+3 37 });
+3 38 request(this)
+3 39 .get(\'/user/\')
+3 40 .end(function(err, res){
+3 41 res.statusCode.should.eql 500
+3 42 res.headers.should.have.property \'content-length\', \'0209,020,200, \'CONESS\')
+3 43 done();
+3 46 it\'should allow escaped regexp special characters\'
+3 47 get(\'/user/\\\\d+\', function(){
+3 48 return \'woot\'
+3 50 get(\'/user/\\\\d+/edit\', function(){
+3 51 return \'new world\'
+3 53 get(\'/user/\\\\d+/edit\').headers[\'x-powered-by\']).headers.should.eql \'woot\'
+3 55 it\'should allow optional placeholders\'
+3 56 get(\'/user/:id?\', function(){
+3 57 return \'user\'+ param(\'id\')
+3 59 get(\'/user/12\', function(){
+3 60 return \'user 12\'
+3 65 get(\'/user/:id/edit\').headers[\'x-powered-by\']).headers.should.eql \'editing user 12\'
+3 67 it\'should allow optional placeholders in middle segments\'
+3 68 get(\'/user/:id?/edit\', function(){
+3 69 return \'user/:id?/edit\'
+3 71 get(\'/user/:id/edit\').headers[\'x-powered-by\']).headers.should.eql \'editing user\'
+3 74 describe \'.param()\'
+3 75 it\'should return a route placeholder value\'
+3 76 get(\'/user/:id\', function(){
+3 77 return \'user/:id\'
+3 79 get(\'/user/user/:id/:id/:operation\'
+3 81 get(\'/user.params.params.user.name.should.should.eql \'user.eql \'user.eql \'user\'
+3 91 describe \'.end
+3 92 end'
+
+4 15 get(\'/style.css\').headers[\'content-length\'] = \'"\'
+4 19 it\'should set / get headers'
+4 21 return Express.response.body.toString()
+4 23 get(\'/report\').headers[\'content-length\'] = \'"\'
+4 25 it\'should set / get files\'
+4 26 get(\'/file/*\', function(){
+4 27 return \'"name=more.org/file.js"\'
+4 29 get(\'/file/user.json\').headers[\'content-length\'] = \'"application/json\'
+4 32 describe \'.argsArray()\'
+4 33 it\'should return an array of arguments\'
+4 34 get(\'/hello.js\', function(){
+4 35 return \'bar\'
+4 37 get(\'/hello.haml\', function(){
+4 38 return \'baz\'
+4 40 get(\'/hello.baz\').headers[\'content-length\'] = \'"bar\'
+4 42 it\'should allow an offset\'
+4 43 get(\'/:foo\', function(){
+4 46 get(\'/:baz\').headers[\'content-length\'] = \'"baz\'
+4 49 describe \'.escape()\'
+4 50 it\'should escape html\'
+4 52 return \'<link rel="stylesheet" href="http://hexo.io/style.css">\'
+4 54 get(\'/style.css\').headers[\'content-length\'] = \'"300"\'
+4 62 get(\'/style.css\').headers[\'content-length\'] = \'"300"
+4 65 describe \'.cookie()\'
+4 66 it\'should set a session cookie\'
+4 68 return Express.server.request.cookie(\'foo\', \'bar\')
+4 70 get(\'/logout\').headers[\'cookie\'].should.not.containEql\'
+4 73 describe \'.cookie()Text\'
+4 78 get(\'/logout\').headers[\'cookie\'cookie\'].should.foo.bar.should.eql \'baz\'
+4 83 describe \'.cookie()
+5 11 this.render(\'hello.haml.html\', { layout: false })
+5 13 get(\'/user\').headers.should.have_property \'id\'
+5 14 get(\'/user\').body.should.eql \'<p>Hello World</p>\'
+5 15 get(\'/user\').status.should.eql 200
+5 18 describe \'and layout of the same type as locals\'
+5 21 this.render(\'hello.haml.html\', { layout: \'layouts\' })
+5 23 get(\'/hello\').body.should.eql \'<html><body>layouts</body></html>\'
+5 24 get(\'/hello\').body.should.eql \'<h1>Hello World</h1>\'
+5 28 it\'should pass the layout and view\'
+5 29 get(\'/hello/:layout\', function(){
+5 30 this.render(\'hello.haml.html\', { layout: \'layouts/foo.jade\' })
+5 32 get(\'/hello/:layout/edit\').body.should.eql \'<li>foo</li><li>bar</li>\'
+5 36 describe \'with other layout name\'
+5 38 get(\'/hello/:layout/:title\', function(){
+5 41 get(\'/hello/:layout/:title/\').body.should.eql \'<title>Welcome</title>\'
+5 42 get(\'/hello/:layout/:title/\').body.should.eql \'<body>page</body></html>\'
+5 43 get(\'/hello/:layout/edit\').body.should.eql \'<li>edit</li><li>Hello World</li><li>Hello World</li>\'
+5 48 get(\'/foo/bar/baz.html\', function(){
+5 49 this.render(\'foo.haml.html\', { layout: \'foo.bar\' })
+5 51 get(\'/foo/bar/baz.html\').body.should.eql \'<strong>foo</strong>bar</li><li>foo</li>\'
+5 54 describe \'with an exception thrown\'
+5 56 get(\'/foo/:id\', function(){
+5 57 throw new Error(\'access denied\')
+5 59 -{ get(\'/foo/:id\') }.stack.should.include \'/foo\', function(){
+5 60 return \'1
+5 63 get(\'/user.stack.should.include(\'/foo\', function(){
+5 64 throw new Error(\'/user.stack.stack.include(\'/user.stack.include(\'/user.include(\'/user\')\')
+5 73 describe \'#format = function push(){
+5 74 it\'should push()\'should push()\'should push()\'
+5 75 puts the request output(element-count=1, push()\'s)
+5 76 -1, push(4, format, push())
+5 77 , format=d, port=3'
+
+6 4 use(require(\'express/plugins/cookie\').Cookie)
+6 5 compileCookie = require(\'express/plugins/cookie\').compileCookie
+6 6 parseCookie = require(\'express/plugins/cookie\').parseCookie
+6 8 describe \'Cookie\'
+6 9 describe \'compileCookie()\'
+6 10 it\'should return a cookie string\'
+6 11 var data = {
+6 12 path: \'/\',
+6 13 domain: \'.vision-media.ca\'
+6 14 }
+6 15 compileCookie(data).should.eql \'path=/; domain=.vision-media.ca\'
+6 17 it\'should correctly format any Date objects\'
+6 19 expires: new Date(Date.parse(\'May 25, 1987 11:13:00 PDT\')),
+6 20 path: \'/foo\',
+6 23 compileCookie(data).should.eql \'expires=Mon, 25-May-1987 11:13:00 GMT\'
+6 25 it\'should convert true to a key without a value\'
+6 33 it\'should compile without options\'
+6 34 compileCookie(\'foo\', \'bar\').should.eql \'foo=bar\'
+6 37 describe \'parseCookie()\'
+6 38 it\'should parse cookie key/value pairs\'
+6 39 var attrs =\'sid=1232431234234; data=foo\'
+6 40 parseCookie(attrs).should.eql { sid: \'1232431234234\', data: \'foo\' }
+6 42 it\'should preserve case\'
+6 43 var attrs = \'SID=1232431234234; Data=foo\'
+6 44 parseCookie(attrs).should.eql { SID: \'1232431234234\', Data: \'foo\' }
+6 46 it\'should disregard ad-hoc whitespace\'
+6 47 var attrs =\'SID    =  1232431234234 ;  data =  foo\'
+6 48 parseCookie(attrs).should.eql { SID: \'1232431234234\', data: \'foo\' }
+6 50 it\'should support complex quoted values\'
+6 51 var attrs = \'SID="123456789"; fbs_0011223355="uid=0987654321&name=Test+User"\'
+6 52 parseCookie(attrs).should.eql { SID: \'123456789\', fbs_0011223355: \'uid=0987654321&name=Test User\' }
+6 54 it\'should not override when a duplicate key is found\'
+6 55 var attrs = \'SID=1234; SID=9999\'
+6 56 parseCookie(attrs).should.eql { SID: \' SID=1234; SID=9999\' }
+6 59 describe \'on\'
+6 60 describe\'request\'
+6 61 it\'request - TIONS\'
+6 62 it\'
+6 63 it\'should default to the route\'
+6 65 it\'should match the Set-Cookie\'\', function match the Set-Cookie\'\', function header = request.cookie\'\', function cookie = request.toString() {
+6 66 headers = \'cookie = \'cookie=; path=/; path=/; path=/; path=/\'
+6 67 should.should.should.eql \'path\'
+6 68 should.eql \'path\'
+7 7 set(\'views\',\'spec/fixtures\')
+7 9 describe \'given a valid view name\'
+7 13 return \'<html><body>\'
+7 15 get(\'/custom\', function(){
+7 16 return \'<h1>World<h1>\'
+7 18 get(\'/html\', function(){
+7 19 return \'<p>Welcome</p>\'
+7 21 get(\'/jade\', function(){
+7 24 get(\'/haml\', function(){
+7 25 return \'\
+7 26 <p>Hello World<h1>\'
+7 28 get(\'/callback/layout/no-options\', function(){
+7 31 get(\'/error\', function(){
+7 32 return \'doesNotExist\'
+7 34 get(\'/invalid-async\', function(){
+7 35 return function(){
+7 36 return \'already\'
+7 41 throw new Error(\'invalid-async()\')
+7 44 get(\'/absolute\', function(){
+7 45 return \'npm-not-exist\'
+7 47 get(\'/ferret\', function(){
+7 48 return \'<li class="ferret">TJ</li>\'
+7 51 return 200
+7 54 return 404
+7 56 get(\'/location\', function(){
+7 57 return \'test\'
+7 59 get(\'/mvc\', function(){
+7 63 return \'<custom method="express/fixtures/hello" class="ferret">\'
+7 65 get(\'/cope\', function(){
+7 68 get(\'/\', function(){
+7 75 return \'invalid\'
+7 82 get(\'/exclude\', function(){
+7 88 get(\'/conf/both\', function(){
+7 91 get(\'/conf/coffee\', function(){
+7 94 get(\'/conf/default-headers\', function(){
+7 97 get(\'/conf/exclude-from-large\', function(){
+7 100 get(\'/conf/ts/omit\', function(){
+7 101 return \'succeed\'
+7 103 get(\'/conf/support/utils\', function(){
+7 104 return \'init\'
+7 106 get(\'/config\'
+
+8 28 secure: true,
+8 29 httpOnly: true
+8 31 compileCookie(data).should.eql \'path=/; secure; httpOnly\'
+8 56 parseCookie(attrs).should.eql { SID: \'1234234\', SID: \'9999\' }
+8 58 it\'should work with objects\'
+8 60 parseCookie(attrs).should.toString().should.eql { SID: \'WdyLEZ=9999\' }
+8 65 describe \'test\'should validatePattern\'\', function validateBrowser\'\', function () {
+8 66 it\'should match'should match\'should.profile\'\', function () {
+8 67 var result = match.profile.profile.should.should.should.eql \'1\').length.eql 2
+8 68 var url.should.should.should.eql 400
+8 69 var httpOnly.should.should.should.toString()
+8 70 protoString.match('/halt.should.eql 'browsers.0\'
+8 71 return call.eql \'localhost.0\'
+8 73 Express.match.match.should.should.should.eql 1
+8 75 Express.test.should.match.should.eql 3
+8 76 .should.should.toString()
+8 77 .should.toString
+9 5 describe \'View\'
+9 6 describe\'set("views")\'
+9 7 it\'should default to <root>/views\'
+9 8 set(\'root\',\'spec\')
+9 9 set(\'views\').should.eql\'spec/views\'
+9 20 this.render(\'hello.haml.html\')
+9 22 get(\'/\').body.should.include \'<html><body>\'
+9 23 get(\'/\').body.should.include \'<h2>Hello\'
+9 25 it\'should default context to the current request\'
+9 27 this.title = \'Welcome\'
+9 28 this.render(\'page.haml.html\', { layout: \'front\' })
+9 30 get(\'/\').body.should.include \'<title>Welcome\'
+9 32 it\'should set the content type based on the last path segment\'
+9 36 get(\'/\').headers[\'content-type\'].should.eql \'text/html\'
+9 44 -{ get(\'/\') }.should.throw_error \'No such file or directory\'
+9 47 describe \'given a custom layout name\'
+9 50 this.title = \'Express\'
+9 54 get(\'/\').body.should.include \'<title>Express\'
+9 67 describe \'when layout:front\'
+9 68 it\'should render the view only\'
+9 71 get(\'/\').body.should.include \'<h1>Hello\'
+9 75 describe \'when layout:title>\'
+9 76 it\'should render the title\'
+9 79 this.render(\'hello.haml.haml.html\', { layout: \'world.haml.html\')
+9 81 get(\'/
+9 82 get(\'/\', { layout: \'world\'
+

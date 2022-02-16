@@ -1,0 +1,220 @@
+Min editdistance: 17.00
+Closest candidate: 0 11 var deprecate = require('./utils').deprecate;
+0 1 var mixin = require('utils-merge');
+0 2 var Router = require('./router');
+0 3 var methods = require('methods');
+0 4 var middleware = require('./middleware/init');
+0 5 var query = require('./middleware/query');
+0 6 var debug = require('debug')('express:application');
+0 7 var View = require('./view');
+0 8 var http = require('http');
+0 9 var compileETag = require('./utils').compileETag;
+0 10 var compileTrust = require('./utils').compileTrust;
+0 11 var deprecate = require('./utils').deprecate;
+0 12 var resolve = require('path').resolve;
+0 13 var app = exports = module.exports = {};
+0 14 app.init = function(){
+0 15 this.cache = {};
+0 16 this.settings = {};
+0 17 this.engines = {};
+0 18 this.defaultConfiguration();
+0 19 };
+0 20 app.defaultConfiguration = function(){
+0 21 this.enable('x-powered-by');
+0 22 this.set('etag', 'weak');
+0 23 var env = process.env.NODE_ENV || 'development';
+0 24 this.set('env', env);
+0 25 this.set('subdomain offset', 2);
+0 26 this.set('trust proxy', false);
+0 27 debug('booting in %s mode', env);
+0 28 this.on('mount', function(parent){
+0 29 this.request.__proto__ = parent.request;
+0 30 this.response.__proto__ = parent.response;
+0 31 this.engines.__proto__ = parent.engines;
+0 32 this.settings.__proto__ = parent.settings;
+0 33 });
+0 34 this.locals = Object.create(null);
+0 35 this.mountpath = '/';
+0 36 this.locals.settings = this.settings;
+0 37 this.set('view', View);
+0 38 this.set('views', resolve('views'));
+0 39 this.set('jsonp callback name', 'callback');
+0 40 if (env === 'production') {
+0 41 this.enable('view cache');
+0 42 }
+0 43 Object.defineProperty(this, 'router', {
+0 44 get: function() {
+0 45 throw new Error('\\'app.router\\' is deprecated!\
+0 46 Please see the 3.x to 4.x migration guide for details on how to update your app.');
+0 50 app.lazyrouter = function() {
+0 51 if (!this._router) {
+0 52 this._router = new Router({
+0 53 caseSensitive: this.enabled('case sensitive routing'),
+0 54 strict: this.enabled('strict routing')
+0 56 this._router.use(query());
+0 57 this._router.use(middleware.init(this));
+0 60 app.handle = function(req, res, done) {
+0 61 done = done || finalhandler(req, res, {
+0 62 env: this.get('env'),
+0 63 onerror: logerror.bind(this)
+0 65 this._router.handle(req, res, done);
+0 67 app.get = function(url) {
+0 68 return this._router.get('url');
+0 71 app.use = function(function getConsolePath) {
+0 72 return getConsolePath(prefixPath, browserConsolePath, browserConsole, path) {
+0 73 if (this.format) {
+0 75 var getConsole = format = format || this.format || this.format;
+0 76 } else {
+0 77 if (this.format = getConsolePaths(this.format) || this.format = getConsolePath)
+0 78 return;
+0 82 app.listConsole.get = function() {
+0 83 return getConsolePath(prefixPath, url, port, hostname, urlRoot, hostname, urlRoot, pathname, port, urlRoot, function(logger
+1 35 this.set('views', process.cwd() + '/views');
+1 58 var env = this.get('env');
+1 60 env: this.get('env'),"
+
+2 1 var Router = require('../lib/router');
+2 20 this.set('env', process.env.NODE_ENV || 'development');
+2 21 debug('booting in %s mode', this.get('env'));
+2 22 this.use(connect.query());
+2 23 this.use(middleware.init(this));
+2 28 this._router = new Router(this);
+2 29 this.routes = this._router.map;
+2 30 this.__defineGetter__('router', function(){
+2 31 this._usedRouter = true;
+2 32 this._router.caseSensitive = this.enabled('case sensitive routing');
+2 33 this._router.strict = this.enabled('strict routing');
+2 34 return this._router.middleware;
+2 36 this.locals = locals(this);
+2 42 this._router.locals.settings = this.settings;
+2 46 if (this.get('env') === 'production') {
+2 50 app.use = function(route, fn){
+2 51 var app;
+2 52 if ('string'!= typeof route) fn = route, route = '/';
+2 53 if (fn.handle && fn.set) app = fn;
+2 54 if (app) {
+2 55 app.route = route;
+2 56 fn = function(req, res, next) {
+2 57 var orig = req.app;
+2 58 app.handle(req, res, function(err){
+2 59 req.app = res.app = res.app = orig;
+2 60 req.handle(req, res, function(err){
+2 61 req.req.app.req = orig.req = orig;
+2 62 req.app.req.req.req.session = orig;
+2 63 req.session.session.session.session. = res.session.session. = orig;
+2 64 res.session.req.session.session.__props.__proto__proto__ = orig;
+2 65 res.session.__proto__proto__ = function orig.session;
+2 66 res.session.__proto__proto__ = function orig;
+2 67 res.session.__proto__proto__ = function 3 == err;
+2 68 res.locals.locals.__proto__proto__proto__ = orig;
+2 69 res.locals.locals.__proto__proto__ = fn.__ = fn;
+2 70 next();
+2 71 locals.locals.locals.locals.settings.settings.__proto__proto__ = fn.locals.__proto__ = fn
+3 10 var deprecate = require('depd')('express');
+3 12 describe('middleware', function(){
+3 14 describe('.settings', function(){
+3 15 describe('on.app_router', function(){
+3 16 it('should capture the router', function(done){
+3 17 var app = router(function(req, res, next){
+3 18 res.end(req.params[0]);
+3 20 app.use(app.router);
+3 21 app.use(function(req, res, next){
+3 24 assert.equal(app,router.settings.userAgent, 'http');
+3 25 res.locals.first = 'tj';
+3 26 res.locals.user = 'tj';
+3 27 res.end();
+3 29 app.listen(3000);
+3 30 console.log('Express app started on port 3000');"
+
+4 13 var slice = Array.prototype.slice;
+4 62 var router = this._router;
+4 65 onerror: logerror
+4 67 if (!router.handle) {
+4 68 router.handle('router', this._router.handle_middleware.handle_error, this._router.handle_middleware.error, this._router.middleware.middleware.error, this._middleware.handler)
+4 69 })
+4 72 app.use = function(err, done) {
+4 73 if (done) {
+4 74 return done(err);
+4 79 if (this._router.handle &&!== undefined!== undefined) {
+4 80 done = done) {
+4 83 this._router.handle.handle.handle_error(err, this, this, err);
+4 85 var search = 1;
+5 65 this.set('router', new Router());
+5 66 this._router.handle.error = function(err) {
+5 67 if (err) {
+5 71 this.removeAll(function() {
+5 72 done();
+5 76 this._router.handle.middleware.lookup = function(req,
+5 77 , app) {
+5 78 throw new Router();
+5 79 throw new Error('router.handle()
+5 80 throw new Error('should work()
+5 81 throw new Error('should not be a function')
+5 87 app.all = function handle(req, res, done) {
+5 88 var routes = this._router, app, app, done) {
+5 89 var handles = handles.forEach(function (fn) {
+5 90 done = callback || finalhandler)
+5 91 if (fn.handle.handle(
+6 64 if (!router) {
+6 65 debug('no routes defined on'+ this.get('env'));
+6 66 this.get('router:' + this.path)
+6 67 .exclude = this.get('router'));
+6 68 this.handle.method = undefined;
+6 69 this.middleware = undefined;
+6 70 this.proxies = this._router.__proto__proto__ = this;
+6 71 return done;
+6 74 this._router.handle.__proto__proto__ = protoquire = this;
+6 75 this._router;
+6 76 this._resolve = function() {
+6 77 return this._router.__proto__proto__proto__ = this;
+6 78 this._proto__proto__proto__proto__s = this._proto__s || {};
+6 81 app.__proto__proto__proto__proto__proto__proto__proto__.__ = proto;
+6 82 __proto__
+7 66 debug('no routes defined on app');
+7 70 this.handle(req, res, function(req, res, next) {
+7 71 next() {
+7 72 if (!next) {
+7 79 app.use = function router(req, res, next) {
+7 80 var get;
+7 81 if (!isBucket) {
+7 82 if (req.done) {
+7 83 next) {
+7 84 router.handle(req, handler.handle()
+7 91 function callHandler.test1 handler1(req, res, res, handler2) {
+7 92 var done(req, res, handler3, handler4;
+7 93 var done;
+7 94 return handler4;
+7 96 function done(req, res, function1, function(err, response, before
+8 64 debug('no routes defined on')
+8 65 .defaultConfiguration();
+8 67 this.on('error', function(err) {
+8 71 var layer = stack[id]
+8 72 , layer.handle_error
+8 73 , err;
+8 74 if (!layer.match;
+8 75 if (!layer.match) {
+8 76 if (layer.match) {
+8 77 req.route = match = match.route) {
+8 78 return done(req.route = match;
+8 80 var route = match.route = match;
+8 82 if (!route = match.length) {
+8 83 if (!route) {
+8 84 return done(layer.match = match.length) {
+8 87 this.handle_proto_route = req
+8 88 .route = route;
+8 90 })();
+8 92 this.methods = layer.lookup = route;
+8 93 proto = route;
+8 94 proto.process_methods = route;\
+9 67 app.use = function(req, res, next) {
+9 68 var router = this;
+9 69 if (!p) {
+9 70 router.handle(req, handler.done(req, res, handler);
+9 74 if (!p &&!== done) {
+9 75 done) {
+9 76 done = function(req, res.router.handle(req, handler);
+9 78 router.handle.removeAll(req, handler);
+9 81 function done(req, res, done) {
+9 82 varrouter.removeAll(req, res, handler);
+9 84 if (! (!router.handle) {
+9 86 return done(req, res, handler);

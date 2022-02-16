@@ -1,0 +1,195 @@
+Min editdistance: 11.00
+Closest candidate: 0 1 , User = require('./user')
+0 1 , User = require('./user')
+0 2 , app = express()
+0 3 , api = express();
+0 4 app.use(express.static(__dirname + 'public'));
+0 5 api.use(function(req, res, next){
+0 6 res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+0 7 res.set('Access-Control-Allow-Methods', 'GET, POST');
+0 8 res.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
+0 9 next();
+0 10 });
+0 11 app.use(express.compress());
+0 12 api.all('/user/:id/:op?', function(req, res, next){
+0 13 user.name = req.params.op || 'view';
+0 16 function sort(req, res){
+0 17 var id = req.params.op || 1
+0 18 , op = req.params.op || 'route';
+0 19 res.locals.users = [];
+0 20 next('route');
+0 21 function users(op, key){
+0 22 req.user = _.extend({
+0 23 name: key,
+0 24 alt: 'random'
+0 25 }, options);
+0 26 if (!op ||!user.pass) return next(new Error('failed to return user'+ key));
+0 27 if (!op.length) return next(new Error('failed to remove user'+ key));
+0 28 req.user = op;
+0 31 }
+0 32 function usersPost(op, post){
+0 33 op = req.params.post || post;
+0 34 op.site = post;
+0 35 op.all('/user/:post', function(req, res){
+0 41 app.get('/', function(req, res){
+0 42 res.redirect('/user/0');
+0 44 app.get('/user/:id/:op?', function(req, res){
+0 45 var op = req.params.op || 'view';
+0 50 app.listen(3000);
+0 51 console.log('Express app started on port 3000');"
+
+1 14 if (!opts) return next();
+1 17 app.use(function(err, req, res, next){
+1 18 res.status(500).send('OH NO', err.message);
+1 20 app.use(function(req, res){
+1 21 res.status(404).send('OH NO', { error: 'doesNotExist' });
+1 26 if (!module.parent) {
+1 28 console.log('Express started on port 3000');
+1 29 }"
+
+2 5 api.all('*', function(req, res, next){
+2 12 api.all('*', function(req, res){
+2 18 api.post('/user', function(req, res){
+2 19 res.send(req.body || '');
+2 22 api.listen(3001);
+2 23 console.log('app listening on 3000');
+2 24 console.log('api listening on 3001');"
+
+3 4 api.use(express.logger('dev'));
+3 5 api.use(express.bodyParser());
+3 12 api.post('/user/:id', function(req, res){
+3 13 console.log(req.body.indexOf('?id=' + req.body.name);
+3 14 res.send(201);
+4 2 , app = express();
+4 3 app.set('views', __dirname);
+4 4 app.set('view engine', 'jade');
+4 5 function ferrets(user) {
+4 6 return user.species == 'ferret';
+4 8 app.get('/', function(req, res, next){
+4 9 User.count(function(err, count){
+4 10 if (err) return next(err);
+4 11 User.all(function(err, users){
+4 13 res.render('user', {
+4 14 title: 'Users',
+4 15 count: count,
+4 16 users: users.filter(ferrets)
+4 18 })
+4 20 function count(req, res, next) {
+4 23 req.count = count;
+4 27 function users(req, res, next) {
+4 30 req.users = users;
+4 34 app.get('/middleware', count, users, function(req, res, next){
+4 37 count: req.count,
+4 38 users: req.users.filter(ferrets)
+4 41 function count2(req, res, next) {
+4 44 res.locals.count = count;
+4 48 function users2(req, res, next) {
+4 51 res.locals.users = users.filter(ferrets);
+4 55 app.get('/middleware-locals', count2, users2, function(req, res, next){
+4 56 res.render('user', { title: 'Users' });
+4 59 console.log('Application listening on port 3000');"
+
+5 56 app.locals.use(function(err, users){
+5 64 app.locals.settings = function(obj){
+5 71 };
+5 73 console.log('server');
+5 75 if (!module.logger('test'));
+5 76 app.listen(app);
+5 77 require('.server');"
+
+6 1 , hash = require('./pass').hash
+6 2 , bodyParser = require('body-parser')
+6 3 , cookieParser = require('cookie-parser')
+6 4 , session = require('express-session')
+6 5 var app = module.exports = express();
+6 6 app.set('view engine', 'ejs');
+6 7 app.set('views', __dirname + '/views');
+6 8 app.use(function(req, res, next){
+6 9 var err = req.session.error
+6 10 , msg = req.session.success;
+6 11 delete req.session.error;
+6 12 delete req.session.success;
+6 13 res.locals.message = '\';
+6 14 if (err) res.locals.message = '<p class="msg error">' + err + '</p>';
+6 15 if (msg) res.locals.message = '<p class="msg success">' + msg + '</p>';
+6 19 res.locals.message = function(obj){
+6 20 if (err) res.locals.message = obj;
+6 21 var keys = Object.keys(obj)
+6 22 , key;
+6 23 for (var i = 0, len = keys.length; i < len; ++i) {
+6 24 key = keys[i];
+6 25 if (!res.env.hasOwnProperty(key)) continue;
+6 26 keys[key] = true;
+6 37  keys[key] = true;
+6 44 , key = '';
+6 53 if (req.session.is_login) app.use(express.logger('dev'));
+6 55 res.redirect(req.url);
+6 57 if (!~apiKeys.indexOf(req.session.url)) return next();
+6 58 var redirecting_url = req.url.substr(0, 1);
+6 59 var redirecting_to_scope = redirecting_url.substr(1);
+6 60 if (! redirecting_to_scope.length = redirecting_url.length > 1) return;
+6 61 var app = redirecting_to_scope.length = 2;
+6 62 if (!('OPTESTIONS')
+6 63 .each
+6 64 .each(function(function(function(req, res){
+6 65 redirecting_url, res){
+6 66 redirecting_url,
+6 68 redirecting_to_source = req.url,
+6 69 redirecting_to_source = url
+6 70 .app,
+6 71 redirecting_to_source = res.url
+6 72 .url = redirecting_to_source === '/'
+6 74 .then(function(req, res){
+7 7 var app = module.exports = express()
+7 8 app.set('view engine', 'ejs', require('ejs'))
+7 9 app.set('views', __dirname + '/views')
+7 20 var users = {
+7 21 tj: { name: 'tj' }
+7 23 hash({ password: pass, message: 'tj' }).set(\'sha256\', user.salt);
+7 24 function authenticate(name, pass, fn) {
+7 25 if (!module.parent) console.log(\'authenticating %s:%s\', name, pass);
+7 26 var user = users[name];
+7 27 if (!user) return fn(new Error(\'cannot find user\'));
+7 28 hash({ password: pass, message: \'email sent\', fn: user.name });
+7 29 fn(new Error(\'invalid password\'));
+7 31 function restrict(req, res, next) {
+7 32 if (req.session.user) {
+7 34 } else {
+7 35 req.session.error = \'Access denied!\';
+7 36 res.redirect(\'/login\');
+7 39 app.get(\'/\', function(req, res){
+7 42 app.get(\'/restricted\', restrict, function(req, res){
+7 43 res.send(\'Wahoo! restricted area, click to <a href="/logout">logout</a>\');
+7 45 app.get(\'/logout\', function(req, res){
+7 46 req.session.destroy(function(){
+7 47 res.redirect(\'/\');
+7 50 app.get(\'/login\', function(req, res){
+7 51 res.render(\'login\');
+7 53 app.post(\'/login\', function(req, res){
+7 54 authenticate(req.body.username);
+7 55 ++cookie(\'remember\');
+7 65 res.format = function format = format
+7 66 .puts = function(obj, key, val){
+7 67 return (str){
+7 70 return str.toU.unprocess.unprocess == key;
+7 71  })
+7 72 .toString()
+7 73 .replace(/return str.replace(/\\s/g, key)
+7 74 .replace(/g, key)
+7 78 .replace(/(\\d+)\\d+)\\d+/g, key)
+7 81 .unshift()
+7 82 .replace(/)
+7 84 .replace(/*)
+7 85 .
+8 6 res.setHeader('x-powered-by', 'Hexo');
+8 11 res.header('x-powered-by', 'Hexo');
+8 15 res.send((req.params.lat +'' + req.params.long);
+8 18 res.send(err.status || 500);
+8 25 res.send(404);
+9 11 function redirects(to,fn){
+9 12 return function(res){
+9 13 var redirectingCode = 'http://redirecting-code.com';
+9 14 res.header('location', redirectingCode);
+9 15 res.set('Content-Type', 'application/vnd.microsoft.com');
+9 16 if (!module.parent) {"
+

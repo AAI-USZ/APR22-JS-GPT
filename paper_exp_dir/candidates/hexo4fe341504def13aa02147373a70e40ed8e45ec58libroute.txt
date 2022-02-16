@@ -1,0 +1,50 @@
+Min editdistance: 4.00
+Closest candidate: 0 1 str = str.replace(/\\/+$/, '/');
+0 1 str = str.replace(/\\/+$/, '/');
+0 2 if (str.substr(0, 1) === '/') str = str.substring(1);
+0 3 var last = str.substr(str.length - 1, 1);
+0 4 if (!last || last === '/') str += 'index.html';
+0 5 return str;
+0 6 };
+0 7 Route.get = function(source){
+0 8 return store[format(source)];
+0 10 Route.set = function(source, callback){
+0 11 source = format(source);
+0 12 if (_.isFunction(callback)){
+0 13 store[source] = function(func){
+0 14 callback(function(err, content){
+0 15 func(err, content, source);
+0 16 Route.emit('change', source, content);
+0 17 Route.emit('change', source);
+0 19 } else {
+0 21 func(null, callback, source);
+0 23 }
+0 27 Route.destroy = function(source){
+0 29 delete store[source];
+0 31 Route.emit('destroy', source);
+0 33 Route.list = function(){
+0 34 return store;
+0 36 Route.clear = function(){
+0 37 store = {};
+0 39 module.exports = Route;"
+
+1 20 this.emit('update', source, callback);
+1 22 Route.remove = function(source){
+1 25 this.emit('remove', source);
+3 2 if (str[0] === '/') str += 'index.html';
+3 23 Route.emit('change', source, null);
+4 2 if (str[0] === '/') str = str.substring(1);
+4 17 });
+4 23 Route.emit('change', source, callback);
+5 2 if (str.substr(0, 1) === '/') str += 'index.html';
+5 24 return Promise.all([
+5 25 this.emit('change'),
+5 26 this.emit('destroy')
+5 27 ]);
+6 15 value = content;
+7 11 store[source] = callback;
+7 13 store[source] = function(fn){
+7 14 fn(null, callback, source);
+7 17 this.emit('update', source);
+8 4 if (!last || last === '/') str += 'index.html';"
+

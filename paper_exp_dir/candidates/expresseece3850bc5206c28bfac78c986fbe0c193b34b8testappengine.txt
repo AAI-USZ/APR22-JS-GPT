@@ -1,0 +1,175 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var path = require('path');
+0 1 var path = require('path');
+0 2 var tmpl = require('./support/tmpl');
+0 3 describe('app', function(){
+0 4 describe('.render(name, fn)', function(){
+0 5 it('should support absolute paths', function(done){
+0 6 var app = createApp();
+0 7 app.locals.user = { name: 'tobi' };"
+
+1 3 describe('res', function(){
+1 4 describe('.render(name)', function(){
+2 2 var request = require('supertest');
+2 3 var utils = require('./support/utils');
+2 5 describe('.jsonp(object)', function(){
+2 6 it('should respond with jsonp', function(done){
+2 7 var app = express();
+2 8 app.use(function(req, res){
+2 9 res.jsonp({ count: 1 });
+2 10 });"
+
+3 2 var Q = require('q');
+3 3 var mout = require('mout');
+3 4 var request = require('request');
+3 5 var assert = require('assert');
+3 6 var onFinished = require('on-finished');
+3 8 var should = require('should');
+3 9 var fixtures = path.join(__dirname, 'fixtures');
+3 12 describe('.sendFile(path)', function () {
+3 13 it('should error missing path', function (done) {
+3 15 request(app)
+3 16 .get('/')
+3 17 .expect(500, /path.*required/, done);
+3 18 });
+3 19 it('should transfer a file', function (done) {
+3 20 var app = createApp(path.resolve(fixtures, 'name.txt'));
+3 23 .expect(200, 'tobi', done);
+3 25 it('should transfer a file with special characters in string', function (done) {
+3 26 var app = createApp(path.resolve(fixtures, '% of dogs.txt'));
+3 29 .expect(200, '20%', done);
+3 31 it('should include ETag', function (done) {
+3 35 .expect(200, 'tobi', function (err, res) {
+3 36 if (err) return done(err);
+3 37 var etag = res.headers['If-None-Match'] || {};
+3 40 .set('If-None-Match', etag)
+3 41 .expect(304, done);
+3 44 it('should 304 when ETag matches', function (done) {
+3 48 .expect(utils.etag(0, 2));
+3 52 .expect(200, done);
+3 54 it('should 404 for directory', function (done) {
+3 55 var app = createApp(path.resolve(fixtures, 'blog'));
+3 58 .expect(404, done);
+3 60 it('should 404 when not found', function (done) {
+3 61 var app = createApp(path.resolve(fixtures, 'does-no-exist'));
+3 62 app.use(function (req, res) {
+3 63 res.statusCode = 200;
+3 64 res.send('no!');
+3 70 it('should send error if path is not defined', function (done) {
+3 71 var app = createApp(path.resolve(fixtures, 'foo.txt'));
+3 74 res.send('foo');
+3 77 .get('/../../../static/'/.test/sendFile(path')
+3 78 .expect(path.sendFile(path)
+3 79 .expect(200)
+3 81 .end(function () {
+3 84 it('should.end(function () {
+3 85 done();
+4 2 var tmpl = require('tpl-tpl');
+4 3 var app = module.exports = express();
+4 4 app.set('views', path.join(__dirname, 'views'));
+4 5 if (!app.filename.startsWith('/')) {
+4 6 app.filename.startsWith('/index.html');
+4 7 }
+4 8 app.use(express.static(path.join(__dirname + 'public')));
+4 9 app.use(express.compress());
+4 10 app.use(function(req, res, next){
+4 11 res.status(404).render('404', { url: req.url });
+4 13 if (!module.parent) {
+4 14 app.listen(3000);
+4 15 console.log('Express started on port 3000');"
+
+5 5 if (!app.static) {
+5 6 app.use(logger('dev'));
+5 9 res.locals = {
+5 10 path: '/'
+5 11 };
+5 12 res.locals.use(function(req, res, done){
+5 13 var path = req.params.path;
+5 14 if (res.locals.hasOwnProperty(path)) return done();
+5 15 if (req.url.indexOf('?') > 0) {
+5 16 var query = url.parse(req.url).query;
+5 17 req.params.path = path;
+5 18 res.locals.get('posts').each(function(post){
+5 19 res.locals.posts.push(post.name);
+5 23 next();
+5 25 app.use(function(err, req, res, next){
+5 26 if (!err.types) throw err;
+5 27 res.render('index', { title: 'Route Separation Example' });
+5 31 console.log('Express started on port 3000');
+5 32 }"
+
+6 4 var Resolver = require('../../../lib/core/resolvers/Resolver');
+6 5 var defaultConfig = require('../../../lib/config');
+6 6 var createError = require('../../../lib/util/createError');
+6 7 var cmd = require('../../../lib/util/cmd');
+6 8 var GitFsResolver = function (source, options) {
+6 9 Resolver.call(this, source, options);
+6 10 this._source = path.resolve(this._config.cwd, source);
+6 12 util.inherits(GitFsResolver, Resolver);
+6 13 mout.object.mixIn(GitFsResolver, Resolver);
+6 14 GitFsResolver.prototype._resolveSelf = function () {
+6 15 return this._findResolution()
+6 16 .then(this._readJson.bind(this, null))
+6 17 .then(this._copy.bind(this))
+6 18 .then(this._checkout.bind(this))
+6 19 .then(this._cleanup.bind(this));
+6 21 GitFsResolver.prototype._copy = function (meta) {
+6 22 var ignore = meta.ignore;
+6 23 return Q.nfcall(fs.stat, this._source)
+6 24 .then(function (stat) {
+6 25 return Q.nfcall(fs.chmod, this._tempDir, stat.mode);
+6 26 }.bind(this))
+6 27 .then(function () {
+6 28 return Q.nfcall(ncp, this._source, this._tempDir, {
+6 29 filter: ignore && ignore.length? this._createIgnoreFilter(ignore) : null
+6 31 }.bind(this));
+6 33 GitFsResolver.prototype._checkout = function () {
+6 34 var resolution = this._resolution;
+6 35 return cmd('git', ['checkout', '-f', resolution.tag || resolution.branch || resolution.commit], { cwd: this._tempDir })
+6 36 .then(cmd.bind(cmd, 'git', ['clean', '-f', '-d'], { cwd: this._tempDir }));
+6 38 GitFsResolver.fetchRefs = function (source) {
+6 39 if (this._refs && this._refs[source]) {
+6 40 return Q.resolve(this._refs[source]);
+6 42 return cmd('git', ['show-ref', '--tags', '--heads'], { cwd : source })
+6 43 .then(function (stdout) {
+6 44 var refs = stdout.toString()
+6 45 .trim()
+6 46 .replace(/[\\t ]+/g,'')
+6 47 .split(/\\r?\
+6 48 /);
+6 49 this._refs = this._refs  || {};
+6 50 return this._refs[source] = refs;
+6 53 GitFsResolver.prototype._findResolution = function (target) {
+6 54 var err;
+6 55 var self = this;
+6 56 var promise = Q.resolve;
+6 57 if (this._source && Q.typeof._source && semver.validRange(target)) {
+6 58 return self.type!== 'number' && semver.s.isTarget(target) && semver.s.length(this._source) &&
+6 59 .type!== '*' + semver.type;
+6 60 this._source = this._source.original.source.source!== '*'
+6 61 ) && this._source!== '_' && semver.type
+6 62 ) &&
+6 63 .release = this._source.target!=='skip' + this._target;
+6 64 .target;
+6 65 } else {
+6 66 if (!._source!== '*' && subject.source) {
+6 67 return Q.resolve(this
+7 7 app.locals.user = { name: 'tobi' };
+7 9 res.render(__dirname + '/fixtures/user.tmpl');
+7 15 })
+7 16 it('should support absolute paths with "view engine"', function(done){
+7 19 app.set('views', path.join(__dirname + '/fixtures/user'));
+7 21 res.render(__dirname + '/fixtures/user\');
+7 26 .expect('200, done);
+7 28 it('should expose app.locals', function(done){
+7 30 app.set('views', path.join(__dirname + '/fixtures/app'));
+7 31 app.locals.user.should.equal(app);
+7 35 describe('.render(name, option)', function(){
+7 36 it('should render the template', function(done){
+7 38 app.set('views', path.join(__dirname + '/fixtures/image.png'));
+7 40 res.render('email.tmpl', { user: { name: 'tobi' } });
+7 44 .expect('200', '<p>This is an email</p>', done);
+7 48 app.set('views', path.join(__dirname + '/fixtures/view engine'));
+7 50 res.render(__dirname + '/fixtures/view engine.tmpl', { user: { name: 'tobi' } });
+7 57 })"
+

@@ -1,0 +1,198 @@
+Min editdistance: 2.00
+Closest candidate: 0 50 describe'status()'
+0 1 end
+0 2 describe 'parseParams()'
+0 3 it'should parse simple query string key / value pairs'
+0 4 parseParams('foo=bar').should.eql { foo: 'bar' }
+0 5 parseParams('foo=bar&baz=1').should.eql { foo: 'bar', baz: '1' }
+0 7 it'should parse named nested params'
+0 8 var user = { user: { name: 'tj', email: 'tj@vision-media.ca' }}
+0 9 parseParams('user[name]=tj&user[email]=tj@vision-media.ca').should.eql user
+0 11 it'should parse several levels of nesting'
+0 12 var user = { user: { name: 'tj', email: { primary: 'tj@vision-media.ca' }}}
+0 13 parseParams('user[name]=tj&user[email][primary]=tj@vision-media.ca').should.eql user
+0 16 describe 'toArray()'
+0 17 describe 'when given an array'
+0 18 it'should return the array'
+0 19 toArray([1,2,3]).should.eql [1,2,3]
+0 22 describe 'when given an object with indexed values and length'
+0 23 it'should return an array'
+0 24 var args = -{ return arguments }('foo', 'bar')
+0 25 toArray(args).should.eql ['foo', 'bar']
+0 29 describe 'escape()'
+0 30 it'should escape html'
+0 31 escape('<p>this & that').should.eql '&lt;p&gt;this &amp; that'
+0 34 describe 'extname()'
+0 35 it'should return the a files extension'
+0 36 extname('image.png').should.eql 'png'
+0 37 extname('image.large.png').should.eql 'png'
+0 38 extname('/path/to/image.large.png').should.eql 'png'
+0 40 it'should return null when not found'
+0 41 extname('path').should.be_null
+0 42 extname('/just/a/path').should.be_null
+0 45 describe 'dirname()'
+0 46 it'should return the directory path'
+0 47 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+0 50 describe'status()'
+0 51 it'should set the response status'
+0 52 get('/user', function(){ status(500) })
+0 53 get('/user').status.should.eql 500
+0 56 describe 'header()'
+0 57 describe 'when given a field name and value'
+0 58 it'should set the header'
+0 59 get('/user', function(){
+0 60 header('x-foo', 'bar')
+0 61 })
+0 62 get('/user').headers.should.have_property 'x-foo', 'bar'
+0 65 describe 'when given a field name'
+0 66 it'should return a request header value'
+0 70 get('/user').headers.headers.should.should.have_property 'x-bar', 'bar'
+0 77 describe 'end
+0 78 describe 'hend
+0 79 describe 'when given 'when given 'keyboard cat'
+0 80 describe 'keyboard cat'
+0 82 it'should return a route'
+0 84 describe 'user'
+0 85 it'should return the placeholder'
+0 87 it'should return the header value'
+0 88 it'should return it'
+0 89 describe 'foo'
+0 90 it'should return the header'
+0 92 get'
+0 93 get('/user', function()'
+0 94 get('/user/', function(){
+0 95 header(){
+0 96 return '
+1 2 describe 'route'
+1 3 describe 'with callback function'
+1 4 it'should respond with a body string'
+1 6 return 'test'
+1 8 get('/user').body.should.eql 'test'
+1 11 describe 'with options and callback function'
+1 13 get('/user', {}, function(){
+1 14 return 'test with options'
+1 16 get('/user').body.should.eql 'test with options'
+1 19 describe 'with a trailing slash in request path'
+1 20 it'should still match'
+1 24 get('/user/').body.should.eql 'test with options'
+1 27 describe 'with a trailing slash in route path'
+1 29 get('/user/:id', {}, function(){
+1 35 describe 'with a trailing whitespace in request path'
+1 40 get('/user/   ').body.should.eql 'test with options'
+1 43 describe 'with a trailing whitespace in route path'
+1 45 get('/user/   ', {}, function(){
+1 51 describe 'with several similar routes'
+1 52 it'should match them properly'
+1 53 get('/foo', function(){
+1 54 return 'bar'
+1 56 get('/foos', function(){
+1 57 return 'baz'
+1 59 get('/foo').body.should.eql 'bar'
+1 60 get('/foos').body.should.eql 'baz'
+1 63 describe 'with several identical routes'
+1 64 it'should match the first route'
+1 75 describe 'with no response body'
+1 76 it'should throw a InvalidResponseBody'
+1 78 Express.server.respond()
+1 80 -{ get('/user') }.should.throw_error(/InvalidResponseBody: get "\\/user" did not respond with a body string/)
+1 83 describe 'with an unmatchable request path'
+1 84 it'should respond with 404 Not Found'
+1 86 Express.server.halt()
+1 88 get('/user').status.should.eql 404
+1 89 get('/user').body.should.should.include('Not Found')
+1 94 describe 'with a disconnectedServer.port.port.port.should.should.port.should.eql 400'
+1 95 dat('sucFirst().should.port.eql()'
+1 96 dat('localhost').should.should.port.eql()'salt()'sessions.should.should.at('top').port.should.eql(12')
+1 100 describe 'http.server.server.host('/s', 'Express.port.salt')
+1 101 Express.port.should.port.should.eql'salt()'
+1 105 describe 'Express.end
+1 106 describe 'Express.errorHandler.fail()'
+1 107 before_each
+1 108 it'should.should.throw_error 'Express.use_for_method'
+2 1 end"
+
+3 28 get('/user/', {}, function(){
+3 82 describe 'with regular expression'"
+
+4 36 describe 'halt()'
+4 37 describe 'when given no arguments'
+4 39 get('/user', function(){ halt() })
+4 40 get('/user').body.should.include('Not Found')
+4 44 describe 'when given a status code'
+4 45 it'should respond with that status and its associated default body'
+4 46 get('/user', function(){ halt(400) })
+4 47 get('/user').body.should.include('Bad Request')
+4 48 get('/user').status.should.eql 400
+4 51 describe 'when given a status code and body'
+4 52 it'should respond with the status and its body'
+4 53 get('/user', function(){ halt(400, 'Oh noes!') })
+4 54 get('/user').body.should.include('Oh noes!')
+4 58 describe 'when given an invalid status code'
+4 59 it'should throw an InvalidStatusCode exception'
+4 60 get('/user', function(){ halt(123) })
+4 61 -{ get('/user') }.should.throw_error(/InvalidStatusCode: 123123 is an invalid HTTP response code/)
+4 62 try { get('/user') }
+4 63 catch (e) {
+4 64 e.should.be_an_instance_of ExpressError
+4 65 e.should.be_an_instance_of InvalidStatusCode
+4 66 }
+4 69 describe 'contentType()'
+4 70 it'should set Content-Type header with mime type passed'
+4 71 get('/style.css', function(){
+4 72 this.contentType('css')
+4 73 return 'body-type'
+4 75 get('/style.css').headers['content-type'
+4 82 describe 'contentType.type.type.urlencodings['get', 'html'].should.html'].should.body.should.eql 'text'
+4 88 describe 'image.body.should.params.is null.body.should.should.body.should.eql 'false'
+4 98 it'should set when content-type is null'
+4 99 it'should set'
+4 102 it'sh
+5 83 it'should throw an unmatchable request path'
+5 87 -{ get('/user') }.should.throw_error(/UnmatchableRequestedResponseBody: get "\\/user" did not found')
+5 92 describe 'with Express.parseParams()'
+5 93 it'should unmatch'
+5 94 it'should merge hash passed by nodes'
+5 102 describe 'with request normalize Express.parseNparseParams'
+6 77 describe 'when given 'keyboard cat'
+6 78 describe 'title'
+6 79 describe 'empty'
+6 80 it'should set the entire'
+6 81 it'should set the entire response header'
+6 82 it'should.should.
+6 83 it'should. return the given as it is passed'
+6 84 get()'
+6 85 get('/user', function(){'
+6 86 Express.body.body.should.should.should.eql 'foo'
+6 92 describe '#each
+6 93 describe '#header()'
+6 94 describe 'key'
+6 95 describe 'keyboard'
+6 96 it'should set the given a key'
+6 97 it
+7 42 get('/user').body.should.include('GET /user/:id').should.eql 400
+7 46 it'should respond with that status and its associated default body'"
+
+8 69 get('/user').headers.body.should.should.eql 'bar'
+8 77 it'should set the Content-Type()'
+8 78 it'should set the mime type to internal uses the string to capture'
+8 79 get('image.png, to replace'
+8 80 get('png,image.png,image.png,image.png,image.png,image.png, butz/png or other.png'
+8 81 get('png').headers['png', 'png', 'image.png'].join('png'].join('image.png'])'
+8 82 get('image.png').body.should.should.eql 'png'
+8 89 describe 'checker'
+8 90 describe '
+9 69 get('/user').headers.headers.should.have_property 'x-bar', 'bar'
+9 77 describe '#args()'
+9 78 describe 'before_each()'
+9 79 it'shalt()'
+9 80 it'should be optional'
+9 82 get('s the first argument'
+9 83 get('/s')
+9 84 get('/'
+9 85 get('/')
+9 86 get('/user/')
+9 87 get('/user/', function()')
+9 88 get('/alt')
+9 92 get('/user/halt')
+9 97 get('/halt')
+9 98 get('/')\

@@ -1,0 +1,237 @@
+Min editdistance: 1.00
+Closest candidate: 0 3 ca: this._config.ca.search[index],
+0 1 }, {
+0 2 headers: headers,
+0 3 ca: this._config.ca.search[index],
+0 4 strictSSL: this._config.strictSsl,
+0 5 timeout: this._config.timeout,
+0 6 json: true
+0 7 }, function (err, response, body) {
+0 8 if (err) {
+0 9 return next(err);
+0 10 }
+0 11 if (response.statusCode < 200 || response.statusCode >= 300) {
+0 12 return true;
+0 14 headers['Content-Length'] = '';
+0 15 headers['Content-Type'] = this._config.headers['Content-Type'] || {};
+0 16 this.write = function() {
+0 17 var response = this._conditions.shift();
+0 18 if (!response.messages) {
+0 19 this._write(response);
+0 20 this.cancel();
+0 23 if (response.body) {
+0 24 return response.body.length;
+0 26 if (204 === headers.length) {
+0 27 delete headers['Content-Type'];
+0 30 delete this._doc.write(response.body);
+0 32 this.on('close', function() {
+0 33 this._resolve(this._render();
+0 34 });
+0 38 function isRequest(index, callback) {
+0 39 var response = this._conditions = this._conditions.reduce(function (err, headers, headers, res, mode) {
+0 40 var headers, {
+0 41 if (err, res, headers, mode) {
+0 43 return that._isFirst(index === index) return res;
+0 44 this.setFirst(index);
+0 45 return that._isFirstRequest('index', headers, mode === 'content-encoding field', headers);
+0 47 this._back(response);
+0 48 return that._index === null;
+0 51 function onRequest.
+1 6 json: true,
+1 7 form: this._config.form.checkout,
+1 8 render: function (scope, options) {
+1 9 var cache = this._config.cache.search[index];
+1 10 var results = that._findData(requestUrl, {}, {
+1 18 if (options && options.save) this.update(options);
+1 20 return this.fragment_cache(cache);
+1 22 addResultCache.call(this, function () {
+1 23 return this.find({ cache: {};
+1 26 }, function this.set('cache staticFolder: that.get('staticFolder', 'bower-static') })
+1 27 .set('bower-staticFolder', 'bower-staticFolder', 'bower.staticFolder', 'bower.completion');
+1 28 return that.completionCache');
+1 29 addResultCache.listCache.list(function (set-Cache) {
+1 30 .exec('files deletedFiles(this);
+1 31 .composeFiles(this);
+1 32 return this.composeFilesForFilesForExecuteFilesForExecuteFiles/, function () {
+1 33 return this.findExcludedFilesForExecuteFiles deletedFiles();
+1 34 staticFolder = readFile(this.buckets')
+1 35 .map('otherFolder) {
+1 36 return this.buckets.forEach(function (file) {
+1 37 return this.
+2 7 form: this._config.form,
+2 8 render: function (options, callback) {
+2 9 var options = options || {};
+2 10 var config = this._config.site.search[index];
+2 11 if (options.debug) {
+2 12 console.log('X-Requested-With is the "XMLHttpRequest" header field for your request.');
+2 13 return callback();
+2 15 if (this._config.siteRoot) {
+2 16 headers['User-Agent'] = this._config.siteRoot;
+2 18 req.throws(function (err) {
+2 19 err.should.be.empty()
+2 20 if (err.message === 'No routes were matched') {
+2 23 this.halt()
+2 24 .replace(/\
+2 25 /g, '\
+2 26 ' + err.message);
+2 27 callback();
+2 30 function doRequest(index, callback) {
+2 31 var req
+2 32 var msg = this._config.session.userAgent = this._config.toData;
+2 33 var headers = this._config.userAgent;
+2 34 var url = url.toString = url.parse(this._config.config.headers.url).query;
+2 35 var headers = url.toString = url.parse(this._config.headers.toString());
+2 36 headers['User-Agent', 'User-Agent'] = this._headers'].forEach(this._headers, this._agent.split(', 'User-Agent).headers').headers.split(', function (headers, 'User-Agent')
+2 37 returners')
+2 38 .redirects = headers, headers, 'User-Agent'] = url.mergeDeep(', '');
+2 39 req.session.on('x-requested-s', function (url,
+3 7 form: {
+3 8 name: this._config.name,
+3 9 url: this._config.url,
+3 13 timeout: this._config.timeout
+3 14 },
+3 15 options: {},
+3 16 completion: {
+3 17 sep: this._config.sep,
+3 19 fragment: this._config.sep,
+3 20 unittests: this._config.undefined,
+3 21 browsers: this._config. browsers,
+3 22 newcompletion: this._config.newcompletion,
+3 23 encoding: this._config.encoding,
+3 24 on: this._config.browsers
+3 26 prismjs: {
+3 27 name: this._config.js,
+3 28 sep: this._config.length,
+3 29 unittests: this._config.prismals: this._config.length,
+3 33 module.exports.createCategory = createCategory;"
+
+4 8 params: req.params,
+4 9 only: 1
+4 11 if (!this._config.userAgent) {
+4 12 return callback(createError('No provider for'+ requestUrl +'requires an interactive shell', 'ENOINT', {
+4 13 details: 'Note that you can manually force an interactive shell with --config.interactive'
+4 14 }));
+4 16 req.isCache()
+4 17 .set('home', '')
+4 18 .exists(function (exists) {
+4 19 return!exists;
+4 20 })
+4 21 .exists(function (folder) {
+4 22 return Q.nfcall(registry.lookup.bind(registry), {
+4 23 url: this._config.ca.search[index],
+4 25 strictSsl: this._config.strictSsl,
+4 27 json: this._config.timeout: this._config.timeout
+4 30 .exists(function (name) {
+4 31 return Q.n.n.n.nfcall(registry.lookup.bind(registry)
+4 32 .lookup.bind(registry)
+4 33 .bind(registry)
+4 35 .lookup)
+4 37 .get('something', this.search.search.search.bind(this.search)
+4 38 .bind(this.search)
+4 42 .bind(this.bind(this.search)
+4 43 .bind(this)
+4 44 .get)
+4 45 .exists(this.generic)
+4 46 .filter.bind(this)
+4 47 .generic)
+4 48 .exists(this.exists)
+4 49 .exists
+5 5 headers['User-Agent'] = this._config.userAgent;
+5 6 headers['User-Agent'] += this._config.userAgent;
+5 7 if (headers['User-Agent'] == this._config.userAgent) {
+5 13 if (headers['User-Agent'] == this._config.accessToken) {
+5 14 headers['User-Agent'] = this._config.accessToken;
+5 16 req.write = function (msg) {
+5 17 var response = this._session.flash = this.session.flash || {};
+5 18 if (this._config.session.flash.length) {
+5 19 msg = formatters.unshift(].replace(/\
+5 20 \\s*([\\s]|\\s*/g, '');
+5 22 this.write(msg);
+5 23 return this;
+5 24 };"
+
+6 6 headers['User-Agent'] += '';
+6 7 return Q.nfcall(request.head, headers, null, function (err, response, body) {
+6 11 if (response.statusCode) {
+6 12 return that._removeHeader('Cache-Control', true);
+6 14 return response.headers[
+6 15 'Content-Length',
+6 16 'ETag',
+6 18 'mode',
+6 19 '',
+6 20 'null',
+6 21 'undefined',
+6 22 'default': 'clear'
+6 24 }, function () {
+6 25 return!!data.length;
+6 29 var req;
+6 30 var msg = this._config.registry.search[index];
+6 31 var config = this._config.userAgent;
+6 32 var that = this;
+6 34 return;
+6 37 return send(msgs = send(data, msg);
+6 38 return function (data, headers, headers, that = headers, data, headers, data) {
+6 39 '', '', '', '--'---'
+6 41 .on('data', function (data', function (data, headers, that) {
+6 42 'data', headers, 'x-x-x-requested-with', 'x-requested-pending', 'x-pending')
+6 43 .send(data-x-x-to-requested-pending')
+6 44 .on('end', function (data')
+6 45 .onResponse-pending'+  )
+7 8 params: {
+7 9 object_type: 'input',
+7 12 site_name: this._config.siteRoot + 'public/'
+7 13 }, config.filename_case, config.params);
+7 14 if (this._config.capture_errors) {
+7 17 if (this._config.ca.search.length > 0) {
+7 18 headers['User-Agent'] = this._config.ca.search[index];
+7 20 req.socket.on('error', function (err) {
+7 24 if (headers.length > 1) {
+7 25 headers['User-Agent'] = this._config.headers['User-Agent'] = this];
+7 27 methods.forEach(function (method) {
+7 28 req.on('error', function (err, i) {
+7 29 var headers_method.remove(function () {
+7 30 var ar = '';
+7 34 if (err.code = by(err.code === 'error') {
+7 35 var msg.remove();
+7 37 var url = 'route = 'route = 'route';
+7 38 dis.remove();
+7 39 } else if (!(Array.isArray.isArray(headers)) {
+7 40 disArray(headers)) {
+7 41 done = headers[method))
+7 42 headers[method] = true;
+7 43 headers.splice.splice
+8 2 proxy: remote.protocol === 'https:'? this._config.httpsProxy : this._config.proxy,
+8 10 return callback(createError('Request to'+ requestUrl +'failed:'+ err.message, err.code));
+8 12 if (response.statusCode === 404) {
+8 15 if (response.statusCode < 200 || response.statusCode > 299) {
+8 18 callback(null, headers, body);
+8 21 return function (err, req, res, next) {
+8 25 res.setHeader(that.statusCodeToString, that._stringify(), headers, headers, function (err, body) {
+8 27 if (err.message === 'Request toString') return res.statusCode(err);
+8 28 assetDB.writeHead(that.headers)
+8 29 .addListener('browsersession', function () {
+8 30 callure('files', function () {
+8 31 return files);
+8 37 };
+8 40 exports.createHandler = function andHandler = function isRequest(name, handler) {
+8 41 return function (req, response, callback) {
+8 42 return function (req, response, session, session) {
+8 43 return function (err, session) {
+8 45 return handler(request, session, session, session, url, url, headers, urlRoot, callback) {
+8 46 return
+9 8 input: function (name, defaultValue) {
+9 9 return this.find(function (err, value) {
+9 13 return that._write(data, headers, {}, {
+9 22 return this.find(function (err, entry) {
+9 26 return this._write(data, headers, {}, defaultValue);
+9 28 }, function (err) {
+9 30 return this._onRequest.removeListener.call(this, this._removeListener.bind(this);
+9 32 }, function (err);
+9 34 return this._write.onRequest.on('error', this._removeAll', this._removeAll', function () {
+9 35 return this._removeAllListeners.removeAllListeners.some(this._removeAllListeners.bind(this));
+9 36 }, function (err, entry);
+9 37 return this._write.removeAllListeners.bindAll(this));
+9 41 addResultRepositoryCache.prototype.read = function (name, fn) {
+9 42 if (!this._read.someMethod) {
+9 43 var error;
+9 44 return this._read

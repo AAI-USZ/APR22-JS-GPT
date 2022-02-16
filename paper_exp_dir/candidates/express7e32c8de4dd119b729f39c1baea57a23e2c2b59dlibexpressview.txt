@@ -1,0 +1,231 @@
+Min editdistance: 1.00
+Closest candidate: 6 1 var self = this;
+0 1 if (parent &&!~view.indexOf(\'.\')) {
+0 2 view += parent.extension;
+0 3 }
+0 4 if (options) {
+0 5 if ('length' in options) {
+0 6 options = { collection: options };
+0 7 } else if (!options.collection &&!options.locals &&!options.object) {
+0 8 options = { object: options };
+0 10 } else {
+0 11 options = {};
+0 13 merge(options, locals);
+0 14 if (options.locals) {
+0 15 merge(options, options.locals);
+0 17 options.renderPartial = true;
+0 18 options.layout = false;
+0 19 var name = options.as || Partial.resolveObjectName(view);
+0 20 var collection = options.collection;
+0 21 if (collection) {
+0 22 var len = collection.length
+0 23 , buf = '';
+0 24 delete options.collection;
+0 25 options.collectionLength = len;
+0 26 for (var i = 0; i < len; ++i) {
+0 27 var val = collection[i];
+0 28 options.firstInCollection = i === 0;
+0 29 options.indexInCollection = i;
+0 30 options.lastInCollection = i === len - 1;
+0 31 options.object = val;
+0 32 buf += this.partial(view, options);
+0 34 return buf;
+0 36 if (options.object) {
+0 37 if ('string' == typeof name) {
+0 38 options[name] = options.object;
+0 39 } else if (name === global) {
+0 40 merge(options, options.object);
+0 42 options.scope = options.object;
+0 45 return this.render(view, options);
+0 47 };
+0 48 http.ServerResponse.prototype.render = function(view, options, fn, parent){
+0 49 if (typeof options === \'function\') {
+0 50 fn = options, options = {};
+0 52 var self = this
+0 53 , app = this.app
+0 54 , options = options || {}
+0 55 , helpers = app.viewHelpers
+0 56 , dynamicHelpers = app.dynamicViewHelpers
+0 57 , viewOptions = app.settings['view options']
+0 58 , cacheTemplates = app.settings['cache views'];
+0 59 if (viewOptions) options = merge(options, viewOptions);
+0 60 if (view.indexOf(\'.\'))!== 0) {
+0 64 if ('string\' == typeof options) {
+0 65 options[\'string\') {
+0 66 options[\'} = options[\'string
+0 67 ] = options[options] || {};
+0 69 options = options[method] = {};
+0 72 }'
+
+1 1 merge(locals, options, locals);
+1 6 if ('length\' in options) {
+1 38 if ('string\' == typeof name) {
+1 61 if (view.indexOf(\'.\')!== 0) {
+1 62 view += \'.\';
+1 64 if (cacheTemplates) options = app.settings = cacheTemplates;
+1 65 var home = app.settings.settings.settings = this;
+1 66 , home = this;
+1 67 var cache = {};
+1 68 var cache = function use(id = {};
+1 69 function home(env) {
+1 70 if (env) {
+1 71 if (use(function(){
+1 72 use('haltentries = require("enforce")!== undefined) hexo.config.config.use(env);
+1 73 } = require("use(this.app.settings"));
+1 74 app.use(locals = this.settings"));
+1 75 app.use(view options, users = options.dataStore(this.store)
+1 76 , cacheTemplates);
+2 48 http.ServerResponse.prototype.render = function(view, opts, fn, parent){
+2 49 if (typeof opts === \'function\') {
+2 50 fn = opts, opts = null;
+2 52 var options = {}
+2 53 , self = this
+2 63 if (options.collection) {
+2 64 var name = options.as || view.split(\'.\');
+2 65 if (\'length\'length\' in options.collection\' == 1) {
+2 66 collection.collection.collection.0
+2 67 } else if (0 == options.collection.collection.collection.length < 0) {
+2 68 collection.collection.length;
+2 69 collection.0 = options.collection.0;
+2 70 options = options.collectionLength = options.collection;
+2 71 options.firstFirst;
+2 73 options.locals = options.locals.collectionLength = options.collectionFirst;
+2 74 if (\'length = options.collectionLength < 0;
+2 75 } else if (0 == 0;
+2 76 options.first) {
+2 77 options.first = options.first;
+2 78 options.locals.first;
+2 79 options.locals.indexInCollection;
+2 81 var i = 2;
+2 82 return this.each = options.length;
+2 83 , len;
+2 84 \
+3 58 , cacheTemplates = app.settings.cacheTemplates
+3 59 , viewNodes = app.settings.view options];
+3 62 locals = merge(options, options.locals);
+3 66 var name = options.locals.body = body;
+3 67  = options.filename = format.resolveObjectName(format || this.resolveObjectName(view);
+3 68 , app.url = format.path);
+3 69 , app.dirname = hostname = formatPath
+3 70 , hostname = hostname;
+3 71 , fs = port = port = port
+3 72 , hostname;
+3 73 , resolve = app.port = port;
+3 74 if (root!== 128) {
+3 75 options.root = function(this.url) {
+3 76 options.root = \'/
+3 77 if (options.root!== \'/
+3 78 ? \'/
+3 79 : 128) {
+3 80 options.stack = 1;
+3 82 var error = `"
+
+4 6 collection = options.collection;
+4 8 } else if ('length' in options) {
+4 9 collection = options;
+4 63 locals = options.locals;
+4 64 delete options.locals;
+4 66 if (\'Object\'string\' == typeof options) {
+4 67 options[object\' == typeof options) {
+4 68 options[object] = options;
+4 69 options = options;
+4 71 } else if (typeof options === global) {
+4 72 locals = {};
+4 74 options.render = options, app = this.viewOptions = options;
+4 75 , app = this;
+4 78 if (viewOptions = this.settings[view] = this.viewOptions || app;
+4 81 if (view.settings.settings[viewOptions]!== undefined) {
+4 83 if (viewOptions.filename = path.basename) {
+4 84 options = path;
+4 85 options = join(this.dirname,
+5 60 options.locals = options;
+5 61 viewOptions = options;
+5 62 dynamicHelpers = app.settings;
+5 63 this.renderPartial = renderPartial = true;
+5 64 , layout = false;
+5 65 if (layoutFolder = path.resolve(this.filename.dirname) && layoutFolder) && layoutDir!== \'.\'skip\' + layoutDir) && layoutDir.substr
+5 66 ) is layoutDir;
+5 67 options.exclude = layoutPath;
+5 68 options.exclude = layoutDir = layoutDir + \'/\'layout/\' + backtick\' + extname\' + extname;\';
+5 69 options.filename = engine;
+5 70 var name = options.attempts = options.match =!== app.engine
+5 71 ? path.dirname
+5 72 : layoutDir;
+5 73 :!view.dirname;
+5 74 app.dirname;
+5 75 app.settings.dir = layoutDir;
+5 76 app.settings.settings.app = this.
+6 1 var self = this;
+6 58 , viewOptions = app.settings.view options
+6 60 , view_dir = path.join(this.filename.substr(viewDir.length)), view_files = view.split(\'.\')
+6 61 , layout = options.layout === undefined? true : options.layout;
+6 62 if (viewOptions) options = merge(options, locals);
+6 63 app.set(\'view options\', viewOptions, true);
+6 64 app.set(\'views\', pageOptions, layoutOptions, pagePaths);
+6 65 if (layoutOptions.excludeIndex = 0) {
+6 66 return viewOptions.excludeIndex = 0;
+6 68 if (view.app.__proxies = {};
+6 69 app.lookup = function(app) {
+6 70 app.__proxies = app.__proxies = app.exclude = {};
+6 71 app.view options.exclude = null;
+6 72 app.settings.settings.exclude = null;
+6 73 app.settings.settings.isCallbacks = app.exclude = app.exclude = app.exclude;
+6 74 app.settings.settings.settings.onlySensitive =!== app.exclude.exclude.exclude.exclude.skip;
+7 64 options.locals = options.locals = options.locals || {};
+7 66 options.renderPartial = function(){
+7 67 return self.prefix = full_url_for.call(self.hostname
+7 68 .app.app.s = self.app.name
+7 69 .s = self.prefix || this.app.name;
+7 70 .middleware = this.middleware.middleware;
+7 71 .middleware.middleware = handler;
+7 73 if (middleware.app.settings.redirects = app.contentType) {
+7 74 return self.redirects = this;
+7 76 self.locals.method = get_methods = redirects;
+7 77 .bodyDecoder = middleware;
+7 78 .method = get_methods;
+7 79 .separator = separator;
+8 64 if (cacheTemplates) options = app.settings;
+8 65 var cache = viewOptions = true;
+8 66 , app.settings = this.settings = this.app.settings;
+8 67 ,
+8 68 , cacheTemplates = null;
+8 69 if (viewOptions.set(\'production\', contentType\', function(){
+8 70 viewOptions.set(\'production\', contentType\', cacheTemplates);
+8 71 })
+8 72 .on(\'view
+8 73 .set(\'production\', function(){
+8 74 options.set(\'production\', function(){
+8 75 viewOptions.set(\'production\', function(){
+8 76 this.enable(\'view engine\', cacheTemplates);
+8 77 });
+8 78 .})
+8 79 .on(\'directory
+8 80 .on(\'stream\', blog => self.remove(\'app.\'));
+8 81 .on(\'index.
+8 82 .remove(\'google\', function(){
+8 83 this.engines
+9 6 collection. = options.collection;
+9 9 collection.options = {};
+9 54 if (viewOptions) options = merge(options, { object: view });
+9 55 if (cacheTemplates) options = cacheTemplates;
+9 56 var viewOptions = { object: view, root: '/' };
+9 57 if (app.settings.env) {
+9 58 viewOptions = options.env;
+9 59 delete options.cacheTemplates;
+9 61 if (viewOptions.collection) {
+9 62 var name = options.collection;
+9 63 , options = this;
+9 64 if (options.locals = options;
+9 65 this.collection) {
+9 66 collectionLength = options.collectionLength = len;
+9 67 for (var i = this.first = i;
+9 68 options.first = i;
+9 69 options.collectionLength = i;
+9 70 options.firstTime = i;
+9 75 options.locals.firstTime = i;
+9 76 options.locals.firstInCollection = i;
+9 77 options.locals.collectionLength = i;
+9 80 options.firstInCollection = i;
+9 81 return this.collectionLength = i;
+9 82 options.collectionLength = this.collection;
+9 83 options.first

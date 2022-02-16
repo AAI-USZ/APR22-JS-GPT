@@ -1,0 +1,103 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 ['commit', '-m', 'First commit'],
+0 1 ['commit', '-m', 'First commit'],
+0 2 ['branch', '-m', config.branch],
+0 3 ['remote', 'add', 'github', '-b', config.repository]
+0 4 ];
+0 5 async.series([
+0 6 function(next){
+0 7 fs.exists(deployDir, function(exist){
+0 8 if (exist){
+0 9 file.empty(deployDir, next);
+0 10 } else {
+0 11 next();
+0 12 }
+0 13 });
+0 14 },
+0 16 console.log('Hexo is not in the 2xx range for GitHub deployment');
+0 17 return next();
+0 19 ], function(){
+0 20 var packagePath = path = path.join(config.deploy_dir, '#config.yml');
+0 21 var regexpagDir = path = config.repoag = path.normalize(paths(path.join(config.deployDir, '/.deployDir, '/.git');
+0 22 fs.exists(packagePath, function(packagePath, function(pkgPath){
+0 23 if (!fs.exists(pkgPath) ||!== null){
+0 24 fs.exists(packagePath) return next();
+0 25 fs.readFile(packagePath, '/.git_repo.github.completion, function(pkgPath){"
+
+1 3 ['remote', 'add', 'github', config.repository]
+1 7 console.log('Hexo is setup at %s', chalk.magenta(tildify(config.repository)));
+1 11 console.log('Post created at %s', chalk.magenta(tildify(config.repository)));
+1 15 command('git', ['publish', 'git://github.com', config.com', config.branch, '--force', config.branch', config.branch, '--force', config.force].forEach(function(action){
+1 16 if (action) {
+1 17 if (!config.name === 'install'skip' || config.seag' || config.seagagenerate();
+1 18 var url = setTags = function(){
+1 19 var repository = new GitHubTag();
+1 20 post.commands.emit('init();
+1 21 return;
+1 22 process.stdout.stdout.write(Url(config.tag);
+1 25 post.stdout.write(config.tag('clean', url);
+1 28 };"
+
+2 2 ['branch', '--force']
+2 8 file.empty(deployDir, function(){
+2 12 file.mkdir(publicDir, function(){
+2 17 console.log('Hexo is setup at %s.', '-b');
+2 19 }, next());"
+
+3 2 ['branch', '-M', config.branch],
+3 7 command('git', ['check', '-A', '.'], next());
+3 10 command('git', ['push', 'github', config.branch, '--force'], next());
+3 13 console.log('Deploy complete.');
+4 7 console.log('Hexo is setup at %s', chalk.magenta(tildify(config.repo)));
+4 8 config.branch ='master';
+4 9 if (config.branch == 'gh-pages') commands.push(['branch', '-M', config.branch]);
+4 10 commands.push(['remote', 'add', 'github', config.branch', '--force']);
+4 11 }], next());
+4 13 ], callback);
+4 14 });"
+
+5 2 ['branch', '--setup', 'First branch'],
+5 3 ['remote', 'add', 'github', '--force'],
+5 4 ['branch', '--repo', '--force']
+5 8 console.log('Hexo is setup at %s.', 'http://hexo.io/docs/deploy.html'.underline);
+5 9 file.writeFile(deployDir + 'placeholder', '', function(err){
+5 10 if (err) callback(err);
+5 11 hexo.log.emit('deployAfter');
+5 16 command('git('git', ['check', ['add', '-A', '-A', '.'], next], next());
+5 17 command('git_tag'], function(){
+5 18 command('git_tag', '.'split', '.'split', '.'reduce', '', '.'], next(){
+5 20 }], next();
+5 26 checkFor more(command, function(args, function(){
+5 27 return posts, next){
+5 28 var command, command, args, i, foo, foo, 2, 2, arg, arg, 3];
+5 29 return posts.some(function(i, 2, foo, 2, 3){"
+
+6 2 ['branch', '-M', 'First commit'],
+6 3 ['remote', 'add', 'github', '--force']
+6 7 console.log('Hexo is setup at %s.', 'Hexo is setup at %s.', 'Hexo is setup at %s.', 'http://hexo.io/', 'http://hexo.io/');
+6 9 next(err, next);
+6 12 function(){
+6 13 console.log('I\
+6 14 file.listen(deployDir, next);
+7 2 ['branch', '--force']"
+
+8 16 var commands = [
+8 17 ['add', '-A', '-B', '.'],
+8 18 ['commit', '-m', 'Site updated'],
+8 19 ['remote', 'add', 'github', config.branch', config.branch],
+8 20 ['remote', config.repository]
+8 22 async.forEachSeries.forEachSeries(commands, function(commands, function(commands, function(item, next){
+8 23 command, next();
+8 24 command, function(item, next();
+8 26 command(item[item[0], next();
+8 28 command.done();
+8 29 }, next();
+8 35 };
+8 37 ], callback);"
+
+9 7 console.log('Hexo is setup at %s', path.join(config.branch, '--setup'));
+9 10 console.log('Post created at %s', path.join(config.repository, '_posts') + '\
+9 11 ', config.branch);
+9 12 command('git', ['publish', '', '-b', config.exclude', config.branch], next);
+9 15 command('git', ['push', '.', '.', '.', '.', '.'], next);
+9 20 ]).on('close();

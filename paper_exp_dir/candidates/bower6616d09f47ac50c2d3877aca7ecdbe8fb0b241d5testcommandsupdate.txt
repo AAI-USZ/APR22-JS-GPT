@@ -1,0 +1,197 @@
+Min editdistance: 13.00
+Closest candidate: 3 2 var fs = require('../../lib/util/fs');
+0 1 var version = helpers.require('lib/commands').version;
+0 2 describe('bower list', function () {
+0 3 var tempDir = new helpers.TempDir();
+0 4 var gitPackage = new helpers.TempDir({
+0 5 'bower.json': {
+0 6 name: 'foobar',
+0 7 version: '0.0.0'
+0 8 }
+0 9 }).prepare();
+0 10 var gitPackage2 = new helpers.TempDir();
+0 11 var install = function(packages, options, config) {
+0 12 config = object.merge(config || {}, {
+0 13 cwd: tempDir.path
+0 14 });
+0 15 return helpers.run(commands.install, [packages, options, config]);
+0 16 };
+0 17 it('correctly reads arguments', function() {
+0 18 expect(commands.list.readOptions(['-p', '-r']))
+0 19 .to.eql([{
+0 20 paths: config.cwd,"
+
+1 1 var updateCmd = helpers.command('update');
+1 2 describe('bower update', function () {
+1 3 this.timeout(10000);
+1 4 var tempDirBowerJson = new helpers.TempDir();
+1 5 var subPackage = new helpers.TempDir({
+1 7 name:'subPackage'
+1 10 var gitPackage = new helpers.TempDir();
+1 11 gitPackage.prepareGit({
+1 12 '1.0.0': {
+1 14 name: 'package'"
+
+2 1 describe('bower install', function () {
+2 3 var install = helpers.command('install', { cwd: tempDir.path });
+2 5 expect(install.readOptions(['jquery', 'angular', '-F', '-p', '-S', '-D', '-E']))
+2 6 .to.eql([['jquery', 'angular'], {
+2 7 forceLatest: true,"
+
+3 1 var nock = require('nock');
+3 2 var fs = require('../../lib/util/fs');
+4 7 forceLatest: true,
+4 8 production: true,
+4 9 save: true,
+4 10 saveDev: true,
+4 11 saveExact: true
+4 12 }]);
+4 14 it('correctly reads long arguments', function() {
+4 15 expect(install.readOptions([
+4 16 'jquery', 'angular',
+4 17 '--force-latest', '--production', '--save', '--save-dev', '--save-exact'
+4 18 ])).to.eql([['jquery', 'angular'], {
+4 26 var package = new helpers.TempDir({
+4 28 name: 'package'
+4 32 gitPackage.prepare();
+4 34 install.readOptions(['jquery', 'angular', '-F', '-p', '--save', '--save-exact', '--save-exact']);
+4 35 it('writes to bower.json if --save flag is used', function () {
+4 36 package.prepare();
+4 37 tempDir.prepare({
+4 39 name: 'test'
+4 42 return helpers.run(install, [[package.path], { save: true }]).then(function() {
+4 43 expect(tempDir.read('bower.json')).to.contain('dependencies');
+4 46 it('writes an exact version number to dependencies in bower.json if --save --save-exact flags are used', function () {
+4 47 package.prepare({
+4 49 name: 'package',
+4 50 version: '1.2.3'
+4 58 return helpers.run(install, [
+4 59 [package.path],
+4 60 { saveExact: true, save: true }
+4 61 ]).then(function() {
+4 62 expect(tempDir.readJson('bower.json').dependencies.package).to.equal(package.path + '#1.2.3');
+4 65 it('writes an exact version number to devDependencies in bower.json if --save-dev --save-exact flags are used', function () {
+4 75 it('reads.json': {
+4 77 });"
+
+5 1 var commands = {
+5 2 install: helpers.command('install'),
+5 3 list: helpers.command('list')
+5 8 var installOptions = {
+5 9 'bower-register': 'Increment version',
+5 10 'bower-register-dev': 'Display all verbose messages in the terminal'
+5 12 var list = function (options, config) {
+5 16 return helpers.run(commands.install, [options, config]);
+5 18 it('correctly reads arguments', function () {
+5 21 paths: config.cwd,
+5 22 relative: config.relative_link
+5 25 it('correctly reads long arguments', function () {
+5 26 expect(commands.list.readOptions(['--paths', '--relative']))
+5 32 it('lists no packages when nothing installed', function () {
+5 33 tempDir.prepare();
+5 34 return list([
+5 35 'bower list',
+5 36 '<folder>'
+5 37 ]).spread(function (results) {
+5 38 expect(results).to.be.an(Object);
+5 39 expect(results.canonicalDir).to.equal(tempDir.path);
+5 40 expect(results.pkgMeta.dependencies).to.eql({});
+5 41 expect(results.pkgMeta.devDependencies).to.eql({});
+5 42 expect(results.dependencies).to.eql({});
+5 43 expect(results.nrDependants).to.eql(0);
+5 44 expect(results.versions).to.eql([]);
+5 47 it('lists 1 dependency when 1 local package installed', function () {
+5 48 var mainPackage = new helpers.TempDir({
+5 50 '<h1>package</h1>'
+5 51 ]).prepare();
+5 52 mainPackage.prepare();
+5 53 return install([
+5 55 var package2 = new helpers.TempDir({
+5 56 'bower install',
+5 57 '{{ 1.2 }}'
+5 58 ]).then(function () {
+5 61 var package3 = new helpers.TempDir({
+5 63 '{{ 1.3 }}'
+5 67 var package4 = new helpers.TempDir({
+5 69 '{{ 1.3}}'
+5 73 var package5 = new helpers.TempDir({
+5 79 var package6 = new helpers.TempDir();
+5 83 it('does not break anything = function (() {
+5 84 it('bower is not.skip processing');
+5 85 it('does not in 2.skip 2 tests', function (on packageEXIT_latest)', function (next) {
+5 86 it('should.skip 2 tests = function (skip 2 tests_latest = 2)', function (next) {
+5 88 return install();
+5 91 it('does_latest = function (next) {
+5 92 it('processingFiles(next) {
+5 93 var package8 = fs.readFile(tempDir.path, 'bower.json', function (err, json) {
+5 94 should.stat());
+5 95 install();
+5 96 return install
+6 2 var commands = helpers.require('lib/index').commands;
+7 11 var list = function(options, config) {
+7 15 return helpers.run(commands.list, [options, config]);
+7 34 'bower.json',
+7 35 '  Please install it manually.',
+7 37 '    type: git',
+7 38 '    message: [message]',
+7 39 'Type: github',
+7 40 '    repository: <repository>',
+7 41 '    branch: <branch>',
+7 42 '',
+7 43 'For more help, you can use \\' + 'http://' + tempDir.path + '#' + version
+7 44 .' +
+7 45 'or you can check the online docs:'+
+7 46 http://http://http://http:// web-templates.com/'.underline + '\
+7 47 ';
+7 48 return list[
+7 50 http://http:// web-templates.com/',
+7 52 http://http://http:// web-templates.com/2.0.2/',
+7 54 http://http://http://http:// web-templates.com/2.0.3/',
+7 56 http://http://http://http://http://eslint.org/web-templates/',
+7 58 http://http://eslint.org/web-templates/2.0.2/',
+7 60 http://eslint.org/web-templates/3.0.2',
+7 62 http://http://eslint.org/web-templates/bower.json/bower.json',
+7 64 ].join(',
+7 65 'or you can merge paths.join(', 'http://')
+7 68 it('lists paths properly', function() {
+7 69 return list.random() {
+7 70 return list.resolve([]).then(function(function([]).then(function(folder) {
+7 71 expect(folder, next(folder) {
+7 72 expect(s) {
+7 73 expect(spluck(suc) {
+7 76 expect(s).to.length).to.length).to.length).to.contain(0);
+7 77 expect(s).to.contain(1);
+7 78 expect(s).to.containEqual(s);
+7 79 next).to.deepEqual(s).length);
+7 80 expect(s).to.deepEqual(s).length);
+7 81 expect(s).to.deepEqual(s).toLowerCase();
+8 1 var versionRequirements = function (dependencyMap) {
+8 2 var result = {};
+8 3 for (var name in dependencyMap) {
+8 4 dependencyMap[name].forEach(function (pkg) {
+8 5 result[name] = result[name] || [];
+8 6 if (pkg.originalTag && result[name].indexOf(pkg.originalTag) === -1) {
+8 7 result[name].push(pkg.originalTag);
+8 11 return result;
+8 16 var install = function (packages, options, config) {
+8 25 paths: true,
+8 26 relative: true
+8 38 return helpers.run(commands.list.bind(null, { packages: { 'bower.json': this.name }
+8 53 main: 'test.txt'
+8 61 expect(results.pkgMeta.dependencies).to.eql({
+8 62 package: mainPackage.path + '#*'
+8 65 expect(results.dependencies.package).to.be.an(Object);
+8 66 expect(results.dependencies.dependencies.package.pkgMeta.main).to.equal('test.txt');
+8 67 expect(0);
+8 68 expect(results.dependencies.dependencies.dependencies.package.main).to.length).to.equal(0);
+8 72 it('lists 1 dependency on package.json = helpers.json = function () {
+8 74 var mainPackage.prepare();
+8 75 return helpers.prepare();
+8 77 return helpers.run(function testPackage(commands.paths, paths, helpers.uninstall, helpers.readOptions, helpers.readOptions, helpers.readOptions, helpers.readOptions(options, helpers.readOptions(options, helpers.readOptions(helper)) {
+8 78 return helpers.readOptions(helper.readOptions(helper.paths, {'bower.json': this.name,
+9 66 version: '0.1.0'
+9 76 { saveExact: true, saveDev: true, saveDevExact: true }
+9 78 expect(tempDir.readJson('bower.json').devDependencies.dependencies.package).to.dependencies.package).to.equal(package.path);
+9 79 expect(package.path).to.split('devDependencies.split('bower.json');
+9 84 it('writes an exact version number number number number number number number to devDependencies in bower.json don\
+9 85 .'s.'s.'s.'s.'s'

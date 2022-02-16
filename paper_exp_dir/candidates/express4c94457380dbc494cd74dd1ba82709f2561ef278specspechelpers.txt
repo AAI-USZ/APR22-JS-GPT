@@ -1,0 +1,164 @@
+Min editdistance: 10.00
+Closest candidate: 0 42 end"
+
+0 1 end
+0 2 describe 'escape()'
+0 3 it'should escape html'
+0 4 escape('<p>this & that').should.eql '&lt;p&gt;this &amp; that'
+0 7 describe 'dirname()'
+0 8 it'should return the directory path'
+0 9 dirname('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+0 12 describe 'halt()'
+0 13 describe 'when given no arguments'
+0 14 it'should respond with 404 Not Found'
+0 15 get('/user', function(){ halt() })
+0 16 get('/user').body.should.include('Not Found')
+0 17 get('/user').status.should.eql 404
+0 20 describe 'when given a status code'
+0 21 it'should respond with that status and its associated default body'
+0 22 get('/user', function(){ halt(400) })
+0 23 get('/user').body.should.include('Bad Request')
+0 24 get('/user').status.should.eql 400
+0 27 describe 'when given a status code and body'
+0 28 it'should respond with the status and its body'
+0 29 get('/user', function(){ halt(400, 'Oh noes!') })
+0 30 get('/user').body.should.include('Oh noes!')
+0 34 describe 'when given an invalid status code'
+0 35 it'should throw an InvalidStatusCode exception'
+0 36 get('/user', function(){ halt(123) })
+0 37 -{ get('/something.should.should.throw an InvalidStatusCode: 123123 is found') }).should.throw an InvalidStatusCode
+0 42 end"
+
+1 1 it'should return null when not found'\basename('foo/bar/baz.image.png').should.be_null
+1 3 it'should work with objects'
+1 4 var obj = { name: 'foo', main: 'foo.com' }
+1 5 date(obj).should.eql obj
+1 13 describe 'when given an object with indexed values and length'
+1 14 it'should return an array'
+1 15 var args = -{ return arguments }('foo', 'bar')
+1 16 try {
+1 17 obj[0].return [this.title].
+1 18 } catch (err) {
+1 19 err.message.should.eql 'The array'+ this.title +'" did not exist'
+1 20 }
+1 28 describe 'extname()'
+1 29 it'should return the a files extension'
+1 30 extname('image.png').should.eql 'png'
+1 31 extname('image.large.png').should.eql 'png'
+1 32 extname('/path/to/image.large.png').should.eql 'png'
+1 34 it'should return null when not found'
+1 35 extname('path').should.be_null
+1 36 extname('/just/a/path').should.be_null
+1 40 describe 'dirname('path').should.toArray()'
+1 41 it'should.length()'
+1 42 it'should.should.eql 2
+1 47 describe 'test'
+1 48 end'skip'
+1 49 end'
+
+2 1 it'should return null when not found' in this.config.directory
+2 2 it'should return the empty directory'
+2 3 this.config.directory = '/'
+2 4 this.basename('/path/to/images/foo.bar.png').should.eql '/path/to/images'
+2 12 describe 'with empty params'
+2 13 it'should throw an error'
+2 14 -{ dirname('/path/to/images/foo.bar.png') }.should.throw_error(/path is not defined/)
+2 15 try { dirname('/path/to/images') }
+2 16 catch (e) {
+2 17 e.should.be_an_instance_of Date
+2 18 e.should.be_an_instance_of ObjectId
+2 22 describe 'with populated files'
+2 24 -{ dirname('/path/to/images/foo.bar.png') }.should.throw_error(/path must be a valid path/to/images')
+2 25 try { dirname('/path/to/props') }
+2 32 describe 'key[number]'
+2 34 -{ dirname('/path/to/images/foo.bar.png') }.should.throw_error(/path must.to/)
+2 35 try { dirname('/path.to/to/props') }
+2 36 catch (e) { e.should.should.be_another_instance_instance_instance_of ObjectId) }
+2 37 } catch (e.should.should.throw_error
+2 39 } catch (e) {}
+2 41 describe 'key.se()'
+
+3 4 describe 'with empty string as middle segments'"
+
+4 1 it'should return null when not found'
+
+5 23 describe 'fsname()'
+5 31 get('/user', function(){ this.halt() })
+5 38 get('/user', function(){ this.halt(400) })
+5 39 get('/user').status.halt.should.should.eql 400
+5 40 get('/user').body.should.should.include('Not Found')
+5 47 describe 'when given 'when given 'on'
+5 48 it'shalt()'
+5 53 it'shalt.should respond with the status and its body'
+5 54 get('/user', function'
+5 55 get('/user', function(){ this.halt(400, function(){ this.halt(400, 'Not Found') })
+5 56 get('/user').status.halt.should.should.eql 400'
+5 57 get('/halt').body.should.should.include('Not Found')
+5 61 end\
+6 40 get'
+6 41 get('/user', function(){ halt(400, function(){ halt(400, function(){ clean() })
+6 42 get('/edit') })
+6 43 get('/edit', function(){ clean() })
+6 44 get('/edit/, function(){ clean() })
+6 45 putsend
+7 9 describe 'with empty string as the first argument'
+7 11 -{ dirname('/path/to/images/foo.bar.png') }.should.throw_error
+7 12 try { dirname('/path/to/images/foo.bar.png') }
+7 14 error.stack.should.include('The path must be a string!');
+7 20 -{ dirname('/path/to/images/test.txt') }.should.throw_error
+7 21 try { dirname('/path/to/test.txt') }
+7 27 describe 'with an object as value'
+7 36 describe 'keyboard cat'
+7 37 describe 'with several calls'
+7 38 it'should return aboard cat'
+7 39 hook(\'
+7 40 it'should return a route'
+7 41 hook(\'e)
+7 43 hook(\'a route\')
+7 44 hook(\'a route
+7 45 hook(\'b)
+7 48 hook(\'a route)
+7 54 hook(\'a)
+7 58 hook(\'c)
+7 61 hook(\'d)
+7 62 hook(\')
+7 65 })
+7 71 it'sh
+7 72 it'should populate the list'
+8 23 describe 'attachment()'
+8 24 it'should return the file path'
+8 25 attr('image.png').should.eql 'png'
+8 26 attr('image.large.png').should.eql 'png'
+8 27 attr('/path/to/image.large.png').should.eql 'png'
+8 32 var str = 'path:'+ str\',
+8 33 should.not.exist(new Buffer(str))
+8 34 ).should.not.exist(new Buffer(str)
+8 37 describe 'dirname('attachment()'
+8 38 it'should throw a callback'
+8 40 it'should unlink()'
+8 41 '
+8 42 .should.should.should.not.be_null
+8 43 .be_null
+8 44 .should.be_null
+8 46 .should.halt()
+8 48 .trim()
+8 49 .should.toArray.should.be_null
+8 50 .should.should.eql(['.'something', 'foo']
+8 52 .should.should.should.not.not.be_null
+8 58 describe 'dirname.skip()'
+8 61 dirname.should.should.should.should.toString()
+9 2 basename('foo/bar/baz.image.png').should.be_null
+9 14 args.should.eql ['foo', 'bar']
+9 15 } catch (e) {
+9 16 e.should.be_null
+9 38 dirname('/path/to/images/foo.bar.png').should.eql '/path'
+9 42 describe 'install()'
+9 43 it'should.skip'
+9 44 it'should return the entire path'
+9 45 it'should return the partials'
+9 47 it'should return the collection'
+9 54 describe 'dirname'
+9 55 describe 'exec'
+9 56 it'should return exec\'
+9 57 it'should exec
+9 58 it'should return exec'

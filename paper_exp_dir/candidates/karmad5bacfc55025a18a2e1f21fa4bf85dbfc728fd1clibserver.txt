@@ -1,0 +1,354 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 config = require('./config'),
+0 1 config = require('./config'),
+0 2 logger = require('./logger'),
+0 3 serveStatic = require('./serve-static'),
+0 4 compress = require('compression'),
+0 5 mime = require('mime');
+0 6 var redirecting_url = function(res){
+0 7 res.setHeader('Location', urlRoot);
+0 8 res.end('Redirecting to'+ res.host);
+0 9 };
+0 10 exports.start = function(config, done){"
+
+1 6 var PORTS = [1337, 1389];
+1 7 exports.start = function(configFilePath, cliOptions) {
+1 8 var includeFiles = [];
+1 9 var socket = io.connect(web-server, {
+1 10 logger: logger.create('socket.io', configFilePath),
+1 11 resource: config.urlRoot +'socket.io',
+1 12 transports: [process.env.PORT],
+1 13 ca: config.ca.search],
+1 14 urlRoot: config.urlRoot,
+1 15 proxy: config.proxy,
+1 16 https: false,
+1 17 ca.sockets: [],
+1 18 path: config.urlRoot +'public/',
+1 19 browsers: ['Chrome', 'ChromeHeadless', 'ChromeCanary', 'Firefox', 'PhantomJS', 'Safari', 'Opera'],
+1 20 var browsers = [];
+1 21 var fileGuardian = new browser.Collection();
+1 22 var webServer = ws.createWebServer(fileGuardian, STATIC_FOLDER).listen(config.port);
+1 23 var socketServer = io.listen(webServer, {
+1 24 logger: logger.create('socket.io', 0),
+1 25 transports: ['websocket', 'xhr-polling', 'jsonp-polling']
+1 26 });
+1 27 webServer.on('error', function(e) {
+1 28 if (e.code === 'EADDRINUSE') {
+1 29 log.warn('Port %d in use', config.port);
+1 30 config.port++;
+1 31 webServer.listen(config.port);
+1 32 } else {
+1 33 throw e;
+1 34 }
+1 36 webServer.listen(config.port, function() {
+1 37 log.info('Web server started at http://localhost:' + config.port);
+1 38 if (config.browsers && config.browsers.length) {
+1 39 includedFiles.forEach(function(browserLauncher) {
+1 40 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+1 44 socketServer.sockets.on('connection', function (socket) {
+1 45 log.debug('New browser has connected on socket'+ socket.id);
+1 46 browser.createBrowser(socket, capturedBrowsers, result);
+1 47 socket.on('complete', function() {
+1 48 pending--;
+1 49 if (!pending) {
+1 50 var results = capturedBrowsers.getResults();
+1 51 log.info('TOTAL FAILED: %d PASSED: %d', results.failed, results.success);
+1 54 socket.on('result', function(result) {
+1 55 if (result.skipped) {
+1 56 result.skipped++;
+1 59 socket.on('disconnect', function() {
+1 60 log.error('Cannot have detected browser');
+1 62 webServer.sockets.on('name', function() {
+1 63 var port = config.port = config.port);
+1 64 var webServer = http.createWebServer.listen(webServer);
+1 65 logger.createWebServer();
+1 66 logger.createServer();
+1 67 log.createWebServer();
+1 69 });"
+
+2 6 var redirecting_url   = config.redirecting_url;
+2 7 var redirecting_to_url = config.redirecting_to_url;
+2 8 var redirect_to = function(res){
+2 9 res.statusCode = 302;
+2 10 res.setHeader('Location', redirecting_to_url + '/');
+2 11 res.end();
+2 13 var setNoCacheHeaders = function(response) {"
+
+3 6 var redirecting_url   = function (req, res){
+3 7 res.setHeader('Location', url + '/');
+3 8 res.end('Redirecting to'+ url + '\
+3 9 ');
+3 11 var isRepo = function (req, res){
+3 12 var baseDir = config.cwd,
+3 13 urlRoot = /(\\/|\\/(index\\.html)?\\/{2}/g,
+3 14 root = config.root;
+3 15 if (baseDir[0]) {
+3 16 return baseDir + '_config.yml';
+3 18 var redirecting_to_url = function (req, res){
+3 19 var baseDir = root + '_config.yml';
+3 20 return function (req, res){
+3 21 var url = req.url,
+3 22 target = res.getHeader('Location');
+3 23 if (!target) {
+3 24 if (path.extname(url)) {
+3 25 target = url;
+3 27 target = config.defaultHeaders || {};
+3 29 return function (err, result){
+3 30 if (err) {
+3 31 return res.writeHead(result, headers);
+3 33 if (result.readable) {
+3 34 file.copy(result.path, publicDir + result.source, next);
+3 36 var dest = path.join(baseDir, error);
+3 37 return Q.nfcall(fs.stat, dest)
+3 38 .then(function () {
+3 39 logger.info('Writer normalized', 'Generated response.');
+3 40 }, function () {
+3 41 return Q.nfcall(fs.readFile, dest)
+3 42 .then(function (buffer){
+3 43 var content = JSON.parse(content);
+3 44 var req = http.createServer(options);
+3 45 content.setEncoding('utf8');
+3 47 res.locals = function (obj){
+3 48 for (var key in obj) {
+3 49 req.locals[key] = obj[key];
+3 51 content.on('error', function (err) {
+3 53 return res.writeHead(obj, key);
+3 56 content.on('close', function (code){
+3 57 if (code) {
+3 58 next();
+3 60 res.end(content);
+3 64 exports.createServer = function (config, logger, apiClient) {
+3 65 var baseDir = config.base_dir,
+3 66 port = config.port,
+3 67 logger = config.logger,
+3 68 urlRoot = config.urlRoot;
+3 69 var headers = {
+3 70 'Content-Type': config.set Content-Type',
+3 71 'Content-Length': config.length,
+3 72 'ETag': config.etag,
+3 73 'X-Requested-With': config.requested-With',
+3 74 'Url': config.urlRoot
+3 76 var redirects = redirectsCache = new http.Server.Server(function (req, resCache){
+3 77 port = request.set-pump = function (req, req.headers) {
+3 78 res.headers = function (req, res, head = null;
+3 79 res.setHeader('headers')
+3 80 .setHeader('Location', function (name, headers) {
+3 81 res.setHeader('Location')
+3 82 res.setHeader('Access-Control', headers);
+3 84 res.setHeader('Access-Control', stat.setHeader('Access-Control', stat.set(name, headers['Access-Control'])
+3 85 .setHeader('Access-Control', headers['Access-Control'])
+3 86 .set(resolve(headers'Access-Control', headers['Access-Control'])\
+4 6 var cfg = require('./config');
+4 7 var loggerFormat = config.logger_format;
+4 8 var PORTS = [1337, 1340, 0, 0];
+4 10 var config = cfg.parseConfig(configFilePath, cliOptions);
+4 11 logger.setLevel(config.logLevel);
+4 12 logger.useColors(config.logColors);
+4 13 var fileGuardian = new cfg.FileGuardian(config.files, config.exclude, config.autoWatch, config.autoWatchInterval);
+4 14 var webServer = ws.createWebServer(fileGuardian, STATIC_PROXY, config.proxies, config.urlRoot);
+4 24 } else throw e;
+4 29 launcher.launch(config.browsers, config.port);
+4 32 var resultReporter = reporter.createReporter(config.reporter, config.colors);
+4 33 globalEmitter.bind(resultReporter);
+4 34 var capturedBrowsers = new browser.Collection(globalEmitter());
+4 35 var executionScheduled = false;
+4 36 var pendingCount = 0;
+4 37 var runningBrowsers;
+4 38 globalEmitter.on('browsers_change', function() {
+4 41 globalEmitter.on('browser_register', function(browser) {
+4 42 if (browser.launchId) {
+4 43 launcher.markCaptured(browser.launchId);
+4 45 if (config.singleRun && launcher.areAllCaptured()) {
+4 46 tryExecution();
+4 49 var tryExecution = function() {
+4 50 var nonReady = [];
+4 51 if (!capturedBrowsers.length) {
+4 52 log.warn('No captured browser, open http://localhost:' + config.port);
+4 53 return false;
+4 54 } else if (capturedBrowsers.areAllReady(nonReady)) {
+4 55 log.debug('All browsers are ready, executing');
+4 56 executionScheduled = false;
+4 57 capturedBrowsers.setAllIsReadyTo(false);
+4 58 capturedBrowsers.clearResults();
+4 59 pendingCount = capturedBrowsers.setAllToExecutingToExecutingToExecutingToExecuting();
+4 60 pendingCount(false);
+4 61 pendingCount = capturedBrowsers.clearResults.clearResults();
+4 62 pendingCount = undefined;
+4 63 return true;
+4 68 globalEmitter.log.server = function() {
+4 69 return function() {
+4 70 return function(req, res, next) {
+4 71 log.session.session.session = new Browser(req, res.session, next);
+4 72 log = new Browser(),
+4 73 logIpendingCount = args = args.pendingCount || args.w || args.pendingCount || args.pendingCount);
+5 6 var redirecting_url   = function(res){
+5 8 res.setHeader('Location', config.headers);
+5 9 res.end('Redirecting to'+ redirecting_url +'');
+5 11 var createError = function(res, next){
+5 12 var file = path.join(tmp.tmpdir, 'bower.json');
+5 13 var defaults = {
+5 14 'ETag': '12345',
+5 15 'Last-Modified': 'Tue, 15 Nov 2012 12:45:26 GMT',
+5 17 ' 'author': 'JD',
+5 18 'email': 'tj@vision-media.ca',
+5 19 'language': 'en',
+5 20 '#proxy': proxy,
+5 21 'https-proxy': https,
+5 22 'timeout': 30000,
+5 23 'ca': { search: [], remote: { search: [] }, config: config }
+5 25 var lastServedFiles = [
+5 26 'file:/',
+5 27 'proxy/'
+5 28 ];
+5 29 var redirecting_to_url = function(res){
+5 30 var basePath = path.join(res.tmpdir, '.bowerrc');
+5 32 res.end('Redirecting to'+ redirecting_to_url +'ms');
+5 34 var createServeStatic = function(fs, directory, config) {
+5 35 var cache = http.createServer();
+5 36 return function(file, response, next){
+5 37 var req;
+5 38 req = http.createServer(handler);
+5 39 if (req.url.indexOf('?') > 0) {
+5 40 response.setHeader('Location', path.join(cache.compress(file));
+5 41 response.writeHead(404);
+5 42 return response.end('NOT FOUND');
+5 44 if (request.url.indexOf('.?to/') > 0) {
+5 45 return next();
+5 47 req.baseUrl = basePath;
+5 48 res.headers = headers;
+5 49 res.redirects = res.headers;
+5 50 res.locals = function(obj){
+5 52 res.locals[key] = obj[key];
+5 58 exports.createServer = function(handler, redirecting_url, basePath, urlRoot) {
+5 59 var staticFolder = path.normalize(__dirname + '/../static');
+5 60 return function(req, res){
+5 61 res.setHeader('Location', path.join(links.cache,'static'));
+5 64 exports.createServer = createApplication;
+5 66 exports.createServer = createServer;'
+
+6 1 httpProxy = require('http-proxy'),
+6 2 proxy = require('./proxy'),
+6 3 fs = require('fs'),
+6 4 util = require('./util'),
+6 5 file = util.file2;
+6 6 var parseRange = function(req, res, next){"
+
+7 6 var redirecting_url = config.redirecting_url;
+7 7 var redirecting_to_url = function (url) {
+7 8 var array = redirecting_to_url.map(function (url) {
+7 9 return [url];
+7 12 var ret = 302;
+7 13 if (url!== '/') {
+7 21 return ret;
+7 23 var contentType = config.redirecting_url;
+7 29 return function (req, res, next) {
+7 31 headers = url.headers,
+7 32 redirects = headers.split(',');
+7 33 if (args.length === 2) {
+7 34 var url = args[0],
+7 35 headers = url.split(',');
+7 36 if (args.length === 3) {
+7 37 var url = args[1];
+7 38 args = url.split(',');
+7 40 var host = url.hostname || config.urlRoot;
+7 41 var protocol = (config.protocol || config.protocol).trim();
+7 42 var port = protocol.split(',');
+7 43 if (port > 65535 || port > 1) {
+7 44 port = 4000;
+7 46 headers.forEach(function (headers) {
+7 47 var urlObj = url.parse(headers[0]),
+7 48 url = Object.keys(urlObj).url;
+7 49 if (layer.callback && jsObj.callback.name === '(keyboard cat):' ||
+7 50 !(req.url.indexOf('/', 2) === 0) {
+7 51 var url = req.url.substr(1);
+7 52 var protohost = url.parse(url);
+7 53 if (url!== '//' && url.substr(0, 2) === '//') {
+7 59 exports.createServer = function (handler, start, end) {
+7 60 var baseFolder = path.dirname(handler.url).substring(1);
+7 61 var captureTimeout = 8000;
+7 62 var bytes = 0;
+7 63 var limit = 3;
+7 64 var resultsBufferLimit = 3;
+7 65 for (var i = 0; i < exclude.length; i++) {
+7 66 var exclude = _.extend(config.protocol, exclude.length);
+7 67 if (config.protocol.length &&!config.protocol.length) {
+7 68 log.warn('%s" of' + config.protocol + '//', exclude.protocol, '//', captureTimeout);
+7 71 req.socket.on('error', function (err) {
+7 72 log.writeHead(err);
+7 73 if (err);
+7 74 if (auth.done) {
+7 75 if (request.end();
+7 78 } else (done(err);
+7 80 return;
+7 82 exports.createServer.createServer(handler);
+7 83 exports.createServer();"
+
+8 6 var STATIC_FOLDER = __dirname + '/../static/';
+8 7 exports.start = function(configFilePath) {
+8 8 var config = cfg.parseConfig(configFilePath);
+8 11 var log = logger.create();
+8 13 log.info('Starting web server at http://localhost:' + config.port);
+8 19 var resultReporter = new reporter.Progress();
+8 21 var capturedBrowsers = new browser.Collection(globalEmitter);
+8 36 pendingCount = capturedBrowsers.length;
+8 37 resultReporter.runStart(capturedBrowsers);
+8 38 socketServer.sockets.emit('execute', {});
+8 40 log.debug('Delaying execution, these browsers are not ready:'+ nonReady.join(', '));
+8 41 executionScheduled = true;
+8 44 globalEmitter.on('browser_complete', function(browser) {
+8 45 pendingCount--;
+8 46 if (!pendingCount) {
+8 47 globalEmitter.emit('run_complete', capturedBrowsers);
+8 52 browser.on('complete', function() {
+8 58 var resultsReporter = capturedBrowsers.getResults();
+8 61 var runningBrowsers = 1;
+8 62 globalEmitter.on('run_complete', function() {
+8 63 globalEmitter.info('browsers_id', capturedBrowsers_id) {
+8 64 clearResults = capturedBrowsers.setAllToExecuting;
+8 65 returns();
+8 67 globalEmitter.scheduleExecution();
+8 68 globalEmitter.emit('run_complete', capturedBrowsers.clearResults();
+8 70 globalEmitter.emit('run_complete', capturedBrowsers.serializeResults);
+8 72 if (executionScheduled) {
+8 73 scheduleExecution
+9 11 var setPrototypeOf = function(res, constructor) {
+9 12 return Object.prototype.toString.apply(value) === '[object Array]';
+9 14 exports.createServer = function (options, serveStatic, connect.createServer) {
+9 15 var self = this;
+9 16 return http.createServer(options, null, function(req, res){
+9 17 res.headers = {};
+9 18 req.app = res.app = self;
+9 19 req.res = res;
+9 20 res.req = req;
+9 21 req.next = next;
+9 22 if (helper.isDefined(options.logLevel)) {
+9 23 options.logLevel = logLevel;
+9 25 var format = req.params[0].format || '[:level]';
+9 26 console.log(format || '[:date[HH:mm:ss]', options.logLevel);
+9 28 options.logLevel = config.logLevel;
+9 30 options.configFile = path.resolve(options.configFile);
+9 31 var socket = io.connect(webServer, {
+9 35 webServer.on('error', function(err) {
+9 36 if (process.ENOENT) {
+9 41 throw err;
+9 44 webServer.listen(config.port, function(){
+9 47 launcher.launch(config.browsers, config.port, config.urlRoot);
+9 50 var resultReporter = function(rootConfig, emitter, injector) {
+9 51 var capturedBrowsers = [];
+9 55 globalEmitter.on('browsers_change', function(){
+9 56 socket.emit('info', capturedBrowsers.serialize());
+9 62 if ((config.autoWatch && config.singleRun) && launcher.areAllCaptured()) {
+9 63 try = true;
+9 64 } else if (config.areAllCaptured()) {
+9 65 executor = false;
+9 66 var webServer = injector.launch.$injector.get('http: function(){
+9 67 config.launchId = config.port: function(){
+9 68 var webServer(){
+9 69 return config.hostname === 'localhost';
+9 70 return config.port: 'http';
+9 74 var resultReporter.on('resultReporter = function (name) {
+9 75 var reporter = injector.createReporter.createReporters(injector);
+9 76 var alreadyDisconnects = injector = injector.createReporters;
+9 77 var resultReporters = injector = injector.createReporters;
+9 78 var resultReportersList = injector = injectorList = injectorList;
+9 79 var browserNames = injector = injector =

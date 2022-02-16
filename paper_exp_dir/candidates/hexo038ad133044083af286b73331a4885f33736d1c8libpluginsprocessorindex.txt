@@ -1,0 +1,205 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 filterExt = extend.filter.list(),
+0 1 renderFn = require('../../render'),
+0 2 render = renderFn.render,
+0 3 isRenderable = renderFn.isRenderable,
+0 4 route = require('../../route'),
+0 5 model = require('../../model'),
+0 6 dbPosts = model.posts,
+0 7 dbPages = model.pages,
+0 8 dbCats = model.categories,
+0 9 dbTags = model.tags,
+0 10 dbAssets = model.assets,
+0 11 util = require('../../util'),
+0 12 yfm = util.yfm,
+0 13 titlecase = util.titlecase,
+0 14 excerptRegex = /<!--\\s*more\\s*-->/;
+0 15 var existed = {
+0 16 posts: [],
+0 17 pages: []
+0 18 };
+0 19 swig.init({tags: tagExt});
+0 20 if (newPostConfig){
+0 21 var filenameRE = pathFn.basename(newPostConfig, pathFn.extname(newPostConfig))
+0 22 .replace(/:year/g, '(\\\\d{4})')
+0 23 .replace(/:(month|day)/g, '(\\\\d{2})')
+0 24 .replace(/:title/g, '(.*)');
+0 25 filenameRE = new RegExp(filenameRE);
+0 26 var filenameArr = _.map(newPostConfig.match(/:[a-z]+/g), function(item){
+0 27 return item.substring(1);
+0 28 });
+0 29 }
+0 30 var getInfoFromFilename = function(str){
+0 31 if (!filenameRE.test(str)) return;
+0 32 var meta = str.match(filenameRE).slice(1),
+0 33 result = {};
+0 34 for (var i=0, len=filenameArr.length; i<len; i++){
+0 35 result[filenameArr[i]] = meta[i];
+0 37 return result;
+0 39 module.exports = function(locals, render, callback){
+0 40 var config = hexo.config,
+0 41 extname = pathFn.extname(config.new_post_name),
+0 42 filename = args.shift(),
+0 43 doc = args.pop(),
+0 44 renderFn = hexo.render,
+0 46 getOutput = renderFn.getOutput;
+0 47 if (isRenderable(filename)){
+0 48 var renderer = hexo.extend.renderer.get(filename);
+0 49 if (renderer){
+0 50 var match = newPostConfig.match(/:[\\s]*([^\\/]+)/)[1],
+0 51 regex = new RegExp(filename)
+0 52 .replace(/:(\\w+)/g, function(_, key){
+0 53 return [key];
+0 55 var content = render[filename];
+0 56 if (!match) return callback();
+0 57 if (regex.test(content)){
+0 58 var match = newPostConfig.match(/:(\\w+)/g),
+0 60 for (var i=0, len=match.length; i<len; i++){
+0 61 result[match.substring = match.length;
+0 63 if (regex.test(content){
+0 64 var item = item = item[0].substring.substring(0, 1);
+0 66 if (layout == 0, item){
+0 67 var layout = item[1] === 'post');
+0 68 if (layout == 'page') result = item[2];
+0 69 renderItem = item[0];
+0 70 } else {
+0 71 result.layout = 'page2];
+0 75 if (prev){
+0 79 callback();
+0 80 };"
+
+1 1 renderer = Object.keys(extend.renderer.list()),
+1 2 tag = extend.tag.list(),
+1 3 render = require('../../render'),
+1 14 highlight = util.highlight,
+1 15 config = hexo.config,
+1 16 catDir = (config.category_dir || 'categories') + '/',
+1 17 tagDir = (config.tag_dir || 'tags') + '/',
+1 18 siteUrl = config.url + '/',
+1 19 configLink = config.permalink,
+1 20 highlightConfig = config.highlight,
+1 21 highlightEnable = highlightConfig? highlightConfig.enable : true,
+1 22 backtickConfig = highlightConfig? highlightConfig.backtick_code_block : true,
+1 23 lineNumConfig = highlightConfig? highlightConfig.line_number : true,
+1 24 tabConfig = highlightConfig? highlightConfig.tab_replace : '',
+1 25 autoSpacingConfig = config.auto_spacing,
+1 26 titlecaseConfig = config.titlecase,
+1 27 newPostConfig = config.new_post_name,
+1 28 defaultCategory = config.default_category || 'uncategorized',
+1 29 categoryMap = config.category_map || {},
+1 30 tagMap = config.tag_map || {},
+1 45 var meta = str.match(filenameRE).slice(1),"
+
+2 1 filterExt = extend.filter.list(),
+2 6 HexoError = require('../../error'),
+2 9 escape = util.escape.path,
+2 12 filenameCaps = config.filename_case,
+2 13 log = hexo.log,
+2 14 model = hexo.model,
+2 15 Post = model('Post'),
+2 16 Page = model('Page'),
+2 17 Asset = model('Asset');
+2 38 var load = function(file, callback){
+2 39 var source = file.source,
+2 40 path = file.path;
+2 41 async.parallel([
+2 42 function(next){
+2 43 file.read({cache: true}, next);
+2 44 },
+2 46 file.stat(next);
+2 48 ], function(err, results){
+2 49 if (err) return callback(HexoError('Source file read failed:'+ source));
+2 50 var content = results[0],
+2 51 stat = results[1],
+2 52 meta = yfm(content);
+2 53 meta.source = path;
+2 54 meta.original_content = content;
+2 55 meta.mtime = stat.mtime;
+2 56 meta.ctime = stat.ctime;
+2 57 if (meta.date &&!_.isDate(meta.date)) meta.date = moment(meta.date, 'YYYY-MM-DD HH:mm:ss').toDate();
+2 58 if (meta.updated){
+2 59 if (!_.isDate(meta.updated)) meta.updated = moment(meta.updated, 'YYYY-MM-DD HH:mm:ss').toDate();
+2 61 meta.updated = stat.mtime;
+2 63 if (meta.permalink = config.root;
+2 64 return meta;
+2 67 var loadPost.prototype.create = function(file, callback){
+2 68 var existed = true;
+2 69 if (next ||!== undefined;
+2 70 if (file.target){
+2 71 if (file.source!== '_isFile) &&/_isFile) throw newPost_file) throw newPost.path) throw newPost.path;
+2 72 this.source = path;
+2 74 this.substring = file.substring = path;
+2 75 this.ctype = 'create;
+2 76 if (this.permalink.categories = undefined;
+2 77 this.permalink.categories.push({
+2 78 ignore = undefined;
+2 79 ignore: meta.ignore = config.ignore || - 1,
+2 80 ignore_default: config
+3 1 tagDir = hexo.config.tag_dir,
+3 2 publicDir = hexo.public_dir,
+3 3 sourceDir = hexo.source_dir;
+3 4 var scaffolds = {
+3 5 post: [
+3 6 'title: {{ title }}',
+3 7 'date: {{ date }}',
+3 8 'tags:',
+3 9 '---'
+3 10 ].join('\
+3 11 ') + '\
+3 12 ',
+3 13 page: [
+3 19 '
+3 21 var create = module.exports = function(data, callback){
+3 22 var slug = escape(data.slug || data.title, config.filename_case),
+3 23 layout = data.layout || config.default_layout,
+3 24 date = moment(data.date) || moment(),
+3 25 target = sourceDir,
+3 26 scaffoldDir = hexo.scaffold_dir;"
+
+4 37 .replace(/:title/g, '(.*)');"
+
+6 16 if (!config.new_post_name){
+6 17 var configNewPostLink = config.new_post_name;
+6 18 var filenameRE = pathFn.basename(configNewPostLink, pathFn.extname(configNewPostLink))
+6 19 .replace(/:year/g, '(\\\\d{4}')
+6 20 .replace(/:(month|day)/g, '(\\\\d{2}')
+6 24 var load = function(source, callback){
+6 25 var sourcePath = sourceDir + source;
+6 28 file.read(sourcePath, next);
+6 31 fs.stat(sourcePath, next);
+6 34 var meta = yfm(results[0]),
+6 35 stats = results[1],
+6 36 extname = pathFn.extname(sourcePath).substring(1);
+6 37 meta.date = _.isDate(meta.date)? moment(meta.date) : moment(meta.date, 'YYYY-MM-DD HH:mm:ss');
+6 38 meta.stats = stats;
+6 39 meta.source = sourcePath;
+6 40 if (meta.updated) meta.updated = _.isDate(meta.updated)? moment(meta.date) : moment(meta.date, 'YYYY-MM-DD HH:mm:ss');
+6 41 else meta.updated = moment(stats.mtime);
+6 42 var compiled = swig.compile(meta._content)().replace(/`{3,} *([^\
+6 43 ]*)?\
+6 44 ([\\s\\S]+?)\
+6 45 `{3,}/g, function(match, args, str){
+6 46 if (!args) return '<notextile>' + highlight(str, options).replace(/&amp;/g, '&\') + '</notextile>';
+6 47 var matched = args.match(/([^\\s]+)\\s+(.+?)(https?:\\/\\/\\S+)\\s*(.+)?/i);
+6 48 if (matched){
+6 49 var lang = matched[1],
+6 50 caption = caption = '<span>' + matched[2] || '</span>';
+6 51 if (matched[3] = caption === '>' || caption;
+6 53 if (options.lang = lang || args.length > 1? caption + '>= + '>' + lang : '>' + '</span>';
+6 54 options.caption += '</li>= '';
+6 56 options.lang = args;
+6 58 options.caption += function(){
+6 59 var caption(args, content = args.replace(/lang, lang, args, caption);
+6 60 return \'<notextile = '';
+6 61 } = line_number> = options.replace(/g, args, caption);
+6 63 }'
+
+7 63 // Exit(meta);
+7 66 if (renderFnif (meta){
+7 67 var layout = meta.content = swig.compile(meta._content;
+7 68 content = layout.replace(/---);
+7 69  swig.compile(content = render(content);
+7 71 var result = render(content);
+7 72 if (data.replace(content);
+7 73 if (data.substring = content);
+7 74 return swig.compile(content);

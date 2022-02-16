@@ -1,0 +1,122 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 _ = require('lodash'),
+0 1 _ = require('lodash'),
+0 2 extend = require('../../extend'),
+0 3 route = require('../../route'),
+0 4 config = hexo.config,
+0 5 log = hexo.log,
+0 6 publicDir = hexo.public_dir;
+0 7 extend.console.register('server', 'Run server', {alias:'s'}, function(args){
+0 8 var app = express(),
+0 9 statics = args.s || args.static? true : false,
+0 10 logFormat = args.l || args.log,
+0 11 port = args.p || args.port || config.port || 4000;
+0 12 if (logFormat){"
+
+1 8 log = args.l || args.log,
+1 10 if (log){
+1 11 app.use(express.logger(log));
+1 12 } else if (config.logger){
+1 13 app.use(express.logger(config.logger_format));
+1 14 } else if (hexo.debug){
+1 16 }
+1 17 app.use(function(req, res, next){
+1 18 res.header('x-powered-by', 'Hexo');
+1 19 next();
+1 20 });
+1 21 app.use(app.router);
+1 22 app.use(function(req, res){
+1 26 app.use(function(err, req, res, next){
+1 27 if (err) return next(err);
+1 28 res.statusCode = 200;
+1 29 res.setHeader('Content-Type', 'application/json');
+1 30 res.writeHead(200, {});
+1 31 res.end('Redirecting server');
+1 33 if (!statics){
+1 34 app.get(config.root + '*', function(req, res, next){
+1 35 var uri = route.format(req.params[0]),
+1 36 target = route.get(uri);
+1 37 if (!target) return next();
+1 38 target(function(err, result){
+1 40 if (result.readable){
+1 41 result.pipe(res).on('error', next);
+1 42 } else {
+1 43 res.end(result);
+1 48 app.use(config.root, express.static(publicDir));
+1 49 if (hexo.debug) app.use(express.errorHandler());
+1 50 if (config.root!== '/'){
+1 51 app.get(config.root + '*', function(req, res){
+1 52 res.redirect(config.root);
+1 57 res.send('port', config.port);
+1 59 app.listen(port, function(){
+1 60 log.success('Hexo is initalized.');
+1 62 });"
+
+2 21 if (!target){
+2 23 if (err) throw err;
+2 25 result.pipe(res).on('error', function(err){"
+
+3 25 res.type(path.extname(uri));
+3 27 result.pipe(res).on('error', function(err){
+3 28 if (err) next(err);
+4 1 async = require('async'),
+5 31 log.e(404);
+5 33 app.use(express.compress());
+5 34 async.eachSeries(app.get('/static/test.css'), function(str){
+5 35 log.i('test');
+5 40 log.e('You should configure deployment settings in _config.yml first!');
+5 41 return;
+5 43 if (!args.s &&!args.static){
+5 45 var url = route.format(req.params[0]),
+5 46 target = route.get(url);
+5 48 if (path.extname(url)) return next();
+5 49 res.redirect(config.root + url + '/');
+5 54 log.i('Config based on', 'log level', 'INFO');
+5 55 app.use(config.root + target + '*');
+5 57 file.copy(result.path, publicDir + result.source, next);
+5 59 file.write(publicDir + key, result, next);
+5 66 if (hexo.debug) app.use(express.compress());
+5 67 if (config.root!== root){
+5 68 app.get('/', function(req, res){
+5 72 res.redirect(config.root = root;
+5 77 if (app.use(function(req, res){
+5 78 app.root, users = users.route());
+5 82 app.use(function (req, res.route, next){"
+
+6 25 res.status(404).setHeader('Location', config.root);
+6 30 if (res.statusCode < 200 || res.statusCode >= 300){"
+
+7 7 var randomPass = function(length){
+7 8 var text = '0123456789abcdefghijklmnopqrstuvwxyz',
+7 9 total = text.length,
+7 10 result = '';
+7 11 for (var i=0; i<length; i++){
+7 12 result += text.substr(parseInt(Math.random() * total), 1);
+7 14 return result;
+7 15 };
+7 16 extend.console.register('server', 'Run server', function(args){
+7 18 admin = false,
+7 20 port = args.p || args.port || config.port,
+7 21 generate = require('../../generate');
+7 22 app.set('views', hexo.core_dir + 'views');
+7 23 app.set('view engine', 'ejs');
+7 24 app.locals.config = config;
+7 25 app.locals.version = hexo.version;
+7 26 app.engine('ejs', require('../../render').renderFile);
+7 27 if (config.logger){
+7 28 if (config.logger_format) app.use(express.logger(config.logger_format));
+7 29 else app.use(express.logger());
+7 31 app.use(express.logger());
+7 33 var startServer = function(){
+7 39 res.status(404).end('404 Not Found');
+7 42 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.root).bold);
+7 43 hexo.emit('server');
+7 45 };"
+
+9 33 if (path.extname(uri)) return next();
+9 34 res.redirect(config.root + uri + '/');
+9 38 if (err ||!result) return next(err);
+9 60 res.send('Hello World\
+9 61 ');
+9 63 app.listen(port 3000);
+9 64 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port 3000 + '/'));

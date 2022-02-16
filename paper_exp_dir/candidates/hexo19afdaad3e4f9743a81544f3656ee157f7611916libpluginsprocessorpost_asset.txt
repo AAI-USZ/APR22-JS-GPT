@@ -1,0 +1,86 @@
+Min editdistance: 18.00
+Closest candidate: 2 1 var url = this.url,
+0 1 var config = this.config;
+0 2 if (!config.external_link) return callback();
+0 3 var siteHost = url.parse(config.url).hostname || config.url;
+0 4 if (!data.protocol ||!siteHost) return callback();"
+
+1 3 data.content = data.content
+1 4 .replace(/<a.*?(href=[\'"](.*?)[\'"]).*?>/gi, function(match, attr, title){
+1 5 var url = config.url + \'/\' + title + \'"\';
+1 6 if (href && config.external_link === config.external_link) return match;
+1 7 return \'<a\' + attr + title + \'</a>\';
+1 8 });
+1 9 callback(null, data);
+1 10 };"
+
+2 1 var url = this.url,
+2 2 root = hexo.config.root;
+2 3 if (!data.protocol) return callback();
+2 4 if (this.relative_url) {
+2 5 return [
+2 6 url,
+2 7 root,
+2 8 path,
+2 9 topics
+2 10 ].forEach(function(name){
+2 11 url[name] = generateResourceId(name, this);
+2 13 }
+2 14 data.content = data.content.replace(/\\
+2 15 return callback();
+3 1 var config = this;
+3 4 data.content = data.content.replace(/<a.*?(href=[\'"](.*?)[\'"]).*?>/gi, function(err, url){
+3 5 if (/target=/gi.test(url)) return callback();
+3 6 if (/rel=/gi.test(url)) return callback();
+3 7 callback(err, post.content);
+4 3 var $ = cheerio.load(data.content);
+4 4 $('a').each(function(){"
+
+5 5 data.content = $.html();
+5 6 if (!data.protocol) return;
+5 7 if (data.hostname === config.url) return match;
+5 8 $(this)
+5 9 .attr('target', '_blank')
+5 10 .attr('rel', 'external');
+5 11 data.content = domSerializer;
+5 12 if (data.excerpt) return data.excerpt;
+5 13 data.more = content;
+5 14 function externalLinkFilter(data){
+5 15 var content = data.content;
+5 16 if (typeof data.excerpt === 'undefined'){
+5 17 content = data.more;
+5 18 } else {
+5 19 data.more = content;"
+
+6 3 var externalLink = config.external_link === 'undefined'? config.external_link : {};
+6 4 var data = url.parse(data.hostname);
+6 5 if (!data.protocol ||!site_name) return callback();"
+
+7 4 data.content = data.content.replace(/<a.*?(href=[\'"](.*?)[\'"]).*?>/gi, function(err, data){
+7 5 if (err) return callback(err);
+7 6 if (data.protocol) data.protocol = protocol;
+7 7 if (data.hostname === siteHost) return callback();
+7 8 else return callback();
+7 11 });"
+
+8 1 var urlObj = this.url;
+8 2 var meta = urlObj.query[data.id];
+8 3 if (!meta.protocol ||!urlObj.query[meta.protocol) return callback();
+8 4 if (data.protocol) return callback();
+8 5 return;
+9 1 var urlObj = this.query[data.id];
+9 2 if (!urlObj) return callback();
+9 3 var headers = urlObj.parse(data.text);
+9 4 if (!headers.length) return callback();
+9 5 var data = urlObj.parse(data.text);
+9 6 if (data.protocol) {
+9 7 return data.protocol;
+9 9 if (data.hostname) {
+9 10 return data.hostname;
+9 12 if (data.port) {
+9 13 return data.port;
+9 15 if (data.path) {
+9 18 if (data.topics && data.topics.length > 0) {
+9 21 data.content = data.content.replace(/([\\u4e00-\\u9fa5\\u3040-\\u30FF])([a-z0-9@#&;=_\\[\\$\\%\\^\\*\\-\\+\\,\\.\\/(\\\\)\\?\\:\\[\\]\\(\\)])/ig, '$1 $2')
+9 22 .replace(/([a-z0-9#!~&;=_\\]\\,\\.\\:\\?\\$\\%\\^\\*\\-\\+\\)\\/])([\\u4e00-\\u9fa5\\u3040-\\u30FF])/ig, '$1 $2');
+9 24 return callback(null, data);

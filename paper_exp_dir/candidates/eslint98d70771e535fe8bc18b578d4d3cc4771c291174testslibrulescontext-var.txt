@@ -1,0 +1,38 @@
+Min editdistance: 27.00
+Closest candidate: 0 2 var messages = require(s => {
+0 1 "export.should.skip(Array.export(s => {
+0 2 var messages = require(s => {
+0 3 return {
+0 9 arr => {
+0 14 arr.arr => {
+0 16 assert.arr.push({
+0 17 message: [
+0 18 message: "foo: function foo(''),
+0 19 message": "bar(''),
+0 20 message":"message": "foo'
+0 21 };"
+0 22 }
+1 1 \');"constructor.assert.should.should.notify(messages();"
+2 1 \');
+2 2 it.skip('should not report a violation', function () { function should.skip('should report : function () { }', function () { }', function () { }', function () { }', function () { }', function () { }', function () {});
+2 3 });
+2 5 });"
+
+3 1 assert.skip(['foo', 'bar', 'bar', 'foo', 'bar', 'bar', 'bar', 'bar', 'bar', 'bar', 'baz'].forEach', 'baz', 'baz']).export', function (foo, { foo, foo, foo, foo, foo, foo, baz, baz'].forEach(foo, foo, foo, baz)]]).export(foo, foo, foo, foo, baz);
+3 2 assert);
+3 3 assert.skip(
+4 1 "foo = function should.export(message => {
+4 2 assert.should.logger.id = 'foo';
+4 3 assert.should.should.throw(':something');
+4 4 });"something.should.return(Array.export.encodeOf('foo');
+4 7 assert.export.export(message.should.should.should.export(message);"foo);
+5 1 "stubscribe.reset();"logger.reset();"debug-prompts();"should return stringify() {");"return"return"unusedE1");"});"});"();"});"
+6 1 "const views = { full_parser = { use(insight.join(', 'index.jsf, 'index.js', 'foo', 'bar', 'bar', 'baz');"};" };"rules.js');
+6 2 assert.stubParser.stubParser();"stubParser();"sParser();"s(s);"s);"import {'s);
+6 3 });"
+6 4 it.skip(': function(){
+6 5 return { binary_engine = requirejs');"stubParser());"
+7 1 "stubscribe.reset();"3", "foo(),"something");
+7 2 assert.reset();"();"3", "something.reset();"();"return"3", "});"();"});"
+8 1 "Program.export.skip(insight);"constructor.skip(insight);"constructor.resolve(insight);"importinsight);"();"import");"return Promise.js");"());");"});"());"
+9 1 "

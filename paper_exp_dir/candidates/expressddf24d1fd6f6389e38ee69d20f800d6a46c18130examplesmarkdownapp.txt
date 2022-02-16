@@ -1,0 +1,295 @@
+Min editdistance: 4.00
+Closest candidate: 0 1 app.set(\'view engine\','md');
+0 1 app.set(\'view engine\','md');
+0 2 app.get(\'/\', function(req, res){
+0 3 res.render(\'index.md\', { title: \'Markdown Example\' });
+0 4 })
+0 5 result.should.contain(html);
+0 7 app.get(\'/fail.:format?\', function(req, res){
+0 8 res.render(\'missing.md\', { format: \'front\' }, function(err, str){
+0 9 if (err) return res.send(500);
+0 10 res.send(str.replace(/%>(.*?)\\/(view|edit)?$/g, \'\'));
+0 11 });
+0 12 res.render(\'index\', { title: \'Markdown Example\' });
+0 14 result.should.contain(meta({property: \'og:locale\', content: \'en' });
+0 16 if (!module.parent) {
+0 17 app.listen(3000);
+0 18 console.log(\'Express started on port 3000\');
+0 19 }"
+
+1 2 res.render(\'index.md\', { title: \'Welcome\' });
+1 4 .then(function(str){
+1 5 res.body.should.equal(\'<p>Welcome</p>\');
+1 6 res.statusCode.should.equal(200);
+1 7 done();
+1 10 it(\'should escape html entities in title by default\', function(done){
+1 11 var app = express();
+1 12 app.use(function(req, res){
+1 13 res.render(\'greetings.md\', {
+1 14 name: \'TJ\'
+1 15 , otherName: \'Overridden\'
+1 18 request(app)
+1 19 .get(\'/\')
+1 20 .expect(\'<p>Welcome Overridden</p>\', done);
+1 22 it(\'should escape whitespace in title by default\', function(done){
+1 34 it(\'should escape whitespace in title\', function(done){
+1 58 describe(\'description\', function(){
+1 59 it(\'should escape all lines\', function(done){
+1 63 lang: \'world\'
+1 64 , bar\',
+1 65 lang: \'\',
+1 66 language: \'\',
+1 68 message: \'test\'\',
+1 73 .get(\'/\'/\')
+1 74 .expect(\'/
+1 75 .expect(200)
+1 77 .expect(200, done)
+1 78 .expect(200, done);
+1 80 it(\'should.end(function(function(function(err, done){
+1 81 request(res){
+1 84 .get(\'/\'/)
+1 89 .expect(404, done);
+1 90 .expect(404)
+1 91 .expect(function(err, done);
+1 92 .expectError)
+2 4 return html;
+2 6 app.get(\'/fail', function(req, res){
+2 7 res.render(\'missing.md\', { title: \'FAILED\' }, function(err, str){
+2 8 assert.ok(!err);
+2 9 res.send(str.replace(/\
+2 10 (\\t+)/g, \'\
+2 11 <p>Welcome</p>\
+2 12 <p>FAILED</p>\
+2 13 </p>\' });
+2 15 assert.response(app,
+2 16 { url: \'/html\' },
+2 17 { body: \'<p>Welcome</p>\
+2 18 <p>FAILED</p>\' });
+2 20 { url: \'/json\' },
+2 21 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+2 23 { url: \'/text\' },
+2 24 { body: \'wahoo\', headers: { \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+2 26 { url: \'/status\' },
+2 27 { body: \'Not Found\', status: 404, headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+2 29 { url: \'/error\' },
+2 30 { body: \'Oh shit!\', status: 500, headers: { \'Content-Type\': \'text/plain\' }});
+2 32 { url: \'/buffer\' },
+2 33 { body: \'wahoo!\', headers: { \'Content-Type\': \'application/octet-stream\' }});
+2 35 { url: \'/noargs\' },
+2 36 { status: 204 }, function(res){
+2 37 assert.equal(undefined, res.headers[\'content-type\']);
+2 38 assert.equal(undefined, res.headers[\'content-length\']);
+2 40 },
+2 41 \'test #contentType()\': function(assert){
+2 42 var app = express.createServer();
+2 43 app.get(\'/html\', function(req, res){
+2 44 res.contentType(\'index.html\');
+2 45 res.writeHead(200, res.headers);
+2 46 res.end(\'<p>yay</p>\');
+2 49 { url: 
+2 50 { url: \'/html\', headers: \'<p>\', headers: \'<p>\', headers: { \'content-type=text/html,text=text/html,text/plain,text/plain\'content-space">\' },
+2 51 { 'text/plain,text/html,text/plain</p>\' },
+2 53 { headers: { 'text/plain,text/plain,text/plain,text/html,text/space,text/plain,text/x-space</p>\' },
+2 54 { end: \'
+2 56 \'test.content-not-exist\' });
+2 58 { url: \'/attachment; filename="text.html; filename="', headers: \'image.png"}
+3 1 app.set(\'view engine\', \'md\');
+3 3 res.render(\'index.md\', { title: \'Markdown Example\' }, function(err, str){
+3 5 res.send(str.replace(\'</g, \'<p>Welcome</p>\'));
+3 8 app.get(\'/fail\', function(req, res){
+3 9 res.render(\'missing.md\', { title: \'Markdown Example\' }, function(err, str){
+3 14 app.get(\'/invalid\', function(req, res){
+3 15 res.render(\'invalid.md\', { title: \'invalid\' });
+3 17 res.send(str.replace(\'<p>Welcome</p>\'));
+3 19 app.get(\'/invalid-async\', function(req, res){
+3 20 process.nextTick(function(){
+3 24 app.get(\'/error\', function(req, res){
+3 25 res.render(\'invalid.md\', { title: \'invalid\' }, function(err){
+3 27 res.send(str.replace(\'</p>\'));
+3 29 app.get(\'/absolute\', function(req, res){
+3 30 res.render(__dirname + \'/fixtures/index.md\', { title: \'Welcome Overridden\' });
+3 33 { url: \'/\' },
+3 34 { body: \'<p>Welcome Overridden</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+3 36 { url: \'/jade\' },
+3 37 { body: \'<p>Welcome Overridden</p>\' });
+3 39 { url: \'/absolute\' },
+3 42 { url: \'/callback/layout\' },
+3 43 { body: \'<html><body><p>:)</p></body></html>\' });
+3 45 { url: \'/callback/layout/no-options\' },
+3 46 { body: \'<options>\'should.options.omit()>\'});
+3 47 assert.toArray(-{ return arguments.length === 0; });
+3 48 assert.should.should.eql([\'should.sessArray()]({ return arguments.join(\'\', \'/\', \'/
+3 49 \'before\', \'GET\', \'GET\', \'after\', \'GET\', \'GET\', \'GET\', \'after\', \'GET\', \'GET\', \'GET\', \'after\', \'GET\', \'GET\', \'GET\', \'after\'], 3]).join(\'
+
+4 6 if (str) return fn(null, str);
+4 8 .then(function(result){
+4 9 if (result.readable){
+4 10 result.pipe(res).on(\'error\', fn);
+4 11 } else {
+4 12 res.end(result);
+4 13 }
+4 16 .done();
+4 18 it(\'should run the callback without error and the valid parameters\', function(done){
+4 24 res.render(\'missing.md\', { title: \'Markdown Example\' });
+4 27 res.render(\'invalid.md\', { title: \'Invalid Example\' });
+4 38 res.render(__dirname + \'/fixtures/index.md\', { title: \'Welcome World\' });
+4 40 app.get(\'/absolute/user/:id/:op?\', function(req, res){
+4 41 res.render(\'invalid.md\', { title: \'op is a valid regexp\', /requires a capture group/i);
+4 45 { body: \'<p>Welcome</p>\' });
+4 47 { url: \'/user/12\', method: \'get\' },
+4 48 { body: \'<p>Forum Thread</p>\' });
+4 50 { url: \'/user/ab\' },
+4 51 { body: \'<p>Cannot GET /user/ab</p>\' });
+4 54 { url: \'/user/user/invalid parameters
+4 55 , function(app, url: { url: \'/user/admin
+4 56 assert.params
+4 57 assert.params)
+4 58 assert.params.should.should.equal(/InvalidAdmin, url: \'id is invalid as required by default\')
+4 59 assert.to.toArray()
+4 60 assert.response(res.params.length)
+4 61 assert.httpOnly.should.should.have.eql(2);
+4 65 it(\'should include: function(){
+4 66 assert.skip(\'should include: function(){
+4 67 assert.strictToSelf = true;
+4 68 assert.strictTo(\'http://localhost: app/admin/auth/auth\');
+4 69 assert.should.skip(\'should.test.apply(app)
+4 70 .id)
+4 71 .toArray(app);
+4 72 assert
+5 2 res.render(\'index.md\', { title: \'Welcome\' }, function(err, str){
+5 3 if (err) return fn(e);
+5 5 res.send(str.replace(\'Hello World\', \':)\'));
+5 8 .get(\'/paginator\', function(req, res){
+5 9 var posts = [];
+5 10 posts.push({
+5 11 _id: \'posts\',
+5 12 title: \'^loc_CONTENT^\'
+5 16 { url: \'/paginator\' },
+5 19 { url: \'/paginator:2\' },
+5 20 { body: \'<p>2</p>\' });
+5 22 { url: \'/paginator:3\' },
+5 23 { body: \'<p>3</p>\' });
+5 25 { url: \'/paginator:4\' },
+5 26 { body: \'<p>4</p>\' });
+5 28 { url: \'/paginator:5\' },
+5 29 { body: \'<p>5</p>\' });
+5 31 { url: \'/routes/blog/posts/all\' },
+5 32 { body: \'<h1>Forum Thread</h1><p>:(</p>\
+5 33 <p>Hello World</p>\' });
+5 35 { url: \'/__run__' },
+5 36 { body: \'(<p>:)</p>\' });
+5 38 { url: \'/test\' },
+5 39 { body: \'<p>:)</p>\' });
+5 41 { url: \'/fail\' },
+5 42 { body: \'doesNotExist\' });
+5 44 { url: \'/invalid\' },
+5 45 function(res){
+5 46 assert.ok(res.body.indexOf(\'ReferenceError\') >= 0);
+5 47 assert.ok(res.body.indexOf(\'doesNotExist\') >= 0);
+5 50 { url: \'/invalid-async\' },
+5 57 { url: \'/error\'invalid-async\' },
+5 59 assert.h1, res){
+5 60 assert.should.equal(res.body.length, res.length, function(0);
+5 61 assert.equal(0);
+5 69 assert.response(app.};
+5 70 app.get(\'/\'/\', function(/: function(/: function(/*)
+5 71 , function(req, function(req, res){
+5 72 res){
+5 73 res.render(res.body){
+5 74 res.render(res.params[0].params[0
+6 4 .get(\'/ejs\', function(req, res){
+6 5 res.render(\'index\', { title: \'Welcome\' });
+6 7 .get(\'/precedence\', function(req, res){
+6 8 res.render(\'hello.md\', {
+6 9 layout: \'html\'
+6 10 , params: { \'Content-Type\': \'text/html; charset=utf-8\' }
+6 15 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'application/javascript; charset=utf-8\' }});
+6 17 { url: \'/ejs\' },
+6 18 { body: \'<p>Hello</p>\' });
+6 20 { url: \'/precedence\' },
+6 21 { body: \'<html><body><p>Hello</p></body></html>\' });
+6 22 beforeExit(function(){
+6 23 assert.equal(3, calls);
+6 26 \'test #render() layout\': function(assert){
+6 27 var app = create();
+6 28 app.set(\'view engine\', \'jade\');
+6 30 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, str){
+6 32 res.send(str.replace(\':(\', \':)\'));
+6 37 { body: \'<cool><p>Welcome</p></cool>\' });
+6 39 \'test #render() specific layout\': function(assert){
+6 41 app.set(\'views\', __dirname + \'/views\');
+6 43 res.render(\'index.jade\', { layout: \'cool-layout\' });
+6 49 \'test #render() scope\': function(assert){
+6 52 app.get(\'/internal_scope\', function(req, res){
+6 53 res.internal_scope = 1;
+6 54 res.method = \'get(\'
+
+7 9 if (result.length < 1) return result;
+7 13 try {
+7 14 return fn(null, result.length);
+7 15 } catch (e){
+7 16 return result;
+7 20 .catch(function(err){
+7 21 fn(err);
+7 25 it(\'should escape md lines in Content-Type\', function(done){
+7 26 var content = [
+7 27 \'{% raw %}\',
+7 28 \'123456\',
+7 29 \'{% endraw %}\'
+7 30 ].join(\'\
+7 31 \');
+7 33 res.render(\'index.md\', { raw: \'123456\', included: false });
+7 35 app.get(\'/ejs\', function(req, res){
+7 36 res.render(\'index.md\', { html: \'<script>foo & "bar" rel="stylesheet">\', options.filename, options.path);
+7 40 { body: \'<p>Welcome</p>\', headers: { \'Content-Type\': \'text/html; charset=utf-8\' }});
+7 45 { url: \'/haml\' },
+7 46 { body: \'\
+7 49 { url: \'/callback\' },
+7 51 <p>:)</p>\' });
+7 63 { url: \'/invalidRange\', 2 },
+7 64 { url: \'/n{ url: \'/n*60000/cannot-res.test/a.js\' },
+7 65 , 2), \'utf8-8
+7 66 * 2 * 2 * 2 * 2 * 2 * 2 * 2.js\', 2.js
+7 67 * 2.js\', 2 * 2 * 3, 2.js
+7 68 * 2.js\', 2.*/*
+7 69 */* 2.js\', 2.js
+7 70 */* 3;
+7 71 */*
+7 72 * 2.js
+7 74 );
+7 76 function express = module.createServer(){
+7 77 });\
+8 9 if (result.length < 0) return \'<p>Welcome</p>\';
+8 10 return result.slice(0, str.length - 1).join(\' \');
+8 13 .then(function(){
+8 14 return Promise.all([
+8 15 fs.readFile(path, \'utf8\', function(err, str){
+8 16 if (err) return fn(err);
+8 17 str = str.replace(/\\\\\
+8 18 $/, \'\');
+8 19 fn(null, str);
+8 22 };
+8 27 res.render(\'invalid.md\', { title: \'Markdown Example\' });
+8 59 .then(function(arr => {
+8 60 arr.push(str);
+8 61 return arr.join(\' \');
+8 66 if (!module.parent.exports.list = function(req, res){
+8 67 res.render();
+8 70 }'
+
+9 4 res.send(str);
+9 7 app.get(\'/%foobar\', function(req, res){
+9 8 res.render(\'foobar\', { title: \'foobar\' }, function(err, str){
+9 9 if (err) return fn(false);
+9 13 app.get(\'/%baz\', function(req, res){
+9 14 res.render(\'baz.md\', { title: \'baz\' }, function(err, str){
+9 25 app.get(\'/%baz/:\
+9 26 \', function(req, res){
+9 32 app.get(\'/%foo/:\
+9 34 res.render(\'foo.md\', { title: \'foo\' }, function(err, str){
+9 39 app.get(\'/%foobar/:\
+9 48 res.render(\'boo.md\', { title: \'baz\' }, function(err, str){
+9 62 res.render(\'baz.md:\
+9 63 \', { title: \'baz\'baz\'baz\'baz.md\' }, function(err, str){
+9 68 });'
+

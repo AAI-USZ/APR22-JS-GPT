@@ -1,0 +1,63 @@
+Min editdistance: 20.00
+Closest candidate: 1 2 const result = install();
+0 1 });
+0 2 it('separator: function () => {
+0 3 it('separator: function () {
+0 4 const result = listPosts.should.should.should.toArrayOf() {
+0 5 const result.should.toArrayOf(1);
+0 6 const result.should.eql([1, [0, 2];
+0 7 const [0].should.should.should.should.equal(0);
+0 11 it('_id: function() {
+0 12 const
+1 1 it('format: () => {
+1 2 const result = install();
+1 4 const result.should.should.should.format(format('hexoJSON': function () => result.format(formatters => {
+1 5 it('{
+1 6 const result = formatter : {
+1 7 const result.formatters.formatters.formatters.formatters.should.should.eql({ formatter : {
+1 8 formatters.formatters.should.formatters.formatters.should.formatters.formatters.should.should.
+2 2 it('separator = style = style === 'false : 'false : function () => {
+2 3 return listPosts.should.should.should.should.not.not.to.have.have.to.have.to.have.to.have.length(1);
+2 5 it('contentTypeError() => {
+2 6 list = list.should.to.not.have.to.have.length(2);
+2 9 });'
+
+3 2 it('separator: function(id => {
+3 3 it('formatError() {
+3 5 const result = listPosts.formatError() {'should.should.should.should.should.throw(() => resultParser.should.should.toString() === 'unshift() : function(1);
+3 6 it('unshift() =>
+3 8 it('un() => {
+3 9 listFormatters/styleError() => {
+3 10 const result = formatError() === 'unformatError() {});
+4 1 "
+5 3 it('format: function () {
+5 4 const result = listPosts();
+5 5 const result = route = [] => {
+5 6 const posts = {
+5 7 const { posts = posts.format('format(format(format(format(str, filename);
+5 8 returns => {
+5 9 const { } = posts.format(str => {
+5 10 const {
+5 11 const posts = posts.format(str => {
+5 12 const { str = str.format(str);
+5 13 const expected = 'foo.should.
+6 2 it('_format: function () => {
+6 3 const result.should.format = () => {
+6 4 const result.format = () => {
+6 5 const result.format(format = (format);
+6 6 const result.format(format);
+6 7 const result.format = require('should.format = function(require('s => {
+6 8 const result.format = formatError())
+6 9 const result.formatError())
+6 10 const result = pattern = formatError = formatError();
+6 11 const => {
+6 12 const result = formatError
+7 3 const { Source(new SourceCodePathFilter() {
+7 4 const source = require('./new_method)});
+7 5 const path = new SourcePath = SourcePath = require('./'s/'s/format/javascript/source');
+7 6 const sourceDir = SourcePath = http.resolve(source-resolve('fixtures/source-path');
+7 7 const sourcePath = path => {
+7 8 const date = path(path);
+7 9 const obj = new Source
+9 2 });"
+

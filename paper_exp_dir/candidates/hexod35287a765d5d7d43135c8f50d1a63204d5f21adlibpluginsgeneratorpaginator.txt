@@ -1,0 +1,71 @@
+Min editdistance: 15.00
+Closest candidate: 4 3 render = function(options){
+0 1 var i = 1;
+0 2 var paginator = new Paginator(base, posts, i, total);
+0 3 render(layout, paginator, function(err, result){
+0 4 if (err) throw err;
+0 5 i++;
+0 6 file.write(publicDir + paginator.current_url + 'index.html', result, next);
+0 7 });
+0 8 } else {
+0 9 render(layout, posts, function(err, result){
+0 11 file.write(publicDir + paginator.current_url + 'index.html', result, callback);
+0 13 }
+0 14 };"
+
+1 11 file.write(publicDir + base + 'index.html', result, callback);
+1 14 }, callback);
+2 3 render.render(layout, paginator, function(err, result){
+2 6 var result = paginator.render(layout, paginator);
+2 7 if (!result) result = render('archive', paginator);
+2 8 if (!result) result = render('index', paginator);
+2 9 if (layout){
+2 10 var content = base + format.replace('%d', i);
+2 11 content += 'index';
+2 13 content += num + 1;
+2 15 var result = render('archive', paginator);
+2 32 return result;
+3 3 render = new Scaffold(layout, paginator);
+3 4 if (i){
+3 5 var content = base + format(base, posts.length);
+3 6 var result = '';
+3 7 for (var i=0, len=posts.length; i<len; i++){
+3 8 result += page.layout + i + '/';
+3 10 result += render.renderSync({
+3 11 path: paginator.current_url,"
+
+4 3 render = function(options){
+4 4 if (layout === undefined){
+4 5 paginator(layout, posts, 'archive', render);
+4 7 render(layout, posts, 'archive', render);
+5 1 var pageLink = format(base, pageLink);
+5 2 if (num === 1){
+5 5 var result = base + pageLink + '/';
+5 7 if (num === total){
+5 8 this.next = 0;
+5 9 this.next_link = '';
+5 11 this.next = num + 1;
+5 12 this.next_link = format(base, num + 1);
+6 3 var format = options.format;
+6 5 var result = render(layout, paginator);
+6 8 var newest = posts.first().date,"
+
+7 9 render.render(layout, posts, function(err, result){
+8 4 posts.forEach(function(post){
+8 5 var link = format(base, post.per_page),
+8 6 archive = archive.findOne({source: post.permalink, year: num, month: num});
+8 7 if (archive === 2){
+8 8 result += '<a class="archive-link" href="' + link(num - 1) + '">' + item.prev + '</a>';
+8 10 result += num - 1;
+8 12 result += '</li>';
+8 14 if (options.archive) result += '<a class="archive-link" href="' + link(num + 1) + '">' + item.prev + '</a>';
+8 15 result += transform? transform(num + 1) : num;
+8 16 result += '</0>';
+8 18 if (options.category) result += '<a class="category" href="' + link(num + 1) + '">' + item.name + '</a>';
+9 9 var posts = posts.filter(function(post){
+9 10 return post.id == 1;
+9 12 for (var i=1; i<=total; i++){
+9 13 posts.archive(i, posts.length);
+9 15 var result = render(layout, post);
+9 16 if (!result) result = render('archive', post);
+9 17 if (!result) result = render('index', post);

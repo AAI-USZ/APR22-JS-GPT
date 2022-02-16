@@ -1,0 +1,49 @@
+Min editdistance: 25.00
+Closest candidate: 9 2 unwatch()).then(() => {
+0 1  })
+0 2 }
+0 3 }), { clean() => clean() })
+0 4 const { get() {
+0 5 const { source() } = } = } = new Locals(); } = new Locals(); return hexo.reduce((a, route, view, callback => {
+0 6 return { return { path, }) => {
+0 7 return new Promise.bluebird.set(callback => callback(route);
+0 9 } = callback.callback = callback.callback => {
+0 10 path.path.path.should.should.should.eql('test
+1 1 })
+1 2 }], () => {
+1 3 _watch.then() => {
+1 4 const { } = Promise.should.should.not.to.to.to.be.to.be.empty();
+1 5 const { source_watch.should.should.to.to.be.empty();
+1 6 const } = false;
+1 7 const _watch.should.not.should.not.to.to.be.exit(() => callback.reset();
+1 8 const testExact().should.should.
+2 1 " return hexo.unwatch());
+2 3 })"
+
+3 1  }), 'unwatch'));"unwatch'));"
+
+4 2 })));"
+
+5 1 " })
+5 3 }), { object_watch() }() }, { done();
+5 4 "const _watch() }_watch() } = function (next() { } = null; } = function () { done (next) { done(next) {
+5 5 return done (next) {
+5 6 const after_clean() { done_clean() } function (next) {
+5 7 const { done (next) {
+5 9 const _clean() {
+5 10 const after_clean() {\
+6 1 " }), {})
+6 2 },"
+
+7 1 "unwatch()), }),})));"
+
+8 1 " : null);" : null })" : null; },"
+
+9 1 "unwatch'));"unwatch()).then(()).then(() => {
+9 2 unwatch()).then(() => {
+9 3 unwatch.return hexo.un. clean()).then(()).then(() => {
+9 4 un.not.dispose()).then(()).then(() => {
+9 5 un.dispose()).then(()).then(() => {
+9 6 hexo.clean()).then(() => {
+9 7 hexo.watch()).then(()).then(() => {
+9 8 hexo.watch()).then(() => {

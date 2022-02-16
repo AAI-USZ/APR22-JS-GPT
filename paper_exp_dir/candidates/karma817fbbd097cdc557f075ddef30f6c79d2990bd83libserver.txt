@@ -1,0 +1,189 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 forceJSONP: config.forceJSONP
+0 1 forceJSONP: config.forceJSONP
+0 2 })
+0 3 executor.socketIoSockets = server.sockets
+0 4 return server
+0 5 }
+0 6 class Server extends KarmaEventEmitter {
+0 7 constructor (cliOptions, done) {
+0 8 super()
+0 9 logger.setupFromConfig(cliOptions)
+0 10 this.log = logger.create()
+0 11 this.loadErrors = []
+0 12 const config = cfg.parseConfig(cliOptions.configFile, cliOptions)
+0 13 this.log.debug("Final config")
+0 14 let modules = [{
+0 15 helper: ['value\', helper],
+0 16 logger: ['value\', logger],
+0 17 done: ['value\', done || process.exit],
+0 18 emitter: ['value\', this],
+0 19 server: ['value\', this],
+0 20 watcher: ['value\', watcher],
+0 21 launcher: ['factory\', Launcher.factory],
+0 22 config: ['value\', config],
+0 23 preprocess: ['factory\', preprocessor.createPreprocessor],
+0 24 fileList: ['factory\', FileList.factory],
+0 25 webServer: ['factory\', ws.createWebServer],
+0 26 serveFile: ['factory
+0 27 }]
+0 28 server.on('error', (e) => {
+0 29 this.log.emit('error', e)
+0 31 const server = new Server(() => {
+0 32 if (name === 'error: null) {
+0 33 this.emitter.emit('error
+0 34 } else if (name ==='server.injector.throwErrors.code === 'injector.error')
+0 35 } else (injector.call(this)
+0 36 } else handler.emitter.emit('error)
+0 37 this.emit('server.startServer)
+0 38 return handler.start()
+0 40 const webServerOnError = init () => {
+0 41 if (config.startServerOnError = initError()
+0 42 injector.addServer)
+0 43 this.get('injector.get)
+0 44 .get('config')
+0 45 .startServer)
+0 46 .use(config.errorHandler)
+0 47 .get('injector.get)
+0 48 .get)
+0 49 .get('config
+1 10 this.log = logger.create('karma-server')
+1 15 helper: ['value', helper],
+1 16 logger: ['value', logger],
+1 17 done: ['value', done || process.exit],
+1 26 serveFile: ['factory\', createWebServer],
+1 27 serveStaticFile: ['factory
+1 30 modules = modules.forEach((framework) => {
+1 31 config.forEach((framework) => this.get('framework:'sucumber')).forEach((framework) => this.get('staticServer()`)
+1 32 return handler.bind(this)
+1 35 return this
+1 38 server extends BrowserCollection {
+1 39 injector (name) => handler
+1 40 logger.bindServer()
+1 45 server extends BrowserCollection (name Server extends BrowserCollection {
+1 46 constructor (cliOptions, middleware, reporter) {
+1 47 this.addServer()
+1 52 injector (injector) {
+1 53 return injector.get('injector)
+1 55 if (injector) {
+1 56 if (inject
+2 13 this.log.debug(`Final config ${this.configFile}Final`)
+2 18 emitter: ['value', this],
+2 19 server: ['value', this],
+2 20 watcher: ['value', watcher],
+2 22 config: ['value', config],
+2 28 const preprocessFilesPromise = []
+2 29 this.Promise.on('error', (file => Promise.resolveFile(file.createFilesPromise.bind(fs))
+2 31 this.on('file_error', preprocess)
+2 32 const servedFilesPromise.on(
+2 33 .on (file => {
+2 34 file => {
+2 35 this.readFilePromise.removeFilePromace(file.path.resolve(this.path, this.path, this.localizePath, preprocess)
+2 36 .lastRun)
+2 37 .execFilter(this.lastRun)
+2 38 .onject(file => this.lastRun)
+2 40 .on('file_injector.runInjector.runInjector.runInjector.runInjector)
+2 42 constants.runInjector = injector.invoke (injector.get)
+2 44 const servedFiles = (
+3 26 serveFile: ['factory\', createServeStaticFile],
+3 30 const createServeStaticFilePromise = function (config, staticFolder, serveFile,
+3 31 fs, staticFolder,
+3 32 fsPromiseFilePromise,
+3 33 publicFilePromise,
+3 34 serveStaticFilePromise,
+3 35 fsPromise, config) {
+3 36 if (config.path) {
+3 37 config.path = config.path = path
+3 38 fs.exists(fs.exists(staticFolder, config.path)
+3 39 if (fs.exists(staticFolder)
+3 40 .exists(fs.path)) return config.path)
+3 41 if (config.exists(fs.exists(config.path)) return config.paths)
+3 42 if (config.exists(fs.exists(staticFolder)) return config.paths)
+3 43 .exists(config.paths, fs.exists(config.paths)) return config.exists(config.paths)) return config.ex
+4 1 transports: config.transports
+4 26 serveFile: ['factory\', createServeFile],
+4 27 serveStaticFile: ['factory\', createServeStaticFile.factory],
+4 28 fs: ['factory
+4 29 readFilePromiseFilePromise]
+4 31 const createServeStaticFilePromise = (config = (config, staticFolder, path) => {
+4 32 return config.setServeFile(fs, path.normalize(fs, path)
+4 34 }'
+
+5 28 fs: ['factory],
+5 29 fileList: ['factory
+5 30 readFilePromiseContainer: ['factory],
+5 31 filesPromise: ['factory],
+5 32 filesPromise: ['factory
+5 33 readFilePromise: ['factory],
+5 34 readFilePromise: ['factory: ['factory: createPromiseContainer]
+5 37 const createServeStaticFilePromise.prototype.then(config, createServeFile = (config, staticFolder, staticFolder, path) {
+5 38 config.then(fs, staticFolder, executor, path.readFile, executor, fileList.readFile, config.readFile,
+5 39 config, fileList: function (file, files) {
+5 40 if (config) {
+5 41 config.return executor.compareFile(config, config, path)
+5 42 return executor.compareFile(config, pathLib.require, pathLib, pathLib.normalize
+6 25 webServer: ['factory\', FileList.factory],
+6 26 serveStaticFile: ['factory\', createServeStaticFile],
+6 29 capturedBrowsers: ['value\', []],
+6 30 reporter: ['value
+6 31 args: ['value\', []],
+6 32 launcher: ['value
+6 33 config: ['value\', []],
+6 34 processor: ['value
+6 35 args: ['value
+6 36 args: ['value\', {}],
+6 37 preprocess: ['value
+6 39 ],
+6 42 server: ['value
+6 44 only: ['value
+6 49 config: ['value
+6 51 server],
+6 52 serverSocket: ['value
+6 53 client: ['value
+6 56 function createSocketIoSocketsServer (webServer, executor, createServer, executor, config) {
+6 57 const server = inject
+7 25 webServer: ['factory\', createWebServer],
+7 30 function createServeStaticFile (config, staticFolder, config = require(filepath) {
+7 31 config.path = path
+7 32 return config.normalize((cache.createSockets, pathname, fs.normalize(staticFolder)
+7 33 if (cache.length)
+7 34 if (config.constructor.constructor === 0)
+7 35 if (config.constructor === 0)
+7 36 if (config.constructor.constructor.createSockets.isDirectory()) {
+7 37 config = createSockets = function (config.paths)
+7 38 config = createSockets = fs.readFile(config.path, fs.readFileSync(path, null)
+7 40 return config
+7 41 let set(staticFolder)
+7 42 fs.readFile, stringify(staticFolder)
+7 43 , null, function (error, data, headers, statFn, headers, statFn, next) {
+7 44 if (onFilepath) {
+7 45 log.warn(
+8 30 const preprocess = preprocessor.createPreprocessor = preprocessor
+8 31 constfileList = config
+8 32 constfileList = helper
+8 33 const webServer = helper.createServeStaticFile = handler
+8 34 const socketServer = reporter.createServeStaticFile
+8 35 const socketServer = handler = handler
+8 36 const socketServer = createServeFileList = createServeStaticFileHandler
+8 37 const socketServerSocketServer = createServeFile
+8 38 const socketServer = createSocketsServer = createServeFileHandler
+8 39 const executor = executor = require(createServeStaticFile, createServeFile, path = require("./static)
+8 40 const createServer = (config, executor, fileList, arg = executor, reporter,
+8 41 logger,
+8 42 helper: ['dots],
+8 43 config, fileList, preprocess, fileList, executor,
+8 44 content
+9 26 serveFile: ['factory\', createServeFile.factory],
+9 30 function createServer (cliOptions, done) {
+9 31 logger.setupFromConfig(cliOptions, cliOptions)
+9 33 this.log.log.log = logger.setupFromConfig(cliOptions)
+9 34 this.getConfigFile()
+9 35 done = cliOptions = cliOptions = cliOptions
+9 36 this.done = helper
+9 37 this.done = helper.done = done
+9 38 return done
+9 42 server extends Server {
+9 43 server: function (cliOptions, done) {
+9 44 super() {
+9 45 return this.server = fromConfig via theEventEmitter
+9 50 \

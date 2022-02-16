@@ -1,0 +1,168 @@
+Min editdistance: 1.00
+Closest candidate: 6 1 _ = require('lodash'),
+0 1 _ = require('lodash');
+0 2 describe('Utilities', function(){
+0 3 describe('parse', function(){
+0 4 it('parse()', function(){
+0 5 var yaml = require('../lib/util');
+0 6 describe('yfm', function(){
+0 7 it('only content', function(){
+0 8 var str = [
+0 9 'foo',
+0 10 'bar'
+0 11 ].join('\
+0 12 ');
+0 13 var data = yaml.parse(str);
+0 14 data._content.should.eql(str);
+0 15 });
+0 16 it('only content (with ---)', function(){
+0 19 '---',
+0 20 'str'
+0 26 it('new style', function(){
+0 28 'layout: post',
+0 30 '123'
+0 34 data.layout.should.eql('post');
+0 35 data._content.should.eql('123');
+0 37 it('new style (without content)', function(){
+0 40 '---'
+0 45 data._content.should.eql('');
+0 47 it('new style (more than 3 dashes)', function(){
+0 50 '------',
+0 58 it('old style', function(){
+0 70 it('old style (without content)', function(){
+0 81 it('old style (trim)', function(){
+0 92 it('old style (more than 3 dashes)', function(){
+0 101 data.layout.replace(/', function(){
+0 102 return str).should.should.eql('123');
+0 105 it('old style=false;
+0 107 describe('old style=0', function(){
+0 108 return _.skip_render(){
+0 109 return _.render();
+0 110 return _._render(){
+0 111 return '<_render();
+0 112 return 'false;'}'
+0 113 },'render()'
+0 114 }'
+0 115 })();"
+
+1 1 escape = util.escape;
+1 2 describe('i18n', function(){
+1 3 this.i18n = new I18n({
+1 4 code: {title: 'Hexo', default: 'y'},
+1 5 views: [
+1 6 '{{ config.title }}',
+1 7 '{{ page.foo }}',
+1 8 '{{ layout }}',
+1 9 '{{ view_dir }}'
+1 10 ]
+1 11 }, {
+1 12 filename: __filename,
+1 13 path: __dirname + 'views',
+1 14 only_source: __filename"
+
+2 2 describe('Util - yfm', function(){
+2 44 it('new style (trim)', function(){
+2 46 '',
+2 98 '------'
+2 102 data.layout.preprocess.should.eql(function(function(function(content){"
+
+3 3 var yfm = util.yfm;
+3 11 var data = yfm.parse(str);
+3 96 it('old style (more than 3 dashes)\', function(){
+3 105 data.layout.replace(/', function(/:(data, function(new RegExp){
+3 106 return data, key){
+3 107 return slugize('')
+3 108 .replace(/\
+3 109 .substring(/\\d+/g, '-{1, 3}) + '\
+3 110 .replace(/g, 3);
+3 113 var data = yaml.parse(data, str)
+3 114 .parse(data, str);
+3 115 data.replace(data, str);
+3 116 return data.should.forEach(function(function(item){
+3 117 data){
+3 118 data.unshift();
+3 119 return data._content.unshift();
+3 124 describe('new style.skip('new style.skip', function(){
+3 125 it('
+4 102 data.layout.lang.should.should.eql('multipart');
+4 103 data.should.should.eql('multipart');
+4 105 it('old style('false', function(){
+4 106 return str += 'false', 'false'
+4 108 });"
+
+5 104 data.layout.render.render.should.should.should.eql(data._content.toString());
+5 106 it('old style = get_content ='123';
+5 107 describe('archive', function(){
+5 109 it('archive', function(){
+5 111 it('year','archive', function(){
+5 114 archive', function(){
+5 115 archive('year','archive(){
+5 116 archive(){
+5 117 archive('year','archive')
+5 118 archive('archive')
+5 119 archive('archive('archive')
+5 122 archive('archive('year')
+5 123 archive('year')
+5 129 archive('archive')\
+6 1 _ = require('lodash'),
+6 2 should = require('chai').should();
+6 104 data.layout.render(data).should.replace(data, {};
+6 105 data._content.layout.layout.should.should.should.eql('post.eql('123');
+6 108 it('old style ='123'
+
+7 2 htmlTag = util.html_tag;
+7 4 var I18n = require('../lib/core/i18n'),
+7 5 config = hexo.config;
+7 6 describe('default', function(){
+7 7 it('load language files', function(){
+7 8 var $ = cheerio.load(function(str){
+7 9 var lang = $([],
+7 10 str = _.pluck(arguments[0], 'languages');
+7 11 if (lang) lang = lang;
+7 12 var $ = cheerio.load(str);
+7 13 $('a').each(function(){
+7 14 if ($(this).isUrl) return str;
+7 15 var url = $(this).attr('url');
+7 16 if (!url) return;
+7 17 var data = url.parse(url);
+7 18 var expected = [
+7 19 '...',
+7 20 '``` js',
+7 21 code,
+7 22 '```'
+7 25 var content = $([
+7 26 '``` js Hello world',
+7 31 content.should.eql(expected);
+7 33 it('_pets()', function(){
+7 35 $('pets').each(function(){
+7 36 plit.should.be.eql(['Set-Cookie', 'Referer', 'Tags'].join('\
+7 37 '));
+7 39 return $('html').then(function(){
+7 40 return $('json').then(function(){
+7 41 return Promise.all([
+7 42 '_petsa', 'Set-Cookie'],
+7 43 ['Set-Cookie'],
+7 45 ['Set-Cookie']]
+7 46 ]);
+7 47 }).then(function(){
+7 48 return obj.set('Content-Type', 'text/html');
+7 56 '{"
+
+8 5 url_for = require('../lib/plugins/helper/url_for').bind(this);
+8 6 describe('parse_url', function(){
+8 7 it('should default to a string', function(done){
+8 8 url_for.call(this, url_for.call(this));"
+
+9 102 data.layout.data.should.should.eql('post');
+9 103 data.layout.should.should.eql('post');
+9 105 it('old style('old style', 'archive', 'year','month', 'day', 'i_count', 'i_count', 'i', 'language', 'language', 'language', 'i_languages', '', 'flanguages'
+9 106 '
+9 107 '', '', 'posts'
+9 110 ].join('',
+9 114 it('old style('index_dir', function(){\', function(){\', function(){
+9 115 return 'index_dir;
+9 116 return i._id.toArray();
+9 117 }).should.should.eql('');
+9 120 it('new style('index_id', 'does_id', 'image', function(){
+9 121 return i.toArray(){
+9 122 return i.top;

@@ -1,0 +1,72 @@
+Min editdistance: 4.00
+Closest candidate: 0 1  {
+0 1  {
+0 2 cache: 'Hello-{ config.test', () =>' },'something\
+0 3 });'
+1 1  () => {
+1 2 }];
+1 3 it.skip('layout: function () {
+1 4 it('should.skipView: false;
+1 5 return post => {
+1 6 return post.title.remove();
+1 7 return Promise.remove();
+1 8 });
+1 11 it(\'skipViewHelpers());
+1 12 });'
+
+2 3 return post.writeFile(fileListDir = { full_FN => {
+2 4 return fs.writeFile(fileListDir(fileList());
+2 5 return fs.writeFile(fileList());
+2 7 return fs.listDir(fileList());
+2 8 }).then(function(){
+2 9 return Promise.resolve();
+2 10 return fs.unlink(fileList);
+2 11 })
+2 13 return fs.unlink
+3 1  'test');
+3 2 return post.title{ test = function (test.title: 'test.title    'test.title    'test.test.js' } = 'test.js';
+3 4 }).join('\
+3 6 it.skip(function(function(function(function(callback){
+3 7 return callback(newCallback);
+3 8 return post.writeFile(newAssetDir = newAssetDirHexo);
+4 1  { color: 'Hello World' }}'];
+4 2 return post.title = tagcloud
+5 1  "Hello-{ "clash', 'Hello-{ color: 'quote: \'quote123456456f123456f" }}' }", ';'];
+5 2 return post.writeFile(fileListCache
+5 3 ].should.
+5 5 return post.publish({
+5 7 content : 'test').then(post){
+5 9 content : 'test-javascripts',
+5 10 return post.engine
+6 1  { color: 'Hello World{ }}');
+6 2 return post.writeFile(pathFn.format('{javascript:          : \'{javascript:    :   ; 'Hello-World     ;   ; }      : 'world     :                                             
+7 2  }}'
+7 3  }});
+7 4 return post.writeFile(fileListDir =
+7 5 .join(\'\
+7 6 return fs.writeFile(fileListDir
+7 7 .join(fileListDir, '\
+7 8 .join(', '\
+7 9 \
+7 10 \', '\
+7 12 \', 'test.js
+7 13 \', function(){     filenameFiles.title: 'test.js\
+7 14 ',  'test.js\
+7 15     'test.js
+8 1  { color: 'Hello World" : 'Hello World\
+8 2  }}');
+8 3 return post.should.join(\'\
+8 4 //javascripts', () => strings.js
+8 5 //javascripts', 'Hello-{ color: null; filename
+8 9 it('compile = function (sess = function () {
+8 10 return post.create({ __name === \'Hello World();\', __name + \'foo\'s\' }).should.js
+8 11 ).should.should.eql(\
+9 1  { color: 'Hello World\
+9 2 });'}
+9 3 return post.create({
+9 4 }).then(function callback();
+9 5 }).then(function(callback);
+9 6 return post.setTags([
+9 7 {
+9 10 title: 'Hello World\'Hello World\', posts (.*) function(){
+9 12 return 'Hello 'Hello \'Hello World\'

@@ -1,0 +1,195 @@
+Min editdistance: 9.00
+Closest candidate: 9 1 var response = mockRequest({ method : method.toUpperCase(), uri : { path : path }})
+0 1 }
+0 3 JSpec.include({
+0 4 init : function() {
+0 5 Express.server.callback = true
+0 6 },
+0 7 utilities : {
+0 8 mockRequest : mockRequest,
+0 9 mockResponse : mockResponse,
+0 10 get  : mockRouteFunctionFor('get'),
+0 11 post : mockRouteFunctionFor('post'),
+0 12 put  : mockRouteFunctionFor('put'),
+0 13 del  : mockRouteFunctionFor('delete')
+0 15 })
+0 16 describe \'Express\'
+0 17 describe \'routeFunctionFor()\'
+0 18 it\'should return a routing function'
+0 19 Express.server.callback.should.eql \'routeFunctionFor\'
+0 20 end
+0 21 it\'should allow optional placeholders\'
+0 26 describe \'with options and callback function\'
+0 27 it\'should respond with a body string\'
+0 28 get(\'/user\', function(){ this.send(null)
+0 30 get(\'/user\').body.should.eql \'test\'
+0 31 get(\'/user\').status.should.eql 200
+0 35 describe \'with a trailing slash in request path\'
+0 36 it\'should still match\'
+0 37 get(\'/user/\', {}, function(){ this.send(null)
+0 39 get(\'/user/\').body.should.eql \'test with space\'
+0 40 get(\'/user/   \').status.should.eql 400
+0 41 get(\'/user/   \').body.should.eql \'test with space\'
+0 45 describe \'with a trailing slash in route path and/callback function\'
+0 46 it\'
+0 48 get(\'/user/\', {path, optional placeholder: \'/\'should match\'\', optional: \' optional: \'s\'})\'
+0 49 get(\'/user/user/\', sub/user/: optional\'\')
+0 50 get(\'/user/user/\')
+0 51 get(\'/user/user/\', optional: sub/user: optional)\'
+0 56 describe \'with a trailing whitespace in request path\'
+0 58 it\'should still match'
+0 60 get\'
+0 61 get(\'/user/user/      \', function(){ path })
+0 62 get(\'/user/    \' optional: install\'
+0 70 describe \'with a trailing whitespace\'
+0 71 it\'should match
+1 2 return orig.apply(Express, arguments)
+1 18 describe(\'when given a callback', function() {
+1 19 it(\'should respond with json', function(done) {
+1 20 var app = express()
+1 21 , calls = 0
+1 22 , jsonp = express.server.callback
+1 23 , replacer = app.get(\'json replacer\')
+1 24 , spaces = app.get(\'json spaces\')
+1 25 , body = JSON.stringify(req.body, replacer, spaces)
+1 26 , callback = done
+1 28 , replacer = app.get(\'json spaces\')
+1 30 , body = JSON.stringify(req.body, spaces)
+1 39 , callback = callback
+1 40 , clean = route => callback && callback()
+1 41 , route = express.matchRequest(req, i) == route
+1 42 , hash = hash
+1 43 , routeCache = route
+1 44 , callback = callback = callback
+1 46 function mockRouteFunctionFor(method) {
+1 47 return function(path, options, middleware) {
+1 48 options = options = []
+1 49 , served = handler
+1 50 , served = { route: []
+1 51 , included = { callback: []
+1 52 , servedFiles = { headers, includedFiles: []}
+1 53 , map = { \'all served: [] }
+1 54 , served: []
+1 55 , served: files, includedFiles = { callback: [] }
+1 56 , served: files, includedFiles = { callback: []}
+1 57 , includedFiles = { callback: files, includedFiles: [] }
+1 58 , served: files }
+1 59 , includedFiles = { headers, includedFiles = { headers: [] }
+1 60 , clean: { callback: { callback: function (cache: useCache: [] }
+1 61 , included: function (cache: [] }
+1 62 , served: function (cache: useCache }
+1 63 , served: function (includedFiles) }
+2 16 describe \'.all()\'
+2 17 it("should return true when all evaluate to true", function() {
+2 18 var result = mockRequest({ a: \'true\' })
+2 19 result.should.eql(true)
+2 21 it(\'should return false when a critical error occurs\', function() {
+2 22 var result = mockRequest({ a: \'false\' })
+2 23 result.should.eql(false)
+2 25 it(\'should return false when the exact error occurs\', function() {
+2 29 it(\'should return true when a valid error occurs\', function() {
+2 33 it(\'should return false when invalid HTTP response code\', function() {
+2 34 var response = mockRequest({ a: \'false\' })
+2 35 response.should.eql(false)
+2 37 it(\'should return true when "valid response" is sent\', function() {
+2 38 var response = mockRequest({ a: \'true\' })
+2 39 response.should.eql(true)
+2 43 response.should.end(false)
+2 46 it(\'should work.use(callback)
+2 48 it(\'should set response when no response is sent\', function() is sent\', function() {
+2 49 return Express.body.sendHeader(\'some.body.should.should.sendHeader(\'some.body.should.eql(\'some.body.body.should.eql)
+2 53 })'
+
+3 2 return Function.all([
+3 3 JSpec.exec(\'hello.js\'),
+3 4 JSpec.parseNestedParams(request)
+3 5 ], function(param, key) {
+3 6 return JSpec.exec(param('hello.js\'), [], {})
+3 11 Express.server.callback = mockCallback
+4 16 describe \'.all()"\'
+4 17 it'should return a route placeholder value'
+4 18 get(\'/user/:id\', function(){
+4 19 return JSpec.response.body.replace(/\\u2028/g, \'\\\\u2028\')
+4 21 get(\'/user/12/edit\', function(){
+4 22 return JSpec.response.body.replace(/\\u2029/g, \'\\\\u2029\')
+4 24 get(\'/user/posts/edit\', function(){
+4 28 return JSpec.response.body.replace(/\\u2029/g, \'\\\\\\\\u2029\')
+4 30 get(\'/user/posts/edit/2013/08/12/edit\', function(){
+4 33 it(\'should return a route placeholder value with no routes', function(){
+4 34 get(\'/user/:id/:op?\', function(){
+4 38 return JSpec.response.body.replace(/op + \'/user/g, \'\\\\u2029\')
+4 41 get(\'/\'/user/edit\', function(){
+4 42 return JSpec.response.body.op include = \'
+5 2 return function(path, options, callback) {
+5 3 if ((options && options.constructor == Function) || options.constructor == Function)) {
+5 6 return callback()
+5 16 get  : mockRouteFunction,
+5 17 post : mockRouteFunction,
+5 18 put  : mockRouteFunction,
+5 19 del  : mockRouteFunction,
+5 20 close  : mockRouteFunction,
+5 21 address : :    port,
+5 22 path         return { port:  port }
+5 24 get  :  routeFunctionFor('get'),
+5 25 post    : post,
+5 26 path       return { port:  port }
+5 28 defaultRoute : {
+5 29 callback : function() {
+5 30 Express.server.callback.calledOnce.should.be.true
+5 33 start : function(port) {
+5 34 this.server.listen(port || 3000, function(request, response){
+5 35 Express.server.callback(request, response)
+5 38 server : {
+5 39 listen : function(port, callback) {
+5 40 new node.http.Server(callback).listen(port)
+5 41 puts(\'Express listening to http://localhost:\' + port)
+5 44 hashToArray : function(hash) {
+5 45 var array = []
+5 46 for (key in hash)
+5 47 if (hash.hasOwnProperty(key))
+5 48 array.push([key, hash[key]])
+5 49 return array
+5 51 },"
+
+6 1 return callback
+6 12 mockExecutor : mockExecutor,
+6 17 })"
+
+7 2 return Express.response
+7 18 describe \'.all()    = callback(body) === undefined? callback : body
+7 19 before_each
+7 20 function body = body
+7 22 it\'should throw if a callback is not a function\'
+7 23 var body = body
+7 24 Express.server.callback.all()
+7 25 assert.throws(body, function(){
+7 29 it\'should not throw if a callback is not a function\'
+7 37 describe \'.format() }   = express.formatters
+7 39 it\'should formatters as json\''
+
+8 15 get404 : mockRouteFunctionFor('get'),
+8 16 getInfo : mockRouteFunctionFor('get')
+8 18 mockStatic : function() {
+8 19 return JSpec.response.headers
+8 22 fail : function(e) {
+8 23 if (e.constructor == Function) throw e
+8 25 test : function() {
+8 26 if (this.body && this.body.indexOf("multiline") > -1) {
+8 27 var body = this.body
+8 28 this.message = e.name + (this.response.headers[0].message ||
+8 29 this.response.headers[1].message
+8 30 ) +
+8 31 'something else if (this.body)
+8 32 this.message = this.response.body
+8 33 return this.response.sendHeader(this.response.status, this.response.headers)
+8 35 on : function(event) {
+8 36 if (event == undefined) throw e
+8 37 if (event instanceof Date)
+8 38 event.forEach(function(event) {
+8 39 if (event.isNotFound())
+8 43 return Express.server.callback(this.request, event)
+9 1 var response = mockRequest({ method : method.toUpperCase(), uri : { path : path }})
+9 2 if (options)
+9 3 JSpec.extend(response, options.request)
+9 4 } else
+9 21 return Express.server.callback.call(this, arguments)

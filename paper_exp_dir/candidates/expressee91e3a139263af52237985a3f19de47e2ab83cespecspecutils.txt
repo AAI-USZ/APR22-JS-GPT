@@ -1,0 +1,14 @@
+Min editdistance: 52.00
+Closest candidate: 4 1 "end"end"end"end"end"end"
+1 1 "
+
+2 1 "
+4 1 "end"end"end"end"end"end"
+4 2 end"
+
+5 1 "end"
+
+6 1 "end
+6 2 end"
+7 1 "end"end"
+

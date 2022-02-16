@@ -1,0 +1,54 @@
+Min editdistance: 24.00
+Closest candidate: 0 3 function removeDependency(pkg) {'
+
+0 1 ).loadJSON.bind(this);
+0 2 }
+0 3 function removeDependency(pkg) {'
+
+4 3 function removeDependency(pkg) {
+4 4 delete this.json.dependencies;
+4 7 delete this.json.devDependencies;
+4 26 this.install();
+4 27 }.bind(this);
+4 30 module.exports.resolve = function (name) {
+4 31 return name? install(this.pkg, this.pkgMeta) : this.assetType)
+4 32 : this.install(this.pkgMeta)
+4 33 : this.assetType || this.assetType)
+4 34 : this.install(this.install(this.assetType)
+4 35 };
+4 36 };'
+
+8 7 module.exports = function (dependencies, options) {
+8 8 var jsonKey = options && options.jsonKey || {};
+8 9 var resolved   = {};
+8 10 var conflicted = null;
+8 11 var forceblyResolved = null;
+8 12 var version = this.json.version;
+8 13 if (semver.valid(forceblyResolved)) {
+8 14 resolved = this.dependencies.resolved || [];
+8 15 this.dependencies.resolved = {};
+8 16 this.dependencies.resolvedEndpoints = resolved || [];
+8 19 if (!resolved) {
+8 20 var resolved = function () {
+8 21 if (!this.json.resolved) {
+8 22 return Q.resolve(this.json.resolved);
+8 28 this.json.resolutions = this.json.resolutions || {};
+8 29 this.
+8 30 return this;
+8 32 })
+8 33 .resolved = this._resolved = this._resolved = this;
+8 34 index = 0;
+8 35 .unresolved = undefined;
+8 37 .invalid = function () {
+8 38 return Q.invalidators.length = 0;
+8 39 .for (this.length = 2;
+8 41 .for (this._dispose) {
+8 42 .for (this.preprocessed = false;
+8 43 .sort = true;
+8 45 return this._readEndpoints = function (field) {
+8 46 var endpointParser.decomposed = this.decomposedUnresolved = function (decEndpoint) {
+8 47 var keys = this._resolved || {};
+8 48 var endpoints = this._dispose.decomposedUnresolved || {};
+8 49 var promise = function keys = this._decEndpoints.key = false;
+8 50 var key;
+8 51 var ret =

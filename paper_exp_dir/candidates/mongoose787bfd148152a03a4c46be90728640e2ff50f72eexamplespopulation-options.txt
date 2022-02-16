@@ -1,0 +1,180 @@
+Min editdistance: 26.00
+Closest candidate: 3 7 var consoles = [];
+0 1  else {
+0 2 console.log(done);
+0 3 }
+0 4 return done();
+0 6 function done (not done) if (no done) console.error(err);
+0 7 var items = done
+0 8 Console.remove(function () { done(not done)
+0 9 })
+0 10 function noDebug () {
+0 13 function done (noDebug === undefined) console.error(404);
+0 14 Console.remove(function () { done(done) { done(done) })
+0 16 var end = function clear();
+0 17 return Console.clean()
+0 19 function saveDatabase(done = Promise.
+0 20 Console.log.unprocess.log()
+0 21 if (!this.write = savedConsole.errorConsole(env) {
+0 22 Console.log('\
+0 23 env) {
+0 24 if (!this.log.destroy()
+0 25 if (env === undefined) delete;
+0 26 this.destroyedConsole plugins = undefined) this.unprocess.exit();
+0 27 this.log.exit();
+0 29 if (!this.writeFileIsUndefined()
+0 30 .writeFileSystem.exit(env) {
+0 31 this.writeFile(env);
+0 32 .close();
+0 34 if (this.log) {
+0 35 return;
+0 37 this.setFormatters = undefined;
+0 38 this.log.write(env);
+0 39 this.apply.bind(
+1 2 function done (event) {
+1 3 if (event == 'error') {
+1 4 var err = {};
+1 5 error.stack = err;
+1 6 err.message.should.equal('Resolved');
+1 7 err.message.should.equal('Config.EXCLUSIVELY_USE_COLORS');
+1 9 var headers = {};
+1 10 Console.remove(header);
+1 11 done(err);
+1 16 error.stack = [];
+1 18 var headers_id.should.eql({
+1 19 : 'error',
+1 20 message: 'No routes[0]
+1 21 };
+1 22 headers['Set-Request-CODES'].for_ADAPTER.remove'].forEach(function () {
+1 23 done(fn) {
+1 24 done(fn)
+1 27 .on('remove(function () {
+1 28 e.on('fn.apply', fn)
+1 29 .apply(this, this)
+1 30 .bind(this)
+1 36 .bind(this));
+1 40 .catch(this.bind(this));
+1 43 function this.leave() {
+1 44 return this;
+1 49 function done()
+2 1 ))
+2 4 if (event) {
+2 5 const obj = {};
+2 6 for (var i = 0, len = event.length; i < len; ++i) {
+2 7 obj[i] = event[i];
+2 8 delete obj[obj[0];
+2 13 function pretty_urls = require('./common/formatters/')(db/msg');
+2 14 function formatters = formattersList = Object.keys(formatters);
+2 15 return function slugize () {
+2 16 return formatters.length = 0;
+2 20 create();
+2 21 module.exports.skip('date = formatters = require(create_methods);
+2 22 create_urls = require(__dirname, formatters);
+2 23 create_scope = function no({
+2 24 formatters = 'urls'});
+2 26 };'
+
+3 1 ", function () { })
+3 2 }", "\
+3 3 "// done for the %s on the %s" n
+3 4 function no () {
+3 7 var consoles = [];
+3 8 Console.create({
+3 9 name: 'Nintendo',
+3 10  developer: 'Nintendo'
+3 11 , released: 'September 29, 1996'
+3 12 }, function (err, nintendo64) {
+3 13 console.log('Hexo is not registered yet.');
+3 14 exh.halt()
+3 16 .expect(404).to.be.empty();
+3 17 .call(function(function () {
+3 18 console.log('No errors)
+3 19 });
+3 21 .expect(1).to.should.not.have.have.skip('dev');
+3 26 function createData(newData) {
+3 28 name: function createData, newConsole, newConsole, newConsole, output) {
+3 29 Console, base = getOutput = fs, color: null })
+3 30 Console;
+3 31 Console.createConsole.setOutput = function outputFile;
+3 32 Console = outputFile;
+3 33 Console.setConsole(newConsole(newConsole, baseConsole, timeout, function () => {
+3 34 returnConsole.log('writeFile, arguments);
+3 35 Console.removeConsole(newConsole);
+3 36 ConsoleFile, arguments = arguments);
+3 37 return newConsoleFile);
+3 38 ConsoleFile = output;
+3 40 return newConsoleFile.removeConsoleFile;
+3 41 ConsoleFile = newConsoleFile
+4 1 "\
+4 2 "
+5 1 "const e = mongoose.createConnection('websocket', {
+5 2 engine: 'x-webs',
+5 3 rules: [{ __proto__:  { port: 123 }, {} }]
+5 4 }), {
+5 5 done: true,
+5 6 write: null }
+5 9 function after_lines_ in 2 ms to 3 tests",done) {
+5 10 if (done) console.error(done);
+5 12 function after_lines_in_browsers() {
+5 13 return done(new Buffer(`Websocket ${this.id}()}()}).toString()"
+
+7 1 ));
+7 4 if (event) console.log(event);
+7 8 function andRestrictTo errors (reason, str) {
+7 9 if (str) return str.replace(/\\{2}/, 'throw')
+7 10 var items = Object.keys(this.app.getters).sort();
+7 11 for (var i = 0, len = items.length; i < len; i++) {
+7 12 items[i] = items[i];
+7 14 return items[0].set('id', event.id, [{ name: { name: item.id, optional: item.name, message: 'Invalid' }, { c: (this.isNew(this.isNew()? 'if (this.isNew() : '') : '' })
+7 18 .error(this.restrictTo errors)
+7 19 .write(this)
+7 21 function andRestrictTo(app) {
+7 22 return this.set('f', function (str) {
+7 23 if (!this.isNew())
+7 24 return console.log('_middleware) return ''
+7 27 .set('f', this.options.bind(this)
+7 28 .options.bind(this.toObjectId, undefined)
+7 29 .toObjectId? 'layout', 'layout') : '')
+7 30 .map(function (error)
+7 31 .map(this.toObject.toObjectId) {
+7 32 .return Object.keys(this.options,
+8 3 function done (s) {
+8 4 if (s) console.log(s);
+8 5 Console.remove(function () { done(); })
+8 7 function test_populate() {
+8 8 var str = template.create({ path: '', model: 'Nintendo', url: 'http://github.com/strongloop/collect' })
+8 9 .split('.');
+8 10 str.forEach(function (str) {
+8 11 str.push(''+ str);
+8 13 str.forEach(function (cursor) {
+8 14 var key = '';
+8 15 console.log(cursor[key] = cursor[key] = cursor[key] || { cursor[key]._id] || { cursor[key]._id]._id.toString() }, function () {
+8 16 if (cursor[key].toString() return true };
+8 17 console.log(cursor[key].cursor[key].toString()];
+8 18 if (cursor[key].length > 0xhr === 3) console.log(key) return; return; }, function () return;
+8 19 if (cursor.cursor.cursor[key].length > 3; return; }) return;
+8 21 return console.log('xhr() > 0);
+8 22 }).join(0);
+8 23 }).returns})forEach(0).join(0).}
+8 26 function test_else_layout = function send(val) {
+8 27 return this.toObject() {
+8 29 return this.
+9 1  else if (err) console.error(err);\Console.remove(function () { done })
+9 5 function done (before_lines_of-commit) {
+9 6 var after_lines_ of hooks = this.app.json.split('/');
+9 7 var after_lines_ of query = [];
+9 8 var after_lines_else = null;
+9 9 var after_lines = null;
+9 10 var clearContext = function () {
+9 11 this.clearContext();
+9 17 function clearRuntimeCache = function clearRequireQuery () {
+9 18 clearRuntimeCache();
+9 20 function clearRequire.apply(this, arguments;
+9 22 require('admin: function clearPublicDir = function clearPublicDir(this, url, cb, fn) {
+9 23 if (name) {
+9 24 if (!Array.isArray.isArray(this.length) || require(this.length) || this.length === 2) require(url).length);
+9 25 if (!this.map { search = '';'s's's's' in this.forEach.map');
+9 26 this.map = url;'s'should.map = 'install's' || this.to.map.controllers.search;' || this.engines;'s';
+9 27 this.engines = url;
+9 28 this.settings = this.settings.bail = this.site.site.search.search = '';
+9 29 if

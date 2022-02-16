@@ -1,0 +1,224 @@
+Min editdistance: 1.00
+Closest candidate: 0 8 const _escapeContent = (cache, str) => {
+0 1 const rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]+?)<\\/escape>/g;
+0 2 const rSwigVar = /\\{\\{[\\s\\S]+?\\}\\}/g;
+0 3 const rSwigComment = /\\{#[\\s\\S]+?#\\}/g;
+0 4 const rSwigBlock = /\\{%[\\s\\S]+?%\\}/g;
+0 5 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+0 6 const rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+0 7 const rSwigTagInsideInlineCode = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+0 8 const _escapeContent = (cache, str) => {
+0 9 const placeholder = \'\\uFFFC\';
+0 10 return `<!--${placeholder}${cache.push(str) - 1}-->`;
+0 11 };
+0 12 function Post(context) {
+0 13 this.context = context;
+0 14 }
+0 15 Post.prototype.create = function(data, replace, callback) {
+0 16 if (!callback && typeof replace === \'function\') {
+0 17 callback = replace;
+0 18 replace = false;
+0 20 const ctx = this.context;
+0 21 const { config } = ctx;
+0 22 data.slug = slugize((data.slug || data.title).toString(), {transform: config.filename_case});
+0 23 data.layout = (data.layout || config.default_layout).toLowerCase();
+0 24 data.date = data.date? moment(data.date) : moment();
+0 25 return Promise.all([
+0 26 ctx.execFilter(\'new_post_path\', data, {
+0 27 args: [replace],
+0 28 context: ctx
+0 29 }),
+0 30 this._renderScaffold(data)
+0 31 ]).spread((path, content) => {
+0 32 const result = {
+0 33 path: path,
+0 34 content: content
+0 37 fs.writeFile(path, content),
+0 38 createAssetFolder(path, config.post_asset_folder)
+0 39 ]).then(() => {
+0 40 ctx.emit(\'new\', result);
+0 41 }).thenReturn(result);
+0 42 }).asCallback(callback);
+0 44 function prepareFrontMatter(data) {
+0 45 const keys = Object.keys(data);
+0 46 for (const key of keys.length === 1) {
+0 47 const item[key] = [key];
+0 49 for (let item[key] = [];
+0 50 return Reflect.asset(data[key].forEach((key, item, i) => {
+0 51 const pair.remove(item[key] = remove(item[key], item[key], () => {
+0 52 return ctx.emit(item[key], item[key], () => {
+0 53 return ctx.emit(item[key], })).remove(item[key]);
+0 54 });
+0 55 }).finally(() => {
+0 59 return Reflect.method.apply(data, this.method(this, this, this, this.middleware.middleware.bind(this));
+0 61 return newPost.prototype.save.data, this, null);
+0 63 function removeFrontMatter(data) {
+0 64 return
+1 1 const rPlaceholder = /(?:<|&lt;)!--\\uFFFC(\\d+)--(?:>|&gt;)/g;
+1 2 const rLang = /\\{\\{[\\s\\S]+?\\}\\}/g;
+1 3 const rTarget = /target=/g;
+1 4 const rRelative = /rel=/g;
+1 5 const rRelativeLength = /rel=["
+
+2 2 const rSwigVar = /{\\{[\\s\\S]*?\\}\\}/g;
+2 3 const rSwigComment = /{#[\\s\\S]*?#\\}/g;
+2 4 const rSwigBlock = /{%[\\s\\S]*?%\\}/g;
+2 5 const rSwigFullBlock = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+2 7 const rSwigTagInsideInlineCode = /{.*}.*>[\\s\\S]+?\\{.*}.*?\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+2 9 const rSwigTagInsideInlineCode = /{% *raw *%\\}[\\s\\S]+?\\{.*}.*?\\}.*?\\}/g;
+2 35 path,
+2 36 content
+2 42 ctx.emit(
+2 43 fs.execFilter(this, null, content)
+2 44 );
+2 47 }).catch(() => {
+2 48 return Promise.reject(() => {
+2 49 ctx.isRenderable.calledWith(\'new_asset_source\', result);
+2 55 return readFile(data) {
+2 57 return data? fs.substringify(data) : null;
+2 61 const content = fs.readFile(data.fromFile(data.path) : null;
+2 63 return fs.unlink(data.n).then(data.substringify(data.substring
+3 5 const rSwigFullBlock = /{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?{% *end\\1 *%\\}/g;
+3 6 const rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?{% *endraw *%\\}/g;
+3 7 const rSwigTagInsideInlineCode = /{%[\\s\\S]*?%\\}[\\s\\S]+?{% *endraw *%\\}/g;
+3 13 return str.replace(/<pre><code.*>[\\s\\S]*?<\\/code><\\/pre>/gm, escapeContent);
+3 15 const _restoreAllSwigTags = (cache, str) => {
+3 16 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags(this.cache));
+3 17 if (restored === str) return restored;
+3 18 return this.restoreAllSwigTags(restored);
+3 20 function resetLocals() {
+3 21 const cache = this.cache;
+3 22 const { cache } = this;
+3 23 if (this.cache.hasOwnProperty(cache)) {
+3 24 return cache[cache];
+3 26 let escape = _str => _escapeContent(this.cache, _str);
+3 27 return this.cache.get(escape? cache[se] : false);
+3 35 let content = this.cache.get(escape);
+3 40 this.emit(\'new\', content);
+3 41 }).thenReturn(callback);
+3 42 }).asCallback.resolve(callback);
+3 44 function createPost(context) {
+3 45 return this.asset = new Post(data => {
+3 46 const { source = this.content = source;
+3 47 this.assetPath = path;
+3 48 this.assetDir = path;
+3 49 this.content = config.path = config.asset_dir;
+3 50 this.post_asset_folder = config.path;
+3 51 this.type = path;
+3 52 this.type = undefined;
+3 54 return this.type.is_post;
+3 56 this.is_post = config.type === undefined;
+3 57 if (this.is_post) === undefined;
+3 58 return this.type!== undefined;
+3 61 create(this.assetDir = config.type!== \'create_post_folder) && this.type!== \'create_archive\' || config.type) return;
+3 62 create
+4 2 const rLang = /\\{\\{[\\s\\S]+?[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+4 3 const rypants = /<\\{% *(.+?)(?: *| +.*)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+4 4 const rRun = /(\\s*)(.+)?["
+
+5 3 const rypants = /<!--\\uFFFC(\\d+)--(?:>|&gt;)/g;
+5 4 const rRawCode = /<!--\\uFFFC(\\d+)/g;
+5 5 const rAuthorTitle = /([^,]+),\\s*([^,]+)/;
+5 6 const rAuthor = /(.+)/;
+5 11 function PostRenderCache() {
+5 12 this.cache = [];
+5 18 PostRenderCache.prototype.escapeContent = function(str) {
+5 20 return str.replace(rEscapeContent, (_, content) => _escapeContent(this.cache, content));
+5 23 const { items } = data;
+5 24 for (const [key, item] of Object.entries(data)) {
+5 25 if (moment.isMoment(item)) {
+5 26 data[key] = item.utc().format(\'YYYY-MM-DD HH:mm:ss\');
+5 27 } else if (moment.isDate(item)) {
+5 28 data[key] = moment.utc(item).format(\'YYYY-MM-DD HH:mm:ss\');
+5 29 } else if (typeof item ===\'string\') {
+5 30 data[key] = `"${item}"`;
+5 33 return data;
+5 35 PostRenderCache.prototype.toString = function() {
+5 36 const result = this.cache.get(this.name);
+5 37 return result;
+5 39 PostRenderCache.prototype.escapeAllSwigTags = function(str) {
+5 40 const rSwigVar = /\\{\\{[\\s\\S]*?\\}\\}/g;
+5 41 const rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+5 42 const rSwigBlock = /\\{%[\\s\\S]*?%\\}/g;
+5 43 const rSwigFullBlock = /\\{% *(.length}[\\s\
+5 45 Post.join(\'\');
+5 46 const escape = newPostTag;
+5 47 const prepareFrontMatter = spy = spy = spy = spy.spacing;
+5 48 const _escape = spy = spy.spacing = spy.length = spy.length = 1;
+5 49 describe(\'before_post_render = _.bind(data = _.bind(data, content, padding = null);
+5 50 const separator = spy = spy.replaceSelection = spy.replaceText = _.replaceText = _.replaceText, escape)
+5 52 const before_post = spy.replaceText = _.bind(data, after_post.bind(data, content, separator);
+5 53 if (data = _.length === 1, content
+6 7 const rSwigTagInsideInlineCode = /{.*}.*>[\\s\\S]+?\\{.*}.*?\\}.*?\\}/g;
+6 45 constFrontMatter = prepareFrontMatter(_.clone(data));
+6 46 for (const key ofFrontMatter) {
+6 47 if (moment.isMoment(key)) {
+6 48 data[key] = moment.isMatter(key)) {
+6 49 data[key] = [key];
+6 52 return [];
+6 54 return newFrontMatter(data);
+6 56 Post.prototype._getScaffoldPath = function removeExtname = function(layout) {
+6 57 const content = function () {
+6 58 return this._getExtname(layout) {
+6 59 const restored;
+6 60 return this.content = this._content.substringify(layout;
+6 63 Post.set _content = _.readFile = function (path) {
+6 64 const ctx.omit(path) {
+6 65 const dest = this.getScaffoldPath();
+6 66 return ctx.extend(dest, content;
+6 68 return ctx.isRenderable = null;
+6 69 };'
+
+7 5 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+7 46 for (const key of Object.keys(data).forEach((key).should.split(\'[0] === \')).should contain(item => {
+7 47 const item[key] = split[key];
+7 50 return ctx.post.publish(data, item;
+7 53 Post.each(data, post, post, post, post) {
+7 54 if (!post, post }).then(post, post.publish(post) {
+7 55 if (post.publish(post) {
+7 56 return Promise.then(post.publish(post.publish(post)
+7 57 .publish(post)
+7 59 .publish(post.publishPost)
+7 60 .publish({
+7 64 Post.thenReturn(post) {
+7 65 Post.all(post)
+7 66 .thenReturn(post)
+7 67 .save
+8 11 const _restoreAllSwigTags = cache => {
+8 14 cache.set(str) => layout === undefined?
+8 15 layout : layout + path;
+8 17 class PostRenderCache {
+8 18 constructor() {
+8 21 restoreAllSwigTags(str) {
+8 24 return this.set(\'Post-Cache\', Post.render(str, _restoreAllSwigTags(this.cache));
+8 26 loadContent(str) {
+8 28 const restored = str.replace(rSwigPlaceHolder, (_restoreAllSwigTags(this.cache));
+8 32 escapeAllSwigTags(str) {
+8 33 return str.replace(rSwigPlaceHolder, escape)
+8 34 .replace(rSwigTagInsideInlineCode, str)
+8 35 .replace(rSwig();
+8 38 const _getScaffoldPath = (layout) {
+8 39 return this.cache.get(layout);
+8 41 exports.post = getScaffoldPath(layout)
+8 42 .skip('postDir)
+8 43 .skip(layout === layout;
+8 45 exports.skip(filename => return join(str => _getScaffoldPath(this.params.path) && partial.sepaginatorPath) && layout!== null) return str.sepag;
+8 46 exports.skip(this.scaffoldPath) return str;
+8 47 const escape = escape = escapeAllSwig(str) || partial.normalize(str) || partial.sepag(str) || partial.sepag, escapeAllSwig(str) || str);
+8 48 const content = escape = escape.replace(str, escape)
+8 49 .replace(/`${filename, escape} = escape} = _escape, escape)
+9 5 const rSwigFullBlock = /{% *(.+?)(?: *| +.*)%\\}[\\s\\S]+?{% *end\\1 *%\\}/g;
+9 14 return \'<!--\\uFFFC\';
+9 34 this._renderScaffold: ctx
+9 37 ]).spread((data,
+9 38 }).spread((ansr, content) => {
+9 40 const locals = _.mergeCtx.extend([
+9 41 const { base: config.base_dir, layout, slugize([layout], content } = [first_id] || \'post
+9 42 ], locals)
+9 43 ]);
+9 44 return result = {
+9 45 path: `${result.substringify(layout, path, layout.substring(layout.length, layout.length, JSON.stringify(content, JSON.stringify(content)
+9 50 locals.filename = _.should.replace = \'${format(content)
+9 51 .replace(r, (_, i) => content.replace(/---\', \'\
+9 52 \', \'\
+9 53 \')}return locals.replace(/g

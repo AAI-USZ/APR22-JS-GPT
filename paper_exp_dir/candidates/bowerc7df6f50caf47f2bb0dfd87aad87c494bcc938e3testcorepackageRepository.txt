@@ -1,0 +1,231 @@
+Min editdistance: 1.00
+Closest candidate: 5 1 var helpers = require('../helpers');
+0 1 describe('PackageRepository', function () {
+0 2 var packageRepository;
+0 3 var resolver;
+0 4 var resolverFactoryHook;
+0 5 var resolverFactoryClearHook;
+0 6 var testPackage = path.resolve(__dirname, '../assets/github-test-package');
+0 7 var tempPackage = path.resolve(__dirname, '../assets/temp');
+0 8 var packagesCacheDir = path.join(__dirname, '../assets/temp-resolve-cache');
+0 9 var registryCacheDir = path.join(__dirname, '../assets/temp-registry-cache');
+0 10 var mockSource = helpers.localSource(testPackage);
+0 11 var forceCaching = true;
+0 12 after(function () {
+0 13 rimraf.sync(registryCacheDir);
+0 14 rimraf.sync(packagesCacheDir);
+0 15 });
+0 16 beforeEach(function (next) {
+0 17 var config;
+0 18 var logger = new Logger();
+0 19 config = mout.object.deepMixIn({}, defaultConfig, {
+0 20 storage: {
+0 21 packages: packagesCacheDir,
+0 22 registry: registryCacheDir
+0 23 }
+0 25 function resolverFactory(decEndpoint, options, _config) {
+0 26 var _logger = options.lodash;
+0 27 expect(_logger).to.be.an(Logger);
+0 28 expect(_logger).to.be.an(RegistryClient);
+0 29 expect(_config).to.be.an(RegistryClient);
+0 30 decEndpoint = mout.object.deepMixIn({}, decEndpoint);
+0 31 decEndpoint.source = mockSource;
+0 32 resolver = new resolvers.GitRemote(decEndpoint, _config, _logger);
+0 33 if (forceCaching) {
+0 34 resolver.isCacheable = function() {
+0 35 return true;
+0 36 };
+0 38 resolverFactoryHook(resolver);
+0 39 return Q.resolve(resolver);
+0 41 resolverFactory.getConstructor = function () {
+0 42 return Q.resolve([
+0 43 resolvers.GitRemote,
+0 44 {
+0 45 source: helpers.localSource(testPackage)
+0 46 }"
+
+1 10 var mockSource = 'file://' + testPackage;
+1 12 var mockRson = new Logger();
+1 13 var bowerJson = new RegistryClient({
+1 14 cache: { search: [], source: 'foo', register: 'foo', url: 'http://', config: {},
+1 15 registry: { search: [], registry: [], exclude: 'foo' }
+1 17 var config = defaultConfig({
+1 18 cache: config.cache,
+1 20 packages: packagesCacheDir,"
+
+2 4 var resolverFactoryHooks;
+2 13 config.reset();
+2 15 packageRepository = new PackageRepository(config, logger);
+2 16 resolverFactoryHooks = resolverFactoryClearHook = function () {
+2 18 'bower-register',
+2 19 'http://bower.io/foo.js',
+2 20 'https://bower.io/foo.js'
+2 21 ]);
+2 25 var loggerCache = new RegistryClient({
+2 26 strictSsl: false,
+2 27 timeout: 1000,
+2 28 urlRoot: '/'
+2 30 function resolverFactory(decEndpoint, options, _registryClient) {
+2 31 var _config = options.config;
+2 32 var _logger = options.logger;
+2 33 expect(_config).to.eql(config);
+2 35 expect(_registryClient).to.be.an(RegistryClient);
+2 37 decEndpoint.source = mockSource;"
+
+3 14 packageRepository = new PackageRepository(mout.object.deepMixIn({}, defaultConfig({
+3 15 cache: defaultConfig()._registry
+3 16 }, defaultConfig()));
+3 18 packageRepository.clear()
+3 19 .then(next.bind(next, null), next);
+3 21 it('should error out if git is not installed', function (next) {
+3 22 var resolverFactoryHook = function () {
+3 23 return Q.nfcall(rimraf, 'git');
+3 26 var sourceId = md5(sourceId);
+3 27 var resolver = new RegistryClient({
+3 28 version: '0.0.0'
+3 30 resolverFactoryHook.call(resolverFactory)
+3 31 .then(function (result) {
+3 32 expect(result).to.be.an('object');
+3 33 expect(typeof result.registry ==='string');
+3 35 next();
+3 37 it('should setup git registry settings in the new e-mail folder', function (next) {
+3 39 return Q.nfcall(rimraf, 'git', {
+3 40 'bower-registry-client': 'git://github.com/{{owner}}/{{package}}.git',
+3 42 'bower-registry-client/': 'git://github.com/{{owner}}/{{package}}.git'
+3 44 resolverFactoryClearHook = function () {
+3 46 'bower-registry-client': 'git://github.com/{{package}}/{{package}}.git',
+3 47 'bower-registry-registry-registryClient/': 'git'
+3 50 var resolverFactory expand = function (options) {
+3 51 return {
+3 52 options: options,
+3 53 config: options,
+3 55 lang: options.config: {cache: config,
+3 56 unsupported: expand,
+3 57 unsupported: options.set: options.set
+3 62 var repository = new PackageRepository.readOptions = function () {
+3 63 var that = options = options();
+3 64 rimraf.readOptions.readOptions();
+3 65 .readOptions.readOptions();
+3 66 .set({
+3 67 'bowerrc: 'https://github.com/{{package.com/{{package}}');
+3 68 if (options
+4 12 var remote = {
+4 13 'bower-registry-client': fake,
+4 14 'http':    'https://bower.herokuapp.com',
+4 15 'info':   'email sent',
+4 16 'lookup':   'http://bower.herokuapp.com',
+4 17 'or':    'bower.herokuapp.com',
+4 18 'git':   'git',
+4 19 'color': true,
+4 20 'interactive':      'foo',
+4 21 'static':     'test'
+4 23 var resolverFactory = function (options, _registryClient) {
+4 24 options = options || {};
+4 25 options.cache = this._config.roaming.registry;
+4 26 this._resolved = {};
+4 27 this._incompatibles = {};
+4 28 setup = helpers.require('../../lib/core/resolvers/resolverFactory');
+4 29 describe('defaults', function () {
+4 30 var resolverFactory;
+4 31 var deferred = Q.defer();
+4 32 var that = this;
+4 33 beforeEach(function () {
+4 40 var resolver = new ResolveCache(
+4 41 defaultConfig({
+4 46 })
+4 47 );
+4 55 it('should resolve git URLs properly', function () {
+4 57 var resolverFactoryClearHook = function () {
+4 60 return Q.clearRuntimeCache();
+4 62 rimraf.sync(resolverFactoryClearHook.bind(resolverFactory);
+4 63 rimraf(resolverFactoryClearHook.bind(resolverFactoryClearHook);
+4 64 rimraf(resolverFactoryClearHook.bind(resolverFactory)
+4 65 .clearRuntimeCacheDir);
+4 66 rimraf(timer.uninstall(resolverFactoryClearHook);
+4 67 return resolverFactoryClearHook.bind(resolverFactory)
+4 68 .then(resolverFactory)
+4 70 .then(function () {
+4 71 logger.clearCache.bind(resolverFactory)
+4 73 .then(function (resolverFactory) {
+4 74 logger.clearCache.getConstructor.bind(resolverFactory)
+4 75 .getConstructor.getConstructor)
+4 76 .then(resolve.getConstructor
+5 1 var helpers = require('../helpers');
+5 20 config = defaultConfig({
+6 18 var PackageRepository;
+6 26 }, defaultConfig);
+6 37 return Q.resolve(resolverFactory);
+6 47 describe('.constructor', function () {
+6 48 it('should guess the name from the path', function () {
+6 49 var resolver = new resolvers.GitRemote();
+6 50 expect(resolverFactoryName).to.equal('package-a');
+6 52 it('should make paths absolute and normalized', function () {
+6 54 expect(resolverFactorySource).to.equal(resolverFactorySource);
+6 55 expect(resolverFactoryUrl).to.equal(multiline(function () {
+6 56 return [
+6 57 resolverFactoryPathsFrom(resolverFactory),
+6 62 it('should.skip('should use config.resolveCache of the source', function () {
+6 64 it('should.skip('should.skip('should use config.cache')
+6 68 describe('.buildSource');
+6 69 describe('.resolverFactory');
+6 70 describe('.resolverFactory', function () {
+6 71 it('should)', function () {
+6 72 it('should use the source source-inspect', function () {
+6 73 it('should callable', function () {
+6 74 it('should resolve by defaultConfigs', function () {
+6 75 var resolverFactory as json', function () {
+6 76 var resolverFactory) {
+6 78 var resolverFactoryHook = Q.resolve = function () {
+6 80 ex
+7 5 var resolverFactoryClearHooks;
+8 6 var testPackage = path.resolve(__dirname, '../assets/package-a');
+8 35 resolver.isCacheable = function () {
+8 39 resolverFactoryHooks = function () {
+8 43 name: 'foo',
+8 44 url: 'https://bower.io',
+8 45 proxy: proxyquire
+8 53 name: 'bar',
+8 59 resolverFactory.clearRuntimeCache = function () {
+8 60 resolverFactoryClearHooks = function () {
+8 61 console.warn('should clear old-git-folder-sessions');
+8 63 module.exports.helpers.require('core/resolve/resolve-cache/resolver-cache');
+8 64 require(resolverFactory');
+8 65 deresolverFactory.clearRuntimeCacheDir = clear();
+8 66 });"
+
+9 21 config.resolve = function () {
+9 22 if (!mout.object.size(this._config.roaming.isCacheable()) {
+9 23 return next();
+9 25 this._config.roaming.should.eql(this._config.roaming.defaults.bind(this));
+9 27 packageRepository = proxyquire('../../lib/core/PackageRepository', {
+9 28 '../../lib/core/resolvers': resolverFactory
+9 31 config.resolveCache = function () {
+9 33 packageRepository.prototype.fetch = function () {
+9 35 'resolve',
+9 36 'github',
+9 37 'test-package'
+9 40 packageRepository.prototype._resolveCache = function () {
+9 42 packageRepository.prototype._read = function () {
+9 44 return this._read()
+9 45 .spread(function (stat, file) {
+9 46 var stat = fs.statSync(file);
+9 47 var promise;
+9 48 var decEndpoint = path.join(that._config.roaming.get);
+9 49 if (stat.isDirectory()) {
+9 50 promise = promise.then(function () {
+9 51 return that._readJson(decEndpoint)
+9 52 .then(function (content) {
+9 53 content.trim()
+9 54 .replace(/\
+9 55 /g,'');
+9 58 .then(function (that._extract(content) {
+9 59 that._extract(content);
+9 60 .done();
+9 65 promise.then(function () {
+9 66 return that._that._extract.then(function () {
+9 67 return that._extract.del();
+9 69 return that._readJson.defract.save();
+9 78 describe('read.read.readOptions = function () {
+9 79 it('Should have.readOptions()') {
+9 80 var that.readOptions();
+9 83 var that = function

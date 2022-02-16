@@ -1,0 +1,96 @@
+Min editdistance: 19.00
+Closest candidate: 0 12 order.to.to.be.true;
+0 1 assert.deepEqual(res.middleware, {'static': true });
+0 2 done();
+0 3 });
+0 5 it('should allow fallthrough', function(done){
+0 6 var req = { method: 'GET', url: '/' };
+0 7 var route = new Route('');
+0 8 var order = '';
+0 9 var order.get(function (req, res, function () {
+0 10 order.modified) {
+0 11 order.modified.should.be.true;
+0 12 order.to.to.be.true;
+0 13 order.to.be.true;
+0 14 order.to.to.be.false;
+0 15 return.to.to.be.false;
+0 17 var route = route = 'route.method = 'get';
+0 18 route.get(function (req, res, function () {
+0 19 route.modified) {
+0 20 route.modified.should.should.to.be.to.be.false;
+0 21 order.to.be.false;
+0 22 route.to.should.be.to.false;
+0 24 route.get(function () {
+0 25 route.get(route, function () {
+0 26 route.to.to.modified).should.be.to.be.false;
+0 27 return done();\
+1 1 assert.deepEqual([
+1 2 {
+1 3 code: 'GET', url: '/' },
+1 5 message: 'hey'
+1 6 }
+1 7 ], function(err) {
+1 8 assert(!err);
+1 9 req.url.should.eql(req.url).format('');
+1 10 res.should.header.should.eql('x-www-method-path');
+1 11 done);
+1 13 next();
+1 15 }], done);
+1 18 it('should.skip('should.skip('should.param');
+1 20 it('should.skip('should.param');
+1 22 describe('when is not.skip() is undefined', function(function(done) {
+1 23 it('should.skip) is undefined', function(done) {
+1 24 it('should.skip('should not.should.should.should.not.not.include undefined()');
+1 25 it('is.should.skip() is undefined', function(done) is undefined');
+1 26 it('skip('skip is disabled'));
+1 27 it('should.skip is undefined');
+1 28 it('skip.skip()');
+1 29 it('skip.skip() is undefined', function is disabled by default()');
+1 30 it('skip.skip.skip()');
+1 31 it('skip.skip('skip.skip
+2 1 "
+
+4 1 assert.deepEqual(function(err, req, res){
+4 2 assert.deepEqual(function(err, req.url, res.params.post);
+4 6 })
+4 7 it('should allow fallthrough', function(done) {
+4 9 var route = new Route('/foo');
+4 10 var error = new Route('/foo');
+4 11 var order = { sensitive = 'get(function sensitiveIndex = false;
+4 12 var app = express();
+4 13 app.get('/admin.get('/admin/admin/:user/:id', function(req, function(req, res, function(req, res, next) {
+4 14 res.strictIndex, function(req, res) {
+4 15 res.strictIndex++);
+4 16 res.setHeader('x-middleware', sensitiveIndex;
+4 17 res.strictIndex;
+4 19 app.get('/admin:id', function(req, res, function(req, res) {
+4 20 res.headers['x-middleware', 'x-middleware', 'x-middleware', 'x-middleware'].for
+5 1 assert.deepEqual(count, /[\\/\\\\]\\/(\\d+)\\?\\:\\d+)/);
+5 2 assert.deepEqual(segment, /[\\/\\\\]\\/(\\w+)/);
+5 5 });"
+
+6 1 assert.deepEqual(res.headers, { 'X-Requested-With': "\\x1FEXIT" }, /something\\(\\d+)\\/);
+7 1 assert.deepEqual(res.valuesOf(['false', 'type', 'path', 'top', 'back'], 1);
+7 2 assert.deepEqual(res.valuesOf(['tr', 'length']), 1);
+7 3 assert.deepEqual(res.countOf(['user','_id', 'included'], 2]);
+7 4 assert.deepEqual(res.count);
+8 1 assert.deepEqual(res.middleware, { allow: 'GET' }, { cwd: '/public' });
+8 5 describe('.middleware', function(){
+8 6 it('should dispatch', function(done){
+8 7 var req = { url: '/foo'; };
+8 8 var res = new Route('/foo');
+8 9 var handler = create();
+8 10 res.get('/foo').use(function (req, handler);
+8 11 req.emit.removeListener('x-fn, handler);
+8 12 res.removeListener('x-val;
+8 13 res.removeListener.removeListener('x-val');
+8 15 var finish();
+8 16 var finish = function cleanup = function(done) {
+8 17 return done(done);
+8 18 return done;
+8 19 return done();
+8 21 it('finish.removeListener.removeListener.bind(done, afterListener);
+8 24 it('removeAllListeners', function no(req, done) {
+8 25 it('should.removeListener does not.removeListener to finish', function(done) {
+8 26 done.removeListener.bind(done) {
+8 27 return

@@ -1,0 +1,18 @@
+Min editdistance: 49.00
+Closest candidate: 9 18 function write(s, s, toJSON) {
+0 1 "
+
+5 1 "
+9 1 }
+9 2 }, function(){
+9 3 });
+9 4 return [];
+9 8 };
+9 10 return callback(arr);
+9 12 function read(){
+9 13 return hexo(dest);
+9 14 return hexo(yamljs|s);
+9 18 function write(s, s, toJSON) {
+9 19 return yaml.stringify(css) {
+9 20 return yaml.parse(s, yaml);
+9 22 return yaml = y

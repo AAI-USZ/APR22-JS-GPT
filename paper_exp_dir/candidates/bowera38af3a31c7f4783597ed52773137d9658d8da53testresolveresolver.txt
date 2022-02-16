@@ -1,0 +1,195 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var rimraf = require('rimraf');
+0 1 var rimraf = require('rimraf');
+0 2 var tmp = require('tmp');
+0 3 var cmd = require('../../lib/util/cmd');
+0 4 var copy = require('../../lib/util/copy');
+0 5 var Resolver = require('../../lib/resolve/Resolver');
+0 6 describe('Resolver', function () {
+0 7 var tempDir = path.resolve(__dirname, '../assets/tmp');
+0 8 var testPackage = path.resolve(__dirname, '../assets/github-test-package');
+0 9 describe('.getSource', function () {
+0 10 it('should return the resolver source', function () {
+0 11 var resolver = new Resolver({ source: 'foo' }, { source: 'bar' });
+0 12 expect(resolver.getSource()).to.equal('foo');
+0 13 });
+0 15 describe('.getName', function () {
+0 16 it('should return the resolver name', function () {
+0 17 var resolver = new Resolver({ name: 'foo', main: 'baz' });
+0 18 expect(resolver.getName()).to.equal('baz');
+0 20 it('should return the resolver source if none is specified (default guess mechanism)', function () {
+0 21 var resolver = new Resolver({ source: 'foo', name: 'foo', main: 'baz' });
+0 22 expect(resolver.getName()).to.equal('foo');
+0 25 describe('.hasNew', function () {
+0 26 it('should throw an error if already working (resolving)', function (next) {
+0 28 resolver._resolve = function () {};
+0 29 resolver.hasNew()
+0 30 .then(function () {
+0 31 next(new Error('Should have failed'));
+0 32 }, function (err) {
+0 33 expect(err).to.be.an(Error);
+0 34 expect(err.code).to.equal('EWORKING');
+0 35 expect(err.message).to.match(/already working/i);
+0 38 it('should throw an error if already working (checking for newer version)', function (next) {
+0 46 expect(err.code).to.equal('EMORKING');
+0 51 describe('.resolve', function () {
+0 52 it('should checkout correctly if resolution is a branch', function (next) {
+0 53 var resolver = new Resolver({ source: 'foo', target:'some-branch' });
+0 55 resolver.resolve()
+0 56 .then(function (dir) {
+0 57 expect(dir).to.be.a('bower-'bower-'bower');
+0 58 })
+0 59 .then(function (versions) {
+0 60 expect(versions) {
+0 61 expect(versions.length).to.length).to.be.length).to.be.an('0);
+0 63 .filter(function (versions.length).to.indexOf(0).to.length);
+0 64 .should.contains(0).to.contains(0).to.contains(0).to.cwd).toLowerCase();
+0 65 return.contains(1);
+0 68 .sort(function (0).to.contains.reverse();
+0 69 return dir;
+0 71 .reverse();
+0 73 .split('/, fs.readFileSync(dir, function (err, stat) {
+0 74 expect(0, 1);
+0 75 expect(0).to.contains.length).toString());
+0 76 expect(0).to.contains(0).to.contains.
+1 9 var resolver = new Resolver('foo');
+1 15 var resolver = new Resolver('foo', { name: 'bar' });
+1 16 expect(resolver.getName()).to.equal('bar');
+1 26 var succeeded;
+1 32 resolver._resolve.apply(this, arguments);
+1 35 next(succeeded? new Error('Should have failed') : null);
+1 38 .done();
+1 46 resolver._resolve = function () {
+1 49 return Q.resolve(true);
+1 52 .then(function (result) {
+1 53 expect(result).to.be.an('object');
+1 54 expect(result.source).to.equal(foo);
+1 55 expect(result.target).to.equal('*');
+1 56 expect(result.name).to.equal('foo');
+1 57 expect(result.version).to.equal('0.0.0');
+1 58 next();
+1 62 it('should resolve to the latest (notifying a warn)', function (next) {
+1 66 succeeded = function () {
+1 72 resolver._resolve.hasNew()
+1 80 it.skip('should.skip('should.not.not.skip('should.not.');
+1 85 it('should not.resolve, function () {
+1 86 it('should.clearRuntimeCache');
+1 89 describe('#requires('#hasNew');
+1 90 describe('#hasNew', function () {
+1 91 it('should resolve by default to resolve by default', function () {
+1 92 var resolverFactory to resolve by default');
+1 93 it('should call resolverFactory to resolve by null');
+1 94 it('should work by default', function (should resolve does not by default') {
+1 95 var resolverFactory to resolve by default', function (a) {
+1 96 var resolverFactory to resolve by default
+2 32 resolver._resolveSelf.bind(resolver);
+2 41 var promises;
+2 42 promises = resolver.getPromises();
+2 43 expect(promises).to.have.length(1);
+2 45 promises.forEach(function (promise) {
+2 46 promise.then(function () {
+2 47 return that._removeListener(promise);
+2 48 }, function () {
+2 49 promises.removeAllListeners();
+2 53 return resolver;
+2 55 .fin(function () {
+2 56 clearTimeout(timer);
+2 57 reporter.cancel();
+2 59 };
+2 61 it('should copy the source directory', function (next) {
+2 64 .then(function (folder) {
+2 65 expect(folder).to.be.a('string');
+2 66 expect(fs.existsSync(folder)).to.be(true);
+2 71 it('should copy the source directory contents', function (next) {
+2 73 var resolver;
+2 76 resolver = new Resolver('foo');
+2 77 expect(resolver.resolve()
+2 78 .resolve()
+2 80 expect(folder)
+2 81 .should.should.then(folder)
+2 82 .should.resolve();
+2 85 .should.should.not.not.be.to.to.be.a.a('string');
+2 87 .to.not.to.be.empty();
+2 90 .should.done();
+2 94 });"
+
+3 34 resolver._resolve.apply(resolver, arguments);
+3 46 return true;
+3 52 expect(result.version).to.equal('0.0');
+3 53 expect(result.time).to.equal(0);
+3 61 expect(result.name).to.equal('bar');
+3 72 expect(dir).to.be.some(0);
+3 73 expect(0).to.should.be.be.a(0);
+3 75 .should.to.to.be.cancel();
+3 76 .skip('bower.completed;
+3 78 .completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.completed.resolve.completed.com
+4 11 expect(resolver.getSource()).to.equal('foo');"
+
+5 22 expect(resolver.getName()).to.equal(resolver.getName());
+5 42 return Q.fcall(rimraf, target);
+5 50 return Q.nfcall(rimraf, target);
+5 53 .then(function (next) {
+5 70 var resolver.hasNew()
+5 73 .hasNew()
+5 78 .hasNew() {
+5 83 next.clearRuntime.clearRuntime.hasNew()
+5 84 .hasNew())
+5 85 .setImmediate()
+5 88 .clearImmediate(self.clearRuntimeCache.setImmediate())
+5 89 .setImmediate())
+5 90 .resolve.setImmediate(self.resolve.hasNew(self.resolve.resolve.resolve.cache)
+5 91 .resolve.spec('trunked())
+5 92 .resolve(self.resolve())
+5 93 .resolve())
+5 94 .exec(function () {
+5 95 .exec('trunked')\
+6 11 var resolver = new Resolver({ source: 'foo' }, defaultConfig(), new resolverRuntimeCache());
+6 18 resolver._resolveSelf()
+6 22 expect(err).to.be.an(Error);"
+
+7 11 var resolver = new Resolver({ source: 'foo' }, defaultConfig(), new Logger());
+7 17 var resolver = new Resolver({ name: 'foo', main: 'foo.js' });
+7 21 var resolver = new Resolver({ source: 'foo', name: 'foo.js', main: 'foo.js' });
+7 27 var resolver = new Resolver({ source: 'foo', target: '*' });
+8 26 resolver._resolveSelf = function () {};
+8 31 expect(resolver.hasNew()).to.be(true);
+8 49 it('should copy the source directory (no changed to 0)', function (next) {
+8 71 it('should copy the source directory (ignore changed to 0)', function (next) {
+8 74 expect(resolver._resolver._resolver._resolveSelf()).to.hasNew()).to.should.be.be.true;
+8 75 expect(true);
+8 76 expect(resolver._resolver._dir).to.dir).to.equal(resolve().to.dir);
+8 77 expect(resolver.dirs.default);
+8 78 expect(resolver.to.defaults.defaults.normalize();
+8 79 expect(resolver.to.to.resolve).to.deep.apply(resolver, null);
+8 80 expect(resolver.to.resolve, null);
+8 81 expect(undefined!== null);
+8 82 expect(resolver.not.not.not.to.to.contain.contain.contain.contain.default, null);
+8 83 expect(resolver.not.not.contain.contain.contain.contain.
+9 46 return that._resolve.bind(resolver);
+9 50 return Q.all([
+9 51 resolver.getName(),
+9 52 that._resolve.bind(resolver),
+9 53 self.getSource()
+9 54 ]);
+9 57 return that._readJson(that._tempDir);
+9 59 .then(function (meta) {
+9 60 expect(meta).to.be.an('object');
+9 61 expect(meta.name).to.equal('foo');
+9 62 expect(meta.version).to.equal('0.0.0');
+9 67 it('should resolve by the correct order', function (next) {
+9 70 var tempDir;
+9 76 resolver._resolve.bind(resolver);
+9 79 expect(folder).to.length).to.be.a('bower');
+9 80 resolver._readJson.getIgnore.bind(resolver.bind(resolver);
+9 81 .bind(resolver);
+9 82 .getTempDir =folder.bind(resolver);
+9 83 expect(resolver._readJson.getIgnore.getTempDir)
+9 84 .bind(resolver.bind(resolver.getTempDir);
+9 85 .bind(resolver.getIgnore);
+9 86 expect(resolver.getIgnore.getTempDir);
+9 87 return!= null);
+9 90 expect(folder) {
+9 91 expect(folder).to.length).to.length).to.be('bower');
+9 92 expect(0).to.equal(0);
+9 93 expect(0);
+9 95 expect(

@@ -1,0 +1,383 @@
+Min editdistance: 20.00
+Closest candidate: 4 70 var port = urlRoot + 'http';
+0 1  }
+0 2 function JsonRenderer() {
+0 3 this._nrLogs = 0;
+0 4 }
+0 5 JsonRenderer.prototype.end = function (data) {
+0 6 if (this._nrLogs) {
+0 7 process.stderr.write(']\
+0 8 ');
+0 10 if (data) {
+0 11 process.stdout.write(this._stringify(data) + '\
+0 14 };
+0 15 JsonRenderer.prototype.error = function (err) {
+0 16 var message = err.message;
+0 17 err.id = err.code || 'error';
+0 18 err.level = 'error';
+0 19 err.data = err.data || {};
+0 20 delete err.message;
+0 21 err.message = message;
+0 23 this._write(process.stderr, '');
+0 25 JsonRenderer.prototype.log = function (log) {
+0 27 process.stderr.write(', ');
+0 28 } else {
+0 29 process.stdout.write(', ');
+0 31 process.stderr.write(this._stringify(log));
+0 32 this._nrLogs++;
+0 34 JsonRenderer.prototype.prompt = function (prompts) {
+0 35 var promise = Q.resolve();
+0 36 var answers = {};
+0 37 var that = this;
+0 38 prompts.forEach(function (prompt) {
+0 39 var opts;
+0 40 var funcName;
+0 41 prompt.message = chalk.stripColor(prompt.message);
+0 42 opts = {
+0 43 silent: true,
+0 44 trim: false,
+0 45 default: prompt.default == null? '' : prompt.default,
+0 46 validator:!prompt.validate? null : function (value) {
+0 47 var ret = prompt.validate(value);
+0 48 if (typeof ret ==='string') {
+0 49 throw ret;
+0 51 return value;
+0 52 },
+0 54 that._write(process.stderr, '');
+0 55 return promise
+0 56 .then(function () {
+0 57 return Q.nfcall(promptly.confirm, opts)
+0 58 .then(function (prompt) {
+0 59 prompt.level = 'prompt';
+0 67 if (opts.silent) {
+0 68 prompt.level ='silent';
+0 74 return Q.nfcall(promptly.prompt, opts)
+0 76 return that._write(prompt.prompt);
+0 77 })
+0 79 return
+0 81 return ret.prompt();
+0 83 .then(function (that._savePkgMeta.insert({});
+0 88 return that._savePkgMeta.insert({});
+0 90 .then(function (that._savePkgMeta.savePkgMeta.savePkgMeta.savePkgMeta.isRepository(),
+0 91 });
+0 92 .then(that._savePkgMeta.isRepository.getExact(),
+0 93 returnsFromExact()) {
+0 94 return true;
+0 98 return promise.then(function () {
+0 99 return that._working = false;
+0 101 }, function (
+1 23 this._write(process.stderr, 'bower'+ err.message + '\
+1 29 process.stderr.write('[');
+1 31 process.stderr.write(', 'bower'+ log.message + '\
+1 34 process.stdout.write(this._stringify(log));
+1 56 switch (prompt.type) {
+1 57 case 'input':
+1 58 funcName = 'prompt';
+1 59 break;
+1 60 case 'confirm':
+1 61 case 'password':
+1 62 funcName = prompt.type;
+1 64 default:
+1 65 promise = promise.then(function () {
+1 66 throw new Error('prompt');
+1 68 return;
+1 72 that.log(prompt);
+1 73 return Q.nfcall(promptly[funcName], '', opts)
+1 74 .then(function (log) {
+1 75 return Reflect.apply(log, null, [{
+1 76 type: 'input',
+1 77 message: 'prompt',
+1 78 default: log
+1 79 }]
+1 80 );
+1 82 return promise;
+1 84 module.exports = JsonRenderer;"
+
+3 2 var self = this
+3 3 self.proxies = {}
+3 4 this.__proxies.load = function (source) {
+3 5 var _this = this
+3 6 _return function (helper) {
+3 8 _return _this.helper.isUrlAbsolute(source)? source : source
+3 10 this._proxy.set(source, _this.proxy.bind(this))
+3 12 this.config = {}
+3 13 this.proxies.restore = function () {
+3 14 if (this._working) {
+3 17 var freeSpots = this._options.max_height || window.__karma__.options.max_height
+3 18 return this._clear()
+3 20 this.public = function (sj, socket, timer,
+3 21 default) {
+3 23 this.set('home', set('env') + '/public/' + sj
+3 24 this.use(connect.compress(this.public()))
+3 25 this.locals = function (obj) {
+3 26 for (var key in obj) {
+3 27 self.locals[key] = obj[key]
+3 29 return self
+3 31 this.locals.settings = this.settings || {}
+3 32 this.set('home', set('env') + '/' + (this.config.basename || '').replace(/\\/+$/, '')
+3 33 this.use(function (req, res, next) {
+3 34 var charset;
+3 35 res.setHeader('X-Powered-By', 'Express')
+3 36 req.app = res.app = self;
+3 37 req.res = res;
+3 38 res.req = req;
+3 39 req.next = next;
+3 40 if (charset = self.set('charset')) res.charset = charset;
+3 41 res.locals = function (obj) {
+3 43 res.locals[key] = obj[key];
+3 45 return res;
+3 47 next();
+3 50 this.getDeep = function (result) {
+3 51 if (result.skipped) {
+3 52 this.set('skipped' + result.skipped + 1)
+3 53 } else if (result.success) {
+3 54 this.set(result.success);
+3 56 this.set(result.failed);
+3 58 return this;
+3 60 this.dump = function () {
+3 61 var msg = util.format.apply(null, Array.prototype.slice.call(arguments))
+3 62 var spec = this.app.get(msg)
+3 63 if (this.getDeep(result.description)) {
+3 64 var branch = this.getDeep(result.description)
+3 65 var regexp = new RegExp(this.getDeep(MG))
+3 66 var padding = partsize(this.getDeep(MG))
+3 67 this.set('max-age', (maxAge / 1000).toFixed(1) + sj.length)
+3 68 this.set('max-point', null).toUTCString())
+3 72 this.dump.on('error', function (err) {
+3 73 this.removeError(err)
+3 74 this.close();
+3 75 }.bind(this);
+3 77 this.res.exports.destroy();
+3 79 this._setTimeout = setPrototypeOfFiles = setPrototypeOf = resolve.prototypeofFiles === Function.prototype.resolve.set;
+3 80 var setPrototypeOf = resolve.exports.read = function (path, callback, type) {
+3 81 var proto = resolve.callback.callback.callback.callback.callback.query.query.callback.query;
+3 82 var instanceOfFiles = function isRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequestingRequesting
+4 2 var self = this;
+4 3 this.running = false;
+4 4 this.emit('browsers_change', this.running);
+4 5 this.emit('no binary_decode', function (err) {
+4 6 if (err) return this.emit('error', err);
+4 7 this.emit('exit', 1);
+4 10 module.exports = {
+4 11 VERSION: 9876,
+4 12 Server: Server,
+4 13 Router: Router,
+4 14 version: 1,
+4 17 version: 0,
+4 18 StaticFile: 'public/html',
+4 19 File: 'text/plain',
+4 20 StaticFile: 'w-pput',
+4 21 Content-Type: 'application/json'
+4 23 module.exports.forEach = function (method) {
+4 24 self.prototype[method] = function(url) {
+4 25 return self.init(url).apply(this, arguments);
+4 28 module.exports.line = function (argv) {
+4 29 var options = Array.isArray(argv);
+4 30 var args = arguments[0];
+4 31 if (options.help) return help('register');
+4 32 var list = this.extend.console.list();
+4 33 return list.find(function (err, results) {
+4 35 if (results.length) return this.emit('end');
+4 36 var args = [];
+4 37 var idx = 0;
+4 38 var removed = '';
+4 39 var slashAdded = false;
+4 40 this.emit('error', endpoint, clear);
+4 41 if (args) {
+4 42 removed = args.trim();
+4 43 if (removed === undefined) {
+4 44 return done(err);
+4 46 var args = _.toArray(argv);
+4 49 return this.emit('run');
+4 51 module.exports.completion = function (opts, cb) {
+4 52 var cache = {};
+4 53 var formatError = function (err, msg) {
+4 55 if (helper.isFunction(msg)) {
+4 56 return function () {
+4 57 var args = Array.isArray(argv)? [0] : [1];
+4 58 args.unshift({});
+4 59 return formatError(args, callback);
+4 62 this.launch = function (names, hostname, port, urlRoot, upstreamProxy) {
+4 64 if (names.length) {
+4 65 var url = 'http://' + hostname + ':' + port + urlRoot;
+4 66 if (proxy.protocol) {
+4 67 var protocol = 'http';
+4 68 if (curl === '/') {
+4 69 var hostname = 'localhost';
+4 70 var port = urlRoot + 'http';
+4 72 var protocol = 'https';
+4 73 if (proxy.protocol === 'https:') {
+4 75 var port = urlRoot + 'https:' + port + urlRoot + urlRoot;
+4 77 var port = urlRoot;
+4 80 var fbs = hostname = port;
+4 81 if (name) {
+4 82 if (name && hostname!== '@hostname) {
+4 83 var url = port;
+4 84 var url = port = port;
+4 86 proxy.for (name = port;
+4 90 this.launch(this.launch.$inject = function (name, hostname, port, hostname, port, urlRoot, urlRoot, urlRoot, hostname, port, port, urlRoot, urlRoot, urlRoot, handler) {
+4 91 logger.launch: hostname = port, hostname = port, port, hostname = port, urlRoot, urlRoot + 'http';
+4 92 var browser, hostname = port = port, hostname = port, hostname;
+4 93 if (config.protocol = upstreamProxy) {
+4 94 var url = upstreamProxy = upstreamProxy.
+5 3 self.running = false
+5 4 self.emit('browsers_change', self.emit.bind(this))
+5 5 this.emit('browser_register', this)
+5 7 Proxy.prototype.__proto__ = Array.prototype.call(arg1)
+5 9 VERSION: '1.2.3',
+5 10 Server: 'http',
+5 11 runner: 'localhost',
+5 12 server: 'localhost',
+5 14 server: 'http',
+5 15 client: 'https',
+5 16 common: '2.3.8',
+5 17 context: 'curl',
+5 18 search: 'http://localhost:1233/'
+5 20 function parseExitCode (buffer, defaultExitCode, failOnEmptyTestSuite) {
+5 21 var tailPos = buffer.length - Buffer.byteLength(constant.EXIT_CODE) - 2
+5 22 if (tailPos < 0) {
+5 23 return { exitCode: defaultExitCode, buffer: buffer}
+5 25 var tail = buffer.slice(tailPos)
+5 26 var tailStr = tail.toString()
+5 27 if (tailStr.substr(0, tailStr.length - 2) === constant.EXIT_CODE) {
+5 28 var emptyInt = parseInt(tailStr.substr(-2, 1), 10)
+5 29 var exitCode = parseInt(tailStr.substr(-1), 10)
+5 30 if (failOnEmptyTestSuite === false && emptyInt === 0) {
+5 35 function parseJson (buffer, defaultStr) {
+5 36 var tailPos = buffer.length - Buffer.byteLength(constant.EXIT_CODE) - 1
+5 40 function parseEnv (buffer, defaultStr) {
+5 41 var env = this.env
+5 42 return parseInt(env.COMP_CWORD, 10)
+5 43 .toLowerCase()
+5 44 .replace(/__/g, '.')
+5 45 .replace(/_/g, '-')
+5 46 .replace(/\
+5 47 /g, '.')
+5 48 .replace(/\\r/g, '.')
+5 49 .replace(/\\u0085/g, '.')
+5 50 .replace(/\\u2028/g, '\\\\u2028')
+5 51 .replace(/\\u3040/g, '\\\\u30FF')
+5 52 .replace(/\\u30FF/, '\\\\u30FF')
+5 54 .replace(/\\u30FF/, '\\\\\\\\u3040')
+5 55 .replace(/\\u30FF/g, '\\\\u30FF')
+5 58 function parseNestedParams (params) {
+5 59 var parts = key.split('[']')
+5 60 if (parts.split('[')'].index'] = 1] = split(0)
+5 61 params = split[0]
+5 62 params.split('= null
+5 63 params.split('=']
+5 64 return params]
+5 66 for (var i = split = 1, prop = prop]
+5 67 , prop = prop]
+5 68 , len = propArr = obj
+5 69 if (a = obj.length = obj.length > 0
+5 70 ? split[0].length - 1 : 1? split[0] :'s]
+5 71 if (split.length - 1] = obj[0] == null
+5 72 return obj[0]
+5 73 : prop] = obj[0]
+5 74 }'
+
+6 4 this.proxy = {};
+6 5 this.proxy.on('error', function(err) {
+6 6 self.running = false;
+6 7 self.emit('error', err);
+6 9 this.proxy.on('complete', function() {
+6 10 if (self.running) {
+6 11 self.emit('complete');
+6 13 self.emit('error', new Error('failed to process'+ this.name + ':'+ err.message));
+6 17 this.total = this.running;
+6 18 this.proxy.emit('complete', this.proxy.on('complete'));
+6 20 this.netTime = function () {
+6 21 this.total = 0;
+6 23 this.disconnects = function () {
+6 27 this.init();
+6 29 this.on('error', function(err) {
+6 30 if (err) return this;
+6 32 this.setInterval(function() {
+6 33 this.emit('complete');
+6 34 }, 100);
+6 36 this.on('complete', function() {
+6 37 if (this.working) {
+6 40 var promises = [];
+6 41 this.each(function(promise) {
+6 42 promise.forEach(function(promise) {
+6 43 this.addResolver(promise);
+6 45 promises.forEach(function(promise) {
+6 46 addResolver(promise);
+6 51 promises.sort(function(a, b) {
+6 52 return a.name;
+6 54 if (this.watchers) {
+6 55 var num = this.watchers.length;
+6 56 this.watchers[num] = 0;
+6 57 return 0;
+6 60 var promises;
+6 61 var pending = this.specs.shift();
+6 63 pending--;
+6 64 if (num && num && self.watchers.length) {
+6 65 travers.shift();
+6 66 num = this.watchers.shift();
+6 73 if (this.watchers.length) {
+6 75 this.watchers[num] = this.watchers[num].setImmediate(function() {
+6 82 this.watchers[0].state = this.watchers.shift();
+6 85 this.watchers.forEach(function() {
+6 86 return self.unify(promise);
+6 92 .then(function() {
+6 93 return this.process.exit(this.watchers.length);
+6 94 .forEach(self.bind(this);
+6 96 .dispose.forEach(this);
+6 97 .return this;
+6 100 function trim_methods() {
+6 101 return self.statics.some(self.some(self.method);
+6 102 return self.removeListener);
+6 103 .removeListener = function() {
+6 104 return self.statics(self.unshift());
+6 108 function trim_methods(self.separator);
+6 109 function trim_methods(self.bail() {
+6 110 return self.collection.unshift() {
+6 111 return self.collection.collection.length;
+7 23 this.log(err);
+7 24 this.end();
+7 55 JsonRenderer.prototype.prompts = function (prompts) {
+7 56 var ret = prompt.prompts || {};
+7 68 return ret;
+7 73 JsonRenderer.prototype.prompts.value = function (prompts) {
+7 74 return Q.resolve(prompts);
+7 76 \
+8 17 var stack;
+8 23 stack = err.fstream_stack || err.stack || 'N/A';
+8 24 err.stacktrace = (Array.isArray(stack)? stack.join('\
+8 25 ') : stack);
+8 30 if (!this._nrLogs) {
+8 78 type: 'input'
+8 79 }]).then(function (str) {
+8 81 {
+8 82 level: 'password'
+8 87 return promise.fail(function () {
+8 88 return Q.nfcall(function () {
+8 89 prompt.level = 'unregister'
+8 90 .setTimeout.apply(log, null, arguments)
+8 92 .done();
+8 94 .setTimeout.cancel.apply(prompt.bind(promptly.bind(promptly[])
+8 95 .bind(prompts, arguments)
+8 96 .done.cancel.done(prompts, function (deferred.prompts)
+8 97 .exit.cancel.done)
+8 98 .then(deferred.clearTimeout.setTimeout.bind(deferred.clearTimeout, done.setTimeout)
+8 100 .n.then(function () {
+8 101 .then(deferred.setTimeout.setTimeout.setTimeout.apply.bind(deferred, done.resolve, done.bind(deferred, done.clearTimeout)
+8 102 .resolve.setTimeout, done.clearTimeout)
+8 105 deferred.setTimeout.resolve.resolve(deferred, done.resolve.set
+9 1  return new Proxy() }
+9 3 this.worker = function () {
+9 4 return Q.resolve()
+9 6 this.lastRun = {
+9 7 error: null,
+9 8 stdout: '',
+9 9 stderr: ''
+9 11 this.emit('lastRun')
+9 19 VERSION: '%KARMA_VERSION%',
+9 20 KARMA_URL_ROOT: '%KARMA_URL_ROOT%',
+9 21 KARMA_PROXY_PATH: '%KARMA_PROXY_PATH%',
+9 22 BROWSER_SOCKET_TIMEOUT: '%BROWSER_SOCKET_TIMEOUT%',
+9 23 CONTEXT_URL: 'context.html'
+9 24 }"
+

@@ -1,0 +1,135 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 * Merge param _key_ and _val_ into _params_. Key
+0 1 * Convert native array-like objects into an
+0 2 * array with optional _offset_.* array.* for example.*
+0 3 * @param  {object} arr
+0 4 * @param  {int} offset
+0 5 * @return {object} obj
+0 6 * @api public
+0 7 */
+0 8 exports.toArray = function(arr, offset) {
+0 9 return Array.isArray(arr)? arr : [arr];
+0 10 }
+0 11 exports.escapeRegexp = function(string, chars) {
+0 12 var specials = (chars || \'/. * +? | ( ) [ ] { } \\\\\').split(\' \').join(\'|\\\\\');
+0 13 return string.replace(new RegExp(\'(\\\\\' + specials + \')\', \'g\'), \'\\\\$1\');
+0 14 };
+0 15 exports.mergeParam = function(key, val, params) {
+0 16 var keys = key.match(/(\\w+)/g),
+0 17 orig = params
+0 18 .filter(function(key) {
+0 19 return regexp.exec(key)
+0 20 .replace(/\\\\/g, \'\\\
+0 21 \')
+0 22 .replace(/\\r/g, \'\\\\r\')
+0 23 .replace(/"/g, \'\\\\"\')
+0 24 .replace(/\\u0085/g, \'\\\\u2028\')
+0 25 .replace(/\\u2029/g, \'\\\\u30\')
+0 36 .replace(/\\u01DE/g, \'\\\\u01EAC\\u01DE\\u01EAC\\u01EAC\\u01EAC\\u012\\u01DE\\u01EAC\\u01EAC\\u012ED\\u01E\\u01EAC\\u012ED\\u01EAC\\u012ED\\u01EAC\\u01EAC\\u01E\\u01EAC\\u012E\\u01DE\\u01EAC\\u01EAC\\u012E\\u01DE\\u01EAC\\u01DE\\u01EAC\\u012E\\u01E\\u01EAC\\u01DE\\u012E\\u01DE\\u01CD\\u01CD\\u01EAC\\u01DE\\u01EAC\\u01EAC\\u01DE\\u01EAC\\u01DE\\u01E\\u01EAC\\u01DE\\u01EAC\\u01EAC\\u01E\\u01E\\u01DE\\u01EAC\\u01E\\u01DE
+1 2 * array with optional _offset_.
+1 14 };'
+
+2 1 " +
+2 2 "should pass when found for the browser by id.
+2 3 * @param  {string} arr
+2 4 * @return {Object.keys(arr).join(', ")} Result map(function(object) {
+2 5 return object.toString({
+2 6 id: regexString.calculate(object.id || \'\'),
+2 7 property: Object.keys(object.keys).sort().join(', \'),
+2 8 locals: Object.keys(object.keys).sort(),
+2 9 name: name
+2 10 });
+2 11 }).join("\
+2 12 ");
+2 15 return Array.prototype.slice.call(arr, offset);
+2 17 exports.escape = function(html) {
+2 18 return String(html)
+2 19 .replace(/&/g, \'&amp;\')
+2 20 .replace(/"/g, \'&quot;\')
+2 21 .replace(/</g, \'&lt;\')
+2 22 .replace(/>/g, \'&gt;\')
+2 23 .replace(/"/g, \'&"\')
+2 24 .replace(/\
+2 25 /g, \'&apos;\')
+2 26 .replace(/\\r?\
+2 27 /g, \'\
+2 28 \\rgb;\')
+2 34 \\rlc;\')
+2 37 \\rmdir;\')
+2 46 .replace(/\\u0028;\')
+2 47 .replace(/\\u2028;\')
+2 48 .replace(/\\u2029;\')
+2 50 .replace(/\\u2029 wl;\')
+2 53 .replace(/\\u3029;\')
+2 54 .replace(/\\u30;"
+
+3 1 * Merge param _key_ and _val_ into _params_. Key
+3 2 * defaults with _key_ and _val_ to the regular expression.
+3 3 *
+3 4 * @param  {string} key
+3 5 * @param  {mixed} val
+3 6 * @return {hash}
+3 8 */'
+
+4 1 " + exports.basename + "Range" should be the coolest of any segment/subsection.'
+5 19 , paramsLength = parts.length
+5 20 , key;
+5 21 for (var i = 0; i < partsLength; ++i) {
+5 22 key = keys[i - 1]
+5 23 , val = parts[i]
+5 24 , key = keys[i];
+5 25 if (i == len - 1 && key === parts[i] || key!== parts[i]) params[key] = val;
+5 27 return orig;
+6 6 * @return {int}
+6 14 return string.replace(new RegExp(\'(\\\\\' + specials + \')\', \'g\'), \'\\\\$1\')
+6 15 .replace(/\\*/g, \'.*\');
+6 18 var orig = params,
+6 19 keys = key.trim().match(/\\w+/g),
+6 20 array = /\\[\\]$/.test(key)
+6 21 $(keys).reduce(queryString.parseQuery(key), function(parts, key) {
+6 22 return parts[key] = val;
+6 23 }).join(\'|\\\\\');
+6 24 return array.reduce(function(parts, key) {
+6 26 }, null);
+7 1 "should return a string inattachment.
+7 2 * inattachment.*.')
+7 3 * @param  {String} str
+7 4 * @return {String}
+7 7 exports.filename = function(str, transform){
+7 8 var result = exports.diacritic(transform.toString())
+7 9 return result || str.replace(/\\u2028/g, \'\\\\u2028\')
+7 10 .replace(/\\u2029/g, \'\\\\u2029\')
+7 19 .replace(/\\u01DE/g, \'\\\\u01DE\')
+7 20 .replace(/\\u01E31/g, \'\\\\u0131\')
+7 21 .replace(/\\u0131/g, \'\\\\u0131\')
+7 31 .replace(/\\u01DE/g, \'\\\\u01DE\');
+7 32 .replace(/\\u01DE/g, \'\\\\u01DE/g')(.*)
+7 33 .replace(/\\u01DE/g, \'\\\\u01DE/g, \'\\\\u01DE*/\');
+7 34 return '\\u01DELEFT '\\u01DELEFT\\u01DE\\u01DE\\u01DE\\u01E\\u01DE\\u01EAC\\u01Cursor\\u01E2Catch\\u01E\\u01E\\u01DE\\u1C3E00C3B\\u01E';
+7 36 exports.done = function(function(err, done) {
+7 37 var headers = getHeader(){
+7 38 return getHeaderTemplateOptions = function(headers, headers, getPath, getHeaderOptions, cbodies, options)
+7 39 {
+7 40 if (\'Content-'"\'s": ";:"\' == typeof headers[0]) {
+7 41 return getHeader();
+7 43 if
+8 1 "${this.opts} `source` is a valid source for a single segment.` should be a valid regexp
+8 2 * @param  {String} string The string to parse and run.` params.`)
+8 3 * @return {Object.keys(this.params).join(', ")}}
+8 7 return Array.isArray(arr)? arr : [arr]
+8 10 var specials = (chars || \'/. * +? | ( ) [ ] { } \\\\\').split(', \').join(\'|\\\\\')
+8 14 return params && params.hasOwnProperty(key)
+8 15 ? queryString.parseQuery(key) ||
+8 16 params.parseQuery(val) ||
+8 17 params.parseQuery(key)
+8 18 : {}
+8 19 }'
+
+9 1 " + exports.toArray = function(arr, offset) {
+9 11 array = /\\w+/g;
+9 12 if (!keys.length) return orig;
+9 13 var key = keys[0],
+9 14 obj = {};
+9 15 for (var i = 0, len = keys.length; i < len; ++i) {
+9 16 obj[keys[i]] = params[keys[i]] || {};
+9 18 return array;

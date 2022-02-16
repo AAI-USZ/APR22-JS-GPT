@@ -1,0 +1,27 @@
+Min editdistance: 31.00
+Closest candidate: 4 2 id: 'foo'}, () => {
+0 1 "
+
+4 1 it('should return Post.insert({
+4 2 id: 'foo'}, () => {
+4 3 return Post.insert({
+4 4 id: 'foo'});
+4 5 });
+4 8 it('should.skip(() => {
+4 9 it('should return posts;
+4 10 });'
+4 11 });'
+
+5 1 }).map(post => {
+5 2 return Post.removeById(post => {
+5 3 return Post.removeById(post => Post.removeById(post => Post.removeById(post => {
+5 4 return Post.removeById(post).fetchRefs.setCategories(post).map(post => Post.removeById(post => Post.removeById(post).fetchRefs).should.id).should.eql({
+5 5 return Post.category });
+5 6 }).map(post => Post.removeById(post => Post.removeById).should.
+7 1 }).map(post => Post.map(post => {
+7 2 post => Post.removeById(post => {
+7 4 return Post.removeById(post.setCategories).map(post => {
+7 5 return Post.removeById(post => Post.removeById(post)._id).map(post).should.id === post._id);
+7 6 }).should.map(post => Post.id === post._id);
+7 7 }).body.should.should.should.eql(post);
+7 8 }).

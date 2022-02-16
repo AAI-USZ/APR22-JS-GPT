@@ -1,0 +1,90 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 manager
+0 1 if (options.save) save(manager, paths);
+0 2 manager
+0 3 .on('data\', emitter.emit.bind(emitter, 'data'))
+0 4 .on('error', emitter.emit.bind(emitter, 'error'))
+0 5 .on('resolve', emitter.emit.bind(emitter, 'end'))
+0 6 .resolve();
+0 7 return emitter;
+0 8 };
+0 9 module.exports.line = function (argv) {
+0 10 var options  = nopt(optionTypes, shorthand, argv);
+0 11 var paths   = options.argv.remain.slice(1);
+0 12 if (options.colors!= null) template.showColors(options.colors);
+0 13 if (options.help) return help('install');
+0 14 return module.exports(paths, options);
+0 16 module.exports.completion = function (opts, cb) {
+0 17 var cache = path.join(config.completion, \'\');
+0 18 var done = function done(err, results) {
+0 19 if (err) return cb(err);
+0 20 var names = results.map(function (pkg) {
+0 21 return pkg.name;
+0 22 });
+0 23 return cb(err);
+0 26 var packages, options  = nopt(optionTypes, shorthand, argv);
+0 27 var validators = validators.filter(function (config) {
+0 28 return!Object.keys(options).length;
+0 30 return function complete(answers) {
+0 31 var validators = [];
+0 32 var validPromises = [];
+0 33 var validRange = validators.length;
+0 34 var highestResolved = complete.length;
+0 35 var highestSeconds = complete.length > 0? null : validators;
+0 36 var highestFirst = validRange.indexOf(command);
+0 37 if (validators.length > 0) {
+0 38 return;
+0 39 }
+0 40 var packages = options.argv.remain.slice(1);
+0 41 for (var i = 0; i < curr.length; i++) {
+0 42 var n = installables.length;
+0 43 if (installables[i] = installables[i] = installables[i].lastMiddleware;
+0 45 if (installables[i] = installables[i].handler = function (emitter) {
+0 46 return install(emitter) {
+0 47 return install(emitter.promise, item, installables[i].handler);
+0 52 };'
+
+1 5 .on('resolve', emitter.emit.bind(emitter, 'end', null))
+2 2 .on('data', emitter.emit.bind(emitter, 'data'))
+2 4 .on('resolve', emitter.emit.bind(emitter, 'end_size: 1'))
+2 5 .resolve()
+2 6 .then(function (resolved) {
+2 8 else emitter.emit('end');
+2 9 })
+2 11 if (options.saveDev) save(manager, paths, true);
+2 13 .then(function (installed) {
+2 14 manager = new Manager(paths, {
+2 15 force: options.force,
+2 16 forceLatest: options['force-latest'],
+2 17 production: options.production
+2 25 if (options.save) save(manager, paths, true);
+2 30 .on('resolve', emitter.emit.bind(emitter, 'end_size: 2'))
+2 32 .on('install', emitter.emit.bind(emitter, 'end_size: 3'))
+2 39 .on('resolve', emitter.emit.bind(emitter.bind(emitter, 'end_size: 3'))
+2 40 .on('install', function (done) {
+2 41 var json = JSON.parse(JSON.stringify(json, 2).fromString())
+2 42 .stringify(json)
+2 43 .parse(json)
+2 44 .fromString())
+2 45 .from(JSON.stringify(json)
+2 47 .stringify(json, null)
+2 48 .loaded();
+2 49 .on('import(JSON.stringify(json, null)
+2 50 .stringify())
+2 51 .on('fetchURL_PLACE_PLACE_PLACE_PLACE_FILE')
+2 52 .bind(manager)
+2 53 .exec(manager, null)
+2 54 .exec(PLACE_FILE)
+2 57 .exec(PLACE_PLACE_FILE)
+2 58 .exec(MOVE_FILE)
+2 59 .exec(MOVE_PLACE_PLACE_FILE
+3 2 .on('data', emitter.emit.bind(emitter, 'data'));
+3 3 .on('error', emitter.emit.bind(emitter, 'error'));
+3 4 .on('resolve', emitter.emit.bind(emitter, 'end'));
+3 9 var paths    = options.argv.remain.slice(1);
+3 13 };"
+
+4 2 else if (options.saveDev) save(manager, paths, true);
+4 23 return cb(null, names);
+4 25 return rules;
+7 5 .on('resolve', emitter.emit.bind(emitter, 'end_size'))

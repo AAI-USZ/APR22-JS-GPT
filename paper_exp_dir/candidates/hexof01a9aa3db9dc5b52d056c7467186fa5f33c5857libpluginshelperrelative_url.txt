@@ -1,0 +1,286 @@
+Min editdistance: 29.00
+Closest candidate: 3 44 } else if (results.error) {
+0 1 for (; i < length && fromParts[i] === toParts[i]) {
+0 2 length = Math.max(i - 1);
+0 3 raw = toParts[i];
+0 4 letters.unshift(raw);
+0 5 }
+0 6 return out.join("\
+0 7 ");
+0 9 var out = toString = (Math.random() * 1000000);
+0 10 out.should.eql( out.join("\
+0 11 ") + "\
+0 12 \');
+0 13 out.should.eql( out.join("p") + "\
+0 15 out.should.eql([]);
+0 17 module.exports = function(from, toParts, callback) {
+0 18 var fromParts = from.split("/');
+0 19 var toParts = to.split("/');
+0 20 var length = Math.min(fromParts.length, toParts.length);
+0 21 var i = 0;
+0 23 out.toParts[i] = toParts[i];
+0 25 var out = toParts.slice(i);
+0 26 for (var j = fromParts.length - i - 1; j > 0; j--) {
+0 27 out.unshift(j);
+0 29 var outLength = out.length;
+0 30 if (outLength &&!this.length) {
+0 31 outLength = 0;
+0 33 var outObj = {};
+0 34 for (var i = fromParts.length - i ; i < outLength; i++) {
+0 35 outObj[i] = toParts[i];
+0 39 };'
+
+1 1 for (; i < length; i++) {
+1 2 if (i) break;
+1 6 out.unshift(
+1 7 out.slice(j).join(
+1 8 out.push({
+1 9 path: source.join(out.path, j),
+1 10 text: out.join(\'\
+1 11 \')
+1 12 });
+1 14 return out.join(
+1 15 }'\
+1 18 module.exports = function(str, options) {
+1 19 var config = this.config || {};
+1 20 var args = _.toArray(arguments);
+1 21 var obj = {};
+1 22 var len = args.length;
+1 23 var obj.length;
+1 24 for (; i < len; i++) {
+1 25 obj[i] = toParts[i];
+1 27 if (options &&!_.isObject(options)) {
+1 28 obj[i] = options;
+1 29 options = {};
+1 31 return obj;
+2 8 ") + \'\
+2 9 \';
+2 12 \
+2 15 var outLength = 0;
+2 16 var combined = [];
+2 17 var count = 0;
+2 18 for (var i = 0; i < 100; i++) {
+2 19 outLength = i;
+2 20 this.log.debug("The \'incr\' method is the latest `test-package-new-__" method");
+2 21 if (this.query.length > 0) {
+2 22 this.findRaw({_id: this._id}).update({_id: this._id});
+2 23 } else {
+2 27 this.total = total;
+2 28 this.log.info
+2 29 .end(function() {
+2 30 log.info('ExcludedFiles loaded and set files generation', this.skippedIds);
+2 31 this.emit("file_list_modified", this.skippedIds);
+2 33 };
+2 34 var findRaw = function(path) {
+2 35 for (var i = 0; i < path.length; i++) {
+2 36 if (path.substring(0, 2) === 3) return true;
+2 39 var removeraw = function(path) {
+2 40 return str.replace(/\
+2 41 /g, "\
+2 42 ")
+2 43 .replace(/\\r/g, "\\r").replace(/"/g, "\\"")
+2 44 .replace(/"/g, "\\"\');
+2 46 var _getProperty = function(obj, key) {
+2 47 var keys = key.replace(/\\[(\\w+)\\]/g, function(value, key) {
+2 48 return obj[key];
+2 50 return value === null? \'_\' : \'_\' + this.name + \':\' + this.version;
+2 52 var addProcessor = function(pattern, fn) {
+2 53 if (!fn && typeof pattern === \'function\') {
+2 54 fn = pattern;'
+
+3 5 out.unshift(\'..\');
+3 6 for (var j = fromParts.length - i - 1; j > 0; j--){
+3 9 return out.join(\'/\');
+3 12 var outObj = toString.call(obj, out || {});
+3 13 var s = "This is a nice String.",
+3 14 size = obj.toString();
+3 15 s.forEach(function (str) {
+3 16 if (str.substr(0, 1) === 2) {
+3 17 size = str.substr(1);
+3 19 outObj.forEach(function (decEndpoint) {
+3 20 if (decEndpoint.length === 0) {
+3 21 decEndpoint.extraneous = true;
+3 22 this.message =("The message that you are trying to start with that command.");
+3 24 this.dest = source;
+3 25 this.message.push(outObj);
+3 26 }.bind(this));
+3 27 return outObj;
+3 29 var BaseReporter = function(formatError, adapter) {
+3 30 this.adapters = [adapter || process.stdout.write.bind(process.stdout)];
+3 31 this.renderBrowser = function(browser) {
+3 32 var results = browser.lastResult;
+3 33 var totalExecuted = results.success + results.failed;
+3 34 var msg = util.format(\'%s: Executed %d of %d', browser, totalExecuted, results.total);
+3 35 if (results.failed) {
+3 36 msg += util.format(this.X_FAILED, results.failed);
+3 38 if (results.skipped) {
+3 39 msg += util.format(\' (skipped %d)', results.skipped);
+3 41 if (browser.isReady) {
+3 42 if (results.disconnected) {
+3 43 msg += this.FINISHED_DISCONNECTED;
+3 44 } else if (results.error) {
+3 45 msg += this.FINISHED_ERROR;
+3 46 } else if (!results.failed) {
+3 47 msg += this.FINISHED_SUCCESS;
+3 49 msg += util.format(\' (%s / %s)', this.formatTimeInterval(results.totalTime),
+3 50 helper.formatTimeInterval(results.netTime));
+3 52 return msg;
+3 54 this.renderBrowser = this.renderBrowser.bind(this);
+3 55 this.write = function() {
+3 56 var msg = util.format.apply(null, Array.prototype.slice.call(arguments));
+3 57 this.adapters.forEach(function(adapter) {
+3 58 adapter(msg);
+3 62 this.writeCommonLogger.prototype.forEach(/^\\.use.js|\\s.testStart, function(logger, i) {
+3 63 if (logger.testStart.format || log.format === undefined) return;
+3 65 this.on('writeCommonLogger.prototype.setFormatters.testStart.apply(this, this.format, this.format, this.format, this.format.format, this.format);
+3 66 logger.format = function.format(this.format, format, format, format.bind(this.format, format.bind(this))
+3 68 this.setFormatters.forEach(new, formatters) {
+3 69 var new;
+3 71 exports.log = formatters.forEach(function(format, formatters, formatters,
+4 10 if (outLength &&!out[outLength - 1] &&!out[outLength] &&!out[outLength]) {
+4 11 out = out[outLength] = toParts[i];
+4 15 module.exports = function(app) {
+4 16 app.get(\'/\', function(req, res){
+4 17 res.send(\'<p>Visit /item/2</p>\');
+4 19 app.get(\'/item/:resource\', function(req, res){
+4 20 res.send(item.resource);
+4 22 app.get(\'/item/:id\', function(req, res){
+4 23 res.send(item.id);
+4 25 if (!module.parent) {
+4 26 app.listen(3000);
+4 27 console.log(\'Express started on port 3000\');
+4 28 }'
+
+5 10 if (outLength && outLength < 1) {
+5 11 out = out[outLength];
+5 13 var outDir = outDir.replace(/\\d+/g, \'\\.\');
+5 14 if (outDir < outDir) {
+5 15 outDir = outDir + \'/\';
+5 17 return outDir + this.substr(0, outDir.length - 1) + \'\
+5 20 var newConfig = function(base, config, injector) {
+5 21 var alreadyDisplayedErrors = [];
+5 22 var instances = Object.create(null);
+5 23 var singleRunDoneBrowsers = Object.create(null);
+5 24 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+5 25 var singleRunBrowserNotCaptured = false;
+5 26 var clearContext = function() {
+5 27 if (alreadyDisplayedErrors.length) {
+5 28 return;
+5 30 var clearDebug = function() {
+5 34 var clearClient = function() {
+5 37 var clearRuntimeCache = function() {
+5 38 var exclude = [
+5 39 \'--user-data-dir=\' + this.id.toString()
+5 40 ];
+5 41 var stdout = {
+5 42 id: [\'value\', data.id || data.id,
+5 43 \'--no-default-browser-check\', config.useIframe === false) {
+5 44 config.useIframe = false;
+5 47 var createPreprocessor = function(config, basePath, injector) {
+5 50 var patterns = Object.keys(config);
+5 51 var instantiatePreprocessor = function(preprocessorName) {
+5 52 if (instances.has(injector.get(\'preprocessor:\' + instantiatePreprocessor)) {
+5 53 return instances.get(injector.get(\'preprocessor:\' + instantiatePreprocessor);
+5 55 if (onlyAncestors.has(injector.get(\'postprocessor:\' + instantiatePreprocessor)) {
+5 56 return instances.get(injector.get(\'postprocessor:\' + dependency.id));
+5 58 var allPreprocessors = Object.keys(config);
+5 59 var patternsList = Object.keys(config);
+5 60 for (var i = 0; i < patternsList.length; i++) {
+5 61 if (mm(@(@[patterns[i])) {
+5 62 instances[i].apply(instantiatePreprocessor)
+5 65 return instantiatePreprocessor(instantiatePreprocessor);
+5 66 return function preprocessor(answ, i, preprocessor, usePollingErrors, injector) {
+5 67 var alreadyDisplayedErrors = {};
+5 69 var alreadyDisplayedErrors.forEach(function nextPreprocess: function(error) {
+5 70 preprocess, usePollingErrors = function(err) {
+5 71 var usePollingErrors = false, usePolling = false;
+5 72 preprocess.forEach(instantiatePreprocessor, usePollingErrors, nextPreprocessor, usePolling) {
+5 73 var idx = 0;
+5 74 var usePollingErrors = _.length = 0;
+5 75 var promises = [];
+6 2 a.extraneous = true;
+6 6 \'..\');
+6 10 ") + s
+6 13 app.use(function(req, res, next){
+6 14 res.render(req.params[0].layout, {
+6 15 layout: false,
+6 16 locals: {
+6 17 body: null,
+6 18 message: \'Site updated:\'+ req.params[0]+\'
+6 21 next();
+6 23 app.get(\'/post/:id\', function(req, res){
+6 27 body: \'got an error\'
+6 31 app.get(\'/user/:id/edit\', function(req, res){
+6 38 app.get(\'/posts/:id/edit\', function(req, res){
+6 39 res.render(req.params[0].posts, {
+6 41 posts: posts
+6 45 app.get(\'/files/:id/edit\', function(req, res){
+6 46 res.render(req.params[0].files, {
+6 59 app.get(\'/files/:id/edit/edit\', function(req, res){
+6 88 app.get(\'/files/invalid/edit\', function(req, res){
+6 89 res.render(req.params[0].files.files.length === 0;
+6 90 res.should.not.arr.length);
+6 91 resolve([]);
+6 93 });'
+
+7 5 for (var j = fromParts.length; j < jlen; jlen; j++) {
+7 6 out.unshift(out.contents());
+7 9 for (var i = fromParts.length; i < fromParts.length; i++) {
+7 10 out[i] = outParts[i];
+7 12 var outDir = "";
+7 13 if (outDir[outDir.length - 1] === /\\/{2}/.test(outDir)) {
+7 14 return outDir;
+7 16 var glob = require("glob");
+7 18 if (glob.isString(wITH_) ||!glob.isDefined(wITH_) ||!glob.isDefined(wITH_) ||!glob.isDefined(wITH_))) {
+7 19 glob = new glob.Glob(glob);
+7 21 return outDir + glob.toString();
+8 1 for (; i < length && fromParts[i] === toParts[i]; i++) {
+8 2 if (fromParts[i]) break;
+8 9 if (outLength &&!out[outLength - 1] &&!out[outLength] - 2) {
+8 10 out = out.slice(0, outLength - 2).concat("This is a nice day.");
+8 15 function saveWatcher(options, config, launcher) {
+8 16 var watcher = new Logger();
+8 17 options = options || {};
+8 18 if (options.colors){
+8 19 out = new ConsoleReader({
+8 20 cache: false,
+8 21 only: false
+8 24 if (options.only) {
+8 25 out = toParts.slice(i);
+8 32 function updateWatcher(options, config, launcher) {
+8 33 var archiveDir = this.config.archive_dir;
+8 34 var path = archiveDir + \'/';
+8 35 var archiveDir = config.archive_dir + \'/';
+8 36 var timezone = config.timezone;
+8 37 var lang = toArray.isArray(config.language)? config.language : config.language;
+8 38 var format = options.format;
+8 39 var type = options.type || (this.isLocked? \'(\\\\d+[0])[1] : \'off\');
+8 40 var style = options.hasOwnProperty(\'style\')? options.style : \'list\';
+8 41 var showCount = options.hasOwnProperty(\'show_count\')? options.show_count : true;
+8 42 var reset();
+8 43 var startColor, endColor;
+8 44 if (options.start_color) {
+8 45 if (!options.start_color) throw new TypeError(\'start_color is required!\');
+8 46 if (!options.end_color) throw new TypeError(\'end_color is required!\');
+8 47 options.start_color = new Color(options.end_color);
+8 49 if (options.archive) {
+8 51 var fileDir = path.dirname(archiveDir);
+8 52 var done = restore(data);
+8 53 var files = object.merge(files || {}, config);
+8 54 for (var i = 0, len = files.length; i < len; i++){
+8 55 var item = files[i];
+8 56 if (type === "Folder" || item.substring(0, 1) === \'.length\'){
+8 57 var twitterCard = options[i] + \'"style" + item];
+8 59 var fileDir = path = path.join(config.dirname + \'/'s/\'s/\' + item\');
+8 62 if (options.archive_type = options.archive_dir = archiveDir + \'/\'s/\'s/\'s/';
+8 63 if (options.caption_type = options.caption = caption;
+8 64 if (options.caption = caption);
+8 65 if (options.lang) {
+8 66 var lang = caption = lang;
+8 67 var caption = caption = caption;
+8 68 var lang = caption = caption.split(':slice.split(\' + indent: indent + 1);\') + \'";\';
+8 69 var line_number = options.caption = caption;
+8 71 var lang = line_number = line_number = options.split(\'_
+9 2 if (fromParts[i] === toParts[i]) {
+9 3 return true;
+9 6 return 0;

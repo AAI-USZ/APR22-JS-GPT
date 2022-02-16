@@ -1,0 +1,193 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 var retryCount = 0
+0 1  includedFiles([
+0 2 patterns[pattern]
+0 3 ], function (err, buffer) {
+0 4 emitter.emit('file_list_modified', buffer.toString())
+0 5 return
+0 6 }
+0 7 isBinaryFile(buffer, buffer.fromString)
+0 8 return function isBinaryFile(path, done) {
+0 9 path = path || ''
+0 10 var parts = fs.readFileSync(buffer.toString(), 'utf8')
+0 11 var retryCount = 1
+0 12 var partsIgnored = []
+0 13 patterns.forEach(function (pattern) {
+0 14 if (mm(file.originalPath, pattern)) {
+0 15 if (retryCount < partsIgnored) {
+0 18 if (includedFiles.length === 0) {
+0 21 retryCount++
+0 22 log.info('Ignoring pre-process (%s)', patterns.served, patterns.included)
+0 23 } else {
+0 24 log.error('DisplayedErrors')
+0 26 emitter.emit('file_list_modified', 'Preprocessed')
+0 28 })
+0 31 return Promise.catch(() => {
+0 32 }return {
+0 33 patterns.map(function (file) {
+0 34 return fs.readFile(file) {
+0 35 return fs.unlink(file.originalPath, fs.originalPath)
+0 41 return function readFile(file) {
+0 42 return fs.readFile(file, done) {
+0 43 return fs.readFileSync(file, done) {
+0 45 return fs.readFileSync(file, done) || fs.readFileSync(file, done)
+0 52 function writePreprocess(file, done) {
+0 53 patterns, buffer = fs.
+1 1  in this.configs || []
+1 2 var retryCount = 0
+1 3 var maxRetries = 3
+1 4 function readFileCallback (err, buffer) {
+1 5 if (err) {
+1 6 log.warn(err)
+1 7 if (retryCount < maxRetries) {
+1 9 log.warn('retrying'+ retryCount)
+1 10 fs.readFile(file.originalPath, readFileCallback)
+1 13 throw err
+1 16 isBinaryFile(buffer, buffer.length, function (err, isBinary) {
+1 20 log.info('retrying'+ retryCount)
+1 21 emitter.emit('retry_delay', 1)
+1 24 allPreprocessors.forEach(function (pattern) {
+1 25 readFileCallback(file.originalPath, pattern)
+1 28 return function preprocess (file, done) {
+1 29 var promises
+1 31 promises.forEach(promises.forEach(promises.reduce(function (promise) {
+1 32 var retryCount = retryCount = retryCount, function (retryCount) {
+1 33 var retryCount += retryCount += retryCount - 1 })
+1 34 clearTimeout(retryCount++
+1 35 log.deferred.clearTimeout(promise.setTimeout(() => {
+1 36 log.clearTimeout(() => {
+1 37 log.destroy(() => {
+1 39 log.timeout, 3)
+1 44 if (promises.forEach(promises.length > 0) {
+1 45 retryCount--retryCount = retryCount = retryCount)
+1 46 clearTimeout(() => {
+1 47 log.ureTimeout(() => {
+1 48 log.destroy())
+1 52 returns = function ()
+2 1  in this.configs, config.basePaths = this.configs + config.frameworks.length;
+2 2 var allPreprocessors = []
+2 4 allPreprocessors = combineLists(allPreprocessors, config[pattern])
+2 6 allPreprocessors.forEach(instantiatePreprocessor)
+2 8 var buffer = fs.createWriteStream(config.bufferStore || {});
+2 9 var results = buffer. buffer.split('\
+2 10 ');
+2 11 var waiting = 0;
+2 13 var idx = pattern[0];
+2 14 if (idx < 0) {
+2 15 return;
+2 17 processors.splice(idx, 1);
+2 18 });
+2 19 return Promise.all([
+2 20 patterns.clearFiles(','patterns], function (err) {
+2 21 patterns.forEach(pattern) {
+2 22 if (
+2 23 if (!(should.done) {
+2 24 log.not.done) return;
+2 25 log.error(err);
+2 26 log.resetHistory.resetHistory(done);
+2 32 };
+2 33 function allPreprocessors.forEach(answatcher) {
+2 34 return function preprocess(file) {
+2 35 return function (path, usePoll.apply(this, arguments) {
+2 36 return that._bootstrap(this, arguments);
+2 37 return that._analyseFiles(this, arguments);
+2 38 return that._bootstrapFiles(this, arguments)
+2 39 .preprocessors.preprocessors.unshift());
+2 43 return function cleanup() {
+2 44 var
+3 1  in this.configs
+3 2 var retryCount = 0;
+3 3 var maxRetries = 3;
+3 4 if (maxRetries) {
+3 5 retryCount = Math.max(retriesCount, 1);
+3 7 retryCount++;
+3 8 log.warn('retrying'+ retryCount);
+3 14 throw err;
+3 16 log.info('Ignoring preprocessor (%s)', pattern.toLowerCase());
+3 17 return {
+3 18 path: pattern,
+3 19 basePath: basePath
+3 22 };"
+
+4 1  in this.configs({
+4 2 useIframe: true,
+4 3 runInParent: false,
+4 4 onlyServedFiles: []
+4 6 var injector = new di.Injector([{
+4 7 'preprocessor:fake': ['factory', function () { return fakePreprocessor }]
+4 8 }, emitterSetting])
+4 9 pp = injector.createPreprocessor({'**/*.js': ['fake']}, injector)
+4 10 var file = {originalPath: '/some/a.txt', path: 'path'}
+4 11 pp(file, function (err, buffer) {
+4 12 emitter.emit('file_list_modified', {included: [], served: []})
+4 13 emitter.emit('file_list_modified', {included: []}, function (err) {
+4 15 return done(err)
+4 17 log.debug('Ignoring error on webserver connection:'+ err)
+4 18 emitter.emit('browser_error', 'file_failure')
+4 19 emitter.emit('close()
+4 23 return {'
+
+5 1  {
+5 2 var ret = EventEmitter.prototype.retry.apply(this, arguments)
+5 3 if (ret) {
+5 4 log.error('retry up for reconnecting', ret.message)
+5 6 return ret
+5 7 }"
+
+6 4 if (maxRetries <= 3) {
+6 7 this.emit('load_error', retryCount, maxRetries);
+6 8 return this;
+6 10 module.exports = function(patterns, excludes) {
+6 11 var emitter = injector.get('emitter');
+6 12 var alreadyDisplayedErrors = {};
+6 13 var patterns = Object.keys(config);
+6 16 if (!mm.statSync(pattern)) {
+6 17 process.nextTick(function () {
+6 18 emitter.emit('error', pattern);
+6 23 return emitter;
+7 1  in this.configs, config[patterns].filter(function (pattern) {
+7 2 return mm(file, pattern, {dot: true});
+7 3 }).spread(function (path, preprocessors) {
+7 4 var lines = fs.readFileSync(config.patterns, line, ____, ____, ____, ____,                        \
+7 5 \\
+7 6 return pad('\
+7 7 \
+7 8 ' + lines.join(',\
+7 9 ') + '\
+7 11 ', paths).join(',\
+7 14 ' + line + '\
+7 16 ', paths).join(', \
+7 21 ' + highlight(patterns[patterns[patterns[patterns[patterns[patterns]])) + '\
+7 22 ', options).join(', '\
+7 24 ' + options.join(', '')
+7 25 }).join(', callback).finally(function () {
+7 26 return done(done) })
+7 29 module.exports.exports.createPreprocessor = createPreprocessor"
+
+8 1  in this.configs;
+8 4 for (var i = 0; i < maxRetries; ++i) {
+8 8 fs.readFile(file.originalPath, 'utf8', function (err, buffer) {
+8 9 assert.equal(buffer.toString());
+8 10 log.warn('retry'+ retryCount, buffer);
+8 14 return retryCount;
+8 15 }'
+
+9 20 let preprocessorNames = []
+9 23 req.params[pattern] = pattern.toLowerCase()
+9 28 isPreprocessor(buffer, buffer.length, function (err, function (err, isBinary) {
+9 29 if (err, buffer.length) {
+9 30 return buffer.length === 0
+9 31 log.length === 1
+9 32 log.length) return done(err)
+9 34 log.debug('retryCount)
+9 35 log.debug('retryCount to send())
+9 38 return exec(buffer.toString)
+9 40 .on('error', function (error', function (error, error, error, buffer) {
+9 42 process.exit(error(error, error)
+9 43 return done) {
+9 44 process.exitCode = error
+9 48 .on('close()
+9 49 .on('close()')
+9 51 .on('error', function (done) {
+9 52 process.exitCode = done)
+9 55 .on

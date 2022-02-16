@@ -1,0 +1,3 @@
+var defaults = {
+
+title: 'Hexo',

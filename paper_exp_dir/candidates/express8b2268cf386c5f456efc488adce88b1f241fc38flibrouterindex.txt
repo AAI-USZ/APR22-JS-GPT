@@ -1,0 +1,105 @@
+Min editdistance: 7.00
+Closest candidate: 0 1 ), methods = require(\'methods\');
+0 1 ), methods = require(\'methods\');
+0 2 var endsWithSlash = function(str, last){
+0 3 return str[str.length - 1] === last;
+0 4 };
+0 5 var expected = [
+0 6 \'<h1 id="more"></h1>\',
+0 7 \'<h2 id="more"></h2>\',
+0 8 \'<h3 id="more"></h3>\',
+0 14 \'<h1 id="more"></h3>\',
+0 17 \'<h1 target="_blank" rel="external">\',
+0 18 \'<h1>Forum Thread</h1><p>\
+0 19 <p>Hello World</p>\
+0 20 <p>No magic number: <span>>1.</span>\
+0 22 <h1>\
+0 23 <p><strong>Hello World</strong>\
+0 24 <strong>Hello World</strong></p>\'
+0 25 ].join(\'\');
+0 28 \'<h2 id="more"></h1>\',
+0 31 \'<h1 id="more"></h1>\'
+0 33 var actual = [
+0 46 \'</
+0 48 function testMethodDefinition(exports, moduleName, captureTimeout, retryLimit) {
+0 49 var id = \'exclude-query-sterritory/fixtures/posts/\' + config.exclude_generator + \'/packages/\' + version + \'.json\';
+0 50 return function(content, file, done) {
+0 51 var meta = yfm(content);
+0 52 var sourceId = (transform? transform(source) : sourceId || \'80\';
+0 53 var sourceDir = hexo.source_dir;
+0 54 var content = [
+0 55 \'{%= content.join(\'\
+0 56 \', \') + \'}\',
+0 57 ];
+0 58 var data = done;
+0 59 if (typeof data.toString.substr[0] === \'function) {
+0 60 done = function(content.substr) {
+0 61 return done();
+0 62 } else {
+0 63 return done(content.substr.apply(data, this, this, this, arguments);
+0 64 }
+0 66 if (!content.subt = function(this, arguments);
+0 67 return content.exec(this, this.args, this.args, this.unshift(), this);
+0 69 return this.exit(this.join(\' \');
+0 72 module.exports.skip = function(extend, next) {
+0 73 return next === undefined;
+0 74 };'
+
+1 1 ), methods = require("./utils')
+1 2 , mime = utils.mime;
+1 3 var log = function(email, options, fn) {
+1 4 return helpers.capture(function(){
+1 5 return"
+
+5 2 var common = require(\'./common\');
+5 3 var VERSION = require(\'../constants\').VERSION;
+5 4 var SCRIPT_TAG = \'<script type="%s" src="%s"></script>\';
+5 5 var LINK_TAG_CSS = \'<link type="text/css" href="%s" rel="stylesheet">\';
+5 6 var LINK_TAG_HTML = \'<link href="%s" rel="import">\';
+5 7 var SCRIPT_TYPE = {
+5 8 \'.js\': \'text/javascript\',
+5 9 \'.dart\': \'application/dart\'
+5 11 var filePathToUrlPath = function(filePath, basePath, urlRoot) {
+5 12 if (filePath.indexOf(basePath) === 0) {
+5 13 return \'/base\' + filePath.substr(basePath.length);
+5 15 return \'/absolute\' + urlRoot;
+5 17 var createKarmaMiddleware = function(filesPromise, serveStaticFile,
+5 18 basePath,   urlRoot) {
+5 19 return function(request, response, next) {
+5 20 var requestUrl = request.url.replace(/\\?.*/, \'\');
+5 21 if (requestUrl === urlRoot.substr(0, 1) || requestUrl === \'/\') {
+5 22 response.setHeader(\'Location\', urlRoot);
+5 23 response.writeHead(301);
+5 24 return response.end(\'MOVED PERMANENTLY\');
+5 26 if (requestUrl.indexOf(urlRoot)!== 0) {
+5 27 return next();
+5 29 requestUrl = requestUrl.substr(urlRoot.length - 1);
+5 30 if (requestUrl === \'/\') {
+5 31 return serveStaticFile(\'/client.html\', response);
+5 33 if (requestUrl === \'/karma.js\') {
+5 34 return serveStaticFile(requestUrl, response, function(data) {
+5 35 return data.replace(\'%KARMA_URL_ROOT%\', urlRoot.substr(1));
+5 36 });
+5 38 if (requestUrl === \'/context.html\' || requestUrl === \'/debug.html\') {
+5 39 return promise.then(function(files) {
+5 40 serveStaticFile(filePath, response, function(data) {
+5 41 common.setNoCacheHeaders(response);
+5 42 var scriptTags = files.included.map(function(file) {
+5 43 var filePath = file.path;
+5 44 var fileExt = path.extname(filePath);
+5 45 if (!file.isUrl) {
+5 46 filePath = filePathToUrlPath;
+5 47 if (requestUrl === \'/context.html\') {
+5 48 filePath += \'?\' + file.sha;
+5 51 if (fileExt === \'.html\') {
+5 56 var file = file.path;
+5 57 if (!fileExt === \'.html\') {
+5 58 filePath = filePath += \'.css\';
+5 62 return filesPromise.then(function() {
+5 63 return Promise.then(next.resolve.nextTick(function() {
+5 64 next.done();
+5 71 function serveStaticFile(filePath, response, basePath, urlRoot, staticFolder, executor, done) {
+5 72 return next) {
+5 73 var filesPromise = injector.promise.getFilesPromise.bind(instor.getFilesPromise);
+5 74 return injector.get(\'config.preprocessor:\'s\', function(filePath)
+5 75 .staticFolder\',

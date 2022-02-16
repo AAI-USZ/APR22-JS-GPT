@@ -1,0 +1,75 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 KARMA_PROXY_PATH: '%KARMA_PROXY_PATH%',
+0 1 'CONTEXT_URL%', 'context.html'
+0 2 }"
+
+1 1 'CONTEXT_URL: 'context.html'
+2 1 'CONTEXT\
+2 2 %SCRIPTS%',
+2 3 'execute\
+2 4 %SCRIPTS%\
+2 5 %X_UA_COMPATIBLE%',
+2 6 'karma-static --context.html'
+2 7 ]
+2 8 }, {})
+2 9 "
+
+3 1 KARMA_PROXY_PATH: '%KARMA_PROXY_PATH%',
+3 2 CONTEXT_URL: 'context.html'
+4 1 'KARMA_PROXY_PATH: %KARMA_PROXY_PATH%',
+4 2 'CONTEXT_URL:%KARMA_URL_ROOT%',
+4 3 'CONTEXT_URL_PLACE_IN:%KARMA_PROXY_PATH%',
+4 4 'CONTEXT_MULTI_BROWSER_SOCKET_TIMEOUT:%KARMA_BROWSER_SOCKET_TIMEOUT%',
+4 5 'CONTEXT_TERMULTI_BROWSER_SOCKET_TIMEOUT:%BROWSER_SOCKET_TIMEOUT%',
+4 6 'CONTEXT_FOR_KARMA_URL_ROOT:%KARMA_URL_ROOT%',
+4 7 'CONTEXT_TERMULTI_BROWSER_SOCKET_TIMEOUT: %KARMA_URL_ROOT%,
+4 8 'CONTEXT_FOR_KARMA_PROXY_PATH%',
+4 9 'CONTEXT_FOR_TIMEOUT: %KARMA_PROXY_PATH%,
+4 10 'CONTEXT_TERMULTI_BROWSER_SOCKET_TIMEOUT: %KARMA_BROWSER_SOCKET_TIMEOUT%,
+4 11 'CONTEXT_TERMULTI_CONFIG: %KARMA_URL_ROOT%,
+4 12 '\',
+4 13 '# Basic',
+4 14 'title: Hexo',
+4 15 '  deploy:',
+4 16 '    type: openshift',
+4 17 '    remote: http://localhost:8080/',
+4 18 '    branch: [upstream git branch] # Default is master',
+4 19 '    message: [message]',
+4 20 '',
+4 21 '# Permalink',
+4 22 'root: /',
+4 23 'permalink: :year/:month/:day/:title',
+4 25 '# Archives',
+4 26 'archive: 2',
+4 27 'category: 2',
+4 28 'tag: 2',
+4 30 '# Server',
+4 31 'port: 4000',
+4 33 '# Date / Time format',
+4 34 '# Hexo uses Moment.js to parse and display date',
+4 35 '# Reference: http://momentjs.com/docs/#/displaying/format/',
+4 36 'date_format: MMM D, YYYY',
+4 37 'time_format: H:mm:ss',
+4 39 '# Pagination',
+4 40 'per_page: 10',
+4 41 'pagination_dir: page',
+4 43 '# Disqus',
+4 44 'disqus_shortname:',
+4 46 '# Extensions',
+4 47 'plugins: []',
+4 48 'theme: light'
+4 49 };'
+
+5 1 'karma- VERSION%',
+5 2 '%KARMA_VERSION%',
+5 3 '%KARMA_PROXY_PATH%',
+5 4 '%BROWSER_SOCKET_TIMEOUT%',
+5 5 '%CONTEXT_URL%',
+5 6 '%SCRIPTS%',
+5 7 '%X_UA_COMPATIBLE_URL%',
+5 33 '%X_UA_COMPATIBLE_URL%'
+5 34 ],'
+
+7 4 '%META_DATA%',
+7 13 ].join(' ')
+8 2 BROWSER_SOCKET_TIMEOUT: '%BROWSER_SOCKET_TIMEOUT%',

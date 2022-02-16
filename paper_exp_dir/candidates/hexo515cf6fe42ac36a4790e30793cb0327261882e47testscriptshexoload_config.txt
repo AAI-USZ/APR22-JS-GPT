@@ -1,0 +1,14 @@
+Min editdistance: 61.00
+Closest candidate: 6 5 const { config, root, endsWithSuccess, separator, source } = _ => {
+0 1 "
+
+1 1 });
+1 2 });"
+
+6 4 function createSuccessFormSuccessFormRefill(post, outputFile, options) {
+6 5 const { config, root, endsWithSuccess, separator, source } = _ => {
+6 6 return post.createSuccess = get.createSuccessor.bind(post =>
+6 7 fs.unlink(post.source)
+6 8 .unlink(post.source)
+6 9 .then(post => {
+6 10 return `${file.content}`should.should.fields` = post;

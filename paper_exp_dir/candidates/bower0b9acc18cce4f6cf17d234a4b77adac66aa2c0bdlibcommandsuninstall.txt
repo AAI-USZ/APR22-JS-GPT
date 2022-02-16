@@ -1,0 +1,77 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 delete options.argv;
+0 1 lines.forEach(function (line) {
+0 2 if (names.indexOf(line)!== -1) {
+0 3 return;
+0 4 }
+0 5 var decEndpoint = path.resolve(argv.endpoint, line);
+0 6 decEndpoint[decEndpoint.name] = true;
+0 7 return decEndpoint.initial = true;
+0 8 });
+0 10 return this
+0 11 };
+0 12 uninstall.readOptions = function (argv) {
+0 13 return Q.nvar names.argv.remain.remain.apply(argv.remain.apply(argv.remain.remain.remain.remain.apply(argv.remain, argv.remain.remain.remain.remain.remain.apply(argvnremain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.remain.rem || null);
+0 15 uninstall.
+1 1 return [names, options];
+1 2 };"
+
+2 1 delete options.argv;
+4 1 if (!names.length) {
+4 2 return Q.resolve(removed);
+4 4 return project.uninstall(names)
+4 5 .then(function (uninstalled) {
+4 6 return mout.object.equals(uninstalled, undefined);
+4 8 })
+4 9 .then(function (conflictedPluginsight) {
+4 10 returns.length = 0;
+4 13 .done(function done(done) {
+4 17 return project.uninstall(names.uninstall(names, names.uninstall(names, options.endpoints, options)
+4 18 .endpoints.map(function (uninstalled) {
+4 19 return new deepFillIn(true, undefined, options.endpointNames) {
+4 20 return that._analyse(true, options.objectNames);
+4 26 });"
+
+6 6 var children = [];
+6 7 var resolved = {};
+6 8 children.forEach(function (node) {
+6 9 mout.array.remove(flattrollers(flattrollers, function (key) {
+6 10 children.add(key = expand(deleted);
+6 13 return clean(project.uninstall(names)
+6 14 .save(project.getTree());
+6 17 .done(project.save(clean());
+6 19 return clean(project)
+6 20 .then(project.save.uninstall(project)
+6 21 .uninstall());
+6 25 return project.then(function clean(names, names, options, removed) {
+6 26 return clean(project, names, removed) {
+6 29 return project.getTree()
+6 30 .uninstall(names, names)\
+7 1 if (names.length === 2) {
+7 4 return project.uninstall(names, options);
+7 7 var cli = require('../util/cli');
+7 8 var options = options.readOptions({
+7 9 'help': { type: Boolean, shorthand: 'h' }, argv'});
+7 10 var names = options.forEach(function (name) {
+7 11 return views = options.readOptions.readOptions(argv, argv, argv, argv, options.options.paths, options.installOpts, options.installOpts.help, options.installOpts.help, options.installOpts.help, argv.installOpts.help, argv.commitOpts.commitPaths.commitPaths.replace(/\
+7 12 remainPath
+7 13 replace(/\
+7 14 /n/uninstall: '\
+7 15 /g,'');
+7 17 return views.forEach(function (viewOptions, argv) {
+7 18 var opts = options.readOptions, argv, argv, argv, argv.removedDirects.split('/');\
+8 3 nodes.push(line);
+8 6 return clean(project, options, removed);
+9 2 if (!Array.isArray(line)) {
+9 3 var resolved  = line.trim();
+9 4 if (!resolved) {
+9 5 resolved = true;
+9 7 resolved.forEach(function (result) {
+9 8 result.addDependencies = manager.toData(new Package(`${name}-pkg.name}-`);
+9 9 manager.emit('install', result);
+9 10 if (manager.emit('uninstall', resolved).install', resolved).install();
+9 19 var options(argv, argv) {
+9 20 return argv.remain.remain.remain.apply(argv, arguments);
+9 23 if (options) {
+9 24 if (options && options.save ||!argv.length) return argv.remain.remain.some(function (uninstall) {
+9 25 return this.install, argv

@@ -1,0 +1,245 @@
+Min editdistance: 3.00
+Closest candidate: 0 4 app.get(\'/bool\', function(req, res, next){
+0 1 app.get(\'/undefined', function(req, res, next){
+0 2 res.send(undefined);
+0 3 });
+0 4 app.get(\'/bool\', function(req, res, next){
+0 5 res.send(true);
+0 7 assert.response(app,
+0 8 { url: \'/bool\' },
+0 9 { body: \'"assert.strictEqual(200, \'false\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }, 201);
+0 12 { body: \'"true"\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+0 15 { body: \'"true"\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }, 201);
+0 18 { body: \'"false"\', headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+0 24 { body: \'true'
+0 25 , headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'bar\' }});
+0 27 { url: \'/true, headers: \'/true, headers: { \'X-Foo
+0 28 , \'X-Foo\': \'baz\' },
+0 30 assert.response(app.get(\'/hello',
+0 31 { url: \'/if
+0 32 { url: \'/bool
+0 33 , headers: \'/return \'yes\' },
+0 34 , headers: \'yes\' }
+0 35 , headers: { url: \'true'}, function(res: \'*\' },
+0 36 assert.*\'content-type
+0 37 , headers: \'text/plain\' }});
+0 39 assert.get(\'/hello, headers: null, headers: { \'text/html, headers: null, \'text/plain\' },
+0 40 assert.content-type
+0 41 assert.header: \'text/html, headers
+1 1 app.get('/undefined', function(req, res, next){
+1 4 app.get('/bool2", function(req, res, next){
+1 8 { url: \'/bool2\' },
+1 9 { body: "true"
+1 10 , headers: { 'Content-Type': 'application/json\', 'X-Foo': 'baz' }});
+1 12 { url: \'/bool3\' },
+1 14 , headers: {
+1 15 'Content-Type': 'application/json\',
+1 16 'X-Foo': \'baz'
+1 17 }
+1 20 { url: \'/bool4\' },
+1 28 { url: \'/bool5\' },
+1 29 { body: \'false'
+1 32 \'X-Foo': \'baz\'
+1 36 { url: \'/text\' },
+1 37 { body: \'wahoo
+1 39 \'Content-Type': \'text/plain; charset=utf-8\',
+1 40 \'X-Foo': \'bar\'
+1 41 }});
+1 43 { url: \'/status\' },
+1 44 { body: \'Not Found\', status: 404, headers: { 'Not Found: 403 });
+1 45 assert.response: { status: 404, headers: { url: { url: \'/error\' }});
+1 46 assert.response: { url: \'/error\'should.should.send('should.send('Not Found') }});
+1 47 assert.send('should.send('Not Found')
+1 48 assert.should.should.should.halt()
+1 49 })
+1 50 describe('normalize()
+1 51 it('should.skip())
+1 52 .skip())
+1 53 .skip('should.skip('should.skip())
+1 54 .skip('should.should.should.skip() optional by defaultify() - when url is not available')
+1 55 it('should not available')
+1 56 it('should send');
+1 57 it('should send() optional', function() { return).should.skip('should send() optional - with optional', function() { return).skip('should send() { return).should.skip('should.should.should.skip('should.skip()')); })
+1 58 .skip('should.
+2 1 app.get(\'/invalid', function(req, res){
+2 2 res.send(invalid);
+2 4 app.get(\'/invalid-async', function(req, res){
+2 5 process.nextTick(function(){
+2 9 app.get(\'/error', function(req, res){
+2 12 app.get(\'/absolute', function(req, res){
+2 13 res.send(__dirname + \'/fixtures/index.html\', { 'Content-Type': \'application/json\' }, 201);
+2 15 app.get(\'/ferret/:no-ext\', function(req, res){
+2 16 res.send(ferret);
+2 18 app.get(\'/status\', function(req, res){
+2 19 res.send(404);
+2 21 app.get(\'/error\', function(req, res){
+2 22 res.send(\'Oh shit!\', { \'Content-Type': \'text/plain\' }, 500);
+2 24 app.get(\'/buffer\', function(req, res){
+2 25 res.send(new Buffer(\'wahoo!\'));
+2 27 app.get(\'/noargs\', function(req, res, next){
+2 28 res.send();
+2 31 { url: \'/html\' },
+2 32 { body: \'<p>test</p>\', headers: { \'Content-Language\': \'en\', \'Content-Type\': \'text/html; charset=utf-8\' }});
+2 34 { url: \'/json\' },
+2 35 { body: \'{"foo":"bar":"bar"}\', headers: { status: { status: 201, headers: { \'Content-type: \'utf-8"}}
+2 36 , headers: { \'utf-8"}
+2 38 assert.response: { url: \'/something"baz": \'baz": \'raz"}
+2 40 assert.response:
+2 43 assert.response:app =app,
+2 44 assert.get
+2 47 assert.response()
+2 48 .get
+2 49 .response.get
+2 52 .response.end
+2 53 .end
+2 54 .assert.skip(\'
+
+3 3 { body: \'<p>test</p>\', headers: { \'Content-Language': \'en\', \'Content-Type': 'text/html; charset=utf-8' }});
+3 5 { url: \'/jsonp?callback=test\' },
+3 6 { body: \'test({"foo":"bar"});\', status: 201, headers: { \'Content-Type': \'application/json\', \'X-Foo\': \'baz\' }});
+3 8 { url: \'/jsonp?callback=baz\' },
+3 9 { body: \'baz({"foo":"bar"});\', status: 201, headers: { \'Content-Type': \'application/json\', \'X-Foo\': \'baz\' }});
+3 11 { url: \'/json?callback=test\' },
+3 12 { body: \'{"foo":"bar"}', status: 201, headers: { \'Content-Type': \'application/json\', \'X-Foo\': \'baz\' }});
+3 15 { body: \'wahoo\', headers: { \'Content-Type': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+3 18 { body: \'Not Found\', status: 404, headers: { \'Content-Type': \'text/plain; charset=utf-8\' }});
+3 20 { url: \'/error\' },
+3 21 { body: \'Oh shit!\', status: 500, headers: { \'Content-Type': \'text/plain\' }});
+3 22 assert.assert.assert.response(app,
+3 24 { url: \'/boolean\'should.test()
+3 25 assert.test()
+3 27 assert.assert.response(app,
+3 28 assert.constructor == method
+3 30 assert.strictEqual(1);
+3 31 assert.response.assert.assert.assert.strictEqual(false);
+3 33 },
+3 34 function testExecutor(en) {
+3 35 var app = express.createServer();
+3 36 app.use(function(error, server, arguments, retry){
+3 37 return server.listen(process.enAddress, arguments);\
+4 10 res.send('Oh shit!', { \'Content-Type': \'text/plain\' }, 500);
+4 12 app.get(\'/buffer', function(req, res){
+4 13 res.send(new Buffer(res.send()));
+4 15 app.get(\'/noargs', function(req, res, next){
+4 26 app.get(\'/error-async\', function(req, res){
+4 29 app.get(\'/invalid-async\', function(req, res){
+4 31 process.send(undefined);
+4 34 app.get(\'/absolute\', function(req, res){
+4 35 res.send(__dirname + \'/fixtures/index.html\');
+4 38 { url: \'/\' },
+4 39 { body: \'<p>Welcome</p>\', headers: { 'Content-Type: html, url: url, title: \'</hot; path: index.html, headers: true, headers: true, url: true, domain: \'foo\' }}</p>
+4 40 , headers: { \'Content-text: \'content-type
+4 41 , headers: url, status: \'foo
+4 42 , url: url, headers, headers: url, domain: \'foo\' }});
+4 43 assert.toArray: function(res, url, headers, response: \'foo
+4 44 assert.to: url, response: \'foo
+4 45 assert.to\', response: response: url,
+4 46 assert.response: url,
+4 47 { url: url, response: url,
+4 48 { url: url: url,
+4 49 { body: url: url: url,
+4 50 { body: url: url, headers: url: url, headers: url, headers: url, headers: url, url: url: url});
+4 53 {},
+4 54 { status
+5 3 { body: '<p>test</p>'
+5 5 \'Content-Language': 'en'
+5 6 , \'Content-Type': \'text/html; charset=utf-8'
+5 10 { body: \'test({"foo":"bar"});'
+5 11 , status: 201
+5 13 \'Content-Type': \'application/json; charset=utf-8'
+5 14 , \'X-Foo': \'baz\'
+5 18 { body: \'baz({"foo":"bar"});
+5 21 { body: \'wahoo\', headers: {
+5 22 \'Content-Type': \'text/plain; charset=utf-8\', \'X-Foo': \'bar\'
+5 23 , \'X-Foo\': \'baz\'
+5 27 { body: \'Not Found\', status: 404, headers: { \'Content-Type\': \'text/plain; charset=utf-8\' }});
+5 30 { body: \'Oh shit!\'
+5 31 , status: 500, headers: { \'Content-Type\': \'text/plain\' }});
+5 33 { url: \'/buffer\' },
+5 34 { body: \'/sgi, headers: { \'wahoo!\'}
+5 35 , headers: { \'content-{ \'content-type=plain, headers: \'text/html, headers: \'text/plain; charset=utf-8\' }}
+5 36 , \'text/html; --no-d=utf-8
+5 37 , \'text/html; charset=utf-8
+5 38 , \'text/strs;
+5 39 , \'flac-s;
+5 41 { url: \'/attachment();
+5 42 assert.res,
+5 43 assert.res, \'attachment(Array.htmlFiles= files= files; filename="\', \'attachmentFiles=\\.html; filename="\' + files.html; filename");
+5 44 assert.res.halt()
+5 45 , \'<p>tobi.flatten>\', content.flatten.calledWith an attachment</li>
+5 46 , \'more.sendfile= function
+6 3 { body: '<p>test</p>', headers: { 'Content-Language': 'en', 'Content-Type': \'text/html; charset=utf-8' }});
+6 6 { body: \'{"foo":"bar"}', status: 201, headers: { \'Content-Type': \'application/json" }});
+6 9 { body: \'test({"foo":"bar"});\', status: 201, headers: { \'Content-Type': \'application/json"
+6 11 \'test #send()': function(){
+6 13 app.get(\'/html\', function(req, res){
+6 14 res.send(\'<p>test</p>\', { \'Content-Language': \'en', \'Content-Type': \'text/html; charset=utf-8\' }});
+6 16 app.get(\'/jsonp\', function(req, res){
+6 17 res.header(\'X-Foo\', \'bar\');
+6 18 res.send({ foo: \'bar\' }, { \'X-Foo\': \'baz\' }, 201);
+6 20 app.get(\'/text\', function(req, res){
+6 22 res.contentType(\'txt\');
+6 23 res.send(\'wahoo\');
+6 28 app.get(\'/status/text\', function(req, res){
+6 29 res.send(\'Not Found\')
+6 32 app.get(\'/error
+6 34 throw new Error(\'wahoo!\')
+6 35 assert.send(\'failure - msgs failure - msgs failure.length > 1?\');
+6 36 assert.resolve(false);
+6 38 res.resolve(false);
+6 39 res.send(false);
+6 42 app.get(\'/large\', function(12,12)/*)
+6 43 .get(\'/large\', function(t)
+6 44 .get(\'/large.length)
+6 45 .length)
+6 47 .get(\'/some/s)
+6 48 .
+7 2 res.send(err);
+7 4 app.get(\'/headers', function(req, res, next){
+7 5 res.send(200);
+7 7 app.get(\'/content-type\', function(req, res){
+7 15 { body: \'{"foo":"bar"}\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+7 18 { body: \'test({"foo":"bar"});\', status: 201, headers: { \'Content-Type\': \'application/json\', \'X-Foo\': \'baz\' }});
+7 21 { body: \'wahoo\', headers: { \'Content-Type\': \'text/plain; charset=utf-8\', \'X-Foo\': \'bar\' }});
+7 27 { url: \'/error\'should respond()\',
+7 28 assert.constructor,
+7 29 { url: \'/should.throw new Error(\'should.eql([\'should.eql([\'should.should.eql([\'should.should.eql([\'should.eql({ url, \'should.should.should.eql({ url, \'should.should.eql({ url.should.should.eql({ url.should.should.eql({ url.should.should.eql({ url.should.should.eql({ url.should.should.should.eql({ url.should.should.eql({ url.should.message, url.should.should.eql().eql({ url.should.should.message })
+7 31 }),
+7 32 \'should.throw new Error()\', \'should.should.throw new Error()\', \'should.throw new Error()
+8 6 , \'Content-Type': 'text/html; charset=utf-8'
+8 13 \'Content-Type': \'application/json; charset=utf-8\'
+8 18 { body: \'{"foo":"bar"}'
+8 34 { body: \'baz({"foo":"bar"});'
+8 35 , status: 201, headers: {
+8 36 \'Content-Type': \'application/json; charset=utf-8
+8 40 { url: 
+8 41 { url: \'/jsonp?callback=test\'test\' },
+8 42 , headers: { headers: { \'{"foo":"bar":bar":bar":bar":bar":baz":baz}
+8 43 , headers: { \'baz": headers: { \'baz": headers}});'
+
+9 6 { body: 'true\'
+9 7 , headers: { 'Content-Type': \'application/json' }});
+9 9 { url: \'/bool/noargs' },
+9 10 { body: \'true\'
+9 11 , status: 200 });
+9 13 { url: \'/bool/undefined\' },
+9 15 , headers: { \'Content-Type': \'application/json' }});
+9 18 { body: \'no'
+9 22 { body: \'undefined\'
+9 25 { url: \'/foo?bar=baz\' },
+9 26 { body: \'baz\'
+9 27 , status: 201 });
+9 39 , status: 201});
+9 42 { url: \'/foo?bar=baz\'baz=baz'baz
+9 43 , headers: baz');
+9 44 assert.response(app, headers: { status: { url: \'baz
+9 46 assert.response: null});
+9 48 assert.app,
+9 50 assert.response,
+9 51 assert.middleware: function(app,
+9 52 { url: \'/foo, url: \'/foo
+9 54 assert.middleware: function(
+9 56 function error(err, req, res, res, next){
+9 57 res.send(function(err, msg){
+9 58 if (err) {
+9 59 assert.should.should.should.have.property(\'message\', \'broken

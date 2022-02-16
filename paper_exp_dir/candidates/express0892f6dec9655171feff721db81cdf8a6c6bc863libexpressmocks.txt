@@ -1,0 +1,223 @@
+Min editdistance: 7.00
+Closest candidate: 0 2 if (event == null) {
+0 1  })
+0 2 if (event == null) {
+0 3 return callback()
+0 4 }
+0 5 if (event == undefined) {
+0 8 return setBodyEncoding : function(type) {
+0 9 this.bodyEncoding = type
+0 10 },
+0 11 addListener : function(event, callback) {
+0 12 this.listeners.push({ event : event, callback : callback })
+0 16 var body = this.body
+0 17 this.body = body
+0 18 this.close()
+0 19 return this.end()
+0 21 return this.name = mock.name
+0 23 function getJson(request) {
+0 24 return this.json = request.uri.path
+0 26 function setFormatters (formatters) {
+0 27 var key = formatters[formatters.shift()] || {},
+0 28 obj = formatters[formatters.shift()] || {}
+0 29 return obj
+0 31 var months = [],
+0 32 months = [],
+0 33 iHH = 'HH:mm:ss',
+0 34 mkdirs = []
+0 35 function formatters (formatters) {
+0 37 format = exports.formatters
+0 38 formatters.forEach(function (format) {
+0 39 formatters[format] = generateConsole(_.extend(formatters, { keepEscaping: false }))
+0 40 })
+0 42 var content = function (request, actual) {
+0 43 var headers = []
+0 44 var items = []
+0 45 for (var i = 0, len = desired.length; i < len; ++i) {
+0 46 item = items[i]
+0 48 content.push(item)
+0 49 if (typeof data.indexOf("string")!== -1) {
+0 50 items.push(string)
+0 52 if (request.uri.params.length) {
+0 53 items.push(request.uri.params[0].uri.path)
+0 54 } else {
+0 55 items.push(actual)
+0 57 return items
+0 59 exports.formatters = {
+0 60 formatters : function(event, options) {
+0 61 if (options && options.formatters.hasOwnProperty(event.formatters)) {
+0 62 return
+0 64 var formatters = options.formatters
+0 65 formatters.forEach(function(format){
+0 69 exports.createServer = function (options, emitter, socket, reporter, executor,
+0 70 protocol, hostname,
+0 71 port,   hostname,
+0 72 urlRoot,
+0 73 upstreamProxy
+0 74 ]
+0 75 exports.application = protoxies,
+0 76 exports.request = emitter
+0 77 exports.server = port
+0 78 exports.server = hostname
+0 79 exports.urlRoot = urlRoot
+0 80 exports.generator = upstreamProxy
+0 81 exports.createServer = createServer = function (middleware = function (request, socket, middleware, staticFolder, socket, executor, path, urlRoot, proxy, path) {
+0 82 var self = require, hostname, port, hostname, urlRoot, upstreamProxy, upstreamProxy, upstreamProxy, urlRoot, upstreamProxy, upstreamProxy, upstreamProxy, upstreamProxy, basePath) {
+0 83 var config: upstreamProxy = upstreamProxy, hostname, hostname, upstreamProxy, hostname, port: hostname, port, port, hostname, urlRoot, port, port: upstreamProxy, urlRoot, urlRoot, upstreamProxy, upstreamProxy, upstreamProxy, upstreamProxy, upstreamProxy, upstreamProxy, urlRoot
+0 84 port: upstreamProxy, upstreamProxy, upstreamProxy, upstreamProxy: upstreamProxy, urlRoot, timeout, hostname, handler: upstreamProxy, timeout, hostname, hostname
+1 5 return msgs.join(this.body || \'\')
+1 8 function getJson(request, string) {
+1 9 return String(new JSpec.options.jsonp(request.uri.path))
+1 10 .replace(/\
+1 11 \\r\\t37\\u00a1\\u0180/g, \'\')
+1 12 .replace(/\\r\\t4E\\u0041\\u1E43\\u1E45\\u1E47\\u1E45\\u01E47\\u01E47\\u01E47\\u01E49\\u01E49\\u01E47\\u01E49\\u01E49\\u01E5\\u01E47\\u01E5\\u01E47\\u01E49\\u01E49\\u01E49\\u01E47\\u01E49\\u01E5\\u01E47\\u01E49\\u01E49\\u01E49\\u01E49\\u01E5\\u01E49\\u01E47\\u01E49\\u01E5\\u01E47\\u01E49\\u01E49\\u01E49\\u01E5\\u01E47\\u01E49\\u01E5\\u01E47\\u01E49\\u01E5\\u01E47\\u01E49\\u01E47\\u01E49\\u01E47\\u01E49\\u01E49\\u01E47\\u01E49\\u01E47\\u01E49\\u01E49\\u01E49\\u01E49\\u01E47\\u01E49\\u01E49\\u01E5\\u01E49\\u01E47\\u01E49\\u01E5\\u01E49\\u01E49\\u01E49\\u01E49\\u01E5\\u01E49\\u01E49\\u01E5\\u01E49\\u01E49\\u01E49\\u01E5\\u01E49\\u01E49\\u01E5\\u01E49\\u01E49\\u01E49\\u01E5\\u01E5\\u01E49\\u01E49\\u01E5\\u01E49\\u01E49\\u01E5\\u01E49\\u01E49\\u1E49\\u01E49\\u01E49\\u01E49\\u01E49\\u1E49\\u01E49\\u01E49\\u01E49\\u01E49\\u01E49\\u01E49\\u1E49\\u1E49\\u019A\\uA\\uA5B\\u017F\\uA5'
+2 1  },"
+
+3 2 if (event == 1) {
+3 6 else
+3 7 callback()
+3 10 mock.uri.params = mock.uri.params || {}
+3 11 return mock
+3 13 it(\'should merge the body and options when present\', function(){
+3 14 var req = mockRequest({ method : "GET", url : \'/user/12' })
+3 15 if (this.body.name === \'user-type\') {
+3 16 this.header(\'Content-Type\', \'application/x-www-form-urlencoded\')
+3 18 body = $(this.body || \'\')
+3 19 return req.params[\'type\'] = this.param(\'user-type\') || \'"application/x-www-form-urlencoded"\'] || null
+3 22 describe(\'onKarmaError\', function(){
+3 23 it(\'should trim sources and targets\', function(){
+3 24 this.start = Number(new Date)
+3 26 it(\'should remove specified hostname from files\', function(){
+3 27 var source = \'/some/file.json\'
+3 28 this.headers.hostname = \'localhost\'
+3 29 this.port = 123
+3 30 return this.request.uri.path + \'/\' + this.hostname
+3 32 it(\'should remove shas\', function(){
+3 33 var source = \'/source.json\'
+3 35 this.port = 300
+3 44 it(\'should not remove shas\', function(){
+3 47 this.port = 3
+3 56 it(\'should not remove files\', function(){
+3 60 return this.request.uri.path + \'/\'
+3 62 it(\'should remove part with +)\', function(){
+3 63 var source = \'/source.json\',
+3 64 part = file.params
+3 65 this.contentType = parts.shift()
+3 66 return parts.length === 0
+3 68 var fullRefresh = function(){
+3 69 return this.reader.close()
+3 73 it(\'should resolve : function(){
+3 74 return that._json = true
+3 75 return Q.some(this.get(\'should.readFile(\'some/s/s/a.js\')
+3 76 .readFile(\'s/b.js\')
+3 79 .options.options.options.options.notify())
+3 80 .refresh()
+3 81 .trim())
+3 82 .collection.deepEqual(/function(options.collection.locals, function(collection, options, options)
+3 83 returns{
+3 84 collection.collection.collection)
+3 86 .collection.add(this)
+3 87 .get({ name: \'first\', function(onlyServedFiles) {
+3 88 return this.isSingle = true
+6 8 Express.server.finished()
+6 10 return msgs
+6 12 function mockResponse(response) {
+6 15 function mockRouteFunctionFor(method) {
+6 16 var orig =  Express.routeFunctionFor(method)
+6 17 return function(path, options, fn){
+6 18 if ((options && options.constructor == Function) ||
+6 19 (callback instanceof Function))
+6 20 return orig.apply(Express, arguments)
+6 23 orig.name = method
+6 24 return Express.server.callback.apply(orig)
+6 26 function mockResponseText(response) {
+6 27 Express.server.callback.apply(Express, arguments)
+6 37 function mockRouteFunctionFor(error) {
+6 38 var orig =  Express.routeFunctionFor(error)
+6 46 var expected = ''
+6 47 var self = this
+6 48 , app = express.createServer()
+6 49 , content = [],
+6 50 called = false
+6 51 if (typeof response.headers[\'content-type\'] ==\'string\')
+6 52 response.headers[\'content-type\'] = response.headers[\'content-type\'] ||
+6 53 response.body.toString()
+6 54 return response.headers[\'content-type\'] = content
+6 56 app.use(function(req, res, next){
+6 57 res.header(\'content-type\', \'text/html\')
+6 58 next()
+6 60 app.get(\'/text\', function(req, res){
+6 61 res.header(\'content-type\', \'text/plain\')
+6 62 res.contentType(\'html\')
+6 63 res.sendHeader(200, res.headers)
+6 64 res.sendBody(res.body || \'\')
+6 65 res.finish()
+6 67 app.get(\'/status\', function(req, res){
+6 68 res.sendStatus(404)
+6 72 app.get(\'/error\', function(req, res){
+6 73 res.sendBody(new Error(\'Oh shit!\')
+6 76 app.get(\'/buffer
+6 77 , function(req, res){
+6 78 res.sendStaticFile(__dirname, __dirname + \'/public/../public/../static\', function(name, fn){
+6 79 res.send*Store.get(\'/public/: function(){\')
+6 80 res.get(\'/public: function(path)\\/: function(path)\\/javascripts*)
+6 81 if (static)
+6 82 throw new Error(\'something is not found\')
+6 86 app.get(\'/no-static
+6 87 , app.get(\'/error
+6 88 , app.get(\'/buffer\', function(404, function(err, req, res){
+6 89 throw new Error(\'please use(http://localhost:3000/javascripts/javascripts/express\')
+6 90 , port: redirecting it is disabled)
+6 91 , app.get(\
+8 10 this.uri.params = mock.params || {}
+8 11 this.headers.length = 0
+8 12 body.top = -1
+8 13 body.left = 0
+8 14 body.up = function(event) {
+8 15 callback(event) {
+8 16 return event == undefined?
+8 17 this.body.remove() :
+8 18 this.body.connect((port) => {
+8 19 this.listeners.splice(0, -1)
+8 20 }).join("",")
+8 22 mockRequest : function(event, callback) {
+8 23 if (event == null) throw new TypeError('Invalid configuration: http.Injector `' + event.request.uri.substr(1))
+8 24 if (event == undefined) throw new TypeError('Invalid configuration: http.Injector `' + event.request.uri.substr(0))
+8 25 var route = this.matchingRoute()
+8 26 if (route)
+8 27 return route.callback.apply(this.uri.substr(1), this.request.uri.path)
+8 29 matchRequest : function(url) {
+8 30 if (this.body.test)
+8 31 return this.header(\'Content-Type\', url.substring(1))
+8 32 this.response.body = this.respond()
+8 34 map : function(fn) {
+8 35 if (this.params.path)
+8 36 return $(this.params.path).find(function(err, path){
+8 37 if (err) return this.header(\'Content-Type\', path)
+8 41 return $(this.params.path).all(err, path)
+8 45 select : function(n) {
+8 46 return $(this.header(\'Content-Type\', \'text/html\')
+8 48 reject : function(fn) {
+8 49 return $(this.header(\'Content-Type\', \'pre\')
+8 51 first : function(n) {
+8 52 return n? this.slice(0, n) : this.at(0)
+8 54 slice : function(start, end) {
+8 55 if (this.cookies.length)
+8 56 return $(this.header(\'Cookies\', this.cookies.slice(1, n + 1))
+8 57 var i = 0
+8 58 return $(this.cookies.reduce(function(cookies, pair){
+8 59 var e = pair.split(/\\.\\s*/)
+8 60 $(e[0])
+8 61 $(e[1]).each(function(key) {
+8 62 if (cookies[key] === undefined) return cookies[key]
+8 64 return cookies[key]
+8 66 }, null)
+8 69 findCookies : function(cookies, callback) {
+8 70 return $(this.findCookies, callback) {
+8 71 for (cookies) {
+8 72 if (cookies.length === 0) return this.find((cookies.length === 0) return callback()
+8 77 } : function $(this.cookies.length === 0)
+8 79 var url = this.findRaw)
+8 80 return function $(this.header(\'URL_s\', undefined).reduce(function(cookies).reduce(cookies.reduce(function(cookies.reduce(function(cookies, pair)
+8 81 return $(cookies.reduce(function(cookies, pair)
+8 82 return cookies

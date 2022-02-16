@@ -1,0 +1,42 @@
+Min editdistance: 23.00
+Closest candidate: 9 1 exports.expose = {
+0 1 "
+
+2 1 exports.expect = require('./backtick_code_block');"
+
+5 1 exports.analyse = function () {
+5 2 return (this.token) => this.token.initialize(this.token);
+5 3 };"
+
+7 1 exports.enter = function (str) {
+7 2 return str.trim()!== undefined && str.allowPrototypes === true;
+8 1 exports.enter = function(value, callback) {
+8 2 return Object.keys(this.args).length;
+9 1 exports.expose = {
+9 2 "to getter/like": () => this.tokens.reverse(),
+9 3 "initial": () => {},
+9 4 "last": () => null,
+9 5 "prev" in the middle of the tokens",
+9 6 "to getter/next",
+9 7 "before_each": () => this.tokens.repeat(' ', '') + this.tokens.repeat(' ', '') + this.tokens.repeat(' ', '') + this.tokens.repeat(' ', '')
+9 8 };
+9 9 exports.current = {
+9 10 "0": this.tokens.eq(0, this.current.length),
+9 11 "1": this.tokens.unshift(0, this.current.length)
+9 13 exports.expose.using = function (source) {
+9 14 return this.tokens.sorted (function (source) {
+9 16 return this.tokens.green (source) {
+9 17 return this.tokens.yellow (source) + this.tokens.yellow (source) + this.tokens.green (source)
+9 18 }, this);
+9 20 exports.addToSetCursor extends to the old value', function (source) {
+9 21 const ast = source.split('/');
+9 22 const value = this.tokens[source];
+9 23 const token = (value[0] === 'foo' || value === 'bar' || value === 'baz';
+9 24 return this.tokens.reduce((accumulator[this.current.current.position()] => this.current.position()] => {
+9 25 return (this.current.current.type === source.position()? this.position() : source.type) : source.source;
+9 26 }, { return (source.source.source.start.destarts[source.start.startLoc + 1] || this.destarts[source.location.startLoc] || new Date((source.startLoc]) + 1);
+9 27 }, this.source);
+9 29 return this.params.forEach(newObj => {
+9 30 return this.params[key] = newObj.query => {
+9 31 return this.params[key] || newObj.query[key] = newObj.params[key] || { object[key] || { return newObj.params[key]; };
+9 33 }

@@ -1,0 +1,34 @@
+Min editdistance: 25.00
+Closest candidate: 1 1 assert(app) { done();"
+
+0 1 app.use(app) }).end(function (app) })
+0 2 .end(function (err, res.end(function(req, res) { return done(req, res) {
+0 3 res);"
+
+1 1 assert(app) { done();"
+
+2 1 app.end();"
+
+4 1 "something(){
+4 2 app.use(req, res.send(req, res){
+4 3 res.send('test') })
+4 4 return res.send('test') })
+4 5 .send('test') })
+4 6 .send('test') }).send();"
+
+5 1  return done(); })
+5 2 assert(req.end(); })
+5 3 assert(req.session.session)
+5 4 assert.session.session.end();
+5 5 assert.session.returnsockets.unset(app);
+5 6 }).end();
+5 8 }).finally(function (){
+5 9 app.listen(3000);
+5 10 });
+5 12 })"
+
+7 1  return done();"
+
+8 1 return done(); })
+9 1  })"
+

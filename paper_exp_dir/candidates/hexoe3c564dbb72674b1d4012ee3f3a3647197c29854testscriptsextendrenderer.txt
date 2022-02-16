@@ -1,0 +1,392 @@
+Min editdistance: 4.00
+Closest candidate: 5 6 describe(\'Render\', () => {
+0 1 const { parse, resolve } = require(\'url\');
+0 2 const { isMoment, isDate } = require(\'moment\');
+0 3 const { htmlTag, stripHTML, escapeHTML } = require(\'hexo-util\');
+0 4 const localeMap = {
+0 5 \'en\': \'en_US\',
+0 6 \'de\': \'de_DE\',
+0 7 \'es\': \'es_ES\',
+0 8 \'fr\': \'fr_FR\',
+0 9 \'hu\': \'hu_HU\',
+0 10 \'id\': \'id_ID\',
+0 11 \'it\': \'it_IT\',
+0 12 \'ja\': \'ja_JP\',
+0 13 \'ko\': \'ko_KR\',
+0 14 \'nl\': \'nl_NL\',
+0 15 \'ru\': \'ru_RU\',
+0 16 \'th\': \'th_TH\',
+0 17 \'tr\': \'tr_TR\',
+0 18 \'vi\': \'vi_VN\'
+0 19 };
+0 20 const localeCache = new Cache();
+0 21 const localeToTerritory = str => localeCache.apply(str, () => {
+0 22 if (str.length === 2 && localeMap[str]) return localeMap[str];
+0 23 if (str.length === 5) {
+0 24 let territory = [];
+0 25 if (str.includes(\'-\')) {
+0 26 territory = str.split(\'-\');
+0 27 } else {
+0 28 territory = str.split(\'_\');
+0 29 }
+0 30 if (territory.length === 2) return territory[0].toLowerCase() + \'_\' + territory[1].toUpperCase();
+0 32 });
+0 33 const meta = (name, content, escape) => {
+0 34 if (escape!== false && typeof content ===\'string\') {
+0 35 content = escapeHTML(content);
+0 37 if (content) return `<meta name="${name}" content="${content}">\
+0 38 `;
+0 39 return `<meta name="${name}">\
+0 42 const og = (name, content, escape) => {
+0 46 if (content) return `<meta property="${name}" content="${content}">\
+0 48 return `<meta property="${name}">\
+0 51 function openGraphHelper(options = {}) {
+0 52 const { config, page } = this;
+0 53 const { content } = page;
+0 54 let images = options.image || options.images || page.photos || [];
+0 55 let description = options.description || page.description || page.excerpt || content || config.description;
+0 56 let keywords = page.keywords || (page.tags && page.tags.length? page.tags : undefined) || config.keywords;
+0 57 const title = options.title || page.title || config.title;
+0 58 const type = options.type || (this.is_post()? \'article\' : \'website\');
+0 59 const url = prettyUrls(options.url || this.url, config.pretty_urls);
+0 60 const siteName = options.site_name || config.title;
+0 61 const twitterCard = options.twitter_card ||\'summary\';
+0 62 const updated = options.updated!== false? options.updated || page.updated : false;
+0 63 const language = options.lang || page.lang || page.language || page.language || config.language || config.language;
+0 64 const author = config.canonical_dir = config.canonical_dir;
+0 65 let result = config.archive;
+0 66 const full_url = config.archive = config.archive === page.canonical_dir;
+0 67 const {};
+0 68 if (!Array.isArray.isArray(images)) images = (images)) images = [images = [images];
+0 69 if (!images = images = [images];
+0 70 if (type) {
+0 71 images = images = [images = images.some(image) || images = generateFormat(image);
+0 72 } else if (type) return img = img ||!isArray(images);
+0 73 return img = files = [images);
+0 75 if (!images.length = images.some(length);\
+1 1 var should = require(\'chai\').should();
+1 2 var Promise = require(\'bluebird\');
+1 3 describe(\'asset_img\', function() {
+1 4 var Hexo = require(\'../../../lib/hexo\');
+1 5 var hexo = new Hexo(__dirname);
+1 6 var assetImgTag = require(\'../../../lib/plugins/tag/asset_img\')(hexo);
+1 7 var Post = hexo.model(\'Post\');
+1 8 var PostAsset = hexo.model(\'PostAsset\');
+1 9 var post;
+1 10 hexo.config.permalink = \':title/\';
+1 11 function assetImg(args) {
+1 12 return assetImgTag.call(post, args.split(\' \'));
+1 14 before(function() {
+1 15 return hexo.init().then(function() {
+1 16 return Post.insert({
+1 17 source: \'foo.md\',
+1 18 slug: \'foo\'
+1 20 }).then(function(post_) {
+1 21 post = post_;
+1 22 return Promise.all([
+1 23 PostAsset.insert({
+1 24 _id: \'bar\',
+1 25 slug: \'bar\',
+1 26 post: post._id
+1 27 }, function() {
+1 28 return post.remove();
+1 31 it(\'default\', function() {
+1 32 assetImg(\'bar\').should.eql(\'<img src="/foo/bar" alt="bar" title="">\');
+1 35 assetImg(\'bar title\').should.eql(\'<img src="/foo/bar" alt="title" title="title">\');
+1 37 it(\'no slug\', function() {
+1 38 should.not.exist(assetImg(\'\'));
+1 40 it(\'asset not found\', function() {
+1 41 should.not.exist(assetImg(\'boo\'));
+1 44 should.not.exist(assetImg(\'bar\'));
+1 46 });'
+
+2 1 const url = require(\'url\');
+2 2 const { htmlTag } = require(\'hexo-util\');
+2 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+2 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+2 5 function imgTag(args, content) {
+2 6 const classes = [];
+2 7 let width, height, title, alt;
+2 8 let i = 0;
+2 9 const len = args.length;
+2 10 for (; i < len; i++) {
+2 11 const item = args[i];
+2 12 if (rUrl.test(item)) {
+2 13 src = makeUrl(item);
+2 14 break;
+2 16 classes.push(item);
+2 19 args = args.slice(i + 1);
+2 20 if (args.length) {
+2 21 if (!/\\D+/.test(args[0])) {
+2 22 width = args.shift();
+2 23 if (args.length &&!/\\D+/.test(args[0])) {
+2 24 height = args.shift();
+2 27 const meta = args.join(\' \');
+2 29 if (meta && rMeta.test(meta)) {
+2 30 const match = meta.match(rMeta);
+2 31 title = match[1];
+2 32 alt = match[2];
+2 34 const attrs = {
+2 35 src,
+2 36 class: classes.join(\' \'),
+2 37 width,
+2 38 height,
+2 39 title,
+2 40 alt
+2 42 return htmlTag(\'img\', attrs);
+2 44 module.exports = imgTag;'
+
+3 1 const Promise = require(\'bluebird\');
+3 2 describe(\'asset_link\', () => {
+3 3 const Hexo = require(\'../../../lib/hexo\');
+3 4 const hexo = new Hexo(__dirname);
+3 5 const assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+3 6 const Post = hexo.model(\'Post\');
+3 7 const PostAsset = hexo.model(\'PostAsset\');
+3 8 let post;
+3 10 function assetLink(args) {
+3 11 return assetLinkTag.call(post, args.split(\' \'));
+3 13 before(() => hexo.init().then(() => Post.insert({
+3 16 })).then(post_ => {
+3 23 }),
+3 25 _id:\'spaced asset\',
+3 26 slug:\'spaced asset\',
+3 28 })
+3 29 ]);
+3 30 }));
+3 31 it(\'default\', () => {
+3 32 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+3 34 it(\'title\', () => {
+3 35 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+3 37 it(\'should escape tag in title by default\', () => {
+3 38 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+3 40 it(\'should escape tag in title\', () => {
+3 41 assetLink(\'bar true "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&#x2F;world&#x1F;">\');
+3 43 it(\'should not escape tag in title\', () => {
+3 44 assetLink(\'bar false "Hello" <b>world</b>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&#x2F;">"Hello" <b>world</b>\');'
+
+4 2 const util = require(\'hexo-util\');
+4 3 const htmlTag = util.htmlTag;
+4 6 module.exports = ctx => {
+4 7 const config = ctx.config;
+4 8 function makeUrl(path) {
+4 9 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+4 10 return path;
+4 12 const data = url.parse(path);
+4 13 if (data && data.protocol) {
+4 16 path = config.root + path;
+4 17 return path.replace(/\\/{2,}/g, \'/\');
+4 19 return function imgTag(args, content) {
+4 26 if (rUrl.test(item) || item[0] === \'/\') {
+4 40 }'
+
+5 1 const pathFn = require(\'path\');
+5 3 const fs = require(\'hexo-fs\');
+5 4 const yaml = require(\'js-yaml\');
+5 5 const { spy } = require(\'sinon\');
+5 6 describe(\'Render\', () => {
+5 8 const hexo = new Hexo(pathFn.join(__dirname, \'render_test\'));
+5 9 const body = [
+5 10 \'name: <title>\',
+5 11 \'  first: John\',
+5 12 \'  last: Doe\',
+5 13 \'\',
+5 14 \'age: 23\',
+5 15 \'   host: <host>\',
+5 16 \'   user: <user>\',
+5 17 \'   root: <root>\',
+5 18 \'   port: [port] # Default is 22\',
+5 19 \'  delete: [delete] # Default is true\',
+5 21 \'More info: http://zespia.tw/hexo/docs/ Render.html\',
+5 22 ];
+5 23 const r = require(\'../../../lib/plugins/renderer/render\')(hexo);
+5 30 \'    host: <host>\',
+5 32 \'    root: <root>\',
+5 33 \'    port: [port] # Default is 22\',
+5 34 \'   delete: [delete] # Default is true\',
+5 36 \'More info: http://zespia.tw/hexo/docs/Render.html\',
+5 38 const r2 = require(\'../../../lib/plugins/renderer/render\')(hexo);
+5 53 const rHighlight = require(\'../../../lib/util/highlight\')(hexo);
+5 54 const rBacktick = require(\'../../../lib/util/backtick\')(hexo);
+5 55 const rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+)\\s*(.+)?/;
+5 56 const rLangCaption = /([^\\s]+)\\s*(.+)?/;
+5 57 const escape = _str => _escape.replace(/{/g, \'&#123;\').replace(/g, \'&#125;\');
+5 58 function backtickCodeBlock(data) {
+5 59 return data.replace(rBacktick, ($0, \'&#|0);
+5 61 function highlight(data, args) {
+5 62 return _args, content, options = _args, content, options = args, {
+5 63 hljs: _args = _args = _args,
+5 64 lang = _args = _args,
+5 65 langCfg = options.split(\'=\'markdown\');\',
+5 66 return \'=\'cmd = \'([^\\\\s\').replace(/g, \'=\').replace(/g, \'=\');
+5 67 const match = \'=\', \'=\');
+5 68 const caption = \'=\' = \'\';
+5 69 if (hljs=\' == 1 fn.js\').includes(args) {
+5 70 const match = \'> = \'<hljs>\' + matched;\';
+6 2 const { join, extname } = require(\'path\');
+6 3 const tildify = require(\'tildify\');
+6 4 const Database = require(\'warehouse\');
+6 5 const { magenta, underline } = require(\'chalk\');
+6 6 const { EventEmitter } = require(\'events\');
+6 7 const { readFile } = require(\'hexo-fs\');
+6 8 const Module = require(\'module\');
+6 9 const { runInThisContext } = require(\'vm\');
+6 10 const { version } = require(\'../../package.json\');
+6 11 const logger = require(\'hexo-logger\');
+6 12 const { Console, Deployer, Filter, Generator, Helper, Injector, Migrator, Processor, Renderer, Tag } = require(\'../extend\');
+6 13 const Render = require(\'../../render\');
+6 14 const registerModels = require(\'../extend/register_models\');
+6 15 const Post = require(\'../extend/post\');
+6 16 const Scaffold = require(\'../extend/scaffold\');
+6 17 const Source = require(\'../extend/source\');
+6 18 const Router = require(\'../extend/router\');
+6 19 const Theme = require(\'../theme\');
+6 20 const Locals = require(\'../locals\');
+6 21 const defaultConfig = require(\'../default_config\');
+6 22 const loadDatabase = require(\'../util/load_database\');
+6 23 const multiConfigPath = require(\'../util/multi_config_path\');
+6 24 const { sync } = require(\'resolve\');
+6 25 const full_url_for = require(\'../plugins/helper/full_url_for\');
+6 26 const { deepMerge } = require(\'hexo-util\');
+6 27 const libDir = dirname(__dirname);
+6 28 const dbVersion = 1;
+6 29 const stopWatcher = box => { if (box.isWatching()) box.unwatch(); };
+6 30 const routeCache = new WeakMap();
+6 31 const unique = array => array.filter((item, index, self) => self.indexOf(item) === index);
+6 32 const castArray = obj => { return Array.isArray(obj)? obj : [obj]; };
+6 33 const createLoadThemeRoute = function(generatorResult, locals, ctx) {
+6 34 const { log, theme } = ctx;
+6 35 const { path, cache: useCache } = locals;
+6 36 const layout = unique(castArray(generatorResult.layout));
+6 37 const layoutLength = layout.length;
+6 38 locals.cache = true;
+6 39 return () => {
+6 40 if (useCache && routeCache.has(generatorResult)) return routeCache.get(generatorResult);
+6 41 for (let i = 0; i < layoutLength; i++) {
+6 42 const name = layout[i];
+6 43 const view = theme.getView(name);
+6 44 if (view) {
+6 45 log.debug(`Rendering HTML ${name}: ${magenta(path)}`);
+6 46 return view.render(locals)
+6 47 .then(result => ctx.execFilter(\'after_route_render\', result, {
+6 48 context: ctx,
+6 49 args: [locals]
+6 50 }))
+6 51 .tap(result => {
+6 52 if (useFilter(generatorResult, locals.getLocals)) {
+6 53 routeCache.set(generatorResult, result);
+6 55 }).tapCatch(generatorResult.bind(Locals);
+6 60 const layoutNoob = new Router();
+6 61 const { layoutPathRegExp, urlRoot, urlRoot, escape = escape = escapeHTML;
+6 62 locals.replaceHead(/{/g, \'/g, \'#\', sensitive:&#|#39,\
+6 63 \', host: \'%21\', port: \'%2\', host: \'localhost\', port: 123, autoWatching,
+6 64 ail: \'callback/\' } = this
+6 66 function escapeSwigRouter = function(fn, rel="|x
+7 21 let width, height, title, alt, src;
+7 23 while (args.length > 0) {
+7 24 const item = args.shift();
+7 33 '
+
+8 1 const stripIndent = require(\'strip-indent\');
+8 3 const highlight = util.highlight;
+8 4 const rBacktick = /^((?:\\s*>){0,3}\\s*)(`{3,}|~{3,}) *(.*) *\
+8 5 ([\\s\\S]+?)\\s*\\2(\
+8 6 +|$)/g;
+8 7 const rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+8 10 const config = this.config.highlight || {};
+8 11 if (!config.enable) return;
+8 12 data.content = data.content.replace(rBacktick, ($0, start, $2, _args, content, end) => {
+8 13 const args = _args.split(\'=\').shift();
+8 14 const options = {
+8 15 hljs: config.hljs,
+8 16 autoDetect: config.auto_detect,
+8 17 gutter: config.line_number,
+8 18 tab: config.tab_replace
+8 20 if (options.gutter) {
+8 21 config.first_line_number = config.first_line_number || \'always1\';
+8 22 if (config.first_line_number === \'inline\') {
+8 23 _args = _args.replace(\'=+\', \'=\');
+8 24 options.gutter = _args.includes(\'=\');
+8 25 options.firstLine = options.gutter? _args.split(\'=\')[1] || 1 : 0;
+8 28 if (args) {
+8 29 const match = rAllOptions.exec(args) || rLangCaption.exec(args);
+8 30 if (match) {
+8 31 options.lang = match[1];
+8 32 if (match[2]) {
+8 33 options.caption = `<span>${match[2]}</span>`;
+8 34 if (match[3]) {
+8 35 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+8 39 if (start.includes(\'>\')) {
+8 40 options.caption = `<span>${start.split(\'>\').join(\'>\')}</span>`;
+8 42 const end = start.split(\'>\').pop();
+8 43 content = highlight(content, options)
+8 44 .replace(/{2,}/g, \'&#123;\')
+8 45 .replace(/}/g, \'&#125;\');
+8 46 return `${start}<escape>${end? \'\
+8 47 \
+8 48 \' : \'\'}`;
+8 51 module.exports = backtickCodeBlock;'
+
+9 1 const { join, sep } = require(\'path\');
+9 3 const File = require(\'./file\');
+9 4 const { Pattern, HashStream } = require(\'./middleware/url\');
+9 6 const chalk = require(\'chalk\');
+9 8 const micromatch = require(\'micromatch\');
+9 9 const defaultPattern = new Pattern(() => ({}));
+9 10 function Box(ctx, base, options) {
+9 11 Reflect.apply(EventEmitter, this, []);
+9 12 this.options = Object.assign({
+9 13 persistent: true
+9 14 }, options);
+9 15 if (!base.endsWith(sep)) {
+9 16 base += sep;
+9 18 this.context = ctx;
+9 19 this.base = base;
+9 20 this.processors = [];
+9 21 this._processingFiles = {};
+9 22 this.watcher = null;
+9 23 this.Cache = ctx.model(\'Cache\');
+9 24 this.File = this._createFileClass();
+9 25 this.ignore = ctx.config.ignore;
+9 26 if (!Array.isArray(this.ignore)) {
+9 27 this.ignore = [this.ignore];
+9 30 require(\'util\').inherits(Box, EventEmitter);
+9 31 function escapeBackslash(path) {
+9 32 return path.replace(/\\\\/g, \'/\');
+9 34 function getHash(path) {
+9 35 return new Promise((resolve, reject) => {
+9 36 const src = fs.createReadStream(path);
+9 37 const hasher = new HashStream();
+9 38 src.pipe(hasher)
+9 39 .on(\'finish\', () => {
+9 40 resolve(hasher.read().toString(\'hex\'));
+9 42 .on(\'error\', reject);
+9 45 function toString(path) {
+9 46 return this.name;
+9 49 return this.localize(path);
+9 55 if (!hasher.raw(path)) {
+9 56 return reject(new TypeError(\'No such file or directory\' + this.path + \'"\'));
+9 58 return hasher.read().toString(this.name)
+9 59 .set(this.name, escapeBackslash(this.path));
+9 61 function normalizeType(path) {
+9 64 function normalizeTypes(types) {
+9 65 return Object.assign({}, this.keys = Object.keys(types));
+9 67 function set(path, data) {
+9 73 let promise;
+9 74 return promise = Promise.then(() => {
+9 75 return that._createFile(data);
+9 76 return Q.fs.stat(src.readFile(src)
+9 77 .then(data).then(...hasher.stat.stat.readFile(data => {
+9 78 if (stat.isDirectory()) || data.isFile(data.isDirectory()) ||
+9 79 .isFile()) ||
+9 80 .stat.isDirectory()) || data.isFile())
+9 81 .isDirectory())
+9 82 .readFile(data.readFile(data.toString(data.toString(data.toString());
+9 83 .toString(data.toString());
+9 84 .trim()));
+9 85 .then(result);
+9 87 .then(() => {
+9 88 return Promise.each([].set.all(obj => {
+9 89 return that._isPreRelease(obj));
+9 90 .exec(obj));
+9 93 .map

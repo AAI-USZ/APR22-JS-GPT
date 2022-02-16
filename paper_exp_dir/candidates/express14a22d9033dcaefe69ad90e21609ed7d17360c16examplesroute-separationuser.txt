@@ -1,0 +1,113 @@
+Min editdistance: 33.00
+Closest candidate: 3 13 req.session = { user: user: req.session };
+0 1 exports.update = function(req, res){
+0 2 res.render('users/update', { title: \'Updated user\' });
+0 3 };
+0 4 exports.edit = function(req, res){
+0 5 res.render('users/update-ex', { title: \'Updated user\' });
+0 8 res.render('users/update-ex', { title: \'Updated user' });
+0 10 exports.destroy = function(req, res){
+0 11 res.render('users/destroy-ex', { title: \'Deleted user' });
+0 13 exports.register = function(req, res){
+0 14 res.register.apply(exports, arguments);
+0 15 };'
+
+1 1 '
+
+2 2 var user = req.body.user;
+2 3 req.user.name.should.eql(user.name);
+2 4 var user2 = req.body.user;
+2 6 var users = [];
+2 7 users.push({ name: \'TJ\' });
+2 8 users.push({ name: \'Guillermo' });
+2 9 users.push({ name: \'Tobi\' });
+2 10 users.push({ name: \'Loki\' });
+2 11 users.push({ name: \'Jane\' });
+2 12 res.message.should.equal(\'<h1>Users</h1>\');
+2 13 res.redirect(\'/\');
+2 15 exports.create = function(req, res, next){
+2 16 res.locals.set(\'pets\', function(tags){
+2 17 res.render(\'pets.jade\', {
+2 18 locals: {
+2 19 name: req.params.id
+2 20 }
+2 21 });
+2 23 next();
+2 26 res.render(\'editing post.haml\', {
+2 28 title: \'Hello World\',
+2 29 items: req.body.posts
+2 32 var post = exports.edit = function(req, res){
+2 38 var post = exports.update = function(req, res){
+2 39 res.render(\'post.haml\', {
+2 41 post: post
+2 44 var page = exports.page = function(req, res){
+2 45 res.render(\'page.haml\', {
+2 47 page: page
+2 50 var post = exports.post = function(req, res){
+2 52 locals: post
+2 56 exports.createServerResponse.createServerResponse = function(req, res){
+2 57 require(
+2 58 require(\'response.compress\', function(){
+2 59 return function(){
+2 60 returnrequire(\'express.server.compress.compress\', true);
+2 61 })
+2 62 .startServer.start();
+2 64 .end();
+2 65 }'
+
+3 3 res.message = function(message){
+3 4 var sess = function(err, req, res){
+3 5 res.message.apply(req, arguments);
+3 7 sess.messages.push({
+3 8 message: sess.message,
+3 9 obj: {
+3 10 keywords: arguments,
+3 11 locals: { 'word': 1, '-key': 8 }
+3 12 },
+3 13 req.session = { user: user: req.session };
+3 14 return res.render(user);
+3 17 req.session.destroy();
+4 3 var body = req.body.body;
+4 4 res.message = function(err, user){
+4 5 if (err) return next(err);
+4 6 var userPath = users[user.name];
+4 7 if (!user) return next(new Error(\'Cannot find user\'));
+4 8 next(new Error(\'invalid password\'));
+4 11 exports.destroy = function(req, res, next){
+4 12 if (req.session.user) {
+4 14 } else {
+4 15 req.session.error = \'Access denied!\';
+4 16 res.redirect(\'/login\');
+4 18 };"
+
+5 2 res.render(\'users/update', { title: \'Updated user\' });
+5 5 res.render(\'users/destroy', function(err, str){
+5 6 if (err) return res.send(str);
+5 11 res.render(\'users/update\', { title: \'Updated user' });
+5 14 res.render(\'users/update\', { title: \'Deleted user' });
+5 17 res.render(\'users/destroy\', { title: \'Deleted user\' });
+7 2 res.render('users/update', { title: \'Updated user'+ req.user.name });
+7 11 res.render('users/destroy', function(err, user){
+7 12 if (err) throw err;
+7 13 res.render(user.body, {
+7 14 name: req.body.name,
+7 15 message: 'Route Error: delete user'+ req.user.name
+7 19 exports.length = function(req, res){
+7 20 res.render(req.body.length);
+7 22 exports.page = function(req, res){
+7 23 res.render(req.body.page);
+7 25 exports.post = function(req, res){
+7 26 res.render(req.body.post);
+7 28 exports.tag = function(req, res){
+7 29 res.render(req.body.tag);
+7 31 exports.archive = function(req, res){
+7 32 res.render(req.body.archive);
+7 34 exports.year = function(req, res){
+7 35 res.render(req.body.year);
+7 37 exports.month = function(req, res){
+7 38 res.render(req.body.month);
+7 40 exports.category = function(req, res){
+7 41 res.render(req.body.category);
+7 50 exports.category = new category;"
+
+9 5 res.render('users/destroy', { title: \'Deleted user\' });

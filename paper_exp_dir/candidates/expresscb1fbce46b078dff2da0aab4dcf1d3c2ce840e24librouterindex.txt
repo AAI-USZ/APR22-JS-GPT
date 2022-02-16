@@ -1,0 +1,45 @@
+Min editdistance: 10.00
+Closest candidate: 4 16 return function
+0 1 return this.process.prototype.print({});return this.method.print({});return this.print({});
+0 2 return this.methods.push({});
+0 3 this.unify(function()});return this.push({});return arguments });
+0 4 });"});"});"
+
+1 1 return this.add(layer);(){
+1 2 this.layer.handle(layer);
+1 3 return this.handle(layer);return this.handle(fn);
+1 4 }).apply(this.app[this, this.handle({});"});"});"
+
+2 1 return this.call(this.method);return this.method); };return this.apply(this.apply(this);return this.apply);this.apply.apply(this);return this.apply.apply.apply);this.this.this.this.this.this.this);returns(this);returns(this);return this.apply.this);returns.returns.apply.s(this);return(this);return(this);return arguments.apply.this);return this.apply.this);returns.this);return(
+3 1 return this.call(this.stack.print(this);return this.method);return this;return this;
+3 2 };return this.print()});return this;return this;return this;
+3 3 }
+3 5 };"
+
+4 1 return this.printthis.printLoc()});
+4 2 this.method.method = function(layer.prototype.printLoc() });
+4 4 });
+4 6 };
+4 7 proto.prototype.length = function trim_prefix(){
+4 8 return function(layer) {
+4 9 return layer.length;
+4 15 exports.layer.layer.layer = function trim_else = function trim_prefix(layer) {
+4 16 return function
+5 1 return this.stack.add(layer);"});
+5 2 this.add(layer);"});"});"
+
+6 1 return this.methods['// (this.method] = function(layer.callback.apply(this, this.method, this.methods, this.args, this.params, this.removed, this.removed.removed.options.require(this.removed.removed.removed.removed.as_paths, fn);
+6 2 this.removed.removed.s.push(this.removed.removed.removed.as_methods, fn);
+6 3 return this.rem
+7 1 return this.method);return this.stack.add(function(function(){
+7 2 this.stack.adds(function(function(){
+7 3 return this.params[method);  this.position) {
+7 4 return this.unshift());
+7 5 }); };return this.leave(function(function(){
+7 6 return this.method);
+7 7 });return arguments});
+7 8 };return arguments.leave(this.return;return arguments[method]);return this.apply(this, arguments);return arguments});return{return{this.require(this.require(this.
+8 1 this.callback.stack.unshift()
+9 1 return this.handle.handle(this.handle(this.stack.method);return(this.method);return(this.method); });
+9 2 this.stack.add(function trim_error(function(fn){ this.stack) {});"});"});"
+

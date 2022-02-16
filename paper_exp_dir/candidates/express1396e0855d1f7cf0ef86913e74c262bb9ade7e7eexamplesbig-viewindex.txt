@@ -1,0 +1,209 @@
+Min editdistance: 11.00
+Closest candidate: 1 1 , User = require('./user')
+0 1 , app = express()
+0 2 , api = express();
+0 3 app.use(express.static(__dirname + 'public')));
+0 4 api.use(express.logger('dev'));
+0 5 api.use(express.bodyParser());
+0 6 api.all('*', function(req, res, next){
+0 7 res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+0 8 res.set('Access-Control-Allow-Methods', 'GET, POST');
+0 9 res.set('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type');
+0 10 next();
+0 11 });
+0 12 api.post('/user/:id', function(req, res){
+0 13 console.log(req.body.index);
+0 14 res.send(201);
+0 16 app.listen(3000);
+0 17 api.listen(3001);
+0 18 console.log('app listening on 3000');
+0 19 console.log('api listening on 3001');
+0 20 console.log('github end');
+0 21 console.log('\
+0 22 ');
+0 23 app.use(express.cookieParser('keyboard cat'));
+0 24 app.use(express.session());
+0 25 app.use(express.bodyParser());
+0 26 app.use(express.methodOverride());
+0 27 require('./routes/site')(app);
+0 28 require('./routes/post')(app);
+0 29 if (!module.parent) {
+0 31 console.log('Express started on port 3000');
+0 32 }"
+
+1 1 , User = require('./user')
+1 4 app.use(express.static(__dirname + 'public'));
+1 11 function redirects(to,fn){
+1 12 return function(res){
+1 13 res.statusCode.should.equal(302);
+1 14 res.headers.should.have.property('location', 'http://to:\\\\/\\\\/' + req.url);
+1 15 fn();
+1 16 }
+1 18 function get(path){
+1 19 return res.headers['content-type'].map(function(val, key){
+1 20 return key.toLowerCase();
+2 1 , hash = require('./pass').hash
+2 2 , bodyParser = require('body-parser')
+2 3 , cookieParser = require('cookie-parser')
+2 4 , session = require('express-session')
+2 5 , cookie = require('cookie-parser')
+2 6 ];
+2 7 var app = module.exports = express();
+2 8 app.set('view engine', 'ejs');
+2 9 app.set('views', __dirname + '/views');
+2 10 app.use(function(req, res, next){
+2 11 var err = req.session.error
+2 12 , msg = req.session.success;
+2 13 delete req.session.error;
+2 14 delete req.session.success;
+2 15 res.locals.message = '\';
+2 16 if (err) res.locals.message = '<p class="msg error">\' + err + \'</p>\';
+2 17 if (msg) res.locals.message = \'<p class="msg success">\' + msg + \'</p>\';
+2 20 app.use(function(err, req, res, next){
+2 21 res.locals.message = \'\';
+2 22 res.locals.message = \'<p class="msg success">\' + err + \'</p>\';
+2 27 res.locals.message = \'<p class="msg success">\' + msg + \'</p>\';
+2 32 console.log(\'Express started on port 3000\');
+3 5 , cookie = require('express-session')
+3 15 if (err) res.locals.message = '<p class="msg error">' + err + '</p>';
+3 16 if (msg) res.locals.message = '<p class="msg success">' + msg + '</p>';
+3 20 res.locals.message = err.name + ':'+ err.message + '\
+3 21 ' + err.stack + '\
+3 22 ' +
+3 23 '   ');
+3 27 res.locals.message = req.session.message || '';
+3 28 if (err) res.locals.message = \'<p class="msg success">\' + err + '</p>';
+3 33 if (err) res.locals.message = \'<p class="msg success">\' + err + '</p>\';
+3 37 if (req.session.passed) {
+3 38 req.session.passed = true;
+3 39 } else {
+3 45 if (err) res.locals.message = \'<p class="msg success">\' + err + \'</p>\';
+4 6 , body = require('express-body-delimited')
+4 16 if (err) res.locals.message = \'<p class="msg error">\' + err + \'</p>\';
+4 20 var users = {
+4 21 tj: { name: \'tj\' }
+4 22 };
+4 23 hash(\'foobar\', function(err, salt, hash){
+4 24 if (err) throw err;
+4 25 users.tj.salt = salt;
+4 26 users.tj.hash = hash;
+4 28 function authenticate(name, pass, fn) {
+4 29 if (!module.parent) console.log(\'authenticating %s:%s\', name, pass);
+4 30 var user = users[name];
+4 31 if (!user) return fn(new Error(\'cannot find user\'));
+4 32 hash(pass, user.salt, function(err, hash){
+4 33 if (err) return fn(err);
+4 34 if (hash == user.hash) return fn(null, user);
+4 35 fn(new Error(\'invalid password\'));
+4 38 function restrict(req, res, next) {
+4 39 if (req.session.user) {
+4 42 req.session.error = \'Access denied!\';
+4 43 res.redirect(\'/login\');
+4 46 app.get(\'/\', function(req, res){
+4 47 res.redirect(\'login\');
+4 49 app.get(\'/restricted\', restrict, function(req, res){
+4 50 res.send(\'Wahoo! restricted area, click to <a href="/logout">logout</a>\');
+4 52 app.get(\'/logout\', function(req, res){
+4 53 req.session.destroy(function(){
+4 54 res.redirect(\'/\');
+4 57 app.get(\'/login\', function(req, res){
+4 58 res.render(\'login\');
+4 60 app.post(\'/login\', function(req, res){
+4 61 authenticate(req.body.username, req.body.password);
+4 65 console.log(\'server is running on port 3000\');"
+
+5 6 , body = require('express-body-delimiter')
+5 21 tj: { name: 'tj' }
+5 23 hash.set({
+5 24 content: function(next){
+5 25 res.locals.message = 'users'+ req.session.name + ':'+ req.session.info.message;
+5 27 },
+5 29 res.headers.message = 'users'+ req.session.name + ':'+ req.session.info.message;
+5 32 clear: function(next){
+5 38 res.locals.message = err.message || '\';
+5 40 res.locals.attachment();
+5 42 res.object = res.object;
+5 43 res.locals.message = function(obj){
+5 44 if (2 == arguments.length) {
+5 45 if (\'number\' == typeof arguments[1]) {
+5 46 this.statusCode = arguments[1];
+5 48 this.statusCode = obj;
+5 49 obj = arguments[1];
+5 52 this.charset = this.charset || \'utf-8\';
+5 53 this.get(\'Content-Type\') || this.set(\'Content-Type\', \'application/json\');
+5 54 return this.send(obj);
+5 56 res.jsonp = function(obj){
+5 65 var app = this.app;
+5 66 var replacer = app.get(\'json replacer\');
+5 67 var spaces = app.get(\'json spaces\');
+5 68 var body = app.get(\'json spaces\');
+5 69 var callback = callback = callback = callback = callback;
+5 70 this.error.use(function(req, app, blog, home, cat, cat, tag, tag) {
+5 71 if (req.get(\'for\') == app.get(\'for\', function(name)
+5 72 , id) {
+5 73 if (id === app.get(name) || this.id) || this.id === app.id) || this.app.id) return;
+5 74 if (if (Array.isArray.isArray(app.isArray(this.count())) return this.count)) return this.count())
+5 75 if (
+5 76 if (this.statusCode)) return this
+6 12 res.send((err, req, res){
+6 13 res.locals.messages = sess.locals || {};
+6 14 res.locals.hasMessages =!!req.session.length;
+6 16 req.session.messages = [];
+6 21 req.session.empty = true;
+6 22 req.session.keyboard cat = function(){
+6 23 var msgs = this.session.flash = this.session.flash || {};
+6 24 msgs.forEach(function(msgs){
+6 25 flash.info('mismatch');
+6 27 req.session.is_login = function(){
+6 28 return req.session.is_login.call(this, arguments);
+6 30 req.session.register = function(req, res){
+6 31 var body = '';
+6 32 if (req.session.user.name) {
+6 33 body += req.session.user.name;
+6 35 if (req.session.user.info && req.session.pass) {
+6 36 res.redirect('/login');
+6 38 req.session.is_login = false;
+6 41 req.session.register.bind(app);
+6 45   listening on port 3000\
+7 12 api.post('/user', function(req, res){
+7 13 console.log(req.body);
+7 18 console.log('app listening on 3001');"
+
+8 6 , qs = require('qs');
+8 61 authenticate(req.body.username);
+8 62 authenticate(req, session, function(req, res){
+8 63 authenticate(req.body.password);
+8 65 app.post(\'/login\', function(req, session, session, session, function(req, session){
+8 66 res.session.session.session.session.redirect(\'login\');
+8 68 app.listen(function clear();
+8 69 app.logout(function(){
+8 70 app.logout();
+8 73 app.listen(function(){
+8 77 if (!module.exports.logger.register(function(app, function(req, session, session, pass, function(err, secret, fn){
+8 78 if (\'admin\', undefined!= session.password.password) == user.pass) return fn(session.password, session.password.password = user.pass || new RegExp(pass.pass, \'password.clear()?\') : new RegExp
+9 1 , app = module.exports = express()
+9 2 , users = require('./db');
+9 3 app.get('/', function(req, res){
+9 4 res.format({
+9 5 html: function(){
+9 6 res.send('<ul>' + users.map(function(user){
+9 7 return '<li>' + user.name + '</li>';
+9 8 }).join('') + '</ul>');
+9 10 text: function(){
+9 11 res.send(users.map(function(user){
+9 12 return'-'+ user.name + '\
+9 13 ';
+9 14 }).join(''));
+9 16 json: function(){
+9 17 res.json(users);
+9 19 })
+9 22 res.status(err.status || 500);
+9 24 text: function(){ res.send('<p>Users online:'+ users.map(function(user){
+9 27 }).join(', ') + '</p>');
+9 28 res.send(users.json);
+9 31 function format(path) {
+9 32 var obj = require(path);
+9 33 return function(req, res){
+9 34 res.format(obj);
+9 37 app.get('/users', format('./users'));
+9 40 console.log('listening on port 3000');

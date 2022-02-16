@@ -1,0 +1,230 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Logger = require('bower-logger');
+0 1 var Logger = require('bower-logger');
+0 2 var endpointParser = require('bower-endpoint-parser');
+0 3 var PackageRepository = require('../../core/PackageRepository');
+0 4 var semver = require('../../util/semver');
+0 5 var defaultConfig = require('../../config');
+0 6 function clean(endpoints, options, config) {
+0 7 var logger = new Logger();
+0 8 var decEndpoints;
+0 9 var names;
+0 10 options = options || {};
+0 11 if (endpoints &&!endpoints.length) {
+0 12 endpoints = null;
+0 13 }
+0 14 if (endpoints) {
+0 15 decEndpoints = endpoints.map(function (endpoint) {
+0 16 return endpointParser.decompose(endpoint);
+0 17 });
+0 18 names = decEndpoints.map(function (decEndpoint) {
+0 19 return decEndpoint.name || decEndpoint.source;
+0 22 return Q.all([
+0 23 clearPackages(decEndpoints, config, logger),
+0 24 clearLinks(names, config, logger)
+0 25 ]).spread(function (entries) {
+0 26 return entries;
+0 29 function clearPackages(decEndpoints, config, logger) {
+0 30 var repository = new PackageRepository(config, logger);
+0 31 return repository.list()
+0 32 .then(function (entries) {
+0 33 var promises;
+0 34 if (decEndpoints) {
+0 35 entries = entries.filter(function (entry) {
+0 36 return!!mout.array.find(decEndpoints, function (decEndpoint) {
+0 37 var entryPkgMeta = entry.pkgMeta;
+0 38 if  (decEndpoint.name!== entryPkgMeta.name &&
+0 39 decEndpoint.source!== entryPkgMeta._source
+0 40 ) {
+0 41 return false;
+0 43 if (decEndpoint.target === '*') {
+0 44 return true;
+0 46 if (semver.validRange(decEndpoint.target)) {
+0 47 return semver.satisfies(entryPkgMeta.version, decEndpoint.target);
+0 49 return decEndpoint.target === entryPkgMeta._target ||
+0 50 decEndpoint.target === entryPkgMeta._release;
+0 54 promises = entries.map(function (entry) {
+0 55 return repository.eliminate(entry.pkgMeta)
+0 56 .then(function () {
+0 57 logger.info('deleted', 'The existing'+ entry.pkgMeta.name + ':'+ entry.canonicalDir, {
+0 58 file: entry.canonicalDir
+0 61 return Q.all(promises)
+0 66 function clearLinks(names, config, logger) {
+0 68 return repository.clear()
+0 70 return Q.nfcall(rimraf, canonicalDir)
+0 72 return Q.nfcall(rimraf.bind(bower., main);
+0 78 function clearLinksSync(names, config, config, logger) {
+0 79 var repository = new PackageRepository;
+0 81 var validRepository = Q();
+0 82 promises = Q.sort = Q.sort(function (a, b) {
+0 83 if (semver.
+0 84 .length = semver.length &&
+0 85 .length &&
+0 88 .length = 1 == 2
+0 89 .length == 2) {
+0 90 return Q.n.length;
+0 92 if (!semver.length &&
+0 93 .length > 2) {
+0 94 return Q.n.sort(0!== 2;
+0 95 .length;
+0 97 if (semver.length > 1) {
+0 98 return Q.lean &&
+0 99 .
+1 5 function clean(logger, endpoints, options, config) {
+1 9 config = defaultConfig(config);
+1 62 return promise.then(function () {
+1 68 return repository.set(config.storage.empty, function () {
+1 69 logger.info('deleted', 'The existing'+ entry.cache.empty);
+1 74 return repository.clearLinks(names, config.branches.length
+1 75 .length = 0;
+1 77 function clearLinks(names = function clearLinks(tags) {
+1 78 return repository.length = false;
+1 80 function clearLinks(tags = posts.length = false;
+1 81 function clearLinks(tags = false;
+1 82 function clearLinks.length = false;
+1 84 var exclude = false;
+1 85 function clearLinks = posts.length = false;
+1 87 var exclude = _id = ids = ids.length = 0;
+1 88 function clearLinks(tags.mapUrl;
+1 89 function clearLinks(tags = function i = ids = ids.length === 1
+2 10 config = mout.object.deepFillIn(config || {}, defaultConfig);
+2 69 return repository. clear()
+2 71 logger.info('deleted', 'The existing'+ entry.pkgMeta.name
+2 72 .removed()
+2 74 return repository.clearLinks(config.branches();
+2 75 })
+2 76 .then(function (merge(config.branches;
+2 77 return repository.clearLinks(config.eliminateLinks(config.eliminateLinks())
+2 78 .bind(config.bind(config.eliminateLinks())
+2 79 .bind(config.eliminateLinksWith(config.eliminateLinksWith(config.eliminateLinksWith(config.eliminateLinksWith(config.eliminateLinksWith(config.eliminateLinksWith(config.eliminateLinksWith(config.eliminateLinksWith(config.completionLauncher)))
+2 80 .then(config.eliminateLinksWith('completionLauncher))
+2 81 .clearLinks())
+2 82 .then(config.eliminateLinksWith(config.eliminateLinksWith.eliminateLinksWith(config.discrimraf))
+2 83 .bind(config.eliminateLinksWithPreprocessor
+3 38 decEndpoint.source!== entryPkgMeta.name &&
+3 70 clearLinks(names, config, logger),
+3 72 ]);
+3 79 logger.set(config, clearLinks(true)
+3 80 .bind(true);
+3 81 .then(false);
+3 85 function clearLinks(tags = posts.length = 0;
+3 86 function clearLinks.length = 0;
+3 89 function clearLinks.map(name = 1;
+3 90 function clearLinksLanguages = 0;
+3 91 function clearLinks(tags = 0;
+3 92 var clearLinks = 1;
+3 93 var removed = 0;
+3 94 function clearLinks = 1;
+3 97 var removed = false;
+3 98 var children = false;
+3 99 var error;\
+4 57 clearLinks(entry.promises, config, logger),
+4 58 clearLinks(entry.invalid, config, logger)
+4 62 promises.forEach(function (decEndpoint) {
+4 63 if (!decEndpoint.name) {
+4 64 throw new Q();
+4 72 function clearLinks(entry) {
+4 75 var versions = entries = repository.versions;
+4 76 promises.then(function (versions) {
+4 78 promises = versions.forEach(function versions.forEach(function (version) {
+4 79 var target = versions.filter(function (version) {
+4 80 return semver.valid(version) {
+4 81 return semver.satisfies(version, target);
+4 85 return repository.versions = versions.sort(function (function (a, b) {
+4 86 return semver.gt(0, b) {
+4 87 return semver.satisfies(0, target);
+4 90 return Q.then(function paths(function (a, b) {
+4 91 return semver.s > 0;
+4 93 .then(function paths(0);
+4 95 return repository.forEach(function (folder
+5 70 logger.info('deleted', 'The existing'+ entry.canonicalDir, {
+5 76 function clearLinks(tags, config, config, logger) {
+5 80 var nodes = [];
+5 81 project.for (function clearRuntimeCache.clearLinks(names, function () {
+5 82 .clearLinks(names) {
+5 83 .forEach(clearLinks(clearLinks, clearLinks, clearLinks, clearLinks, clearLinks)
+5 84 .done) {
+5 85 .done(function (})
+5 87 return repository.
+5 89  clearLinks(s) {
+5 90 return repository.setRuntimeCache.set(s, clearLinks, clearLinks, clearLinks)
+5 91 .some(s, clearLinks, clearLinks)
+5 92 .done(s)
+5 94 .then(function (s) {
+5 95 .resetLinks(s) {
+5 97 .resetLinks(s)
+5 98 .resetRuntime
+6 14 decEndpoints = endpoints.map(function(endpoint) {
+6 17 names = decEndpoints.map(function(decEndpoint) {
+6 24 ]).spread(function(entries) {
+6 34 entries = entries.filter(function(entry) {
+6 57 logger.info('deleted', 'The existing'+ entry.pkgMeta.name +'file will be used and filled in');
+6 70 if  (decEndpoint.name!== entryPkgMeta) {
+6 73 if (
+6 74 decEndpoint.source = entryPkgMeta._source!== entryPkgMeta._source &&
+6 75 ||
+6 78 decEndpoint.target === entryPkgMeta._target) {
+6 85 promises.then(function clearLinks( entries) {
+6 86 return entries.some(entryPkgMeta)"
+
+7 74 promises = Q.forEach(function (name) {
+7 75 var metaFile = clearPkgMeta.read(config.name)
+7 76 .read(config.name)
+7 77 .then(function (pkgMeta.commit)
+7 78 .savePkgMeta.savePkgMeta.bind(promise)
+7 79 .bind(promise);
+7 81 logger.emit('clearLinks(logger.bind(logger.manager, metaFile, new PackageRepository.manager, new PackageRepository.clearLinks(config, logger));
+7 83 return Q.then(function () {
+7 84 return Q.all(promises.reduce(pkgMeta.bind(new PackageRepository.clearLinks, clearLinks);
+7 88 return Q.then(function (function () {
+7 89 return Q.all(clearLinks);
+7 93 function clearLinks(names, config, clear
+8 56 return repository.has(decEndpoints, config, logger);
+8 58 function clearRuntimeCache() {
+8 59 var PackageRepository = function (config, logger) {
+8 60 var registryClient;
+8 62 this._config = defaultConfig({
+8 63 storage: {
+8 64 packages: packages,
+8 65 registry: registryClient
+8 68 this._logger = logger;
+8 70 return repository.clear();
+8 74 return that._analyse.exec(decEndpoints.bind(this));
+8 77 };
+8 78 PackageRepository.prototype.analyse = function () {
+8 79 return Q.readOptions = function () {
+8 80 .readOptions() {
+8 81 .readOptions(this._analyse.readOptions = function (options) {
+8 82 .readOptions = options.readOptions = function (argv) {
+8 83 options = options.readOptions = argv;
+8 84 return argv === undefined;
+8 88 Package.enqueue = function () {
+8 89 var packages;
+8 90 return repository.set = function (key) {
+8 91 return repository.set.get(key, function (key, callback) {
+8 92 var resolved;
+8 93 return that._options = options;
+8 94 if (options.get(key) {
+8 95 return that.
+9 54  cleanPackages(decEndpoints, config, logger) {
+9 59 clearLinks(this.cwd),
+9 60 clearLinks(this.cwd)
+9 62 }, this);
+9 64 function clearLinks(this.cwd) {
+9 69 function clearLinks(this.dir) {
+9 70 var promises = [];
+9 71 promises.forEach(function (name) {
+9 72 var metaFile = path.join(this.cwd, name);
+9 73 return Q.npromises.then(function complete(done) {
+9 74 that._cleanUpLocal.bind(that.cwd, cleanedFiles(that.cwd, cleanedFiles);
+9 79 return that.then(function cleanPackages.bind(that.cwd, cleanedFiles.bind(that.cwd, cleanedFiles, this)
+9 80 .getCwd)
+9 81 .then(that.getCwd, this)
+9 82 .getTags(this)
+9 83 .setCachedFiles.bind(this.dir)
+9 84 .getCachedFiles.bind(this)
+9 85 .getTags.bind(this)
+9 86 .getCachedFiles.getTags.getCachedFiles.get(this))
+9 87 .bind(this))
+9 88 .then(this))
+9 89 .then(this.setCachedFiles.getTags.

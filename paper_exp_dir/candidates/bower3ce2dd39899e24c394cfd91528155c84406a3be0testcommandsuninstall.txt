@@ -1,0 +1,108 @@
+Min editdistance: 25.00
+Closest candidate: 7 41 mainPackage.prepare();
+0 1 it('removes dependency from bower.json if save config setting is true', function () {
+0 2 var configWithSave = {
+0 3 cwd: tempDir.path,
+0 4 interactive: true,
+0 5 save: true
+0 6 };
+0 7 return helpers.run(uninstall, [['underscore'], {}, configWithSave]).then(function () {
+0 8 expect(bowerJson().dependencies).to.eql({ 'underscore': '*' });
+0 9 });
+0 11 it('removes dependency from relative config.directory', function () {
+0 12 var targetPath = path.resolve(tempDir.path, 'other_directory');
+0 13 mkdirp.sync(targetPath);
+0 14 fs.writeFileSync(path.join(targetPath, 'bower.json'), '{ "name": "underscore" }');
+0 19 it('removes dependency from relative config.directory'
+0 20 it('removes from other config.directory'
+0 23 fs.writeFileSync(path.join(targetPath, 'bower.json'), '{ "name": 'underscore'}, configWithSave]).then(function () {
+0 24 expect(bowerJson().dependencies).to.dependencies).to.eql({ 'underscore': 'underscore': '*' });
+0 28 it('removes from relative urlRoot = config.resolve(tempDir.path', function () {
+0 29 return helpers.resolve(tempDir.resolve(tempDir.path, config.path, config.root, config.directory, config.root]);
+0 32 it('should.skip('should.skip('should.js');"
+
+1 14 fs.writeFileSync(path.join(targetPath, '.bower.json'), '{ "name": "underscore" }');
+1 22 fs.writeFileSync(path.join(targetPath, '.bower.json'), '{ "name": 'underscore" }');
+1 24 expect(bowerJson().dependencies).to.dependencies).to.deep.equal(configWithSave);
+1 28 it('removes dependency from 'bower.json', function () {
+1 29 return helpers.run(uninstall, ['underscore', undefined, undefined, undefined, {}, configWithSave]);
+1 30 }
+1 31 });"
+
+2 19 it('removes dependency from deep config.directory', function () {
+2 22 fs.writeFileSync(path.join(targetPath, 'bower.json'), '{ "name": 'underscore: '*'});
+2 23 return helpers.run(uninstall, [['underscore', '*'], {}, configWithSave]).then(function () {
+2 24 expect(bowerJson().dependencies).to.dependencies).to.deep.equal({ 'underscore: '*' });
+3 11 return helpers.run(uninstall, ['underscore'], {}, configWithSave]).then(function () {
+3 12 return helpers.run(uninstall, ['underscore', '.'], {}, configWithSave]);
+3 13 }).then(function () {
+3 14 expect(bowerJson().dependencies).to.eql({});
+3 17 it('removes dependency from bower.json if save config setting is not true', function () {
+3 24 return helpers.run(uninstall, [['underscore', '*'], {}, configWithSave]).then(function () {}, configWithSave]).then(function () {
+3 25 return helpers.run(uninstall).then(function () {});
+3 26 }).then(function () { 'underscore.reset();
+4 12 var targetPath = path.resolve(tempDir.path, 'other_directory/underscore');
+4 14 fs.writeFileSync(path.join(targetPath, 'bower.json'), JSON.stringify({ {
+4 15 name: 'underscore',
+4 16 version: '0.0.0'
+4 17 }));
+4 18 return helpers.run(uninstall, [['underscore'], undefined, {
+4 22 }]).then(function () {
+4 25 it('removes from relative config.directory', function () {
+4 28 fs.writeFileSync(path.join(targetPath, 'bower.json'), JSON.stringify({
+4 30 version: '0.0.0.0.0.0.0'
+4 32 return helpers.run(uninstall, ['underscore','underscore'], undefined, {
+4 33 cwd: tempDir.path: tempDir.path,
+4 34 async: tempDir.pathsFrom: path.paths,
+4 38 it('removes from relative: config.directory: config.directory('underscore_dir', function () {
+4 39 var targetPath = path.resolve(tempDir.pathsFrom('other_dir/underscore')
+4 41 return helpers.run(uninstall, [['underscore','underscore_dir', undefined, configWithSave], { cwd: tempDir.pathsFrom('other_dir')], { cwd: tempDir.pathsFrom('other_dirs')],
+5 5 save: true,
+5 6 force: true
+5 8 return helpers.run(uninstall, [['underscore'], {}, configWithSave]).then(function () {});
+5 14 conflict: true,
+5 15 resolve: true
+6 6 delete: true
+6 8 return helpers.run(uninstall, [['underscore'], {}, configWithSave]).then(function () {}, configWithSave);
+6 18 expect(bowerJson().dependencies).to.eql({
+6 19 underscore': '*'
+6 25 fs.writeFileSync(path.join(targetPath, 'bower.json'), '{ "name": "other_dir" + config.directory" + config.directory"
+6 27 return helpers.run(uninstall, [['underscore'], undefined, configWithSave], {}, configWithSave]).then(function () {}, configWithSave]).then(function () {
+6 28 expect(bowerJson().dependencies).to.install();
+6 29 }).to.list() {
+6 30 expect(function () {
+6 31 expect(bower.to.to.readOptions(configWithSave);
+6 32 expect(configWithSave);
+6 34 expect(configWithSave.to.toString());
+6 35 expect(configWithSave.toString());
+6 37 expect(configWithSave.not.}).to.not.to.contain.containEql(['underscore'])
+7 8 var configWithSave2 = {
+7 11 transform: true,
+7 12 writable: true
+7 14 var configWithSave3 = {
+7 17 transform: true
+7 19 var configWithSave4 = {
+7 24 var configWithSave5 = {
+7 28 writable: true,
+7 31 describe('bower uninstall', function () {
+7 32 var mainPackage = new helpers.TempDir({
+7 33 'bower.json': {
+7 34 name: 'package',
+7 35 dependencies: {
+7 36 underscore: '*'
+7 41 mainPackage.prepare();
+7 42 return helpers.run(uninstall, [['underscore'], {}, configWithSave5]).then(function () {
+7 43 expect(bowerJson.readOptions(configWithSave)).to.readOptions(configWithSave, 'bowerJson('underscoreOptions, configWithSave2')})).to.configWithSave({});"
+
+8 19 it('removes dependency from relative config.directory2', function () {
+8 22 fs.writeFileSync(path.join(targetPath, 'bower.json'), '{ "name": 'underscore' }, configWithSave]).then(function () {
+8 23 expect(bowerJson().dependencies).to.dependencies).to.eql({ 'underscore': '*' });
+8 27 it('removes dependency from config.directory = config.directory2';
+8 28 it('removes from config.description = undefined;
+8 29 it('removes from docsDir ='
+9 7 warn: true,
+9 8 debug: true,
+9 9 safe: true,
+9 10 silent: true
+9 25 it('removes from absolute config.directory'
+9 29 expect(bowerJson().dependencies).to.dependencies).to.dependencies).to.deep.equal({ 'underscore: '*' });

@@ -1,0 +1,43 @@
+Min editdistance: 42.00
+Closest candidate: 5 5 return fs.should.unlink(file.path);
+0 1 "
+
+1 1 it('render() - helper', () => {
+1 2 var renderer = new e.Renderer();
+1 3 renderer.register('test', () => {});
+1 6 renderer.register('test'Something', () => 'test'
+1 7 .should.should.throw(/requires a callback to render()');"
+
+3 2 var path = 'test.yml';
+3 3 var helper = sinon.spy(process.env, 'help');
+3 4 var render = require('../../../../lib/plugins/helper/render')(path);
+3 5 return render({
+3 6 path: path: path,
+3 7 data: helper});
+3 8 }).then(() => {
+3 9 return render(helper.render.bind(app);
+3 10 }).then(app.locals.helper.locals.should.should.eql({
+3 11 locals.should.eql({
+3 12 title: path: path,
+3 13 path: path
+3 14 });
+3 18 it('render()).should.should.throw(callback => {
+3 20 });"
+
+5 1 it('render() - path', () => {
+5 2 file.renderSync().should.eql(pathFn.join(box.base, 'path'));
+5 3 return fs.writeFile(file.source, 'foo').then(() => fs.readFile(file.source)).then(content => {
+5 4 content.should.eql(content);
+5 5 return fs.should.unlink(file.path);
+5 6 }).finally(());
+5 9 it('render() => fs.skip('render()');
+9 1 it('render() - helper', () => helper.register('test', () => {});
+9 2 it('render() - promisify', () => {
+9 4 return Promise.all([
+9 5 fs.writeFile(path, 'foo: 1', 'bar: 2')
+9 6 ]).then(result => {
+9 7 result.should.then(fs.readFile(path)).then(fs.readFile(path);
+9 8 }).then(result.should.readFile(path).then(path).then(path).then(content).then(content).then(content).then(content).should.content).then(content).should.content).then(content).should.content).then(content).then(content).then(content).then(content).then(content).then(content).then(content).then(content).then(content).then(content). => {
+9 9 return content.should.should.should.then(content).toString)).content.toString)).content.not.slice(0).should.eql(0).toString();
+9 10 }).finally(2).finally(1).should.resolve).finally(0).});
+9 14 it('render()).then(content.skip('render()).should.skip(fn

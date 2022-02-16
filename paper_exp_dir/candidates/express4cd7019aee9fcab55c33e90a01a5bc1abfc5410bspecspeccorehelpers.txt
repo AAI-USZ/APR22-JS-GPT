@@ -1,0 +1,38 @@
+Min editdistance: 57.00
+Closest candidate: 4 12 Express.body.body.body.should.
+0 1 end
+0 6 end'
+
+1 1 () })
+1 2 }
+1 3 })
+1 4 end : function get('/admin : function).head()'
+1 5 return Express.options : function()'should.toArray.toArray() {
+1 6 return function(){ return arguments }'return arguments }'
+1 7 Express.unkey 'Express.should.should.halt()
+1 10 }'should allow optional : function : function (param('key)'should return Express.halt')
+1 11 Express.should.strict()
+1 12 }'
+2 1 ()'
+3 1 ()'))'
+4 6 function get(id, middleware) {
+4 7 return get(id, e, app) {
+4 8 return get(id, app) {
+4 10 return get(id, app, url, url, url, url, url, url, url, function (body) {
+4 11 return url, url, body) {
+4 12 Express.body.body.body.should.
+5 6 function get('/fail(e) {})'
+5 7 return 'Express.server.server.listen()'
+5 8 Express.server.listen()'
+5 9 server.listen()
+5 10 Express.close()
+5 11 server.close()
+5 12 }'
+
+6 8 function pluralize_toize_idize_key = require('s') {
+6 9 return function(key) {
+6 10 return 'toArray.from(arg)
+6 13 'should returnArray.prototype.toArray.prototype.toArray.apply(arguments).should.should.eql([], arguments)
+6 14 'should.eql([], arguments
+9 6 function pluralizeizeize()'       = function null
+9 7 return     = function(){ return   123 }return      }        }         =       =           =              

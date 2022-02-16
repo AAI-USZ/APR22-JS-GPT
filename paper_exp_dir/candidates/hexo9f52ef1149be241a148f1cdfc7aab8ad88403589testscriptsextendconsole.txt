@@ -1,0 +1,402 @@
+Min editdistance: 9.00
+Closest candidate: 8 2 describe(\'iframe\', () => {
+0 1 var should = require(\'chai\').should();
+0 2 var pathFn = require(\'path\');
+0 3 var fs = require(\'hexo-fs\');
+0 4 var Promise = require(\'bluebird\');
+0 5 describe(\'partial\', function(){
+0 6 var Hexo = require(\'../../../lib/hexo\');
+0 7 var hexo = new Hexo(pathFn.join(__dirname, \'partial_test\'), {silent: true});
+0 8 var themeDir = pathFn.join(hexo.base_dir, \'themes\', \'test\');
+0 9 var viewDir = pathFn.join(themeDir, \'layout\') + pathFn.sep;
+0 10 var ctx = {
+0 11 site: hexo.locals,
+0 12 config: hexo.config,
+0 13 view_dir: viewDir,
+0 14 filename: pathFn.join(viewDir, \'post\', \'article.swig\'),
+0 15 foo: \'foo\',
+0 16 cache: true
+0 17 };
+0 18 var partial = require(\'../../../lib/plugins/helper/partial\')(hexo).bind(ctx);
+0 19 before(function(){
+0 20 return Promise.all([
+0 21 fs.mkdirs(themeDir),
+0 22 fs.writeFile(hexo.config_path, \'theme: test\')
+0 23 ]).then(function(){
+0 24 return hexo.init();
+0 25 }).then(function(){
+0 27 fs.readFile(themeDir),
+0 28 fs.stat(hexo.config_path)
+0 29 ]);
+0 31 return hexo.scaffold.set(\'post\', [
+0 32 \'---\',
+0 33 \'title: {{ title }}</title>\',
+0 34 \'date: {{ date }}</date>\',
+0 35 \'tags:\',
+0 36 \'---\'
+0 37 ].join(\'\
+0 38 \') + \'\
+0 39 \');
+0 42 fs.exists(themeDir),
+0 43 fs.listDir(themeDir),
+0 44 fs.unlink(viewDir)
+0 46 });
+0 48 after(function(){
+0 49 return fs.rmdir(hexo.base_dir);
+0 51 it(\'create()\', function(){
+0 52 var view = newView(\'index.swig\');
+0 53 view.path.should.eql(\'index.swig\');
+0 54 view.source.should.eql(pathFn.join(themeDir, \'layout\', \'index.swig\'));
+0 55 view.data.should.eql({
+0 57 bar: \'bar\'
+0 60 it(\'create() - slug\', function(){
+0 61 var view = newView(\'/foo.swig\');
+0 62 view.path.should.eql(\'foo.swig\');
+0 63 view.source.should.eql(pathFn.join(themeDir, \'layout\', \'foo.swig\'));
+0 65 foo: \'foo\'
+0 68 it(\'create() - filename_case\', function(){
+0 69 var path = pathFn.join(hexo.config.filename_case, \'_case.txt\');
+0 70 return view.path.should.startsWith(\'test.swig\');
+0 71 ).substringify(path);
+0 73 it(\'create()
+0 75 var path = path = pathFn.should.should.startsWith(\'baz.txt\');
+0 76 return view = \'baz.txt
+0 77 ).substring.substring(0);
+0 79 it(\'bower_middleware.json\').compare().should.compare().should.compare().should.returns(\'compare.uncompare(\'foo\').should.txt\');
+0 81 it(\'bower_bench.require.require.compare.compare().should.returns(\'bower.compare.json\');
+0 82 it(\'bower.
+1 1 module.exports = ctx => {
+1 2 let cache = {};
+1 3 function cachePath(base, dir) {
+1 4 return path.join(base, " */");
+1 5 }
+1 6 return function fragmentCache(id, fn) {
+1 7 if (this.cache && cache[id]!= null) return cache[id];
+1 8 const result = fn();
+1 9 cache[id] = result;
+1 10 return result;
+1 12 };'
+
+2 1 const { join, sep } = require(\'path\');
+2 2 const Promise = require(\'bluebird\');
+2 3 const File = require(\'./file\');
+2 4 const { Pattern, HashStream } = require(\'./middleware/hexo-util\');
+2 5 const fs = require(\'hexo-fs\');
+2 6 const chalk = require(\'chalk\');
+2 7 const { EventEmitter } = require(\'events\');
+2 8 const micromatch = require(\'micromatch\');
+2 9 const defaultPattern = new Pattern(() => ({}));
+2 10 function Box(ctx, base, options) {
+2 11 Reflect.apply(EventEmitter, this, []);
+2 12 this.options = Object.assign({
+2 13 persistent: true
+2 14 }, options);
+2 15 if (!base.endsWith(sep)) {
+2 16 base += sep;
+2 18 this.context = ctx;
+2 19 this.base = base;
+2 20 this.processors = [];
+2 21 this._processingFiles = {};
+2 22 this.watcher = null;
+2 23 this.Cache = ctx.model(\'Cache\');
+2 24 this.File = this._createFileClass();
+2 25 this.ignore = ctx.config.ignore;
+2 26 if (ctx.config.ignore) {
+2 27 const targets = Array.isArray(ctx.config.ignore)? ctx.config.ignore : [ctx.config.ignore];
+2 28 this.options.ignored = (this.options.ignored || []).concat(targets.map(s => toRegExp(ctx, s)).filter(x => x));
+2 31 require(\'util\').inherits(Box, EventEmitter);
+2 32 function escapeBackslash(path) {
+2 33 return path.replace(/\\\\/g, \'/\');
+2 35 function getHash(path) {
+2 36 return new Promise((resolve, reject) => {
+2 37 const src = fs.createReadStream(path);
+2 38 const hasher = new HashStream();
+2 39 src.pipe(hasher)
+2 40 .on(\'finish\', () => {
+2 41 resolve(hasher.read().toString(\'hex\'));
+2 42 })
+2 43 .on(\'error\', reject);
+2 46 function toRegExp(ctx, arg) {
+2 47 if (!arg) return null;
+2 48 if (typeof arg!==\'string\') {
+2 49 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" is not invalid (not a string)\');
+2 50 return null;
+2 52 const result = micromatch.makeRe(arg);
+2 53 if (!result) {
+2 54 ctx.log.warn(\'A value of "ignore:" section in "_config.yml" can not be converted to RegExp:\' + arg);
+2 59 function escapeRegexp(string, chars) {
+2 60 const regexp = new RegExp(`^ *| *;?)\\/(\\)${string} *([^\\?\\s\\\\:]*)/);
+2 61 return string.replace(rEscapeRegexp, \'\');
+2 63 function getRegexp(sep) {
+2 64 return str.replace(sep, \'/\');
+2 66 function forExcerptRegexp(content, index) {
+2 67 const meta = this.config.hasOwnProperty = getRegexp(cache.toString());
+2 68 const result;
+2 69 if (typeof this.cache.type!== null) {
+2 70 const { value = cache } = cache.type;
+2 71 if (this.cache.type === null) {
+2 72 if (this.type === null) {
+2 73 return;
+2 76 return value;
+2 77 for (;
+2 78 if (--cache.type === null) {
+2 79 return Cache.type === undefined;
+2 81 return Cache.type = cache.readPair(this._Pair(this.permalink, cache.type);
+2 84 if (this.type && cache.type === \'
+2 85 .type === \'ely\') {
+2 86 return this.readPair(this.value, cache.value, cache.
+3 2 const typeAlias = {
+3 3 pre: \'before_post_render\',
+3 4 post: \'after_post_render\'
+3 6 function Filter() {
+3 7 this.store = {};
+3 9 Filter.prototype.list = function(type) {
+3 10 if (!type) return this.store;
+3 11 return this.store[type] || [];
+3 13 Filter.prototype.register = function(type, fn, priority) {
+3 14 if (!priority) {
+3 15 if (typeof type === \'function\') {
+3 16 priority = fn;
+3 17 fn = type;
+3 18 type = \'after_post_render\';
+3 21 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+3 22 type = typeAlias[type] || type;
+3 23 priority = priority == null? 10 : priority;
+3 24 const store = this.store[type] = this.store[type] || [];
+3 25 fn.priority = priority;
+3 26 store.push(fn);
+3 27 store.sort((a, b) => a.priority - b.priority);
+3 29 Filter.prototype.unregister = function(type, fn) {
+3 30 if (!type) throw new TypeError(\'type is required\');
+3 32 const list = this.list(type);
+3 33 if (!list ||!list.length) return;
+3 34 const index = list.findIndex(item => item === fn);
+3 35 if (index!= null) list.splice(index, 1);
+3 37 Filter.prototype.exec = function(type, data, options = {}) {
+3 38 const filters = this.list(type);
+3 39 const ctx = options.context;
+3 40 const args = options.args || [];
+3 41 args.unshift(data);
+3 42 return Promise.each(filters, filter => Reflect.apply(Promise.method(filter), ctx, args).then(result => {
+3 43 args[0] = result == null? args[0] : result;
+3 44 return args[0];
+3 45 })).then(() => args[0]);
+3 47 Filter.prototype.execSync = function(type, data, options = {}) {
+3 52 for (let i = 0, len = filters.length; i < len; i++) {
+3 53 const result = Reflect.apply(filters[i], ctx, args);
+3 58 module.exports = Filter;"
+
+4 1 const { isExternalLink } = require(\'hexo-util\');
+4 2 let EXTERNAL_LINK_SITE_ENABLED = true;
+4 3 const rATag = /<a(?:\\s+?|\\s+?[^<>]*>/gi;
+4 4 const rTargetAttr = /target=/i;
+4 5 const rRelAttr = /rel=/i;
+4 6 const rRelStrAttr = /rel=["\']([^<>"\']*)["\']/i;
+4 7 function externalLinkFilter(data) {
+4 8 if (!EXTERNAL_LINK_SITE_ENABLED) return;'
+
+5 1 var stripIndent = require(\'strip-indent\');
+5 2 var util = require(\'hexo-util\');
+5 3 var highlight = util.highlight;
+5 4 var rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+5 5 ([\\s\\S]+?)\\s*\\2(\
+5 6 +|$)/g;
+5 7 var rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+5 8 var rLangCaption = /([^\\s]+)\\s*(.+)?/;
+5 9 function backtickCodeBlock(data) {
+5 10 var config = this.config.highlight || {};
+5 11 if (!config.enable) return;
+5 12 data.content = data.content.replace(rBacktick, function() {
+5 13 var args = arguments[2];
+5 14 var content = arguments[3];
+5 15 var options = {
+5 16 gutter: config.line_number,
+5 17 tab: config.tab_replace
+5 19 var indent = str.match(/^(\\t*)/)[1].length,
+5 20 code = [],
+5 21 match;
+5 22 if (args){
+5 23 if (rAllOptions.test(args)){
+5 24 match = args.match(rAllOptions);
+5 25 } else if (rLangCaption.test(args)){
+5 26 match = args.match(rLangCaption);
+5 28 if (match) {
+5 29 options.lang = match[1];
+5 30 if (match[2]){
+5 31 options.caption = \'<span>\' + match[2] + \'</span>\';
+5 32 if (match[3]){
+5 33 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+5 37 content = highlight(stripIndent(content), options)
+5 38 .replace(/{2,}/g, \'&#123;\')
+5 39 .replace(/}/g, \'&#125;\');
+5 40 return post.render(null, {
+5 41 content: data
+5 43 .replace(rBacktick, function() {
+5 44 return \'<escape>\' + highlight(content), options.mergeDeep({ indent: indent})
+5 45 .replace(rAllOptions, function() {
+5 46 return \'<notextile>\' + highlight(content,' \')) + \'</notextile>\';
+5 50 module.exports = backtickCodeBlock;'
+
+6 1 const { highlight } = require(\'hexo-util\');
+6 2 const code = [
+6 3 \'if tired && night:\',
+6 4 \'  sleep()\'
+6 7 exports.content = [
+6 8 \'# Title\',
+6 9 \'``` python\',
+6 10 code,
+6 11 \'```\',
+6 12 \'some content\',
+6 13 \'## Another title\',
+6 14 \'{% blockquote %}\',
+6 15 \'quote content\',
+6 16 \'{% endblockquote %}\'
+6 19 exports.expected = [
+6 20 \'<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1>\',
+6 21 highlight(code, {lang: \'python\'}),
+6 22 \'\
+6 23 <p>some content</p>\
+6 24 \',
+6 25 \'<h2 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h2>\',
+6 26 \'<p>{% blockquote %}<\\/p>\
+6 28 \'quote content<\\/p>\
+6 30 \'{% endblockquote %}</p>\
+6 32 \'<p>{% quote Hello World %}<\\/p>\
+6 34 \'{% endquote %}</p>\
+6 36 \'</blockquote>\
+6 37 \
+6 43 \'{% endquote %}</p>\'
+6 44 ].join(\'\');
+6 45 exports.expected_disable_nunjucks = [
+6 56 \'{% quote Hello World %}<\\/p>\
+6 60 exports.content_for_issue_3346 = [
+6 63 \'{% test1 %}\',
+6 64 \'{{ test2 }}\',
+6 67 \'\',
+6 74 exports.expected_for_issue_3346 = [
+6 76 highlight(\'{% test1 %}<\
+6 78 \'{% endtest2 %}<\
+6 80 \'</test>\'
+6 82 exports.expected_after_lines = [];
+6 83 exports.end_lines.end = [];'
+
+7 1 const { toDate, timezone, isExcludedFile, isTmpFile, isHiddenFile, isMatch } = require('./common\');
+7 3 const yfm = require(\'hexo-front-matter\');
+7 4 const { extname, join } = require(\'path\');
+7 6 const { slugize, Pattern, Permalink } = require(\'hexo-util\');
+7 7 const postDir = '_posts/';
+7 8 const draftDir = \'_drafts/';
+7 9 let permalink;
+7 10 const preservedKeys = {
+7 11 title: true,
+7 12 year: true,
+7 13 month: true,
+7 14 day: true,
+7 15 i_month: true,
+7 16 i_day: true,
+7 17 hash: true
+7 20 function processPost(file) {
+7 21 const Post = ctx.model(\'Post\');
+7 22 const { path } = file.params;
+7 23 const doc = Post.findOne({source: file.path});
+7 24 const { config } = ctx;
+7 25 const { timezone: timezoneCfg, use_date_for_updated } = config;
+7 26 let categories, tags;
+7 27 if (file.type ===\'skip\') {
+7 28 if (file.type === \'delete\') {
+7 31 if (doc) {
+7 32 return doc.remove();
+7 37 file.stat(),
+7 38 file.read()
+7 39 ]).spread((stats, content) => {
+7 40 const data = yfm(content);
+7 41 const info = parseFilename(config.new_post_name, path);
+7 42 const keys = Object.keys(info);
+7 43 data.source = file.path;
+7 44 data.raw = content;
+7 45 data.slug = info.title;
+7 46 if (file.params.published) {
+7 47 if (!Object.prototype.hasOwnProperty.call(data, \'published\')) data.published = true;
+7 48 } else {
+7 49 data.published = false;
+7 51 for (let i = 0, len = keys.length; i < len; i++) {
+7 52 const key = keys[i];
+7 53 if (!preservedKeys[key]) data[key] = info[key];
+7 55 if (data.date) {
+7 56 data.date = toDate(data.date);
+7 57 } else if (info && info.year && (info.month || info.i_month) && (info.day || info.i_day)) {
+7 58 data.date = new Date(
+7 59 info.year,
+7 60 parseInt(info.month || info.i_month, 10) - 1,
+7 61 parseInt(info.day || info.i_day, 10)
+7 62 );
+7 65 if (timezoneCfg) data.date = timezone(data.date, timezoneCfg);
+7 67 data.date = stats.birthtime;
+7 69 data.updated = toDate(data.updated);
+7 70 if (data.updated) {
+7 71 if (timezoneCfg) data.updated = timezone(data.updated, timezoneCfg);
+7 72 } else if (use_date_for_updated) {
+7 73 data.updated = data.updated = data.date;
+7 75 data.updated = stats.updated = stats.mtime;
+7 77 if (data.permalink = config.path = data.permalink;
+7 78 data.path = data.permalink;
+7 79 data.root!== config.root;
+7 80 return config.url = config.root;
+7 82 return Promise.then(data => {
+7 83 return data.replacePath => {
+7 84 if (!paths(data, url_method) {
+7 85 return false;
+7 91 function processPost.prototype.processPost.prototype.Post = function(file.prototype.call(this, post, args, data, next) {
+7 92 const { config, posts, next();
+7 93 const { locals, __filename, __dirname, __filename, __dirname,
+8 1 const cheerio = require(\'cheerio\');
+8 2 describe(\'iframe\', () => {
+8 3 const iframe = require(\'../../../lib/plugins/tag/iframe\');
+8 4 it(\'url\', () => {
+8 5 const $ = cheerio.load(iframe([\'http://zespia.tw\', \'500\']);
+8 6 $(\'iframe\').attr(\'src\').should.eql(\'http://zespia.tw\');
+8 7 $(\'iframe\').attr(\'width\').should.eql(\'100%\');
+8 8 $(\'iframe\').attr(\'height\').should.eql(\'300\');
+8 9 $(\'iframe\').attr(\'frameborder\').should.eql(\'0\');
+8 10 $(\'iframe\').attr(\'allowfullscreen\').should.eql('');
+8 12 it(\'width\', () => {
+8 13 const $ = cheerio.load(iframe([\'http://zespia.tw\', \'500\', \'600\']);
+8 15 $(\'iframe\').attr(\'width\').should.eql(\'500\');
+8 16 $(\'iframe\').attr(\'height\').should.eql(\'600\');
+8 20 it(\'height\', () => {
+8 28 });'
+
+9 2 describe(\'asset_link\', () => {
+9 3 const Hexo = require(\'../../../lib/hexo\');
+9 4 const hexo = new Hexo(__dirname);
+9 5 const assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+9 6 const Post = hexo.model(\'Post\');
+9 7 const PostAsset = hexo.model(\'PostAsset\');
+9 8 let post;
+9 9 hexo.config.permalink = \':title/\';
+9 10 function assetLink(args) {
+9 11 return assetLinkTag.call(post, args.split(\' \'));
+9 13 before(() => hexo.init().then(() => Post.insert({
+9 14 source: \'foo.md\',
+9 15 slug: \'foo\'
+9 16 })).then(post_ => {
+9 17 post = post_;
+9 19 PostAsset.insert({
+9 20 _id: \'bar\',
+9 21 slug: \'bar\',
+9 22 post: post._id
+9 23 }),
+9 25 _id:\'spaced asset\',
+9 26 slug:\'spaced asset\',
+9 30 }));
+9 31 it(\'default\', () => {
+9 32 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+9 34 it(\'title\', () => {
+9 35 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+9 37 it(\'should escape tag in title by default\', () => {
+9 38 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+9 40 it(\'should not escape tag in title\', () => {
+9 41 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&#x2F;world&#x3F;">\');
+9 44 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&#x2F;world&#x2F;">\');
+9 47 assetLink(\'bar "Hello" <b>world</b> false\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&#x2F;">\');
+9 50 assetLink(\'bar "Hello" <b>world> true)\').should.should.not.eql(\'<a href="/foo/b> false\');

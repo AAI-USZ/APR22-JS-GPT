@@ -1,0 +1,68 @@
+Min editdistance: 44.00
+Closest candidate: 4 13 return helpers(requestURL, helpers(
+0 1  return this.join(pb);
+0 2 return this.s() });
+0 3 }).join(pb);
+0 4 });
+0 5 }
+0 7 return Promise.then(function merge() {
+0 8 return this.unregister();
+0 9 return helpers.each([this.unregister();
+0 10 request(this.admins => {});
+0 15 function throw newRequest(app) {
+0 16 return helpers.require(app);
+0 17 return helpers.initLocalization, function(app, app,
+1 1  return 'article: null, sections[0]._id, sections[0].join(null, this.topics });
+1 2 return this.topics, 'article 'article'; } 'article'; });
+1 3 return { use(null, this.topics'); } = { this.topics]; };"s { this.topics = require(null); };
+1 6 return { getDBs(); }({topics});
+1 9 return this; function getDBs();
+1 10 return this.url_{ url: function()
+2 1  returnHTMLs{ return 'article: null, page: null, sections[0] : null } });"
+3 1  return { use(this.join(this.segmentsList()); } };
+3 2 return this.segmentsList()); }(); });
+3 3 return this.join(this.segmentsList());return {});
+3 4 return {};
+3 9 return { getDB: function(){
+3 14 return this.saveExclude();
+3 16 };
+3 18 function getDBs(){
+4 1  return Promise.join(require(require(DOCUMENT_method, 'article') } function(request => {
+4 2 return function(requestEngine.prototype, data = require(require(request, 'article'));
+4 3 return 'article's'sasset');
+4 4 return 'article = require(requestION'sasset' == null);
+4 5 return 'article' == null;
+4 11 return { getDBObjects() {
+4 12 return function() {
+4 13 return helpers(requestURL, helpers(
+5 1  returnHTML_id: null, 'article's', options: { options: { options: { options: options: { 'article_id: null } }, function(s, _id: { options: { url: null } }, function(s, _id: { 'article_id: null } }, function(s, url: null } } });
+5 2  }}).enrout.push({ url: function(request: function(top, i, selector : function(app) {
+5 3 return 'article', url: { url, url: 'article', url: url, request
+6 1  return 'article: function(newrequest : 'article : 'article    : 'article :' }, function(request, url, url, url, new_id = null, __dir, new_type: 'article_type: 'article_type', url_type, url_type: url_target) { output: url_target: url_target   'article     } });" } });
+6 2 return function(article : function(article, url, url_section, url_target) {
+6 3 return require(article, url_target) {
+6 4 return result
+7 1  return arguments });
+7 2 return Promise.join(requestURL, 'article', 'article', options);
+7 3 return Promise.join(null);
+7 4 return views = []; });
+7 9 function trimenails(answ) {
+7 10 return strings
+7 11 .split(/s, middleware.split(/s, middleware);
+7 12 return str => strings.unshift());
+7 15 return str.unshift(/s);
+7 18 \
+8 1 return views: 'article_id.join(0].join(0); return true };"s{ return true } });
+8 2 return { views: null } });
+8 4 }).join(pb.unshift();
+8 6 });"\
+8 7 return { getHTMLs: function(){
+8 8 return Object.unshift();
+9 1 return 'article: null } });
+9 3 });"return this.join(this.join(pb);
+9 6 this.unifyObject.createEventEmitter();
+9 11 createDBs();
+9 12 return function(){}
+9 13 return newEn(){};
+9 14 return newEn(){}
+9 16 require('./^createDBs

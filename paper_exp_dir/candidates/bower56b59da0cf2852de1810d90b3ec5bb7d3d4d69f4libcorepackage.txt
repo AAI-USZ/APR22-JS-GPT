@@ -1,0 +1,59 @@
+Min editdistance: 76.00
+Closest candidate: 0 5 return { transform, tag: function () { transform, tag } };
+0 1  return { transform: function () {
+0 2 return { transform: function () {
+0 4 return { transform, tag: function () {
+0 5 return { transform, tag: function () { transform, tag } };
+0 6 }
+0 8 }).export.unregisterShorthand();
+0 9 });
+0 10 };
+0 11 };'
+
+1 1 package = function () {
+1 2 return function () {
+1 7 return return { return yarnice(this.unserialize(this.key, this.key, this.name, this.name, this.name, this.tag);
+1 12 });'
+
+2 1  __dirname = function () {
+2 2 return this.resolveShorthand});"
+
+3 1 return { function () {
+3 2 return {};
+3 3 }"return { function () {
+3 5 return {
+3 8 return this.unregisterShorthand(this.unregister();"unregister(),"unregister(),"unregister()"unregister()"unregister()"unregister(),"unregister(),"unregister(),"return"unregister()"};
+3 11 };"});
+3 13 };"
+
+4 1  return function () {
+4 3 return this.install() {
+4 6 return this.install()
+4 9 .install()
+4 14 .uninstall();
+4 16 .uninstall()
+4 17 .return this.install()
+4 18 .setExact()
+4 21 .set
+5 4 return this.install(),"return {
+5 5 'install'install' : function () {
+5 6 ' : function () {
+5 8 return this.install' : function () {
+5 9 return }" : function () {
+5 10 return }' : function () {
+5 11 return };' : function () {} };' }", this. }" };' }"
+5 12 };' }" }", this.return };' };'
+5 13 };" }", this.return", this.return };'};" }", this.}"
+6 7 return this.install();
+6 15 }).forEach( function () {
+6 16 it('Should have.setShorthand() {
+7 6 return }).then(this.install()
+7 14 .install();
+7 15 .filter((err) {
+7 16 return uninstall()
+7 18 .filter.length;
+7 19 .length.forEach(1).should.gt(1
+8 6 }"
+9 3 return this.resolveShorthand() {
+9 4 return this.install(),"return this.install()"
+

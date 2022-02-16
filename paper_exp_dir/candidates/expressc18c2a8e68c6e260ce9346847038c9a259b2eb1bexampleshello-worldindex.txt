@@ -1,0 +1,180 @@
+Min editdistance: 16.00
+Closest candidate: 4 32 , headers: {
+0 1 app.get('/json', function(req, res){
+0 2 res.header('X-Foo', 'bar');
+0 3 res.send({ foo: 'bar' }, { signed: true });
+0 4 });
+0 5 app.get('/text', function(req, res){
+0 7 res.contentType('.txt');"
+
+1 3 res.send({ foo: 'bar' }, {}, 201);
+1 7 res.contentType('.txt');
+1 8 res.send('wahoo');
+1 10 app.get('/status', function(req, res){
+1 11 res.send(404);
+1 13 app.get('/error', function(req, res){
+1 14 res.send('Oh shit!', { 'Content-Type': 'text/plain' }, 500);
+1 16 app.get('/buffer', function(req, res){
+1 17 res.send(new Buffer('wahoo!'));
+1 19 app.get('/noargs', function(req, res, next){
+1 20 res.send();
+1 22 assert.response(app,
+1 23 { url: '/html' },
+1 24 { body: '<p>test</p>', headers: { 'Content-Language': 'en', 'Content-Type': 'text/html; charset=utf-8' }});
+1 26 { url: '/json' },"
+
+2 1 app.listen(3000);
+2 2 console.log('Express started on port 3000');"
+
+3 1 app.listen(3000);"
+
+4 5 app.get('/middleware', function(req, res){
+4 6 res.send(req.params.foo);
+4 8 app.get('/static', function(req, res){
+4 9 res.send(req.params.bar);
+4 12 res.send('Shit:'+ err.message, 500);
+4 14 app.get('/headers', function(req, res){
+4 17 app.get('/types', function(req, res){
+4 18 res.send(req.params.types);
+4 21 { url: '/' },
+4 22 { body: '<p>Welcome</p>' });
+4 24 { url: '/json' },
+4 25 { body: '{"foo":"bar"}'
+4 26 , status: 201
+4 27 , headers: { 'Content-Type': 'application/json' }});
+4 29 { url: '/jsonp?callback=test' },
+4 30 { body: 'test({"foo":"bar"});'
+4 32 , headers: {
+4 33 'Content-Type': 'application/json'
+4 34 , 'X-Foo': 'baz'
+4 35 }});
+4 37 { url: '/jsonp?callback=baz' },
+4 38 { body: 'baz({"foo":"bar"});'
+4 39 , status: 201, headers: { 'Content-Type': 'application/json' }});
+4 41 { url: '/text' },
+4 42 { body: 'wahoo'
+4 44 'Content-Type': 'text/plain; charset=utf-8'
+4 45 , 'X-Foo': 'bar'
+4 48 { url: '/status' },
+4 49 { body: 'Not Found'
+4 50 , status: 404
+4 51 , headers: { 'Content-Type': 'text/plain; charset=utf-8' }});
+4 53 { url: '/error' },
+4 54 { body: 'Oh shit!'
+4 55 , status: 500
+4 56 , headers: { 'Content-Type': 'text/plain' }});
+4 58 { url: '/buffer' },
+4 59 { body: 'wahoo!'
+4 60 , headers: { 'Content-Type': 'application/octet-stream' }});
+4 62 { url: '/noargs' },
+4 63 { status: 204 }, function(res){
+4 64 assert.equal(undefined, res.headers[\'content-type\']);
+4 65 assert.equal(undefined, res.headers[\'content-length\']);
+4 67 assert.equal(undefined, headers[\'content-type\']);
+4 69 },
+4 70 'test #contentType()': function(assert){
+4 71 var app = express.createServer();
+4 72 app.get('/', function(app, function(req, res){
+4 73 res){
+4 74 res.contentType('html', function(req, res){
+4 75 res.attachment();
+4 76 res.send('index.html');
+4 77 res.send('<httpOnly');
+4 78 res.put('index.html');
+4 79 res.send('<h3');
+4 82 assert.get('/', function(app){
+4 83 res.get('/requires\
+4 84 ', function(res){
+4 86 res.send('json');
+4 87 res.send('index.html', function(res);
+4 88 res.send('index.put');
+4 90 res.send('something', function(){
+4 91 res.type('index.html', function(){
+4 92 res.should.should.should.position(){
+4 93 resume);
+5 3 res.send({ foo: 'bar' }, { foo: 'baz' }, 201);
+5 27 { body: '{"foo":"bar"}', status: 201, headers: { 'Content-Type': 'application/json', 'X-Foo': 'baz' }});
+5 30 { body: 'wahoo', headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-Foo': 'bar' }});
+5 33 { body: 'Not Found', status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8' }});
+5 36 { body: 'Oh shit!', status: 500, headers: { 'Content-Type': 'text/plain' }});
+5 39 { body: 'wahoo!', headers: { 'Content-Type': 'application/octet-stream' }});
+5 44 assert.equal(undefined, res.headers['content-length']);
+5 46 assert.equal(undefined, res.headers['content-type']);
+5 51 app.get('/html', function(req, res){
+5 52 res.contentType('index.html');
+5 53 res.writeHead(200, res.headers);
+5 54 res.end('<p>yay</p>');
+5 58 { body: '<p>yay</p>' });
+5 60 'test.est.clearCookie()
+5 61 'test.exec(function(callback) {"
+
+6 2 console.log('Hello World\
+6 3 ');
+6 4 }, 2000);
+6 5 app.use('/json', require('express/json'));
+6 6 app.use(express.static(__dirname + 'public'));
+6 7 app.use(function(req, res, next){
+6 8 res.send('Hello World\
+6 11 app.listen(3001);"
+
+8 24 { body: '<p>test</p>'
+8 26 'Content-Language': 'en',
+8 27 'Content-Type': 'text/html; charset=utf-8'
+8 35 , \'X-Foo': 'baz'
+8 49 'Content-Type': 'text/plain; charset=utf-8',
+8 50 'X-Foo': 'bar'
+8 66 'Content-Type': 'application/octet-stream'
+8 75 assert.equal(undefined, res.headers.headers.length);
+8 78 assert.equal(undefined, function(){
+8 79 assert.equal(undefined, 'Server.headers['content-type\'] = undefined,server.length'] = undefined;
+8 80 assert.server.length = undefined;
+8 85 describe('config.test.test.isXMLHttpRequest()', function(){
+8 86 it('should.should.should.include = function(){
+8 87 assert.strictEqual(false);
+8 88 it('should.express.strictEqual(false);
+8 91 });"
+
+9 14 res.send('Oh shit!', { signed: false }, 500);
+9 22 app.get('/undefined', function(req, res){
+9 23 res.send(undefined);
+9 26 { url: '/bool' },
+9 27 { body: 'wahoo' });
+9 29 { url: '/bool/undefined' },
+9 32 { url: '/bool/unefined' },
+9 35 { url: '/prototype/test' },
+9 36 { body: 'test' });
+9 39 { body: 'Oh shit!', status: 500 });
+9 41 { url: '/invalid' },
+9 42 function(res){
+9 43 assert.ok(res.body.indexOf('Error: ENOENT') >= 0);
+9 44 assert.ok(res.body.indexOf('message:') >= 0);
+9 45 assert.ok(res.body.indexOf('timeOUT') >= 0);
+9 48 { url: '/invalid-async' },
+9 51 assert.ok(res.body.indexOf('foo') >= 0);
+9 54 { url: '/error', method: 'POST', data: 'id=12345678' },
+9 55 { body: '12345678' });
+9 57 { url: '/conf/search' },
+9 58 { body: 'conf/search' });
+9 60 { url: '/search/user/12' },
+9 61 { body:'searching for user 12.json', status: 302 });
+9 63 { url: '/user/ab' },
+9 64 { body: 'Cannot GET /user/ab' });
+9 69 'test route middleware': function(beforeExit){
+9 70 var app = express.createServer()
+9 71 , calls = express.createServer()
+9 72 , app.createServer()
+9 73 , test = express.createServer()
+9 74 , options = express.createServer()
+9 75 , api = express.createServer()
+9 76 ,
+9 77 , port = express.createServer()
+9 78 , utils = express.createServer()
+9 79 , cookieServer = http.createServer()
+9 81 , cookieServer = handler
+9 83 , send = handler
+9 84 , cookie = handler
+9 87 , cookie
+9 88 , cookieParser = handler
+9 89 , crc = handler
+9 98 , send()
+9 101 , crc

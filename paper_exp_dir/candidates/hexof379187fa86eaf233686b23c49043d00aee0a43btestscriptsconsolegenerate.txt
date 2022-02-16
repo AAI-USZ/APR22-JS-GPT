@@ -1,0 +1,56 @@
+Min editdistance: 20.00
+Closest candidate: 0 6 patterns: true,
+0 1 });
+0 3 it('extend(skip processingFiles {patterns', function() {
+0 4 return Promise.extend({watch: false,
+0 5 patterns: false,
+0 6 patterns: true,
+0 8 it: function() {
+0 9 return Promise.skip('process: function() {
+0 10 return function(next) {
+0 11 return Promise.should.should.not.not.not.to.to.containEqual(posts, 'foo.txt);
+0 13 }
+1 1 "
+
+2 3 it('notify()', function() {
+2 4 return postGenerate() {
+2 5 return Promise.all([
+2 6 return postGenerate();
+2 7 }).then(postGenerate();
+2 8 }).then(postGenerate);
+2 9 }).then(function() { return postGenerate();
+2 10 }).then(function(postGenerate);
+2 11 }).then(function(postGenerate() { return postGenerate);
+2 13 return post.then(function(postGener
+3 2 it('should.skip generatingFiles();
+3 3 it('_generate() - update() - update()');
+3 4 });'
+
+4 1 }).then(function() { 'nreturn Promise.resolve();
+4 5 it('deploy', function(){
+4 6 return hexo.engine('testGenerate() {};
+4 7 return helpers.watch.testGenerate();
+4 8 return helpers.testGenerate();
+4 9 .testGenerate();
+4 12 .testGenerate();'testGenerate();'
+
+5 1 }).then(function (0).then(function() { return Promise.all(1).then(0).then(0).then(1).then(0).then(0).then(0).then(1).then(0).then(1).then(0).then(0).then(0).then(1).then(0).then(0).then(1).then(1).then(0).then(0).then(0).then(0).then(0).then(0).then(0).then(0).then(1).then(0
+7 3 it('notify());
+7 4 it('remove()', function(){
+7 5 return Promise.skip(new(){
+7 8 return that.skip('_ => fs.unlink(pathFn.unlink(src),
+7 9 .unlink(dest),
+7 10 .remove())
+7 11 ]);
+7 15 it('addView(){
+7 16 return Promise.skip('remove()
+8 2 it('extend('igrator', function()', function(){
+8 3 return {
+8 4 return migrator(args(){
+8 5 return config.extend();
+8 6 }).finally(function(){
+8 8 }).then(function(){
+8 9 return require((){
+9 2 it('empty()', function() {
+9 5 it('not.skip processingFiles);
+9 6 it.skip('watch()');

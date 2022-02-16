@@ -1,0 +1,336 @@
+Min editdistance: 14.00
+Closest candidate: 6 1 const url = require(\'url\');
+0 1 var cheerio = require(\'cheerio\');
+0 2 var should = require(\'chai\').should();
+0 3 describe(\'js\', function() {
+0 4 var iframe = require(\'../../../lib/plugins/tag/iframe\');
+0 5 it(\'url\', function() {
+0 6 var $ = cheerio.load(iframe([], \'http://zespia.tw\'));
+0 7 $(\'iframe\').attr(\'src\').should.eql(\'http://zespia.tw\');
+0 8 $(\'iframe\').attr(\'width\').should.eql(\'100%\');
+0 9 $(\'iframe\').attr(\'height\').should.eql(\'300\');
+0 10 $(\'iframe\').attr(\'frameborder\').should.eql(\'0\');
+0 11 $(\'iframe\').attr(\'allowfullscreen\').should.eql('');
+0 12 });
+0 13 it(\'width\', function() {
+0 16 $(\'iframe\').attr(\'width\').should.eql(500);
+0 21 it(\'height\', function() {
+0 24 $(\'iframe\').attr(\'width\').should.eql(\'500\');
+0 29 });'
+
+1 1 const Promise = require(\'bluebird\');
+1 2 describe(\'asset_img\', () => {
+1 3 const Hexo = require(\'../../../lib/hexo\');
+1 4 const hexo = new Hexo(__dirname);
+1 5 const assetImgTag = require(\'../../../lib/plugins/tag/asset_img\')(hexo);
+1 6 const Post = hexo.model(\'Post\');
+1 7 const PostAsset = hexo.model(\'PostAsset\');
+1 8 let post;
+1 9 hexo.config.permalink = \':title/\';
+1 10 function assetImg(args) {
+1 11 return assetImgTag.call(post, args.split(\' \'));
+1 12 }
+1 13 before(() => hexo.init().then(() => Post.insert({
+1 14 source: \'foo.md\',
+1 15 slug: \'foo\'
+1 16 })).then(post_ => {
+1 17 post = post_;
+1 18 return Promise.all([
+1 19 PostAsset.insert({
+1 20 _id: \'bar\',
+1 21 slug: \'bar\',
+1 22 post: post._id
+1 23 }),
+1 25 _id: \'bár\',
+1 26 slug: \'bár\',
+1 28 })
+1 29 ]);
+1 30 }));
+1 31 it(\'default\', () => {
+1 32 assetImg(\'bar\').should.eql(\'<img src="/foo/bar">\');
+1 35 assetImg(\'bar title\').should.eql(\'<img src="/foo/bar" title="title">\');
+1 37 it(\'with space\', () => {
+1 38 assetImgTag.call(post, [\'spaced asset\',\'spaced title\'])
+1 39 .should.eql(\'<img src="/foo/spaced%20asset" title="spaced title">\');
+1 41 it(\'no slug\', () => {
+1 42 should.not.exist(assetImg(\'\'));
+1 44 it(\'asset not found\', () => {
+1 45 should.not.exist(assetImg(\'boo\'));
+1 48 assetImgTag.call(post, [\'spaced title\'])
+1 51 it(\'no title\', () => {
+1 52 should.not.exist(assetImgTag(\'\'));
+1 56 .should.eql(\'<img src="/foo/spaced%20asset" title="spaced title" alt="alt">\');
+1 58 it(\'no title with alt\', () => {
+1 59 assetImgTag.call(post, [\'bar\', \'baz\']);
+1 60 return PostAsset.insert({
+1 61 _id: \'foo\',
+1 63 }).then(() =>
+1 65 _id: \'baz.middleware.serve({
+1 66 content: [\'baz\'\',
+1 67 })).thenReturn.middleware.middleware.middleware.}).then(()).then(() => {
+1 68 }).then(() => {
+1 69 return Array.isArray.isArray.isArray(config.isArray(config.middleware);
+1 70 })).filter((item => item.should.middleware.middleware.length);
+1 71 })).map(item.should.middleware).should.eql(item => handler.middleware.length);
+1 72 }).should.eql(foo).should.middleware.length;
+2 1 var stripIndent = require(\'strip-indent\');
+2 2 var util = require(\'hexo-util\');
+2 3 var highlight = util.highlight;
+2 4 var rBacktick = /(\\s*)(`{3,}|~{3,}) *(.*) *\
+2 5 ([\\s\\S]+?)\\s*\\2(\
+2 6 +|$)/g;
+2 7 var rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+2 8 var rLangCaption = /([^\\s]+)\\s*(.+)?/;
+2 9 function backtickCodeBlock(data){
+2 10 var config = this.config.highlight || {};
+2 11 if (!config.enable) return;
+2 12 data.content = data.content.replace(rBacktick, function(){
+2 13 var args = arguments[2];
+2 14 var content = arguments[3];
+2 15 var options = {
+2 16 gutter: config.line_number,
+2 17 tab: config.tab_replace
+2 18 };
+2 19 if (args){
+2 20 var match;
+2 21 if (rAllOptions.test(args)){
+2 22 match = args.match(rAllOptions);
+2 23 } else if (rLangCaption.test(args)){
+2 24 match = args.match(rLangCaption);
+2 26 options.lang = match[1];
+2 27 if (match[2]){
+2 28 options.caption = \'<span>\' + match[2] + \'</span>\';
+2 29 if (match[3]){
+2 30 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+2 33 content = highlight(stripIndent(content), options)
+2 34 .replace(/{2,}/g, \'&#123;\')
+2 35 .replace(/}/g, \'&#125;\');
+2 36 return \'<escape>\' + content + \'</escape>\' + (end? \'\
+2 37 \
+2 38 \' : \'\');
+2 41 module.exports = backtickCodeBlock;'
+
+3 2 var Promise = require(\'bluebird\');
+3 3 describe(\'asset_img\', function() {
+3 4 var Hexo = require(\'../../../lib/hexo\');
+3 5 var hexo = new Hexo(__dirname);
+3 6 var assetImgTag = require(\'../../../lib/plugins/tag/asset_img\')(hexo);
+3 7 var Post = hexo.model(\'Post\');
+3 8 var PostAsset = hexo.model(\'PostAsset\');
+3 9 var post;
+3 14 before(function() {
+3 15 return hexo.init().then(function() {
+3 16 return Post.insert({
+3 20 }).then(function(post_) {
+3 29 _id:\'spaced asset\',
+3 30 slug:\'spaced asset\',
+3 34 }).then(function() {
+3 35 return PostAsset.removeById(post._id);
+3 38 it(\'default\', function() {
+3 39 assetImg(\'bar\').should.eql(\'<img src="/foo/bar" class="">\');
+3 42 assetImg(\'bar title\').should.eql(\'<img src="/foo/bar" class="" title="title">\');
+3 44 it(\'with space\', function() {
+3 46 .should.eql(\'<img src="/foo/spaced%20asset" class="" title="spaced title">\');
+3 48 it(\'no slug\', function() {
+3 51 it(\'asset not found\', function() {
+4 2 describe(\'feed_tag\', function() {
+4 5 var ctx = {
+4 6 config: hexo.config
+4 8 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+4 9 var feed = require(\'../../../lib/plugins/helper/feed_tag\').bind(ctx);
+4 10 it(\'path\', function() {
+4 11 feed(\'atom.xml\').should.eql(\'<link rel="alternate" href="/atom.xml" title="Hexo">\');
+4 13 it(\'title\', function() {
+4 14 feed(\'atom.xml\', {title: \'RSS Feed\'}).should.eql(\'<link rel="alternate" href="/atom.xml" title="RSS Feed">\');
+4 16 it(\'type\', function() {
+4 17 feed(\'rss.xml\', {type: \'rss\'}).should.eql(\'<link rel="alternate" href="/rss.xml" title="Hexo">\');
+4 19 it(\'type - null\', function() {
+4 20 feed(\'foo.xml\', {type: null}).should.eql(\'<link rel="alternate" href="/foo.xml" title="Hexo">\');
+4 22 it(\'invalid input - number\', function() {
+4 23 should.throw(function() {
+4 24 var input = [
+4 25 \'1\',
+4 26 \'2\',
+4 27 \'3\',
+4 28 \'return post.html.eql(input.trim());
+4 30 it(\'invalid input - undefined\', function() {
+4 31 ctx.config.feed = {};
+4 32 const result = feed(input, {type: \'invalid input\': 1});
+4 33 result.length.should.eql(0);
+4 35 it(\'invalid input - empty\', function() {
+4 37 const result = feed(input, {type: \'invalid input\': 0});
+4 40 it(\'feed - after_render filter\', function() {
+4 42 const result = feed(ctx, {invalid: true});
+4 47 const result = feed(ctx, {invalid: false});
+4 50 it(\'feed - after_render filter (relative off)\', function() {
+4 55 it(\'feed - after_render filter (relative on)\', function() {
+4 58 const result.length.length.should.eql(0);
+4 60 it(\'feed - link\', function() {
+4 61 ctx.config.config.feed.feed = {};
+5 1 const { htmlTag } = require(\'hexo-util\');
+5 2 function iframeTag(args) {
+5 3 const url = args[0];
+5 4 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+5 5 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+5 6 const attrs = {
+5 7 src: url,
+5 8 class: classes.join(\' \'),
+5 9 width: width,
+5 10 height: height,
+5 11 title: title,
+5 12 alt: alt
+5 14 return htmlTag(\'img\', attrs);
+5 16 module.exports = iframeTag;'
+
+6 1 const url = require(\'url\');
+6 2 function urlForHelper(path = '/\', options) {
+6 3 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+6 4 return path;
+6 6 const { config } = this;
+6 7 const { root } = config;
+6 8 const data = url.parse(path);
+6 9 options = Object.assign({
+6 10 relative: config.relative_link
+6 11 }, options);
+6 12 if (data.protocol) {
+6 15 if (options.relative) {
+6 16 return this.relative_url(this.path, path);
+6 18 path = root + path;
+6 19 return path.replace(/\\/{2,}/g, \'/\');
+6 21 module.exports = urlForHelper;'
+
+7 1 const fs = require(\'hexo-fs\');
+7 2 const { join, dirname } = require(\'path\');
+7 4 const prettyHrtime = require(\'pretty-hrtime\');
+7 5 const chalk = require(\'chalk\');
+7 6 const tildify = require(\'tildify\');
+7 7 const { Transform, PassThrough } = require(\'stream\');
+7 8 const { HashStream } = require(\'hexo-util\');
+7 9 function generateConsole(args = {}) {
+7 10 const force = args.f || args.force;
+7 11 const bail = args.b || args.bail;
+7 12 const concurrency = args.c || args.concurrency;
+7 13 const { route, log } = this;
+7 14 const publicDir = this.public_dir;
+7 15 let start = process.hrtime();
+7 16 const Cache = this.model(\'Cache\');
+7 17 const generatingFiles = {};
+7 18 function generateFile(path) {
+7 19 if (generatingFiles[path]) return Promise.resolve();
+7 20 generatingFiles[path] = true;
+7 21 const dest = join(publicDir, path);
+7 22 return fs.exists(dest).then(exist => {
+7 23 if (force ||!exist) return writeFile(path, true);
+7 24 if (route.isModified(path)) return writeFile(path);
+7 25 }).finally(() => {
+7 26 generatingFiles[path] = false;
+7 29 function writeFile(path, force) {
+7 31 const cacheId = `public/${path}`;
+7 32 const dataStream = wrapDataStream(route.get(path), bail);
+7 33 const cacheStream = new CacheStream();
+7 34 const hashStream = new HashStream();
+7 35 return pipeStream(dataStream, cacheStream, hashStream).then(() => {
+7 36 const cache = Cache.findById(cacheId);
+7 37 const hash = hashStream.read().toString('hex\');
+7 38 if (!force && cache && cache.hash === hash) {
+7 39 return;
+7 41 return Cache.save({
+7 42 _id: cacheId,
+7 43 hash
+7 45 fs.writeFile(dest, cacheStream.getCache())).then(() => {
+7 46 log.info(\'Generated: %s\', chalk.magenta(path));
+7 47 return true;
+7 50 cacheStream.destroy();
+7 53 function deleteFile(path) {
+7 55 return fs.unlink(dest).then(() => {
+7 56 log.info(\'Deleted: %s\', chalk.magenta(path));
+7 57 }, err => {
+7 58 if (err.cause && err.cause.code === \'ENOENT\') return;
+7 59 throw err;
+7 62 function wrapDataStream(dataStream, bail) {
+7 63 if (bail) {
+7 64 return dataStream;
+7 66 dataStream.on(\'error\', err => {
+7 67 log.error(err);
+7 69 return dataStream.pipe(new PassThrough());
+7 70 }).on(\'
+
+8 1 var fs = require(\'hexo-fs\');
+8 2 var pathFn = require(\'path\');
+8 4 var prettyHrtime = require(\'pretty-hrtime\');
+8 5 var chalk = require(\'chalk\');
+8 6 var _ = require(\'lodash\');
+8 7 var xxhash = require(\'xxhash\');
+8 8 var join = pathFn.join;
+8 9 function generateConsole(args) {
+8 10 var force = args.f || args.force;
+8 11 var route = this.route;
+8 12 var publicDir = this.public_dir;
+8 13 var log = this.log;
+8 14 var self = this;
+8 15 var start = process.hrtime();
+8 16 var Cache = this.model(\'Cache\');
+8 17 var generatingFiles = {};
+8 21 var dest = join(publicDir, path);
+8 22 return fs.exists(dest).then(function(exist) {
+8 25 }).finally(function() {
+8 31 var cacheId = `public/${path}`;
+8 32 var dataStream = wrapDataStream(route.get(path), {bail});
+8 33 var cacheStream = new CacheStream();
+8 34 var hashStream = new HashStream();
+8 35 return pipeStream(dataStream, cacheStream, hashStream).then(function() {
+8 36 var cache = Cache.findById(cacheId);
+8 37 var hash = hashStream.read().toString(\'hex\');
+8 45 return fs.writeFile(dest, cacheStream.getCache());
+8 53 return fs.unlink(dest).then(function() {
+8 55 }, function() {
+8 56 return fs.unlink(dest);
+8 59 function wrapDataStream(dataStream, options) {
+8 60 var bail = options && options;
+8 61 if (bail === true) {
+8 64 dataStream.on(\'error\', function(err) {
+8 65 if (err.code === \'EISDIR\') return;
+8 70 function andon(\'finish\', function() {
+8 71 return this.state = this;
+8 74 function clearFile(path) {
+8 75 return this.cleanFile(path) {
+8 76 if (this.isModified == null) || fs.unlink(path) || fs.statSync(path);
+8 80 function first(next.on(\'error)
+8 81 .done(this.params = undefined) return this.method === undefined;
+8 83 function all(err) {
+8 84 if (this.exclude = undefined;
+8 85 this.preprocess = undefined;
+8 87 this.ignore = undefined;
+8 88 this.queue.setExcluded = undefined;
+8 89 this.setExcluded = undefined;
+8 90 this.setHeavyCacheHeaders = this.exclude = this.preprocess == null;
+8 91 this.setPraceContainer = undefined;
+8 92 this.setHandlers = undefined;
+8 93 this
+9 9 function backtickCodeBlock(data) {
+9 12 data.content = data.content.replace(rBacktick, function() {
+9 16 auto_detect: config.auto_detect,
+9 27 if (match) {
+9 39 return post.render(null, {
+9 40 content: content
+9 42 .replace(rBacktick, function(){
+9 43 var args = arguments[3];
+9 44 var content = arguments[4];
+9 50 if (args) content = args.slice();
+9 51 var indent = str.match(/^(\\t*)/)[1].length;
+9 52 var argsLength = args.length;
+9 53 if (args.length){
+9 54 var match = args.match(rAllOptions);
+9 55 } else if (args.length){
+9 56 var match = args.match(rLangCaption);
+9 59 options.caption = \'<span>\' + match[1] + \'</span><a href="\' + match[2] + match[3] + \'">link</a>\';
+9 60 } else {
+9 61 options.caption = \'<a href="\' + match[1] + match[0] + \'">\' + match[1] + \'</span>\';
+9 65 content.replace(/([\\s\\s\\S]+?)\\s*(\
+9 66 +$/g, \'\
+9 67 ]+ args, \'\\r\\s*/, \'<\\s*/, \'\');
+9 72 .replace(/{2, options)
+9 73 .replace(/{/g, \'&#123;\', \'&#125;\', \'&#123;\');
+9 78 module.skip(\'Backtick = backtickCodeBlock\', function(){
+9 79 return \'`{3,}'
+

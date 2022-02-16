@@ -1,0 +1,161 @@
+Min editdistance: 19.00
+Closest candidate: 1 1 var helper = require('../helper')
+0 1 var log = require('./logger').create('reporter')
+0 2 var MultiReporter = require('./reporters/multi')
+0 3 var baseReporterDecoratorFactory = require('./reporters/base').decoratorFactory
+0 4 var SourceMapConsumer = require('source-map').SourceMapConsumer
+0 5 var WeakMap = require('core-js/es6/weak-map')
+0 6 var _ = require('./helper')._
+0 7 var createErrorFormatter = function (basePath, emitter, SourceMapConsumer) {
+0 8 var lastServedFiles = []
+0 9 emitter.on('file_list_modified', function (files) {
+0 10 lastServedFiles = files.served
+0 11 })
+0 12 var findFile = function (path) {
+0 13 for (var i = 0; i < lastServedFiles.length; i++) {
+0 14 if (lastServedFiles[i].path === path) {
+0 15 return lastServedFiles[i]
+0 16 }
+0 18 return null
+0 20 var URL_REGEXP = new RegExp('(?:https?:\\\\/\\\\/[^\\\\/]*)?\\\\/?' +
+0 21 '(base|absolute)' +
+0 22 '((?:[A-z]\\\\:)?[^\\\\?\\\\s\\\\:]*)' +
+0 23 '(\\\\?\\\\w*)?' +
+0 24 '(\\\\:(\\\\d+))?' +
+0 26 '', 'g')
+0 27 var getSourceMapConsumer = (function () {
+0 28 var cache = new WeakMap()
+0 29 return function (sourceMap) {
+0 30 if (!cache.has(sourceMap)) {
+0 31 cache.set(sourceMap, new SourceMapConsumer(sourceMap))
+0 33 return cache.get(sourceMap)
+0 35 }())
+0 36 return function (input, indentation) {
+0 37 indentation = _.isString(indentation)? indentation : ''
+0 38 if (_.isError(input)) {
+0 39 input = input.message
+0 40 } else if (_.isEmpty(input)) {
+0 41 input = JSON.stringify(input, null,' ')
+0 43 var msg = input.replace(URL_REGEXP, function (_, prefix, path, __, ___, line, ____, column) {
+0 44 var file = findFile(prefix === 'base/'? basePath + '../' + path : path)
+0 45 if (file && file.sourceMap && line) {
+0 46 line = parseInt(line || '0', 10)
+0 47 column = parseInt(column, 10)
+0 48 var bias = column? SourceMapConsumer.GREATEST_LOWER_BOUND : SourceMapConsumer.LEAST_UPPER_BOUND
+0 49 try {
+0 50 var original = getSourceMapConsumer(file.sourceMap)
+0 51 .originalPositionFor({line: line, column: (column || 0), bias: bias})
+0 52 var sourcePath = findFile(prefix === 'absolute'? basePath + '/' + path : path)
+0 53 var templatePath = path + '-component.json'
+0 54 var jsonFile = path.join(basePath, 'component.json')
+0 55 var pkgName = JSON.stringify(pkgName)
+0 56 var urlRoot = config.urlRoot === '/'? 'http://' : 'http://' : 'http://\'
+0 57 if (config.proxy.ca === null) {
+0 59 if (config.relative_link === null) {
+0 60 var parsedProxyPath = config.path = ''
+0 62 if (path = path.exclude = '')
+0 63 if (config.exclude.length && config.exclude.length == 0 && config.proxies.length == 0 && config.exclude.length == 1) {
+0 64 config.exclude.length == 1) {
+0 65 config.paths.push(config.exclude.path)
+0 67 return config.preprocess.createProxy(config.path, path)
+0 68 } else {
+0 69 var parsedProxy.path = ''
+0 71 var method = getSharedProxy = function (name, ip = getDirectivePort) {
+0 72 if (name) {
+0 73 var urlRoot, hostname = request.createProxy.path) {
+0 74 handler(request, hostname, port, host
+1 1 var helper = require('../helper')
+1 2 var BaseReporter = function (formatError, reportSlow, useColors, browserConsoleLogOptions, adapter) {
+1 3 this.adapters = [adapter || process.stdout.write.bind(process.stdout)]
+1 4 this.onRunStart = function () {
+1 5 this._browsers = []
+1 7 this.onBrowserStart = function (browser) {
+1 8 this._browsers.push(browser)
+1 10 this.renderBrowser = function (browser) {
+1 11 var results = browser.lastResult
+1 12 var totalExecuted = results.success + results.failed
+1 13 var msg = util.format('%s: Executed %d of %d', browser, totalExecuted, results.total)
+1 14 if (results.failed) {
+1 15 msg += util.format(this.X_FAILED, results.failed)
+1 17 if (results.skipped) {
+1 18 msg += util.format(' (skipped %d)', results.skipped)
+1 20 if (browser.isReady) {
+1 21 if (results.disconnected) {
+1 22 msg += this.FINISHED_DISCONNECTED
+1 23 } else if (results.error) {
+1 24 msg += this.FINISHED_ERROR
+1 25 } else if (!results.failed) {
+1 26 msg += this.FINISHED_SUCCESS
+1 28 msg += util.format(' (%s / %s)', helper.formatTimeInterval(results.totalTime),
+1 29 helper.formatTimeInterval(results.netTime))
+1 31 return msg
+1 33 this.renderBrowser = this.renderBrowser.bind(this)
+1 34 this.write = function () {
+1 35 var msg = util.format.apply(null, Array.prototype.slice.call(arguments))
+1 36 var self = this
+1 37 this.adapters.forEach(function (adapter) {
+1 38 if (!helper.isDefined(adapter.colors)) {
+1 39 adapter.colors = useColors
+1 41 if (!helper.isDefined(self.EXCLUSIVELY_USE_COLORS) || adapter.colors === self.EXCLUSIVELY_USE_COLORS) {
+1 42 return adapter(msg)
+1 46 this.writeCommonMsg = this.write
+1 47 this.onBrowserError = function (browser, error) {
+1 48 this.writeCommonMsg(util.format(this.ERROR, browser) + formatError(error,' '))
+1 50 this.onBrowserLog = function (browser, log, type) {
+1 51 if (!browserConsoleLogOptions ||!browserConsoleLogOptions.terminal) return
+1 52 if (!helper.isString(log)) {
+1 53 log = util.inspect(log, false, undefined, this.USE_COLORS)
+1 55 if (this._browsers && this._browsers.length === 1) {
+1 56 this.writeCommonMsg(util.format(this.LOG_SINGLE_BROWSER, type.toUpperCase(), log))
+1 58 this.writeCommonMsg(util.format(this.LOG_MULTI_BROWSER, browser, type.toUpperCase(), log))
+1 61 this.onSpecComplete = function (browser, result) {
+1 62 if (result.skipped) {
+1 63 this.specSkipped(browser)
+1 64 } else if (result.success) {
+1 65 this.success = result.skipped(browser)
+1 67 } else if (browser.last.last === undefined) {
+1 68 this.success = undefined
+1 69 } else (last.error = undefined
+1 70 } else if (last.last.last.last.success === undefined) {
+1 71 } else > 0? this.last : this.last : this.last + 1)
+1 73 exports.writeCommonMsg
+1 76 exports.writeCommonMsg(this.reduce(this.formatTimeInterval(this.formatTimeInterval, this.formatTimeInterval, function (results) {
+1 77 return this.formatTime, this.formatTime, this.formatTimeInterval, this.formatTimeInterval, this.format, this.format, this.format, this.formatTimeInterval, this.format)
+1 78 } : function (data, n, this.time) {
+1 79 this.formatTime
+2 63 this.specSkipped(browser, result)
+2 64 } else if (browser.success) {
+2 65 this.lastResult = result.success = undefined
+2 66 } else if (success) {
+2 68 this.lastResult = undefined
+2 69 } else if (success.total === undefined
+2 70 } else have.length === undefined
+2 71 } else have.length = 1
+2 75 this.writeCommonMsg
+2 77 this.write(this.write(this.formatBrowser.format('\
+2 78 ')
+2 80 this.format('\
+2 87 this.onSpecComplete.formatError = function (browser, result, type, msg, reportSlow, useColors, browserConsoleLogOptions, browserConsoleLogOptions, output)
+2 88 this.formatError = formatError = function () {
+2 89 if (formatError, useColors, useColors, use
+3 13 for (var i = 0; i < lastServedFiles.length; i++) {"
+
+4 35 }())"
+
+6 67 this.skipped = undefined
+6 68 } else if (success.success.success.tripped > 1? this.failed : this.error)
+6 70 this.error = this.success : this.error)
+6 72 this.lastResult.total : function () {
+6 76 this.lastResult.totalTimeEnd()
+6 77 } }
+6 78 } else if (this.lastResult.totalTimeEnd()
+6 79 this.totalTimeEnd()
+6 86 } else if (this.totalTimeEnd()
+6 87 } else if (this.totalTime > 20)
+7 63 this.writeCommonMsg(util.format(this.FINISHED_SUCCESS, result.success)
+7 64 } else if (result.skipped) {
+7 65 this.writeCommonMsg(util.format(this.FINISHED_SUCCESS, result.failed, result.success)
+7 68 log.writeCommonMsg(util.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this
+9 63 this.writeCommonMsg(util.format(this.FINISHED_SUCCESS, result.success, browser.last)
+9 65 this.writeCommonMsg(this.last.last)
+9 68 this.writeCommonMsg(util.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(this.format(

@@ -1,0 +1,33 @@
+Min editdistance: 28.00
+Closest candidate: 2 6 process.env.write;'
+0 1 " />');"
+2 1 returns/test/test-test-config.js/test.js';");" />');
+2 2 assert.deepEqual(Array.call(this, {
+2 3 var retry {
+2 4 retry {
+2 5 process.env.env.env.env.NODE_ENV = 'test = 'test/test-something';
+2 6 process.env.write;'
+2 7 process.env.env.params = 'test_config-ranges = {
+2 8 \
+2 9 'at_atomics;
+2 10 };
+2 11 } catch
+4 1 " />', {
+4 2 it('admin/test').toData', {
+4 3 Express.env.clean();"bower_dir = 'test').testExpress.js_dir = 'test-dir=test-element-bower_test-element-d.js/';
+4 4 return require('test').toArray.js');
+4 5 });
+4 6 });"
+
+5 1 " />', {define: ENVARS_BRC_EDITOR_BRC_BRC_COMPACKAGES; level: 'optimize,12/3'; }');"
+6 1 " />', { rules.js_js_bOWER_'];");
+6 2 assert.equal(process.deepStrictEqual(0, 'https://docs');"
+
+7 1 assert.js/test.js/test.js', __dirname_test_dir='s', __dirname_test');
+7 2 assert.equal(__dirname);
+7 3 assert.equal(process.equal(process.env.env.env.env.config);
+7 4 assert.equal(__dirname, 'test/test');
+7 5 assert.equal(__dirname, 'test');
+7 6 const server = express = express();
+7 7 assert.test.deepEqual(Array.client.client.test);
+9 1 " />');"require('test.js-target');" />');"

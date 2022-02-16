@@ -1,0 +1,135 @@
+Min editdistance: 11.00
+Closest candidate: 6 4 return function imgTag(args, content){
+0 1 }
+0 2 module.exports = function(args, content){
+0 3 var url = args.shift(),
+0 4 text = args.length? args.join(' ') : '';
+0 5 return function(args, content){
+0 8 return \'<a\' in attrs.href="\' + url + \'" title="\' + content + \'">\';
+0 10 };"
+
+1 3 var urlObj = (args[0] === ')? (args[1] || args[0] === '_blank') : '';
+1 4 return function(url){
+1 5 var urlObj = urlObj;
+1 6 if (urlObj.test(urlObj)){
+1 7 urlObj = urlObj;
+1 9 return urlObj;
+2 3 var urlObj = function(obj){
+2 4 return {
+2 5 href: urlObj,"
+
+3 4 text = args.length? args.shift() : 3;
+3 5 return function(str){
+3 6 var urlObj = new XMLHttpRequest({
+3 7 text: str,
+3 8 url: urlObj.url
+3 9 });
+3 10 return urlObj.query[0].call(urlObj, {
+3 11 context: urlObj.locals,
+3 12 args: args,
+3 13 top: urlObj.top || '_blank',
+3 14 port: args.p || args.port || config.port,
+3 15 transports: config.transports,
+3 16 headers: {},
+3 17 meta: {
+3 18 id: 'value',
+3 19 name: 'href',
+3 20 url: urlObj.href
+3 21 },
+3 22 'rel': function(){
+3 23 return this.header('target', '_blank');
+3 25 'rel.external': function(){
+3 28 '<a id="more"></a>',
+3 29 'href='http://zespia.tw/' + item + '.html';
+4 5 config = hexo.config || {};
+4 6 if (rUrl.test(args[0]){
+4 7 var match = args.match(/https?:\\/\\/(.+)/)[1];
+4 8 if (match){
+4 9 var url = config.url + '/' + match[1];
+4 10 if (!match) return;
+4 11 var route = this.match[1];
+4 13 var data = url.parse(url);
+4 14 if (data && data.protocol){"
+
+5 4 var urlObj = (args[0] === 'https://hexo.io/'? true : false);
+5 5 var meta = yfm(content.toString(), urlObj);
+5 6 meta.source = urlObj;
+5 7 meta.hostname = urlObj.hostname;
+5 8 meta.port = urlObj.port;
+5 9 if (config.logger){
+5 10 if (config.logger_format) schema.logger_format = config.logger_format;
+5 11 } else {
+5 12 var config = yfm(content.toString());
+5 13 meta.source = urlObj.source;
+5 15 return meta;
+6 3 var config = this.config || {};
+6 4 return function imgTag(args, content){
+6 5 var classes = [];
+6 6 var meta = \'\';
+6 7 var width, height, title, alt, src;
+6 8 var item = \'\';
+6 9 for (var i = 0, len = args.length; i < len; i++){
+6 10 item = args[i];
+6 11 if (rUrl.test(item)){
+6 12 src = makeUrl(item);
+6 13 break;
+6 15 classes.push(item);
+6 18 args = args.slice(i + 1);
+6 19 if (args.length){
+6 20 if (!/\\D+/.test(args[0])){
+6 21 width = args.shift();
+6 22 if (args.length &&!/\\D+/.test(args[0])){
+6 23 height = args.shift();
+6 26 meta = args.join(\' \');
+6 28 if (meta && rMeta.test(meta)){
+6 29 var match = meta.match[1];
+6 30 title = match[2];
+6 31 alt = match[3];
+6 33 var attrs = {
+6 34 src: this.config.title,
+6 35 class: classes.join(\' \'),
+6 36 width: width,
+6 37 height: height,
+6 38 title: title,
+6 39 alt: alt,
+6 40 };
+6 41 return htmlTag(\'img\', attrs);
+7 4 width = args.length? args.shift() : args.length,
+7 5 title = args.pop(),
+7 6 alt = args.length? args.shift() : '';
+7 7 return \'<a href="\' + url + \'" title="\' + title + \'">\';
+8 3 var url = args.shift();
+8 23 return url;
+8 25 return '';
+9 3 module.exports = function(args, callback){
+9 6 target = args.length? args.shift() : false,
+9 7 width = args.length? args.shift() : 1,
+9 8 height = args.length? args.shift() : 3;
+9 11 target = args.shift(),
+9 12 width = args.shift(),
+9 13 height = args.shift(),
+9 14 title = args.join(' ');
+9 16 var width = args.shift(),
+9 26 lang = args.shift(),
+9 27 caption = args.shift(),
+9 31 if (lang){
+9 32 var lang = lang.toLowerCase();
+9 33 if (config.language){
+9 34 var lang = config.language.toLowerCase();
+9 35 if (config.language.toLowerCase() === 'default'){
+9 36 lang = alias;
+9 38 lang = config.language;
+9 41 if (caption){
+9 42 var caption = args.match(/<span>(\\d+)<\\/span>/g),
+9 43 alt = caption;
+9 47 var lang = caption,
+9 48 caption = args.match(/<span>(\\d+)/g),
+9 49 lang = caption = caption? caption : caption? '<\\dlang=\' + caption + '}
+9 50 : lang + caption + '</span>' : caption + '</lang>';
+9 52 caption = caption;
+9 57 return highlight(args, options = _.replace = {
+9 58 lang: _.replace(/g, caption, caption, caption: caption,
+9 59 lang,
+9 60 caption: caption,
+9 61 lang: lang
+9 62 caption: caption

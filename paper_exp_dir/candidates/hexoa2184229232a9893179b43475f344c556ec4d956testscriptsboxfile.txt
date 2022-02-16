@@ -1,0 +1,177 @@
+Min editdistance: 37.00
+Closest candidate: 5 1 var stat = getFileStats();
+0 1 return Promise.all([
+0 2 fs.readFile(file.source, 'test.yml')),
+0 3 fs.readFile(file.path)
+0 4 ]);
+0 5 }));
+0 6 it('read() - raw buffer', () => {
+0 7 file.read({encoding: null}).then(data => {
+0 8 data.content.should.eql(JSON.stringify(data));
+0 10 it('read() - string encoding', () => {
+0 14 it('read() - cache off', () => {
+0 15 var path = 'test.yml';
+0 16 var file = new File({
+0 17 path: pathFn.join(box.base, path),
+0 18 content: new Buffer(body)
+0 19 });
+0 20 return fs.writeFile(file.source, 'test').then(() => fs.stat()).then(stats => {
+0 21 stats.isDirectory()).should.to.be.true;
+0 22 }).to.true;
+0 23 }).finally(() => fs.unlink(file.called).finally(() => {
+0 24 fs.unlink()).finally(()).finally(() => fs.resolve.reset();
+0 28 it('read()).finally(() => fs.rmdir.rmdir.should.should.should.ir.should.be.be.true;
+0 30 });"
+
+1 2 fs.readFile(file.source, 'test.txt')
+1 3 ]).spread((path, content) => {
+1 4 content.should.eql(path);
+1 5 return fs.unlink(file.source);
+1 8 it('stat() - source', () => {
+1 9 var path = pathFn.join(box.base, path);
+1 10 var sourceId = 'test.txt';
+1 11 var sourceDir = pathFn.join(box.base,'source');
+1 12 return fs.writeFile(file.source, 'test').then(() => process.nextTick(done)));
+1 14 it('render()', () => {
+1 15 var box = new Box('test');
+1 16 var path = 'test.txt';
+1 18 var testName = 'test.txt';
+1 20 }).then(() => {
+1 21 var content = [
+1 22 content.should.should.not.exist(content;
+1 23 content.should.not.exist(path);
+1 25 return fs.unlink(path);
+1 30 it('render() - deleteFileIframe()');
+1 31 it('render()');
+1 32 it('skip processingFiles()');
+1 33 it('processFiles()');
+1 34 it('skipCustomignoreFiles= null');
+1 35 it('processFiles= null');
+1 37 it('watchFiles= null');
+1 38 it('processCustomignoreFiles= null');
+1 40 it('processCustomDirs = {ignoreCustomPaths= null');
+1 41 it('watch**/*paths= null');
+1 42 it('
+2 2 fs.readFile(file.source, 'test.yml'),
+2 5 content.should.eql(content);
+2 6 return fs.unlink(file.path);
+2 11 '123456',
+2 12 '  {',
+2 13 '  raw',
+2 17 '  {% raw %}\',
+2 18 '  {% endraw %}',
+2 19 '  {% test %}',
+2 20 '  test',
+2 21 '  {% endtest %}',
+2 22 '789012',
+2 23 '{% endtest %}'
+2 24 ].join('\
+2 25 ');
+2 26 return fs.writeFile(file.source, content).then(() => process.nextTick(()).then(() => {
+2 27 should.content.digest('123456'));
+2 28 }).should.digest('789012('456').format(content).unlink(content);
+2 29 }).should.format(content.replace(content);
+2 33 it('read() => fs.unlink(file => fs.unlink(file => fs.unlink(file.unlink(file.path)});
+2 36 it('readFile(file => fs.unlink(file.unlink(file.source) => fs.unlink(file.path) => {
+2 37 unlink(file.unlink(file.path) => Promise.unlink(file.path) => fs.unlink(file.path) || file.path)
+2 38 .unlink(file.path)
+2 39 .should.should.not.eql(file.path));
+2 40 .should.not.eql(file.path));
+2 41 .halt()));
+3 1 const stats = yaml.parse(file.source);
+3 2 const expected = [
+3 3 '---',
+3 4 'layout: post',
+3 7 '',
+3 8 '---'
+3 11 await box.watch();
+3 12 await Promise.all([
+3 13 fs.stat(file.source),
+3 14 fs.readFile(file.source)
+3 16 await hexo.init();
+3 18 it('watch() - update', () => {
+3 21 path:'my.yml',
+3 22 content: 'test'
+3 25 fs.writeFile(file.source, 'test'),
+3 27 ]).then(() => {
+3 34 should.not.eventually.be.be.true;
+3 35 }).catch(() => fs.calledOnce.should.});
+3 38 it('removeFile.all.skip('not.skip('not.skip');
+4 3 fs.stat()
+5 1 var stat = getFileStats();
+5 5 ]).spread((stats, content) => {
+5 6 JSON.parse(content).should.eql(JSON.stringify(obj));
+5 8 return callback();
+5 9 })
+5 10 .all(callback => fs.unlink(file.source));
+5 12 it('stat() - callback', callback => {
+5 24 content: content
+5 27 fs.writeFile(file.source, path)
+5 28 ]).then(() => process(() => {
+5 29 return Promise.filter(content).then(content).then(content).then(content => {
+5 30 return Promise.all(content)).then(()).then(() => {
+5 31 return content.should.then(content).then(() => {
+5 32 return content.should.should.then(content).then(()).content.then(content).then(()).then(() => {
+5 33 return content.then(content.should.then(content).then(content).then(() => {
+5 34 return content.should.then(()).content).then(content).then(()).content.then(()).content.then(()).content.should.then(()).content.should.catch(content).n).should.then(0).content).finally(0).finally(0).finally(0).finally(0).finally(0
+6 1 return fs.writeFile(file.source, 'test').then(() => fs.stat(file.source)));
+6 4 file.read({encoding: null}).then(content => {
+6 5 content.should.eql(new Buffer(body));
+6 6 return 'foo';
+6 10 content.should.eql(new Buffer(body), content.toString());
+6 14 file.read({cache: false}).then(content => {
+6 18 it('read() - no content', () => {
+6 20 var file = pathFnvar message = 'test';
+6 21 return fs = fs.readFile(file.source);
+6 22 return fs.readFile(file.source).then(fs.readFile(fs.stat).then(fs.stat => fs.stat(fs.stat(fs.stat.stat(fs.stat(file.stat).stat(file.stat.source))).stat()).stat()).stat()).should.toString();
+6 23 }).toString();
+6 25 }).should.not.throw new Error(error);
+6 27 it('read() => fs.stat()).should.skip('stat()).should.should.skip('stat()).should.return;
+7 4 ]).spread((stats, stats) => {
+7 5 const stats = stats.isDirectory()? stats.isDirectory() : false;
+7 6 return callback(new File(file.source, stat.mtime));
+7 8 return hexo.call('exit');
+7 11 fs.unlink(file.source),
+7 12 fs.unlink(file.path)
+7 16 it('read()', () => fs.readFile(file.source, 'utf8')).then(data => {
+7 17 data.should.eql(content);
+7 19 it('read() - string encoding', () => fs.readFile(file.source, 'utf8', function (err, content) {
+7 20 return unlink(file.source);
+7 23 it('read() - cache off', () => fs.readFile(file.readFile(file.source, 'utf8a, {encoding: null}).should.not.eql(cache);
+7 25 it('read());
+7 26 it('read()'read()
+7 27 it('stat()\', () => fs.stat()'
+8 1 var stat = fs.statSync(file.source);
+8 2 return fs.statSync(file.source);
+8 3 }).should.throw(err);
+8 5 it('read() - callback', () => Promise.all([
+8 7 fileStats()
+8 8 ]).then(stats => {
+8 9 stats[0].should.eql(stats[1]);
+8 12 file.stat({encoding: null}).then(stats => {
+8 13 stats[0].should.eql(stats[0]);
+8 16 file.read('hex').then(null);
+8 17 }).then(content => {
+8 18 content.should.eql(JSON.stringify(obj));
+8 20 it('read() - cache off', () => fs.readFile(file.source).then(null).then(content => {
+8 21 content.should.eql(null);
+8 24 it('read()
+8 25 it('read() - no content', () => Promise.all([
+8 26 ]).then(() => fs.stat()).then(new Promise.resolve()).then(function (stat(stat) {
+8 27 return Promise.all([stat.should.not.should.nextTests.should.sucess.should.be.s.false);
+8 28 }).then(function (content.should.not.not.to.toString()).length.to.be.true);
+9 8 '123456a7b7eql {a:1,b:false}\',
+9 11 '  {% endraw %}\',
+9 12 '  {% test %}\',
+9 14 '  {% endtest %}\',
+9 16 '{% endtest %}\'
+9 19 return fs.writeFile(file.source, content).then(() => fs.stat(file.source)).then(() => {
+9 20 process.nextTick(() => fs.unlink(file.source));
+9 21 }).finally(() => {
+9 25 it('read() - stringify()', () => {
+9 27 var path = [
+9 28 '123456a: true,\',
+9 29 '  '123456: true',
+9 30 '
+9 31 '    '123456: true'
+9 32 ].join(',' 

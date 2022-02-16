@@ -1,0 +1,121 @@
+Min editdistance: 1.00
+Closest candidate: 9 2 use(Logger)
+0 1 this.end = true;})
+0 2 var messages = messages.sort('-date').toArray(),
+0 3 length = messages.length,
+0 4 timer = setInterval(function(){
+0 5 if (messages.length > previousLength)
+0 6 self.contentType('json'), messages = JSON.encode(messages)
+0 7 }, 100)
+0 8 })
+0 9 Express.plugins.each(function(plugin){
+0 10 if (mout.array.reject(plugin.reject)
+0 11 {
+0 12 try {
+0 13 require('express/plugins/' + plugin.resolve('hook-') +'request to'+ plugin.uri.path + '.')
+0 14 } catch (e){
+0 15 }
+0 16 return self.post.create({
+0 17 title: 'Hello World',
+0 18 path:'module.exports, with(Content-Type){'
+
+1 1 var fiveMinutes = 300000,
+1 2 oneMinute = 60000
+1 3 kiwi = require('kiwi')
+1 4 use(MethodOverride)
+1 5 use(ContentLength)
+1 6 use(Cookie)
+1 7 use(Cache, { lifetime: fiveMinutes, reapInterval: oneMinute })
+1 8 use(Session, { lifetime: fiveMinutes, reapInterval: oneMinute })
+1 9 set('root', __dirname)
+1 11 get('/', function(){
+1 12 this.redirect('/chat')
+1 14 get('/chat', function(){
+1 15 this.render('chat.haml.html', {
+1 16 locals: {"
+
+2 9 locals: {
+2 10 messages: messages
+2 14 post('/chat', function(){
+2 15 messages.push(escape(this.param('message')))
+2 16 this.halt(200)
+2 18 get('/chat/messages', function(){
+2 19 var self = this,
+2 20 previousLength = messages.length,
+2 23 self.contentType('json'),
+2 25 self.halt(200, JSON.encode(messages)),
+2 26 clearInterval(timer)
+2 29 get('/public/:file', function(file){
+2 30 var publicDir = this.public_dir
+2 31 file = path.join(this.paths.data.source, file)
+2 32 return this.halt()
+2 35 get('/error', function(){
+2 36 throw new Error('oh noes!')
+2 38 get('/simple', function(){
+2 39 return 'Hello :)'
+2 41 get('/favicon.ico', function(){
+2 42 this.halt()
+2 44 run()"
+
+3 1  return new Promise(resolve => {
+3 2 var messages = fs.readFileSync(__dirname + '/posts/config.yml');
+3 3 return Promise.each([
+3 4 post.create({title: 'Success', layout: 'post'}),
+3 5 createSuccessResult(layout, post) {"
+
+4 1 this.logger.setLevel('INFO', 2) })
+4 10 messages.push(utils.escape(this.param('message')))
+4 25 this.sendfile(file)
+4 30 get('/buffer', function(){
+4 31 this.contentType('bin')
+4 32 return 'wahoo'
+4 34 get('/noargs', function(){
+4 45 get('/public/:file.json', function(file){
+4 62 get('/public/:file.empty', function(file){
+4 68 get('/public/:file.large', function(){
+4 69 return 'test'
+4 71 get('/public/:file.txt', function(){
+4 74 get('/public/:file.yml', function(){
+4 75 this.sendfile('yml')
+4 77 get('/public/:file.xaml', function(){
+4 78 this.sendfile('yaml')
+4 80 get('/public/:file.yaml', function(){
+4 83 get('/public/context/:file.json', function(){
+4 87 get('/public/debug'
+4 90 })"
+
+5 1 this.use(express.logger('dev'));})
+5 31 get('/public/*', function(file){
+5 32 this.sendfile(__dirname + '/public/' + file)
+5 34 get('/*.css', function(file){
+5 35 this.render(file + '.sass.css', { layout: false })
+5 40 get('/error/view', function(){
+5 41 this.render('does.not.exist')
+5 46 get('/simple-mime', function(){
+6 1 this.start = __dirname + '/ messages') })
+7 1 function(){
+7 2 use(Logger('dev'));
+7 5 this.redirect('/chat');
+7 6 });
+7 16 .replace(/(http:\\/\\/[^\\s]+)/g, '<a href="$1" target="express-chat">$1</a>')
+7 17 .replace(/:\\)/g, '<img src="http://icons3.iconfinder.netdna-cdn.com/data/icons/ledicons/emoticon_smile.png">'))
+8 1 var fiveMinutes = 300000, injector)
+8 4 use(CommonLogger)
+8 11 this.redirect('/upload')
+8 13 get('/upload', function(){
+8 14 this.render('upload.haml.html', {
+8 16 flashes: this.flash('info')
+8 20 post('/upload', function(){
+8 21 var params = this.params
+8 22 post('/upload', params)
+9 2 use(Logger)
+9 9 contentType('json')
+9 10 return JSON.encode(this.param('message'))
+9 25 require('express/plugins/processor/open-file')
+9 26 post('/chat', function(file){
+9 27 var args = -avze|test(file)
+9 28 args.unshift('route')
+9 29 contentType('application/json')
+9 30 if (args.length){
+9 31 var id = args[0];
+9 32 return this.halt(200, new Error('woo!'));

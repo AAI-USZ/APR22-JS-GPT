@@ -1,0 +1,57 @@
+Min editdistance: 28.00
+Closest candidate: 2 12 paginator(target, posts, 'archive', render, next);
+0 1 var target = archive.findOne({source: ykey});
+0 2 if (target) target = target[0];
+0 3 if (!mkey.isObject(target)) target = target[1];
+0 4 if (mkey.isString(target)){
+0 5 if (target.length === 0) target = mkey.substring(0, target.length - 1);
+0 6 else if (target.length === 1) target = mkey.substring(0, target.length - 2);
+0 7 }
+0 8 next();
+0 9 });
+0 10 }, next);
+0 11 }, callback);
+0 13 ], callback);
+0 14 };"
+
+1 1 paginator('', posts, '', render, next);
+1 7 });"
+
+2 1 var target = archive.findOne({source: target});
+2 2 if (mkey === target){
+2 4 } else {
+2 5 var err = archive.findOne({source: target});
+2 6 if (err) throw err;
+2 7 if (false);
+2 8 return next();
+2 10 content.archive = true;
+2 11 if (mode == 2){
+2 12 paginator(target, posts, 'archive', render, next);
+2 14 render('archive', posts, function(err, result){
+2 16 file.write(target, result, next);
+3 1 paginator('', yearly[ykey], '', render, next);
+4 2 if (mkey in target) posts.push(target);
+4 3 if (yearly.hasOwnProperty(target)){
+4 4 yearly[ykey][mkey].push(mkey);
+4 6 yearly[ykey] = posts.slice(i, i + 1);
+5 2 if (!target) target = target[0];
+5 3 route.set(target, function(func){
+5 4 func(null, target);
+6 5 ], next);
+6 6 }, function(){
+6 7 console.log('Hexo is watching for for all post changes. Press Ctrl+C to stop.');
+6 8 async.forEach(Object.keys(yearly), function(mkey, next){
+6 9 var target = hexo.config.archive_dir + '/' + ykey + '/';
+6 10 yearly[ykey].year = year;
+6 11 yearly[ykey].archive = true;
+6 12 if (config.archive){
+6 15 render('', yearly[ykey], '', function(err, result){
+6 17 result.should.eql(['archive', 'year','month', 'day', 'title'].slice(0, 1));
+6 22 console.log('Hexo is running at least for the first post.');
+7 2 if (!target) target += 'index.html';
+7 3 render('target', target, function(err, result){
+8 2 if (target){"
+
+9 1 var target = archive.getTarget();
+9 2 if (!target) target = 'latest';
+9 11 }], callback);

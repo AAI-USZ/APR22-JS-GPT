@@ -1,0 +1,245 @@
+Min editdistance: 1.00
+Closest candidate: 6 5 module.exports = ctx => {
+0 1 var should = require(\'chai\').should();
+0 2 describe(\'list_posts\', function() {
+0 3 var Hexo = require(\'../../../lib/hexo\');
+0 4 var hexo = new Hexo(__dirname);
+0 5 var Post = hexo.model(\'Post\');
+0 6 var ctx = {
+0 7 config: hexo.config
+0 8 };
+0 9 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+0 10 var listPosts = require(\'../../../lib/plugins/helper/list_posts\').bind(ctx);
+0 11 before(function() {
+0 12 return Post.insert([
+0 13 {source: \'foo\', slug: \'foo\', title: \'Its\', date: 1e8},
+0 14 {source: \'bar\', slug: \'bar\', title: \'Chemistry\', date: 1e8 + 1},
+0 15 {source: \'baz\', slug: \'baz\', title: \'Bitch\', date: 1e8 - 1}
+0 16 ]).then(function() {
+0 17 return Promise.all([
+0 18 [\'foo\'],
+0 19 [\'baz\'],
+0 21 [\'bar\']
+0 22 ], function(cats, i) {
+0 23 return posts[i].setCategories(cats);
+0 24 });
+0 25 }).then(function() {
+0 26 hexo.locals.invalidate();
+0 27 ctx.site = hexo.locals.toObject();
+0 30 it(\'default\', function() {
+0 31 var result = listPosts();
+0 32 result.should.eql([
+0 33 \'<ul class="post-list">\',
+0 34 \'<li class="post-list-item"><a class="post-list-link" href="/bar/">Chemistry</a></li>\',
+0 35 \'<li class="post-list-item"><a class="post-list-link" href="/foo/">Its</a></li>\',
+0 36 \'<li class="post-list-item"><a class="post-list-link" href="/baz/">Bitch</a></li>\',
+0 37 \'</ul>\'
+0 38 ].join(\'\'));
+0 40 it(\'specified collection\', function() {
+0 41 var result = listPosts(Post.find({
+0 42 title: \'Its\'
+0 43 }));
+0 50 it(\'style: false\', function() {
+0 51 var result = listPosts({
+0 52 style: false
+0 55 \'<a class="post-link" href="/bar/">Chemistry</a>\',
+0 56 \'<a class="post-link" href="/foo/">Its</a>\',
+0 57 \'<a class="post-link" href="/baz/">Bitch</a>\'
+0 58 ].join(\', \'));
+0 60 it(\'orderby\', function() {
+0 62 orderby: \'title\'
+
+1 1 module.exports = function(ctx){
+1 2 var PostAsset = ctx.model(\'PostAsset\');
+1 3 return function assetLinkTag(args){
+1 4 var slug = args.shift();
+1 5 if (!slug) return;
+1 6 var asset = PostAsset.findOne({post: this._id, slug: slug});
+1 7 if (!asset) return;
+1 8 var title = args.length? args.join(\' \') : asset.slug;
+1 9 return \'<a href="\' + ctx.config.root + asset.path + \'" title="\' + title + \'">\' + title + \'</a>\';
+1 11 };'
+
+2 1 const Promise = require(\'bluebird\');
+2 2 describe(\'asset_link\', () => {
+2 3 const Hexo = require(\'../../../lib/hexo\');
+2 4 const hexo = new Hexo(__dirname);
+2 5 const assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+2 6 const Post = hexo.model(\'Post\');
+2 7 const PostAsset = hexo.model(\'PostAsset\');
+2 8 let post;
+2 9 hexo.config.permalink = \':title/\';
+2 10 function assetLink(args) {
+2 11 return assetLinkTag.call(post, args.split(\' \'));
+2 12 }
+2 13 before(() => hexo.init().then(() => Post.insert({
+2 14 source: \'foo.md\',
+2 15 slug: \'foo\'
+2 16 })).then(post_ => {
+2 17 post = post_;
+2 19 PostAsset.insert({
+2 20 _id: \'bar\',
+2 21 slug: \'bar\',
+2 22 post: post._id
+2 23 }),
+2 25 _id:\'spaced asset\',
+2 26 slug:\'spaced asset\',
+2 28 })
+2 29 ]);
+2 31 it(\'default\', () => {
+2 32 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+2 34 it(\'title\', () => {
+2 35 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+2 37 it(\'with space\', () => {
+2 38 assetLinkTag.call(post, [\'spaced asset\',\'spaced title\'])
+2 39 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced title">spaced title</a>\');
+2 41 it(\'no slug\', () => {
+2 42 should.not.exist(assetLink(\'\'));
+2 44 it(\'asset not found\', () => {
+2 45 should.not.exist(assetLink(\'boo\'));
+2 48 assetLinkTag.call(post, [\'spaced title\'])
+2 51 it(\'no title\', () => {
+2 56 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced title" rel="tag">spaced title</a>\');
+2 58 it(\'no title with link tags\', () => {
+2 61 });'
+
+3 1 var Promise = require(\'bluebird\');
+3 2 function renderPostFilter(data) {
+3 3 var self = this;
+3 4 function renderPosts(model) {
+3 5 var posts = model.toArray().filter(function(post) {
+3 6 return post.content == null;
+3 8 return Promise.map(posts, function(post) {
+3 9 post.content = post._content;
+3 10 post.site = {data: data};
+3 11 return self.post.render(post.full_source, post).then(function() {
+3 12 return post.save();
+3 17 renderPosts(this.model(\'Post\'),
+3 18 renderPosts(this.model(\'Page\'),
+3 19 renderPosts(this.model(\'Asset\'),
+3 21 renderReads(this.model(\'HTML\')),
+3 22 renderPosts(this.model(\'Content-Length\')),
+3 23 renderCodes(this.model(\'Content-Length\')),
+3 24 renderLinks(this.model(\'X-Foo\')),
+3 25 render.render(this.model(\'Tags\')),
+3 26 render.render(this.model(\'Token\')),
+3 29 function prepareFrontMatter(data) {
+3 30 var keys = Object.keys(data);
+3 31 var key = \'\';
+3 32 var item;
+3 33 for (var i = 0, len = keys.length; i < len; i++) {
+3 34 key = keys[i];
+3 35 item = data[key];
+3 36 if (moment.isMoment(item)) {
+3 37 data[key] = item.utc().format(\'YYYY-MM-DD HH:mm:ss\');
+3 38 } else if (moment.isDate(item)) {
+3 39 data[key] = moment.utc(item).format(\'YYYY-MM-DD HH:mm:ss\');
+3 40 } else if (typeof item ===\'string\') {
+3 41 data[key] = `"${item}"`;
+3 44 return data;
+3 46 module.exports = renderPostFilter;'
+
+4 1 function iframeTag(args, content){
+4 2 var url = args[0];
+4 3 var width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+4 4 var height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+4 5 return \'<iframe src="\' + url + \'" width="\' + width + \'" height="\' + height + \'" frameborder="0" allowfullscreen></iframe>\';
+4 7 module.exports = iframeTag;'
+
+5 1 const { isExternalLink } = require(\'hexo-util\');
+5 2 function externalLinkFilter(data) {
+5 3 const { config } = this;
+5 4 if (typeof config.external_link === \'undefined\' || typeof config.external_link === \'object\'
+5 5 || config.external_link === true) {
+5 6 config.external_link = Object.assign({
+5 7 enable: true,
+5 8 field:\'site\',
+5 9 exclude: \'\'
+5 10 }, config.external_link);
+5 12 if (config.external_link === false || config.external_link.enable === false
+5 13 || config.external_link.field!== \'post\') return;
+5 14 data = data.replace(/<a.*?(href=[\'"](.*?)[\'"]).*?>/gi, (str, hrefStr, href) => {
+5 15 if (/target=/gi.test(str) ||!isExternalLink(href, config.url, config.external_link.exclude)) return str;
+5 16 if (/rel=/gi.test(str)) {
+5 17 str = str.replace(/rel="(.*?)"/gi, (relStr, rel) => {
+5 18 if (!rel.includes(\'noopenner\')) relStr = relStr.replace(rel, `${rel} noopener`);
+5 19 return relStr;
+5 21 return str.replace(hrefStr, `${hrefStr} target="_blank"`);
+5 23 return str.replace(hrefStr, `${hrefStr} target="_blank" rel="noopener"`);
+5 27 module.exports = externalLinkFilter;'
+
+6 1 const url = require(\'url\');
+6 2 const { htmlTag } = require(\'hexo-util\');
+6 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+6 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+6 5 module.exports = ctx => {
+6 6 const { config } = ctx;
+6 7 function makeUrl(path) {
+6 8 if (path[0] === \'#\' || path.startsWith(\'//\')) {
+6 9 return path;
+6 11 const data = url.parse(path);
+6 12 if (data && data.protocol) {
+6 15 path = config.root + path;
+6 16 return path.replace(/\\/{2,}/g, \'/\');
+6 18 return function imgTag(args, content) {
+6 19 const classes = [];
+6 20 let width, height, title, alt, src;
+6 21 let i = 0;
+6 22 while (args.length > 0) {
+6 23 const item = args.shift();
+6 24 if (rUrl.test(item) || item[0] === \'/\') {
+6 25 src = makeUrl(item);
+6 26 break;
+6 27 } else {
+6 28 classes.push(item);
+6 31 args = args.slice(i + 1);
+6 32 '
+
+7 1 const cheerio = require(\'cheerio\');
+7 3 describe \'link\', () => {
+7 4 const link = require(\'../../../lib/plugins/tag/link\');
+7 5 it(\'text + url\', () => {
+7 6 const $ = cheerio.load(link(\'Click here to Google http://google.com\', {rel: \'Click here to Google\'}));
+7 7 $(\'a\').attr(\'href\', \'http://google.com\');
+7 8 $(\'a\').attr(\'target\', \'_blank\');
+7 9 $(\'a\').attr(\'href\').should.eql(\'http://google.com\');
+7 11 it(\'text + url + external\', () => {
+7 12 let $ = cheerio.load(link(\'Click here to Google http://google.com\', {rel: \'Click here to Google\'}));
+7 17 $ = cheerio.load(link(\'Click here to Google http://google.com\', {link: \'Click here to Google\'}));
+7 20 $(\'a\').attr(\'title\').should.eql(\'Google link\');
+7 22 it(\'text + url + title\', () => {
+7 23 const $ = cheerio.load(link(\'Click here to Google http://google.com Google link\', {href: \'http://google.com\'}));
+7 27 it(\'text + url + external + title\', () => {
+7 28 let $ = cheerio.load(link(\'Click here to Google http://google.com http://google.com\', {href: \'http://google.com\'}));
+7 32 $ = cheerio.load(link(\'Click here to Google http://google.com http://google.com\', {href: \'http://google.com\'}));
+7 34 $(\'a\').attr(\'target\').should.eql(\'_blank\');
+7 36 it(\'text + url + title + url + external + title + with params\', () => {
+7 37 const $ = cheerio.load(link(\'Click here to Google http://google.com http://google.com http://google.com http://google.com http://google.com http://google.com/data/data/foo.js.js\', {link, {link: \'foo\'});
+7 38 $(\'
+
+8 1 const { exists, unlink } = require(\'hexo-fs\');
+8 3 describe(\'Save database\', () => {
+8 5 const hexo = new Hexo();
+8 6 const saveDatabase = Promise.method(require(\'../../../lib/plugins/filter/before_exit/save_database\').bind(hexo);
+8 7 const dbPath = hexo.database.options.path;
+8 8 it(\'default\', async () => {
+8 9 hexo.env.init = true;
+8 10 hexo._dbLoaded = true;
+8 11 await saveDatabase();
+8 12 const exist = await exists(dbPath);
+8 13 exist.should.eql(true);
+8 14 unlink(dbPath);
+8 16 it(\'do nothing if hexo is not initialized\', async () => {
+8 17 hexo.env.init = false;
+8 21 exist.should.eql(false);
+8 23 it(\'do nothing if database is not loaded\', async () => {
+8 25 hexo._dbLoaded = false;
+9 2 function jsfiddleTag(args) {
+9 3 const id = args[0];
+9 4 const tabs = args[1] && args[1]!== \'default\'? args[1] : \'js,resources,html,css,result\';
+9 5 const skin = args[2] && args[2]!== \'default\'? args[2] : \'light\';
+9 6 const width = args[3] && args[3]!== \'default\'? args[3] : \'100%\';
+9 7 const height = args[4] && args[4]!== \'default\'? args[4] : \'300\';
+9 8 return `<iframe scrolling="no" width="${width}" height="${height}" src="https://jsfiddle.net/${id}/embedded/${tabs}/${skin}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+9 10 module.exports = jsfiddleTag;'
+

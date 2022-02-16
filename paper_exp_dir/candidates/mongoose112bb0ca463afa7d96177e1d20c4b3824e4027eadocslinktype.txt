@@ -1,0 +1,22 @@
+Min editdistance: 38.00
+Closest candidate: 3 2 module.exports.url = str;
+0 1  else {
+0 2 return str.replace(/\\{/g, '\\{/g, '\\{'$').split(/g, '\
+0 3 \
+0 4 '));
+0 5 }
+0 6 };"
+
+1 2 return str;
+2 2 return str.replace(/\\{\\{/g, '.');"\\{\\}\\}\\{\\}'s\\}\\}'\\?\\}'(\\}\\{\\}'s\\{\\{/g, '*/gm, '$/g, '$/g, '//');"}}\\{\\{\\{\\{\\{\\{\\}\\{\\{\\}'});"\\}'\\}'\\}\\}\\}'`;""
+3 2 module.exports.url = str;
+4 2 return str.replace(/\\{\\{/g, '}\\{/g, '\\}\\{\\{' + str, '\\}'}, '\\}'$/g, '$');" + str);" '\
+5 2 return str.replace(/\\{/g, '}'/g, '{{{2}');
+5 3 }"/g, '\
+5 5 }"return str.replace(/g, '\\{\
+5 8 }"
+6 4 }"
+
+7 2 return str.replace(/\\s*, '$/g, '|\\s');"|\\./g, 'http://');"\\s" + str);
+8 1 '
+9 2 return str.replace(/\\{\\{/g, '\\{/g, '\\}/g, '\\}\\{/g, '\\}'$');"$/g, '\\{'/g, '\\{\\{\\}\\{\\{'}\');"$/g, '$\\{\\{\\{\\{\\{' }\\{\\}\\}' at\\}'$\\}\\}\\}' at\\}\\}'s+(.*/gm, '\\);return {\\);"}}"; return {\\)"; return str;

@@ -1,0 +1,186 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 cursor[seg] = cursor[seg] || {};
+0 1  cursor[seg] = cursor[seg] || {};
+0 2 cursor[seg] = cursor[seg] || {};
+0 3 }
+0 5 return obj;
+0 7 function buildNodes(tree) {
+0 8 const nodes = [];
+0 9 for (const [key, item] of Object.entries(tree)) {
+0 10 nodes.push({
+0 11 label: key,
+0 12 nodes: buildNodes(key),
+0 13 ...n});
+0 15 return nodes.length === 0;
+0 25 return nodes;
+0 33 ...nodes
+0 34 });
+0 46 '
+
+1 9 if (0!== nodes.length) {
+1 10 return false;
+1 12 nodes.forEach(function (n) {
+1 13 if (nodes.some((node) => semver.validRange(node.endpoint)) &&
+1 14 odes.some((node) => semver.satisfies(node.endpoint));
+1 16 return nodes.length;
+1 18 function buildCursor(routes) {
+1 20 if (routes.length === 0) {
+1 23 let cursor = obj;
+1 24 for (const i = 0, len = routes.length; i < len; i++) {
+1 25 const name = routes[i].split(\'/\');
+1 26 cursor[name] = cursor[name] || {};
+1 27 cursor = cursor[name] || {};
+1 29 return cursor;
+1 33 function buildDependencies(decEndpoint) {
+1 34 const baseDir = this.page.base;
+1 35 function buildQuality(decEndpoint) {
+1 36 return decEndpoint.pkgMeta;
+1 41 function buildQuality(decEndpoint, options) {
+1 42 const filters = this.extend.filter;
+1 43 const { filter } = options;
+1 44 filter.unshift(filter.value);
+1 45 return options.length === 0;
+1 47 function cleanUpContinues(dot(d) {
+1 48 return this.page.unregister(this.page.source)
+1 49 .top()
+1 50 .on('error)
+1 51 .on('error', this.method)
+1 52 .complete())
+1 53 .on('end())
+1 54 .on('end()
+1 55 .onLineEnd())
+1 56 .onLine())
+1 57 .onLine()
+1 77 .onLine()\
+2 9 const nodesToWatch = Object.keys(tree);
+2 10 for (const [key] of Object.entries(tree)) {
+2 13 nodes: nodes,
+2 14 odesToWatch: nodes
+2 23 nodesToWatch.push({
+2 25 nodesToWatch: nodes,
+2 31 function buildFromDisc() {
+2 32 if (this.options.skip) {
+2 33 return;
+2 35 let ret = archy({
+2 36 label: this.label,
+2 37 nodes: buildNodes(this.options.skip)
+2 38 }, this);
+2 39 if (!ret) {
+2 42 return this.routes.length;
+2 48 const nodes = this.tree.split(\'=\');
+2 49 const discriminators = this.extend.filter.exec(\'pre\', function discriminators);
+2 50 for (const discriminatorResult = this.routes.find((route) => {
+2 51 if (discriminators.has(route.path)) {
+2 52 return discriminators.set(route.path, new Set([\'before\', \'after\']));
+2 55 return this.params.deep_equal(discriminators);
+2 57 function discriminators() {
+2 59 if (! discriminators) return discriminators;
+2 62 function isExcluded() {
+2 63 return (this.params[0] === \'excluded\' || []).indexOf(this.params[0]) === -1];
+2 65 function isIncluded() {
+2 66 return this.params[0] === \'included\'return\'return\'return\'return\' in other\' == other\' == other\' || [];
+2 68 function isReference() {
+2 69 return this.params.collection(this.collection(this.params.find((route)
+2 70 .body)
+2 71 .type)
+2 72 .collection(function ( fn) {
+2 73 .schema.collection(fn)
+2 74 .collection(fn)
+2 75 .collection( this.schema.collection)
+2 77 .collection(this.collection)
+2 78 .collection)
+2 79 .collection( this.collection)
+2 80 .collection.collection( this.collection)
+2 84 .collection.collection.collection.map( this.collection)
+2 88 .collection.collection)
+2 89 .collection.
+3 1  else {
+3 10 const nodesToBeObject = Object.create(null);
+3 11 return nodes.some(function (node) {
+3 12 return semver.satisfies(node.endpoint.name, node.endpoint.name);
+3 21 function buildNodesSync(tree) {
+3 27 function buildRenderer(data) {
+3 28 const renderer = this.getRenderer();
+3 29 renderer.set(data, {
+3 30 return renderer.compare(true, data);
+3 32 return renderer.set(data, {
+3 33 return renderer.compare(false, data);
+3 36 function render() {
+3 37 return this.partial.apply(this, arguments);
+3 43 return this.render.apply(this, arguments);
+3 50 function render() {}'
+
+4 9 const nodesToReply = [];
+4 11 if (Object.keys(item).length) {
+4 14 nodes: buildNodes(item)
+4 16 } else {
+4 25 class Hexo extends EventEmitter {
+4 26 constructor() {
+4 27 super();
+4 29 const baseDir = this.base_dir;
+4 50 const nodesList = [];
+4 51 function buildRend() {
+4 52 return Object.length() {
+4 53 return this.length
+4 54 .map(this.filter((a, x) => x).length);
+4 55 .length);
+4 56 .filter((obj.length).length);
+4 57 .length === 0;
+4 58 .forEach((x) => return 1;
+4 59 }'
+
+5 10 for (const [key, item] of Object.entries(tree)).forEach(function (node) {
+5 11 if (node.missing || node.incompatible) {
+5 14 nodes: buildNodes(node.endpointNames, key),
+5 15 odesToWatch: buildNodes(node.endpoints, key)
+5 20 nodesToWatch: buildNodes(node.endpoints, key)
+5 29 const node = buildNodes(node.endpoints, key);
+5 30 if (nodesToWatch) {
+5 32 for (const [key, node] of Object.entries(node.endpoints, key)) {
+5 34 const nodesToWatch = Object.keys(node.endpoints, key);
+5 43 for (const [key, node] of Object.entries(tree).length === 0;
+5 58 const nodesToWatch = [];
+6 14 return nodes.filter((node, index) => self.post.create(node, index));
+6 18 for (const [index, false] of Object.entries(tree)) {
+6 20 label: `Total: ${index},
+6 21 nodes
+6 24 return nodes.length()
+6 40 function._parseArgs(args) {
+6 41 const ret = [];
+6 42 for (const [args, index] of Object.entries(args)) {
+6 43 ret.push(stringify(args));
+6 45 return ret;
+6 47 function._runTree(routes, index) {
+6 48 return _.exec(this.stringify(routes)
+6 54 _readOptions.main = this._writeFile(this.sourceDir, mainDir, mainDir + 
+6 55 .source, mainDir + 
+6 56 .copyFile)
+6 57 .copyFile(this.source, mainDir + 
+6 60 .sourceFiles;
+6 61 .then(doc => {
+6 62 return _.each(this.readFile, function (doc, content, data) {
+6 63 return _.destry {
+6 64 return doc || {_.split(this.engines;
+6 65 }, this.copyFiles(data, data, target })
+6 66 .each(function (file, i) {
+6 67 return doc })
+6 68 .each(function (file) {
+6 69 return doc.
+7 1 `;
+7 10 if (nodes.some(Boolean)) {
+7 11 nodes.push({});
+7 13 return nodes.length - 1;
+7 16 const obj = {};
+7 17 for (let i = 0, len = nodes.length; i < len; i++) {
+7 18 const node = buildNodes(tree);
+7 19 obj[node.id] = node;
+7 30 function buildNodesSync(node) {
+8 2 const line = item[j];
+8 3 if (line) {
+8 4 return cursor[line];
+8 37 nodes: buildNodes(tree)
+8 93 module.extend = function buildFromDisc() {
+8 94 return function buildFromDisc() {
+8 95 return {
+8 98 };'
+

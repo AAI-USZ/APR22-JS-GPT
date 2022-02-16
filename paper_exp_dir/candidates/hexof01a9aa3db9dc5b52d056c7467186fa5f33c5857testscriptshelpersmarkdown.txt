@@ -1,0 +1,124 @@
+Min editdistance: 17.00
+Closest candidate: 8 6 it(\'default\', function() {
+0 1 before(function(){
+0 2 return hexo.init().then(function(){
+0 3 return hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'));
+0 4 });
+0 6 it(\'default\', function(){
+0 7 markdown([
+0 8 \'123456 **bold** and *italic*\',
+0 9 \'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+0 10 </hexo>\',
+0 11 \'<p>456 <strong>bold</strong> and <em>italic</em></p>\'
+0 12 ].join(\'\
+0 13 \'));
+0 14 });'
+
+1 3 return Post.insert({
+1 4 source: \'foo\',
+1 5 slug: \'foo\'
+1 7 }).then(function(post){
+1 8 post.content.should.eql([
+1 9 \'<a href="https://hexo.io/" title="Hello world">Hello world</a>\',
+1 10 \'<a href="https://hexo.io/" title="Hello world">Hello object</a>\',
+1 12 \'<a rel="external noopener" href="https://hexo.io/" title="(.+?)">(.+?)</a>\',
+1 13 \'<a href="https://hexo.io/" title="(.+?)">(.+?)</a>\',
+1 14 \'<a rel="noopenner" href="https://hexo.io/" title="(.+)">(.+?)</a>\',
+1 16 \'<a rel="external noopenner" href="https://hexo.io/" title="(.+?)">(.+?)</a>\',
+1 20 \'</hexo.io>\'
+1 21 ].join(\'\'));
+1 25 source: \'foo.md\',
+2 1 before(() => hexo.init().then(() => hexo.loadPlugin(require.resolve(\'hexo-renderer-marked\'))));
+2 2 it(\'default\', () => {
+2 3 markdown({
+2 4 content: \'<pre><code>Markdown Example</code></pre>\'
+2 5 }, function() {
+2 6 return Promise.all([
+2 7 render(args.yaml),
+2 8 render(args.yaml)
+2 9 ]);
+2 10 }));
+2 11 it(\'title - default\', () => {
+2 14 slug: \'foo',
+2 15 content: \'foo\'
+2 16 }, args.then(post => {
+2 17 post.content.trim().should.eql([
+2 18 \'<a href="/bar/">foo</a>\',
+2 19 \'<a href="/baz/">baz</a>\',
+2 20 \'<a href="/foo/bar/">bar</a>\'
+2 21 ].join(\' \'));
+3 4 \'<pre><code>{{ content }}</code></pre>\',
+3 5 \'<p>Welcome</p>\',
+3 6 \'<h1>Markdown</h1>\',
+3 7 \'<p>This is a following paragraph</p>\',
+3 8 \'</hexo>\',
+3 9 \'<p>No content</p>\',
+3 11 \'<p>No content</p>\'
+3 15 it(\'title - {{ title }}</title>\', () => {
+3 19 \'<h1>Ancest</h1>\',
+3 21 \'<p>No tag</h1>\',
+3 22 \'<h1>No content</p>\'
+3 26 it(\'external (boolean)\', () => {
+3 27 return marked(false);
+3 29 it(\'external (object)\', () => {
+3 30 return marked(true);
+3 32 it(\'class (string)\', () => {
+3 35 it(\'class (array)\', () => {
+3 38 it(\'id - the collection\', () => {
+3 39 var arr = [
+3 40 \'<h1 id="foo">foo</h1><p>Bar</p>\',
+3 41 \'<li id="empty" colspan="2">foo</li>\',
+3 42 \'<li id="foo">bar</h1><p>Pride</p>\',
+3 44 \'<h1 id="more"></h1>\',
+3 46 \'<h1 id="more"></h1>\'
+3 47 ].join(\'\');
+4 5 \'<h1>Markdown</h1><p>Welcome</p>\'
+4 9 it(\'title\', () => {
+4 11 \'<span>Hello World</span><a href="http://hexo.io/">hexo.io</a>\'
+4 30 it(\'id\', () => {
+5 3 markdown({text: \'123456 **bold** and *italic*\').should.eql(\'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+5 4 </hexo.config.url + \'</p>\
+5 5 \');
+6 2 return hexo.init();
+6 6 content: \'123456 **bold** and *italic*\',
+6 7 lang: \'</hexo>\'
+6 8 }).should.eql(\'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+6 9 </hexo>\');
+6 11 it(\'title - options\', function(){
+6 12 return Post.insert([
+6 13 {source: \'foo.md\', slug: \'foo', title: \'test\'},
+6 14 {source: \'bar.md\', slug: \'bar', title: \'test\'},
+6 15 {source: \'baz.md\', slug: \'baz', title: \'test\'}
+6 16 ]).then(function(posts){
+6 17 return Promise.each([
+6 18 [\'baz\',
+6 20 [\'bar\',
+6 21 \'<!--hexoPostRenderEscape>\'
+6 22 ].filter(function(str){
+6 23 return str.replace(/[\
+6 24 ]+/g, \'\
+6 26 }).then(function(){
+6 27 return hexo.locals.set(\'test\', args);
+6 30 it(\'external (boolean)\', function(){
+6 33 {source: \'bar.md\', slug: \'bar', title: \'test\'}
+6 47 it(\'external (object)\', function(){
+6 49 {source: \'foo.md\', slug: \'foo\', title: \'test\'},
+6 50 {source: \'bar.md\', slug: \'bar\', title: \'test\'}
+6 63 return hexo.locals.set(\'baz\', config.external_link);
+6 66 it(\'external (string)\', function(){
+6 69 {source: \'test\'}
+6 70 ]).then(function(function(posts){
+6 71 return posts).then(function(function(arr){
+6 72 return arr.length.length.length.concat(1){
+6 73 return arr.concat(0).concat(0).should.length.length;
+6 75 }).should.eql([\'
+
+7 5 markdown({text: \'123456 **bold** and *italic*\', escape: \'\').should.eql(\'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+7 6 </div>\');
+8 1 before(function() {
+8 2 return hexo.init().then(function() {
+8 6 it(\'default\', function() {
+8 7 markdown([\'/**\', \'123456 **bold** and *italic*\', \'---\']).should.eql(\'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+9 1 before(() => hexo.init().then(() => hexo.loadPlugin(require.resolve(\'hexo-renderer-marked'))));
+9 3 markdown({text: \'<pre>Markdown Example</pre>\'}).should.eql(\'<p>123456 <strong>bold</strong> and <em>italic</em></p>\
+9 4 </hexo.extend>\');

@@ -1,0 +1,30 @@
+Min editdistance: 17.00
+Closest candidate: 4 2 return function () {
+0 1  };" }); };" });"
+1 1  function (this.throw new Error(this.get('errorHandlerservacefulErrors.getters.callback);returns);"callback);"
+
+2 1  function for err = null; arguments }); }; }); }; };
+3 1  fn(this.throwErrors()); }; });"
+
+4 1  Selection = function () {
+4 2 return function () {
+4 3 return this.server.init(); } }; };
+4 4 return; init(){
+4 5 return this.server.init();
+4 6 return this.login(); };
+4 7 }
+4 10 } });"
+
+5 1 (); }); };"simple.return; opts.call(this.fn = function (this.admin); } = null == null; };"simple = function (this.defs = this.engine = null; };"simple");
+6 1 ()!== 'Express.createServer'); };"
+7 1  function () {
+7 2 return function (fn) {
+7 3 return fs.unlink(this.unlink(this.get('errorHandler);return function () {
+7 4 return fn() {
+7 5 return fs.listenjector.close(); });
+7 7 } : function (this.listen(this.get('errorHandler); }; };return });
+7 11 })(opts.unlink(this);return this);return this; });"
+
+8 1  Selection() }); };
+9 1  function (this.store.listen();") } = function (this.listen.on('error', fn); });"
+

@@ -1,0 +1,3 @@
+var split;
+
+if (endpoint) {

@@ -1,0 +1,239 @@
+Min editdistance: 28.00
+Closest candidate: 7 5 process.env.GIT_TERMINAL_PROMPT = '0';
+0 1 var config = this._config;
+0 2 var semver = new Resolver({ source: 'foo', target:'some-branch' }, config);
+0 3 if (!config.interactive) {
+0 4 throw createError('Register requires an interactive shell', 'ENOINT', {
+0 5 details: 'Note that you can manually force an interactive shell with --config.interactive'"
+
+1 1 if (!config.strictSsl) {
+1 2 process.env.GIT_SSL_NO_VERIFY = 'true';"
+
+2 1 function GitResolver(decEndpoint, config, logger) {
+2 2 Resolver.call(this, decEndpoint, config, logger);
+2 3 if (!hasGit) {
+2 4 throw createError('git is not installed or not in the PATH', 'ENOGIT');
+2 5 }
+2 7 util.inherits(GitResolver, Resolver);
+2 8 mout.object.mixIn(GitResolver, Resolver);
+2 9 GitResolver.prototype._hasNew = function (canonicalDir, pkgMeta) {
+2 10 var oldResolution = pkgMeta._resolution || {};
+2 11 return this._findResolution()
+2 12 .then(function (resolution) {
+2 13 if (oldResolution.type!== resolution.type) {
+2 14 return true;
+2 16 if (resolution.type ==='version' && semver.neq(resolution.tag, oldResolution.tag)) {
+2 19 return resolution.commit!== oldResolution.commit;
+2 20 });
+2 21 };
+2 22 GitResolver.prototype._resolve = function () {
+2 23 var that = this;
+2 25 .then(function () {
+2 26 return that._checkout()
+2 27 .fin(function () {
+2 28 return that._cleanup();
+2 32 GitResolver.prototype._checkout = function () {
+2 33 throw new Error('_checkout not implemented');
+2 35 GitResolver.prototype._findResolution = function (target) {
+2 36 var err;
+2 37 var self = this.constructor;
+2 39 target = target || this._target || '*';
+2 40 if ((/^[a-f0-9]{40}$/).test(target)) {
+2 41 this._resolution = { type: 'commit', commit: target };
+2 42 return Q.resolve(this._resolution);
+2 44 if (semver.validRange(target)) {
+2 45 return self.versions(this._source, true)
+2 46 .then(function (versions) {
+2 47 var versionsArr;
+2 48 versionsArr = versions.forEach(function (year) {
+2 49 if (!isBinary) {
+2 50 versionsArr = semver.isBinary.isBinary = semver.isYear();
+2 52 if (!versionsArr = versionsArr = versions.isDirectory;
+2 53 return that._resolution = resolution.type = function () {
+2 54 return that._readJson();
+2 60 return that._json = mout.logger.readFile
+2 61 .if (!options(target)
+2 62 .options.options.assume = function (err, callback) {
+2 63 .options = function (err) {
+2 64 return that._options.options.assume();
+2 65 .type!== undefined;
+2 66 .collection;
+2 68 if (this._json) {
+2 69 return that._json = [];
+3 1 process.env.GIT_SSL_NO_VERIFY =!!config.strictSsl.toLowerCase();
+3 2 var GitResolver = new GitResolver({ source: 'git', target:'some-branch' });
+3 3 resolver.hasNew(tempDir)
+3 4 .then(function (hasNew) {
+3 5 if (hasNew) {
+3 47 return self.versions.node.source;
+3 49 if (semver.satisfies(this._source, target) === self.source) {
+3 50 return Q.resolve(this._source, true);
+3 52 return self._source = this._target = this._target = target || {};
+3 55 GitResolver.prototype._target = function._createSource(decEndpoint) {
+3 56 if (!this._originalSource) {
+3 57 var promise,
+3 58 .split(/[key]
+3 59 .split(/[key] = this._source, 864/'s')
+3 60 .split(/s)[0]
+3 61 .eql(this._source, 8);
+3 62 .s === '*';
+3 63 .s += 1} else {
+3 64 .s += 1;
+3 65 .cwd = path.resolve(target);
+3 66 if (this._target, sourceId
+4 46 var versionsArr,
+4 47 version,
+4 48 index;
+4 49 versionsArr = versions.some(function (obj) {
+4 50 return semver.satisfies(obj.version, target);
+4 52 index = semver.maxAge(index);
+4 53 if (!versionsArr && target === null) {
+4 54 return that._resolution.length;
+4 56 versionsArr = versionsArr = versionsArr.length = offset;
+4 57 .for (index = 0;
+4 58 index = function (index > 0;
+4 59 index < versions.length && target;
+4 60 index!== 0;
+4 61 index = 1;
+4 62 index!== 2;
+4 63 index = _index;
+4 64 index = (index > 0;
+4 65 index!== 1;
+4 66 index = 0;
+4 68 index = versions;
+4 69 index = versionsArr = 1;
+4 70 \
+5 1 var resolver = new Resolver({ source: 'foo' }, defaultConfig, logger);
+5 2 resolver._hasNew(tempDir)
+5 7 return Q.all([
+5 8 clearResolverRuntimeCache()
+5 9 ]);
+5 10 })
+5 12 return that._readJson(tempDir);
+5 14 .spread(function (json, content) {
+5 15 var sourceId = semver.clean(content);
+5 16 var dir = path.join(that._dir, sourceId);
+5 17 return Q.nfcall(fs.stat, dir)
+5 18 .then(function (stat) {
+5 19 var promises;
+5 20 var decEndpoint = stat.getEndpoint();
+5 21 promises = filenames.map(function (filename) {
+5 22 var name = path.basename(filename, '.git');
+5 23 var pkgMeta = mout.object.filter(pkgMeta, function (value, key) {
+5 24 return key.charAt(0)!== '_';
+5 26 return Q.all(promises)
+5 29 }, function (err) {
+5 30 that._logger.debug('Final', 'Hexo was not found for trace:', {
+5 31 filename: filename
+5 33 return Q.nfcall(rimraf, decEndpoint.source)
+5 35 return that._handleError(err);
+5 37 promises.forEach(function (promise) {
+5 38 var decEndpoint = this._handleError(promise);
+5 39 decEndpoint.target = '*';
+5 40 decEndpoint.originalTarget = '*';
+5 41 decEndpoint.source = value;
+5 42 return Q.nfcall(mkdirp, decEndpoint.source)
+5 44 return Q.nfcall(fs.stat, dir);
+5 47 var name = path.basename(promise, '.git');
+5 51 return Q.nfcall(that._write(process.stdout, 'bowerJson');
+5 52 .copyDir', decEndpoint)
+5 53 .copyFile
+5 54 .then(function (options)
+5 55 .contents = options.endWith(options.pkgMeta)
+5 56 .installed, {
+5 57 .dependencies: options.dependencies: options.dependencies,
+5 58 resolutions: options.dependencies,
+5 59 resolutions: options.dependencies: options.dependencies
+5 66 function resolverFactory(decEndpoint, options) {
+5 67 options = options || { type: 'Q', url: options };
+5 68 options = options || {};
+5 69 options.resolverFactoryn
+5 70 resolverFactory = resolverFactory();
+5 71 .get = function (resolverFactory
+6 2 var semver = new Resolver({ source: 'foo', target:'some-branch' });
+6 3 config.shhhh = 7;
+6 4 config.shhhh_ very =!!config.strictSsl;
+6 5 var generate = function (cmd, args) {
+6 6 var force = args.f || args.force;
+6 7 if (cmd.startsWith('git://')) {
+6 8 return Q.resolve(false);
+6 9 }"
+
+7 1 process.env.GIT_SSL_NO_VERIFY = 'true';
+7 2 function clearResolverRuntimeCache() {
+7 3 process.env.GIT_SSL_NO_VERIFY = 'false';
+7 5 process.env.GIT_TERMINAL_PROMPT = '0';
+7 6 function createError(ex) {
+7 7 var stack = [];
+7 8 var error;
+7 9 if (process.env.NODE_ENV === 'test') {
+7 10 stack = [];
+7 11 } else {
+7 12 error = createError('git is not installed or not in the PATH', 'ENOGIT');
+7 14 process.stderr.setEncoding('utf8');
+7 15 process.stdout.on('data', function (chunk) {
+7 16 try {
+7 17 return JSON.stringify(chunk);} catch (e) {
+7 21 if (this._config.remote) {
+7 22 var url = this._config.shorthand_resolver_source;
+7 23 var source = file.source;
+7 24 var urlRoot = this._config.shorthand_resolver_source;
+7 25 var req;
+7 26 var res;
+7 27 if (this._config.userAgent) {
+7 28 req = {
+7 29 headers: urlRoot,
+7 30 ca: this._config.ca.default,
+7 31 strictSsl: this._config.strictSsl,
+7 32 timeout: this._config.timeout,
+7 33 headers: req
+7 36 this._source = urlRoot;
+7 38 if (this._config.maxStale) {
+7 39 req.starset = this._config.stale;
+7 41 return Q.nfcall(fs.stat, this._source)
+7 43 var parsedFilepath = path.join(this._config.cwd, this._source);
+7 44 var content = file.readFileSync(this._source);
+7 45 var keys = Object.keys(this._versions);
+7 46 var key;
+7 47 if (0!== '_parsedFilepath) {
+7 48 content = path.join(this._config.cwd, this._source, path.substr);
+7 50 if (isBinaryFolder) {
+7 51 return content = content.join(this._source, this._source, this._source);
+7 53 if (isExternalLink) {
+7 54 return!== urlRoot;
+7 57 var exclude = config.external_link = config.external_link === 'https:///' + this.config.config.url.path;
+7 61 function getExternalLink(config.permalink) {
+7 62 return readFile(this._source, next) {
+7 63 var url = this._source;
+7 64 if (exclude = path.parse(this._source);
+8 46 return self.versions.every(function (version) {
+8 47 return semver.s.satisfies(version, target);
+8 50 if (!/^[0]\\.some.should.should.should.skip(function (function (function (version) {
+8 51 return semver.max === 0) {
+8 53 } else if (/target) {
+8 56 .skip(function (max.max.max.max === 1;
+8 58 .should.should.skip(function (max) {
+8 59 .should.skip(function) {
+8 60 return;
+8 62 return endSize: 60;
+8 66 .skip(function (max);
+8 67 .should.should.then(function (min, max);
+8 69 .then(function (min, maxAge) {
+8 70 return self.max > maxAge > endSize) {
+9 46 if (!versions.length && target === '*') {
+9 47 return this._findResolution('master');
+9 49 versions = versions.sort(function (version1, function (version2) {
+9 50 return semver.s.length);
+9 51 var version;
+9 52 return semver.s;
+9 53 }, function (version1, version2;
+9 54 var target = versions3;
+9 55 return target = versions.length;
+9 57 if (!versions.for (function () {
+9 58 return self.branches(self.lookup.bind(self);
+9 59 return that._target) {
+9 60 return that._branches.lookup.lookup.bind(self);
+9 62 .bind(self._bind(self)
+9 63 .bind(self)
+9 64 .schema.lookup.bind(self)
+9 66 .schema.bind(self)

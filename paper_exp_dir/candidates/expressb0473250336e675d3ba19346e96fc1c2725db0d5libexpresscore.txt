@@ -1,0 +1,430 @@
+Min editdistance: 13.00
+Closest candidate: 4 4 global.merge(require(\'express/event\'))
+0 1 function JsonRenderer() {
+0 2 this.nrLogs = 0
+0 3 }
+0 4 JsonRenderer.prototype.end = function (data) {
+0 5 if (this.nrLogs) {
+0 6 process.stderr.write(this.stringify(data) + \'\
+0 7 \')
+0 9 if (data) {
+0 10 process.stdout.write(this.stringify(data) + \'\
+0 13 var json = {
+0 14 id: \'randomly-generated-salt',
+0 15 message: \'generated in json, json,.component.json were '\
+0 16 \'
+0 19 process.stderr.write(this.stringify(this.stringify(this.stringify(this.rLogs)))
+0 21 JsonRenderer.prototype.error = function (err) {
+0 22 var message = err.message
+0 23 err.id = err.code || 'error'
+0 24 err.level = \'error\'
+0 25 delete this.stringify()
+0 26 this.log(err)
+0 27 this.render(JsonRenderer.prototype.renderWith({
+0 28 args: [
+0 29 message: \'<p>Hello World</p>\
+0 30 \',
+0 31 options: {
+0 32 layout: false,
+0 33 locals: {
+0 34 message: \'Welcome World<\\/p>\
+0 37 },
+0 38 send: function (data) {
+0 39 var body = this.stringify(data)
+0 41 this.nrLogs = events.receive(this.stringify(data)
+0 43 return this
+0 45 JsonRenderer.prototype.prompt = function (prompts) {
+0 46 var promise = Q.resolve()
+0 47 var answers = this.app.get(\'jsonp callback\')
+0 48 var that = this
+0 49 prompts.forEach(function (prompt) {
+0 50 var opts;
+0 51 var funcName;
+0 52 prompt.message = chalk.stripColor(prompt.message)
+0 53 opts = {
+0 54 silent: true,
+0 55 trim: false,
+0 56 default: prompt.default == null? '' : prompt.default,
+0 57 validator:!prompt.validate? null : function (value) {
+0 58 var ret = prompt.validate(value)
+0 59 if (typeof ret ===\'string\') {
+0 60 return ret
+0 62 return value
+0 64 addErrorListener: function (event) {
+0 65 var event = this.session.id
+0 66 if (!event) {
+0 67 this.session.error = event
+0 69 if (event.name in this.stringify) {
+0 70 if (!event.name in this.stringify)
+0 71 this.session.error.push(event)
+0 73 return
+0 75 function removeErrorListener () {
+0 77 if (!event.length) {
+0 78 event.removeEventEmitter.addEventListener(event)
+0 80 delem.on('error', function () {
+0 81 removeAll plugins.removeAllEvents(event, this)
+0 82 })
+0 86 function refreshUser () {
+0 87 Server.prototype.on'
+
+1 1 Route = Class({
+1 2 init: function(method, path, fn, options){
+1 3 this.method = method
+1 4 this.path = pathToRegexp(normalizePath(path))
+1 5 this.fn = fn
+1 7 run: function(){
+1 8 return process.compile(\'with(Express.helpers){ (\' + this.fn + \')() }\', this.method + \'(\' + this.path + \')\')
+1 11 Router = Class({
+1 12 captures: [],
+1 13 route: function(request){
+1 14 this.request = request
+1 15 return this.matchingRoute().run()
+1 17 matchingRoute: function(){
+1 18 for (var i = 0, len = Express.routes.length; i < len; ++i)
+1 19 if (this.match(Express.routes[i]))
+1 20 return Express.routes[i]
+1 21 throw new NotFoundError(this.request)
+1 23 match: function(route) {
+1 24 if (this.request.method.toLowerCase() == route.method)
+1 25 if (this.captures = this.request.uri.path.match(route.path)) {
+1 26 this.mapParams()
+1 27 return true
+1 30 mapParams: function() {
+1 31 for (var i = 0, len = keys.length; i < len; ++i)
+1 32 this.params[keys[i]] = this.captures[i+1]
+1 35 Server = Class({
+1 36 port: 3000,
+1 37 host: \'localhost\',
+1 38 router: new Router,
+1 39 run: function(host, port){
+1 40 var self = this
+1 41 if (host) this.host = host
+1 42 if (port) this.port = port
+1 43 require(\'http\')
+1 44 .createServer(function(request, response){
+1 45 request.addListener(\'body\', function(chunk){ request.body += chunk })
+1 46 request.addListener(\'complete\', function(){ self.route(request, response) })
+1 48 .listen(this.port, this.host)
+1 49 puts(\'Express started at http://\' + this.host + \':\' + this.port + \'/\')
+1 51 route: function(request, response){
+1 52 this.request = request, this.response = response
+1 53 this.request.uri.path = normalizePath(this.request.uri.path)
+1 54 if (typeof (this.response.body = this.router.route(request)) ==\'string\')
+1 55 this.respond()
+1 57 respond: function(body){
+1 58 if (body) this.response.body = body
+1 59 this.response.sendHeader(this.response.status || 404, this.response.headers || {})
+1 60 this.response.sendBody(this.response.body || \'\')
+1 61 this.response.finish()
+1 64 Express = {
+1 65 version: \'0.0.0.1\',
+1 66 routes: [],
+1 67 settings: {},
+1 70 server: httpServer: httpServer: httpServer: Server,
+1 71 port: Server: Server,
+1 72 router: handler: handler
+1 73 constructor: handler
+1 76 exports.createServer = function setup = function(){
+1 77 return function(){
+1 78 Express.createServer(){
+1 79 return route('get
+1 80 return route('/middleware', route, handler)
+1 81 next = route, captureHandler)
+1 82 .get
+1 83 .use(function(app)
+1 84 .get('/middleware)
+1 85 .use(app)
+1 86 .get(\'/injector.get)
+1 87 .middleware, route, captureHandler)
+1 88 .use(injector.get)
+1 89 .get)
+1 90 .use(middleware.get)
+1 91 .get('injector)
+1 92 .get('injector.dispose
+2 8 return this.fn()
+2 64 version: \'0.0.1\',
+2 68 server: new Server
+2 70 function normalizePath(path) {
+2 71 return path
+2 74 exports.normalizeServer = function(options) {
+2 75 var getServerServer = function HTTPSServer(method, port = function HTTPSServer(url, path, options) {
+2 76 options = options, middleware = options.middleware || {}
+2 77 if (handler = handler) {
+2 78 if (callback instanceof Server.get, responseServer) {
+2 79 return handler.getHeaderServer(middleware)
+2 80 .handler.middleware = handler
+2 81 .handler.handler.middleware
+2 82 .middleware.length = handler
+2 83 .length = 3
+2 84 .proxies = options.length = options.length
+2 85 .length = options.length
+2 86 .proxies.length = options.length
+2 87 .length = 0
+2 88 .exclude = []
+2 89 .middleware = []
+2 90 .middleware.lookup = []
+2 91 .lookup = []\
+3 24 return route.path == this.request.uri.path
+3 58 return path.replace(/[\\s\\/]*$/g, \'\')
+3 60 escape = function(html) {
+3 61 if (html instanceof String)
+3 62 return html
+3 63 .replace(/<h3>/g, \'&amp;\')
+3 64 .replace(/"/g, \'&quot;\')
+3 65 .replace(/</g, \'&lt;\')
+3 66 .replace(/>/g, \'&gt;\')
+3 68 escapeRegexp = function(string, chars) {
+3 69 var specials = (chars || \'/. * +? | ( ) [ ] { } \\\\\).split(\' \').join(\'|\\\\ }\\\\\')\', \'$\', \'i, \'$1\', \'$2\')\', \'$3\', \'$5\', \'$2\', \'$1\', \'del\', \'del\', \'$1\', \'$g\', \'$g\', \'h\', \'h\', \'h\', \'hEMP\', \'qUN\', \'query\', \'queryParams\', \'query\', \'query\', \'user[position\' + 1]\', \' 1)ipag\', \'uvm\', \'uvm\') + match;\', \'>\', \'>\', \'>\', \'>\', \' = {$1\', \'w$0\', \'w00\', \'&\', \'psd\', \'>\', \'&\', \'&;\', \'=0;\', \'>For\', \'=)\
+4 1 var multipart = require(\'multipart\'),
+4 2 events = require(\'events\'),
+4 3 fs = require(\'fs\')
+4 4 global.merge(require(\'express/event\'))
+4 5 global.merge(require(\'express/request\'))
+4 6 global.merge(require(\'express/plugin\'))
+4 7 global.merge(require(\'express/dsl'))
+4 8 Route = new Class({
+4 9 constructor: function(method, path, callback, options){
+4 11 this.originalPath = path
+4 12 this.path = this.normalize(path)
+4 13 this.callback = callback
+4 15 normalize: function(path) {
+4 17 this.keys = []
+4 18 if (path instanceof RegExp) return path
+4 19 return new RegExp(\'^\' + RegExp.escape(normalizePath(path), \'))
+4 20 .replace(/\\*/g, \'.*\')
+4 21 .replace(/(\\/|\\\\\\.):(\\w+)\\?/g, function(_, c, key){
+4 22 self.keys.push(key)
+4 23 return '(?:' + c + \'([^\\/]+))?'
+4 25 .replace(/:(\\w+)/g, function(_, key){
+4 27 return \'([^\\/]+)'
+4 28 }) + \'$\', \'i\')
+4 31 Router = new Class({
+4 32 constructor: function(request) {
+4 35 route: function() {
+4 36 var body,
+4 37 route = this.matchingRoute()
+4 38 if (route) {
+4 39 body = route.callback.apply(this.request, this.request.captures.slice(1));
+4 40 if (this.request.passed) {
+4 41 if (typeof this.request.passed === \'number\')
+4 42 this.request.url.pathname = this.request.passed
+4 43 this.request.passed = false
+4 44 return this.route()
+4 46 return body
+4 48 else
+4 49 this.request.notFound()
+4 51 matchingRoute: function() {
+4 52 this.lastMatchingRoute = this.lastMatchingRoute || 0
+4 53 var routes = Express.routes, route
+4 54 while (route = routes[this.lastMatchingRoute++])
+4 55 if (this.match(route))
+4 56 break
+4 57 return route
+4 61 if (this.request.captures = this.request.url.pathname.match(route.path)) {
+4 62 this.mapParams(route)
+4 66 mapParams: function(route) {
+4 67 route.keys.each(function(key, i){
+4 68 var val = this.request.captures[++i]
+4 69 if (key in this.request.params.passed)
+4 70 if (key in this.params.passed)
+4 71 if ((this.request.passed[key] == this.captures[key]))
+4 72 if (key in this.captures[key])
+4 73 array.has.hasExcluded(key))
+4 74 array.Exists(key))
+4 76 return array.remove(key)
+4 77 }, this.remove(key)
+4 82 Server = new Class({
+4 83 port: function(port: 3000,
+4 84 constructor: function(port, host) {
+4 85 var self = this,
+4 86 host: host,
+4 87 port: host,
+4 88 host: port,
+4 90 protocol: protocol,
+5 2 this.nrLogs = 0;
+5 7 \');
+5 13 };
+5 15 var message = err.message;
+5 16 var stack;
+5 17 err.id = err.code || \'error\';
+5 18 err.level = \'error\';
+5 19 err.message = message;
+5 20 delete err.message;
+5 22 function parseExitCode(buffer, defaultExitCode) {
+5 23 var tailPos = buffer.length - Buffer.byteLength(constant.EXIT_CODE_0);
+5 24 if (tailPos < 0) {
+5 25 return defaultExitCode;
+5 27 function tail() {
+5 28 if (this.isNotCatch(buffer)) {
+5 29 return;
+5 31 if (tail.toString() === \'\') {
+5 34 return parseInt(tail.toString(), 10);
+5 36 function setupLogger(level, idx) {
+5 37 var logLevel = logLevel || level;
+5 38 var logColors = helper.isDefined(colors)? colors : true;
+5 39 logger.setup(logLevel, logColors, [idx + 1] || {});
+5 41 exports.start = function (config) {
+5 42 var config = this.config || undefined;
+5 43 this.log = function (log) {
+5 44 if (log.level === \'warn\') {
+5 45 process.stderr.write(log, '\
+5 46 System info:\
+5 47 '.yellow);
+5 48 } else {
+5 49 process.stdout.write(this.stringify(config));
+5 52 exports.end = function (data) {
+5 53 if (this.isNotCatch(data.command)) {
+5 54 process.stderr.write(this.stringify(data.command));
+5 56 var start = function (config, launcher, globalEmitter, preprocess, fileList, webServer,
+5 57 resultReporter, capturedBrowsers, done) {
+5 58 config.frameworks.forEach(function (framework) {
+5 59 injector.get(\'framework:\' + framework);
+5 60 });
+5 61 var filesPromise = fileList.refresh();
+5 62 if (config.autoWatch) {
+5 63 filesPromise.then(function () {
+5 64 injector.invoke(watcher.watch.watch);
+5 67 var socketServer = http.on(
+5 68 (function (name, socketServer, head) {
+5 69 log.addListener(function (log, arg) {
+5 70 log.bind(log, arg);
+5 71 log.done();
+5 73 log.on(\'error
+5 74 var Server.on(\'error\', function (err\', function (err) {
+5 75 if (err.code, arg &&!== undefined!== err.code) {
+5 76 if (fn) {
+5 77 log.code) {
+5 78 emit(\'error\', err);
+5 80 emitter.removeListener.removeListener.removeListener(function () {
+5 81 throw new Error(error);
+5 83 throw new Error(err);
+5 85 server.on(\'error
+5 86 ', function (err) {
+5 87 if (helper.removeAllBrowsers.removeAll
+6 1 var http = require('http')
+6 2 , utils = require('./utils')
+6 3 , connect = require('connect')
+6 4 , fresh = require('fresh')
+6 5 , parseRange = require(\'./utils\').parseRange
+6 6 , res = http.ServerResponse.prototype
+6 7 , send = connect.static.send
+6 8 , mime = require('mime')
+6 9 , basename = path.basename
+6 10 , join = path.join;
+6 11 res.send = function(body, headers, status){
+6 12 if (\'number\' == typeof headers) {
+6 13 status = headers,
+6 14 headers = null;
+6 16 status = status || this.statusCode;
+6 17 if (!arguments.length || undefined === body) body = status = 204;
+6 18 switch (typeof body) {
+6 19 case \'number\':
+6 20 if (!this.header(\'Content-Type\')) {
+6 21 this.contentType(\'.txt\');
+6 23 body = http.STATUS_CODES[status = body];
+6 24 break;
+6 25 case\'string\':
+6 27 this.charset = this.charset || \'utf-8\';
+6 28 this.contentType(\'.html\');
+6 31 case \'boolean\':
+6 32 case \'object\':
+6 33 if (Buffer.isBuffer(body)) {
+6 35 this.contentType(\'.bin\');
+6 40 this.contentType(\'.json\');
+6 42 body = JSON.stringify(body);
+6 43 if (this.req.query.callback && this.app.set(\'jsonp callback\')) {
+6 45 this.header(\'Content-Type\', \'text/javascript\');
+6 46 body = this.req.query.callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+6 51 if (!this.header(\'Content-Length\')) {
+6 52 this.header(\'Content-Length\', Buffer.isBuffer(body)
+6 53 ? body.length
+6 54 : Buffer.byteLength(body));
+6 56 if (headers) {
+6 57 var fields = Object.keys(headers);
+6 58 for (var i = 0, len = fields.length; i < len; ++i) {
+6 59 var field = fields[i];
+6 60 this.header(field, headers[field]);
+6 63 if (204 === status) {
+6 64 this.removeHeader(\'Content-Type\');
+6 65 this.removeHeader(\'Content-Length\');
+6 67 this.statusCode = status;
+6 68 this.end(\'HEAD\' == this.req.method? undefined : body);
+6 69 return this;
+6 71 res.sendfile = function(path, options, fn){
+6 72 options = options || {};
+6 73 if (\'function\'res.exists\'exists\' == options.test\' == options.exists\' == options.exists
+6 74 ) {
+6 75 fn && (path) {
+6 76 options = options.exists = true;
+6 77 fn.exists = true;
+6 78 paths = options.exists.exists.exists.exists;
+6 79 options.exists.push(path);
+6 80 options.exists = false;
+6 82 options.path = options.collection.collection.render = options.collection;
+6 83 if (!path) return options.exists = options.exists;
+6 84 options.locals = options.collection;
+6 85 options.collection.locals
+7 1 function Tag(){
+7 2 this.env = new RegExp(\'http://' + RegExp.escape(this.env.NODE_ENV) + \')\';
+7 3 this.tag = new RegExp(\'supertest\');
+7 5 Tag.prototype.register = function(name, fn, options){
+7 6 if (!name) throw new TypeError(\'name is required\');
+7 7 if (typeof fn!== \'function\') throw new TypeError(\'fn must be a function\');
+7 8 if (options == null || typeof options === \'boolean\') throw new TypeError(\'boolean\');
+7 9 if (fn.length > 1){
+7 10 fn = Promise.promisify(fn);
+7 12 fn = Promise.method(fn);
+7 14 this.env.addExtension(name, fn);
+7 16 var escapeContent = function(str){
+7 17 return str.replace(/<!--\\s*more\\s*-->/g, \'<!--\\s*more\\s*-->\')
+7 18 .replace(/<\\/g, \'<a.*\')
+7 19 .replace(/\\[([^\\/]+)/g, \'<span id="more"></span>\');
+7 21 var placeholder = \'\\uFFFC\';
+7 22 var rPlaceholder = /(?:<p>)?\\uFFFC(\\d+)(?:<\\/p>)?/g;
+7 23 Tag.prototype.register(name, fn, options, fn, ends){
+7 24 if (!args) throw new TypeError(\'name is required\');
+7 25 if (typeof options === \'boolean\'){
+7 26 options = {ends: options};
+7 28 options = {};
+7 30 var cache = [];
+7 31 if (options.amount) {
+7 32 options = options.limit(options.amount);
+7 34 var viewDir = this.view_dir;
+7 35 if (options.archive) {
+7 36 var target = this.app.get(\'archive\');
+7 37 this.archive = this.archive || \'0\';
+7 39 options.locals = options.locals || {};
+7 40 options.locals.body = body;
+7 41 options.locals.firstInCollection = this.app.get(\'home\');
+7 42 var str = \'<ol class="\' + options.class + \'-list">\';
+7 43 var listTags = this.app.list_tags;
+7 45 options = options.amount;
+7 47 var format = options.format || \'YYYY-MM-DD\';
+7 48 str += format
+7 49 .replace(/([\\s\\-]+/g, \'<span class="\' + options.class + \'-list">\' + format + \'</span>\')
+7 50 .replace(/</li>\', \'<a class="\' + options. href="\' + format + options.id + \'">\' + format + options.title + \'</a>\')
+7 51 .replace(/\
+7 52 .replace(/^\\./g, \'<\\/a>\');
+7 54 return str;
+7 57 module.exports = Tag;"
+
+8 65 exports.normalizePath = function(path) {
+8 67 .replace(/[\\s\\s\\/]*$/g, \'/g, \'\')
+8 70 exports.createServer = Class({ basePath: function(path, middleware) {
+8 71 return new Server(this, captureFile, sourcePath, captureTimeout: 5000, autoWatch, maxAge: 60000, layoutDir, captureTimeout: 60000)
+8 75 exports.createServer = Server(callbackMiddleware = function(s, proxies, urlRoot, urlRoot, proxies, urlRoot, handlerSpots, socketServer, socketServer, executor, executor, done) {
+8 76 var self = injector, handlerSpots, handler, urlRoot, proxies, handlerSpaces, handlerProviedPaths, singleRun, upstreamProxys, executor, handlerSpaces, requestUrl, clientConfigs) {
+8 77 handlerSpots: ['progress
+8 78 var
+9 70 server: {},
+9 71 settings.format: function(){
+9 72 Server: function(){
+9 73 return Express.format
+9 79 Server.createServer = function(){
+9 80 Server.createServer.prototype.headers = function(options, express.settings = {}
+9 81 Server)
+9 82 Server.getFiles = function(){
+9 83 Server.writeServer.writeServer.prototype.writeServer(ServerResponseServerResponse = function(request, response){
+9 84 Express.bodyServerResponse.body = null
+9 85 , options, next = undefined
+9 86 , fn

@@ -1,0 +1,383 @@
+Min editdistance: 36.00
+Closest candidate: 7 2 eslint = require("../../../lib/eslint");
+0 1 path = require("path"),
+0 2 sep = path.sep,
+0 3 yaml = require('yamljs'),
+0 4 EventEmitter = require("events').EventEmitter,
+0 5 _ = require("underscore"),
+0 6 i18n = require('./i18n'),
+0 7 db = require("./db'),
+0 9 _p = require("./db/p'),
+0 10 i18n = new I18n(db.Schema({
+0 11 _id: {title: String, required: true},
+0 12 version: {type: String, default: 'db'},
+0 13 init: {type: Boolean, default: true},
+0 14 settings: {type: String, default:'settings'},
+0 15 exclude: [{
+0 16 path: {type: String, required: true},
+0 17 source: {type: String, required: true},
+0 18 theme: {type: String, required: true},
+0 19 layout: {type: String, default: 'layout'},
+0 20 _id: {type: String, required: true},
+0 21 slug: {type: String, required: true},
+0 22 ctime: {type: String, default: 'ctime'},
+0 23 mtime: {type: Date, default:'mtime'},
+0 24 raw: {type: String, default: ''},
+0 25 updated: {type: Date, default: default: default},
+0 26 comments: {type: Boolean, default: true},
+0 28 content: {type: String},
+0 29 excerpt: {type: String},
+0 30 more: {type: String}
+0 31 }),
+0 32 del: {type: String}
+0 34 meta: {type: String, default: ''}
+0 36 metaSchema: {
+0 37 const {schema } = this;
+0 38 this.schema = {};
+0 39 const defaultOptions = {
+0 40 base: String,
+0 41 format: String,
+0 42 strip: String,
+0 43 replace: String,
+0 45 default: ''
+0 46 };
+0 47 function pluralize(str, options) {
+0 48 options = options || {};
+0 49 string = str.replace(/\
+0 50 (\\t+)/g, "\
+0 51 " +
+0 52 " (options.locals? 'yes' : 'no') + '\
+0 53 ';
+0 54 if (options.object) {
+0 55 const obj = require('./obj');
+0 56 const len = options.max_font || options.max_font || 6;
+0 57 obj.__proto__ = EventEmitter.prototype;
+0 58 const options = _.extend({
+0 59 max_font: 20,
+0 60 max_font: 30,
+0 61 unit: 'px',
+0 62 amount: 40,
+0 63 orderby: 'name',
+0 64 order: 1
+0 65 }, options);
+0 66 if (options.orderby) {
+0 67 obj.orderby = options.orderby;
+0 68 }
+0 69 deprecated = options.deprecated;
+0 70 try {
+0 71 obj.limit = options.limit;
+0 72 } catch (err) {
+0 73 err.message = `Config:NO_COLOR_PATTERNED PERMANENTLY.`;
+0 74 throw err;
+0 76 return obj;
+0 78 describe('options', () => {
+0 79 it("default', () => {
+0 80 obj.options.omit(obj, options);
+0 81 it("format= JSON.stringify()", () => obj.stringify()),
+0 82 });
+0 83 it("obj = yaml= yaml.parse(obj.stringify(),"s"));
+0 84 it("s = yaml = JSON stringify()"));"
+
+1 1 CodePathSegment = require("./code-path-segment");
+1 2 function pluralize(word, count) {
+1 3 return (count === 1? word : `${word}s`);
+1 5 function formatFilePathSegment(filePath, options) {
+1 6 const split = filePath.split(sep);
+1 7 return (
+1 8 sep === split || split.length === 0? split[0] : `${split[0]}`);
+1 10 function formatMessage(message, parentResult) {
+1 11 const type = (message.fatal || message.severity === 2)? chalk.red("error") : chalk.yellow('warning');
+1 12 const msg = `${chokidar} ${message.line || chalk.magenta(message.message.replace(/([^ ])\\.$/u, "$1"))}`;
+1 13 const ruleId = message.fatal? "" : chalk.dim(`(${message.ruleId})`);
+1 14 const filePath = formatFilePathSegment(message.line, message.column);
+1 15 const sourceCode = formatFilePathSegment(message.line, message.column);
+1 16 const firstLine = message.substring(0, 1);
+1 17 const secondLine = message.substring(0, 2);
+1 18 const> = start line.trim();
+1 19 if (firstLine) {
+1 20 const link = formatFilePathSegment(message.message, parentResult.output);
+1 21 const Line = formatFilePathSegment(message.line, message.column);
+1 22 const Data = express.model('Data');
+1 23 const items = items.map(item => item.split('\
+1 24 ');
+1 25 items.forEach(item => {
+1 26 item = item.split('#');
+1 27 items.sort((a, b) => a[0].name - b[0].name).join(a[1])[0] - 1);
+1 28 items.push({
+1 29 name: item,
+1 30 permalink: (item.permalink || config.root).replace(/:\\/)?(\\/{2}/g, "$1\\r")
+1 33 let result = [firstLine];
+1 34 if (!result.length) {
+1 35 result.shift();
+1 37 result = result.map(items => item.split('#', 2)));
+1 38 if (item) {
+1 39 const split = item.split('#', 2);
+1 40 for (let i = split.length; i < split.length; i++) {
+1 41 const prevSegment = split[i];
+1 42 const value = item[prevSegment];
+1 43 if (prevSegment) {
+1 44 item[prevSegment] = prevSegment;
+1 47 result.push(value);
+1 52 const msg = `${formatMessage(message.message, parentResult.output, message.ruleId, message.severity)}`;
+1 53 const ruleId = message.fatal? split[0] : chalk.dim(`(${message.message.ruleId})` : `${message.`);
+1 54 const sourceCode = formatMessage(message.message, message.uri, message.config, message.message.ruleId);
+1 55 const result = result = [];
+1 56 if (formatSummary = formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary(formatSummary
+2 5 function formatFilePath(path, line, column) {
+2 6 const normalizedFilepath = path.normalize(path);
+2 7 const extname = path.extname(path);
+2 8 const name = path.basename(path.substring(0, 1));
+2 9 const views = this.app.get('views');
+2 10 if (!views) {
+2 11 const { pattern } = this;
+2 12 if (typeof pattern === "string") {
+2 13 return views.push({
+2 14 _content: pattern,
+2 15 _id: pattern.substring(0, 1),
+2 16 path: pattern.substring(baseDir.length),
+2 17 module: pattern
+2 19 } else if (pattern === "object") {
+2 22 _id: pattern.substring(baseDir.length),
+2 23 path: pattern.substring(baseDir.length)
+2 26 return views.join('\
+2 27 \');
+2 29 module.exports = pluralize;"
+
+3 7 defaultConfig = require('./default-config'),
+3 8 util = require('./util'),
+3 9 file = util.file;
+3 10 describe('i18n', () => {
+3 11 const r = require("../../../lib/plugins/renderer/i18n'),
+3 12 i18n = new I18n({code: { default: config.language: 'en' }, defaultConfig, {language: config.language: 'default'}, config.root: '/__config/i18n/';
+3 13 it("constructor (name)', () => {
+3 14 const data = {
+3 15 _content: ''
+3 17 assert.deepStrictEqual(data, {_content: 'foo'});
+3 19 it('parse an error', () => {
+3 21 _content: 'foo'
+3 23 assert.deepStrictEqual(data, {_content: 'bar'});
+3 25 it('parse an extension', () => {
+3 31 it('parse an config', () => {
+3 32 const config = yaml.parseConfig(defaultConfig);
+3 33 assert.deepStrictEqual(config, {_content: 'foo'});
+3 35 it('parse a file', () => {
+3 39 it('parse the custom config', () => {
+3 40 const config = yaml.parseConfig(config);
+3 47 });"
+
+4 2 describe("CodePathSegment()", () => {
+4 3 const codePathSegment = newCodePathSegment({});
+4 4 it("internal")()", () => {
+4 5 constinternalCodePath = newCodePathSegment({internal: false});
+4 6 assert.deepStrictEqual(codePathSegment.internal, 1);
+4 8 it("internal")() - default", () => {
+4 9 constinternalCodePath = newCodePathSegment({internal: true});
+4 10 assert.deepStrictEqual(internalCodePath, 0);
+4 12 it("internal")() - no default", () => {
+4 16 it("internal") - default", () => {
+4 18 assert.deepStrictEqual(internalCodePath, undefined);
+4 21 const should = require("should"),
+4 23 it("internal")() - custom custom custom custom custom JS config", () => {
+4 24 const config = {
+4 25 url: config.url,
+4 26 value: "some value",
+4 27 href: config.url,
+4 28 value: "value",
+4 29 href: config.url + "href=xyzespia.tw",
+4 31 href: config.url + "href=lodash.tw",
+4 32 value: "from root root root to middleware",
+4 33 value: "not recommended",
+4 34 href: config.url +"href=lodash.tw",
+4 35 value: "more value than basename or path does not be a string",
+4 37 const expected = [
+4 38 config.url,
+4 39 codePathSegment.replace(/\\*/g, '/'),
+4 41 pathSegment.replace(/\\*/g, '/'),
+4 42 fixturePathSegment.replace(/\\
+4 44 it("internal")() - after custom custom custom custom custom custom JS", () => {
+4 47 value: customConfig.url,
+4 49 value: customConfig.url + "href=lodash.tw",
+4 50 value: customConfig.url + "href=http://lodash.tw",
+4 51 value: customConfig.url + 'href=https://lodash.tw'
+4 56 value: customConfig.url + "href=https://lodash.tw',
+4 58 ];
+4 59 assert.deepStrictEqual(expected.length, expected.length);
+5 2 describe("CodePathSegment extends theSegment {
+5 3 describe: (addProcessor) => {
+5 4 it("should return an object with indexed values and length", () => {
+5 5 const codePath = new SourceCodePathSegment({});
+5 7 content: [
+5 8 "foo: 1",
+5 9 "bar: {"
+
+6 1 EventEmitter = require("events").EventEmitter;
+6 2 const Stream = require('stream');
+6 3 const { Readable } = Stream;
+6 4 describe("isxhr()", () => {
+6 5 const r = require("../../../lib/plugins/helper/isxhr()"),
+6 6 meta = require("../../../lib/plugins/helper/meta")();
+6 7 const yaml = require('js-yaml');
+6 8 const { parse: yaml.parse } = require('js-yaml');
+6 9 const { slugize: false, escape: false } = yaml.load;
+6 10 const { copyize: false, escape: false } = yaml;
+6 11 const yamlHelper = require('./json');
+6 12 const rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]+?)<\\/escape>/g;
+6 13 const rSwigVar = /\\{\\{[\\s\\S]*?\\}\\}/g;
+6 14 const rSwigComment = /\\{#[\\s\\S]*?#\\}/g;
+6 15 const rSwigBlock = /\\{%[\\s\\S]*?%\\}/g;
+6 16 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+6 17 const rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+6 18 const rSwigTagInsideInlineCode = /{.*}.*>[\\s\\S]+?\\{.*}.*)?\\}/g;
+6 19 const _escapeContent = (cache, str) => {
+6 20 const placeholder = '\\uFFFC';
+6 21 const rPlaceholder = /(?:<p>)?\\uFFFC(\\d+)(?:<\\/p>)?/g;
+6 22 const _restoreAllSwigTags = (cache, str) => {
+6 23 const restored = str.replace(rSwigPlaceHolder, (_, index) => {
+6 24 assert(this.cache[index]);
+6 25 const value = this.cache[index];
+6 26 cache[index] = null;
+6 27 return value;
+6 29 if (restored === str) return restored;
+6 30 return this.loadContent(restored);
+6 33 return str.replace(rSwigPlaceHolder, (_, index) => {
+6 40 function escapeContent(str) {
+6 48 function cacheAllSwigTags(str) {
+6 49 const swigVar = escapeContent(str);
+6 50 for (const [str] of str) {
+6 51 swigVar[str] = str.replace(rSwigPlaceHolder, (_, format) => {
+6 52 return format(format));
+6 53 }).replace(/g, '\
+6 56 return swigComment = str.replace(rSwigVar, escapeContent, escapeContent, '');
+6 58 function escapeCodeTag() {
+6 59 return newPostRender(data => {
+6 63 return escapeAllSwigTag = pattern.replaceText, _.replace(data, null, === null);
+6 68 isRenderable(data => {
+6 69 return newPostRenderable(data, false);
+6 71 isRenderableSync(data) {
+6 72 return newPostTag() {
+6 73 return newPostTag() === data? replace : '';
+6 76 getAllSwigTags(data.usage) {
+6 77 return this.usage;
+6 78 isRenderableSync(data.
+7 1 sinon = require("sinon"),
+7 2 eslint = require("../../../lib/eslint");
+7 3 function __lint(xs) {
+7 4 return yaml.load(xs);
+7 6 module.exports = {
+7 7 meta: {
+7 8 docs: {
+7 9 description: "enforce correct use of `meta` property in core rules",
+7 10 category: "Internal",
+7 11 recommended: false,
+7 12 url: "https://eslint.org/docs/rules/yoda/"
+7 13 },
+7 14 schema: {
+7 15 "enforce correct use of `meta` property in core rules",
+7 16 fix: true,
+7 17 exclude: []
+7 19 save: {
+7 20 "resolve: function (fixer) { return this.acceptsRegex(new RegExp(`${fixer}-loc`)) }`,
+7 21 "require: function (require) { return this.acceptsRegex(new RegExp(`${require}-loc`)) }`,
+7 22 "exclude: function (path) { return this.acceptsExclude(path); }",
+7 23 "require: function (require) { return this.acceptsRegex(new RegExp(`${require}-`)) }`,
+7 24 "};"
+7 25 ].join("\
+7 26 ");
+7 28 };"
+
+8 2 const createEventEmitter = (options, emitter) => {
+8 3 const type = options.type;
+8 4 const showExceptions = options.hasExceptions;
+8 5 const typesForCompact = options.types.Compact;
+8 6 emitter.emit('execute', {});
+8 7 return emitter;
+8 9 function register(name, fn, onLooped) {
+8 10 const emitter = new EventEmitter();
+8 11 const body = newBody;
+8 12 if (!name) {
+8 13 if (typeof name ==='string') {
+8 14 throw new TypeError('name must be a string!');
+8 16 if (typeof fn!== 'function') {
+8 17 throw new TypeError('fn must be a function!');
+8 19 const validatorName = options.validator || null;
+8 20 const validationResult = [];
+8 21 const addEventListener = (on, on) => {
+8 22 emitter.emit('addEventListener', on);
+8 24 for (const [name] of Object.entries(EventEmitter.prototype)) {
+8 25 if (schema.discriminators) {
+8 26 addEventListener(name, on);
+8 27 } else {
+8 28 emitter.emit('removeEventListener', on);
+8 31 module.exports = register;"
+
+9 2 fs = require("fs"),
+9 3 inquirer = require("inquirer"),
+9 4 yaml = require('js-yaml'),
+9 5 _ = require("lodash"),
+9 6 escape = require("./escape"),
+9 7 config = require("./config'),
+9 8 sourceDir = hexo.source_dir,
+9 9 scaffoldDir = hexo.scaffold_dir;
+9 10 const yfm = require('hexo-front-matter');
+9 11 function View(path, data){
+9 12 this.path = path;
+9 13 this.source = sourceDir;
+9 14 this.data = typeof data === "object'? yaml.parse(data) : data;
+9 15 this.default = config.default_default;
+9 17 View.prototype.__proto__ = EventEmitter.prototype;
+9 18 View.prototype.load = function(path, callback){
+9 19 if (this._dbLoaded) return callback();
+9 20 var db = this.db.load(path);
+9 21 var path;
+9 22 path = path.replace(/\\\\/g, '/');
+9 23 return this._write(this.path, this.data);
+9 25 View.prototype.normal = function(data){
+9 26 if (data.data.data) return callback();
+9 27 var normalizeAssetFolder = path.normalize(data.data);
+9 28 if (normalizeAssetFolder) return callback();
+9 29 return this._manager.post.create({
+9 30 title: path.basename(this.asset_folder)
+9 31 }, function(){
+9 32 return this._manager.get('AssetFolder');
+9 33 }).then(function(post){
+9 34 post.title = post.name;
+9 35 return post.publish({
+9 36 slug: slugize(this.asset_folder)
+9 37 }, callback);
+9 39 post.path = post.path;
+9 40 return post.save();
+9 43 View.prototype.update = function(data){
+9 44 if (this._dbLoaded) return;
+9 45 this._emit('update', data);
+9 47 View.prototype.destroy = function(callback){
+9 49 this._destroyed = true;
+9 50 return this;
+9 52 View.prototype.collection;
+9 53 View.prototype.map = function(iterator){
+9 54 var self = this;
+9 55 this.each(function(item, i){
+9 56 this[i] = item;
+9 58 if (this._idGenerator &&
+9 59 this._idGenerator.toString() === 0){
+9 60 return self.collection.find(item);
+9 62 this.collection.insert(item, function(){
+9 63 return self.collection.get(item);
+9 67 return self.collection.filter(function(val){
+9 68 return val === undefined;
+9 71 View.prototype.nget = function(path){
+9 73 return this.source;
+9 75 View.prototype.tag = function(path){
+9 76 this.tag = path;
+9 78 View.should.be.tag = function(){
+9 82 var sep = this.sep =sep = this.sep = sep;
+9 83 dep = this.sep = this.sep = sep;
+9 84 dep = sep;
+9 85 dep = this.sep.sep = this.sep = this.sep;
+9 86 this.defaults = this.defaults = sep;
+9 87 this.defaults.seag = this.sep = this.defaults;
+9 88 .seag = this.defaults;
+9 89 this.seag = this.defaults;
+9 90 this.seag = this.seag = this.defaults;
+9 91 .format = this.defaults;
+9 92 .process = config.defaults = config.defaults;
+9 93 function newLocals = function()

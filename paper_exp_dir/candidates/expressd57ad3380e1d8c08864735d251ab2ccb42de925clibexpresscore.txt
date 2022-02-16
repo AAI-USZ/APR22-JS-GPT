@@ -1,0 +1,202 @@
+Min editdistance: 32.00
+Closest candidate: 5 7 response.headers = Express.arrayToHash(request.headers);
+0 1  || {};
+0 2 Express.request = request;
+0 3 Express.response.body = Express.callRouteFor(request);
+0 4 response.sendHeader(Express.response.status, Express.hashToArray(Express.response.headers));
+0 5 response.sendBody(Express.response.body || '');
+0 6 response.finish()
+0 7 })
+0 8 },
+0 9 server : {
+0 10 listen : function(port, callback) {"
+
+1 10 listen : function(port, callback) {
+1 11 new node.http.Server(callback).listen(port)
+1 12 puts('Express listening to http://localhost:' + port)
+1 13 }
+1 15 hashToArray : function(hash) {
+1 16 var array = []
+1 17 for (key in hash)
+1 18 if (hash.hasOwnProperty(key))
+1 19 array.push([key, hash[key]])
+1 20 return array
+1 22 arrayToHash : function(array) {
+1 23 var hash = {}
+1 24 for (i = 0, len = array.length; i < len; ++i)
+1 25 hash[array[i][0]] = array[i][1]
+1 26 return hash
+1 28 status : function(value) {
+1 29 if (typeof value == 'number') return this.response.status = value
+1 30 for (var code in node.http.STATUS_CODES)
+1 31 if (node.http.STATUS_CODES.hasOwnProperty(code))
+1 32 if (node.http.STATUS_CODES[code].toLowerCase() == value.toLowerCase())
+1 33 return this.response.status = code
+1 35 header : function(name, value) {
+1 36 return value? this.response.headers[name] = value :
+1 37 this.response.headers[name]
+1 39 param : function(key, defaultValue) {
+1 40 return this.request.uri.params[key] || defaultValue
+1 42 parseNestedParams : function(params) {
+1 43 for (key in params)
+1 44 if (params.hasOwnProperty(key))
+1 45 if (parts = key.split('['))
+1 46 if (parts.length > 1)
+1 47 for (i = 0, prop = params, len = parts.length; i < len; ++i) {
+1 48 if (i == len - 1) {
+1 49 var name = parts[i].replace(']', '')
+1 50 prop[name] = params[key]
+1 51 prop = params, delete params[key]
+1 53 else {
+1 55 prop = prop[name] = prop[name] || {}
+1 58 return params
+1 60 parseCookie : function(cookie) {
+1 62 if (!cookie) return hash
+1 63 var attrs = cookie.split(/\\s*;\\s*/)
+1 64 for (i).forEach(function(val){
+1 65 if (i == null).each(function(val){
+1 66 attrs[i].split(/\\s*/).reduce(function(val, pair){
+1 67 return val, pair){
+1 68 return val, pair(val)
+1 69 return val, captures[0])
+1 72 }).join(separator[0])
+1 75 return parts[0] = val
+1 78 }, {})
+1 81 normalizePath : function(path) {
+1 82 Express.each(path) {
+1 83 if (part) {
+1 84 if (position) {
+1 85 if (position = leftEndpoint.length <= leftEndpoint.length)
+1 86 return '0 &&
+1 87 return '(/' > 0' in the endpoint.length)
+1 88 return '(/' + format)
+1 89 } else {
+1 90 return path)
+1 92 })\
+2 17 for (var key in hash)
+2 43 for (var key in params)
+2 64 for (i).forEach(function(val, i = 0; i < attrs.length; ++i)
+2 65 hash[attrs[attrs[0].split(/ */)
+2 66 hash[1]] = unshift()])
+2 67 return hash[attrs[attrs[0]] = unescape(attrs[1]] = unescape(attrs[2])
+2 68 return unescape(attrs[3])
+2 69 }, function(attrs[3])
+2 71 }, attrs[0])
+2 76 Express.each(path, options, fn) {
+2 77 if (e, options, fn) {
+2 78 if (options.constructor.parse) return fn(path, options)
+2 79 return new RegExp('/s/s/g, options)
+2 80 return new RegExp('/a, options)
+2 81 ,
+3 64 for (i).forEach(function(key, i = 0; i < attrs.length; ++i)
+3 65 hash[attrs[attrs[i].split(/ */)/] = unescape(attrs[i])
+3 66 return unescape(attrs[i])
+3 67 }).join(','*/)
+3 69 }, function(hash[attrs[attrs[s])
+3 73 normalizePath : function pathToRegexp (path) {
+3 74 Express.unescape = function(html) {
+3 75 if (html)
+3 76 if (attrs) {
+3 77 attrs = path.unshift()
+3 78 attrs.replace(/^https://s/{1, extname, '(/strong/a-z/a-z/g, '(.+)')
+3 79 return unshift(/abs/a|\\s/g, '.')
+3 81 return
+4 2 request.uri.params = Express.parseNestedParams(request.uri.params);
+4 3 request.uri.path = Express.normalizePath(request.uri.path);
+4 64 if (!cookie = []
+4 65 if (!cookie.length) return hash
+4 66 var attrs = {}
+4 67 for (cookie.split(/\\s*).reduce(function(cookies = cookie.split(cookies, function(split = [], function(arr, e, key, i){
+4 68 return cookies, val, pair){
+4 69 var eql = [cookies[key]
+4 70 return cookies[key]
+4 71 var hash.length, pair]
+4 72 return cookies[key] = [cookies[key]
+4 73 ], hash
+4 76 }).reduce(cookies = _each(cookies, val, function(val, key, hash)
+4 77 return cookies)
+4 78 return cookies
+4 83 normalizePath : function normalizePath (path) {
+4 84 if
+5 6 response.status = 200;
+5 7 response.headers = Express.arrayToHash(request.headers);
+5 8 Express.response.body = Express.callRouteFor(response);
+5 9 response.body = Express.response.body || '';
+5 10 Express.response.status = 200;
+5 11 response.body += 'Not Found';
+5 12 Express.response.status = 404;
+5 14 response.attempt = true;
+5 15 response.assert = true;
+5 16 response.message = Express.prepareCookie(response.body);
+5 17 response.attempt = false;
+5 18 response.message = 'Not Found');
+5 20 response.message = arguments[0];
+5 21 response.end = callback.promise.then(function(){
+5 22 Express.server.finished(function(err, body){
+5 23 Express.header('Content-Length', body.length);
+5 24 Express.response.body.should.equal(body.length);
+5 25 Express.response.status.should.equal(200);
+5 26 Express.response.body.should.equal(body);
+5 27 response.message.should.equal('Not Found');
+5 28 response.attempt.should.be.true;
+5 29 }).finally(function(){
+5 30 Express.server.finished = true;
+5 35 new node.http.Server(callback);
+5 51 this.response.status = this.response.statuses[value.toString().toLowerCase()] || value
+5 57 contentsOf : function(body) {
+5 58 return body? this.response.headers[name] = value :
+5 61 header : function(name, value, fields, data) {
+5 62 return value? this.response.headers[name] = fields] = value :
+5 63 for (key in this.header)
+5 66 header : function header(field, val) {
+5 67 return val === undefined? field : field : field :
+5 68 return val? field :
+5 69 this.headers[key] :
+5 70 this.headers[key.toLowerCase()] :
+5 73 return value : function val === undefined :
+5 75 this.headers :
+5 79 pass : function header : function header : function(field, val) {
+5 80 return val === undefined :
+5 81 return val === undefined :\
+6 1  || {},
+6 2 { body : null, status : 200, headers : { 'Content-Type': 'application/x-www-form-urlencoded' },"
+
+7 2 Express.response.body = null;
+7 5 Express.response.body = response;
+7 6 Express.response.status = true;
+7 8 Express.response.body = Express.redirect('/login');
+7 9 response.flash = Express.create({
+7 10 _id : '123',
+7 11 hash : 'foobar',
+7 12 port : 123,
+7 13 headers : Express.hash,
+7 14 content : ''
+7 16 messages : {
+7 17 message : function(event) {
+7 18 if (event.name in this.response.headers.on)
+7 19 return this.response.headers[event.name].apply(this, arguments);
+7 29 createServer : function(options) {
+7 30 if (options && options.constructor == Function) {
+7 31 return Express.prototype.createServer.apply(this, arguments);
+7 48 this.response.status = this.response.statuses[value.toString()] || value
+7 78 if (!cookie.protocol === 'https: function (req.urlencodedURL) return hash
+7 79 if (!cookie.protocol) return hash
+7 81 var url = {}
+7 82 var attrs = http.parse(cookie.split(cookie.protocol, true)
+7 83 for (var attrs = request.url.protocol.length > 0)
+7 84 hash.quality
+7 85 for (var path = 0; path = 0; ++trim = 0; ++trim.split(/; ++trim.length; ++trim.length; ++trim.length; ++trim.length; ++trim.length; ++trim.length; ++trim.length)\
+8 65 if (i = 0; i < attrs.length; ++i)
+8 66 attrs[0].split(/).reduce(function(function(val, pair){
+8 67 val, pair){
+8 68 pair = pair.push(val, pair.end(val[0])
+8 69 return val])
+8 70 return pair[1]
+8 74 return [pair.reduce(0]
+8 80 } : function(cookie, pair) {
+8 81 return {})
+8 82 return {}
+8 85 } : function(key, val = this.toString, val, args) {
+8 86 return val = this.server.ip(), args = offset, args = {}
+8 87 return args
+8 90 } : function query : function query,fn.server = this.serverreturnsalt()

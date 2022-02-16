@@ -1,0 +1,27 @@
+Min editdistance: 40.00
+Closest candidate: 0 5 'dependency.js': 'coverage'
+0 1 browsers = ['Chrome'];
+0 2 singleRun = false;
+0 3 reporters = ['progress', 'coverage'];
+0 4 preprocessors = {
+0 5 'dependency.js': 'coverage'
+0 6 };
+0 7 coverageReporter = {
+0 8 type : 'html',
+0 9 dir : 'coverage/'
+0 11 plugins = [
+0 12 'karma-jasmine',
+0 13 'karma-coverage',
+0 14 'karma-chrome-launcher',
+0 15 'karma-firefox-launcher'
+0 16 ];"
+
+4 11 plugins = ["
+
+5 5 '**/*.coverage/lib/*.js': 'coverage'
+6 5 'karma-firefox-launcher'"
+
+8 12 'testacular-jasmine',
+8 13 'testacular-coverage',
+8 14 'testacular-chrome-launcher',
+8 15 'testacular-firefox-launcher'

@@ -1,0 +1,15 @@
+Min editdistance: 22.00
+Closest candidate: 0 5 server.start(),
+0 1 }
+0 2 extend.console.register('server', 'Run server', function(args){
+0 3 var baseDir = hexo.base_dir;
+0 4 var server = new SimpleReporter(baseDir + 'files/server');
+0 5 server.start(),
+0 6 process.nextTick(function(){
+0 7 file.mkdir(function(){
+0 8 var exist(next);
+0 9 });
+0 16 });"
+
+1 1 "
+

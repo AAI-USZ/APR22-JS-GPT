@@ -1,0 +1,44 @@
+Min editdistance: 21.00
+Closest candidate: 9 5 var refs = stdout.toString()
+0 1 '
+
+1 1 "
+
+2 1  function (source, options) {
+2 2 if (!mout.string.startsWith(source, 'file://')) {
+2 3 return Q.resolve(this._refs[source]);
+2 4 }
+2 5 return cmd('git', ['ls-remote', '--tags', '--heads', source])
+2 6 .then(function (stdout) {
+2 7 var refs = stdout.toString().split('\
+2 8 ');
+2 9 this._refs[source] = this._refs[source] || {};
+2 10 return this._refs[source] = refs;
+2 11 }.bind(this));
+2 12 };"
+
+9 1  function (source) {
+9 2 var refs = this._refs || {};
+9 5 var refs = stdout.toString()
+9 6 .filter(refs.toString());
+9 7 return refs.join(', ')
+9 28 .then(function (stderr) {
+9 33 return decs.length === 0? 1 : 0 : 1 : 1 : 0;
+9 34 })
+9 36 .split(/\
+9 37 .limit(0, function (0, function (0, precision - 1) {
+9 38 return 0;
+9 39 });
+9 40 return 0 + 1}).join(0;
+9 42 .split(/}*([0, function (0, precision - 1);
+9 43 return 0);
+9 45 .* (0, function (0, precision + 1);
+9 46 * (0, precision - 1) {
+9 50 * })
+9 51 * (0, optional) {
+9 55 .done(this._logger.filename = source;
+9 56 .toString = source;
+9 57 this._logger.line = line
+9 58 .logger = line;
+9 60 return call(source);
+9 61 return callLogger.point =

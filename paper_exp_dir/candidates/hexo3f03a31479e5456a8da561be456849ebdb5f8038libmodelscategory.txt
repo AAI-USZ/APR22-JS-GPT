@@ -1,0 +1,86 @@
+Min editdistance: 9.00
+Closest candidate: 6 17 const { name } = data;
+0 1 });
+0 2 return `${ctx.config.url}/${this.path}`;
+0 4 Category.virtual('posts').get(function() {
+0 5 const PostCategory = ctx.model(\'PostCategory\');
+0 6 const ids = PostCategory.find({category_id: this._id}).map(item => item.post_id);
+0 7 return ctx.locals.get('posts').find({
+0 8 _id: {$in: ids}
+0 11 Category.virtual('length').get(function() {
+0 12 return this.posts.length;
+0 14 Category.pre('save', data => {
+0 15 const { name, parent } = data;
+0 16 if (!name) return;
+0 17 const Category = ctx.model(\'Category\');
+0 18 const cat = Category.findOne({
+0 19 name,
+0 20 parent: parent || {$exists: false}
+0 21 }, {lean: true});
+0 22 if (name) {
+0 23 return Promise.all([
+0 24 Category.scaffold.set(name, data.slug));
+0 25 }
+0 26 Category.pre('remove', data => {
+0 28 return PostCategory.remove({category_id: data._id});
+0 30 return Category;
+0 31 };'
+
+1 1  {
+1 4 return str;
+1 24 if (cat) {
+1 25 throw new Error(`Category \\`${name}\\` has already existed!`);
+1 28 Category.pre(() => {
+1 32 Category.scaffold.set(\'post', [
+1 34 parent || {$exists: false}
+1 35 ]).spread((stats, content) => {
+1 36 const query = {};
+1 37 if (helper.isString(data.path)) {
+1 38 query.path = data.path;
+1 39 } else {
+1 40 query.source = '';
+1 42 if (postCategory && postCategory.length == 0) {
+1 43 return Promise.resolve();
+1 45 const posts = this.posts.sort(\'date\', -1);
+1 46 if (!posts.length) return;
+1 47 const data = PostCategory.findOne({
+1 48 name: this.slug});
+1 49 if (data.path) {
+1 50 const query = data.path;
+1 51 if (!posts.length = postCategory.length = 1;
+1 53 return Promise.map((post_id, post_id, post_id, post_id) => {
+1 54 const { return postCategory.createCategory.create()).set(post_id, post_id);
+1 55 post_id = post_id == post._id);
+1 56 post_id;
+1 57 post = post._id = post._id;
+1 58 post = post._id;
+1 59 return post.id = post._id;
+1 64 return Promise.then(data => {
+1 65 return data;
+1 66 return Promise.save();
+1 67 }).then(data => {
+1 68 returnCategory.save({
+1 69 ctx.save());
+1 73 });'
+
+2 4 }'
+
+3 1  return ctx.config.url} + \'/\' + this.path; });
+3 7 return ctx.locals.posts.find({
+4 3 return ctx.config.url + this.path;
+4 4 };
+4 8 return ctx.locals.get(\'posts\', ctx.locals.posts).find({
+4 24 throw new Error(\'Category `' + name + "` has already existed!\');
+4 27 Category.pre('remove\', data => {
+5 1  return `${ctx.config.url}/${this.path}`; });
+6 9 return ctx.locals.get(\'posts\', this.posts).find({
+6 17 const { name } = data;
+6 18 const { parent } = data;
+7 5 return Category.virtual('posts').get(function() {
+7 13 Category.findOne({source: this._id}),
+7 14 Category.findRaw({source: this._id}),
+7 15 Category.findRaw({source: this._id})
+7 16 ]);
+9 7 return ctx.locals.get(\'posts\', {_id: {$in: ids}
+9 8 ).find({
+9 24 throw new Error(\'Category `' + name + \'" must be a valid post_asset_ value for the post.`);

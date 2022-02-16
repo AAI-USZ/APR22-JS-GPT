@@ -1,0 +1,153 @@
+Min editdistance: 5.00
+Closest candidate: 3 29 describe '#params()'
+
+0 1 it'should return null if no match is found'
+0 2 $(['foo', 'bar']).xpath('', 'foo').length().should.be_null
+0 3 end
+0 5 describe '#children()'
+0 6 it'should return children'
+0 7 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').children().length().should.eql 1
+0 8 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').children().length().should.eql 2
+0 11 describe '#parents()'
+0 12 it'should return parents'
+0 13 $(['foo', 'bar']).xpath('', 'foo').length().should.eql 2
+0 14 $('$('foo').xpath('bar').xpath('baz').xpath('README.md')
+0 17 $(['foo', 'bar']).xpath('', 'bar').xpath('baz').xpath('README.md')
+0 20 describe '#parent()'
+0 21 it'should return the first parent'
+0 29 describe '#query'
+0 30 it'should return the response'
+0 32 $(['foo', 'bar']).xpath', 'bar']).xpath', 'baz', 'baz', 'baz'].xpath'].xpath('foo'
+0 36 describe 'baz'
+0 41 describe '#end'
+0 42 describe '#end()'
+0 43 describe '#before()'
+0 44 it'should return ()'
+0 45 it'should return the return'
+0 46 it'should return it'
+0 52 it'should return it'\
+1 3 before_each
+1 4 items.each(function() {
+1 5 it('should return children'+ '<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 2
+1 6 items = $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').xpath('descendant-or-self::p').length().should.eql 2
+1 8 it'should return null if no match is found', function(){
+1 9 assert.strictEqual(this.selectors[0].length, 1)
+1 10 assert.strictEqual(this.selectors[0].length, 0)
+1 11 })
+1 12 items.xpath('descendant-or-self::p').length().should.eql null
+1 14 it'should work with objects'
+1 15 var items = $({ foo: 'bar' }).xpath('descendant-or-self::p', { baz: 'raz' }).xpath('descendant-or-self::p', { c: 'foo', d: 'baz' }).xpath('descendant-or-self::p', { b: 'baz', d: 'raz' }).xpath('descendant-or-self::p').length().should.eql 2
+1 19 describe 'when given an array'
+1 20 it('should return the array'
+1 21 it('should return the object'
+1 22 it('should return the first'
+1 24 it('should contain the first object'
+1 25 it('one).at(0).at(0).should.length.eql '0).length < 0'
+1 26 it('one').length'
+1 28 $(0).at(1).should.at(1).should.should.should.should.length.length.should.addListener('foo').length.length)
+1 29 end(0).should.addListener)
+1 30 end('arr.addListener)
+1 35 describe '#before_each
+1 36 describe 'when given a value'
+1 37 describe 'key'
+1 39 it('key'
+1 42 it('keykeykeykeykey')
+1 43 it('value')
+1 44 it('keykey')
+1 45 it('key_at'
+1 48 '
+2 4 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 2$('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').children().length().should.eql 1$('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').children().length().should.eql 2$('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::*').length().should.eql 2$('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::*').length().should.eql 2$('<p><strong>foo</strong><strong>bar</strong></p>').xpath('descendant-or-self::*').length().should.eql 3
+2 9 $('<ul><li></li><ul><li></li></ul>').xpath('descendant-or-self::*').length().should.eql 2
+2 10 $('<li></li><ul><li></li>').xpath('descendant-or-self::*').length().should.eql 3
+2 16 $('<ul><li></li>') return \'foo\'
+2 17 $('<li>'
+2 18 $(new Promise.method()').at(0).should.should.halt()).should.halt()
+2 19 $('should.should.halt()
+2 20 } else.should.halt()
+2 21 end()
+2 25 describe 'executor.exec(['system.props()','should.should.js', 'this', 'this']
+2 29 describe 'this.exec: null')
+2 30 describe 'this.exec, \'this.args'
+2 31 .skip'
+2 32 it'shalt()'
+2 35 describe 'this.skip'
+2 38 end"
+
+3 2 $('<p>foo</p>').reduce(0, function(val, e){
+3 3 assert.strictEqual(2, val.length);
+3 4 assert.strictEqual(0, val.length);
+3 5 });
+3 8 .xpath('descendant-or-self::p').length().should.eql 2;
+3 11 $({ foo: 'bar' }).xpath('descendant-or-self::p').length().should.eql 3;
+3 16 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 2;
+3 17 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 3;
+3 22 $('<ul><li>foo</li><li>bar</li></ul><ul><li>bar</li></li>').xpath('descendant-or-self::*/*[name()=&b()]s+(.+?)<.+?)<.+?)([name()=\'(.+)'$.]f-\\./fixtures/user/name.name.jquery.js') : \'jquery.js\'}');
+3 23 $('jQuery.js
+3 24 .css()
+3 25 }).xpath('javascript\').xpath('javascript').xpath('javascript').xpath('javascript').length().length().should.should.should.toArray().should.eql(0).toArray().should.eql(0);
+3 26 end();
+3 29 describe '#params()'
+
+4 3 before(() => {
+4 4 process.mixin(GLOBAL, { before: 'foo' }, emitter.emit.bind(emitter))
+4 6 it('should return children'
+4 7 $('<p><strong>foo</strong><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 2$('<p><strong>bar</strong><strong>strong</strong></p>').xpath('descendant-or-self::*').length().should.eql 2
+4 11 it('should return parents'
+4 12 $('<ul><li></li><ul><li></li>').xpath('descendant-or-self::*').length().should.eql 2
+4 16 it('should return the first parent'
+4 20 describe '#slice()'
+4 22 $('<ul><li></li><ul><li></li>').xpath('descendant-or-self::*').length().should.eql 3
+4 25 describe '#grep()'
+4 26 it('should return values which evaluate to true'
+4 27 $(['foo', 'bar']).grep(function(val){ return val.charAt(0) == 'f' }).should.eql 'foo' }).should.slice(0).at(1).should.eql 'bar'
+4 31 it('should return values[0].length - 1).should.should.should.should.should.eql 2 : 1
+4 35 it('should.should.should.should.exit().should.exit().should.toArray().should.should.be_greater_greater_than_than : 3 }).should.exit.exit().length == 0
+4 41 describe '#any()'
+5 4 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 2
+5 10 $('<ul><li></li></ul><li></li>').xpath('descendant-or-self::*').length().should.eql 2
+5 11 $('<ul><li></li><li></ul>').xpath('descendant-or-self::*').length().should.eql 2
+5 21 it'should select values matching the given domain'
+5 22 $(['foo', 'bar']).grep(/foo(bar)?/)
+5 23 $(['foo', 'bar']).xpath('descendant-or-or-self::*')
+5 24 $).length().should.eql(0)
+5 28 describe '#format()'
+5 29 it'should return Statistics with line number/style/s', function()'
+5 30 $(12, col', s=12, b=0, format=1, format=12, count=5's', s=0, tests=12, word=1,gender=12;'s', fn=0, callback=null, domain=null'should=null'
+5 31 $(' + 1, domain=null')
+5 32 $(12)'"
+
+6 2 $({ foo: 'bar' }).xpath('bar').length().should.eql 2
+6 3 $({ foo: 'bar' }).xpath('baz').length().should.eql 3
+6 14 $('<ul><li></li></ul><li></li></li></li>').xpath('descendant-or-self::*').length().should.eql 1
+6 15 $('<li></li></ul><li></li></li>').xpath('descendant-or-self::*').length().should.eql 2
+6 20 $('<ul><li></li></ul><li></li></li>').xpath('descendant-or-self::*').length().should.eql 2
+6 21 $('<li></li><ul><li></li></ul>').xpath('descendant-or-self::*').length().should.eql 3
+6 25 it'should return the return the min value'
+6 26 $(5).bar).bar().length().length().length().length().length().length().should.toFixed(1}s0).toFixed(0).s}).solve(1)
+6 27 $(0).suc).s(0).should.suc.unit(1, min).s.unit).s}).s$(0).s+(1).s+(1).s).should.unit).s.unit).s+(1).s).s.unit).s.unit).s.s.should.unit).s.unit).s.s.s.should.s.format('std','std',''
+
+7 3 it'should return children with array-like collection'
+7 4 $('<p><strong>foo</strong><strong>bar</strong></p>').xpath('descendant-or-self::p').length().should.eql 3$('<p><strong>bar</strong><strong>strong</strong></p>').xpath('descendant-or-self::p').length().should.eql 2$('<p><strong>foo</strong><strong>bar</strong><strong>strong</strong></p>').xpath('descendant-or-self::*').length().should.eql 3
+7 10 $('<ul><li></li></ul><li></li>').xpath('descendant-or-self::*').length().should.eql 3
+7 23 it'should return children with given with given array'
+7 24 $(array)
+7 37 }).xhr.length().length().should.should.length().should.eql 2
+7 38 $(2().should.halt()
+9 2 $(['foo', 'bar']).xpath(').at(0).should.be_null
+9 3 items.xpath('invalid')
+9 4 collection.xpath('with_tag')
+9 5 _else_id.should.be_null
+9 10 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').children().length().should.eql 1$('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::p').children().length().should.eql 2
+9 15 $(['foo', 'bar']).xpath('descendant-or-self::*').parents().length().should.eql 2
+9 16 $('<p><em>foo</em><strong>bar</strong></p>').xpath('descendant-or-self::*').children().length().should.eql 3
+9 21 $(['foo', 'bar']).xpath('descendant-or-self::*').parent().length().should.eql 2
+9 26 describe '#args()'
+9 27 it'should return the first args'
+9 28 $(['foo', 'bar']).xpath', 'baz', 'baz']).xpath', 'baz').xpath.s'].xpath.s.should.should.eql'baz'baz'
+9 30 it'should.is.should.is.not.is.a.a.should.a.toString()
+9 31 it's.toArray()'
+9 36 describe 'end
+9 37 describe '#format = function()'
+9 38 it'should return Express.format()'
+9 39 it'should return the format'
+9 45 it'should return

@@ -1,0 +1,92 @@
+Min editdistance: 24.00
+Closest candidate: 5 12 command('git', ['add', '.'], {cwd: deployDir}, next());
+0 1 file.dir(publicDir, function(files){
+0 2 async.forEach(files, function(item, next){
+0 3 file.copy(publicDir + item, target + '/.deploy' + item);
+0 4 next();
+0 5 }, next);
+0 6 });
+0 7 } else {
+0 8 console.log('You have to use `%s` to generate files first.', clc.bold('hexo generate'));
+0 9 }
+0 11 }, callback);
+0 13 ], function(){
+0 14 console.log('Deploy complete.');
+0 16 };
+0 17 exports.setup = function(args){
+0 18 var repo = args[0];
+0 19 if (repo === undefined) return callback();
+0 20 if (args[1]){
+0 21 console.log('Copying files.');
+0 24 var dirs = item.split(path.sep);
+0 25 for (var i=0, len=dirs.length; i<len; i++){
+0 26 if (dirs[i].substring(0, 1) === '.'){
+0 27 continue;
+0 38 };"
+
+1 9 file.copy(publicDir + item, deployDir + dirs + next());
+1 16 ]);
+1 17 }, function(){
+1 18 async.forEachSeries(commands, function(item, next){
+1 19 command('deploy', item, next());
+2 3 var dirs = item.split('/');
+2 6 return next();
+2 9 file.copy(publicDir + item, deployDir + dirs + '/' + item);
+2 22 if (repo === undefined) return false;
+2 24 var branch = args[1];
+2 26 var message = 'Site updated:'+ moment.format(args[0]),
+2 27 commitMessage = args[0];
+2 29 var run = function(command, args, callback){
+2 30 var cp = spawn(command, args, {cwd: deployDir});
+2 31 cp.stdout.on('data', function(data){
+2 32 process.stdout.write(data);
+2 34 cp.stderr.on('data', function(data){
+2 35 process.stderr.write(data);
+2 37 cp.on('close', callback);
+3 9 file.copy(publicDir + item, deployDir + item);
+4 9 file.copy(publicDir + item, deployDir + dirs + next);
+4 16 },
+4 17 function(next){
+4 18 command('rm', ['-fr', '--setup'], next());
+4 21 var commands = [
+4 22 ['add', '-A', '.'],
+4 23 ['commit', '-m', 'First commit'],
+4 24 ['branch', '-m', config.branch],
+4 25 ['remote', 'add', 'github', config.repository]
+4 26 ];
+4 28 run('git', item, function(){
+4 33 ], callback);
+5 3 file.copy(publicDir + item, target + '/.deploy/' + item);
+5 12 command('git', ['add', '.'], {cwd: deployDir}, next());
+5 19 console.log('Deploy done.');
+5 21 });"
+
+6 17 var deployDir = hexo.base_dir + 'assets/' + repo;
+6 22 var message = 'Site updated:'+ new Date();
+6 23 console.log(message);
+7 3 file.copy(publicDir + item, target + '/.deploy.yml');
+7 7 file.write(publicDir + item, target + '/.deploy.yml');
+7 11 })
+7 26 if (args[2]){
+7 27 var branch = args[2];
+7 29 var message = 'Deployating.'+ repo;
+7 30 console.log('Clearing.');
+7 31 file.empty(deployDir, callback);
+7 33 file.write(deployDir + item, message, callback);
+8 9 file.copy(publicDir + item, deployDir + '/' + item);
+8 28 if (repo.match(/^(https?:\\/\\/|git(@|:\\/\\/))([^\\/]+)/)[3].match(/github\\.com/)/)?'master' : 'gh-pages';
+8 43 exports.replace = function(args, callback){
+8 44 var args = args = args;
+8 45 var command = args.replace('end', callback);
+8 46 if (args.replace(/\
+8 47 'st', '%s', callback);
+8 48 args.remove', callback);
+8 49 if (callback!== undefined!== undefined) callback = callback.callback.callback.apply(callback);
+8 50 function args = args;
+8 51 async.series.series([
+8 52 ], function(args, done){"
+
+9 12 console.log('Generating.');
+9 13 file.empty(deployDir, next);
+9 26 if (repo.match(/^(https?:\\/\\/|git(@|:\\/\\/))([^\\/]+)/)[3].match(/github\\.com/)?'master' : 'gh-pages';
+9 28 var branch ='master';

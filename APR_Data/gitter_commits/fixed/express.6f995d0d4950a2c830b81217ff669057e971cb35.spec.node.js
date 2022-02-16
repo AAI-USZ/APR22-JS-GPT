@@ -1,0 +1,42 @@
+
+require.paths.unshift('spec', 'lib', 'spec/lib', 'spec/support/libxmljs')
+require("jspec")
+require("express")
+require("express/spec")
+
+quit = process.exit
+print = puts
+
+readFile = function(path) {
+  var result
+  require('posix')
+    .cat(path, "utf8")
+    .addCallback(function(contents){ result = contents })
+    .addErrback(function(){ throw new Error("failed to read file `" + path + "'") })
+    .wait()
+  return result
+}
+
+if (process.ARGV[2])
+  JSpec.exec('spec/spec.' + process.ARGV[2] + '.js')  
+else
+  JSpec
+    .exec('spec/spec.core.js')
+    .exec('spec/spec.routing.js')
+    .exec('spec/spec.helpers.js')
+    .exec('spec/spec.request.js')
+    .exec('spec/spec.mime.js')
+    .exec('spec/spec.static.js')
+    .exec('spec/spec.collection.js')
+    .exec('spec/spec.element-collection.js')
+    .exec('spec/spec.plugins.js')
+    .exec('spec/spec.plugins.view.js')
+    .exec('spec/spec.plugins.common-logger.js')
+    .exec('spec/spec.plugins.content-length.js')
+    .exec('spec/spec.plugins.method-override.js')
+    .exec('spec/spec.plugins.body-decoder.js')
+    .exec('spec/spec.plugins.redirect.js')
+    .exec('spec/spec.plugins.hooks.js')
+    .exec('spec/spec.plugins.cookie.js')
+JSpec.run({ reporter: JSpec.reporters.Terminal, failuresOnly: true })
+JSpec.report()

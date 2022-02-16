@@ -1,0 +1,114 @@
+Min editdistance: 15.00
+Closest candidate: 3 14 before(function(){
+0 1 '
+
+3 1 ));
+3 2 var viewDir = pathFn.join(themeDir, \'layout\') + pathFn.sep;
+3 3 var viewName = \'article.swig\';
+3 4 var ctx = {
+3 5 site: hexo.locals,
+3 6 config: hexo.config,
+3 7 view_dir: viewDir,
+3 8 filename: pathFn.join(viewDir, \'post\', \'article.swig\'),
+3 9 foo: \'foo\',
+3 10 cache: true
+3 11 };
+3 12 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo.extend.helper.bind(ctx));
+3 13 var partial = require(\'../../../lib/plugins/helper/partial\')(hexo.extend.helper.bind(ctx));
+3 14 before(function(){
+3 15 return Promise.all([
+3 16 fs.mkdirs(themeDir),
+3 17 fs.writeFile(hexo.config_path, \'theme: test\')
+3 18 ]).then(function(){
+3 19 return hexo.init();
+3 20 }).then(function(){
+3 22 fs.readFile(themeDir),
+3 23 fs.readFile(hexo.config_path)
+3 24 ]);
+3 25 }).then(function(content){
+3 26 return yaml.parse(content);
+3 28 return fs.unlink(hexo.theme.config.theme_config);
+3 29 });
+3 31 after(function(){
+3 32 return fs.rmdir(hexo.base_dir);
+3 34 it(\'default\', function(){
+3 35 partial(\'article.swig\', { locals: { test: \'1\', title: \'test\' }});
+3 36 partial(\'article.swig\', { locals: { test: \'2\', title: \'test\' }});
+3 38 it(\'external (boolean)\', function(){
+3 39 var result = {
+3 40 path: \'test.swig\',
+3 41 content: \'foo\'
+3 43 result.external_link.should.eql(\'<a href="\' + hexo.config.external_link.replace(/{2,}/g, \'bar\') + \'" class="external">foo</a>\');
+3 45 it(\'external (object)\', function(){
+3 50 result.external_link.should.eql(obj);
+3 52 it(\'class\', function(){
+3 56 should.should.should.not.exist;
+3 58 });'
+
+6 1 )
+6 2 .then(function(){
+6 9 hexo.theme.setView('layout.swig', [
+6 10 \'{{ body }}\',
+6 11 \'{{ view_dir }}'
+6 12 ].join(\'\
+6 13 \'));
+6 19 it(\'constructor - add trailing "/" to the escape\', function(){
+6 20 var box = newBox(\'foo\');
+6 21 box.__super__({
+6 22 path: \'bar\',
+6 23 layout: \'photo\'
+6 25 var view = fs.createReadStream(route.path);
+6 26 view.path.should.eql(\'foo\');
+6 27 view.source.should.eql(pathFn.join(themeDir, \'layout\', \'photo\') + pathFn.sep);
+6 28 view.data.should.eql({
+6 29 foo: \'bar\'
+6 32 it(\'addProcessor() - no pattern\', function(){
+6 33 var box = newBox();
+6 34 box.addProcessor(function(){
+6 35 return \'test\';
+6 37 var data = box.processors[0];
+6 38 data.should.eql({
+6 39 path: \'test\',
+6 40 layout: \'nothing\'
+6 42 return fs.writeFile(data, \'foo\').then(function(){
+6 44 fs.stat(data),
+6 45 process()
+6 47 }).spread(function(stats){
+6 48 var box = newBox(\'test\');
+6 52 return data.length.should.eql(0);
+6 54 it(\'addProcessor() - with regex\', function(){
+6 56 box.addProcessor(/^foo/, function(){
+6 59 var filter = sinon.spy();
+6 73 return obj.process()
+6 75 return Promise.should.should.map(obj.method.toString()
+6 76 .should.eql(obj.toLowerCase());
+8 1 ).then(function(){
+8 14 fs.unlink(themeDir),
+8 15 fs.unlink(hexo.config_path)
+8 22 it(\'layout\', function(){
+8 23 var view = new themeDir({
+8 24 path: \'layout\',
+8 25 layout: false
+8 27 return view.setView(\'layout.swig\').then(function(){
+8 28 return \'<a><![^swig.name] view.render(themeDir + \'"></a>\';
+8 30 return \'<a><![ view.source_dir + \'index.swig] view.render(themeDir + \'"></a>\';
+8 44 it(\'only\', function(){
+8 47 only: true
+8 54 return \'<a><![^swig.name] view.render(themeDir + \'</a>\';
+8 59 it(\'skip processing if post/page.html\', function(){
+8 61 path: \'**/*.mdir\',
+8 64 var view = new themeDir(){'**process: function(){};
+8 65 return view.series.series([
+8 66 }).any(function(next){
+8 67 }).should.skip(function(function(next){
+8 68 return view.skip(function(function(next){
+8 69 return \'~next){
+8 70 process.next){
+8 71 return next();
+8 72 }).isModified(true);
+8 73 }).skip(function(false);
+8 76 }
+8 79 it(\'skip processingFiles(next){
+8 80 it(\'processingFiles(next){
+8 82 function test_createFolder = "theme:": function(next){
+8 83 \

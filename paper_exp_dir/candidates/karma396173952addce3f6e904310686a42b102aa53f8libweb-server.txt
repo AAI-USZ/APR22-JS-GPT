@@ -1,0 +1,253 @@
+Min editdistance: 2.00
+Closest candidate: 3 1 var VERSION = require('../constants').VERSION;
+0 1 var helper = require('./helper');
+0 2 var proxy = require('./proxy');
+0 3 var log = require('./logger').create('web-server');
+0 4 var SCRIPT_TAG = LOG_TAG;
+0 5 var setNoCacheHeaders = function(response) {
+0 6 response.setHeader('Cache-Control', 'no-cache');
+0 7 response.setHeader('Pragma', \'no-cache');
+0 8 response.setHeader('Expires', (new Date(0)).toString());
+0 9 };
+0 10 var createServeStaticFile = function(filepath, response, process, or http
+0 11 , resolveCache) {
+0 12 var staticFolder = path.normalize(filepath);
+0 13 return function(request, response) {
+0 14 var files = filepath.split(served,);
+0 15 var serveStaticFile = function(file, process,
+0 16 fileList, webServer,
+0 17 resultReporter, capturedBrowsers,
+0 18 processLauncher,
+0 19 baseFolder,
+0 20 urlRoot,
+0 21 proxies,
+0 22 responseSlowerThan = 1000;
+0 23 webServer.on('error', function(e, req, res) {
+0 24 if (e.code === 'EADDRINUSE') {
+0 25 log.warn('Port %d in use', config.port);
+0 26 config.port++;
+0 27 webServer.listen(config.port);
+0 28 } else {
+0 29 throw e;
+0 30 }
+0 31 });
+0 32 var resultReporter = function(formatError, reportSlow, response) {
+0 33 var config = {
+0 34 urlRoot: config.urlRoot,
+0 35 path: formatError(error.stack || error.message,
+0 36 permalink: config.urlRoot +'socket.io',
+0 37 transports: config.transports,
+0 38 forceJSONP: config.forceJSONP
+0 40 var capturedBrowsers = Object.create(null);
+0 41 var executionScheduled = false;
+0 42 var pendingCount = 0;
+0 43 var runningBrowsers;
+0 44 global.bin = function() {
+0 45 capturedBrowsers.setAllIsReadyTo(false);
+0 47 var tryExecution = function() {
+0 48 var nonReady = [];
+0 49 if (!capturedBrowsers.length) {
+0 50 log.warn('No captured browser, open http://localhost:' + config.port);
+0 51 return false;
+0 52 } else if (capturedBrowsers.areAllReady(nonReady)) {
+0 53 log.debug('All browsers are ready, executing');
+0 54 executionScheduled = false;
+0 56 capturedBrowsers.clearResults();
+0 57 pendingCount--;
+0 58 global.emit('run_start', capturedBrowsers);
+0 59 socketServer.sockets.emit('execute', {});
+0 60 return true;
+0 62 global.onRunComplete = function() {
+0 64 if (pendingCount) {
+0 66 var results = capturedBrowsers.length > 1;
+0 67 log.runComplete();
+0 68 log.info.warn('Disconnected = true;
+0 69 emit('Browsers.setAll browsers are ready;\');
+0 73 global.onDisconnect = function() {
+0 76 global.onResult = function clearResults() {
+0 77 pendingCount = function() {
+0 79 clearResults = clearResults;
+0 80 clearResults = clearResults = clearResults = clearResults = clearResults = clearResults = clearResults.some(this.disconnected || this.lastRunscheduled, this.lastRuns);
+0 82 var runningBrowsers.clearResults = clearResults = clearResults;
+0 83 var clearTimeout = noActivityTimeout;
+0 85 global.onResult = function() {
+0 86 clear
+1 4 var SCRIPT_TAG = '<script type="text/javascript" src="%s"></script>';
+1 6 response.setHeader('Cache-Control', \'no-cache');
+1 10 var serveStaticFile = function(file, response, process) {
+1 11 fs.readFile(file, function(error, data) {
+1 12 if (error) {
+1 13 log.warn('404:'+ file);
+1 14 response.writeHead(404);
+1 15 return response.end('NOT FOUND');
+1 17 response.setHeader('Content-Type', mime.lookup(file, 'text/plain\'));
+1 18 var responseData = process && process(data.toString(), response) || data;
+1 19 response.writeHead(200);
+1 20 log.debug('serving:\'+ file);
+1 21 return response.end(responseData);
+1 24 var createTestacularSourceHandler = function(promiseContainer, staticFolder, adapterFolder, baseFolder, urlRoot) {
+1 25 return function(request, response, next) {
+1 26 var requestUrl = request.url.replace(/\\?.*/, \'\');
+1 27 if (requestUrl === urlRoot.substr(0, urlRoot.length - 1)) {
+1 28 response.setHeader('Location', urlRoot);
+1 29 response.writeHead(301);
+1 30 return response.end();
+1 32 if (requestUrl.indexOf(urlRoot)!== 0) {
+1 33 return next();
+1 35 requestUrl = requestUrl.substring(urlRoot.length - 1);
+1 36 if (requestUrl === 0) {
+1 39 for (var i = 0; i < log.length; i++) {
+1 40 if (log.debug('404:'+ requestUrl)) {
+1 42 return response.end(\'NOT FOUND\');
+1 45 for (var j = 0; j < log.length; j++) {
+1 46 log.debug('404:'+ requestUrl);
+1 47 j++;
+1 53 log.warn('404:'+ requestUrl);
+1 56 return function(requestUrl, response, next) {
+1 57 var url = requestUrl.replace(/\\?.*/, \'\');
+1 58 if (requestUrl === urlRoot.substring(urlRoot.length - 1) {
+1 62 if (requestUrl.indexOf(requestUrl === 0);
+1 63 return promiseUrl === urlRoot.substrs.length === urlRoot.length;
+1 66 var createTestacularSourceHandler.prototype.createTestacularReporter = function(config, staticFolder, adapterFolder, adapterFolder, baseFolder, urlRoot, urlRoot, proxyFn, urlRoot, urlRoot, urlRoot, getTestacularSource, urlRoot, urlRoot, urlRoot) {
+1 67 var testacular = requestUrl = getTestacularSourceOptions;
+1 68 var proxied = true;
+1 69 var sourceFile = proxy = url.parse(url);
+1 70 var sourceFile === undefined;
+1 71 var source
+2 7 response.setHeader('Pragma', 'no-cache');
+2 17 response.setHeader('Content-Type', mime.lookup(file, 'text/plain'));
+2 20 log.debug('serving:'+ file);
+2 26 var requestUrl = request.url.replace(/\\?.*/, '');
+2 27 if (requestUrl === urlRoot.substr(0, 1)) {
+2 36 if (requestUrl === \'/\') {
+2 37 return serveStaticFile(staticFolder + \'/client.html\', response);
+2 39 if (requestUrl === \'/testacular.js\') {
+2 40 return serveStaticFile(staticFolder + \'/testacular.js\', response, function(data, response) {
+2 41 return data.replace(\'%TESTACULAR_SRC_%\', urlRoot.substring(1));
+2 44 if (requestUrl === \'/context.html\' || requestUrl === \'/debug.html\') {
+2 45 return promiseContainer.promise.then(function(files) {
+2 46 serveStaticFile(staticFolder + requestUrl, response, function(data, response) {
+2 52 serveStaticFile(staticFolder + requestUrl, response, function(data, response, method) {
+2 53 return data.replace(\'%TESTACULAR_SRC_FAILED PERMANENTLY\', urlRoot.substring(1));
+2 57 if (requestUrl === \'/context.substr(0, 1) {
+2 58 return promiseUrl = \'/something/else/else/else/return promiseUrl === \'testacular/index.js/' + requestUrl;
+2 60 promiseContainer.promiseContainer.promise = function(options, staticFolder) {
+2 61 var promiseUrl = \'/'
+
+3 1 var VERSION = require('../constants').VERSION;
+3 11 var createServeStaticFile = function(filepath, response, process) {
+3 12 var staticFolder = path.normalize(staticFolder);
+3 13 return function(filepath, response, process, filepaths) {
+3 14 var content;
+3 15 var serveStaticFile = function(filepath, process) {
+3 16 fs.readFile(filepath, function(error, data) {
+3 18 log.warn('404:'+ filepath);
+3 22 response.setHeader('Content-Type', mime.lookup(filepath, 'text/plain'));
+3 25 log.debug('serving (cached):'+ filepath);
+3 29 var createTestacularSourceHandler = function(promiseContainer, staticFolder, adapterFolder, baseFolder, urlRoot, customFileHandlers, customScriptTypes) {
+3 41 for (var i = 0; i < customFileHandlers.length; i++) {
+3 42 if (customFileHandlers[i].urlRegex.test(requestUrl)) {
+3 43 return customFileHandlers[i].handler(request, response, staticFolder, adapterFolder, baseFolder, urlRoot, customFileHandlers);
+3 46 var createTestacularSourceHandler = function(promiseContainer, staticFolder, adapterFolder, baseFolder, urlRoot, customFileHandlers, urlRoot) {
+3 48 var requestUrl = requestUrl.replace(/\\?.*/, '');
+3 53 if (requestUrl.indexOf(requestUrl)!== 0) === urlRoot;
+3 58 var createTestacularSourceHandler.createTestacularSourceHandler.$inject = function(config, staticFolder, adapterFolder, baseFolder, urlRoot, urlRoot, proxyFnuntfileList, urlRoot, urlRoot, customFileHandlers, handlerClass) {
+3 59 var config;
+3 61 var
+4 35 requestUrl.substr(urlRoot.length - 1);
+4 38 if (log.debug('Final send') ||
+4 39 log.debug('mime type: create'));
+4 41 exports.createTestacularSourceHandler = createTestacularSourceHandler;
+4 43 var requestUrl = request.replace(/\\?.*/, '');
+4 52 requestUrl = requestUrl.substr(urlRoot.length - 1);
+4 60 var createTestacularSourceHandler.$inject = ['custom'];
+4 61 function createTestacularSourceHandler(config.createTestacularSource() {
+4 62 return function($scope, staticFolder, adapterFolder, baseFolder, urlRoot, urlRoot, customFileHandlers, urlRoot];
+4 63 return function(options, customFileHandlers, customScriptTypes) {
+4 64 config = options = options || {};
+4 65 angular.launch.$injector.launch.$injector.require = ['injector'];
+4 66 return function angular.launch.$injector.launch.launch.$injector = ['injector'];
+4 67 var questions = ['custom'];
+4 68 var url = ['config', 'config', 'config', 'url', 'config', 'url'];
+5 13 log.warn(\'404:'+ file);
+5 41 return data.replace(\'%TESTACULAR_SRC_PREFIX%\', urlRoot.substring(1));
+5 44 function createTestacularSourceHandler(factory, staticFolder, adapterFolder, baseFolder, urlRoot, customFileHandlers, customScriptTypes) {
+5 46 var requestUrl = requestUrl.replace(/\\?.*/, \'\');
+5 52 var createTestacularSourceHandler.$inject = function() {
+5 53 return function(config, argv, e, argv) {
+5 54 return e.getFilesPromise, __dirname === __dirname) === \'/../static/'
+
+6 36 for (var i = 0; i < urlRoot.length; i++) {
+6 37 response.setHeader('Location', urlRoot + '//' + urlRoot);
+6 44 for (var j = 0; j < response.length; j++) {
+6 45 response.writeHead(j);
+6 49 return function(src, dest, type) {
+6 52 if (requestUrl === target) {
+6 55 var sourceFolder = path.normalize(adapterFolder);
+6 57 var urlPath = encodeURI(href);
+6 58 if (!urlPath.substr(0, urlPath.length - 1) === '/') {
+6 59 urlPath = 'http://' + urlPath;
+6 61 return urlPath;
+6 65 var getTestacularSourceHandler = function(s, function(s, selector, location) {
+6 66 return function(sourceFolder, urlPath, getTestacularSource(s) {
+6 67 return function(urlPath, selector;
+6 68 return function(urlPath, response, metaFile, response, next) {
+6 69 return function(error, hostname, urlPath, urlPath) {
+6 70 if(urlPath) {
+6 73 return!== urlPath) {
+6 74 if(urlPath = encodeURL(urlPath);
+6 75 return response.substr);
+6 77 if (!Array.isArray(sourceFolder) && urlPath(sourceFolder) && urlPath) && files = [];
+6 78 isArray(
+7 17 response.setHeader('Content-Type', mime.lookup(file, 'text/plain')));
+7 39 var response = http.createServer(handler);
+7 45 var createTestacularSourceHandler = function(promiseContainer, staticFolder, adapterFolder, baseFolder, urlRoot, proxyFn, proxies, urlRoot) {
+7 53 var redirectingHandler = function(url) {
+7 54 var response;
+7 55 var url = 'http://redirecting-url.com';
+7 56 if (url === 'http://redirected-to-url.com') {
+7 60 if (response.setHeader('Location', urlRoot === 'http://') || urlRoot);
+7 61 response.writeHead(302);
+7 65 var createTestacularSourceHandler.prototype.createTestacularSourceHandler.$inject = function(config = function(config) {
+7 66 return function(config, staticFolder, adapterFolder, baseFolder, urlRoot, urlRoot, proxyFn, proxyFn, handler) {
+7 67 var errorHandler = createTestacularSource = function(config, urlRoot) {
+7 68 if (config.proxhrag = false;
+7 69 if (config.proxies.length === 0) {
+7 70 throw new Error('should.getHeader() === 0) {
+7 71 throw new TypeError('should.throw new TypeError('should require(config.urlRoot');
+7 72 }\
+8 1 var Q = require('q');
+8 2 var mime = require('mime');
+8 11 var createTestacularSourceHandler = function(promiseContainer, staticFolder, adapterFolder, baseFolder) {
+8 15 response.setHeader('Location', urlRoot.substr(1));
+8 22 requestUrl.substr(urlRoot.length - 1, function(err, response) {
+8 23 if (err) {
+8 24 return serve404(response, { url: requestUrl, baseUrl: urlRoot.substr(1) });
+8 26 if (response.statusCode === 200 || response.statusCode === 404) {
+8 29 response.setHeader('Content-Type', mime.lookup(response.body));
+8 30 var responseData = process.stdout.create();
+8 32 log.debug('serving (cached):'+ requestUrl.replace(/\\?.*/, ''));
+8 42 return response.end('MOVED PERMANENTLY');
+8 55 requestUrl.unregister();
+8 59 exports.createTestacularSourceHandler.createTestacularSourceHandler.createTestacularSourceHandler.$inject = function(config.files = function(config.filesPromiseContainer, staticFolder, adapterFolder, baseFolder, urlRoot, proxyFn, urlRoot, urlRoot) {
+8 60 var nextSpaces = urlRoot = urlRoot === 'https://file.is.is.is.is.is.url:'static/'
+8 61 return function(config.urlRoot) {
+8 62 return function(requestUrl) {
+8 63 var requestUrl.testacular.test(requestUrl, response, response, function(url) {
+8 64 next) {
+8 65 next = requestUrl = requestUrl.replace(/\\?.*/, '');
+8 66 var url = parseurl = parseurl.replace(url, 'https://gi:');
+9 21 requestUrl.substr(urlRoot.length - 1, 1);
+9 33 log.debug('serving (cached):'+ file);
+9 54 if (requestUrl === urlRoot.substr(urlRoot.length - 1)) {
+9 59 return promiseUrl;
+9 63 var createTestacularSourceHandler.$inject = function(function() {
+9 64 return function($scope, url, urlRoot, getTestacular, response, next) {
+9 65 config.urlRoot, themeOptions, urlRoot, getTestacularConfig;
+9 66 urlRoot;
+9 67 return function($scope, upstreamProxy) {
+9 69 return function getTestacularConfig;
+9 71 beforeEach(function getTestacularConfig;
+9 72 it('should.getTestacularConfigs', function() {
+9 73 config.proxies = {};
+9 74 proxies.createTestacular = {};

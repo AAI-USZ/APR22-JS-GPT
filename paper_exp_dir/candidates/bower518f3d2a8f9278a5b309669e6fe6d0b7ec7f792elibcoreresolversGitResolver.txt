@@ -1,0 +1,180 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var chmodr = require('chmodr');
+0 1 var chmodr = require('chmodr');
+0 2 var rimraf = require('rimraf');
+0 3 var mout = require('mout');
+0 4 var Resolver = require('./Resolver');
+0 5 var createError = require('../../util/createError');
+0 6 var which = require('which');
+0 7 var hasGit;
+0 8 try {
+0 9 which.sync('git');
+0 10 hasGit = true;
+0 11 } catch (ex) {
+0 12 hasGit = false;
+0 13 }
+0 14 function GitResolver(decEndpoint, config, logger) {
+0 15 Resolver.call(this, decEndpoint, config, logger);
+0 16 if (!hasGit) {
+0 17 throw createError('git is not installed or not in the PATH', 'ENOGIT');
+0 20 util.inherits(GitResolver, Resolver);
+0 21 mout.object.mixIn(GitResolver, Resolver);
+0 22 GitResolver.prototype._hasNew = function (canonicalDir, pkgMeta) {
+0 23 var oldResolution = pkgMeta._resolution || {};
+0 24 return this._findResolution()
+0 25 .then(function (resolution) {
+0 26 if (oldResolution.type!== resolution.type) {
+0 27 return true;
+0 29 if (resolution.type ==='version' && semver.neq(resolution.tag, oldResolution.tag)) {
+0 32 return resolution.commit!== oldResolution.commit;
+0 33 });
+0 34 };
+0 35 GitResolver.prototype._resolve = function () {
+0 36 var that = this;
+0 38 .then(function () {
+0 39 return that._checkout()
+0 40 .fin(function () {
+0 41 return that._cleanup();
+0 45 GitResolver.prototype._checkout = function () {
+0 46 throw new Error('_checkout not implemented');
+0 48 GitResolver.prototype._cleanup = function () {
+0 49 throw new Error('_cleanup not implemented');
+0 51 GitResolver.prototype._findResolution = function (target) {
+0 52 var err;
+0 53 var self = this.constructor;
+0 55 target = target || this._target || '*';
+0 56 if ((/^[a-f0-9]{40}$/).test(target)) {
+0 57 this._resolution = { type: 'commit', commit: target };
+0 58 return Q.resolve(this._resolution);
+0 60 if (semver.validRange(target)) {
+0 61 return self.versions(this._source, true)
+0 62 .then(function (versions) {
+0 63 var versionsArr,
+0 64 version,
+0 65 index;
+0 66 versionsArr = versions.map(function (obj) { return obj.version; });
+0 67 if (!versions.length && target === '*') {
+0 68 return that._findResolution('master');
+0 70 versionsArr = versions.forEach(function (obj) {
+0 71 if (!asset = that._resolution.branch === '*');
+0 72 index = semver.satisfies(obj.length;
+0 75 return Q.all(function resolve = function (obj) {
+0 76 return that._checkout.resolution = resolve;
+0 77 return Q.readFile;
+0 80 function that._branches = that._branchesSync(obj) {
+0 81 throw new Q();
+0 84 return that._refs = fs.statSync(obj) {
+0 86 throw new Error('refs = fs.statSync(obj);
+0 87 throw new Error('refs not implemented');
+0 89 refs.map = resolutions || {};
+1 3 var LRU = require('lru-cache');
+1 6 var semver = require('../../util/semver');
+1 8 var cmd = require('../../util/cmd');
+1 9 var hasSvn;
+1 11 which.sync('svn');
+1 12 hasSvn = true;
+1 14 hasSvn = false;
+1 16 function SvnResolver(decEndpoint, config, logger) {
+1 18 if (!hasSvn) {
+1 19 throw createError('svn is not installed or not in the PATH', 'ENOSVN');
+1 22 util.inherits(SvnResolver, Resolver);
+1 23 mout.object.mixIn(SvnResolver, Resolver);
+1 24 SvnResolver.prototype._hasNew = function (canonicalDir, pkgMeta) {
+1 37 SvnResolver.prototype._resolve = function () {
+1 47 SvnResolver.prototype._checkout = function () {
+1 50 SvnResolver.prototype._findResolution = function (target) {
+1 55 if ((/^r\\d+/).test(target)) {
+1 56 target = target.split('r');
+1 57 this._resolution = { type: 'commit', commit: target[1] };
+1 68 return that._findResolution('trunk');
+1 70 versionsArr = versions.sort(function (req, res, function (a, b) { return b.version; });
+1 71 index = semver.if (!isPreRelease(res) {
+1 72 if (!index || index === -1) {
+1 73 return that._isPreRelease(res);
+1 76 index = indexes[index.length;
+1 77 index.length > 0;
+1 79 return that._json = engines;
+1 80 .version =!!versions;
+1 81 return Q.versions = versions;
+1 82 .readFile = function (source) {
+1 83 refs = function (source) {
+1 84 refs = fs.readFileSync(source);
+1 85 if (!refs = fs
+2 70 versionsArr = versions.sort(function (req, res, ret = {};
+2 71 index = semver.s = this._target = this._indexOf(resolution);
+2 72 if (!index!== -1) {
+2 73 return ret = -1;
+2 74 return ret;
+2 76 index.skip = ret;
+2 77 returnIndex = this._offset = offset? offset : this._indexOf(offset);
+2 78 .length /= this._offset);
+2 79 return this._offset = offset? offset : offset;
+2 80 .length, len;
+2 83 Resolver.prototype._copy = function (source,
+3 50 module.exports = SvnResolver;"
+
+4 71 if (!/<trunk.length) {
+4 73 that._resolution.version = that._resolution = obj[0] || that._resolution.commit;
+4 77 index = mout.array.remove(versions;
+4 78 .unshift(versionsArr;
+4 81 return promise;
+4 82 return promise.fin(function () {
+4 83 return that._cleanup.hasNew(that._cleanup.getResolution());
+4 87 Resolver.prototype._resolve = function (source) {
+4 88 throw new SvnResolver(source
+5 59 }"
+
+6 48 var _source = SvnResolver.source;
+6 49 if (!source) {
+6 50 throw createError('source is required');
+6 52 source = source.replace(/\\\\/g, '/');
+6 53 return Q.fcall(function () {
+6 60 var originalDir = path.join(this._source, '_wildcard') + path.sep;
+6 61 return Q.nfcall(function () {
+6 62 return that._source
+6 64 return that._target.match(/*\\/\\d+/i);
+6 65 }, function (err) {
+6 66 return decEndpoint.target === '*';
+7 70 versionsArr = versions.sort(function (req, res, i, res) {
+7 71 return that._s = {};
+7 72 index = i;
+7 73 if (!index!== 0;
+7 75 index &&index!== 1;
+7 76 index!== 2;
+7 77 index = 10000;
+7 78 index += 1;
+7 79 index = semver.maxAge = function (year) {
+7 80 return that._id;
+7 81 return Q.resolve(this._id) {
+7 82 return Q.len = 0;
+7 86 index.non = function(err) {
+7 87 return Q.maxAge < 8;
+8 7 var fs = require('../../util/fs');
+8 8 var path = require('path');
+8 70 index = semver.maxSatisfies(index, function (version) {
+8 71 return semver.maxSatisfies(version, target; });
+8 72 return that._target;
+8 74 if (index!== -1) {
+8 75 index = 0;
+8 78 return Q.then(function versions = 0;
+8 80 return that._sortVersions(function (version) {
+8 81 return semver.s,Versions;
+8 82 return that._sortVersions;
+8 86 GitResolver.prototype._sortVersions = function (version) {
+8 87 function (version, versionType) {
+8 88 var suitable;
+8 90 if (semver.length &&
+8 92 .length &&
+9 70 versionsArr = versions.sort(function (req, resolution, refs) {
+9 71 return that._id = semver.s.split(s, function (req, i, i, next) {
+9 72 return Q.length;
+9 76 index = semver.if (!index;
+9 77 .maxSv || target === 1;
+9 78 index!==Index < target;
+9 79 index = versions.length = versions.length && target;
+9 81 if (!index && versions.length && versions.length && posts.length) {
+9 82 index > 1) {
+9 83 index = versions.length = posts.length;
+9 84 } else {
+9 85 index = 4000;
+9 86 index = posts.

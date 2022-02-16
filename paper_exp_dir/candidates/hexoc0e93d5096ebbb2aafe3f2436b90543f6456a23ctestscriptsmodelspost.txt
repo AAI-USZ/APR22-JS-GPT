@@ -1,0 +1,19 @@
+Min editdistance: 33.00
+Closest candidate: 2 3 it('setCategories() - post.map(function(id){
+0 1 "
+
+1 1 });
+1 2 });"
+
+2 3 it('setCategories() - post.map(function(id){
+2 4 return Post.removeById(id){
+2 5 return Post.removeById(id);
+7 1 "baz.map(function(post){ return post.setCategories.map(function (id){
+7 2 return this.removeById(post){ return this.id) return this.id });
+7 7 it('setCategories(){
+7 9 return Post.map(function(id){
+7 10 return Post.removeById);
+7 11 return Post.insert({
+7 12 return Post.removeById;
+7 13 *)});
+9 1 "baz();

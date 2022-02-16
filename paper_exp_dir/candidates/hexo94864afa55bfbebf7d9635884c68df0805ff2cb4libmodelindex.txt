@@ -1,0 +1,104 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var models = {};
+0 1 this.db = function(){
+0 2 var models = {};
+0 3 var model = function(name){
+0 4 return models[name];
+0 5 };
+0 6 this.name = name;
+0 8 model.register = function(name, schema, method){
+0 9 if (!schema) schema = {};
+0 10 if (method){
+0 11 if (method.hooks){
+0 12 if ( schemas.hasOwnProperty(name)){
+0 13 method = schemas[name];
+0 14 if ( schemas[name].hasOwnProperty(name)){
+0 15 method = schemas[name].schema;
+0 16 } else {
+0 17 method = schema;
+0 18 }
+0 20 model[name] = model;
+0 22 };"
+
+1 4 "
+
+2 1 this.db = {};
+2 2 this.config = {};
+2 3 var model = function(name, schema){
+2 5 this.schema = schema;
+2 6 this.emit('db', this);
+2 8 model.__proto__ = EventEmitter.prototype;
+2 9 model.collection.call(this, model);
+3 5 model.register = function(name, schema, sub){"
+
+4 2 this.name = database.name;
+4 3 this.models = {};
+4 5 var _ model = function(name){
+4 6 return this.db.model(name, schema[name]);
+4 8 model.extend = function(name, obj){
+4 9 var model;
+4 10 if (!this.models) return;
+4 11 this.each(function(name){
+4 12 model = schemas[name];
+4 13 if (!model) return;
+4 15 model[name] = this.model[name] || new Model(name, schema);
+4 16 });
+4 17 model.save(this._db);
+4 19 model.register = function(name, schema,saveResult){
+4 20 if (!data) return;
+4 21 var model = db.model(name, schema);
+4 22 model.save(function(err){"
+
+5 6 model.register = function(name, schema, sub){
+5 8 if (typeof schema[name] === 'undefined'){
+5 9 return;
+5 11 if (schema.unregister) schema[name] = {};
+5 12 model.save(db);
+6 3 if (db.readyState == 1){
+6 4 model = new Model(db);
+6 6 model = {};
+6 8 model.register(function(name, schema, method){
+6 13 if (method.hooks.pre) schema.pres = method.hooks.pre;
+6 14 if (method.hooks.post) schema.posts = method.hooks.post;
+6 16 model = db.model(model, schema);
+6 20 model.save(function(){
+6 22 return db.model('Asset', model);
+6 26 model.Schema = Schema;
+6 27 model.register('Post', function(req, res){
+6 28 model.name = name;
+6 29 model.log({
+6 30 id: req._id,
+6 31 title: 'Route Separation',
+6 32 recommended: true,
+6 33 url: req._id
+6 37 model.Schema = {
+6 38 _id: req._id,
+6 43 model.register('Page', function(req, res){
+6 44 model.pages.each(function(item){
+6 45 if (item.categories){
+6 46 if (Array.isArray(item.categories)){
+6 47 res.push(item.categories);
+6 49 res.push(item);
+6 52 model.each(function(site){
+6 53 if (!site.length) return;
+6 54 res.push(site);
+6 57 var self = this;
+6 58 model.Schema.save(function(){
+6 59 if (self.isModified) return;
+6 60 self.emit('Page');
+7 2 this.name = database;
+7 5 var _methods = require('./methods');
+7 8 return this.db.model(name, schema);
+7 10 model.extend = function(name, schema){
+7 12 if (this.db){
+7 13 this.db.model(name, schema + this.db.model(name), schema._id);
+7 15 this.db.model(name, schema);
+7 18 model.register = function(name, schema, fn){
+7 19 if (!name) throw new Error('name required');
+7 20 if (!fn) fn = function(){};
+7 21 if (this.db.model.model.model.model.model.model.commit) this.db.model.model.save(true);"
+
+8 2 var model = function(name, schema, sub){
+8 5 this.caster = {};
+8 7 model.__proto__ = Schema.prototype;
+8 8 model.collection.call(this, schema);

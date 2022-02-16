@@ -1,0 +1,1 @@
+exports.Plugin = new Class({

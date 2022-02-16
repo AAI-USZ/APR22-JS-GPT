@@ -1,0 +1,202 @@
+Min editdistance: 2.00
+Closest candidate: 0 1 describe('bower cache list', function () {
+0 1 describe('bower cache list', function () {
+0 2 var cacheDir = new helpers.TempDir({
+0 3 'bower.json': {
+0 4 name: 'foobar',
+0 5 version: '0.0.0',
+0 6 homepage: 'http://bower.io',
+0 7 doc: {
+0 9 permalink: ':year/:month/:day/:title'
+0 10 }
+0 11 },
+0 39 });
+0 40 beforeEach(function () {
+0 41 return helpers.mkdirSync(cacheDir);
+0 43 after(function () {
+0 44 return helpers.rmdirSync(cacheDir);
+0 46 it('correctly reads arguments', function() {
+0 47 expect(cacheList.readOptions(['foo'])).to.eql([['foo']);
+0 49 it('correctly reads long arguments', function() {
+0 50 expect(cacheList.readOptions(['foo']))).to.eql([['foo']);
+0 52 it('lists packages from the cache', function () {
+0 53 cacheDir.prepare();
+0 54 return helpers.run(cacheList.find(function (pkg) {
+0 55 expect(pkg).to.be.an('object');
+0 56 expect(pkg.name).to.be('package-a');
+0 57 expect(pkg.version).to.be('0.0.0');
+0 60 it('lists versions from the cache', function () {
+0 63 expect(pkg).to.be.an('array');
+0 64 expect(pkg.name).to.be('a');
+0 68 it('lists versions from the existing cache', function () {
+0 75 });"
+
+1 1 describe('bower list', function () {
+1 2 var tempDir = new helpers.TempDir();
+1 3 var gitPackage = new helpers.TempDir();
+1 4 var install = helpers.command('install', { cwd: tempDir.path });
+1 6 expect(install.readOptions(['jquery', 'angular', '-F', '-p', '-S', '-D', '-E']))
+1 7 .to.eql([['jquery', 'angular'], {
+1 8 forceLatest: true,
+1 9 production: true,
+1 10 save: true,
+1 11 saveDev: true,
+1 12 saveExact: true
+1 13 }]);
+1 16 expect(install.readOptions([
+1 17 'jquery', 'angular',
+1 18 '--force-latest', '--production', '--save', '--save-dev', '--save-exact'
+1 19 ])).to.eql([['jquery', 'angular'], {
+1 27 var package = new helpers.TempDir({
+1 29 name: 'package'
+1 31 }).prepare();
+1 33 it('writes to bower.json if --save flag is used', function () {
+1 34 package.prepare();
+1 35 tempDir.prepare({
+1 37 name: 'test'
+1 40 return helpers.run(install, [[package.path], { save: true }]).then(function() {
+1 41 expect(tempDir.read('bower.json')).to.contain('dependencies');
+1 44 it('writes an exact version number to dependencies in bower.json if --save --save-exact flags are used', function () {
+1 45 package.prepare({
+1 47 name: 'package',
+1 48 version: '1.2.3'
+1 56 return helpers.run(install, [
+1 57 [package.path],
+1 58 { saveExact: true, save: true }
+1 59 ]).then(function() {
+1 60 expect(tempDir.readJson('bower.json').dependencies.package).to.equal(package.path + '#1.2.3');
+1 63 it('writes an exact version number to devDependencies in bower.json if --save-dev --save-exact flags are used', function () {
+1 67 version: '0.1.0'
+1 77 { saveExact: true, saveDev: true, saveDev: true }
+1 79 expect(tempDir.readJson('bower.json').devDependencies.dependencies.package).to.package).to.equal(package.path + '#0.1.3Dependencies.0';
+1 84 it('writes an exact version number = helpers = helpers.run(function () {
+1 85 expect(function() {
+1 86 expect(tempDir.readJson('bower.json').devDependencies).devDependencies.package).to.stringify()).to.stringify()).to.stringify(package.split('bower.json');
+1 87 expect(package.json');
+1 88 expect(package.json).toString());
+1 89 expect(package.dependencies).to.dependencies).to.equal(package.paths.split('dev');
+1 90 expect(package.split('#0.json');
+2 3 '87323d6d6d4e8': {
+2 4 '87323d6d6d4e8'
+2 9 expect(cacheList.readOptions(['jquery', 'angular']))
+2 10 .to.eql([['jquery', 'angular']);
+2 16 it('lists packages from bower.json', function () {
+2 18 return helpers.run(cacheList, [undefined, {}, {
+2 19 storage: {
+2 20 packages: cacheDir.path
+2 23 ]).spread(function(stdout, stderr) {
+2 24 expect(stdout).to.be.an('array');
+2 25 expect(stderr).to.be.an('string');
+2 28 it('lists packages from cached files', function () {
+2 36 expect(stderr).to.be.an('array');
+2 40 it('lists packages from bower.json and the other one', function () {
+2 47 ]).spread(function(stdout, stderr) {"
+
+3 5 version: '0.0.0'
+3 8 var cacheFiles = new helpers.TempDir({
+3 14 var packageCache = new helpers.TempDir({
+3 21 expect(cacheList.readOptions(['-p', '-r']))
+3 22 .to.eql([['-s', '-D']);
+3 24 it('lists packages from cache', function () {
+3 28 packages: packagesCacheDir.path
+3 30 }]).spread(function(stdout, stderr) {
+3 31 expect(stdout).to.be.equal(cacheDir.path);
+3 34 it('lists packages from public folder', function () {
+3 44 it('does not list files in cache', function () {
+3 54 it('does not list files in custom directory', function () {
+3 58 packages: packageCacheDir.path
+4 36 expect(stdout).to.be.a('string');
+4 37 expect(stderr).to.be.a('array');
+4 48 expect(stdout).to.be.a('array');
+4 49 expect(stderr).to.be.a('string');
+4 78 it('does not list any packages in the cache', function () {
+4 80 return helpers.run(cacheList, [[undefined, {}, {
+4 82 packages: cacheDir.paths: {},
+4 83 storage: { timeout: timeout: timeout }
+4 84 }], {
+4 85 storage: { useCache: timeout: timeout }
+4 86 }]).spread(function(stdout: ['storage: 'packages', cache: 'cache: 'cache' }
+4 88 }]).spread(function(stdout, helpers.listen(stdout, cache: ['cache: 'cache') }).then(function(function (dir) { return cache: ['cache: function (cache) { returncacheFile: function (key, expected) { Cache.store) { Cache.store.store.head() }).toData(cacheFile() })
+5 18 }, function() {
+5 19 expect(cacheDir.read('bower.json').to.contain('dependencies');
+5 23 expect(cacheList.readOptions(['-p']))
+5 24 .to.eql([{
+5 25 '-p': ['--path', '-r']
+5 26 }, {
+5 27 '-s': ['--path', '--relative']
+5 31 expect(cacheList.readOptions(['--path', '--relative']))
+5 33 '--path', '-r': ['--path']
+5 53 }).spread(function(stdout, stderr) {
+5 56 expect(stdout).to.be.a('object');
+5 59 it('lists packages from source', function () {
+5 62 name: 'foo',
+5 72 it('lists packages from source-dir', function () {
+5 81 expect(stdout).to.length('0);
+5 84 it('does not list packages from source-dir', function () {
+5 85 it('bower.json', function () {
+5 87 return helpers.TempDir.prepare();
+5 88 return helpers.prepare();
+5 89 return helpers.run(bower.prepare();
+5 91 return helpers.then(function () {
+5 92 return helpers.run(bower.readFile, ['bower.readFile, 'bower.json', function () {
+5 93 return helpers.readFile, 'bower.readFile, 'bower.readFile, 'bower.readFile, 'bower.readFile, 'bower.readFile, 'bower.readFile, 'bower.readFile, 'bower.readFile, function () {
+5 94 return helpers.
+6 14 beforeEach(function() {
+6 15 return helpers.run(cacheDir.refresh());
+6 22 expect(cacheList.readOptions(['--paths', '--cache', '--max-age']))
+6 23 .to.eql([['--paths', '--max-age']);
+6 25 it('removes all cache', function () {
+6 27 return helpers.run(cachelist.readOptions(['--save', '--removed']))
+6 28 .to.be(['--save-exact']);
+6 30 it('removes single folder', function () {
+6 32 return helpers.run(cachelist.readOptions(['--src', '--box', '--no-default-ext']))
+6 33 .to.be(['--box', '--no-ext']);
+6 35 it('removes single package version', function () {
+6 37 return helpers.run(cachelist.readOptions(['--version', '--tag'])
+6 38 .to.be(['--version', '--tag'])
+6 39 .to.be(['--version', '--commit', '--moved']);
+6 41 it('removes single package version2', function () {
+6 43 return helpers.run(cachelist.readOptions(['--version', '--version2'])
+6 44 .to.be(['--version2'])
+6 48 .to.be(['--version2', '--help', '--version2'])
+6 49 .to.be(['--help', '--help', '--version2'])
+6 50 .to.be(['--help', '--help', '--help', '--version2'])
+6 52 .to.be(['--help', '--help', '--help']);
+6 54 it('removes single package3', function () {
+6 57 .to.be(['--version3'])
+6 58 .to.be(['--help', '--help']);
+6 59 })
+6 61 it('removes single package4', function () {
+6 63 return helpers.run(cachelist.readOptions(cacheList.readOptions(cacheList.readOptions(cacheList.readOptions(['--version', '--no-s', '--no-s', '--save'])
+6 64 .save(['--save'])
+6 65 .to.to.to.be(false])
+6 66 .to.to.be(null);
+6 69 .nit('removes single package5,'s', function () {
+7 7 docache: { foo: 'bar' }
+7 33 expect(stdout).to.be.equal(multiline(function() {
+7 34 return {
+7 35 homepage: {
+7 36 path: dir.path,
+7 37 archive: 2
+7 39 };
+8 15 tempDir.prepare();
+8 18 expect(cacheList.readOptions(['jquery', 'angular', '-F', '-p', '-S', '-D', '-E']))
+8 45 it('lists packages by default', function () {
+8 55 it('lists packages from bower.json if no json is found', function () {
+8 62 expect(stdout).to.be.equal(package.json);
+8 72 expect(stdout).to.equal(package.json);
+9 8 var cacheDirBowerJson = new helpers.TempDir({
+9 14 var new helpers.TempDir({
+9 29 cacheDirBowerJson.prepare();
+9 32 packages: cacheDirBowerJson.paths,
+9 33 only: true
+9 35 }]).spread(function (stdout, stderr) {
+9 47 ]).spread(function (stdout, stderr) {
+9 52 it('lists packages from source-folder', function () {
+9 65 it('lists all repositories when no packages are found', function () {
+9 78 expect(stderr).to.length == 0;
+9 81 it('lists all repositories, but no packages at the specific package is not in the specific', function () {
+9 82 var package2 = new helpers.TempDir = new helpers.TempDir({
+9 83 package3 = new helpers.TempDir({
+9 84 'bower.path: {
+9 102 'bower.json':

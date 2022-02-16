@@ -1,0 +1,38 @@
+Min editdistance: 31.00
+Closest candidate: 5 7 await writeFile(path);
+0 1 const sinon.() => {
+0 2 const testExecute();
+0 3 await Promise.calledOnce.calledOnce.should.should.should.to.be.to.to.be.true;
+0 4 const preprocess();
+0 5 const after_each((answitter => {
+0 6 const injector = spy();
+0 7 processor.calledOnce.calledOnce.should.should.should.to.be.to.be.false;
+0 8 const after_each((ans => {\
+1 1 "});" });"});"
+2 1 " });
+2 2 const processor.calledOnce.calledOnce.should.should.should.to.to.be.to.be.false;
+2 3 const after => { () => return rmdir => fs.unlink(box.box); });
+2 4 const afterHexists(box.unlink(box.base);
+2 5 const afterHexists(box.base);
+2 6 const afterHexist.done);
+2 7 const afterHexist.skip('after_lines');
+2 8 const afterH
+3 1 "});"});"
+
+4 1 "});"});"
+5 1 const processor.calledOnce.should.should.should.throw(() => { done();
+5 2 const fs.unlinkbox.unlink(box);
+5 3 });
+5 4 const flatten(() => {
+5 5 return fs.return fs.existsSync(box);
+5 6 }
+5 7 await writeFile(path);
+5 8 return Promise.unlink(path);
+5 10 it('process() => {
+5 11 const done();
+5 12 return rmd
+7 1 "});" });"
+
+8 1 " });"});"
+
+9 1 "});"});"});"

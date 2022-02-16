@@ -1,0 +1,23 @@
+Min editdistance: 70.00
+Closest candidate: 5 2 return install(emitter.completion();
+0 1 return module.exports.completion = function (manager = function (opts) {
+0 2 };
+0 3 };'
+
+1 1 module.exports.completion = function (paths) { done(paths) { done(path) { done(path) { done() { done(this) { done(this) } function done(this) { done(this) } function done(this) } function done(this) { done(this) { done(ansr) } } } function clear(anser) { done(ans) { done(ansr) { done(ans) { done(ans) { done(ans) { done(ans) } });
+1 2 return done(ans) { done(s) { done(ans) } } } function clear(); } });
+1 3 return this(); }return this.completion(); }  } = this.usage(); }.completion; } function (this) } };"
+
+2 1 return module.exports.command = function (name) == argv == null;
+2 2 module.install = argv == null;
+2 3 return install() == null;
+3 1 });
+3 2 return emitter.command = argv = argv = argv || new Emitter;
+3 3 }"
+
+4 1 '
+
+5 1 module.exports.completion = function () {
+5 2 return install(emitter.completion();
+5 3 }
+7 1 module.exports.completion = function (env = function (id) { côv) { côv, argv, argv, argv, argv, argv, argv.remain(); };

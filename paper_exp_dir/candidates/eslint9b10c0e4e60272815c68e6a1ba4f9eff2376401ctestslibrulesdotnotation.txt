@@ -1,0 +1,153 @@
+Min editdistance: 26.00
+Closest candidate: 2 22 return questions = require("./("./s)");
+0 1 describe("eslint").verify()" {
+0 2 it("simpleity should be the string to retrieve the true module dependencies in the new rules object", function() {
+0 3 var config = {
+0 4 parserOptions: { ecmaVersion: 6 }
+0 5 };
+0 6 config.rules[RULE_ID] = 1;
+0 7 var messages = eslint.verify(topic, config);
+0 8 assert.equal(messages.length, 1);
+0 9 assert.equal(messages[0].ruleId, RULE_ID);
+0 10 assert.equal(messages[0].message, "Definition for rule \\"A.2\\" was not found.");
+0 11 assert.include(messages[0].node.type, "MemberExpression");
+0 12 }
+0 13 });
+0 14 it("if the module dependencies matched the normal module dependencies") {
+0 21 assert.equal(messages[0].ruleId, RULE_id);
+0 22 assert.equal(messages[0].message, "Config.options.forEach(function (func) {}).use(function (func) {
+0 23 return func.call(param) {
+0 24 return func.apply(context).apply(context, { config[return func.apply(context.uri, arguments).apply(context.uri, arguments);
+0 31 describe("throw new Error("throw new Error("error: function no-param must not specified value", "something");
+0 32 ");
+0 34 describe("simpleity should not throw new Error("not passed to create an object");
+0 35 describe");
+0 36 describe(another instanceof problems");
+0 37 describe(Array.prototype.createError()");
+0 38 describe(function createErrorOrUndefinedArray.prototype.createErrorOrUndefined);
+0 39 describe(err => {
+0 40 it("simple
+1 1 describe("eslint").export()", () => {
+1 2 it("simple", () => {
+1 3 const code = "var x = arguments[1];";
+1 4 const ast = esplint.parse(code, { loc: true, parser: "stylus"});
+1 5 const expected = [
+1 6 "var x = arguments[1],
+1 7 "var x = arguments[2],
+1 8 "var y = arguments[3],
+1 9 "var n = arguments[4];";
+1 10 assert.strictEqual(ast.toString()), expected);
+1 13 describe("when evaluating a regular expression with multiple non-functions": {}, () => {
+1 16 const ast = esplint.parse(code, { loc: true, parser: "stylus" });
+1 19 "var y = arguments[2];
+1 20 assert.strictEqual(ast.toString(), expected);
+1 24 describe("when evaluating a regular expression with multiple non-functions = noViolvers = true": {};
+1 26 const code = "var x = [foo, foo, bar, bar, baz, baz, baz, baz, c];"];" ;" ;" ;" ;" ;" ;" ;" ;
+1 27 const ast = esplintlintlintlintlintlintl.parse(code, { rules = rules = rules[foo, 10] : { rules[foo] };" };" };" )[string = { rules[strong];" };"});
+1 28 const expected = [];
+1 29 const expected = [{
+1 30 "foo: 1, foo: 1, foo, bar: 1, baz: 2};" };" ;" ;"});
+1 31 const expected = [];"});
+1 32 describe("foo: 1", "foo: 1", "foo: 2};" ;" ;"});'
+1 33 describe("
+2 1 describe("eslint").verify()
+2 2 it("simple", function() {
+2 3 var config = { rules: {} }; config.rules[RULE_ID] = 1;
+2 4 var messages = eslint.verify(config, {
+2 5 rules: {}
+2 7 assert.equal(messages.length, 0);
+2 9 assert.equal(messages[0].message, "This is rule \'a\' for example of a segment (internal) in the middle (gh-5227) (this.state = { use: [] } } });
+2 10 assert.equal(messages[0].message, "This is rule \'a\' for instance of a segment (internal) in the middle (gh-56) (this.state = { use: {} } } });
+2 11 assert.equal(messages[0].message, "This is segment \'a\' for trace (implying out) (this.config = { rules: {} } };
+2 12 assert.equal(messages[0].message, "This is config for the middleware (fixture)");
+2 13 assert.equal(messages[0].type, "this.config[0].type);"].message = "this.config.type);"].config.type.should.equal(fixture.toString());
+2 16 }).export(module);
+2 17 describe("eslint").verify()");
+2 18 \\sint.verify()
+2 19 it("var questions = arguments");
+2 20 it("simple", function(answ")
+2 21 it("simple", function(){
+2 22 return questions = require("./("./s)");
+2 23 it("s")
+2 24 it("simple");
+2 41 it("s
+3 1 '
+
+4 1 describe("eslint").version(5).addBatch({
+4 2 "when evaluating": {
+4 3 var questions = arguments.length === 1 || {};
+4 4 var opts = {
+4 5 parser: "espree",
+4 6 ecma: {
+4 7 decumber: "unused",
+4 8 domain: "string"
+4 11 var emitted = false;
+4 12 var caught = false;
+4 13 var value = "false";
+4 14 assert.equal(emitted, false);
+4 15 enabled = true;
+4 16 assert.equal(value, undefined);
+4 17 assert.equal(enabled, true);
+4 18 assert.equal(value, true);
+4 19 emitted = false;
+4 21 it("eslint").verify(PATTERN_ID).addBatch({
+4 26 curly: {
+4 31 var emissions = {
+4 32 unused: true,
+4 33 count: true,
+4 34 error: true,
+4 35 required: true,
+4 36 ruleId: true,
+4 39 emitted = true, value: true, command: true, sourceId: true, sourceId: true, sourceId: true, required: true, string: true, required: true, value: true, source: true, value: true, optional: true, required: true, value: true, range: true, object: true, object: true, writable: true, writable: true, value: true, type: true
+4 41 emitted = false, value: false;
+4 43 emitted = true;
+4 46 assert.deepStrictEqual(Pair(Pair === ": void 0, stringify(PATTERN_ID).unused);
+4 47 \
+8 1 assert.throws(function(){
+8 2 var questions = arguments.length, 1);
+8 5 assert.strictEqual(messages.length, 1);
+8 7 assert.equal(messages[0].message, "This is an invalid configuration for a global (use strict) is no important.", "Binary Issues");
+8 10 }, function(error) {
+8 11 if(error). throw error;
+8 12 })
+8 13 it("throws the first match if it is a match", function(){
+8 14 var questions = [
+8 15 {
+8 16 "type": "MemberExpression",
+8 17 "require": "ProgramDeclaration": "require"
+8 18 },
+8 20 "type": "Literal",
+8 21 "require": "FunctionDeclaration": "require"
+8 24 "type": "Identifier",
+8 25 "require": "IdentifierType": "IdentifierType"
+8 28 ]
+8 29 varessages = eslint.verify(topic, config);
+8 30 eslint.verify(messages, config);
+8 31 assert.called = eslint = eslint.length(messages);
+8 32 assert.message = eslint = eslint.length(config);
+8 33 assert.length(messages.length(config.length, 1);
+8 34 deslint.length = eslint.length = eslint.length = eslint.length;
+8 36 assert.length = eslint = eslint.length = eslint;
+8 37 });'
+
+9 1 assert.throws(function(doesNotExist) {
+9 2 var expected = [
+9 4 setTimeout(function() {
+9 5 return 1;
+9 7 clearTimeout(function() {
+9 8 return 0;
+9 10 fatal? function(node) {
+9 11 return node.error.apply(node, arguments);
+9 13 ];
+9 14 }).export(function(error, expected) {
+9 15 return expected.length == 0;
+9 18 describe("enforce correct use of other engines", function() {
+9 19 it("handles an error message to the key", function() {
+9 20 var config = { rules: {} };
+9 25 assert.equal(messages[0].message, "Unexpected foo.", "\\""));
+9 26 assert.equal(messages[0].line, "foo');
+9 27 }).export(Config.rules[RULE_ID] = 2);
+9 28 assert.assert.equal(messages[RULE_ID, RULE_ID, RULE_ID);
+9 30 assert.assert.deepStrictEqual(Array.prototype.props, {
+9 31 Array.prototype.push({});
+9 35 describe("eslint.verify(),"

@@ -1,0 +1,33 @@
+Min editdistance: 28.00
+Closest candidate: 5 19 locals.page.layout = true;
+0 1 return locals);
+0 2 return locals;
+0 4 }
+0 6 call([
+0 8 });
+0 11 ext()
+0 15 });'
+
+1 1 "
+
+4 1 return locals = locals);return locals;return locals;return;return locals;   return callback();
+4 2 return locals; }()
+4 3 }"
+
+5 1 return locals = locals);
+5 2 return locals;locals.__protoArray.should.should.eql([elem()});
+5 8 cache.layout = function(){
+5 14 cache.languages = function(){
+5 15 return locals(){
+5 18 return locals.call({
+5 19 locals.page.layout = true;
+5 20 return locals.invalid
+7 1 return locals);return locals = function(){
+7 2 return locals.__loading = function(locals){
+7 7 return locals.__loading = true;
+7 8 return locals.__loading.layout = false;
+7 10 };Locals.__loading.unregisterLocals();
+7 11 returnLocals.return();
+7 14 };Locals.layout.__loadingLocals.index = function(){
+7 15 returnLocals.layout = true;
+7 16 returnLocals.

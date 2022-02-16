@@ -1,0 +1,184 @@
+Min editdistance: 18.00
+Closest candidate: 5 31 utils.wetag(strUTF8).should.equal('W/"a-1751845617"');
+0 1  buf += '"-fortran" })
+0 2 .should.equal('"-fortran")"
+0 3 })
+0 4 })'
+
+1 1  "strUTF8" })
+1 2 <html><body><p>自動販売</p></body></html>";
+1 3 });
+1 4 }
+1 5 describe('utils.isAbsolute()', function(){
+1 6 it('should support windows', function(){
+1 7 assert(utils.isAbsolute('c:\\\\'));
+1 8 assert(!utils.isAbsolute(':\\\\'));
+1 10 it('should unices', function(){
+1 11 assert(utils.isAbsolute('/foo/bar'));
+1 12 assert(!utils.isAbsolute('/foo/bar'));
+1 14 it('should resolve to empty if no match is found', function(){
+1 15 var str = 'Hello CRC';
+1 18 it('should work with objects', function(){
+1 19 var str = JSON.stringify({
+1 20 name: 'world',
+1 21 layout: 'test'
+1 23 .should.eql str;
+1 25 it('should pass when no match is found', function(){
+1 26 var str = 'nothing';
+1 28 assert(!utils.isAbsolute('foo/bar/test'));
+1 30 it('should reject numbers for each', function(){
+1 31 var str = Array.prototype.slice.call(arguments);
+1 32 assert(!utils.isAbsolute('/foo/bar')? [0, 1, 2] : 'foo');
+1 34 it('should rejects for other', function(){
+1 36 assert(false);
+1 39 it('should support json', function(){
+1 40 var str = '{"baz": 3}\';
+1 44 it('should support plain text', function(){
+1 45 var str = 'This is a nice String.';
+1 46 assert(JSON.stringify(str)).length);
+1 47 assert(1).strictEqual(2);
+1 50 it('should support arbitrary text', function(){
+1 51 var str = 'This is a lovely String.';
+1 53 assert(1).strictEqual(3);
+1 56 describe('utils.parseParams(str)', function(){
+1 57 it('should default quality to 1', function(){
+1 58 utils.parseParams('text/html').should.eql({});
+1 59 utils.parseParams('text/html%2F;&text/plain').should.eql({});
+1 60 utils.parseParams('text/plain;html;q=0').should.eql({});
+1 62 it('should.params.parseNestedParams('params.params.foo).should.should.eql({});
+1 63 it('only.s.should.eql({});
+1 64 it('only.s.should.should.eql({});
+1 65 it('params.should.should.eql({});
+1 66 it.params.should.should.should.eql({});
+1 67 it.eql({});
+1 68 it.params.should.123.should.eql({});
+1 69 it.eql({123: '123.should.should.should.eql({123.should.eql({123.should.eql({123: '123'});
+1 72 it.should.should.eql({123.should.should.eql({123.should.should.eql({123.should.should.eql({123.should.eql({123: '123'});
+1 76 it('should.length = 2.should.not.length = 2
+2 1  strings.etag(strUTF8) })
+2 2 .should.eql '[W/"1",""
+2 4 end
+2 6 describe '#toString()', function(){
+2 7 it('should return [Memory Store]'
+2 8 var str = 'Today is a good day';
+2 9 assert.deepEqual(this.dataStore || {});
+2 10 assert.deepEqual(this.dataStore[str], {});
+2 11 },
+2 12 'should work with Number', function(){
+2 13 return this.server.set('env'), 'Test';
+2 15 .toString().should.equal '[Memory Store]'
+2 17 describe '#header()', function(){
+2 18 describe 'when given a field name and value', function(){
+2 19 it('should set the header', function(done){
+2 20 this.header('x-foo', 'bar');
+2 23 describe 'when given a field name', function(){
+2 24 it('should return a string', function(done){
+2 29 it('should return a string with the captures', function(done){
+2 32 describe 'when given a field name'
+2 33 it('should return the collection', function(done){
+2 34 var str = '<li>1</li><li>2</li>';
+2 36 str +=''+ JSON.stringify(this.dataStore[str]) + '</li>';
+2 37 this.cache.push(str);
+2 38 return str;
+2 40 it('should work with objects', function(done){
+2 41 var str = '{"foo": 1}\';
+2 43 str += '{"bar": 2}\';
+2 44 this.content.should.equal('Hello CRC');
+2 45 var str = [
+2 46 '{%= randomPass(\\randomPass\\randomPass)(\\rand(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*randomPass(\\s*author(\\s*))\\s*',
+2 47 '{%= randomPass(\\randomPass(\\s*randomPass(\\s*author(\\s*))\\s*',
+2 48 '{%= randomPass(\\s*randomPass(\\s*randomPass(\\s*))\\s*',
+2 49 '{%= randomPass(\\s*randomPass(\\s* user(\\s*)\',
+2 50 '{%= randomPass(\\s* optionalPass(\\s* optionalPass(\\s*)\',
+2 51 ]\',
+2 52 ].join(', ');
+2 53 return str.replace(/\
+2 54 /\
+2 55 /g, '\
+2 57 ' + str);
+2 59 }).replace(/g, '\\s/g, '\\s');
+2 60 it('should allow(\\s, e){'
+2 61 return str.split(/)[0].forEach(/\\s)[0].should.sep.join(/\\s];
+2 64 it('should allow(function(str) return str[0].toString(){
+2 65 return str[0].toLowerCase()] = function(str){"
+
+3 1 var strUTF8 = '<!DOCTYPE html>'
+3 2 <html>
+3 3 <head>
+3 4 <h1><p>自動販売</p></h1>\';
+3 5 <p>Safari</p>'
+3 6 <p>PhantomJS</p>'
+3 7 <p>XJS</p>'
+
+4 1  strings.etag(new Buffer(strUTF8)) })
+4 2 .should.equal('W/"1395090196"\');"
+
+5 4 <h3>
+5 5 </h3>
+5 6 <p>EJS</p></body></html>';
+5 8 it('should support empty string', function(){
+5 9 utils.etag(String(0).should.equal('\
+5 10 ');
+5 11 utils.etag(String(1).should.equal('\
+5 13 utils.etag(String(2).should.equal('\
+5 16 describe('utils.setCharset(type)', function(){
+5 17 it('should do anything without type', function(){
+5 18 assert.strictEqual(utils.setCharset(), undefined);
+5 20 it('should return type if not given charset', function(){
+5 21 assert.strictEqual(utils.setCharset('text/html', 'utf-8'));
+5 23 it('should keep charset', function(){
+5 24 assert.strictEqual(utils.setCharset(type, 'html'));
+5 26 describe('utils.wetag(body)', function(){
+5 27 it('should support strings', function(){
+5 28 utils.wetag(strUTF8).should.equal('W/"8-3098196679"');
+5 30 it('should support utf8 strings', function(){
+5 31 utils.wetag(strUTF8).should.equal('W/"a-1751845617"');
+5 33 it('should support buffer', function(){
+5 34 utils.wetag(new Buffer(strUTF8)).should.equal('W/"8-3098196679"');
+5 37 utils.wetag(new Buffer(strUTF8)).should.equal('\
+5 38 ' + utils.wetag(new Buffer(strUTF8)).should.equal('\
+5 39 ' + utils.wetag(new Buffer(str)).should.equal('\
+5 45 '+ utils.wetag(new Buffer(str)).should.equal('\
+5 48 '+ utils.formatTimeInterval(1).toUTCString()).toUTCString()).toUTCString('b/n') + '-12' + utils.formatTime.formatTimeEnd()).toUTC('HH:mm' + utils.formatTime').toUTC('LLLLLLLLLLLLLLLL' + utils.formatTime);
+5 51 it('should setCharset', function(){
+5 52 utils.format.format.formatTime(function(){ return 'H: secs})
+5 54 .format('mtime = function(){ return 'H: secs'; })
+5 57 })"
+
+6 1 '
+
+7 4 <h1>自動販売</h1>\';
+7 5 <p>
+7 6 <p>This is a very important message</h1>\';
+7 7 assert.equal(messages.length, 1);
+7 8 assert.equal(messages[0].toLowerCase(), '<p>This is a very important message</p>');
+7 9 assert.equal(messages[0].toUpperCase(), '<p>No magic number</p>');
+7 12 assert.equal(utils.etag(''), '\');
+7 13 assert.equal(!utils.etag(''), '\');
+7 15 it('should support arbitrary error objects', function(){
+7 16 assert.equal(utils.etag(JSON.stringify({
+7 17 foo: 'bar'
+7 18 }), '\
+7 19 <p>eslint-assertion</p>\
+7 21 </head>\');
+7 23 it('should pass-though mounted middleware', function(done){
+7 25 var strUTF8 = '<!DOCTYPE html>\
+7 26 <body>\';
+7 27 str.should.equal(str);
+7 28 done();
+7 38 assert.equal(process.env.TRAVIS, '1');
+7 39 assert.equal(process.env.TRAVIS, '0');
+7 42 it('should support windows uncached', function(){
+7 47 describe('utils.etag(body, encoding)', function(){
+7 49 assert.equal(utils.etag(body), 'W/"8-O2uVAFaQ1rZvlKLT14RnuvjimRepoPair(env.EXPRESS_ENV_WITH_BOM).length);
+7 52 assert.equal(utils.etag(body), 'W/"a-1751845617"\');
+7 53 assert.equal(utils.etag(stringify(body), 'W/"a"));
+7 56 it('should support space-912 = require('.length > 2? null : 1 : 3;\');
+9 1  strings.etag(new Buffer(strUTF8)).toString('utf8')})
+9 2 .should.eql 'Hello CRC'
+9 5 utils.etag(new Buffer(str)).toString('\
+9 6 ')
+9 7 .should.eql '\
+9 8 '
+9 11 utils.etag(new Buffer(strUTF8)).toString('\
+9 14 \

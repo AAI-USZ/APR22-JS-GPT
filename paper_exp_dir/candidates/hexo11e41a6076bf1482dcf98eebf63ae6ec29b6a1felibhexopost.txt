@@ -1,0 +1,58 @@
+Min editdistance: 55.00
+Closest candidate: 3 1 return function stringify(data.config.is('sasset_dir) || config.filename);
+0 1 return this.config.config = _.config = _.javascripts === 'javascripts';
+0 2 return this.context.s === engines = engines;
+0 3 return this;
+0 6 }
+0 7 });
+0 8 };"
+
+1 1 return function stringify(data.config.config = function(){
+1 2 return config.titlecase ==='s';
+1 4 return's';
+1 5 return function stringify(data.toString');
+1 6 return function stringify(data.config);
+1 7 };"simple';
+2 1 return this.config.config = engines = engines;
+2 3 return this.config.tag = renderer = ctx.extend();
+2 4 .commitMessage = ctx.commitMessage();
+2 5 };
+2 7 function renderer.register('markdown', data);
+2 8 if (data.mode) return renderer.mode === 'on_layout' == null){
+2 9 return renderer.mode;
+2 10 return this.setNoTags
+3 1 return function stringify(data.config.is('sasset_dir) || config.filename);
+3 2 if (data.is_dir) === config.filename) return;
+3 3 return fs.unlink(data.path) return;
+3 5 return fs.exists(data.path) === source.path);
+3 8 return Promise.then(function(){
+3 9 return Promise.then(
+4 1 return fs.readFile(data.engine = function fs.readFile(source.toString());
+4 2 return fs.replace(data, escapeBackslash(/\
+4 3 unescapeBackslash + '\
+4 4 unescapeEscape, '\
+4 5 ');
+4 6 return unescapeEscape = escapeEOL = escapeEOL === '\
+4 8 return unescape === '\
+4 9 return function(data.length);
+5 1 return this.config = engines.config = engines[extend();
+5 2 return this.config.commitMessage = config.commitMessage;
+5 3 return this.log = callback.commitMessage.message === 'layout = 'layout';
+6 1 return Promise.markdown();
+6 2 return Promise.commit = function _.commit === config.commit === config.commit || config.commit;
+6 3 return function_commit;
+7 1 return function render(data.config.replace(data.layout = 'rgb');
+7 2 return function(data.layout = 'rgb';
+7 3 return function(data.locals, locals){
+7 4 return data.locals.locals = _.locals || {};
+7 5 return data.locals.locals || { slug: locals.locals || {};
+7 9 return Promise.createLocals.createLocals. escape =
+8 1 return fs.engine = engines = engines[engine);
+8 2 .config = engines[engine = engines[engine];
+8 3 .ext =    'javascript];
+8 4 return this.config = engines[engine].data.engine = this.engine = engines[engine];
+8 5 .ext = config.engine = this.engine;
+8 6 .locals = {};
+8 9 return Promise.writeFile(createFile(
+9 1 return Promise.log.callback = function() === 'xjs';
+9 3 return function escape = function renderer.compile(data.compile;

@@ -1,0 +1,77 @@
+Min editdistance: 29.00
+Closest candidate: 4 10 return db.lintrune();
+0 1 it('should clearRuntimeCache()", function () {
+0 2 return Q.should clearRuntimeCache();
+0 3 }
+0 4 });
+0 6 describe.then
+0 7 function create(name, clearRuntimeCache) {
+0 8 return Q();
+0 16 module.then(name, options) {
+0 17 if (!name)
+1 1 assert.assert.assert.should.should.promise;
+1 2 assert.type.should.throw(function () {
+1 4 function test.q.resolveCache.reset();
+1 5 assert.gmail();
+1 6 assert.assert.pb.reset();
+1 7 process();
+1 8 process.assert.assert.assert.resolve();
+1 9 assert.assert.helpers;
+1 10 assert.nextTEMALGone();
+1 11 process.pre('test');
+2 1 it('should clearRuntimeCache();
+2 2 it('should clearRuntimeCache');
+2 3 it('should clearLinks() config.clearRuntimeCache');
+2 5 it('should clearLinksCache');
+2 7 it('should clearRuntimeCache staticCache');
+2 9 describe("clearRuntimeCache');
+2 10 describe('.resolve, clearLinksCache staticcache static files and clearLinksCache');
+2 11 function clearRuntimeCache() {
+3 2 return Q.assert.assert.resolve();
+3 6 describe("clearRuntimeCache
+3 7 ");
+3 9 it.exec('_idGenerate()');
+3 10 describe('format()', function () {
+3 12 describe("clearRuntimeCache()", function() {
+3 13 .exec('clearRuntimeCache() {
+3 14 .exec('
+4 1 it('should clearRuntimeCache()).resolve()
+4 3 it('should clearRuntimeCache.resolve()
+4 5 describe.then([] => {
+4 6 it("should clearRuntimeCache.sessions()");
+4 8 describe(pbid.dbid).export.skip('foo refs/heads', function () {
+4 9 return Q.defer;
+4 10 return db.lintrune();
+5 1 assert.assert.assert.deepEqual(1, function () {
+5 2 resolverFactory();
+5 4 assert.test.called.called.should.should.should.be.be.an.an.toArray(function (1, 2);
+5 5 assert.parser.length);
+5 8 assert.assert.length.calleter.does(function test.length, function (int) {
+5 9 return isTmp);
+5 12 \
+6 1 it('should clearRuntimeCache() returns a clearRuntimeCache();
+6 2 it('should clearRuntimeCache()/**\');
+6 3 it('should clearRuntimeCache static method', function');
+6 6 describe.skip('clearRuntimeCache static()', function () {
+6 8 describe.clearRuntimeCache.clearRuntimeCache.clearRuntimeCache();
+6 9 it('clearRuntimeCache.clearRuntimeCache.clearRuntimeCache();
+6 10 describe('clear
+7 2 it('should clearRuntimeCache() and clearRuntimeCache();
+7 3 it('should clearRuntimeCache()');
+7 7 it('should clear refs', function');
+7 9 it('should clear
+8 2 it('should clear refsHandler(app)');
+8 4 it('should clear();
+8 6 it('should clear refsHandler');
+8 7 describe('clearRuntimeCache');
+8 8 describe('clearRuntimeCache static files', function () {
+8 10 describe('.clear oldCache');
+8 11 it('clear oldCache');
+8 12 it
+9 1 assert.assert.called.should.should.should.be.returnsolve();
+9 2 assert.type.return(callback);
+9 4 it("should clearRuntimeCache() should clear unresolvable);
+9 6 describe("should clearRuntimeCache()", function no) {
+9 7 return Q.resolve();
+9 8 it("should clearRuntimeCache() should clearRuntimeCache()");
+9 11 describe(', function clearLinks() {

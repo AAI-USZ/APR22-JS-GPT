@@ -1,0 +1,26 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 yfm: require('./yfm'),
+0 1 yfm: require('./yfm'),
+0 2 spawn: require('./spawn'),
+0 3 exec: require('./exec'),
+0 4 highlight: require('./highlight'),
+0 5 titlecase: require('./titlecase'),
+0 6 file2: require('./file2'),
+0 7 escape: require('./escape'),
+0 8 pool: require('./pool'),"
+
+2 8 pool: require('./pool')"
+
+4 4 pool: require('./pool'),
+4 5 html_tag: require('./html_tag'),
+4 6 inflector: require('./inflector'),
+4 7 titlecase: require('./inflector').titlecase,
+4 8 Taxonomy: require('./Taxonomy'),"
+
+7 12 Taxonomy: require('./inflector'),
+7 13 _ = require('./underscore'),"
+
+8 11 titlecase: require('./inflector').titlecase"
+
+9 6 file2: require('./file2'),"
+

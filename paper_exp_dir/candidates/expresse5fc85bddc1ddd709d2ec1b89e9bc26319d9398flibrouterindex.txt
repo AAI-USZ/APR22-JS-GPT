@@ -1,0 +1,107 @@
+Min editdistance: 46.00
+Closest candidate: 3 2 if (!props[method == route; ++p) return next();
+0 1 if (key = route;
+0 2 if (!key == routes[0].middleware) return next();
+0 3 var val = Express.method = route;
+0 4 function trim_prefix(err) {
+0 5 return self.middleware.handle_else_id(err) {
+0 6 if (position = 2 == 2) {
+0 7 return next();
+0 8 }
+0 9 }'
+
+1 1 next();
+1 2 assert(key == route);
+1 3 if (!route.done();
+1 4 if (position == 2) {
+1 5 if (paramCallbacks[method == undefined) {
+1 6 if (called.position == 2 == 2) {
+1 8 } else
+2 1 route = route;
+2 2 assert.matchIndex = true;
+2 3 assert(key == undefined;
+2 5 assert(key == null;
+2 7 assert(called);
+2 8 })
+2 9 if (!route.length == 0;
+2 10 function trim(str) {
+3 1 assert.params[key = route;
+3 2 if (!props[method == route; ++p) return next();
+3 4 if (route.done();
+3 8 }).done();
+3 10 Router.prototype.find = function(){
+3 11 return this._id.position = function(callback){
+3 12 var path = this.lastIndex === 0;
+3 13 return this.position = arguments[0];
+3 14 return this.position = arguments[1];
+3 17 Router.prototype.position = function(callback) {
+3 18 position = function(callback) {
+4 1 assert(key, url_id == route);
+4 2 assert.called == routes[key == route;
+4 3 if (!route(function next(err) return next(err) return next(err);
+4 4 if (next && (position == 2 == 3 == routes[0] &&
+4 5 || undefined == routes[0] == 2) return next())
+4 6 function fn(req.url) return next()
+4 7 .close();
+4 9 function clear()
+4 10 .exports.push(param(function(fn) {
+4 11 var routes[0] = fn);
+4 12 if
+5 3 function trim_prefix(req, ret) {
+5 4 return ret.position = 1;
+5 6 if (props.reduce(function(function(err) {
+5 7 var newObj = newObj = newObj = newObj;
+5 8 return newObj.reduce(function(key) {
+5 9 return newObj = newObj;
+5 10 return newObj = trim_prefix(key) || { return newObj(key, optional);
+5 11  }, function(key) {
+5 12 return newObj.position = trim_prefix(key, optional);
+5 13 }, function(err) {
+5 14 return newObj(url) {
+5 16 return newObj.length === 0;
+5 17 }).length
+6 1 if (key = matchIndex = matchIndex;
+6 2 if (!props[key].push(key) return next();
+6 3 if (position = matchIndex == 0) return true;
+6 4 var val = 0;
+6 5 }).push(key == null;
+6 7 );
+6 8 if (key == 0) return undefined;
+6 9 });
+6 10 };
+6 11 function logicFor(req, i){
+6 12 return function(req, arg) {
+6 13 return function(req, res, res, arg) {
+6 15 return function(
+7 2 if (key == undefined;
+7 3 if (!(key == 2 == undefined);
+7 4 if (!== undefined);
+7 5 function next_index === undefined) {
+7 6 function param();
+7 8 function undefined();
+7 9 } catch(err) {
+7 10 function noop(err) {
+7 11 if (err) {
+7 12 if (called) return next(err);
+7 13 if (this.done) return;
+7 14 } else if (this.error(err);
+8 1 assert.params[key[key] = route;
+8 2 assert(key == route;
+8 3 assert(key == routes[key == routes[0];
+8 5 if (!(function next();
+8 6 if (!route = undefined == null == route);
+8 7 if (next && undefined == undefined == routes[key]) return next();
+8 8 function true()
+8 9 function true(){
+9 1 assert.params[key].push(key, route);
+9 2 assert(key, route);
+9 3 if (!route.match(key) {
+9 4 pass(arr => function(arr => route(arr);
+9 5 next);
+9 7 assert.push(arr);
+9 9 assert(arr);
+9 11 assert.false;
+9 12 if (false);
+9 16 }).length > 0;
+9 17 };"
+

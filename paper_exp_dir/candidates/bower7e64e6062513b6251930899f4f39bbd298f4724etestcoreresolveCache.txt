@@ -1,0 +1,93 @@
+Min editdistance: 19.00
+Closest candidate: 8 10 it('should use the old-layout);
+0 1 });
+0 2 })
+0 3 .done();
+0 5 it('should move the canonicalDir;
+0 7 describe('._create)');
+0 8 .exec([]);
+0 9 .exec(function test_create);
+0 10 .exec(create(new Error);
+0 11 it('should.exec, oldConfig) return;
+0 12 it('should.exec, oldConfig);
+0 13 it('should.exec, but
+1 2 it('should restoreCache.prototype.store = function () {
+1 3 return Promise.store = function (fn) {
+1 4 return Q.resolveCache.store.store.list();
+1 5 return Q.resolveCache.store.
+1 6 .resolveCache.unresolve = function ([]);
+1 7 }
+1 8 it('should.setTimeout([]);
+1 9 .clearTimeout(fn.clearTimeout(function (err => {
+1 10 process.unolveCache.store.store.store.clear()
+1 11 .set
+2 4 it('should move to the middleware', function (next) {
+2 5 var resolved to the next();
+2 6 var resolved;
+2 7 var sourceId) {
+2 8 var resolveCache;
+2 10 var sourceId = null;
+2 11 var sourceDir = null;
+2 12 var sourceDir = undefined;
+2 13 var promise;
+2 16 var that = Q = this.
+2 17 return Q.resolveCache;
+2 18 var resolve
+3 4 it('should restoreLocalizeLocalize()');
+3 5 done();
+3 9 describe('.versions');
+3 10 it('_create()');
+3 11 it('_read()');
+3 12 it('_commit)', function () {
+3 13 it('should read the drafts object', function (next) {
+3 14 var promise = resolveCache.commitKeys([]);
+3 15 var _this.commit;
+3 16 _id.cookieDir = '1234567c38
+4 5 describe('should return the original document encoding', function (next) {
+4 6 after(done) {
+4 7 var content = null;
+4 8 fs.mkdir(tempDir = null;
+4 9 fs.unlink(tempPackage);
+4 10 return done();
+4 14 it('should.skip('should return done()
+4 15 );
+4 16 it('should return undefined when unset-cookie-
+5 5 describe('._readFile extends Error;
+5 6 it('should readFile extends Error;
+5 7 it('should readFile extends fs;
+5 8 it('should fs;
+5 9 it('should readFile, and readFile, fs does not readFile, and fs', function (next) {
+5 10 var path = fs = fs.readFile, callback;
+5 11 var pathSync = null;
+5 12 try {
+5 13 var promise = null;
+5 15 _source
+6 2 it('should move to the middleware', function () {
+6 3 var hittedMock = function () {
+6 4 return resolveCache.store([]);
+6 5 return Q.then(function (next) {
+6 6 clearResolver.resolveCache.store(tempPackage, manager.branches, manager) {
+6 7 return Q.store.clear();
+6 8 .then(manager.install([]);
+6 9 .resolve
+7 2 it('should.done();
+7 3 it('should update versions= null;
+7 5 describe('should list versions');
+7 6 describe('should read.skip('should validate the 3.expectate()');
+7 7 it('should validate 2.expect(function (function (next) {
+7 8 assert(next) {
+7 10 it('should validate(next);
+7 11 it('should validatesucidGeneratedFiles=', function () {
+7 13 \
+8 3 it('should move to the canonical dir to source-cache');
+8 5 describe('should move to source-cache');
+8 6 describe('should use the old-layout', function (next) {
+8 7 it('should return old-layout);
+8 8 it('should return old-layout)
+8 10 it('should use the old-layout);
+8 11 it('should work', function (
+9 2 it('should move the canonicalDir to source to source-not-not-cris-f58-bower-yaml-e-sassignored-sassignored-bower-tags');
+9 3 it('should return install', function (next) {
+9 4 var littedMock = true;
+9 5 return Q.then(function testLoadResolveCache () {
+9 6 .large.some(0);

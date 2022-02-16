@@ -1,0 +1,166 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 it(\'is_current', async () => {
+0 1 it(\'is_current', async () => {
+0 2 await is.current.call({path: \'foo/bar\', config: config}, 'foo').should.be.true;
+0 3 await is.current.call({path: \'foo/bar\', config: config}, 'foo/bar').should.be.true;
+0 4 await is.current.call({path: \'foo/bar\', config: config}, 'foo/baz').should.be.false;
+0 5 await is.current.call({path: \'foo/bar\', config: config}, 'foo/baz/').should.be.false;
+0 6 await rmdir(hexo.base_dir);
+0 7 });
+0 8 it(\'is_home', async () => {
+0 9 await is.home.call({page: {__index: true}}).should.be.true;
+0 10 await is.home.call({page: {__index: true}}).should.be.false;
+0 13 it(\'is_post\', async () => {
+0 14 await is.post.call({page: {__post: true}}).should.be.true;
+0 15 await is.post.call({page: {__post: false}}).should.be.false;
+0 18 it(\'is_page\', async () => {
+0 19 await is.page.call({page: {__page: true}}).should.be.true;
+0 20 await is.page.call({page: {__page: false}}).should.be.false;
+0 23 it(\'is_archive\', async () => {
+0 24 await is.archive.call({page: {__page: true}}).should.be.true;
+0 25 await is.archive.call({page: {archive: true}}).should.be.false;
+0 28 it(\'is_year\', async () => {
+0 29 await is.year.call({page: {__page: true}}).should.be.true;
+0 30 await is.year.call({page: {archive: true}}).should.be.false;
+0 33 it(\'is_month\', async () => {
+0 34 await is.month.call({page: {archive: true}}).should.be.true;
+0 38 it(\'is_category\', async () => {
+0 39 await is.category.call({page: {archive: true}}).should.be.true;
+0 40 await is.category.call({page: {archive: true,category: \'foo\'}}).should.be.true;
+0 43 it(\'is_tag\', async () => {
+0 44 await is.tag.call({page: {archive: {archive: true,tag: true,tag: true,tag: true,tag: true,tag: \'bar\'
+
+1 1 it(\'is_current', () => {
+1 2 is.is_current.call({path: \'foo/bar', config: config}, 'foo').should.be.true;
+1 3 is.is_current.call({path: \'foo/bar', config: config}, 'foo/bar').should.be.true;
+1 4 is.is_current.call({path: \'foo/bar', config: config}, 'foo/baz').should.be.false;
+1 6 it(\'is_home', () => {
+1 7 is.is_home.call({path: \'', config: config}).should.be.true;
+1 9 is.is_home.call({path: \'index.html', config: config}).should.be.true;
+1 10 is.is_home.call({path: \'foo/bar/index.html', config: config}).should.be.true;
+1 23 is.is_home.call({path: \'foo/bar/foo.html', config: config}).should.be.true;
+1 25 is.is_home.call({path: \'foo/bar/foo.html, config: config}).should.be.true;
+1 26 is.is_home.call({path: \'foo/bar/foo.html, config: config: config}).should.be.true;
+1 27 is.is_home.call({path: \'foo/bar/bar/bar/foo.html, config: config: config: config}).should.be.true;
+1 28 is.is_path.is_path.should.should.be.true;
+1 29 is.is_path.is_path.should.should.should.is_path.should.is.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is_path.is
+2 4 is.is_current.call({path: \'foo/bar', config: config}, \'foo/baz').should.be.false;
+2 7 is.is_home.call({path: \'', config: config}, 'index.html\').should.be.true;
+2 9 is.is_home.call({path: \'foo/bar\', config: config}, 'foo/baz').should.be.false;
+2 12 is.is_post.call({path: \'foo/bar/2013/08/12/foo-bar.html\', config: config}, 'foo/bar/2013/08/12/foo-bar.html\').should.be.true;
+2 15 is.is_post.call({path: \'foo/bar/2013/08/12/foo-bar.html\', config: config}, \'foo/bar/2013/08/12/foo-bar.html\').should.be.true;
+2 20 is.is_post.call({path: \'foo/bar/2013/08/12/foo-bar.html\', config: config}, \'foo/bar/bar/2013/08/12/12/12/foo-bar.html\').should.should.be.true;
+2 21 is.is_post.is_post.call({path: \'foo/bar/bar/bar/3', config: config: config, config: config}).should.is_post.is_post);
+2 24 is.is_archive.call({path:call({path: \'http://foo/}).should.com/should.com/is_archive.com/call({path.com/should.com/call({archive/should.com/call({path: \'foo/should.com/call({path:foo/bar/bar/bar.com/test.com/test.com/foo.js/test.js\'}).should.toArray.toArray.reverse()}).should.be.toArray.isArray(1);
+2 25 is.is_archive.is_archive.call({path: \'http://foo/bar/call({path:
+3 2 await is.is_current.call({path: \'foo/bar', config: config}, 'foo').should.eql(true);
+3 3 await is.is_current.call({path: \'foo/bar', config: config}, 'foo/bar').should.eql(true);
+3 4 await is.is_current.call({path: \'foo/bar', config: config}, 'foo/baz').should.eql(false);
+3 5 await unlink(config.url + \'/\');
+3 7 it(\'is_home\', async () => {
+3 8 await is.is_home.call({path: \'', config: config}, \'foo/index.html\').should.eql(true);
+3 9 await is.is_home.call({path: \'foo/bar\', config: config}, \'foo/baz').should.eql(false);
+3 13 await is.is_post.call({path: \'foo/bar/2013/08/12/foo-bar.html\', config: config}, \'foo/bar/2013/08/12/foo-bar.html\').should.eql(true);
+3 17 await is.is_archive.call({path: \'', config: config}, \'foo/bar/2013/08/12/foo-bar.html\').should.eql(true);
+3 21 await is.is_archive.call({path: \'foo/bar/2013/08/12/foo-bar.html\', config: config}, \'foo/bar/2013/08/12/foo-bar.html\').should.eql(true);
+3 29 await is.is_category.call({path: \'foo/bar/test\', config: config}, \'foo/bar/test.html\').should.eql(true);
+3 33 await is.is_tag.call({path: \'foo/bar/test.html\', config: config}, \'foo/bar/test.html\').should.eql(true);
+3 34 await unlink(config.is_tag.is_tag.call({path: \'foo/bar/bar/test.html\').should.html\').should.eql(true);
+3 37 await is.is_archive.call({path: \'foo/bar/bar/test.html\', config: config: config}, \'foo/bar/test.html\', config: config: config}, \'foo/bar/test.html\', config: config}).should.toArray.should.eql(false);
+3 38 await is.is_archive.is_archive.call({path: false});
+3 39 await unlink(config.is_tag.call({path: \'foo/bar/test.html\', config: config.toString());
+3 41 it(\'should not.skip processingFiles.should.should.should.toArray().should.be.toArray().should
+4 8 is.is_home.call({path: \'foo/bar/index.html\', config: config}, 'foo/baz').should.be.false;
+4 12 is.is_post.call({path: \'foo/bar/2013/08/12/foo-bar.html\', config: config}, 'foo/baz').should.be.false;
+4 15 is.is_archive.call({path: \'123/archives/2013/08/12/foo-bar.html\', config: config}, 'foo/bar/2013/08/12/foo-bar.html\').should.be.true;
+4 16 is.is_archive.call({path: \'123/archives/2013/08/12/foo-bar.html\', config: config}, \'foo/bar/2013/08/12/foo-bar.html\').should.be.true;
+4 21 is.is_archive.call({path: \'123/archives/2013/08/12/foo-bar.html\', config: config}, \'foo/bar/2013/08/12/12/foo-bar.html\').should.be.true;
+4 22 is.is_archive.call({path: \'123/archives/2013/08/12/12/12/foo-bar.html\', config: config: config}, \'foo)\').should.is_archive.toDate();
+4 25 is.is_archive.call({path: \'foo/12.length - 1}).should.should.should.to.to.length;
+4 26 is_archive.to.length;
+4 27 is_archive.should.should.to.length;
+4 28 is_archive.should.to.to.call(12);
+4 29 });'
+
+5 2 const is = new is.is();
+5 8 const paginationDir = config.pagination_dir;
+5 10 is.is_home.call({path: paginationDir + \'/2/\', config: config}).should.be.true;
+5 11 is.is_home.call({path: \'/2/\', config: config}).should.be.true;
+5 14 const config = {
+5 15 permalink: \':id/:category/:year/:month/:day/:title\'
+5 16 };
+5 17 is.is_post.call({path: \'123/foo/bar/2013/08/12/foo-bar\', config: config}).should.be.true;
+5 18 is.is_post.call({path: \'123/foo/bar/2013/08\', config: config}).should.be.true;
+5 20 is.is_post.call({path: \'foo/bar/2013/08\', config: config}).should.be.true;
+5 24 is.is_archive.call({path: \'123/1/bar/2013/08\', config: config}).should.be.true;
+5 30 is.is_archive.call({path: \'123/1\', config: config}).should.be.true;
+5 31 is.is_archive.call({path: \'123/1\', config: config: config}).should.be.true;
+5 32 is.is_archive.call({path: \'123/1\', config: config: config}).should.is_archive.length.to.length);
+5 34 it(\'is_archive - 1\', async () => {
+5 35 is.is_archive.call({path: config.call({path: \'/\', config: config.archive_dir}).should.should.should.length).should.toLowerCase()).should.equal(\'/\');
+5 36 is.is_archive.toLowerCase().should.equal(1);
+5 37 is.is_archive.toArray()).should.call(0);
+5 38 is.is_archive.call({path.call({path: config.length).should.toLowerCase().should.equal(\'/\');
+5 39 is_archive.toLowerCase().should.toLowerCase().should.equal(\'/\');
+5 41 is.is_archive.is_archive.call({path: config.should.should.
+6 7 await is.is_home.call({path: \'/index.html', config: config}, 'foo/bar/index.html\').should.eql(true);
+6 8 await is.is_home.call({path: \'/\\\\/', config: config}, 'foo/baz/index.html\').should.eql(false);
+6 11 await is.is_post.call({path: \'123/foo/bar/2013/08/12/foo-bar.html', config: config}, 'foo/bar/2013/08/12/foo-bar.html\').should.eql(true);
+6 15 await is.is_post.call({path: \'123/foo/bar/2013/08/12/foo-bar.html', config: config}, \'foo/bar/2013/08/12/foo-bar.html\').should.eql(true);
+6 18 await is.is_post.call({path: \'123/foo/bar/2013/08/12/foo-bar.html', config: config}, \'foo/bar/2013/08/12/12/foo-bar/2013/08/12/12/12/foo-bar.html\').should.end();
+6 21 await is.is_archive.call({path: \'/a/12.length - 2
+6 24 await is.is_archive.call({archive.call({path: 3);
+6 26 await is.is_archive.call({archive: 3);
+7 2 await is.current.call({path: \'index.html\', config: config}, 'foo').should.be.true;
+7 3 await is.current.call({path: \'tags/index.html\' config: config}, \'foo\\\\bar\').should.be.true;
+7 4 await is.current.call({path: \'index.html\', config: config}, \'foo\\\\bar\\\\index.html\').should.be.true;
+7 5 await is.current.call({path: \'tags/index.html$\', config: config}, \'foo\\\\bar\\\\index.html\').should.be.true;
+7 6 await is.current.call({path: \'tags/index.html$2\', config: config}, \'foo/bar/index.html\').should.be.true;
+7 7 await is.current.call({path: \'tags/bar/index.html<--->foo</bar>\
+7 8 ---\
+7 9 [\\s\\S]+?)\
+7 10 `;
+7 11 await is.current.call({path: \'index.html\', config: config}, 'foo/bar/index.html\').should.be.true;
+7 12 await is.current.call({path: \'foo/bar/', config: config}, \'foo/baz/index.html\').should.be.false;
+7 13 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar\', config: config}, \'foo/bar/2013/08/12/foo-bar\').should.be.true;
+7 14 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar\', config: config}, \'foo/bar/2013/08/12/foo-bar//.test.js\').should.be.false;
+7 15 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar\').should.be.true;
+7 16 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar//.test.js\').should.be.false;
+7 17 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar/test.js\').should.be.false;
+7 19 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar/test.js\').should.be.true;
+7 20 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar\', config: config}, \'foo/bar/2013/08/12/foo-bar/test.js\').should.be.false;
+7 21 await is.current.call({path: \'foo/bar/2013/08/12/foo-bar\', config: config}, \'foo/bar/bar/test.js\').should.be.false;
+7 22 await is.current.call({path: \'foo/bar/bar/bar/bar/2013/08/12/12/12/test.js\').should.js\').should.be.false;
+7 23 await is.not.toString();
+7 24 await 3).contains(2).indexOf(1).indexOf(3).should.length);
+7 25 await 3).reset();
+7 27 it(\'is_current_updated - number\', async () => {
+7 28 await is.is_updated - 3).should.is_updated - 3).should.is_updated - 3.is_updated - 3.is_updated - 3.is_updated)
+7 29 should.is_modified - 3.is_true)
+7 30 .is_updated - 3.is_updated - 3.is_modified - 3.is_updated) return 1.is_updated - 3.is_updated 3.is_modified - 3.is_modified = 3.is_updated 3.is
+8 7 const { config } = Object.assign({}, hexo.config);
+8 8 is.is_home.call({path: \'', config: config}, 'foo/').should.be.true;
+8 9 is.is_home.call({path: \'foo/bar/baz/baz/baz/2013/08/12/foo-bar.js\').should.be.true;
+8 10 is.is_home.call({path: \'foo/bar/baz/foo-bar.js\', config: config}, 'foo/baz/2013/08/12/foo-bar.js\').should.be.true;
+8 13 is.is_home.call({path: \'foo/bar/baz/foo-bar.js\', config: config}, \'foo/baz/2013/08/12/foo-bar.js\').should.be.true;
+8 15 is.is_home.call({path: \'foo/bar/baz/foo-bar.js\', config: config}, \'foo/bar/baz/2013/08\').should.be.true;
+8 17 is.is_home.call({path: \'foo/bar/baz/foo-bar.js\', config: config}, \'foo/bar/baz/2013/08\').should.be.false;
+8 18 is.is_home.call({path: \'foo/bar/baz/foo-bar.js\', config: config}, \'foo/bar/baz/foo-bar.js\').should.be.false;
+8 19 is.is_home.call({path: \'foo/bar/faz/foo-bar.js\', config: config}, \'foo/bar/baz/bar/baz/foo-bar.js\').should.be.false;
+8 20 is.is_home.call({path: \'foo/bar/bar/bar/faz/baz/baz/bar/baz/foo-bar.js\', config: config: config}, \'foo/bar/baz/bar/baz\').should.is_installed.is_home.is_home.is_home.is_home.is_home.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post.is_post
+9 4 await is.current.call({path: \'foo/bar\', config: config}, \'foo/baz').should.be.false;
+9 5 await is.current.call({path: \'foo/bar\', config: config}, \'foo/baz/').should.be.false;
+9 6 await is.current.call({path: \'foo/bar\', config: config}, \'foo/baz/).should.be.false;
+9 18 await is.current.call({path: \'foo/bar\', config: config}, \'foo/baz/index.js\').should.be.false;
+9 22 await is.current.call({path: \'foo/bar\', config: config}, \'foo/baz/baz/index.js\').should.be.false;
+9 23 await is.current.options.should.toArray().should.eql([false];
+9 24 await must.not.not.toArray().should.indexOf(2);
+9 25 await should.sucFirst().should.contains(3);
+9 26 await should.arranges.await should.length().should.contains.great();
+9 27 await.unshift().should.contains.toArray().should.contains(3);
+9 28 await un.toArray().should.contains.should.contains(3);
+9 30 it(\'does not.skip processingAnswers.\', async (a) => {
+9 31 await is.is.is.false);
+9 32 await is.should.current.should.true;
+9 33 await is.is.false;
+9 34 await is.

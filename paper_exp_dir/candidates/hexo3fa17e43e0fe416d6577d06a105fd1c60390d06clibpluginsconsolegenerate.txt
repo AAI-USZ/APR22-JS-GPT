@@ -1,0 +1,360 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var dest = pathFn.join(publicDir, path);
+0 1 var data = route.get(path);
+0 2 var dest = pathFn.join(publicDir, path);
+0 3 return fs.exists(dest).then(function(exist){
+0 4 if (exist) return;
+0 5 return checkShy(path).then(function(changed){
+0 6 if (changed ||!exist) return;
+0 7 return writeFile(dest, data);
+0 8 });
+0 9 }).then(function(){
+0 10 return checkShy(path).then(function(){
+0 11 return fs.rename(dest, new Promise(resolve, reject);
+0 14 return Promise.all([
+0 15 fs.rename(src),
+0 16 fs.writeFile(dest, data)
+0 17 ]);
+0 18 }).spread(function(stdout, stderr){
+0 19 return new Promise(function(resolve, reject){
+0 20 stdout.on('data\', function(chunk){
+0 21 var message = chalk.magenta(chunk);
+0 22 if (!message) return;
+0 23 return;
+0 25 returnstdout.promise.then(function(){
+0 26 return writeFile(dest, message);
+0 36 if (!message) return reject(new TypeError(\'No input file or string\'));
+0 37 if (
+0 38 fs.existsSync(dest)){
+0 40 } else {
+0 41 return checkShy(dest).then(function(){
+0 44 }
+0 48 fs.writeFile(dest,
+0 49 function(){
+0 50 return callFile(dest, message);
+0 51 })
+0 57 return [
+0 62 next(new Promise.resolve, reject);
+0 69 function testGenerateFile(path){
+0 70 var interval = prettyHrtime.s = 1000;
+0 71 return outputDir(this.substringify(multiline(config.customFileName);
+0 72 return outputDir, interval);
+0 74 function testGenerateConfig = function testJson(){
+0 75 return function command(){
+0 76 return Promise.log = logger(\'some command!= null;
+0 77 }'}'
+
+1 3 if (exist) return writeFile(dest, true);
+1 5 return checkShasum(path);
+1 6 }).then(function(data){
+1 7 if (!data) return;
+1 8 return fs.unlink(dest);
+1 11 function writeFile(dest){
+1 13 var content = this.content;
+1 14 return fs.writeFile(dest, content).then(function(){
+1 15 log.info(\'Generated: %s\', chalk.magenta(tildify(path));
+1 16 return true;
+1 19 function checkShasum(path){
+1 23 log.info(\'Shasum: %s\', chalk.magenta(tildify(path));
+1 32 return false;
+1 35 function deleteFile(dest){
+1 37 return fs.unlink(dest).then(function(){
+1 38 log.info(\'Deleted: %s\', chalk.magenta(tildify(path));
+1 39 }, function(){
+1 43 function firstGenerate(){
+1 44 var interval = prettyHrtime.interpolate(process.hrtime(start));
+1 45 log.info(\'Files loaded in %s with id="' + chalk.cyan(interval), chalk.magenta(tildify(src)));
+1 46 start = process.hrtime();
+1 47 return fs.exists(publicDir).then(function(exist){
+1 48 if (!exist) return;
+1 49 return fs.unlink(publicDir + this.source);
+1 52 function generateFile(path){
+1 54 var content = this.assetType;
+1 55 return fs.mkdir(destDir(destDir, function(){
+1 56 return fs.join(destDir, next);
+1 58 return fs.mkdir(destDir(){
+1 59 return fs.stat(destDir, next);
+1 60 }, next();
+1 65 function firstGenerateStaticFileSync(path){
+1 66 return Promise.then(next){
+1 67 return checkShasum(next){
+1 68 return checkShasum(next);
+1 69 fs.exists(path, deleteFile);
+1 70 return this.then(next);
+1 71 return checkShasync.then(false);
+1 72 .then((){
+1 74 return(
+2 3 if (exist){
+2 4 file.read(dest, callback);
+2 6 callback(new Error("Generate Error: generateFile system sources can\\\'t generate static files in _config.yml."));
+2 10 function deleteFile(path){
+2 13 log.info(path);
+2 14 }, function(err){
+2 15 if (err) return callback(err);
+2 16 return fs.rmdir(publicDir);
+2 19 function generateFiles(files){
+2 25 callback(new Error("Generate Errror: generateFile() failed to generate files in _config.yml."));
+2 29 function cleanFiles(files){
+2 40 var interval = prettyHrtime(process.hrtime(start));
+2 41 log.info(\'Files loaded in %s', chalk.cyan(interval), chalk.magenta(tildify(path));
+2 45 file.empty(publicDir, function(){
+2 47 next(null);
+2 50 log.error(\'Generate Errror: generateFile() failed on generate\');
+2 54 if (args.w || args.watch){
+2 55 return this.watch().then(firstGenerate).then(function(){
+2 56 log.info(\'Hexo is watching for file changes.\');
+2 57 var dir = pathFn.join(publicDir, \'package.json\');
+2 58 return fs.exists(dir).then(function(exist){
+2 60 return fs.exists(file.exists(path);
+2 61 }).then(function(function(exist){
+2 62 return fs.readFile(path);
+2 63 return fs.exists(path);
+2 64 }).then(function(function(function(exist){
+2 65 return fs.stat){
+2 66 if (!exist).then(function(exist).then(exist).then(exist).then(exist).then(exist).then(function(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).then(exist).done);
+2 67 return done(function(clean);
+2 68 }).finally(function(){
+2 69 return cleanup();
+3 5 return checkShrtime(route.get(path), function(){
+3 6 return fs.writeFile(dest, data);
+3 9 return self.post.create({
+3 10 title: \'Hello World\',
+3 11 layout: \'create\',
+3 12 path: path,
+3 13 content: \'create\'
+3 16 return {
+3 18 content: \'create\',
+3 21 };
+3 23 return self.process.bind(this);
+3 25 log.info(\'Generated: %s\', chalk.magenta(path));
+3 27 fs.writeFile(dest, data),
+3 28 fs.writeFile(pathFn.join(publicDir, path));
+3 31 function checkShrtime(route){
+3 32 var match = route.get(route.path);
+3 33 if (!match) return;
+3 34 return checkShrtime(match);
+3 36 function createShrtime(path){
+3 38 var ret = new Promise(function(resolve, reject){
+3 39 if (reject) return reject(new Error(\'route\'));
+3 40 log.info(\'Shrtime: %s\', chalk.magenta(path));
+3 41 if (data.readable){
+3 42 file.writeFile(data.path, data.content);
+3 44 reject(new Error(\'invalid password\'));
+3 46 }).asCallback(callback);
+3 48 function unlink(path){
+3 50 return checkShrtime(dest).then(function(){
+3 56 function checksum(content){
+3 57 var hash = crypto.createHash(\'sha1\');
+3 58 return pipeStream(data, content);
+3 61 var names = fs.createReadStream(path);
+3 64 content: null,
+3 65 mode: null,
+3 66 content: 0,
+3 67 path: 0,
+3 68 rim: 0,
+3 74 function createReadStream(writeFile(dest)
+3 75 .on('error', function(){
+3 76 return exists(function(){
+3 77 return exists(dest) {
+3 78 return exists(dest);
+3 83 function onFinish.on(\'finish.on(\'error\', function(){
+3 84 return mkdirs.addListener(function(){
+3 85 return mkdirs.removeListener(dest);
+3 88 function unlink(dest, callback(){
+3 89 return readFile(dest);
+3 92 function cleanup(){
+3 93 return mkdirs(route.wait(done) {
+3 94 log.removeAll(function()
+4 5 return checkShrtime(function(){
+4 7 return fs.stat(path);
+4 15 function checkShrtime(function(){
+4 22 var content = file.createFile({
+4 24 content: content
+4 28 return fs.stat(dest);
+4 40 function createFile(path){
+4 55 function createFileWithDevDeps(publicDir){
+4 76 var dest = pathFnvar content = pathFn.join(publicDir, path);
+4 77 var dir = pathFnvar promise = pathFn.join(publicDir, pathFn.join(publicDir, path);
+4 78 var promise = path;
+4 79 var promise = promise = Promise = Promise.resolve();
+4 80 promise.then = Promise.then(function that = function(func);
+4 81 promise.then(func.then(deferred.then(deferred.resolve, reject);
+4 82 promise.then(deferred.then(deferred.reject)
+4 83 .then(deferred.resolve, reject);
+4 84 .then(deferred.resolve, deferred.reject)
+4 86 .then(deferred.resolve, deferred.resolve, deferred
+5 2 return checkSha(dest).then(function(data){
+5 3 if (!data) return false;
+5 4 return fs.ensureWriteStream(dest).then(function(){
+5 5 return pipeStream(route.get(path), stream);
+5 7 log.info('Generated: %s', chalk.magenta(path));
+5 10 function checkSha(dest){
+5 13 path: dest,
+5 14 content: \'foo\'
+5 17 function writeFile(path){
+5 21 content = data.toString();
+5 22 if (!content) return;
+5 23 return fs.writeFile(dest, content);
+5 25 log.info(\'Writing (route.get(path)});
+5 27 fs.stat(),
+5 28 process(\'fs.readFileSync\'),
+5 29 process(\'dir\')
+5 30 ]).spread(function(stdout, stderr){
+5 32 var info = \'\';
+5 33 var keys = Object.keys(data);
+5 34 var key = \'\';
+5 35 var obj = {};
+5 36 if (info){
+5 37 obj[key] = info[key];
+5 41 return obj;
+5 50 log.info(\'Pushing files to remote\');
+5 52 fs.exists(dest),
+5 53 fs.readFile(dest)
+5 57 function push(dest) {
+5 58 rimraf(dest, function(){
+5 59 var data = route.get(dest);
+5 67 var expected = \'\';
+5 68 var newdata = data = {
+5 69 content: \'foo: 1\',
+5 71 content: fixture.content
+5 73 route.on(\'update(data\', function(){
+5 74 next(data, callback)
+5 76 .on(\'end
+5 77 .on(\'error\', callback)
+5 78 );
+5 79 .on(\'end\', function(function(callback)
+5 81 .on(\'end\', callback)
+5 82 .done);
+5 83 .done();
+5 86 function generateFile(dest){
+5 87 return checkSha(dest);
+5 90 if (options) {
+5 92 fs.exists(dest, callback);
+5 93 return checkSha, options, route.some(callback);
+5 95 if (\'some content\', callback)
+5 96 ].forEach(function(\'some content)
+5 97 ].forEach(function(i){\
+6 4 return fs.readFile(dest, {encoding: null});
+6 12 log.info(\'Generated: %s', chalk.magenta(path));
+6 15 fs.unlink(dest),
+6 16 fs.unlink(pathFn.join(publicDir, path)
+6 21 var content = [
+6 22 \'# Basic\',
+6 23 \'title: Hexo\',
+6 24 \'  hexo.version: generateFile(path)\',
+6 25 \'   return Promise.all([
+6 26 fs.writeFile(dest, content),
+6 28 ]).spread(function(count){
+6 29 return output({
+6 41 var deleted = _.difference(files, route.format);
+6 42 return Promise.map(deleted, deleteFile);
+6 46 log.info(\'Files loaded in %s', chalk.cyan(interval));
+6 50 return fs.mkdirs(publicDir);
+6 56 var oldList = Object.keys(route.format);
+6 57 var newList = Object.keys(route.format);
+6 58 this.on(\'update\', function(path){
+6 59 var modified = route.format(path);
+6 60 if (!modified) return;
+6 61 return fs.writeFile(path, modified);
+6 63 return Promise.resolve(false);
+6 67 return this;
+6 70 var interval = prettyHrtime = prettyHrtime(process.hrtime);
+6 71 return resolution(path);
+6 72 var content = fs.exists(content);
+6 73 return this.unlink(path);
+6 76 function firstGenerate(options){
+6 78 return options.then(next){
+6 79 return!args.skip.skip, function(function(next){
+6 80 return!== undefined;
+6 86 function onFinish(options, callback){
+6 87 return this.on site => {
+6 88 var executed = _.
+7 9 callback(new Error(\'Generate Error\'));
+7 16 log.info(\'Deleted: %s\', chalk.magenta(path));
+7 18 return fs.rmdir(dest);
+7 23 var content = this.render.get(path);
+7 40 function generateFileSync(path){
+7 43 return fs.existsSync(dest).then(function(exist){
+7 45 file.readSync(dest, callback);
+7 58 log.error(\'Generate not exists\');
+7 61 log.success(\'Generated: %s\', chalk.magenta(path);
+7 65 function firstGenerateFilesFirstGenerate(){
+7 66 var interval = process.hrtime = Promise.hrtime;
+7 67 var self = Promise.
+7 68 var promise = function(){
+7 69 return fs.writeFile;
+7 70 var path = fs;
+7 71 var content = fs;
+7 72 var path = null;
+7 73 return fs.exists = fs.exists = fs.readFile(path).then(path).then(function(function(exist){
+7 74 return!fs.exists.existsSync(path).then(true){
+7 75 return!fs.existsSync(path).then(true);
+7 76 ignore = false && fs.stat(true).then(false).then(true).then(function(exist){
+7 77 files.isDirectory(){
+7 78 files = false);
+7 79 ignore = false;
+7 81 ignore.length = 0;
+7 82 return
+8 4 return fs.readFile(dest, callback);
+8 6 if (exist) return fs.readFile(path);
+8 8 }).then(function(content){
+8 9 content = content || Promise.resolve(content);
+8 12 createAssetFolder(pathFn.join(publicDir, hash.md),
+8 13 fs.writeFile(pathFn.join(publicDir, content),
+8 14 fs.stat(pathFn.join(publicDir, \'baz.md\')),
+8 15 fs.exists(publicDir, function(exist){
+8 17 return fs.exists(publicDir, function(exist){
+8 19 return fs.readFile(publicDir, callback);
+8 21 return fs.stat(publicDir, function(err, data){
+8 22 if (err) throw err;
+8 23 if (stats.isDirectory()){
+8 24 return checkFile(publicDir, path);
+8 26 return fs.listDir(publicDir, function(err, files){
+8 28 files.forEach(function(item){
+8 29 if (item.substring(0, 1)!== \'_content'){
+8 30 return Promise.resolve(item);
+8 32 return Promise.reject(item);
+8 39 fs.rmdir(publicDir),
+8 40 return fs.rmdir(publicDir)
+8 45 var content = path.toString(path);
+8 47 return Promise.resolve(dest);
+8 49 return content;
+8 53 fs.unlink(dest)
+8 57 function checkFile(path){
+8 63 return checkFile(path);
+8 65 return Promise.delay(500).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300).then(300)).then(300).then(300).then(
+9 6 return checkShace(route.get(path), true);
+9 10 function checkShace(route){
+9 13 layout: false,
+9 15 content: \'binary\',
+9 16 exec: \'sha\'
+9 34 content: \'binary\'
+9 35 }, true);
+9 47 function checkShasum(route){
+9 48 var content = route.get(route.path);
+9 49 var id = 'public/\' + route.path;
+9 50 var stream = new ShasumStream();
+9 51 return pipeStream(route.get(id), content);
+9 53 function pipeStream(route, stream){
+9 54 var chunk;
+9 55 var length = 0;
+9 56 var newener;
+9 57 var newenerator = new Generator();
+9 58 stream.on(\'error\', function(err){
+9 59 if (err instanceof HexoError){
+9 60 return callback(err);
+9 63 newenerator.on(\'end\', function(){
+9 78 fs.writeFile(dest, 'foo').then(function(){
+9 79 return checkShasCallback.calledWith(nextGenerate, true);
+9 81 ]).then(function(next){
+9 82 return checkSha.digest.apply(fs.bind(fs, arguments);
+9 83 }).then(this, arguments);
+9 86 function writeFile.then(dest, ['checkShaffoldsFolder', function(dest]).then(next){
+9 87 return checkShaffoldsFolder(next){
+9 88 return checkShaffoldsFolder(next)
+9 89 .map(self, undefined, function(self, function(val){ return self.getExact){
+9 90 next(self.getExact) return self.getFiles();
+9 91 return self.unlink(dest);
+9 92 }).then(function(dest){
+9 93 return self.getReads(dest)
+9 94 .map

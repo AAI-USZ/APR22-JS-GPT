@@ -1,0 +1,506 @@
+Min editdistance: 1.00
+Closest candidate: 1 2 url = require('url')
+0 1  = require("express/media-router-nest")
+0 2 var Swig = module.exports = function(source){
+0 3 this.source = source || \'\';
+0 4 this.path = source;
+0 5 this.regexp = /<strong>.*?[^\\S]+?)<\\/strong>/g;
+0 6 this.tag = source.match(/^\\s*([^\\S]+)\\s*>/g;
+0 7 this.addCommonError = function(msg){
+0 8 this.use(function(err, req, res, next){
+0 9 res.send(err.message, 500);
+0 10 });
+0 11 };
+0 12 this.removeCommonError = function(msg){
+0 14 res.send(404);
+0 17 this.write = function(){
+0 18 var args = Array.prototype.slice.call(arguments);
+0 19 if (args.length){
+0 20 return this.regexp.test(args[0], args.shift());
+0 21 } else {
+0 22 var args = args.slice(1),
+0 23 path = args.shift(),
+0 24 ctime = args.length? args.shift() : args.length,
+0 25 method = args.shift(),
+0 26 regex = args.join(\' \').join(\' \').substring(1);
+0 27 if (!regex.test(path)) return;
+0 28 var match = path.match(regex),
+0 29 result = {};
+0 30 for (var i = 1, len = match.length; i <= len; i++){
+0 31 if (match[i]) result[params[i - 1]] = match[i];
+0 32 }
+0 33 return result;
+0 35 this.end = function(body){
+0 36 return this.post.create(body);
+0 39 res.send = function(body){
+0 40 var req = this.req,
+0 41 res.sendStatus = function(code){
+0 42 var req = this.req.status,
+0 43 res.setHeader(\'Content-Type\', \'text/html\');
+0 44 this.statusCode = code;
+0 45 res.setHeader(\'Content-Length\', len);
+0 46 res.send(body);
+0 48 res.sendFile = function(path, options, fn){
+0 49 var self = this;
+0 50 if (\'function\' == typeof options) fn = options;
+0 51 options = {};
+0 52 if (\'function\' == typeof options) {
+0 53 fn = options;
+0 56 options.path = path;
+0 57 options.source = source;
+0 58 var split = body.split(\' \');
+0 59 if (options.method === \'GET\') {
+0 60 this.search();
+0 61 } else if (\'function\' == typeof options) {
+0 62 this.push(options);
+0 66 options.params = options.params || this.params;
+0 67 options.path = split;
+0 68 if (\'GET\'HEAD\' == self.search\' == self.search) {
+0 69 .search = options.search;
+0 70 .length;
+0 71 var regexp = this.exec(options.keys = options;
+0 72 options.method = options.methods.preprocess.middleware;
+0 74 if (middleware = options.lookup.isPreprocess) {
+0 75 self.lookup = function(path) {
+0 76 return self.lookup;
+0 77 .exec(path, options, options, options, fn);
+0 79 if (middleware.lookup.lookup) {
+0 80 return self.lookup.lookup;
+0 81 .length = middleware;
+0 83 self.errorHandlers = self.contentType = handler;
+0 85 if (\'length\'length\' == 0) {
+1 1  = require('express/world'),
+1 2 url = require('url')
+1 3 var siteUrl = url.parse(function(req, res){
+1 4 res.statusCode = 302;
+1 5 res.headers = {};
+1 6 res.redirects = {};
+1 7 res.status = 302;
+1 9 res.cache = {};
+1 10 return function(req, res){
+1 11 var buf = new Buffer(req.params[0]),
+1 12 url = args.shift(),
+1 13 path = args.length? args.shift() : 1,
+1 14 target = hexo.source_dir + '*' + target,
+1 15 start = new Date(),
+1 16 cache = {};
+1 17 if (target === \'*\'){
+1 18 result += cache[target];
+1 20 result += baseLauncherDecoder.decompose(target);
+1 22 target = target.split(\'?\');
+1 23 if (target.substr(0, 1)!== \'/\'){
+1 24 target = \'/**/\';
+1 26 if (result.substr(baseLauncherDecoder.decompose(target)){
+1 27 target = baseLauncherDecomposedProxy.decomposedProxy;
+1 31 res.download = function download(path, filename, fn) {
+1 32 if (path) {
+1 33 if (fn && callback) {
+1 34 fn(null, path);
+1 36 if (content) {
+1 37 content = fn(null, path);
+1 39 filename = filename || path;
+1 40 var headers = {
+1 41 \'Content-Disposition\': content
+1 43 var fullPath = resolve(cache.source, path);
+1 44 return this.post.load(path, fn);
+1 46 res.contentType =
+1 47 res.type = function(type){
+1 48 return this.set(\'Content-Type\', ~type.indexOf(\'/\')
+1 49 ? type
+1 50 : mime.lookup(type));
+1 52 res.format = function(obj){
+1 53 var req = this.req;
+1 54 var next = req.next;
+1 55 var fn = obj.default;
+1 56 if (fn) delete obj.default;
+1 57 var keys = Object.keys(obj);
+1 58 var key = req.accepts(keys);
+1 59 this.vary("Accept");
+1 60 if (key) {
+1 61 this.set(\'Content-Type\', normalizeType(key).value);
+1 62 obj[key](req, this, next);
+1 63 } else if (fn) {
+1 64 fn();
+1 66 var err = new Error(\'Not Acceptable\');
+1 67 err.status = err.statusCode = 406;
+1 68 err.types = normalizeTypes(keys).map(function(o){ return o.value });
+1 69 next(err);
+1 71 return this;
+1 73 res.attachment = function attachment(filename) {
+1 74 if (filename) {
+1 75 this.type(extname(filename).send(this.get(\'Content-Disposition\'));
+1 77 this.type(extname(filename));
+1 80 res.append = function append(field, val) {
+1 81 var prev) {
+1 82 var value = this.get(field);
+1 83 return this.get(field);
+1 84 return this.set(val);
+1 85 return val;
+1 87 var value = val = val;
+1 90 if (position = function header(field, val) {
+1 91 position) {
+1 92 position = val.set(position);
+1 93 val += header.set(position);
+1 94 val += 1;
+1 95 if (position > 2;
+1 96 val += 2;
+2 1  = require("http");
+2 2 function sendStatus(statusCode) {
+2 3 var body = statusBodies[statusCode] || {};
+2 4 statusBodies[statusCode] = body;
+2 6 module.exports = sendStatus;'
+
+3 1  = require("https");
+3 2 function StatusUpdater(name, bannerElement, browsersElement) {
+3 3 this.name = name;
+3 4 this.banner = bannerElement;
+3 5 this.emit("connect", this.name + (event.total - 1) + "\
+3 6 ");
+3 8 module.exports = StatusUpdater;"
+
+4 1  = require('express/who-session-as-promised'),
+4 2 url = require(\'url')
+4 3 function UrlResolver(decEndpoint, config, logger) {
+4 4 this._source = decEndpoint.source;
+4 5 this._target = decEndpoint.target || \'*\';
+4 6 this._name = decEndpoint.name || path.basename(this._source);
+4 7 this._config = config;
+4 8 this._logger = logger;
+4 9 this._guessedName =!decEndpoint.name;
+4 11 UrlResolver.prototype.toString = function () {
+4 12 return this._source;
+4 14 UrlResolver.prototype.init = function (config, logger) {
+4 16 var config = this._config;
+4 17 this._logger.setLevel(config.logLevel);
+4 18 this._render = function(str, options, fn) {
+4 19 if (env in this._config) {
+4 20 return self.call(this._logger.prompt.bind(this), options, fn);
+4 22 if (this._target!== config.target) {
+4 23 throw new Error(\'URL sources must be an absolute or normalized to "%s"\', this._source);
+4 25 if (this._guessedName) {
+4 26 this._name = this._name.substr(0, this._name.length - 1);
+4 27 this._name = this._name.substr(this._name.length + 1, this._name.length - 2);
+4 29 this._remote = url.parse(this._source);
+4 30 this._shallowCloning = true;
+4 31 return this._download()
+4 32 .spread(this._extract.bind(this))
+4 33 .then(this._rename.bind(this));
+4 35 UrlResolver.prototype._download = function () {
+4 36 var file = path.join(this._tempDir, this._name);
+4 37 var deferred = Q.defer();
+4 38 rimraf(file, function (err) {
+4 39 if (err) {
+4 40 if (this._hasFailed) {
+4 41 return deferred.reject(createError(\'No binary for %s browser on your platform.\
+4 42 \\t\' +
+4 43 'Please, set "%s" env variable.\', this._name, this._target));
+4 44 this._download();
+4 46 deferred.reject(createError(\'Can not remove "%s" from your platform.\
+4 48 \'Please, set "%s" env variable.\', this._target));
+4 50 return deferred.resolve([
+4 51 this._download(),
+4 52 this._extract.bind(this))
+4 53 ]);
+4 55 UrlResolver.prototype._isPathAbsolute = function (path) {
+4 56 if (path.indexOf(\'/\') === 0) {
+4 57 return true;
+4 59 return path.resolve(this._tempDir, this._name);
+4 61 UrlResolver.prototype._fetch = function (decEndpoint) {
+4 62 var sourceUrl = this._source || this._source;
+4 63 var deferred = this._target = path.getDirectCallbacks = function (source) {
+4 64 return decEndpoint = getDirector;
+4 65 .handleDirector = getDirector;
+4 66 .getDirector = function (direct = function (url) {
+4 67 .getDirector.name, path;
+4 68 .name = getDirector;
+4 73 .props = getDirector;
+4 74 .dir = getDirector;
+4 76 UrlResolver.prototype._isTargetable = function () {
+4 77 return this._resolve = function
+5 1  = require('express/user/os#*');
+5 2 function redirects(to,fn){
+5 3 return function(res){
+5 4 res.statusCode.should.equal(302);
+5 5 res.headers.should.have.property(\'location\', \'http://google.com\');
+5 6 res.text.should.equal(\'<p>Moved Temporarily. Redirecting to <a href="http://google.com">http://google.com</a></p>\');
+5 9 module.exports = redirects;
+5 10 function getLocation(res){
+5 11 return res.url.resolve(res.location);
+5 13 exports.Redirect = Plugin.extend({
+5 14 extend: {
+5 15 init: function(){
+5 16 Request.include({
+5 17 redirect: function(url, headers, data){
+5 18 if (!headers.host) return false;
+5 19 if (data.redirect) return true;
+5 20 headers[\'Location\'] = data.redirect;
+5 21 if (headers.redirect) return highlight(redirect, headers, data);
+5 22 var headers = headers.map(function(val, key){
+5 23 return val.split(\':\');
+5 25 headers.each(function(item){
+5 26 halt('' + item[0].replace(/\\u2028/g, \'\\\\u2028\') + \'</a>\');
+5 28 return halt()
+5 29 .replace(/\\u2029/g, \'\\\\u2029\');
+5 31 },
+5 32 header: function(name, value){
+5 33 return value?
+5 34 this.headers[name.toLowerCase()] = value :
+5 35 this.response.headers[name.toLowerCase()] = value;
+5 37 param: function(key, defaultValue){
+5 38 return this.params[key] || defaultValue;
+5 40 accepts: function(){
+5 41 var accept = this.header(\'accept\')
+5 42 , type = String(type);
+5 43 if (!accept || accept === \'*/*\') return true;
+5 44 if (type && type.indexOf(\'/\') < 0) return true;
+5 45 type = type.split(\'/\')[0] + \'/*\';
+5 46 return accept.indexOf(type >= 0;
+5 47 }'
+
+6 1  = require('events').ObjectID,
+6 3 var multiple = [],
+6 4 large = 2,
+6 5 total = 3,
+6 6 endSize = 3,
+6 7 midSize = 4,
+6 8 space = 5,
+6 9 nextname = pathFn.extname(endSize)
+6 10 function Post(context) {
+6 11 this.context = context || this
+6 12 this.settings = {};
+6 13 this.redirects = {};
+6 14 this.is_post = false;
+6 15 this.source = source;
+6 16 this.path = path;
+6 17 this.marked = false;
+6 18 this.permalink = public_settings.renderSync(this.source, options);
+6 20 Post.prototype.create = function(data, replace, callback) {
+6 21 if (!callback && typeof replace === \'function\') {
+6 22 callback = replace;
+6 23 replace = false;
+6 25 var ctx = this.context;
+6 26 var config = ctx.config;
+6 27 data.slug = escapeHTML(data.slug || data.title, config.filename_case);
+6 28 data.layout = (data.layout || config.default_layout).toLowerCase();
+6 29 data.date = data.date? moment(data.date) : moment();
+6 30 return Promise.all([
+6 31 ctx.execFilter(\'new_post_path\', data, {
+6 32 args: [replace],
+6 33 context: ctx
+6 34 }),
+6 35 this._getScaffold(data.layout)
+6 36 ]).spread(function(path, scaffold) {
+6 37 data.title = \'"\' + data.title + \'"\';
+6 38 data.date = data.date.format(\'YYYY-MM-DD HH:mm:ss\');
+6 39 var split = yfm.split(scaffold);
+6 40 var content = swig.compile(split.data)(data) + \'\
+6 41 \';
+6 42 var compiled = yaml.load(content);
+6 43 var keys = Object.keys(data);
+6 44 var key = \'\';
+6 45 var obj = {};
+6 46 for (var i = 0, len = keys.length; i < len; i++) {
+6 47 key = keys[i];
+6 48 if (!preservedKeys[key] &&!compiled.hasOwnProperty(key)) {
+6 49 obj[key] = data[key];
+6 52 if (Object.keys(obj).length) {
+6 53 content += yaml.dump(obj);
+6 55 content += split.content;
+6 56 content += split.source;
+6 57 if (data.content) {
+6 58 content += (data.content - 1) + \'\
+6 61 content += this._getScaffold(data.layout)
+6 62 .then(function(scaffold) {
+6 63 var scaffoldPath = pathFn.join(this.source_dir, data.content);
+6 64 var scaffoldPath = pathFn.join(scaffoldPath, \'---\');
+6 66 fs.writeFile(file.source, content),
+6 67 createAssetFolder(dataFolder)
+6 68 ]).then(function() {
+6 69 return {
+6 70 return
+6 71 Post.createFolderFolderFolderFolderFolder()
+6 72 .Folder.Folder.apply(file, functionFolder, postFolder, postFolder.Folder, postFolder.apply(fileFolder, baseFolder, repairFolder, repairFolder)
+6 73 })
+6 74 }).then(function() {
+6 75 return Promise.then(filesFolder.caffoldFolder.cwd === baseFolder
+6 76 ])
+6 77 .then(function() {
+6 78 var files = files.join(baseFolder);
+6 79 return Array.isArray.isArray(files.isArray(files.isArray(files.isArray(files.isArray(files))
+6 80 ? files.some(files)) : partialsize(files))
+6 81 .map(baseFolder) : partials)).join(baseFolder);
+6 82 }).join(baseFolder);
+6 83 }).map(self.length);
+6 84 }).forEach(function
+7 1  = require("memos"),
+7 2 url = require("url"),
+7 3 extend = require("../../extend"),
+7 4 route = require(\'../../route'),
+7 5 util = require('../../util"),
+7 6 file = util.file,
+7 7 coreDir = hexo.core_dir,
+7 8 log = hexo.log,
+7 9 proxy = require(\'proxy\'),
+7 10 shhttps = require('https\'),
+7 11 root = config.root,
+7 12 perPage = config.per_page,
+7 13 pageDir = config.pagination_dir,
+7 14 publicDir = hexo.public_dir,
+7 15 tagDir = config.tag_dir + \'/\',
+7 16 archiveDir = config.archive_dir + \'/\',
+7 17 category_dir = config.category_dir + \'/\',
+7 18 code_dir = config.download_dir + \'/\',
+7 19 i18n_dir = config.category_dir + \'/\',
+7 20 source_dir = config.source_dir,
+7 21 configLink = config.permalink,
+7 22 highlight = config.highlight,
+7 23 highlightConfig = config.highlight,
+7 24 highlightEnable = highlightConfig? highlightConfig.enable : true,
+7 25 backtickConfig = highlightConfig? highlightConfig.backtick_code_block : true,
+7 26 lineNumConfig = highlightConfig? highlightConfig.line_number : true,
+7 27 tabConfig = highlightConfig? highlightConfig.tab_replace : \'\',
+7 28 autoSpacingConfig = config.auto_spacing,
+7 29 titlecaseConfig = config.titlecase,
+7 30 newPostConfig = config.new_post_name,
+7 31 defaultCategory = config.default_category || \'uncategorized\',
+7 32 categoryMap = config.category_map || {},
+7 33 tagMap = config.tag_map || {},
+7 34 excerptRegex = /<!--\\s*more\\s*-->/;
+7 35 swig.init({tags: tagExt});
+7 36 if (newPostConfig){
+7 37 var filenameRE = pathFn.basename(newPostConfig, pathFn.extname(newPostConfig))
+7 38 .replace(/:year/g, \'(\\\\d{4})\')
+7 39 .replace(/:(month|day)/g, \'(\\\\d{2})\')
+7 40 .replace(/:title/g, \'(.*)\');
+7 41 filenameRE = new RegExp(filenameRE);
+7 42 var filenameArr = _.map(newPostConfig.match(/:[a-z]+/g), function(item){
+7 43 return item.substring(1);
+7 46 var getInfoFromFilename = function(str){
+7 47 if (!filenameRE.test(str)) return;
+7 48 var meta = str.match(filenameRE).slice(1),"
+
+8 3 function request(method, url, headers, data, promise) {
+8 4 var responseData = new Buffer(Number(new Date) + "redirect detected")
+8 5 response.setHeader('Location', url)
+8 6 return promise.progress(function (state) {
+8 7 return that._removeListener(req, response) || Promise.resolve()
+8 9 .on('error', function (err) {
+8 11 return promise.error(err)
+8 13 return that._download()
+8 16 .on('warn', function (err) {
+8 18 return promise.warn(err)
+8 30 .on('close', function () {
+8 31 return that._cleanup();
+8 37 return that.download()
+8 40 .on('directory', function () {
+8 41 return that._deploy.discard()
+8 43 .on('resolve', function () {
+8 44 return that._readJson(that._source, true)
+8 45 .then(function (response) {
+8 46 return that.parseJson(response._source, true)
+8 47 .then(function (json) {
+8 48 return that._jsonFile
+8 49 .contents = json.toString()
+8 50 .message
+8 51 .trim()
+8 52 .replace(/[\\r\
+8 53 ]+/g, \'\
+8 54 \')
+8 56 ]/g, \'\\r\')
+8 57 .replace(/"/g, \'\\"\');
+8 58 return that._json = json
+8 59 .fin(function () {
+8 60 that._working = false
+8 62 .on(\'error\', function (err) {
+8 63 throw err
+8 65 .on(\'directory\', function () {
+8 68 .on(\'stream\', function (stream) {
+8 69 var file
+8 70 var oldData
+8 71 db = fs.createWriteStream(file)
+8 72 , buffer = new Buffer(buffer)
+8 73 , crc = new RegExp(normalize, \'-\' + crc.length + \'"\')
+8 74 , basename = path.basename(file, \'.\')
+8 75 , hostname = request.headers.hostname
+8 76 , port = url.parse(config.port, config.urlRoot, config.proxyPath)
+8 77 , url = request(http, hostname, urlRoot, config.proxies, { host: url.parse(hostname, port, urlRoot, config.proxies.hostname) })
+8 78 return res.json(buffer)
+8 79 .setEncoding(\'utf8\')
+8 80 .writeHead(200)
+8 81 .end(function (err, buffer) {
+8 82 return \'{"\' + crc.charAt(0)}\') + \'}\'
+8 85 .on(\'return
+8 86 .on(\'close\', function () {
+8 87 close()
+8 88 .on(
+8 89 .resolve()
+8 90 .on(\'error
+8 92 .on(\'directory\')
+8 94 .exec(function () {
+8 95 .exec(callback.exec(request.assetExists(\'ogg.html_injector.html\')
+8 96 .html)
+8 97 .pipe(file)
+8 98 .on(\'ogg.contents)
+8 99 .filters.html)
+8 100 .on(\'not.html_helpers.html\')
+8 101 .exec(\'
+
+9 3 var siteUrl = function (req, res) {
+9 4 res.statusCode = 200;
+9 5 res.setHeader(\'Location\', url.parse(req.url).toString());
+9 6 res.end();
+9 8 res.cache = function (key, options) {
+9 9 var val = typeof options === \'function\'? options : {};
+9 10 options = options || {};
+9 11 if (options.maxAge) val += \', max-age=60 * (options.maxAge / 1000);
+9 12 return this.set(\'Cache-Control\', val);
+9 14 res.send = function (body, status) {
+9 15 var req = this.req
+9 16 , head = \'HEAD\' == req.method;
+9 17 if (2 == arguments.length) {
+9 18 this.statusCode = body;
+9 19 body = arguments[1];
+9 21 switch (typeof body) {
+9 22 case \'number\':
+9 23 this.header(\'Content-Type\') || this.contentType(\'.txt\');
+9 25 body = http.STATUS_CODES[body];
+9 26 break;
+9 27 case\'string\':
+9 28 if (!this.header(\'Content-Type\')) {
+9 29 this.charset = this.charset || \'utf-8\';
+9 30 this.contentType(\'.html\');
+9 33 case \'boolean\':
+9 34 case \'object\':
+9 35 if (null == body) {
+9 36 body = \'\';
+9 37 } else if (Buffer.isBuffer(body)) {
+9 38 this.header(\'Content-Type\') || this.contentType(\'.bin\');
+9 40 return this.json(body);
+9 44 if (undefined!== body &&!this.header(\'Content-Length\')) {
+9 45 this.header(\'Content-Length\', Buffer.isBuffer(body)
+9 46 ? body.length
+9 47 : Buffer.byteLength(body));
+9 49 if (204 == this.statusCode || 304 == this.statusCode) {
+9 50 this.removeHeader(\'Content-Type\');
+9 51 this.removeHeader(\'Content-Length\');
+9 54 this.end(head? null : body);
+9 57 res.json = function(obj, headers, status) {
+9 58 var body = JSON.stringify(obj)
+9 59 , callback = this.req.query.callback
+9 60 , jsonp = this.app.enabled(\'jsonp callback\');
+9 62 this.header(\'Content-Type\', \'application/json\');
+9 63 if (callback && jsonp) {
+9 64 this.header(\'Content-Type\', \'text/javascript\');
+9 65 body = callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+9 67 return this.send(body, headers, status);
+9 69 res.status = function(code){
+9 70 this.removeHeader(\'Content-At\');
+9 72 return this.removeHeader(\'Content-Encoding\');
+9 74 return this.setHeader(\'];
+9 77 res.isAbsolute = function(obj){
+9 78 return (
+9 80 ) {
+9 81 return (\'body.test\'string\' == body.test\');
+9 83 return \'foo &&\' == body.test
+9 85 };'
+

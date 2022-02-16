@@ -1,0 +1,34 @@
+
+
+require.paths.unshift(__dirname + '/../../support');
+
+
+
+var express = require('../../lib/express');
+
+var app = express.createServer(
+express.logger(),
+
+
+express.cookieParser(),
+
+
+
+
+
+express.session({ secret: 'keyboard cat' })
+);
+
+app.get('/', function(req, res){
+var body = '';
+if (req.session.views) {
+++req.session.views;
+} else {
+req.session.views = 1;
+body += '<p>First time visiting? view this page in several browsers :)</p>';
+}
+res.send(body + '<p>viewed <strong>' + req.session.views + '</strong> times.</p>');
+});
+
+app.listen(3000);
+console.log('Express app started on port 3000');

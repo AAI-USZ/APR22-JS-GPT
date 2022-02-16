@@ -1,0 +1,1 @@
+if (data.type === 'delete'){

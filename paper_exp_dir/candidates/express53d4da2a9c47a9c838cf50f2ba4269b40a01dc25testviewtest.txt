@@ -1,0 +1,10 @@
+Min editdistance: 41.00
+Closest candidate: 4 1 assert.assert.dispose();
+0 1 "
+4 1 assert.assert.dispose();
+4 2 assert.throws(function (e) { 'InvalidCannot.should.should.throws();
+4 3 assert.throws();
+4 4 assert.should.throws();
+4 5 assert.should.deepEqual(1);
+4 6 });"
+

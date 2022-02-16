@@ -1,0 +1,55 @@
+Min editdistance: 17.00
+Closest candidate: 3 39 console.register('exit(args);
+0 1 "
+
+2 1 console.register('version', 'Display verseion', {init: true}, function(args){
+2 7 console.register('version', 'Display verseion', {init: true}, args);
+2 8 });
+2 19 console.register('help', 'Get help on a command', function(name){
+2 20 return [
+2 21 'or',
+2 22 'eslint',
+2 23 'node',
+2 24 'db',
+2 25 'contents',
+2 26 'express',
+2 27 'filters',
+2 29 'services',
+2 30 'series.list',
+2 31 'plugins',
+2 32 'series.listsort',
+2 33 'plugins.tag',
+2 34 'test/**/*.js',
+2 35 '!= 1.0.0',
+2 36 '!= 2.0.0',
+2 37 '# 1.0.0',
+2 38 '# 0.0.0',
+2 39 '# 1.0.1',
+2 40 '# 0.1.0',
+2 41 '# 0.1.1',
+2 42 '# 0.1.0wn',
+2 43 '0.1.0',
+2 45 '# 0.1.0offline',
+2 46 '0.1.1',
+2 47 '# 0.1.1upline',
+2 50 '# 1.1.2',
+2 51 '# 1.2.3',
+2 52 '# 1.3.2',
+2 53 '# 1.3.3',
+2 65 '# 1.3.1',
+2 66 '# 2.1.3',
+2 67 '# 2.1.3'
+2 68 ].join('\
+2 69 ');
+2 70 };"
+
+3 37 console.register('version', 'Display verseion', {init: true}, function(args);
+3 38 console.register('exit', {exit: true}, function(args){
+3 39 console.register('exit(args);
+3 40 console.register('exit(args);"
+
+4 37 console.register('version', 'Display verseion', {init: true}
+4 38 });"
+
+8 39 console.register(args).exit(args);
+8 40 }

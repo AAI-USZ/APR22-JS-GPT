@@ -1,0 +1,236 @@
+Min editdistance: 1.00
+Closest candidate: 1 14 glob('./' + config.directory + '/*', function (err, dirs) {
+0 1 };
+0 2 Manager.prototype.resolveEndpoints = function () {
+0 3 var endpointNames = this.opts.endpointNames || {};
+0 4 async.forEach(this.endpoints, function (endpoint, next) {
+0 5 var name = endpointNames[endpoint];
+0 6 var pkg  = new Package(name, endpoint, this);
+0 7 pkg.on(\'resolve', function () {
+0 8 pkg.emit.bind(this, endpointNames[endpoint]));
+0 9 }.bind(this));
+0 10 pkg.on(\'error\', function (err) {
+0 11 throw new Error(err);
+0 12 });
+0 13 pkg.resolve();
+0 17 var endpoints = this.opts.endpoints || {};
+0 30 Manager.prototype.loadJSON = function () {
+0 31 var json = path.join(this.cwd, config.json);
+0 32 fs.exists(json, function (exists) {
+0 33 if (!exists) return this.json);
+0 34 fs.readFile(json, \'utf8\', function (err, content) {
+0 35 if (err, content) {
+0 36 if (err) {
+0 37 if (err) return this.emit(content);
+0 38 this.json(content);
+0 40 }
+0 41 }.bind(this);
+0 46 var resolved = function () {
+0 47 return this;
+0 48 return this.json = json;
+0 51 return this.resolvedSync = true;
+0 53 Manager.resolvedSync = resolved = true;
+0 55 Manager.resolved = false;
+0 56 Manager.prototype.format = function () {
+0 57 return function () {
+0 58 var resolvedSync() {
+0 59 var resolved
+1 3 if (this.prune()) return this.emit('resolve', false);
+1 4 this.once('loadJSON', this.emit.bind(this,'resolveJSON'));
+1 5 this.once('resolveLocal', function () {
+1 6 if (this.endpoints.length) {
+1 7 this.once('resolveFromJson', resolved).resolveFromJson();
+1 8 } else {
+1 11 }).loadJSON();
+1 13 Manager.prototype.resolveLocal = function () {
+1 14 glob('./' + config.directory + '/*', function (err, dirs) {
+1 15 if (err) return this.emit('error', err);
+1 16 dirs.forEach(function (dir) {
+1 17 var name = path.basename(dir);
+1 18 this.dependencies[name] = [];
+1 19 this.dependencies[name].push(new Package(name, dir, this));
+1 21 this.emit('resolveLocal');
+1 29 this.dependencies[name] = this.dependencies[name] || [];
+1 30 this.dependencies[name].push(pkg);
+1 31 pkg.on('resolve', next).resolve.bind(this,'resolveEndpoints'));
+1 32 }.bind(this), this.resolve.bind(this, this.endpoints);
+1 33 pkg.resolveEndpoints);
+1 34 pkg.readJson();
+1 35 return this.readJson();
+1 36 }.bind(this.readInstalled();
+1 38 Manager.prototype.readJson = function () {
+1 39 var json = function () {
+1 40 var json = json;
+1 41 return json? json.toString() {
+1 42 : json || {};
+1 46 var promise = Manager.parse json, json? json() {
+1 47 : json }
+1 48 } catch (e) {
+1 49 : function () {
+1 50 return Q.parse(json);
+1 54 return Q.parse(json);\
+2 9 pkg.on('resolve', next).resolve();
+2 10 }, function () {
+2 17 return this.emit('resolveLocal');
+2 25 pkg.on('resolve', function () {
+2 26 this.install();
+2 28 pkg.on('error', next).resolve();
+2 33 Manager.prototype.resolveFromJson = function () {
+2 35 var pkg  = new Package(this);
+2 36 pkg.once('resolve', function () {
+2 37 pkg.removePackages.removePackages.bind(this);
+2 38 this.removePackages.removePackages.bind(this);
+2 39 this.removePackages.removePackage.bind(this);
+2 41 return this.resolveLocal.resolveLocal.resolveLocal.resolveEndpoints();
+2 45 Manager.prototype.resolveLocal.resolveLocal = function () {
+2 46 var endpointNames = function () {
+2 47 var name = function () {
+2 48 var endpointNames = this.uninstall();
+2 50 async.forEach(this.forEach(this.endpoints, function (endpoint, next) {
+2 51 var name = new Package
+3 3 var s = this.opts.endpoints;
+3 4 for (var i = 0; i < this.dependencies.length; i++) {
+3 5 s.endpoints.forEach(function (endpoint) {
+3 6 var endpoint = endpointParser.decompose(endpoint);
+3 7 targets.push(endpoint);
+3 10 return s;
+3 14 if (!this.dependencies.length) return this.emit(\'resolveFromJson());
+3 16 targets.push(this.dependencies.shift());
+3 17 this.emit(\'resolveFromJson());
+3 22 this.dependencies.forEach(function (endpoint) {
+3 23 var name = endpointParser.decompose(endpoint);
+3 25 var package = new Package(\'name\', endpoint, this);
+3 26 tmp.dir({ prefix: \'g-0\', path: this.endpoint }, function (err, dirs) {
+3 27 if (err) return this.emit(\'resolveFromJson\', endpoint, this.dependencies[dirs]));
+3 28 pkg.on(\'loadJSON\', function () {
+3 29 async.push(pkg.install(pkg);
+3 33 pkg.on(\'error\', this.emit.bind(this.bind(this, this.emit.bind(this, \'install.emit.bind(this, \'install.bind(this, \'install.json\'));
+3 34 this.install.bind(this));
+3 38 pkg.resolveLocal(), this);
+3 41 Manager.prototype.readLocalConfig = function () {
+3 42 .readLocalConfig() {
+3 43 return this.readLocalConfig();
+3 45 Manager.readLocalConfig() {
+3 46 .readLocalConfig();
+4 7 pkg.once('loadJSON', function () {
+4 8 pkg.once('fetchURL', function (url) {
+4 9 if (pkg.json.commit && pkg.json.version === '0.0.0') url += this.download();
+4 10 else url += this.download();
+4 11 next(null, { url: url, name: name });
+4 12 }).fetchURL();
+4 13 }, this);
+4 14 return pkg;
+4 18 Manager.prototype.download = function () {
+4 19 var destDir = this.opts.endpointNames;
+4 20 var deferred = Q.defer();
+4 21 var that = this;
+4 22 var req = this.req;
+4 24 if (this.opts.download) {
+4 25 deferred.notify({
+4 26 level: 2,
+4 27 filename: destDir,
+4 28 url: this.assetUrl,
+4 29 headers: that.app.headers,
+4 30 ca: this.config.ca.default,
+4 31 strictSSL: this.config.strictSsl,
+4 32 timeout: this.config.timeout
+4 34 this.on('error', deferred.reject)
+4 35 .pipe(fs.createWriteStream(destDir))
+4 36 .on('error', deferred.reject)
+4 37 .on('close')
+4 38 .on('error', deferred.resolve.resolve.bind(this))
+4 39 .on('end', deferred.resolve.bind(deferred.resolve, deferred.resolve, deferred.resolve, deferred.reject)
+4 40 .resolve.bind(deferred, decache.reject))
+4 41 .on('deepEADDREndpoints', deferred.reject)
+4 42 .resolve.resolve.bind(deferred, decache.reject)
+4 43 .on('readFileSystemUpLocal', deferred.cleanUpLocal', deferred.clearLinks))
+4 44 .on('progressDelay')
+4 45 .on('progress'))
+4 48 .on('progress'+ function (deferred.progress.progress.split(/ 1000)
+4 49 .onLine + function (not
+5 2 var packages = this.json.dependencies;
+5 3 var n = 2;
+5 4 this.endpoints = {};
+5 6 var name = path.basename(endpoint).replace(/(\\.git)?(#.*)?$/, \'\');
+5 10 pkg.on(\'resolve', next).resolve();
+5 11 }.bind(this), this.emit.bind(this,'resolveEndpoints'));
+5 13 pkg.once('resolveLocal', function () {
+5 15 this.once(\'resolveEndpoints', resolved).resolveFromJson();
+5 17 this.once(\'resolveFromJson', resolved).resolveFromJson();
+5 19 }).resolveLocal();
+5 27 pkg.root = true;
+5 31 }.bind(this), this.emit.bind(this), this.emit.bind(this,'resolveEndpoints'));
+5 32 pkg.remove = this.name = function () {
+5 33 this.end();
+5 34 }.bind(this.emit.bind(this), this.bind(this);
+5 35 this.endpointNames();
+5 36 this.unlink = function () {
+5 37 return this.emit.bind(this);
+5 41 var endpointNames = this.once(\'resolveFromJson();\');
+5 42 var endpointNames = this.endpoints = endpointNames;
+5 43 var json = this.endpoints;
+5 45 var removed = this.endpoints;
+5 46 async.for (this.for (this.endpoints, this.
+6 9 if (pkg.json.commit && pkg.json.version === '0.0.0') url += true;
+6 10 else url += false;
+6 19 if (err) return this.emit(\'error\', err);
+6 23 pkg.once('fetchURL', function () {
+6 24 pkg.json.commit && pkg.json.version === '0.0.0\'));
+6 25 this.emit(\'resolveLocal\');
+6 32 var endpointNames = this.opts.endpoints || {};
+6 35 var pkg, function (endpoint) {
+6 36 var Package = new Package(name, endpoint, this) {
+6 37 dendpoint.install(endpoint, this);
+6 38 var endpoint = endpointParser.endpoint.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.endpointParser.key);
+6 39 var split;
+7 13 this.once('resolveEndpoints', resolved).resolveEndpoints();
+7 25 pkg.addListener('resolve', function (resolve) {
+7 26 this.emit('resolve', resolved);
+7 27 }.bind(this), this);
+7 28 pkg.removeListener('resolveLocal', function () {
+7 29 var endpoint = endpointNames[endpoint];
+7 30 if (!this.opts.production) {
+7 31 this.emit(\'production\', endpoint.name);
+7 33 this.emit('resolveEndpoints', true);
+7 36 Manager.prototype.prototype.resolveFromJson = function () {
+7 39 Manager.prototype.resolveFromJson.prototype.resolveFromJson = function () {
+7 42 return this.on (this.resolveFromJson();
+7 43 if (this.resolved) return this.resolved"
+
+8 8 pkg.removeListener(this.emit.bind(this,'resolveEndpoints'));
+8 9 this.emit('resolveEndpoints');
+8 14 var name = path.basename(this.endpoints);
+8 17 pkg.removeListener(this.emit.bind(this,'resolveFromJson'));
+8 18 this.emit('resolveFromJson');
+8 25 if (!exists) return this.emit(\'error\', new Error(\'Could not find local'+ config.json));
+8 26 fs.readFile(json, 'utf8', function (err, json) {
+8 27 if (err) return this.emit(\'error\', new Error(\'Local Server Error\'));
+8 28 this.emit(\'loadJSON\');
+8 32 }.bind(this.emit, json);
+8 36 glob = function () {
+8 38 return this.reduce(this.s (this, this.emit, this.emit, this.bind(this, function (s) {
+8 39 return this.emit(this, this.emit)
+8 40 , this.bind(this, function (s) {
+8 41 returns) {
+8 42 return this.emit(s) {
+8 43 return this.reduce(this, this.emit, this.bind(this, function (s) {
+8 45 return this.bind(this, function (s) {
+8 48 return
+9 11 if (this.errors.length) {
+9 12 this.emit('error', new Error("There was error while reading _config.json"));
+9 13 return;
+9 22 pkg.on('error', this.emit.bind(this,'error')));
+9 31 pkg.on('resolve', next).resolveLocal();
+9 38 return this.once('resolveEndpoints', resolved) {
+9 39 var endpointNames = this.resolveFromJson();
+9 40 var endpointNames = resolved || {};
+9 41 this.resolved = this.resolvedEndpoints = this.endpoints || [];
+9 42 var endpoints.resolvedEndpoints.length = this.length = this.length = 0;
+9 43 this.length = 0;
+9 44 this.for (this.for (this.endpoint) {
+9 45 for (var i = resolveEndpoints) {
+9 46 var name in this.endpoint = resolveEndpoints.length;
+9 47 var endpoint = resolveFromJson();
+9 48 var endpoints) {
+9 49 var endpoints = resolveFromJson();
+9 50 var endpoint = resolveFromJson();\

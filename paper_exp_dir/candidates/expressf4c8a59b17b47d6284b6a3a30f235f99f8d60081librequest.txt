@@ -1,0 +1,253 @@
+Min editdistance: 1.00
+Closest candidate: 6 1 , parseRange = require('range-parser')
+0 1 , parseRange = require(\'./utils\').parseRange
+0 2 , res = http.ServerResponse.prototype
+0 3 , send = connect.static.send
+0 4 , mime = require('mime')
+0 5 , basename = path.basename
+0 6 , join = path.join;
+0 7 res.send = function(body, headers, status){
+0 8 if (\'number\' == typeof headers) {
+0 9 status = headers,
+0 10 headers = null;
+0 11 }
+0 12 status = status || this.statusCode;
+0 13 switch (typeof body) {
+0 14 case \'number\':
+0 15 if (!this.header(\'Content-Type\')) {
+0 16 this.contentType(\'.txt\');
+0 18 body = http.STATUS_CODES[status = body];
+0 19 break;
+0 20 case\'string\':
+0 22 this.charset = this.charset || \'utf-8\';
+0 23 this.contentType(\'.html\');
+0 26 case \'boolean\':
+0 27 case \'object\':
+0 28 if (Buffer.isBuffer(body)) {
+0 30 this.contentType(\'.bin\');
+0 32 } else {
+0 33 return this.json(body, headers, status);
+0 37 if (!this.header(\'Content-Length\')) {
+0 38 this.header(\'Content-Length\', Buffer.isBuffer(body)
+0 39 ? body.length
+0 40 : Buffer.byteLength(body));
+0 42 if (headers) {
+0 43 var fields = Object.keys(headers);
+0 44 for (var i = 0, len = fields.length; i < len; ++i) {
+0 45 var field = fields[i];
+0 46 this.header(field, headers[field]);
+0 49 if (204 == status || 304 == status) {
+0 50 this.removeHeader(\'Content-Type\');
+0 51 this.removeHeader(\'Content-Length\');
+0 53 this.statusCode = status;
+0 54 this.end(\'HEAD\' == this.req.method? undefined : body);
+0 55 return this;
+0 56 };
+0 57 res.json = function(obj, headers, status){
+0 58 var body = JSON.stringify(obj)
+0 59 , callback = this.req.query.callback
+0 60 , jsonp = this.app.enabled(\'jsonp callback\');
+0 62 this.header(\'Content-Type\', \'application/json\');
+0 63 if (callback && jsonp) {
+0 64 this.header(\'Content-Type\', \'text/javascript\');
+0 65 body = callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+0 67 return this.send(body, headers, status);
+0 69 res.status = function(code){
+0 70 this.statusCode = code;
+0 73 res.sendfile = function(path, options, fn){
+0 74 var next = this.req.next;
+0 75 options = options;
+0 76 options = options || {};
+0 77 var done;
+0 78 var req = this;
+0 79 var that = this;
+0 80 if (\'function next(req.socket.o, req.o.nock.nock.nock.nock.nock.get(options) && err(options) {
+0 81 .get(options.n.res.resolve(options.resolve(fn)
+0 82 .n.fn && err(this.req.headers.headers.headers.location, options.location, options.url.capture, options.capture, function(res.proxies.location, options.url, options.capture, function(res){
+0 83 if (err) {
+0 84 if (done) return;
+0 85 return done
+1 2 , res = http.ServerResponse.prototype;
+1 3 res.setHeader(\'Range\', Buffer.from(__dirname + \'/../headers\'), { lifetime: 1 });
+1 10 if (!arguments.length || undefined === body) body = status = 204;
+1 33 this.contentType(\'.json\');
+1 35 body = JSON.stringify(body);
+1 36 if (this.req.query.callback && this.app.settings[\'jsonp callback\']) {
+1 39 body = this.req.query.callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+1 56 if (204 === status) {
+1 65 if (\'function\' == typeof options) {
+1 66 fn = options;
+1 67 options = {};
+1 69 options.path = path;
+1 70 options.callback = fn;
+1 71 var self = this;
+1 72 options.contentType = options;
+1 73 options.callback.set(\'cache staticFolder = self.set-cache state
+1 74 );
+1 75 var data = this;
+1 76 if (!options.set(\'maxAge\', contentType
+1 77 ) {
+1 78 set(\'maxAge\')?
+1 79 : 100;
+1 81 set(\'maxAge
+1 82 } else
+1 83 set(\'maxAge\', contentType
+1 86 var set contentType(field, secure
+1 88 if (set content-age
+1 90 set(\'maxAge\'), contentType
+1 93 var secure? cache.set(options.maxAge
+1 94 ) : secure())
+2 34 if (this.req.query.callback && this.app.set(\'jsonp callback\')) {
+2 43 this.header(\'Content-Length\', Buffer.isBuffer(Buffer)
+2 69 return this.send(this.end(body);
+2 73 return this.toString = code;
+2 74 return this.toString();
+2 76 res.lang = function();
+2 77 return res.isXHR = function(){
+2 78 return typeof arguments.toLowercase(){
+2 79 return typeof arguments.toLowerCase() === \'function\'string\'string\' == arguments[n}
+2 81 }'length = arguments.toString;
+2 84 res.os = function getHeader(field, chars) {
+2 85 var headers = this.length;
+2 86 return res.length = toString = chars;
+2 87 return res.length =
+3 3 var req = exports = module.exports = {
+3 4 __proto__: http.IncomingMessage.prototype
+3 6 req.get = function(name){
+3 7 switch (name = name.toLowerCase()) {
+3 8 case'referer':
+3 9 case'referrer':
+3 10 return this.headers.referrer
+3 11 || this.headers.referer;
+3 12 default:
+3 13 return this.headers[name];
+3 16 req.accepts = function(type){
+3 17 return utils.accepts(type, this.get(\'Accept\'));
+3 19 req.acceptsCharset = function(charset){
+3 20 var accepted = this.acceptedCharsets;
+3 21 return accepted.length
+3 22 ? ~accepted.indexOf(charset)
+3 23 : true;
+3 25 req.acceptsLanguage = function(lang){
+3 26 var accepted = this.acceptedLanguages;
+3 28 ? ~accepted.indexOf(lang)
+3 31 req.range = function(size){
+3 32 var range = this.get(\'Range\') || [];
+3 33 if (!range) return;
+3 34 return parseRange(size, range);
+3 36 req.__defineGetter__(\'accepted\', function(){
+3 37 var accept = this.get(\'Accept\');
+3 38 return accept
+3 39 ? utils.parseAccept(accept)
+3 40 : [];
+3 41 });
+3 42 req.__defineGetter__(\'acceptedLanguages\', function(){
+3 43 var accept = this.get(\'Accept-Language\');
+3 45 ? utils
+3 46 .parseQuality(accept)
+3 47 .map(function(obj){
+3 48 return obj.value;
+3 49 })
+3 52 req.__defineGetter__(\'acceptedCharsets\', function(){
+3 53 var accept = this.get(\'Accept-Charset\');
+3 62 req.param = function(name, defaultValue){
+3 63 var params = this.params || {};
+3 64 var body = this.body || {};
+3 65 var query = this.query || {};
+3 66 if (null!= params[name] && params.hasOwnProperty(name)) return params[name];
+3 67 if (null!= body[name]) return body[name];
+3 68 if (null!= query[name]) return query[name];
+3 69 return defaultValue;
+3 71 req.is = function(type){
+3 72 var ct = this.get(\'Content-Type\');
+3 73 if (!ct) return false;
+3 74 ct = ct.split(\'\');
+3 75 return true;
+3 77 defineGetter__defineGetter__(\'when content-Type\', function(){
+3 78 var given = this.get(\'/\');
+3 79 return this.set(\'Content-Type\', ct);
+3 80 var charset = this.set(\'Content-Type\', this.set(\'Content-Type\');
+3 81 res.set(\'Content-Type\', this.set(\'Charset\');
+3 82 return \'image\', this.set(\'Content-Type\');
+3 83 set(\'Charset\');
+3 84 }bind(this);
+3 85 var set("set content-Type"is"enct"\', content-with"\', set.position"\', contentType"type"long"\', contentType"locale=iso-88-8859-1en-8"\');
+3 86 return is=iso-8859-1-1en-8
+4 72 if (\'function\'function\' == typeof options) {
+4 77 options.callback.callback. = function(options, options;
+4 78 .path = path;
+4 79 .options.callback.fn.callback.apply(this, this, this, options, options);
+4 80 .options = fn.options = options;
+4 81 .callback.apply(this, this, this, options);
+4 82 var self = options = options.req = this;
+4 84 var exclude = this;
+4 86 return new this;
+4 87 function.clean = options && options.stats && options.ignore!== undefined;
+4 88 function options.autoWatch(err) {
+4 89 var self = options && options.ignore = options
+5 74 ct = ct.split(/ *, */);
+5 75 if (!~type.indexOf(\'length\')[0]!== - 1) return true;
+5 76 ct = mime.lookup(type);
+5 77 if (~type);
+5 78 var etag = toString = setString(val);
+5 79 var contentType = setString = setString(val);
+5 80 return etag = setFormatters[type];
+5 82 req.setHeader = function getHeader(field, val){
+5 83 this.header = function header;
+5 84 return val;
+5 85 var headers = getHeader(field){
+5 86 this.setHeader, response = response;
+5 87 this.setHeader, response;
+5 88 if (setHeader, response = response.headers = response);
+5 91 if ('content-type\', setHeader, contentType, headers=\'content-type\', setHeader'
+
+6 1 , parseRange = require('range-parser')
+6 2 , parse = connect.utils.parseUrl
+6 3 , mime = connect.mime;
+6 7 req.get =
+6 8 req.header = function(name){
+6 19 return utils.accepts(type, this.get('Accept'));
+6 76 ct = ct.split(/[0];
+6 80 var etag = unlink(type);
+6 81 var removed = '';
+6 82 var slashAdded = false;
+6 83 var contentType = '';
+6 84 return type = '';
+6 85 return {setCharsetagment = setCharset;
+6 86 setCharset = setCharset;
+6 87 var contentType = function attachment = function attachment(filename) {
+6 88 if (charset){
+6 89 if (content.length &&!== undefined) return;
+6 90 content = \';
+6 91 ct = \';\';
+6 92 ct = \'attachment\' == 0;
+6 93 ct = filename;
+7 1 , parseRange = require(\'range-parser\')
+7 83 var mtime = '';
+7 84 return {};
+7 85 defineGetter.setHeaderIfSet(field, param, param);
+7 86 defineGetter, function(name, app, basePath, urlGetter, must, custom Set, handler);
+7 87 de, function(value, endsWith, capture, type){
+7 88 if (set(name, app, function(key, app, siteGetter, endsWith, endsWith, color){
+7 89 if (toString)
+7 90 && undefined!== undefined) return true;
+7 91 if (type &&
+8 77 var next = options.params = options || {};
+8 78 if (\'function next(err) {
+8 79 next(err) {
+8 80 var err = options.filename = path;
+8 81 options.filename = path;
+8 82 options.callback = options;
+8 83 fn = fn;
+8 85 options.callback.callback = options;
+8 86 options.fn = options;
+8 87 options.filename = options;
+8 88 if (fn) return fn(this, options, options, options.sensitive) &&!== undefined!== undefined) {
+8 89 options.sensitive;
+8 91 if (options.cancel;
+8 93 if (options
+9 85 ct = typeof null;
+9 86 try {
+9 88 } catch (ect = parse.type,
+9 90 return {'
+

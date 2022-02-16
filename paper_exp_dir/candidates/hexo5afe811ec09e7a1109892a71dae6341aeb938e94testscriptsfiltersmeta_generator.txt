@@ -1,0 +1,98 @@
+Min editdistance: 48.00
+Closest candidate: 1 3 + \'<meta name="generator" content="foo"></head>\'
+0 1 it(\'_generator() - with duplicate "generator" parameter.\', () => {
+0 2 const content = \'<head><link></head>\'
+0 3 const result = metaGenerator(content);
+0 4 const resultType = typeof result;
+0 5 resultType.should.eql(\'undefined\');
+0 6 });
+0 7 it(\'_generator() - with empty "generator" tag\', () => {
+0 8 const content = \'<head></head>\'
+0 13 it(\'_generator() - with non-empty head tag\', () => {
+0 19 it(\'_generator() - with no duplicate "generator" tag\', () => {
+0 31 it(\'_generator() - with no valid input type\', () => {
+0 32 const content = \'<input type="text" name="generator" value="foo"></input>\'
+0 34 const $ = cheerio.load(result);
+0 35 $(`meta ${result}<head>="generator" value="foo"`);
+0 36 $(\'meta[name="generator"]\').should.eql(`<head>="generator" value="foo"`);
+0 38 it(\'_generator() - with valid input type\', () => {
+0 39 const content = \'<input type="application/atom+xml" name="generator" />`;\';
+0 41 const $ = cheerio.load(content);
+0 42 $(`<input type="<input type="application/learnboost" name="generator" value="generator" name="generator")>${type}">
+0 43 .method="generator}</input>`);
+0 44 return output(`<input type="d="d="d="d" class="g," class="s" name="generator">`);
+0 45 });'
+
+1 1 it(\'should work without plugins\', () => {
+1 2 const content = \'<head><link>\'
+1 3 + \'<meta name="generator" content="foo"></head>\'
+1 4 + \'<meta content="foo" name="generator"></head>\'
+1 5 + \'<head>\'
+1 9 + \'<join(hexo.base_dir, \'head, \'paginator\') + \'></head>\'
+1 11 + \'<meta content="paginator" content="foo" name="paginator"></head>\'
+1 13 + \'<meta content="cog" name="paginator"></head>\'
+1 14 + \'<p>foo</p>\'
+1 15 + \'<body><p>bar</p></body></html>\';
+1 16 it(\'should work with several similar head tag\', () => {
+1 18 + \'<head></head>'
+1 19 + \'<head><head><head><link></head>\'
+1 20 + \'<head><head><link></head>\';
+1 22 assert.strictEqual(result, undefined);
+1 25 it(\'should work with several identical routes\', () => {
+1 27 + \'<head><head><link></head>\'
+1 28 + \'<head><link></head>\';
+1 38 + \'<head>\'</head>\'
+1 40 + \'</head>\'
+1 43 + \'</head>'
+1 45 + \'</head>
+2 1 it(\'should pass-generator for plugins with <select> tag\', () => {
+2 2 const content = \'<head><link></head>\';
+2 5 $(\'meta[name="generator"]\').length.should.eql(1);
+3 1 const result = str => {
+3 2 assert.strictEqual(str.replace(/<head>(?!<\\/head>)/g, "");
+3 3 assert.strictEqual(str.replace(/<head>Pride<\\/head>/g, \'<a href="${hexo.version}">Hexo</a>`);
+3 5 };'
+
+4 2 const content = \'<head></head>\';
+5 1 it(\'_generator() - with array-like collection\', () => {
+5 2 const content = \'<head>\
+5 3 <meta name="generator" content="Hexo ${this.env.name}">`;
+5 6 $(\'meta[name="generator"]\').length.should.eql(0);
+6 2 assert(str.replace(/<head>(?!<\\/head>).test(`Hexo ${hexo.version}`);
+6 3 assert(typeof str === \'object\');
+6 4 result[str] = str;
+6 5 };
+6 6 return result;
+7 1 it(\'should provide an escape tag in the `meta` property', () => {
+7 2 const content = \'<head></head>\
+7 3 <head>\
+7 4 <meta content="foo" name="generator"></head>\
+7 6 <link></head>`;
+7 8 result.should.eql(content);
+8 1 it(\'should return nothing', () => {
+8 2 const result = str => metaGenerator(str);
+8 3 result.should.eql([
+8 4 \'<head>\',
+8 5 \'<meta name="generator" content="foo"></head>\',
+8 6 \'<meta content="foo" name="generator"></head>\',
+8 7 \'<meta content="bar" name="generator"></head>\',
+8 9 \'<meta content="bar" name="generator"></head>\'
+8 10 ].join(\' \'));
+9 1 it(\'_generator() - no duplicate generator tag\', () => {
+9 11 + \'<meta content="bar" name="generator"></head>\'
+9 26 + \'</hexo.extend.filter.register(\'after_render:html\', content => {
+9 27 const posts = $([\'foo\', \'bar\']);
+9 28 posts.forEach(post => {
+9 29 const id = post.id;
+9 30 const post = post.post;
+9 31 if (!post.length) return;
+9 32 const layout = post.layout;
+9 33 const id = post._id;
+9 34 const layoutLength = layout.length;
+9 36 post.__post = post._id;
+9 37 post.layout = post.layout;
+9 38 if (layout === \'false\') {
+9 39 return {
+9 40 path: `${post.path}/`
+9 42 }'
+

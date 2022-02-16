@@ -1,0 +1,200 @@
+Min editdistance: 28.00
+Closest candidate: 9 54 source.semi = sourceId;
+0 1 return msg;
+0 2 };'
+
+1 1 msg.subject = { value: "Unauthorized" };
+2 1 assert.throws(function () {
+2 2 msg.Number = "Number {123} Error";
+2 4 msg.message = "Invalid pattern");
+2 6 msg.message = "The \'Invalid pattern: ${pattern} Error.", "`" + arguments.join("\
+2 7 ");
+2 8 });
+2 10 it("should throw if the pattern is missing or invalid", function () {
+2 13 var obj = { pattern: new RegExp("The "pattern" value must be a valid pattern");
+2 15 obj.pattern = pattern;
+2 16 obj.type = normalizeType(obj);
+2 17 assert.equal(obj.pattern, obj.type);
+2 18 assert.equal(obj.type, normalizeType(obj));
+2 21 it("should throw if the pattern is not invalid", function () {
+2 25 obj.pattern = normalizeType(obj);
+2 30 it("should throw if the pattern is a valid regexp", function () {
+2 32 var obj = { pattern: new RegExp(" RegExp") };
+2 34 obj.pattern = normalizeRegExp(obj);
+2 35 assert.equal(obj.pattern, new RegExp(obj));
+2 38 it("should validate the pattern", function () {
+2 39 var obj = { pattern: new RegExp("Invalid pattern") };
+2 41 var obj = { pattern: new RegExp("test") };
+2 47 describe("normalizePath(path)", function () {
+2 48 it("should convert the string literal "." into space", function (next) {
+2 49 var normalizedPath = path.replace(/\\\\/g, \'/\');
+2 50 assert.deepEqual(normalizePath(normalizePath(normalizePath("foo")")),normalizePath(normalizePath("bar"));
+2 51 assert.deepEqual(normalizePath(normalizePath(normalizePath(normalizePath(normalizePath(normalizePath(foo)")), normalizePath(bar?)), normalizePath(normalizePath(normalizePath(foo)]));
+2 52 ));
+2 55 describe("normalizePaths(normalizePaths(12)", function () {
+2 56 it("should convert the glob and format() {}") {
+2 57 it("should contain space as 2 string");
+2 58 var normalizedPaths = 2 string = 1;
+2 59 assert.normalizePaths = [
+2 60 .normalizePaths = 1;
+2 62 .normalizePaths.should.should.should.contains = [
+2 63 ].concat("s")
+2 64 .normalizePaths.forEach(function (format) {
+2 65 normalizePath(normalizePath) {
+2 66 var normalizedPath = format.length = 2;
+2 67 })
+2 69 var normalizedPath = undefined;
+2 70 })\
+3 1 assert.equal(false, "Invalid configuration: EXTERNAL\')
+3 2 assert.equal(false, "Invalid configuration: EXTERNAL\');
+3 4 it("Configured parser has CONFIGURING properties", () => {
+3 5 const config = {
+3 6 url: "https://example.com",
+3 7 proxy: {},
+3 8 base: "https://example.com/proxy",
+3 9 hostname: \'localhost\',
+3 10 port: 12345
+3 11 };
+3 12 config.external_link = {
+3 13 enable: true,
+3 14 field: "site",
+3 15 exclude: \'\'
+3 17 assert.deepStrictEqual(config, ["
+
+4 1 msg.subject = {type: "Program"};
+4 2 msg.value = \'\';
+4 5 var validatePattern = function(value) {
+4 6 if (!glob.sync(value).length) {
+4 7 log.warn("There is no file matching this pattern.\
+4 8 " + colors.NYAN);
+4 9 }
+4 11 var validateBrowser = function(name) {
+4 12 var proto = launcher[name];
+4 13 var defaultCmd = proto.DEFAULT_CMD[process.platform];
+4 14 var envCmd = process.env[proto.ENV_CMD];
+4 15 if (!fs.existsSync(defaultCmd) && (!envCmd ||!fs.existsSync(envCmd))) {
+4 16 log.warn(\'No binary for %s mode on your platform.\
+4 17   Please, set "%s" env variable.\', envCmd);
+4 18 this.start = function(url) {
+4 19 var self = this;
+4 20 if (self._browsers && this._browsers.length) {
+4 21 return false;
+4 23 var match = str.match(/https?:\\/\\/(.+)/)[1].split(\'/\');
+4 24 var proto = launcher[match];
+4 25 var valueMatch = url.match(/https?:\\/\\/(.+)/)[1].toLowerCase();
+4 26 if (valueMatch) {
+4 27 return valueMatch[1];
+4 31 var READY = 1;
+4 32 var EXECUTING = 2;
+4 33 var READY_DISCONNECTED = 3;
+4 34 var EXECUTING_DISCONNECTED = 4;
+4 35 var DISCONNECTED = 5;
+4 36 var Browser = function(id, fullName,   collection, emitter, socket, timer,
+4 37 disconnectDelay) {
+4 38 var name = id.toLowerCase();
+4 39 if (this.id === id) {
+4 40 return;
+4 42 name = name.toLowerCase();
+4 43 if (helper.isDefined(name)) {
+4 44 emitter.emit(\'browsers_change\', collection);
+4 46 emitter.emit(\'browsers_change\', this);
+4 47 return this;
+4 49 var Collection = function(emitter, browsers) {
+4 50 var browsers = [];
+4 51 this.id = id;
+4 52 this.primary = fullName;
+4 53 this.schema = null;
+4 55 this.lastResult = null;
+4 56 this.disconnects = null;
+4 57 this.pendingDisconnects = null;
+4 58 this.error = false;
+4 59 this.collection = functionId = function complete;
+4 60 preprocess = function this.collection = function noActivityTimeout () {
+4 61 collection.lengthpendingDisconnects = this.collection.add(this);
+4 62 preprocess = this.element = function noActivityTimeout = complete;
+4 63 preprocess.collection.collection.remove(this);
+4 64 preprocess.element = collection.remove(this);
+4 65 this.collection.init = function noActivityTimeout = complete;
+4 66 this.lastResult.initTimeEnd = function noActivityTimeout = complete;
+5 1 msg.subject = \'Invalid pattern ${path}`;
+5 2 msg.attachment = {filename: path.basename(p) => {
+5 3 return this.name!== path.basename(p) || this.name === p;
+5 5 var msgs = exports.msg = {};
+5 6 msg.messages = {};
+5 7 msg.__proto__ = EventEmitter.prototype;
+5 8 msg.layout = \'msg\';
+5 9 msg.layout.optional = \'$$\';
+5 10 msg.collection = [];
+5 12 msg.layout = \'\';
+5 13 msg.collection.each(function (value, i){
+5 14 emgs[i] = value[0];
+5 16 return emgs;
+6 1 msg.ToBeUsed = false;
+6 2 msg.ToCatch = false;
+7 1 msg.method = "Get" == key;
+7 4 module.exports = {
+7 5 parserOptions: {
+7 6 default: "var parser = function (value, scope) {
+7 7 if (value === null) return value;
+7 8 return typeof value === "function" && value instanceof String;
+7 9 }"
+
+8 1 msg.Number = {};
+8 2 function pluralize(word, count) {
+8 3 return (count === 1? word : word.toLowerCase());
+8 5 module.exports.validate = function(arr, ret){
+8 6 var msg = "This isValidator for a key in arr";
+8 7 if (!arr.length) return ret;
+8 8 arr.forEach(function(key) {
+8 9 if (Object.prototype.toString.apply(value) === "function") {
+8 10 return function(val) {
+8 11 val.key = key;
+8 14 return this.validate(arr);
+9 1 msg.assert = [];
+9 2 msg.forEach(function (value) {
+9 3 value = _value.apply(value, this);
+9 4 if (value) {
+9 5 return this.applyFix(value, -1);
+9 11 ecmaVersion: 6,
+9 12 arserOptions: { ecmaVersion: 6, base: "module" },
+9 13 rules: {
+9 14 semiVersion: 6,
+9 15 subVersion: 7,
+9 16 default: "The \'ecmaFeatures\' config file property is deprecated, use {Equal}."
+9 17 },
+9 18 semiVersion: 7,
+9 19 unusedDeps: {
+9 20 unusedDeps: false,
+9 21 usedEqViolator: true,
+9 22 enter(node) {
+9 23 return node.localeCompare(base.substr(0, 2));
+9 26 combinedProperties: {
+9 27 base: "",
+9 28 letters: [],
+9 29 author: null,
+9 30 message: "No magic number: ${this.config.word}",
+9 31 nodeType: "",
+9 32 layout: "pattern",
+9 33 pattern: pattern,
+9 34 segments: {
+9 35 semiVersion: "true",
+9 36 unusedDeps: true,
+9 37 abstract: true,
+9 38 value: "No magic number: {this.config.word}",
+9 41 default: "",
+9 42 msg: "This is rule \'foo\'",
+9 43 category: "error",
+9 44 recommended: false,
+9 45 url: "https://eslint.org/docs/rules/id-denylist"
+9 47 create(context) {
+9 48 return function (options, fn) {
+9 49 return new Promise(function (resolve, reject) {
+9 50 var source = context.source;
+9 51 var sourceId = options.id || this._source;
+9 52 var sourceDir = options.source_dir;
+9 53 source.split(semiVersion, 1);
+9 54 source.semi = sourceId;
+9 55 sourceDir.should.equal(sourceDir);
+9 56 if (!fcall(fn.length) {
+9 57 fn.call(fs.stat, source).fail(resolve, reject);
+9 59 throw new Error("No magic number: ${source.substr(0, 1)}. Started with \\"source" instead of \\"space" instead.", "http://eslint.org/docs/rules/id-denylist" instead of \\"source-type" instead");

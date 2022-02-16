@@ -1,0 +1,98 @@
+Min editdistance: 6.00
+Closest candidate: 0 1 meta({property: \'og:locale', content: \'en'}),
+0 1 meta({property: \'og:locale', content: \'en'}),
+0 2 meta({property: \'og:updated_time', content: post.updated.toISOString()}),
+0 3 meta({name: \'twitter:card\', content:\'summary\'})
+0 4 ].join(\'\
+0 5 \'));
+0 6 return Post.removeById(post._id);
+0 7 });
+0 9 it(\'title - page\', () => {
+0 10 const ctx = {
+0 11 page: {title: \'Hello world\'},
+0 12 config: hexo.config,
+0 13 is_post: isPost
+0 14 };
+0 15 const result = openGraph.call(ctx);
+0 16 result.should.eql([
+0 17 meta({property: \'og:title\', content: ctx.page.title}),
+0 18 meta({property: \'og:url\'}),
+0 19 meta({property: \'og:site_name\', content: hexo.config.title}),
+0 20 meta({property: \'og:description\', content: ctx.page.description}),
+0 21 meta({name: \'twitter:card\', content:\'summary\'}),
+0 22 meta({name: \'twitter:title\', content: ctx.page.title}),
+0 23 meta({name: \'twitter:description\', content: ctx.page.description})
+0 27 it(\'type - options\', () => {
+0 28 const result = openGraph.call({
+0 29 page: {},
+0 32 }, {type: \'photo\'});
+0 34 meta({property: \'og:type\', content: \'photo\'}),
+0 37 meta({property: \'og:description
+0 38 meta:http\'}),
+0 39 meta({property: \'og:type
+0 41 return result.should.not.skip(() => result.skip(() => result.remove()).should.ncall();
+0 44 it(\'type - isPost.skip()\', () => {
+0 45 const result.skip(\'archive = require(\'archiveDir\');
+0 46 should.skip(\'category_skip\');
+0 47 it(\'category_skip\');
+0 48 should.skip_skip_skip_skip_skip_posts.should.should.skip_skip_skip_skip_skip_skip_skip_skip_post.should.should.should.should.have.have.apply(ctx);
+0 49 it(\'archive_skip_skip_posts.skip_posts.skip
+1 3 meta({property: \'og:author', content: hexo.config.author}),
+1 4 meta({property: \'og:description', content: hexo.config.description}),
+1 5 meta({name: \'twitter:card\', content:'summary\'})
+1 10 });'
+
+2 2 meta({property: \'article:published_time', content: post.date.toISOString()}),
+2 3 meta({property: \'article:modified_time', content: post.updated.toISOString()}),
+2 4 meta({property: \'article:author\', content: hexo.config.author}),
+2 5 meta({property: \'article:tag\', content: \'optimize,web'}),
+2 6 meta({property: \'article:tag\', content: \'web\')}),
+3 15 result.should.have.string(meta({property: \'og:title\', content: ctx.page.title}));
+3 17 it(\'title - options\', () => {
+3 19 page: {title: \'test\'},
+3 22 }, {title: \'test\'});
+3 23 result.should.have.string(meta({property: \'og:title\', content: \'test\'}));
+3 31 result.should.have.string(meta({property: \'og:type\', content: \'photo\'}));
+3 33 it(\'type - is_post\', () => {
+3 37 is_post() {
+3 38 return true;
+3 39 }
+3 44 it(\'type - is_post - config\', () => {
+3 45 hexo.config.config.permalink = \': \': \': \': \': \': \'/\';
+3 46 var result.should.config.url\'https://\'site/\' }).should.com/\'
+3 48 it(\'description -should.config.description - undefined;
+3 49 it(\'type - allow = \'og:description\' is_post\')
+4 1  {property: \'og:locale', content: \'en'}),
+4 45 it(\'type - config => {
+4 46 it(\'type - isPost.insert()\', () => {
+4 47 const result = join(ctx.page.permalink = \'index.html_123\');
+4 48 should.should.replace(/foo(\'
+
+5 1  {
+5 2 meta: \'og:description', content: hexo.config.title}),
+5 3 meta: \'og:url'}),
+5 4 meta: \'og:site_name', content: hexo.config.title}),
+5 5 meta: \'og:description'})
+6 1  {property: \'og:description', content: post.description}),
+6 2 meta({name: \'twitter:card', content:\'summary\'})
+6 16 meta({name: \'description\'}),
+6 17 meta({property: \'og:type\', content: \'website\'}),
+6 21 meta({property: \'og:description\'}),
+6 24 meta({name: \'twitter:description\'})
+6 39 meta({property: \'og:type\', content: {type: \'photo\'}),
+6 40 meta: \'image:\'}),
+6 41 meta: \'og:type
+6 44 it(\'type - is_post - isPost - options\', () => {
+6 45 const result.should.should.to.to.call(ctx.param(\'og.param(\'og:type\', \'photo\', isPost
+6 46 config.photo === \'photo\');
+6 48 it(\'type - options);
+6 49 it(\'type - options.should.should.toArray = function () {
+6 50 const result = [\'photo = 1;\', \'photo = 2;\', [\'photo = 2];\', 3];
+6 51 should.should.should.should.toArray = [\'photo = [photo = 3];\', 3];
+6 52 should.should.toArray = [\'photo
+7 3 meta({property: \'og:comments\', content: true}),
+7 4 meta({property: \'og:X-Foo\', content: \'bar\'}),
+7 5 meta({property: \'og:updated_time\', content: post.updated.toISOString()}),
+7 11 meta({property: \'og:description\', content: hexo.config.description}),
+7 12 meta({name: \'twitter:card\', content:'summary\'}),
+7 13 meta({name: \'twitter:title\', content: hexo.config.title})

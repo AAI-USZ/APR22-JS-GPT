@@ -1,0 +1,30 @@
+Min editdistance: 22.00
+Closest candidate: 3 7 module.exports.sync = function (dir) {
+0 1  return callback(err); });
+0 2 });
+0 3 };
+0 4 rimraf.sync(dir);
+0 5 return callback;
+0 6 };"
+
+1 1 return callback(err); })
+2 1 return callback(err);})
+3 1  return ignore(err) + '\
+3 2 ' + err.message + '\
+3 3 '; })
+3 4 .on('exit', callback);
+3 7 module.exports.sync = function (dir) {
+3 8 var stat = fs.statSync(dir);
+3 9 var file = path.join(dir, uid(0)).toString();
+3 10 try {
+3 11 file = fs.readFileSync(file);
+3 12 } catch (e) {
+3 13 return callback(false);
+3 14 }
+3 15 return checkVersions(fs.readFileSync(file, 'utf8'));
+3 16 } finally {
+3 17 return callback();
+4 1  return callback(err); })
+5 4 module.exports.sync = function (path) {
+5 5 return!!process.env.TIMING;
+6 1  return ignore(err) + stats; })

@@ -1,0 +1,41 @@
+Min editdistance: 32.00
+Closest candidate: 7 8 return this.renderSync = function(next){
+0 1 callCallback.call(locals.call(locals);
+0 2 return;
+0 3 });
+0 4 }
+0 6 return callback();
+0 7 };
+0 8 return this.renderSync = function(options){"
+
+1 1 callCallback();
+1 7 return this;
+1 8 }).join("\
+1 9 ");
+1 11 };"
+1 12 function renderPost.prototype.prototype.read = function(str, callback);
+1 13 function renderPost.renderSync = function(str){
+1 14 return this.content = function(str, options, options, callback){
+1 15 if (
+2 1 "
+
+4 1 callback();
+4 6 module.exports.renderSync = function(data, locals){
+4 7 return locals(){
+4 8 return this.renderSync = this.rendererSync = this.rendererSync;
+4 13 return locals;'Output.loadLayout = function(layout, locals){
+4 14 if (layout, options, callback){
+4 15 return locals){
+4 16 return layoutSync = this.layout = this.layout = layout
+5 7 module.readFileSync = function(source){
+5 8 return this.renderSync = function(source, options){
+5 9 return this.getExtname(source) || this.output, options, this.rendererSync, this.content, _.static);
+5 10 };"
+
+7 7 function callback();
+7 8 return this.renderSync = function(next){
+7 9 return this.getOutput = function(output, callback){
+7 10 if (data){
+7 11 return this.engine = getExtname(output, function(){
+7 12 return this.output, callback);
+7 13 return this.content = renderSync(data);

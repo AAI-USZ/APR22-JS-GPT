@@ -1,0 +1,294 @@
+Min editdistance: 1.00
+Closest candidate: 5 2 Database = require('warehouse'),
+0 1 colors = require('colors'),
+0 2 moment = require('moment'),
+0 3 os = require('os'),
+0 4 HexoError = require('../error'),
+0 5 ExtendError = require('../extend/error'),
+0 6 util = require('../util'),
+0 7 file = util.file2;
+0 8 var scaffolds = hexo.scaffold,
+0 9 coreDir = hexo.core_dir;
+0 10 var scaffoldsPost = hexo.scaffold_drafts.replace(/---/, function(baseDir){
+0 11 return baseDir + path.sep;
+0 12 });
+0 13 var scaffolds = scaffolds.sort('date', -1),
+0 14 path = pathFn.join(baseDir, 'post', 'index' + pathFn.sep);
+0 15 var createError = module.exports = function(baseDir, callback){
+0 16 fs.exists(path, function(exist){
+0 17 if (!exist) return callback();
+0 18 file.list(path, function(err, files){
+0 19 if (err) return callback(HexoError.wrap(err, 'Scaffold load failed'));
+0 20 async.each(files, function(item, next){
+0 21 var scaffoldPath = pathFn.join(baseDir, item);
+0 22 next();
+0 23 }, next);
+0 25 }, callback);
+0 26 };
+0 27 var createSuccessResult = function(post, callback){
+0 28 var scaffoldPath = pathFn.join(baseDir, post.title);
+0 29 file.writeFile(path, scaffoldPath, function(err){
+0 30 if (err) return callback(err);
+0 34 var scaffolds = {
+0 35 post: [
+0 36 'title: {{ title }}',
+0 37 'date: {{ date }}',
+0 38 'tags:',
+0 39 '---'
+0 40 ].join('\
+0 41 ') + '\
+0 42 ',
+0 43 page: [
+0 50 '
+0 53 return function(data){
+0 55 file.writeFile(filePath, scaffoldPath, function(err){
+0 61 var createSuccessResult = function(page, callback){
+0 63 var scaffoldPath = pathFn.join(baseDir, page.title);
+0 64 file.writeFile(filePath, scaffoldPath, callback);
+0 67 var createSuccessResultAutofWork = function(data, callback){
+0 68 fs.exists(data, function(exist){
+0 69 if (exist){
+0 71 file.readFile(data.content.exists(data.path);
+0 72 } else {
+0 73 file.writeFile.writeFile(data.path = data.path;
+0 74 }
+0 81 };"
+
+1 7 module.exports = function(cwd, args, callback){
+1 8 var baseDir = cwd + '/',
+1 9 database = new Database(),
+1 10 config = {},
+1 11 init = true;
+1 12 try {
+1 13 config = require(baseDir + '_config.yml');
+1 14 } catch (e){
+1 15 init = false;
+1 17 if (init){
+1 19 var data = require(baseDir + 'db.json');
+1 20 database.import(data);
+1 24 var version = require('../package.json').version,
+1 25 safe = args.safe? true : false,
+1 26 debug = args.debug? true : false,
+1 27 newConfig = init? {} : null,
+1 28 dirname = __dirname.replace(/\\/*$/, '/'),
+1 29 themeDir = init? baseDir + 'themes/' + config.theme + '/' : null;
+1 30 var hexo = global.hexo = new Hexo(baseDir, args, {}),
+1 31 log = args.l || args.log,
+1 32 config = args.config? config.debug : false,
+1 33 env = process.env,
+1 34 version = args.l || args.config,
+1 36 database = new Database();
+1 39 env = args.env || 'themes/' + config.theme + '/' : null;
+1 40 var dbPath = args.database || baseDir + 'db.json';
+1 41 var format = args.l || args.log,
+1 42 layout = args.layout === undefined? true : options.layout,
+1 43 date = new Date(),
+1 44 self = this;
+1 45 return function(err){
+1 46 if (err) return callback(HexoError.wrap(err, 'Theme configuration load failed'));
+1 47 self.log.d('Theme configuration loaded');
+1 48 return dbPath;
+2 9 hexo = global.hexo = new Hexo(baseDir, args, {}),
+2 10 log = hexo.log;
+2 11 require('colors');
+2 12 if (args._test){
+2 13 var hexo.core_dir = path.dirname(path.join(baseDir, 'debug.yml')),
+2 14 _ = args.l || args.log,
+2 15 logFormat = args.l || args.log,
+2 16 root = process.cwd();
+2 17 if (root){
+2 18 var baseDir = root + '_/';
+2 19 hexo.extend.generator.register('test', function(locals, render, callback){
+2 20 if (!locals._test){
+2 21 var help = [
+2 22 'You should configure deployment settings in _config.yml first!',
+2 23 '',
+2 24 'Example:',
+2 25 '  deploy:',
+2 26 '   type: create',
+2 27 '   repository: <repository>',
+2 28 '    branch: <branch>',
+2 30 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline
+2 31 ];
+2 32 console.log(help.join('\
+2 33 '));
+2 34 return callback();
+2 36 var url = root + '_/' + args.root + '_';
+2 37 async.series([
+2 38 function(next){
+2 39 var cache = {};
+2 40 file.rmdir(path.join(baseDir, 'cache/test.yml'), function(err){
+2 41 if (err) return callback(HexoError.wrap(err, 'Config.yml load failed'));
+2 42 log.d('For more help, you can use \\'hexo help [yml] for the detailed information');
+2 45 },
+2 47 var blogDir = path.join(baseDir, 'blog');
+2 48 log.d('BlogDir generated.');
+2 49 file.rmdir(blogDir, function(err){
+2 50 if (err) return callback(HexoError.wrap(err, 'Config.yml content'));
+2 55 ], function(){
+2 56 log.d('Hexo is initalized.');
+3 3 spawn = require('child_process').spawn,
+3 4 util = require('../../util'),
+3 6 module.exports = function(args, callback){
+3 7 var config = hexo.config.deploy,
+3 8 deployDir = hexo.base_dir + '.deploy/',
+3 9 defaultPath = config.url + '/',
+3 10 publicDir = hexo.public_dir;
+3 11 if (!config.repo &&!config.repository){
+3 17 '    type: git',
+3 18 '    repository: <repository>',
+3 27 var repo = config.repo || config.repository;
+3 28 if (!repo){"
+
+4 8 defaultPath = hexo.config.deploy_path || this.normalize_deploy;
+4 15 '   type: heroku',
+4 16 '   repository: <repository url>',
+4 18 'For more help, you can check the online docs:'+ 'http://zespia.tw/hexo/'.underline
+4 24 var url = config.repo || config.repository;
+4 25 if (!mout.string.size(url)){
+4 27 'Example:'+ url,
+4 28 '   repo: <repository url>',
+4 29 '   branch: <branch>',
+4 40 var files = ['app.js', 'Procfile'];
+4 42 var dirs = item.split(path.sep);
+4 43 for (var i=0, len=dirs.length; i<len; i++){
+4 44 var front = dirs[i].substring(0, 1);
+4 45 if (front === '_' || front === '.'){
+4 46 return next();
+4 49 file.create(path.join(dest, item), next);
+4 52 var commands = [
+4 53 ['app', '--setup', '--log-level', 'info', '--port', '--log-level', 'debug'],
+4 54 ['app', '--setup', '-repo'],
+4 55 ['app', '-repository', '--setup', '--colors', '--log-level', 'debug'],
+4 56 ['app-version', '--'],
+4 57 ['app-mout','version'],
+4 58 ['app-type', 'list', '--version', '--listener', '--log-level', 'debug'],
+4 59 ['app-repository', '--repository', '--check', '--file', '--file-loaded'],
+4 60 ['app-type', 'list', '-version', '--token'],
+4 61 ['app-mout','version', '--express'],
+4 62 ['.'server','version']
+4 64 file.write(dest, '', function(dest, 'test');
+4 68 ], callback);
+5 2 Database = require('warehouse'),
+5 5 Hexo = require('./core'),
+5 6 HexoError = require('./error'),
+5 7 Model = require('./model'),
+5 8 util = require('./util'),
+5 14 require('./plugins/swig');
+5 15 require('./plugins/renderer');
+5 16 hexo.render = require('./render');
+5 17 async.auto({
+5 18 config: function(next){
+5 19 var configPath = path.join(baseDir, '_config.yml');
+5 20 fs.exists(configPath, function(exist){
+5 21 if (!exist) return next(null, false);
+5 22 hexo.render.render({path: configPath}, function(err, result){
+5 23 if (err) return log.e(HexoError.wrap(err, 'Configuration file load failed'));
+5 24 hexo.config = _.extend(require('./default'), result);
+5 25 log.d('Configuration file load successfully');
+5 26 next(null, true);
+5 30 update: ['config', function(next, results){
+5 31 if (!results.config) return next();
+5 32 var packagePath = path.join(baseDir, 'package.json');
+5 33 async.waterfall([
+5 35 fs.exists(packagePath, function(exist){
+5 36 next(null, exist);
+5 39 function(exist, next){
+5 41 var obj = require(packagePath);
+5 42 if (hexo.version === obj.version) return next(null, false);
+5 43 log.d('Updating package.json version');
+5 44 obj.version = version;
+5 46 var obj = {
+5 47 name: 'hexo',
+5 48 version: version,
+5 49 private: true,
+5 50 dependencies: {}
+5 52 log.d('package.json lost. Rebuilding a new one.');
+5 54 fs.writeFile(packagePath, JSON.stringify(obj, null,' '), function(err){
+5 55 next(err, exist);
+5 58 function(old, next){
+5 59 if (!old) return next();
+5 60 var dbPath = path.join(baseDir, 'db.json');
+5 61 log.d('Hexo was just updated. Deleting old cache database.');
+5 62 fs.exists(dbPath, function(exist){
+5 63 if (!exist) return next();
+5 64 fs.unlink(dbPath, next);
+5 68 log.success('Hexo was at least updated. Deleting old cache database.');
+5 69 return hexo.unwatch.exit(function(){
+5 73 "
+
+6 11 hexo.render.init();
+6 17 file.read(configPath, function(err, content){
+6 18 if (err) return next(HexoError.wrap(err, 'Configuration file load failed'));
+6 23 next(null, false);
+6 65 log.success('Hexo is initalized');
+7 7 baseDir = hexo.base_dir;
+7 16 '   message: [message]',
+7 28 async.forEach(files, function(item, next){
+7 29 var src = path.join(__dirname, item),
+7 30 dest = path.join(baseDir, item);
+7 31 fs.exists(dest, function(exist){
+7 35 hexo.log.d('Copying %s...', item);
+7 36 file.copyFile(src, dest, next);
+7 43 var defaultPackage = JSON.stringify({
+7 45 version: hexo.version,
+7 47 dependencies: {
+7 48 connect: '2.x'
+7 50 },' ');
+7 54 var content = require(packagePath);
+7 56 if (hexo.log.debug) throw new Error('Failed to lookup for package.json');
+8 11 var baseDir = cwd,
+8 14 hexo.config = {};
+8 16 var args = _.toArray(arguments);
+8 17 if (args.silent){
+8 18 hexo.log.init();
+8 20 log.error('Console `' + args.silent + '` has not been registered yet!');
+8 22 if (args.json){
+8 23 var obj = args._[0];
+8 24 obj.__proto__ = cwd + args.json;
+8 26 log.error('No binary for'+ args.json.replace(/\
+8 27 hexo--{3}/, '\
+8 28 ');
+8 30 return obj;
+8 32 log.log('Loading.');
+8 33 var list = require('./list'),
+8 34 keys = Object.keys(list);
+8 37 fs.exists(baseDir + '_config.yml', function(exist){
+8 43 var obj = require(baseDir + '_config.yml');
+8 44 if (hexo.log.is_post()){
+8 45 obj.call(db.create({
+8 46 _id: Object.keys(list._posts).length,
+8 47 path: baseDir + '_config.yml'
+8 48 }, function(post){
+8 50 log.d('Loading.');
+8 51 var results = [];
+8 52 posts.forEach(function(post){
+8 53 var date = post.date.format('YYYY-MM-DD HH:mm:ss');
+8 54 var content = [
+8 55 '---',
+8 56 'layout: post',
+8 63 ';
+8 65 file.writeFile(results.join('\
+8 67 \
+8 68 ', next);
+8 72 var data = ['Posts', 'Path', 'Category', 'Tags'];
+8 73 if (data){
+8 74 data.categories = data.categories;
+8 75 delete data.categories;
+8 77 log.d('No categories.');
+8 79 if (data.categories){
+8 80 var categories = data.categories;
+8 81 for (var i){
+8 82 if (!Array.isArray.isArray(data.categories)){
+8 83 posts.categories)){
+8 84 posts.push(data.categories).push(data.categories);
+8 86 _id = posts.push(posts[i] = {};
+8 91 var posts = _ = _.sort(function(key){
+8 92 return posts.toArray.filter(data, i){
+8 93 return posts.length;
+8 94 return posts.toArray(data, i){
+8 95 return posts.every(data.categories).toArray(data.categories).toArray(data.categories, i){
+8 96 return posts.length; i == 0; i == i;
+8 100 log.d('posts.forEach(function(post){
+8 101 return posts).sort(function(post){
+8 102 var i){

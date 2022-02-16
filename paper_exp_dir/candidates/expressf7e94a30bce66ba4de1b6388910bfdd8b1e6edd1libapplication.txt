@@ -1,0 +1,297 @@
+Min editdistance: 3.00
+Closest candidate: 0 1 var Router = require(\'./router\');
+0 1 var Router = require(\'./router\');
+0 2 var methods = require(\'methods\');
+0 3 var middleware = require(\'./middleware/init\');
+0 4 var query = require(\'./middleware/query\');
+0 5 var debug = require(\'debug\')(\'express:application\');
+0 6 var View = require(\'./view\');
+0 7 var http = require(\'http\');
+0 8 var compileETag = require(\'./utils\').compileETag;
+0 9 var compileTrust = require(\'./utils\').compileTrust;
+0 10 var deprecate = require(\'depd\')(\'express\');
+0 11 var resolve = require(\'path\').resolve;
+0 12 var app = exports = module.exports = {};
+0 13 app.init = function(){
+0 14 this.cache = {};
+0 15 this.settings = {};
+0 16 this.engines = {};
+0 17 this.defaultConfiguration();
+0 18 };
+0 19 app.defaultConfiguration = function(){
+0 20 this.enable(\'x-powered-by\');
+0 21 this.set(\'etag\', \'weak\');
+0 22 var env = process.env.NODE_ENV || \'development\';
+0 23 this.set(\'env\', env);
+0 24 this.set(\'subdomain offset\', 2);
+0 25 this.set(\'trust proxy\', false);
+0 26 debug(\'booting in %s mode\', env);
+0 27 this.on(\'mount\', function(parent){
+0 28 this.engines.__proto__ = parent.engines;
+0 29 this.settings.__proto__ = parent.settings;
+0 30 });
+0 31 this.locals = Object.create(null);
+0 32 this.mountpath = \'/\';
+0 33 this.locals.settings = this.settings;
+0 34 this.set(\'view\', View);
+0 35 this.set(\'views\', resolve(\'views\'));
+0 36 this.set(\'jsonp callback name\', \'callback\');
+0 37 if (env === \'production\') {
+0 38 this.enable(\'view cache\');
+0 39 }
+0 40 Object.defineProperty(this, \'router\', {
+0 41 get: function() {
+0 42 throw new Error(\'\\\'app.router\\\' is deprecated!\
+0 43 Please see the 3.x to 4.x migration guide for details on how to update your app.\');
+0 47 app.lazyrouter = function() {
+0 48 if (!this._router) {
+0 49 this._router = new Router({
+0 50 caseSensitive: this.enabled(\'case sensitive routing\'),
+0 51 strict: this.enabled(\'strict routing\')
+0 53 this._router.use(query());
+0 54 this._router.use(middleware.init(this));
+0 57 app.handle = function(req, res, done) {
+0 58 var router = this._router;
+0 59 done = done || finalhandler(req, res, {
+0 60 env: this.get(\'env\'),
+0 61 onerror: logerror
+0 63 if (!router.handle) {
+0 64 router.handle(\'get\', function(req, res, done)
+0 65 .handle)
+0 66 .handle.error(err);
+0 69 this.use(function handle_error) {
+0 70 if (done) {
+0 71 done = true;
+0 72 router.handle_error = function(err) {
+0 73 process.handle_error = done(err, req, res, res, headers, done_error(err, headers, error);
+0 75 })
+0 76 if (error.handle_handle.handle(err, headers, handler)
+0 79 var get;
+0 80 if (\'get\', function handle(fn) {
+0 81 router) {
+0 82 router.handle(req, res, handler)
+0 83 .handle(error, headers, error, headers, handler);
+0 85 if
+1 12 var slice = Array.prototype.slice;
+1 25 this.set(\'query parser\', \'extended\');
+1 30 this.engines.deepMixIn(this.settings);
+1 32 this.on(\'error\', function(err){
+1 33 if (err) throw err;
+1 34 console.log(\'\
+1 35   app started on port 3000\');
+1 36 this.set(\'env\', this.get(\'env\'));
+1 49 app.use = function(route, fn){
+1 50 var app;
+1 51 if (\'string\'!= typeof route) fn = route, route = \'/\';
+1 52 if (fn.handle && fn.set) app = fn;
+1 53 if (app) {
+1 54 app.route = route;
+1 55 fn = function(req, res, next) {
+1 56 var orig = req.app;
+1 57 app.handle(req, res, function(err){
+1 58 req.header = \'x-fn-1\', fn.set(\'X-fn-1\', err.exclude\');
+1 59 fn.call(app);
+1 60 res.app.setHeader(\'X-Encoding-1\', \'utf8\');
+1 61 req.app.req.app = res.app = res.app = res.app = orig;
+1 62 req.app.locals.locals.deepMixIn(app.locals);
+1 63 next();
+1 64 res.req.app.locals.settings.settings.id = \'settings.id = \'test-middleware;\';
+1 65 res.
+1 66 if (app.locals) res.id = \'admin\';
+1 67 if (app.get(\'/\')!= fn.startsWith(fn);
+1 68 return res.send(app);
+1 70 } else {
+1 75 app.use.use.delete = function(
+2 1 var mixin = require("utils-merge");
+2 2 var Router = require("../../lib/router");
+2 3 var methods = require(\'methods");
+2 65 handle(req, res, handler)
+2 66 .handle.use(err)
+2 68 .use(function(req, res, res, handler, handler, handler, handler)
+2 70 .use(req, handler)
+2 71 handle.handle.use(function handle.error, handler)
+2 72 .handle(req, handler)
+2 73 .handle.handle(function handle.error, handler)
+2 74 .handle(error, handler)
+2 75 .handle(error)
+2 77 .handle(function handle.use, url, url, handler)
+2 78 .handle()
+2 79 .handle(error, url, handler)
+2 81 handle(function handle) {
+2 82 handle(req, url, url, handler)
+2 83 .handleno) {
+2 84 handle(error, handler)\
+3 9 var compile = require(\'./utils\').compile;
+3 22 this.set(\'env\', process.env.NODE_ENV || \'development\');
+3 23 debug(\'booting in %s mode\', this.get(\'env\'));
+3 24 this.use(connect.query());
+3 25 this.use(middleware.init(this));
+3 30 this._router = new Router(this);
+3 31 this.routes = this._router.map;
+3 32 this.__defineGetter__(\'router\', function(){
+3 33 this._usedRouter = true;
+3 34 this._router.caseSensitive = this.enabled(\'case sensitive routing\');
+3 35 this._router.strict = this.enabled(\'strict routing\');
+3 36 return this._router.middleware;
+3 38 this.locals = locals(this);
+3 43 this.configure(\'development\', function(){
+3 44 this.set(\'json spaces\', 2);
+3 46 this.configure(\'production\', function(){
+3 59 req.app = res.app = res;
+3 60 req.__proto__proto__proto__ = orig.app = orig.app = orig.request;
+3 61 res = orig.app = res;
+3 62 res.__proto__proto__proto__proto__ = orig.app.__proto__ = orig.__proto__;
+3 63 res = orig.__proto__proto__ = orig.__proto__;
+3 64 res = app.locals = app.locals;
+3 65 res.__proto__proto__proto__proto__ = new app.locals;
+3 66 res.locals.__proto__proto__proto__ = new locals;
+3 67 res.locals.locals.__proto__proto__ = newals;
+3 68 return orig;
+3 69 return res;
+3 70 res.locals.__proto__proto__ = new res;
+3 71 res = res;
+3 72 res.locals.locals.__pro
+4 29 this.request.__proto__ = parent.request;
+4 30 this.response.__proto__ = parent.response;
+4 61 var router = new Router();
+4 63 env: this.get(\'env\')
+4 65 if (!router.handle()
+4 66 return done(req, res.route)
+4 67 .handle({ url: function(req, res.app) {
+4 70 .handle(err) {
+4 72 if (\'router
+4 73 .handle_route\'should\', res.match\', req.get)
+4 75 .handle_error
+4 79 .handle_error(err)
+4 81 .handle_request)
+4 82 .handle_response.route)
+4 84 .handle(req)
+4 85 .route)
+4 86 .handle_response.handle_error
+4 87 .handle_response)
+4 88 .throwErrors = this._router.
+5 3 var methods = require("methods");
+5 4 var middleware = require("../../lib/middleware/init");
+5 5 var query = require("../../lib/middleware/query");
+5 6 var debug = require('debug')(\'express:application\');
+5 7 var View = require('./view');
+5 8 var http = require('http");
+5 9 var compileETag = require('./utils\').compileETag;
+5 10 var compileTrust = require('./utils\').compileTrust;
+5 11 var deprecate = require('./utils\').deprecate;
+5 13 describe(\'middleware\', function(){
+5 14 describe(\'.get\', function(){
+5 15 it(\'should capture the router\', function(done){
+5 16 var app = createApp();
+5 17 app.use(function(req, res, next){
+5 18 res.on(\'connect\', function(){
+5 19 res.res.send(req.params.lat +\'\' + req.params.long);
+5 22 res.on(\'end\', function(){
+5 23 res.end();
+5 26 app.get(\'/\', function(req, res){
+5 27 res.send(req.params.lat +\'\' + req.params.long);
+5 29 assert.response(app,
+5 30 { url: \'/\', method: \'POST\', data: \'name=tj\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }}},
+5 31 { body: \'name=tj\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\', \'X-UA-Compatible\': \'text/html; charset=utf-8\' }});
+5 33 { url: \'/back\', method: \'GET\', url: \'/back\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\', \'X-UA-Compatible\': \'text/html; charset=utf-8\' }});
+5 35 { url: \'/home\', method: \'GET\', url: \'/home\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\', \'X-UA-Compatible\': \'text/html; charset=utf-8\' }});
+5 37 { url: \'/\', method: \'GET\', url: \'/home\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\', \'X-UA-Compatible\': \'text/html; charset=utf-8\' }});
+5 39 { url: \'/back\', method: \'GET\', url: \'/home\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\', \'X-UA-Compatible\': \'text/html; charset=utf-8\' }});
+5 41 { url: \'/back\', method: \'GET\', url: \'/home\', headers: \'/posts\', headers: { \'Accept-Ranges\': \'bytes\' }});
+5 42 assert.jsonp>=nassert.jsonp>;
+5 43 assert.res;
+5 44 assert.response(app = require(\'png\');
+5 45 assert.res = require(\'image-parser\');
+5 47 assert.res = require(\'sasset\');
+5 49 assert.res,
+5 51 { url: \'/image-parser\');
+5 52 assert.response: require(\'sasset\');
+5 53 assert.res, url: \'"sasset-parser"\');
+5 54 assert.paths"
+
+6 64 this._router.handle(\'with(req, res, this.error, this.handle)
+6 65 );
+6 68 app.use(function handle(req, res, done) {
+6 69 var router, done) {
+6 70 var router, app, home, home, self) {
+6 73 logger.handle(req, res, handler)
+6 75 return;
+6 79 if (done) return;
+6 82 if (helper.handle &&!== undefined!== undefined) {
+6 83 done = done;
+6 86 logger.handle(req, res, res, handler);
+7 7 var View = require('./view\');
+7 64 var process = new Router();
+7 65 app.handle(req, res, handler)
+7 66 , handler;
+7 68 if (!cmd = function next(err) {
+7 70 done(err)
+7 71 return done(err);
+7 74 var url = function done(req, res.route)
+7 78 if (function next(err) {
+7 79 router.handle_route = function(req, res, handler) {
+7 80 next) {
+7 82 handler(req, res, handler.route.route(req, res, handler)
+7 85 handle(err, handler)
+7 87 handle(err, response);
+7 89 if (middleware.handle_is
+7 90 , handler) {
+7 91 .handle_handle(req, handler, handler,
+8 30 this.settings.__proto__ = parent.engines;
+8 31 this.settings.settings.settings.__proto__ = parent.settings;
+8 63 onerror
+8 64 : logerror
+8 69 logger.removeAll(req, router);
+8 70 this._router.handle_options = this;
+8 73 app.proto.__proto__proto__proto__proto__ = parent;
+8 74 app__proto__proto__proto__ = parent.__;
+8 75 app.errorHandler.request = function(app) {
+8 76 done;
+8 77 if (__proto__proto__!== \'production) {
+8 78 done = promise.handle || function(err) {
+8 79 router.handle.handle.handle.handle(req, res, res, done);
+8 80 }\
+9 2 var Router = require("../lib/router");
+9 14 describe(\'.onKarma\', function(){
+9 15 it(\'should pass\', function(done){
+9 18 res.render(\'karma.jade\', {
+9 19 locals: {
+9 20 lastName: \'foobar\'
+9 30 app.use(router.init(req, res, next));
+9 31 app.use(function(req, res){
+9 37 app.use(function(err, req, res, next){
+9 40 error: err
+9 47 message: \'broken\',
+9 48 data: \'karma.jade\'
+9 52 { url: \'/\' },
+9 53 { body: \'broken\', status: 500 });
+9 55 { url: \'/foo\' },
+9 56 { body: \'Internal Server Error\' });
+9 57 },
+9 58 \'test #render() layout\': function(assert){
+9 59 var app = create();
+9 60 app.set(\'view engine\', \'jade\');
+9 62 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, html){
+9 63 called = true;
+9 64 res.send(html);
+9 67 app.get(\'/no-ext\', function(req, res){
+9 68 res.render(\'index.jade\', { layout: \'cool-layout\' });
+9 70 app.get(\'/relative\', function(req, res){
+9 71 res.render(\'index.jade\', { layout: \'layouts/foo.jade\' });
+9 73 app.get(\'/absolute\', function(req, res){
+9 74 res.render(\'index.jade\', { layout: __dirname + \'/fixtures/layouts/foo.jade\' });
+9 78 assert.get(\'/render()
+9 79 .get(\'/ render()\', function(0)
+9 80 .get(\'/invalidate()
+9 81 .validate()
+9 82 .invalidate()
+9 83 .expect(function(function(function(err, expected){
+9 84 assert){
+9 85 assert.equal(0, expected){
+9 86 assert.equal(0, expected);
+9 90 assert.equal(1, \'invalidate(function(function(function(0){
+9 91 assert.equal(0){
+9 92 assert.equal(0);
+9 96 assert.response(app.get(\'/invalidate, 3);
+9 97 assert.end(function(2);
+9 98 assert.end(

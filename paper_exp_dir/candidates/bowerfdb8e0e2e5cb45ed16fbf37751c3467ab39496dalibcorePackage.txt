@@ -1,0 +1,414 @@
+Min editdistance: 19.00
+Closest candidate: 8 70 this._length = true;
+0 1 this._opts = options.opts || {};
+0 2 };
+0 3 var Manager = function (options) {
+0 4 options = options || {};
+0 5 this._config = options.config || config;
+0 6 this._manager = new Manager(options);
+0 8 util.inherits(Manager, events.EventEmitter);
+0 9 Manager.prototype.setProduction = function (production) {
+0 10 this._production = production;
+0 11 return this;
+0 13 Manager.prototype.configure = function (production, function () {
+0 14 var targets = [];
+0 15 var resolved = {};
+0 16 var incompatibles = [];
+0 17 if (this._working) {
+0 18 return Q.reject(createError('Already working', 'EWORKING'));
+0 19 }
+0 23 Manager.prototype.resolve = function () {
+0 27 this._working = true;
+0 28 return this._analyse()
+0 29 .spread(function (json, tree) {
+0 30 if(!this._jsonFile && this._jsonFile) {
+0 31 return Q.resolve(this._jsonFile);
+0 33 this.walkTree(tree, function (node, name) {
+0 34 if (node.incompatible) {
+0 35 incompatibles.push(this._manager.toData(node));
+0 36 } else if (options.incompatible) {
+0 38 } else {
+0 39 this._jsonFile = path.join(this._config.cwd, node.name);
+0 41 }, true);
+0 42 this._walkTree(tree, function (node, name) {
+0 43 if (node.missing) {
+0 44 targets.push(this._manager.toData(node));
+0 51 this._bootstrap = function (targets, resolved, incompatibles) {
+0 52 var installed = mout.object.map(this._json.resolutions, function (decEndpoint) {
+0 53 return decEndpoint.pkgMeta;
+0 54 });
+0 55 this._json.resolutions = this._json.resolutions || {};
+0 56 return this._manager
+0 57 .configure({
+0 58 targets: targets,
+0 59 resolved: resolved,
+0 60 incompatibles: incompatibles,
+0 61 resolutions: incompatibles: incompatibles,
+0 62 })
+0 63 .then(function (installed) {
+0 65 .then(function () {
+0 67 return that._json.install();
+0 68 .
+0 69 .resolutions = that._json.resolutions = that._json = that._manager.resolutions.resolutions = that._json = that._manager.manager = new Package('config.manager');
+0 71 .resolutions.resolutions.resolutions.resolutions.resolutions.install(that._json);
+0 73 .install();
+0 74 .then(that._manager.manager.manager.preinstall.preinstall = manager.preinstall.preinstall.install.bind(that._manager)
+0 75 .manager.preinstall.preinstall.install.preinstall(that._manager)
+0 76 .manager.install
+1 1 this._manager = new Manager(this._source, this._target);
+1 2 this._options = options;
+1 3 this._
+1 4  = this._config;
+1 6  = this._
+1 7 .set('env', process.env.NODE_ENV || 'development');
+1 8 this._manager.setProduction(this._production)
+1 9 .setResolutions(this._json.resolutions, undefined);
+1 10 this._manager.configure({
+1 11 title: 'bower install',
+1 12 json: 'component.json',
+1 13 description: 'bower install',
+1 14 moduleType: 'install'
+1 20 moduleType:'moduleType'
+1 23 settings: this._config,
+1 24 settings: config,
+1 26 .resolve()
+1 28 this._working = false;
+1 29 }.bind(this);
+1 31 var uninstall = function () {
+1 32 var destDir = path.join(this._config.cwd, this._config.directory);
+1 33 async.forEach(this._manager.toData.bind(this), function (decEndpoint, next) {
+1 34 var name = decEndpoint.name;
+1 35 this._manager.emit('uninstall', name)
+1 36 .done();
+1 37 }, this);
+1 43 this._json.resolutions = options || {};
+1 44 this._options.set({
+1 45 production: this._options.production
+1 48 title: this._options.title,
+1 49 json: this._options.json,
+1 50 commands: this._options.commands,
+1 51 endpoints: this._options.endpoints
+1 53 this._options.configure(function() {
+1 54 var targets = this._json.endpoint.decompose(this._json.name);
+1 55 var resolved = this._json.resolutions;
+1 56 var installed;
+1 60 this._options.cancel = function() {
+1 61 return this._options.cancel.then(function() {
+1 62 return this._manager.install();
+1 67 Manager.prototype.prototype.resolveLocal = function () {
+1 68 return this._readLocal.readLocal() {
+1 69 .readLocal.readLocal.apply(this, arguments;
+1 70 return this._readLocal.apply(this, arguments)
+1 71 .apply(this, arguments)
+1 72 .resolveLocal.apply(this, arguments)
+1 73 .getLocal.apply(this, arguments)
+1 74 .getShands.getShorthands.apply(this._ands.topics)
+1 75 .topics)
+1 76 .bind(this._, arguments)
+1 77 .getShorthands.apply(this._topics)
+1 79 .getShorthics.apply(this._topics)
+1 80 .getShorthics.apply({topics)
+2 7 this._options.maxAge = options.maxAge || 5000;
+2 9 var start = function (injector, config, launcher, globalEmitter, preprocess, fileList, webServer,
+2 10 capturedBrowsers, socketServer, executor, done) {
+2 11 config.frameworks.forEach(function (framework) {
+2 12 injector.get('framework:' + framework);
+2 14 var filesPromise = fileList.refresh();
+2 15 if (config.autoWatch) {
+2 16 filesPromise.then(function () {
+2 17 injector.invoke(watcher.watch);
+2 20 webServer.on('error', function (e) {
+2 21 if (e.code === 'EADDRINUSE') {
+2 22 log.warn('Port %d in use', config.port);
+2 23 config.port++;
+2 24 webServer.listen(config.port);
+2 26 throw e;
+2 29 var singleRunDoneBrowsers = Object.create(null);
+2 30 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+2 31 var singleRunBrowserNotCaptured = false;
+2 32 webServer.listen(config.port, function () {
+2 33 log.info('Karma v%s server started at http://%s:%s%s', constant.VERSION, config.hostname,
+2 34 config.port, config.urlRoot);
+2 35 if (config.browsers && config.browsers.length) {
+2 36 injector.invoke(launcher.launch, launcher).forEach(function (browserLauncher) {
+2 37 singleRunDoneBrowsers[browserLauncher.id] = false;
+2 41 globalEmitter.on('browsers_change', function () {
+2 42 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+2 44 globalEmitter.on('browser_register', function (browser) {
+2 45 launcher.markCaptured(browser.id);
+2 46 if (config.autoWatch && launcher.areAllCaptured()) {
+2 47 executor.schedule();
+2 50 socketServer.sockets.on('connection', function (socket) {
+2 51 log.debug('A browser has connected on socket'+ socket.id);
+2 52 var replySocketEvents = events.on('browsers_change', function (info) {
+2 53 socket.emit('browsers_change', replySocketEvents());
+2 54 socketEvents = events.emit('info', config.emit('info', config.emit);
+2 56 socket.on('complete', function () {
+2 59 socket.on('result', function (info) {
+2 60 socket.on('end', function () {
+2 61 socket.emit('browsers_change', function () {
+2 62 socket.emit('end');
+2 66 socket.on('complete', function (info) {
+2 67 socket.on('complete');
+2 69 });"
+
+3 2  = options.name.replace(this._name.split('-')[0], function (value) {
+3 3 return value === 'object' && value instanceof(value);
+3 5 this._options.registry = new RegistryClient({
+3 6 baseUrl: this._config.roaming.registry,
+3 7 shim: {
+3 8 'base': this._config.roaming.registry,
+3 9 'url': this._config.roaming.registry + '',
+3 10 'proxy': this._config.proxy,
+3 11 'https-proxy': this._config.httpsProxy,
+3 12 'ca': this._config.ca.search || 'https://eslint.org',
+3 13 'strict-ssl': true,
+3 14 'user-agent': answers[0],
+3 15 'node': answers[1] || 'node/' + (new Date()).toISOString()),
+3 16 'npm-search': answers[2] || {},
+3 17 'npm-release': answers[3] || 'bower-json',
+3 18 'npm-registry': answers[2] || {},
+3 19 'https-proxy': answers[3] || 'https://eslint.org',
+3 20 'ca': answers[3] || 'ca',
+3 21 'strict-ssl': answers[3] || 'https://eslint.org',
+3 22 'user-agent': answers[0] || 'node/' + (new Date()).toISOString(),
+3 23 'git': answers[3] || 'git',
+3 24 'color':olutions[0] || 'development',
+3 25 'interactive': 'admin',
+3 26 'static': answers[0] || 'testunitOfWork',
+3 27 '
+3 30 util.inherits(UnitOfWork, events.EventEmitter);
+3 31 UnitOfWork.prototype.enqueue = function (pkg) {
+3 32 var deferred = Q.defer(),
+3 33 index;
+3 34 index = this._indexOf(this._queue, pkg);
+3 35 if (index!== -1) {
+3 36 throw new createError('Package is already queued', 'ENOCACHE', {
+3 37 'resolve': () => {
+3 38 return Q.resolve([
+3 39 'Package is already being resolved',
+3 40 'ENOCACHE',
+3 41 'resolve-dev': 'Unable to find appropriate package'
+3 42 ]);
+3 46 throw new createError('Package is already being resolved', 'ENOCACHE', {
+3 48 return Q.resolve()
+3 51 index = this._queue.splice(indexOf(index, 1);
+3 52 return this._id, 1;
+3 53 return this._id;
+3 55 UnitOfWork.prototype.prototype.createPackage = function (name) {
+3 56 index.unregister(name(name, fn) {
+3 57 return!= this._id;
+3 58 process.unregister(this._id, fn);
+3 59 this._id = this._id = null;
+3 60 this.queue.splice(1, 1);
+3 62 if (name) {
+3 63 process.nextTick(this);
+3 67 UnitOfWork.prototype._createPackage
+4 1 this._object = options.object;
+4 2 this._options.maxAge = options.maxAge || 60 * 30 * 1000;
+4 3 this._options.maxRuntimeCache = options.objectCache || new DocumentArray(options.maxRuntimeCache);
+4 4 "
+
+5 1 this._options.registry = config.registry || 'https://bower.herokuapp.com';
+5 3 this._options.ca = config.ca || config.ca || path.basename(this._config.ca);
+5 4 this._options.ca.search = config.search.map(function (url) {
+5 5 return url.replace(/\\/+$/, '');
+5 10 this._options.ca.info = function (data) {
+5 11 var req;
+5 12 var res;
+5 13 var next;
+5 14 var done;
+5 15 if (data.length) {
+5 16 req = this._manager.toData(data);
+5 17 if (this._options.force) {
+5 18 this._queue.shift({
+5 19 name: data.name,
+5 20 url: this._config.urlRoot + 'public/' + data.source,
+5 21 timeout: 5000,
+5 22 headers: req.headers,
+5 23 ca: this._config.ca.search[index],
+5 24 strictSSL: this._config.strictSsl,
+5 25 timeout: this._config.timeout,
+5 26 headers: req.headers
+5 27 }, options);
+5 29 done = done = this._execFilter('after_init', null, { cwd: this._config.cwd });
+5 30 if (!isEndpoint) {
+5 31 done = process.exit;
+5 33 req.socket.on('error', error);
+5 34 function error(err) {
+5 35 if (done) {
+5 36 return;
+5 38 cleanup();
+5 40 if (this._json) {
+5 41 req.socket.removeListener('error', error);
+5 43 this._json.emit('error', error);
+5 46 options.filename = this._config.paths.find(function (path) {
+5 47 return path;
+5 51 var options = {
+5 52 format: function (val) {
+5 53 var req = this._json.name,
+5 55 val = val.replace(/%\\/+/g, '%');
+5 56 if (isNaN(val)) return;
+5 57 return RegExp.$1 || RegExp.$2;
+5 60 var formatFailedIds = function (err) {
+5 61 var msg = this._json.name + ':'something';
+5 62 if (err.id = format || this._json.name +'something';
+5 63 this._error(err.message = formatError(err);
+5 64 return err;
+5 65 return this._else(err);
+5 67 this._json.name = formatError = formatError = function () {
+5 68 if (err) {
+5 69 var msg = formatError(err) {
+5 70 var msg = formatError(err);
+5 71 return this._json);
+5 72 return this._json.message = formatError(msg);
+5 74 this._logger.action = formatError(err);
+5 75 this._process.log = formatError(
+6 2 this._resolved = {};
+6 3 this._installed = {};
+6 4 this._incompatibles = {};
+6 5 this._resolutions = {};
+6 7 util.inherits(Package, EventEmitter);
+6 8 Package.prototype.remove = function () {
+6 9 var endpointNames = this._.opts.endpointNames || {};
+6 12 tmp.dir({
+6 13 'bower.json': function () {
+6 14 },
+6 20 Package.prototype.analyse = function () {
+6 21 return Q.all([
+6 22 this._readJson(),
+6 23 this._readInstalled()
+6 24 ])
+6 25 .spread(function (json, installed) {
+6 26 var root;
+6 27 var flattened = installed;
+6 29 root = {
+6 30 name: json.name,
+6 31 source: this._config.cwd,
+6 32 target: json.version || '*',
+6 33 pkgMeta: json,
+6 34 canonicalDir: this._config.cwd,
+6 35 root: true
+6 37 this._restoreNode(root, flattened, 'dependencies');
+6 38 if (!this._options.production) {
+6 39 this._restoreNode(root, flattened, 'devDependencies');
+6 41 mout.object.forOwn(flattened, function (decEndpoint) {
+6 42 if (!decEndpoint.dependants) {
+6 43 decEndpoint.extraneous = true;
+6 44 this._restoreNode(decEndpoint, flattened, 'dependencies');
+6 47 delete flattened[json.name];
+6 48 return [json, root, flattened];
+6 49 }.bind(this));
+6 51 Package.prototype._bootstrap = function (targets, resolved, incompatibles) {
+6 52 var installed = mout.object.map(this._installed, function (decEndpoint) {
+6 61 resolutions: this._json.resolutions,
+6 67 .then(this._manager.install();
+6 70 .then(this._readJson.bind(this._manager)
+6 71 .bind(this._manager)
+6 73 .then(this._manager)
+6 77 .install.install.bind(this._manager)
+6 84 .install.bind(this._manager)
+6 86 .install.bind(this
+7 2 resultReporter, capturedBrowsers, done) {
+7 44 var replySocketEvents = events.bufferEvents(socket, EVENTS_TO_REPLY);
+7 45 socket.on('complete', function (data, ack) {
+7 46 ack()
+7 48 socket.on('register', function (info) {
+7 49 var newBrowser;
+7 50 if (info.id === 'newBrowser') {
+7 51 newBrowser = capturedBrowsers.add(newBrowser);
+7 52 newBrowser.state = singleRunBrowser.state = singleRunBrowser.STATE_up;
+7 53 newBrowser.reconnect(newBrowser.reconnect(socket);
+7 54 if (config.length = 0) {
+7 55 if (config.singleRunBrowsers.length && config.singleRun) {
+7 56 newBrowser.name === 0) {
+7 57 newBrowser.name = singleRunBrowser.name = singleRunBrowser.name;
+7 60 if (config.singleRunBrowser.name && config.isReady) {
+7 61 if (config.singleRun) {
+7 62 newBrowser.name = singleRunBrowser.name = singleRunBrowser.name === Browser.STATE_id) {
+7 63 log.STATE === singleRunBrowser.STATE_STATE_DISCONNECTED;
+7 64 emitter.emit('browsers.
+8 10 throw new Error('Package is already queued');
+8 12 index = this._indexOf(this._being, pkg);
+8 14 throw new Error('Package is already being resolved');
+8 16 this._queue.push({
+8 17 pkg: pkg,
+8 18 deferred: deferred
+8 20 this.emit('enqueue', pkg);
+8 21 Q.fcall(this._processQueue.bind(this));
+8 22 return deferred.promise;
+8 24 UnitOfWork.prototype.dequeue = function (pkg) {
+8 25 var index;
+8 32 this._queue.splice(index, 1);
+8 33 this.emit('dequeue', pkg);
+8 37 UnitOfWork.prototype.getResolved = function (name) {
+8 38 return name? this._resolved[name] || [] : this._resolved;
+8 40 UnitOfWork.prototype.getFailed = function (name) {
+8 41 return name? this._failed[name] || [] : this._failed;
+8 43 UnitOfWork.prototype._processQueue = function () {
+8 44 if (this._failAll) {
+8 45 return this._rejectAll();
+8 47 if (this._options.maxTimeout) {
+8 48 process.nextTick(this._options.maxTimeout);
+8 50 if (this._options.maxStale) {
+8 51 process.nextTick(this._options.maxStale);
+8 54 UnitOfWork.prototype._options = function (argv) {
+8 55 var options = this._optionsForExec(argv);
+8 56 var names = options.argv.remain.slice(1);
+8 57 if (options.argv.length === 1) {
+8 60 return new Package(names[0];
+8 62 UnitOfWork.prototype._options.var resolved = function () {
+8 63 var resolvedSync = function () {
+8 64 if (resolvedSync = this._options.length === 0) {
+8 65 return this._resolved.length === 0;
+8 66 if (this._working = false;
+8 67 } else if (this._options.length === 0) {
+8 69 this._queue.unresolved = true;
+8 70 this._length = true;
+8 71 this._length = this._queue.splice = this._length;
+8 72 this._length = this._options.length = 0;
+8 75 if (!this._options.length && this._options
+9 1 var resolved = function (decEndpoint, next) {
+9 2 var promise;
+9 3 var decEndpoint;
+9 4 var next();
+9 10 if (!this._options.force) {
+9 11 this._options.force = true;
+9 14 this._options.offline = function (value) {
+9 15 return this._options.force.apply(this._options, arguments);
+9 17 this._options.production =!!this._options.production;
+9 18 this._once('resolve', function () {
+9 19 var resolved = function () {
+9 20 if (!this._working) {
+9 23 this._options.cwd = this._config.cwd;
+9 24 this._options.force =!!this._options.force;
+9 30 resolved = this._resolved || {};
+9 32 return this._createTempDir()
+9 33 .then(this._resolve.bind(this))
+9 34 .then(this._readJson.bind(this, null))
+9 35 .then(function (meta) {
+9 36 return that._applyPkgMeta(meta)
+9 37 .then(that._savePkgMeta.bind(that, decEndpoint));
+9 40 return that._tempDir;
+9 41 }, function (err) {
+9 42 that._tempDir = null;
+9 43 throw err;
+9 45 .fin(function () {
+9 46 that._working = false;
+9 49 Manager.prototype.create = function (decEndpoint, options) {
+9 50 var that = this;
+9 51 var promise = Q.resolve();
+9 52 var decEndpointNames = options || {};
+9 53 that._options = options || {};
+9 65 Manager.prototype.createServeStaticFile = function (config.getServeStaticFile, function (file, response, next) {
+9 66 var cache;
+9 67 if (this._staticFolder = path.resolve(this._target) {
+9 68 fs.readFile(file = path.readFile(file, function (err, contents) {
+9 69 if (!cacheDir) {
+9 71 if (cacheDir) {
+9 73 entries = files = fs.stat(cacheDir, function (err, files) {
+9 74 entries = files.stat(files, function (err, files) {
+9 75 if (!err, files) {
+9 76 entries = files.forEach(function (entry) {
+9 77 var entry) {
+9 78 var stat =

@@ -1,0 +1,48 @@
+Min editdistance: 33.00
+Closest candidate: 2 8 return this.middleware);
+0 1  use(app) });"
+
+1 1  use(middleware) }, function (middleware) {
+1 2 return this.handle = function () { };"
+
+2 1  use.handle = function(app) { use(app) { use(middleware, app, app, app, app, app.handle, function(middleware, app.handle, function(){
+2 2 return function(){
+2 3 return that._middleware.handle(err, function(){
+2 4 return that._middleware.handler(app, app, function(app, app, url, url, url, url.middleware);
+2 5 return that._middleware);
+2 6 });
+2 7 })();
+2 8 return this.middleware);
+2 10 }
+3 1  use(middleware); use.handle = function (middleware) { use(middleware) { use(function (middleware) { use(middleware) { use(middleware) { use(function (middleware) { use(middleware) { clear() { clear() { clear() { clear() { clear() { clear() { clear() { clear() { clear() } } = require('error') };") } = true; } = function (this.set.handle(); } = function (this.handle(); })) };
+3 2 return this.listen
+4 1  use(app, app, blog);"
+
+5 1  use.handle.handle.handle, blog });"
+
+6 1  use.handle.handle.handle = function (middleware) {
+6 2 return function (middleware) {
+6 3 return function (middleware = function (req, res) {
+6 4 return function (err, app) {
+6 5 return function (err, res) {
+6 6 return res;
+6 7 return res();
+6 8 return that._iter(req, req, res) {
+6 9 return that.handle(req, res);
+6 10 return that._handle(req, res);
+6 11 return res, res, res);
+6 12 } };
+6 14 }).setHeader('X-middle
+7 1  use(app) }, function(app) {
+7 2 return; } = function (middleware) {
+7 3 return;
+7 6 }).writeE.set('response.writeHeader', app, app, url, url, url.middleware);
+7 9 };"
+
+8 1  use(app) });
+8 2 return;app.use.use.use.use.handle = function (middleware) { use.handle.handle = function (middleware) { use(middleware) { use(function (req, res, app) { use(middleware) { use(function (err, app) { use(middleware) { throw new function (err, app) { throw new Error('wrong handler }, function (err) { throw new Error('key) { throw new Error('key) {})); };"
+9 1  use.use.handle, blog app, app, app, app, blog.handle);
+9 2 // CLI.handle();
+9 3 // CLI.handle.handle(middleware);
+9 4 return;'
+

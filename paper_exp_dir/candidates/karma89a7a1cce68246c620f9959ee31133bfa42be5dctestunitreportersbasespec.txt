@@ -1,0 +1,55 @@
+Min editdistance: 49.00
+Closest candidate: 3 3 it('should send as a function send asdforters', function send()', function () {
+0 1 it('should sendComters sendComters sendComters sendComters sendComters sendComters sendComters sendComters sendComters sendComters sendComters for single', () => {
+0 2 var callHandler(emitter.create('writeCommonMsg', emitter didStderrbackMock, 'write')
+0 3 return call.create('test')
+0 4 })
+0 5 .on('reporter:'dots sendComters sendComters sendComters', function (s)', emitter.createServerResponse.create())
+0 6 .sendComters.set('test')
+1 1 expect(function () { get } () { get } () { get } () { get () { get () { } () { } () { } () { } () { } = require('test') } = function () { } = null } = function () { } = function () { } = function () {} } 'test')}
+2 1 it('should send()).toArray.createReporters.createReporters.createReporters.createReporters.createReporters.createReporters.createReporters(),"reporters.sessions.sessions () => writeSpy(),"
+
+3 1 it('should sendComters.write('Email', 'Mend')
+3 3 it('should send as a function send asdforters', function send()', function () {
+3 4 return expect(reporter) {
+3 5 return writeSpy.reject(reporter.write('foo')
+3 6 return callSpy('something')
+3 7 .reset()
+3 11 it('should set the server does not.to.port', function () {
+3 12 return expect(reporter.port', 'localhost')
+3 13 return expect(writeSpy.port).to.
+4 1 expect(writeSpy)
+4 2 expect(reporter.should.been.calledWith('config').toString)
+4 3 expect(reporter)
+4 4 expect(reporter).to.to.have.have.been.calledWith('config').to.to.have.been.calledWith('config')
+4 7 expect(reporter).to.to.have.have.have.been.calledWith('config')
+4 11 expect(reporter.to.have.args
+5 1 it('should sendComplender()'
+5 3 it('should sendComplender()', function () {
+5 4 return expect(reporter)
+5 5 return expect(reporter).to.write('foo')
+5 9 it('should send() {})"
+6 1 expect(function () { getConsole() { getConsole() {}() {}() {} }() {} })
+6 2 expect(newSpy.return expect(newSpy)
+6 3 expect(newSpy)
+6 4 } () => {
+6 5 expect(newSpy.return expect(newSpy.return expect(newSpy)
+6 10 describe('writeSpy', () => {
+6 11 it('should returnWrite file encoding', function () {})
+6 12 return expect(newSpy. () => {
+6 13 expect(newSp
+7 2 it('should formatters () {}
+8 1 expect(function () { get })
+8 2 return {
+8 3 expect(reporter) {
+8 4 expect(adapter) {
+8 5 expect(adapter).to.to.lastRunsFrom(1)
+8 6 expect(1)
+8 7 return expect(1)
+8 8 return expect(adapter).to.lastRunsFrom('client)
+8 12 it('should call('should call it('should format BROWSERS', function () {
+8 13 expect(new, browser.lastRuns', 'Email')
+8 14 expect(new)', 'Log')
+8 15 expect(adapter
+9 1 "
+

@@ -1,0 +1,55 @@
+Min editdistance: 10.00
+Closest candidate: 4 4 return function (paths) {
+0 1  } function (extend = function (extractorTypes = function (source) {
+0 2 return function (source = function (source) {
+0 3 return function (source) {
+0 4 return return function (source) {
+0 5 return Q.nreturn Q.nreturn return Q.nfcall(fs.readdirname === source
+0 6 .exists(source || (source); };
+0 7 };
+0 8 };"
+
+1 1  path.resolve = function (source => function (source, themeansource, themeConfigs = function (sourceConfigs) { return function (sourceConfigs) { return { return new Source(sourceConfigs) { return sourceConfigsConfigs || { return sourceConfigs || { configs };
+1 2 return function (sourceConfigs || { return sourceConfigs };
+1 3 };"
+2 1  require function (extract(extracts) { function (extracts) {extracts = { require(extracts, } = require(https, } = require(https);return function (https) {
+2 2 return newextracts = {};
+2 3 return!!extracts = {};
+2 4 }
+2 5 });"
+
+3 1  filename => {
+3 2 return function (filename => {
+3 3 return function (
+3 4 return function (path => {
+3 5 return {
+3 6 return Q.nreturn Q.nreturn Q.nfcall(fs.readdirname === path.resolve(src);
+3 7 .nexports || function (paths, filename);
+3 8 return Q.pipe(fs);
+4 4 return function (paths) {
+4 5 return Q.unlink(paths);
+4 6 return Q.unlinks(paths);
+4 8 }"
+
+5 1  path.resolve = function (source_error = function (source) { source = function (source) {
+5 2 return function (source = source = source(source) {
+5 3 return Q.resolve(source, i, mode) {
+5 4 return Q.resolve(source, sourceType); };"
+
+6 1 exports.trimpleHould = function (func => function (extract(func) {
+6 2 return function (func) {
+6 5 return func.require(source) {
+6 6 return function () {
+6 8 return Q.require(source.call(source); };
+6 9 }; };
+7 1 return function (extract = function (source) { source : function (source, options = sourceType, options = optionTypes = options || {};
+7 2 return function (sourceTypes = options };
+7 3 return function (sourceType = function (sourceType || (sourceType) {
+7 4 return function (sourceType = requireor) {
+7 5 return function (type) {
+7 6 return Object.return type.return function (sourceTypes[sourceTypes[sourceType];
+7 12 if (sourceTypes[
+8 1  path.me = function (extend = function (source) { sourceDir, themeDir };"
+9 1  } function (func) {
+9 2 exports.reject(extract = function (extractor = function (extractor) { return function (source) { return function (source = newExtractor(source) {
+9 5 return source.engine = engines.requireEngine(source); };

@@ -1,0 +1,215 @@
+Min editdistance: 2.00
+Closest candidate: 1 1 link = '',
+0 1 link = data.read;
+0 2 if (data.id){
+0 3 file.db.save(function(){
+0 4 if (err) return callback(err);
+0 5 next(null);
+0 6 });
+0 7 } else {
+0 8 file.commit(null, results.length, next);
+0 9 }
+0 11 }, function(err){
+0 13 var results = results.findRaw({cache: true}, function(err, results){
+0 14 if (err) return callback(null, results.data, results.content);
+0 15 if (data.raw){
+0 16 file.raw({cache: true}, function(err, data){
+0 17 if (err) return callback(null, data.raw);
+0 18 result.content = results.content;
+0 19 data.date.valueOf();
+0 20 result.update({
+0 21 _content: data.content,
+0 22 _id: data.id,
+0 23 path: data.path,
+0 24 raw: data.raw
+0 27 data.raw({cache: false});
+0 32 }, callback);
+0 34 });"
+
+1 1 link = '',
+1 2 meta = yfm(results.read);
+1 3 meta.content = meta._content;
+1 4 delete meta._content;
+1 5 meta.source = path;
+1 6 meta.raw = results.read;
+1 8 if (!meta.date) return callback();
+1 9 var result = callback(null, { path: path });
+1 10 result.path = path;
+1 11 meta.permalink = config.permalink;
+1 12 if (!pathFn.extname(result.path)) return callback();
+1 13 if (meta.updated) return callback();
+1 14 if (!helper.is_post()){
+1 15 meta.permalink = ':year/:month/:day/:title';
+1 16 meta.permalink += util.normalize(meta.permalink);
+1 18 if (meta.permalink){
+1 19 var link = meta.permalink + '/' + data.path;
+1 22 if (!pathFn.extname(link)){
+1 23 var link = pathFn.join(hexo.public_dir, data.path);
+1 24 meta.permalink += \'/\';
+1 27 var link = meta.permalink + \'/\' + data.path;
+1 29 return callback();
+2 1 _id = results.id;
+2 2 if (data && stat.mtime.getTime() === data.mtime.valueOf()){
+2 3 return callback(null, data.content);
+2 5 if (data.date){
+2 6 data.date = new Date(data.date, data.time);
+2 8 data.date = stat.ctime;
+2 10 data.save();
+2 11 callback();
+2 14 };"
+
+3 1 page = Page.findOne({source: path});
+3 2 if (data){
+3 3 data.read({cache: true}, next);
+3 5 Page.insert({source: path, content: results.content, callback);
+3 10 Page.prototype.generate = function(){
+3 11 var page = this.page,
+3 12 config = hexo.config,
+3 13 mode = args.mode,
+3 14 layout = args.length? this.config.default_layout : 'page',
+3 15 doc = Page.findOne({source: path});
+3 16 if (mode){
+3 17 if (!hexo.config.auto_spacing) content = [
+3 18 'layout: page',
+3 19 '---',
+3 20 '123'
+3 21 ].join('\
+3 22 ');
+3 23 if (mode == 0 || mode == 2){
+3 24 page.__page = true;
+3 26 page.__page = false;
+3 29 if (layout){
+3 30 var target = hexo.config.default_layout;
+3 31 if (layout === 'page'){
+3 32 target += 'index.html';
+3 34 var layout = layout.split('---');
+3 35 var prev = '';
+3 36 var next = data.latest;
+3 37 if (prev){
+3 38 var target = pathFn.join(hexo.base_dir, data.source);
+3 39 if (prev === undefined){
+3 42 prev = layout.split('---');
+3 43 for (var i=0, len=prev.length; i<len; i++){
+3 44 var item = front? item[i] : item[i];
+3 46 var link = link + (i == 0? '_posts' : '_drafts') + 'index.html';
+3 47 if (prev == null){
+3 61 if (prev.length){
+3 62 var tags = this.site.tags;
+3 63 if (tags.length){
+3 64 tags = tags.reduce(function(arr, _id){
+3 65 return this.set(data.target, function(post){
+3 66 return post.slug.slug, post.path);
+3 67 }, this);
+3 71 if (data.tags.tags.length){
+3 72 tags.forEach(function(tag){
+3 73 tags.push(item);
+3 74 this.tag = tags.path = this.path;
+3 75 this.archive = tag;
+3 76 this.archive = this.path = tag;
+3 77 if (tag == this.archive == this.path).archive || this.config.default_archive);
+3 78 if (!this.archive === this.archive) posts[this.length - 1 posts[archive];
+3 79 this.archive = posts[archive];
+3 80 if (!this.length - 2 posts.length) posts[archive] posts[archive] posts[archive] posts[archive] posts[archive] = posts[archive]];
+3 81 return posts[archive = posts[archive]];
+3 83 };
+4 2 if (data.stat){
+4 3 if (data.stat.mtime.getTime() === data.stat.mtime.valueOf()){
+4 4 return callback(null, data.stat);
+4 6 if (data.stat.njk){
+4 7 if (data.stat.mtime.value === data.stat.mtime.value){"
+
+5 3 if (data.type === 'delete'){
+5 4 file.box.config.permalink = ':year/:month/:day/:title';
+5 5 page.source = path;
+5 9 data.read({cache: true}, function(err, content){
+5 11 var page = Page.findOne({source: path});
+5 12 if (!page.date) return callback();
+5 13 page.date = stats.ctime;
+5 14 if (stats.ctime){
+5 15 page.ctime = stats.ctime;
+5 18 if (data.date.toString){
+5 19 return callback(null);
+5 27 Page.insert(data);
+5 28 Page.next();
+6 7 meta.date = date;
+6 8 meta.comments = posts.comments;
+6 9 if (meta.date){
+6 10 if (!(meta.date instanceof Date)){
+6 11 meta.date = moment(meta.date, 'YYYY-MM-DD HH:mm:ss').toDate();
+6 14 meta.date = stat.ctime;
+6 16 if (meta.updated){
+6 17 if (!(meta.updated instanceof Date)){
+6 18 meta.updated = moment(meta.updated, 'YYYY-MM-DD HH:mm:ss').toDate();
+6 21 meta.updated = stat.mtime;
+6 24 return Page.insert(meta.permalink, data.permalink);
+6 26 meta.permalink = path;
+6 28 if (meta.path){
+6 29 return Page.insert(meta.path, data.permalink);
+6 31 if (!pathFn.extname(meta.permalink)){
+6 32 return callback(new Error('permalink required'));
+7 1 link = data.read,
+7 8 meta.comments = true;
+7 9 meta.layout = 'page';
+7 18 return site.set('posts', posts);
+7 20 if (meta.categories){
+7 21 var categories = meta.categories;
+7 22 meta.categories.forEach(function(cat){
+7 23 var posts = cat.posts.sort('date', -1).toArray();
+7 24 posts.forEach(function(category){
+7 25 var posts = post.categories.toArray();
+7 26 if (!posts.length) return;
+7 27 var i = 0;
+7 28 posts.forEach(function(post){
+7 29 var query = post.categories.toArray();
+7 31 if (post.categories){
+7 32 var categories = post.categories.toArray();
+7 33 if (!categories.length) return;
+7 36 meta.categories.splice(i, 1);
+7 39 meta.categories = posts;
+7 40 return db.model('Page').findRaw({
+7 41 _id: meta._id,
+7 43 _content: meta._content
+8 3 if (data.id === data.id){
+8 4 data.id = data.id;
+8 6 data.id = stats.id;
+8 9 if (data.updated){
+8 10 data.updated = data.date;
+8 12 data.updated = stats.mtime;
+8 14 if (data.permalink){
+8 15 data.path = data.permalink;
+8 16 delete data.permalink;"
+
+9 1 link = data.permalink,
+9 2 draw = results.read,
+9 7 meta.raw = source;
+9 8 if (meta.updated) meta.updated = _.isDate(meta.updated)? meta.date : moment(meta.date, 'YYYY-MM-DD HH:mm:ss');
+9 9 if (meta.updated) meta.updated = moment(stats.mtime);
+9 11 var link = meta.permalink;
+9 12 draw = this.permalink.replace(/:category/, category);
+9 15 if (link[0] === '/'){
+9 16 link += 'index.html';
+9 18 link += '/index.html';
+9 21 if (meta.categories) {
+9 22 if (!Array.isArray(meta.categories)) meta.categories = [meta.categories];
+9 23 var tags = [];
+9 24 meta.categories.forEach(function(tag){
+9 25 tag = tag.toString();
+9 27 var data = Page.findOne({source: tag});
+9 29 data.categories.forEach(function(cat){
+9 30 Tag.create(data.categories, cat._id);
+9 34 return data;
+9 36 module.exports.update = function(data, callback){
+9 37 if (!callback) callback = function(){};
+9 38 var Page = hexo.model('Page'),
+9 40 mode = hexo.config.archive,
+9 41 arr = Page.findOne({source: data.path});
+9 42 if (!arr.length) return callback();
+9 43 var target = pathFn.join(hexo.base_dir, data.categories);
+9 45 var config = {
+9 46 permalink: config.permalink,
+9 47 archive: posts.length,
+9 48 year: posts.length
+9 52 archive: posts,
+9 53 year: posts.length,
+9 54 month: posts.length
+9 57 Page.insert(data.categories, config, callback);

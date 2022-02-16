@@ -1,0 +1,69 @@
+Min editdistance: 4.00
+Closest candidate: 0 2 require.paths.unshift(__dirname + '/support/sass/lib')
+0 1 require.paths.unshift(__dirname + '/support/haml/lib')
+0 2 require.paths.unshift(__dirname + '/support/sass/lib')
+0 3 require.paths.unshift(__dirname + '/support/multipart/lib')
+0 4 require('ext')
+0 5 Class = require('support/class/lib/class').Class
+0 6 require('express/core')"
+
+3 6 require.paths.unshift(__dirname + '/support/multipart/blah/lib')
+3 8 Class = require('support/class/lib/class/class').Class
+6 6 Class = require('./utils').Class
+6 7 require('./utils').Extend({
+6 8 init: function(options) {
+6 9 this.merge(options || {})
+6 10 this.store = new (this.dataStore || exports.Store.Memory)(options)
+6 11 this.startReaper()
+6 12 },
+6 13 startReaper: function() {
+6 14 setInterval(function(){
+6 15 this.store.reap(this.lifetime || (1).day)
+6 16 }, this.reapInterval || this.reapEvery || (1).hour, this)
+6 17 }
+6 18 })
+6 19 on: {
+6 20 response: function(event) {
+6 21 if (event.name in this.store)
+6 22 return
+6 23 if (exports.Session.store.hasOwnProperty(event.name))
+6 27 var startReaper = function() {
+6 37 if (this.response.length == 0)
+6 46 header: function(name, value) {
+6 47 return value?
+6 48 this.response.headers[name.toLowerCase()] = value :
+6 49 this.response.headers[name.toLowerCase()]
+6 51 requestHeader: function(name, defaultValue) {
+6 52 return this.request.headers[name.toLowerCase()] || defaultValue
+6 54 param: function(key, defaultValue) {
+6 55 return this.request.uri.params[key] || defaultValue
+6 57 parseParams: function(string) {
+6 58 var params = {}, pairs = string.split(',')
+6 59 for (var i = 0, len = pairs.length; i < len; ++i) {
+6 60 pair = pairs[i].split(',')
+6 61 params[pair[0]] = pair[1]
+6 65 exports.parseQueryParams = function(string) {
+6 66 return queryString.split(/ *, */).reduce(function(parts, key) {
+6 67 return parts[0].split(',')
+6 68 }, function(parts, key){
+6 69 return parts[1].split(',')
+6 73 exports.parseNestedParams = function(params) {
+6 74 var parts = {}
+6 75 for (var key in params = {}
+6 76 for (var i = {}
+6 77 for (var key in params)
+6 79 if (params.has(params.hasOwnProperty in params.hasOwnProperty in params)
+6 80 if (parts[key in params.hasOwnProperty in params.hasOwn[key])
+6 81 if (parts[key])
+6 83 if (parts[key in params.hasOwn.hasOwnProperty in params.hasOwn(key))
+6 84 estedParams.hasOwn(key))
+6 85 params.hasOwn(params[key))
+6 86 estedParams[key].params[key] = params[key]
+6 87 return params
+6 88 } else
+6 90 }, {}
+6 91 params : function regexp = exports
+6 92 parseCookie
+7 6 Class = require('./support/class/lib/class').Class
+7 7 require('./express/core')"
+

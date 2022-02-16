@@ -1,0 +1,55 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 if (args.p){
+0 1 if (args.p){
+0 2 var port = args.p;
+0 3 } else if (args.port){
+0 4 var port = args.port;
+0 5 } else {
+0 6 var port = config.port;
+0 7 }
+0 8 if (config.logger){
+0 9 if (config.logger_format) app.use(connect.logger(config.logger_format));
+0 10 else app.use(connect.logger());
+0 11 } else if (hexo.debug){
+0 12 app.use(connect.logger());
+0 14 app.use(connect.static(hexo.public_dir));
+0 15 app.use(connect.compress());
+0 16 app.use('/', connect.compress());"
+
+1 15 app.use(connect.compress());"
+
+2 9 if (config.logger_format) app.use(connect.logger(config.logger_format));"
+
+3 16 app.use('/', function(req, res){
+3 17 res.header('x-powered-by', 'Hexo');
+3 18 next();
+3 19 });
+3 21 app.use('/sass', connect.compress());
+3 22 });"
+
+4 16 app.use('/', require('url'));
+4 17 app.use('/static', connect.compress());
+4 18 app.use('/*', connect.staticCache());
+4 20 app.listen(port, function(){
+4 21 console.log('Hexo is running at %s. Press Ctrl+C to stop.', ('http://localhost:' + port + config.root).bold);
+4 22 hexo.emit('server');
+5 16 app.use('/', connect.compress());
+5 17 app.use('/root', connect.root());
+5 18 app.use('/', connect.static(hexo.public_dir));
+5 20 app.use('/list', connect.compress());
+5 21 app.list.forEach(function(item){
+5 24 app.list.sort('/', function(req, res){
+5 25 res.locals.error = '404';
+5 26 res.locals.warning = 'Can\\'t find that'+ item.message;
+5 28 if (item.api) app.use(connect.compress());
+5 29 if (item.api.match(/^\\/user\\/[0-9]+$/)){
+5 30 var getter = require('connect.filter').getter;
+5 31 getter.call(this, item, function(err, cursor){
+5 32 if (err) throw err;
+5 33 console.log('Config key must be a string');
+5 35 }"
+
+7 14 console.log('Loading.');
+7 15 app.use(config.root, connect.static(hexo.public_dir));
+9 16 app.use('/', require('url').format());
+9 17 app.use('/s', connect.compress());

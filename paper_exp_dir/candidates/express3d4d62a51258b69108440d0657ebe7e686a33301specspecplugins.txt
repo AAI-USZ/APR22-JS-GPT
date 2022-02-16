@@ -1,0 +1,20 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 describe 'Event'
+0 1 end
+0 2 describe 'events'
+0 3 describe'response'"
+
+1 2 describe'response'
+1 3 it'should be triggered before headers and body are sent'
+1 4 get('/style.css', function(){
+1 5 contentType('css')
+1 6 return 'body { color: black; }'
+1 7 })
+1 8 get('/style.css').body.should.eql 'body { color: #000; }'
+1 12 end"
+
+3 1 describe 'Event'
+3 7 get('/style.css').headers['content-type'] = 'css'"
+
+7 5 this.contentType('css')
+7 8 get('/style.css')

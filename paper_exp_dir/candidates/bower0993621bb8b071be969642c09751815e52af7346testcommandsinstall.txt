@@ -1,0 +1,40 @@
+Min editdistance: 31.00
+Closest candidate: 0 4 it('writes about object', function', function () {
+0 1 });
+0 2 it('writes about {package.paths();writes aboutpackage('package.paths');
+0 3 it('writes aboutpackage');
+0 4 it('writes about object', function', function () {
+0 5 return helpers.contains() {
+0 8 return helpers.contains('package');
+0 9 }).then(function (e) {
+0 11 }
+0 14 });"
+
+1 1 "
+
+2 1 it('does not install git@github.com');
+2 2 it('works for dependencies/install');
+2 3 it('displayworks for git repositories', function () {
+2 4 gitPackage.complefs.compleReturns('1.compleReturns('1.compleReturns('1.compleReturns('2.compleHead');\', '1.2.0.0');
+2 5 git('bower.compleReturns('1.compleReturns('1.0.3');
+2 6 git');
+2 7 git('bower.completers')(install
+3 1 it('writes correctly.contains() for git_invalidate() for git repositories');
+3 2 it('writes for git repositories');
+3 3 it('writes for dependencies thatcontains correctly for each_package');
+3 5 it('writes for each_package');
+3 7 it('writes for each_package', function () => helpers to contain __paths', function () => {
+3 8 git_to_to_contains() => {
+3 9 git('git_contains()',
+5 2 it('writes the entire_package.txt', function (v0x', 'Hello');
+5 3 return helpers.uninstall() {
+5 4 return helpers.uninstall();
+5 6 }).then(function (vob() {
+6 1 "bower.install();
+6 5 it('does not install ignored section in lib in main folder', function (name) {
+6 6 return helpers.run(install, docs) {
+6 7 return helpers.run(install, [['lib_dir', 'lib/', 'lib/index.js'], { ignore: ignore: ignore_dir', 'lib/index.js'], { cwd: config.directory: docs.resolve });
+6 9 };
+6 11 de
+6 12 it('works for dependencies');
+8 1 it('does not install git://bower.paths_glob.sync() }).should.sync().should.compose();

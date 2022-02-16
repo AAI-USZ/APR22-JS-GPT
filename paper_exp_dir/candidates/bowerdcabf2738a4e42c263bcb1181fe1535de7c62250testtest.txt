@@ -1,0 +1,144 @@
+Min editdistance: 6.00
+Closest candidate: 7 20 target: '*'
+0 1  cwd: testGitRemoteResolver() });
+0 2 return bowerResolver.resolve()
+0 3 .then(function () {
+0 4 console.log('ok!');
+0 5 })
+0 6 .done();
+0 7 });"
+
+1 1  cwd: testGitRemoteResolver(), argv: testGitRemoteResolver.argv.slice(1, 2);
+1 5 }, function (err) {
+1 6 console.log('failed to resolve', err);
+1 7 });
+1 8 }"
+
+2 1 target:'rewrite'});
+2 8 }
+2 9 function testGitRemoteResolverNoTags() {
+2 10 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spark-no-tags.git', {
+2 11 '0.0.1': {
+2 12 'bower.json': {
+2 13 name:'spark-no-tag': '*'
+2 14 },
+2 15 '0.1.0': {
+2 17 name:'spark-no-tag': 'latest'
+2 23 'version': '0.1.0'
+2 33 if (process.argv[1] &&!/mocha/.test(process.argv[1])) {
+2 34 testGitRemoteResolver()
+2 35 .then(testGitRemoteResolver)
+2 36 .then(testGitRemoteResolverNoTags);
+2 37 } else {
+2 38 process.removeAllListeners('uncaughtException');
+2 39 .removeAllListeners('error');
+2 40 .on('error', function (err) {
+2 41 if (err.code === 'ENOENT') {
+2 42 return;
+2 44 try {
+2 45 process.nextTick(function () {
+2 46 if (!err.message) {
+2 49 var msg = 'Authorized'+ 'https://github.com/strongloop/bower.git';
+2 50 assert.equal(msg, 'https://github.com/strongloop/bower.git');
+2 54 describe('misc', function () {
+2 55 it.skip('should handle @ as a.');
+2 56 it.skip('should handle @ as an object');
+2 57 it.skip('should handle null');
+2 58 it.skip('should handle undefined');
+3 1  cwd: __dirname + '/assets/project-complex-nest');
+4 7 function testGitFsResolver() {
+4 8 var bowerResolver = new GitFsResolver('.', { cwd: testGitFsResolver });
+4 15 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', { cwd: testGitRemoteResolver noTags });
+4 16 return spoonResolver.resolve()
+4 23 .then(testGitFsResolver)
+4 27 require('./resolve/resolver');
+4 28 require('./resolve/resolvers/gitResolver');
+4 29 require('./resolve/resolvers/gitFsResolver');
+4 30 require('./resolve/resolvers/gitRemoteResolver');
+4 31 require('./resolve/worker');"
+
+5 1  cwd: 'bower_components' }, { cwd: 'components' }, { cwd: 'components' });
+5 10 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', { name:'spoonjs', content:'some foo' });
+5 21 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', { name:'spoonjs', content:'some bar' });
+5 36 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', { name: 'git' }, { name:'spoonjs' }, { cwd: 'http://github.com/' });
+5 38 .resolve()
+5 42 console.log('spy()
+5 43 .log('saved')
+5 44 .log('ok!');
+5 49 function testExternalResolverFactory(resolverFactory.prototype._resolve = function () {
+5 50 .readJson() {
+5 51 .readAll();
+5 52 .then(function (source, options)
+6 15 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', {
+6 16 name:'spoonjs',
+6 17 test: function () {
+6 24 test.equal(testGitRemoteResolver, process.argv[1]);
+6 26 function spoonResolverNoTags(name) {
+6 35 if (process.argv[2] &&!/mocha/.test(process.argv[2])) {
+6 36 test.equal(tEST_SRC_PREFIX, 10);
+6 38 function testGitRemoteResolverNoTags(name) {
+6 47 if (process.argv[3] &&!/mocha/.test(process.argv[3])) {
+6 48 test.equal(tEST_SRC_PREFIX, 3);
+6 50 function testGitRemoteResolverNoTagsWithDefaults() {
+6 56 .then(testGit()
+6 58 .skip('bower.compose())
+6 59 .completed.done()
+6 60 .done()
+6 63 .then(doc.done.done.bind(manager.bind(manager.getManager));
+6 66 .then(this.bind(this));
+6 67 .then(this));
+6 70 return this.exec('admin', function () {
+6 71 isRepo(admin')
+6 72 .exec('spec/spec.bindS', function (err, manager) {
+6 73 return manager.bindScheduledWithDefaults
+7 1 target:'rewrite' });
+7 8 var bowerResolver = new GitFsResolver('.', {
+7 9 name: 'bower',
+7 10 target:'rewrite'
+7 20 target: '*'
+7 33 before(function () {
+7 34 var dir = path.join(__dirname, 'assets/github-test-package');
+7 35 return fs.writeFileSync(dir, 'foo');
+7 38 return expect(fs.existsSync(bowerOsTempDir)).to.be(true);
+7 39 expect(fs.readdirSync(bowerOsTempDir)).to.eql([]);
+7 42 it('should remove the folder on an uncaught exception', function () {
+7 43 var config = {
+7 44 storage: {
+7 45 packages: 'bower-test-package'
+7 47 };
+7 48 var mockSource = 'bar.json';
+7 49 install.sync(tempSource)
+7 50 .then(function (dir) {
+7 51 expect(fs.existsSync(path.join(dir, 'bower_test-package'))).to.be(true);
+7 52 expect(fs.readdirSync(path.join(dir, 'bower_test-package'))).to.be(false);
+7 53 return config;
+7 56 return expect(fs.existsSync(path.join(dir, 'bower_test-package'))).to.be(true);
+7 57 expect(true);
+7 58 expect(fs.readdir).to.readdirSync(tempDirSync(tempDir)).to.empty();
+7 63 it('should.skip('should.skip('should');
+7 64 it('should');
+7 79 it('should()');
+7 87 it('should', function()');
+7 89 it('should.skip('should');
+7 92 it('should
+8 8 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', { test: '1' });
+8 9 var testGitRemoteResolverNoExists = function () {
+8 11 var testGitRemoteResolverNoTags = function () {
+8 21 var testGitRemoteResolverFactory = function (resolve) {
+8 22 var deferred = Q.defer();
+8 23 resolve = function () {
+8 24 var args = Array.isArray(resolve)? function (object) {
+8 25 return object.split('#')[0] : object;
+8 27 object.forOwn(resolve, function (value, key) {
+8 28 promise = promise.then(function () {
+8 29 return that._handleUpdatedResolver(object.getShan(value),
+8 30 fs.writeFileSync(path.join(tempDir, key));
+8 33 return that._cleanUpLocalResolver.hasNew(cmd);
+8 37 "
+
+9 15 var spoonResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', { cwd: testGitRemoteResolverNoTags });
+9 30 testGitFsResolver()
+9 33 testGitRemoteResolverNoTags = function () {
+9 34 return spoonResolver.resolve();
+9 46 function testGitRemoteResolver() {
+9 47 var bowerResolver = new GitRemoteResolver('git://github.com/IndigoUnited/spoon.js.git', {

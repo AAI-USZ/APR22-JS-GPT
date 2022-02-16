@@ -1,0 +1,345 @@
+Min editdistance: 16.00
+Closest candidate: 0 6 new StatusUpdater(socket, util.elm('title'), util.elm('banner'), util.elm('browsers')
+0 1  {
+0 2 function setTransportTo (transportName) {
+0 3 socket._setTransportNameTo(transportName)
+0 4 socket.emit('connect')
+0 5 }
+0 6 new StatusUpdater(socket, util.elm('title'), util.elm('banner'), util.elm('browsers')
+0 7 window.karma = new Karma(socket, util.elm('context'), window.open,
+0 8 window.navigator, window.location)"
+
+1 4 socket.emit("connect")
+1 6 var policy = {
+1 7 createURL: function (s) {
+1 8 return s
+1 9 },
+1 10 createScriptURL: function (s) {
+1 14 var socketReconnect = false
+1 15 this.VERSION = constant.VERSION
+1 16 this.config = {}
+1 17 this.socket = socket
+1 18 if (window.addEventListener) {
+1 19 window.addEventListener('message', function handleMessage (evt) {
+1 20 var origin = evt.origin || evt.originalEvent.origin
+1 21 if (origin!== window.location.origin) {
+1 22 return
+1 24 var method = evt.data.__karmaMethod
+1 25 if (method) {
+1 26 if (!self[method]) {
+1 27 self.error(\'Received `postMessage` for "\' + method + \'" but the method doesn\\\'t exist\')
+1 30 self[method].apply(self, evt.data.__karmaArguments)
+1 32 }, false)
+1 34 var childWindow = null
+1 35 function navigateContextTo (url) {
+1 36 karma.config.clearContext(url)
+1 38 this.app = function (url, headers, navigator, location) {
+1 39 nvar self = this
+1 40 var config = this.config
+1 41 var hasError = false
+1 42 var store = {};
+1 43 this.VERSION = VERSION
+1 44 this.setupContext = function (contextWindow) {
+1 45 if (hasError) {
+1 48 var getConsole = function (currentWindow) {
+1 49 return currentWindow.console || {
+1 50 log: function () {},
+1 51 info: function () {},
+1 52 warn: function () {},
+1 53 error: function () {},
+1 54 debug: function () {}
+1 57 contextWindow.__karma__ = this
+1 58 contextWindow.onerror = function () {
+1 59 return contextWindow.__karma__.error.apply(contextWindow.__karma__, arguments)
+1 61 contextWindow.onbeforeunload = function (e, b) {
+1 62 if (self.setupContext()) {
+1 63 rimraf(self.activePath, function () {
+1 64 self.log.warn()
+1 65 })
+1 67 contextWindow.dump()
+1 70 return currentWindow.console
+1 74 this.error = function clearContextWindow () {
+1 75 if (self.error) {
+1 76 if (self.log) {
+1 77 clearContext()
+1 81 var getConsole = function clearDebug = function (contextWindow) {
+1 82 if (contextWindow) {
+1 83 clearDebug = function (self.log) {
+1 84 clearDebug = function (self.log, cbrowsers) {
+1 85 if (self.logLevels)
+1 88 var getConsoleMethod = clearDebug = clearContext = clearContext = clearContext)
+1 91 this.error = function clearDebug = function clearDebug = function (contextWindow) {
+1 92 if (self.logLevel
+2 2 var config = {
+2 3 useIframe: true
+2 5 var socketServer = function (sj, location, document) {
+2 7 var self = this
+2 8 var queryParams = util.parseQueryParams(location.search)
+2 9 var browserId = queryParams.id || util.generateId('manual-')
+2 10 var displayName = queryParams.displayName
+2 11 var returnUrl = queryParams[\'return_url\' + \'\'] || null
+2 12 var resultsBufferLimit = 50
+2 13 var resultsBuffer = []
+2 15 createURL: function (sj, path) {
+2 16 return sj
+2 18 createScriptURL: function (sj, body) {
+2 19 return body
+2 22 var trustedTypes = window.trustedTypes || window.TrustedTypes
+2 23 if (trustedTypes) {
+2 24 policy = trustedTypes.createPolicy(\'karma\', policy)
+2 25 if (!policy.createURL) {
+2 26 policy.createURL = function (sj, hostname, port, urlRoot, upstreamProxy) {
+2 32 var trustedTypes = this.trustedTypes || window.TrustedTypes
+2 48 var startEmitted = function (sj, endFrom) {
+2 49 return sj = new Json.createIgnore(sj, target) {
+2 50 return sj <= endFromJson.getFromJson()
+2 55 exports.someMethodOverride = function (fn) {
+2 56 return function (d, autoWatching) {
+2 57 if (fn) {
+2 58 return fn.some(fn) {
+2 59 return enable = false
+2 60 } catch (e.handleErrors = []
+2 61 } : function (e) {
+2 62 if (e.level === undefined) {}
+2 63 emitter.emit('error
+2 64 emitter.emit('error\', arguments)
+2 65 emitter.emit('warn\', arguments)
+3 2 assert(karma.error.calledWith(string(this.name + \'\')!== constant.VERSION) {
+3 3 assert(this.name === \'KARMA_URL_ROOT\') ||
+3 4 this.name === \'KARMA_PROXY_PATH\') +
+3 5 '\\\
+3 6 \' +
+3 7 \'[object Object].toString.apply(this, arguments)
+3 15 window.addEventListener('message\', function handleMessage (evt) {
+3 32 karma.log.info(`Karma v${url}`)
+3 34 this.config = {}
+
+4 2 assert(karma.error.calledWith(this.name +\'\' + KARMA_URL_ROOT.substr(1)))
+4 3 assert(this.name === \'socket.io\')
+4 4 assert(this.name === \'debug\')
+4 5 assert(this.name === \'karma-router\')
+4 6 assert(this.name === \'client-ip\')
+4 7 assert(this.name === \'karma-static\')
+4 8 assert(this.name === \'context\')
+4 10 'test constructor middleware': function(beforeExit){
+4 11 var calls = [];
+4 12 function one(req, res, next){
+4 13 calls.push(\'one\');
+4 14 next();
+4 16 function two(req, res, next){
+4 17 calls.push(\'two\');
+4 20 var app = function(id, fullName, bannerElement, browsersElement, location, document) {
+4 21 return function(request, response, next){
+4 22 var requestUrl = request.url.replace(/\\?.*/, \'\')
+4 23 var response = function(body, status){
+4 24 var url = response.headers[\'content-type\'] || this.config.title;
+4 25 var request = response.body = body
+4 26 this.status(status)
+4 27 if (request.url.indexOf(\'?\')!== 0) {
+4 28 return next();
+4 30 if (requestUrl === url + \'/\') {
+4 31 requestUrl += \'/index.html\';
+4 33 if (requestUrl === \'/__karma__/\') {
+4 36 requestUrl = requestUrl.substr(1);
+4 38 if (!args) {
+4 39 var url = args[0];
+4 40 args = this.get(\'url\') || \'http://\' + this.host + \':\' + this.port + url + \'/\';
+4 42 if (args.length) {
+4 45 if (config.proxies && config.proxies.hasOwnProperty(config.url)) {
+4 46 return config.url + \'\';
+4 48 if (config.singleRun && config.autoWatch) {
+4 49 return self.source.runInjector.call(this, args);
+4 51 if (this.post.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.runInjector.post.runInjector.runInjector.runInjector.runInjector.runInjector.post.runInjector.runInjector.runInjector.runInjector.runInjector.post.runInjector.runInjector.runInjector.post.runInjector.runInjector.runInjector.runInjector.post.runInjector.post.runInjector.runInjector.runInjector.runInjector.post.runInjector.runInjector.runInjector.runInjector.runInjector.post.runInjector.runInjector.runInjector.runInjector.runInjector.post.runInjector.run
+5 2 assert(kARMA_URL_ROOT.substr(1), \'CONTEXT\
+5 3 <script type="text/javascript" src="%s"></script>\')
+5 4 assert(kARMA_URL_ROOT.substr(7), \'DEBUG\
+5 5 <body><p>kARMA_URL_ROOT.substr(7)
+5 9 var defaultConfig = {}
+5 10 var browserId = null
+5 11 var socketId = socketIdFactory
+5 12 var instanceOf = function (value, constructorName) {
+5 13 return Object.prototype.toString.apply(value) === null
+5 15 var socketReconnect = function () {
+5 16 if (window.active) {
+5 19 var replySocketEvents = events.bufferEvents(socket)
+5 20 var killPromise = new Promise(function () {
+5 21 socket.on(\'error\', function (e) {
+5 22 if (e.code === \'EADDRINUSE\') {
+5 23 log.warn(\'Port %d in use\', config.port)
+5 24 config.port++
+5 25 webServer.listen(config.port)
+5 26 } else {
+5 27 throw e
+5 30 socket.on(\'complete\', function (browsers, results) {
+5 31 if (browsers.length > 1) {
+5 32 result.disconnected = true
+5 34 for (var i = 0; i < browsers.length; i++) {
+5 35 result.disconnected = false
+5 37 var items = []
+5 38 var status
+5 39 if (process.env.TRAVIS) {
+5 40 status = tests.exitCode
+5 41 if (results.failed) {
+5 42 items.push(dbLauncher.areAllCaptured())
+5 44 success(new Error(\'Cannot start execution\')
+5 47 init()
+5 49 if (browserId) {
+5 57 window.addEventListener(\'message\', function handleMessage (evt) {
+5 59 if (origin!== window.location.location.search.search.length) {
+5 60 origin) {
+5 64 var search = evt.location.search = evt.location.search
+5 69 window.location.search.search = evtauncher
+5 71 }'
+
+6 2 assert(karma.config.title,
+6 3 "use strict";
+6 4 var spyWindow = document.createElement(\'karma-\' + KARMA_URL_ROOT.substr(1) +"\');
+6 5 var windowLocation = window.location;
+6 6 var windowStub = function (s) {
+6 7 socket.on(\'connect\', function (res) {
+6 8 console.log("updating for reply: " + s + "");
+6 9 karma.emit("connect", res);
+6 10 });
+6 11 };
+6 12 var socketServer = function (s, io, location) {
+6 13 var browserName = (location.hostname || \'\').substr(1) || [],
+6 14 port = parseInt(port || 9876, 10);
+6 15 this.name = name;
+6 16 this.isReady = function () {
+6 17 return this.state === READY;
+6 19 this.toString = function (name) {
+6 20 return this.name;
+6 22 this.onError = function (error) {
+6 23 if (this.isReady()) {
+6 24 return;
+6 26 this.lastResult.error = true;
+6 27 this.onInfo = function (info) {
+6 31 if (info.id) {
+6 33 this.lastResult.total = info.id;
+6 35 this.lastResult.total = stats.mtime;
+6 38 this.onComplete = function (result) {
+6 42 this.state = READY;
+6 43 this.lastResult.totalTimeEnd();
+6 44 if (!this.lastResult.success) {
+6 47 this.emit("change", this.name + (this.isReady()? \'idle\' : \'\'));
+6 48 this.clearContext = function () {
+6 49 context.src = \'\';
+6 51 this.error = function(msg, url, line, out) {
+6 52 var err = msg.replace(/(\
+6 53 |\\r?\
+6 54 )?\
+6 55 ([\\s\\S]+?)\
+6 56 -1\
+6 57 -9]/.test(this.name);
+6 58 err.code = err.message;
+6 59 if (process.nextTick(err);
+6 60 msg = fs.unlink(this);
+6 61 return this;
+6 64 if (!this.isReady) {
+6 68 this.write = function (str) {
+6 69 return this.process.write = function (str) {
+6 70 return str;
+6 71 return this.onIndex === null;
+6 76 this.onFormatters = function (d, formatters) {
+6 77 this.onIndex = function (str) {
+6 78 if (format) {
+6 79 var i = parseInt = formatters.some(formatters, 10);
+6 80 return formatters.forEach(this.toString);
+7 2 var config;
+7 3 var hasError = false;
+7 4 var parser = (function (node) {
+7 5 var location = {};
+7 6 if (this.config.title) {
+7 7 location[this.config.title] = function (context) {
+7 8 return context.name === util.ucFirst(context.name)?
+7 9 context.property.name :
+7 10 context.property.name = KARMA_URL_ROOT.substr(1).replace(/\
+7 11 .*/, \'\');
+7 13 } else if (context.settings.title) {
+7 15 return context.name === util.ucFirst(context.name) ||
+7 16 context.property.name === KARMA_URL_ROOT.substr(1).replace(/\
+7 20 if (sourceMap.isUrlAbsolute(sourceMap)) {
+7 21 return sourceMap[sourceMap];
+7 35 , trustedTypes = window.TrustedTypes || window.TrustedTypes
+7 36 , config = {};
+7 37 var socketReconnect = false;
+7 38 this.VERSION = constant.VERSION;
+7 39 this.config = {};
+7 40 this.socket = socket;
+7 42 var event = new Karma(socket, {}, window.open,
+7 43 connectDelay: function (id, fullName, ____, ____karma__, socket, callback) {
+7 44 if (callback) {
+7 45  events.emit('connect\', event);
+7 47 EventEmitter.call(this);
+7 50 if (this.settings.redirect) {
+7 51 config.redirect = this.settings.redirect;
+7 53 this.settings.firstResult = new Result()
+7 54 this.app = this;
+7 55 this.connectDelay = this.disconnectDelay;
+7 56 this.log = function (err) {
+7 57 if (err) {
+7 58 if (this.isNotExcluded) {
+7 59 log.called = true;
+7 60 this.error = true;
+7 61 this.emit('error = true;
+7 63 this.lastResult.totalErrors = true;
+7 64 this.disconnected = true;
+7 65 this.setHeaderSent = true;
+7 66 this.setHeaderPraceResponseHeaderIsUndefined = true;
+7 67 this.removeHeaderPraceHeaders(this);
+7 68 this.removeHeaderPraceResponseHeaders(this);
+7 70 if (this.response.statusCode) {
+7 71 this.writeHeaders(this);
+7 72 clearHeader('None of your
+7 73 ) func = function (fn) {
+7 74 this.apply(this);
+8 8 this.disconnects = function() {
+8 10 process.nextTick(function() {
+8 11 disconnects.bind(this));
+8 14 this.name = (this.name || \'\').substr(1) +\'socket.io\';
+8 15 this.socket.on(\'error\', function(browser, error) {
+8 16 if (this.isNotConnected()) {
+8 17 this.disconnect();
+8 19 this.start = function(url) {
+8 20 var replySocketEvents = events.bufferEvents(url);
+8 21 this.log.debug(\'Karma v\' + this.name + \':\'+ this.socket.id);
+8 22 this.emit(\'connect\');
+8 23 this.emit(\'error\', function(error) {
+8 24 hasError = true;
+8 29 this.set(\'result\', new Buffer(this.name + \'\'));
+8 30 this.readable = function(toString) {
+8 31 return this.isReady? \'idle\' : \'executing\';
+8 33 this.on(\'result\', function(result) {
+8 34 if (this.isReady) {
+8 37 if (result.readable) {
+8 38 file.copy(this.name, this.config.client.args);
+8 39 delete this.config.client.args;
+8 41 this.emit(\'progress\', function(browsers, results) {
+8 42 var percent = (this.isReady? \'idle\' : \'executing\') + results.exitCode;
+8 43 this.set(\'filename\', this.config.siteRoot + \'/public\');
+8 44 this.emit(\'karma-\' + this.name + \'\');
+8 45 this.clearContext();
+8 46 this.on(\'error\', function(err) {
+8 47 this.lastResult.error = err;
+8 48 this.isReady = true;
+8 49 this.lastResult.total = true;
+8 51 this.error.disconnected = true;
+8 54 this.setState(this.setState(this.toString, this.name, this.name, this.name, this.config.config);
+8 55 this.log, this.emit.bind(this);
+8 56 this.execFilter.bind(this);
+8 57 this.execCommand(this);
+8 58 if (this.bindAll) {
+8 59 this.exec(this);
+8 60 bindAll(this);
+9 2 assert(karma.error.calledWith(this.name +\'is not a valid HTTP response.')
+9 3 assert(karma.response.status, 'Not Found') >= 0)
+9 4 assert(karma.response.body, '\
+9 5 <p>Welcome</p>\
+9 6 <p>No provider for browser on your platform.\
+9 7 \
+9 8 <strong>' +
+9 9 \'<em>500</em>\
+9 11 \'</p>\
+9 12 </karma>\
+9 13 })'
+

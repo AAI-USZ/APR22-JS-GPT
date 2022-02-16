@@ -1,0 +1,100 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 yellow : function (s) { return s.yellow; },
+0 1 yellow : function (s) { return s.yellow; },
+0 2 green    = s.green;
+0 3 if (parts = context.args) {
+0 4 return _.extend(context.args, partials);
+0 5 }
+0 6 context.report({
+0 7 path: parts[0],
+0 8 content: content
+0 9 });
+0 10 };
+0 11 module.exports.nonline = function (context) {
+0 12 return hogan.Template.prototype.renderWithColors.call(context, function (str, options) {
+0 13 if (!options.colors) return str;
+0 14 var key = options.language;
+0 15 var val = typeof options === \'object\'? options.locals : {};
+0 16 if (options.only) {
+0 17 value = arg;
+0 18 } else if (options.count) {
+0 19 value = $([5, 10, 15];
+0 20 } else {
+0 21 value = $([1, 2]);
+0 23 if (!key) return;
+0 24 var section = options.section || \'article\';
+0 25 var topic = options.topic || \'themes\',
+0 26 media: options.media || \'common\',
+0 27 archive: function (i) {
+0 28 var articlesLayout = self.config.article_drafts || {};
+0 29 var articleTemplate = _.extend({
+0 30 title: \'^article: <new world> |\'+ article.title,
+0 31 type: \'create\',
+0 32 name: pathFn.basename(article.source_dir) + \'/\',
+0 33 url: function (str) {
+0 34 return self.url_for(words.slice(0, 1), function (str) {
+0 35 if (words.shift() === 0) {
+0 36 return true;
+0 42 var articleTemplate = this.config.article_drafts || {};
+0 43 var article = this.config.article_media || {};
+0 44 var page = this.config.page || {};
+0 45 if (!page) return;
+0 46 var property = page.toString();
+0 47 if (property) {
+0 48 if (typeof property === \'undefined\') {
+0 49 return;
+0 51 if (property.length) {
+0 52 return page.limit(property);
+0 54 return {
+0 55 _content: function (str) {
+0 56 if (!str ||!this.headers[\'content-length\']) return str;
+0 57 var redirecting_url = this.config.redirects || this.config.redirects[0]
+0 60 module.exports.article = article;"
+
+1 2 green  : function (s) { return s.green; },
+1 3 cyan   : function (r) { returnr.cyan; },
+1 4 grey   : function (r) { return r.grey; }
+1 5 }, context);
+1 6 return this.ri([context], partials || {};
+1 7 };'
+
+2 3 return s.yellow;
+3 2 green  : function (s) { return s.green;  },
+3 3 cyan    = {},
+3 4 red     = {},
+3 5 lime     = {};
+3 7 url: context.url,
+3 8 context: function (s) { return s.yellow;  },
+3 9 verbose      = s.green;
+3 10 if (numberof n!== 0) context.report({
+3 11 url: context.url +
+3 15 module.exports.call(context, partials, indent);
+4 2 green   : function (s) { return s.green;  },
+4 3 cyan   : function (s) { return s.cyan;   },
+4 4 grey   : function (s) { return s.grey;   }
+5 2 green   : function (s) { return s.green; },
+5 3 cyan    : function (s) { return s.cyan; },
+5 4 grey    : function (s) { return s.grey; },
+5 5 red    : function (s) { return s.red;  },
+5 6 white    : function (s) { return s.white;   },
+5 7 whitespace   : function (s) { return s.pace;   }
+6 3 cyan   : function (s) { return s.cyan;   }
+7 3 cyan   : function (r) { return r.cyan;   },
+7 4 grey   : function (r) { return r.grey;   },
+7 5 red   : function (r) { return r.red;   },
+7 6 white   : function (r) {
+7 7 return r.white;    },
+7 8 magenta   : function (r) {
+7 9 return r.magenta;   },
+7 10 maroon   : function (r) {
+7 11 return r.malt;
+7 14 return this.ri([context], partials || {}, indent);
+8 4 grey   : function (s) { return s.grey;   },
+8 5 red    : function (s) { return s.red;   }
+9 3 cyan   : function (s) { return s.cyan; },
+9 4 grey   : function (s) { return s.grey;  },
+9 6 white   : function (s) { return s.white;  },
+9 7 lime    : function (s) { return s.lime;   },
+9 8 images   : [
+9 9 { layout: false, path: \'"
+

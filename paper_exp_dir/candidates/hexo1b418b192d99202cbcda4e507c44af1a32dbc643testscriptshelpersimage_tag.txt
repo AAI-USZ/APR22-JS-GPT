@@ -1,0 +1,141 @@
+Min editdistance: 35.00
+Closest candidate: 2 13 result.should.eql(\'<img src="http://hexo.io/image.jpg">\');
+0 1 '
+
+1 1  return ctx.config.root + \'/img/\' + img(str) + \'.png\'; });
+1 2 it(\'path - array', () => {
+1 3 img(\'http://placekitten.com/200/300\').should.eql(\'http://placekitten.com/200/300\');
+1 4 });
+1 5 it(\'class (array)\', () => {
+1 6 img(\'http://placekitten.com/200/300\', { color: \'foo\' }, { color: \'bar\' }, { color: \'baz\' }, 201);
+1 7 img(\'http://placekitten.com/200/300\', { color: \'foo\', color: \'bar\' }, 201);
+1 8 img(\'http://placekitten.com/200/300\', { color: \'foo', color: \'bar\' }, 201);
+1 10 it(\'alt\', () => {
+1 11 img(\'http://placekitten.com/alt\', {alt: \'Image caption\'});
+1 13 it(\'alt - options\', () => {
+1 14 img(\'http://placekitten.com/200/300\', {alt: \'Image caption\'});
+1 18 it(\'type\', () => {
+1 19 img(\'http://placekitten.com/200/300\', {type: \'photo\'});
+1 22 });'
+
+2 1  ctx.config.root = \'/\';
+2 2 const view = ctx.theme.getView(test.path) || ctx.theme.getView(name);
+2 3 view.filename.should.eql(path);
+2 4 view.path.should.eql(ctx.config.root + \'/\');
+2 5 view.source.should.eql(ctx.config.url + \'/\');
+2 6 view.type.should.eql(\'create\');
+2 7 view.params.should.eql({});
+2 8 }
+2 10 it(\'path - array-like objects\', () => {
+2 11 hexo.config.root = \'/\';
+2 12 return img(\'http://hexo.io/image.jpg\', { path: \'foo.jpg\' }).then(result => {
+2 13 result.should.eql(\'<img src="http://hexo.io/image.jpg">\');
+2 16 it(\'path - page\', () => {
+2 17 return img(\'http://hexo.io/image.jpg\', { path: \'foo.html\' }).then(page => {
+2 18 page.should.eql(\'<img src="http://hexo.io/image.jpg" width="560" height="315" title="Welcome">\');
+2 21 it(\'path - tag_img\', () => {
+2 23 return img(\'http://hexo.io/image.jpg\', { path: \'foo.html\' }).then(image => {
+2 24 image.should.eql(\'<img src="http://hexo.io/image.jpg" width="500" height="300" title="Welcome">\');
+2 27 it(\'path - file_list_img\', () => {
+2 30 image.should.eql(\'<img src="http://hexo.io/image.jpg" width="0" height="2">\');
+3 1  ctx.config.root = \'/\'; });
+3 2 it(\'path\', () => {
+3 3 img(ctx).attr(\'src\', \'https://hexo.io/image.png\');
+3 5 it(\'class (array)', () => {
+3 8 it(\'class (string)\', () => {
+3 12 img(ctx).alt(200);
+4 2 const view = ctx.theme.getView(path) || ctx.theme.getView(name);
+4 3 return img(ctx)(args).then(() => {
+4 4 ctx.log.info('Partial %s', chalk.magenta(tildify(name)));
+5 2 let src = \'https://example.com/' + hexo.config.root;
+5 3 const result = {
+5 4 path: src,
+5 5 class: classes,
+5 6 recommended: false
+5 7 };
+5 8 result.should.eql([
+5 9 \'<img src="https://example.com/image.png" class="img">\',
+5 12 \'</img>\',
+5 13 \'<a href="https://hexo.io/">hexo.io</a>">\',
+5 14 \'</img>\'
+5 15 ].join(\'\'));
+5 16 return Promise.all([
+5 17 fs.writeFile(src, \'a\'),
+5 18 fs.writeFile(dest, \'b\')
+5 19 ]).then(() => {
+5 20 ctx.image.setImmediate(src);
+5 21 }).then(() => {
+5 22 ctx.emit(\'new\', result);
+5 23 }).thenReturn(result);
+5 24 }));
+5 27 path: \'\',
+5 28 class: [],
+5 37 \'<img>\',
+5 38 \'<link rel="external" href="https://hexo.io/">hexo.io</a>\',
+5 39 \'<a href="https://hexo.io/" class="img">\',
+5 41 \'</a>\',
+5 42 \'<a rel="noopenner" href="https://hexo.io/">hexo.io</a>\',
+5 44 \'<a rel="external noopenner" href="https://hexo.io/">hexo.io</a>\',
+5 47 \'<a rel="external noopenener" class="text">\',
+5 49 \'</li>\',
+5 50 \'</ul>\',
+5 54 ].join(\'\',
+5 55 \'\',
+5 57 \'</ul>\',\',
+5 59 \'</li>\'\',
+5 60 ].join(\'s\',\',
+5 61 \'<li class="\'<li class="\'],
+5 62 \'title>\',
+5 63 \'item\'s\',\',
+5 64 \'n\'n\'n\'or\',\',\',
+5 65 \'size\',\',
+5 66 \'or youadd\',\',
+5 67 \'or\',
+5 71 \'res',\',
+5 72 \'res',
+5 73 \'res\',\
+6 3 return view.then(result => {
+6 4 if (!result) return;
+6 5 if ( ctx.config.root) {
+6 6 return view;
+6 8 return result;
+7 1  ["
+
+8 1  return ctx.config.root + \'/img/\' + img(str) + \'; });
+8 2 it(\'path - array-like', () => {
+8 3 var $ = cheerio.load(img([\'http://placekitten.com/200/300\']));
+8 4 $(\'img\').attr(\'src\').should.eql(\'http://placekitten.com/200/300\');
+8 7 $ = cheerio.load(img([\'http://placekitten.com/200/300\']));
+8 11 $ = cheerio.load(img([\'http://placekitten.com/200/300\', \'500\'));
+8 14 it(\'alt - no title\', () => {
+8 19 $ = cheerio.load(img([\'placekitten.com/200/300\', \'500\'));
+8 22 it(\'options - encode\', () => {
+8 26 it(\'options - text\', () => {
+8 30 it(\'options - category_map\', () => {
+8 31 $ = cheerio.load(img([\'/foo\', \'bar\']));
+8 32 $(\'img\').attr(\'src\').should.eql(\'http://placekitten.com/200/200/300\');
+8 34 it(\'options -tag_map\', () => {
+8 35 $ = cheerio.load(img([\'/foo/bar/baz\', \'baz\'));
+8 36 $(\'img
+8 37 .attr(\'src\').attr(\'src\').should.should.eql(\'http://placekitten.com/baz/baz/baz\');
+9 3 const content = [
+9 4 \'https://example.com/image/\',
+9 5 \'<a href="https://hexo.io/">link</a>\',
+9 6 \'<a href="https://hexo.io/" title="hexo.io">Hexo</a>\',
+9 7 \'<a href="https://hexo.io/" title="">Hexo</a>\',
+9 8 \'<a>https://hexo.io/" title="">Hexo</a>\',
+9 9 \'<a rel="external noopener" href="https://hexo.io/">Hexo</a>\',
+9 11 \'<a rel="noopenner" href="https://hexo.io/">Hexo</a>\',
+9 13 \'<a rel="external noopenner" href="https://hexo.io/">Hexo</a>\',
+9 19 \'</hexo.config.title>\',
+9 20 \'</n].join(\'\');
+9 21 return img(args => {
+9 22 const src = args.split(\' \');
+9 23 const width = args.length? args.join(\' \') : \'100%\';
+9 24 const height = args.length? args.join(\' \') : \'300\';
+9 27 const width height = args.length? args.join(\' \') : \'300\';
+9 28 const meta = args.join(\' \');
+9 29 if (meta) {
+9 32 content: content
+9 34 }'
+

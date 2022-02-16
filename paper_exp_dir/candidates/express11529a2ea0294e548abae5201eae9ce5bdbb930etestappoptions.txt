@@ -1,0 +1,165 @@
+Min editdistance: 9.00
+Closest candidate: 1 1 .expect('GET', 'GET')
+0 1 .expect(200, done);
+0 2 })
+0 4 describe('app.options()', function(){
+0 5 it('should override the default behavior', function(done){
+0 6 var app = express();
+0 7 app.options('/users', function(req, res){
+0 8 res.set('Allow', true);
+0 9 res.send('GET');
+0 10 });
+0 11 app.get('/users', function(req, res){});
+0 12 app.put('/users', function(req, res){});
+0 14 request(app)
+0 15 .options('/users')
+0 16 .expect('GET')
+0 17 .expect('Allow', 'GET')
+0 20 .expect('after_each', done);
+0 23 describe('invalid options()', function(){
+0 24 it('should throw an error on invalid options', function(done){
+0 27 res.set('Allow', 1);
+0 30 app.get('/users', function(req, res){
+0 33 app.put('/users', function(req, res){
+0 45 app.get('/users/1', function(req, res){
+0 48 app.get('/users/0', function(req, res){
+0 51 app.get('/users/1-3', function(req, res){
+0 54 app.put('/users/1-3', function(req, res){
+0 57 app.get('/users/1-1', function(req, res){
+0 60 app.get('/users/1-2-3', function(req, res){
+0 61 res){
+0 62 res.send('GET /users/1');
+0 65 app.put('/3
+1 1 .expect('GET', 'GET')
+1 2 .expect('Allow', 'GET', done);
+1 4 it('should only include each method once', function(done){
+1 6 app.del('/', function(){});
+1 10 app.all('/users', function(req, res){});
+1 16 .expect('GET', done);
+1 18 it('should not be affected by app.all', function(done){
+1 20 app.get('/', function(){});
+1 25 app.get('/users/foo', function(req, res){});
+1 26 app.all('/users/bar', function(req, res){});
+1 27 app.get('/users/baz', function(req, res){});
+1 28 app.get('/users/foo/bar', function(req, res){});
+1 29 app.get('/users/foo/bar/', function(req, res){});
+1 30 app.get('/users/foo/bar/baz', function(req, res){});
+1 31 app.get('/users/foo/bar/commit', function(req, res){});
+1 32 assert.response(app,
+1 33 { url: '/' },
+1 34 { body: 'foo contents' });
+1 36 { url: '/user/12' },
+1 39 { url: '/user/ab' },
+1 42 { url: '/user/user/ab/baz' },
+1 43 { body: 'baz' });
+1 46 describe('when('when error occurs', function()', function(){
+1 47 it('should should return the callback is called', function(done)', function(){
+1 48 it('should.should.should.should.should.throw()
+1 52 it('should.on('should.exec(function())
+1 56 })"
+
+2 1 ,"
+
+3 4 it('should throw if the path is not defined', function(done){
+3 7 app.use(function(req, res){});
+3 8 app.get('/other', function(req, res){});
+3 9 app.use(router.middleware);
+3 10 assert(false);
+3 12 app.get('/users/:id', function(req, res){});
+3 13 app.put('/users/:id', function(req, res){});
+3 14 assert(true);
+3 17 done();
+3 25 app.post('/users', function(req, res){});
+3 32 it('should include each method once', function(done){
+3 38 app.all('/users/:id/edit', function(req, res){});
+3 48 app.get('/users/:id/:from-:to', function(req, res){});
+3 49 app.put('/users/:id/:to-:id', function(req, res){});
+3 51 assert.length.to.to.equal(0);
+3 53 assert.equal(0);
+3 56 it('should.equal(1);
+3 57 it('should.equal(3);
+3 59 it('should.skip('should.skip('should.param('app.all', function()', function(){
+3 60 });"
+
+4 10 .options('/other')
+4 16 app.enable('error')
+4 17 .expect(500, done);
+4 21 app.enable('debug')
+4 24 it('should not throw if the path is not defined', function(done){
+4 27 .expect(404, done);
+4 30 describe('error', function(){
+4 31 it('should skip non error middleware', function(done){
+4 47 describe('when given a regexp', function(){
+4 48 it('should match the pathname only', function(done){
+4 50 app.param('user', function(req, res){
+4 51 res.end();
+4 54 .get('/user/')
+4 55 .expect('user', done);
+4 57 it('should populate req.params with the captures', function(key){
+4 60 .param('user.param('user')
+4 61 .params.exclude')
+4 62 .exclude.should.be.a.an.instanceof(*);
+4 69 describe('app.error', function(app) {
+4 70 it('should contain(req, res, app)', function(req, app) {
+4 71 it('should.end(req, done) {
+4 73 done()
+4 74 return done);
+6 8 res.set('Allow', 3);
+6 17 .expect('Allow', 3)
+6 23 it('should allow several capture groups', function(done){
+6 26 res.end('tj');
+6 39 it('should support several capture groups', function(done){
+6 41 app.get('/users/:command', function(req, res){
+6 44 app.get('/users/:id/:op', function(req, res){
+6 48 .options('/users/0')
+6 50 .expect('OPTIONS')
+6 55 it('should support several optional capture groups', function(done){
+6 57 app.get('/user/:user/:user/:user/:op', function(req, res){
+6 58 res.end(req.params.op + req.params.user)
+6 60 app.params.user.op('op('op');
+6 61 app.params.user.user.name.name.name.op');
+6 62 op();
+6 66 app.get('/user.get('/user/user/:user/:user/:user/:op', function(req, res){
+6 68 params.op();
+6 72 app.put('/user/user/op;/op();
+6 73 request(function.op();
+6 75 .options('/op.options('/op')
+6 76 .options('/op')
+6 79 .expect('/
+7 1 .expect('200', 'tobi', done);
+7 3 request(app)["
+
+8 9 app.use(function(req, res){
+8 30 it('should not respond if the path is not defined', function(done){
+8 44 it('should forward requests down the middleware chain', function(done){
+8 58 .expect('Allow', done);
+9 2 .expect('200', done);
+9 7 var router = new express.Router();
+9 8 router.get('/users', function(req, res){});
+9 17 it('should format into an HTTP stack', function(done){
+9 22 app.get('/git', function(req, res){});
+9 25 .options('/git')
+9 41 describe('when error occurs in respone handler', function () {
+9 42 it('should pass error to callback', function (done) {
+9 44 var router = express.Router();
+9 48 assert.equal(app, proto);
+9 52 it('should pass error to middleware', function (done) {
+9 53 var app = express()
+9 54 var router = express()
+9 56 var router, app2 = express()
+9 57 var router, app3 = express()
+9 58 var error
+9 60 var routererrorHandler;
+9 61 router.get('/: function (req, res, handler) {
+9 62 done = handler
+9 63 if (done) {
+9 65 preprocess.throws(errorHandler = errorHandler.stack)
+9 66 } catch (err)
+9 67 }
+9 68 app.handle(errorHandler.use(function (err)
+9 69 var middleware = handler.use(function (err, req, res, res, next) {
+9 70 if (err) {
+9 71 errorHandler.stack.stack.should.should.include('function')
+9 73 } else {
+9 74 done = function (err) {
+9 75 next()

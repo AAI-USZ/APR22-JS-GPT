@@ -1,0 +1,374 @@
+Min editdistance: 15.00
+Closest candidate: 0 15 nextTickQueue.set(function() {
+0 1 var index = 0;
+0 2 var promise = function(fn) {
+0 3 var promise = Q.resolve();
+0 4 if (fn) {
+0 5 promise.then(nextTickQueue.shift());
+0 6 } else {
+0 7 promise.then(nextTickQueue.length);
+0 8 }
+0 9 };
+0 10 var TIMES_DISCONNECTED = false;
+0 11 this.on('error', function(err) {
+0 12 if (err) return promise.error(err);
+0 13 nextTickQueue.shift()(function() {
+0 14 nextTickQueue.unshift(function() {
+0 15 nextTickQueue.set(function() {
+0 16 nextQueue.splice(0, 1);
+0 17 });
+0 18 }, this);
+0 19 return promise;
+0 21 this.onError = function(err) {
+0 23 this.emit('error', err);
+0 24 return this;
+0 26 this.onInfo = function(info) {
+0 27 if (info) {
+0 28 return;
+0 30 if (process.env.TRAVIS[info.id] &&
+0 31 /^(?:\\/\\
+0 32 )$/.test(info.id)) {
+0 33 this.track = function(name) {
+0 34 if (!name) {
+0 35 this.track(name, this.serialize());
+0 37 this.emit('close');
+0 40 Tracker.prototype.findAndModify = function(callback) {
+0 41 var tags;
+0 42 var model = this.model;
+0 43 model.hooks.forEach(function(i) {
+0 44 if (this.hooks[i].model.id.toString() === name) {
+0 47 if (model.hooks[i].model.name === name) {
+0 48 return model.hooks[i].model.name;
+0 51 model.hooks.forEach(function(fn) {
+0 55 var self = this;
+0 56 model.hooks.forEach(function(err) {
+0 57 if (err) return self.error(err);
+0 58 if (this.hooks[i].model.name === name) {
+0 59 return self.error(err);
+0 63 if (err) return this.error(err);
+0 65 self.log.debug('Attempting to instantiateiate'+ 'pre' + this.id.toString());
+0 66 var hooks = this._injector.get('pre');
+0 67 if (hooks.has(this.name)) {
+0 70 if (this.hooks.length) {
+0 71 this.emit('init');
+0 75 if (err) return self.emit('error', this);
+0 79 model.hooks.forEach(function(name) {
+0 80 this.forEach(callback);
+0 84 this.all = function(callback) {
+0 85 return this._injector.defer();
+0 91 exports.resolve = function resolveEnv = function(name) {
+0 92 var deferred = Q.resolve() {
+0 93 var that = Q.defer;
+0 94 if (this.unitWorkerure(this, fn
+1 1 var index = function (fn) {
+1 2 if (!fn) {
+1 3 return nextTickCallback(fn);
+1 5 if (index!== -1) {
+1 6 nextTickQueue.push(fn);
+1 8 init(nextTickCallback);
+1 11 res.next = function (fn) {
+1 12 return this._initCode(this._config.nextToken)
+1 13 .expect(fn).to.be.called
+1 14 next();
+1 16 res.lang = function (lang) {
+1 17 var foo = this._config.language
+1 18 , bar = this._config.caption
+1 19 , arg = arg.replace(/lang:\\w+/g, '-')
+1 20 , prefix = '------' + arg.replace(/:\\w+/g, '-')
+1 21 , argarray = /\\[\\]$/.test(arg)
+1 22 , json = {
+1 23 name: this.getName(),
+1 24 arg: arg,
+1 25 path: path,
+1 26 lang: lang,
+1 27 caption: caption,
+1 28 title: this.getConfigJSON(),
+1 30 caption: caption
+1 32 return json;
+1 34 res.json = function (obj) {
+1 35 var val = obj;
+1 36 if (arg) {
+1 37 if (typeof arg!== 'function') {
+1 38 throw new Error('invalid argument() call for'+ arg + ':'+ obj.message.replace(/\\u2028/g, '\\u2028'));
+1 40 if (obj.path) {
+1 41  + 1 = obj.path.substr(0, obj.length - 1)
+1 42 .length - 2;
+1 44 return obj;
+1 46 res.dirname = function (dirname, callback) {
+1 47 return findResolution(path, pattern) === false
+1 48 .then(function (err) {
+1 49 if (err) return callback(err);
+1 50 if (source_dir) {
+1 51 return Q.nfcall(fs.stat, source)
+1 52 .then(function (stat) {
+1 53 var file = source.split('/')
+1 54 , start = parseInt(stat.toString(), 10)
+1 55 , end = parseInt(end),
+1 56 length = parseInt(length, 10)
+1 57 , n = parseInt(n, 10);
+1 58 if (n > 0) {
+1 59 return callback(new Error('invalid argument() call for'+ source + ':'+ path + ':'+ error.message.replace(/\\u2028/g, '\\\\u2028'));
+1 61 throw new Error('invalid argument() for'+ source + ':'+ path + ':'+ error.message.replace(/\\u2029/g, '\\\\u2029');
+1 64 res.format = function (obj, obj) {
+1 65 var req = this.req;
+1 66 var next = req.next;
+1 67 var fn = obj.default;
+1 68 if (fn) delete obj.default;
+1 69 var keys = Object.keys(obj);
+1 70 var key = req.accepts(keys);
+1 71 if (!key) delete obj.accepts(key);
+1 72 if (!~length.length) return fn(keys[key];
+1 73 var accepted = true;
+1 74 return this.set('accepts', content, content, encoding);
+1 75 if (setEncoding(encoding, content, content, this.setEncoding, content, content);
+1 76 if (encodingodingoding, this.setCharset, content);
+1 77 if (encoding.on('gzip' == null) content = encoding) content = null) content = null) encoding = 'enodingoding sent, encoding = false' || content.setEncoding('utf8');
+1 78 return this.setEncoding(content, content, this.setCharset, undefined);
+1 80 this.setEncoding, undefined, content = undefined, encoding);
+1 81 return this.
+2 1 function FakeBrowser(id) {
+2 2 if (!mout.string.startsWith(id, 'http://localhost:8080/')) {
+2 3 return nextTickQueue.push(function () {
+2 4 nextTickQueue.push(function () {
+2 9 nextBickQueue.push(function () {
+2 11 nextSuccesss.push(function () {
+2 75 })
+2 87 if (nextTickQueue.length())"
+
+3 2 var addError = function(fn) {
+3 3 return function(err) {
+3 5 promise.complete();
+3 8 addError = function(fn) {"
+
+4 2 if (!Hexo.server.running) {
+4 5 function setup(id, tabs, skin, height, title, alt) {
+4 6 var promise;
+4 7 var timer;
+4 8 EventEmitter.call(this);
+4 9 this.browsers = [];
+4 10 Object.keys(this.emitter.keys).forEach(function (browser) {
+4 11 if (browser.id === id) {
+4 12 promise = this.browsers.push(browser);
+4 15 return promise.then(function () {
+4 16 timer = setTimeout(function () {
+4 17 promise.progress(reporter);
+4 18 }, 100);
+4 21 module.exports = {
+4 22 'X-Browser': function(browser) {
+4 23 var lastGeneratedId = null;
+4 24 return this.browsers.find(function (browser) {
+4 25 return browser.id === id;
+4 28 'Browser-VERBOSE': function (browsers) {
+4 29 var lastGeneratedId = 0;
+4 31 return!browser.isCaptured()? browser.id : false;
+4 34 'Server-Control': function(emitter) {
+4 35 return this.browsers.slice(emitter.length - 1);
+4 37 'Content-Type': function(browser) {
+4 38 return this.browser.split(/ *; */)[0];
+4 40 'Content-TypeLength': function(length) {
+4 41 return stripIndent(length / 1024).length;
+4 43 'Pre-processors': function(preprocessors) {
+4 44 var lines = [];
+4 45 Object.keys(preprocessors).forEach(function (pattern) {
+4 46 lines.push({
+4 47 id: pattern,
+4 48 name: pattern,
+4 49 process: preprocessors[pattern],
+4 50 serialize: new EventEmitter.prototype
+4 53 return this.browsers.map(function (browser) {
+4 54 return browsers.shift();
+4 56 };"
+
+5 2 promise.then(function() {
+5 3 return fn(someMethodFunction(fn));
+5 5 .done();
+5 6 expect(nextTickQueue.length).to.equal(0);
+5 7 extTickCallback.call(this, fn);
+5 10 var TIMES_FILENAME = ':someMethodFunction';
+5 11 var testMethod = function(a, b, c) {
+5 12 return function(args, content) {
+5 13 var id = args[0];
+5 14 var path = args[1];
+5 15 var doc = args[2];
+5 16 return \'test someMethodFunction(a, b, c)\';
+5 19 var createSuccessResult = function(result) {
+5 20 var deferred = Q.defer();
+5 21 return result.andCallFake(function(result) {
+5 22 deferred.notify({
+5 23 level: ACCESS_INFO,
+5 24 timeout: result.time / 1000
+5 27 return deferred.promise;
+5 30 if (Array.isArray(result.success)) {
+5 31 return result.success;
+5 45 return function(file) {
+5 46 if (!file ||!file.isDefined(result.success)) {
+5 47 return Promise.resolve();
+5 49 return file.then(function() {
+5 61 return Promise.all([
+5 62 fs.writeFile(file.source, result.data),
+5 63 createSuccessResult(file.path)
+5 64 ]).spread(function(result) {
+5 65 varSuccessResult = this.findSuccessResult();
+5 67 this.setSuccessResult = function() {
+5 68 return result.success? newSuccessResult() : result.success;
+5 70 this.setFailureResult = function() {
+5 71 return newFailureResult;
+5 73 this.clearRuntimeCache();
+5 76 var createSuccessResult = function(file) {
+5 77 var newSuccessResult = this.findSuccessResult();
+5 78 if (file.isDefined(file.source)) {
+5 81 var promise = createSuccessResult;
+5 84 }.bind(this);
+5 87 var createSuccessResult = function readSuccessResult; function readSuccessResult;
+5 88 if (error) {
+5 90 return Q.error)
+5 91 .error = error;
+5 92 .setError(error = true;
+5 93 .apply(this, arguments);
+5 95 .apply(this, arguments;
+5 98 return Q.apply(this, arguments)
+5 99 .apply(this, arguments)
+5 100 .apply.apply(this, arguments);
+5 102 .apply.apply.apply.apply(this, arguments)
+5 104 return [this.apply.apply.bind(this, arguments);
+6 1 var pendingCount = 0;
+6 2 var lastFailedIds = [
+6 3 'file http://bower.io/bower.json',
+6 4 'https://bower.io/bower.json/help-' + lastFailedIds.join('\
+6 5 ') + '\
+6 6 '
+6 7 ];
+6 8 function resetCache() {"
+
+7 1 function assignTo(name, base, context) {
+7 2 return function (action) {
+7 3 if (exports.hasOwnProperty(name)) {
+7 4 return [name];
+7 6 return function (cb) {
+7 8 if (self.working) {
+7 9 return Q.reject(createError('Already working', 'EWORKING'));
+7 11 context = cb;
+7 12 return function () {
+7 13 return self.insert({
+7 14 name: name,
+7 15 url: url
+7 19 function createNextToken(previousToken) {
+7 20 if (previousToken) {
+7 21 return function nextToken(error, resolved) {
+7 22 return self.reject(error, resolved);
+7 25 var tokens = returned byWords;
+7 26 var token;
+7 27 for (var i = 0; i < tokens.length; i++) {
+7 28 var comment = tokens[i].split('\
+7 29 ');
+7 30 if (node.indexOf( comment) === -1) {
+7 31 var ast = token.split('#'),
+7 32 secondToLastToken = split.shift(),
+7 33 lastToLastToken = split.shift(),
+7 34 getter = new RegExp('^' + escape.replace(/\
+7 35 $/, ''));
+7 36 return [token, token];
+7 38 var gsParser = function (previousToken, normalizedPreprocess, types) {
+7 39 var args = Array.isArray(previousToken.split('#')[0])? ['$', '$2','red'] : ['$1', '$2','s50']);
+7 40 args.unshift(data);
+7 41 return [args, tokens, gsParser(args), content, ']
+7 42 .replace(/\
+7 43 \\t (\\d+)\\s+(https?:\\/\\/)(\\S+)\\s*(.+)?/g, function (match, tick, args, str) {
+7 44 var t = args[0],
+7 45 url = args[1],
+7 46 target = '';
+7 47 if (target === '*') {
+7 48 url = target;
+7 50 target = args[2];
+7 51 if (!target) {
+7 52 content = stripIndent(args[0]),
+7 53 args = args.slice(i + 1);
+7 54 if (args[3]) {
+7 55 var args = args.slice(i + 1);
+7 56 args.unshift('--');
+7 57 if (args[4]) {
+7 62 target = target.split('#')[0];
+7 63 return {
+7 64 path: args[0],
+7 65 content: args[1],
+7 66 lang: args[2],
+7 67 ca: args[3],
+7 68 self: args[4]
+7 71 return nextToken;
+7 73 function createSourceCode(previousToken) {
+7 74 return function (config) {
+7 75 var sourceCode = previousToken.split('/');
+7 76 var sourceId = this._config.source_dir;
+7 77 return Q.nfcall(fs.readFile, sourceCode)
+7 78 .then(function (content) {
+7 79 var args = content;
+7 80 var length = args.length;
+7 81 var i = 0;
+7 82 var token = '';
+7 83 for (token.split('=')[0] = split('/').length > 0;
+7 84 for (i = '';
+7 85 for (var j = split.length; i < length; i; i; i; i) {
+7 86 if (jlen = ilen = count; ilen > 0; ilen > 0; i--) {
+7 87 if (jlen = i; i--) {
+7 88 key = l;
+7 90 if (key.split('*'..'/.index.length' + i)/.indexOf(cur.length > 0) ||
+7 91 .length > 0) {
+7 92 return Q.n.n.push(sourceCode out;
+7 94 out[key] = sourceCode[i] : sourceCode[i];
+7 97 outId = sourceCode[i];
+8 1 function renderTick(fn) {
+8 2 if (!fn) return nextTick(fn);
+8 3 var promise = fn.resolve();
+8 4 if (promise && promise.then) {
+8 5 promise.then(nextTick.bind(nextTick, null))
+8 8 promise.setAllIsReadyTo(false);
+8 13 function createEventHandler(tcim, location) {
+8 14 return function(req, res, next) {
+8 17 var promise = createEventHandler(tcim, location);
+8 18 promise.then(next.bind(next, null))
+8 22 addEventListener('change', function() {
+8 23 var event = new EventEmitter();
+8 24 var listener = sinon.spy();
+8 25 EventEmitter.call(event, event);
+8 26 listener.calledOnce.should.be.true;
+8 28 return function(fn) {
+8 29 if (event == null) {
+8 34 return checkResult(fn)
+8 35 .then(function(result) {
+8 36 if (result == null) {
+8 39 result = render.renderSync({
+8 40 path: config.filename + '',
+8 41 type: 'create',
+8 42 emit: 'update',
+8 43 file: config.filename + 'bar'
+8 45 return result;
+8 72 describe('remove', function() {
+8 73 var remove = createEventEmitter.prototype.reset;
+8 74 it('should remove the folder on an uncaught exception', function() {
+8 75 remove = createEventEmitter.prototype.remove;
+8 76 rimraf(testPackage, function() {
+8 77 return remove('./' + item);
+8 86 it.skip('should not remove the folder on an uncaught exception');
+8 88 it('should remove the next post', function() {
+8 89 remove = createEventEmitter = createEventEmitter = createEventEmitter.prototype.remove;
+8 92 describe('', function createEventEmitter.bind(remove);
+8 93 function createEventEmitter.on('bind(removeAll', function() {
+8 94 bindAll) {
+8 95 return emitter.removeAll(remove);
+8 96 return emitter;
+8 100 function createEventEmitter.on == emitter;
+8 101 function clean() {
+8 102 return Promise.on;
+8 103 removeAll(name;
+8 104 function no(fn) {
+8 105 return call(err) {\
+9 1 function removeNextQueue(fn) {
+9 2 var promise = require('bluebird');
+9 3 fs.exists(promise.resolve, function (exists) {
+9 4 if (!exists) {
+9 5 promise.removeNextQueue();
+9 10 function run(context, args) {
+9 11 return this._init(args);
+9 13 module.exports = removeNextTickQueue;
+9 14 module.exports.run = function (context) {
+9 15 return this._init();

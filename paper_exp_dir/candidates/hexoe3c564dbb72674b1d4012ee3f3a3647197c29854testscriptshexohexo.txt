@@ -1,0 +1,279 @@
+Min editdistance: 3.00
+Closest candidate: 3 1 const pathFn = require(\'path\');
+0 1 const { htmlTag } = require(\'hexo-util\');
+0 2 function jsfiddleTag(args) {
+0 3 const id = args[0];
+0 4 const tabs = args[1] && args[1]!== \'default\'? args[1] : \'js,resources,html,css,result\';
+0 5 const skin = args[2] && args[2]!== \'default\'? args[2] : \'light\';
+0 6 const width = args[3] && args[3]!== \'default\'? args[3] : \'100%\';
+0 7 const height = args[4] && args[4]!== \'default\'? args[4] : \'300\';
+0 8 return `<iframe scrolling="no" width="${width}" height="${height}" src="https://jsfiddle.net/${id}/embedded/${tabs}/${skin}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+0 9 }
+0 10 module.exports = jsfiddleTag;'
+
+1 2 function iframeTag(args) {
+1 3 const url = args[0];
+1 4 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+1 5 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+1 6 const attrs = {
+1 7 src: url,"
+
+2 1 const Promise = require(\'bluebird\');
+2 2 const { sep, join, dirname } = require(\'path\');
+2 3 const tildify = require(\'tildify\');
+2 4 const Database = require(\'warehouse\');
+2 5 const _ = require(\'lodash\');
+2 6 const { magenta, underline } = require(\'chalk\');
+2 7 const { EventEmitter } = require(\'events\');
+2 8 const { readFile } = require(\'hexo-fs\');
+2 9 const Module = require(\'module\');
+2 10 const { runInThisContext } = require(\'vm\');
+2 11 const { version } = require(\'../../package.json\');
+2 12 const logger = require(\'hexo-logger\');
+2 13 const { Console, Deployer, Filter, Generator, Helper, Injector, Migrator, Processor, Renderer, Tag } = require(\'../extend\');
+2 14 const Render = require(\'./render\');
+2 15 const registerModels = require(\'./register_models\');
+2 16 const Post = require(\'./post\');
+2 17 const Scaffold = require(\'./scaffold\');
+2 18 const Source = require(\'./source\');
+2 19 const Router = require(\'./router\');
+2 20 const Theme = require(\'../theme\');
+2 21 const Locals = require(\'./locals\');
+2 22 const defaultConfig = require(\'../config\');
+2 23 const loadDatabase = require(\'warehouse\');
+2 24 const multiConfigPath = require(\'multi_config_path\');
+2 25 const { sync } = require(\'resolve\');
+2 26 const full_url_for = require(\'../plugins/helper/full_url_for\');
+2 27 const { deepMerge } = require(\'hexo-util\');
+2 28 const libDir = dirname(__dirname);
+2 29 const dbVersion = 1;
+2 30 const stopWatcher = box => { if (box.isWatching()) box.unwatch(); };
+2 31 const routeCache = new WeakMap();
+2 32 const unique = array => array.filter((item, index, self) => self.indexOf(item) === index);
+2 33 const castArray = obj => { return Array.isArray(obj)? obj : [obj]; };
+2 34 const createLoadThemeRoute = function(generatorResult, locals, ctx) {
+2 35 const { log, theme } = ctx;
+2 36 const { path, cache: useCache } = locals;
+2 37 const layout = unique(castArray(generatorResult.layout));
+2 38 const layoutLength = layout.length;
+2 39 locals.cache = true;
+2 40 return () => {
+2 41 if (useCache && routeCache.has(generatorResult)) return routeCache.get(generatorResult);
+2 42 for (let i = 0; i < layoutLength; i++) {
+2 43 const name = layout[i];
+2 44 const view = theme.getView(name);
+2 45 if (view) {
+2 46 log.debug(`Rendering HTML: ${name}: ${magenta(path)}`);
+2 47 return view.render(locals)
+2 48 .then(result => ctx.execFilter(\'after_route_render\', result, {
+2 49 context: ctx,
+2 50 args: [locals]
+2 51 }))
+2 52 .tap(result => {
+2 53 if (useCache.has(generatorResult)) {
+2 54 routeCache.set(generatorResult.get(generatorResult))
+2 55 }).tapCatch(generatorResult.bind(locals);
+2 59 };
+2 61 createThemeRender.prototype.generate = function() {
+2 62 return function(options, callback) {
+2 63 return Promise.resolve = path(callback) {
+2 64 return callback(callback);
+2 67 class Locals.render = this;
+2 68 class LocalsView.invalidateStartLocals {
+2 69 Locals {};
+2 70 initLocals.page = _.page = _;
+2 71 locals.page = locals;
+2 72 locals.cache.get = null;
+2 73 if (this.env.permalink = this.path) {
+2 74 return Promise
+3 1 const pathFn = require(\'path\');
+3 2 const fs = require(\'hexo-fs\');
+3 4 describe(\'partial\', () => {
+3 5 const Hexo = require(\'../../../lib/hexo\');
+3 6 const hexo = new Hexo(pathFn.join(__dirname, \'partial_test\'), {silent: true});
+3 7 const themeDir = pathFn.join(hexo.base_dir, \'themes\', \'test\');
+3 8 const viewDir = pathFn.join(themeDir, \'layout\') + pathFn.sep;
+3 9 const viewName = \'article.swig\';
+3 10 const ctx = {
+3 11 site: hexo.locals,
+3 12 config: hexo.config,
+3 13 view_dir: viewDir,
+3 14 filename: pathFn.join(viewDir, \'post\', \'article.swig\'),
+3 15 foo: \'foo\',
+3 16 cache: true
+3 18 ctx.fragment_cache = require(\'../../../lib/plugins/helper/fragment_cache\')(hexo);
+3 19 const partial = require(\'../../../lib/plugins/helper/partial\')(hexo).bind(ctx);
+3 20 before(async () => {
+3 21 await Promise.all([
+3 22 fs.mkdirs(themeDir),
+3 23 fs.writeFile(hexo.config_path, \'theme: test\')
+3 24 ]);
+3 25 await hexo.init();
+3 26 hexo.theme.setView(\'widget/tag.swig\', \'tag widget\');
+3 27 });
+3 28 after(() => fs.rmdir(hexo.base_dir));
+3 29 it(\'default\', () => {
+3 30 partial(\'../widget/tag\').should.eql(\'tag widget\');
+3 31 partial(\'widget/tag\').should.eql(\'tag widget\');
+3 32 partial(\'foo\').should.eql(\'\');
+3 34 it(\'locals\', () => {
+3 35 hexo.theme.setView(\'test.swig\', \'{{ foo }}\');
+3 36 partial(\'test\', {foo: \'bar\'}).should.eql(\'bar\');
+3 38 it(\'cache\', () => {
+3 40 partial(\'test\', {foo: \'bar\'}, {cache: true}).should.eql(\'bar\');
+3 41 partial(\'test\', {}, {cache: true}).should.eql(\'bar\');
+3 43 it(\'only\', () => {
+3 45 partial(\'test\', {bar: \'bar\'}, {only: true}).should.eql(\'bar\');
+3 47 it(\'a partial in another partial\', () => {
+3 49 partial(\'test(\'test\', {}, {bar: {only: true}).should.eql(\'bar\')
+3 51 it(\'a partial\'\', {% = 2 == 2? partial : partial : partial : view_dir;\', partial : view_dir;
+3 52 it(\'should.should.should.extend(view_dir.should.position = 2;
+3 53 it(\'position = 2;\', content = 2;
+3 54 it(\'should.should.should.position = 3;
+3 55 \', content = content > 0;
+3 56 it(\'should.should.should.eql(\'123\', content);
+3 57 it(\'deep_link\', () => {
+3 58 \', content).should.should.should.eql(\'123/foo.htmlEqual(content);
+3 60 it(\' invalidate();
+3 61 it(\'cache\', () => partial.should.should.
+4 1 const { url_for } = require(\'hexo-util\');
+4 2 module.exports = function(path, options) {
+4 3 return url_for.call(this, path, options);
+4 4 };'
+
+5 7 src: url,
+5 8 width: width,
+5 9 height: height,
+5 10 title: title,
+5 11 alt: alt,
+5 12 src: external link
+5 14 return htmlTag(\'img\', attrs);
+5 16 module.exports = iframeTag;'
+
+6 1 var should = require(\'chai\').should();
+6 2 var Promise = require(\'bluebird\');
+6 3 describe(\'asset_link\', function() {
+6 4 var Hexo = require(\'../../../lib/hexo\');
+6 5 var hexo = new Hexo(__dirname);
+6 6 var assetLinkTag = require(\'../../../lib/plugins/tag/asset_link\')(hexo);
+6 7 var Post = hexo.model(\'Post\');
+6 8 var PostAsset = hexo.model(\'PostAsset\');
+6 9 var post;
+6 10 hexo.config.permalink = \':title/\';
+6 11 function assetLink(args) {
+6 12 return assetLinkTag.call(post, args.split(\' \'));
+6 14 before(function() {
+6 15 return hexo.init().then(function() {
+6 16 return Post.insert({
+6 17 source: \'foo.md\',
+6 18 slug: \'foo\'
+6 20 }).then(function(post_) {
+6 21 post = post_;
+6 22 return Promise.all([
+6 23 PostAsset.insert({
+6 24 _id: \'bar\',
+6 25 slug: \'bar\',
+6 26 post: post._id
+6 27 }),
+6 29 _id: \'bár\',
+6 30 slug: \'bár\',
+6 32 })
+6 38 _id: \'cár\',
+6 39 slug: \'cár\',
+6 43 _id:\'spaced asset\',
+6 44 slug:\'spaced asset\',
+6 48 }).then(function(post) {
+6 49 should.not.exist(post.tag);
+6 50 return PostAsset.removeById(post._id);
+6 53 it(\'default\', function() {
+6 54 assetLink(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+6 56 it(\'title\', function() {
+6 57 assetLink(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+6 59 it(\'should escape tag in title by default\', function() {
+6 60 assetLink(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot;world&quot;">&quot;Hello&quot;world&quot;</a>\');
+6 62 it(\'should not escape tag in title\', function() {
+6 63 assetLink(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot;world&quot;Hello&quot;world&quot;</a>\');
+6 66 assetLink(\'bar "Hello" <world> true    )\').should.should.eql(\'<a href="/foo/bar" title="&quot;world> true" title="&quot;world&quot;Hello&quot;Hello&quot;Hello&quot;world&quot;world&quot;GLOBALFORMAL&quot;!!pre>\')>\');
+6 69 });'
+
+7 2 describe(\'post_link\', function(){
+7 5 var postLink = require(\'../../../lib/plugins/tag/post_link\')(hexo);
+7 8 before(function(){
+7 9 return hexo.init().then(function(){
+7 11 source: \'foo\',
+7 12 slug: \'foo\',
+7 13 title: \'Hello world\'
+7 16 it(\'default\', function(){
+7 17 postLink([\'foo\']).should.eql(\'<a href="/foo/" title="Hello world">Hello world</a>\');
+7 19 it(\'title - link\', function(){
+7 20 postLink([\'foo\', \'test\'].should.eql(\'<a href="/foo/" title="test">test</a>\');
+7 22 it(\'no slug\', function(){
+7 23 should.not.exist(postLink([]));
+7 25 it(\'post_link - virtual\', function(){
+7 26 should.not.exist(postLink([\'bar\']))
+7 27 );
+7 29 it(\'no slug - category_link\', function(){
+7 30 hexo.config.permalink = \':category\';
+7 31 postLink([\'bar\']).should.eql(\'<a href="/bar/" title="bar">bar</a>\');
+7 32 hexo.config.permalink = \':category_link\';
+7 34 it(\'permalink - virtual\', function(){
+7 39 }).then(function(post){
+7 40 postLink([\'bar\']).should.eql(\'<a href="/bar/" title="Hello world">bar</a>\');
+8 1 const url = require(\'url\');
+8 3 const rUrl = /((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[.\\!\\/\\\\w]*))?)/;
+8 4 const rMeta = /["\']?([^"\']+)?["\']?\\s*["\']?([^"\']+)?["\']?/;
+8 5 function imgTag(args, content) {
+8 6 const classes = [];
+8 7 let meta = \'\';
+8 8 let width, height, title, alt;
+8 9 let i = 0;
+8 10 const len = args.length;
+8 11 for (; i < len; i++) {
+8 12 const item = args[i];
+8 13 if (rUrl.test(item)) {
+8 14 src = makeUrl(item);
+8 15 break;
+8 16 } else {
+8 17 classes.push(item);
+8 20 args = args.slice(i + 1);
+8 21 if (args.length) {
+8 22 if (!/\\D+/.test(args[0])) {
+8 23 width = args.shift();
+8 24 if (args.length &&!/\\D+/.test(args[0])) {
+8 25 height = args.shift();
+8 28 meta = args.join(\' \');
+8 30 if (meta && rMeta.test(meta)) {
+8 31 const match = meta.match(rMeta);
+8 32 title = match[1];
+8 33 alt = match[2];
+8 36 src,
+8 37 class: classes.join(\' \'),
+8 38 width,
+8 39 height,
+8 40 title,
+8 41 alt
+8 45 module.exports = imgTag;'
+
+9 2 describe(\'link_to\', function(){
+9 5 var ctx = {
+9 6 config: hexo.config
+9 8 ctx.url_for = require(\'../../../lib/plugins/helper/url_for\').bind(ctx);
+9 9 var linkTo = require(\'../../../lib/plugins/helper/link_to\').bind(ctx);
+9 10 it(\'path\', function(){
+9 11 linkTo(\'http://hexo.io/\').should.eql(\'<a href="http://hexo.io/" title="hexo.io">hexo.io</a>\');
+9 13 it(\'title\', function(){
+9 14 linkTo(\'http://hexo.io/\', \'Hexo\').should.eql(\'<a href="http://hexo.io/" title="Hexo">Hexo</a>\');
+9 16 it(\'external (boolean)\', function(){
+9 17 linkTo(\'http://hexo.io/\', \'Hexo\', true)
+9 18 .should.eql(\'<a href="http://hexo.io/" title="Hexo" target="_blank" rel="external">Hexo</a>\');
+9 20 it(\'external (object)\', function(){
+9 21 linkTo(\'http://hexo.io/\', \'Hexo\', {external: true})
+9 24 it(\'class (string)\', function(){
+9 25 linkTo(\'http://hexo.io/\', \'Hexo\', {class: \'foo\'})
+9 26 .should.eql(\'<a href="http://hexo.io/" title="Hexo" class="foo">Hexo</a>\');
+9 28 it(\'class (array)\', function(){
+9 29 linkTo(\'http://hexo.io/\', \'Hexo\', {class: [\'foo\', \'bar\']})
+9 30 .should.eql(\'<a href="http://hexo.io/" title="Hexo" class="foo bar">Hexo</a>\');
+9 32 it(\'id\', function(){
+9 33 linkTo(\'http://hexo.io/\', \'Hexo\', {id: \'foo\'})
+9 34 .should.eql(\'<a href="http://hexo.io/" title="Hexo" id="foo">Hexo</a>\');

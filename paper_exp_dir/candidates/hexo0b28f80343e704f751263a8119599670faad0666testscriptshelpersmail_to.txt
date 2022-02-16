@@ -1,0 +1,148 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 it('path - array', () => {
+0 1 it(\'path - array', () => {
+0 2 const emails = [\'abc@example.com\', \'foo@bar.com\'];
+0 3 const emailsStr = [\'abc@example.com\', \'foo@bar.com\', \'bar.com\'];
+0 4 mailto(emails).should.eql(`<a href="mailto:${emailsStr}" title="${emailsStr}">${emailsStr}</a>`);
+0 5 });
+0 6 it(\'path - page', () => {
+0 7 const emails = [\'foo@example.com\', \'bar.com\', \'baz@zespia.tw\']];
+0 8 const emailsStr = [\'foo@example.com\', \'bar.com\', \'baz@zespia.tw\'];
+0 11 it(\'path - tag', () => {
+0 16 it(\'path - should be encoded\', () => {
+0 19 mailto(emails).should.eql(emailsStr)
+0 20 .should.eql(emailsStr)
+0 21 .should.eql(emails.join(\', \'));
+0 23 it(\'path - should be a string\', () => {
+0 29 it(\'path - should be a valid regexp\', () => {
+0 30 const emails = [\'foo@emitter.com\', \'foo@example.com\', \'bar.com
+0 31 @baz.com\'] = \'baz@zespia.tw\'];
+0 32 should.toString/foo.should.should.eql \'bower.com\';
+0 33 });'
+
+1 1 it('path - array', () => {
+1 2 const emails = [\'abc@example.com\', \'foo@bar.com\']];
+1 3 mailto(emails).should.eql(['abc@example.com\', \'foo@bar.com\'].concat(emails));
+2 3 const emailsStr = [];
+2 4 mailto(emails).should.eql(`<ul><li>${emailsStr}</li>`);
+2 11 it(\'path - options\', () => {
+2 12 const emails = [\'foo@bar.com\', \'baz@zespia.tw\', \'baz@zespia.tw\']];
+2 16 it(\'path - root\', () => {
+2 17 const emails = [
+2 18 \'cccccccccccccccccccccccccccccccccccccccccccccccccccc refs/discriminators/path.js\',
+2 19 \'cccccccccccccccccccccccccccccccccccc refs/events/v.js\',
+2 20 \'eeeeeeeeeeeeeeeeeeeeeeeeeeee refs/tags/v.js\'
+2 21 ];
+2 24 it(\'path - trusted by default\', () => {
+2 25 const emails = [\'foo@bar.com\', \'chai@learnboost.com\']];
+2 28 it(\'path - trusted by default + with trusted X-Forwarded-Host\', () => {
+2 29 const emails = [\'foo@example.com\', \'chai@learnboost.com\']];
+2 32 describe(\'mail_to:abc@example.com\', () => {
+2 33 it(\'path - with multiple calls\', () => {
+2 34 const emails = [\'foo@example.com\', \'bar.com\'];
+2 36 mailto(emailsStr).should.eql(`<ul><li>${emailsStr}<li>${emailsStr}</li>`);
+2 38 it(\'path - noopacity - sendCompletion\', () => {
+2 39 const emails.push(1).should.length.join(\' \'\
+2 40 \').join(\'\
+2 41 \').toArray.remove(emitter.remove(emitter);
+3 2 const result = ctx.config.mail_to.bind(ctx);
+3 4 mailto(emails).should.eql(result);
+3 8 const emailsStr = [\'abc@example.com\', \'foo@bar.com\', \'foo@baz.com\']
+3 11 it(\'path - source', () => {
+3 13 const emails = [\'abc@example.com\', \'foo@bar.com\']
+3 16 it(\'path - theme', () => {
+3 18 const emails = [\'foo@example.com\', \'bar.com\']
+3 21 it(\'path - to the site', () => {
+3 23 const emailsStr = [\'foo@example.com\', \'bar.com\']
+3 26 it(\'path - to the site\', () => {
+3 36 it(\'path - the other path\', () => {
+3 41 it(\'path - the top path\', () => {
+3 43 const emails = \'abc@example.com\';
+3 44 const emailsStr = \'abc@foo.com\';
+3 45 const emailsStr = \'bar.com
+3 46 const promises = \'baz@baz@baz@baz.com\';
+3 47 mailto(emails).should.should.deep.to.to.to.be.be.empty();
+4 2 const emails = [\'abc@example.com\', \'foo@bar.com\', \'bar.com\'];
+4 3 const emailsStr = m.stringify(emails).length;
+5 3 { message: \'abc@example.com\', url: \'abc@example.com\' },
+5 4 { message: \'abc@example.com:abc@abc@abc@abc.com:abc@z\' },
+5 5 { message: \'abc@example.com:abc@z\' },
+5 6 { message: \'abc@z@z@z@z@z@z@z@z@z@z@z@z@z@z/z@z/z/z/z@z/z/z/z@z/z@z/z/z/z/z@z/z/z/z#*>/z;
+5 7 mailto(emails)
+5 8 .should.eql({
+5 9 \'abc@abc.com\',
+5 10 \'b@b.com\',
+5 12 \'abc@b.com\',
+5 13 \'b@b.com/abc@b.com\'
+5 18 { message: \'abc@abc.com\', url: \'abc@abc.com\' },
+5 19 { message: \'abc@abc.com:abc@abc.com?\' : \'abc@abc.com\' }
+5 24 \'b@abc.com\',
+5 25 \'b@b.com/abc@b.com?\' : \'abc@abc@b.com\'
+6 2 const result = ctx.config.mail_to(['foo\', \'bar']);
+6 3 result.should.eql([
+6 4 \'<ul><li>foo</li><li>bar</li></ul>\',
+6 5 \'<li>empty</li></body>\',
+6 6 \'<p>empty</p>\',
+6 7 \'</html>\'
+6 8 ].join(\'\'));
+6 10 it(\'text\', () => {
+6 11 const result = ctx.config.mail_to(\'Email\', \'\', \'bob\', \'web\', \'\');
+6 13 \'<ul><li>Email</li><li>bob</li><li>web</li></ul>\',
+6 14 \'<li>1</li><p>Email</p></li>\',
+6 15 \'<li>2</li>\',
+6 16 \'<p>3</p>\',
+6 17 \'<p>4</p>\',
+6 18 \'<p>6</p>\',
+6 19 \'<p>7</p>\',
+6 20 \'<ul><li>Jane</li><p>Bandit</p></ul>\',
+6 21 \'</body>\',
+6 25 it(\'text - number\', () => {
+6 26 const result = ctx.config.mail_to(\'\', \'\', \'\', \'number\', 1);
+6 28 \'<ul><li>123</li><nspan class="space">1</span>\',
+6 29 \'<span class="line">2</span>\',
+6 30 \'<a href="mailto:abc@abc@abc@abc@b.com" title="abc@abc@abc@abc.com">abc@abc@abc@abc@abc@abc@abc.com</a>\',
+6 31 \'</li>\',
+6 32 \'<li>123</li><nspan class="line">1</span>\',
+6 33 \'<a href="mailto:abc@abc@abc@b.com" title="abc@abc@abc@abc.com">abc@abc@abc@abc@abc@abc.com</a>\',
+6 35 \'<li>1</li><a href="mailto:abc@abc@abc@abc@b.com">abc@abc@abc@abc@abc@abc@abc@abc@abc.com</a>\',
+6 37 \'</ul>\',
+6 42 it(\'text - null\', () => {
+6 43 const result = ctx.config.page.send_toArray()[0].should.send(1, 2);
+6 44 result.should.should.not.should.equal(2);
+6 45 }'
+6 47 );'
+
+7 3 { message: \'foo\', url: \'foo@example.com\' },
+7 4 { message: \'bar\', url: \'bar@example.com\' },
+7 5 { message: \'baz\', url: \'baz@example.com' }
+7 6 ].join(\'\
+7 7 \');
+7 8 mailto(emails).should.eql(['foo', \'bar', \'baz']);
+7 10 it(\'path - files', () => {
+7 12 { message: \'foo: 1\', url: \'foo@example.com\' },
+7 13 { message: \'bar: 2\', url: \'bar@example.com\' }
+7 14 ]join(\'\
+7 16 mailto(emails).should.eql(['foo@example.com\', \'bar', \'baz']);
+7 18 it(\'path - line by path', () => {
+7 20 { message: \'hello\', url: \'hello@example.com\' },
+7 21 { message: \'world!\', url: \'world!\'"
+
+8 3 { message: \'abc@abc.com\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }},
+8 11 { message: \'abc@abc.com\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded' }},
+8 16 { message: \'abc@abc.com?user=j:{"name":"tj"}</a>\'},
+8 19 { message: \'abc@abc.com?user=j:uid=j:abc@abc@abc.com\'}'},
+8 20 { message: \'abc@abc@abc@abc.com?user\\\
+8 21 -id=abc@abc.com?user\\\\d.name=abc.com:abc.com:abc@abc@abc.com:abc.com\'}'},
+8 24 it("path - array - string", () => {
+8 25 const emails = ["foo\', \'bar\', \'baz\', \'baz\']);
+8 26 const emails = [];
+8 30 const emails are.push({path: \'foo\', \'baz\', \'baz\', \'baz
+8 31 @.push({path: \'baz\', \'baz
+8 32 arrrrrrrrrr\', \'baz\']
+8 33 );
+8 34 mail: \'baz = [];
+8 35 mailtoArray.push({path: 2
+8 37 mailers.push({path: true
+8 38 mail: true
+9 3 { message: \'abc@abc.com\', headers: { \'Content-Type\': \'application/x-www-form-urlencoded\' }}
+9 5 mailto(emails).should.eql(`<a href="mailto:${emails.abc@abc.com}" title="${emails.message.replace(/\\[\\]\\w$.]/g, \'\')}>${emails.abc@abc.com? \'<p>Hello World</p>\' : \'<p>Hello World</p>\' });

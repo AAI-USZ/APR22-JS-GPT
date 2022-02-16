@@ -1,0 +1,69 @@
+Min editdistance: 32.00
+Closest candidate: 6 11 describe('should.all() optional);
+0 1  : function ({"redirectory":"redirectory":"http://hexo.format: 'http://hexo.format:pagenta'});"});
+0 2 assert.should.format = 'x-mpeg-s', 'x-mpeg');
+0 3 assert.format = 'x-function(){'return require('x-foo');
+0 4 });
+0 5 }).format = 'x-engine.config');
+0 7 it('should.format = function(){ return(': function(){ return 'x-foo'); };"format =
+1 1  });
+1 2 it('should.test({"app":"app": function()", function() {
+1 3 return done();"raw": function (invalidate": function (value) { cshould.should.should.should.should.have.have.have.been.calledOnce(1);
+1 4 assert(1);
+1 5 return function (value) {
+1 6 return call(app) {
+1 7 return call.should.should.toArray.should.be.be.calledOnce(1);
+1 8 }
+1 12 \
+2 2 assert.post('/foo', function () => function should.post('/callback');
+2 3 assert.callback });
+2 4 it('should.skip('should.skip('should.skip', function()');"callback');"
+
+3 1 ,"express();
+3 2 assert.puts('/test');
+3 3 assert.format('test');
+3 5 it('should.format = function should.format(': function(){
+3 6 assert(': function(){
+3 8 assert.format(': function(){
+3 10 assert(this.format) == 3);
+3 12 assert(this.formatters.should.should.format);
+3 13 assert(this.format);
+3 14 assert(this.format
+4 1 ,"redirecting(),"redirecting(),"redirecting(),"redirecting()", function () => { calls.push('/foo');
+4 3 it('should.wait(function(){
+4 4 app.listen((){
+4 5 app).listen((){
+4 6 app);
+4 7 app.get('/foo.get('/foo');
+4 8 return;
+4 10 }).return();
+4 11 }).any(function(app);
+4 12 }).should.use(function(fn);
+5 1  });"
+6 2 assert(express();
+6 3 assert(0);
+6 5 assert.should.deepEqual(3);
+6 7 it('should.skip('should.skip('should.should.all()', function() optional);
+6 9 it('should.skip('should.restore() is undefined', function(done);
+6 11 describe('should.all() optional);
+6 12 it('should allow(is not.should
+7 1  }, function () => {
+7 2 calls.push('/foo');
+7 3 assert.get('/sucumber');
+7 5 it('should.skip('should support('should not be a function', function', function(){
+7 6 return done);
+7 7 }).export(function () {
+7 8 Express.any(1, done);
+7 11 it('should.test.test.should.should.returnsolve()should.should.be.hooks.hooks.hooks.hooks
+8 1 ,"express(),"stringify()", function()"use({"ig:function"),"ig");"});"});"});"
+8 2 }).should.listen('', function(){
+8 3 it('should work
+9 1 ,"redirect(),"redirecting: "http://http://http://hexo.io/bob.io/foo');
+9 3 assert.listen(3000);
+9 4 assert.response(app,
+9 5 })("foo);
+9 6 })(()
+9 7 it('should.skip processing');
+9 8 it('should allow processing middleware', function(done);
+9 9 it('should use(done)', function(done) {
+9 10 return call(done) {\

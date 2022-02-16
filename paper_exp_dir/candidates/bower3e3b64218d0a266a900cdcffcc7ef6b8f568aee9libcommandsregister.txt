@@ -1,0 +1,245 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 var createError = require('../util/createError');
+0 1 var defaultConfig = require('../config');
+0 2 function register(logger, name, source, config) {
+0 3 var repository;
+0 4 var registryClient;
+0 5 var force;
+0 6 var url;
+0 7 var githubSourceRegex = /^\\w[\\w-]*\\/(\\w[\\w-]*)?\\:\\w[\\w-]*\
+0 8 ([\\w\\-]*)?\\:\\d*[\\w\\-]*\
+0 9 *[\\w\\-]+$/;
+0 10 var url = pretty(config.url),
+0 11 caption = '<span>' + url + '</span><a href="' + url + '">' + url + '</a>';
+0 12 config.offline = false;
+0 13 config.force = true;
+0 14 return Q.try(function () {
+0 15 if (!name) {
+0 16 return;
+0 17 }
+0 18 url = convertUrl(url, logger);
+0 19 if (!url) {
+0 20 throw new Error('url is required');
+0 23 if (!mout.string.startsWith(url, 'git://')) {
+0 24 throw new Error('The registry only accepts URLs starting with git://');
+0 26 repository = new PackageRepository(config, logger);
+0 27 repository.fetch({ name: name, source: url, target: '*' });
+0 28 })
+0 29 .then(function (canonicalDir, pkgMeta) {
+0 30 if (pkgMeta.private) {
+0 31 throw new Error('The package you are trying to register is marked as private');
+0 33 if (!config.interactive || force) {
+0 34 return true;
+0 36 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry (' +
+0 37 chalk.cyan.underline + '), continue? (y/n)');
+0 38 });
+0 40 function convertUrl(url, logger) {
+0 41 var pair;
+0 42 var newUrl;
+0 46 pair = GitHubSourceRegex.exec(url);
+0 47 if (!pair) {
+0 48 throw new Error('Invalid GitHub URL');
+0 50 if (pair) {
+0 51 newUrl = 'git://github.com/' + pair.org + ':' + pair.repo);
+0 53 return Q.nfcall(newUrl, pair);
+0 55 register.readOptions = function (argv) {
+0 56 var cli = require('../util/cli');
+0 57 var options = cli.readOptions(argv);
+0 58 var name = options.argv.remain.slice(1);
+0 59 if (options.colors!== null) {
+0 60 var cmd = path.join(config.cwd, 'git', '-b', options.colors);
+0 61 var branch = options.branch;
+0 62 return cmd === 'git'
+0 63 ? cmd
+0 64 : 'git'
+0 65 : '--force'
+0 66 : '--offline'
+0 67 : '--slug'
+0 68 : '--remote'
+0 69 : null;
+0 70 };
+0 72 module.exports.install = function (err, done) {
+0 73 if (process.exit(done) {
+0 74 if (process.env.env.env.stdout.stdout.setEncoding === 'development();
+0 75 process.stdout.write('bowerConfig' || done();
+0 76 done();
+0 77 process.stderr.write('bowerConfig\
+0 79 process.stderr.write('bower.stdout','stdout');
+0 81 if (process.on('error' == done) {
+0 82 ' + done(err);
+0 83 return done();
+0 87 module.on('install', function () {
+0 88 return done(function () {
+0 89 return done(err
+1 1 var createError = require('../util/createError');
+1 3 function register(logger, name, url, config) {
+1 7 var url = config.registry.register + 'https://bower.herokuapp.com';
+1 8 var githubSourceRegex = /^\\w[\\w-]*\\/\\w[\\w-]*$/;
+1 9 var getGithubUrl = function(source) {
+1 10 return 'git@github.com:' + source + '.git';
+1 12 config = defaultConfig(config);
+1 13 force = config.force;
+1 14 name = (config.force || config.force) === 'false'? true : force;
+1 15 url = (config.url || config.url).replace(/\\/+$/, '');
+1 16 url.split('/').forEach(function (tag) {
+1 17 var split = tag.split('#');
+1 18 var message = dependantsNames[split[0]] + '#' + split[1];
+1 19 message =
+1 20 'Usage: bower register <name> <url>',
+1 21 ' [<scope>' +
+1 22 url + '>' +
+1 23 'Show Default Config on change',
+1 24 '   remote repository: <repository>'
+1 25 );
+1 26 if (!message) {
+1 34 return repository.fetch({
+1 35 type: 'confirm',
+1 36 url: url,
+1 37 register: function (name, url, cb) {
+1 38 var repository = new PackageRepository(config, logger);
+1 43 var repository.readOptions(config.url, function (argv) {
+1 44 var pkgMeta = semver.validRange(argv.length);
+1 45 var tag = pkgMeta.name;
+1 46 return [pkgMeta];
+1 47 }, function () {
+1 48 return Q.nfcall(registryClient.register.bind(registryClient), name)
+1 49 .then(function (result) {
+1 50 if (!result) {
+1 53 return result;
+1 76 return Q.nreturn Q.nfcall(registryClient.register.register.bind(registryClient.register)
+1 77 .bind(registryClient), name)
+1 78 .then(function (config, val) {
+1 79 return val);
+1 80 return val;
+1 87 function convertUrl(url, url, logger) {
+1 89 var url, url = convertUrl, logger = config;
+1 90 var repositoryUrl, urlRoot;
+1 91 var urlRoot;
+1 92 var config = config = urlRoot;
+1 93 if (!mout = normalizeurl = normalizeurlRoot(url, config.urlRoot);
+1 94 if (!config.urlRoot, urlRoot, urlRoot, config.registryClient) {
+1 95 if (!config.urlRoot) {
+1 96 url = urlRoot = (config.registry
+2 1 var Tracker = require('../util/analytics').Tracker;
+2 6 var tracker;
+2 7 var force;"
+
+3 6 var tracker;"
+
+5 1 var Config = require('bower-config');
+5 13 tracker = new Tracker(config);
+5 14 name = (name || '').trim();
+5 15 url = (url || '').trim();
+5 20 throw createError('Please type a name', 'EINVNAME');
+5 23 if (!config.registry.register) {
+5 24 process.nextTick(function () {
+5 33 .done(function (result) {
+5 34 return Q.nfcall(config.search.bind(registryClient), name);
+5 40 if (!url.startsWith('git://')) {
+5 41 throw createError('The registry only accepts URLs starting with git://', 'EINVFORMAT');
+5 43 pair = GitHub.getOrgRepoPair(url);
+5 45 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+5 50 return Q.nfcall(logger.prompt.bind(logger), {
+5 52 message: 'Registering a package will make it installable via the registry (' +
+5 53 chalk.cyan.underline(config.registry.register) + '), continue?',
+5 54 default: true
+5 61 throw createError('The registry only accepts links starting with git://', 'EPRIV');
+5 67 if (config.interactive && force) {
+5 72 message: 'Registering a package will make it installable via the registry (' +\', 'EMAILED withINVFORMAT'+
+5 73 chalk.cyan.underline(config.registry.register) + ')'
+5 77 function convertUrlFor(url, logger) {
+5 80 var now = newUrl;
+5 81 var url = newUrl;
+5 83 var promise = newUrl;
+5 84 var that = rc;
+5 85 var promises = rc;
+5 86 if (!
+5 87 if (!cache.force &&!cache.has(logger) {
+5 88 throw newUrl) {
+5 89 throw newUrl;
+5 90 commands.set(function () {
+5 91 logger.lookup.lookup = function () {
+5 92 throw createError('should.lookup.
+6 7 var url = config.registry.register === 'https:'? defaultConfig.force : false;
+6 8 var githubSourceRegex = /^\\w[\\w-]*\\/(\\w\\/)\\/\\w[\\w-]*\\/(\\w\\)/;
+6 14 name = (process.env.STRICT_REQUIRE || '*') > 0? '\
+6 15 ' : '',
+6 16 url = source.match(/https?(?!\\/\\/(.+?)\\/(.+)?/github\\.com/)?'master' : 'gh-pages');
+6 21 if (!name ||!url) {
+6 22 throw createError('Usage: bower register <name> <url>', 'EINVFORMAT');
+6 27 .spread(function (canonicalDir, pkgMeta) {
+6 45 registryClient = repository.getRegistryClient();
+6 46 logger.action('register', url, {
+6 47 name: name,
+6 48 url: url
+6 50 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+6 57 pair = GitHubSourceRegex.getOrgRepoPair(url);
+6 59 newUrl = 'git://github.com/' + pair.org + '/' + pair.repo + '/';
+6 63 completion = function () {
+6 65 module.exports = {
+6 66 version: {
+6 67 version: version,
+6 68 commands: commands,
+6 69 config: {},
+6 70 abbreviations: abbreviations: abbreviations,
+6 71 reset: clearRuntimeCache: clearRuntimeCache,
+6 72 };'
+
+7 14 source = (source || '').trim();
+7 15 url = source.match(githubSourceRegex)? getGithubUrl(source) : source;
+7 20 throw createError('Please type a link to package', 'EINVFORMAT');
+7 23 return repository.fetch({ name: name, source: url, target: '*' });
+7 35 chalk.cyan.underline + '), continue?',
+7 58 pair.org = pair.org;
+7 59 if (!pair.length) {
+7 62 pair. GitHubTag = function() {
+7 63 var branch = pair.branch;
+7 64 if (!branch) {
+7 67 return Q.nfcall(that._logger.prompt.bind(that._logger), 'install', branch);
+7 69 return Q.then(function (result) {
+7 71 return Q.nreturn Q.nfcall(that._analyse.bind(that._analyse.bind(that._conditions, result);
+7 72 .info.bind(that._conditions, it._conditions, it._conditions, this._conditions, this._conditions);
+7 74 .defs, [
+7 75 .defs];
+7 77 module.skip('error', function (err, called, param) {
+7 78 return function (err, error, param, param) {
+7 79 var meta = 'uncategorizedUrl = entry.length > 0? true : false;
+7 80 var error in this._invalidate(err);
+7 81 if (called) {
+7 82 called = true;
+7 84 this.for (called = true;
+7 85 this._invalidate(error);\
+8 7 var url = config.url;
+8 14 url = (config.url || '').replace(/\\/+$/, '');
+8 15 url.split('/').forEach(function (line) {
+8 16 if (!line) {
+8 19 var url =-parseInt(line || '0', 10),
+8 25 throw createError('url is required', 'http://localhost:8080/');
+8 27 return Q.nfcall(function () {
+8 35 var name = options.argv.remain.slice(1).join(' ');
+8 36 return [name];
+8 38 module.exports = register;"
+
+9 15 url = function (source) {
+9 17 if (!source.match(/^\\/\\
+9 19 return require('../templates/' + source);
+9 21 .then(function (response) {
+9 25 return Q.nfcall(config.force);
+9 67 newUrl = 'git://github.com/' + pair.org + '/' + pair.repo + '/' + pair.source;
+9 68 return Q.nfcall(newUrl, pair.split('/'), 'index.html');
+9 70 resolveCache.refs = function () {
+9 71 return Q.resolve([
+9 72 resolveCache.clearCache.list()
+9 73 ]);
+9 76 function convertFirst(config.readFiles(folder, callback) {
+9 77 require(folder)
+9 78 .then(folder)
+9 79 .then(callback) {
+9 80 .folder.readFile(callback)
+9 81 .length = undefined;
+9 82 .length = 5000;
+9 87 function readFile(folder, callback.length, callback.length, headers, headers, callback) {
+9 88 var headers = null;
+9 89 if (length === 1) {
+9 90 require('cache'
+

@@ -1,0 +1,55 @@
+Min editdistance: 5.00
+Closest candidate: 5 2 this.set(\'env\', process.env.NODE_ENV || \'development\');
+5 1 6422);
+5 2 this.set(\'env\', process.env.NODE_ENV || \'development\');
+5 3 this.use(function(req, res, next){
+5 4 req.query = {};
+5 5 res.headers = { \'X-Powered-By\': \'Express\', \'Content-Type\': \'application/x-www-form-urlencoded\' };
+5 6 req.app = res.app = self;
+5 7 req.res = res;
+5 8 res.req = req;
+5 9 req.next = next;
+5 10 if (req.url.indexOf(\'?\')!== 0) {
+5 11 var query = url.parse(req.url).query;
+5 12 req.query = exports.parseQueryString(query);
+5 13 }
+5 14 next();
+5 15 });
+5 16 var fn = router(function(app){ self.routes = app; });
+5 17 this.__defineGetter__(\'router\', function(){
+5 18 this.__usedRouter = true;
+5 19 return fn;
+5 21 };
+5 22 Server.prototype.__proto__ = connect.Server.prototype;
+5 23 exports.parseQueryString = queryString.parse;
+5 24 Server.prototype.listen = function(){
+5 25 this.registerErrorHandlers();
+5 26 connect.Server.prototype.listen.apply(this, arguments);
+5 28 Server.prototype.listenFD = function(){
+5 30 connect.Server.prototype.listenFD.apply(this, arguments);
+5 32 Server.prototype.onvhost = function(){
+5 35 Server.prototype.registerErrorHandlers = function(){
+5 36 this.errorHandlers.forEach(function(fn){
+5 37 this.use(function(err, req, res, next){
+5 38 fn.apply(this, arguments);
+5 40 }, this);
+5 41 return this;
+5 43 Server.prototype.use = function(route, middleware){
+5 44 if (typeof route!==\'string\') {
+5 45 middleware = route, route = '/\';
+5 47 connect.Server.prototype.use.call(this, route, middleware);
+5 48 if (middleware instanceof Server) {
+5 49 var app = middleware,
+5 50 home = app.set(\'home\') || {};
+5 51 app.set(\'home\', homepage);
+5 52 app.set(\'home\', port);
+5 56 Server.prototype.contentType =
+5 57 ,
+5 58 , Array = require('./middleware/formatters/formatters/formatters');
+5 59 Server.methods = Server.forEachServer.prototype.Server.Server.prototype.Server = function(middleware = function(middleware, middleware, fn){
+5 60 Server.methods = function(urlServer, host){
+5 61 Server.prototype.methods = [], host = this.get(\'http\')
+5 62 , port = hostname, hostname, port, hostname, port){
+5 63 this.proxies = this.port = this.get(\'http\') || {};
+5 64 return server = hostname;
+5 67 Server.prototype.createServer = function Server(

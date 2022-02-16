@@ -1,0 +1,89 @@
+Min editdistance: 1.00
+Closest candidate: 3 1 expect(console.log.calledWith(sinon.match('Name'))).be.true;
+0 1 expect(console.log.calledWith(sinon.match('Name'))).to.be.true;
+0 2 expect(console.log.calledWith(sinon.match('Posts'))).to.be.true;
+0 3 expect(console.log.calledWith(sinon.match('No categories.'))).to.be.true;
+0 4 });
+0 5 it(\'categories - virtual', () => {
+0 6 const posts = [
+0 7 {source: \'foo\', slug: \'foo\'},
+0 8 {source: \'bar\', slug: \'bar\'},
+0 9 {source: \'baz\', slug: \'baz\'},
+0 10 {source: \'boo\', slug: \'boo\'}
+0 11 ];
+0 12 return Post.insert(posts).then(function(posts) {
+0 13 expect(console.log.calledWith(sinon.match(\'Name\'))).to.be.true;
+0 14 expect(console.log.calledWith(sinon.match(\'Posts\'))).to.be.true;
+0 15 expect(console.log.calledWith(sinon.match(\'baz\'))).to.be.true;
+0 16 expect(console.log.calledWith(sinon.match(\'foo\'))).to.be.true;
+0 17 expect(console.log.calledWith(sinon.match(\'bar\'))).to.be.true;
+0 22 it(\'source - virtual', () => {
+0 37 it(\'source - virtual - post_asset_folder enabled\', () => {
+0 38 hexo.config.permalink = \': false;
+0 39 const posts = \'<a new Source(() => Promise.asset_asset_folder.bind(hexo.source)
+0 40 .then(post_asset_folder.s.source = undefined) => writeFile(new Source(post_folder)
+0 41 .source)
+0 42 .then(post_folder)
+0 43 .then(this.source.source.bind(this.source_folder.source, undefined))
+0 44 .then(this.source.source_folder.source).then(function() => writeFile(post_folder.source, undefined))
+0 45 .then(this.source.source_folder.source))
+0 46 .then(post.source_folder.source).then(function() => {
+0 47 this.source_folder.sasset_s.salt.then(post_salt(true, undefined, undefined, undefined
+1 5 });'
+
+2 2 expect(console.log.calledWith(sinon.match('Posts\'))).to.be.true;
+3 1 expect(console.log.calledWith(sinon.match('Name'))).be.true;
+3 2 expect(console.log.calledWith(sinon.match('Posts'))).be.true;
+3 3 expect(console.log.calledWith(sinon.match('No categories.'))).be.true;
+3 4 expect(console.log.calledWith(sinon.match(\No categories.'more\'))).be.true;
+4 5 it(\'categories - post', () => {
+4 7 {source: \'foo\', slug: \'foo', title: \'Its', date: 1e8},
+4 8 {source: \'bar\', slug: \'bar', title: \'Math', date: 1e8 + 1},
+4 9 {source: \'baz\', slug: \'baz\', title: \'Dude', date: 1e8 - 1}
+4 11 return posts.map(post => {
+4 12 const posts = Post.sort({
+4 13 name: 1,
+4 14 lategories: [\'foo\', \'bar\']
+4 16 return Promise.all([
+4 17 posts.map(post => {
+4 18 post.categories.forEach(post => {
+4 19 return post.categories;
+4 21 }).then(() => {
+4 22 listCategories();
+4 32 it(\'publish() - draft', () => {
+4 33 const draftPath = \'\';
+4 34 const path = pathFn.join(hexo.source_dir, \'_posts\', \'Hello-World.md\');
+4 35 const date = moment();
+4 36 const content = [
+4 37 \'---\',
+4 38 \'title: Hello World\',
+4 39 \'date:\'+ date.format(\'YYYY-MM-DD HH:mm:ss\'),
+4 40 \'tags:\',
+4 41 \'---\'
+4 42 ].join(\'
+4 43 ].join(\'\
+4 44 \');
+4 46 fs.writeFile(path, content).then(() => {
+4 47 const data.then(post.publish({
+4 48 publish({
+4 49 slanguages: post.publish({
+4 50 slanguages: drafts: true })
+4 51 })
+4 53 .then(post.publish({
+4 54 }).then(post => {
+4 55 post.path.path.path.path.should.should.eql(path);
+4 56 .should.eql(path);
+4 57 post.should.should.eql(path);
+4 58 .post.should.fate.should.format(path);
+4 59 .post.format(path);
+4 60 .fate.should.format(path);
+4 61 .format(path.should.should.fate.format(path));
+4 62 .format(path.should.format(path));
+4 63 .format(path.should.should.format(
+5 7 {source: \'foo\', slug: \'foo\', title: \'Its\', date: 1e8},
+5 8 {source: \'bar\', slug: \'bar\', title: \'Math\', date: 1e8 + 1},
+5 9 {source: \'baz\', slug: \'baz\', title: \'Dude\', date: 1e8 - 1}
+5 11 return Post.insert(posts).then(() => {
+5 12 hexo.locals.invalidate();
+6 4 expect(console.log.calledWith(sinon.match('No tags.'))).be.true;
+9 2 expect(console.log.calledWith(sinon.match('Posts\'))).be.true;

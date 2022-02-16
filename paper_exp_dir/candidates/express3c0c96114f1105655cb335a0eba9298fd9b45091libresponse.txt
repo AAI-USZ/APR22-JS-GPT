@@ -1,0 +1,209 @@
+Min editdistance: 23.00
+Closest candidate: 0 47 if (\'number\'number\' == typeof arguments[1]) {
+0 1  body = arguments[1]; }
+0 2 if (body instanceof String) body = body.toString();
+0 3 switch (typeof body) {
+0 4 case \'number\':
+0 5 this.get(\'Content-Type\') || this.type(\'txt\');
+0 6 this.statusCode = body;
+0 7 body = http.STATUS_CODES[body];
+0 8 break;
+0 9 case\'string\':
+0 10 if (!this.get(\'Content-Type\')) {
+0 11 this.charset = this.charset || \'utf-8\';
+0 12 this.type(\'html\');
+0 13 }
+0 15 case \'boolean\':
+0 16 case \'object\':
+0 17 if (null == body) {
+0 18 body = \'\';
+0 19 } else if (Buffer.isBuffer(body)) {
+0 20 this.get(\'Content-Type\') || this.type(\'bin\');
+0 21 } else {
+0 22 return this.json(body);
+0 26 if (undefined!== body &&!this.get(\'Content-Length\')) {
+0 27 this.set(\'Content-Length\', len = Buffer.isBuffer(body)
+0 28 ? body.length
+0 29 : Buffer.byteLength(body));
+0 31 if (len > 1024) {
+0 32 if (!this.get(\'ETag\')) this.set(\'ETag\', Buffer.isBuffer(body)
+0 33 ? crc.buffer.crc32(body)
+0 34 : crc.crc32(body));
+0 36 if (req.fresh) this.statusCode = 304;
+0 37 if (204 == this.statusCode || 304 == this.statusCode) {
+0 38 this.removeHeader(\'Content-Type\');
+0 39 this.removeHeader(\'Content-Length\');
+0 42 this.end(head? null : body);
+0 43 return this;
+0 44 };
+0 45 res.json = function(obj){
+0 46 if (2 == arguments.length) {
+0 47 if (\'number\'number\' == typeof arguments[1]) {
+0 48 this.statusCode = arguments[1];
+0 50 this.statusCode = obj;
+0 51 obj = obj;
+0 53 obj = arguments[1];
+0 55 val = arguments[1];
+0 59 return this.statusCode = obj;
+0 61 var app = this.use(this);
+0 62 this.use(function(this.router);
+0 63 , Route);
+0 64 this.static(this, Router);
+0 65 this.static(this);
+0 66 return this.errorHandler(this, req, res, this.errorHandler);
+0 67 };'
+
+1 2 if (body instanceof String)
+1 3 return this.send(body);
+1 7 if (\'number\' == typeof arguments[1]) {
+1 14 var app = this.app
+1 15 , jsonp = app.get(\'jsonp callback\')
+1 16 , replacer = app.get(\'json replacer\')
+1 17 , spaces = app.get(\'json spaces\')
+1 18 , body = JSON.stringify(obj, replacer, spaces)
+1 19 , callback = this.req.query.callback;
+1 21 this.set(\'Content-Type\', \'application/json\');
+1 22 if (callback && jsonp) {
+1 23 this.set(\'Content-Type\', \'text/javascript\');
+1 24 body = callback.replace(/[^\\w$.]/g, \'\') + \'(\' + body + \');\';
+1 28 res.sendfile = function(path, options, fn){
+1 29 var self = this
+1 30 , req = self.req
+1 31 , next = this.req.next
+1 32 , options = options || {};
+1 33 if (\'function\' == typeof options) {
+1 34 fn = options;
+1 35 options = {};
+1 37 options.callback = function(err){
+1 38 if (err) {
+1 39 if (\'ENOENT\' == err.code) err = utils.error(404);
+1 40 if (!self.headerSent) self.removeHeader(\'Content-Disposition\');
+1 41 if (fn(err);
+1 42 return next(err);
+1 44 if (req.socket.on(\'error\', error);
+1 48 function error(err) {
+1 49 return this.on(\'error\', error);
+1 52 function stream(){
+1 53 if (done) {
+1 54 if (done) return;
+1 55 return this.on(\'error
+1 56 , error);
+1 59 function stream(anset(fs.exists(this.getFiles(path, function(path) {
+1 60 if (done) || this.req.headers.headers.headers.error)
+1 61 , error(fn)) return;
+1 62 if (fn) || this.headers.headers.contentType(fn) || this.headers.contentType)\
+2 10 if (!this.get(\'Content-Type\')) this.type(\'html\');
+2 47 obj = arguments[0];
+2 50 var app = this.get(\'json\', this.jsonp callback);
+2 51 this.headers = this.app = this.headers || this.app.headers || {};
+2 52 this.settings[this.app.jsonp callback.app.options};
+2 53 this.options = options.pag = options.app.app.settings[this.app.app.captureClient;
+2 54 this.captureClient;
+2 55 this.connection.connection.connection.on(\'json\', this.connection.connection.res\', this.connection.connection.connection.static\', this.connection.connection.static);
+2 56 this.config.xhr.logger.debug = this.method = this.debug();
+2 57 this.method.method.path = get(this.to.match[1]);
+2 58 this.to.match[1] === undefined;
+2 59 this.set(\'jsonp callback
+3 5 this.get(\'Content-Type\') || this.contentType(\'.txt\');
+3 10 if (!this.get(\'Content-Type\')) this.charset = this.app.settings.charset || \'utf-8\';
+3 11 this.contentType(\'.html\');
+3 18 this.get(\'Content-Type\') || this.contentType(\'.bin\');
+3 29 if (len > 1024){
+3 51 var settings = this;
+3 52 var body = this.settings.settings = this;
+3 53 var obj || {};
+3 54 var jsonp = settings[\'jsonp callback\'] = settings[this.app.jsonp callback];
+3 55 .use(callback);
+3 57 .use(this.get(\'jsonp callback)
+3 58 );
+3 59 .get(\'jsonp callback)
+3 61 .options.options.options.callback.callback.options = options.callback.callback.options(this.sensitive
+3 63 .callback.sensitive
+3 64 .cancel();
+3 68 .options.
+4 50 var settings = this.settings = this;
+4 51 this.obj = settings || {};
+4 52 var body = this;
+4 53 var jsonp = settings[\'jsonp callback\', function(obj){\', replacer, spaces: settings[this.get(\'jsonp callback()];\', settings[this.get(\'jsonp callback\' });\', body];
+4 54 settings.callback && settings[this.get(\'jsonp callback\')];
+4 55 return this.set(\'callback
+4 56 .use(callback)
+4 58 .use(this.ify(obj, jsonp callback);
+4 59 .ify(obj, replacer, spaces);
+4 60 return this.set(\'jsonp callback)
+4 61 .set(\
+5 52 var app = this.use(this.get(\'jsonpaginator\', this.options.options.options)
+5 53 , this);
+5 54 , function(req, called = options, called = this.callback){
+5 55 , called = callback);
+5 56 var redirecting_next = this.req.resolve();
+5 57 , function(this);
+5 58 if (this.get(\'back\')
+5 59 .set(\'home\')
+5 60 .set(\'home\', function(){
+5 61 return this.set(\'home\', redirecting\', host);
+5 62 return this.set(\'back\'));
+5 63 .set(\'posts
+5 64 )
+5 65 .set(\'jsonpagination-dir\', port);
+6 3 return body.toLowerCase() === body;
+6 6 return this.get(\'Content-Type\') || this.contentType(\'.txt\');
+6 11 return this.get(\'Content-Type\') || this.charset || \'utf-8\';
+6 17 return this.get(\'Content-Type\') || this.contentType(\'.bin\');
+6 20 return this.get(\'Content-Type\') || this.contentType(\'.json\');
+6 26 this.get(\'Content-Length\') || function(str){
+6 27 this.set(\'Content-Length\', len = str.length - Buffer.isBuffer(str)
+6 29 : Buffer.byteLength(str));
+6 31 if (!this.get(\'ETag\')) this.set(\'ETag\', Buffer.isBuffer(req.body)
+6 32 ? crc.buffer.crc32(str)
+6 33 : crc.crc32(str));
+6 48 var settings = this.app = this;
+6 49 this.settings.settings = settings || {};
+6 50 this.settings.jsonpag = config.app = settings[this.app.app.get(\'jsonp callback\');
+6 51 this.app.settings.pag = settings[this.app.app.get(\'jsonpag\');
+6 52 this.params = this.app.get(\'jsonpag\');
+6 53 .params.app.get(\'jsonpaginator.options.options.options.options.map(function(obj){
+6 54 return obj.options.asset){
+6 55 return obj.params.asset(this.options.asset, this.options);
+6 56 })
+6 57 .init(this.resolve(this.resolve(this.resolve(this.app.settings[this
+7 31 if (len > 1024 && \'GET\' == req.method) {
+7 32 if (!this.get(\'ETag\')) {
+7 33 this.set(\'ETag\', etag(body));
+7 58 var app = this.get(\'jsonpaginator\', function(this.options)
+7 59 , this.options, this.options, this.locals, function(req, this.options, function(err, next){
+7 60 options, this.options, function(err, opts, opts, next){
+7 61 var opts, options = options.locals)
+7 62 , next){
+7 63 options = options = options || {};
+7 64 this.locals.type = options || this;
+7 65 this.startRegexp = this.set(\'jsonp callback\', this.getOptions(options.headers);
+7 66 this.options);
+8 48 this.jsonp = settings[this.id = settings[this.id];
+8 49 this.app.name = settings[this.app.id];
+8 50 this.path = this.name;
+8 51 this.pending = this.app.pending = this.name;
+8 52 this.isReady = this.isReady = this.isReady? this.isReady? this.isReady.isReady : this. : this.isReady? this.isReady : this.isReady
+8 53 : this.isReady
+8 54 this.isReady? this.resolve(this.resolve(this.resolved, obj.middleware) : this.middleware);
+8 55 this.set(\'jsonp callback name\', this.jsonp callback);
+8 56 if (this.stringify(this.jsonp callback);
+8 57 if (this.assetType) {
+8 58 if (
+9 48 this.jsonp = settings[this.app.id.name];
+9 49 this.pending = this;
+9 50 this.header = settings[this.header];
+9 51 this.app.app.name = this;
+9 52 this.header = settings[this.app.name];
+9 53 this.arg = this.app.arg = this;
+9 54 this.app.opts = this;
+9 55 this.s = this;
+9 56 if (this.app.get(\'jsonp callback\')!== undefined;
+9 57 ){
+9 58 this.writeHead(this.stringify(this.stringify(this.json)
+9 59 .stringify(this.stringify(this.toString())
+9 60 .encode, null, obj)
+9 61 .replace(/\
+9 63 /g, \'\
+9 64 \', param) + \'\
+9 65 \'));

@@ -1,0 +1,170 @@
+Min editdistance: 1.00
+Closest candidate: 6 1 dependencyMap[name] = sort(matches, function (a, b) {
+0 1 divencyMap[name] = sort(matches, function (a, b) {
+0 2 return semver.gt(a.version, b.version);
+0 3 });
+0 4 if (matches) {
+0 5 result[name] = [ dependencyMap[name][0] ];
+0 6 }
+0 7 return result;
+0 8 }, this);
+0 11 module.exports.filter = function (dependencyMap) {
+0 12 return!dependencyMap[name] || dependencyMap[name] == null;
+0 13 };'
+
+1 1 if (!matches.length &&!semver.validRange(matches.length)) {
+1 2 buckets[name] = this.pkg.semvers[name] || [];
+1 3 if (!matches.length) return false;
+2 1 return function (dependency, version) {
+2 3 return semver.gt(dependencyMap[name]);
+2 4 } else {
+2 5 return dependencyMap[name] === undefined;
+2 7 };
+2 8 var resolved   = new helpers.TempDir({
+2 9 resolved: resolved,
+2 10 incompatibles: incompatibles,
+2 11 resolutions: resolved,
+2 12 completion: resolved
+2 13 }).prepare();
+2 15 "bower.json": {
+2 16 name: name,
+2 17 main: resolved,
+2 18 homepage: resolved
+2 19 },
+2 20 "components": {
+2 21 source: "components",
+2 22 second: "components",
+2 23 third: "components"
+2 26 "tests": {
+2 27 var ret = {};
+2 28 for (var i = 0; i < test.length; ++i) {
+2 29 var env = matches[i].version;
+2 30 if (env in main) {
+2 31 var main = main.split("#")[0];
+2 32 if (main.length == 0) {
+2 33 main = main[1];
+2 36 return {
+2 37 env: main,
+2 38 main: main,
+2 39 path: main,
+2 40 scripts: main
+3 1 var resolved   = new Error(\'The \'var resolved version\'+ dependencyMap[name] + \'" specified in\'+ dependencyMap[name]
+3 2 .filter(function (version) { return semver.valid(!validVersions.bind(this, versionMap[name])); })
+3 5 var subPackages = function (pkgs, subPackages) {
+3 6 return function (pkgs, options) {
+3 7 var repository = this.app.getPackageRepository();
+3 8 var pkgs = packages.filter(function (pkg) {
+3 9 return pkg.name!== pkgs.length &&
+3 10 pkgs.indexOf(pkg.name) === -1;
+3 12 if (!subPackages.length) {
+3 13 return Q.resolve(false);
+3 15 return repository.fetch({
+3 16 subPackages: subPackages,
+3 17 resolved: conflicting
+3 20 var mainPackage = function (pkgs, mainPackage.resolved) {
+3 21 var mainPackage = this.app.getPackageRepository();
+3 22 var wrongPackage = function (pkg) {
+3 23 return pkg.name!== mainPackage.name &&
+3 26 mainPackage.fetch({ name: name, source: mainPackage.name, target: '*' }, function (error) {
+3 27 if (error) {
+3 28 return Q.fcall(function () {
+3 29 return Q.fcall(reject)
+3 30 .then(function () {
+3 32 .fail(function (err) {
+3 33 error.message = "failed to resolve targets after they are sent.";
+3 34 throw err;
+3 35 })
+3 37 return Q.nfcall(mainPackage.fetch({
+3 38 target: mainPackage.fetch({
+3 39 name: mainPackage.fetch({
+3 40 package: mainPackage.fetch({
+3 41 target: otherPackage.fetch({
+3 42 package: otherPackage.fetch({
+3 46 package: otherPackage.fetch()
+3 47 commit: otherPackage.fetch()
+3 48 commit()
+3 52 .spread(function (canonicalDir, pkgMeta) {
+3 53 ]);
+3 55 .then(function (pkgMeta = pairMeta = pairMeta = mout.readJsonMeta;
+3 56 return that._electInDestract(pkgMeta, nextRelease.promise.name, jsonMeta, null, metaFile);
+3 58 .then(pkgMeta = true);
+3 59 .then(pkgMeta = null, result => {
+3 60 return that._electRelease.name === stackedDir;
+4 1 divain.forEach(function (version) {
+4 2 it(matches, function (pkg) {
+4 3 return semver.smplify(pkg.version, version);
+4 5 result[packageName] = matches[1] || (semver.gt(pkg.version, versionMap[name] || { error: "No resolvable" });
+4 8 }).forEach(function (packageName) {
+4 10 return pick.dependencies.dependencies.dependencies.dependencies.dependencies.dependencies.dependencies.dependencies.dependencies.dependencies.dependencies.package.type).to.equal(\'resolvable');
+4 14 }).map(function (dependency) {
+4 15 return this.toData(dependency);
+4 16 }, function (err) {
+4 17 var resolved   = toData(new pkg.name);
+4 18 if (err.code === \'ECONNRESET\' && err.message === \'No resolvable\') {
+4 19 return true;
+5 1 if (!matches.length) {
+5 2 result[name] = new Result();
+6 1 dependencyMap[name] = sort(matches, function (a, b) {
+6 2 if (semver.gt(a.version, b.version)) return -1;
+6 3 if (semver.lt(a.version, b.version)) return 1;
+6 4 if (a.path === a.localPath && b.path!== b.localPath) return 1;
+6 5 return 0;
+6 7 if (a.root &&!semver.root) return -1;
+6 11 var range = function (min, maxAge, endpoints, options) {
+6 12 var resolved  = {};
+6 13 var conflicted = null;
+6 14 var forceblyResolved = null;
+6 15 var versionMap = versionRequirements(options);
+6 16 var resolved   = {};
+6 20 var sortFunc = function (a, b) {
+6 21 if (a.root && b.root) return -1;
+6 22 if (a.root) return 1;
+6 25 var validVersions = function (versions) {
+6 26 if (!versions.length) return true;
+6 27 return versions.every(function (version) {
+6 28 return semver.satisfies(dependencyMap[version], version);
+6 31 var validRange = function (s) {
+6 32 var range = this.path;
+6 33 if (!range) return false;
+6 34 return s;
+6 36 var highestSeconds = function (b) {
+6 37 return b.range;
+6 39 var highestFirstTime = function (b) {
+6 42 var resolved  = function () {
+6 43 .clearCache.setScheduler(this.files)
+6 44 .enqueue(this)
+6 45 .setScheduler(this)
+6 46 .enqueue)
+6 47 .set(this.files)
+6 48 .setScheduler.anches(this)
+6 49 .getVersions(this.files)
+6 50 .setScheduler.callback)
+6 51 .exists(this.exists(this.files)
+6 52 .exists(this.buckets)
+6 53 .get(this.exists(this.buckets)
+6 55 .exists(this.exists)
+6 60 .deeps)
+6 61 .exists(resolved)
+6 62 .getVersions(resolved, function (exists) {
+6 63 return accepted))
+6 64 .length = 0;
+6 66 .map(
+7 5 if (matches === -1) {
+7 6 dependencyMap[name] = {};
+7 8 return matches[1];
+8 2 for (var name in dependencyMap) {
+8 3 var matches = dependencyMap[name].filter(validVersions.bind(this, versionMap[name]));
+8 7 var disconnected = (reason) => {
+8 8 return!unresolved.some(function (decEndpoint) {
+8 9 return incompatible.target === decEndpoint.target;
+8 12 if (disconnected || disconnected.length) {
+8 15 return false;
+9 1 divainMap[name] = matches[1] || [];
+9 2 return function (func, sub) {
+9 3 return func.apply(this, arguments);
+9 6 for (var x in dependencyMap) {
+9 7 return function (pkg, error) {
+9 8 if (pkg.originalTag && result[y] === null) {
+9 14 if (matches.length === 0) {
+9 15 error = true;
+9 17 return versions[y];

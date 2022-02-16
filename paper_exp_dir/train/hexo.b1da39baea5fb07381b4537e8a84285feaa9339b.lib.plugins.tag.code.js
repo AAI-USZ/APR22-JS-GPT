@@ -1,0 +1,135 @@
+'use strict';
+
+
+
+const { escapeHTML } = require('hexo-util');
+
+
+let highlight, prismHighlight;
+
+const rCaptionUrlTitle = /(\S[\S\s]*)\s+(https?:\/\/\S+)\s+(.+)/i;
+const rCaptionUrl = /(\S[\S\s]*)\s+(https?:\/\/\S+)/i;
+const rCaption = /\S[\S\s]*/;
+
+
+
+function parseArgs(args) {
+const _else = [];
+const len = args.length;
+let lang,
+line_number, wrap;
+let firstLine = 1;
+const mark = [];
+for (let i = 0; i < len; i++) {
+const colon = args[i].indexOf(':');
+
+if (colon === -1) {
+_else.push(args[i]);
+continue;
+}
+
+const key = args[i].slice(0, colon);
+const value = args[i].slice(colon + 1);
+
+switch (key) {
+case 'lang':
+lang = value;
+break;
+case 'line_number':
+line_number = value === 'true';
+break;
+case 'first_line':
+if (!isNaN(value)) firstLine = +value;
+break;
+case 'wrap':
+wrap = value === 'true';
+break;
+case 'mark': {
+for (const cur of value.split(',')) {
+const hyphen = cur.indexOf('-');
+if (hyphen !== -1) {
+let a = +cur.substr(0, hyphen);
+let b = +cur.substr(hyphen + 1);
+if (Number.isNaN(a) || Number.isNaN(b)) continue;
+if (b < a) {
+const temp = a;
+a = b;
+b = temp;
+}
+
+for (; a <= b; a++) {
+mark.push(a);
+}
+}
+if (!isNaN(cur)) mark.push(+cur);
+}
+break;
+}
+default: {
+_else.push(args[i]);
+}
+}
+}
+
+const arg = _else.join(' ');
+
+let match, caption = '';
+
+if ((match = arg.match(rCaptionUrlTitle)) != null) {
+caption = `<span>${match[1]}</span><a href="${match[2]}">${match[3]}</a>`;
+} else if ((match = arg.match(rCaptionUrl)) != null) {
+caption = `<span>${match[1]}</span><a href="${match[2]}">link</a>`;
+} else if ((match = arg.match(rCaption)) != null) {
+caption = `<span>${match[0]}</span>`;
+}
+
+return {
+lang,
+firstLine,
+caption,
+line_number,
+mark,
+wrap
+};
+}
+
+module.exports = ctx => function codeTag(args, content) {
+const hljsCfg = ctx.config.highlight || {};
+const prismjsCfg = ctx.config.prismjs || {};
+
+
+if (!hljsCfg.enable && !prismjsCfg.enable) {
+return `<pre><code>${escapeHTML(content)}</code></pre>`;
+}
+
+let index;
+let enableHighlight = true;
+
+if ((index = args.findIndex(item => item.startsWith('highlight:'))) !== -1) {
+const arg = args[index];
+const highlightStr = arg.slice(10);
+enableHighlight = highlightStr === 'true';
+args.splice(index, 1);
+}
+
+
+if (!enableHighlight) {
+return `<pre><code>${escapeHTML(content)}</code></pre>`;
+}
+
+const { lang, firstLine, caption, line_number, mark, wrap } = parseArgs(args);
+
+if (prismjsCfg.enable) {
+const prismjsOption = {
+lang,
+firstLine,
+caption,
+lineNumber: typeof line_number !== 'undefined' ? line_number : prismjsCfg.line_number,
+mark,
+tab: prismjsCfg.tab_replace,
+isPreprocess: prismjsCfg.preprocess
+};
+
+if (!prismHighlight) prismHighlight = require('hexo-util').prismHighlight;
+
+content = prismHighlight(content, prismjsOption);

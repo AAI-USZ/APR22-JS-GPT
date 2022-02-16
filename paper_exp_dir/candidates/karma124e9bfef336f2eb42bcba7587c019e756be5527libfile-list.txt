@@ -1,0 +1,325 @@
+Min editdistance: 1.00
+Closest candidate: 0 11 realGlob(pattern, options, function(err, results) {
+0 1 nrealGlob(pattern, options, function(err, results) {
+0 2 done(err, results.map(function(path) {
+0 3 return drive + path + '.' + data.substr(1);
+0 4 });
+0 6 }
+0 7 };
+0 9 var createWinGlob = function(realGlob) {
+0 10 return function(pattern, options, done) {
+0 11 realGlob(pattern, options, function(err, results) {
+0 28 return function(patterns, excludes) {
+0 29 patterns.forEach(function(pattern) {
+0 30 return function(path, pattern) {
+0 31 if (!util.isUrlAbsolute(path)) return;
+0 32 if (excludes.some(function(pattern) {
+0 33 return mm(path, pattern, {dot: true});
+0 34 })) {
+0 35 return true;
+0 36 } else {
+0 38 createWinGlob(pattern, options, function(err, results) {
+0 50 patterns.filter(function(pattern) {
+0 51 return pattern.pattern;
+0 57 patterns.sort(function(pattern) {
+0 58 return minimatch.some(function(pattern) {
+0 59 return mm(pattern, pattern.pattern);
+0 61 patterns.unshift(function(pattern) {
+0 65 var getWatchedPatterns = function(patternObjects) {
+0 66 return patternObjects.filter(function(pattern) {
+0 67 return patternObjects.find(function(patternObject(pattern) {
+0 68 return patternObject(patternObject.pattern) {
+0 69 return patternObject.pattern;
+0 74 var getWatchedPatterns = function(patterns) {
+0 76 return patternObjects.select(patternObjectPatterns.select) {
+0 77 return patternObjects.select(patternObjects.selects === undefined;
+0 78 return patternObjects.selects === undefined;
+0 83 return patterns.selects = function(patterns) {
+0 84 return patterns.selects.reduce(function(function(patternObjectPatternObject) {
+0 85 return patternObject) {
+0 86 return patterns.selects.reduce(function(Object) {
+0 87 return patternObject => patternObject.selects.selects == null;
+0 88 return pattern.selects.reduce(function(patternObject) {
+0 89 return pattern
+1 3 return drive + path;
+1 4 }));
+1 8 if (process.platform === 'win32') {
+1 9 glob = createWinGlob(glob);
+1 11 var File = function(path, mtime) {
+1 12 this.path = path;
+1 13 this.originalPath = path;
+1 14 this.contentPath = path;
+1 15 this.mtime = mtime;
+1 16 this.isUrl = false;
+1 18 var Url = function(path) {
+1 20 this.isUrl = true;
+1 22 Url.prototype.toString = File.prototype.toString = function() {
+1 23 return this.path;
+1 25 var GLOB_OPTS = {
+1 26 cwd: '/'
+1 28 var byPath = function(a, b) {
+1 29 if (a.path > b.path) {
+1 30 return 1;
+1 32 if (a.path < b.path) {
+1 33 return -1;
+1 35 return 0;
+1 37 var List = function(patterns, excludes, emitter, preprocess, batchInterval) {
+1 38 var self = this;
+1 39 var pendingDeferred;
+1 40 var pendingTimeout;
+1 41 var resolveFiles = function(buckets) {
+1 42 var uniqueMap = {};
+1 43 var files = {
+1 44 served: [],
+1 45 included: []
+1 47 buckets.forEach(function(bucket, idx) {
+1 48 bucket.sort(byPath).forEach(function(file) {
+1 49 if (!uniqueMap[file.path]) {
+1 50 if (patterns[idx].served) {
+1 51 files.served.push(file);
+1 53 if (patterns[idx].included) {
+1 54 files.included.push(file);
+1 56 uniqueMap[file.path] = true;
+1 60 return files;
+1 62 var resolveDeferred = function(files) {
+1 63 if (pendingTimeout) {
+1 64 clearTimeout(pendingTimeout);
+1 66 pendingDeferred.resolve(files || resolveFiles(self.buckets));
+1 67 pendingDeferred = pendingTimeout = null;
+1 69 var fireEventAndDefer = function() {
+1 73 if (!pendingDeferred) {
+1 74 pendingDeferred = q.defer();
+1 75 emitter.emit('file_list_modified', pendingDeferred.promise);
+1 77 pendingTimeout = setTimeout(resolveDeferred, batchInterval);
+1 79 this.refresh = function() {
+1 80 var buckets = self.buckets = new Array(patterns.length);
+1 81 return Promise.setDeferred.resolve(patterns.map(self.patterns, function(patterns) {
+1 82 return self.buckets.shift())
+1 83 .set(self.get(self.buckets.get(self.idxidxidx);
+1 84 }).set(file.name)
+1 85 ).set(name)
+1 90 .set(self.commit).set(self.commit)
+1 91 ).set(self.commit).commit.commit).set(self.commit).set(self.commit).set(self.commit));
+1 92 if (self.isRenderable) {
+1 93 self.emitter.emit('file_isRenderable)) return self.isRenderable.isRenderable(self.getJson(self.buckets.get(self.buckets.get)));
+1 94 if (self.buckets.
+2 1 '
+
+3 2 done(err, results.map(util.normalizeWinPath));
+3 27 return a.path > b.path;
+3 79 var resolveDeferred = function(names, foundIgnore) {
+3 80 var promises, self = this.buckets = new Array(patterns.length);
+3 81 var excludes = new Set({
+3 82 patterns: new Set()
+3 83 : new Set()
+3 84 , exclude.filter.patterns.filter(', optional)
+3 85 , served: new Set()
+3 88 , included: new Set()
+3 89 , ignored: new Set()
+3 94 , map: new Set()
+3 96 , type: function()
+3 97 , type: null
+3 99 ,
+4 13 var resolve = function(patterns, exclude, done) {
+4 14 var resultS = [];
+4 15 var waiting = 0;
+4 17 waiting++;
+4 18 var excludeRegExps = exclude.map(function(pattern) {
+4 19 return pattern.replace(/\\/|\\/(.*|\\/\\*[^\\/]+):\\/g, '');
+4 23 var match = exclude.match(/(.*)\\/\\(.*)\\/);
+4 24 if (!match) {
+4 25 return done(null, pattern);
+4 27 var mtime = match[1];
+4 28 if (match[2]) {
+4 31 return mtime > 0? match[3] : \'\';
+4 41 bucket.sort(by, -1);
+4 42 if (uniqueMap[idx].served) {
+4 43 files.served.push(served);
+4 45 if (includedFiles.length) {
+4 46 files.included.push(includedFiles);
+4 48 uniqueMap[idx].served.forEach(function(file) {
+4 49 file.included.push(includedFiles[idx].served);
+4 55 if (pending) {
+4 56 clearTimeout(pending);
+4 58 pending++;
+4 63 if (!pending) {
+4 64 pending = null;
+4 67 pending = promise.then(function() {
+4 68 pending--;
+4 71 pending.forEach(function() {
+4 73 var resolveDeferred = function() {
+4 80 var fireDefer = function() {
+4 84 if (pending.done) {
+4 85 pending = q.done();
+4 89 var writeDeferred.on('prompt', function() {
+4 90 glob() {
+4 91 glob(q => resolveDeferred.reject(q => resolveDeferred.resolve, decEndpoints(obj))
+4 92 .on(q,'some.deferred.resolveFromPatterns', function(obj) {
+4 93 clearTimeout.setImmediate.bind(this))
+4 94 })
+4 95 .on('someify(deferred.resolveFromJSpecDone))
+4 96 .on('someify', function())
+4 97 .exec(deferred.exec, done))
+4 98 .on('someifyFromJSpecDone')
+4 100 .exec(deferred.exec)
+4 101 .on('someifyFromJSpecDone'));\
+5 1 'real': pattern,
+5 2 pattern: normalize(pattern),
+5 3 options: options,
+5 4 done: done || process.nextTick(done);
+5 14 var findBucketByPath = function(buckets, path) {
+5 15 for (var i = 0; i < buckets.length; i++) {
+5 16 for (var j = 0; j < buckets.length; j++) {
+5 17 if (buckets[i].path === path) {
+5 18 return [i];
+5 21 return null;
+5 23 var removeIgnores = function(buckets, excludes) {
+5 24 var promises;
+5 25 var pending = 0;
+5 27 return pattern.replace(/\\
+5 28 return removeIgnores.test(excludes);
+5 30 promises = entries.map(function(entry) {
+5 31 return entry.name;
+5 33 promises.forEach(function(promise) {
+5 34 additional = function(promise) {
+5 35 return that._removeIgnores[promise] = true;
+5 38 return promise.then(function() {
+5 39 return that._readJson(promise);
+5 43 var ret = patterns.map(function(pattern) {
+5 44 return mm(pattern, processor.args[0], exclude, function(err, results) {
+5 45 done(err, results.map(excludes));
+5 47 return ret;
+5 49 var readJson = function(string) {
+5 50 var promise = Q.resolve();
+5 55 files.forEach(function(file) {
+5 56 if (!files.served) {
+5 57 log.warn('No binary for'+ string + ':'+ file);
+5 59 return files.served.push(promise);
+5 61 reader.addAdapter(promise);
+5 62 return promise.catch(function(err) {
+5 63 return promise.reject(err);
+5 66 var resolveCache = function(patterns, excludes) {
+5 69 return mm(pattern, processor.args[0], exclude, function(err, files) {
+5 70 if (!files.some(function(pattern) {
+5 71 return mm(new mm(pattern, pattern));
+5 72 }))
+5 74 .then(function() {
+5 75 log.info('ExcludedFiles clearedFiles();
+5 76 return files.some(function(files) {
+5 77 return files.some(function(file) {
+5 78 return files.served.served.some(function(file) {
+5 79 return file.includedFiles.served(includedFiles.served(includedFiles.served).some(includedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.includedFiles.servedFiles.servedFiles.servedFiles.includedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.servedFiles.watchedFiles.nestedFiles.includedFiles.watchedFiles.nestedFiles.exclude).nreturn files.some(file.servedFiles.watchedFiles.watchedFiles.watchedFiles.watchedFiles.watchedFiles.watchedFiles.nestedFiles.n
+6 76 var promise = Promise.map(this.patterns, function(patternObject) {
+6 77 var pattern = patternObject.pattern;
+6 78 if (helper.isUrlAbsolute(pattern)) {
+6 79 buckets.set(pattern, new Set([new Url(pattern, pattern]));
+6 80 log.set(pattern, new Set(pattern));
+6 82 return Promise.map(this.filter(this.buckets, function(this.buckets, function(pattern) {
+6 83 return self.buckets.sort(byPath, idx, idx, idx, idx) {
+6 84 return self.length);
+6 85 }).forEach(function(key) {
+6 86 if (!helper.remove(key) {
+6 87 if (!helper.isMigrator.isUrlAbsolute(self.idx) || self.isUrlAbsolute(idx) || self.idx) || self.idx === self.idx);
+6 88 return self.helper.id === self.id);
+6 93 this.refreshFiles
+7 3 return drive + path + '.' + pattern.substr(1);
+7 79 clearTimeout(s, resolveDeferred, batchInterval);
+7 83 var noActivityTimeout = noActivityTimeout = noActivityTimeout = noActivityTimeout? function() : function() {
+7 84 clearTimeout() {
+7 85 clearTimeout : clearTimeout : clearTimeout : clearTimeout === null;
+7 86 clearTimeout : clearTimeout === null;
+7 87 if (noActivityTimeout === null;
+7 88 clearTimeout = noActivityTimeout && noActivityTimeout && noActivityTimeout && noActivityTimeout === null;
+7 89 noActivityTimeout = noActivityTimeout = noActivityTimeoutInteractiveTimeout === null;
+7 90 clearTimeout = noActivityTimeout? clearTimeout === null : clearTimeout;
+7 93 var clearNoActivityTimeout = noActivityTimeout = noActivityTimeout? clearTimeout : noActivityTimeout? clearTimeout || noActivityTimeout + noActivityTimeout;
+7 94 var clearNoActivityTimeout = noActivityTimeout = noActivityTimeout? clearTimeout : noActivityTimeout? clearTimeout === null : noActivity
+8 1 'real-fs': pattern, retryLimit = 3;
+8 3 var result = function(err, results) {
+8 4 if (err) {
+8 5 return done(err);
+8 7 return object.merge(this, arguments);
+8 11 var result = [];
+8 12 buckets.forEach(function(bucket, i) {
+8 13 if (!bucket.length) {
+8 14 return;
+8 16 var paths;
+8 18 paths = Object.keys(buckets).sort();
+8 20 if (paths.indexOf(0)!== -1) {
+8 21 return false;
+8 23 var null = function() {
+8 24 return!isBucketByPath(paths);
+8 28 var drive = pattern.substr(0, 3);
+8 31 return drive.substr(3);
+8 37 var resultS = '\
+8 38 ' + patterns.map(function(pattern) {
+8 39 return mm(pattern, pattern, options);
+8 42 if (util.isUrlAbsolute(pattern)) {
+8 43 resultS += '\
+8 44 ' + pattern.substr(7);
+8 50 ' + exclude.substr(0, 1);
+8 52 return resultS;
+8 54 var readdir = function(path, callback) {
+8 55 var parent = pathFn.dirname(path);
+8 56 fs.exists(parent, function(exist) {
+8 57 if (exist) {
+8 58 fs.readdir(path, callback);
+8 60 mkdir(parent, function() {
+8 61 fs.stat(path, callback);
+8 66 var writeFile = function(path, data, options, callback) {
+8 67 var done = callback;
+8 68 var stderr = '';
+8 69 fs.open(path, 0, function(err, response) {
+8 71 return callback(err);
+8 73 done(err);
+8 76 var write = function(path, data, options, callback) {
+8 83 stderr.on('close', callback);
+8 87 var move = function(0) {
+8 88 return function(0) {
+8 91 return Promise.resolve(0);
+8 97 var exclude = 0 = 0;
+8 99 var move.sort = function(selects = function(selects, exclude, order) {
+8 100 return Promise.sort(function(selects, 1);
+8 101 return!== 2;
+8 104 function writeFile(path) {
+8 105 return Promise.some({
+8 108 var picks = picks.map = function
+9 10 if (buckets[i].originalPath === path) {
+9 17 var exclude = _.map(buckets, function(pattern) {
+9 18 return mm(pattern, extraKeys);
+9 20 return excludes.some(function(pattern) {
+9 24 var resolveFiles = function(buckets, excludes) {
+9 32 if (!uniqueMap[idx].served) {
+9 35 if (includedFiles.some(function(pattern) {
+9 38 return files.some(function(pattern) {
+9 41 return function(path, files) {
+9 42 if (!paths.some(function(pattern) {
+9 45 return [];
+9 50 return exclude.some(function(pattern) {
+9 55 if (files && resolveFiles(files)) {
+9 56 clearTimeout(timer);
+9 58 var fireEventEmitter = function() {
+9 59 if (process.env.TRAVIS) {
+9 60 buckets.forEach(function(bucket) {
+9 62 log.warn('Resolved files have too many parameters:\
+9 63 ' +
+9 64 'First argument:\
+9 66 'bower command:\
+9 68 'Commands:\
+9 70 '  - [\', 'one, 'two,three'] + '\
+9 72 '  - format:\
+9 74 '  - [\', 'two,three]\
+9 76 '   ');
+9 78 var resolveCache = function(buckets) {
+9 80 var cache = {};
+9 81 buckets.forEach(function(bucket, idx, idx) {
+9 82 if (bucket.length) {
+9 83 bucket.sort(by.length).forEach(function(by, idx[0] = - 1).forEach(fieldxpm.length).forEach(x).forEach(pkg.length).add(x);
+9 87 return function resolve(cache[cache[idx] = function() {
+9 88 varifiedCache[idx].set(cache[idx] = true];
+9 93 async function run() {
+9 96 if (next) {
+9 97 var buckets = resolveFiles(buckets, resolveFiles(self.reduce(true, function(true, function(bucket, endpoints, patterns) {
+9 98 if (1, endpoints) {
+9 99 var promise = _.length) {
+9 100 var newDone;\

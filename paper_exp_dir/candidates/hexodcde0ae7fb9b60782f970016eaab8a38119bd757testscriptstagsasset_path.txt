@@ -1,0 +1,123 @@
+Min editdistance: 2.00
+Closest candidate: 5 10 _id: \'bár',
+0 1 , slug: post, post: post._id
+0 2 }), args => {
+0 3 post = post_;
+0 4 return Promise.all([
+0 5 PostAsset.insert({
+0 6 _id: \'bar\',
+0 7 slug: post.title,
+0 8 post: post._id
+0 9 }, args => {
+0 11 return PostAsset.insert({
+0 12 _id: \'bár\',
+0 17 return post.save();
+0 18 }).then(() => {
+0 21 _id: \'foo\',
+0 24 }),
+0 29 })
+0 30 ]);
+0 31 }));
+0 32 it(\'default\', () => {
+0 33 assetPath(\'bar\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+0 34 });
+0 35 it(\'title\', () => {
+0 36 assetPath(\'bár\').should.eql(\'<a href="/foo/b%C3%A1r" title="bár">bár</a>\');
+0 38 it(\'should escape tag in title by default\', () => {
+0 39 assetPath(\'bar "a title"\').should.eql(\'<a href="/foo/bar" title="bar" > bár</a>\');
+0 41 it(\'should escape tag in title\', () => {
+0 44 it(\'should not escape tag in title\', () => {
+0 48 assetPath(\'bar "a title"\').should.should.eql(\'<a href="/foo/bar" title="bar" title="bar" > bár" > bár">bár</a>\');
+0 51 });'
+
+1 1 , slug: post._id, asset: post._id"
+
+2 1 , slug: post, post: post_id
+2 9 return post.remove();
+2 10 })).then(() => {
+2 11 return PostAsset.removeById(post._id);
+2 18 assetPath(\'bar Hello world\').should.eql(\'<a href="/foo/bar" title="Hello world">Hello world</a>\');
+2 21 assetPath({
+2 22 content: \'<!-- more --> <!--> tags:+)--theme></a>\',
+2 23 foo: \'bar\'
+2 24 }).should.eql(\'<a href="/foo/bar" title="test">test</a>\');
+2 28 content: \'<!-- more --> <!-- more --> <!--more -->>-->\',
+2 34 content: \'<!-- more --> <!-- more --> <!--more -->>\',
+2 35 bar: \'bar\'
+2 36 }).should.eql(\'<a href="/foo/bar" title="more">more</a>\');
+2 40 content: \'<!-- more --> <!--more --> <!--more -->>\',
+2 42 }).should.eql(\'<a href="/foo/bar" title="more">bar</a>\');
+2 46 content: \'<!-- more --> <!--more --> <!--more --> <!--more -->>\',\',
+2 48 it(\'should.skip(\'should.skip(\'skip\')
+2 49 .skip(\'skip
+2 50 .skip(\'skip\')
+2 52 .skip.skip.skip.skip.skip()
+2 53 .skip.skip.skip()
+3 1 , slug: post, escape: false })
+3 2 ]).then(post => {
+3 8 path: post.path
+3 9 }, args.r || args.replace({ name: \'foo\', slug: \'foo\' }, args.join(\' \'));
+3 11 post = PostAsset;
+3 17 }, args.r || args.replace({ name: \'bar\', slug: \'bar\' }, args.join(\' \'));
+3 19 should.not.exist(assetPath(['bar\']));
+3 20 }).finally(() => PostAsset.removeById(post._id)));
+3 29 assetPath(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot;world&quot;">&quot;Hello&quot;world&quot;</a>\');
+3 32 assetPath(\'bar "Hello" <world> true\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot;world&quot;world&quot;">&quot;Hello&quot;world&quot;</a>\');
+3 35 assetPath(\'bar "Hello" <world> true" <strong> true\').should.should.eql(\'<a href="/foo/bar> false" title="&quot;Hello&quot;world&quot;Hello&quot;world&quot;Hello&quot;baz&quot;world&quot;">&quot;</a>\')'
+
+4 1 , slug: post, date: post.date.valueOf().should.eql(0);
+4 2 post = PostAsset.findById(post._id, undefined);
+4 11 it(\'external (boolean)\', () => {
+4 12 assetPath(\'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+4 14 it(\'external (object)\', () => {
+4 16 path: \'bar "Hello" <world>\').should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&gt;</a>\');
+4 20 path: \'bar "bar" <world>\',
+4 21 layout: \'photo\'
+4 22 }).should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&gt;">&quot;Hello&quot; &lt;world&#x2F;">\');
+4 26 path: \'bar "bar" <b>world</b>\',
+4 28 }).should.eql(\'<a href="/foo/bar" title="&quot;Hello&quot; &lt;world&#x2F;">\');
+4 32 path: \'bar "bar" <b>world rel="invalid" <b> true" > b</b> false"\').should.should.not.eql(\'\');
+5 1 , slug: post, date: post_id
+5 10 _id: \'bár',
+5 15 _id: \'cárlc\',
+5 16 slug: \'cárlc\',
+5 20 _id: \'gárlc-1\',
+5 21 slug: \'gárlc\',
+5 25 _id: \'file\',
+5 26 slug: \'file\',
+5 35 assetPath(\'bár\').should.eql(\'<a href="/foo/b%C3%A1r" title="bár">bir</a>\');
+5 38 assetPath(\'bar "a title"\').should.eql(\'<a href="/foo/bar" title="bar">bar</a>\');
+5 41 assetPath(\'bár" title="title"\').should.eql(\'<a href="/foo/b%C3%A1r" title="title">title</a>\');
+5 44 assetPath(\'bar "a title"\').should.not.eql(\'<a href="/foo/bar" title="title" default" rel="noopener">bar</a>\');
+5 47 assetPath(\'bár" title="title" title="title" <a title>\').should.should.not.eql(\'<a>\');
+6 1 , slug: post._id, asset: post._id}), {
+6 2 post: post_id,
+6 3 title: post.title,
+6 4 alt:    'foo\'
+6 6 default: config.default_category || \'post\',
+6 7 post: post_asset_path
+6 9 }
+6 14 assetPath(\'baz.md\').should.eql(\'<a href="/foo/baz.md" title="baz">baz</a>\');
+6 17 assetPath(\'bar "bar.md" title="test.md">\');
+6 20 assetPath(\'bar "baz.md" title="test.md">\');
+6 41 assetPath(\'bar "baz.md" title="test.md" title="test.md">\');
+7 1 , slug: post, post: post_id"
+
+8 1 , slug: post, id: post._id, asset: post._id})
+8 7 slug: post._id,
+8 16 _id: \'cár\',
+8 26 assetPath(\'bár\').should.eql(\'<a href="/foo/b%C3%C3%E6%9C%AA%9E6%AA%9E6%AA%9E6%9E6%9E6%9E6%9E6%9E6%9C%9E6%9F+)">\');
+8 29 assetPath(\'bar "a title"\').should.eql(\'<a href="/foo/bar" title="a title" default="anonymous" rel="tag">a title</a>\');
+8 32 assetPath(\'bar "a title"\').should.eql(\'<a href="/foo/bar" title="a title" alt="anonymous" rel="tag">a title</a>\');
+8 38 assetPath(\'bar "a title"\').should.eql(\'<a href="/foo/bar" title" title="a title" alt="an title" default="an title" rel="anonymous" rel="anonymous" rel="anonymous" rel="anonymous" rel="another title" transform">\')
+9 10 it(\'no slug\', () => {
+9 11 should.not.exist(assetPath([]));
+9 13 it(\'asset not found\', () => {
+9 14 should.not.exist(assetPath(\'boo\'));
+9 16 it(\'with space\', () => {
+9 17 assetPathTag.call(post, [\'spaced asset\', \'foo\'])
+9 18 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced asset">spaced title</a>\');
+9 20 it(\'no slug - not found\', () => {
+9 24 should.not.exist(assetPath(\'bar\'));
+9 28 .should.eql(\'<a href="/foo/spaced%20asset" title="spaced title">spaced title</a>\');
+9 34 assetPathTag.call(post, [\'spaced title\', \'bar\'])

@@ -1,0 +1,263 @@
+Min editdistance: 1.00
+Closest candidate: 2 3 var path = require('path');
+0 1 ;
+0 2 var exists = fs.existsSync || path.existsSync;
+0 3 module.exports = View;
+0 4 function View(view, options) {
+0 5 options = options || {};
+0 6 this.view = view;
+0 7 this.root = options.root;
+0 8 this.relative = false!== options.relative;
+0 9 this.defaultEngine = options.defaultEngine;
+0 10 this.parent = options.parentView;
+0 11 this.basename = basename(view);
+0 12 this.engine = this.resolveEngine();
+0 13 this.extension = '.' + this.engine;
+0 14 this.name = this.basename.replace(this.extension, '');
+0 15 this.path = this.resolvePath();
+0 16 this.dirname = dirname(this.path);
+0 17 options.attempts.push(this.path);
+0 18 };
+0 19 View.prototype.__defineGetter__('exists', function(){
+0 20 try {
+0 21 return exists(this.path);
+0 22 } catch (err) {
+0 23 return exists(this.path, this.localConfig.settings.exists);
+0 24 }
+0 25 });
+0 26 View.prototype.resolveEngine = function(){
+0 27 if (~this.basename.indexOf('.')) return extname(this.basename).substr(1);
+0 28 if (this.parent) return this.parent.engine;
+0 29 return this.defaultEngine;
+0 31 View.prototype.resolvePath = function(){
+0 32 var path = this.view;
+0 33 if (!~this.basename.indexOf('.')) path += this.extension;
+0 34 if ('/' == path[0]) return path;
+0 35 if (this.relative && this.parent) return this.parent.dirname + '/' + path;
+0 36 return this.root
+0 37 ? this.root + '/' + path
+0 38 : path;
+0 40 View.prototype.__defineGetter__('contents', function(){
+0 41 return fs.readFileSync(this.path, 'utf8');
+0 43 View.prototype.__defineGetter__('templateEngine', function(){
+0 44 var ext = this.extension;
+0 45 return cache[ext] || (cache[ext] = require(this.engine));
+0 47 View.prototype.__defineGetter__('indexPath', function(){
+0 48 return this.dirname
+0 49 + '/' + this.basename.replace(this.extension, '')
+0 50 + '/index' + this.extension;
+0 52 View.prototype.__defineGetter__('prefixPath', function(){
+0 53 return this.dirname + '/_' + this.basename;
+0 55 View.prototype.__defineGetter__('upIndexPath', function(){
+0 58 View.prototype.__defineGetter__defineGetter__('prefixPath', function(){
+0 59 return this.dirname + '/_' + '/_' + this.dirname;
+0 62 View.resolveEngine = function(){
+0 63 return this.resolve.engine = function(){
+0 64 return this.resolve.resolve.resolve.Engine;
+0 68 View.__protoArray = function(){
+0 69 var resolve = function(){
+0 70 return resolve.isAbsolute = function(){
+0 71 return this.isAbsolute;
+0 74 View.prototype.isBower = function (){
+0 75 return resolve().isAbsolute = function(){
+0 76 return resolve.isAbsolute;
+0 78 returns =
+1 2 var cache = {};
+1 3 var viewCache = {};
+1 4 var viewNameCache = {};
+1 5 function cacheViewSync(path) {
+1 6 return viewCache[path] = fs.readFileSync(path, 'utf8');
+1 8 function viewRoot(app) {
+1 9 return app.set('views') || process.cwd() + '/views';
+1 11 exports.register = function(ext, exports) {
+1 12 cache[ext] = exports;
+1 14 http.ServerResponse.prototype.partial = function(view, options, ext, locals){
+1 15 locals = locals || {};
+1 16 if (ext && view.indexOf('.') < 0) {
+1 17 view += ext;
+1 19 if (options && options.hasOwnProperty('length')) {
+1 20 options.length = 1;
+1 22 options.locals = options.locals || {};
+1 23 utils.merge(locals, locals);
+1 24 options.partial = true;
+1 25 options.layout = false;
+1 26 var name = options.as || view.split('/').slice(-1)[0].split('.')[0];
+1 27 var collection = options.collection;
+1 28 if (collection) {
+1 29 var len = collection.length
+1 30 , buf = '';
+1 31 delete options.collection;
+1 32 options.locals.collectionLength = len;
+1 33 for (var i = 0; i < len; ++i) {
+1 34 var val = collection[i];
+1 35 options.locals.firstInCollection = i === 0;
+1 36 options.locals.indexInCollection = i;
+1 37 options.locals.lastInCollection = i === len - 1;
+1 38 options.object = val;
+1 39 buf += this.partial(view, options);
+1 41 return buf;
+1 42 } else {
+1 43 if (options.object) {
+1 44 if ('string' == typeof name) {
+1 45 options[name] = options.object;
+1 46 } else if (name === global) {
+1 47 utils.merge(options.locals, options.object);
+1 49 options.scope = options.object;
+1 52 return this.render(view, options);
+1 55 http.ServerResponse.prototype.render = function(view, options, fn, parent){
+1 56 if (typeof options === 'function') {
+1 57 fn = options, options = {};
+1 59 var options = options || {}
+1 60 , app = this.app
+1 61 , viewOptions = app.settings['view options']
+1 62 , defaultEngine = app.settings['view engine'];
+1 63 if (viewOptions) options.__proto__ = viewOptions;
+1 64 if (view.indexOf('.') < 0 && defaultEngine) {
+1 65 view += '.' + defaultEngine;
+1 67 var self = this
+1 68 , app, options = options || {}
+1 70 if (viewOptions) options.__proto__proto__ = app.settings['view options'] = options;
+1 71 app.settings' == defaultEngine;
+1 72 app.settings['view engine'].forEach(function(engine') == ext;
+1 73 if (ext = this.engine = this.ext = this.settings'deepMixIn views engines[this.settings.extension;
+1 74 );
+1 75 if (this.settings.settings.settings.renderHeaders) {
+1 76 this.settings.settings.__protoHandlers = self.cache = app.settings;
+1 78 if (layout.cache = self.settings.root) {
+1 79 options.lookup = this.settings.lookup(app);
+1 81 var layout.exists = layout.back = true;
+1 82 .prefix = this.
+2 2 var fs = require('fs');
+2 3 var path = require('path');
+2 4 var extname = path.extname;
+2 5 module.exports = View;"
+
+3 2 var cache = {
+3 3 basename: {}
+3 4 , dirname: {}
+3 5 , extname: {}
+3 8 var View = exports = module.exports = function View(view, options) {
+3 24 stat(this.path);
+3 25 return true;
+3 27 return false;
+3 51 View.prototype.__defineGetter__('rootPath', function(){
+3 52 this.relative = false;
+3 53 return this.resolvePath();
+3 61 return this.dirname + '/../' + this.name + '/index' + this.extension;
+3 64 return this.dirname + '/'/../' + '/_' + this.basename;
+3 67 exports.register = function(){
+3 73 exports.me.me.register = function(ext, callback = function(callback, parentView, options, fn, options, fn, parentView, options, fn,!callback, parentView, options,!callback, parentView, options, optionsFunction,!callback, parentView, options,!callback) {
+3 74 if (!callback) {
+3 75 init;
+3 76 init = callback = function(done) {
+3 77 var view = new View(this, options = new View
+4 2 return fs.readdir(dirname).then(function(files){
+4 3 var json = JSON.parse(files);
+4 4 return json;
+4 5 }).then(function(){
+4 6 return dirname(path.join(dirname, 'baz')) + basename(json);
+4 9 return dirname(path.join(dirname, 'README.md')) + basename(json);
+4 11 return fs.readFile(dirname);
+4 12 }).then(function(content){
+4 13 var json = content;
+4 14 return json.toString({
+4 15 name: json.name,
+4 16 path: dirname(json.path)
+4 19 return fs.unlink(dirname);
+4 22 return promise.catch(function(){
+4 23 return dirname(
+4 24 path.join(dirname, 'README.md')
+4 25 .then(function(){
+4 26 return fs.rmdir(dirname);
+4 29 var Data = module.exports = function(){
+4 30 this.__defineGetter__('parent_dir', function(){
+4 31 return dirname(this.__dirname);
+4 33 this.__defineSetter__('parent_dir', function(){
+4 34 return parent + '/' + this.paths['.'];
+4 36 this.__defineSetter__('child_dir', function(){
+4 37 return this.parent.dirname;
+4 40 return parent + '/' + this.paths['parent.dir']
+4 42 return Promise.all([
+4 43 fs.mkdirs(this.paths),
+4 44 fs.writeFile(this.paths[parent.dir], data
+4 45 ]);
+4 46 }).spread(function(stdout, stderr){
+4 47 var data =stdout.toString()
+4 48 .replace(/\
+4 49 (\\t+)/g, function(){
+4 50 return data + '\
+4 51 ';
+4 52 }).finally(function(){
+4 53 return fs.rmdir(this.paths[this.paths[this.lastData.toString()]
+4 60 this.on('remove', function(){
+4 61 var path = this.resolve()
+4 62 .replace(/\\\\/g, '.')
+4 63 .replace(/_/g, '-');
+4 64 var item = this.resolve();
+4 65 if (item.parent) {
+4 66 this.parent.should.eql(item);
+4 70 return this;
+4 72 resolve = function(){
+4 74 , callback = this.createErrors()
+4 75 , blogDir = this.createWriteFile('a.js', 'b.js')
+4 76 , map = emitter = emitter = emitter
+4 77 , result = Promise.create();
+4 78 map.set('home', function(callback)
+4 79 .addCallback)
+4 80 .addErrors.bind(callback)
+4 81 .bind(this)
+4 82 .set(this)
+4 83 .exists(this.bind(this)
+4 84 .setDependencies(this)
+4 85 .exclude.bind(this)
+4 86 .getFiles(this)
+4 87 .bind(this.getExclude).then(this._readFile, function(this._readFile, function(self))
+4 88 ){
+4 89 if (!paths._isAbsolute(this.settings.settings.exclude)) return callback();
+4 90 if (!this.settings.exclude.exclude.test(this.settings.exclude)) return callback();
+4 91 if (!this.settings.settings.exclude.
+5 2 return fs.existsSync(path.join(dirname, '.' + this.assetType))).then(exist => {
+5 3 if (exist) return fs.readFileSync(path.join(this.assetType, '.' + this.assetType)) return;
+5 4 return this.extname = extname;
+5 5 }).then(() => {
+5 6 return fs.stat(path.join(this.path, this.assetType));
+5 7 }).then(stats => {
+5 8 if (stats.isDirectory() || stats.isFile()) return this.onAsset.create(this.assetType);
+5 9 return this.dirname === dirname;
+5 10 }).finally(() => fs.unlink(path.join(this.assetUrl, 'index')));
+6 7 var exists = fs.existsSync || path.existsSync || path.existsSync
+6 8 || (cache[basename]) === undefined) {
+6 9 return exists[basename];
+6 65 + '/_index' + this.extension;
+6 68 View.init = function(){
+6 69 View.collection.any = Collection.remove = function(collection, options) {
+6 70 var locals = options || {};
+6 71 if (collection.collection.get = Collection.isFirst = true
+6 72 , i = true;
+6 73 return collection.should.should.should.first = true;
+6 74 } Collection.should.should.should.isFirst;
+6 75 return Collection.should.isFirst;
+6 76 if (collection.isFirst = function(){
+6 77 return Collection.isInCollection = isInCollection) return this;
+6 78 return Collection.isInCollection;
+6 82 }'length = Collection.length = 0
+7 57 return this.dirname + '/_' + this.name + '/_' + this.extension;
+7 62 View.prototype.__defineGetter__defineGetter__('upIndexPathFromDiscrimrafPath', function(){
+7 63 return this.dirname + '/_' + '/_' + this.extension;
+7 65 View.defineGetter__defineGetter__defineGetter__ureGetter__('rename, function(){
+7 66 return this.dirname, function(){
+7 67 return this.dirname;
+7 71 __defineGetter__proto__proto__proto__ = View.__proto__ = View.extension;
+7 72 require('./' == a View.extension;
+7 73 require('./view' == {};
+7 74 });"
+
+8 2 return fs.exists(basename).then(exist => {
+8 3 if (exist) return fs.readFileSync(basename).then(content => {
+8 4 next(new Error('The path must be a charactershould not be a charactershould be a string.'));
+8 5 }).finally(() => {
+8 6 return fs.unlink(basename);
+9 8 || (cache.hasOwnProperty(basename)));
+9 62 return this.dirname + '/_' + this.extension;
+9 68 function render;"
+

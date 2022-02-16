@@ -1,0 +1,18 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 plugins = ["
+
+0 1 plugins = ["
+
+1 1 plugins = [
+1 2 'testacular-mocha',
+1 3 'testacular-coverage',
+1 4 'testacular-chrome-launcher',
+1 5 'testacular-firefox-launcher'"
+
+6 2 'testacular-CONFIG',
+6 3 'testacular-adapter',
+8 3 'testacular-REQUIRE',
+8 4 'testacular-CONFIG_HOME',
+8 5 'testacular-CONFIG_HOME'
+8 6 ];"
+

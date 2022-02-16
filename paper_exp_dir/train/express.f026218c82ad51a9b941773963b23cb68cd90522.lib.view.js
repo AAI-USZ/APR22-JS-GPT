@@ -1,0 +1,91 @@
+
+
+
+
+
+var path = require('path')
+, extname = path.extname
+, dirname = path.dirname
+, basename = path.basename
+, utils = require('connect').utils
+, View = require('./view/view')
+, partial = require('./view/partial')
+, union = require('./utils').union
+, merge = utils.merge
+, http = require('http')
+, res = http.ServerResponse.prototype;
+
+
+
+exports = module.exports = View;
+
+
+
+exports.register = View.register;
+
+
+
+exports.compile = function(view, cache, cid, options){
+if (cache && cid && cache[cid]) return cache[cid];
+
+
+view = exports.lookup(view, options);
+
+
+if (!view.exists) {
+if (options.hint) hintAtViewPaths(view.original, options);
+var err = new Error('failed to locate view "' + view.original.view + '"');
+err.view = view.original;
+throw err;
+}
+
+
+view.fn = view.templateEngine.compile(view.contents, options);
+cache[cid] = view;
+
+return view;
+};
+
+
+
+exports.lookup = function(view, options){
+var orig = view = new View(view, options);
+
+
+if (partial) {
+view = new View(orig.prefixPath, options);
+if (!view.exists) view = orig;
+}
+
+
+if (!view.exists) view = new View(orig.indexPath, options);
+
+
+
+if (!view.exists && !options.isLayout) view = new View(orig.upIndexPath, options);
+
+
+if (!view.exists) view = new View(orig.rootPath, options);
+
+
+if (!view.exists && partial) view = new View(view.prefixPath, options);
+
+view.original = orig;
+return view;
+};
+
+
+
+function renderPartial(res, view, options, parentLocals, parent){
+var collection, object, locals;
+
+if (options) {
+
+if (options.collection) {
+collection = options.collection;
+delete options.collection;
+} else if ('length' in options) {
+collection = options;
+options = {};
+}
+

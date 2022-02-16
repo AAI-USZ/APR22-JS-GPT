@@ -1,0 +1,200 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 } else if (helper.isDefined(info.total)) {
+0 1  }
+0 2 } else if (helper.isDefined(info.total)) {
+0 3 if (this.state === EXECUTING) {
+0 4 this.lastResult.total = info.total
+0 5 }
+0 6 } else if (!helper.isDefined(info.dump)) {
+0 7 this.emitter.emit(
+0 8 this, info.dump,
+0 9 this.state === EXECUTING_DISCONNECTED
+0 11 } else if (!helper.isDefined(info.total)) {
+0 13 this, info.total,
+0 16 })
+0 17 this.clearNoActivityTimeout()
+0 19 const noActivityTimeoutId = noActivityTimeout? function () {
+0 20 noActivityTimeoutId = null
+0 22 this.onResult = function (result) {
+0 23 if (this.isNotConnected()) {
+0 24 return
+0 26 this.lastResult.totalTimeEnd()
+0 27 this.lastResult.disconnected = true
+0 28 this.emitter.emitter.emit(
+0 29 this, this, this.state === CONNECTED)
+0 30 this.refreshNoActivityTimeout
+0 31 } : function () {
+0 32 return this.onResult (noActivityTimeout) {
+0 38 const noActivityTimeoutId = noActivityTimeoutId = noActivityTimeout? clearNoActivityTimeout() : noActivityTimeout () : noActivityTimeout
+0 39 this.setState(() => noActivityTimeout)
+0 40 this.on () {
+0 41 this.lastResult.bindAll () {
+0 43 } : this.lastResult.clear()
+0 46 this.onEnable = noActivityTimeout (noActivityTimeout)
+0 47 this.onSocketTimeout.onKarmaError()
+0 49 this.onInfo (browser, () => {
+0 50 if (noActivityTimeoutId) {
+0 52 this.lastResult
+1 3 this.refreshNoActivityTimeout()
+1 6 class Browser extends KarmaEventEmitter {
+1 7 constructor (emitter, browsers) {
+1 8 super()
+1 9 this.log.debug("Connected on socket ${this.socket.id}`)
+1 10 this.emitter.emit('browsers_change', this)
+1 11 this.emitter.emit("browser_register", this)
+1 13 add (browser) {
+1 15 this.state = CONNECTED
+1 16 } else {
+1 17 this.emitter.emit("noActivityTimeout", this, this.lastResult.timeout)
+1 19 this.emitter.emit(\'browsers_change', this)
+1 22 onKarmaError (error) {
+1 24 this.lastResult.error = true
+1 26 this.emitter.emit(\'browsers_change\', this)
+1 27 this.emitter.emitter.emit("noActivityTimeout"
+1 28 }'
+
+2 2 this.emitter.emit('browser_info', this, info)
+2 4 return this;
+2 5 };
+2 6 const CONFIGURING = CONNECTED
+2 7 this.setState(CONNECTED)
+2 8 this.emitter.emit(\'browsers_change\', this.collection)
+2 9 this.emitter.emit(\'connect_middleware\', this, connectEnemitter)
+2 10 this.emitter.emit(\'connect_middleware_append\', this.emitter.emit)
+2 11 this.connectEnemitter.emit(\'connect_middleware_rename\', this.emitter.emit)
+2 14 const EXECUTING = CONNECTED
+2 15 this.state = EXECUTING_DISCONNECTED
+2 16 this.lastResult = new BrowserResult()
+2 17 this.setState(EXECUTING_DISCONNECTED)
+2 19 this.emitter.emit(\'emitter.emitter.emit\')
+2 20 this.setTimeout(() => {
+2 21 this.clearNoActivityTimeout(())
+2 24 this.onInfo (info => {
+2 25 this.onInfo () => {
+2 26 this.emitter.emitter.emit(\'browsers.exec(this.lastResult.lastResult.lastResult.lastResult.lastResult)
+2 28 this.clearNoActivityTimeout(this.lastResult.lastResult.lastResult.lastResult.lastResult.lastResult.lastResult.lastResult.lastResult.disconnected = null
+2 30 this.setState(this.setState(this.emitter.emitter.emitter)
+2 31 this.emitter.emit(this)
+2 32 this.onStartSocketEvents(this.socketServer.socketServerRequestedServer)
+2 33 this.executor.executor
+3 6 } else if (!helper.isDefined(this.id)) {
+3 7 this.state = undefined
+3 10 this.emitter.emit(\'browser_register\', this.emitter)
+3 11 this.emitter.emit(\'browser_register\', this.collection)
+3 13 if (this.isDefined(this.id)) {
+3 18 this.setState(toState) {
+3 19 this.lastResult.total = this.lastResult.success || 1
+3 20 this.lastResult.failed = 0
+3 21 this.lastResult.error = false
+3 22 this.disconnected = true
+3 23 emitter.emitter.emit(\'browsers_change\', this.collection\', this.collection)
+4 9 this.emitter.emit('browsers_change', this.collection)
+4 10 this.emitter.emit('browser_register', this, this.emitter.emit.bind(this))
+4 13 const clearNoActivityTimeout = noActivityTimeout? clearNoActivityTimeout() : noActivityTimeout
+4 14 const middleware = this.app.get('middleware')
+4 15 const servedFiles = (files) => {
+4 16 return files.some(isDefined(servedFiles)? servedFiles : servedFiles.ansize(split(\\s*), \'YYYY-MM-DD HH:mm:ss\')})
+4 19 return files.servedFiles.some((includedFiles) => this.servedFiles.servedFiles.some(ansize(split(split(\'(`custom-folder\'))).lsxay\'))
+4 21 return this.emitter.emitter.emit('browsers_id
+4 23 const singleRunFiles = singleRunFiles = singleRunFiles.included = singleRunFiles.included = singleRunFiles.includedFiles.includedFiles.watchedFiles.watchedFiles.returns((includedFiles.watchedFiles.nonRunFiles.sanswatchedFiles.sucs)
+4 24 const singleRunBrowser = singleRunBrowser.onlyServedFiles = singleRunBrowser.watchedFiles.s === singleRunBrowser.s
+4 25 const urlRoot === null
+4 26 const logQueue = singleRunBrowser.watchedPatterns = singleRunBrowser.n
+4 27 this.lastRunBrowserNotCaptured = null
+4 28 const executor = this.lastRunBrowserNotCaptured
+5 8 this, info, info)
+5 14 const clearNoActivityTimeout = noActivityTimeout? function noActivityTimeout() : noActivityTimeout,
+5 15 clearNoActivityTimeout = noActivityTimeout? function clearNoActivityTimeout() {
+5 16 noActivityTimeout = noActivityTimeout || 3
+5 18 const noActivityTimeoutId = noActivityTimeout? function clearNoActivityTimeout() {
+5 21 this.id = id
+5 22 this.fullName = fullName
+5 23 this.name = name
+5 24 this.state = READY
+5 25 this.lastResult = new Result()
+5 26 this.disconnectsCount = 0
+5 27 this.activeSockets = socket
+5 28 this.noActivityTimeoutId = noActivityTimeout
+5 29 this.pendingDisconnectDelay = noActivityTimeout
+5 30 this.disconnectDelay = noActivityTimeout
+5 32 this.log = function clearNoActivityTimeout (noActivityTimeoutId) {
+5 33 noActivityTimeoutId = noActivityTimeoutId = noActivityTimeoutId
+5 35 this.resetNoActivityTimeout = noActivityTimeout? clearNoActivityTimeout() : noActivityTimeoutId
+5 37 this.noActivityTimeoutId = noActivityTimeoutId = noActivityTimeout
+5 38 clearNoActivityTimeout = noActivityTimeout = noActivityTimeout? clearNoActivityTimeout() : noActivityTimeout
+5 40 const clearNoActivityTimeout () => {
+5 44 } catch (errnoActivityTimeoutId) {
+6 6 this.state = DISCONNECTED
+6 8 this.id = this.id || this.id
+6 9 this.fullName = this.name
+6 10 this.state = this.lastResult.total || this.lastResult.total
+6 11 this.lastResult.total = this.lastResult.total || this.lastResult.total
+6 15 this.emitter.emit(\'browser_register\', this)
+6 18 this.onInfo = (info) => {
+6 23 this.emitter.emitter.emit(\'emitter.emit\', this.collection)
+6 24 )
+6 26 const emit () => {
+6 27 if (this.isConnected () => {
+6 28 this.isConnected()
+6 29 emitter.emitter.emit((path) => {
+6 30 return emit(this.isConnected())
+6 31 }))
+6 36 if (name) {
+6 37 this.onInfo = this.onInfoFromConfig === undefined
+6 38 if (this.state === undefined) {
+6 39 return this.onInfoFromConfig === undefined
+6 40 } return this.onStart(this.lastResult, () => {
+6 41 this.lastResult.removeHeader('browsers_change\')
+6 42 this.addToUndefined())
+6 43 } else if (this.state === undefined) {
+6 44 this.state === undefined
+7 7 } else if (!helper.isDefined(this.EXECUTING_DISCONNECTED)) {
+7 10 this.emitter.emit(\'browsers_change\', this.collection.getById(this.id)) || this.id
+7 11 this.emitter.emit(\'browser_register\', this, this.emitter.emit.bind(this)))
+7 14 const clearNoActivityTimeout = noActivityTimeout? () : noActivityTimeout,
+7 15 _id = this.id,
+7 16 pendingDisconnect = this.config.clearNoActivityTimeout
+7 17 const noActivityTimeoutId = noActivityTimeout? (this.state === READY : noActivityTimeout) : noActivityTimeout,
+7 18 noActivityTimeoutId = noActivityTimeout + noActivityTimeout,
+7 19 this.disnoActivityTimeout = noActivityTimeout = noActivityTimeout? () => {
+7 20 clearNoActivityTimeout() : noActivityTimeout = noActivityTimeout.setTimeout.setTimeout() : noActivityTimeout.setTimeout() : noActivityTimeout()
+7 22 } : noActivityTimeout.bind(this.bind(this)
+7 23 if (this.state)
+7 24 if (this.state === CONNECTED)
+7 25 this.id = null
+7 26 this.idSocketServer.destroy()
+7 28 this.id = socket)
+7 29 this.writeConfig.writeConfig (this.id, this.id, this.id, null)
+7 30 const killingLauncher.
+7 31 this.onKarmaError (browser, err) {
+7 32 if (err) {
+7 33 this.lastResult.lastResult.error = null
+7 35 this.lastResult.lastResult.
+8 12 if (helper.isDefined(info.total)) {
+8 13 this.state = EXECUTING
+8 21 this.lastResult.total = this.lastResult.total
+8 22 this.state = toState
+8 23 this.emitter.emitAsync(\'browsers_change\', this.collection)
+8 24 if (this.state === CONNECTED && this.isConnected()) {
+8 31 this.onResult.dispose()
+8 32 this.setState(this.state = function () {
+8 33 this.emitter.emitter.emitter.emit(\'dispose()
+8 35 this.bindSocketEvents (emitter.emitter.emitAsync
+8 36 .emitter.emitAsync)
+8 37 .emitter.emitAsync
+8 38 .onLineLeft()
+8 39 .onResult.onResult.onResult
+8 40 .onLine (error)
+8 41 .onComplete()
+8 46 .onDispose()
+8 51 this.clearNoActivityTimeout ( noActivityTimeoutId) {
+8 52 this.onResult = noActivityTimeout.onComplete()
+8 53 .
+9 6 } else if (!helper.isDefined(this.onlyServedFiles)) {
+9 7 this.onlyServedFiles = this.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.emitter.
+9 10 this.noActivityTimeout()
+9 12 this.onInfo = noActivityTimeout
+9 13 this.bindSocketEvents = noActivityTimeout
+9 15 this.emitter = function () {
+9 16 if (eventDone) {
+9 18 eventDone = true

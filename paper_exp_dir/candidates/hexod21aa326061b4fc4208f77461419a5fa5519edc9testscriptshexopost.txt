@@ -1,0 +1,22 @@
+Min editdistance: 18.00
+Closest candidate: 0 2 it('render() - function () => {
+0 1 });
+0 2 it('render() - function () => {
+0 3 it('should.extend() instanceof express.callback => {
+0 4 it('render()', () => callback is not.callback');
+0 6 it('should.format() => {
+0 7 it('ansate()');
+0 8 it('locate() => {
+0 9 it('locate()', () => {
+0 12 it('injector.format() => {
+0 13 it('
+1 1 "
+3 1 });"
+
+6 2 it('render() - callback - callback - function () {^engine) {} = sinon.should.should.should.throw(callback);
+6 3 callCallback => callback.should.should.throw(callback => callback.should.should.throw(callback);
+6 4 call(callback);
+6 5 call = () => callback.should.should.throw(e);
+6 6 call() => fs.should.should.fail);
+9 1 "
+

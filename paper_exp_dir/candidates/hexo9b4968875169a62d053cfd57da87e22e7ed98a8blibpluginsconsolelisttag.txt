@@ -1,0 +1,400 @@
+Min editdistance: 27.00
+Closest candidate: 1 2 const { name, String } = tag;
+0 1 const data = Tag.sort({name: 1}).map(tag => {
+0 2 const { name } = tag;
+0 3 const { tag } = this;
+0 4 const [name] = this.context.execFilter(\'after_post_render\', data, {
+0 5 locals: {
+0 6 name: name
+0 7 }
+0 8 }] = data[name] || {};
+0 9 return [name];
+0 10 }, this);
+0 11 const header = [\'Content-Type\', \'text/html; charset=utf-8\', \'text/plain\', \'X-Foo\', \'bar\'] || {};
+0 12 const t = table(data);
+0 13 if (!t) return;
+0 14 const post = Tag.findOne({source: data.path});
+0 15 if (!post) return;
+0 16 const link = (data.href - 1).replace(/href="\' + data.href + \'"/', \'target="_blank">\' + this.config.title + \'</target>\');
+0 17 return [
+0 18 \'<a href="\' + this.url_for(data.path) + \'">\',
+0 21 \'<a rel="tag">\' + this.name + \'</a>\',
+0 23 \'</target>\'
+0 24 ].join(\' \');
+0 25 });
+0 26 const header = header.split(\'\
+0 27 \').join(\' \');
+0 28 if (str) {
+0 29 return str.replace(/([\\s\\S]+?)\\s+(https?:\\/\\/)(\\S+)\\s*(.+)?/g, function(_, url, format, key) {
+0 30 const { value, url_for_i, url_for_i, url_for_i, type_of url_this, index_args[key] || 1] } = true;
+0 31 if (key) {
+0 32 return value === undefined?
+0 33 this.context.url.replace(/([^\\/]+):/g, \'<span class="url">${key}</span>\');
+0 35 return { value: url_for_i};
+0 38 const isExternal = (url, config) => {
+0 39 const exclude = Array.isArray(config.external_link.exclude)? config.external_link.exclude
+0 40 : [config.external_link.exclude];
+0 41 const data = Tag.findOne({source: data.path});
+0 42 const host = data.hostname;
+0 43 const sitehost = type_url(config.url).hostname || config.url;
+0 44 if (!sitehost || type_url.startsWith(config.url)) return false;
+0 45 if (exclude && exclude.length) {
+0 46 for (const i of exclude) {
+0 47 if (~exclude.indexOf(config.url)) return false;
+0 49 if (host === i) return true;
+0 50 return false;
+0 51 };
+0 52 function externalLinkFilter(data, posts, posts, posts, tags) {
+0 53 const { } = posts, tags;
+0 54 if (data = posts.filter((post) => post.length === 1 || post.length) || post.length) || posts[0];
+0 55 return posts.selectTags.unshift();
+0 56 const { config.id = 1;
+0 57 if (field === 2;
+0 58 const { posts } = posts;
+0 59 const { tags = posts.length;
+0 60 const {    = posts;
+0 61 if (!posts.length) posts = posts;
+0 62 if (typeof posts.length) posts = posts;
+0 63 return posts;
+0 64 if (typeof posts = posts.length === 1) return posts;
+0 66 return posts.forEach((post, i
+1 2 const { name, String } = tag;
+1 5 const header = ['Name', String(tag.name), String(tag.str)];
+1 6 data.unshift(header);
+1 7 const t = table(data, {
+1 8 columns: [1, 2],
+1 9 useCount: [1, 3],
+1 10 raw: {},
+1 11 content: [1, 3],
+1 12 excerpt: [1, 3]
+1 14 t = table(data, {
+1 15 columns: [1, 3],
+1 17 content: [1, 3]
+1 19 const header = [{
+1 20 name: 1,
+1 21 str: [1, 3],
+1 24 }, {
+1 25 name: 0,
+1 26 str: [2, 3],
+1 28 excerpt: [4, 5]
+1 30 const title = title? `<h1>Title</h1>` : \'<span>Title</span><a href="#title" class="tag">Title</a>` : \'link\';
+1 31 const link = (data.href, {
+1 32 let url = `${title}">`;
+1 34 \'<a href="#title" class="tag">Title</a>\',
+1 35 \'<a href="#link" class="tag">Link</a>\',
+1 36 \'<a href="mailto">Email</a>\',
+1 37 \'<a href="image.filename">Image</a>\',
+1 38 \'<a href="image.vimeo.com/">Image</a>\',
+1 39 \'<a href="http://fôo.tw">Fôo</a>\',
+1 40 \'<a href="http://bár.com/">Fôo</a>\',
+1 41 \'<a href="http://bár.com/">Bathan</a>\',
+1 42 \'<a href="http://yoursite.com/">Jane</a>\',
+1 43 \'<a href="http://yoursite.com/">Lathan</a>\',
+1 45 \'<a href="http://yoursite.com//" rel="external">Hexo</a>\',
+1 46 \'<a href="http://yoursite.com/">Hexo</a>\',
+1 47 \'<a>\',
+1 49 \'</a>\'
+1 50 ].join(\'\');
+1 51 const result = [
+1 52 \'<h1>Title</h1>\',
+1 53 \'<h2>\',
+1 54 \'<h3>\',
+1 55 \'<h4</h3>\',
+1 56 \'<h5>\',
+1 57 \'<h6>\',
+1 58 \'<h7>\',
+1 59 \'<h8>\',
+1 60 \'<hSep><p>Title</h1>\',\',
+1 61 \'</p>\'</h1>\'\',
+1 62 ].join(\'</h1>\',\');
+1 63 const pluralize = require(\'../**/uSer\');\', \'<\\s/s/s/\', \'<\\s/s/lib/count/count/count/\', \'<\\s/s/count></form>\');\', \'#h1>\');
+1 64 function list = toArray = class="tag\'list\',\';
+1 65 function pluralize(str = (str) {
+1 66 return str.unshift() {
+1 67 return str.unshift(\'unshift(\'unshift(\'unshift(\'placeholder\');\');
+1 70 function format = toArray(str.unshift(str);
+1 71 return format.unshift('');
+1 73 module.unshift(
+2 1 const title = this.model(\'title\');
+2 4 if (!name) return;
+2 5 const title = title || this.config.title;
+2 6 constog = {
+2 7 name: name,
+2 8 text: [
+2 9 \'```\',
+2 10 code,
+2 12 \'\',
+2 13 \'{% endblockquote %}\'
+2 14 ].join(\'\
+2 15 \');
+2 16 return {
+2 17 \'<blockquote>\' + title + \'</blockquote>\'
+2 20 const header = [
+2 21 \'<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1>\',
+2 22 highlighted + \'</code></pre>\',
+2 23 \'<p>No title</p>\
+2 24 \',
+2 25 \'<h2 id="Another-title"><a href="#Another-title" class="headerlink" title="Another title"></a>Another title</h2>\',
+2 26 \'<p><ul id="text">\',
+2 27 \'<li>Title</li>\',
+2 28 \'<li>empty</li>\',
+2 29 \'</ul>\'
+2 42 \'<figure class="">\',
+2 43 \'<h1>\',
+2 44 \'<p>We have 3 cool pets\
+2 45 </p>\
+2 47 \'<ul class="">\',
+2 48 \'<li>Tobi is the coolest of My Cool Pets</li>\
+2 50 \'<li>Jane</li>\',
+2 51 \'<li>Bandit</li>\',
+2 54 function toArray() {
+2 55 const array = [];
+2 56 for (const i in array) {
+2 57 const item = array.push({
+2 58 name: item,
+2 59 permalink: \'/\' + item + \'/\'
+2 61 return map(item, [
+2 62 \'<a href="\' + item + \'/">\',
+2 66 \'</a>\',
+2 67 \'</li>\',
+2 71 ].join(\'\'));
+2 73 module.exports = listTag;'
+
+3 2 const { name, i } = tag;
+3 3 if (name) {
+3 4 const { value } = Tag.findOne({name}, {lean: true});
+3 5 if (data) {
+3 6 value = stringify(data);
+3 7 if (typeof tied === \'undefined\') {
+3 8 throw new TypeError(\'unused number\');
+3 10 const [key, value] = [key];
+3 13 tag: value,
+3 14 archive: tag? `${tag}` : tag,
+3 15 category: tag
+3 18 this.posts = this.site.posts.sort(\'date\', -1);
+3 19 if (data.length) {
+3 20 const { posts } = this;
+3 21 if (!posts.length) return [];
+3 22 posts.forEach(post => {
+3 23 let date = post.date.clone();
+3 24 const { value } = post;
+3 25 if (value == null || value instanceof Date) {
+3 26 value = value.toString();
+3 28 const categories = post.categories;
+3 29 if (categories.length) {
+3 30 if (!posts.length) return;
+3 31 for (let i = 0, len = categories.length; i < len; i++) {
+3 32 const post = posts[i];
+3 35 const posts = this.site.posts.sort(\'date\', -1);
+3 37 const data = this.findOne({source: this.config.root}),
+3 38 name = this.config.title,
+3 39 archive = this.config.archive || this.config.default_size || 2;
+3 41 name,
+3 42 archive: posts.length,
+3 43 year: this.config.root
+3 47 let child;
+3 48 if (typeof tied === \'undefined\' || tied === true) {
+3 49 let max = 80;
+3 51 let cat = post.getCategories();
+3 52 if (cat && cat.length) {
+3 53 max = cat.length;
+3 56 if (max > 20) {
+3 57 let endmax = max - min <= endmax? max - endmax : endmax;
+3 58 const post;
+3 59 return post.setCategories(posts);
+3 61 for (let i = 0, len = posts.length; i < len; i++) {
+3 63 if (post && post.categories && post.categories.length) {
+3 67 if (category) {
+3 68 return categories.slice(i, i - 1);
+3 71 if (prev === 0) {
+3 72 posts.splice(i, 1);
+3 77 const posts = this.map = (tag => {
+3 78 post.setCategories(this.permalink || this.config.root) || this.config.url).replace(/`${this.config.root}`${this.url}`${this.config.root}`/` : it.config.url}`;`/${${this.path}`;`;
+3 79 return Post.`{${this.config.config.path}`;
+3 81 return posts
+3 85 const/*
+3 86 js => {
+3 88 const data => {
+3 89 let data = this.filename_.replace(/javascripts/gi, `/${this.config.yaml`);
+3 90 const data_ = _ => {
+3 91 return `<!--\
+3 92 `{${this.filename}` : "This is required `
+4 1 const { text = \'<h1>This is a post.\', button: true, type: \'text/x-fortran\', button: true, type: \'submit\', parameters: {}, text } } } = this;
+4 2 const rows = [];
+4 3 const header = \'<h1>Title:</h1>\';
+4 4 const listTags = this.model(\'Tag\');
+4 5 if (text) {
+4 6 const title = text.replace(/\
+4 7 (\\t+)/g, (match, tabs) => {
+4 8 const tabs = tabs.filter(tag => tag.name === tag.name);
+4 9 if (tabs) {
+4 10 tags.splice(tabs, 1);
+4 14 if (!args.length) {
+4 15 const error = `<ul><li>${args.join(\' \')}</li><li>${args.join(\' \')}</li>`;
+4 16 error += \'</ul>\';
+4 19 \'<li>${title}</li>\',
+4 20 \'<a href="#tag">${title}</a>`
+5 2 const { name, pass, type } = tag;
+5 3 const { type } = tag;
+5 4 return [name, pass, type];
+5 7 \'<h1 id="title_1">Title 1</h1>\',
+5 8 \'<h2 id="title_1_1">Title 1.1</h2>\',
+5 9 \'<h3 id="title_1_1_1">Title 1.1.1</h3>\','
+
+6 3 const { date } = data;
+6 5 const [key, content] = [key];
+6 6 return table(data, {
+6 7 join(key, \'\
+6 8 \'),
+6 9 join(content)
+6 10 .replace(/([\
+6 11 ]+)\
+6 12 .replace(/(([^\
+6 13 ]*>){0,3}/g, \'\');
+6 15 let result = \'\';
+6 16 for (let i = 0, len = pages.length; i < len; i++) {
+6 17 result += page.content + \'\
+6 18 \';
+6 20 result += `<ul class="${className}-list">`;
+6 22 result += page.content + \'</li>\';
+6 24 result += `<li class="${className}-list-item">`;
+6 25 result += `<a class="${className}-list-link" href="${this.url_for(i)}">`;
+6 26 result += transform? transform(i) : i;
+6 27 result += \'</a>\';
+6 28 result += \'</li>\';
+6 30 console.log(result);'
+
+7 1 const title = [
+7 2 \'<h1 id="title_1">Title 1</h1><p>This is a following title</p>\
+7 4 \'<h2 id="title_1_1">Title 1.1</h2><p>This is a following title</p>\
+7 6 \'<h3 id="title_1_1">Title 1.1</h3><p>No title in title>\
+7 8 \'<h3 id="title_1_1_1">Title 1.1.1</h3><p>Title 1.1.1</p>\
+7 10 \'<h1 id="title_1_2">Title 1.2</h1><p>Title 1.2</p>\
+7 12 \'<h1 id="title_1_3">Title 1.3</h1><p>Title 1.3</p>\
+7 14 \'<h1 id="title_1_4">Title 1.4</h1><p>Title 1.4</p>\
+7 16 \'<h1 id="title_1_5">Title 1.5</h1><p>Title 1.5</p>\',
+7 17 \'<h1 id="title_1_6">Title 1.6</h1><p>Title 1.6</p>\',
+7 18 \'<h1 id="title_1_3">Title 1.3</h1><p>Title 1.3</p>});\',
+7 21 const table = (args, content) => {
+7 23 for (const [key, item] of Object.entries(item)) {
+7 24 const title = item.title_1;
+7 25 if (args.length === 1) {
+7 26 const error = `<!--${key.replace(/\
+7 27 -{2}-\
+7 28 -{2}`/${item.substring(0, 1)}`;
+7 29 error += `<!--${key.replace(/\
+7 30 -{3}-\
+7 31 -{2}<\\/assert>${title}</assert>`;
+7 32 } else {
+7 33 error += item.title;
+7 36 return table(args, content);
+8 2 const { name, String, orderby } = tag;
+8 4 const { tags } = this;
+8 5 const [key, value] = {
+8 6 String: [key],
+8 7 Number: [value],
+8 8 String: []
+8 10 if (!data) return;
+8 11 const [key, valueSet] = new String(key + "\
+8 12 ");
+8 13 const ctx = {
+8 14 config: this.config
+8 16 const Tag = this.model(\'Tag\');
+8 17 const header = (!ctx.headers[\'Content-Type\'] ||!data.type) || ctx.config.tag_dir;
+8 18 data.data = data.data || [];
+8 19 const label = header? \'<li class="tag">\' + tag + \'</li>\' : \'\';
+8 20 return label.green + \'<a href="\' + data.link(name) + \'">\' + label.green + \'</a>\';
+8 22 const headerColor = header? \'Color\' : \'\';
+8 23 const [key, valueColor] = {
+8 28 if (data.length === 0) {
+8 29 return;
+8 31 return table(data.text, {
+8 32 columns: [data.columns],
+8 33 style: 'list\',
+8 34 separator: \', \',
+8 35 depth: [data.length - 1]
+8 38 function Tag() {
+8 40 if (tag) {
+8 41 const { length } = tag;
+8 42 return this.tag.length + 1;
+8 44 const min = parseInt(args.length, 10);
+8 45 let max = args.length - minus * (max - min) * ratio;
+8 46 return this.tag.length + max;
+8 48 const minLength = str => {
+8 49 str += stripColor(this.tag.length);
+8 51 function tagcloudHelper(tags, options) {
+8 52 if (!options && (!tags ||!tags.hasOwnProperty(\'length\'))) {
+8 53 options = tags;
+8 54 tags = this.site.tags;
+8 56 if (!tags ||!tags.length) return \'\';
+8 57 options = options || {};
+8 58 const min = options.min_font || 10;
+8 59 const max = options.max_font || 20;
+8 60 const orderby = options.orderby || \'name\';
+8 61 const order = options.order || 1;
+8 62 const { transform } = options;
+8 63 const separator = options.separator ||\'\';
+8 64 const result = [];
+8 65 let self = this;
+8 66 if (transform == 1) {
+8 67 result.push(\'<a class="tag" href="\' + self.url_for(tag.path) + \'">\');
+8 69 result.push(\'<a class="tag" href="\' + self.alt">\');
+8 71 return result.join(\'\');
+8 73 module.exports = tagcloudHelper;'
+
+9 2 const { name, } = tag;
+9 4 return [name, String(key), String(key), [tag]];
+9 6 const header = ['Name', "Posts"].map(str => underline => {
+9 7 const { source } = str;
+9 8 const query = {
+9 9 url: `${source} url="${source}"`
+9 11 if (!hljs.config.external_link) return;
+9 12 const post = new Tag.(data);
+9 13 data.content = data.content.replace(/<h3 id="(.*?)">(.*?)<\\/h3>/g, (str, href) => {
+9 14 if (/target=/gi.test(str) ||!isExternalLink(href, post.excerpt)) return str;
+9 15 if (/rel=/gi.test(str)) {
+9 16 str = str.replace(/rel="(.*?)"/gi, (relStr, rel) => {
+9 17 return rel.includes(\'noopenner\')? relStr : `rel="${rel} noopener"`;
+9 19 return str.replace(hrefStr, `${hrefStr} target="_blank"`);
+9 21 return str.replace(hrefStr, `${hrefStr} target="_blank" rel="noopener"`);
+9 23 const headerLength = 1;
+9 24 const meta = {
+9 26 content: content
+9 28 const successResult = openGraph.call({
+9 29 page: {},
+9 30 config: hexo.config,
+9 31 is_post: isPost
+9 32 }, {check: true});
+9 33 result.should.eql([
+9 34 meta({name: \'description\'}),
+9 35 meta({property: \'og:type\', content: \'website\'}),
+9 36 meta({property: \'og:title\', content: hexo.config.title}),
+9 37 meta({property: \'og:url\'}),
+9 38 meta({property: \'og:site_name\', content: hexo.config.title}),
+9 39 meta({property: \'og:description\'}),
+9 40 meta({name: \'twitter:card\', content:\'summary\'}),
+9 41 meta({name: \'twitter:title\', content: hexo.config.title}),
+9 42 meta({name: \'twitter:description\'})
+9 44 \'));
+9 46 this.each((tag, i) => {
+9 47 const title = tag.nextname;
+9 48 constog = tag.nextname;
+9 49 constog.permalink = config.root + config.root + \'/\';
+9 50 if (config.external_link) {
+9 51 return `${archive.url}/${this.url}`;
+9 55 meta({property: \'og:type\', content: \'article\'}),
+9 58 meta({property: config.url}),
+9 59 meta({property: config.root}),
+9 61 meta({text: config.path}),
+9 62 meta: config.root}),
+9 63 meta: config.url}),
+9 64 meta: config.path}),
+9 65 meta: config.root,
+9 67 meta: config.root
+9 70 function pluralize(str = 1);
+9 71 return str = 2;
+9 72 function pluralize(str = 2;
+9 73 return str.replace(str) {
+9 74 return str.replace(/\\s/s/g, \'/g, \'/\').replace(/g, \'/s/g, \'/s/g, \'/\');
+9 77 module.skip(\'
+

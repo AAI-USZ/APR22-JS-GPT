@@ -1,0 +1,149 @@
+Min editdistance: 1.00
+Closest candidate: 4 1 sep = require('path').sep,
+0 1 sep = require('path').sep;
+0 2 module.exports = function(callback){
+0 3 var pluginDir = hexo.plugin_dir;
+0 4 async.series([
+0 5 function(next){
+0 6 fs.exists(pluginDir, function(exist){
+0 7 if (exist){
+0 8 file.dir(pluginDir, function(files){
+0 9 async.forEach(files, function(item, next){
+0 10 require(pluginDir + item);
+0 11 next();
+0 12 }, next);
+0 13 } else {
+0 15 }
+0 16 });
+0 17 },
+0 27 }], callback);
+0 29 ], callback);
+0 30 };"
+
+1 4 if (!hexo.config) return callback();"
+
+2 3 file.read(__dirname + '/../package.json', function(err, json){
+2 4 if (err) throw err;
+2 5 console.log('hexo:', hexo.version);
+3 13 if (hexo.config) return next();
+4 1 sep = require('path').sep,
+4 2 extend = require('./extend'),
+4 3 util = require('./util'),
+4 4 file = util.file,
+4 5 spawn = util.spawn;
+4 6 module.exports = function(args){
+4 7 var target = process.cwd();
+4 8 if (args[0]) target = path.resolve(target, args[0]);
+4 9 async.parallel([
+4 11 file.mkdir(target + '/themes', function(){
+4 12 spawn({
+4 13 command: 'git',
+4 14 args: ['clone', 'git://github.com/tommy351/hexo-theme-light.git', target + '/themes/light'],
+4 15 exit: function(code){
+4 16 if (code === 0) next();"
+
+5 5 console.log('hexo:', parseInt(json.name || 'package.json'), 10));
+5 7 file.write(hexo.config_path, json, callback);
+5 8 });"
+
+6 16 if (code === 0) next();
+6 22 file.mkdir(target + '/source', function(){
+6 25 file.mkdir(target + '/source/_posts', next);
+6 28 file.mkdir(target + '/source/_stash', next);
+6 30 ], next);
+6 34 var config = [
+6 35 '# Basic',
+6 36 'title: Hexo',
+6 37 'subtitle: Fastest blogging framework',
+6 38 'description:',
+6 39 'url: http://yoursite.com',
+6 40 'author: John Doe',
+6 41 'email:',
+6 42 '',
+6 43 '# Permalink',
+6 44 'root: /',
+6 45 'permalink: :year/:month/:day/:title',
+6 46 'tag_dir: tags',
+6 47 'archive_dir: archives',
+6 48 'category: posts',
+6 50 '# Server',
+6 51 'port: 4000',
+6 53 '# Date / Time format',
+6 54 '# Hexo uses Moment.js to parse and display date',
+6 55 '# Reference: http://momentjs.com/docs/#/displaying/format/',
+6 56 'date_format: MMM D, YYYY',
+6 57 'time_format: H:mm:ss',
+6 59 '# Pagination',
+6 60 'per_page: 10',
+6 61 'pagination_dir: page',
+6 63 '# Disqus',
+6 64 'disqus_shortname:',
+6 66 '# Extensions',
+6 67 'theme: light'
+6 68 ];
+6 69 file.write(target + '/_config.yml', config.join('\
+6 70 '), next);
+6 72 ], function(){
+6 73 console.log('Hexo is initalized.');
+7 4 file = util.file;
+7 6 var safe =!!args.safe,
+7 7 debug =!!args.debug,
+7 8 dirname = __dirname,
+7 9 baseDir = hexo.base_dir,
+7 10 publicDir = hexo.public_dir;
+7 11 var hexo.__proto__ = parent.toString();
+7 12 if (args.s &&!args.static){
+7 13 app.use(express.static(publicDir));
+7 15 app.use(function(req, res, next){
+7 16 res.header('x-powered-by', 'Hexo');
+7 19 app.use(express.compress());
+7 20 app.use(file.readFile(baseDir + 'public')));
+7 25 app.use(function(err, req, res, next){
+7 27 res.render('page');
+7 30 res.render('index');
+7 34 res.render('404');
+7 40 res.render('error', err.message);
+7 42 if (!args.s &&!args.static){
+7 43 app.get(source + ':' + args.static, function(req, res){
+7 44 res.redirect(res.root());
+7 47 res.redirect(baseDir + 'public/' + args.root + '.std');
+7 50 app.use(function(req, res){
+7 53 if (404!== req.url.indexOf('?') > 0) {
+7 54 res.redirect(res.root + 'index.html');
+7 56 res.redirect(baseDir + 'public/jquery');
+7 60 res.send(err.message);
+7 65 if (!args.length){
+7 66 process.nextTick(function(){
+7 69 } catch (err.cancel();
+7 71 };
+8 5 console.log('hexo version:'+ p.version);
+9 4 var command = function(comm, args, callback){
+9 5 spawn(comm, args, callback);
+9 7 module.exports = function(args, callback){
+9 8 var baseDir = hexo.base_dir,
+9 9 deployDir = path.join(baseDir, '.deploy'),
+9 11 if (!args.repo &&!args.repository){
+9 12 var help = [
+9 13 'You should configure deployment settings in _config.yml first!',
+9 15 'Example:',
+9 16 '  deploy:',
+9 17 '    type: git',
+9 18 '   repository: <repository url>',
+9 20 'For more help, you can check the docs:'+ 'http://zespia.tw/hexo/docs/deployment.html'.underline
+9 22 console.log(help.join('\
+9 23 '));
+9 24 return callback();
+9 26 var url = args.repo || args.repository;
+9 29 var files = ['app.js', 'Procfile'];
+9 31 var src = path.join(__dirname, item);
+9 32 fs.exists(dest, function(exist){
+9 34 }, next());
+9 37 file.empty(dest, next());
+9 40 var commands = [
+9 41 ['init'],
+9 42 ['remote', 'add', 'heroku', 'heroku_data', 'git', 'openshift'],
+9 43 ['add', '-A', '.'],
+9 44 ['commit', '-m', 'Site updated:'+ moment().format('YYYY-MM-DD HH:mm:ss')],
+9 45 ['push', remote, branch, '--force']
+9 47 async.forEachSeries(commands, function(item, next){
+9 48 run('git', item, function(){

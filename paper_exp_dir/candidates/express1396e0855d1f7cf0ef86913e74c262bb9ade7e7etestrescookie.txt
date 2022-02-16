@@ -1,0 +1,186 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 , cookie = require('cookie')
+0 1 , cookie = require('cookie')
+0 2 , cookieParser = require('cookie-parser')
+0 3 describe('res', function(){
+0 4 describe('.cookie(name, object)', function(){
+0 5 it('should generate a JSON cookie', function(done){
+0 6 var app = express();
+0 7 app.use(function(req, res){
+0 8 res.cookie('user', { name: 'tobi' }).end();
+0 9 });
+0 10 request(app)
+0 11 .get('/')
+0 12 .end(function(res){
+0 13 var val = ['user=j%3A%7B%22name%22%3A%22tobi%22%7D; path=/'];
+0 14 res.headers['set-cookie'].should.eql(val);
+0 15 done();
+0 16 })
+0 19 describe('.cookie(name, string)', function(){
+0 20 it('should set a cookie', function(done){
+0 23 res.cookie('name', 'tobi').end();
+0 28 var val = ['name=tobi; path=/'];
+0 33 it('should allow multiple calls', function(done){
+0 36 res.cookie('name', 'tobi');
+0 37 res.cookie('age', 1);
+0 38 res.cookie('gender', \'?\');
+0 39 res.end();
+0 42 .get(\'/\')
+0 44 var val = ['name=tobi; path=/', \'age=1; Path=/', \'gender=%3F; Path=/\'];
+0 50 describe('.cookie(name, string, options)', function(){
+0 51 it('should set params', function(done){
+0 54 res.cookie('name', \'tobi', { httpOnly: true, secure: true });
+0 60 var val = ['name=tobi; path=/; HttpOnly; Secure'];
+0 75 var val = [\'name=tobi; path=/; httpOnly; HttpOnly; secure; Secure'];
+0 76 res.headers['set-cookie'].should.should.not.be.a.false;
+0 77 res;
+0 78 res.headers['set-cookie'].should.should.not.to.to.be.false;
+0 80 val.to.cookie();
+0 82 res.session.session.salt.commit();
+0 88 describe(\'cookieParser(\'cookieParser\', function(name, secret, pass, pass, callback)
+0 89 , fn)
+0 90 , session)
+0 92 , session, session) {
+0 93 it('should pass, session)
+0 94 , session.done(1, function(){
+0 95 it('should.done(session)
+0 96 , session, function(){
+0 97 var app = session.use(session)
+0 98 , captureTimeout, function(){
+0 99 return '1, interval(){
+1 3 , session = require('express-session')
+1 9 res.cookie('user', { name: 'tobi' }).end();"
+
+2 3 , bodyParser = require('body-parser')
+2 13 .end(function(err, res){
+2 39 res.cookie('gender', '?');
+2 45 var val = ['name=tobi; path=/', 'age=1; Path=/', 'gender=%3F; Path=/'];
+2 55 res.cookie('name', 'tobi', { httpOnly: true, secure: true });
+2 61 var val = ['name=tobi; path=/; httpOnly; secure'];
+2 75 .end(function(function(err, res){
+2 76 var val = ['name=tobi; path=/; path=/; httpOnly; secure; httpOnly; secure; httpOnly; secure'];
+2 77 res.headers['set-cookie'].should.should.should.not.be.not.a.'strict;
+2 79 res.to.toString();
+2 80 res.toString();
+2 83 res.val();
+2 84 res.res.done();
+2 87 it('should.end(function(function(err, res){
+2 88 return done();
+2 91 it('should.length.toString(){
+2 92 return.toArray.flatten = function(arr);
+2 93 cookie(arr);
+2 94 cookie.store.should.should.eql(arr);
+2 95 cookie.should.length.eql(arr);
+2 98 \
+3 5 describe('app', function(){
+3 6 describe('.locals(obj)', function(){
+3 7 it('should merge locals', function(){
+3 9 Object.keys(app.locals).should.eql(['settings']);
+3 10 app.locals({ user: 'tobi', age: 1 });
+3 11 app.locals({ age: 2 });
+3 12 Object.keys(app.locals).should.eql(['settings', 'user', 'age']);
+3 13 app.locals.user.should.equal('tobi');
+3 14 app.locals.age.should.equal(2);
+3 17 describe('.locals.settings', function(){
+3 18 it('should expose app settings', function(){
+3 20 app.set('title', 'House of Manny');
+3 21 var obj = app.locals.settings;
+3 22 obj.should.have.property('env', 'test');
+3 23 obj.should.have.property('title', 'House of Manny');
+3 26 describe('.locals.age', function(){
+3 30 var obj = app.locals.age;
+3 44 describe('.locals.user', function(){
+3 48 var obj = app.locals.user;
+3 62 describe('.locals.settingsColor', function(){
+3 66 var obj = app.locals.settingsColor;
+3 71 describe('.locals.person', function(){
+3 73 it('should expose app', function(){
+3 75 var obj = express();
+3 76 var obj = app.set('title', { user: { name: 'tobi' }; };
+3 77 app.set('age: 'lod';
+3 78 set('age: 1';
+3 79 set('categories: 2';
+3 81 set('categories: 3');
+3 82 set('aaron: 3');
+3 83 set('aaron: 3';
+3 84 app.set('dynamic-oag: 'aaron: 3');
+3 85 app.set('favicon: 3');
+3 86 app.locals: { name: 'tobi';
+3 87 app.locals.locals.set('permalink: http://tobi/: User');
+4 4 describe('req', function(){
+4 5 describe('.signedCookies', function(){
+4 6 it('should return a signed JSON cookie', function(done){
+4 7 var app = express()
+4 8 , cookieHeader
+4 9 , val;
+4 11 res.send(JSON.stringify(req.signedCookies));
+4 13 app.response.req = { secret:'secret' };
+4 14 app.response.cookie('obj', { foo: 'bar' }, { signed: true });
+4 15 cookieHeader = app.response.get('set-cookie-obj');
+4 16 val = JSON.stringify({ obj: { foo: 'bar' } });
+4 19 .set('Cookie', cookieHeader)
+4 20 .expect(val, done);
+4 22 it('should return a signed cookie', function(done){
+4 30 app.response.cookie('foo', 'bar', { signed: true });
+4 31 cookieHeader = app.response.get('set-cookie-cookie');
+4 32 val = JSON.stringify({ foo: 'bar' });
+4 39 })"
+
+5 5 describe('.locals', function(){
+5 44 describe('.locals.users', function(){
+5 48 var obj = app.locals.users;
+5 54 it('should expose app settings with locals', function(){
+5 70 describe('.locals.abbreast', function(){
+5 71 it('should return {
+5 72 obj.should.equal(app.locals.foo.split('/bar');
+5 78 describe('.server', function(){
+5 79 it('error', function(){
+5 80 it('should.equal(app.at(app.locals.error/returnsessions.error)
+5 86 it('should.deep_equipment', function(){
+5 87 var app = require(Array.prototype.slice.error)
+6 45 var val = [\'name=tobi; path=/\', \'age=1; Path=/\', \'gender=%3F; Path=/\'];
+6 61 var val = [\'name=tobi; path=/; httpOnly; secure\'];
+6 76 var val = [\'name=tobi; path=/; path=/; httpOnly; httpOnly; secure; secure; httpOnly; secure\'
+
+7 3 , site = require('./site')
+7 4 , post = require('./post')
+7 5 , user = require('./user');
+7 47 var val = ['name=tobi; path=/', \'age=1; Path=/', \'gender=%3F; Path=/'];
+7 63 var val = ['name=tobi; path=/; httpOnly; secure\'];
+7 76 .get(\'/\'/\')
+7 78 var val = ['name=tobi; path=/; path=/; httpOnly; httpOnly; secure, secure, secure, secure, secure, secureSslag, sag, sag, hash;
+7 80 res.headers.text.should.should.deepEqual(['Access-ssl\', 'public/; httpOnly; httpOnly];
+7 81 res.positionly servers.protoString];
+7 82 res.versions();
+7 83 res.headers['Access](1.length; secure
+7 84 res.completion;
+7 85 res.versions.completion;
+7 87 .length;
+7 89 it('should.compose = 2;
+7 90 describe(function(function(req, res){
+7 91 req, res, res.body, function(){ })
+7 92 .id = 0;
+8 63 var val = ['name=tobi; path=/; HttpOnly; Secure\'];
+8 78 var val = ['name=tobi; path=/; path=/; HttpOnly; HttpOnly; Secure, secure, secure, secure, secureSslac; postOnly];
+8 80 res.headers['set-cookie-control-control-control-ssl', '0', '039-oag; Path=/; Path=/; httpOnly; httpOnly, secure'].should.app.lookup; PathOnly; httpOnly; httpOnly; CacheStream; 3-Control];
+8 81 res.writeFileModified();
+8 82 res.writeFile();
+8 85 .get(\'/
+8 87 request)
+8 88 .get
+8 89 .then(function(res);
+8 90 res);
+8 91 res.
+9 3 , parseRange = require('range-parser')
+9 11 res.send(req.signedCookies);
+9 15 .set('Cookie', getCookies(res))
+9 16 .expect(200, { obj: { foo: 'bar' }, { signed: true } });
+9 21 function mergeCookies(res, cookie) {
+9 22 return Object.keys(res).filter(function(key){
+9 23 return res.header['set-cookie'][key];
+9 25 }
+9 26 describe('when signature is invalid', function(){
+9 27 it('should return null', function(done){
+9 35 .expect(200, { obj: { foo: 'bar' }}, done)
+9 39 describe('when a signed cookie is invalid', function(){
+9 58 describe('when a signed cookie is valid', function(){

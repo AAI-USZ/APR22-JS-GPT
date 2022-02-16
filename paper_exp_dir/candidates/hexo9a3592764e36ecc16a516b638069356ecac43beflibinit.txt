@@ -1,0 +1,378 @@
+Min editdistance: 21.00
+Closest candidate: 0 15 var defaultConfig = {
+0 1 var extend = require('./extend');
+0 2 var Render = require('./render');
+0 3 var registerModels = require('./register_models');
+0 4 var Post = require('./post');
+0 5 var Scaffold = require('./scaffold');
+0 6 var Source = require('./source');
+0 7 var Router = require('./router');
+0 8 var Theme = require('../theme');
+0 9 var Locals = require('./locals');
+0 10 var defaultConfig = require('./default_config');
+0 11 var loadDatabase = require('./load_database');
+0 12 var libDir = path.dirname(__dirname);
+0 13 var sep = path.sep;
+0 14 var dbVersion = 1;
+0 15 var defaultConfig = {
+0 16 permalink: ':year/:month/:day/:title/',
+0 17 title: 'Hexo version',
+0 18 'date': {
+0 19 type: 'year',
+0 20 language: 'en',
+0 21 urlRoot: '/' + sep
+0 22 },
+0 23 logger: function(req, res, next){
+0 24 var id = req.params.id;
+0 25 var PostAsset = new Class({
+0 26 _id: id,
+0 27 slug: body,
+0 28 post: function(req, res, next){
+0 29 req.post = post;
+0 30 if (!post) return next();
+0 31 post.create({
+0 32 title: post._id,
+0 34 path: urlRoot + post.path,
+0 35 modified: post.modified == null? true : false,
+0 36 post_asset: post._id
+0 37 });
+0 38 var path = loadDatabase(this);
+0 39 next();
+0 40 }],
+0 41 describe: function(next){
+0 42 var db = new Database({
+0 43 version: dbVersion,
+0 44 path: exports.data = {};
+0 45 var dbPath = path.join(dbPath, 'db.json');
+0 46 var pathType = typeof db.Types === 'function'? db.Types : {};
+0 47 var model = hexo.model;
+0 48 var path = path.replace(/\\.\\/|\\.\\$$/, '/');
+0 49 model.extend = {
+0 50 version: version,
+0 51 path: path,
+0 52 content: post.content
+0 53 };
+0 54 model.register = function(req, res, next){
+0 55 if (!req.env.init) return next();
+0 56 var args = _.toArray(arguments);
+0 57 var key = args.shift();
+0 58 if (!key) return next();
+0 59 res.locals.set('posts', dbPath);
+0 60 if (!res.hasOwnProperty(post.path)) return next();
+0 61 res.locals.set('pages', dbPath);
+0 62 res.render('pages', { layout: false });
+0 64 model.register(req, res, next);
+0 65 }
+0 67 model.remove = function(req, res, next){
+0 69 var path = req.params.path;
+0 70 if (!path) return next();
+0 71 var doc = Post.create({
+0 72 source: data.create({source: data.path,
+0 73 _id: path});
+0 75 if (!doc.save();
+0 76 doc.next();
+0 77 doc.replace();
+0 78 doc(Post.skip('/doc, function(req, res, next);
+0 84 module.exports.create();"
+
+1 2 module.exports = function(cwd, args, callback){
+1 3 if (typeof callback!== 'function') callback = defaultConfig.delete;
+1 4 if (args) hexo.call(this, args);
+1 5 var hexo = global.hexo = new Hexo(),
+1 6 configfile = args.config || '_config.yml';
+1 7 hexo.bootstrap(targets, options);
+1 8 hexo.configfile = path.join(this.base_dir, configfile);
+1 9 async.eachSeries([
+1 10 'logger',
+1 11 'extend',
+1 12 'config',
+1 13 'update',
+1 14 'database',
+1 15 'plugins',
+1 16 'scripts'
+1 17 ], function(name, next){
+1 18 require('./loaders/' + name)(next);
+1 19 }, function(err){
+1 20 if (err) throw err;
+1 21 hexo.emit('ready');
+1 22 var command = args._.shift();
+1 23 if (command){
+1 24 var c = hexo.extend.console.get(command);
+1 25 if (!c || (!hexo.env.init &&!c.options.init)){
+1 26 command = 'help';
+1 27 }"
+
+2 1 var cli = require('./cli');
+2 3 if (typeof callback!== 'function') callback = function(){};
+2 4 var hexo = global.hexo = new Hexo();
+2 5 var configfile = args.config || '_config.yml';
+2 6 hexo.bootstrap(cwd, args);
+2 7 hexo.configfile = path.join(hexo.base_dir, configfile);
+2 20 hexo.emit('ready');"
+
+3 15 LOG_DISABLE: 1,
+3 16 LOG_ERROR:  1,
+3 17 LOG_WARN:   2,
+3 18 LOG_INFO:   3,
+3 19 LOG_DEBUG:  4,
+3 20 JASMINE: __dirname,
+3 21 JASMINE_ADAPTER: __dirname
+3 23 var createLoadTheme = function(generatorResult, next) {
+3 24 var themeDir = new Theme(generatorResult.files, {silent: true});
+3 25 fs.exists(themeDir, function(exist) {
+3 26 if (!exist) return next();
+3 27 render.create(themeDir + sep, function(err, result) {
+3 28 if (err) return callback(HexoError.wrap(err, 'Theme configuration load failed'));
+3 29 log.d('Theme configuration loaded');
+3 34 var findConfigPath = function(path, callback) {
+3 35 var configPath = path.join(hexo.base_dir, path);
+3 36 fs.exists(configPath, function(exist) {
+3 37 if (!exist) return callback(HexoError.wrap(err, 'Theme configuration load failed'));
+3 42 var processSource = function(data, done) {
+3 43 var source = data.source;
+3 44 var path = data.path;
+3 45 if (data.type === 'delete') {
+3 46 if (doc) {
+3 47 return doc.remove();
+3 49 return;
+3 51 if (source) {
+3 52 return checkPosts(source.substring(0, 1), function(err, posts) {
+3 53 if (err) return callback(HexoError.wrap(err, 'Source create failed:'+ source));
+3 54 files.forEach(function(post) {
+3 55 if (!filter.isPost()) return post;
+3 56 post.create(post.path, function(err, posts) {
+3 57 if (!posts.length) return;
+3 58 var data = Post.findOne({source: source});
+3 59 if (data) {
+3 60 data.tags.unshift(post.path);
+3 61 posts.splice(post.path, 1);
+3 62 log.d('Posts unshift(post.path);
+3 68 var processHexo = function(data, done) {
+3 69 var baseDir = hexo.base_dir;
+3 70 log.log.d('Hexo.log = log.log || log.d('Hexo.log');
+3 71 log.d('processingFiles loaded');
+3 72 processingFiles = fs.length = 0;
+3 73 processingFiles.nextensions.forEach(function(extensions, next) {
+3 74 processingFiles.for(extensions.for(extensions, function(extensions, require(extensions, require('./extensions'));
+3 75 processingFiles, require('./'s' +'s' + folder));
+3 76 async.forEach(function(extension, function(file, next) {
+3 77 var data, next();
+3 78 var dataPkg, next();
+3 79 var done(answatcher, infoDataStream, next);
+3 80 checkPkg, infoData.readFile(dataPkg, next);
+4 4 if (typeof callback!== 'function') callback = defaultConfig;
+5 12 var stopWatcher = box.watch;
+5 13 var consoleLog = logger.create('init');
+5 14 var command = function(comm, args, callback){
+5 15 spawn(comm, args, {cwd: baseDir});
+5 17 var scaffoldDir = path.join(baseDir, 'post');
+5 18 file.writeFile(file.source, 'test.md');
+5 19 before(function(){
+5 20 return hexo.init();
+5 22 after(function(){
+5 23 return hexo.cleanAll();
+5 25 it('create()', function(){
+5 26 var scaffoldPath = baseDir + 'test.md';
+5 29 return Promise.all([
+5 30 fs.exists(draftDir),
+5 31 fs.exists(draftDir)
+5 32 ]);
+5 34 it('create() - escape', function(){
+5 37 return scaffoldPath.then(function(){
+5 40 fs.exists(path.join(postDir, '.md'))
+5 42 }).then(function(){
+5 43 return hexo.extend.filter.exec('before_post_render', [
+5 44 {
+5 46 content: 'test'
+5 54 return hexo.extend.filter.exec('after_post_render', [
+5 66 it('create() - with content', function(){
+5 90 it('create()
+5 92 var scaffoldPath = baseDir = pathFn
+5 93 .then(function(){
+5 95 fs.writeFile(baseDir)
+5 96 .readFile(baseDir, 'test.md5)
+5 97 .then(function(function(err, content)
+5 98 .should.should.not.not.exist, function(){
+5 99 return Q.nreturn Q.n})
+5 100 .then(function(next){
+5 101 content.n
+5 102 ].should.not.not.exist(content.exist)
+5 103 .dir)
+5 104 .exists(content.dir)
+5 105 .exists(baseDir)
+5 106 .exists(path)
+5 109 .exists(path.exists(
+6 4 if (!Array.isArray(args)) args = [args];
+6 5 hexo.log.apply(cwd, args);
+6 6 if (hexo.env.init) {
+6 7 var packagePath = path.join(base, 'package.json');
+6 8 var config = cwd + '/',
+6 9 root = config.root;
+6 10 args.forEach(function(path){
+6 11 var port = args[0];
+6 12 if (config.permalink){
+6 13 if (config.port.replace(/\\/{2,}/g, '.')) break;
+6 14 } else {
+6 15 if (config.port.replace(/\\/{3,}/g, '..') return next();
+6 18 if (args. > 65535 || args.generate){
+6 19 hexo.call('generate', require('./render').renderFile);
+6 21 renderFile(app).then(function(){
+6 22 return loadDatabase(hexo);
+6 23 }, function(){
+6 25 fs.exists(packagePath),
+6 26 fs.listDir(packagePath),
+6 27 fs.unlink(packagePath)
+6 31 var logPath = path.join(base, 'log');
+6 32 return function(){
+6 33 return hexo.log.apply(logPath, args);
+6 35 };"
+
+7 1 var defaultConfig = require('./default-config');
+7 3 var baseDir = cwd + '/',
+7 4 logger = new Logger({
+7 5 id: 0,
+7 6 message: args,
+7 7 default: args[0]? {} : 'log',
+7 8 headers: {},
+7 9 stat: callback){
+7 10 var baseDir = cwd + '/' + args.tmpbar + 'Log',
+7 11 arr = [];
+7 12 var start = function(injector, config, launcher, globalEmitter, preprocess, fileList, webServer,
+7 13 resultReporter, capturedBrowsers, done) {
+7 14 config.frameworks.forEach(function(framework) {
+7 15 injector.get('framework:' + framework);
+7 17 var filesPromise = fileList.refresh();
+7 18 if (config.autoWatch) {
+7 19 filesPromise.then(function() {
+7 20 injector.invoke(watcher.watch);
+7 23 webServer.on('error', function(e) {
+7 24 if (e.code === 'EADDRINUSE') {
+7 25 log.warn('Port %d in use', config.port);
+7 26 config.port++;
+7 27 webServer.listen(config.port);
+7 29 throw e;
+7 32 var singleRunDoneBrowsers = Object.create(null);
+7 33 var singleRunBrowsers = new browser.Collection(new EventEmitter());
+7 34 var singleRunBrowserNotCaptured = false;
+7 35 webServer.listen(config.port, function(){
+7 36 log.info('Karma v%s server started at http://%s:%s%s', constant.VERSION, config.hostname,
+7 37 config.port, config.urlRoot);
+7 38 if (config.browsers && config.browsers.length) {
+7 39 injector.invoke(launcher.launch, launcher).forEach(function(browserLauncher) {
+7 40 singleRunDoneBrowsers[browserLauncher.id] = false;
+7 44 globalEmitter.on('browsers_change', function(){
+7 45 socketServer.sockets.emit('info', capturedBrowsers.serialize());
+7 47 globalEmitter.on('browser_register', function(browser) {
+7 48 launcher.markCaptured(browser.id);
+7 49 if (config.autoWatch && launcher.areAllCaptured()) {
+7 50 executor.schedule();
+7 53 socketServer.sockets.on('connection', function (socket) {
+7 54 log.debug('A browser has connected on socket'+ socket.id);
+7 55 var replySocketEvents = events.bufferEvents(socket, EVENTS_TO_REPLY);
+7 56 socket.on('register', function(info) {
+7 57 var newBrowser;
+7 58 if (info.id) {
+7 59 newBrowser = capturedBrowsers.id;
+7 60 newBrowser.state = Browser.STATE_DISCONNECTED;
+7 61 newBrowser.reconnectTIMING;
+7 62 if (config.singleRun) {
+7 63 newBrowser.execute(newBrowser.execute(config.name);
+7 66 socket.on('result', function() {
+7 67 if (singleRunBrowser.isSocketReconnected && config.id === null) {
+7 68 returns.id === null) {
+7 69 newBrowser.execute(newBrowser.execute(config.id);
+7 71 socket.emit('execute(newBrowser);
+7 74 var results = newBrowser.execute(newBrowser, i, socket);
+7 75 if (browsers.length = results.length === 1) {
+7 76 var results.exitCode = tests.exitCode = results.exitCode;
+7 77 clearResults.exitCode = false;
+8 4 logger = new Logger(),
+8 5 render = require('./render'),
+8 6 renderWithAsset = renderWithSource({source: baseDir});
+8 7 if (args._skipped) return callback();
+8 8 var target = args._skipped? path.resolve(baseDir, args._skipped) : baseDir;
+8 9 logger.setLevel(target, args._source);
+8 10 logger.useColors(defaultConfig? args.colorless : false);
+8 11 var Asset = function(id, callback){
+8 12 if (this._manager) return callback();
+8 13 var path = findAssetFolder(this._config.path);
+8 14 if (!path) return callback();
+8 15 path = path.replace(/\\\\/g, '/');
+8 16 return callback();
+8 18 Asset.prototype.read = function(source){
+8 19 if (this._source) return callback();
+8 20 var path = path.replace(/\\\\/g, '/');
+8 21 var config = this._config || {};
+8 22 this._path = path;
+8 23 if (this._render) return callback();
+8 24 var doc = Asset.findOne({source: source});
+8 25 if (data.type === 'delete'){
+8 26 if (doc){"
+
+9 15 function Hexo(base, args){
+9 16 base = base || process.cwd();
+9 17 args = args || {};
+9 18 EventEmitter.call(this);
+9 19 this.base_dir = base + sep;
+9 20 this.public_dir = base + sep;
+9 21 this.source_dir = base + sep;
+9 22 this.plugin_dir = base + sep;
+9 23 this.script_dir = base + sep;
+9 24 this.scaffold_dir = base + sep;
+9 25 this.theme_dir = base + sep;
+9 26 this.theme_script_dir = base + sep;
+9 27 this.env = {
+9 28 args: args,
+9 29 debug: Boolean(args.debug),
+9 30 safe: Boolean(args.safe),
+9 31 silent: Boolean(args.silent),
+9 32 env: process.env.NODE_ENV || 'development',
+9 34 init: false
+9 36 this.config_path = args.config? path.resolve(base, args.config)
+9 37 : path.join(base, '_config.yml');
+9 38 this.extend = {
+9 39 console: new extend.Console(),
+9 40 deployer: new extend.Deployer(),
+9 41 filter: new extend.Filter(),
+9 42 generator: new extend.Generator(),
+9 43 helper: new extend.Helper(),
+9 44 migrator: new extend.Migrator(),
+9 45 processor: new extend.Processor(),
+9 46 renderer: new extend.Renderer(),
+9 47 tag: new extend.Tag()
+9 49 this.config = _.clone(defaultConfig);
+9 50 this.log = createLogger(this.env);
+9 51 this.render = new Render(this);
+9 52 this.route = new Router();
+9 53 this.post = new Post(this);
+9 54 this.scaffold = new Scaffold(this);
+9 55 this._dbLoaded = false;
+9 56 this._isGenerating = false;
+9 57 this.database = new Database({
+9 59 path: this.config.db.name,
+9 60 _logger: new extend.Logger(),
+9 61 static: false,
+9 62 logger_format: 'dev',
+9 63 url: this.config.url,
+9 64 root: '/',
+9 65 permalink: this.config.root,
+9 66 permalink_defaults: {},
+9 68 path: this.config: root,
+9 69 permalink_default_default: {},
+9 70 archive: new config.archive: archiveDir,
+9 71 year: archiveDir,
+9 72 category: 2,
+9 73 year: 2,
+9 75 tag: 2,
+9 77 seag: 2,
+9 79 ctag: 2,
+9 80 port: 2,
+9 81 language: 2,
+9 82 server: 2,
+9 88 logger: 2,
+9 91 port: 3,
+9 95 server_ip: 2,
+9 96 logger: 3,
+9 97 server: 3,
+9 99 logger_format: 3,
+9 101 t

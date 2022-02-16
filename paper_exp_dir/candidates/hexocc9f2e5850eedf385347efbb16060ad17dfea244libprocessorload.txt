@@ -1,0 +1,78 @@
+Min editdistance: 25.00
+Closest candidate: 0 17 return fs.readFile
+0 1 callback(locals, locals);
+0 2 });
+0 3 }
+0 4 };
+0 5 return callback();
+0 10 function getAllScaffoldPaths(){
+0 11 return fs.readFile(source, callback){
+0 12 return fs.readFile(source, callback);
+0 15 function getPages(){
+0 16 return fs.readFile(source, function(source, function(source, i, callback){
+0 17 return fs.readFile
+1 1 return this.unregister();
+1 3 }, callback(locals.call(locals);
+1 8 return callback(locals);
+1 11 return this.puts([
+1 12 meta, page => {
+1 13 post.remove() {
+1 14 callback(locals);
+1 15 return this.join(page.join(', '), locals);
+1 16 return this.join(this.page_indent());
+1 20 });\
+2 1 return function(locals.locals, locals);
+2 2 return locals;
+2 3 .locals.each(function(item, i, i, i, i, i locals){
+2 4 locals, i, locals){
+2 5 locals.each(item, locals){
+2 6 if (item, i, locals){
+2 7 locals locals){
+2 8 locals.each(item, locals);
+2 11 locals.each(locals.locals
+3 1 // (locals.locals.unregisterLocals.setLocals());
+3 2 returnLocals();
+3 3 return locals.setLocals();
+3 5 };'
+
+4 1 // (locals.engine, locals);
+4 2 returnLocals.each(locals.posts).each(function(item, i, i, i, i, next){
+4 3 if (item, i, i, i\'site locals);
+4 4 if (item.siteLocals);
+4 5 if (siteLocals).n locals).n locals.each(function(itemLocals).locals). locals = siteLocals.posts.posts.push(itemLocals);
+4 6 if (siteLocals). locals.push(itemLocals).
+5 1 callback(locals.locals.topics, locals);
+5 3 returnLocals.top();
+5 8 return locals = _.getLocals();
+5 12 extend();
+5 15 end();
+5 16 end.use(locals.filename => locals.readOptions = function(next){
+5 17 return locals => locals.readOptions
+6 1 callback(locals.locals.searsearify(locals, callback);
+6 10 function getMeta(config.isArray(category, callback) {
+6 11 return function(category, item) {
+6 12 if (category, i, reply) {
+6 13 if (category) {
+6 14 return locals){
+6 15 var page.isArray(category, reply);
+6 16 return;
+6 20 \
+7 1 return callback(locals.locals, locals);
+7 2 return this.locals.posts();
+7 6 return this();
+7 12 function getConfigPath(section){
+7 13 return this.site, url, callback){
+7 15 return this.replace(config.site, page, locals){
+7 16 page.replace(config.topics, page
+8 1 return this.call(locals.locals.locals, locals);
+8 2 returnLocals.posts();
+8 6 return this;
+8 7 return this.engine.render(locals()
+8 11 function get_toArray(){
+8 12 return {
+8 15 return this.content, callback(this.content, callback);
+8 23 function getPosts
+9 10 function getXUMetaPath(config.fm(config.stringify(config.url) {
+9 11 return config.url) {
+9 12 if (config.url) || config.url).toLowerCase() === undefined;
+9 13 return config.url = \'https://\'\';

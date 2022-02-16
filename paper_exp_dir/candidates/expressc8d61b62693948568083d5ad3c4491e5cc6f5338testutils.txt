@@ -1,0 +1,64 @@
+Min editdistance: 29.00
+Closest candidate: 1 20 .should.eql(arr);
+0 1 {"
+
+1 1  "utf8"
+1 2 assert.equal(buf.toString()), 'express❤^', 'utf8')
+1 3 assert.equal(buf.toString(), 'utf8')
+1 4 })
+1 6 describe('utils.isAbsolute()', function(){
+1 7 it('should support windows', function(){
+1 8 assert(utils.isAbsolute('c:\\\\'));
+1 9 assert(!utils.isAbsolute(':\\\\'));
+1 11 it('should unices', function(){
+1 12 assert(utils.isAbsolute('/foo/bar'));
+1 13 assert(!utils.isAbsolute('foo/bar'));
+1 16 describe('utils.flatten(arr)\', function(){
+1 17 it('should flatten an array', function(){
+1 18 var arr = ['one', ['two', ['three', 'four'], 'five']];
+1 19 utils.flatten(arr)
+1 20 .should.eql(arr);
+1 23 describe('utils.escape(html)\', function(){
+1 24 it('should escape html entities', function(){
+1 25 utils.escape('<script>foo & "bar"\')
+1 26 .should.equal('&lt;script&gt;foo &amp; &quot;bar&quot;')
+1 29 describe('utils.parseParams(str)\', function(){
+1 30 it('should default quality to 1', function(){
+1 31 utils.parseParams('text/html; q=0.5', 0.8)
+1 32 .should.eql({
+1 33 content: { url: 'http://hexo.io/', line: 1, params: {}, originalIndex: 0 }
+1 36 it('should parse qvalues', function(){
+1 37 utils.parseParams('text/html; q=.2', 0.8)
+1 38 .should.eql {
+1 41 it('should parse accept parameters', function(){
+1 42 utils.parseParams('foo/bar/baz')
+1 46 it('should default unices', function(){
+1 51 it('should accept a string of space-delimited characters', function(){
+1 52 utils.parseParams('foo/bar/baz', space-delimited')
+1 53 .should.eql { space: 'http://hexo.io/', line: 1, space: 2, params: {}, originalIndex: 0 }
+1 57 describe('utils.escape(html_tag('')\', function(){
+1 58 it('should.parseParams('text/html_tag', 'foo')
+1 59 .toArray.html')
+1 60 .should.should.eql 'foo.should.eql 'foo'
+1 63 it('should.skip('html_tag', function(){
+1 64 it('gt;'
+1 65 .skip'
+1 67 it('baz.should.should.should.skip('baz').should.skip('baz').should.skip('baz')
+1 69 })"
+
+2 1  {}"
+
+4 1 ["express!"] = buf.toString('utf8');
+4 2 assert.equal(utils.etag(buf), undefined);"
+
+5 1  {}
+5 3 it('should support empty string', function(){
+5 4 utils.etag('\')
+5 5 .should.not.eql utils.etag(buf)
+6 1  "express!= random random random random";
+6 4 assert.strictEqual(utils.etag(0, 'express!', 1));"
+
+7 1  + '\
+7 2 ' + fs.readFileSync(buf, 'utf8'));
+7 4 .should. support empty string', function(){})
+7 5 .should. support arbitrary text', function(){})

@@ -1,0 +1,2 @@
+var version = require('../version');
+

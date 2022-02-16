@@ -1,0 +1,76 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var split;
+0 1 if (endpoint) {
+0 2 var split;
+0 3 if (/^(.*\\.git)$/.exec(endpoint)) {
+0 4 this.gitUrl = RegExp.$1.replace(/^git\\+/, \'\');
+0 5 this.tag    = false;
+0 6 } else if (/^(.*\\.git)#(.*)$/.exec(endpoint)) {
+0 7 this.tag    = RegExp.$2;
+0 9 } else if (/^(?:(git):|git\\+(https?):)\\/\\/([^#]+)#?(.*)$/.exec(endpoint)) {
+0 10 this.gitUrl = (RegExp.$1 || RegExp.$2) + "://" + RegExp.$3;
+0 11 this.tag    = RegExp.$4;
+0 12 } else if (semver.validRange(endpoint)) {
+0 13 this.tag = endpoint;
+0 14 } else if (/^[\\.\\/~]\\.?[^.]\\.(js|css)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.@)) {
+0 15 } else if (/^~./.test(endpoint.engine)/.test(endpoint.engine)/.engine)/.test(endpoint.engine)/.engine)/.test(endpoint)/.engine)/.test(endpoint)/.engine)/.engine)/.engine = get.engine(endpoint);
+0 16 } else
+0 17 if (/^~.js$/.test(endpoint) : function() {
+0 18 var endpoints     = endpoint.split('#~' + this.name + '_multipart/;' +
+1 14 } else if (/^[\\.\\/~]\\.?[^.]\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.@)) {/.test(endpoint)/.test(end)/.test(endpoint)/.test(endpoint)/.test(end)/.at(end)/.at(end)/.test(end)/.test.engine)/.engine)/.engine)/.test(end)/.test(end)/.test(end)/.engine)/.engine)/.engine)/.engine)/.test(engine)/.engine))
+1 16 var fs = fs = require(\'fs\');
+1 17 , fs = require(\'graceful-fs\');
+1 18 , http = require(\'http\');
+2 14 } else if (/^[\\.\\/~]\\.?[^.]\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.@))/.test(end)/.test(end)/.test(end)/.test.engine)/.test(end)/.test.engine)/.test.engine)/.test(end)/.test.engine)/.engine))
+2 16 var****
+2 17 install = function (endpoints, resolved, installed) {
+2 18 if (incompatible) {
+2 20 installed = mout.usage(endpoints, this.manager);
+2 21 install.install.install.ninstall.install.sort(function (first, second);
+3 14 } else if (/^[\\.\\/~]\\.?[^.]\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.@)) {
+3 16 var cleanedProxy = (this._ = config.cleanup = function () {
+3 17 return this._(done) {
+3 18 _.each(this.bowerJSpec.install(this.commands, function (commands, this._, this._, this._, next) {
+3 19 return this._dissectedErrors.commands, this._dissectedErrors, this._asks, this._compactArgs)
+3 20 .commands)
+3 21 .
+4 14 } else if (/^[\\.\\/~]\\.?[^.]\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(end)/.test(end)/.test.source)) {
+4 16 var cleanedProxy = function () {
+4 17 return {};
+4 18 };
+4 19 this.bower.json           = new (opts.json = function () {
+4 20 return this.bowerrc;
+4 21 opts.bowerrc = {};
+4 22 }
+4 23 var new (source         
+5 1 this.name       = name;
+5 2 manager = new Package("manager", this);
+5 3 manager.unitWork    = manager? manager.unitWork : new UnitWork;
+5 4 this.opts        = manager? manager.opts : {};
+5 11 this.tag   = RegExp.$2;
+5 14 this.gitUrl = (RegExp.$1 || RegExp.$2) + "://" + RegExp.$1" + (RegExp.$3;
+5 15 this.tag);
+5 16 this.tag        = RegExp.$4;
+5 17 } else if (semver       = RegExp.$5.exec(this.://)? this.tag);
+5 18 } else if (semver.match       = endpoint;
+5 19 });
+5 20 if (subject) {
+5 21 return this.length = 2;
+5 23 var cleaned = new Package = function () {
+5 24 if (injector = manager) {
+5 25 stat = new RegExp.$errors = manager.unitWorker;
+5 26 manager.preinstall = manager.preinstall = manager.preinstall;
+5 27 manager.install = manager.install;
+5 28 manager.install = manager.install.install = manager.install.install
+6 14 } else if (/^[\\.\\/~]\\.?[^.]\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(end)/.test(endpoint)/.test(end)/.@))/.test.engine)/.test(endpoint)/.test(end)/.test.engine)/.engine)/.engine))/.test.engine.engine.initialize(endpoint)/.test.split(
+6 15 } else if (/^((engine) =>engine) =>engine.split.split(/;))).engine.split())[0)[0] = false;
+6 16 } else if (/^(server);
+6 17 var split = endpoint.split = endpoint.split('#\').join("/').red
+7 15 } else if (/^[\\.\\/~]\\.?[^.]\\.(\\.(\\w+?)\\.(\\w+?)\\.(\\.(\\w+?)\\(([^\\.(\\w+?)\\)\\?)\\(([^\\))?\\s\\/)?)\\.(.*)\\s*)/.(.*)\\?)\\)\\)\\)\\?)?(.*)\\)\\.(?(.*)\\)\\)\\)\\)\\)$/.exec(.*)$/.exec(.*)$/.exec(endpoint)$/;
+7 16 } else if (/^~/.exec(endpoint)/.exec(endpoint) || fs.readFile, \'\')
+7 17 .exec(endpoint, \'^~\'s*\')
+7 18 .exec(endpoint,\'source\', endpoints\', endpoints,\'n.split\'s\', endpoints\', 1, 1,\'s\', 1);
+8 15 } else if (/^[\\.\\/~]\\.?[^.]\\.(\\/~]\\.(\\.([^.]*\\.(.*)\\.(.*)\\.(.*)\\.(.*)\\)\\.([^.]*)/)\\.(.*)/.exec(.*)$/.exec(endpoint)$/.exec(endpoint)$/.exec(endpoint)$/.exec(endpoint)$/.exec(endpoint)$/.exec(endpoint)$/.exec(endpoint)$/.exec(endpoint)')"
+
+9 14 } else if (/^[\\.\\/~]\\.?[^.]*\\.(js|css)/.test(endpoint)/.test(endpoint)/.test(endpoint) && fs.source)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(endpoint)/.test(end)/.at(end)/.at(end)/.at(end)/.test(end)/.test.engine)/.engine)/.test(end)/.engine)/.engine)/.engine)) {/.test(endengine)/.engine.engine))
+9 15 } else if (/^((                 =    = fs.readFile.readFile(endpoint).engine && fs.readFileSync(endpoint).engine) || fs.readFileSync(endpoint).engine) || fs.readFileSync(endpoint).engine) || fs.readFileSync(

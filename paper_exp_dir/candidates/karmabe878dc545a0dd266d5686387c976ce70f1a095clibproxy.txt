@@ -1,0 +1,146 @@
+Min editdistance: 1.00
+Closest candidate: 3 10 port: proxyDetails.port,
+0 1  url: { url: url(proxyUrl, host: url.hostname } }, { object: config.hostname });
+0 2 }
+0 3 function createProxyHandler(proxy, proxyConfig) {
+0 4 var proxies = getProxies(proxyConfig);
+0 5 var proxiesList = Object.keys(proxies).sort().reverse();
+0 6 if (!proxiesList.length) {
+0 7 return function(request, response, next) {
+0 8 return next();
+0 9 };
+0 11 proxy.on('error', function(err, req, resp) {
+0 12 if (err.code === 'ECONNRESET') {
+0 13 log.debug('failed to proxy %s (browser hang up the socket)\', req.url);
+0 14 } else {
+0 15 log.warn('failed to proxy %s (%s)\', req.url, err);
+0 17 });
+0 19 for (var i = 0; i < proxiesList.length; i++) {
+0 20 if (request.url.indexOf(proxiesList[i]) === 0) {
+0 21 var proxiedUrl = proxies[proxiesList[i]];
+0 22 log.debug('Proxying request -'+ request.url +'to'+ proxiedUrl.host + ':' + proxiedUrl.port);
+0 23 request.url = request.url.replace(proxiesList[i], proxiedUrl.host);
+0 24 proxy.proxy.resolve();
+0 26 next();
+0 30 exports.createProxyHandler = createProxyHandler;'
+
+1 1  url: pathname};
+1 5 var proxies = getProxyConfig(proxyConfig);
+1 8 return function() {
+1 9 return false;
+1 15 if (response.statusCode < 200 || response.statusCode >= 300) {
+1 19 proxy.conflict(404, { error: err.message });
+1 26 request.url = request.url.replace(proxiesList[i], proxiedUrl.baseProxy);
+1 27 proxy.proxyRequest(request, response);
+1 28 return;
+1 34 "
+
+2 1  url: https://proxy.com };
+2 2 });"
+
+3 3 if (process.env.HTTP_PROXY) {
+3 4 var proxy = process.env.HTTP_PROXY;
+3 5 var httpsProxy = process.env.HTTPS_PROXY;
+3 6 var pathname = proxyDetails.pathname;
+3 7 var userAgent = window.__karma__.split(' ')[0] + ':' + getProxyClient(proxy, userAgent);
+3 8 var socket = net.connect(httpsProxy, {
+3 9 host: proxyDetails.hostname,
+3 10 port: proxyDetails.port,
+3 11 https: httpsProxy,
+3 12 ca: config.ca,
+3 13 strictSSL: config.strictSsl,
+3 14 timeout: config.timeout,
+3 15 headers: {
+3 16 'host': userAgent
+3 17 },
+3 18 'user-agent': userAgent
+3 21 var userAgent = userAgent.split(' ')[0];
+3 22 if (userAgent) {
+3 23 var len = userAgent.length;
+3 24 log.warn('useragent is not 35');
+3 26 userAgent = userAgent.split(' ')[0];
+3 27 if (app.settings['x-powered-by']) {
+3 28 app.settings['x-powered-by', 'https-proxy'].forEach(function(url) {
+3 29 url.replace(/\\/+$/, '');
+3 32 if (!app.headers['x-powered-by']) {
+3 42 app.use(function (proxy, host, port, urlRoot, proxyPath) {
+3 43 var client = getProxyConfig(proxy, host, urlRoot, true);
+3 44 if (host === '127.0.0.0.0.1') {
+3 45 logger.debug('proxy') === 'httpsupgrade');
+3 46 proxy.upgrade(port = 'https://hostnameupgrade.com');
+3 47 hostname = 'port = 'localhost';
+3 48 urlRoot';
+3 50 var socket = port = upstream.split('https://: host;
+3 51 var removed = '';
+3 52 var removedProxy = (removedProxy = removedProxy = (removedProxy.cleanup === 'https://?'s3.0.0.0.proxy'
+3 53 ? removedProxy
+3 54 : removedProxy
+3 55 : removedProxy.cleanup.spluck(removedProxy, '');
+3 56 if (command === 'https://bower.com') || port
+3 57 : 'bower' || port = removedProxy.lookup';
+4 1  url: endpoint };
+4 5 var proxies = [];
+4 24 request.url = request.url.replace(proxiesList[i], proxiedUrl.port);
+4 25 proxy.proxyRequest(request, response, {}, function(err) {
+4 26 if (err) {
+4 27 return next(err);
+4 34 exports.createProxyHandler = createProxyHandler;
+4 35 exports.proxy = createProxyHandler;
+4 36 exports.webServer = createProxyHandler;
+4 37 exports.router = createProxyHandler;
+4 38 exports.static = createProxyHandler;
+4 40 exports.textHandler = createProxyHandler;
+4 43 exports.routerFactory = createProxyHandlerFactory;"
+
+5 8 return function (request, response, next) {
+5 12 proxy.on('error', function(err, req, res) {
+5 20 for (var i = 0; i < proxiesList.length; i++) {'
+
+6 1  url: https://example.com/test.com'};
+6 3 return proxyConfig;
+6 4 };"
+
+7 1  url: this.proxyUrl };
+7 4 function createProxyHandler(command, config) {
+7 12 var match = proxyDetails.hostname.match(command, config.url);
+7 13 if (match) {
+7 14 return proxiesList.some(function(request, response) {
+7 15 return mm(request.url, {dot: true});
+7 17 return endsWithSlash(match);
+7 19 return handler.call(proxies, config);
+7 21 function getXUACompatibleMetaElement(config) {
+7 22 var endsWithSlash = function(str) {
+7 23 return str.substr(-1) === '/';
+7 25 for (var i = 0; i < config.url.length; i++) {
+7 26 if (
+7 27 config.proxies &&
+7 28 config.proxies.is[config.url]) {
+7 32 return null;
+7 34 function getXUACompatibleUrl(url) {
+7 38 return \'[\' + url + \'] = [url];
+7 41 exports.createWebServer = function createWebServer(injector, emitter, socket, protoxies, location, proxyValidateSSL, config) {
+7 43 return str.substr(-1) === '/;
+7 45 return emitter.call(function(res, socket, protoxies) {
+7 46 var proxies = getProxyArgs(request);
+7 51 var remaining = 2;
+7 52 function generateProxy = function new Url(name, url) {
+7 53 return function(name, port, hostname, urlRoot, proxyVal, urlRoot, pathname, proxyVal, urlRoot, urlRoot, timeout) {
+7 54 var offset, hostname, proxyVal, hostname, port, urlRoot, proxyValidateSSL, urlRoot;
+7 55 var callback;
+7 56 var error;
+7 57 var proxies = 0xiesList = 0;
+7 58 var changeOrigin = false;
+7 59 var initialProxy = function: functionproxiesList = proxiesList.some(name) {
+7 60 var url = functionproxiesList.length === 1;
+7 61 var urlTypes;
+7 62 if (name === 'https://) {
+7 63 name.com.comparrowsers.length &&
+7 64 .length &&
+7 65 .type === 'https://.com/proxy
+7 66 .length === 0) {
+7 67 .port = port
+8 5 var proxies = parseProxyConfig(proxyConfig);
+8 16 proxy.on('close', function() {
+8 17 if (request.url === '/__proxy__/') {
+8 20 promise.done();
+8 28 request.url = request.url.replace(proxiesList[i], proxiedUrl.target);

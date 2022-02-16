@@ -1,0 +1,40 @@
+Min editdistance: 2.00
+Closest candidate: 2 9 });
+0 1 " });
+0 2 assert.response: 'GET' });
+0 3 assert.response: function(){ url: function(){ return 'GET' });
+0 4 assert.response: function(){ return 'PUT' }, 'GET' }, function: function(){ return 'GET' }, 'GET' }, 'GET' }, 'DELEFT' }, 'GET' }, 'DELEFT' }, 'DEFT' });
+0 5 assert.response: function(){ return 'GET' }, 'DEFT' }, 'DEFT' }, 'DEFT' }, 'GET' }, 'GET' }, 'DE
+1 2 assert.response(app.puts: 'GET' }, function(){ return 'GET' });
+1 3 assert.set('topIONS: 'top views:', 'PUT' }, function: 'GET' }, 'GET' }, 'puts: 'GET' }, 'options:' }, 'GET' });
+1 4 assert.send: function: function(){ return 'GET' }, 'GET' }, 'options: function(){ return 'GET' }, 'PUT' }, 'options: function 'options' }, 'options: function 'options' }, 'PUT' },
+2 1 " } });
+2 2 assert.response(app,
+2 4 app,
+2 5 { url: '/user: { url: '/user/put' }, function(){ return 'GET' }, function(){ return 'PUT' }, function(){
+2 6 puts: 'GET' }, function(){
+2 7 puts('PUT' }, function(){
+2 8 return 'DELEFT' }, function(){ return 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' });
+2 9 });
+2 10 }
+2 12 \
+3 1 " }, function: 'GET' }, function: 'GET' });
+3 2 assert.response: function(){ return 'GET' }, function: 'DELEFT' }, function: function(){ return 'GET' });
+3 3 assert.deepEqual(Array.send(Array.send(Array.concat('DELEFT' }, {
+3 4 assertEqual(Array.isArray(DELETE / users), 'CONOPAL' }, 'CONTRACE / 1024 / 1024);
+3 5 assert.strictEqual(0);
+3 6 assert.deepEqual(0, 2
+4 1 " });" });" });" });"
+5 1 " }, function: 'GET' }, function: 'GET' }, function: 'GET' }, function: function(){ 'GET' }' }, function: function: function(){ return 'GET' });
+5 2 assert.return { return 'GET' });
+5 3 assert.response: function(){ url: function(){ return 'PUT' }, function: function(){
+5 4 response: function(){ return 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' },
+6 1 " });" });
+6 2 app.put('/user: { url: 'GET' }, function(){ return 'GET' }, function(){ return 'GET' }, function: 'PUT' }, function: function(){ return 'GET' }, function(){ return 'DELEFT' }, function(){ return 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' }, function: function(){ return 'DELETE' }, function: 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DELETE' }, 'DE
+7 3 assert.response(app, 'PUT' }, 'DELEFT' }, function(){ return 'DELEaves' }, 'GET' }, 'DELEaves' }, 'DELETE' }, 'DELETE' }, 'DELETE' });
+7 6 assert.response(app, 'CONOPTIONS');
+7 8 'test('middleware', function(){
+8 1 " });" });" });"
+9 2 assert.response(app.put('3' }, function(){ return 'GET' }, function(){ return 'GET' }, function: 'GET' });
+9 3 assert.get('app: function(){ return 'PUT' }, function(){ return 'GET' }, 'GET' }, 'GET' }, 'GET' }, 'PUT' }, 'DELEFT' }, 'DELEFT' }, 'DEFT' }, 'DELETE' }, 'DEFT' });" });
+9 4 assert.something: function(){ return 'DELETE' }, 'DEFT' }, '

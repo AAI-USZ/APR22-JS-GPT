@@ -1,0 +1,55 @@
+Min editdistance: 11.00
+Closest candidate: 9 10 })('
+
+0 1 app.get('', function()).join(function(){
+0 2 return function(){
+0 3 return done();"foo();") }).return this.use(this.use(function(function(req, res){
+0 4 return this.app.get('/', function(){
+0 5 return res.get('/', function(){
+0 8 return done);
+0 9 return 'foo');
+0 10 }).then(function(){
+0 11 return done();
+0 12 }).then(function
+1 1 "
+2 1 app.extend();
+2 2 app.__proto.init();
+2 3 }
+2 6 }"
+3 3 app.init();
+3 5 app.use(function trim(){
+3 7 app.use(function(fn) {
+3 8 return function(fn) {
+3 9 return function(req, arg) {
+3 10 return function(req, arg });
+3 11 return function(err) {
+3 12 return self.apply(app, this, arguments);
+3 13 return this.apply(this, arguments);
+3 14 });
+3 15 }).toArray.prototype.apply(this, arguments);
+3 16 }).forEach(this
+4 1 app.end();
+4 2 app.set('views', function(){ views()});
+4 7 function clear(){
+4 8 return this.app.set('topics', posts);
+4 9 app.static(this.compose();
+4 10 app);
+4 14 module.get('categories', function(req, function(req, res){
+4 15 return posts);
+4 16 return this.static(else){
+4 17 return this.static(this.config.location);
+5 1 ====
+6 1 app.render(dynamicHelpers.helpers.helpers.helpers.helpers.helpers.helpers.helpers.helpers.helpers.helpers.helpers.helpers.helps = function () => function (fn) function (fn) {
+6 2 return function (fn) {
+6 4 return function (str) {
+6 5 return fn(fn) {
+6 6 return self.call(this, this.app, this.app, this.app, this.app, this.app, this.app, this.
+7 1 app.addListener
+9 1 app.write.write(functionFinished();
+9 2 app.redirect();
+9 3 app.use(function trim_prefix();
+9 4 app();
+9 5 app.use(fn);
+9 8 return this.use(function trim_prefix();
+9 10 })('
+

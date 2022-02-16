@@ -1,0 +1,216 @@
+Min editdistance: 25.00
+Closest candidate: 0 1 var PackageRepository = function (options) {
+0 1 var PackageRepository = function (options) {
+0 2 options = options || {};
+0 3 this._options = options;
+0 4 this._config = options.config || defaultConfig;
+0 5 this._options.registry = new RegistryClient(mout.object.fillIn({
+0 6 cache: this._config.roaming.registry
+0 7 }, this._config));
+0 8 this._resolveCache = new ResolveCache(this._config.roaming.cache);
+0 9 };
+0 10 PackageRepository.prototype.fetch = function (decEndpoint) {
+0 11 var res;
+0 12 var deferred = Q.defer();
+0 13 var that = this;
+0 14 resolverFactory(decEndpoint, this._options)
+0 15 .then(function (resolver) {
+0 16 res = resolver;
+0 17 decEndpoint.resolverName = resolver.getName();
+0 18 if (that._options.force) {
+0 19 deferred.notify({
+0 20 level: 'action',
+0 21 tag:'resolve',
+0 22 data: 'Resolving'+ resolver.getSource(),
+0 23 });
+0 24 return that._resolve(resolver);
+0 25 }
+0 26 return that._resolveCache.retrieve(resolver.getSource(), resolver.getTarget())
+0 27 .spread(function (canonicalDir, pkgMeta) {
+0 28 if (!canonicalDir) {
+0 29 if (that._options.offline) {
+0 30 throw createError('No cached version for'+ resolver.getSource() + '#' + resolver.getTarget(), 'ENOCACHE', {
+0 31 resolver: resolver
+0 35 level: 'info',
+0 36 tag: 'uncached',
+0 37 data: 'No cached version for'+ resolver.getSource() + '#' + resolver.getTarget()
+0 42 resolver: resolver,
+0 43 msg: 'Resolving'+ resolver.getSource() + '#' + resolver.getTarget()
+0 47 tag: 'cached',
+0 48 data: 'Got cached'+ resolver.getSource() + '#' + resolver.getTarget()
+0 54 msg: resolver msg,
+0 64 tag:'return',
+0 66 resolve',
+0 67 msg: resolver: resolver,
+0 68 msg: resolver,
+0 69 data: null
+0 74 options: options.notify,
+0 78 return PackageRepository.prototype.resolveCache.retrieve = function () {
+0 79 return resolverFactory
+0 80 .read()
+0 86 .set(callback.set(callback) {
+0 87 cache.readOptions(callback)
+0 88 .readOptions(callback)
+0 90 .read())
+0 92 .set('canonicalDir, options)
+1 22 default: resolver.getSource() + '#' + resolver.getTarget()
+1 27 .spread(function (canonicalPkg, pkgMeta) {
+1 28 if (!canonicalPkg) {
+1 37 default: 'cached'
+1 52 that._options.offline = true;
+1 53 return Q.resolve(resolver);
+1 55 that._resolveCache.retrieve(resolver.getSource(), resolver.getTarget())
+1 57 if (this._options.offline) {
+1 58 return [canonicalPkg, pkgMeta];
+1 63 Manager.prototype.areCompatible = function (source, subject) {
+1 64 var validSource = semver.valid(source.target)!= null;
+1 65 var validSubject = semver.validRange(subject)!== null;
+1 66 var validRange = semver.maxSrc.length;
+1 67 var highestSubject;
+1 69 var highestSource = this._source = this._source = source && source && source.length < subject.length;
+1 70 return semver.length > 1? source.length
+1 71 : source.length
+1 72 : source.length + 1;
+1 74 return this._target = 2;
+1 76 if (validSource && subject.target === '*' && subject.length && subject.length!== 2) {
+1 77 return semver.maxAge
+1 78 || this._target!== 3;
+2 3 options.config = options.config || defaultConfig;
+2 5 this._config = options.config;
+2 17 res = resolverFactory(decEndpoint, this._options)
+2 23 data: resolver.getSource() + '#' + resolver.getTarget()
+2 57 msg: 'Site response on'+ resolver.getSource() + '#' + resolver.getTarget()
+2 64 data: 'Resolving'+ resolver.getSource() + '#' + resolver.getTarget()
+2 66 return that._resolveCache.clear()
+2 67 .then(function () {
+2 68 return Q.then(function () {
+2 69 return Q.npromise.resolve(resolver.hasNew(resolver.getSource())
+2 70 .getSource())
+2 71 .then(resolve(resolver.getResolution.getSource())
+2 72 .getResolution.setHeader('bower.bind(resolver, ResolveCache.clearCache.bind(resolver))
+2 73 .setHeader('bower.get ResolveCache.get ResolveCache.setHeader('cached'));
+2 74 })
+2 75 .then(resolver.setHeader('cached'));
+2 78 return that._readFile(resolver.getResolver.setSource())
+2 79 .then(resolve(resolver.getSource())
+2 80 .has
+3 5 this._options.registryClient = new RegistryClient(mout.object.fillIn({
+3 37 data: 'No cached version for'+ resolver.getSource() + '#' + resolver.getTarget(),
+3 43 url: '/' + resolver.getSource(),
+3 50 data: 'Got cached'+ resolver.getSource() + '#' + resolver.getTarget(),
+3 54 PackageRepository.prototype._resolve = function () {
+3 56 if (this._working) {
+3 57 return Q.reject(createError('Already working', 'EWORKING'));
+3 59 this._working = true;
+3 60 return this._createTempDir()
+3 61 .then(this._resolve.bind(this))
+3 63 return that._readJson.bind(that._tempDir, null);
+3 65 .then(function (meta) {
+3 66 return that._applyPkgMeta(that._savePkgMeta(meta)
+3 67 .bind(that._savePkgMeta, meta)
+3 68 .bind(that._savePkgMeta)
+3 69 .bind(that._cleanPkgMeta, meta)
+3 73 .bindHelpers.bind(that._cleanPkgMeta)
+3 74 .bindHelpers.bindHelpers.bindHelpers.bindHelpers.bind(that._self))
+3 75 .then(that._savePkgMeta.bindHelpers.bindHelpers.bindHelpers.bindHelpers.bindHelpers.bind(that));
+3 78 return that._ meta.then(function () {
+3 79 \
+4 44 url: '/' + resolver.getSource() + '#' + resolver.getTarget()
+4 51 data: 'Got cached'+ resolver.getSource() + (pkgMeta._release? '#' + pkgMeta._release : '') +'entry',
+4 52 msg: 'Site updated:'+ pkgMeta._release
+4 61 url: '/' + resolver.getSource() + (pkgMeta._release? pkgMeta._release + '#' + pkgMeta._release : '')
+4 65 return ResolveCache.retrieve(resolver.retrieve(resolver.getSource(), resolver.getSource())
+4 67 .then(resolver.getTarget())
+4 68 .then(function (canonicalPkgMeta)
+4 69 .store.eliminate(resolver)
+4 70 .eliminate(resolver.getSource())
+4 72 .then(resolver.getPkgMeta)
+4 73 .then(resolver)
+4 80 .storeResolver)
+4 81 .then
+5 43 default: pkgMeta
+5 60 packageRepository.prototype._resolveCache.retrieve = function () {
+5 61 var sourceId = this._getSourceId(this._source);
+5 62 var dir = path.join(this._dir, sourceId, 'bower-json-bower-json');
+5 64 return Q.nfcall(fs.stat, dir)
+5 66 return Q.n
+5 67 return Q.nfcall(rimraf, function () {
+5 68 return Q.n.n.nfcall(rimraf.n.nfcall(rimraf, dir);
+5 69 }, function (err) {
+5 70 throw err;
+5 74 throw new Error('Should have.n
+5 75 .fail(err);
+5 77 .then(function (err) {
+5 78 .fail(function (err) {
+5 79 throw new Error(err);
+5 80 return Q.n.n.n.nfcall.nfcall.nfcall.nfcall(bower.nfcall.locate.bind(bowerDir, dir);
+5 81 throw err)
+5 82 .fail(function () {
+5 83 throw err);
+6 23 default: 'action'
+6 44 default: config.defaultRoot
+6 50 url: 'http://bower.io'
+6 61 return that._resolveCache.retrieve(resolver.getSource())
+6 63 if (that._options.constructor.hasNew(canonicalPkg)) {
+6 64 return true;
+6 66 if (that._options.set(canonicalPkg, pkg, pkg, pkgMeta)
+6 67 .canonicalPkg, function () {
+6 68 .canonicalPkg.canonicalPkg = canonicalPkg = canonicalPkg;
+6 69 return that._readPkg.readPkgMeta(canonicalPkg, url + (pkgMeta)
+6 70 .readPkgMeta(canonicalPkg, url);
+6 72 return that._writeFile(canonicalPkg, url, meta)
+6 73 .metaFile, metaFile, metaFile, url + 'bower.readPkgMeta(canonicalPkg, url, null, metaFile, metaFile, packageMeta)
+6 74 .then(pkgMeta)
+6 75 .then(function (contents) {
+7 22 data: resolver.getSource(),
+7 37 data: 'Resolving'+ resolver.getSource() + '#' + resolver.getTarget(),
+7 43 url: that._source,
+7 44 proxy: this._config.proxy,
+7 45 strictSSL: this._config.strictSsl,
+7 46 timeout: this._config.timeout
+7 52 url: this._source,
+7 55 timeout: this._config.timeout,
+7 56 headers: {
+7 57 'Content-Type': 'application/json'
+7 59 }, function () {
+7 60 return Q.nfcall(rimraf, canonicalDir)
+7 62 return that._resolveCache.retrieve(resolver.getSource(), {
+7 63 name: 'foo',
+7 66 strictSsl: this._config.strictSsl,
+7 71 .then(function (retrieve) {
+7 72 var sourceId = 'bower-'std-github-'
+7 73 .com/'
+7 75 .json';
+7 76 return {
+7 77 name: 'bower-json';
+7 78 url: 'bower-xml-xml-jquery'
+7 84 ResolveCache.prototype.read = function (source, options, callback) {
+7 85 var that = function (source, json, json, headers, cb, argv) {
+7 86 var promise = options = options || {};
+7 87 if (this._options) {
+7 88 var sourceId = options.map = options.argv.argv.remain;
+7 89 return this._source = null
+8 23 default: 'bower'
+8 44 return [canonicalDir, pkgMeta];
+8 46 process.nextTick(function () {
+8 51 deferred: deferred
+8 65 this._options.offline = function () {
+8 68 this._queue.push(function (err) {
+8 69 throw new Error('ShouldNotFoundError');
+8 70 this._sortVersions(this._sortVersions(this._options, function (versions) {
+8 71 return that._exists = this._exists = true;
+8 72 if (!options.toArray.isVersions(Versions) {
+8 73 return that._versions.versions.filter(function (versions) {
+8 74 return semver.type).length;
+8 77 if (options.versions.sort) {
+8 78 return semver.selectIndexOf(versions, function (version) {
+8 79 return semver.type).indexOf(version) {
+8 80 return semver.type;
+8 82 } else {
+8 83 if (options.versions.constructor == null) {
+8 84 return found
+9 44 name:'resolve',
+9 45 data: 'Resolved'+ resolver.getSource() + '#' + resolver.getTarget()
+9 64 ResolveCache.prototype.fetch = function (decEndpoint) {
+9 65 var source;
+9 66 var deferred = Q();

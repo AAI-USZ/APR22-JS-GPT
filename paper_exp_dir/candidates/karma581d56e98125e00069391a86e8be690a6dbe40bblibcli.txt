@@ -1,0 +1,243 @@
+Min editdistance: 5.00
+Closest candidate: 5 12 if (name === '_' || name === '$0') {
+0 1 console.log(util.inspect(options[util.dashToCamel(name)] || constant.EXCLUSIVELY_USE_COLORS[name]));
+0 2 });
+0 3 var processKillTimeout = function() {
+0 4 var timer = new (this.TestacularExecutor.getTime() - captureTimeout);
+0 5 timer.pause();
+0 6 if (process.env.TRAVIS) {
+0 7 process.env.TRAVIS.DISCONNECTED = true;
+0 8 }
+0 9 this.emit('browsers_change', this.emit.bind(this));
+0 10 };
+0 11 var KarmaEventEmitter = function() {
+0 12 var self = this;
+0 13 this.on('browsers_change', function() {
+0 14 timer.setTimeout(function() {
+0 15 process.stdout.write(this.name + '\\x1b[0m');
+0 16 }, 100);
+0 17 this.emit('browser_register', this.emit.bind(this));
+0 19 this.on('browser_register', function(browser) {
+0 20 launcher.markCaptured(browser.id);
+0 24 this.on('name', function() {
+0 25 name = 'testacular';
+0 26 if (this.isCaptured()) {
+0 27 process.stdout.write(this.name + '\\x1B[0m');
+0 29 launcher.markCaptured();
+0 30 if (launcher.areAllCaptured()) {
+0 31 self.emit('browsers_ready');
+0 32 if (config.autoWatch) {
+0 33 executor.schedule();
+0 35 } else {
+0 39 this.on('complete', function(state) {
+0 41 return;
+0 43 if (this.isReady()) {
+0 44 process.stdout.write(this.name + '\\x1B[1m');
+0 46 var exitCallback = this.emit('exit');
+0 47 var killTimeout = this.killTimeout || 2000;
+0 48 var cmd = this.validateExitCallback();
+0 49 if (!cmd) {
+0 50 process.nextTick(cmd);
+0 52 this.on('exit', function() {
+0 53 exitCallback.done(exitCallback);
+0 55 };"
+
+1 2 if (options.autoWatch) {
+1 3 options.autoWatch = true;
+1 5 "
+
+2 1 });"
+
+3 1 console.log('[util.dashToCamel(name)]');
+3 3 exports.runner = function(argv) {
+3 4 var options = Object.getOwnPropertyNames(argv);
+3 5 if (argv.colors!== undefined) {
+3 6 options.colors = true;
+3 8 if (argv.logLevel) {
+3 9 options.logLevel = constant['LOG_' + options.logLevel.toUpperCase()] || constant.LOG_DISABLE;
+3 11 options.argv = argv.configure({
+3 12 frameworks: [
+3 13 '*.js'
+3 14 ],
+3 15 '*.txt'
+3 16 ]
+3 18 exports.server = function(argv) {
+3 19 optimist
+3 20 .usage('Execute - send execute command to Testacular server.\
+3 21 Usage: $0 [options]\
+3 22 \
+3 23 ' +
+3 24 ' [options]\
+3 28 '    var testExecute = false;\
+3 30 '    at http://localhost:8080/testacular.js\
+3 32 '    at https://github.com/testacular.com/testacular.js\
+3 34 '     at http://localhost:8080/testacular.js\
+3 36 '    at https://github.com/testacular.js?\
+3 38 '      at http://localhost:8080/testacular.js\
+3 40 '    at http://localhost:8080/testacular.js?\
+3 42 '     at http://localhost:8080/testacular.js?\
+3 54 '     at http://localhost:80808080/testacular.js?\
+3 58 '          at http://localhost:808080808080/testacular.js?\
+3 62 '       'dev' +
+3 65 'socket.destroyed'socket.io' +
+3 66 'socket.io' +
+3 67 ) +
+3 68 );
+3 69 return process.stdout
+3 70 .stderr.write(process.write(process.stdout, process.stderr);
+3 72 exports.on('exit', function() {
+3 73 exports.exit(argv);
+3 74 return argv.pipe(process);
+4 3 exports.runner = function(id, width, height, title) {
+4 4 optimist.describe('using the constant from the database.');
+4 5 var result = {
+4 6 id: id,
+4 7 width: width,
+4 8 height: height,
+4 9 transports: ['.websocket', 'xhr-polling', 'jsonp-polling']
+4 11 var processOptions = function(argv) {
+4 12 argv = optimist.parse(argv);
+4 13 if (argv.help) {
+4 14 console.log('[optimist.help()]');
+4 15 process.exit(1);
+4 17 if (argv.version) {
+4 18 console.log('Testacular version:'+ constant.VERSION);
+4 19 process.exit(0);
+4 22 optimist.usage('Start Testacular server in $ ms.');
+4 23 return result;
+5 2 var processEnv = function(argv) {
+5 3 var env = process.env;
+5 4 if (argv.colors === 'false') {
+5 5 processEnv();
+5 8 console.log('[%s] %s', constant.LOG_INFO, options.colors);
+5 11 Object.getOwnPropertyNames(argv).forEach(function(name) {
+5 12 if (name === '_' || name === '$0') {
+5 13 options[util.dashToCamel(name)] = argv[name];
+5 16 var processPath = function(argv) {
+5 17 var options = Object.getOwnPropertyNames(argv).filter(function(name) {
+5 18 return options[util.dashToCamel(name)] === '_';
+5 22 processPath(argv, options.args);
+5 24 return processPath(argv);
+5 26 var describeShared = function() {
+5 28 .usage('Testacular - Spectacular Test Runner for JavaScript.\
+5 31 'Usage:\
+5 33 '  $0 <command>\
+5 36 'Commands:\
+5 38 '  start [<config>\
+5 40 '  init [<options>] Start the server / do single run.\
+5 42 '  run [<config>\
+5 44 '  run [<options>] [<options>] Start the server / do single run.\
+5 46 '  init [<config>\
+5 48 '  run [<options>] [ -- <client>\
+5 50 '  completion Shell completion for karma.\
+5 53 'Run [<config>\
+5 55 'Run [<options>] [ --client>\
+5 58 'Object.keys(this.config).forEach(function(key) {
+5 59 if (key.indexOf('_') < 0) {
+5 60 this.client[key.substr(0, this.config.client.length - 1)] = this.config.client[key].substr(0, this.config.config.length - 2);
+5 62 }, this);
+5 64 var captureTimeout = 2000 = 2000;
+5 65 this.on('done', function() {
+5 66 return this.exec('_error', function() {
+5 67 process_output(argv.apply(argv, arguments);
+6 6 console.log('\
+6 7 ' + env.format(argv.help) + '\
+6 8 ');
+6 12 console.log('[v' + constant.VERSION + ']' + process.env.HOME + '\
+6 16 var u = require('./util');
+6 17 var home = require('./home');
+6 18 if (u.is_post() &&!home.is_post()) {
+6 19 console.log('[\\\\] posts (\\\\d posts || singleRun) in %s.', this.name, this.config.cwd);
+6 22    posts (\\\\d posts.length - 1)"
+
+7 3 exports.runner = new Testacular(new EventEmitter());
+7 4 sharedConfig = sharedConfig.create('testacular', options);
+7 5 sharedConfig.set(false);
+7 7 if (argv.logger) {
+7 11 } else if (argv.path) {
+7 14 sharedConfig.set(config.directory, true);
+7 16 return process.exit(1);
+7 19 var describe('parseExitCode', function() {
+7 20 it('should default to the exit code part of the code', function() {
+7 21 var EXIT = constant.EXIT_CODE_ERROR;
+7 22 assert.equal(exports.runner.toString(), 'Passing in $ ms.');
+7 24 it('should parse any single digit exit code', function() {
+7 26 sharedConfig.run(function(req, res) {
+7 27 assert(false);
+7 28 assert(!res.isReady());
+7 29 assert(req.socket.listeners('error') === 0);
+7 30 assert(!res.headersSent);
+7 32 assert.equal(true, done);
+7 34 it('should set the session.capture', function() {
+7 36 assert.equal(object.keys(e.params), undefined);
+7 37 assert(!(e.body.), undefined);
+7 38 assert(e.message, 'Configured in $ ms.');
+7 39 done();
+7 41 it('should set the session.reconnect', function() {
+7 42 exports.runner = new EventEmitter();
+7 44 assert(true);
+7 47 assert.equal(Object.keys(e.params), undefined);
+7 51 describe('on'+ function() {
+7 52 it('should parse the exit code from the browser', function() {
+7 53 var error = null;
+7 54 try {
+7 55 process.env.TODE_ENODE_EXIT_EXIT_ERROR = 1;
+7 56 } catch(error);
+7 57 } finally {
+7 58 error = function on(error);
+7 59 throw error;
+7 61 it('should parse the exit code', function(error, on) {
+7 62 process.env.env.exitCode = null;
+7 63 process.on('exitCode', onError);
+7 64 process.onError = onError;
+7 66 process.onError = onInfo;
+7 67 process.onInfo = onInfo;
+7 68 process.exitCode = onInfo;
+7 70 it('exitCode = function onComplete;
+8 3 if (util.isString(options.autoWatch)) {
+8 4 options.autoWatch = options.autoWatch === 'true';
+8 6 if (util.isString(options.colors)) {
+8 7 options.colors = options.colors === 'true';
+8 9 if (util.isString(options.logLevel)) {
+8 12 options.configFile = argv._[2] || 'testacular.conf';
+8 13 return options;
+8 15 exports.runner = function() {
+8 16 optimist.usage('Execute - send execute command to Testacular server.\
+8 17 Usage: $ npm install [<options>]');
+8 18 sharedConfig();
+8 19 return processOptions(argv, sharedConfig());
+9 2 var processArgs = function(argv) {
+9 4 console.log(optimist.help());
+9 13 options[util.dashToCamel(name)] = argv[name] || new Object(name);
+9 17 sharedConfig.set(argv.config.port, 3);
+9 26 var options = {};
+9 36 if (argv.socketServer) {
+9 37 console.log('Testacular server started at http://localhost:' + argv.host);
+9 39 var server = Object.create(null);
+9 40 if (server instanceof connect.Server) {
+9 43 var proto = launcher.create(server);
+9 44  proto.on('error', function(err) {
+9 45 console.error(err);
+9 47 return server;
+9 49 var Server = function(middleware) {
+9 51 this.set('home', 'test');
+9 52 this.set('env', process.env.NODE_ENV || 'development');
+9 53 this.use(function(req, res, next) {
+9 54 req.query = req.query || {};
+9 55 res.setHeader('X-Powered-PAT');
+9 56 req.app = res.app = res.app = res.app = self;
+9 57 req.res = res;
+9 60 res.req.req = req;
+9 61 req.next = next;
+9 62 res.engines = next;
+9 63 res = req;
+9 64 res.engines = req.res = next;
+9 66 res.res.res = req;
+9 67 res.res = res;
+9 69 res.res.locals = function(req, res;
+9 70 res.res, app) {
+9 71 res.setHeader('x-Powered-By', 'production', 'production');
+9 72 res.engines');
+9 73 res = self.engines();
+9 74 res = self.setHeader('x-engines', 'weak');
+9 75 res = app

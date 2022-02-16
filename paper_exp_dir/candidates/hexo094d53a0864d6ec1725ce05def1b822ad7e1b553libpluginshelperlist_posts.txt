@@ -1,0 +1,86 @@
+Min editdistance: 35.00
+Closest candidate: 0 1 const { transform } = options;
+0 1 const { transform } = options;
+0 2 const separator = options.hasOwnProperty(\'separator\')? options.separator : \', \';
+0 3 const amount = options.amount || 6;
+0 4 let result = \'\';
+0 5 const self = this;
+0 6 posts = posts.sort(orderby, order);
+0 7 if (amount) posts = posts.limit(amount);
+0 8 if (style === \'list\') {
+0 9 result += `<ul class="${className}-list">`;
+0 10 posts.forEach(post => {
+0 11 const title = post.title || post.slug;
+0 12 result += `<li class="${className}-list-item">`;
+0 13 result += transform? transform(title) : title;
+0 14 result += \'</li>\';
+0 15 result += \'</ul>\';
+0 16 });
+0 19 return result;
+0 20 }
+0 21 module.exports = listPostsHelper;'
+
+1 13 result += `<a class="${className}-list-link" href="${self.url_for(post.path)}">`;
+1 15 result += \'</a>\';
+1 19 } else {
+1 20 posts.forEach((post, i) => {
+1 21 if (i) result += separator;
+1 22 result += post.title;
+1 24 result += `<a class="${className}-link" href="${self.url_for(post.path)}">`;
+4 22 result += post.content;
+5 1 const transform = options.transform;
+5 8 options.renderWithColors(options.locals)
+5 9 .then(null, {
+5 10 content: posts,
+5 11 locals: posts
+5 21 if (!options.amount) posts = this.site.posts;
+5 29 options.renderWithColors = function(context) {
+5 30 return self.post.render(context.source, options, {
+5 31 filename: baseDir
+5 33 };
+5 34 listPostsHelper.prototype.toArray = function() {
+5 35 const { tags } = this;
+5 36 return posts.toArray().filter(tag => tag!= null && tag!== undefined) || tag!== unse;
+5 38 listPostsHelper.prototype.skip = function(num) {
+5 39 return this.post.slice(num);
+5 41 listPostsHelper.prototype.limit = function(num) {
+5 42 return this.post.slice(0, num);
+5 44 listPostsHelper.prototype.set = function(post, val) {
+5 45 if (!val) return;
+5 46 return this.set(\'length\', num);
+5 48 listPostsHelper.prototype.sort = function(orderby, order) {
+5 49 var posts = this.site.posts.sort(orderby, order);
+5 50 var length = posts.length;
+5 51 var result = \'\';
+5 52 if (length < 1) {
+5 53 length = 0;
+5 56 var date = post.date.format(\'YYYY-MM-DD HH:mm:ss\');
+5 57 if (time / date.format(\'YYYY-MM-DD HH:mm:ss\') > 0) date += 1;
+5 58 result += time /=;
+5 59 const posts = posts.filter(function(post) {
+5 60 return post.date.format(format(\'YYYY-MM-DD HH:mm:ss\'));
+5 62 if (!posts.length) return;
+5 64 var date = post.date.format(format(format(\'YYYYYY-MM-MM-DD HH:mm:ss\'));
+5 65 result += time /= post.format(format(\'MM-MM-DD HH:ss\');
+5 66 post.format(post.format(post.format(post.format(post.format(post.format(post.format(post.format));
+5 67 if (0));
+5 68 return posts.forEach((post) => {
+5 69 result += posts.forEach((post) => {
+5 70 return post.setCategories(post.setCategories(post.setCategories(post.categories(post.categories(post.categories(post.categories(post.categories(post.categories)));
+5 71 for (setCategories(post.categories(post.categories(post.categories(post.categories(post.categories)));
+5 72 return post.categories(post.categories(post.
+6 9 if (options.hasOwnProperty(\'style\')) {
+6 10 options[style] = \'list\';
+6 13 for (let i = 0, len = posts.length; i < len; i++) {
+6 14 result += posts[i];
+6 15 if (!result) {
+6 16 result += \'\
+6 17 \';
+6 19 result += \'<ul class="page-number current">\';
+6 20 result += `<li class="page-number current">${format? `${self.config.pagination_dir}` : \'page-number-${item.length}</li>`;
+6 24 }'
+
+9 9 .then(result => {
+9 10 if (!result.length) result = [false];
+9 11 return self.remove(post.source);
+9 14 posts.limit(length);

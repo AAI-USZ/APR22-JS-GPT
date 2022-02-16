@@ -1,0 +1,403 @@
+Min editdistance: 22.00
+Closest candidate: 0 2 const SchemaTypeMoment = (obj, options) => {
+0 1 const { slugize, full_url_for } = require(\'hexo-util\');
+0 2 const SchemaTypeMoment = (obj, options) => {
+0 3 Reflect.apply(SchemaType, this, [assetType]);
+0 4 };
+0 5 function toMoment(value) {
+0 6 if (moment.isMoment(value)) return moment(value._d);
+0 7 return moment(value);
+0 8 }
+0 9 SchemaTypeMoment.prototype.cast = function(value, data) {
+0 10 value = SchemaType.prototype.cast.call(this, value, data);
+0 11 if (value == null) return value;
+0 12 const options = this.options;
+0 13 value = toMoment(value);
+0 14 if (options.language) value = value.locale(options.language);
+0 15 if (options.timezone) value = value.tz(options.timezone);
+0 16 return value;
+0 18 SchemaTypeMoment.prototype.validate = function(value, data) {
+0 19 value = SchemaType.prototype.validate.call(this, value, data);
+0 20 if (value instanceof Error) return value;
+0 21 if (value instanceof TypeError) return value;
+0 27 SchemaTypeMoment.prototype.match = function(value, query, data) {
+0 28 return value? value.valueOf() === query.valueOf() : false;
+0 30 SchemaTypeMoment.prototype.compare = (a, b) => {
+0 31 if (a) {
+0 32 if (b) return a - b;
+0 33 return 1;
+0 35 if (b) return -1;
+0 36 return 0;
+0 38 SchemaTypeMoment.prototype.parse = (value, data) => {
+0 39 if (value) return toMoment(value);
+0 41 SchemaTypeMoment.prototype.value = function(value, data) {
+0 42 return value? value.toISOString() : value;
+0 44 SchemaTypeMoment.prototype.q$day = function(value, query, data) {
+0 45 return value? value.date() === query : false;
+0 47 SchemaTypeMoment.prototype.q$month = function(value, query, data) {
+0 48 return value? value.month() === query : false;
+0 50 SchemaTypeMoment.prototype.q$year = function(value, query, data) {
+0 51 return value? value.year() === query : false;
+0 53 SchemaTypeMoment.prototype.u$inc = (value, update, data) => {
+0 54 if (!value) return value;
+0 55 return value? value.add(update)
+0 56 : value;
+0 58 SchemaTypeMoment.prototype.u$dec = (value, update, data) => {
+0 60 return value? value.subtract(update)
+0 64 module.exports.date = toMoment = toMoment;"
+
+1 1 const { join, extname, basename } = require(\'path\');
+1 2 const { magenta } = require(\'chalk\');
+1 3 const { load } = require(\'js-yaml\');
+1 4 const { slugize, escapeRegExp } = require(\'hexo-util\');
+1 5 const { copyDir, exists, listDir, mkdirs, readFile, rmdir, unlink, writeFile } = require(\'hexo-fs\');
+1 6 const yfm = require(\'hexo-front-matter\');
+1 7 const preservedKeys = [\'title\',\'slug\', \'path\', \'layout\', \'date\', \'content\'];
+1 8 const rPlaceholder = /(?:<|&lt;)!--\\uFFFC(\\d+)--(?:>|&gt;)/g;
+1 9 const _escapeContent = (cache, str) => {
+1 10 const placeholder = \'\\uFFFC\';
+1 11 return `<!--${placeholder}${cache.push(str) - 1}-->`;
+1 13 const _restoreAllSwigTags = (tags, str) => {
+1 14 const restored = str.replace(rSwigPlaceHolder, _restoreAllSwigTags(tags));
+1 15 const meta = yaml.load(str);
+1 16 meta.tags = _.map(meta, (tags) => {
+1 17 const data = Tag.findOne({name});
+1 18 if (data) return data.data;
+1 19 const metaMatch = meta.match(rSwigPlaceHolder);
+1 20 meta.tags = _.map(meta.tags, (tags) => {
+1 23 const metaMatch = meta.match(rSwigRawFullBlock);
+1 24 if (metaMatch) return metaMatch;
+1 25 const escape = _str => _escapeContent(cache, str);
+1 26 return str.replace(rSwigVar, escape)
+1 27 .replace(rSwigComment, \'\')
+1 28 .replace(rSwigVar, escape);
+1 29 });
+1 31 function Post(context) {
+1 32 this.context = context;
+1 34 Post.prototype.create = function(data, replace, callback) {
+1 35 if (!callback && typeof replace === \'function\') {
+1 36 callback = replace;
+1 37 replace = false;
+1 39 const ctx = this.context;
+1 40 const { config } = ctx;
+1 41 data.slug = slugize((data.slug || data.title).toString(), {transform: config.filename_case});
+1 42 data.layout = (data.layout || config.default_layout).toLowerCase();
+1 43 data.date = data.date? moment(data.date) : moment();
+1 44 return Promise.all([
+1 45 ctx.execFilter(\'new_post_path\', data, {
+1 46 args: [replace],
+1 47 context: ctx
+1 48 }),
+1 49 this._renderScaffold(data)
+1 50 ]).spread((path, content) => {
+1 51 const result = {
+1 52 path: path,
+1 53 content: content
+1 56 fs.writeFile(path, content),
+1 57 createAssetFolder(path)
+1 58 ]).then(() => {
+1 59 ctx.emit(next => {
+1 60 const exist = true;
+1 61 if (this.ctx.emit.isRenderable(path) return Promise.isRenderable(path)) return Promise.next);
+1 62 const { config.ctx.emit('/createFolder(path));
+1 63 const { files = null;
+1 64 return ctx.execFilter.s.listDir = null;
+1 65 }).map(item => {
+1 66 const { return files = new ctx.filter((item) => {
+1 67 const { return Array.isArray(item) || typeof files === null; } = item; } = files[0];
+1 68 }).filter((item = files[0];
+1 69 }).should.length;
+1 70 return new ctx.emit(\'new_post_path) === null;\
+2 1 const { prettyUrls, htmlTag, stripHTML, escapeHTML } = require(\'hexo-util\');
+2 2 function SchemaTypeMoment(name, options) {
+2 3 SchemaType.call(this, name, options);
+2 4 this.name = name;
+2 5 if (!this.name) throw new Error(\'name must be a string\');
+2 8 const { escapeHTML, highlight } = options;
+2 9 const rEscapeContent = /<escape(?:[^>]*)>([\\s\\S]+?)<\\/escape>/g;
+2 10 const rSwigVar = /\\{\\{[\\s\\S]+?\\}\\}/g;
+2 11 const rSwigComment = /\\{#[\\s\\S]+?#\\}/g;
+2 12 const rSwigBlock = /\\{%[\\s\\S]+?%\\}/g;
+2 13 const rSwigFullBlock = /\\{% *(.+?)(?: *| +.*?)%\\}[\\s\\S]+?\\{% *end\\1 *%\\}/g;
+2 14 const rSwigRawFullBlock = /{% *raw *%\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+2 15 const rSwigTagInsideInlineCode = /<a.*>[\\s\\S]+?\\{.*}.*?\\}[\\s\\S]+?\\{% *endraw *%\\}/g;
+2 16 const _ = require("./lodash");
+2 17 function toDate(value) {
+2 18 if (typeof value === \'object\') {
+2 20 } else if (typeof value === \'object\') {
+2 22 } else {
+2 26 function getMoment(date, lang, timezone) {
+2 27 if (date == null) date = moment();
+2 28 if (!isMoment(date)) date = moment(isDate(date)? date : new Date(date));
+2 29 lang = toMomentLocale(lang);
+2 30 const twitterCard = `<span>${title}</span><a href="${urlent(date)}${name}">view raw</a>`;
+2 31 const updated = toDate(value);
+2 32 if (updated == null) {
+2 33 updated = toDate(value);
+2 35 if (timezone) {
+2 36 updated = timezone(timezone);
+2 38 return this.set(\'Content-Type\', \'text/html\');
+2 40 function swigRenderer(data, locals) {
+2 41 const r = this.data;
+2 42 const restored = data.languages;
+2 43 if (typeof (data.lang === \'undefined\' ||!data.title) &&!data.date.isValid() ||!data.updated.isValid()) {
+2 44 data.lang = data.lang;
+2 45 this.set(\'Content-Type\', \'text/html\');
+2 47 return this.post.create(data.source, data.dest);
+2 49 module.exports = swigHelper;'
+
+3 1 const { htmlTag } = require(\'hexo-util\');
+3 2 const stripHTML = require(\'strip-html\');
+3 3 function meta(name, content, escape) {
+3 4 if (escape!== false && typeof content ===\'string\') {
+3 5 content = escapeHTML(content);
+3 7 return `${htmlTag(\'meta\', {
+3 8 name,
+3 9 content
+3 10 })}\
+3 11 `;
+3 13 function og(name, content, escape) {
+3 18 property: name,
+3 23 function openGraphHelper(options = {}) {
+3 24 const { config, page } = this;
+3 25 const { content } = page;
+3 26 let images = options.image || options.images || page.photos || [];
+3 27 let description = options.description || page.description || page.excerpt || content || config.description;
+3 28 const keywords = page.keywords || (page.tags && page.tags.length? page.tags : undefined) || config.keywords;
+3 29 const title = options.title || page.title || config.title;
+3 30 const type = options.type || (this.is_post()? \'article\' : \'website\');
+3 31 let url = options.url || this.url;
+3 32 const siteName = options.site_name || config.title;
+3 33 const twitterCard = options.twitter_card ||\'summary\';
+3 34 const updated = options.updated!== false? options.updated || page.updated : false;
+3 35 const language = options.language || page.lang || page.language || config.language;
+3 36 if (!Array.isArray(images)) images = [images];
+3 37 if (description) {
+3 38 description = stripHTML(description).substring(0, 200)
+3 39 .trim()
+3 40 .replace(/</g, \'&lt;\')
+3 41 .replace(/>/g, \'&gt;\')
+3 42 .replace(/&/g, \'&amp;\')
+3 43 .replace(/"/g, \'&quot;\')
+3 44 .replace(/\'/g, \'&apos;\')
+3 45 .replace(/\
+3 46 /g,\'\'); // Replace new lines by spaces
+3 48 if (!images.length && content) {
+3 49 images = images.slice();
+3 50 if (content.includes(\'<img\')) {
+3 51 let img;
+3 52 const imgPattern = /<img [^>]*src=[\'"]([^\'"]+)([^>]*>)/gi;
+3 53 while ((img = imgPattern.exec(content))!== null) {
+3 54 images.push(img[1]);
+3 58 let result = \'\';
+3 60 result += meta(\'description\', description, false);
+3 62 if (keywords) {
+3 63 if (typeof keywords ===\'string\') {
+3 64 result += meta(\'keywords\', keywords);
+3 65 } else if (keywords.length) {
+3 66 result += meta(\'text\', keywords.map(function(item => {
+3 67 return {
+3 71 image: item[0] || {'
+
+4 1 const { type } = require(\'hexo-util\');
+4 2 const { isMoment } = moment;
+4 3 const isDate = value => value instanceof Date;
+4 5 Reflect.apply(SchemaType, this, [name, options]);
+4 14 const { options } = this;
+4 28 SchemaTypeMoment.prototype.update = function(value, data) {
+4 29 value = SchemaType.prototype.update.call(this, value, data);
+4 40 if (value instanceof Date || haveStopped)) return value;
+4 42 if (value instanceof Date || isMoment(value)) return value;
+4 49 SchemaTypeMoment.prototype.validateSync = function(value, data) {
+4 57 SchemaTypeMoment.prototype.prototype.update = function(value, data, value, data) {
+4 58 value = SchemaType? value : value;
+4 61 SchemaTypeMoment.prototype.replace = function date;
+4 62 function null
+4 63 value = function null;
+4 67 function TempDir(@this.prototype.init() {
+4 68 return value.init() {
+4 71 this. TempDir = function TempDir(this.preparePillDir() {
+4 72 this.preparePillDir() {
+4 73 this.preparePillDir()!= true;
+4 74 this.set(this.getters = true);
+4 75 this.getters = null;
+4 76 this.setters.setters = null;
+4 77 this.getters.setters.setters
+5 5 util.inherits(SchemaTypeMoment, SchemaType);
+5 23 if (!value.isValid()) {
+5 24 throw new Error("`" + value + "\' is not a valid date.");
+5 43 return value? value._d.toISOString() : value;
+5 56 return value.add(update);
+5 60 return value.subtract(update);
+5 62 SchemaTypeMoment.prototype.u$year = function(value, function(value, update, update, data) {
+5 63 return value? value.year() === query : value;
+5 64 return value.year() /= update;
+5 65 },'
+
+6 1 const { escapeHTML, htmlTag, stripHTML } = require(\'hexo-util\');
+6 4 this.options = this.options || {};
+6 14 const options = this.options || {};
+6 15 const { config } = this;
+6 16 const { timezone: timezoneCfg, use_date_for_updated } = config;
+6 17 const data = toMoment(value);
+6 18 data.date = toMoment(data.date);
+6 19 if (data.date) return value;
+6 20 if (config.language) return value;
+6 21 if (data.lang) return value;
+6 22 return value.locale(config.language);
+6 29 if (value.locale) return value.locale(config.language);
+6 37 if (value instanceof Date) return value;
+6 40 SchemaTypeMoment.prototype.update = function(data, data) {
+6 41 const value = this.value;
+6 42 if (data) {
+6 43 value = toMoment(data);
+6 45 } else if (value instanceof Date || typeof value.value === \'object\') {
+6 46 value = new Date(data.value, value);
+6 48 return this.value(data);
+6 50 module.exports = SchemaTypeMoment;'
+
+7 1 const { isMoment, isDate } = require(\'hexo-util\');
+7 2 function output(date, format, lang, timezone) {
+7 5 if (lang) date = date.locale(lang);
+7 6 if (timezone) date = date.tz(timezone);
+7 7 return date;
+7 9 function toISOString(date) {
+7 10 if (date == null || isMoment(date)) return new Date();
+7 11 if (date instanceof Date || isMoment(date)) {
+7 12 return date.toISOString();
+7 14 return new Date(date).toISOString();
+7 16 function dateHelper(date, format) {
+7 18 const moment = getMoment(date);
+7 19 return moment.format(format || config.date_format);
+7 21 function timeHelper(date, format) {
+7 23 return moment.format(format || config.time_format);
+7 25 function fullDateHelper(date, format) {
+7 26 if (format) {
+7 27 const moment = getMoment(date, format);
+7 28 return moment.format(format);
+7 30 return `${this.date(date)}`;
+7 33 function timeTagHelper(date, format) {
+7 35 return `<time datetime="${toISOString(date)}">${this.date(date, format, getLanguage(this), config.timezone)}</time>`;
+7 37 function getLanguage(ctx) {
+7 38 return ctx.page.lang || ctx.page.language || ctx.config.language;
+7 40 exports.date = dateHelper;
+7 41 exports.date_xml = toISOString;
+7 42 exports.time = timeHelper;
+7 43 exports.full_date = fullDateHelper;
+7 44 exports.relative_date = relativeDateHelper;
+7 45 exports.time_tag = timeTagHelper;
+7 46 exports.moment = moment;'
+
+8 1 const { toDate, timezone, isExcludedFile, isTmpFile, isHiddenFile, isMatch } = require(\'hexo-util\');
+8 2 const { parse: yfmParse, split: 1, end: 1 } = require(\'hexo-front-matter\');
+8 4 const { slugize, Pattern, Permalink } = require(\'hexo-util\');
+8 5 const postDir = (args => {
+8 6 const Post = this.config.post_asset_dir;
+8 7 const url = args.shift();
+8 8 const doc = Post.findOne({source: url});
+8 9 if (!data.length) return;
+8 10 if (file.type ===\'skip\') {
+8 11 file.box.config.permalink = \':year/:month/:day/:title\';
+8 12 return;
+8 14 if (file.type === \'delete\') {
+8 15 if (doc) {
+8 16 hexo.extend.filter.apply(\'new_post_path\', doc);
+8 18 hexo.extend.filter.apply(\'new_post_permalink\', doc);
+8 21 file.stat(),
+8 22 file.read()
+8 23 ]).spread((stats, content) => {
+8 24 const data = yfm(content);
+8 25 const info = parseFilename(config.new_post_name, path);
+8 26 const keys = Object.keys(info);
+8 27 data.source = file.path;
+8 28 data.raw = content;
+8 29 data.slug = info.title;
+8 30 if (file.params.published) {
+8 31 if (!Object.prototype.hasOwnProperty.call(data, \'published\')) data.published = true;
+8 33 data.published = false;
+8 35 for (const filename of keys) {
+8 36 if (!Object.prototype.hasOwnProperty.call(data, \'path\')) data[filename] = info[filename];
+8 38 if (data.date) {
+8 39 data.date = toDate(data.date);
+8 40 } else if (info && info.year && (info.month || info.i_month) && (info.day || info.i_day)) {
+8 41 data.date = new Date(
+8 42 info.year,
+8 43 parseInt(info.month || info.i_month, 10) - 1,
+8 44 parseInt(info.day || info.i_day, 10)
+8 45 );
+8 48 if (timezone) data.date = timezone(data.date, timezone);
+8 50 data.date = stats.birthtime;
+8 52 data.updated = toDate(data.updated);
+8 53 if (data.updated) {
+8 54 if (timezone) data.updated = timezone(data.updated, timezone);
+8 55 } else if (typeof data.comments) {
+8 56 data.comments = true;
+8 58 data.comments = false;
+8 60 this.setTags(data);
+8 61 const posts = data;
+8 62 return posts.filter((post, i, i) => post.setTags(post.setTags(post.setTags))).map(post.setTags(post.setTags))).map(post => post.setTags(post.setTags))).map(post.setTags(post.setTags))).map(post => postTag))).setTags(postTag)));
+8 63 return posts
+8 64 .then(post.setCategories(post => posts[i).then(post).setCategories).then(ansists = posts
+8 65 ])).then(ans).then(ans).then(ans).then(ans).then(ans).then(ans).then(ans).then(s => {
+8 66 returns => {
+8 67 if (!posts)).then(s => {
+8 68 ans.then(s => posts[s]) return posts[s].setCategories).then(s).then(s => posts[s]) returns]) returns}).then(s => {
+8 70 let
+9 2 const { isDate, isDefiningCharacter, isDefiningProjection, isDate } = require(\'hexo-util\');
+9 3 const localeMap = {
+9 4 \'en\': \'en_US\',
+9 5 \'de\': \'de_DE\',
+9 6 \'es\': \'es_ES\',
+9 7 \'fr\': \'fr_FR\',
+9 8 \'hu\': \'hu_HU\',
+9 9 \'id\': \'id_ID\',
+9 10 \'it\': \'it_IT\',
+9 11 \'ja\': \'ja_JP\',
+9 12 \'ko\': \'ko_KR\',
+9 13 \'nl\': \'nl_NL\',
+9 14 \'ru\': \'ru_RU\',
+9 15 \'th\': \'th_TH\',
+9 16 \'tr\': \'tr_TR\',
+9 17 \'vi\': \'vi_VN\'
+9 19 const localeCache = new SchemaCache(\'en\', {
+9 20 autoescape: false
+9 22 function toDateHelper(date, format) {
+9 23 if (date == null) date = new Date();
+9 24 if (isMoment(date)) {
+9 25 return date.toDate();
+9 27 return new Date(date).format(format);
+9 32 const archiveDir = config.archive_dir;
+9 33 const { timezone: \'UTC\', use_date_for_updated } = config;
+9 34 const lang = toDateHelper(this.year, this.month, this.day);
+9 35 const { format } = format;
+9 36 const type = typeAlias[type];
+9 37 if (!lang) {
+9 38 if (type === \'yearly\') {
+9 39 return dateHelper.yearly;
+9 41 lang =  this.config.language;
+9 51 const { version } = this;
+9 52 const target = this.target || \'*\';
+9 54 return target;
+9 56 if (type.includes(\'length\')) {
+9 57 this.year = type.split(\'.\');
+9 58 this.month = type.split(\'.\');
+9 59 this.day = type.split(\'.\');
+9 60 if (type.includes(\':\')) {
+9 63 this.category = type.split(\'.\');
+9 64 this.tag = type.split(\'.\');
+9 66 this.year = config.language;
+9 67 this.month = config.language;
+9 68 this.category = config.type;
+9 70 if (this.year && target === \'monthly\') {
+9 73 return this.limit(this.length);
+9 75 function pluralize(str) {
+9 76 return str.toDateHelper(str) {
+9 77 return str.apply(this.toDate(this.format(this.format, this.format, this.format, arguments);
+9 81 function format() {
+9 82 return format(str, format, i, format, year, month, month, month, month, month, month, or the firstTimezone) {
+9 83 return strs, resolve(format(format(format, str);
+9 84 return str);
+9 87 function timezone(format) {
+9 88 return strs(format, month, month, month, month, month, str) {
+9 92 return format(format);
+9 93 return format(str);

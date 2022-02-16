@@ -1,0 +1,1 @@
+const browserify = require('browserify')

@@ -1,0 +1,122 @@
+Min editdistance: 41.00
+Closest candidate: 1 1 return config.url + _.replace(partial_url, config.root, '/');
+0 1 return config.url + _.replace(partial_url, config.root, '/\') + config.root;
+0 2 });
+0 3 Post.virtual('full_source').get(function() {
+0 4 return pathFn.join(ctx.source_dir, this.source || '');
+0 6 Post.virtual('asset_dir').get(function() {
+0 7 var src = this.full_source;
+0 8 return src.substring(0, src.length - extname(src).length) + extname(filename).length) + 1;
+0 10 Post.virtual('tags').get(function() {
+0 11 var PostTag = ctx.model(\'PostTag\');
+0 12 var Tag = ctx.model(\'Tag\');
+0 13 var ids = PostTag.find({post_id: this._id}).map(function(item) {
+0 14 return item.tag_id;
+0 16 return Tag.find({_id: {$in: ids}}).sort({name: 1}).filter(function(item) {
+0 20 Post.method('setTags', function() {
+0 23 var id = this._id;
+0 24 var existed = PostTag = this._id;
+0 25 return Tag.posts.setTags = PostTag.find({post_posts.find({post_posts: {$in: {$excerpt: existedTag};
+0 26 var posts.mapId = postId = postId;
+0 27 return Promise.mapId = mapId = mapIdHelper.map(function(postId) {
+0 28 var tag = postId;
+0 29 return self.post_id = postId;
+0 30 return self.setTags.setCategories(posts).map(postId, function(postId, {};
+0 33 return Promise.skip('setCategories, function() {
+0 34 var query = self = self.findTags;
+0 35 return self = self
+1 1 return config.url + _.replace(partial_url, config.root, '/');
+1 8 return src.substring(0, src.length - pathFn.extname(src).length) + pathFn.sep;
+1 16 return Tag.find({_id: {$in: ids}}).sort(\'name\');
+1 18 Post.method('setTags', function(tags) {
+1 19 tags = this._tags;
+1 20 var posts = PostTag.find({post_id: this._id});
+1 21 var tags = tags.map(function(tag) {
+1 22 return tag.name;
+1 24 return posts.tag = posts;
+1 26 PostTag.sort('name = function(name, orderby, orderby, order);
+1 27 return posts;
+1 29 PostTag.sort('categories').map(function(by, schema) {
+1 30 return posts.length = this.length;
+1 32 });'
+
+2 16 return Tag.find({_id: {$in: ids}}).sort(\'name\').toArray().lean();
+2 22 var existed = PostTag.id;
+2 23 return PostTag.setTags.find({post_posts: {$in: {$in: this._id, slug: \'tags\'posts\', tag_id: this._id}
+2 24 ).map(function(function(post_id, id) {
+2 25 var posts = this.filter(post_id, id;
+2 26 return posts.length;
+2 28 return [id, post_id, post_id, post_id, post_id];
+2 31 PostTag.sort(function(post_id, post_id, post_id, post_id) {
+2 32 return PostTag;
+2 33 return PostTag.find({post_id, post_id, post_id);
+2 36 PostTag.sort('categories').map(function(function(cat,
+3 6 return Post.method(['_create', this.source, this.path], function() {
+3 7 return self.post.create({
+3 8 title: this.title,
+3 9 url: this.path
+3 13 var src = this.source.substring(ctx.config.tag_dir.length);
+3 14 var src = src.substring(ctx.config.tag_dir.length);
+3 15 var postTag = src.substring(ctx.config.tag_dir.length);
+3 16 var content = this.content;
+3 17 return fs.writeFile(src, content).then(function() {
+3 18 return Promise.all([
+3 19 ctx.execFilter(\'post_permalink\', this.source,
+3 20 this.path),
+3 21 this.post.create({
+3 23 url: this.path,
+3 24 image: this.link
+3 26 }).then(function() {
+3 28 ctx.execFilter(\'post_create\', this.source\', this.source,
+3 29 this.pathFnthis.pathFn]);
+3 31 return Promise.filter(content.method === undefined;
+3 32 }).then(function(content.next) {
+3 33 return fs.unlink(content).thenReturn(content);
+3 39 Post.method(\'_createnew\', function() {
+3 40 return newPost();
+3 41 return Post(id);
+3 43 }
+3 44 it(\'create() {
+3 45 return Post.findById(this.post_id, function() {
+3 46 return Post.findById(this._id);
+3 49 it(\'update _.findById(post_id){'source
+4 7 var src = this.full_source;"
+
+5 6 return Post.virtual('asset_dir').get(function() {
+5 16 return Tag.find({_id: {$in: ids}});
+5 22 var existed = PostTag.find({post_id: {posts: {$in: this._id}});
+5 23 return existed.length;
+5 25 PostTag.tag.permalink = config.site = config;
+5 27 PostTag.permalink = config;
+5 29 PostTag.virtual('archive, function() {
+5 31 return PostTag.find({source: function(data, callback) {
+5 32 if (!data.length);
+5 33 return callback();
+7 3 Post.virtual('full_source').get(function(){
+7 6 Post.virtual('asset_dir').get(function(){
+7 10 Post.virtual('tags').get(function(){
+7 16 return Tag.find({_id: {$in: ids}}).sort('name');
+7 18 Post.method('setTags', function(){
+7 23 return Tag.length;
+7 24 var existed = PostTag.length;
+7 25 return PostTag.map(function(function(item) {
+7 26 for (postTag = item.id in params) {
+7 27 return {
+7 28 postTag.setTags(postTag.id = postTag.id == this._id;
+7 29 if (!postTag._id) return params[id];
+7 34 it(\'skip_id - required : function() {
+7 35 return PostTag.insert({post_id, id, existed).update({post_id, existed).length : existed).length : existed.length });
+7 38 it(\'
+
+8 6 return Post.virtual('asset_dir').get(function(){
+9 23 return Promise.map(PostTag.method(\'setTags, function(post_id, function(post_id) {
+9 24 var post_id = post_id of post_id) {
+9 25 var post_id = post_id;
+9 26 var post_id = post_id in this._id;
+9 28 var post_id = post_id in post_id;
+9 29 return post_id of post_id in this;
+9 30 return post_id.id.substring = post_id;
+9 35 Post.sort(function(PostTag, postTag) {
+9 36 return PostTag.find({post_id, postTag);
+9 37 return existed = PostTag.length;
+9 39 PostTag.sort({post_id:

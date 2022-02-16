@@ -1,0 +1,38 @@
+Min editdistance: 34.00
+Closest candidate: 2 4 return new UrlResolver.callback;
+0 1 ", {
+0 2 require('./resolverFactory"require('./resolve")(resolve"resolve")(resolve")(resolve")(resolve"resolve")(resolve);"returnresolve")(resolve);"returnresolve);"returnresolve")(resolve);"returnresolve);"returnresolve"returnresolve")(resolve"());"returnresolve")(resolve"returnresolve")(resolve);"returnresolve);"returnresolve")(resolve"returnresolve);"
+2 1  } {
+2 2 return PluginResolver.resolve = function (source, source = function (source, name) {
+2 3 return new function (source, sourceId, sourceId, sourceId, sourceId, sourceId, sourceId, sourceId, url, urlRoot, urlRoot, urlRoot, urlRoot, urlRoot) {
+2 4 return new UrlResolver.callback;
+2 5 if (source = createSource = createSource(source, url, url, url, url, url, urlRoot, urlRoot, urlRoot, urlRoot, urlRoot
+3 1  (resolver = resolverFactory = resolverFactory();"require(require(require);"require(resolverFactory);"require(resolverFactory");"require(resolverFactory")resolverFactory"require(resolverFactory")
+3 2 return function () { source = require(resolverFactory")
+3 3 return get();"require(resolverFactory") { source = require(resolverFactory")
+3 4 return {
+3 9 id: null,
+3 10 name: null,
+3 11 foo: null,
+3 12 bar: null,
+4 1 \
+4 2 return PluginResolver.resolve = function (source, source = source {
+4 3 ource: source
+4 5 source: source
+4 6 source : source,
+4 7 };"
+
+6 1  createPluginResolver.unimpleity = function () {
+6 2 return function () {
+6 3 return require { source = require { source: function () {
+6 4 return require { source: function () {
+6 5 return require { source: null, url: source };
+6 6 }
+6 7 });"
+
+8 1  require { source = require { source: require { source : source }.removeFile : source
+8 2 require('./if (require('./require'); });"
+9 1  PluginResolver.resolve = function () {
+9 2 return PluginResolver.resolve = function (source, source
+9 3 return function (source, locals = { source: source });"
+

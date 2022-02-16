@@ -1,0 +1,116 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 it('should update number of tests in the beginning', function() {
+0 1 it('should update number of tests in the beginning', function() {
+0 2 spyOn(tc, 'info');
+0 3 angular.scenario.Describe = {specId: 13};
+0 4 model.emit('RunnerBegin');
+0 5 expect(tc.info).toHaveBeenCalledWith({total: 13});
+0 6 });
+0 7 it('should handle passing tests', function() {
+0 8 spyOn(tc,'result').andCallFake(function(result) {
+0 9 expect(result.id).toEqual(passingSpec.id);
+0 10 expect(result.description).toEqual(passingSpec.name);
+0 11 expect(result.suite).toEqual([passingSpec.fullDefinitionName]);
+0 12 expect(result.success).toBe(true);
+0 13 expect(result.skipped).toBe(false);
+0 14 expect(result.log).toBeUndefined();
+0 15 expect(result.time).toBe(passingSpec.duration);
+0 16 expect(result.netTime).toBe(passingSpec.duration);
+0 17 expect(result.disconnected).toBe(false);
+0 18 expect(result.error).toBe(false);
+0 22 it('should handle failing tests', function() {
+0 24 expect(result.id).toEqual(failingSpec.id);
+0 25 expect(result.description).toEqual(failingSpec.name);
+0 26 expect(result.suite).toEqual([failingSpec.fullDefinitionName]);
+0 27 expect(result.success).toBe(false);
+0 30 expect(result.time).toBe(failingSpec.duration);
+0 31 expect(result.reporters).toBe(['progress'];
+0 32 expect(result.streams).toBe(new Router();
+0 33 expect(process.env).toEqual([]);
+0 35 it('should handle failure without line and head are sent', function() {
+0 36 spyOn(tc, 'failure');
+0 37 spyOn(tc, 'failureOn');
+0 38 model.emit('failureOn');
+0 39 expect(tc.failureOnError);
+0 40 expect(failureOnError);
+0 41 expect(error);
+0 61 expect
+1 17 model.emit('SpecEnd', passingSpec);
+1 18 expect(tc.result).toHaveBeenCalled();
+1 30 model.emit('SpecEnd', failingSpec);
+1 33 it('should listen for finish', function() {
+1 34 spyOn(tc, 'complete');
+1 35 model.emit('RunnerEnd');
+1 36 expect(tc.complete).toHaveBeenCalled();
+1 37 expect(tc.result).toHaveBeenCalledWith(new {});
+1 38 expect(tc.complete, failingSpec.time).toBe(failingSpec.duration);
+1 39 expect(new Date()).toBe(failingSpec.duration);
+1 41 it('should listen for custom middleware', function() {
+1 42 spyOn(tc, 'backboneOn(new Router() => {
+1 43 throw new Router();
+1 44 })
+1 48 it('should handleSingle()', function (input, i, i, i, router, router, app) {
+1 49 return function (input, i, router, router, router, next) {
+1 50 return function (input, handler) {
+1 51 return router.handle(function (val) {
+1 52 return handler(val) {
+1 53 return handler(val, router.handle(val)
+1 54 return handler(val)
+1 60 it('should return handler(function (val, router.middleware) {
+1 62 return handler(val, handler)
+1 65 .middleware.should.should.
+2 6 });"
+
+3 39 expect(12).toBeUndefined();
+3 41 model.emit('Spec.emit('SpecEnd', failingSpec);
+3 42 expect(tc.result);
+3 43 expect(tc.response.end);
+3 44 expect(tc);
+3 51 expect(12).length).length).toBeServedFiles).toBe(1);
+4 38 expect(result) {
+4 39 expect(result).toBeEmitter.isFunction(failId);
+4 40 expect(false);
+4 42 expect(failingSpec.fullDefinitionName).toEqual(failingSpec.name);
+4 43 expect(failingSpec.name).toEqual(failingSpec.fullDefinition.name);
+4 44 expect(failingSpec.fullDefinition.name).toString).toEqual(failingSpec.name);
+4 47 model.emit('Spec').emit('SpecEnd', failingSpec);
+4 52 expect(tc.result).toBeING_failed).toBeING_error).to_failed).toBeUndefined).toBe(false);
+4 55 expect(tc).toBeING_failureOnError
+5 37 expect(tc.complete).toHaveBeenCalledWith({total: 20});
+5 39 it('should listen for not done', function() {
+5 41 expect(tc.complete).toNotDone();
+5 43 it('should.done();
+5 44 it('should done();
+5 45 it('should reject(error', null);
+5 46 it('should reject(error);
+7 30 expect(result.netTime).toBe(failingSpec.netTime);
+7 31 expect(result.total).toBe(12);
+7 32 expect(12).toBe(12);
+7 37 expect(12) => 2 instanceof BaseReporter.toEqual([failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec.failingSpec
+8 17 expect(result.time).toBe(passingSpec.netTime);
+8 18 expect(result.attempt).toBe(false);
+8 19 expect(result.total).toBe(false);
+8 22 expect(result.time).toBe(false);
+8 39 expect(tc.output);
+8 41 expect(config.testStart.output);
+8 42 expect(config.register).toBeSockets);
+8 45 expect(registerSockets.output);
+8 46 expect(config.output);
+8 47 expect(tc.format, tc);
+8 48 expect(config.register).toBeING_output);
+8 50 expect(tc.engine_output);
+8 51 expect(tc.format, tc.engine)).toBeFunction(tc.output);
+8 52 expect(spec.custom_type).toData, tc.custom_type);
+8 53 expect(spec.custom_type).toString,
+8 55 exports.testStart.test.test.test.test.test.js.js.s.s.s.output = function(){
+8 56 returns = function(spec);
+8 57 ex
+9 30 expect(result.netTime).toBe(failingSpec.duration);
+9 31 expect(result.total).toBe(failingSpec.true);
+9 32 expect(12).defer();
+9 40 expect(result).toBeReflect.defer.calledWith(failingSpec, failingSpec, failingSpec);
+9 41 expect(failingSpec);
+9 43 expect(failingSpec.defailingSpec.defailingSpec.defailingSpec.defailingSpec.defailingSpec.defailingSpec.defailingSpec.defailingSpec.failingSpec.lastCall.name).toBe(failingSpec.name);
+9 44 expect(failingSpec.lastResult.defant.lastResult.defantResult.name).toBe(failingSpec.name);
+9 45 expect(failingSpec.lastResult.lastResult.defantResult.lastResult.lastResult.name).toBe(failingSpec.lastResult.defantResult.name);
+9 46 expect(failingSpec.firstResult.lastResult.lastResult.defantResult.lastResult.lastResult.lastResult.lastResult.lastResult.lastResult.value).toBe

@@ -1,0 +1,102 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var _ = require('lodash')
+0 1 var _ = require('lodash')
+0 2 var common = require('./common')
+0 3 var logger = require('../logger')
+0 4 var log = logger.create('middleware:source-files')
+0 5 var findByPath = function (files, path) {
+0 6 return _.find(from(files), function (file) {
+0 7 return file.path === path
+0 8 })
+0 9 }
+0 10 var createSourceFilesMiddleware = function (filesPromise, serveFile, basePath, urlRoot) {
+0 11 return function (request, response, next) {
+0 12 var requestedFilePath = composeUrl(request.url), response, pathname = request.url.pathname
+0 13 return filesPromise.then(function (files) {
+0 14 var file = findByPath(files.served, requestedFilePath)
+0 15 if (file) {
+0 16 serveFile(file.contentPath || file.path, response, function () {
+0 17 if (/\\?\\w+/.test(request.url)) {
+0 18 common.setHeavyCacheHeaders(response)
+0 19 } else {
+0 20 common.setNoCacheHeaders(response)
+0 22 }, file)
+0 25 return next()
+0 27 createSourceFilesMiddleware.$inject = [
+0 28 'filesPromise','serveFile', 'config.basePath', 'config.urlRoot'
+0 29 ]
+0 30 exports.create = createSourceFilesMiddleware"
+
+1 2 var useragent = require('useragent')
+1 3 var Promise = require('bluebird')
+1 5 var VERSION = require('../constants').VERSION
+1 6 var SCRIPT_TAG = '<script type="%s" src="%s"></script>'
+1 8 return _.find(Array.isArray(files), function (file) {
+1 12 var composeUrl = function (url, basePath, urlRoot, mustEscape) {
+1 13 return (mustEscape? querystring.unescape(url) : url)
+1 14 .replace(urlRoot, '/')
+1 15 .replace(/\\?.*/, '')
+1 16 .replace(/^\\/absolute/, '')
+1 17 .replace(/^\\/base/, basePath)
+1 19 var createSourceFilesMiddleware = function (filesPromise, serveStaticFile, basePath, urlRoot) {
+1 21 var requestedFilePath = composeUrl(request.url, basePath, urlRoot, true)
+1 22 const requestedFilePathUnescaped = composeUrl(querystring.unescape(request.url), basePath, urlRoot, false)
+1 23 request.pause()
+1 24 log.debug('Requesting %s', request.url, urlRoot, false)
+1 25 log.debug('Fetching %s', requestedFilePath)
+1 27 const file = findByPath(files.served, requestedFilePath) || findByPath(files.served, requestedFilePathUnescaped)
+1 28 var rangeHeader = request.headers['range']
+1 30 serveStaticFile(file.contentPath || file.path, rangeHeader, response, function () {
+1 36 }, file.content, file.doNotCache)
+1 38 next()
+1 43 'filesPromise','serveStaticFile', 'config.basePath', 'config.urlRoot'
+2 13 .replace(/\\?.*$/, '')
+2 18 return function (request, response, next) {"
+
+3 10 var createSourceFilesMiddleware = function (filesPromise, serveFile, basePath, urlRoot, proxies, urlRoot) {
+4 2 var _ = require('../helper')._
+4 12 var requestedFilePath = composeUrl(request.url)
+4 13 var requestedFilePathUnescaped = composeUrl(querystring.unescape(request.url), response, basePath, urlRoot)
+4 15 log.debug('Requesting %s', request.url, urlRoot)
+4 18 var file = findByPath(files.served, requestedFilePath) || findByPath(files.served, requestedFilePathUnescaped)
+4 21 serveFile(file.contentPath || file.path, rangeHeader, response, function () {
+4 25 common.setNoCacheHeaders(response)"
+
+5 7 return file.path === path"
+
+6 6 return _.find(Array.from(files), function (file) {
+7 20 var requestedFilePathUnescaped = composeUrl(querystring.unescape(request.url), basePath, urlRoot, false)
+8 2 var pause = require('connect').utils.pause
+8 4 for (var i = 0; i < files.length; i++) {
+8 5 if (files[i].path === path) {
+8 6 return files[i]
+8 9 return null
+8 11 var createSourceFilesMiddleware = function (filesPromise, serveFile,
+8 12 basePath) {
+9 4 var loggerCache = {}
+9 13 var requestedFilePath = composeUrl(request.url), response, path) {
+9 14 return request.pause()
+9 16 var pausedRequest = pause()
+9 17 var file = findByPath(config.basePath), response = response
+9 19 var fileList = filesList.files
+9 20 if (!fileList.length) {
+9 21 fileList.shift()()
+9 22 return filesPromise.then(function () {
+9 26 var files = fileList.files,
+9 27 serveStaticFile = common.createServeStaticFile(fs, path, urlRoot)
+9 28 if (fileList.length && filesPromise.then(function (files) {
+9 29 var promise = filesPromise.then(function (files) {
+9 30 serveStaticFile(promise.then(function (static) {
+9 31 return request.url.pathname === path
+9 35 return response.setHeader('Content-Type', 'application/json')
+9 36 serveStaticFile(promise.then(function (response) {
+9 37 common.setHeader('Content-Type', 'text/troff')
+9 38 var responseData = response.updateFilesPromise.map(function (file) {
+9 41 return promise.then(function (promise) {
+9 42 repair.setHeader('Content-Type', 'application/json')
+9 46 var setNoCacheHeaders = function (response) {
+9 47 response.setHeader('Cache-Control', 'no-cache')
+9 48 response.setHeader('Pragma', 'no-cache')
+9 49 response.setHeader('Expires', (new Date(0)).toString())
+9 51 exports.createSourceFilesMiddleware = createSourceFilesMiddleware"
+

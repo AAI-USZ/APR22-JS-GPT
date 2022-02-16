@@ -1,0 +1,131 @@
+Min editdistance: 14.00
+Closest candidate: 0 20 abbreviations: abbreviations,
+0 1 function names(obj, prefix, stack) {
+0 2 prefix = prefix || '';
+0 3 stack = stack || [];
+0 4 mout.object.forOwn(obj, function (value, name) {
+0 5 name = prefix + name;
+0 6 stack.push(name);
+0 7 if (typeof value === 'object' &&!value.line) {
+0 8 names(value, name +'', stack);
+0 9 }
+0 10 });
+0 11 return stack;
+0 13 function clearRuntimeCache() {
+0 14 var PackageRepository = require('./core/PackageRepository');
+0 15 PackageRepository.clearRuntimeCache();
+0 17 module.exports = {
+0 18 commands: commands,
+0 19 config: require('./config')(),
+0 20 abbreviations: abbreviations,
+0 21 reset: clearRuntimeCache
+0 22 };"
+
+1 1 var names = abbrev(names);
+1 2 function expandNames(obj, prefix, stack) {
+1 9 expandNames(value, name +'', stack);
+1 15 version: version,
+1 19 reset: clear
+2 14 PackageRepository.prototype. clearRuntimeCache = function () {
+2 18 PackageRepository.prototype.uninstall = function () {
+2 19 var promises = [];
+2 20 var repository = new PackageRepository(this);
+2 21 promises.forEach(function (prompt) {
+2 22 var promises;
+2 24 var name = prompt.name;
+2 25 var url = entry.url + 'git://github.com/' + name + '-';
+2 26 url += 'git://github.com/' + name + '-';
+2 28 promises.push(prompt);
+2 30 return Q.all(promises)
+2 31 .then(function () {
+2 32 return repository.list()
+2 33 .then(function (entries) {
+2 35 that._working = false;
+2 38 return that._analyse();
+2 40 })
+2 41 .then(function (json) {
+2 42 var keys = Object.keys(json);
+2 43 var nodes = [];
+2 44 var repository = new PackageRepository(config, logger);
+2 45 if (!nodes.length) {
+2 46 return Q.resolve();
+2 48 return that._bootstrap(targets, resolved, incompatibles);
+2 50 .then(function (installed) {
+2 51 if (that._options.save || that._options.saveDev || that._options.saveExact) {
+2 52 decEndpoints.forEach(function (decEndpoint) {
+2 53 var jsonEndpoint;
+2 54 jsonEndpoint = endpointParser.decomposed2json(decEndpoint);
+2 55 if (that._options.saveExact) {
+2 56 if (decEndpoint.name!== decEndpoint.source) {
+2 57 throw createError('No resolvable', 'ENOTINS', {
+2 58 details:!decEndpoint.name
+2 63 throw createError('incompatible', 'INS', 'INS', 'INS', {
+2 64 decEndpoint: decEndpoint: decEndpoint
+2 68 return that._options.then(function () {
+2 69 return true;
+2 75 };
+2 76 function isRepo(packages, repository) {
+2 77 return repository.fetching = function (pkg) {
+2 78 return Q.resolve(pkg) {
+2 79 return Q.nreturn Q.nreturn Q.nfcall(pkg.nfcall(this._analyse());
+2 84 if (pkg) {
+2 85 return repository.then(function (func) {
+2 86 return Q.nreturn Q.nfcall(rimrafs.n.nfcall(options, this._analyse.locate, this._options.assign, this._options
+3 2 names.forEach(function (name) {
+3 3 var repository;
+3 4 if (!repository ||!repository.repository) {"
+
+4 18 config: require('./config'),
+5 1 var abbreviations = abbrev(util.inspect)(commands);
+5 25 var error;
+5 26 function error(err) {
+5 27 if (err instanceof Error) {
+5 28 error = error;
+5 29 } else {
+5 30 error = true;
+5 32 var entry = {
+5 33 name: prefix,
+5 34 url: prefix,
+5 35 format: args => Array.isArray(args)? args : [args],
+5 36 locals: { body: locals },
+5 37 version: pkgMeta
+5 39 function convertPackageName(name) {
+5 40 var repository = new PackageRepository(config.defaults, name);
+5 41 var type = {
+5 42 'version': type,
+5 43 'cache': useCache,
+5 44 'only': type,
+5 45 'writable': type,
+5 46 'mtime': date.getTime(),
+5 47 'max-stream': 20
+5 49 var writter = new PackageRepository(config.roaming, config.directory, name);
+5 50 var originalFetchRefs = resolvers.GitRemote.versions;
+5 51 var logger;
+5 52 var OriginalFetchRefs = {
+5 53 'source': 'https://github.com/' + name,
+5 54 'target': '*'
+5 56 function convertPackageNameToPackageName(name, prefix) {
+5 57 var resolver = new PackageRepository(config.roaming, name);
+5 58 resolver.getSource()
+5 59 .set(name)
+5 60 .then(function (source) {
+5 61 var obj = source;
+5 62 obj.dependencies = {};
+5 63 resolver.resolve(obj.resolve(obj);
+5 64 return obj;
+5 66 .hasDependencies.getPkgMeta();
+5 67 .hasDependencies = true;
+5 69 .return obj;
+5 70 .resolve();
+5 72 return deferred.resolve = function () {
+5 73 return deferred.resolve()
+5 74 .resolve()
+5 76 .then(obj => store.resolve();
+5 77 .then(obj.resolve.resolve, deferred.resolve.resolve.bind(obj, deferred.resolve, deferred.reject);
+5 81 module.readOptions = function readOptions.resolve = function () {
+5 82 var that = function () {
+5 83 return Q.resolve;
+5 86 module.readOptions
+6 42 packageRepository.clearRuntimeCache();
+7 1 var names = abbrev({"
+

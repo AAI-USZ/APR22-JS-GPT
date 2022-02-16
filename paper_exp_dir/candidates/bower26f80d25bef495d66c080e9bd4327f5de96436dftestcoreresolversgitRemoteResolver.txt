@@ -1,0 +1,61 @@
+Min editdistance: 87.00
+Closest candidate: 5 1 return Q.then(function testSource(input, url, logger) {
+0 1 return function () { evaluate (yay.logger.debug('should.debug('s', '1');
+0 2 return Q.logs', '1');
+0 3 });
+0 4 }
+0 6 describe('# evaluate (s', function () => {
+0 7 it('s', function (s)', function (s)', function (s)', function (s) {
+0 8 return Q.s(s);
+0 11 })
+1 1  } function () { config = 'bowerConfig.findAllInMemory', logger.findAll(sjquery;return Q.findAll(s => function (s) { return Q.resolve(s) { returns) { returns: {s: [{s: [] } });
+1 2 return Q.selint.deepEqual(s, sourceCode; };
+1 5 assert.deepEqual(s, Q.pluck(s, stringify(config, function (value
+2 1 return Q.then(function testSource ]).then(function (func) {
+2 2 return Q.resolveLocalizeError();
+2 4 .then(function (err => {
+2 5 return Q.admin.create();
+2 7 .then(function testSource(config = function (source) {
+2 8 return Q.admin
+2 9 .internalizeError();
+2 10 .solve([
+2 11 process
+3 1 function convertForEvents() {
+3 2 removeAllYAMING_DISCONSOLE_APPENDER_FN : function () {
+3 3 return {
+3 6 events() {
+3 8 });'
+
+4 1  }). evaluate to.bind(this.bind(this);
+4 3 return Q.resolve.clear();
+4 4 return Q.n})
+4 5 .then(function (func);
+4 7 .then(err => {
+4 8 return Q.n.then(config.npmessage.bind(pb, ['log', 'log', 'error', 'error', 'warn
+5 1 return Q.then(function testSource(input, url, logger) {
+5 2 return Q.internal_format = 'foo';
+5 3 return Q.expect(input, sourceId = 'foo';
+5 5 .expect(input.should.should.toString());
+5 6 return Q.writeFile = resolveCache.unprocess(function () {
+5 7 return Q.n
+5 8 fcall(this);
+6 1 assert.then(() => {
+6 2 return Q.then(() => {
+6 3 return Q.nfcall new resolver.fcall(app)
+6 4 .then(app, testSource)
+6 5 .then(function (resolver).then(function (val) {
+6 6 assert(q) {
+6 7 assert(q);
+6 8 assert(equal(q);
+6 9 .then(s => {\
+7 1 assert.then(function testSource ]).then(function (value) {
+7 2 assert.logger.should.should.throwErrors();
+7 3 assert.spread(this._config.compareFileSystem(processSourcefixture.prototype, sourceCode);
+7 5 \
+8 1 function createCustomHandlerOfFilesPromiseProviderOfFilesPromiseProviderOfFilesPromiseContainer() {
+8 2 .exec('some.exec('fs', 'file:// /path/some/s/a.js', opts/*', emitter/b.js');
+8 3 require('fs.
+9 1 return Q.then(function testSource ]).write(writse it(stringify(val);
+9 3 }).then(function () {
+9 4 return Q.done();
+9 6 .done();

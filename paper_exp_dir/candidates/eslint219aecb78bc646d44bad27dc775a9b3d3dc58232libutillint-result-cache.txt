@@ -1,0 +1,76 @@
+Min editdistance: 33.00
+Closest candidate: 4 2 const config = this.config,
+0 1 module.exports.reset = function reset () {
+0 2 this.cache = {};
+0 3 this.settings = {};
+0 4 this.redirects = {};
+0 5 this.isCallbacks = {};
+0 6 this.viewCallbacks = [];
+0 7 this.dynamicViewHelpers = {};
+0 8 this.errorHandlers = [];
+0 9 this.set('home', set("home"));
+0 10 this.set('env', process.env);
+0 11 this.set('newenv', process.env);
+0 12 this.set('params', null);
+0 13 this.set('cache views', undefined);
+0 14 this.set('reconnect views', null);
+0 15 this.set('settings', undefined);
+0 16 this.set('view', this.join(this.set('\
+0 17 uploaded-as-resolve.jade\
+0 18 upload.sess.s.bind(this)));
+0 19 this.set('reconnects', this.set('filename-cache view', this.set('image.get('image.png')));
+0 20 this.set('foaginator image.oolean'));
+0 21 this.config.configure('strictSslate()' in place.bind(this);
+0 22 };"
+
+1 1 function makeSegments(context) {
+1 2 const rulesMeta = this.fileEntryCache;
+1 3 const { config } = this;
+1 4 const num = args.length;
+1 5 return Object.keys(this.rulesMeta).length;
+1 6 }
+1 7 return function(answers) {
+1 8 let meta = this.config.meta_source;
+1 9 return object.merge(this.rulesMeta, { include: false, config: this.config })
+1 10 .filter((entry) => this.rulesMeta.add(ferret).to(this));
+1 11 return this.scaffold.set(this.filePath, this.stringify([], true)).then(() => {
+1 12 const content = this.content;
+1 13 return {
+1 14 content,
+1 15 id: this.source,
+1 16 ruleId: this.source
+1 17 };
+1 22 return setCachedLintResults(this.scaffoldPath, this.config, this.path);
+1 23 return this.scaffoldPath = this.config.options.postObjects.resolveObjects.postObjects.static);
+1 28 describe(context.skipDataPair(this.assetPath) {
+1 29 it("should not undefined;"
+
+2 1  HintResultCache;"
+
+3 1 '
+
+4 1 function makeSegments(options, callback) {
+4 2 const config = this.config,
+4 3 segments = this.segments? this.segments.segments : [],
+4 4 params = this.params;
+4 5 constfor (constsegments in params) {
+4 6 if (segments.segments.segments.segments.segments.segments.segments.segments.searmd) {
+4 7 const segment = segment.segments.segments.searmd);
+4 8 if (segments.segments.segments.searmd) {
+4 9 const segment = segment.segments.searmd.searator.segment.sear);
+4 10 if (segments.segments.searmd) {
+4 11 this.segments.searmd.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.searator.seagment.seag optional.seag.seag optional.segment.searator.searator.searator.searator.searator.searator.seag optional.searator.searator.seag.searator.searator.searator.seag optional.seag optional.seag optional.segment.seag optional.seag optional.searator.seag optional.searator.12handles optional.12 optional.12 optional.seagexpress.seag? [segments.segments.searator.searator.searator. optional.searator. optional.searator. optional.searator.searator.12 optional.searator. optional.searator.
+5 1  HintResultCache"
+9 1 assert.deepStrictEqual(patterns => ({}), [
+9 2 { config: { js: { source: 'foo' },
+9 3 { config: { js: { source: 'bar' },
+9 4 { config: { js: { source: 'baz' },
+9 5 { config: { js: { source: 'boo' },
+9 9 { config: { js: { config: { js: { path: 'baz' } } } } } },
+9 10 { config: { baz: { path: 'baz' } } }},
+9 11 { config: { baz: { path: 'baz' } } } } }}
+9 12 }),
+9 13 { config: {   {  { config: { config: { schema: { path: { } } } } } } } } } } }
+9 14 })
+9 15 }).deepStrictEqual(compactLY_IGNORE_IGNORE_ENDOENTLY_IGNORE_ENDOENTLY_IGNORE_CONFIGIONS, ["
+

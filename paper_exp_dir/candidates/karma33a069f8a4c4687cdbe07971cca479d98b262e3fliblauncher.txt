@@ -1,0 +1,422 @@
+Min editdistance: 11.00
+Closest candidate: 1 1 const path = require(\'path\')
+0 1 const fs = require(\'graceful-fs\')
+0 2 const mm = require(\'minimatch\')
+0 3 const isBinaryFile = require(\'isbinaryfile\')
+0 4 const _ = require(\'lodash\')
+0 5 const CryptoUtils = require(\'./utils/crypto-utils\')
+0 6 const log = require(\'./logger\').create(\'preprocess\')
+0 7 function sha1 (data) {
+0 8 const hash = crypto.createHash(\'sha1\')
+0 9 hash.update(data)
+0 10 return hash.digest(\'hex\')
+0 11 }
+0 12 function createNextProcessor (preprocess, file, done) {
+0 13 return function nextPreprocessor (error, content) {
+0 14 if (arguments.length === 1 && typeof error ===\'string\') {
+0 15 content = error
+0 16 error = null
+0 18 if (error) {
+0 19 file.contentPath = null
+0 20 file.content = content
+0 21 return done(error)
+0 23 if (!preprocessors.length) {
+0 26 file.sha = sha1(content)
+0 27 return done()
+0 29 preprocessors.shift()(content, file, nextPreprocessor)
+0 32 function createPreprocessor (config, basePath, injector) {
+0 33 const emitter = injector.get(\'emitter\')
+0 34 const alreadyDisplayedErrors = {}
+0 35 const instances = {}
+0 36 let patterns = Object.keys(config)
+0 37 function instantiatePreprocessor (name) {
+0 38 if (alreadyDisplayedErrors[name]) {
+0 39 return
+0 41 let p
+0 42 try {
+0 43 p = injector.get(\'preprocessor:\' + name)
+0 44 } catch (e) {
+0 45 if (e.message.includes(`No provider for "preprocessor:${name}"`)) {
+0 46 log.error(`Can not load "${name}", it is not registered!\
+0 47   Perhaps you are missing some plugin?`)
+0 48 } else {
+0 49 log.error(`Can not load "${name}"!\
+0 50   ` + e.stack)
+0 52 alreadyDisplayedErrors[name] = true
+0 53 emitter.emit(\'load_error\', \'preprocessor\', name)
+0 55 return p
+0 57 let allPreprocessors = []
+0 58 patterns.forEach((pattern) => {
+0 59 allPreprocessors = _.union(allPreprocessors, config[pattern])
+0 60 })
+0 61 allPreprocessors.forEach(instantiatePreprocessor)
+0 62 return function preprocess (file, done) {
+0 63 patterns = Object.keys(config)
+0 64 let retryCount = 0
+0 65 let maxRetries = 3
+0 66 function readFileCallback (err, buffer) {
+0 67 if (err) {
+0 68 log.warn(err)
+0 69 if (retryCount < maxRetries) {
+0 70 retryCount++
+0 71 log.warn(\'retrying\'+ retryCount)
+0 72 fs.readFile(file.originalPath, readFileCallback)
+0 75 throw err
+0 78 isBinaryFile(buffer, buffer.length, function (err, isBinary) {
+0 82 let preprocessorNames = []
+0 84 if (mm(file.originalPath, pattern.pattern = pattern))
+0 85 }))
+0 86 log.forEach((patterns[pattern) => {
+0 87 if (mm(patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[]]))]]])) return
+0 89 return [{
+0 90 if (mm(file.originalPath, patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns[patterns]])) return
+0 91 }]]
+0 94 log.warn(`setting up-\' + patterns-\'s-\' + patterns-\' + patterns-]+ patterns-: getB
+1 1 const path = require(\'path\')
+1 2 const assert = require(\'assert\')
+1 3 const yargs = require(\'yargs\')
+1 5 describe(\'init\', () => {
+1 6 let logStub
+1 7 let start = process.hrtime.interval
+1 8 function generate (args) {
+1 9 return Reflect.apply(logStub, args)
+1 11 describe(\'template\', () => {
+1 12 let addCommonLogger = (function (_log) {
+1 13 return function (request, response, next) {
+1 14 if (exports.isRenderable(request.url)) {
+1 15 return next()
+1 19 if (exports.isRenderable(response.body)) {
+1 24 function composeLogger (output, style, url, line, content, callback) {
+1 25 return function (err, result, code) {
+1 26 if (code) return err
+1 27 const outputFile = output? output.replace(/\
+1 28 (\\t+)/g, \'\') : output
+1 29 const logPath = output? output.replace(/\
+1 30 (\\r+/g, \'\') : output
+1 31 return \'\'
+1 34 function getConsole (args) {
+1 35 const key = args.join(\' \')
+1 36 const value = args.length?\'\' + args.join(\' \') : \'\'
+1 37 return value? `${args.join(\' \')} for example \'+ command + args.join(\' \')}` : \'\'
+1 39 function commandList (title, list) {
+1 40 return Reflect.apply(list, [], [], function (value, key) {
+1 41 const command = getConsole(title, list)
+1 42 if (command) {
+1 43 return `${title} ${list[0]}`
+1 44 } else if (isRenderable(value)) {
+1 45 return list[0]
+1 47 return `${result} ${type} ${value}`
+1 51 function getPosts (page, callback) {
+1 52 const match = page.canonical_path
+1 53 return Promise.all([
+1 54 page.canonical_path,
+1 55 page.html,
+1 56 create({title: \'Hello World\', layout: \'draft\'}),
+1 57 create({title: \'Hello World\'})
+1 58 ]).then(post => {
+1 59 post.path.should.eql(page.canonical_path)
+1 60 const data = yargs.parse(page.content, data)
+1 61 if (data.length === 1) {
+1 63 page.write([
+1 64 ].join(\' \'), content),
+1 65 create({title: \'Hello World\'},
+1 66 page.title,
+1 67 \'{% endswig%}\',
+1 68 page.source,
+1 69 \'{% quote Hello World %}\',
+1 70 \'quote content\',
+1 71 \'{% endquote %}\'
+1 72 ].join(\' \'))
+1 73 }).then(data => {
+1 74 data.content.trim()
+1 75 return [
+1 76 page.remove(),
+1 77 new Promise((resolve, reject) => {
+1 78 page.remove()
+1 80 }).then((pages => {
+1 81 page.close()
+1 84 fs.unshift()
+1 88 it(\'
+
+2 3 const helper = require(\'./helper\')
+2 4 const log = require(\'./logger\').create(\'plugin\')
+2 5 const IGNORED_PACKAGES = [\'karma-cli\', \'karma-runner.github.com\']
+2 6 function resolve (plugins, emitter) {
+2 7 const modules = []
+2 8 function requirePlugin (name) {
+2 9 log.debug(`Loading plugin ${name}.`)
+2 11 modules.push(require(name))
+2 13 if (e.code === \'MODULE_NOT_FOUND\' && e.message.includes(name)) {
+2 14 log.error(`Cannot find plugin "${name}".\
+2 15   Did you forget to install it?\
+2 16   npm install ${name} --save-dev`)
+2 18 log.error(`Error during loading "${name}" plugin:\
+2 19   ${e.message}`)
+2 21 emitter.emit(\'load_error\', \'plug_in\', name)
+2 24 plugins.forEach(function (plugin) {
+2 25 if (helper.isString(plugin)) {
+2 26 if (!plugin.includes(\'*\')) {
+2 27 requirePlugin(plugin)
+2 30 const pluginDirectory = path.normalize(path.join(__dirname, \'/../..\'))
+2 31 const regexp = new RegExp(`^${plugin.replace(/\\*/g, \'.*\')}`)
+2 32 log.debug(`Loading ${plugin} from ${pluginDirectory}`)
+2 33 fs.readdirSync(pluginDirectory)
+2 34 .filter((pluginName) =>!IGNORED_PACKAGES.includes(pluginName) && regexp.test(pluginName) && regexp.test(pluginName))
+2 35 .forEach((pluginName) => requirePlugin(pluginDirectory + \'/\' + pluginName))
+2 36 } else if (helper.isObject(plugin)) {
+2 37 log.debug(`Loading inlined plugin (defining ${Object.keys(plugin).join(\', \')}).`)
+2 38 modules.push(plugin)
+2 40 log.error(`Invalid plugin ${plugin}`)
+2 41 emitter.emit(\'load_error\', \'plug_in\', plugin)
+2 44 return modules
+2 46 exports.resolve = resolve'
+
+3 1 const log = require(\'./logger\').create(\'launcher\')
+3 2 const baseBrowserDecoratorFactory = require(\'./launchers/base\').decoratorFactory
+3 3 const Launcher = function (emitter, injector) {
+3 4 this.launch = emitter
+3 5 this.emit(\'browsers\', [])
+3 6 this.launch.$inject = []
+3 7 this.launch.$inject = [\'config.browsers\', \'config.emitter\', \'injector\'])
+3 9 this.publicServer = require(\'./public\').createServer()
+3 10 this.connectServer = require(\'./connect\').createServer()
+3 11 this.errorHandler.on(\'error\', function (e) {
+3 12 if (e.code === \'EADDRINUSE\') {
+3 13 log.warn(\'Port %d in use\', config.port)
+3 14 config.port++
+3 15 webServer.listen(config.port)
+3 17 throw e
+3 20 this.start = function (url) {
+3 21 this._injector.createChild([{
+3 22 id: [\'value\', Launcher.generateId()],
+3 23 fullName: [\'value\', name],
+3 24 name: [\'value\', name],
+3 25 processKillTimeout: [\'value\', processKillTimeout],
+3 26 baseLauncherDecorator: [\'factory\', baseDecoratorFactory]
+3 27 }])
+3 28 this.launch.$inject = [\'config.browsers\', \'config.hostname\', \'config.port\', \'config.urlRoot\'])
+3 29 this.kill = function (id, callback) {
+3 30 for (const i = 0; i < browsers.length; i++) {
+3 31 if (browsers[i].id === id) {
+3 32 browsers[i].lastResult.dispose()
+3 33 return true
+3 36 processKillTimeout()
+3 38 this.on(\'browsers_change\', () => {
+3 39 socketServer.sockets.emit(\'info\', capturedBrowsers.serialize())
+3 41 this.on(\'browser_register\', (browser) => {
+3 42 if (browser.launchId) {
+3 43 launcher.markCaptured(browser.launchId)
+3 45 if ((config.autoWatch || config.singleRun) && launcher.areAllCaptured()) {
+3 46 executor.schedule()
+3 50 Launcher.generateId = function (emitter) {
+3 51 return Math.floor((Math.random() * 100).toString())
+3 54 this.publicServer = function (socket, context) {
+3 55 var self = this
+3 56 self.log.info(\'Starting browser %s\', self.name)
+3 57 if (this.launchId) {
+3 58 this.launchId = this.launchId
+3 60 this.writeConfigFile = function (config.promise, browser) {
+3 61 if (config.singleRun && config.autoWatch) {
+3 62 puts(\'injector.watch\')
+3 64 this.writeConfig.refreshNoActivityTimeout()
+3 67 this.on(\'start
+3 68 this.on(\'browsers_change\', function () => {
+3 69 this._browsers_change\', collection.setAllToExecuting()
+3 70 emitter.emit(this))
+3 71 this.on(browsers.emitter.emit.bind(this))
+3 73 this.on(\'start\', (name) => {
+3 74 if (name) {
+3 75 config.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor.executor
+4 1 const log = require(\'../logger\').create(\'launcher\')
+4 2 const baseDecorator = require(\'./launchers/base\').decoratorFactory
+4 3 const captureTimeoutDecorator = require(\'./launchers/capture_timeout\').decoratorFactory
+4 4 const retryDecorator = require(\'./launchers/retry\').decoratorFactory
+4 5 const processDecorator = require(\'./launchers/process\').decoratorFactory
+4 6 var baseBrowserDecoratorFactory = function (
+4 7 baseLauncherDecorator,
+4 8 captureTimeoutLauncherDecorator,
+4 9 retryLauncherDecorator,
+4 10 processLauncherDecorator,
+4 11 processKillTimeout
+4 12 ) {
+4 13 return function (launcher) {
+4 14 baseLauncherDecorator(launcher)
+4 15 captureTimeoutLauncherDecorator(launcher)
+4 16 retryLauncherDecorator(launcher)
+4 17 processLauncherDecorator(launcher, processKillTimeout)
+4 20 function Launcher (server, emitter, injector) {
+4 21 this._browsers = []
+4 22 let lastStartTime
+4 23 const getBrowserById = (id) => this._browsers.find((browser) => browser.id === id)
+4 24 this.launchSingle = (protocol, hostname, port, urlRoot, upstreamProxy, processKillTimeout) => {
+4 25 if (upstreamProxy) {
+4 26 protocol = upstreamProxy.protocol
+4 27 hostname = upstreamProxy.hostname
+4 28 port = upstreamProxy.port
+4 29 urlRoot = upstreamProxy.path + urlRoot.substr(1)
+4 31 var url = protocol + \'//\' + hostname + \':\' + port + urlRoot
+4 32 const locals = {
+4 36 baseLauncherDecorator: [\'factory\', baseDecorator],
+4 37 captureTimeoutLauncherDecorator: [\'factory\', captureTimeoutDecorator],
+4 38 retryLauncherDecorator: [\'factory\', retryDecorator],
+4 39 processLauncherDecorator: [\'factory\', processDecorator],
+4 40 baseBrowserDecorator: [\'factory\', baseBrowserDecoratorFactory]
+4 42 if (name.includes(\'/\')) {
+4 43 name = \'Script\'
+4 46 this._browsers.push(launcher)
+4 48 if (e.message.includes(name + \'Script\')) {
+4 59 let browser
+4 60 if (process.platform === \'win32\') {
+4 61 browser = new Browser(\'id\', emitter, injector)
+4 63 id: [\'value\',\',
+4 65 processKillTimeout: [\'value\', name],
+4 66 baseLauncherDecorator: [\'factory\', baseDecorator: [\'factory\',actory\', baseDecorator],
+4 67 config: {'injectorator: [\'factory\', injector]\', injector: injector]\', emitter: injector]
+4 71 '
+
+5 1 const chokidar = require(\'chokidar\')
+5 3 const expandBraces = require(\'expand-braces\')
+5 5 const log = require(\'./logger\').create(\'watcher\')
+5 6 const DIR_SEP = require(\'path\').sep
+5 7 function baseDirFromPattern (pattern) {
+5 8 return pattern
+5 9 .replace(/[/\\\\][^\\/\\\\]*\\*.*$/, \'\')
+5 10 .replace(/[/\\\\][^\\/\\\\]*[\\!\\+]\\(.*$/, \'\')
+5 11 .replace(/[/\\\\][^\\/\\\\]*\\)\\?.*$/, \'\') || DIR_SEP
+5 13 function watchPatterns (patterns, watcher) {
+5 14 const pathsToWatch = new Set()
+5 15 expandBraces(patterns)
+5 16 .forEach((path) => pathsToWatch.add(baseDirFromPattern(path)))
+5 17 pathsToWatch.forEach((path) => {
+5 18 if (!pathsToWatch.some((p) => p!== path && path.startsWith(p + DIR_SEP))) {
+5 19 watcher.add(baseDirFromPattern(path + \'/\' + path))
+5 20 log.debug(\'Watching "%s"\', path)
+5 24 function checkAnyPathMatch (patterns, path) {
+5 25 return patterns.some((pattern) => mm(path, pattern, {dot: true}))
+5 27 function createIgnore (patterns, excludes) {
+5 28 return function (path, stat) {
+5 29 if (stat &&!stat.isDirectory()) {
+5 30 return!checkAnyPathMatch(patterns, path) || checkAnyPathMatch(excludes, path)
+5 32 return false
+5 36 function getWatchedPatterns (patterns) {
+5 37 return patterns
+5 38 .filter((pattern) => pattern.watched)
+5 39 .map((pattern) => pattern.pattern)
+5 40 .filter((pattern) => pattern.pattern)
+5 41 .sort((a, b) => a.path > b.path)
+5 42 .forEach((pattern) => pattern.watched += 1)
+5 43 .add(baseDirFromPattern(pattern.pattern))
+5 50 .filter((pattern) => pattern.pattern && pattern.pattern)
+5 51 .forEach((pattern) => pattern.pattern)
+5 53 }'
+
+6 6 function resolve (plugins) {
+6 27 requirePlugin(plugin)'
+
+7 2 const http = require(\'http\')
+7 3 const https = require(\'https\')
+7 5 const connect = require(\'connect\')
+7 6 const mimeType = require(\'mime\')
+7 7 const common = require(\'./middleware/common\')
+7 8 var runnerMiddleware = require(\'./middleware/runner\')
+7 9 var stripHostMiddleware = require(\'./middleware/strip_host\')
+7 10 var karmaMiddleware = require(\'./middleware/karma\')
+7 11 var sourceFilesMiddleware = require(\'./middleware/source_files\')
+7 12 var proxyMiddleware = require(\'./middleware/proxy\')
+7 13 var log = require(\'./logger\').create(\'web-server\')
+7 14 function createCustomHandler (customFileHandlers, config) {
+7 16 const handler = customFileHandlers.find((handler) => handler.urlRegex.test(request.url))
+7 17 return handler
+7 18 ? handler.handler(request, response, 'fake/static\', config.basePath, 'fake/adapter\', config.proxies, handler.urlRoot)
+7 19 : next()
+7 22 createCustomHandler.$inject = [\'config.basePath\', \'config.urlRoot\'];
+7 23 function createFilesPromise (emitter, fileList) {
+7 24 let files = fileList.files
+7 25 emitter.on(\'file_list_modified\', (filesParam) => { files = filesParam })
+7 26 return function (filepath) {
+7 27 return Promise.resolve(emitter.lastCall.prompt)
+7 28 .then(() => {
+7 29 files.served.should.be.served
+7 30 emitter.emit(\'file_list_modified\', { files: {served: [], included: [] } } })
+7 31 .catch((err) => {
+7 32 emitter.emit(\'error\', err)
+7 34 .fail(err)
+7 35 return files
+7 37 next()
+7 39 .done(() => {
+7 40 fileList. files = files
+7 41 emitter.emit(\'file_list_modified\', { files: {served: [], included: [] } })
+7 43 files.included.should.eql([\'admin\', \'themes\', config.basePath, \'debug.html\']
+7 44 ])
+7 47 next();
+7 50 fileList.files = files
+7 53 createFilesPromise(emitter,fileList),
+7 54 fs.writeFile(config.urlRoot, \'/client.html\')
+7 55 ]).then(() => {
+7 58 return Promise.resolve(config.middleware.files)
+7 61 return paths
+7 63 fs.unlink(config.urlRoot, \'/root/\')
+7 66 rimraf(config.upstream.emit(\'upstream\')
+7 67 .on(\'error
+7 68 )
+7 69 .on(\'done\')
+7 70 .on(\'end\')
+7 73 .done()
+7 79 .done))
+7 81 .done.$inherits(customFileHandlers).forEach((fileList.promise).toArray.extend({ paths, servedFiles).toArray(config.elimitter.getFiles()) => {
+7 82 return handler.getFiles().forEach((filepath) => handler.addFile(\'middleware:\'middleware:\'))\')
+7 85 it(\'customFileHandlers.forEach((includedFiles).addFilesPromise).get(fileList.customFileHandlers).addFilesPromise)
+7 87 it(\'custom
+8 1 const resolve = require(\'url\').resolve
+8 2 const SourceMapConsumer = require(\'source-map\').SourceMapConsumer
+8 4 const PathUtils = require(\'./utils/path-utils\')
+8 5 const log = require(\'./logger\').create(\'reporter\')
+8 6 const MultiReporter = require(\'./reporters/multi\')
+8 7 const baseReporterDecoratorFactory = require(\'./reporters/base\').decoratorFactory
+8 8 function createErrorFormatter (config, emitter, SourceMapConsumer) {
+8 9 const basePath = config.basePath
+8 10 const urlRoot = config.urlRoot === \'/\'? \'\' : (config.urlRoot || \'\')
+8 11 let lastServedFiles = []
+8 12 emitter.on(\'file_list_modified\', (files) => {
+8 13 lastServedFiles = files.served
+8 15 const URL_REGEXP = new RegExp(\'(?:https?:\\\\/\\\\/\' +
+8 16 config.hostname + \'(?:\\\\:\' + config.port + \')?\' + \')?\\\\/?\' +
+8 17 urlRoot + \'\\\\/?id=\' +
+8 18 urlRoot + \'\\\\/?id=\\\\/?id=\' +
+8 19 \'(base/|absolute)\' +
+8 20 \'((?:[A-z]\\\\:)?[^\\\\?\\\\s\\\\:]*)\' +
+8 21 \'(\\\\?\\\\w*)?\' +
+8 22 \'(\\\\:(\\\\d+))?\' +
+8 24 \'\', \'g\')
+8 25 const cache = new WeakMap()
+8 26 function getSourceMapConsumer (sourceMap) {
+8 27 if (!cache.has(sourceMap)) {
+8 28 cache.set(sourceMap, new SourceMapConsumer(sourceMap))
+8 30 return cache.get(sourceMap)
+8 32 return function (input, indentation) {
+8 33 indentation = _.isString(indentation)? indentation : \'\'
+8 34 if (_.isError(input)) {
+8 35 input = input.message
+8 36 } else if (_.isEmpty(input)) {
+8 37 input = \'\'
+8 38 } else if (!_.isString(input)) {
+8 39 input = JSON.stringify(input, null, indentation)
+8 41 let msg = input.replace(URL_REGEXP, function (_, prefix, path, __, ___, line, ____, column) {
+8 42 const normalizedPath = prefix === \'base/\'? `${basePath}/${path}` : path
+8 43 const file = lastServedFiles.find((file) => file.path === normalizedPath)
+8 44 if (file && file.sourceMap && line) {
+8 45 line = +line
+8 46 column = +column
+8 47 const bias = column? SourceMapConsumer.GREATEST_LOWER_BOUND : SourceMapConsumer.LEAST_UPPER_BOUND
+8 49 const original = getSourceMapConsumer(file.sourceMap)
+8 50 .originalPositionFor({line, column: (column || 0), bias})
+8 51 const sourcePath = resolve(normalizePath(file.source), original.source)
+8 52 return `${PathUtils.formatPathMappingPathWeights(sourcePath)}`
+8 53 } <- ${PathUtils.formatPathMappingPathWeights(basePath)}`
+8 54 }`
+8 55 }`)
+8 56 const oneBasedFiles = function getFromDiscrimraf (file) {
+8 57 return fs.realize (file) {
+8 58 return fs.realize (file.pathToUrl(file.path)
+8 64 createServerUtils.formatFiles (ansrmdir { use(answ* fromConfig, path fromConfig, singleRun, singleRunanswers) {
+9 6 exports.resolve = function (plugins) {

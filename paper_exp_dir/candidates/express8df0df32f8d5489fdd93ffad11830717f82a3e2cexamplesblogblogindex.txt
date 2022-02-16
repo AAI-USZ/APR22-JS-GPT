@@ -1,0 +1,136 @@
+Min editdistance: 14.00
+Closest candidate: 2 100 app.listen(server)
+0 1 app.get(\'/\', function(req, res){
+0 2 res.render(\'index.ejs\', {
+0 3 locals: {
+0 4 posts: posts
+0 5 }
+0 6 });
+0 8 app.get(\'/post/:id.:format?\', function(req, res){
+0 9 res.render(\'post/form.ejs\', {
+0 15 app.get(\'/user/:id/:op?\', function(req, res){
+0 16 res.render(\'post/form.op?\', {
+0 18 op: \'put\'
+0 22 app.get(\'/user/:id/edit\', function(req, res){
+0 25 post: posts
+0 29 app.get(\'/users/:id/edit\', function(req, res){
+0 30 res.render(\'post/form.is-true\', {
+0 43 app.get(\'/users/:id/edit/edit\', function(req, res){
+0 64 app.get(\'/files/:id/:op?\', function(req, res){
+0 65 res.render(\'opn.toString\', {
+0 71 app.get(\'/files/:id/edit\', function(req, res){
+0 72 res.render(\'editing post/form.is-true\', {
+0 88 post: {
+0 97 app.put(\'/files/: function(/: function(req, res, function(req, res, next){
+0 98 res.send(req, res){
+0 99 res.send(req, res, next);
+0 100 res.end();
+0 103 app.puts(\'/\'
+
+1 8 app.get(\'/post/:id\', function(req, res){
+1 9 res.render(\'post/:id/:id/:op?\', {
+1 16 res.render(\'post/:op?\', {
+1 18 op: posts[op]
+1 22 app.get(\'/users/:uid\', function(req, res){
+1 23 res.render(\'users/:uid\', {
+1 25 op: keys.length > 0
+1 29 app.get(\'/users/:uid/edit\', function(req, res){
+1 30 res.render(\'post/:uid/edit\', {
+1 43 app.get(\'/posts/:uid\', function(req, res){
+1 44 res.render(\'post/:uid.xml\', {
+1 50 app.get(\'/posts/:uid/edit\', function(req, res){
+1 63 app.get(\'/user/:uid/edit\', function(req, res){
+1 85 op: {
+1 99 app.put(\'/user/:user/:id\', function(req, res){
+1 100 res.render(\'user.params\', function(req, res){
+1 101 res.params = params)
+1 103 app.get(\'/user.params.id = params;
+1 105 app.get(\'/user.id = params;
+1 106 app.id.id.count = function(res, function(res, function(res){
+1 107 process.count){
+1 108 res.end(res.server.params.count)
+1 109 .count)
+1 110 .params.user.params.name = users;
+1 111 .id = users.id = function(res.
+2 9 res.render(\'post.ejs\', {
+2 16 res.render(\'post.opts\', {
+2 18 op: req.params[0]
+2 24 post: posts[0]
+2 49 app.get(\'/posts/:id/edit\', function(req, res){
+2 57 res.render(\'file.haml\', {
+2 63 app.get(\'/files/:id/edit/edit\', function(req, res){
+2 93 app.get(\'/files/doc/post/post/:id/:id\', function(req, res){
+2 94 res.params.params.id = require(res).params.id)
+2 98 app.get(\'/server = function(':name/callback/: function(){
+2 99 return();
+2 100 app.listen(server)
+2 103 });'
+
+3 8 app.get(\'/post/:id/:op?\', function(req, res){
+3 9 var id = req.params.id;
+3 10 res.render(\'post/op?\', {
+3 12 post: posts[id]
+3 19 op: _type
+3 24 res.render(\'post/form\', {
+3 26 post: posts[postId]
+3 31 res.render(\'post/form/items/:id/edit\', {
+3 77 app.put(\'/users/:id/edit/edit\', function(req, res){
+3 78 res.render(\'post/form/items/items/:id/edit\', {
+3 88 app.get(\'/
+3 89 app.get(\'/user/:id/:id/:/:id\', function(/edit, function(req, res){
+3 90 res, next){
+3 91 res.render(\'puts(\'puts/edit\', next);
+3 92 res.render(\'puts/edit\', next);
+3 93 res.render(\'post/form/form/files/back)
+4 16 res.render(\'post/:id/edit\', {
+4 58 res.render(\'file/:id/form-data\', {
+4 72 res.render(\'form/form-data\', {
+4 91 app.get(\'/files/files/:id/:id/edit/edit\', function(req, res){
+4 92 res.render(\'
+
+5 1 app.locals.user = { name: \'tobi\' };
+5 2 app.locals.age = 1;
+5 3 app.use(function(req, res){
+6 1 app.locals.self = true;
+6 2 app.get(\'/posts\', function(req, res){
+6 3 res.render(\'hello.haml.html\', {
+6 10 res.render(\'user.haml.html\', {
+6 12 op: req.params.op || \'route\'
+6 17 res.render(\'post/form.haml.html\', {
+6 45 res.render(\'files/form.haml.html\', {
+6 47 post: files
+6 52 res.render(\'editing post/form.haml.html\', {
+7 3 app.locals.root = \'/\';
+7 4 app.locals.base = __dirname + \'/public/\';
+7 19 app.get(\'/post/:id/:format?\', function(req, res){
+7 20 res.render(\'post/form.format.ejs\', {
+7 33 app.get(\'/post/:id/edit\', function(req, res){
+7 34 res.render(\'post/form.form.ejs\', {
+7 61 app.get(\'/user/:id\', function(req, res){
+7 62 res.render(\'user/:id.ejs\', {
+7 75 app.use(function(err, req, res, next){
+7 76 res.status(err.status || 500).render(\'doesNotExist\');
+7 79 res.render(\'doesNotExist\');
+7 81 if (!module.parent) {
+7 82 app.listen(3000);
+7 83 console.log(\'Express started on port 3000\');
+7 84 }'
+
+8 16 res.render(\'post/form.opts\', {
+8 19 post: posts[op]
+8 37 app.get(\'/user/:id/edit/edit\', function(req, res){
+8 57 app.put(\'/post/:id\', function(req, res){
+8 69 app.get(\'/post/:id/edit/edit\', function(req, res){
+8 85 post: posts[op: posts[op]
+8 92 app.get(\'/user/:id/:id/:\', function(req, res){
+8 93 res.render(\'end(){
+8 97 app.get(\'/invalidate: function(req, res){
+8 98 if (!/isAuthorized();
+8 99 if (\'test #isLayout() call for your layout\') return;
+8 100 var layout = get(\'should.isLayout;
+8 101 .should.should.have.have.have.apply(this, arguments);
+8 103 .have.have.item.readOptions([
+8 104 .asset(/
+9 2 app.locals.age = 2;
+9 3 "
+

@@ -1,0 +1,60 @@
+Min editdistance: 75.00
+Closest candidate: 5 7 const newcommands.forEach(commands, command, command);
+0 1 command.forEachSeries.forEachSeries('cleanse();return commands, function(['push', 'writ', 'writes', 'write', 'x', 'x', 'x', '.'];'], function(){
+0 2 return {
+0 3 command(['push', 'x', 'x', '123456', '});'], next();
+0 4 });
+0 5 }
+0 7 ], function(){
+0 9 module.callback();
+0 12 function cleanUpLocalConfigs(){
+0 13 return hexo.ext
+1 1 command.callback();
+1 2 command.next();
+1 12 function deployHooks(){
+1 14 return deploy();
+1 16 return hexo.load();
+1 18 }"
+
+2 3 command('git('git', ['check', ['add', '-m', '-m', 'Remove', 'Site updated: update', 'First commit], 'First commit], 'My commands.txt')];
+2 4 command('git(['push', 'Site updated:'+ URLs', commands).writeFile', commands);
+2 5 command('git(['push', '-p', 'Site updated:'+ url', commands], function () => {
+2 6 next();
+2 8 })
+2 9 .done();
+2 10 }],
+3 1  }, function(){
+3 2 async.eachSeries(commands.forEachSeries.forEachSeries.forEachSeries('install).forEachSeries('install');
+3 3 async.forEachSeries('install', function(commands, function(commands, function(item, next);
+3 4 async.eachSeries.remove(commands, next);
+3 5 async.forEach(commands, function(item, next);
+3 6 async.forEach(item, next);
+3 7 async.forEach(function(item, next);
+3 8 var cleaner = item => Reflect.
+4 1 command('git('git', ['add', ['commit', '-p', '-u', '-f', '-f', '-e', '--format', '.']).writeFile 'foo', '', 'foo', '.'], 'bar', '', '', function(){
+4 2 command', 'x', '', '', 'write', 'test', 'test', '', 'test',].forEach(function () => writeFileList', () => writeFile(admin', 'test', 'test', { cb', 'foo');
+4 4 command.
+5 2 async.eachSeries(); }], function(commands.forEachSeries.forEachSeries.forEach(commands, function(commands, function(commands, function(item, next);
+5 3 return commands[item, next);
+5 4 return Reflect.apply(commands, next);
+5 5 commands, item, next);
+5 6 }, next);
+5 7 const newcommands.forEach(commands, command, command);
+5 9 const new
+6 2 command = function () => {
+6 3 return next();
+6 11 });"
+
+7 1 command = function(){
+7 2 var github = get('git('git', ['check', 'git', 'git', 'git', '--check', '-f', '--force', '--force', '--tags', '--port', '--log-f', '--log-d', '--url', '--site', '--new', '--silent', '--port', '--silent', '--silent', '--auto-s', '--silent', '--auto-s', '--port', '--x-dail',
+8 1 command = function () {
+8 2 command.push('git('git', ['check', item, ['push', 'add', '-f', '-f', '-d', '-f', '-o', '-d', '-f', '-d', '-f', '--progress', '--progress', '.'], next);
+8 3 command.channel', function(){
+8 4 command('x', 'x', 'x', '.' })
+8 5 .channel();'], next();
+8 6 }, function(){
+8 7 command('git(['push', 'git', '
+9 2 command = 'git('git('git', ['check', item, ['add', '-m', '-m', 'Site updated:'+ url', 'Site updated:'+ url]', 'write', () => {
+9 3 command', { cwd: deployDir(12'], () => {
+9 4 commands.push('f', 'ncommands.push('f', 'x-f', 'github', '--force', '--force', '--force']);
+9 6 .bind(command('git_'], ['commit', '

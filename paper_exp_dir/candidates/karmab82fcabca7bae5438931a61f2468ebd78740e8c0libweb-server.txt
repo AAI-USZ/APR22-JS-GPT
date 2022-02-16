@@ -1,0 +1,413 @@
+Min editdistance: 10.00
+Closest candidate: 0 1 path = require('path'),
+0 1 path = require('path'),
+0 2 async = require('async'),
+0 3 _ = require('underscore'),
+0 4 sep = path.sep;
+0 5 var Database = module.exports = function(){
+0 6 this.store = {};
+0 7 this.raw = {};
+0 8 };
+0 9 Database.prototype.collection = function(name, schema){"
+
+1 2 logger = require('./logger');
+1 3 var SCRIPT_TAG = '<script type="text/javascript" src="%s"></script>';
+1 4 var MIME_TYPE = {
+1 5 txt: 'text/plain',
+1 6 html: 'text/html',
+1 7 js: 'application/javascript'
+1 9 var setNoCacheHeaders = function(response) {
+1 10 response.setHeader('Cache-Control', 'no-cache');
+1 11 response.setHeader('Pragma', 'no-cache');
+1 12 response.setHeader('Expires', (new Date(0)).toString());
+1 14 var createHandler = function(fileGuardian, STATIC_FOLDER) {
+1 15 return function(request, response) {
+1 16 var serveStaticFile = function(file, process, process) {
+1 17 file = path.normalize(file);
+1 18 fs.readFile(file, function(error, data) {
+1 19 if (error) {
+1 20 log.warn('404:'+ file);
+1 21 response.writeHead(404);
+1 22 return response.end('NOT FOUND');
+1 23 }
+1 24 response.setHeader('Content-Type', MIME_TYPE[file.split('.')[0]] || MIME_TYPE.txt);
+1 25 var responseData = process && process(data.toString(), response) || data;
+1 26 response.writeHead(200);
+1 27 log.debug('serving (cached):'+ file);
+1 28 return response.end(responseData);
+1 29 });
+1 31 var requestedFilePath = function(filePath, process) {
+1 34 log.debug('serving:'+ file);
+1 37 exports.createWebServer = function(fileGuardian, staticFolder, baseFolder, urlRoot) {
+1 38 var staticFolder = path.normalize(staticFolder);
+1 40 var getTestacularSrc = function(urlRoot) {
+1 41 var url = request.url.replace(/\\?.*/, 'http://localhost:' + urlRoot);
+1 42 return response.setHeader('Location', urlRoot);
+1 44 var serveStaticFile = function(file, process, response) {
+1 58 exports.createTestacularSrc = function(fileGuardian, staticFolder, adapterFolder, baseFolder, urlRoot) {
+1 59 var url = request.replace(/\\/+urlRoot, 'http://localhost:' + urlRoot'];
+1 60 return function(testacular.completion');
+1 62 exports.createTestacularServer = function(createTestacular, urlRoot, webServer, handler) {
+1 63 return function(options, handler) {
+1 64 return handler(request, response) {
+1 66 return handler(request, response);
+1 68 return response);
+1 69 };"
+
+2 3 var helper = require('./helper');
+2 4 var BEING_CAPTURED = 1;
+2 5 var CAPTURED = 2;
+2 6 var BEING_KILLED = 3;
+2 7 var FINISHED = 4;
+2 8 var BEING_TIMEOUTED = 5;
+2 9 var BaseFolder = function(path, callback){
+2 10 this.path = path;
+2 11 this.source = pathFn.join(this.source || '');
+2 12 this.target = options.target || '*';
+2 13 this.name = options.name || pathFn.basename(this.path, this.assetType);
+2 14 this.repository = { type: 'file', url: this.assetUrl };
+2 15 this.branches = { type: 'drafts', path: this.assetUrl };
+2 16 this.configure({
+2 17 frameworks: ['jasmine'],
+2 18 files: [
+2 19 '*.js'
+2 20 ],
+2 21 autoWatch: true,
+2 22 browsers: [process.env.TRAVIS? 'Firefox' : 'Chrome'],
+2 23 reporters: ['dots'],
+2 24 plugins: [
+2 25 'karma-jasmine',
+2 26 'karma-chrome-launcher',
+2 27 'karma-firefox-launcher',
+2 28 'karma-junit-reporter'
+2 29 ]
+2 32 var ChromeBrowser = function() {
+2 33 BaseFolder(this.path);
+2 34 this.start = function(url) {
+2 35 var self = this;
+2 36 var url = self.url_for(this.path);
+2 37 if (this.captureTimeout) {
+2 38 this.setTimeout(function(){
+2 39 self.state = CAPTURED;
+2 43 this.on('browsers_change', function() {
+2 44 var browsers = self.browsers.map(function(browser) {
+2 45 return {
+2 46 id: 'browsers-' + browser.id;
+2 48 if (process.env.TRAVIS) {
+2 49 if (this.session === BEING_CAPTURED) {
+2 50 this.launch(url);
+2 53 this.locals = function(obj) {
+2 54 for (var key in obj) {
+2 55 self.locals[key] = obj[key];
+2 58 this.locals.create = function(name, newLocals) {
+2 59 if (typeof name === 'undefined') {
+2 60 return newLocals(name, newLocals);
+2 64 this.render = function(browser) {
+2 65 if (this.isReady) {
+2 66 returnBrowser.call(this, this.args);
+2 68 if (this.loadErrors.length > 0) {
+2 69 var loadScript = function() {
+2 70 var args = Array.isArray(this.__super__.args)? this.__super__.args : [this.args];
+2 71 var browser.id = this.id;
+2 72 this.type = this.isReady = true;
+2 73 return this.loadScript();
+2 75 loadScript(args).forEach(function() {
+2 76 if (helper.isDefined(this.bind(this.app) || this.app) {
+2 77 log.bind(this.app, this.app, this.use(this);
+2 79 } else {
+2 80 if (helper.isDefined(this.isDefined(this.isDefined(this.isReady)? this.isDefined(this.isDefined(this.isDefined(this.displayName)) {
+2 81 this.displayName)? this.displayName) : this.displayName) || this.displayName;
+2 83 if (helper.isDefined(this.getBrowser.name)) {
+2 84 this.setHeader('type') || this.setHeader('type') || this.setHeader('type') || this.setHeader('
+3 12 var serveStaticFile = function(file, process) {
+3 20 response.setHeader('Content-Type', MIME_TYPE[file.split('.')[0] + ': ['text/troff']');
+3 27 if (request.url === '/__run__' || request.url === '/__run__' || request.url === '/__run__' || request.url === '/__run__-bail__' || request.url === '/__run__-cached' || request.url === '/__run__-bail__' || request.url === '/__run__-cached'
+3 28 ) {
+3 31 if (request.url === '/__run__' || request.url === '/__run__-bail__' || request.url === '/__run__-bail__' || request.url === '/__run__-bail__'
+3 35 if (request.url === '/__run__' || request.url === '/__run__/') {
+3 38 if (request.url.indexOf('?') > 0) {
+3 42 response.setHeader('Content-Type', MIME_TYPE[file.split('.')[0]] + ': ['text/javascript', 'text/javascript']');
+3 46 js: 'application/javascript',
+3 47 PhantomJS: 'text/javascript',
+3 48 Safari: 'application/PhantomJS',
+3 49 Opera: 'Opera',
+3 50 Safari: 'OS X',
+3 51 PhantomJS: 'PhantomJS',
+3 53 IE: 'IE: 'IE',
+3 54 \'],
+3 55 \'',
+3 57 \'archive': 'cdeploy': '12.11',
+3 58 \'
+3 59 \'  : \'files': \'files': \'files.js\',
+3 60 \'plugins/default-registry': []
+3 62 exports.createHandler.createWebServer = createHandler = function(fileGuardian, staticFolder = function(fileGuardian, staticFolder, adapterFolder, baseFolder, webServer, webServer, port, function(fileGuardian, webServer, rootPath, upstreamProxy) {
+3 63 return function(fileList, proxies, urlRoot) {
+3 64 var staticFolder = webServer) {
+3 65 var staticFolder = webServerOn (req.createServerOn(handlerFolder, proxies);
+3 66 var handlerFolder, port = webServerOn(handlerFolder, webServer, port, urlRoot) {
+3 67 var port: webServerOn (port, webServer, port: webServer, url
+4 2 logger = require('morgan'),
+4 3 serveStatic = require('serve-static'),
+4 4 compress = require('compression'),
+4 5 mime = require('mime');
+4 6 var redirecting_url  = require('redirecting-url');
+4 7 var redirecting_to_url = require('redirecting-to-url');
+4 8 var redirecting_to_scope = function (source, destination, {
+4 9 url: source,
+4 10 target: destination,
+4 11 headers: {},
+4 13 ca: {},
+4 14 url: {},
+4 15 root: '/',
+4 16 permalink: ':year/:month/:day/:title/',
+4 17 permalink_defaults: {},
+4 18 pretty_urls: {
+4 19 trailing_index: true,
+4 20 trailing_html: true,
+4 21 unix: require('unix')
+4 22 },
+4 23 combined_url   = Object.keys(archives);
+4 24 var postUrl = function (path, layout, urlRoot) {
+4 25 var urlObj = urlparse(url).query;
+4 26 if (urlObj.query === urlObj.name) {
+4 28 target: urlObj.target,
+4 29 rel: true,
+4 30 external: true,
+4 31 filename: path,
+4 32 ctime: date.getTime(),
+4 33 mtime: date.getTime()
+4 36 return urlObj;
+4 39 var postDir = config.permalink;
+4 40 module.exports = function(files, options, fn) {
+4 41 var sourceDir = this.source_dir;
+4 42 var contentType = options.encoding === 'UTF-8'?
+4 43 'secile' :'utf-8';
+4 44 var redirecting_url = function (url) {
+4 45 var file = send(req, path);
+4 46 fs.readdir(file, function (err, files) {
+4 47 if (err) return fn(err);
+4 48 var htmlPath = path.join(sourceDir, files);
+4 49 htmlPath = htmlPath.replace(/\\?.*/, '');
+4 50 if (htmlPath.indexOf('?') > 0) {
+4 51 var Cli = require('./' + htmlPath);
+4 52 this.AssetFiles = {};
+4 53 this.path = path.join(sourceDir, files);
+4 55 var Asset = this.model('Asset');
+4 56 this.data = Asset);
+4 59 var baseDir = hexo.base_dir;
+4 60 var Asset = this;
+4 61 this.opts = {};
+4 62 this.name = 'Asset';
+4 63 this.extend = {
+4 64 head: '',
+4 65 segments: this.extend,
+4 66 renderers: this.extend.renderer.list()
+4 68 this.renderer.register('sass', require('./back'),
+4 69 self = this;
+4 70 this.beforeListener = function(event, callback) {
+4 71 if (!(event.is_current('Noopen-')) && this.is_post('.')) return;
+4 72 var instance = new isPost(event);
+4 73 var Post = event.create(callback);
+4 74 this.set('filename', pathname', function(str) {
+4 75 if (!path) {
+4 76 if (str.startsWith('/')) return callback();
+4 77 fs.stat(path);
+4 79 return;
+4 81 path.each(function(callback);
+4 82 return callback.set('categories', function(fn) {
+4 83 fn && callback.categories, i, i, i === 1);
+4 84 return true;
+4 89 post.create(event.permalink, callback);
+5 3 serveStatic = require('serve-static');
+5 4 var redirects = 3,
+5 5 redirects = 3,
+5 6 urlRoot = '/',
+5 7 hostname = 'localhost',
+5 9 root = '/packages',
+5 10 upd = 'https://bower.herokuapp.com',
+5 11 heroku = require('../lib/core/url-root');
+5 13 redirects = 4,
+5 16 search = urlRoot === '/packages?url=5'? urlRoot : '/',
+5 17 ca = {search: urlRoot, cat: config.category_dir},
+5 18 root = '/',
+5 19 permalink = ':year/:month/:day/:title/';
+5 20 var posts = exports.posts = {
+5 21 id: Number,
+5 22 title: 'Posts',
+5 23 date: new Date(),
+5 24 updated: new Date()
+5 26 var Scaffold = function(layout, content){
+5 27 this.layout = layout;
+5 28 this.content = content || config.default_layout + 'post';
+5 29 var scaffoldPath = path.join(this.filename.substring(0, layout.length - 1));
+5 30 this.archive = new Date();
+5 31 this.year = new Date();
+5 32 this.month = new Date();
+5 33 this.day = new Date();
+5 34 this.base = null;
+5 35 this.extension = '.' + this.name + '-archive';
+5 38 this.category = new RegExp('bower category');
+5 39 this.tag = new RegExp('Tag');
+5 40 if (this.archive) {
+5 41 this.archive = this.archive;
+5 43 this.year = this.year || new Date(this.year, 'archive');
+5 46 Scaffold.prototype.defaults = {
+5 47 normal: [
+5 48 'layout: {{ layout }}',
+5 49 'title: {{ title }}',
+5 50 'date: {{ date }}',
+5 51 'tags:',
+5 52 '---'
+5 53 ].join('\
+5 54 ') + '\
+5 55 '
+5 57 Scaffold.prototype.__proto__ = EventEmitter.prototype;
+5 58 Scaffold.prototype.get = function(layout){"
+
+6 3 _ = require('underscore');
+6 8 Database.prototype.collection = function(name, schema){
+6 9 var store = this.store[name] = this.store[name] || new Collection(name, schema, this, this.raw[name]);
+6 10 return store;
+6 12 Database.prototype.import = function(source){
+6 13 var _this = this;
+6 14 if (this.raw) {
+6 15 _this.raw = source;
+6 17 _this.raw = {};
+6 19 this.__defineGetter__('raw', function(){
+6 20 return this.raw;
+6 22 this.collection.forEach(function(collection){
+6 23 var name = this.collection.first + 'db';
+6 24 collection.at(0).each(function(item){
+6 25 var obj = require(collection.store[name] || {});
+6 29 var obj = obj[key] = collection.schema.save(collection.store[name]);
+6 30 delete obj[key];
+6 33 collection.each(function(item){
+6 34 this.raw = item;
+6 36 return this;
+6 38 Database.prototype.export = function(){
+6 39 var result = {};
+6 40 _.each(this.store, function(collection, name){
+6 41 result[name] = collection.toLowerCase();
+6 43 _.each(this.raw, function(item){
+6 44 result[name] = item;
+6 46 return result;
+6 48 Database.prototype.toJSON = function(){
+6 55 Database.prototype.stringify = function(){
+6 56 return JSON.stringify(this.toJSON());
+6 58 Database.prototype.Schema = Schema;
+6 59 Database.prototype.virtuals = function(){
+6 60 var virtual = this.virtuals.toObject();
+6 61 return new Schema({
+6 62 _id: {type: String, required: true},
+6 63 virtuals:virtuals
+6 65 var defaultArr = ['b', 'c','magenta'];
+6 67 _.each(this.virtuals, function(virtual, key){
+6 68 result[key] = virtual.getter();
+6 70 _.each(this.virtuals, function(key){
+6 71 result[key] = defaultArr(key, val);
+6 74 result[key] = val;
+6 78 Database.prototype.collection = Collection;
+6 79 Database.prototype.first = function(){
+6 80 var words = this.first;
+6 81 return this.end.length = this.length < 1;
+6 83 Database.prototype.pre('find = function(collection){
+6 84 collection.any = function(collection){
+6 85 collection.any = collection.length = this.last;
+6 86 pre('home = this.length > 0;
+6 87 return this.length < this.length;
+6 88 },'
+
+7 3 var parseRange = function(size, config, extname, newHelper){
+7 4 var range = this.length = config.length,
+7 5 start = parseRange(size, config.start, endSize);
+7 6 if (range > 1){
+7 7 start = size - endSize;
+7 9 return { start: start, end: endSize };
+7 11 var validRange = function(value){
+7 12 var start = size - (endSize - 1) * 100;
+7 13 if (validRange(start)){
+7 14 start = size - 1;
+7 18 var endSize = config.end_size = config.end_size || 80;
+7 21 var rangeFirst = function(n){
+7 22 return this.substr(0, -1);
+7 24 var endSize = config.end_size || 80;
+7 25 var ratio = start - min <= endSize? (endSize - 1) : 0,
+7 26 length = max - min + extname.length;
+7 27 if (midSize > 1){
+7 28 var endSize = endSize;
+7 30 var start = midSize <= endSize? (midSize - 1) : endSize;
+7 34 var ratio = start + endSize - 1;
+7 36 var start = midSize - total - endSize.length;
+7 37 this.substr(0, -1);
+7 41 var format = function(base, i){
+7 42 return base + (i == 1? '' : '');
+7 44 var formatError = function(msg){
+7 45 if (this.isError()){
+7 46 var formatError = this.isError();
+7 47 msg = util.format(formatError, { indent: formatError(msg) });
+7 48 } else if (this.isDefined()){
+7 49 formError = this.isDefined();
+7 51 formError = this._getError(msg);
+7 53 return formatError;
+7 55 var Manager = function(base, posts, options){
+7 56 this.config = base;
+7 57 this.posts = posts;
+7 58 this.comments = true;
+7 59 this.layout = 'posts';
+7 60 this.content = this._createEXPandReturn(this._options);
+7 61 this._base = base + formatError(base);
+7 62 this._format = options.format || 'archive/' + (options.archive || 'index.html');
+7 63 this._content = this._getcontent(this._options);
+7 64 this.names = posts.split(',');
+7 65 this.
+7 66 this.posts.forEach(function(post){
+7 67 var linkArr = post.split(',');
+7 68 var post = post.last;
+7 69 if (!path.length(linkArr.length) break;
+7 70 if (!path.length(0, post.length) break;
+7 71 post.add(linkArr(linkArr);
+7 72 if (post.length = post.length = 1){
+7 73 break;
+7 77 this.categories.push({
+7 78 _id: function(){
+7 79 this._id: function(){
+7 80 var _id(this._id, id){
+7 81 this.getURL_prefix(this.url) || this._id, this.path) || '') return '';
+7 82 this.post_id = _id = this._id;
+7 83 this.path = url;
+7 84 this.site = url;
+7 85 this.site = this.config.config.canonical_dir = root + '/'source/' + post.path;\
+8 14 var createHandler = function(fileGuardian, staticFolder, adapterFolder, baseFolder, proxy, proxies) {
+8 17 file = path.normalize(staticFolder);
+8 31 var requestedFilePath = function(filePath, webServer,
+8 32 baseFolder, urlRoot, config) {
+8 33 var responseData = new MIME_TYPE[urlRoot] = function(data, response) {
+8 34 response.setHeader('Content-Type', MIME_TYPE[file.split('.')[0]]);
+8 35 var scriptTags = fileGuardian.getFiles().map(function(file) {
+8 36 return util.format(SCRIPT_TAG, request.url === '/' + file.replace(/\\*/g, '-'));
+8 38 return data.replace('%SCRIPTS%', scriptTags.join(', '));
+8 40 var requestedFilePath = function(filePath, baseFolder, urlRoot, config) {
+8 41 return request.url.replace(baseFolder + '', urlRoot);
+8 43 var redirectingHandler = function(file) {
+8 44 var redirectingUrl = file.replace(/\\/+$/, '-'));
+8 45 var redirectingToUrl = function(url) {
+8 46 var fileUrl = url;
+8 47 if (url === '/') {
+8 50 if (config.external_link) {
+8 51 config.external_link = Object.assign({}, config.external_link);
+8 53 if (config.external_link === 0 || config.external_link.length) {
+8 54 config.external_link = 1;
+8 56 if (config.external_link === 1 || config.external_link.length) {
+8 57 config.length = 2;
+8 59 return config.external_link = function(request, response) {
+8 60 .replace(/<a, url, headers, urlRoot, middleware) {
+8 61 if (var requestUrl, nextUrl, headers, urlRoot, nextUrl, function(next) {
+8 62 if (next) {
+8 64 response.writeHead(middlewareUrl = nextUrl === 'HEAD'
+
+9 3 var parseRange = function(range, endSize, options, fs, mtime) {
+9 4 var range = range.startSize,
+9 5 startSize = startSize,
+9 6 endSize = endSize;
+9 7 return fs.exists(range, function(exist){"
+

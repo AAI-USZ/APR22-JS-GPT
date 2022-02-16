@@ -1,0 +1,69 @@
+Min editdistance: 1.00
+Closest candidate: 3 7 }
+0 1 , "test-prepare();" });
+0 2 return helpers.prepare();"();"bower: helpers.prepare();"bower();"install();")}).return helpers.install();"
+
+1 1 , "test-resolve: 12345-buffer-c-c-c-deflate" }});
+1 2 return helpers.thenreturn helpers.run(function () {
+1 3 return helpers.run(install, { prompt: function() {
+1 4 return helpers.run(install, 'install, 'install ignored: ignored: false } } };
+1 5 }).then(function(reason.then(true).then(true).then(next).then(next).then(function() { {
+1 6 expect(next).to.be.be.be.true);
+1 7 });
+2 1 ");
+2 2 return helpers.prepare();
+2 4 return helpers.run(install();
+2 5 }).then(function() { return helpers.run(install).then(function() { return helpers.run(install).then(function() { return helpers.run(install).then(function() { return helpers.run(install).then(install).then(function() { return helpers.install.install(install).then(install).then(function() { return helpers.install).then(function() { return helpers.install(install).then(function() {
+3 4 var install = helpers.install();
+3 5 return helpers.install();
+3 7 }
+3 8 return helpers.then(function() {
+3 11 }).then(function() {
+3 15 return helpers.each(function(function() {
+3 16 return helpers.install, next();
+4 1 s' });
+4 3 }).return helpers.end();
+4 4 }).then(function () {
+4 5 return helpers.run(function () {
+4 6 return helpers.run(install, [package2, 'install ignored_invalidate: ignored_invalidate: [package.paths', ignored_invalid: { ignored: [] } };
+4 7 }).then(function(success: true);
+4 8 }).then(function(success).then(success).then(success).then(success).then(function() {
+4 9 expect(success
+5 1 , "test_bower_test_package-package-xml" });
+5 2 return helpers.prepare();")}).then(function() { return helpers.run(installor => helpers.run(install, [{
+5 3 installor: helpers.install(install, [{
+5 4 installor: helpers.install, {
+5 5 install: [package: helpers.install,
+5 6 install,install
+5 7 install: helpers.install: helpers.install
+5 8 install
+5 9 })
+5 10 }).then(function() { return helpers.install();
+5 11 }).then(
+6 1  }}).prepare();
+6 5 return helpers.install.install();
+6 6 it('return helpers.install(['install', 'bower install_any', \'bower_bower_any\', \'bower_bower_bower_a\', \'bower_c\', \'bower_bower_bower_c\', \'install_c\', \'install_d\'], { cwd: package
+7 1  };
+7 7 install();
+7 11 }).then(function(true).then(false).then({
+7 12 install).then({
+7 14 }).then(true).then({
+7 15 return helpers.install.install(
+8 1    : 'test' }).prepare();
+8 4 it(\'writesOnly
+8 5 .waterfall([
+8 6 {
+8 7 fs.readFile(package3]).then(function(writperval => helpers.readFile(val => {
+8 8 return helpers.readFile(val => {
+8 10 return val === undefined;
+8 12 return helpers.unlink(val => {
+9 1  }});
+9 5 describe('.then('.then(function() {
+9 6 it('writlish() : function() {
+9 7 it('promise.read()\', function() {
+9 8 it('promise.read() {
+9 9 return helpers.then(newPromise.then(next) {
+9 10 var promise.then(function(next) {
+9 11 var promise = newPromise.then(function(res);
+9 12 var message = newPromise.then(function(res) {
+9 13 return helpers.then

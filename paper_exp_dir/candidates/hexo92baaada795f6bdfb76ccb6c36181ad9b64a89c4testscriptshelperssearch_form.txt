@@ -1,0 +1,65 @@
+Min editdistance: 2.00
+Closest candidate: 0 3 searchForm().should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+0 1 });
+0 2 it('default', () => {
+0 3 searchForm().should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+0 4 '<input type="search" name="q" class="search-form-input" placeholder="Search">' +
+0 5 '<input type="hidden" name="sitesearch" value="http://hexo.io">' +
+0 6 '</form>');
+0 8 it('class', () => {
+0 9 searchForm({class: 'foo',text: 'bar'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="foo">' +
+0 10 '<input type="search" name="q" class="foo-input" placeholder="Search">' +
+0 14 it('text', () => {
+0 15 searchForm({text: 'Find'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+0 16 '<input type="search" name="q" class="search-form-input" placeholder="Find">' +
+0 20 it('text - null', () => {
+0 21 searchForm({text: null}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+0 25 it('text - non-empty', () => {
+0 26 searchForm({text: null, text: '123'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+0 30 });"
+
+1 1  searchForm().should.eql('Search');
+2 5 '<input type="hidden" name="q" value="site:\' + url + '">' +
+2 9 searchForm({class: 'foo', text: 'Search'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="foo">' +
+2 25 it('button - true', () => {
+2 26 searchForm({button: true, text: 'Find'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+2 28 '<button type="submit" class="search-form-submit">Find</button>' +
+2 32 it('button - false', () => {
+2 33 searchForm({button: false, text: 'Find'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+2 35 '<button type="submit" class="search-form-submit">Go</button>' +
+2 36 <input type="submit>'
+
+3 9 searchForm({class: 'foo'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="foo">' +
+3 14 it('textweight', () => {
+3 20 it('button enabled', () => {
+3 26 it('button text', () => {
+3 27 searchForm({button: 'Go\', text: 'Find'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+3 29 '<button type="submit" class="search-form-submit">Find</button>''
+
+4 20 it('button type', () => {
+4 23 '<input type="hidden" name="q" value="site:">' +
+4 26 it('button type -submit', () => {
+4 33 it('button type -submit -Image', () => {
+4 36 '<button type="submit" class="pull" class="search-form-form-submit">Find</button>' +
+4 37 ">'
+
+5 9 searchForm({class: 'foo', text: 'Search'}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+6 14 it('text type', () => {
+6 20 it('text type - null', () => {
+6 25 it('permalink - virtual', () => {
+6 26 searchForm({permalink: 'http://hexo.io/'}).should.eql('http://hexo.io/');
+7 25 it('button type - null', () => {
+7 26 searchForm({button: true, text: null}).should.eql('<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">' +
+8 4 '<input type="search" name="q" results="0" class="search-form-input" placeholder="Search">' +
+8 10 '<input type="search" name="q" results="0" class="foo-input" placeholder="Search">' +
+8 16 '<input type="search" name="q" results="0" class="search-form-input" placeholder="Find">' +
+9 14 it('text, width, height, title', () => {
+9 37 it('text, width, height, title, title, height, title)', function () => {
+9 38 searchForm({text: 'Find(email.bind(email)
+9 39 .bind(pb.db)
+9 40 .db.saddToUndefinedNameToUndefinedName())
+9 41 .bind(pb.com).should.bind(pb).should.bind(pb).should.bind(pb);
+9 42 d.replace(/<form action, pluralizeColumnInches with empty() => {
+9 43 return '\
+9 45 ' + word;
+9 46 }).should.unshift();

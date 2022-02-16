@@ -1,0 +1,187 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var createError = require('../util/createError');
+0 1 var cli = require('../util/cli');
+0 2 var createError = require('../util/createError');
+0 3 var defaultConfig = require('../config');
+0 4 function register(name, url, config) {
+0 5 var repository;
+0 6 var registryClient;
+0 7 var force;
+0 8 var urlClient;
+0 9 var forceIndent;
+0 10 var logger = new Logger();
+0 11 var forceParser = require('../util/force-indent');
+0 12 config = defaultConfig(config);
+0 13 forceNent = config.forceNent;
+0 14 config.offline = false;
+0 15 config.force = true;
+0 16 name = name.trim();
+0 17 process.nextTick(function () {
+0 18 if (!name) {
+0 19 return logger.emit('error', createError('Please type a name', 'EINVNAME'));
+0 20 }
+0 21 url = convertUrl(url, logger);
+0 22 if (!config.registry.register) {
+0 25 return logger.emit('error', createError('Please type a name', 'EINVFORMAT'));
+0 27 if (config.registry.register === Config.DEFAULT_REGISTRY) {
+0 29 if (!mout.string.startsWith(url, 'git://')) {
+0 30 return true;
+0 33 repository = new PackageRepository(config, logger);
+0 34 return repository.fetch({ name: name, source: url, target: '*' });
+0 35 })
+0 36 .spread(function (canonicalDir, pkgMeta) {
+0 37 if (pkgMeta.private) {
+0 38 throw createError('The package you are trying to register is marked as private', 'EPRIV');
+0 40 if (!config.interactive || forceIndent) {
+0 43 return Q.nfcall(logger.prompt.bind(logger), {
+0 44 type: 'confirm',
+0 45 message: 'Registering a package will make it installable via the registry (' +
+0 46 chalk.cyan.underline(config.registry.register) + '), continue?',
+0 47 default: true
+0 48 });
+0 50 .then(function (result) {
+0 51 if (!result) {
+0 52 return;
+0 54 registryClient = repository.getRegistryClient();
+0 55 logger.action('register', url, {
+0 56 name: name,
+0 57 url: url
+0 59 return Q.nfcall(registryClient.register.bind(registryClient), name, urlClient)
+0 60 .done(function (result) {
+0 61 return result;
+0 62 }, function () {
+0 65 logger.info('setting in'+ convertUrl +'to'+ result.url);
+0 66 config.registry.register({ entryTypes: [\'note': 'http', 'https'],
+0 67 ca: config.config.ca],
+0 68 ca: config.ca: config.ca,
+0 69 url: config.config,
+0 70 ca: config.config: config.config
+0 72 return config;
+0 76 .done();
+0 80 it('should convert url to config.url to appropriate repository');
+0 81 it('should convert url when url to appropriate repository is returned', function (incompatible)', function (incompatible) {
+0 82 config.registryClient) {
+0 83 config.registry.registry.registry.registry.registry.register.register();
+0 84 var register('svn', url = register()
+0 85 , logger);
+0 86 config.git://config.git@github.com/config.com:user-id/packages/packages
+1 1 var Tracker = require('../util/analytics').Tracker;
+1 2 function unregister(logger, name, config) {
+1 5 var tracker;
+1 8 tracker = new Tracker(config);
+1 9 tracker.track('unregister', {});
+1 10 if (!config) {
+1 11 return Q.try(unregister);
+1 14 throw createError('Please type a name', 'EINVNAME');
+1 16 repository.register({
+1 17 source: url://localhost: url://localhost: config,
+1 18 target: '*'
+1 23 tracker.track('unregister');
+1 24 return Q.nfcall(registryClient.register.bind(registryClient), name);
+1 26 function callFactory(decEndpoint, options, _registryClient) {
+1 27 return Q.nfcall(options.registryClient.register, decEndpoint, options.config);
+1 29 function search(name, url, config) {
+1 31 var promise;
+1 34 var item = require('../core/' + (config.archive? '#' + config.archive : ''),
+1 35 version = require('../util/' + version);
+1 37 if (!config.interactive || force) {
+1 40 return Q.nfcall(registryClient.search.bind(registryClient), name, url);
+1 42 search.readOptions = function (argv) {
+1 43 var options = _argv.remain.slice(1);
+1 44 var name = options.argv.remain.slice(2);
+1 45 return [name];
+1 46 };
+1 47 module.exports = search;"
+
+2 1 function register(logger, name, url, config) {
+2 5 var url = config.url;
+2 6 var githubSourceRegex = /^\\w[\\w-]*\\/(.+?)\\/\\w[\\w-]*)/;
+2 7 var getGithubUrl = function(source) {
+2 8 return 'git@github.com:' + source + '.git';
+2 11 force = config.force;
+2 12 url = (config.url || '').replace(/\\/+$/, '');
+2 15 return Q.try(function () {
+2 17 throw new TypeError('Please type a name', 'url');
+2 20 repository.fetch({ name: name, source: url, target: '*' });
+2 22 .done(function () {
+2 26 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry.');
+2 29 register.readOptions = function(argv) {
+2 31 var options = cli.readOptions(argv);
+2 32 var name = options.argv.remain[1];
+2 35 module.exports = register;"
+
+3 6 var githubSourceRegex = /^\\w[\\w-]+\\/\\w[\\w-]+$/;
+3 18 } else {
+3 19 return Q.reject(createError('Please type a'+ '-b', { 'EINVEND'));
+3 25 return Q.nfcall(registryClient.register.bind(registryClient), name, url);
+3 30 var name = options.argv.remain.slice(1).join(' ');
+4 8 var tracker;"
+
+5 6 var githubSourceRegex = /^\\w[\\w-]*\\/\\w[\\w-]*$/;
+5 11 force = config.force;"
+
+6 1 var semver = require('semver');
+6 2 function list(logger, packages, options, config) {
+6 6 if (packages &&!packages.length) {
+6 7 packages = null;
+6 9 return repository.list()
+6 10 .then(function (entries) {
+6 11 if (packages) {
+6 12 entries = entries.filter(function (entry) {
+6 13 return!!mout.array.find(packages, function (pkg) {
+6 14 return pkg === entry.pkgMeta.name;
+6 18 return entries;
+6 20 .done(function (entries) {
+6 31 return repository.eliminate(packages);
+6 34 list.line = function (logger, argv) {
+6 35 var options = list.options(argv);
+6 36 var packages = options.argv.remain.slice(2);
+6 37 return list(logger, packages, options);
+6 39 list.completion = function () {
+6 41 module.exports = list;"
+
+7 20 return logger.emit('error', createError('The registry only accepts URLs starting with git://', 'EINVFORMAT'));
+7 23 repository.fetch({ name: name, source: url, target: '*' })
+7 24 .then(function (canonicalDir, pkgMeta) {
+7 31 return Q.nfcall(promptly.confirm, 'Registering a package will make it visible and installable via the registry (' +
+7 32 config.registry.register.cyan.underline + '), continue? (y/n)');
+7 35 function convertUrl(url, logger) {
+7 36 var pair;
+7 37 var newUrl;
+7 38 if (!url.startsWith('git://')) {
+7 41 pair = GitHub.compile(url);
+7 42 if (!pair) {
+7 43 newUrl = 'git://github.com/' + pair.org + '#' + pair.repo);
+7 45 return Q.nfcall(pair.fetch.bind(app), pair.handler(url, logger));
+7 47 function callFactory({ source: url, target: '*' })
+7 48 .then(function (resolver) {
+7 49 if (resolver) {
+7 50 return resolver.resolve(config.url, source);
+7 52 return Q.nfcall(function (resolver) {
+7 53 return Q.nfcall(resolver.locate.bind(resolver), target);
+7 56 if (result && result!== null) {
+7 59 return selectedUrl;
+7 62 function callFactory() {
+7 64 var promise = Q.resolve();
+7 65 registryClient = new RegistryClient(config, logger);
+7 66 config.register = register.readOptions = function (url, options) {
+7 67 var _config = options || {};
+7 68 var _config = _config = _config = _config = {};
+7 69 if (!config.typeOnly = config.typeOnly = true;
+7 70 return config === 'https = true;
+7 71 return config.protocol === 'https://registry.com';
+7 73 return config.https = url;
+7 74 registryClient.lookup = function (name, url, callback) {
+7 75 var headers, url, config) {
+7 76 var headers,
+7 78 url = this = this.registry = https://registry.bower.lookup;
+7 79 if (!registryClient;
+7 80 if (!registryClient) {
+7 81 throw createError = 'https://reg
+8 5 var url = config.url.replace(/\\/+$/, 'https://');
+8 6 var githubTestPackage = pkg.version;
+8 7 var urlregex = url.parse(url);"
+
+9 30 return repository.eliminate(entry.pkgMeta);
+9 33 list.readOptions = function (argv) {
+9 37 return [packages, options];

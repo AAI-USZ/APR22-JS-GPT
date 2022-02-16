@@ -1,0 +1,228 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 this.set('home', '/');
+0 1 this.viewCallbacks = [];
+0 2 this.defaultConfiguration();
+0 3 this.set(\'home\', '/');
+0 4 this.set(\'env\', process.env.NODE_ENV || \'development\');
+0 5 this.use(connect.query());
+0 6 this.locals = function(obj){
+0 7 for (var key in obj) {
+0 8 self.locals[key] = obj[key];
+0 9 }
+0 10 };
+0 11 this.use(function(req, res, next){
+0 12 var charset;
+0 13 res.setHeader(\'X-Powered-By\', \'Express\');
+0 14 req.app = res.app = self;
+0 15 req.res = res;
+0 16 res.req = req;
+0 17 req.next = next;
+0 18 if (charset = self.set(\'charset\')) res.charset = charset;
+0 19 res.locals = function(obj){
+0 21 res.locals[key] = obj[key];
+0 23 return res;
+0 25 next();
+0 26 });
+0 27 if (middleware) middleware.forEach(self.use.bind(self));
+0 28 this.routes = new Router(this);
+0 29 this.__defineGetter__(\'router\', function(){
+0 30 this.__usedRouter = true;
+0 31 this.caseSensitive = this.enabled(\'case sensitive routing\');
+0 32 this.strict = this.enabled(\'strict routing\');
+0 33 return this.middleware;
+0 35 this.locals.settings = this.settings;
+0 36 this.configure(\'production\', function(){
+0 37 this.enable(\'view cache\');
+0 40 app.use = function(route, fn){
+0 41 var app, home, handle;
+0 42 if (\'string\'!= typeof route) fn = route, route = \'/\';
+0 43 if (fn.handle && fn.set) app = fn;
+0 44 if (app) {
+0 45 app.route = route;
+0 46 fn = function(req, res, next) {
+0 47 var orig = req.app;
+0 48 app.handle(req, res, function(err){
+0 49 req.app = res.app = orig;
+0 51 req.app.__proto__proto__ = orig.request;
+0 52 res.__proto__proto__ = orig.response;
+0 53 res.__proto__proto__ = orig.pb = orig.request;
+0 54 res = orig.app = res;
+0 55 res.__proto__proto__proto__proto__proto__ = orig.pb = orig.response;
+0 56 res = orig.locals;
+0 57 res.__proto__proto__proto__proto__proto__ = new Function__;
+0 58 res.locals.locals.__proto__proto__ = res;
+0 59 res = res;
+0 61 res.locals.locals.__proto__proto__proto__ = res;
+0 64 res.locals.__proto__ = res;
+0 66 res.locals.locals.__proto__
+1 1 this.set('home', '/');
+1 2 this.set(\'env', process.env.NODE_ENV || \'development\');
+1 4 this.use(middleware.init(this));
+1 9 return self;
+1 27 if (middleware) {
+1 28 middleware.forEach(function(fn){
+1 29 self.use(connect.compress());
+1 35 this.set(\'home\', \'/\');
+1 44 var app;
+1 53 req.__proto__proto__ = orig.request;
+1 55 res = orig.engines = orig.settings;
+1 57 res.settings = app;
+1 59 if (false!== undefined) res.setHeader(req.app.app = fn(req.app);
+1 61 fn();
+1 64 app.__proto__proto__proto__proto__proto__ = app;
+1 68 app.locals.locals.settings = this;
+1 69 this.set(\'production\', function(){
+1 71 this.set(\'view cache\');
+1 72 this.engines;
+1 73 this.set(\'production\', fn);
+1 76 app.
+2 29 },
+2 30 \'test app.router', function(app){
+2 31 var router = new Router();
+2 32 this.__proto__ = connect.router.request;
+2 51 req.app = res.app = res;
+2 52 req.req.app = orig.app.id = orig.id;
+2 53 res.id = req.app.id;
+2 54 req.locals.locals.message = \'
+2 56 if (err) res.locals.locals.message = \'
+2 63 app.use(\'/
+2 64 app
+2 66 app.use(function(function(req, res, next){
+2 67 res.redirect(req, res);
+2 68 res.redirect(join(res.app, app);
+2 70 app.use(app);
+2 71 app.use(function(app, i){
+2 72 return function(req, res){
+2 73 return req.req, res.redirect(app);
+2 76 app.use(function (req, res){
+2 77 return res.get
+3 31 return self.routes.middleware;
+3 37 methods.forEach(function(method){
+3 38 self.lookup[method] = function(path){
+3 39 return self.routes.lookup(method, path);
+3 41 self.match[method] = function(path){
+3 42 return self.routes.match(method, path);
+3 44 self.remove[method] = function(path){
+3 45 return self.routes.lookup(method, path).remove();
+3 48 self.lookup.del = self.lookup.delete;
+3 49 self.match.del = self.match.delete;
+3 50 self.remove.del = self.remove.delete;
+3 53 app.remove = function(path){
+3 54 return this.routes.lookup(\'all\')
+3 55 .all()
+3 56 .remove.apply(this, arguments)
+3 57 .apply(this, arguments)
+3 60 .apply(this)
+3 64 .middleware.middleware.middleware.middleware.middleware.middleware.forEach(this)
+3 65 .middleware.middleware.middleware);
+3 67 app.lookup = function.lookup.get
+3 68 , url
+3 70 , middleware.lookup
+3 72 , assert: function(app){
+3 73 assert.get
+3 74 , url.get
+3 75 , fn) {
+3 76 assert.get(url.isFirst, url.isFirst, url.last, url.indexOf(\'http://\')
+3 77 , app.last)
+3 78 , route)
+3 79 , route =
+4 52 return this.routes.lookup(\'all\', path).remove();
+4 54 app.lookup = function(path){
+4 55 return this.routes.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.lookup.look
+5 12 res.locals.settings = this.settings;
+5 24 self.use(fn);
+5 46 req.connection.encrypted = true;
+5 47 req.session.encrypted = false;
+5 48 res.headers.should.have.property(\'X-Powered-By\', \'Express\');
+5 49 res.app.set(\'env\', process.env.NODE_ENV || \'development\');
+5 53 app.use.use.bind(this);
+5 54 app.use.errorHandler.forEach(function(fn){
+5 55 if (fn.handle.set === fn.handle) app.use(app);
+5 56 })
+5 57 handle.use(function(err, req, res, res, next) {
+5 58 fn.handle.remove()
+5 64 function fn.use(req, app) {
+5 65 return function fn.router(req, res, next, handler)
+5 66 return function(req, res, next, handler)
+5 67 return handler)
+5 72 function handler(req, res, next, before, middleware) {
+5 73 if (before, handler)
+5 75 return handler.handle(req, handler)
+5 76 return handler
+5 78 , middleware, handler)
+5 79 , handler)
+5 80 , middleware'
+
+6 40 app.remove = function(url){
+6 41 var removed = this.req.url;
+6 42 var slashAdded = false;
+6 48 req.app = res;
+6 52 res.locals.setHeader(\'X-Powered-By\', \'Firefox\');
+6 53 res.req = req.res = res;
+6 54 res.res = res;
+6 55 res.installed = res;
+6 56 res.installed = false;
+6 57 res.
+6 58 if (restored.length > 0) {
+6 59 var route = 2;
+6 60 var route = removed = slashAdded = false;
+6 61 methods.length = removed = 0;
+6 62 methods.all(function(){
+6 63 var route = route = routeCache.exec(req, res, path.join(self.url, \'/\'/\'));
+6 64 if (!self.lookup = route.methods.exec(req, path.extname(removed)) return;
+6 65 if (!self.match = routeCache.url.isModified(req.url)) return;
+6 66 if (method)
+6 67 self.routes.
+7 31 res.locals.setHeader(\'X-Powered-By\', \'Express\');
+7 36 if (typeof route!==\'string\') throw new TypeError(\'route requires a a callback function\')
+7 43 if (fn.length > 2) {
+7 44 return function(req, res, next){
+7 52 if (res.locals) res.locals = function(obj){
+7 54 res.locals[key].locals[key] = obj[key];
+7 60 if (next.called = next;
+7 61 .done = function(next) {
+7 62 return done();
+7 63 return res.asset = function res.assetUrl;
+7 64 return res.resolve(this.body.render(this.engines.html_helpers, this.settings.settings.isCallbacks, this.settings)
+7 65 , this.settings.settings.redirects);
+7 69 app.remove = function(){
+7 70 router.__proto__proto__proto__ = connect.__proto__;
+7 71 app.__proto__proto__ = parent.__proto__;
+7 72 app.__proto__proto__ =
+8 52 req.req.fn(err, req.req, res.headers);
+8 53 res.headers.app.__proto__proto__proto__proto__ = orig.__ = orig.request;
+8 54 res;
+8 55 res.__proto__proto__proto__proto__ = orig.__ = orig.__proto__proto__ = orig.__proto__;
+8 57 res.__proto__proto__proto__proto__proto__proto__ = orig.__ = new orig.__proto__(request);
+8 58 res.__proto__proto__proto__proto__ = new app.__proto__;
+8 59 res.__proto__proto__ = new app.__proto__;
+8 60 res.__proto__proto__ = new app.app.__proto__;
+8 61 res.__proto__ = new app.locals.__proto__proto__;
+8 63 res.locals.
+9 36 if (this.set(\'reload\')) {
+9 37 this.enable(\'jsonp callback\');
+9 38 } else {
+9 39 this.enable(\'html tag\');
+9 42 connect.Server.prototype.__proto__ = connect.Server.prototype;
+9 43 app.listen(this.port, this.host);
+9 44 this.runConfig('any', this.set(\'env\'), this.set(\'subdomain offset\'));
+9 45 this.use(connect.static(this.host));
+9 46 this.use(connect.compress());
+9 47 this.on(\'error\', function(err){
+9 48 if (this.isCallbacks.length) {
+9 50 res.statusCode = err.status || 500;
+9 51 req.headers = res.headers || {};
+9 52 next(err);
+9 56 res.headers.app = res.app = res;
+9 57 req.req = req;
+9 59 res.req.next = next;
+9 60 res.app.req.req = next;
+9 63 req.req.next = next;
+9 64 res.next = next;
+9 65 res.app.__proto__proto__proto__ = orig;
+9 66 res = orig;
+9 67 res.__proto__proto__ = orig;
+9 69 res.app.res = res;
+9 71 res.__proto__proto__ = app.locals = new Router(this);
+9 72 res.locals.__proto__proto__ = new Query(this);
+9 73 res);

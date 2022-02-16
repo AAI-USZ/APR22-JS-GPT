@@ -1,0 +1,86 @@
+Min editdistance: 1.00
+Closest candidate: 7 1 before(async () => {
+0 1 before(() => hexo.init().then(() => Post.insert([
+0 2 {source: \'foo\', slug: \'foo', title: \'Its', date: 1e8},
+0 3 {source: \'bar\', slug: \'bar', title: \'Chemistry', date: 1e8 + 1},
+0 4 {source: \'baz\', slug: \'baz', title: \'Bitch', date: 1e8 - 1}
+0 5 ])).then(posts =>
+0 6 Promise.each([
+0 7 [\'foo\'],
+0 8 [\'baz\'],
+0 9 [\'baz\', \'bar\']
+0 10 ], (tags, i) => posts[i].setTags(tags))).then(() => {
+0 11 hexo.locals.invalidate();
+0 12 ctx.site = hexo.locals.toObject();
+0 13 }));
+0 14 it(\'default\', () => {
+0 15 const result = listPosts();
+0 16 result.should.eql([
+0 17 \'<ul class="post-list">\',
+0 18 \'<li class="post-list-item"><a class="post-list-link" href="/bar/">Chemistry</a></li>\',
+0 19 \'<li class="post-list-item"><a class="post-list-link" href="/foo/">Its</a></li>\',
+0 20 \'<li class="post-list-item"><a class="post-list-link" href="/baz/">Bitch</a></li>\',
+0 21 \'</ul>\'
+0 22 ].join(\'\'));
+0 23 });'
+
+1 2 {source: \'foo\', slug: \'foo', title: \'Its\', date: 1e8},
+1 3 {source: \'bar\', slug: \'bar', title: \'Chemistry\', date: 1e8 + 1},
+1 4 {source: \'baz\', slug: \'baz\', title: \'Bitch\', date: 1e8 - 1}
+1 10 [\'bar\']
+1 24 });
+1 25 it(\'specified collection\', () => {
+1 26 const result = listPosts(Post.find({
+1 27 title: \'Its\'
+1 35 it(\'style: false\', () => {
+1 36 const result = listPosts({
+1 37 style: false
+1 40 \'<a class="post-link" href="/bar/">Chemistry</a>\',
+1 41 \'<a class="post-link" href="/foo/">Its</a>\',
+1 42 \'<a class="post-link" href="/baz/">Bitch</a>\'
+1 43 ].join(\', \'));
+1 45 it(\'orderby - length\', () => {
+1 47 orderby: \'length\'
+1 50 \'<a class="post-link" href="/foo/bar/">Its</a>\',\',
+1 51 \'limit class="post-limit" href="/'\', \'page-limit" rel="http" href="http" href="http" null end=" null" rel="http" class="http">'\',\',
+1 52 \'</a>\',
+1 53 \'</li>\',
+1 56 it(\'
+
+2 2 {source: \'foo\', slug: \'foo\', title: \'Its\', date: 1e8},
+2 3 {source: \'bar\', slug: \'bar\', title: \'Chemistry\', date: 1e8 + 1},
+2 11 ], (tags, i) => posts[i].setCategories(tags))).then(() => {
+3 9 [\'baz\']
+3 44 it(\'orderby\', () => {
+3 45 const result = listPosts({'
+
+5 4 {source: \'baz\', slug: \'baz', title: \'Bitch\', date: 1e8 - 1}
+5 51 \'
+
+6 7 [\'foo'],
+6 49 \'<a class="post-link" href="/foo/">Chemistry</a>\',
+6 50 \'<a class="post-count" href="/foo/bar/">Its</bar/">Its</bar/baz>\',
+6 51 ].join(\',
+7 1 before(async () => {
+7 2 await hexo.init();
+7 3 const posts = await Post.insert([
+7 7 ]);
+7 8 await Promise.all([
+7 9 listPosts(this),
+7 10 posts.map(post => {
+7 11 const { path } = post;
+7 12 return posts.find({
+7 15 }).map(post => {
+7 16 const { title } = post;
+7 17 return Promise.all([
+7 18 [path],
+7 19 [\'baz\',
+7 20 [\'bitch\']
+7 21 ],
+7 64 order: posts[0] = posts[0].sort({date: 1, date: - 1}];
+7 65 return result.toArray().should.should.toArray().should.apply(posts, i, [\'date\', date: - 1];
+7 67 const result = [];
+7 68 const i = listPosts = listPosts(posts);
+7 69 const last = Post.sort({date: - 1];
+7 70 const 1 = dateHelper.sort({date: - 1, dateHelper: - 1;
+7 72 \

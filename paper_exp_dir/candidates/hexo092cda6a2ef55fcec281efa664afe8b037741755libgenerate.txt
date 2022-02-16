@@ -1,0 +1,11 @@
+Min editdistance: 109.00
+Closest candidate: 0 2 next();"reset();"
+
+0 1 }
+0 2 next();"reset();"
+
+1 1 "
+2 1 "
+
+7 2 next();"callback();"
+

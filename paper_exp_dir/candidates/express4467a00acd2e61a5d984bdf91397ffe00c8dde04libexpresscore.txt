@@ -1,0 +1,26 @@
+Min editdistance: 16.00
+Closest candidate: 7 12 return request
+0 1  } : null })
+0 2 })
+0 3 describe('deep_instance_initializeExpress.middleware ()'
+0 4 it('generate()')
+0 5 it('generate()', function()'sour()', function(){
+0 6 Express.middleware () { return function(){
+0 7 Express.body = function(){
+0 8 return Express.middleware.salt()
+0 12 })"
+
+2 1  }') }
+7 1  })
+7 3 Express.register()})
+7 4 Express.server.saltopend()
+7 5 Express.response.returns('httpOnly'
+7 6 Express.response.method.response.server.pending = function()
+7 8 }
+7 9 get('/javascripts', function(){
+7 10 return Express.s('javascripts', function(){
+7 12 return request
+7 13 return Express.server.s(){
+7 14 request('http')
+7 15 return Express.home = get('http://')\
+9 1  } : function () }

@@ -1,0 +1,3 @@
+if (node.missing) {
+return;
+

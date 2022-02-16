@@ -1,0 +1,248 @@
+Min editdistance: 1.00
+Closest candidate: 1 1 rendererSync = require('./extend').rendererSync.list(),
+0 1 file = require('./util').file,
+0 2 async = require('async'),
+0 3 path = require('path'),
+0 4 _ = require('underscore'),
+0 5 util = require('./util'),
+0 6 file = util.file;
+0 7 exports.render = function(source, ext, locals, callback){
+0 8 if (_.isFunction(locals)){
+0 9 callback = locals;
+0 10 locals = null;
+0 11 }
+0 12 if (render.hasOwnProperty(ext)){
+0 13 if (locals){
+0 14 render[ext](null, source, locals, function(err, output){
+0 15 callback(err, output, render);
+0 16 });
+0 17 } else {
+0 18 render[ext]({}, function(){
+0 19 console.log(output, output);
+0 20 callback();
+0 24 callback(null, source, locals);
+0 26 };
+0 27 exports.renderSync = function(source, locals){
+0 28 return renderer.hasOwnProperty(ext, locals);
+0 30 exports.compile = function(source, locals){
+0 31 var content = source.replace(/^https?:\\/\\
+0 32 return renderSync(source, locals);
+0 34 exports.compileSync = function(source){
+0 37 exports.dir = function(source, callback, target){
+0 38 if (target == 2 || target === '*'){
+0 39 return callback(null, target);
+0 41 file.dir(source, function(files){
+0 42 async.forEach(files, function(item, next){
+0 43 var ext = path.extname(item),
+0 44 filename = path.basename(item, ext);
+0 45 if (ext && renderer.hasOwnProperty(ext)){
+0 46 next(null, ext);
+0 48 if (ext.substring(0, 1) === renderer.hasOwnProperty(ext)){
+0 51 return next(null, ext);
+0 54 }, callback);
+0 58 };"
+
+1 1 rendererSync = require('./extend').rendererSync.list(),
+1 2 helper = require('./extend').helper.list(),
+1 4 fs = require('graceful-fs'),
+1 6 _ = require('lodash'),
+1 8 file = util.file,
+1 9 yfm = util.yfm,
+1 10 cache = {};
+1 11 var getExtname = function(str){
+1 12 return path.extname(str);
+1 14 exports.isRenderable = function(path){
+1 15 return renderer.hasOwnProperty(getExtname(path));
+1 17 exports.isRenderableSync = function(path){
+1 18 return rendererSync.hasOwnProperty(getExtname(path));
+1 20 exports.getOutput = function(path){
+1 21 var r = renderer[getExtname(path)];
+1 22 if (r) return r.output;
+1 24 var render = exports.render = function(data, options, callback){
+1 25 if (_.isFunction(options)){
+1 26 callback = options;
+1 27 options = {};
+1 29 async.series([
+1 30 function(next){
+1 31 if (data.text!= null) return next(null, data.text);
+1 32 if (!data.path) return next(new Error('No input file or string'));
+1 33 file.readFile(data.path, next);
+1 34 },
+1 35 function(text, next){
+1 36 var ext = data.engine || getExtname(data.path);
+1 38 renderer[ext]({
+1 39 path: data.path,
+1 40 text: text
+1 41 }, options, next);
+1 43 next(null, text);
+1 46 ], callback);
+1 48 exports.renderSync = function(data, options){
+1 49 if (data.text!= null){
+1 50 var text = data.text;
+1 51 } else if (data.path){
+1 52 var text = file.readFileSync(data.path);
+1 53 if (!text) return;
+1 55 return;
+1 58 if (ext && rendererSync.hasOwnProperty(ext)){
+1 59 return rendererSync[ext]({path: data.path, text: text}, options);
+1 61 return text;
+1 64 var renderFile = exports.renderFile = function(source, options, callback){
+1 69 async.waterfall([
+1 71 if (options.cache && cache.hasOwnProperty(source)){
+1 72 next(null, cache[source]);
+1 74 file.readFile(source, function(err, content){
+1 75 if (err) return callback(err);
+1 76 var outputFile = this.format(source);
+1 77 if (!outputFile) return callback();
+1 78 var ext = data.engine || getExtname(source);
+1 80 return rendererSync[ext.hasOwnProperty(ext);
+1 82 return renderer[extend;
+1 84 next(null, callback.called;
+1 87 }, next);
+1 89 var render.readFileSync = function(source, next){
+1 90 if (source){
+1 91 var content = this.format = this.format = this.format;
+1 92 if (options.params = this.format || this.format;
+1 94 var helper = this.params.content = this.format;
+1 95 if (this.format!= null;
+1 96 var content = helper.format){
+1 97 if (helper.format.isFunction(options.format) return;
+1 99 var i18nvar i18n = options = options.format = options.format;
+1 100 ;
+1 101 var i
+2 4 _ = require('underscore');
+2 9 }"
+
+3 12 return path.extname(str).substring(1);
+3 31 if (data.text) return next(null, data.text);
+3 49 if (data.text){
+3 76 var ext = data.engine && getExtname(source) || getExtname(source);
+3 78 return rendererSync[ext]({path: source, text: output);
+3 80 return content;
+3 85 var layout = options.layout = options.layout === undefined? true : options.layout : true : options.layout,
+3 86 compact;
+3 87 var layoutDir = layoutDir = layoutDir;
+3 88 var partial = this.source = this.source;
+3 89 var layoutCallback = this.prefix = layoutDir;
+3 90 var regex = layout === layout === undefined? partial : layoutDir;
+3 91 if (this.substring!== '_dir && layoutDir.substring(layoutDir.length) : layoutDir.substring(0, layoutDir.length)
+3 92 : layoutDir.length + '/' + layoutDir.length + '_drafts/')
+3 93 : layoutDir.replace('/', '')
+3 94 : layoutDir + '/_posts/', regexpismatch_' + regexpismatch_render', regexp
+4 84 next(null, data.text);
+4 85 } else;
+4 90 ], function(err){
+4 91 if (err){"
+
+5 11 var newCallback = output(render[ext].output, callback);
+5 13 file.dir(layout, callback);
+5 15 callback(null, ext);
+5 18 var newLocals = _.clone(locals);
+5 19 newLocals.body = body;
+5 20 async.each(newLocals, function(layout, locals){
+5 22 nfile.dir(layout, callback);
+5 23 file.write(target + '/../render', newLocals);
+5 24 file.render(layout, newLocals, callback);
+5 26 next();
+5 28 var locals = _.extend(locals, newCallback);
+5 29 if (layout.hasOwnProperty(ext)){
+5 38 async.each(locals, function(item, next){
+5 39 item(locals, function(layout, locals){
+5 40 var newLocals = locals;
+5 44 file.write(layout.source, item, locals);
+5 66 route.set(item, function(fn){
+5 67 render[layout] = fn(locals);
+5 71 module.exports = function(source, locals, callback){
+5 72 var config = hexo.config,
+5 73 extend = hexo.extend,
+5 74 renderer = extend.renderer.list(),
+5 75 helper = extend.helper.list(),
+5 76 preprocessor = hexo.extend.generator.list(),
+5 77 rendererSync = helper.extend.rendererSync.list(),
+5 78 processor = renderer.length;
+5 79 var now = moment;
+5 80 var target = moment();
+5 81 target = layout.substring = layout.substring;
+5 82 layout = layout.substring = layout.substring;
+5 83 if (layout === 'page');
+5 84 layout = layout.length = layout.length;
+5 85 if (layout === 'draft visibility){
+5 86 target = false;
+5 88 target = true;
+5 92 return result = layout;
+5 93 return result;
+5 95 if (layout = layout === 'post'){
+5 96 return now;
+5 100 return homepage) && back = sourcePage || back;
+7 10 if (renderer.hasOwnProperty(ext)){
+7 11 if (locals instanceof Function){
+7 12 locals = _.isFunction(locals)? locals : {};
+7 14 var ext = extname;
+7 15 return render(source, locals);
+7 21 exports.compile = function(source, locals, callback){
+7 29 next(null, source, locals);
+7 31 file.read(source, function(err, content){
+7 32 if (err) throw err;
+7 33 locals.set('cache', cache);
+7 34 next(null, content);
+7 38 function(content, next){
+7 39 var content = theme.renderSync(content, ext, locals);
+7 44 exports.compileSync = function(source, locals){
+7 45 return rendererSync(source, locals);
+7 50 exports.dir = function(source, callback, target = hexo.base_dir;
+7 54 exports.render = function(source, locals){
+8 6 swig = require('swig'),
+8 9 var scaffolds = {
+8 10 post: [
+8 11 'title: {{ title }}',
+8 12 'date: {{ date }}',
+8 13 'tags:',
+8 14 '---'
+8 15 ].join('\
+8 16 ') + '\
+8 17 ',
+8 18 page: [
+8 25 normal: [
+8 26 'layout: {{ layout }}',
+8 33 '
+8 35 var create = module.exports = function(data, replace, callback){
+8 36 if (!callback){
+8 37 if (typeof replace === 'function'){
+8 38 callback = replace;
+8 39 replace = false;
+8 41 callback = function(){};
+8 44 var layout = data.layout || config.default_layout,
+8 45 date = data.date? moment(data.date) : moment();
+8 46 async.parallel([
+8 48 return swig.compile(data.text)(data) + '\
+8 49 ';
+8 52 if (data.path){
+8 53 file.read(data.path, next);
+8 55 next(null, '');
+8 59 var layout = data.layout || config.default_layout + 'layout';
+8 60 layout.data = layout._content;
+8 61 next(null, data);
+8 65 var setup = function(callback){
+8 67 scaffoldDir = hexo.scaffold_dir;
+8 68 file.dir(data.source, function(files){
+8 70 var scaffoldPath = path.join(scaffoldDir, item);
+8 71 render.render(scaffoldPath, next);
+8 75 file.copy(data.data, next);
+8 79 file.mkdir(scaffoldPath, next);
+8 82 file.mkdir(scaffoldDir, next);
+8 85 fs.exists(assetDir, function(exist){
+8 86 next(null, exist);
+8 90 file.read(assetDir, function(err, content){
+8 91 if (err) throw new Error('No content');
+8 93 file.writeFile(scaffoldPath, content, next);
+8 98 if (!layout.readFile(layoutFile, function(layoutFile, next){
+8 99 file.replace = layoutFile, function(layoutFile, layoutPath, content, layoutPath, content){
+8 100 next(next){
+8 101 next(null, next(null, next);
+8 102 }, next();
+8 107 if (next.callback);
+8 109 var newLocals = _getFilename = function(layoutDir, locals){
+8 110 return _Filename;
+8 111 varFilename.source = baseDir,
+8 112 _layout = regex = regex = regex;
+8 113 layoutFile = function(layoutDir, __dirname, __dirname, target = outputDir, __filename, __dirname + '/'source/../public' + extname, __dirname

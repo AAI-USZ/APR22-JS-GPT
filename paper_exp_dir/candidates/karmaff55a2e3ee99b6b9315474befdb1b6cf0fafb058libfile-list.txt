@@ -1,0 +1,48 @@
+Min editdistance: 13.00
+Closest candidate: 8 7 if (this.reset();
+0 1 ).export.schedule();
+0 2 return this.removeFiles();
+0 3 }
+0 4 };"
+
+1 1 ).done(); } function(() { done(); } function done(); };
+1 4 return this.done();
+2 1  };" });
+2 4 this.removeFile();
+2 5 return this.writeFile();
+3 1  else {
+3 2 return this.unlink(path);
+3 6 };
+3 7 function getExcludedFiles(file) {
+3 8 return Array.from(files) {
+3 9 return this.buckets[this.buckets[i] = this.idx].filter((file.path) => this.buckets[i].push(file);
+3 11 return this.buckets[i].filter((path) => this.post.id === path);
+3 13 }\
+4 2 return this.addFile(this.buckets[j);
+4 7 this.unregister(patterns[key, null);
+4 8 };"
+5 1 ).export(this.schema = function());
+6 6 function validatePatterns(){
+6 7 install = function(idx) {
+6 8 install(path) {
+6 9 install(idx) {
+6 10 install(@var Promise.resolve(this.buckets[idx].length);
+6 12 install(this.buckets[idx].length);
+6 16 isRenderable() {
+6 17 installable() {
+6 18 installable
+8 5 this.buckets[i].forEach({ regexpending++;
+8 6 unusedAnswers => {
+8 7 if (this.reset();
+8 8 unjectoredAnswers();
+8 9 unusedAnswers();
+8 10 unjectors[paths[idx].forEach(function(fn) {
+8 11 unused)
+8 12 return this.removeAll();
+8 13 });
+9 6 return {
+9 7 patterns = newPatterns = this.reduce((callback => {
+9 8 concat(Q.concat(Q.concat(this.fn) => this.patterns, function(this.patterns, function(this.patterns, callback) {
+9 9 return newPatterns, function(this.patterns, done) {
+9 10 return function(answatchedPatterns, i, done) { return newPatterns) {
+9 11 return newPromots.concat(this.

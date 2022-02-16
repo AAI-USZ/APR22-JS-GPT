@@ -1,0 +1,181 @@
+Min editdistance: 1.00
+Closest candidate: 0 2 var defaultConfig = require('../config');
+0 1 var cli = require('../util/cli');
+0 2 var defaultConfig = require('../config');
+0 3 function link(logger, name, localName, config) {
+0 4 var project;
+0 5 var promise;
+0 6 var logger = new Logger();
+0 7 config = mout.object.deepFillIn(config || {}, defaultConfig);
+0 8 project = new Project(config, logger);
+0 9 return project.getJson()
+0 10 .spread(function (json, tree, flattened) {
+0 11 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+0 12 project.walkTree(tree, function (node) {
+0 13 if (node.missing) {
+0 14 return;
+0 15 }
+0 16 if (options.relative) {
+0 17 node.canonicalDir = normalize(node.canonicalDir);
+0 19 if (options.paths) {
+0 22 }, true);
+0 23 mout.object.forOwn(flattened, function (node) {
+0 33 });
+0 35 return paths(flattened);
+0 37 if (config.offline) {
+0 38 return tree;
+0 40 return checkVersions(project, tree, logger)
+0 41 .then(function () {
+0 44 })
+0 45 .done(function (value) {
+0 46 logger.emit('end', value);
+0 47 }, function (error) {
+0 48 logger.emit('error', error);
+0 50 logger.json =!!options.paths;
+0 51 return logger;
+0 53 function checkVersions(project, tree, logger) {
+0 54 var promises;
+0 55 var nodes = [];
+0 56 var repository = project.getPackageRepository();
+0 58 nodes.push(node);
+0 60 if (nodes.length) {
+0 61 logger.info('check-new', 'Checking for new versions..');
+0 63 promises = nodes.map(function (node) {
+0 64 var target = node.endpoint.target;
+0 65 return repository.versions(source.endpoint.source)
+0 66 .then(function (versions) {
+0 67 node.versions = versions;
+0 68 if (versions.length && semver.validRange(target)) {
+0 69 node.update = {
+0 70 target: semver.maxSatisfying(versions, target),
+0 71 latest: semver.maxSatisfying(versions, '*')
+0 72 };
+0 75 tree.versions = [];
+0 76 return Q.all(promises);
+0 78 function paths(flattened) {
+0 79 var ret = {};
+0 80 mout.object.forOwn(flattened = ret, function (pkg, function (pkg, name) {
+0 82 if (!pkg.dependencies[name] = { name: pkg, url: pkg.name };
+0 83 return repository.forEach(function (pkg.canonicalDir, url, pkg.canonicalDir, urlRoot, urlRoot, urlRoot, urlRoot, urlRoot, manager) {
+0 84 if (pkg.pkgMeta === undefined;
+0 85 retarsed = urlRoot == null) return;
+0 87 return repository.forEach(function (pkg, json;
+0 88 if (!retarsed) {
+0 89 pkg = repository.forEach(function (pkg, i) {
+0 90 pkg = repository.versions(pkg, urlRoot, urlRoot, manager) {
+0 91 pkg = manager = manager.pkgMeta;
+0 92 if (!pkgMeta.
+1 4 if (name) {
+1 5 return linkTo(logger, name, localName, config);
+1 6 } else {
+1 7 return linkSelf(logger, config);
+1 10 function linkSelf(logger, config) {
+1 12 config = defaultConfig(config);
+1 15 .then(function (json) {
+1 16 var src = config.cwd;
+1 17 var dst = path.join(config.storage.links, json.name);
+1 18 return Q.nfcall(rimraf, dst)
+1 20 return createLink(src, dst);
+1 23 return {
+1 24 src: src,
+1 25 dst: dst
+1 29 .done(function (result) {
+1 30 if (result === null ||!result) {
+1 31 return next(new Error('Should have failed'));
+1 33 return result;
+1 36 function linkTo(logger, name, localName, config) {
+1 37 var src;
+1 38 var dst;
+1 42 localName = localName || name;
+1 43 src = path.join(config.storage.links, name);
+1 44 dst = path.join(process.cwd(), config.directory, localName);
+1 50 return project.update([localName]);
+1 52 .then(function (installed) {
+1 55 dst: dst,
+1 56 installed: installed
+1 60 link.line = function (logger, argv) {
+1 61 var options = cli.readOptions(argv);
+1 62 var name = options.argv.remain[1];
+1 63 var localName = options.argv.remain[2];
+1 64 return link(logger, name, localName);
+1 66 link.completion = function () {
+1 68 module.exports = link;"
+
+2 7 return linkSelf(logger);
+2 31 return next(new Error('Should have thrown'));
+3 6 var loggerCache;
+3 8 project = new Project(config, loggerCache);
+3 13 project.getJson(src, function (json) {
+3 14 if (json) {
+3 15 return Q.resolve(json);
+3 29 logger.emit('end', result);
+3 33 return loggerCache.retrieve(function (source, target) {
+3 34 return Q.nfcall(rimraf, target);
+3 37 function linkTo(name, localName, config) {
+3 41 var promise = Q.resolve();
+3 46 src = path.join(config.cwd, name);
+3 49 .then(function (json, tree, flattened) {
+3 51 var dst = path.join(config.storage.links, name);
+3 52 return project.setJson(src, dst);
+3 55 if (
+3 56 !project.dir &&
+3 57 !project.cwd) {
+3 58 throw createError('No binary for'+ name + ':'+ localName, 'ENOENT');
+3 60 project.uninstall();
+3 63 Link.prototype.readOptions = function (argv) {
+3 66 var name = options.argv.remain.slice(1);
+3 67 if (options.help) {
+3 68 return help('install');
+3 70 return cli.readOptions(argv);
+4 37 dst = Q.nfcall(rimraf, dst)
+4 56 var local = options.argv.remain[3];
+6 32 var name = options.argv.remain.slice(1).join(' ');
+6 34 return linkTo(logger, name);
+6 36 return linkSelf(logger, name);
+7 37 dst = path.join(config.cwd, config.directory, localName);
+8 11 var bowerJson = json;
+8 13 project.getJson('bowerJson', function () {
+8 14 return readJson(bowerJson);
+8 17 var main;
+8 18 if (names.indexOf(',') > -1) {
+8 19 main = + '.' + main;
+8 21 main = + '.txt';
+8 23 if (main === 0) {
+8 26 main = main.map(function (part) {
+8 27 return path.join(config.directory, part).substr(1);
+8 29 if (!main) {
+8 30 return Q.nfcall(rimraf, main);
+8 32 return checkVersions(project, tree, loggerCache)
+8 42 return semver.satisfies(node.endpoint.source, target);
+8 45 return Q.all([
+8 46 checkVersions(project, tree, loggerCache),
+8 47 createLink(project, tree, loggerCache)
+8 48 ]);
+8 51 return node.endpoint.source;
+8 53 return Q.all(promises)
+8 59 if (options.save || options.saveDev) {
+8 60 return project.save({
+8 61 target: '2.2.3'
+8 64 return project.saveJson()
+8 69 function checkVersions(project, tree, loggerCache) {
+8 82 return repository.analyse()
+8 83 .eliminate(node)
+8 84 .then(callback)
+8 85 .then(function (answait(answait(manager)
+8 86 .install) {
+8 87 .elimit('should.bind(manager)
+8 88 .install(manager)
+8 89 .install())
+8 90 .then(sucrune.bind(s(sucune.bind(s));
+8 91 .bind(s));
+8 92 .elimit('cache.bind(s));
+8 94 .deep.rimraf()
+8 95 .rimraf(s.map(self.bind(self));
+8 97 .deep.export(self.exists(self.deep.export)
+8 98 .uniq().should.length)
+8 99 .length);
+8 100 .message.message.message.on('uninstall = 'uninstall', function (notification) {
+8 101 return uniq.uninstall())
+8 102 .length.uninstall();
+9 30 if (result === undefined) {
+9 31 return null;

@@ -1,0 +1,45 @@
+Min editdistance: 22.00
+Closest candidate: 0 1 done();
+0 1 done();
+0 2 });
+0 3 });"
+
+1 1 should.not.exist(data.updated);
+1 2 should.not.exist(data.comments);
+1 4 return Page.removeById(data._id);
+6 4 Page.removeById(data._id);
+6 7 it('default values', function(){
+6 8 return Page.insert({
+6 9 source: 'foo',
+6 10 path: 'bar'
+6 11 }, function(){
+6 14 path: 'baz'
+6 17 source: 'bar',
+6 21 source: 'foo.md',
+6 22 path: 'faz'
+6 25 source: 'foo.mdwn',
+6 29 source: 'bar.md',
+6 33 source: 'foo.mdtxt',
+6 37 source: 'bar.mdtext',
+6 41 source: 'foo.mdx',
+6 49 source: 'bar.mdx',
+6 81 source: 'foo.mdx.'
+
+7 6 it('source - required', function(){
+7 7 return Page.insert({}).catch(function(err){
+7 8 err.should.have.property('message', '`source` is required!');
+7 11 it('path - required', function(){
+7 13 source: 'foo'
+7 14 }).catch(function(err){
+7 15 err.should.have.property('message', '`path` is required!');
+7 18 it('permalink - virtual', function(){
+7 22 }).then(function(data){
+7 23 data.permalink.should.eql(hexo.config.url + '/' + data.path);
+7 27 it('permalink - trailing_index', function(){
+7 30 path: 'bar/index.html'
+7 32 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/index\\.html$/, ''));
+7 33 hexo.config.pretty_urls.trailing_index = false;
+7 37 it('permalink - trailing_html', function(){
+7 40 path: 'bar/foo.html'
+7 42 data.permalink.should.eql(hexo.config.url + '/' + data.path.replace(/\\.html$/, ''));
+7 43 hexo.config.pretty_urls.trailing_html = false;

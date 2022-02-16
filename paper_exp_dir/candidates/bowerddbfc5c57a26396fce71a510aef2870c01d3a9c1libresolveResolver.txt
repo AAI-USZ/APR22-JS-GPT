@@ -1,0 +1,181 @@
+Min editdistance: 1.00
+Closest candidate: 2 1 var pathspec = require('pathspec');
+0 1 var config = require('../config');
+0 2 var createError = require('../util/createError');
+0 3 var removeIgnores = require('../util/removeIgnores');
+0 4 tmp.setGracefulCleanup();
+0 5 var Resolver = function (source, options) {
+0 6 options = options || {};
+0 7 this._source = source;
+0 8 this._target = options.target || '*';
+0 9 this._name = options.name || this._source;"
+
+1 1 var createError = require('../../util/createError');
+1 2 var removeIgnores = require('../../util/removeIgnores');
+1 8 this._name = options.name || this._source;
+1 9 this._guessedName =!options.name;
+1 10 this._config = options.config || config;
+1 11 };
+1 12 util.inherits(Resolver, events.EventEmitter);
+1 13 Resolver.prototype.getSource = function () {
+1 14 return this._source;
+1 16 Resolver.prototype.getName = function () {
+1 17 return this._name;
+1 19 Resolver.prototype.getTarget = function () {
+1 20 return this._target;
+1 22 Resolver.prototype.getTempDir = function () {
+1 23 return this._tempDir;
+1 25 Resolver.prototype.hasNew = function (canonicalPkg, pkgMeta) {
+1 26 var promise;
+1 27 var metaFile;
+1 28 var that = this;
+1 29 function Resolver(decEndpoint, config, logger) {
+1 30 var sourceDir = this._source;
+1 31 Resolver.prototype.resolve = function () {
+1 34 if (this._working) {
+1 35 return Q.reject(createError('Already working', 'EWORKING'));
+1 36 }
+1 37 this._working = true;
+1 38 return this._createTempDir()
+1 39 .then(this._resolve.bind(this))
+1 40 .then(function () {
+1 41 return that._readJson(that._tempDir);
+1 42 })
+1 43 .then(function (meta) {
+1 44 return Q.all([
+1 45 that._applyPkgMeta(meta),
+1 46 that._savePkgMeta(meta)
+1 47 ]);
+1 50 return that._tempDir;
+1 51 }, function (err) {
+1 52 that._tempDir = null;
+1 53 throw err;
+1 55 .fin(function () {
+1 56 that._working = false;
+1 57 });
+1 59 Resolver.prototype.isCacheable = function () {
+1 60 function TempDir(defaults, tempDir) {
+1 61 this._target = tempDir;
+1 62 this._tempDir = this._tempDir;
+1 64 TempDir = Q.resolve = Q.attempts.apply(this._cleanup();
+1 65 return Q.pempts.bind(this._cleanup.bind(this._cleanup.bind(this._cleanup, null);
+1 67 TempDir.then(this._readJson.bind(this, null);
+1 68 .then(this._readJson.readJson.bind(this, null);
+1 69 .then(setIgnore.bind(this, meta)
+1 70 .then(this._parseJson.bind(this, null);
+1 71 this._readPkgMeta.bind(this, null);
+1 72 return this._applyPkgMeta.bind(this, null);
+1 74 \
+2 1 var pathspec = require('pathspec');
+2 2 var rimraf = require('rimraf');
+2 3 var glob = require('glob');
+2 28 Resolver.prototype.hasNew = function (canonicalPkg) {
+2 32 function createInstance(decEndpoint, config, logger, registryClient) {
+2 33 return that._createTempDir()
+2 34 .then(function (dir) {
+2 35 rimraf.sync(directory);
+2 36 return Q.nfcall(rimraf, dir)
+2 40 that._logger.debug('deleted', 'The existing'+ path.basename(that._source) +'file will be used and filled in');
+2 41 return Q.nfcall(registryClient.bind(that));
+2 44 function simulatePackage(name) {
+2 45 var main;
+2 47 var decEndpoint = path.join(config.directory, name);
+2 48 main = main.map(function (main) {
+2 49 return function (main) {
+2 50 var main = main.map(function (main) {
+2 51 return generate(main);
+2 53 main.maxAge = 5 * 7;
+2 54 main.getPkgMeta = function (pkgMeta) {
+2 55 return pkgMeta;
+2 57 return main.
+2 58 .then(function (result) {
+2 59 if (typeof result === 'object') {
+2 60 return result;
+2 61 } else if (result.length === 0) {
+2 62 main = main.map(function (part) {
+2 63 return parts[0];
+2 64 } else {
+2 65 return part[1];
+2 71 Resolver.prototype.main = function (dir) {
+2 72 return dir;
+2 74 Resolver.prototype.cache = function (dir;
+2 75 Resolver.prototype._createTempDir = function (default, logger) {
+2 77 return Resolver.prototype.create = function (default, source, options) {
+2 78 var promise = Q.n.nfcall(mkdir, domain =.nfcall(fs.readFile, this._dir, domain)
+2 79 .readFile, main)
+2 80 .then(function (files) {
+2 81 var that = files || {};
+3 36 if (pkgMeta) {
+3 37 promise = this._hasNew(canonicalPkg, pkgMeta);
+3 39 metaFile = path.join(canonicalPkg, '.bower.json');
+3 40 promise = Q.nfcall(fs.readFile, metaFile)
+3 41 .then(function (contents) {
+3 42 var pkgMeta = JSON.parse(contents.toString());
+3 43 return that._hasNew(canonicalPkg, pkgMeta);
+3 44 }, function () {
+3 45 return true;
+3 48 return promise.fin(function () {
+3 80 '
+
+4 77 Resolver.prototype.create = function (promise, staticFolder, adapterFolder, baseFolder, proxy, proxyFn, proxyFn, urlRoot) {
+4 78 var that = this._source = Q.source;
+4 79 var sourceId = 0;
+4 80 var oldUrl;
+4 81 var sourceDir = this._target = '';
+4 82 return Q.n
+4 84 .n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.n.
+4 85 .n.n.n.n.n.n.n
+5 11 this._config = options.config || config;"
+
+6 29 var Manager = function (options) {
+6 31 this._config = options.config || this._config;
+6 32 this._logger = options.logger || this._logger.create('config');
+6 33 this._options = options;
+6 34 this._config = config;
+7 30 var sourceId = this._source.substr(0, 1);
+7 63 if (this._source &&
+7 64 /^(?:file:[\\/\\\\]{2}|[A-z\\/\\\\]/.test(this._source)/.test(this._source)) &&
+7 65 this._source.substr(1, 1)/.test(this._source.length > 1)/.test(this._ 1)/.test(this._source)) {
+7 66 this._source = path.substringify(this.substringify(this._source_dir, 2);
+7 68 this._source = null;
+7 69 return this._cache.push(this._source);
+7 71 Resolver.prototype._resolveCache.prototype._create = function () {
+7 72 var sourceId = function () {
+7 73 var sourceId = this._source;
+7 74 return Q.n.n.then(this._readJson.parse
+7 75 .split('/name)
+7 76 .split('/A',');
+7 77 .filter.map(function (val, function (val, i) {
+7 78 return val, this._id) {
+7 79 return val.trim()
+7 80 .split('/' +
+8 29 var version = function (source, options) {
+8 30 var promise = Q.resolve();
+8 31 options.target = (this._target || '*') + '-wildcard';
+8 32 promise = this._hasNew(source, options);
+8 33 return promise.then(function (result) {
+8 35 return that._hasNew(canonicalPkg, result);
+8 67 /^(?:file:[\\/\\\\]{2}|[A-Z]:)?\\.?\\.?[\\/\\\\]/.test(this._source)/.test(this._source)/.test(this._source)/.test(this._source)/.test(this._source)/.test(this._source))/.test(this._source)/.test(this._source))/.test(this._source.substringify(this._ignore)/.subify(this._ignore)/.test(this._ignore)/.split('/))
+8 68 .split(/))/.defs/)/.return;
+8 69 .split('/\',').filter(/
+8 70 .unix.unix.unix.unix.unix.unix.unix.unix.unix.split(0);
+8 71 .split(0);
+8 72 .split('/.contains/')
+8 73 .replace('/.**/.test')
+8 74 .replace(/**/.**/.test')
+8 75 .split('/);
+8 76 .unix.unix.unix.unix.split('/.test');
+8 77 .unix.unix.split('**')
+9 29 function removeIgnores(dir, metaFile) {
+9 30 var reader;
+9 32 function readPkgMeta(promise, encoding, callback) {
+9 33 var pkgMeta = {
+9 34 name: path.basename(that._source),
+9 35 version: pkgMeta._target,
+9 36 homepage: this._config.cwd,
+9 37 doc: that._config.directory === '*'? '_wildcard' : pkgMeta._target,
+9 38 meta: metaFile,
+9 39 url: that._source,
+9 40 root: true
+9 43 var pkgMeta = {"
+

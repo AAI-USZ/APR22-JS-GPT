@@ -1,0 +1,60 @@
+Min editdistance: 9.00
+Closest candidate: 0 2 if (!routes[i]){
+0 1 for (var i = 0, len = keys.length; i < len; i++){
+0 2 if (!routes[i]){
+0 3 var key = keys[i];
+0 4 if (key.substr(0, 3) === '$'){
+0 5 return callback();
+0 6 } else {
+0 7 routes[i] = true;
+0 8 }
+0 10 };
+0 12 };"
+
+1 1 if (!args._.length){
+1 2 console.log('\
+1 3 You should configure deployment settings in %s first!\
+1 4 ', '_config.yml'.bold);
+1 7 var routes = {};
+1 8 for (var i = 0, len = routes.length; i < len; i++){
+1 9 var key = routes[i],
+1 10 obj = _.extend(obj, args);
+1 11 if (!obj.length) return callback();"
+
+2 3 var key = keys[i],
+2 4 verbose = args[key];
+2 5 if (verbose && console.log()){
+2 6 process.nextTick(function(){
+2 12 route.set(key, routes[i]);
+2 13 verbose && console.log();
+2 17 var users = [
+2 18 { name: 'TJ', email: 'tj@vision-media.ca' },
+2 19 { name: 'Simon', email:'simon@vision-media.ca' },
+2 20 { name: 'James Cameron', email: 'James Cameron@abc.com' }
+2 21 ];
+2 22 for (var i = 0, len = users.length; i < len; i++){
+2 23 var item = users[i],
+2 24 verbose = args[i] == 'test';
+2 25 if (item!== routes[i]){
+2 26 if (args[i]._id.equals(item)){
+2 27 return;
+2 29 users[i].get(item).apply(undefined, args);
+2 31 return out.write(process.nextTick(function(){
+2 32 return next();
+2 33 });
+3 3 routes[i].write(new TypeError('routes[i]'));
+3 6 callback();"
+
+5 5 routes[i] = false;
+6 2 var routes = this.route.routes;
+6 4 if (routes[i]._id.indexOf('post') === 0){"
+
+7 3 if (!routes[key]){
+7 4 return callback(new Error('No routes were matched, yet'));
+8 2 console.log('No routes defined on a keypress post.');
+8 6 keys.forEach(function(key){"
+
+9 4 if (key.substr(0, 3)!== '.'){
+9 5 continue;
+9 8 if (!hexo.cache.rebuild) return callback();"
+

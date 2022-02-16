@@ -1,0 +1,47 @@
+Min editdistance: 8.00
+Closest candidate: 5 2 if (hexo.debug){
+0 1 }
+0 2 app.use(connect.static(hexo.public_dir));"
+
+1 1 app.use(connect.router());
+1 2 app.use(connect.static());"
+
+2 1 "
+
+5 2 if (hexo.debug){
+5 3 app.use(connect.logger());
+5 5 console.log('Loading.');
+5 6 require('../generate')({preview: true}, function(){
+5 7 var list = route.list(),
+5 8 get = route.get;
+5 9 app.use(config.root, function(req, res){
+5 10 var uri = url.parse(req.url).pathname,
+5 11 target = get(uri);
+5 12 if (target){
+5 13 target(function(err, result, source){
+5 14 if (err) throw err;
+5 15 res.statusCode = 200;
+5 16 res.setHeader('Content-Type', mime.lookup(source));
+5 17 if (result.readable){
+5 18 result.pipe(res).on('error', function(err){
+5 19 res.statusCode = 500;
+5 20 res.end('500 Internal Server Error');
+5 21 });
+5 22 } else {
+5 23 res.write(result);
+5 24 res.end();
+5 28 var last = uri.substr(uri.length - 1, 1);
+5 29 if (last!== '/'){
+5 30 res.statusCode = 301;
+5 31 res.setHeader('Location', uri + '/');
+5 34 res.statusCode = 404;
+5 35 res.end('404 Not Found');
+5 39 app.use(config.root, connect.static(hexo.public_dir));
+5 40 app.use('/', function(req, res){
+5 41 res.statusCode = 302;
+5 42 res.setHeader('Location', config.root);
+5 45 app.listen(config.port, function(){
+5 46 console.log('Hexo is running at %s. Press Ctrl+C to stop.', clc.bold('http://localhost:' + config.port + config.root));
+5 47 hexo.emit('preview');
+5 49 });"
+

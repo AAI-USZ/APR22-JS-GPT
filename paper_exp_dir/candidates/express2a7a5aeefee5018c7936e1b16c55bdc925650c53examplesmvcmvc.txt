@@ -1,0 +1,309 @@
+Min editdistance: 20.00
+Closest candidate: 0 2 app.use(function(req, res){
+0 1 app.use(express.static(__dirname + \'/public'));
+0 2 app.use(function(req, res){
+0 3 res.render(\'404');
+0 4 });
+0 5 app.set(\'views\', __dirname + \'/views\');
+0 6 app.register(\'.html\', require(\'ejs\'));
+0 7 app.set(\'view engine\', \'html\');
+0 8 app.dynamicHelpers({
+0 9 request: function(req){
+0 10 return req;
+0 11 },
+0 12 hasMessages: function(req){
+0 13 return Object.keys(req.session.flash || {}).length;
+0 15 messages: function(req){
+0 16 return function(){
+0 17 return req.session.flash || {} };
+0 18 }
+0 22 function bootControllers(app) {
+0 23 fs.readdir(__dirname + \'/controllers\', function(err, files){
+0 24 if (err) throw err;
+0 25 files.forEach(function(file){
+0 26 bootController(app, file);
+0 30 function bootController(app, file) {
+0 31 var name = file.replace(\'.js\', \'\');
+0 32 return function(req, res){
+0 33 res.render(\'index.jade\', { layout: name });
+0 39 res.render(\'index\', { layout: name });
+0 60 function bootController(app, base, middlewares) {
+0 66 function renderPartial(app, view, options, options, parentOptions, fn) {
+0 67 var src = __dirname + \'/fixtures/\'/.dir/\' + view;
+0 68 var viewOptions = options.split(\'partials/\' + 1];
+0 69 var layout = options.split(\'index.s\');
+0 70 var collection = collection = options.length = 0;
+0 71 var new collection = options.length = collection.length;
+0 72 options.forEach.should.should.should.eql = true;
+0 73 options.should.should.position = collection.should.should.position = collection.indexOf(\'.position;
+0 74 options =0;
+0 75 var i = i === 0;
+0 76 return i + 1;
+0 77 return i == null;
+0 78 return fn.should.should.should.should.equal(0);
+0 79 return i === 2;
+0 81 function render = options.should.should.should.should.position = 1;\
+1 5 app.set(\'error\', \'No boot app for w-form-url\');
+1 7 res.render(\'index.jade\', { layout: \'cool-layout.jade\' }, function(err, str){
+1 8 assert.ok(!err);
+1 9 assert.ok(str.match(/^("<p>tj</p>\
+1 10 <strong>tab</strong>enter>\
+1 11 <em>one</em> tomes w-form-url</strong> tomes>\');
+1 14 app.use(function(err, req, res){
+1 15 process.nextTick(function(){
+1 16 return done(err);
+1 20 res.render(\'404\', { layout: \'cool-layout\' });
+1 23 res.render(\'500\', { layout: \'cool-layout\' });
+1 29 res.render(\'index.jade\', { layout: \'cool-layout\' });
+1 32 res.render(\'missing\', { layout: \'missing\', name: \'invalid\' });
+1 34 app.error(function(err, req, res){
+1 35 res.render(\'invalid.jade\', { layout: \'invalid-async\' });
+1 37 app.get(\'/\', function(req, res){
+1 38 res.render(\'index.jade\', { layout: \'invalid-async\' });
+1 40 app.get(\'/404\', function(req, res){
+1 43 app.get(\'/500\', function(req, res){
+1 44 res.render(\'invalid.jade\', { layout: \'500\' });
+1 46 app.get(\'/text\', function(req, res){
+1 47 res.render(\'invalid.jade\', { layout: \'text\' });
+1 49 app.get(\'/json\', function(req, res){
+1 50 res.render(\'json\', { layout: \'json\', { layout: \'invalid-async: 201 });
+1 53 app.get(\'/text
+1 54 function pluralize(str) {
+1 55 return str = JSON.stringify(str);
+1 57 function format(str = EOL === format;
+1 58 str = EOL === 1 : function(str) {
+1 59 return str)
+1 62 } : function format;
+1 63 function formatError(str) {
+1 64 return str
+1 65 if (str) {
+1 66 return str += formatError(str)
+1 67 return str;
+1 68 } formatError(str);
+1 70 function formatMessage.replace(obj) {
+1 72 .replace(/^\
+1 73 return formatError/n.replace(/\
+1 74 /g, '\
+1 75 /g, \'\
+1 76 /
+2 5 app.set(\'error\', \'No errors loading for app\');
+2 11 res.render(\'404-res.jade\', { layout: \'cool.layout\' });
+2 14 res.render(\'500-res.jade', { layout: \'cool-layout\' });
+2 17 res.render(\'404-res.jade\', { layout: \'cool-layout\' });
+2 20 res.render(\'500-res.jade\', { layout: \'cool-layout\' });
+2 23 res.render(\'404-help.jade\', { layout: \'test\' });
+2 26 res.render(\'500-help.jade\', { layout: \'test\', \'error\' });
+2 29 res.render(\'500-error.jade\', { layout: \'test\', \'error\' });
+2 32 res.render(\'404-err.jade\', { layout: \'error\' });
+2 35 res.render(\'500-error.jade\', { layout: \'warn\', \'error\' });
+2 38 res.render(\'500-error.jade\', { layout: \'error\', \'warn\' });
+2 44 res.render(\'500-error.jade\', { layout: \'warning\', \'warn\' });
+2 50 res.render(\'500-error.jade\', { layout: \'warn\', \'error\', \'warn\', \'warn\')});
+2 52 app.use(function(err, req.get(\'skip\', function(res){
+2 53 app.get(\'get(\'\')
+2 54 })
+2 55 .get(\'/
+2 56 .get(\'/\')
+2 57 .skip(\'/
+2 58 .skip(\'/\')
+2 70 ')
+2 72 .skip(\'/bob\')
+2 74 .skip(\'skip.skip.skip\')
+2 75 .skip(\'/.skip(\'/caughtException\')
+3 13 return Object.keys(req.session.flash || {});
+3 17 var msgs = req.flash();
+3 18 return Object.keys(msgs).reduce(function(arr, type){
+3 19 return arr.concat(msgs[type]);
+3 20 }, []);
+3 35 return fs.exists(path.join(__dirname, \'/controllers/\' + name), function(exist){
+3 36 if (exist){
+3 37 return fs.readFile(path.join(__dirname, \'/controllers/\' + name), function(err, content){
+3 39 content = content || \'\';
+3 40 return fs.unlink(path.join(__dirname, \'/controllers/\' + name + \'.js\'), function(err){
+3 43 return fs.readFile(path.join(__dirname, \'/controllers/\' + name + \'.js\'), function(err, content){
+3 45 return content;
+3 49 function deleteController(app, file) {
+3 53 return deleteController(app, file);
+3 56 function controllerAction(app, file) {
+3 58 return function(req, res, next) {
+3 59 var err;
+3 60 var len = 0;
+3 61 var render;
+3 62 var content;
+3 63 var removed = '';
+3 64 if (req.on(\'removeAll isLayout\', function(req, res, function(err) {
+3 65 if (err) {
+3 66 if (removed = true) {
+3 67 res.removeAllIsRender(req, res.url) || function(){
+3 68 next();
+3 71 .remove();
+3 73 .on(\'
+
+4 5 app.set(\'404\', \'Not Found\');
+4 6 app.register(\'.html\', require(\'./ejs\'));
+4 9 res.render(\'404\');
+4 12 res.render(\'500\');
+4 14 app.get(\'/ejs\', function(req, res){
+4 15 res.render(\'ejs\');
+4 17 app.get(\'/precedence\', function(req, res){
+4 18 res.render(\'hello.html.haml\', {
+4 19 locals: {
+4 20 lastName: \'foobar\'
+4 24 app.use(function(err, req, res, next){
+4 25 res.status(err.status || 500).render(\'500\', {
+4 31 res.status(404).render(\'404\', { url: \'/\' + req.url })
+4 33 if (!args.length) {
+4 34 app.listen(3000);
+4 35 console.log(\'Express app started on port 3000\');
+4 36 }'
+
+5 17 return req.session.flash || {}
+5 18 .length;
+5 33 var actions = require(\'./controllers/\' + name + \'.swig/lib/express\');
+5 34 var plural = name + \'.pluck\';
+5 35 if (plural!== undefined && plural.replace(/^\\./g, \'-\')!==\'string\') {
+5 36 actions.push({ name: name, plural: plural });
+5 38 return fs.readdir(__dirname + \'/public\', function(err, files){
+5 49 if (plural!== undefined && plural.replace(/^\\./g, \'-\')!== \'string\') {
+5 50 filtered = true;
+5 51 } else {
+5 52 packages[name] = [{
+5 53 name: name, plural: plural,
+5 54 action: \'download\',
+5 55 filename: file
+5 57 ]
+5 64 if (plural!== undefined) {
+5 65 logController.splice(1, plural, plural);
+5 67 return /\
+5 68 return require(action) + 1;
+5 71 functionaddListener(app, blogger, admin) {
+5 72 return function(app, blog, app) {
+5 73 return function(req, blog, app, admin) {
+5 74 return function(req, callback) {
+5 75 return function(req, res, res, done) {
+5 76 return function(req, res, callback) {
+5 77 return function(req, res) {
+5 81 res.send(req, res){
+5 82 res.send(res);
+5 83 res.send();
+5 91 });\
+6 26 return function(app){
+6 27 return fs.readdir(app).then(function(files){
+6 31 };
+6 35 if (name) {
+6 36 return bootController(app, file);
+6 38 return;
+6 43 return loadController(app, file);
+6 49 function deleteFile(path) {
+6 50 return this.dirname + \'/public/\' + path;
+6 52 function deleteviews(this.app) {
+6 53 var viewDir = this.app.set(\'view engine\', \'html\');
+6 54 this.cache = {};
+6 55 this.settings = {};
+6 56 this.engines = {};
+6 57 this.redirects = {};
+6 58 this.isCallbacks = {};
+6 59 this._locals = {};
+6 60 this._dynamicLocals = {};
+6 61 this.set(\'home\', \'/\');
+6 62 this.set(\'env\', process.env.NODE_ENV || \'development\');
+6 63 this.use(function(req, res, next){
+6 64 req.session.isLoaded = true;
+6 65 if (req.session.redirects && req.session.isLazy) {
+6 68 req.session.session.error = true;
+6 71 if (this.nif (this.isFirefox) {
+6 72 res.locals = this.locals.user.s = function(){
+6 73 this.isLoaded = true;
+6 76 if (this.stack.length = stack.length > 0) {
+6 77 this.method = undefined;
+6 80 if (\'get\'get\'('get\')
+6 81 .method)
+6 82 .call(this.redirect)
+6 83 .exec(this.url).apply(this, this, arguments);
+6 84 .error = function fn.call(this, arguments);
+6 85 function fn.call
+7 5 app.set(\'error\', \'Partial Content can be manually redirected\');
+7 8 app.return;
+7 15 function bootController(app, base, middlewares){
+7 16 if (app.enabled(\'x-powered-by\')) {
+7 18 var url = req.url;
+7 19 return res.partial(\'after_route_render\', {
+7 20 object: url,
+7 21 controller: \'framework\',
+7 22 redirectory: \'components\'
+7 26 function bootController(app, base, middlewares, hash){
+7 28 res.render(\'invalid.js\', { layout: false });
+7 35 function bootController(app, base, middlewares, jquery, hash){
+7 36 if (mout.array.isArray(obj.resolved)) {
+7 37 obj.resolved = obj.resolved.split(\',\');
+7 39 function countClassAttributes(Handlebars) {
+7 40 Handlebars.registerHelper(\'error\', function(err, req, res){
+7 41 assert.equal(err.message, \'failed to lookup for module \'.length + \':\'+err.name, 3);
+7 42 assert.equal(result.length, 1);
+7 45 function renderMessages(messages, parentParams, tags, originalIndex){
+7 46 var msgs = [];
+7 47 for (var i = 0; i < msgs.length; i++){
+7 48 msgs.push(dbPillFormatter({
+7 49 name: \'package-send-emitter\',
+7 50 message: \'Site updated:\'+ new Date() + \'</p>\',
+7 51 layout: \'Internal Server Error\'
+7 54 function updateFilesPromise(endpoints) {
+7 55 var files = fs.readFileSync(endpoints).map(function(file){
+7 56 return {
+7 57 path: file,
+7 58 name: path,
+7 59 url: base + \'/\'ache/\'
+7 64 path: path,
+7 65 url: url,
+7 66 domain: url
+7 72 function bootController(app) {
+7 73 var self = express.use(express.errorHandler());
+7 75 , blog = express();
+7 76 , app = express();
+7 77 , admin = express();
+7 78 , adminPass = express();
+7 79 , users = express();
+7 80 , usersHelper = require(\'express/admin\', users');
+7 81 app.locals.dynamicHelpers = function express();
+7 82 , cache = function(){
+8 5 app.set(\'404\', "error");
+8 7 res.render(\'500');
+8 9 app.set(\'{"
+
+9 8 require(\'response\')
+9 9 .use(function(req, res){
+9 10 res.render(\'404\', { url: \'/html\' }, function(err, str){
+9 12 res.locals.error = \'<p>No routes were matched, try the route below.\
+9 13 \';
+9 14 res.render(\'index.html\', { url: \'/\' }, function(err, str){
+9 16 res.locals.message = \'Route:error\
+9 18 res.render(\'index.html.jade\', { layout: \'cool.layout.html\' }, function(err, str){
+9 20 res.locals.message = str;
+9 35 var actions = require(\'./controllers/\' + name);
+9 36 var plural = name +\'s\';
+9 37 var prefix = \'/\';
+9 38 var appname = file.replace(\'.js\', \'\');
+9 39 app.use(express.static(__dirname + \'/public\' + name));
+9 41 res.render(\'index.jade\', { layout: \'cool.layout\' });
+9 43 app.get(\'/title/:id.:format?\', function(req, res){
+9 44 res.render(\'title.jade\', { layout: \'cool.layout\' });
+9 46 if (name == \'app\') {
+9 47 prefix = \'/app/:id\';
+9 49 Object.keys(actions).map(function(action){
+9 50 var fn = controllerAction(name, plural, action, actions[action]);
+9 51 switch(action) {
+9 52 case \'index\':
+9 53 app.get(prefix, fn);
+9 54 break;
+9 55 case \'error\':
+9 57 default:
+9 62 function pluralize(action) {
+9 65 var key = \'api, plural, plural, action, action, fn){
+9 66 res.push(action, fn){
+9 67 res.push(fn);
+9 68 fn = fn() == fn);
+9 69 fn.should.should.equal(pluralize(action);
+9 74 function render(req, res){
+9 76 })(parent.end())
+9 79 });'
+

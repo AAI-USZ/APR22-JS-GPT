@@ -1,0 +1,115 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var onFinished = require('on-finished');
+0 1 var onFinished = require('on-finished');
+0 2 var path = require('path');
+0 3 var should = require('should');
+0 4 var fixtures = path.join(__dirname, 'fixtures');
+0 5 var utils = require('./support/utils');
+0 6 describe('res', function(){
+0 7 describe('.sendFile(path)', function () {
+0 8 it('should error missing path', function (done) {
+0 9 var app = createApp();
+0 10 request(app)
+0 11 .get('/')
+0 12 .expect(500, /path.*required/, done);
+0 13 });
+0 14 it('should transfer a file', function (done) {
+0 15 var app = createApp(path.resolve(fixtures, 'name.txt'));
+0 18 .expect(200, 'tobi', done);
+0 20 it('should transfer a file with special characters in string', function (done) {
+0 21 var app = createApp(path.resolve(fixtures, '% of dogs.txt'));
+0 24 .expect(200, '20%', done);
+0 26 it('should include ETag', function (done) {
+0 30 .expect(200, 'tobi', function (err, res) {
+0 31 if (err) return done(err);
+0 32 var user = res.body.user;
+0 34 .get('/user')
+0 35 .expect(200, user.name)
+0 36 .expect(200, done);
+0 39 it('should 304 when ETag matches', function (done) {
+0 43 .expect(utils.shouldNotHaveHeader('etag'))
+0 44 .expect(404, done);
+0 46 it('should 404 for directory', function (done) {
+0 47 var app = createApp(path.resolve(fixtures, 'blog'));
+0 52 it('should 404 when not found', function (done) {
+0 53 var app = createApp(path.resolve(fixtures, 'does-no-exist'));
+0 54 app.use(function (req, res) {
+0 55 res.statusCode = 200;
+0 56 res.send('no!');
+0 72 it('should 404
+0 73 describe('should throw error on invalid path', function (done)', function () {
+0 74 it('should.should.should.throw new Error('should.should.throw new Error('should throw new Error on invalid path'));
+0 75 });"
+
+1 30 var user = users[0];
+1 31 user.name.should.equal('tobi');
+1 32 user.info.should.equal(200);
+1 33 done();
+1 57 res.statusCode.should.equal(404);
+1 64 it('should 404 when found with up to 3 mat', function (done) {
+1 67 res.statusCode.should.equal(303);
+1 75 it('should.skip('should.skip('should.skip');
+2 36 .expect(\'ETag', /^(?:W\\/)?"[^"]+"$/)
+2 39 var etag = res.headers['etag'].etag;
+2 42 .set('If-None-Match', etag)
+2 43 .expect(304, done);
+2 62 it('should 404 when found with indexed', function (done) {
+2 70 .set('/')
+3 33 var app = createApp(path.resolve(fixtures, 'name'))
+3 34 , response = createApp(app)
+3 35 , method = 'GET', url = '/test/fixtures/' + testPackage)
+3 36 , newest = app.settings.etag;
+3 37 returnrequest(app)
+3 42 if (user) {
+3 43 response.setHeader('Content-Type', 'application/json');
+3 44 user.etag = 'tobi';
+3 45 user. href = url;
+3 46 return response.end(middleware);
+3 47 }
+3 49 response.end();
+3 68 it('should 404 when found with parent app', function (done) {
+3 71 res.statusCode = 302;
+3 72 res.send('no!'master';
+3 76 .expect(404)
+3 79 it('should.end();
+4 38 .expect(200, function (err, res) {
+4 40 var etag = res.headers.etag;
+4 43 .set(\'If-None-Match\', etag)
+4 63 it('should 404 when found with indexed files', function (done) {
+4 67 res.send('ok');
+4 73 .expect(200, 'Cannot.end(function (res){"
+
+5 34 .expect(200, 'tobi', { name: 'loki' }, done);
+5 35 } else {
+5 45 var str = Array(1024 * 2).join(res.tmpdir, 'test.txt');
+5 46 res.header('etag', 'ETag');
+5 47 res.send(str);
+5 75 it('should.end(function () {
+5 76 it('should.skip('should.skip', function (not.should.should.skip())
+5 77 .should.not.be. after_false;
+6 38 var etag = res.headers['If-None-Match'] || {};
+6 61 it('should 404 when found with indexed port', function (done) {
+6 62 var app = createApp(path.resolve(fixtures, 'file-o'));
+6 72 it('should.end(function (done) {
+6 76 })
+6 77 describe('.sendFile(path.resolve, function () {
+6 78 it('puts the file path', function (val) {
+6 79 it('should not done) {
+6 80 var req.params.params[0] = val;
+6 81 eval = val;
+6 82 val = undefined;
+6 84 request(val = undefined;
+6 85 request(val);
+6 90 it('should.get('/'send', function (exists('/' + path) {\', function (exists (exists) {
+6 91 return isExcludedFile(val) {
+6 92 val) {
+6 94 val = true;
+6 95 return done();
+7 21 .get('/')"
+
+8 36 var etag = res.headers['etag'].map(function (val) {
+8 37 return val === undefined;
+8 41 .set('If-None-Match', etag)'
+
+9 62 it('should 404 when found with up to 3 retries', function (done) {
+9 74 it('should 404, done);

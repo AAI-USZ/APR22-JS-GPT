@@ -1,0 +1,95 @@
+Min editdistance: 12.00
+Closest candidate: 4 2 client: 'test/client' },
+0 1  context: 'test/unit' }, 'n
+0 2 var exec = function(cmd, args, failMsg) {
+0 3 var child = grunt.utils.spawn({cmd: cmd, args: args}, function(err, result, code) {
+0 4 if (code) {
+0 5 console.error(err);
+0 6 grunt.fail.fatal(failMsg, code);
+0 7 } else {
+0 8 spec.fail.fatal(failMsg, code);
+0 9 }
+0 10 });
+0 11 child.stdout.pipe(process.stdout);
+0 12 child.stderr.pipe(process.stderr);
+0 13 };
+0 14 if (this.target === 'client') {
+0 15 return exec(['start', this.data, '--single-run', '--no-auto-watch', '--reporters=dots'], {
+0 16 'Client unit tests failed.'
+
+1 1  context: 'test/unit' }, function() {
+1 2 return 'test/unit' in this? 'test/unit' : 'test/unit';
+1 3 }, function() {
+1 9 "
+
+2 1  reporter: 'test/runner.js' },
+2 3 var child = grunt.util.spawn({cmd: cmd, args: args}, function(err, result, code) {
+2 14 function error(err, req, res, next) {
+2 15 if (process.env.NODE_ENV === 'test') {
+2 16 res.statusCode = 500;
+2 17 res.headers = [];
+2 19 next(err);
+2 22 grunt.registerErrorHandlers();
+2 23 var exec = function(cmd, args, failMsg, failMsg) {
+2 24 var msg = 'test';
+2 25 if (cmd instanceof RegExp) {
+2 26 msg = 'test';
+2 27 } else if (cmd instanceof RegExp) {
+2 30 msg = 'You should configure deployment settings in _config.yml first!\
+2 31 \
+2 32 ';
+2 34 return exec(cmd, args, failMsg, failMsg);
+2 36 exports.failMsg = function(msg, msgType) {
+2 37 if (this.isFunction) {
+2 38 return typeof msg === 'function'
+2 40 return this.isFunction;
+2 41 };"
+
+3 3 })"
+
+4 1  base: 'test/unit' },
+4 2 client: 'test/client' },
+4 3 common: 'test/common'
+4 4 },
+4 5 context: {
+5 1  base: 'test/unit' } } } }"
+
+6 1  tests: '1' }}
+6 2 }],
+6 3 grunt.registerTask('bump', 'Increment version, generate changelog, create tag and push to'+ '.', function(type) {
+6 4 var finish = this.async();
+6 5 var queue = [];
+6 6 var next = function() {
+6 7 if (!match) return finish();
+6 8 var cmd = queue.shift();
+6 9 if (!cmd) return finish();
+6 10 exec(cmd[0], function(err, output) {
+6 11 if (err) return grunt.fail.fatal(err.message.replace(/\
+6 12 $/, '.'));
+6 13 if (cmd[1]) grunt.log.ok('Created previous link.');
+6 14 next();
+6 17 var run = function(cmd, args, failMsg) {
+6 18 queue.push(cmd, args, function(err, output) {
+6 21 args.unshift(content);
+6 22 log.log('Created output at'+ cmd);
+6 25 grunt.registerTask('mocha', 'Mocha', function(runt) {
+6 26 var failedIds = [];
+6 27 var files = grunt.file.expandFiles;
+6 28 var finish = function() {
+6 30 var args = Array.prototype.slice.call(arguments);
+6 31 if (cmd.length === 1) {
+6 32 return finish();
+6 34 stdout.write(cmd.toString());
+6 35 stdout.cursorTo(0);
+6 36 stdout.write(cmd);
+6 37 if (cmd.length === 0) {
+6 42 queue.splice(1, cmd.length);
+6 44 if (!cmd) {
+6 45 return done();
+6 48 return cmd;
+7 1  context: 'test/unit' },
+7 11 return code;
+8 1  base: 'test/unit' }, function (mocha) {
+8 2 return mocha.constructor.name === 'test';
+9 1  tests: ['test/unit'], "test/unit"]] } } }"
+

@@ -1,0 +1,284 @@
+Min editdistance: 15.00
+Closest candidate: 1 1 var fs = require(\'hexo-fs\');
+0 1 function generateConsole(args) {
+0 2 var force = args.f || args.force;
+0 3 var route = this.route;
+0 4 var publicDir = this.public_dir;
+0 5 var log = this.log;
+0 6 var self = this;
+0 7 var start = process.hrtime();
+0 8 var Cache = this.model(\'Cache\');
+0 9 var generatingFiles = {};
+0 10 function generateFile(path) {
+0 11 if (generatingFiles[path]) return Promise.resolve();
+0 12 generatingFiles[path] = true;
+0 13 var dest = pathFn.join(publicDir, path);
+0 14 return fs.exists(dest).then(function(exist) {
+0 15 if (force ||!exist) return writeFile(path, true);
+0 16 if (route.isModified(path)) return writeFile(path);
+0 17 }).finally(function() {
+0 18 generatingFiles[path] = false;
+0 19 });
+0 20 }
+0 21 function writeFile(path, force) {
+0 23 var cacheId = `public/${path}`;
+0 24 var dataStream = wrapDataStream(route.get(path), {bail});
+0 25 var cacheStream = new CacheStream();
+0 26 var hashStream = new HashStream();
+0 27 return pipeStream(dataStream, cacheStream, hashStream).then(function() {
+0 28 return pipeStream(dataStream, stream).then(function() {
+0 29 return pipeStream.read()
+0 30 .then(function(content) {
+0 31 var cache = Cache.findById(cacheId);
+0 32 var hash = hashStream.read();
+0 33 if (!force && cache && cache.hash === hash) {
+0 34 return;
+0 36 return Cache.save({
+0 37 _id: cacheId,
+0 38 hash
+0 39 }).then(function() {
+0 40 return Promise.all([
+0 41 fs.writeFile(dest, cacheStream.getCache())
+0 42 ]);
+0 44 return generateFile(dest);
+0 46 log.info(\'Generated: %s\', chalk.magenta(path));
+0 48 fs.writeFile(dest,
+0 49 pathFn.join(publicDir, hash),
+0 50 function() {
+0 51 return
+0 52 fs.readFile(dest, function(err, content) {
+0 53 if (err) return log.error(err);
+0 54 var data = cacheStream.getCache();
+0 55 var hash = hashStream.readFileSync(dest);
+0 56 if (!data) return;
+0 58 fs.unlink(dest),
+0 59 fs.unlink(dest)
+0 63 function deleteFile(path) {
+0 65 return fs.unlink(dest).then(function() {
+0 66 log.info(\'Deleted: %s\', chalk.magenta(path));
+0 67 }, function() {
+0 69 fs.unlink(dest);
+0 74 function generateFileSync(path) {
+0 75 var dest = pathFnvar stat = route.createReadStream(this.get(path);
+0 76 var content = fs.readFileSync(path);
+0 77 var new Promise = Promise.options = options);
+0 78 return Promise.then(function paths(null, callback = Q.assignored = options);
+0 79 if (new Promise.map = new Q();
+0 80 options.bail = options, ignored = options.bail = options.bail;
+0 81 return!map[0] = options;
+0 82 .readdir = function(s, path) {
+0 83 return!== undefined;
+0 84 .bail.lash = set(0, dest, dest, typeof options.ignore;
+0 85 ignore;
+1 1 var fs = require(\'hexo-fs\');
+1 2 var chalk = require(\'chalk\');
+1 3 function generateConsole(args){
+1 12 function generateFile(path){
+1 16 return fs.exists(dest).then(function(exist){
+1 19 }).finally(function(){
+1 23 function writeFile(path, force){
+1 29 return pipeStream(dataStream, cacheStream, hashStream).then(function(){
+1 31 var hash = hashStream.read().toString('hex\');
+1 38 }).then(function(){
+1 39 return fs.writeFile(dest, cacheStream.getCache());
+1 41 return passThrough(route.get(path), {bail});
+1 44 return true;
+1 47 function deleteFile(path){
+1 49 return fs.unlink(dest).then(function(){
+1 51 }, function(){
+1 55 function wrapDataStream(dataStream, options){
+1 56 var bail = options && options;
+1 57 if (bail === true) {
+1 58 return dataStream;
+1 60 dataStream.on(\'error\', function(err){
+1 61 if (err.cause.code === \'ENOENT\') return;
+1 62 throw err;
+1 64 return dataStream.pipe(new PassThrough());
+1 65 .on(\'finish\', function(){
+1 67 })
+1 68 .on(\'
+
+2 31 var hash = hashStream.read().toString('hex');
+2 43 return generator(hexo.locals);
+2 46 fs.readFile(dest),
+2 47 fs.readFile(path)
+2 49 }).spread(function(files, next) {
+2 50 var layout = cache[path];
+2 51 var publicDir = hexo.public_dir;
+2 53 fs.exists(publicDir),
+2 54 fs.exists(pathFn.join(publicDir, \'post\', post))
+2 56 }).then(function(exist) {
+2 57 if (exist){
+2 62 } else {
+2 63 return next();
+2 74 fs.rmdir(dest, next() {
+2 75 fs.rmdir(dest, next);
+2 81 function generateFiles(files = packagesCache.sort(req, res, next) {
+2 82 var idx = _.length = 1;
+2 83 var promises = _.filter.length = 0;
+2 84 return Promise.mapFiles.each(function(folder, i, next) {
+2 85 var src = getReadFile(folder, i, next);
+2 86 var dest = getReadStream;
+2 87 var promise;
+2 88 var dest = get = getStream;
+2 89 return Promise.mapDataStream = _.isGeneratingFiles(folder)
+2 90 .filter(files, function(path) {
+3 10 var data = route.get(path);
+3 13 if (force ||!exist) return;
+3 14 return checkShy(dest).then(function(changed){
+3 15 if (changed ||!exist) return writeFile(path);
+3 19 function writeFile(path){
+3 21 var content = route.get(path);
+3 23 if (changed ||!exist) return;
+3 27 fs.writeFile(path, content),
+3 28 fs.writeFile(path, content)
+3 31 return checkShy(dest);
+3 34 fs.stat(path),
+3 37 }).spread(function(stats){
+3 38 return that._generate({cache: true});
+3 43 fs.unlink(path),
+3 44 fs.unlink(path)
+3 51 return deleteFile(dest);
+3 53 return fs.unlink(dest);
+3 56 function firstGenerate(){
+3 57 var interval = prettyHrtime.interpolate(process.hrtime(start));
+3 58 log.info(\'Files loaded in %s with Press Ctrl+C to clear public folder\', chalk.cyan(interval));
+3 59 start = process.hrtime();
+3 60 return fs.exists(publicDir).then(function(exist){
+3 62 file.empty(publicDir, function(){
+3 63 log.info(\'Public folder not found\');
+3 64 next(null);
+3 67 file.list(publicDir, function(){
+3 68 log.info(\'Public folder saved\');
+3 74 fs.readFile(publicDir),
+3 75 process.unlink(path)
+3 79 }).spread(function(function(err){
+3 80 if (err) return {};
+3 81 if (args.done) return Promise.all([
+3 82 process.title = route.title.title == \'Express\', blogDir];
+3 83 return done();
+3 84 }'
+
+4 39 fs.writeFile(dest, cacheStream.getCache()),"
+
+5 28 return pipeStream(dataStream, cacheStream, hashStream.on(\'end\', function() {
+5 29 return passThrough(function() {
+5 30 return pipeStream(dataStream, cacheStream, hashStream.on(\'error\', \'create\'));
+5 32 var interval = prettyHrtime(process.hrtime(start));
+5 33 var stream = new MediaStream();
+5 34 return pipeStream(dataStream,
+5 35 \'-```\',
+5 36 \'-mtime\',
+5 37 \'(\
+5 38 )\')
+5 39 ).then(function() {
+6 12 if (exist) return writeFile(dest, new Promise(resolve, reject);
+6 14 if (force ||!exist) return writeFile(dest);
+6 15 if (route.isModified(path)) return writeFile(dest);
+6 18 fs.unlink(pathFn.join(publicDir, path),
+6 19 fs.rmdir(publicDir)
+6 23 function writeFile(dest, force) {
+6 28 return process.hrtime(500);
+6 31 fs.rmdir(dest),
+6 36 function deleteFile(dest) {
+6 44 function firstGenerate() {
+6 46 log.info(\'Files loaded in %s with Press Ctrl+C to exit.\', chalk.cyan(interval));
+6 48 return fs.exists(publicDir).then(function(exist) {
+6 50 return fs.mkdirs(publicDir);
+6 52 return checkShaffold(publicDir, function() {
+6 58 if (!args.w ||!args.watch ||!args.watchInterval){
+6 59 return this.watch().then(firstGenerate).then(function() {
+6 60 log.info(\'Watching for file changes.\');
+6 61 var oldList = Object.keys(route.routes).length;
+6 62 var newList = Object.keys(route.routes).length;
+6 63 this.format = function(path) {
+6 64 return fs.writeFile(path, args.replace(/\\\\/g, \'/g, \'/\');
+6 65 };
+6 67 var newList.format = function(path, content, options, callback) {
+6 68 return callback = callback || function(new Set(err) {
+6 69 if (err) {
+6 70 if (err) return callback(err);
+6 71 return callback(err);
+6 72 if (typeof oldList.length && err === 0;
+6 73 if (oldList.length === 0) return callback();
+6 74 if (route.length === 0) return callback();
+6 75 callback(new Set);
+6 76 return callback();
+6 79 function debounce(err) {
+7 35 cacheStream.destroy();
+7 46 function wrapDataStream(dataStream, options) {
+7 51 dataStream.on(\'error\', error);
+7 54 functionon('finish\', function() {
+7 55 return self.onNext(function() {
+7 56 expect(self.onResolve.bind(self, null))
+7 57 ).to.on('error\', function(err) {
+7 58 if (err) return self.error(err);
+7 59 log.info(\'Endering: %s\', chalk.magenta(path));
+7 60 return self.onResolve.bind(self, null);
+7 61 }).on('error\', function() {
+7 62 throw new Error(err);
+7 66 function onDataStream.on('end\', function() {
+7 67 var buffer = fs.createWriteStream = fs.createWriteStream(path);
+7 68 return this.on(\'some.on(\'some.on(\'some.on\', function() {\', function() {
+7 69 var content = fs.stat() {
+7 70 var path = fs.statSync(path.readFile(path));
+7 72 .on(\'some.on(\'on(\'hey\')
+7 73 );
+8 28 return pipeStream. pipeStream(dataStream, cacheStream, hashStream).then(function() {
+8 29 return pipeStream.update(dataStream, cacheStream);
+8 34 log.info(\'Generated in $ ms...\');
+8 35 return PassThrough.promise.then(function() {
+8 36 return log.info('Generated in $ ms...\');
+8 42 log.info(\'Deleted in $ ms...\');
+8 55 functiononDataStream(stream, on_data_) {
+8 56 var bail;
+8 57 var one;
+8 58 var invalid;
+8 62 return Q.all([
+8 63 fs.writeFile(path, scriptStream.getFiles(), true),
+8 64 process.stdout.writeFile(path, scriptStream.getFiles())
+8 65 ]).then(function() {
+8 66 return process.stdout.on(\'exit\', function() {
+8 67 process.exit();
+8 71 .on(\'bail.on(\'finish\', function() {
+8 76 .on(\'}
+8 77 function cleanup() {
+8 79 return this.wait.wait.forEach(300) {
+8 80 return this.done();
+8 83 function first(new Promise.done) {
+8 84 return this.log.log.bind(this, arguments);
+8 85 return this.onLineStream.bind(this, after_iterror)
+8 86 .executes, after_each(this.end, after_error)
+8 87 .progress);
+8 89 function first(() {
+8 90 this.on_each(() => this.end())
+8 91 .log.log.bind
+9 14 if (force){
+9 15 return!exist;
+9 23 log.info(\'Generated: %s\', chalk.magenta(tildify(path));
+9 28 function generateFiles(files){
+9 29 var content = route.createFile(path);
+9 33 return fs.readFile(dest).then(function(content){
+9 34 var result = \'\';
+9 38 fs.rmdir(dest)
+9 42 return fs.rmdir(publicDir);
+9 58 return fs.readFile(dest);
+9 64 function cleanFiles(files){
+9 65 var deleted = _.difference(files, undefined);
+9 67 fs.unlink(src),
+9 73 log.info(\'Files loaded in %s mode: %s\', chalk.cyan(interval));
+9 75 return fs.stat(publicDir;
+9 76 .then(function(){
+9 77 return fs.stat(publicDir);
+9 78 }, function(err, results){
+9 79 if (err) return nextGenerate(true);
+9 82 return Promise.
+9 86 function generateFilesFirstGenerate(files){
+9 87 .then(newFolder = baseDir = pathFn.join(publicDir, undefined);
+9 88 return exists(baseDir, replaceFiles);
+9 89 return Promise.then(nextensions, files = undefined);
+9 90 return Promise.then(files){
+9 91 return Promise.each(files){
+9 92 return Array.each(files, function(item, i){
+9 93 removeFile);
+9 94 removeFiles

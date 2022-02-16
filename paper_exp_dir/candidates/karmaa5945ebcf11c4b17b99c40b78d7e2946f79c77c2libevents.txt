@@ -1,0 +1,208 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var bindMethod = function(method) {
+0 1 var bindMethod = function(method) {
+0 2 context.on(helper.camelToSnake(method.substr(2)), object[method].apply(object, Array.prototype.slice.call(arguments, 1));
+0 3 };
+0 4 for (var method in object) {
+0 5 bindMethod(method);
+0 6 }
+0 8 var bufferEvents = function(emitter, eventsToBuffer) {
+0 9 var listeners = [];
+0 10 var eventsToReply = [];
+0 11 var genericListener = function() {
+0 12 eventsToReply.push(Array.prototype.slice.call(arguments));
+0 14 eventsToBuffer.forEach(function(eventName) {
+0 15 var listener = genericListener.bind(null, eventName);
+0 16 listeners.push(listener);
+0 17 emitter.on(eventName, listener);
+0 18 });
+0 19 this.emitAsync = function(name) {
+0 20 var pending = this.listeners.length;
+0 21 var deferred = Q.defer();
+0 22 if (!pending) {
+0 23 deferred.resolve(this.emit('timeline');
+0 25 this.emit(name);
+0 26 return deferred.promise;
+0 28 util.inherits(bindAllEvents, events.EventEmitter);
+0 29 var oldListeners = function() {
+0 30 return this.listeners.length;
+0 32 this.emit('timeline');
+0 35 var buffer = function(emitter, eventsToReply) {
+0 45 return function() {
+0 46 var args = Array.prototype.slice.call(arguments);
+0 47 args.forEach(function(args) {
+0 48 var id = eventName.indexOf(' ', ');
+0 50 emitter.emit('timeline', this.emitAsync('timeline'), {
+0 51 id: id,
+0 52 def: this.emitAsync('timeline')
+0 64 };"
+
+1 2 if (helper.isFunction(object[method]) && method.substr(0, 2) === 'on') {
+1 3 context.on(helper.camelToSnake(method.substr(2)), object[method].bind(object));
+1 7 var EventEmitter = function(emitter) {
+1 8 this.bind = function(emitter) {
+1 9 return object.emit('Event', this, []);
+1 11 this.emit('name', this.name);
+1 12 this.bind = function(name) {
+1 13 return object.emit('bind', this, [name]);
+1 15 this.emit('info', this.emit.bind(this,'result'));
+1 16 this.on('disconnect', function() {
+1 17 emitter.emit('error', this.emit.bind(this,'result'));
+1 19 this.emit('disconnectLocal', this);
+1 21 this.remove = function() {
+1 22 var events = this.events;
+1 23 var router = new Router();
+1 24 for (var i = 0; i < events.length; i++) {
+1 25 if (!events[i].events) {
+1 26 this.emit('error', event);
+1 29 return this;
+1 31 util.inherits(EventEmitter, events.EventEmitter);
+1 32 exports.EventEmitter = EventEmitter;
+1 33 exports.bindAll = bindAllEvents;"
+
+2 3 context.on(helper.camelToUnderscore(method.substr(2)), object[method].bind(object));
+2 7 var EventEmitter = function() {
+2 8 this.bind = bindAllEvents;
+2 10 var pending = this.emitAsync('name', name);
+2 12 var done = function() {
+2 13 if (!--pending) {
+2 14 deferred.resolve();
+2 17 this.emit(name, done);
+3 16 emitter.emit('browsers_change', listener);
+3 18 var MockSocket = function(emitter) {
+3 20 this.on = function(eventName) {
+3 21 this.emit('browsers_change', this.emit.apply(emitter, []));
+3 23 this.remove = function(eventName) {
+3 24 var routes = event.split('/').join(', ');
+3 25 for (var i = 0; i < routes.length; i++) {
+3 26 if (route == routes[i]) {
+3 31 this.connect = function() {
+3 33 if (args.length === 1) {
+3 34 args.unshift(':[');
+3 38 var pending = this.listeners(name).length;
+3 48 util.inherits(KarmaEventEmitter, events.EventEmitter);
+3 49 "
+
+4 3 context.on(helper.isFunction(object[method].bind(this));
+4 7 varemitter = function(name, args) {
+4 8 var context = this;
+4 9 var bindAllEvents = function(object, context) {
+4 10 context.on(object, function(prompt) {
+4 11 bindAllEvents.apply(this, arguments);
+4 12 }, this);
+4 20 varemitterPromise = function(emitter) {
+4 21 emitter.on('browsers_change', function(browser) {
+4 22 emitter.emit('browsers_change', this);
+4 25 var colors = {
+4 26 create: '\\x1B[39m',
+4 27 process: function(a, b) {
+4 28 if (a) {
+4 29 if (b) {
+4 30 return a.isBinary;
+4 31 } else {
+4 32 return 0;
+4 36 var proto = function(commands, done) {
+4 37 var args = Array.isArray(args)? args : [].slice.call(arguments);
+4 38 commands.forEach(function(command) {
+4 39 var list = this.extend.helper.list();
+4 40 if (!list ||!list.length) {
+4 41 return done();
+4 43 var obj = {
+4 44 id: [],
+4 45 name: [],
+4 46 message: [message]
+4 48 if (typeof command === 'function') {
+4 49 this.emit('command');
+4 51 process.nextTick(done);
+4 54 proto.__proto__ = EventEmitter.prototype;
+4 55 proto.on = function(fn) {
+4 56 if (fn.length < 3) {
+4 57 fn = function() {};
+4 59 var self = this;
+4 60 this.emit('server');
+4 63 proto.stop = function() {
+4 64 if (helper.isFunction(this.emit.bind(this)) && this.isFunction(this.emit.bind(this))) {
+4 65 return;
+4 67 var freeSpots = this.emit.bind(this);
+4 68 var socketServer = this.emit.bind(this);
+4 69 if (!this.length) {
+4 70 this.emit('stop');
+4 73 this.on('error', function(err) {
+4 74 if (err) {
+4 75 emitter.emit('error', err);
+4 77 this.on('complete', function() {
+4 78 if (!this.isReady) {
+4 80 this.emit.done();
+4 84 this.on.on('register', function(name) {
+4 85 name = function(name, fn.name, fn.name, fn.length;
+4 86 name isReady = this.length;
+4 87 this.commit = fn.commit = this.commit || this.emit('length');
+4 88 return this.name;
+4 90 fn.length = fn.name = fn.commit || this.commit;
+4 91 this.type = function() {
+4 92 name = fn.apply.apply(this, arguments;
+4 96 exports.parseQuery = function(req, called;
+4 97 if (fn.length, arguments.length, arguments.length
+5 8 var args = Array.isArray(args)? args : ["
+
+6 14 deferred.resolve(function() {
+6 15 this.emit('done');
+7 16 emitter.emit('event', listener);
+7 19 if (!eventsToReply) {
+7 22 listeners.forEach(function(listener, i) {
+7 23 emitter.removeListener(eventsToBuffer[i], listener);
+7 25 eventsToReply.forEach(function(args) {
+7 27 it('should removeListener', function() {
+7 28 emitter.emit('a', listener);
+7 31 listeners.forEach(function(args) {
+7 32 it('should removeList', function() {
+7 33 emitter.emit('a', list);
+7 38 process.on('mount', function(b, name) {
+7 39 var url = config.url + '/' + name;
+7 40 var args = arguments;
+7 41 var url = config.root + url + '?id=' + args.shift();
+7 42 var pathname = options.argv.remain.slice(1, 3);
+7 43 if (args[0].match(name)) {
+7 44 pathname = args[0];
+7 46 pathname = config.root + pathname;
+7 48 return url;
+7 50 process.on('error', function(e) {
+7 51 emitter.emit('a', error);
+7 53 process.on('close', function(a, b, c) {
+7 55 args[0].match(name);
+7 57 throw new Error('Some error');
+7 61 var allTestFiles = function() {
+7 62 var TEST_REGEXP = /test\\.js\\/(.|test)\\.js$/;
+7 63 Object.keys(window.__karma__.files).forEach(function(file) {
+7 64 var pointer = sinon.spy();
+7 65 box.addProcessor(processor);
+7 66 return function(file) {
+7 67 return Q.defer();
+7 71 exports.watch = function validate(object) {
+7 72 return Q.defer() {
+7 73 validate(object.values(object) {
+7 74 return Object.values(object.values(object)
+7 75 .values(object.values(object)
+7 76 .length)
+7 82 exports.onKarma__proto__proto__ = EventEmitter = function noop () {
+7 83 process.enqueue = function () {
+7 84 process.enqueue.push(object, function() {
+7 85 process.ejects.length__karma__.length__.length__ / 3;
+7 86 return emitter.enqueue.length = 3;
+8 14 deferred.resolve(done);
+9 13 var onFinished = function(finished) {
+9 14 if (finished) {
+9 31 eventsToReply.forEach(function(eventName) {
+9 32 addListener(eventName, listener);
+9 34 var allReady = function() {
+9 36 for (var i = 0; i < args.length; i++) {
+9 37 allReady.forEach(function(fn) {
+9 38 fn.apply(eventName, args);
+9 42 var EventEmitter = function(emitter, eventsToReply) {
+9 47 object.on('error', function(e) {
+9 48 emitter.emit('error', e);
+9 51 var EventEmitter.prototype.on = function(eventName, listener) {
+9 52 if (!eventName) {
+9 54 listener = function() {
+9 58 '
+

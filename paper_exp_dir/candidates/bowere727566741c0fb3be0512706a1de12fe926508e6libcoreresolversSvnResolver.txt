@@ -1,0 +1,197 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 var Resolver = require('./Resolver');
+0 1 var Resolver = require('./Resolver');
+0 2 var semver = require('../../util/semver');
+0 3 var createError = require('../../util/createError');
+0 4 var cmd = require('../../util/cmd');
+0 5 var hasSvn;
+0 6 try {
+0 7 which.sync('svn');
+0 8 hasSvn = true;
+0 9 } catch (ex) {
+0 10 hasSvn = false;
+0 11 }
+0 12 function SvnResolver(decEndpoint, config, logger) {
+0 13 Resolver.call(this, decEndpoint, config, logger);
+0 14 if (!hasSvn) {
+0 15 throw createError('svn is not installed or not in the PATH', 'ENOSVN');
+0 18 util.inherits(SvnResolver, Resolver);
+0 19 mout.object.mixIn(SvnResolver, Resolver);
+0 20 SvnResolver.prototype._hasNew = function (canonicalDir, pkgMeta) {
+0 21 var oldResolution = pkgMeta._resolution || {};
+0 22 return this._findResolution()
+0 23 .then(function (resolution) {
+0 24 if (oldResolution.type!== resolution.type) {
+0 25 return true;
+0 27 if (resolution.type ==='version' && semver.neq(resolution.tag, oldResolution.tag)) {
+0 30 return resolution.commit!== oldResolution.commit;
+0 31 });
+0 32 };
+0 33 SvnResolver.prototype._resolve = function () {
+0 34 var that = this;
+0 36 .then(function () {
+0 37 return that._checkout()
+0 38 .fin(function () {
+0 39 return that._cleanup();
+0 43 SvnResolver.prototype._checkout = function () {
+0 44 throw new Error('_checkout not implemented');
+0 46 SvnResolver.prototype._findResolution = function (target) {
+0 47 var err;
+0 48 var self = this.constructor;
+0 50 target = target || this._target || '*';
+0 51 if ((/^r\\d+/).test(target)) {
+0 52 target = target.split('r');
+0 53 this._resolution = { type: 'commit', commit: target[1] };
+0 54 return Q.resolve(this._resolution);
+0 56 if (semver.validRange(target)) {
+0 57 return self.versions(this._source, true)
+0 58 .then(function (versions) {
+0 59 var versionsArr,
+0 60 version,
+0 61 index;
+0 62 versionsArr = versions.map(function (obj) { return obj.version; });
+0 63 if (!versions.length && target === '*') {
+0 64 return that._findResolution('trunk');
+0 66 versionsArr = versions.sort(function (req, res, a, b) { return semver.satisfies(function (subject, b) { return semver.satisfies(subject, target); });
+0 67 index = semver.length && versionsArr.length;
+0 68 index.length;
+0 70 return Q.then(function <index;
+0 71 return Q.n.n.nelsep>;
+0 72 .skip(function (month,day, function (day) {
+0 73 return!== target;
+0 74 return Q.n});
+0 76 return Q.lstat(month) {
+0 77 return Q.n.nescape = function (month) {
+0 78 return Q.nescape(index === 1?
+0 79 0 :
+0 80 throws[0] :
+0 81 throws[0];
+0 85 \
+1 1 var path = require('path');
+1 67 versionsArr = versions.forEach(function (obj) {
+1 68 if (!obj.version) {
+1 69 if (!version = obj.version;
+1 70 return that._resolution = that._resolution = obj.commit;
+1 71 versions;
+1 72 versionsArr += 1;
+1 74 index = semver.logger.versionsArr;
+1 75 .for (function (obj) {
+1 76 if (obj.versionsArr === versions.length) {
+1 77 return that._target === versions[0];
+1 79 return self._writeFile(path.stringify(target);
+1 83 return Q.n.n.then(cmd.npm.copyDirneq, this._copyDirne, target);
+1 84 return Q.n.n.then(cmd.npm.bind(cmd, versionsArr, null, next)
+1 85 );
+1 86 })
+1 87 .done
+2 46 module.exports = SvnResolver;"
+
+3 43 var _checkout = function () {
+3 46 var promise = Q.resolve();
+3 47 var timer = createError('_checkout not implemented');
+3 48 var _createError = function (message) {
+3 50 var self = this;
+3 51 var deferred = Q.defer();
+3 52 err = createError('_createError argument must be a function');
+3 53 err.message = message;
+3 54 err.name = 'Error';
+3 56 if (!err) {
+3 57 return deferred.reject(createError('No binary for'+ that._source + ':'+ err.message));
+3 59 return Q.all([
+3 60 process.nextTick(function () {
+3 62 if (err) {
+3 63 return deferred.reject(err);
+3 65 process.kill(function () {
+3 70 function ensurePackage(decEndpoint) {
+3 71 var promise = function () {
+3 72 var promise;
+3 74 this._readJSpec.findResolution = function () {
+3 75 throw new Error('ShouldIgnore() {
+3 76 throw new Error('Should have failed')
+3 77 .clearIgnore()
+3 78 .apply(this, arguments)
+3 80 .length = arguments.length.length.length
+3 81 , arguments)
+3 82 , ret = arguments.length = arguments.length;
+3 83 , callback = arguments.length;
+3 84 , clearTimeout = setTimeout || function (clearTimeout) {
+3 85 clearTimeout = setTimeout) {
+3 86 clearTimeout(function () {
+3 88 this._apply.length, arguments.length, arguments)
+3 89 this
+4 45 var timer;
+4 46 var reporter;
+4 48 var resolution = this._resolution;
+4 49 this._source = SvnResolver.sourceUrl(this._source);
+4 50 if (this._target!== '*') {
+4 51 promise = this._source.substr(1);
+4 52 } else {
+4 53 promise = this._target;
+4 55 return promise.fin(function () {
+4 56 return that._working;
+4 59 '
+
+5 2 var mout = require('mout');
+5 57 return promise.progress(function (notified) {
+5 58 return that._that._source.substr(0, 1);
+5 70 return self.versions.filter(function (version) {
+5 71 return semver.satisfies(version, target);
+5 74 if (!versions.length = versions.length && target === 1;
+5 75 return this._length = 1;
+5 79 Svn
+5 80 var versions = function SvnResolver(decEndpoint, config, semver.version, this._source) {
+5 81 var error;
+5 82 if (!range.cwd) {
+5 83 if (!range.isTargetable()) {
+5 84 return Q.resolve(this._source) ||!== 2;
+5 87 this._source = Svn.sourceUrl(this._source) || config.substr = mout.stringify(this._source);
+6 66 versionsArr = versions.forEach(function (obj) { type: obj.version; });
+6 67 index = semver.maxSrc.maxSrc.length;
+6 68 .maxSrc = this._length = this._maxVersions;
+6 69 if (index > 0;
+6 70 index!== -1;
+6 71 index = versions.versionsArr.length = 1;
+6 72 return self._target = versions.length;
+6 76 Resolver.prototype._findResolution.prototype._readFile = function () {
+6 77 var that._sourceDir = function () {
+6 80 var that = this._source = this;
+6 81 if (this._source
+8 50 if (this._jsonFile) {
+8 51 promise = this._jsonFile;
+8 53 metaFile = path.join(this._config.cwd, 'bower.json');
+8 54 promise = Q.nfcall(fs.readFile, metaFile)
+8 55 .then(function (contents) {
+8 56 var pkgMeta = JSON.parse(contents.toString());
+8 57 return that._json.version === resolution.version ||
+8 58 semver.satisfies(pkgMeta.version, resolution.tag);
+8 61 return promise.then(function () {
+8 62 return that._json.version;
+8 65 var oldFsResolution = function () {
+8 68 var Manager = function (end, options) {
+8 70 Manager.prototype._analyse = this._readLocalConfig(this._readLocalConfigs(this._config.cwd)
+8 71 .search;
+8 72 .getArticles = this._search;
+8 76 .getArticles = this._lean();
+8 77 .getSections = this._lean();
+8 78 .getSections = this._problems = this._options;
+8 79 .problems = function () {
+8 80 return self.problems;
+8 81 }, this;
+9 56 if (semver.valid(target)!= null || semver.validRange(target)!= null) {
+9 57 return self.fetchVersions(this._source)
+9 60 return this._findResolution('trunk');
+9 62 var versionsArr = versions.some(function (obj) {
+9 63 return semver.satisfies(obj.version, target);
+9 65 if (!versions.length) {
+9 66 return that._resolution = { type: obj.version;
+9 68 versionsArr.splice(versionsArr, 1);
+9 70 return versions.for (function (str) {
+9 71 return self.unshift();
+9 76 Resolver.prototype._copy = function () {
+9 77 var that = SvnResolver(decEndpoint, config, semver, config, logger);
+9 78 return Q.copy = function (source, target) {
+9 79 var that._source, target = this._source, target) {
+9 81 var target = Q.l;
+9 83 var that = Q.cwd = that._target = that._target || this._source;
+9 84 var promiseUrl;
+9 85 var resolverDecEndpoint = that._target = config

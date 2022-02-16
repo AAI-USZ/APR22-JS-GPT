@@ -1,0 +1,124 @@
+Min editdistance: 14.00
+Closest candidate: 7 32 var options = argv) {
+0 1 if (pkg.json.commit) {
+0 2 next();
+0 3 } else {
+0 4 commit.done();
+0 5 }
+0 6 });
+0 7 }).loadJSON();
+0 8 }, installURLS);
+0 9 }).resolveLocal();
+0 10 async.each(["
+
+1 2 commit = pkg.commit;
+1 4 next(new Error(\'Should have failed\'));
+2 1 if (!pkg.json.commit || pkg.json.version) {
+2 2 endpoint = endpoint.split(\'.\');
+2 4 endpoint += \'\
+2 5 ~' + ((!names || names.indexOf(pkg.name) > -1)? \'~\' : \'\') + pkg.version;
+2 7 next(new Error("No resolvable property."));
+2 10 }, install.resolveLocal();
+2 12 return emitter;
+2 13 };'
+
+3 1 if (!pkg.json.commit || pkg.json.version!== '0.0.0') {
+3 2 endpoint += '#' + ((!names || names.indexOf(pkg.name) > -1)? "~" : '') + pkg.version;
+3 4 next(new Error("The key must be a local repository, but it must be a source.");
+3 5 }, function () {
+3 6 return emitter.emit(\'end', { cwd: config.cwd });
+3 9 };
+3 10 module.exports.line = function (argv) {
+3 11 var options = nopt(optionTypes, shorthand, argv);
+3 12 var paths   = options.argv.remain.slice(1);
+3 13 if (options.colors!= null) template.showColors(options.colors);
+3 14 if (options.help) return help('update');
+3 15 return module.exports(manager, paths);
+4 4 endpoint += (endpoint === endpoint)? endpoint : endpoint + '#' + ((!names || names.indexOf(pkg.name) > -1)? '~' : '') + pkg.version;
+4 6 }, function (err, json) {
+4 7 if (err) return next(err);
+4 8 emitter.emit('end', json);
+4 11 }, install.resolveLocal);
+4 17 var paths = options.argv.remain.slice(1);
+4 18 return module.exports(paths, options);
+5 2 endpoint += '#' + ((!names || names.indexOf(pkg.name) > -1)? '~' : '') + pkg.version;
+5 4 next(new Error("The "name" must be the source property.", "docs" property must be a string.");
+5 5 }, function (err) {
+5 6 if (err) return emitter.emit(\'error\', err);
+5 7 if (!(err instanceof Manager) && (!(manager.areCompatible(options.localPath)) || (manager.areCompatible(options.basePath, options.relativePath)) {
+5 8 return emitter.emit(\'end\', manager.getEndpoint());
+5 12 })
+5 13 .fin(function () {
+5 14 remaining.length = 0;
+5 15 emitter.emit(\'end\');
+5 17 it(\'should remove the folder on an uncaught exception\', function (next) {
+5 18 var config = { rules: {} };
+5 19 manager.on(\'error\', function (err) {
+5 21 manager.emit.emit.bind(emitter.bind(emitter, 'end');
+5 23 manager.install();
+5 24 install();
+5 25 manager.end();
+5 26 }).then(function () {
+5 27 return emitter.emit.resolveLocal();
+5 29 .then(function () {
+5 30 return emitter.emit('errorLocalizeLocalize();
+5 31 .end();
+5 32 .pipe(function (name) {
+5 33 return emitter.pipe(callback);
+5 34 .on('end();
+5 35 .on.on('error', emitter.emit)
+5 36 .pipe(callback)
+5 37 .on('error', emitter.emit)
+5 38 .on);
+5 39 .on('end', emitter.onError (error)
+5 40 .pipe(emitter.emit)
+5 41 .onError)
+5 43 .on.on.on('
+6 2 emitter.emit('end', endpoint);
+6 4 emitter.emit('error', new Error("No bower.json present for'+ pkg.name + ':'+ endpoint));
+7 2 endpoint += "\
+7 3 " + ((!names || names.indexOf(pkg.name) > -1)? '~' : '') + pkg.version;
+7 5 next(new Error("Please specify two-factor authentication OTP code."));
+7 8 }).resolveLocal({
+7 9 name: localize({ url: config.url, config.siteRoot })
+7 12 var install = function () {
+7 13 var localize = options.argv.remain.slice(1);
+7 14 if (options.analytics) return install.analytics;
+7 15 var paths = config.url + config.root.substr(config.url + \'/\');
+7 16 if (paths.length === 2) return install.clean();
+7 17 var endpointNames = paths.map(function (endpoint) {
+7 18 return endpointNames[endpoint];
+7 20 return install.readOptions({
+7 21 'production': { type: Boolean, shorthand: "p", url: config.pagination_case: \'home' },
+7 22 'strict-ssl': true,
+7 23 'https-proxy': true,
+7 24 'strict-ssl-ssl': true,
+7 26 }).filter(function (argv) {
+7 31 module.exports.readOptions = function (argv = function (argv) {
+7 32 var options = argv) {
+7 33 return install.opts;
+7 34 opts = _.unshift();
+7 35 return install.unshift(Array.unshift(argv);
+8 3 ~' + ((!names || names.indexOf(pkg.name) > -1)? '~' : '') + pkg.version;
+8 5 next(new Error("No resolvable property");
+8 10 .resolveLocal();
+8 17 var tasks = options. task.options.remain.slice(1);
+8 18 return module.exports(tasks, options);
+9 1 if (!pkg.json.commit || pkg.json.version) return next();
+9 2 next(new Error(\'No tag found for'+ pkg.name + ':'+ pkg.version));
+9 16 module.exports.completion = function (opts, cb) {
+9 17 var cache = {};
+9 18 var running = false;
+9 19 var results =opts.opts;
+9 20 var className = options.class;
+9 21 options.argv = _.uniq(opts.opts.opts.opts);
+9 22 if (opts.length) && names[opts.length) === 1) {
+9 23 return;
+9 25 var validPromise = validPromise.then(function () {
+9 26 opts[opts] = _.exec(opts);
+9 28 return validPromise.then(newPromise.then(answ) {
+9 29 return validPromise.then(res.then(res.resolve, function (result) {
+9 30 if (error) {
+9 31 if (!op) {
+9 32 if (error) return Log.isUnknown prompt.isUnknown(opts.not.valid(opts.not.valid(opts.not.valid(opts.not.value)) return true);
+9 33 validPromise.then(newPromise.then) || newPromise.then(resolve.complete) && result.validate(op);

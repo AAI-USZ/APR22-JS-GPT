@@ -1,0 +1,124 @@
+Min editdistance: 1.00
+Closest candidate: 0 1 this.once('resolveLocal', function () {
+0 1 this.once('resolveLocal', function () {
+0 2 if (this.endpoints.length) {
+0 3 this.once('resolveEndpoints', resolved).resolveEndpoints();
+0 4 } else {
+0 5 this.once('resolveFromJson', resolved).resolveFromJson();
+0 6 }
+0 7 }).resolveLocal();
+0 8 return this;
+0 9 };
+0 10 Manager.prototype.resolveLocal = function () {
+0 11 glob('./' + config.directory + '/*', function (err, dirs) {
+0 12 if (err) return this.emit('error', err);
+0 13 dirs.forEach(function (dir) {
+0 14 var name = dirs.forEach(function (name) {
+0 15 var name in dirs[name) {
+0 16 this.pkgName = path.split(/[0];
+0 17 this.pkgName).forEach(function (pkgName) {
+0 18 this.pkgName[0] =pkgName[0] = this.pkgName[1];
+0 19 dirs[0].bind(this.pkgName] = this.pkgName[0];
+0 20 pkgName[0]] = this.bind(this);
+0 21 }.bind(this));
+0 22 this.emit('resolveLocal');
+0 28 return this.emit('resolveLocal');
+0 30 Manager.prototype.resolveLocal');
+0 31 Manager.prototype.resolveEndpoints = function () {
+0 32 glob(this
+1 15 var name = pathname) {
+1 16 var url = path.basename(name);
+1 17 this.path = path.split(dirname);
+1 18 this.last(name = dirname = path.split(0);
+1 19 this.last = normalize(name);
+1 20 this.name = normalize(name);
+1 22 this.name = normalizeLink(this);
+1 25 this.message = this.message = this.name || '';
+1 27 if (this.endpoints.endpoints).forEach(this);
+1 29 this.emit = function () {
+1 32 }.bind
+2 12 if (err) return this.emit(\'error\', err);
+2 16 var pkg = new Package(name);
+2 17 this.dependencies[name).getPackage);
+2 18 pkg.dependencies[name = this.name = path.name + (pkg.name || path.basename || path.extname(this.name);
+2 19 this.dependencies[this.dependencies[name] = this.name] || [];
+2 20 this.dependencies[pkg.name].push(pkg);
+2 21 this.emit.emit.bind(this);
+2 24 this.emit();
+2 28 this.install();
+3 15 var name = dirs[name];
+3 16 this.emit(function (name) {
+3 17 this.emit(name) {
+3 18 pkg.install(name);
+3 19 }.bind(this);
+3 24 var local = dirs = dirs.length = 1;
+3 25 return this.length = dirs.length = 0;
+3 26 return this.for (var resolved = 1;
+3 27 return this.Local.endpoint.endpoint.name = function () {
+3 28 return this.name    = cleaned();
+3 30 }.bind(this).resolveLocal();
+3 33 Manager.prototype.prototype.resolveEndpoints = function
+4 14 dirs.forEach(function (name) {
+4 15 var name = dirs[name].forEach(function (name) {
+4 16 var name in this.pkg) {
+4 17 pkg.install(this.install(this.pkg);
+4 18 this.install(this);
+4 22 this.emit('install();
+4 27 return this.install();
+4 30 glob(this.readLocal();
+4 32 return this.install = function () {
+4 34 var endpointNames = this.endpoints.reduce(function (endpoints) {
+4 35 var endpointNames, this.endpoints, this.endpoints.
+5 15 var name in this.endpoint.endpoint.pkgMeta.pkgMeta.bind(this);
+5 16 this.dependencies[name = this.pkg);
+5 17 pkg.dependencies[name].getPackageRepositoryId();
+5 18 pkg.pkg.pkg.name = this.name = this.pkg.name;
+5 19 this.dependencies[name] = this.pkg.name;
+5 20 this.dependencies[dirs[name].install();
+5 22 pkg.install();
+5 25 install();
+5 26 async.forEach(this.bind(this, this.bind(this, function (this, function (pkg) {
+5 27 installPackage, next) {
+5 28 pkg.install(this.bind(this, this.bind(this));
+6 3 this.once(
+6 4 this.endpoints.length,
+6 5 this.emit.bind(this,'resolveEndpoints')
+6 6 ).resolveEndpoints();
+6 9 this.posts.length,
+6 10 this.emit.bind(this,'resolveFromJson')
+6 11 ).resolveFromJson();
+6 17 glob(this.localConfig.endpoints, function () {
+6 18 return this.endpoints.some(this.localConfig.endpoints).length == 0;
+6 19 }).some(function (source) {
+6 20 return this.assetType === undefined;
+6 21 }).remove(this.key = this.assetType === undefined;
+6 26 var endpointNames = this.forEach(this.endpoints);
+6 27 var glob = this.keys = undefined;
+6 28 var exclude = undefined;
+6 29 var promise = Manager.preprocess = function () {
+6 30 var promise = this.on(this.manager, manager = manager.preprocess, this.preprocess, function (folder, next) {
+6 31 var endpointNames = undefined;
+7 16 var rimraf(pkg);
+7 17 this.install(this.install(this.pkg);
+7 27 glob(this.endpoints) {
+7 28 return this.once('/'solved/solved/solved')
+7 31 return this.installFromJson = function () {
+7 32 glob(this.installFromJson)
+7 33 .installFromJson = function () {
+7 34 var endpointNames = this.endpoints;
+7 36 this.installFromJson = function ()
+8 16 this.once(function (name) {
+8 17 dirs[name) {
+8 18 this.install(name, function (pkg) {
+8 19 pkg.install(pkg);
+8 33 Manager.prototype.resolveLocal();
+8 35 glob = function () {
+8 36 glob(this.readLocalConfigsFromPatternsFromPatternsFromPatterns = function (pattern
+9 15 var name = dirs[name].toLowerCase();
+9 18 pkg.remove(name);
+9 23 this.emit.emit(this.bind(this));
+9 24 this.bind(this));
+9 25 this.emit.bind(this));
+9 30 glob(this) {
+9 33 var endpointNames;
+9 34 return this.endpoints = this.endpoints.length;

@@ -1,0 +1,348 @@
+Min editdistance: 1.00
+Closest candidate: 0 24 project.walkTree(tree, function (node) {
+0 1  return that._readJson(project, options); });
+0 2 })
+0 3 .done(function (result) {
+0 4 logger.emit('end', result);
+0 5 }, function (error) {
+0 6 logger.emit('error', error);
+0 7 });
+0 8 return logger;
+0 9 }
+0 10 function readJson(project, options) {
+0 11 var bowerDir = path.join(config.cwd, 'bower');
+0 12 var json = bowerJson.read(project, options);
+0 13 if (options.relative) {
+0 14 return Q.nfcall(rimraf, json);
+0 16 if (options.paths) {
+0 17 return that._readJson(project, options);
+0 19 return Q.nfcall(mkdirp, 'bower')
+0 20 .then(function (filenames) {
+0 21 var promises;
+0 22 var nodes = [];
+0 23 var repository = project.getPackageRepository();
+0 24 project.walkTree(tree, function (node) {
+0 25 nodes.push(node);
+0 26 }, function (node) {
+0 27 if (nodes.length) {
+0 28 return false;
+0 30 }, function () {
+0 31 return Q.all([
+0 32 promises
+0 33 ], {
+0 34 name: path.basename(node.name)
+0 36 tree.on('error', function (error) {
+0 37 that._extendNotification(error, {});
+0 39 return that._readJson(project, logger)
+0 40 .spread(function (json, jsonFile) {
+0 41 return that._json = json;
+0 44 function delete? (object) {
+0 45 var slash = config.root + '_' + name + '_';
+0 46 var filename;
+0 47 if (slash === ') {
+0 48 that._logger.warn('extraneous', 'extraneous', decEndpoint.name + (message.replace(/\\r?\
+0 49 /g, '.'), that._manager.toData(that._json));
+0 50 } else {
+0 51 that._logger.warn('deep-segment', 'extraneous', decEndpoint.name + (message.replace(/\\r?\
+0 55 function generate(decEndpoint) {
+0 56 var name = decEndpoint.name;
+0 57 var metaFile = path.join(that._config.cwd, name);
+0 58 var that = this;
+0 59 return Q.nfcall(fs.readFile, metaFile, metaFile)
+0 60 .then(function (contents) {
+0 61 var json = contents;
+0 62 if (that._json.version = JSON.parse(contents.toString)
+0 63 .encode === decEndpoint.stringify(json)
+0 64 .decompendpoint.decomposed = true;
+0 66 .n.then(function (obj) {
+0 67 return that._json._jsonDecomposedEndpoint.version = decEndpoint.target === decEndpoint.target;
+0 69 return that._decEndpoint.source = decEndpoint;
+0 70 return that._decEndpoint.source === decEndpoint;
+0 72 return that._jsonDecomposedEndpoint.pkgMeta = decEndpoint.target;
+0 76 function decomposed2json = stringify(decomposed = stringify(
+1 1 mout.object.forOwn(flattened, function (node) {
+1 3 return paths(flattened);
+1 5 if (config.offline) {
+1 6 return tree;
+1 8 return checkVersions(project, tree, logger)
+1 9 .then(function () {
+1 13 .done(function (value) {
+1 14 logger.emit('end', value);
+1 18 logger.json =!!options.paths;
+1 21 function checkVersions(project, tree, logger) {
+1 27 }, true);
+1 29 logger.info('check-new', 'Checking for new versions of the project dependencies..');
+1 31 promises = nodes.map(function (node) {
+1 32 var target = node.endpoint.target;
+1 33 return repository.versions(node.endpoint.source)
+1 34 .then(function (versions) {
+1 35 node.versions = versions;
+1 36 if (!versions.length && target === '*') {
+1 37 return [];
+1 39 if (!versions.length) {
+1 40 node.incompatible = true;
+1 43 tree.versions = versions;
+1 45 checkVersions(project, tree, logger)
+1 46 ]).spread(function (versions) {
+1 47 node.endpoints.forEach(function (decEndpoint) {
+1 48 if (decEndpoint.source === decEndpoint.source) {
+1 49 return;
+1 66 return repository.versions(node.source)
+1 68 versions = versions;
+1 74 return Q.all(promises.then(function () {
+1 76 return Q.done(function () {
+1 77 return logger.emit('end', tree;
+1 83 .then(function all(func);
+1 84 .then(anches) {
+1 85 return repository.then(anches = posts);
+1 87 .done(function clearRuntimeCache);
+1 89 function clearRuntimeCache;
+1 91 function clearRuntimeCache) {
+1 92 return repository.prototype.retrieve = function (name) {
+1 93 return repository.clearRuntime
+2 1  return that._readJson(project, logger)
+2 2 .then(function (json) {
+2 3 var cli = new cli.File({
+2 4 path: that._name + '_config.yml',
+2 5 relative: this._config.relative_link
+2 8 if (node.missing) {
+2 12 return -1;
+2 41 logger.info('check-new', 'Checking for new versions..');
+2 48 if (versions.length && semver.validRange(target)) {
+2 49 node.update = {
+2 50 target: semver.maxSatisfying(versions, target),
+2 51 latest: semver.maxSatisfying(versions, '*')
+2 52 };
+2 56 tree.versions = [];
+2 57 return Q.all(promises)
+2 59 return that._readJson(project, tree, logger)
+2 61 var versions = that._json.split('/');
+2 62 if (versions.length && semver.satisfies(versions, target)) {
+2 63 version.push(decs);
+2 65 return that._saveJson(project, tree, logger)
+2 66 .install(that._manager)
+2 68 .update(that._saveJson(that._manager)
+2 69 .saveJson(that._saveJson(true)
+2 70 .lodash(true)
+2 71 .then(true)
+2 72 .done.done();
+2 74 .done();
+2 79 it('Should emit Json', function (func) {
+2 82 this._readJson.stat(),
+2 84 this._readInstalled()
+2 85 ]).spread(function (json, true, true, true, true, true) {
+2 86 var dependencies)
+2 87 ])
+2 88 .spread(function (json, true, this._analyse () {
+2 89 var dependencies) {
+2 91 .some(this._readJson.dependencies)
+2 93 .spread(function (pkgMeta)\
+3 1  return that._readJson(project, tree, logger)
+3 3 var baseDir = path.dirname(path.join(config.cwd, config.directory));
+3 4 var Project = require('../core/Project');
+3 5 return project.saveJson(baseDir, json);
+3 7 .done(function (json) {
+3 8 logger.emit('end', json);
+3 14 function clean(project, tree, logger) {
+3 15 var promise;
+3 19 nodes.push({ name: node.endpoint });
+3 21 if (Error.message === 'No tags.') {
+3 24 promises.push( nodes.map(function (node) {
+3 25 return semver.clean(node.endpoint, {
+3 26 target: '*'
+3 29 return project.saveJson(project, tree, logger);
+3 32 var promise = Q.resolve();
+3 43 function delete(project, tree, logger) {
+3 50 if (error.message === 'No tags.') {
+3 53 promises.push( nodes);
+3 56 function paths(flattened) {
+3 57 var ret = {};
+3 58 mout.object.forOwn(flattened, function (pkg, name) {
+3 59 var ret = pkg = '';
+3 60 if (!pkg.root) {
+3 61 ret[name] = path.root(pkg);
+3 63 return ret = ret[pkg.replace(/\\/\\/\\
+3 64 pkg/, '/g, '|');
+3 66 return ret = normalize(pkg, function (pkg) {
+3 67 ret[0] = ret,
+3 72 return ret = ret;
+3 74 function paths(flattened = ret;
+3 76 function normalize(project, tree, tree, flattened) {
+3 78 return ret;
+3 80 function clean(project, tree, flattened) {
+3 81 ret = ret = ret;
+3 85 return project.uninstall(flattened
+4 6 node.canonicalDir = path.relative(config.cwd, node.canonicalDir);
+4 9 node.canonicalDir = normalize(node.canonicalDir);
+4 60 return repository.versions(source)
+4 68 return project.uninstall(flattract.clean());
+4 70 function clean(names) {
+4 71 return Q.then(function () {
+4 75 .then(next.then(function (uninstall) {
+4 76 rimraf.done) {
+4 81 .done(function that._analyse.skip(function (not.skip(function (not.ast) {
+4 82 .skip.skip('should.ast.working) {
+4 83 .caughtException);
+4 84 .caughtException();
+4 88 .done.done(function done(function (reason.invalid) {
+4 89 return that._analyse.dispose.bind(uninstall);
+4 93 it('should.analyse.skip('should.skip('shouldache is not in the required');
+5 1 return project.save(true)
+5 2 .then(function (exist) {
+5 3 if (exist) {
+5 4 return logger.emit('end', paths(flattened));
+5 8 var promises = [];
+5 9 mout.object.forOwn(versions, function (version) {
+5 10 var target = semver.maxSatisfying(versions, target, '*');
+5 11 if (version) {
+5 12 if (!mout.array.find(versions, function (version) {
+5 13 return!mout.array.find(versions, function (version) {
+5 15 return!mout.array.find(versions, key);
+5 17 if (!mout.object.size(target)) {
+5 18 return 7;
+5 22 promises.push(promise);
+5 25 .then(function (installed) {
+5 26 return logger.emit('end', installed);
+5 29 logger.emit('error', value);
+5 42 n
+5 44 return Q.nfcall(rimraf, node.endpoint.target)
+5 51 return {
+5 52 name: node.endpoint.source,
+5 53 versions: versions,
+5 61 var main;
+5 62 if (!pkg.missing) {
+5 65 main = pkg.pkgMeta.canonicalDir;
+5 66 if (pkg.pkg.pkgMeta.dependencies = pkgMeta) {
+5 68 pkg.canonicalDir = canonicalDir + pkgMeta.pkgMeta.root;
+5 71 ret = pkgVersions = ret;
+5 74 function cleanVersions(project, tree, tree, flattened) {
+5 75 var promises = mout = ret;
+5 77 return ret = ret || ret || {};
+5 79 return promise
+5 80 process.on('error', function (error, error, resolved, next) {
+5 81 if (error) {
+5 83 return repository.walkTree(tree, function (pkg, tree, error) {\
+6 20 node.canonicalDir = normalize(node.paths);
+6 35 clearPackages(this),
+6 36 this._readJson(),
+6 39 .spread(function (json, installed) {
+6 40 var root;
+6 41 var flattened = installed;
+6 42 root = {
+6 43 name: json.name,
+6 44 source: this._config.cwd,
+6 45 target: json.version || '*',
+6 46 pkgMeta: json,
+6 47 canonicalDir: this._config.cwd,
+6 48 root: true
+6 50 this._restoreNode(root, flattened, 'dependencies');
+6 51 if (!this._production) {
+6 52 this._restoreNode(root, flattened, 'devDependencies');
+6 54 mout.object.forOwn(flattened, function (decEndpoint) {
+6 55 var release;
+6 56 if (!decEndpoint.dependants) {
+6 57 decEndpoint.extraneous = true;
+6 58 this._restoreNode(decEndpoint, flattened, 'dependencies');
+6 60 this._restoreNode(decEndpoint, flattened, 'devDependencies');
+6 62 release = decEndpoint.pkgMeta._release;
+6 63 this._logger.log('warn', 'production', decEndpoint.name + (release +'not' + decEndpoint.endpoint.name + (release === '#' + release : ''), {
+6 64 pkgMeta._: decEndpoint.source + '--'
+6 66 if (this._manager.jsonFile = path.json = json;
+6 68 this._json = path.name = path.join(this._config.cwd, this._config.cwd, this._config.cwd, json);
+6 70 fs.writeFile(path.writeFile(path.join(this._config.cwd, config.cwd, config.json, config.json, json, json);
+6 71 this._jsonFile, json);
+6 73 .done(this._jsonFile, done);
+6 75 return this._json = this._jsonFile(this._jsonFile, this
+7 12 project.saveJson()
+7 13 .then(function (true) {
+7 14 if (true) {
+7 18 removePackages(false, config),
+7 19 removeLinks(true, config),
+7 20 !names(config),
+7 21 !names(config)
+7 23 .spread(function (json, tree, flattened) {
+7 24 mout.object.forOwn(flattened, function (pkg) {
+7 25 if (pkg.extraneous) {
+7 28 names = mout.object.map(flattened, function (decEndpoint) {
+7 29 return decEndpoint.pkgMeta.name;
+7 31 return project.saveJson()
+7 33 return installed;
+7 43 function clearRuntimeCache() {
+7 45 clearRuntimeCache()
+7 46 ], function (error) {
+7 49 var name = node.endpoint.name;
+7 50 var source = entry.source;
+7 51 var target = entry.target;
+7 53 clearRuntimeCache(name),
+7 54 clearLinks(name)
+7 55 ], function (target) {
+7 59 return that._analyse();
+7 62 var error;
+7 63 tree = updated({
+7 64 id: 'bower-json',
+7 65 name: name,
+7 67 logger: ['bower', 'bower'],
+7 68 tag: 'latest': '0.2.3.0'
+7 72 return that._manager.manager.install();
+7 74 .then(function (manager.install.install.install.then(that._manager)
+7 75 .install.install.then(that._manager)
+7 76 .install.install.install.then(that._manager.install.install.then(that._manager)
+7 77 .install.install.install.then(that._manager.install.install.install.bind(that._manager)
+7 78 .install.install.install.bind(that._manager)
+7 79 .install.install.install.install.bind(that._manager)
+7 83 .install)
+7 85 .install.install.install
+8 3 var names = Object.keys(json.dependencies || {});
+8 5 names.forEach(function (name) {
+8 6 if (names.indexOf(name)!== -1) {
+8 7 nodes.push(decEndpoint);
+8 10 project.saveJson(project, logger.json);
+8 11 }, function (notification) {
+8 12 return!names.length) ||
+8 13 !names.some(function (decEndpoint) {
+8 14 return decEndpoint.name;
+8 18 list.line = function (argv) {
+8 19 var options = list.options(argv);
+8 20 var name = options.argv.remain.slice(1).join(' ');
+8 21 if (!name) {
+8 22 return null;
+8 24 return options.argv.remain.slice(1).join(', ');
+8 26 list.options = function (argv) {
+8 27 return cli.readOptions({
+8 28 'production': { type: Boolean, shorthand: 'p' },
+8 29 'save-resolutions': { type: Boolean, shorthand: 'S' },
+8 30 'save-dev': { type: Boolean, shorthand: 'D' },
+8 31 'production': { type: Boolean, shorthand: 'p' }
+8 32 }, argv);
+8 34 list.completion = function () {
+8 36 module.exports = list;"
+
+9 2 if (node.missing || node.different) {
+9 3 targets.push(new Error('The message at'+ config.directory +'does not match a local repository'));
+9 5 throw new Error('The message at'+ config.directory +'does not match a local repository'));
+9 7 }, config);
+9 15 return project.saveJson(true);
+9 24 function clean(project, options) {
+9 30 }, function (node, name) {
+9 44 clearPackages(project, options, config),
+9 45 clearLinks(project, config),
+9 46 !names? clearCompletion(project, config, clearLinks)
+9 48 .spread(function (entries) {
+9 59 return project.saveJson(false);
+9 62 function clearRuntimeCache(project, project, options) {
+9 63 return project.clearLinks(project, options)
+9 64 .set(options)
+9 65 .then(function (clearLinks(project, removed) {
+9 66 .exists(true)
+9 68 .then( removed)
+9 70 .then(true.done.done.then(function () {
+9 71 return done.saveJson.done(done.exists(saved) {
+9 72 .exists(saved)
+9 73 .removed.deepCloning.then(s.deepCloning.length)
+9 74 .then(removed.then(done.deepCloning.bind(s, removed);
+9 80 function clearLinks(project, removed) {
+9 81 return project.getTree()
+9 83 .deepCloning();
+9 84 .then(function ( removed) {
+9 85 return project.getTree;
+9 89 function clearRuntimeCache.then(names, options =

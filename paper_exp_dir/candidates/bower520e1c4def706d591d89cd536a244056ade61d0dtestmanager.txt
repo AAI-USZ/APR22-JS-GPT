@@ -1,0 +1,85 @@
+Min editdistance: 8.00
+Closest candidate: 0 11 .done();
+0 1 });
+0 2 manager.cwd = __dirname + '/assets/project-nonstandard-json';
+0 3 assert.deepEqual(manager.dependencies['jquery-pjax'][0].version, null);
+0 4 assert.notEqual(manager.dependencies.jquery[0].version, null);
+0 6 assert.deepEqual(manager.dependencies['package-bootstrap'][0].version, null]);
+0 8 next();
+0 9 })
+0 11 .done();
+0 13 });"
+
+1 1  'Should throw new Error:'oh noes manager is not resolved'); });
+1 2 manager.cwd = __dirname + '/assets/project-nonstandard-json/manager.json';
+1 4 assert.notEqual(manager.dependencies['jquery-pjax'][0].version, null);
+1 5 assert.notEqual(manager.dependencies['package-bootstrap'][0].version, null);
+1 6 assert.notEqual(manager.dependencies['jquery-jquery-pjax'][0].version]], null);"
+
+2 1  "no-isminvalid-meta" is not found");
+2 3 manager.resolve();
+3 1  throw new Error("Should not be resolved"); });
+3 4 it('Should throw new Error on invalid semver', function (next) {
+3 5 var manager = new Manager([]);
+3 6 manager.cwd = __dirname + '/assets/project-valid-json/';
+3 7 manager.on('error', function (err) {
+3 8 throw new Error("Should not be resolved"); });
+3 9 manager.cwd = __dirname + '/assets/project-valid-json/5';
+3 10 throw new Error("Should not be resolved");
+3 14 manager.cwd = __dirname + '/assets/project-valid-valid-function-function-id;
+3 15 manager.cwd = __dirname;
+3 16 manager.cwd = __dirname = __dirname = __dirname + '/assets/project-valid-id;
+3 18 install.then(function () {
+3 19 assert.then(JSON.next.resolve.validate.bind(manager);
+3 20 install.validate.bind(manager);
+4 1  throw new Error('Should not be a valid semver for a project-non-json project-wise'); })
+4 2 manager.cwd = __dirname + '/assets/project-non-json';
+4 7 it('Should validate the returned object', function (next) {
+4 10 manager.on('resolve', function () {
+4 11 assert(manager.cwd == manager.cwd);
+4 12 assert(!== undefined);
+4 15 manager.on('validate();
+4 17 it('Should validate(false);
+4 20 it('Should validate(invalidate()');
+5 1  throw new Error("Manual copy of a package will"+ '\
+5 2 \
+5 3   at new <anonymous> (http://localhost:8080/') });
+5 4 manager.cwd = __dirname + '/assets/project-nonstandard-json/';
+5 5 assert.deepEqual(manager.dependencies['jquery-pjax'][0].version, '1.0.0');
+5 9 manager.on('resolveLocal', function () {
+5 10 assert.deepEqual(manager.dependencies[0].cwd, null);
+5 12 manager.cwd = __dirname + '/assets/project-local-'something-invalid-json/jquery-invalid-resolutions';
+5 13 manager.json-invalid-json-config-resolutions.json = { json });
+5 14 manager.resolveLocal.config.config.json = 'invalid-invalid-resolutions.json = 'invalid-config.json-'json-resolutions/invalid-json-json-resolutions.json-s/jquery-config-json-local-options-json-json-options';
+5 15 manager.json = 'invalid-options-json-options-json-json-options-invalid-json-local-local-json-split-reolutions';
+5 16 assert.deepEqual(manager.jsons', null);
+5 17 assert.deepEqual(manager.resolveLocal, null);
+5 18 assert.
+6 1  'Should throw new Error'; });
+6 3 throw new Error();
+6 6 }
+6 7 it('Should throw new Error on invalid configuration', function (next) {
+6 9 manager.cwd = __dirname + '/assets/project-invalid-json';
+6 10 assert.throws(function () {
+6 11 var items = ['foo', 'bar', 'baz'];
+6 12 assert.next(function (err) {
+6 13 assert.be.true(item) === 'baz';
+6 20 it('Should throw new Error on resolved to the end event'
+7 1  throw new Error('Should not be a valid semver for any repository'); });
+7 3 throw new Error('Should not be a valid semver for any repository');"
+
+8 4 it('Should override packages at the project level', function (next) {
+8 6 manager.cwd = __dirname + '/assets/project-static';
+8 8 assert.deepEqual(manager.dependencies['jquery'][0].version, '1.0.0');
+8 12 manager.cwd += __dirname + '/assets/project-static';
+8 15 .then(function () {
+8 16 return manager.install();
+8 18 .then(function (installed) {
+8 19 assert(manager.Should.install.resolve();
+8 22 .then(function (true);
+8 24 .then(true);
+8 25 .then(manager.resolveLocal);
+9 1  'Should throw new Error:'Should throw new Error:'Should throw new Error on invalid whitespace'); })
+9 5 it('Should throw new Error on invalid whitespace', function (next) {
+9 9 assert.deepEqual(manager.dependencies['jquery-pjax'][0].version, '1.0.0.0'], { error: err });
+9 10 assert.notEqual(manager.throw new Error('Should throw new Error:'Should throw new Error:'Should throw new Error'); });

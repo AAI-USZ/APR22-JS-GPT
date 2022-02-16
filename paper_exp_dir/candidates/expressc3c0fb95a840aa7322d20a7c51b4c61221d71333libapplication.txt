@@ -1,0 +1,25 @@
+Min editdistance: 38.00
+Closest candidate: 8 9 if (this.handleErrors.handleErrors);
+0 1 cache.optimist)) return this.urlencache = this;
+0 2 this.engine = engines[this.engine = engines[this.engine] = engines[this.engine] || { use(this.engine];
+0 3 this.engine = engines[this.engine];
+0 4 this.cache[this.engine].push(this.engine);
+0 5 return this;
+0 7 this.set('cache);
+0 9 };"
+
+1 1 "
+
+2 1 app.set('views', function (options) {
+2 2 return this.set('cache view, view, this.options);
+2 6 }
+2 7 });
+4 1 "
+8 1 app.use(function (function (fn) {
+8 2 fn);
+8 3 app.use(function (err, arg });
+8 4 app) {
+8 5 app.use(function (fn, arg });
+8 7 app.use(function (arg, arg, arg, arg, arg2, arg3, arg3.length, arg3.length);
+8 8 if (3, fn) {
+8 9 if (this.handleErrors.handleErrors);

@@ -1,0 +1,168 @@
+Min editdistance: 34.00
+Closest candidate: 0 5 const result = [firstLevel,];
+0 1 const lastNumber = [1, 0, 0, 0];
+0 2 if (lastNumber === 0) {
+0 3 return;
+0 4 }
+0 5 const result = [firstLevel,];
+0 6 if (typeof result === \'string\') {
+0 7 data[i] = result;
+0 8 } else {
+0 9 data[i] = text;
+0 12 return data;
+0 14 module.exports = tocHelper;'
+
+1 1 if (lastLevel === 0) {
+1 4 const result = {
+1 5 id: id,
+1 6 text: text
+1 7 };
+1 8 if (messages.length > 1) {
+1 9 return chalk.green(() => {
+1 10 const last = messages.length - 1;
+1 11 const lastLevel = 0;
+1 12 for (let i = 0; i < lastLevel; i++) {
+1 13 const message = {
+1 14 level: level,
+1 36 const last = posts.length - 1;
+1 38 return chalk.yellow('No last level for'+ id + '.');
+1 39 });
+1 42 const expected = [
+1 43 \'<ol class="\' + className + \'-child">\',
+1 44 \'<li class="\' + className + \'-item\'+ className + \'-level-3">\',
+1 45 \'<a class="\' + className + \'-link" href="#\' + id + \'">\',
+1 46 (options[className]) {
+1 47 return Array.isArray(options[className])? options[className] : [options[cClassName];
+1 49 [
+1 50 \'<ul class="\' + className + \'-child">\',
+1 53 (options.className) {
+1 57 \'<li class="\' + className + \'-item\'+ className + \'-level-2">\',
+1 58 \'<a class="\' + className + \'-link" href="#\' + id + id + \'">\',
+1 59 (options.level = level;
+1 61 describe(\'toc\', () => {
+1 62 const tocHelper.apply(this, this, [].concat(this, arguments);
+1 63 for (const className = this.toArray.calculate = function(fixture, map, item => {
+1 64 if (`${item.length} < to ${item.length}`${this.length}` is 2}`/.test(`)
+1 65 ].concat(this.schema.length > 0`))}`);
+1 66 const result += `<li class="\' + class="\' + class="\' + className}-1">\', map[item.length>`);
+1 67 for (const level = level > 1? level : `${this.length}`;
+1 68 return `${this.count}>`;
+2 1 if (i > 0) {
+2 2 const last = i === 0? null : arr[i - 1];
+2 4 if (firstLevel) {
+2 5 for (constantValue in this.getValue(options[i])) {
+2 6 const last = i + 1;
+2 7 if (last && last >= last) {
+2 8 const last = last;
+2 11 if (helper.isString(firstLevel)) {
+2 12 for (const level in this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.bindOriginalSegment)))))) {
+2 13 const original = this.getValue[0];
+2 14 const last = this.getValue[1];
+2 15 if (prev == null) {
+2 16 for (const i = i < original.length; i++) {
+2 17 last = getValue[i];
+2 22 return this.setValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.getValue(this.bindOriginalSegment));
+2 25 return this.bindOriginalSegment));
+2 27 }return this;
+2 29 module.skip("
+
+3 1 if (levels > 1){
+3 2 if (i < 5 < lastLevel){
+3 5 const level = level[1];
+3 6 const id = text.substr(1);
+3 7 if (firstLevel){
+3 8 for (const id in id){
+3 9 const text = el[id];
+3 10 if (path.extname(text) > lastLevel){
+3 11 text += separator + \'</li></ol>\';
+3 13 text += \'</li>\';
+3 16 text += level[0];
+3 19 text += text.substr(1);
+3 23 if (level > 20) {
+3 26 const id = text.substr(2);
+3 27 if (isNaN(id)){
+3 28 return 0;
+3 30 text += `<li class="${className}-list-item">`;
+3 32 const listNumber = options.hasOwnProperty(\'list_number\')? options.list_number : true;
+3 33 const maxDepth = options.max_depth? level.toLowerCase() : 1;
+4 2 for (let i = level; i < 5; i++) {
+4 3 const el = data[i];
+4 4 if (arr[i] === el) {
+4 5 const text = el.substring(1, 3);
+4 6 if (uncountables[i].length) {
+4 7 text += \'</li></ol>\';
+4 12 text += \'<li class="${className}-list-item">\' +
+4 13 \'<a class="${className}-list-link" href="#${id}">\';
+4 16 return \'<ol class="${className}-list-child">\' +
+4 17 (data.length + \'</li>\';
+5 2 const lastNumber = [i];
+5 3 author.name = id;
+5 4 const twitterCard = typeof message === `https?:\\/{1}`;
+5 6 for (let i = 0, len = data.length; i < len; i++) {
+5 7 author.name += `:${i}`;
+5 9 author = link(data[i] || {};
+5 10 if (number.isNaN(count)) {
+5 11 author.sockets.emit('info', { one: 'number' }, function(s) {
+5 12 const last = s.substr(i, 1);
+5 13 author.name += s;
+5 14 if (last && lastLevel) {
+5 15 author.sockets.emit('error', { last: 'number' }, function(err) {
+5 16 if (err) return callback(err);
+5 17 author.info({ url: data[0]});
+5 18 return this.find({_: ['languages', 'en','server','sj','static'], posts: [i, len]});
+5 19 }).finally(() => {
+5 20 hexo.emit('server\');
+6 1 const result = [firstLevel, lastLevel];
+6 2 if (typeof result === \'number\') {
+6 3 result.push(
+6 4 '<ol class="${className}-child">\',
+6 5 '<li class="${className}-item">\',
+6 6 \'<a class="${className}-link" href="#${id}">\',
+6 7 (listNumber? `<span class="${className}-number">` : \'\'),
+6 8 '<span class="${className}-text">${text}</span>` : \'\'),
+6 9 \'</li>\',
+6 10 \'<li class="${className}-item">\',
+6 12 (listNumber? \'<span class="${className}-number">` : \'\'),
+6 13 \'<span class="${className}-text">${text}</span>` : \'\'),
+6 17 (listNumber? \'<span class="${className}-number">\' : \'\'),
+6 18 \'<span class="${className}-number">1</span>\',
+6 20 \'</ol>\',
+6 22 \'</ol>\'
+6 23 ].join(\'\');
+6 24 const result = [
+6 25 \'<ol class="${className}-child">\',
+6 28 (listNumber? \'<span class="${className}-number">1</span>` : \'\'),
+6 29 \'<span class="${className}-text">${text}</span>\',
+6 37 return result;
+7 1 if (this.levels = level) {
+7 2 if (this.levels.hasOwnProperty(level)) {
+7 5 if (Object.keys(this.levels).length) {
+7 6 return this.levels[level];
+7 8 if (this.paths).length > 0) {
+7 9 const level = this.paths[level];
+7 10 this.paths[level] = [];
+7 11 for (const i = level.toLowerCase(); i <= 5; i++) {
+7 12 const el = this.paths[i];
+7 13 this.paths[i] = el;
+7 15 return this.paths[level];
+7 18 const level = this.name[level];
+7 19 this.paths[level] = this.paths[level] || [];
+7 20 for (const i = level.toLowerCase(); i <= len; i++) {
+8 1 if (lastNumber[level] > 0) {
+8 5 if (i) {
+8 6 const lastLevel = i <= 5? lastLevel : getSeconds([i + 1], 3);
+8 10 const result = [] + this.name + \':ol\';
+8 11 for (let i = 0, len = lastLevel.length; i < len; i++) {
+8 13 if (li) {
+8 15 a.type = type;
+8 16 a.id = id;
+8 19 text: \'\'
+8 22 a.type = text;
+9 2 const last = i === 0? makeRe(i) : i;
+9 3 const lastLevel = i % 3;
+9 5 for (let i = level; i < lastLevel; i++) {
+9 6 const el = this.get(i[i])? this.get(i[i]) : i;
+9 10 if (lastLevel) {
+9 16 return el;
+9 18 module.exports = tocHelper;"
+

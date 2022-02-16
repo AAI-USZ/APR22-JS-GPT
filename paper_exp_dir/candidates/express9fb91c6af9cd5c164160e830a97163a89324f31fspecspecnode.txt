@@ -1,0 +1,118 @@
+Min editdistance: 1.00
+Closest candidate: 3 4 if (process.ARGV[2]) {
+0 1 )"
+
+1 1 )
+1 2 promise.resolve()
+1 3 .exec('something', '\
+1 4 ')
+1 5 .exec('something/else', '\
+1 9 .exec('something')
+1 18 .exec('throw exceptions')
+1 21 .exec('throwErrback')
+1 27 .exec('promise')
+1 28 .exec('posix')
+1 29 .exec('test')
+1 30 .exec('mocks.process.env.NODE_ENV')
+1 32 .exec('mime.lookup')"
+
+2 2 return promise.promise.exec(function(resolve, reject) {"
+
+3 2 return promise.save()
+3 3 }
+3 4 if (process.ARGV[2]) {
+3 5 JSpec.exec(\'spec/spec.\'+process.ARGV[2]+\'.js\')
+3 6 } else {
+3 7 JSpec
+3 8 .exec(\'spec/spec.core.js\')
+3 9 .exec(\'spec/spec.routing.js\')
+3 10 .exec(\'spec/spec.mocks.js\')
+3 11 .exec(\'spec/spec.modules.js\')
+3 12 .exec(\'spec/spec.mime.js\')
+3 13 .exec(\'spec/spec.cookie.js\')
+3 14 .exec(\'spec/spec.session.js\')
+3 15 .exec(\'spec/spec.view.js\')
+3 16 .exec(\'spec/spec.async.js\')
+3 18 JSpec.run({ formatter : JSpec.formatters.Terminal, failuresOnly : true })
+3 19 JSpec.report()
+3 23 },
+3 24 report : function() {
+3 25 var body,
+3 26 message = JSpec.formatters.Terminal,
+3 27 specs = JSpec.formatters.Terminal,
+3 28 args = [],
+3 29 error = args.shift() || args.length === 0?
+3 30 'You should configure Require.js and configure Require.core.js\',
+3 31 '',
+3 32 \'For more help, you can use \\'jasmine \\' +'spec\\'` to list possible options.\',
+3 33 \'or you can check the online docs:\
+3 34 http://zespia.tw/hexo/\',
+3 35 ];
+3 36 console.log(message)
+3 37 .replace(/([\\]\\w$.]/g, \'\
+3 38 \\r]+/g, "<strong>$2</strong>")
+3 39 .replace(/^\\./g, \'\
+3 40 \\r]+/g, \'\
+3 41 <strong>$2</strong>\')
+3 43 \')
+3 44 .replace(/\
+3 45 /g, \'\
+3 47 .replace(/^\\/g, \'\
+3 49 .replace(/^\\/absolute/, \'\
+3 51 .replace(/^\\/base/, base)
+3 52 return \'\';
+3 54 formatters : {
+3 55 common: function(a, b) {
+3 56 if (a.name === \'Validator\') {
+3 57 return JSpec.formatters.Terminal
+3 58 } else if (a.name === \'MethodOverride\') {
+3 61 return JSpec.formatters.formatters.formatters.Terminal
+3 64 };
+3 65 processAnswers = function(answ) {
+3 66 questions = ans = JSpec.questions.questions || {};
+3 67 answ = this;
+3 68 this.answ = ans = ans = ans || new (this.ans.ans.Init;
+3 69 ans.Init;
+3 70 ans.Init = ansInit || new (ans.Init || new (ans.Init || new ans.Init.Init) || new (ans.Init || new (ans.Init?\'s') || new (ansInit? \'_Init's') : new ans.Init.Init.resolve, __protoInit) || new (ans.username }) || new (ans.Init?\'s') || new (ans.Init? \'--redirects\') : \'install') };
+3 71 this.nreturn this;
+3 73 \
+4 2 promise.wait()
+4 19 JSpec.report()"
+
+5 5 JSpec.exec('spec/spec.\'+process.ARGV[2]+" \')
+5 8 .exec('spec/spec.core.js')
+5 9 .exec('spec/spec.routing.js')
+5 10 .exec('spec/spec.mocks.js')
+5 11 .exec('spec/spec.modules.js')
+5 12 .exec('spec/spec.mime.js')
+5 13 .exec('spec/spec.cookie.js')
+5 14 .exec('spec/spec.session.js')
+5 15 .exec('spec/spec.view.js')
+5 16 .exec('spec/spec.async.js')
+5 18 })
+5 19 }"
+
+7 2 promise.wait()"
+
+8 2 return promise.resolve()
+8 5 JSpec.exec('spec/spec.\'+process.ARGV[2]+"\' \')
+8 15 if (setof options === \'production\') {
+8 16 JSpec.exec(\'spec/spec.core.js\')
+8 39 if (process.ARGV[3]) {
+8 51 if (process.ARGV[2] &&!/^\\d+/.test(process.ARGV[2] &&!/mocks.run()`[2]/.test(3]`/.test(3]/.test(4.js)\')`/.test(4.js"/.test(6"/.test(12"/.test.js"/.test(12"/.test.js")`/.test.s")`/.test(3"/.test(12"/.test.js")`/.test(3")}")}`/.test.js"/.test.js"/.test.js"/spec.js"/i")
+8 52 } else if (process.ARGV[3] :/.test.0()`/.test(1]/.test(1)/.test =.js
+8 53 function validate(server) {
+8 54 process.ARGV[2] = injector.createServer()
+8 55 } catch (e) {
+8 56 try { exec: function(server, args, callback) {
+8 57 throw new e.server.isRun({port: process.getDirect
+9 22 if (JSpec.error) {
+9 25 .exec(\'spec/spec.start.js\')
+9 29 .exec(\'spec/spec.modules.redirect.js\')
+9 30 .exec(\'spec/spec.http.js\')
+9 31 .exec(\'spec/spec.error.js\')
+9 41 .exec(\'spec/spec.redirect.js\')
+9 48 if (process.ARGV[4] &&!/) {
+9 54 JSpec.run({ formatter : JSpec.formatters.formatters.Terminal, failuresOnly : true })
+9 59 "
+

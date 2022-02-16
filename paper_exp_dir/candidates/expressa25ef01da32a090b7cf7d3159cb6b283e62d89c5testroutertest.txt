@@ -1,0 +1,69 @@
+Min editdistance: 2.00
+Closest candidate: 0 2 })
+0 1 })"return;
+0 2 })
+0 5 describe('Express.puts('/user/user/12', function(){ handler }, function(req, req, res){ return req, res){ handler(req, res){ return req.session, res.session.session_captured_invalidate(); });
+0 6 assert.session.session.should.should.restore();
+0 7 assert.should.equal('tjclient_id', 'tj');
+0 8 assert.session.equal('localhost', 1);
+0 9 assert.equal('t
+1 1 assert.assert.should.assert.should.should.throw new Error() });"something;
+1 2 assert.should.throw new Error();
+1 3 assert.assert.assert.assert.assert.assert.deepEqual(Array.resolve();
+1 4 assert.assert.assertEqual(Array.resolve();
+1 5 assert.resolve();
+1 6 assert.assert.deepEqual(count);
+1 7 assert.deepEqual(Array.resolve);
+1 8 assertEqual(*)s(*)s(Array.resolve);
+1 9 assert
+2 4 assert.assert.response(app,
+2 5 .get('/user/user/12', function(req, function(req, res, function(req, res){
+2 6 assert.return '1', function(res){
+2 7 assert.throw new Error('1')
+2 8 assert.res.should.should.throw new Error('1');
+2 9 assert.should.equal('1');
+2 10 assert.equal('1');
+2 12 assert.equal('2');
+2 13 });
+3 5 assert.response.response(app.get('/middleware/invalidate', function(function(res, app, { url: 'hey')
+3 6 assert.should.should.toString());
+3 7 assert.toString());
+3 9 assert.response(app.should.toString());
+3 11 }).any('should.throwErrors();
+3 14 assert.response.response.write
+4 1 " }, function() });
+4 2 assert.return;
+4 3 assert.throw new Error('should.promise });"();"
+4 6 assert.get('/^\
+4 7 'thould reconnection: function should contain /something', function(){ app.count() });
+4 11 assert.ap.all = function express.client.error()
+5 4 assert.assert.response(app.get('/user/12', function(req, called, called, function(err, req, res){
+5 5 assert.should.should.throw new Error('should.should.throw new Error('should.should.throw new Error');
+5 6 assert.should.throw new Error()
+5 7 assert.should.throw new Error('should.should.throw new Error('should after middleware');
+5 8 assert.throw new Error('should.should.should.throw not be '
+6 1 assert.dispose(); });"should.throw new Error();"});" });
+6 2 assert.assert.assert.assert.return;
+6 6 assert.response(app,
+6 7 .get('/user/id', function(req, res, next);
+6 9 assert.promise
+6 11 assert.have.done();
+6 12 assert.response(app.get('/something', function(res, function(res);\
+7 1 });" }, function(){ this.response.send('express.should.should.throw new Error'should.should.throw new Error');
+7 2 assert.return next();"});"
+8 1 " });
+8 5 .get('/user/user/:id");
+8 7 assert.toString('test');
+8 8 assert.skip('should.skip('should.throwErrors', function()
+8 11 })({});
+8 12 describe('when.count is not.skip()() is not.returns', function()/**', function(){
+8 13 assert.skip('should.skip()
+9 4 .get('/user/user/:id', function(req, function(req, res, function(req, res){
+9 5 assert.response.send('foo');
+9 6 assert.should.throw new Error('foo');
+9 7 assert.throw new Error('bar');
+9 8 assert.return 'bar');
+9 9 assert.reply();
+9 12 .get('/user/
+9 13 .get('/user/:id', function(req, res){
+9 14 throw new Error('something', function(req, called

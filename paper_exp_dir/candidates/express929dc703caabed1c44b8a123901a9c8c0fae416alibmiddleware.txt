@@ -1,0 +1,52 @@
+Min editdistance: 5.00
+Closest candidate: 6 2 res.setHeader(\'X-Powered-By\', \'Express\');
+0 1 if (app.enabled(\'x-powered-by\') && req.session.user_id &&
+0 2 app.enabled(\'x-powered-by\')) {
+0 3 req.session.user.name = app.settings.user_id;
+0 4 res.redirect(\'/login\');
+0 5 }
+0 6 next();
+0 7 };
+0 8 };'
+
+1 1 if (app.enabled(\'x-powered-by\') && req.headers.etag == req.app.settings.cookie[\'x-powered-by\'] == null) {
+1 3 } else {
+2 1 if (app.enabled(\'x-powered-by\') && req.session.user_id == req.session.user_id){
+2 4 req.session.error = \'Access denied!\';
+2 9 app.use(function(req, res){
+2 11 });
+2 12 app.post(\'/login\', function(req, res){
+2 13 res.send(\'<p>This islogin <strong>\' + req.session.user_id);
+2 18 app.clearout = function(){
+2 19 req.session.error = \'Authentication failed\';
+2 22 app.listen(3000);
+2 23 console.log(\'Express app started on port 3000\');'
+
+3 1 if (app.enabled(\'x-powered-by\') || req.session.is_login) return next();
+3 2 req.app = res.app.locals
+3 3 .locals.settings = app.settings;
+3 4 res.locals.set(\'x-powered-by\', \'weak\');
+3 5 res.locals.user = new User(req, res);
+3 6 res.locals.post = new Post(res, user.name);
+4 1 if (app.enabled(\'x-powered-by\') && req.session.is_login) {
+5 4 req.session.is_login = true;
+6 1 if (app.enabled(\'x-powered-by\') && req.headers.etag == req.headers.etag) {
+6 2 res.setHeader(\'X-Powered-By\', \'Express\');
+6 3 res.writeHead(200, {});
+6 4 res.end(\'MOVED PERMANENTLY\');
+7 1 if (app.enabled(\'x-powered-by\') && req.session.user_id && req.session.root){
+7 2 req.session.root = app.settings.root;
+8 2 req.app = res.app = app;
+8 3 app.locals.user = { name: \'tj\' };
+8 4 res.locals.user.name = app.settings.tj;
+8 5 res.locals.user.login = app.settings.logger;
+8 6 if (req.url.indexOf(\'?\') > 0) {
+9 3 res.redirect(\'login\');
+9 6 res.type(\'html\');
+9 9 req.res = res;
+9 10 res.req = req;
+9 11 req.next = next;
+9 12 req.url = req.url.replace(/\\?.*/, \'\');
+9 13 res.locals = function(obj){
+9 14 for (var key in obj) res.locals[key] = obj[key];
+9 15 return res;

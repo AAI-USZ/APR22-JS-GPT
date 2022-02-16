@@ -1,0 +1,18 @@
+Min editdistance: 30.00
+Closest candidate: 2 1 "remaining);"
+
+0 1 "
+2 1 "remaining);"
+
+3 1 "strictHexports.test = function(){ returns.reset();
+3 2 return{app.set('some feature }).set('some feature must be a.').should.returnsolve(); }'solve();
+3 3 }
+4 1 "stricts.should.should.should.returnsucused() false; }).should.be.should.returnsucused();"
+6 1 "strictHexports.should.should.should.have.have.have.not.no.client.returns(app, 'test');"seag;express.should.sessionsseapath-segment');"sessionssegment');"sessions.segment");
+6 2 done();
+6 3 })
+6 5 })"
+
+7 1 "require('reason.reset();") }).return { express.set('something');"remaining');"sucid');"sadd');"succeeds();"deep");"));"
+
+8 1 " />' });"

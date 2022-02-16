@@ -1,0 +1,61 @@
+Min editdistance: 21.00
+Closest candidate: 8 9 PostAsset = this;
+0 1 ).map(function (post) { return post.remove(); }).return PostAsset.insert({
+0 2 return post.remove(); }).then(post_id);"
+
+1 1 ).filter(function(post) return post.title);"
+
+2 1 ).then(function () {
+2 2 return Promise.resolve();
+2 4 });
+2 5 }).then(function unprocessAssetFiles();
+2 6 }
+2 7 Post.prototype.unregister(){
+2 8 return PostAsset();
+2 14 module.skip('_id = function _id;
+2 15 return PostAsset.unregisterHelper('_id', function(){
+3 1 ).filter(function(function(post) { return post.id) { return post.id === undefined; }).join(post) return post.id });
+3 2 return post.id!== undefined; }).reduce(post => {
+3 3 return Promise.equals(post => {
+3 4 return post.return Promise.promise; });
+3 10 return PostAsset.remove();
+3 13 "
+
+4 1 ).join(this.stringify(post) : post.path);
+4 2 return Promise.resolve(post);
+4 3 };
+4 4 PostAsset.remove({ source: url_id: url_middleware: function () {
+4 5 return this.middleware({
+4 6 return {
+4 7 return this.middleware.handler(this.handler(this.middleware({
+4 8 id: url_middleware,
+4 9 post: url_middleware.middleware.middleware,
+4 10 id: url_middleware.middleware\
+5 1 ).map(function post_id });" });"
+
+6 1 ).reduce({}, function (post_id: post.id, id);
+6 2 return post.middlewatched_s => {
+6 3 return Promise.middleware;
+6 4 return post.middleware.handler.handler(post => {
+6 5 post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(post.handler(
+7 2 return Promise.resolve() {
+7 3 return Promise.resolve()
+7 5 }).then([]).then(function(PostAsset.remove(PostAsset.remove({});
+7 6 return fs.unprocess(post._id);
+7 12 return Promise.then(function trim_prefix(post, post) {
+7 13 return PostAsset);
+7 14 return PostAsset.unprocessPost.unprocess();
+8 1 ).then(function post = post.path, post.path, function () {
+8 2 return Promise.resolve(post.resolve(post) post.path);
+8 3 post.path.s_id.unresolve(post.id);
+8 4 post.s_id = post.s);
+8 5 return post.s_id = post.id);
+8 8 return Promise.then(function post.save();
+8 9 PostAsset = this;
+8 10 return this._save();
+9 1 ).filter(function (post) { return post.title); }).return post.remove();
+9 2 return post.remove(); }).filter(function (post) { this.remove(); }).return post.remove(); };
+9 6 post.paths = post.remove = posts;
+9 7 .unshift();
+9 8 return Promise.unshift();
+9 9 return Promise.exec(() => {

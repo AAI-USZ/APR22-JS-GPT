@@ -1,0 +1,266 @@
+Min editdistance: 9.00
+Closest candidate: 3 6 describe(\'config\', () => {
+0 1 function jsfiddleTag(args) {
+0 2 const id = args[0];
+0 3 const tabs = args[1] && args[1]!== \'default\'? args[1] : \'js,resources,html,css,result\';
+0 4 const skin = args[2] && args[2]!== \'default\'? args[2] : \'light\';
+0 5 const width = args[3] && args[3]!== \'default\'? args[3] : \'100%\';
+0 6 const height = args[4] && args[4]!== \'default\'? args[4] : \'300\';
+0 7 return `<iframe scrolling="no" width="${width}" height="${height}" src="http://jsfiddle.net/${id}/embedded/${tabs}/${skin}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+0 8 }
+0 9 module.exports = jsfiddleTag;'
+
+1 1 module.exports = ctx => function pullquoteTag(args, content) {
+1 2 let result = \'\';
+1 3 args.unshift(\'pullquote\');
+1 4 result += `<blockquote class="${args.join(\' \')}<p>\
+1 5 </p>`;
+1 6 result += \'</blockquote>\
+1 7 \
+1 8 \';
+1 9 return result;'
+
+2 1 var url = require(\'url\');
+2 2 var cheerio;
+2 3 function externalLinkFilter(data) {
+2 4 var config = this.config;
+2 5 if (!config.external_link) return;
+2 6 if (!cheerio) cheerio = require(\'cheerio\');
+2 7 var $ = cheerio.load(data.content, {decodeEntities: false});
+2 8 var siteHost = url.parse(config.url).hostname || config.url;
+2 9 $(\'a\').each(function() {
+2 10 if ($(this).attr(\'target\')!== undefined) return;
+2 11 var href = $(this).attr(\'href\');
+2 12 if (!href) return;
+2 13 var data = url.parse(href);
+2 14 if (!data.protocol) return;
+2 15 if (data.hostname === siteHost) return;
+2 16 $(this)
+2 17 .attr(\'target\', \'_blank\')
+2 18 .attr(\'rel\', \'noopener\');
+2 19 });
+2 20 data.content = $.html();
+2 22 module.exports = externalLinkFilter;'
+
+3 1 const { exists, mkdirs, rmdir, unlink, writeFile } = require(\'hexo-fs\');
+3 2 const { join } = require(\'path\');
+3 3 const { load } = require(\'js-yaml\');
+3 4 const rewire = require(\'rewire\');
+3 5 const sinon = require(\'sinon\');
+3 6 describe(\'config\', () => {
+3 7 const Hexo = require(\'../../../lib/hexo\');
+3 8 const hexo = new Hexo(join(__dirname, \'config_test\'), {silent: true});
+3 9 const config = require(\'../../../lib/plugins/console/config\').bind(hexo);
+3 10 const configModule = rewire(\'../../../lib/plugins/console/config\');
+3 11 before(async () => {
+3 12 await mkdirs(hexo.base_dir);
+3 13 hexo.init();
+3 15 beforeEach(() => writeFile(hexo.config_path, \'default: %s\'));
+3 16 after(() => rmdir(hexo.base_dir));
+3 17 it(\'read all config\', async () => {
+3 18 const spy = sinon.spy();
+3 19 await configModule.__with__({
+3 20 console: {
+3 21 log: spy
+3 23 })(() => configModule.call(hexo, {_: []}));
+3 24 spy.args[0][0].should.eql(hexo.config);
+3 26 it(\'read config', async () => {
+3 33 spy.args[0][0].should.eql(hexo.config.default_config);
+3 35 it(\'read nested config\', async () => {
+3 37 hexo.config.server = {
+3 38 port: 12345
+3 39 };
+3 40 return configModule.__with__({
+3 44 })(() => configModule.call(hexo, {_: ['server.port']})).then(() => {
+3 45 spy.args[0][0].should.eql(hexo.config.server.port);
+3 46 }).finally(() => {
+3 47 delete hexo.config.server;
+3 50 async function writeConfig() {
+3 51 const config = await writeConfig({
+3 54 config.server.on(\'error\', err => {
+3 55 spy.args[0][0].should.eql([\'setting up for "config deployment settings" is missing.\']);
+3 57 it(\'write config\', async () => {
+3 62 spy.args[0][0].should.eql(err);
+3 66 port: 356
+3 68 config.server.on(\'log\', logModified();
+3 69 config.server.on(\'exit\', done => {
+3 72 it(\'end
+3 73 it(\'end\', () => writeConfig.reset();
+3 74 });'
+
+4 1 var Promise = require(\'bluebird\');
+4 2 function renderPostFilter(data) {
+4 3 var self = this;
+4 4 function renderPosts(model) {
+4 5 var posts = model.toArray().filter(function(post) {
+4 6 return post.content == null;
+4 8 return Promise.map(posts, function(post) {
+4 9 post.content = post._content;
+4 10 post.site = {data: post};
+4 11 return self.post.render(post.full_source, post).then(function() {
+4 12 return post.save();
+4 16 return Promise.all([
+4 17 renderPosts(this.model(\'Post\'),
+4 18 renderPosts(this.model(\'Page\'),
+4 19 renderPosts(this.model(\'Asset\'),
+4 20 renderPosts(this.model(\'Post\')
+4 21 ]);
+4 22 }'
+
+5 1 const stripIndent = require(\'strip-indent\');
+5 2 const { highlight } = require(\'hexo-util\');
+5 3 const rBacktick = /^((?:\\s*>){0,3}\\s*)(`{3,}|~{3,}) *(.*) *\
+5 4 ([\\s\\S]+?)\\s*\\2(\
+5 5 +|$)/gm;
+5 6 const rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+5 7 const rLangCaption = /([^\\s]+)\\s*(.+)?/;
+5 8 function backtickCodeBlock(data) {
+5 9 const config = this.config.highlight || {};
+5 10 if (!config.enable) return;
+5 11 data.content = data.content.replace(rBacktick, ($0, start, $2, _args, content, end) => {
+5 12 const args = _args.split(\'=\').shift();
+5 13 const options = {
+5 14 hljs: config.hljs,
+5 15 autoDetect: config.auto_detect,
+5 16 gutter: config.line_number,
+5 17 tab: config.tab_replace
+5 19 if (options.gutter) {
+5 20 config.first_line_number = config.first_line_number || \'always1\';
+5 21 if (config.first_line_number === \'inline\') {
+5 22 _args = _args.replace(\'=+\', \'=\');
+5 23 options.gutter = _args.includes(\'=\');
+5 24 options.firstLine = options.gutter? _args.split(\'=\')[1] || 1 : 0;
+5 27 if (args) {
+5 28 const match = rAllOptions.exec(args) || rLangCaption.exec(args);
+5 29 if (match) {
+5 30 options.lang = match[1];
+5 31 if (match[2]) {
+5 32 options.caption = `<span>${match[2]}</span>`;
+5 33 if (match[3]) {
+5 34 options.caption += `<a href="${match[3]}">${match[4]? match[4] : \'link\'}</a>`;
+5 38 if (start.includes(\'>\')) {
+5 39 const depth = start.split(\'>\').length - 1;
+5 40 const regexp = new RegExp(`^([^\\\\S\\\\r\\\
+5 41 ]*>){0,${depth}}([^\\\\S\\\\r\\\
+5 42 ]|$)`,\'mg\');
+5 43 content = content.replace(regexp, \'\');
+5 45 if (prismjs.test(content)) {
+5 46 const match =prismjs.match(content);
+5 48 prismjs.highlight = content.replace(rBacktick, ($0, start, $2, _args, content, end) => {
+5 50 let options = {
+5 51 hljs: prismjs,
+5 52 autoDetect: prismjs,
+5 53 gutter: prismjs,
+5 54 lazy: prismjs
+5 57 if (options.lang.match(/((\'lang\')[0] = match[0]) && match[1] == \'first]) {
+5 59 const caption = \'<a href="${match[1]}"`]">${match[2]}`;\';
+5 61 return highlight(`{${match[3]}`{${match[3]}`;js}
+5 62 }`{${ends}`;`;
+5 63 }`{ends="${match[1]}`;
+5 64 }</a>`;
+5 65 }`;
+5 68 module.each(`{\'sBacktickCode block:${match[2]}`}`);
+5 69 .addBacktickCodeAllToAllToAllToAllBody(AllToAllBody)
+5 70 .replace(AllToAllToAllToAllBatch
+6 1 var stripIndent = require(\'strip-indent\');
+6 2 var util = require(\'hexo-util\');
+6 3 var highlight = util.highlight;
+6 4 var rBacktick = /\
+6 5 *(`{3,}|~{3,}) *(.*) *\
+6 7 +|$)/g;
+6 8 var rAllOptions = /([^\\s]+)\\s+(.+?)\\s+(https?:\\/\\/\\S+|\\/\\S+)\\s*(.+)?/;
+6 9 var rLangCaption = /([^\\s]+)\\s*(.+)?/;
+6 10 function backtickCodeBlock(data){
+6 11 var config = this.config.highlight || {};
+6 13 data.content = data.content.replace(rBacktick, function(){
+6 14 var args = arguments[2];
+6 15 var content = arguments[3];
+6 16 var options = {
+6 20 var indent = str.match(/^(\\t*)/)[1].length,
+6 21 code = [],
+6 22 match;
+6 23 if (args){
+6 24 if (rAllOptions.test(args)){
+6 25 match = args.match(rAllOptions);
+6 26 } else if (rLangCaption.test(args)){
+6 27 match = args.match(rLangCaption);
+6 30 if (match[2]){
+6 31 options.caption = \'<span>\' + match[2] + \'</span>\';
+6 32 if (match[3]){
+6 33 options.caption += \'<a href="\' + match[3] + \'">\' + (match[4]? match[4] : \'link\') + \'</a>\';
+6 36 content = highlight(stripIndent(content), options)
+6 37 .replace(/{2,}/g, \'&#123;\')
+6 38 .replace(/}/g, \'&#125;\');
+6 39 return post.render(null, {
+6 40 content: data
+6 41 })
+6 42 .then(function(){
+6 43 return args.some(function(args){
+6 44 return args.join(\' \');
+6 47 .skip(\'Backtick\');
+6 50 module.exports = backtickCodeBlock;'
+
+7 1 const fs = require(\'hexo-fs\');
+7 2 const { join, dirname } = require(\'path\');
+7 3 const Promise = require(\'bluebird\');
+7 4 describe(\'Load plugins\', () => {
+7 6 const hexo = new Hexo(join(__dirname, \'plugin_test\'), {silent: true});
+7 7 const loadPlugins = require(\'../../../lib/hexo/load_plugins\');
+7 8 const script = [
+7 9 \'hexo._script_test = {',
+7 10 \'  filename: __filename,',
+7 11 \'  dirname: __dirname,',
+7 12 \'  module: module,',
+7 13 \'  require: require\',
+7 14 \'}\'
+7 15 ].join(\'\
+7 16 \');
+7 17 function validate(path) {
+7 18 const result = hexo._script_test;
+7 19 result.filename.should.eql(path);
+7 20 result.dirname.should.eql(dirname(path));
+7 21 result.module.id.should.eql(path);
+7 22 result.module.filename.should.eql(path);
+7 23 delete hexo._script_test;
+7 25 function createPackageFile(...args) {
+7 26 const pkg = {"
+
+8 2 const { basename, extname, join } = require(\'path\');
+8 5 const rCaptionTitleFile = /(.*)?(\\s+|^)(\\
+8 6 module.exports = ctx => function includeCodeTag(args) {
+8 7 const config = ctx.config.highlight || {};
+8 8 let codeDir = ctx.config.code_dir;
+8 9 let arg = args.join(\' \');
+8 10 if (codeDir[codeDir.length - 1]!== \'/\') codeDir += \'/\';
+8 11 let lang = \'\';
+8 12 arg = arg.replace(rLang, (match, _lang) => {
+8 13 lang = _lang;
+8 14 return \'\';
+8 16 let caption = \'\';
+8 17 const match = arg.match(rCaptionTitleFile);
+8 18 if (!match) return;
+8 19 const path = match[2];
+8 20 if (!path) return;
+8 21 const src = join(ctx.source_dir, codeDir, path);
+8 22 return fs.exists(src).then(exist => {
+8 23 if (exist) return fs.readFile(src);
+8 24 }).then(code => {
+8 25 if (!code) return;
+8 26 code = stripIndent(code).trim();
+8 27 if (!config.enable) {
+8 28 return `<pre><code>${code}</code></pre>`;
+8 30 title = title || basename(path);
+8 31 lang = lang || extname(path).substring(1);
+8 32 const caption = `<span>${title}</span><a href="${ctx.config.root}${codeDir}${path}">view raw</a>`;
+8 33 return highlight(code, {
+8 34 lang,
+8 35 caption,
+8 39 };'
+
+9 1 function iframeTag(args) {
+9 2 const url = args[0];
+9 3 const width = args[1] && args[1]!== \'default\'? args[1] : \'100%\';
+9 4 const height = args[2] && args[2]!== \'default\'? args[2] : \'300\';
+9 5 return `<iframe src="${url}" width="${width}" height="${height}" frameborder="0" loading="lazy" allowfullscreen></iframe>`;
+9 7 module.exports = iframeTag;'
+
